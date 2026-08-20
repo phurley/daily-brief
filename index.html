@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Daily Brief — Thursday, August 20, 2026</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f3f5f2;
+      --surface: #ffffff;
+      --text: #17211b;
+      --muted: #5b675f;
+      --line: #d6ddd8;
+      --accent: #116466;
+      --accent-soft: #dff2ef;
+      --warm: #9a4b18;
+      --shadow: 0 12px 30px rgba(23, 33, 27, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px; border-radius: 2px; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 3.5rem 0 2rem;
+      background: linear-gradient(135deg, #0f4c4f, #167579);
+      color: #fff;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.84;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 0.45rem; font-size: clamp(2rem, 6vw, 3.65rem); line-height: 1.05; }
+    header p:last-child { margin-bottom: 0; max-width: 62ch; opacity: 0.9; }
+
+    main { padding: 1.5rem 0 3.5rem; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      grid-column: span 12;
+      padding: clamp(1.15rem, 3vw, 1.6rem);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 { margin-bottom: 1rem; font-size: 1.3rem; }
+    .weather { grid-column: span 12; }
+    .news { grid-column: span 7; }
+    .activities { grid-column: span 5; }
+
+    .outlook {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .place {
+      padding: 1rem;
+      border-radius: 0.75rem;
+      background: var(--accent-soft);
+    }
+
+    .place h3 { margin-bottom: 0.35rem; font-size: 1rem; }
+    .temperature { margin: 0.25rem 0; font-size: 1.65rem; font-weight: 800; letter-spacing: -0.03em; }
+    .place p { margin-bottom: 0.45rem; }
+
+    .source {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .source a { white-space: nowrap; }
+
+    .items { margin: 0; padding: 0; list-style: none; }
+    .items li + li { border-top: 1px solid var(--line); }
+    .items li { padding: 1rem 0; }
+    .items li:first-child { padding-top: 0; }
+    .items li:last-child { padding-bottom: 0; }
+    .items h3 { margin-bottom: 0.25rem; font-size: 1rem; line-height: 1.35; }
+    .items p { margin-bottom: 0.4rem; }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.7rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 0.65rem;
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #0c4f51;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .plan {
+      margin-top: 1rem;
+      padding: 1rem 1.1rem;
+      border-left: 4px solid var(--warm);
+      border-radius: 0.35rem;
+      background: color-mix(in srgb, var(--surface) 82%, #f5c8a8);
+    }
+
+    .plan strong { display: block; margin-bottom: 0.2rem; }
+    .plan p { margin-bottom: 0; }
+
+    footer {
+      padding: 1.2rem 0 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .status { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .ok::before { content: "✓ "; color: var(--accent); font-weight: 900; }
+
+    @media (max-width: 780px) {
+      header { padding-top: 2.5rem; }
+      .news, .activities { grid-column: span 12; }
+      .outlook { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111713;
+        --surface: #1a231d;
+        --text: #edf4ef;
+        --muted: #b2c0b6;
+        --line: #35443a;
+        --accent: #78d6d0;
+        --accent-soft: #193c3a;
+        --warm: #f0a36e;
+        --shadow: none;
+      }
+      .tag { color: #b6efeb; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Your daily brief</p>
+      <h1>Thursday, August 20</h1>
+      <p>A quick look at the weather across southeast Michigan, the stories to know, and a few after-work possibilities.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <section class="card weather" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Weather outlook</h2>
+        <div class="outlook">
+          <article class="place">
+            <h3>Canton &amp; Plymouth</h3>
+            <p class="temperature">81° / 55°F</p>
+            <p>Mostly sunny this afternoon and mostly clear tonight, with no precipitation forecast.</p>
+            <p class="source">Sources: <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4822">Canton forecast</a> · <a href="https://forecast.weather.gov/MapClick.php?lat=42.2836&amp;lon=-83.7455">Plymouth forecast</a></p>
+          </article>
+          <article class="place">
+            <h3>Ann Arbor</h3>
+            <p class="temperature">81° / 55°F</p>
+            <p>Mostly sunny this afternoon and mostly clear tonight, with no precipitation forecast.</p>
+            <p class="source">Source: <a href="https://forecast.weather.gov/MapClick.php?FcstType=text&amp;lat=42.2836&amp;lg=en&amp;lon=-83.7455&amp;unit=1">NWS forecast</a></p>
+          </article>
+          <article class="place">
+            <h3>Detroit</h3>
+            <p class="temperature">81° / 63°F</p>
+            <p>Mostly sunny this afternoon and mostly clear tonight, with no precipitation forecast.</p>
+            <p class="source">Sources: <a href="https://forecast.weather.gov/MapClick.php?lat=42.3314&amp;lon=-83.0458">NWS forecast</a> · <a href="https://www.accuweather.com/en/us/detroit/48226/august-weather/1-348755_1_al">AccuWeather</a></p>
+          </article>
+        </div>
+        <div class="plan" aria-label="Suggested short plan">
+          <strong>A simple after-work plan</strong>
+          <p>With an 81°F high, clear evening conditions, and no rain forecast across the area, pick one nearby event below and leave the rest of the evening open. <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4822">Weather source</a></p>
+        </div>
+      </section>
+
+      <section class="card news" aria-labelledby="news-heading">
+        <h2 id="news-heading">News digest</h2>
+        <ol class="items">
+          <li>
+            <span class="tag">Local</span>
+            <h3><a href="https://www.clickondetroit.com/news/local/2026/08/20/dea-detroit-seizes-85-million-potentially-deadly-doses-of-fentanyl-142-guns-seized-176-arrests/">DEA Detroit reports 8.5 million potentially lethal fentanyl doses seized</a></h3>
+            <p>The Detroit Field Division said a recent operation led to 176 arrests, 142 gun seizures, and roughly $2.6 million in seized cash and assets.</p>
+            <div class="meta"><span>WDIV Local 4</span><time datetime="2026-08-20T05:00:00-04:00">5:00 a.m.</time></div>
+          </li>
+          <li>
+            <span class="tag">U.S.</span>
+            <h3><a href="https://www.clickondetroit.com/news/politics/2026/08/20/the-latest-the-us-national-debt-hits-a-record-40-trillion/">U.S. debt surpasses $40 trillion</a></h3>
+            <p>The national debt crossed a record milestone five months after reaching $39 trillion, with defense spending, social programs, and interest costs cited as drivers.</p>
+            <div class="meta"><span>Associated Press</span><time datetime="2026-08-20T14:54:00-04:00">2:54 p.m.</time></div>
+          </li>
+          <li>
+            <span class="tag">U.S.</span>
+            <h3><a href="https://www.clickondetroit.com/news/national/2026/08/20/still-recovering-from-hurricane-lala-hawaii-prepares-for-a-possible-weekend-cyclone/">Hawaii prepares for another tropical system during Hurricane Lala recovery</a></h3>
+            <p>Thousands remain without power as forecasters warn a developing system could bring up to 15 inches of rain plus dangerous flooding, mudslides, and rip currents to the Big Island this weekend.</p>
+            <div class="meta"><span>Associated Press</span><time datetime="2026-08-20T14:34:00-04:00">2:34 p.m.</time></div>
+          </li>
+          <li>
+            <span class="tag">World</span>
+            <h3><a href="https://www.clickondetroit.com/news/world/2026/08/20/us-sends-20-deportees-to-liberia-part-of-1200-migrants-the-country-will-receive-under-new-deal/">U.S. begins deportations under Liberia third-country agreement</a></h3>
+            <p>Twenty deportees arrived in Liberia under a new agreement allowing the country to accept as many as 1,200 non-Liberians.</p>
+            <div class="meta"><span>Associated Press</span><time datetime="2026-08-20T14:06:00-04:00">2:06 p.m.</time></div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="card activities" aria-labelledby="activities-heading">
+        <h2 id="activities-heading">After work</h2>
+        <ul class="items">
+          <li>
+            <span class="tag">Canton · 7:00 p.m.</span>
+            <h3><a href="https://www.csc.canton-mi.org/calendar.aspx">Yoga in the Village</a></h3>
+            <p>Free evening yoga at Preservation Park.</p>
+            <div class="meta"><span>Free</span><span>Preservation Park</span></div>
+          </li>
+          <li>
+            <span class="tag">Ann Arbor · 6:00 p.m.</span>
+            <h3><a href="https://lsa.umich.edu/archaeology/news-events/all-events.detail.html/149427-21906399.html">Third Thursday Tour: Highlights of the Kelsey</a></h3>
+            <p>A free evening tour at the Kelsey Museum of Archaeology.</p>
+            <div class="meta"><span>Free</span><span>Kelsey Museum of Archaeology</span></div>
+          </li>
+          <li>
+            <span class="tag">Detroit · 5:00 p.m.</span>
+            <h3><a href="https://www.detroithistorical.org/events/free-admission-5-8pm-9">Free admission and “Beyond the Stars &amp; Stripes”</a></h3>
+            <p>Free admission from 5–8 p.m. plus a Flag Stories lecture at the Dossin Great Lakes Museum.</p>
+            <div class="meta"><span>Free</span><span>Dossin Great Lakes Museum</span></div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="wrap">
+    <p class="eyebrow">Collector status</p>
+    <div class="status" aria-label="Collector status">
+      <span class="ok">Weather available</span>
+      <span class="ok">News available</span>
+      <span class="ok">Activities available</span>
+    </div>
+    <p>Weather collected at <time datetime="2026-08-20T14:55:00-04:00">2:55 p.m. EDT</time>; news at <time datetime="2026-08-20T15:15:35-04:00">3:15 p.m. EDT</time>; activities at <time datetime="2026-08-20T19:15:18Z">7:15 p.m. UTC</time>.</p>
+  </footer>
+</body>
+</html>
