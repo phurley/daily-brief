@@ -3,287 +3,576 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
   <title>Daily Brief — Thursday, August 20, 2026</title>
   <style>
     :root {
-      color-scheme: light dark;
-      --bg: #f3f5f2;
-      --surface: #ffffff;
-      --text: #17211b;
-      --muted: #5b675f;
-      --line: #d6ddd8;
-      --accent: #116466;
-      --accent-soft: #dff2ef;
-      --warm: #9a4b18;
-      --shadow: 0 12px 30px rgba(23, 33, 27, 0.08);
+      color-scheme: light;
+      --ink: #102f3b;
+      --muted: #536a72;
+      --paper: #fffdf8;
+      --paper-blue: #f1f8f8;
+      --sky: #dceff1;
+      --lake: #0c6770;
+      --lake-dark: #084952;
+      --sun: #e59a3a;
+      --sun-soft: #f7d8a0;
+      --green: #47705c;
+      --line: #cbdcda;
+      --shadow: 0 1.15rem 3rem rgba(16, 47, 59, .09);
     }
 
     * { box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
+      background:
+        radial-gradient(circle at 9% 4%, rgba(247, 216, 160, .78) 0 5rem, transparent 13rem),
+        linear-gradient(180deg, var(--sky) 0 24rem, #f5f1e7 48rem, #eef4f1 100%);
+      color: var(--ink);
+      font: 1rem/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-rendering: optimizeLegibility;
     }
 
-    a {
-      color: var(--accent);
-      text-underline-offset: 0.18em;
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 25rem;
+      pointer-events: none;
+      background: linear-gradient(165deg, transparent 0 58%, rgba(255, 255, 255, .34) 58% 59%, transparent 59%);
     }
 
-    a:hover { text-decoration-thickness: 2px; }
-    a:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px; border-radius: 2px; }
+    main {
+      position: relative;
+      width: min(76rem, calc(100% - 2rem));
+      margin: clamp(1rem, 3vw, 3rem) auto;
+    }
 
-    .wrap {
-      width: min(1120px, calc(100% - 2rem));
-      margin: 0 auto;
+    header,
+    section {
+      overflow: hidden;
+      position: relative;
+      background: rgba(255, 253, 248, .96);
+      border: 1px solid rgba(148, 177, 176, .7);
+      border-radius: 1.25rem;
+      box-shadow: var(--shadow);
+      padding: clamp(1.25rem, 4vw, 3rem);
+      margin-block: clamp(1rem, 2vw, 1.5rem);
     }
 
     header {
-      padding: 3.5rem 0 2rem;
-      background: linear-gradient(135deg, #0f4c4f, #167579);
-      color: #fff;
+      isolation: isolate;
+      min-height: 25rem;
+      display: grid;
+      align-content: end;
+      color: #fffdf8;
+      border: 0;
+      background:
+        linear-gradient(110deg, rgba(5, 48, 58, .97) 0 46%, rgba(8, 73, 82, .88) 68%, rgba(12, 103, 112, .76) 100%);
     }
 
-    .eyebrow {
-      margin: 0 0 0.45rem;
-      font-size: 0.78rem;
-      font-weight: 750;
-      letter-spacing: 0.12em;
+    header::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: clamp(12rem, 28vw, 21rem);
+      aspect-ratio: 1;
+      right: clamp(-5rem, -2vw, -1rem);
+      top: clamp(-6rem, -3vw, -2rem);
+      border-radius: 50%;
+      background: radial-gradient(circle, #f6ca79 0 31%, #e59a3a 32% 46%, rgba(229, 154, 58, .2) 47% 62%, transparent 63%);
+      opacity: .95;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: auto -8% -24% 34%;
+      height: 52%;
+      border-radius: 50% 50% 0 0;
+      background: linear-gradient(160deg, rgba(81, 123, 101, .4), rgba(8, 73, 82, .16));
+      transform: rotate(-4deg);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.12;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 10ch;
+      margin: 0;
+      font-size: clamp(3.15rem, 9vw, 6.8rem);
+      font-weight: 500;
+      letter-spacing: -.055em;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin: 0 0 1.5rem;
+      font-size: clamp(1.8rem, 4vw, 2.65rem);
+      font-weight: 500;
+      letter-spacing: -.025em;
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--sun), transparent);
+    }
+
+    h3 {
+      margin: 0 0 .45rem;
+      font-size: clamp(1.12rem, 2.2vw, 1.38rem);
+      color: var(--lake-dark);
+    }
+
+    p { margin: .45rem 0 0; }
+    strong { color: #153f48; }
+    cite { font-family: Georgia, "Times New Roman", serif; }
+
+    a {
+      color: var(--lake-dark);
+      font-weight: 700;
+      text-decoration-color: rgba(229, 154, 58, .8);
+      text-decoration-thickness: .12em;
+      text-underline-offset: .2em;
+    }
+
+    a:hover { color: #7a4613; }
+    a:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: .15rem; }
+
+    .eyebrow,
+    .meta {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    header .eyebrow {
+      order: -1;
+      color: #ffe2ad;
+      margin: 0 0 .5rem;
+      font-weight: 800;
+      letter-spacing: .15em;
       text-transform: uppercase;
-      opacity: 0.84;
     }
 
-    h1, h2, h3, p { margin-top: 0; }
-    h1 { margin-bottom: 0.45rem; font-size: clamp(2rem, 6vw, 3.65rem); line-height: 1.05; }
-    header p:last-child { margin-bottom: 0; max-width: 62ch; opacity: 0.9; }
+    header > h1 + p {
+      width: fit-content;
+      margin-top: .5rem;
+      color: #d6eeee;
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      font-weight: 650;
+      letter-spacing: .04em;
+    }
 
-    main { padding: 1.5rem 0 3.5rem; }
+    .callout {
+      margin-top: 1.5rem;
+      padding: 1rem 1.15rem;
+      background: var(--paper-blue);
+      border: 1px solid #c8dedc;
+      border-left: .35rem solid var(--sun);
+      border-radius: .25rem .85rem .85rem .25rem;
+    }
+
+    header .callout {
+      max-width: 62rem;
+      color: #f9ffff;
+      background: rgba(255, 255, 255, .11);
+      border-color: rgba(255, 255, 255, .26);
+      border-left-color: #f3b65b;
+      backdrop-filter: blur(8px);
+    }
+
+    header .callout strong { color: #ffe3ae; }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
 
     .card {
-      grid-column: span 12;
-      padding: clamp(1.15rem, 3vw, 1.6rem);
-      border: 1px solid var(--line);
-      border-radius: 1rem;
-      background: var(--surface);
-      box-shadow: var(--shadow);
+      min-width: 0;
+      padding: 1.2rem;
+      background: linear-gradient(150deg, #f6fbfa, #e7f1ef);
+      border: 1px solid #cadedb;
+      border-top: .3rem solid var(--sun);
+      border-radius: .85rem;
     }
 
-    .card h2 { margin-bottom: 1rem; font-size: 1.3rem; }
-    .weather { grid-column: span 12; }
-    .news { grid-column: span 7; }
-    .activities { grid-column: span 5; }
+    .card h3::before {
+      content: "";
+      display: inline-block;
+      width: .7em;
+      aspect-ratio: 1;
+      margin-right: .45em;
+      border-radius: 50%;
+      background: var(--sun);
+      box-shadow: 0 0 0 .22rem var(--sun-soft);
+      vertical-align: .05em;
+    }
 
-    .outlook {
+    ol,
+    ul { margin: 0; padding: 0; }
+
+    li + li { margin-top: .9rem; }
+
+    [data-brief-section="tonight"] {
+      color: #e9f6f5;
+      background: linear-gradient(145deg, #0c3c47, #0a5961);
+      border: 0;
+    }
+
+    [data-brief-section="tonight"] h2,
+    [data-brief-section="tonight"] h3,
+    [data-brief-section="tonight"] strong,
+    [data-brief-section="tonight"] a { color: #fffdf8; }
+
+    [data-brief-section="tonight"] h2::after { background: linear-gradient(90deg, #f3b65b, transparent); }
+
+    [data-brief-section="tonight"] ol {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
+      gap: 1rem;
+      list-style: none;
+      counter-reset: tonight;
     }
 
-    .place {
-      padding: 1rem;
-      border-radius: 0.75rem;
-      background: var(--accent-soft);
+    [data-brief-section="tonight"] li {
+      counter-increment: tonight;
+      margin: 0;
+      padding: 1.25rem;
+      background: rgba(255, 255, 255, .09);
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: .85rem;
     }
 
-    .place h3 { margin-bottom: 0.35rem; font-size: 1rem; }
-    .temperature { margin: 0.25rem 0; font-size: 1.65rem; font-weight: 800; letter-spacing: -0.03em; }
-    .place p { margin-bottom: 0.45rem; }
-
-    .source {
-      font-size: 0.8rem;
-      color: var(--muted);
+    [data-brief-section="tonight"] li::before {
+      content: "0" counter(tonight);
+      display: block;
+      margin-bottom: .75rem;
+      color: #f4bd67;
+      font: 800 .8rem/1 system-ui, sans-serif;
+      letter-spacing: .14em;
     }
 
-    .source a { white-space: nowrap; }
+    [data-brief-section="tonight"] a { text-decoration-color: #f3b65b; }
+    [data-brief-section="tonight"] .meta { margin-top: 1.25rem; color: #bdd8d8; }
 
-    .items { margin: 0; padding: 0; list-style: none; }
-    .items li + li { border-top: 1px solid var(--line); }
-    .items li { padding: 1rem 0; }
-    .items li:first-child { padding-top: 0; }
-    .items li:last-child { padding-bottom: 0; }
-    .items h3 { margin-bottom: 0.25rem; font-size: 1rem; line-height: 1.35; }
-    .items p { margin-bottom: 0.4rem; }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem 0.7rem;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
-    .tag {
+    .score {
       display: inline-block;
-      margin-bottom: 0.65rem;
-      padding: 0.22rem 0.55rem;
+      white-space: nowrap;
+      padding: .12rem .55rem;
+      color: #173c42;
+      background: #f6d28e;
       border-radius: 999px;
-      background: var(--accent-soft);
-      color: #0c4f51;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+      font: 800 .82rem/1.45 system-ui, sans-serif;
     }
 
-    .plan {
-      margin-top: 1rem;
-      padding: 1rem 1.1rem;
-      border-left: 4px solid var(--warm);
-      border-radius: 0.35rem;
-      background: color-mix(in srgb, var(--surface) 82%, #f5c8a8);
+    [data-brief-section="news"] ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 2rem;
+      list-style: none;
     }
 
-    .plan strong { display: block; margin-bottom: 0.2rem; }
-    .plan p { margin-bottom: 0; }
+    [data-brief-section="news"] li {
+      margin: 0;
+      padding: 1rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    [data-brief-section="news"] li:first-child {
+      grid-row: span 2;
+      padding: 1.25rem;
+      background: #eef6f3;
+      border: 0;
+      border-radius: .85rem;
+      font-size: 1.08rem;
+    }
+
+    [data-brief-section="countdown"] {
+      display: grid;
+      grid-template-columns: minmax(13rem, .65fr) minmax(18rem, 1.35fr);
+      align-items: center;
+      gap: 1rem 2rem;
+      color: #fffaf1;
+      background: linear-gradient(110deg, #b66421, #da8d32);
+      border: 0;
+    }
+
+    [data-brief-section="countdown"] h2 { margin: 0; }
+    [data-brief-section="countdown"] h2::after { background: rgba(255, 255, 255, .5); }
+    [data-brief-section="countdown"] p { margin: 0; font-size: clamp(1.05rem, 2vw, 1.35rem); }
+    [data-brief-section="countdown"] strong { color: #fff; }
+
+    [data-brief-section="plan-ahead"] > ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      list-style: none;
+    }
+
+    [data-brief-section="plan-ahead"] > ul > li {
+      margin: 0;
+      padding: 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: .85rem;
+      background: linear-gradient(160deg, #fffefa, #f5f1e6);
+    }
+
+    [data-brief-section="science-technology"] { background: #f7fbfa; }
+
+    [data-brief-section="science-technology"] article {
+      display: grid;
+      grid-template-columns: minmax(12rem, .65fr) minmax(18rem, 1.35fr);
+      gap: .5rem 2rem;
+      padding: 1.4rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    [data-brief-section="science-technology"] article:first-of-type { border-top: 0; padding-top: 0; }
+    [data-brief-section="science-technology"] article h3 { grid-row: span 2; font-size: clamp(1.25rem, 2.5vw, 1.65rem); }
+    [data-brief-section="science-technology"] article p { margin: 0; }
+    [data-brief-section="science-technology"] article p + p { margin-top: .75rem; }
 
     footer {
-      padding: 1.2rem 0 2rem;
       color: var(--muted);
-      font-size: 0.8rem;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: .86rem;
     }
 
-    .status { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
-    .ok::before { content: "✓ "; color: var(--accent); font-weight: 900; }
+    @media (max-width: 52rem) {
+      .grid,
+      [data-brief-section="tonight"] ol { grid-template-columns: 1fr; }
 
-    @media (max-width: 780px) {
-      header { padding-top: 2.5rem; }
-      .news, .activities { grid-column: span 12; }
-      .outlook { grid-template-columns: 1fr; }
-    }
+      [data-brief-section="news"] ul,
+      [data-brief-section="plan-ahead"] > ul { grid-template-columns: 1fr; }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111713;
-        --surface: #1a231d;
-        --text: #edf4ef;
-        --muted: #b2c0b6;
-        --line: #35443a;
-        --accent: #78d6d0;
-        --accent-soft: #193c3a;
-        --warm: #f0a36e;
-        --shadow: none;
+      [data-brief-section="news"] li:first-child { grid-row: auto; }
+
+      [data-brief-section="science-technology"] article {
+        grid-template-columns: 1fr;
+        gap: .65rem;
       }
-      .tag { color: #b6efeb; }
+
+      [data-brief-section="science-technology"] article h3 { grid-row: auto; }
+    }
+
+    @media (max-width: 35rem) {
+      body { font-size: .96rem; }
+      main { width: min(100% - 1rem, 76rem); margin-block: .5rem; }
+      header, section { padding: 1.15rem; border-radius: .9rem; }
+      header { min-height: 28rem; }
+      h2 { align-items: flex-start; }
+      h2::after { margin-top: .55em; }
+      [data-brief-section="countdown"] { grid-template-columns: 1fr; }
+      .card, [data-brief-section="tonight"] li, [data-brief-section="plan-ahead"] > ul > li { padding: 1rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; }
+      html { scroll-behavior: auto; }
+    }
+
+    @media print {
+      body { background: #fff; color: #000; font-size: 10pt; }
+      body::before { display: none; }
+      main { width: 100%; margin: 0; }
+      header, section { break-inside: avoid; box-shadow: none; background: #fff !important; color: #000 !important; border: 1px solid #aaa; }
+      header { min-height: auto; }
+      header::before, header::after { display: none; }
+      header *, [data-brief-section="tonight"] *, [data-brief-section="countdown"] * { color: #000 !important; }
+      a { color: #000; }
     }
   </style>
+<style id="brief-feedback-styles">
+  .brief-feedback-button { margin:.75rem 0 0; padding:.35rem .65rem; border:1px solid currentColor;
+    border-radius:999px; background:transparent; color:inherit; cursor:pointer; font:inherit; font-size:.78rem; }
+  #brief-feedback-dialog { max-width:36rem; width:calc(100% - 2rem); border:0; border-radius:1rem;
+    padding:1.25rem; box-shadow:0 1.5rem 5rem rgb(0 0 0 / .35); }
+  #brief-feedback-dialog::backdrop { background:rgb(0 0 0 / .55); }
+  #brief-feedback-dialog textarea { width:100%; min-height:9rem; margin:.75rem 0; padding:.75rem; font:inherit; }
+  .brief-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
+</style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <p class="eyebrow">Your daily brief</p>
-      <h1>Thursday, August 20</h1>
-      <p>A quick look at the weather across southeast Michigan, the stories to know, and a few after-work possibilities.</p>
-    </div>
-  </header>
+  <main>
+    <header data-brief-section="overview">
+      <p class="eyebrow">Southeast Michigan · Thursday</p>
+      <h1>Daily Brief</h1>
+      <p>August 20, 2026</p>
+      <p class="callout"><strong>The short version:</strong> Expect a warm, mostly sunny and dry day around Ann Arbor and Detroit. Canton and Plymouth carry a small rain chance. Tonight’s strongest nearby options are free yoga in Canton or a $5 classic movie in Plymouth.</p>
+    </header>
 
-  <main class="wrap">
-    <div class="grid">
-      <section class="card weather" aria-labelledby="weather-heading">
-        <h2 id="weather-heading">Weather outlook</h2>
-        <div class="outlook">
-          <article class="place">
-            <h3>Canton &amp; Plymouth</h3>
-            <p class="temperature">81° / 55°F</p>
-            <p>Mostly sunny this afternoon and mostly clear tonight, with no precipitation forecast.</p>
-            <p class="source">Sources: <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4822">Canton forecast</a> · <a href="https://forecast.weather.gov/MapClick.php?lat=42.2836&amp;lon=-83.7455">Plymouth forecast</a></p>
-          </article>
-          <article class="place">
-            <h3>Ann Arbor</h3>
-            <p class="temperature">81° / 55°F</p>
-            <p>Mostly sunny this afternoon and mostly clear tonight, with no precipitation forecast.</p>
-            <p class="source">Source: <a href="https://forecast.weather.gov/MapClick.php?FcstType=text&amp;lat=42.2836&amp;lg=en&amp;lon=-83.7455&amp;unit=1">NWS forecast</a></p>
-          </article>
-          <article class="place">
-            <h3>Detroit</h3>
-            <p class="temperature">81° / 63°F</p>
-            <p>Mostly sunny this afternoon and mostly clear tonight, with no precipitation forecast.</p>
-            <p class="source">Sources: <a href="https://forecast.weather.gov/MapClick.php?lat=42.3314&amp;lon=-83.0458">NWS forecast</a> · <a href="https://www.accuweather.com/en/us/detroit/48226/august-weather/1-348755_1_al">AccuWeather</a></p>
-          </article>
+    <section data-brief-section="weather" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">Weather &amp; outside time</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Canton &amp; Plymouth</h3>
+          <p>Partly cloudy, around <strong>81°F / 68°F</strong>, with an <strong>18% chance of rain</strong>. The location-specific forecast was synchronized August 7, while a more recent statewide outlook favors sunny, dry conditions nearby. No active alerts are listed. <a href="https://www.weatherworld.com/14dayweather/mi/canton.html">Location forecast</a> · <a href="https://preview-forecast.weather.gov/product.php?format=txt&amp;glossary=0&amp;issuedby=MI&amp;product=SFT&amp;site=TOP&amp;version=1">NWS outlook</a></p>
         </div>
-        <div class="plan" aria-label="Suggested short plan">
-          <strong>A simple after-work plan</strong>
-          <p>With an 81°F high, clear evening conditions, and no rain forecast across the area, pick one nearby event below and leave the rest of the evening open. <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4822">Weather source</a></p>
+        <div class="card">
+          <h3>Ann Arbor</h3>
+          <p>Sunny, around <strong>80°F / 57°F</strong>, with <strong>0% daytime precipitation</strong>. No active alerts are listed. <a href="https://preview-forecast.weather.gov/product.php?format=txt&amp;glossary=0&amp;issuedby=MI&amp;product=SFT&amp;site=TOP&amp;version=1">NWS outlook</a></p>
         </div>
-      </section>
+        <div class="card">
+          <h3>Detroit</h3>
+          <p>Sunny, around <strong>81°F / 61°F</strong>, with <strong>0% daytime precipitation</strong>. No active alerts are listed. <a href="https://preview-forecast.weather.gov/product.php?format=txt&amp;glossary=0&amp;issuedby=MI&amp;product=SFT&amp;site=TOP&amp;version=1">NWS outlook</a></p>
+        </div>
+      </div>
+      <p class="callout"><strong>Walking window: 6 AM–6 PM.</strong> NWS defines this as the daytime period and calls for sun with no daytime precipitation in Ann Arbor and Detroit. In Canton, recheck the local forecast before leaving because its model still shows an 18% rain chance. <a href="https://preview-forecast.weather.gov/product.php?format=txt&amp;glossary=0&amp;issuedby=MI&amp;product=SFT&amp;site=TOP&amp;version=1">Source</a></p>
+    </section>
 
-      <section class="card news" aria-labelledby="news-heading">
-        <h2 id="news-heading">News digest</h2>
-        <ol class="items">
-          <li>
-            <span class="tag">Local</span>
-            <h3><a href="https://www.clickondetroit.com/news/local/2026/08/20/dea-detroit-seizes-85-million-potentially-deadly-doses-of-fentanyl-142-guns-seized-176-arrests/">DEA Detroit reports 8.5 million potentially lethal fentanyl doses seized</a></h3>
-            <p>The Detroit Field Division said a recent operation led to 176 arrests, 142 gun seizures, and roughly $2.6 million in seized cash and assets.</p>
-            <div class="meta"><span>WDIV Local 4</span><time datetime="2026-08-20T05:00:00-04:00">5:00 a.m.</time></div>
-          </li>
-          <li>
-            <span class="tag">U.S.</span>
-            <h3><a href="https://www.clickondetroit.com/news/politics/2026/08/20/the-latest-the-us-national-debt-hits-a-record-40-trillion/">U.S. debt surpasses $40 trillion</a></h3>
-            <p>The national debt crossed a record milestone five months after reaching $39 trillion, with defense spending, social programs, and interest costs cited as drivers.</p>
-            <div class="meta"><span>Associated Press</span><time datetime="2026-08-20T14:54:00-04:00">2:54 p.m.</time></div>
-          </li>
-          <li>
-            <span class="tag">U.S.</span>
-            <h3><a href="https://www.clickondetroit.com/news/national/2026/08/20/still-recovering-from-hurricane-lala-hawaii-prepares-for-a-possible-weekend-cyclone/">Hawaii prepares for another tropical system during Hurricane Lala recovery</a></h3>
-            <p>Thousands remain without power as forecasters warn a developing system could bring up to 15 inches of rain plus dangerous flooding, mudslides, and rip currents to the Big Island this weekend.</p>
-            <div class="meta"><span>Associated Press</span><time datetime="2026-08-20T14:34:00-04:00">2:34 p.m.</time></div>
-          </li>
-          <li>
-            <span class="tag">World</span>
-            <h3><a href="https://www.clickondetroit.com/news/world/2026/08/20/us-sends-20-deportees-to-liberia-part-of-1200-migrants-the-country-will-receive-under-new-deal/">U.S. begins deportations under Liberia third-country agreement</a></h3>
-            <p>Twenty deportees arrived in Liberia under a new agreement allowing the country to accept as many as 1,200 non-Liberians.</p>
-            <div class="meta"><span>Associated Press</span><time datetime="2026-08-20T14:06:00-04:00">2:06 p.m.</time></div>
-          </li>
-        </ol>
-      </section>
+    <section data-brief-section="tonight" aria-labelledby="tonight-heading">
+      <h2 id="tonight-heading">A realistic plan for tonight</h2>
+      <ol>
+        <li>
+          <h3>Yoga in the Village — 7 PM</h3>
+          <p><strong>Preservation Park, Canton · Free · <span class="score">98/100</span></strong></p>
+          <p>This is the standout: only six miles away, free, easy to park for, well timed, and highly rated. The one compromise is the outdoor weather fit, so check the sky before heading out. <a href="https://csc.canton-mi.org/Calendar.aspx?EID=4743&amp;calType=0&amp;day=12&amp;month=8&amp;year=2026">Event details</a></p>
+        </li>
+        <li>
+          <h3><cite>Smokey and the Bandit</cite> (1977) — 7 PM</h3>
+          <p><strong>Penn Theatre, Plymouth · $5 · <span class="score">95/100</span></strong></p>
+          <p>A close, inexpensive indoor fallback just seven miles away. Its combination of weather certainty, easy timing, and novelty makes it unusually strong for a simple Thursday-night outing. <a href="https://penntheatre.com/attractions.html">Show details</a></p>
+        </li>
+        <li>
+          <h3>Third Thursday Tour: Highlights of the Kelsey — 6 PM</h3>
+          <p><strong>Kelsey Museum of Archaeology, Ann Arbor · Free · <span class="score">93/100</span></strong></p>
+          <p>The best farther-afield option: a highly rated, unusual museum tour with no admission cost. The 20-mile drive and less convenient parking are the tradeoffs. <a href="https://lsa.umich.edu/archaeology/news-events/all-events.detail.html/149427-21906399.html">Tour details</a></p>
+        </li>
+      </ol>
+      <p class="meta">Scores weigh reputation, distance, price, weather fit, parking, timing, and unusualness. Because today is a workday, this list is limited to after-work choices.</p>
+    </section>
 
-      <section class="card activities" aria-labelledby="activities-heading">
-        <h2 id="activities-heading">After work</h2>
-        <ul class="items">
-          <li>
-            <span class="tag">Canton · 7:00 p.m.</span>
-            <h3><a href="https://www.csc.canton-mi.org/calendar.aspx">Yoga in the Village</a></h3>
-            <p>Free evening yoga at Preservation Park.</p>
-            <div class="meta"><span>Free</span><span>Preservation Park</span></div>
-          </li>
-          <li>
-            <span class="tag">Ann Arbor · 6:00 p.m.</span>
-            <h3><a href="https://lsa.umich.edu/archaeology/news-events/all-events.detail.html/149427-21906399.html">Third Thursday Tour: Highlights of the Kelsey</a></h3>
-            <p>A free evening tour at the Kelsey Museum of Archaeology.</p>
-            <div class="meta"><span>Free</span><span>Kelsey Museum of Archaeology</span></div>
-          </li>
-          <li>
-            <span class="tag">Detroit · 5:00 p.m.</span>
-            <h3><a href="https://www.detroithistorical.org/events/free-admission-5-8pm-9">Free admission and “Beyond the Stars &amp; Stripes”</a></h3>
-            <p>Free admission from 5–8 p.m. plus a Flag Stories lecture at the Dossin Great Lakes Museum.</p>
-            <div class="meta"><span>Free</span><span>Dossin Great Lakes Museum</span></div>
-          </li>
-        </ul>
-      </section>
-    </div>
+    <section data-brief-section="news" aria-labelledby="news-heading">
+      <h2 id="news-heading">News in brief</h2>
+      <ul>
+        <li><strong>Michigan reports its first human West Nile virus case of the year.</strong> The case was found through routine blood-donation screening, while mosquito activity has also been reported in several southeastern Michigan counties. <a href="https://www.cbsnews.com/detroit/news/human-case-of-west-nile-virus-michigan-blood-donation/">CBS Detroit, 1:47 PM EDT</a></li>
+        <li><strong>Michigan Stadium will carry advertising for the first time in 99 years.</strong> Michigan Athletics is adding Coca-Cola, Meijer, and Google Gemini branding through a partner program intended to support student-athletes. <a href="https://www.cbsnews.com/detroit/news/michigan-stadium-advertisements-first-time-in-99-years/">CBS Detroit, 2:49 PM EDT</a></li>
+        <li><strong>A former Oak Park records clerk has filed a hostile-work-environment lawsuit.</strong> She alleges discrimination, sexual harassment, and improper disclosure of personal information. <a href="https://www.cbsnews.com/detroit/news/oak-park-muslim-woman-lawsuit-alleged-hostile-work-environment/">CBS Detroit, 1:20 PM EDT</a></li>
+        <li><strong>FBI agents seized former Rep. Eric Swalwell’s electronic devices.</strong> CBS News reports that warrants were executed as part of a criminal investigation into sexual-misconduct allegations. <a href="https://www.cbsnews.com/news/swalwell-fbi-search-warrants-devices-sexual-misconduct-investigation/">CBS News, 2:51 PM EDT</a></li>
+        <li><strong>Iran rejected a U.S. economic-pressure threat as the conflict entered a new phase.</strong> U.S. officials say pressure and maritime enforcement will continue, with the USS George Washington arriving in the region. <a href="https://www.cbsnews.com/live-updates/iran-war-donald-trump-us-economic-threat-defeat/">CBS News, 3:54 PM EDT</a></li>
+      </ul>
+    </section>
+
+    <section data-brief-section="countdown" aria-labelledby="countdown-heading">
+      <h2 id="countdown-heading">On the horizon</h2>
+      <p><strong>18 days until Labor Day</strong> on Monday, September 7 — the federal holiday honoring American workers.</p>
+    </section>
+
+    <section data-brief-section="plan-ahead" aria-labelledby="plan-heading">
+      <h2 id="plan-heading">Plan two to six weeks ahead</h2>
+      <ul>
+        <li>
+          <h3>Plymouth Fall Festival — September 11–13</h3>
+          <p><strong>Downtown Plymouth / Kellogg Park · Free entry · <span class="score">96/100</span></strong></p>
+          <p>This nearby three-day festival has a fixed schedule of food fundraisers, carnival attractions, a craft show, and a car show. No festival admission is sold; carnival tickets are available at the booth. The Sunday Rotary Chicken BBQ runs until sold out, and its presale location is still listed as coming soon. <a href="https://plymouthfallfestival.com/schedule/">Schedule</a></p>
+        </li>
+        <li>
+          <h3>VOICES feat. Ki5 &amp; Friends — September 3 at 8 PM</h3>
+          <p><strong>The Ark, Ann Arbor · $24 · <span class="score">89/100</span></strong></p>
+          <p>A one-night performance in an intimate venue, with tickets already offered. There is no published reservation deadline or original on-sale date, so book when you decide to go. <a href="https://theark.org/events/month/2026-09/">Tickets and calendar</a></p>
+        </li>
+        <li>
+          <h3>Before First Pitch — September 12 at noon</h3>
+          <p><strong>Detroit Opera Cadillac Café · Free · <span class="score">88/100</span></strong></p>
+          <p>A game-day-weekend option with DJ sets, food trucks, and giveaways. It is free and open to the public, with no reservation required. <a href="https://detroitopera.org/before-first-pitch/">Event details</a></p>
+        </li>
+        <li>
+          <h3>Ann Arbor Django Reinhardt Festival — September 12 at 8 PM</h3>
+          <p><strong>The Ark, Ann Arbor · $29–$40 · <span class="score">85/100</span></strong></p>
+          <p>The Ark calls this its fourth annual festival, featuring a special jazz-manouche lineup. Tickets are on sale; no reservation deadline or original on-sale date is published. Reserve while seats remain. <a href="https://theark.org/event/ann-arbor-django-reinhardt-festival-260912/">Tickets</a></p>
+        </li>
+      </ul>
+    </section>
+
+    <section data-brief-section="science-technology" aria-labelledby="science-heading">
+      <h2 id="science-heading">Science &amp; technology</h2>
+      <article>
+        <h3>Room-temperature device produces correlated microwave pairs</h3>
+        <p>MIT researchers demonstrated a compact magnon–photon device that splits one input microwave photon into two frequency-distinct, strongly correlated signals at room temperature, then used them to recover an encoded image in a secure-communications demonstration.</p>
+        <p><strong>What’s new:</strong> Published in <cite>Nature Electronics</cite> on August 19, the peer-reviewed result replaces a cryogenic superconducting approach with a room-temperature cavity-magnonic platform and demonstrates non-degenerate correlated outputs. <strong>Caveat:</strong> It remains a laboratory proof of principle, the authors disclose a related patent filing, and a preprint preceded this version of record. <a href="https://www.nature.com/articles/s41928-026-01689-y">Paper</a> · <a href="https://news.mit.edu/2026/securing-wireless-communication-next-generation-devices-0819">MIT summary</a></p>
+      </article>
+      <article>
+        <h3>Hubble data point to an earlier major Milky Way merger</h3>
+        <p>A <cite>Nature Astronomy</cite> analysis of homogeneous Hubble photometry for 39 inner-Milky-Way globular clusters identifies a third age–metallicity sequence, attributed to a merger with the proposed Low-energy-Kraken-Heracles progenitor about 12.3 billion years ago.</p>
+        <p><strong>What’s new:</strong> Published August 17, the peer-reviewed study dates the event about 1.8 billion years before the Gaia-Sausage-Enceladus merger. <strong>Caveat:</strong> The merger is inferred from cluster ages, chemical-evolution modeling, and orbital statistics rather than directly observed; absolute ages depend on stellar-evolution models, and smaller progenitors without surviving clusters cannot be ruled out. <a href="https://www.nature.com/articles/s41550-026-02931-5">Paper</a> · <a href="https://science.nasa.gov/missions/hubble/hubble-solves-merger-mystery-from-milky-ways-early-years/">NASA summary</a></p>
+      </article>
+      <article>
+        <h3>LRO resolves a fresh lunar crater from a Falcon 9 upper-stage impact</h3>
+        <p>NASA’s Lunar Reconnaissance Orbiter imaged the crater created when a Falcon 9 upper stage struck the Moon on August 5. Multi-angle camera images put it at about 60 feet wide and under 10 feet deep, with older weathered material and fresher ejecta exposed.</p>
+        <p><strong>What’s new:</strong> NASA released the measurements August 18; the observation also tested impact-prediction tools after an independently refined trajectory and Korea’s Danuri imaging helped localize the site. <strong>Caveat:</strong> This is an official mission observation, not a peer-reviewed paper. Depth comes from shadow length, and one accidental impact cannot establish general impact behavior. <a href="https://science.nasa.gov/solar-system/moon/nasas-lro-images-falcon-9-crater-on-moon-learns-new-details/">NASA mission report</a></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>Prepared from collector results gathered August 20, 2026. Follow linked sources for updates.</p>
+    </footer>
   </main>
-
-  <footer class="wrap">
-    <p class="eyebrow">Collector status</p>
-    <div class="status" aria-label="Collector status">
-      <span class="ok">Weather available</span>
-      <span class="ok">News available</span>
-      <span class="ok">Activities available</span>
+<dialog id="brief-feedback-dialog">
+  <form method="dialog">
+    <h2>Improve this brief</h2>
+    <p id="brief-feedback-context"></p>
+    <textarea id="brief-feedback-text" aria-label="Feedback" placeholder="What should change in this section?"></textarea>
+    <p><small>This opens a public GitHub issue for review before the next brief run.</small></p>
+    <div class="brief-feedback-actions">
+      <button value="cancel">Cancel</button>
+      <button id="brief-feedback-submit" value="default">Continue to GitHub</button>
     </div>
-    <p>Weather collected at <time datetime="2026-08-20T14:55:00-04:00">2:55 p.m. EDT</time>; news at <time datetime="2026-08-20T15:15:35-04:00">3:15 p.m. EDT</time>; activities at <time datetime="2026-08-20T19:15:18Z">7:15 p.m. UTC</time>.</p>
-  </footer>
+  </form>
+</dialog>
+<script id="brief-feedback-script">
+  (() => {
+    const repository = "phurley/daily-brief";
+    const dialog = document.getElementById("brief-feedback-dialog");
+    const context = document.getElementById("brief-feedback-context");
+    const input = document.getElementById("brief-feedback-text");
+    let sectionName = "General";
+    const openFeedback = (section) => {
+      sectionName = section.dataset.briefSection || section.querySelector("h1,h2,h3")?.textContent?.trim() || "General";
+      context.textContent = `Section: ${sectionName}`;
+      input.value = "";
+      dialog.showModal();
+      input.focus();
+    };
+    const sections = [...document.querySelectorAll("[data-brief-section], main > section, main > article")]
+      .filter((section, index, all) => all.findIndex((candidate) => candidate === section || candidate.contains(section)) === index);
+    sections.forEach((section) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "brief-feedback-button";
+      button.textContent = "Suggest an improvement";
+      button.addEventListener("click", () => openFeedback(section));
+      section.append(button);
+      section.addEventListener("contextmenu", (event) => { event.preventDefault(); openFeedback(section); });
+    });
+    document.getElementById("brief-feedback-submit").addEventListener("click", (event) => {
+      event.preventDefault();
+      const feedback = input.value.trim();
+      if (!feedback) { input.focus(); return; }
+      const body = `Section: ${sectionName}
+
+Requested change:
+${feedback}
+
+Submitted from the published daily brief.`;
+      const url = `https://github.com/${repository}/issues/new?labels=brief-feedback&title=${encodeURIComponent(`Daily brief: ${sectionName}`)}&body=${encodeURIComponent(body)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+      dialog.close();
+    });
+  })();
+</script>
 </body>
 </html>
