@@ -116,7 +116,7 @@
     }
     .masthead-inner, main, .footer-inner { width: min(1160px, calc(100% - 2.5rem)); margin-inline: auto; }
     .masthead-inner { position: relative; z-index: 1; padding: clamp(5rem, 12vw, 9rem) 0 clamp(2.5rem, 6vw, 4.5rem); }
-    .masthead-tools { display: flex; align-items: center; flex-wrap: wrap; gap: .55rem; margin-top: 1rem; }
+    .masthead-tools { display: grid; grid-template-columns: minmax(0, 1.05fr) auto auto; align-items: center; gap: .55rem; margin-top: 1rem; }
     .masthead-tools .time-chip, .masthead-tools .family-note, .masthead-tools .edition-links { margin: 0; }
     .time-chip { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.4rem; padding: .42rem .68rem; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(8,20,19,.18); backdrop-filter: blur(12px); font-size: .72rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
     .time-chip::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 .25rem color-mix(in srgb, var(--signal) 20%, transparent); }
@@ -130,12 +130,12 @@
     }
     h1, h2, h3 { line-height: 1.15; }
     h1 { margin: 0; max-width: 8ch; font-family: Georgia, "Times New Roman", serif; font-size: clamp(4rem, 13vw, 9rem); font-weight: 500; letter-spacing: -.065em; }
-    .dateline { margin-top: 1rem; font-weight: 700; }
+    .dateline { min-width: 0; margin: 0; padding: .55rem .75rem; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(8,20,19,.18); backdrop-filter: blur(12px); font-size: .86rem; font-weight: 750; white-space: nowrap; }
     .dek { max-width: 49rem; margin-top: 1.6rem; padding-left: 1rem; border-left: 3px solid var(--signal); font-size: clamp(1.05rem, 1.7vw, 1.28rem); }
-    .family-note { display: inline-flex; align-items: center; gap: .55rem; margin: 1.25rem 0 0; padding: .5rem .72rem; border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(8,20,19,.2); backdrop-filter: blur(12px); font-size: .86rem; font-weight: 700; }
+    .family-note { display: inline-flex; align-items: center; min-width: 0; gap: .55rem; margin: 1.25rem 0 0; padding: .5rem .72rem; border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(8,20,19,.2); backdrop-filter: blur(12px); font-size: .8rem; font-weight: 700; white-space: nowrap; }
     .family-note span { color: color-mix(in srgb, var(--event-sun) 82%, white); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
-    .edition-links { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.1rem; font-size: .82rem; font-weight: 750; }
-    .edition-links a, .edition-links span { padding: .48rem .72rem; color: var(--masthead-ink); border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(8,20,19,.2); backdrop-filter: blur(12px); text-decoration: none; }
+    .edition-links { display: flex; gap: .4rem; margin-top: 1.1rem; font-size: .76rem; font-weight: 750; white-space: nowrap; }
+    .edition-links a, .edition-links span { padding: .48rem .62rem; color: var(--masthead-ink); border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(8,20,19,.2); backdrop-filter: blur(12px); text-decoration: none; }
     .edition-links a:hover { color: color-mix(in srgb, var(--event-sun) 82%, white); border-color: color-mix(in srgb, var(--event-sun) 70%, white); }
 
     main { padding: .5rem 0 5rem; }
@@ -154,8 +154,8 @@
       border-left: 5px solid var(--signal);
       border-radius: 10px;
     }
-    .weather-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; overflow: hidden; background: var(--line); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); }
-    .weather-grid .group { min-width: 0; padding: 1.4rem; background: var(--surface); }
+    .weather-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+    .weather-grid .group { min-width: 0; padding: 1.35rem; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; box-shadow: 0 8px 24px rgba(34, 53, 44, .06); }
     .weather-grid h3 { color: var(--accent); font-size: .77rem; letter-spacing: .13em; text-transform: uppercase; }
     .weather-grid p { font-family: Georgia, "Times New Roman", serif; font-size: 1.22rem; }
 
@@ -226,7 +226,9 @@
       .masthead-inner, main, .footer-inner { width: min(100% - 1.3rem, 1120px); }
       .masthead { min-height: 66vh; }
       .weather-grid { grid-template-columns: 1fr; }
-      .masthead-tools { align-items: flex-start; }
+      .masthead-tools { display: flex; align-items: flex-start; }
+      .masthead-tools .dateline { width: 100%; }
+      .masthead-tools .edition-links { flex-wrap: wrap; white-space: normal; }
       .countdown-detail { display: block; margin: .7rem 0 0; max-width: none; }
       .story-grid { display: block; }
       .card { margin-top: .85rem; }
@@ -403,7 +405,7 @@
 
   <footer>
     <div class="footer-inner">
-      <p><small>Dad joke: I’m reading a book about anti-gravity. It’s impossible to put down.</small></p>
+      <p><small>I’m reading a book about anti-gravity. It’s impossible to put down.</small></p>
     </div>
   </footer>
 <dialog id="brief-feedback-dialog">
