@@ -154,6 +154,18 @@
     .science .card p { font-size: .94rem; }
     .science .card small { display: block; margin-top: auto; padding-top: .8rem; color: var(--muted); }
 
+    .memory-photo {
+      overflow: hidden;
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+    .memory-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+    .memory-photo figcaption { padding: 1rem 1.2rem 1.15rem; color: var(--muted); }
+    .memory-photo figcaption strong { color: var(--ink); }
+
     .short-plan { margin-top: 1.25rem; padding: clamp(1.25rem, 3vw, 2rem); color: var(--masthead-ink); background: linear-gradient(135deg, var(--sky-a), var(--sky-b)); border-radius: 12px; box-shadow: var(--shadow); }
     .short-plan h3 { color: color-mix(in srgb, var(--signal) 70%, white); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; }
     .countdown { padding: clamp(1.2rem, 4vw, 2rem); background: var(--signal-soft); border: 1px solid color-mix(in srgb, var(--signal) 42%, var(--line)); border-radius: 12px; }
@@ -209,20 +221,20 @@
     <section data-brief-section="weather" aria-labelledby="weather-title">
       <div class="section-heading"><h2 id="weather-title">Weather</h2></div>
       <div class="weather-grid">
-        <div class="group" aria-labelledby="weather-current">
-          <h3 id="weather-current">Current</h3>
-          <p>Clear and cool at daybreak: about 56°F in Canton, warming quickly under bright skies.</p>
+        <div class="group" aria-labelledby="weather-today">
+          <h3 id="weather-today">Today</h3>
+          <p>Mostly sunny and pleasant. High 82°F, low 63°F; clear and 56°F at daybreak.</p>
         </div>
-        <div class="group" aria-labelledby="weather-next-day">
-          <h3 id="weather-next-day">Today</h3>
-          <p>Mostly sunny, 63°F at 8 AM and near 80–82°F from mid-afternoon through early evening; partly cloudy after sunset.</p>
+        <div class="group" aria-labelledby="weather-tomorrow">
+          <h3 id="weather-tomorrow">Tomorrow</h3>
+          <p>Clouds and sun, turning humid with a couple of later showers or a thunderstorm. High 77°F, low 57°F.</p>
         </div>
         <div class="group" aria-labelledby="weather-almanac">
-          <h3 id="weather-almanac">Saturday</h3>
-          <p>Late-night showers are possible; keep tonight’s outdoor plans flexible after 10 PM.</p>
+          <h3 id="weather-almanac">Almanac</h3>
+          <p>Tonight’s waxing gibbous moon is about 68% illuminated—one week from full. <a href="https://www.timeanddate.com/moon/usa/canton?month=8">Moon calendar</a></p>
         </div>
       </div>
-      <p class="weather-note"><small>Outdoor plans fit the forecast from late morning through the evening: dry, mild, and mostly sunny. The late-night shower risk is the only mismatch to watch. Verify before leaving with the <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4824">National Weather Service forecast for Canton</a>.</small></p>
+      <p class="weather-note"><small>Canton’s dry, mostly sunny forecast fits outdoor plans through this evening. Tomorrow’s later shower and thunderstorm risk makes Saturday plans less certain. Verify before leaving with the <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4824">National Weather Service forecast for Canton</a>.</small></p>
     </section>
 
     <section data-brief-section="news" aria-labelledby="news-title">
@@ -271,6 +283,16 @@
         <h3 id="short-plan-title">A realistic short plan</h3>
         <p>Keep it easy: dinner near downtown Plymouth, then Motor City Soul at 7:00 PM. If the clear sky holds and you want something more memorable, skip the concert or leave early enough to reach the Detroit Observatory for 9:00 PM observing.</p>
       </aside>
+    </section>
+
+    <section data-brief-section="on-this-day" aria-labelledby="memory-title">
+      <div class="section-heading"><h2 id="memory-title">On this day</h2></div>
+      <figure class="memory-photo">
+        <a href="https://photos.hurleyhome.com/Family/Family-shots-of-grandpa/i-tpQSx5J/A">
+          <img src="https://photos.smugmug.com/Family/Family-shots-of-grandpa/i-tpQSx5J/0/K9K3rtTqDd58vBHqrCfnswSGkdsrSqN2CGHzJNCk7/L/IMG_6628-L.jpg" alt="Hurley family gathered together outdoors at Niagara Falls" decoding="async">
+        </a>
+        <figcaption><strong>August 21, 2010:</strong> A sunny family group photo at Niagara Falls. <a href="https://photos.hurleyhome.com/Family/Family-shots-of-grandpa/i-tpQSx5J/A">Open it in the family SmugMug gallery.</a></figcaption>
+      </figure>
     </section>
 
     <section data-brief-section="starship" aria-labelledby="starship-title">
@@ -326,6 +348,9 @@
       <div class="section-heading"><h2 id="status-title">Collector status</h2></div>
       <ul class="collector-list">
         <li>Weather checked at approximately 6:00 AM EDT</li>
+        <li>Hurley Family calendars checked; Jimmy’s birthday included</li>
+        <li>SmugMug exact-date scan checked 10,000 public images; four August 21 matches found</li>
+        <li>Starship tracker present with source links and no unconfirmed countdown</li>
         <li>Today events checked against official city and university calendars</li>
         <li>News, plan-ahead, and science links refreshed for August 21</li>
       </ul>
@@ -334,7 +359,7 @@
 
   <footer>
     <div class="footer-inner">
-      <p><small>Direct edition prepared at 6:00 AM EDT on August 21. Conditions, event details, and availability can change; follow each linked source before leaving or purchasing. Right-click any panel to suggest an improvement.</small></p>
+      <p><small>Direct edition corrected at 7:05 AM EDT on August 21. Conditions, event details, and availability can change; follow each linked source before leaving or purchasing. Right-click any panel to suggest an improvement.</small></p>
     </div>
   </footer>
 <dialog id="brief-feedback-dialog">
