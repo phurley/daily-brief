@@ -204,8 +204,6 @@
     .memory-photo:hover img { transform: scale(1.018); }
     .memory-photo figcaption { position: absolute; z-index: 1; right: clamp(1.2rem, 4vw, 3rem); bottom: clamp(1.2rem, 4vw, 2.6rem); left: clamp(1.2rem, 4vw, 3rem); display: grid; gap: .24rem; color: rgba(255,255,255,.84); text-shadow: 0 2px 18px rgba(0,0,0,.38); }
     .memory-photo figcaption strong { color: #fff; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.45rem, 4vw, 2.8rem); line-height: 1.05; }
-    .memory-photo figcaption a { color: #fff; text-decoration-color: var(--event-sun); }
-    .archive-kicker { color: var(--event-sun); font-size: .7rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
 
     .short-plan { margin-top: 1.25rem; padding: clamp(1.25rem, 3vw, 2rem); color: var(--masthead-ink); background: linear-gradient(135deg, var(--sky-a), var(--sky-b)); border-radius: 12px; box-shadow: var(--shadow); }
     .short-plan h3 { color: color-mix(in srgb, var(--signal) 70%, white); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; }
@@ -240,6 +238,7 @@
       .memory-break { width: 100vw; }
       .memory-photo { border-radius: 0; }
       .memory-photo img { aspect-ratio: 4 / 3; }
+      .memory-photo figcaption strong { max-width: 16ch; }
     }
     @media (min-width: 761px) and (max-width: 980px) {
       .card, .science .card { grid-column: span 6; }
@@ -342,15 +341,14 @@
       </aside>
     </section>
 
-    <section class="memory-break" data-brief-section="on-this-day" aria-label="From the archive">
+    <section class="memory-break" data-brief-section="on-this-day" aria-label="Family photo from August 21, 2010">
       <figure class="memory-photo">
         <a href="https://photos.hurleyhome.com/Family/Family-shots-of-grandpa/i-tpQSx5J/A">
           <img src="https://photos.smugmug.com/Family/Family-shots-of-grandpa/i-tpQSx5J/0/K9K3rtTqDd58vBHqrCfnswSGkdsrSqN2CGHzJNCk7/L/IMG_6628-L.jpg" alt="A group gathered outdoors at Niagara Falls with mist rising behind them" decoding="async">
         </a>
         <figcaption>
-          <span class="archive-kicker">From the archive</span>
           <strong>Niagara Falls · August 21, 2010</strong>
-          <span>Sixteen summers ago today. <a href="https://photos.hurleyhome.com/Family/Family-shots-of-grandpa/i-tpQSx5J/A">View original.</a></span>
+          <span>Sixteen summers ago today.</span>
         </figcaption>
       </figure>
     </section>
