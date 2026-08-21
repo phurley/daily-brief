@@ -268,11 +268,14 @@
 
 <style id="original-live-layer-styles">
   .live-canton-weather { margin:.55rem 0 0; font-size:.88rem; color:var(--muted); }
+  .masthead-tools { grid-template-columns:minmax(0,1fr) auto auto; }
   .time-chip { justify-self:start; width:max-content; max-width:100%; white-space:nowrap; line-height:1.2; }
+  .masthead-tools .family-note { grid-column:1 / -1; justify-self:start; max-width:min(100%,46rem); white-space:normal; border-radius:1rem; }
+  .masthead-tools .edition-links { grid-column:3; grid-row:1; justify-self:end; }
   @media (max-width:760px) {
     .masthead-tools { flex-wrap:wrap; }
     .masthead-tools .time-chip { width:max-content; }
-    .masthead-tools .family-note { max-width:100%; white-space:normal; }
+    .masthead-tools .family-note { width:100%; max-width:100%; }
     .masthead-tools .edition-links { width:100%; }
   }
 </style>
