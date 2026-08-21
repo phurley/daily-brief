@@ -214,6 +214,8 @@
     .countdown p { margin: 0; }
     .countdown-detail { display: inline-block; margin-left: .65rem; max-width: 34rem; vertical-align: middle; }
     .starship-mini { margin-top: 2.2rem; color: var(--muted); font-size: .84rem; }
+    .science-heading { grid-template-columns: auto auto 1fr; }
+    .science-heading .starship-mini { margin: 0; }
     .starship-mini p { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin: 0; padding: .45rem .65rem; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--surface) 82%, transparent); }
     .starship-mini .rocket { color: var(--signal); font-size: 1rem; }
 
@@ -229,6 +231,8 @@
       .masthead-tools { display: flex; align-items: flex-start; }
       .masthead-tools .dateline { width: 100%; }
       .masthead-tools .edition-links { flex-wrap: wrap; white-space: normal; }
+      .science-heading { display: flex; flex-wrap: wrap; }
+      .science-heading::after { flex: 1 1 3rem; }
       .countdown-detail { display: block; margin: .7rem 0 0; max-width: none; }
       .story-grid { display: block; }
       .card { margin-top: .85rem; }
@@ -351,10 +355,6 @@
       </figure>
     </section>
 
-    <section class="starship-mini" data-brief-section="starship" aria-label="Starship status">
-      <p><span class="rocket" aria-hidden="true">🚀</span> <strong>Starship:</strong> date unknown · <a href="https://www.faa.gov/newsroom/statements/general-statements">FAA</a> · <a href="https://www.spacex.com/launches/mission/?+missionId=starship-flight-test">SpaceX</a></p>
-    </section>
-
     <section class="plan-ahead" data-brief-section="plan-ahead" aria-labelledby="plan-ahead-title">
       <div class="section-heading"><h2 id="plan-ahead-title">Plan ahead: the next two to six weeks</h2></div>
       <div class="story-grid">
@@ -389,7 +389,7 @@
     </section>
 
     <section class="science" data-brief-section="science-technology" aria-labelledby="science-title">
-      <div class="section-heading"><h2 id="science-title">Science &amp; technology</h2></div>
+      <div class="section-heading science-heading"><h2 id="science-title">Science &amp; technology</h2><div class="starship-mini" data-brief-section="starship" aria-label="Starship status"><p><span class="rocket" aria-hidden="true">🚀</span> <strong>Starship:</strong> date unknown · <a href="https://www.faa.gov/newsroom/statements/general-statements">FAA</a> · <a href="https://www.spacex.com/launches/mission/?+missionId=starship-flight-test">SpaceX</a></p></div></div>
       <div class="story-grid">
         <article class="card">
           <h3><a href="https://science.nasa.gov/blogs/science-news/2026/08/05/nasas-new-horizons-finds-evidence-of-recent-liquid-on-plutos-surface/">New Horizons finds evidence of recent liquid on Pluto</a></h3>
