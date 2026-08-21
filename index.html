@@ -3,255 +3,254 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daily Brief — Thursday, August 20, 2026</title>
+  <meta name="theme-color" content="#173f38">
+  <title>Daily Brief — Friday, August 21, 2026</title>
+  <script>
+    (() => {
+      const hour = new Date().getHours();
+      const theme = hour < 6 ? "night" : hour < 11 ? "morning" : hour < 17 ? "afternoon" : hour < 21 ? "evening" : "night";
+      document.documentElement.dataset.timeTheme = theme;
+    })();
+  </script>
   <style>
     :root {
       color-scheme: light;
-      --ink: #17243b;
-      --muted: #596579;
-      --paper: #f7f3ea;
-      --card: #fffdf8;
-      --navy: #12233f;
-      --blue: #275f91;
-      --lake: #88b8c8;
-      --sun: #e7a34a;
-      --rust: #a84d32;
-      --line: #d6d4cc;
-      --shadow: 0 14px 34px rgba(18, 35, 63, .09);
-      font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      --ink: #172622;
+      --muted: #62706b;
+      --paper: #f3f0e8;
+      --surface: #fffdf8;
+      --surface-soft: #e8eee8;
+      --line: #c9d0ca;
+      --accent: #27604e;
+      --accent-strong: #173f38;
+      --signal: #d79a33;
+      --signal-soft: #f6e7bf;
+      --masthead-ink: #fffdf8;
+      --sky-a: #143f37;
+      --sky-b: #286653;
+      --glow: rgba(247, 190, 82, .32);
+      --event-hot: #ef765f;
+      --event-sun: #f7ca66;
+      --event-sea: #0e6768;
+      --shadow: 0 18px 55px rgba(28, 46, 39, .10);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: clamp(16px, .2vw + 15px, 18px);
       line-height: 1.62;
     }
 
-    * { box-sizing: border-box; }
+    :root[data-time-theme="morning"] {
+      --paper: #f6f0e5; --surface-soft: #f1e5cf; --accent: #4f6e57; --accent-strong: #294a3b;
+      --signal: #df6f54; --signal-soft: #f8ddc5; --sky-a: #075b61; --sky-b: #df765b; --glow: rgba(255, 218, 154, .58);
+    }
+    :root[data-time-theme="afternoon"] {
+      --paper: #f3f0e8; --surface-soft: #e5eee8; --accent: #27604e; --accent-strong: #173f38;
+      --signal: #c58b2f; --signal-soft: #f6e7bf; --sky-a: #16453d; --sky-b: #3f7a62; --glow: rgba(250, 198, 83, .38);
+    }
+    :root[data-time-theme="evening"] {
+      --paper: #f3ede9; --surface-soft: #eee2df; --accent: #775065; --accent-strong: #3c3045;
+      --signal: #d17658; --signal-soft: #f6d8ca; --sky-a: #2d2c49; --sky-b: #93565d; --glow: rgba(241, 147, 95, .42);
+    }
+    :root[data-time-theme="night"] {
+      color-scheme: dark;
+      --ink: #e8ece9; --muted: #aebbb7; --paper: #111918; --surface: #192321; --surface-soft: #202d2a;
+      --line: #354542; --accent: #8dbca9; --accent-strong: #b5ddcc; --signal: #e2b66e; --signal-soft: #3c3427;
+      --masthead-ink: #f4f3ed; --sky-a: #0a1418; --sky-b: #1e3d3e; --glow: rgba(153, 191, 196, .18);
+      --shadow: 0 22px 65px rgba(0, 0, 0, .28);
+      --event-hot: #c75e70; --event-sun: #e2b66e; --event-sea: #123f4a;
+    }
 
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       color: var(--ink);
-      background:
-        linear-gradient(180deg, var(--navy) 0 17rem, var(--paper) 17rem 100%);
-      font-size: clamp(1rem, .96rem + .2vw, 1.125rem);
+      background: var(--paper);
+      transition: color .4s ease, background-color .4s ease;
     }
 
-    body::before {
+    a { color: var(--accent-strong); text-decoration-color: var(--signal); text-decoration-thickness: .1em; text-underline-offset: .2em; }
+    a:hover { color: var(--signal); }
+    a:focus-visible { outline: 3px solid var(--signal); outline-offset: 4px; border-radius: 3px; }
+    p { margin: .6rem 0 0; }
+    small { font-size: .82rem; line-height: 1.55; }
+
+    .masthead {
+      position: relative;
+      overflow: hidden;
+      min-height: min(72vh, 700px);
+      display: grid;
+      align-items: end;
+      color: var(--masthead-ink);
+      background:
+        radial-gradient(circle at 82% 25%, var(--glow) 0 4%, transparent 24%),
+        linear-gradient(135deg, var(--sky-a), var(--sky-b));
+      border-bottom: 1px solid color-mix(in srgb, var(--signal) 70%, transparent);
+    }
+    body.event-luau .masthead {
+      background:
+        radial-gradient(circle at 81% 22%, color-mix(in srgb, var(--event-sun) 86%, white) 0 8%, transparent 8.4%),
+        radial-gradient(circle at 92% 42%, color-mix(in srgb, var(--event-hot) 72%, transparent) 0 14%, transparent 29%),
+        linear-gradient(135deg, var(--event-sea), var(--sky-b));
+    }
+    body.event-luau .masthead::before {
       content: "";
       position: absolute;
-      inset: 0 0 auto;
-      height: 17rem;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 82% 24%, rgba(231, 163, 74, .28), transparent 17rem),
-        linear-gradient(135deg, transparent 0 68%, rgba(136, 184, 200, .09) 68% 100%);
+      z-index: 0;
+      right: -8vw;
+      bottom: -20%;
+      width: min(62vw, 760px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      opacity: .42;
+      background: repeating-radial-gradient(ellipse at center, transparent 0 7%, rgba(255,255,255,.2) 7.5% 8.2%, transparent 8.7% 13%);
+      transform: rotate(-12deg) scaleY(.42);
     }
-
-    body > header,
-    main,
-    footer {
-      position: relative;
-      width: min(100% - 2rem, 72rem);
-      margin-inline: auto;
+    .masthead::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .4;
+      background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, transparent, #000);
     }
-
-    body > header {
-      min-height: 17rem;
-      padding: clamp(2rem, 7vw, 5.25rem) clamp(.25rem, 2vw, 1.5rem) 2rem;
-      color: #fffaf0;
-    }
-
-    .meta {
-      margin: 0 0 1.1rem;
-      color: #bcd7e1;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: .76rem;
-      font-weight: 750;
-      letter-spacing: .14em;
+    .masthead-inner, main, .footer-inner { width: min(1160px, calc(100% - 2.5rem)); margin-inline: auto; }
+    .masthead-inner { position: relative; z-index: 1; padding: clamp(5rem, 12vw, 9rem) 0 clamp(2.5rem, 6vw, 4.5rem); }
+    .masthead-tools { display: grid; grid-template-columns: minmax(0, 1.05fr) auto minmax(0, 1.15fr) auto; align-items: center; gap: .55rem; margin-top: 1rem; }
+    .masthead-tools .time-chip, .masthead-tools .family-note, .masthead-tools .edition-links { margin: 0; }
+    .time-chip { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.4rem; padding: .42rem .68rem; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(8,20,19,.18); backdrop-filter: blur(12px); font-size: .72rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+    .time-chip::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 .25rem color-mix(in srgb, var(--signal) 20%, transparent); }
+    .eyebrow {
+      margin: 0 0 1.3rem;
+      color: color-mix(in srgb, var(--signal) 75%, white);
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .16em;
       text-transform: uppercase;
     }
+    h1, h2, h3 { line-height: 1.15; }
+    h1 { margin: 0; max-width: 8ch; font-family: Georgia, "Times New Roman", serif; font-size: clamp(4rem, 13vw, 9rem); font-weight: 500; letter-spacing: -.065em; }
+    .dateline { min-width: 0; margin: 0; padding: .55rem .75rem; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(8,20,19,.18); backdrop-filter: blur(12px); font-size: .86rem; font-weight: 750; white-space: nowrap; }
+    .dek { max-width: 49rem; margin-top: 1.6rem; padding-left: 1rem; border-left: 3px solid var(--signal); font-size: clamp(1.05rem, 1.7vw, 1.28rem); }
+    .family-note { display: inline-flex; align-items: center; min-width: 0; gap: .55rem; margin: 1.25rem 0 0; padding: .5rem .72rem; border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(8,20,19,.2); backdrop-filter: blur(12px); font-size: .8rem; font-weight: 700; white-space: nowrap; }
+    .family-note span { color: color-mix(in srgb, var(--event-sun) 82%, white); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+    .edition-links { display: flex; gap: .4rem; margin-top: 1.1rem; font-size: .76rem; font-weight: 750; white-space: nowrap; }
+    .edition-links a, .edition-links span { padding: .48rem .62rem; color: var(--masthead-ink); border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(8,20,19,.2); backdrop-filter: blur(12px); text-decoration: none; }
+    .edition-links a:hover { color: color-mix(in srgb, var(--event-sun) 82%, white); border-color: color-mix(in srgb, var(--event-sun) 70%, white); }
 
-    h1, h2, h3 { margin-top: 0; line-height: 1.12; text-wrap: balance; }
+    main { padding: .5rem 0 5rem; }
+    section { margin-top: clamp(3.5rem, 8vw, 6rem); }
+    .section-heading { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+    .section-heading::after { content: ""; height: 1px; background: var(--line); }
+    h2 { margin: 0; color: var(--accent-strong); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9rem, 4vw, 2.9rem); letter-spacing: -.035em; }
+    h3 { margin: 0; font-size: clamp(1.08rem, 2vw, 1.3rem); }
 
-    h1 {
-      max-width: 10ch;
-      margin-bottom: .4rem;
-      font-size: clamp(3rem, 9vw, 6.4rem);
-      font-weight: 600;
-      letter-spacing: -.055em;
-    }
-
-    .lede {
+    .status {
       margin: 0 0 1.25rem;
-      color: #f2c887;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: clamp(.95rem, 1.5vw, 1.12rem);
-      font-weight: 650;
-    }
-
-    header > p:last-child {
-      max-width: 48rem;
-      margin: 0;
-      color: #eef5f6;
-      font-size: clamp(1.08rem, 2vw, 1.35rem);
-    }
-
-    main { padding-block: clamp(2.5rem, 6vw, 5rem); }
-
-    main > section {
-      margin-bottom: clamp(3rem, 7vw, 5.75rem);
-      scroll-margin-top: 1rem;
-    }
-
-    h2 {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      color: var(--navy);
-      font-size: clamp(1.75rem, 4vw, 2.65rem);
-      font-weight: 600;
-      letter-spacing: -.035em;
-    }
-
-    h2::after { content: ""; height: 1px; background: var(--line); }
-
-    h3 {
-      margin-bottom: .55rem;
-      color: var(--navy);
-      font-size: clamp(1.16rem, 2vw, 1.42rem);
-      letter-spacing: -.012em;
-    }
-
-    p { margin: .4rem 0 1rem; }
-
-    a {
-      color: #185983;
-      font-weight: 650;
-      text-decoration-color: rgba(24, 89, 131, .45);
-      text-decoration-thickness: .08em;
-      text-underline-offset: .18em;
-    }
-
-    a:hover { color: var(--rust); text-decoration-color: currentColor; }
-    a:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 2px; }
-
-    .notice {
-      margin: 0 0 1rem;
       padding: .9rem 1rem;
-      border: 1px solid #e4c98f;
-      border-left: .35rem solid var(--sun);
-      border-radius: .35rem;
-      background: #fff7df;
-      color: #59441f;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: .94rem;
+      color: var(--ink);
+      background: var(--signal-soft);
+      border: 1px solid color-mix(in srgb, var(--signal) 42%, var(--line));
+      border-left: 5px solid var(--signal);
+      border-radius: 10px;
     }
+    .weather-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+    .weather-grid .group { min-width: 0; padding: 1.35rem; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; box-shadow: 0 8px 24px rgba(34, 53, 44, .06); }
+    .weather-grid h3 { color: var(--accent); font-size: .77rem; letter-spacing: .13em; text-transform: uppercase; }
+    .weather-grid p { font-family: Georgia, "Times New Roman", serif; font-size: 1.22rem; }
 
-    .weather-groups {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .weather-groups section {
+    .intro { max-width: 47rem; color: var(--muted); }
+    .story-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.1rem; margin-top: 1.5rem; }
+    .card {
+      grid-column: span 4;
+      display: flex;
+      flex-direction: column;
       min-width: 0;
-      margin: 0;
-      padding: 1.25rem;
-      border: 1px solid #cad5d6;
-      border-top: .3rem solid var(--lake);
-      border-radius: .45rem;
-      background: #f7fbfb;
-    }
-
-    .weather-groups h3 { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: .08em; }
-    .weather-groups p { margin-bottom: 0; color: var(--muted); }
-
-    article {
-      position: relative;
-      margin-block: 1rem;
-      padding: clamp(1.2rem, 3vw, 1.8rem);
+      padding: 1.35rem;
+      background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: .55rem;
-      background: var(--card);
-      box-shadow: var(--shadow);
+      border-top: 4px solid var(--accent);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(34, 53, 44, .06);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .card h3 a { overflow-wrap: anywhere; }
+    .event-meta { color: var(--muted); font-size: .9rem; }
+    .score { display: inline-block; color: var(--signal); font-size: .78em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .plan-ahead .card { grid-column: span 6; border-top-color: var(--signal); }
+    .science .card { grid-column: span 4; border-top-color: var(--accent-strong); }
+    .science .card p { font-size: .94rem; }
+    .science .card small { display: block; margin-top: auto; padding-top: .8rem; color: var(--muted); }
 
-    article > p:nth-of-type(1) {
-      color: var(--muted);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: .91rem;
+    .memory-break {
+      position: relative;
+      width: min(1320px, calc(100vw - 1rem));
+      margin-inline: 50%;
+      transform: translateX(-50%);
     }
-
-    .score {
-      display: inline-block;
-      padding: .1rem .48rem;
-      border-radius: 999px;
-      background: #e5eff2;
-      color: #174e66;
-      font-weight: 800;
-      white-space: nowrap;
+    .memory-photo {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      color: #fff;
+      background: var(--event-sea);
+      border-radius: 20px;
+      box-shadow: 0 28px 80px color-mix(in srgb, var(--event-sea) 28%, transparent);
     }
+    .memory-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(5,18,20,.86), transparent 58%); }
+    .memory-photo > a { display: block; }
+    .memory-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 7; object-fit: cover; object-position: center 44%; transition: transform .7s ease; }
+    .memory-photo:hover img { transform: scale(1.018); }
+    .memory-photo figcaption { position: absolute; z-index: 1; right: clamp(1.2rem, 4vw, 3rem); bottom: clamp(1.2rem, 4vw, 2.6rem); left: clamp(1.2rem, 4vw, 3rem); display: grid; gap: .24rem; color: rgba(255,255,255,.84); text-shadow: 0 2px 18px rgba(0,0,0,.38); }
+    .memory-photo figcaption strong { color: #fff; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.45rem, 4vw, 2.8rem); line-height: 1.05; }
+    .memory-photo figcaption a { color: #fff; text-decoration-color: var(--event-sun); }
+    .archive-kicker { color: var(--event-sun); font-size: .7rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
 
-    [data-brief-section="activities"] article { border-left: .32rem solid var(--sun); }
-    [data-brief-section="plan-ahead"] article { border-left: .32rem solid var(--blue); }
-    [data-brief-section="science-technology"] article { border-left: .32rem solid var(--lake); }
+    .short-plan { margin-top: 1.25rem; padding: clamp(1.25rem, 3vw, 2rem); color: var(--masthead-ink); background: linear-gradient(135deg, var(--sky-a), var(--sky-b)); border-radius: 12px; box-shadow: var(--shadow); }
+    .short-plan h3 { color: color-mix(in srgb, var(--signal) 70%, white); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; }
+    .countdown { padding: clamp(1.2rem, 4vw, 2rem); background: var(--signal-soft); border: 1px solid color-mix(in srgb, var(--signal) 42%, var(--line)); border-radius: 12px; }
+    .countdown strong { color: var(--signal); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.5rem, 4vw, 2.4rem); line-height: 1; }
+    .countdown p { margin: 0; }
+    .countdown-detail { display: inline-block; margin-left: .65rem; max-width: 34rem; vertical-align: middle; }
+    .starship-mini { margin-top: 2.2rem; color: var(--muted); font-size: .84rem; }
+    .science-heading { grid-template-columns: auto auto 1fr; }
+    .science-heading .starship-mini { margin: 0; }
+    .starship-mini p { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin: 0; padding: .45rem .65rem; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--surface) 82%, transparent); }
+    .starship-mini .rocket { color: var(--signal); font-size: 1rem; }
 
-    aside {
-      margin-top: 1.25rem;
-      padding: 1.35rem clamp(1.25rem, 4vw, 2rem);
-      border-radius: .55rem;
-      background: var(--navy);
-      color: #edf4f5;
+    .collector-list { columns: 2; gap: 3rem; margin: 0; padding-left: 1.2rem; }
+    .collector-list li { margin-bottom: .5rem; break-inside: avoid; }
+    footer { color: var(--masthead-ink); background: var(--sky-a); }
+    .footer-inner { padding: 1.5rem 0; }
+
+    @media (max-width: 760px) {
+      .masthead-inner, main, .footer-inner { width: min(100% - 1.3rem, 1120px); }
+      .masthead { min-height: 66vh; }
+      .weather-grid { grid-template-columns: 1fr; }
+      .masthead-tools { display: flex; align-items: flex-start; }
+      .masthead-tools .dateline { width: 100%; }
+      .masthead-tools .edition-links { flex-wrap: wrap; white-space: normal; }
+      .science-heading { display: flex; flex-wrap: wrap; }
+      .science-heading::after { flex: 1 1 3rem; }
+      .countdown-detail { display: block; margin: .7rem 0 0; max-width: none; }
+      .story-grid { display: block; }
+      .card { margin-top: .85rem; }
+      .collector-list { columns: 1; }
+      .memory-break { width: 100vw; }
+      .memory-photo { border-radius: 0; }
+      .memory-photo img { aspect-ratio: 4 / 3; }
     }
-
-    aside h3 { color: #f3bd68; }
-    aside p { margin-bottom: 0; }
-
-    [data-brief-section="countdowns"] {
-      padding: clamp(1.5rem, 4vw, 2.5rem);
-      border-radius: .55rem;
-      background: linear-gradient(120deg, #a74932, #c46b3f);
-      color: #fffaf1;
-      box-shadow: var(--shadow);
+    @media (min-width: 761px) and (max-width: 980px) {
+      .card, .science .card { grid-column: span 6; }
     }
-
-    [data-brief-section="countdowns"] h2 { color: #fff; }
-    [data-brief-section="countdowns"] h2::after { background: rgba(255,255,255,.35); }
-    [data-brief-section="countdowns"] p { margin-bottom: 0; }
-
-    footer {
-      padding: 1.5rem .25rem 3rem;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    footer p { margin: 0; }
-
-    @media (min-width: 48rem) {
-      [data-brief-section="activities"] article,
-      [data-brief-section="plan-ahead"] article,
-      [data-brief-section="science-technology"] article { padding-left: 2rem; }
-    }
-
-    @media (max-width: 42rem) {
-      body { background: linear-gradient(180deg, var(--navy) 0 15rem, var(--paper) 15rem 100%); }
-      body::before { height: 15rem; }
-      body > header { min-height: 15rem; }
-      .weather-groups { grid-template-columns: 1fr; }
-      h2 { grid-template-columns: 1fr; gap: .55rem; }
-      h2::after { width: 3rem; }
-      article { box-shadow: 0 8px 22px rgba(18, 35, 63, .08); }
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      a { transition: color .16s ease, text-decoration-color .16s ease; }
-    }
-
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
     @media print {
       body { background: #fff; }
-      body::before { display: none; }
-      body > header { min-height: auto; color: var(--ink); }
-      .meta, .lede, header > p:last-child { color: var(--ink); }
-      article { box-shadow: none; break-inside: avoid; }
+      .masthead { background: #fff; color: var(--ink); }
+      .eyebrow { color: var(--accent-strong); }
+      .card, .weather-grid, .short-plan { box-shadow: none; }
+      a { color: inherit; }
     }
   </style>
 <style id="brief-feedback-styles">
@@ -263,119 +262,156 @@
   .brief-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
 </head>
-<body>
-  <header data-brief-section="overview">
-    <p class="meta">Canton &amp; Plymouth · Ann Arbor · Detroit</p>
-    <h1>Daily Brief</h1>
-    <p class="lede"><time datetime="2026-08-20">Thursday, August 20, 2026</time> · Workday edition</p>
-    <p>Tonight's strongest nearby option is free yoga in Canton. Ann Arbor adds two distinctive, free alternatives: an archaeology tour and hands-on woodcarving.</p>
+<body class="event-luau">
+  <header class="masthead" data-brief-section="overview">
+    <div class="masthead-inner">
+      <p class="eyebrow">Canton morning · Tonight’s rhythm: Motor City Soul</p>
+      <h1>Daily Brief</h1>
+      <div class="masthead-tools">
+        <p class="dateline"><time datetime="2026-08-21">Friday, August 21, 2026</time> · Workday</p>
+        <p class="time-chip" id="time-chip" aria-live="polite">Local edition</p>
+        <p class="family-note"><span>Family note</span> 🎂 Jimmy’s birthday today</p>
+        <nav class="edition-links" aria-label="Daily editions"><span aria-current="page">Today · Fri 21</span><a href="tomorrow/">Tomorrow · Sat 22 →</a></nav>
+      </div>
+      <p class="dek">A clear, warm Friday makes room for one easy family moment, a little live music, and a comfortable evening outside.</p>
+    </div>
   </header>
 
   <main>
-    <section data-brief-section="weather" aria-labelledby="weather-heading">
-      <h2 id="weather-heading">Weather</h2>
-      <p class="notice"><strong>Weather collector unavailable.</strong> No sourced conditions or outdoor-condition windows were returned, so none are inferred.</p>
-      <div class="weather-groups">
-        <section aria-labelledby="current-heading">
-          <h3 id="current-heading">Current</h3>
-          <p>Unavailable.</p>
-        </section>
-        <section aria-labelledby="next-day-heading">
-          <h3 id="next-day-heading">Next day</h3>
-          <p>Unavailable.</p>
-        </section>
-        <section aria-labelledby="almanac-heading">
-          <h3 id="almanac-heading">Almanac</h3>
-          <p>Unavailable.</p>
-        </section>
+    <section data-brief-section="weather" aria-labelledby="weather-title">
+      <div class="section-heading"><h2 id="weather-title">Weather</h2></div>
+      <div class="weather-grid">
+        <div class="group" aria-labelledby="weather-today">
+          <h3 id="weather-today">Today</h3>
+          <p>Mostly sunny and pleasant. High 82°F, low 63°F; clear and 56°F at daybreak. Dry through evening—good for outdoor plans.</p>
+        </div>
+        <div class="group" aria-labelledby="weather-tomorrow">
+          <h3 id="weather-tomorrow">Tomorrow</h3>
+          <p>Clouds and sun, turning humid with a couple of later showers or a thunderstorm. High 77°F, low 57°F. Saturday plans are less certain; <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4824">NWS Canton forecast</a>.</p>
+        </div>
+        <div class="group" aria-labelledby="weather-almanac">
+          <h3 id="weather-almanac">Almanac</h3>
+          <p>Tonight’s waxing gibbous moon is about 68% illuminated—one week from full. <a href="https://www.timeanddate.com/moon/usa/canton?month=8">Moon calendar</a></p>
+        </div>
       </div>
     </section>
 
-    <section data-brief-section="news" aria-labelledby="news-heading">
-      <h2 id="news-heading">News digest</h2>
-      <p class="notice"><strong>News collector unavailable.</strong> No news claims are included.</p>
+    <section data-brief-section="news" aria-labelledby="news-title">
+      <div class="section-heading"><h2 id="news-title">News digest</h2></div>
+      <div class="story-grid">
+        <article class="card">
+          <h3><a href="https://www.axios.com/local/detroit/2026/08/20/things-to-do-this-weekend-in-metro-detroit-aug-21-23">Metro Detroit's weekend starts crowded</a></h3>
+          <p>Opening weekend for the Michigan Renaissance Festival joins Detroit All City Fest, the Detroit Bourbon &amp; Blues Festival, My Chemical Romance at Comerica Park, and Brandi Carlile at Meadow Brook. Expect the busiest travel around major venues tonight.</p>
+          <p><small>Axios Detroit · published August 20</small></p>
+        </article>
+        <article class="card">
+          <h3><a href="https://wdet.org/2026/08/11/abdul-el-sayed-metro-interview/">Abdul El-Sayed looks ahead after the primary</a></h3>
+          <p>Michigan’s Democratic Senate nominee talks with WDET about winning despite being heavily outspent, the Detroit voters he still needs to reach, and how he plans to carry his campaign into the general election.</p>
+          <p><small>WDET · The Metro · published August 11</small></p>
+        </article>
+        <article class="card">
+          <h3><a href="https://cantonmi.gov/calendar.aspx?CID=28%2C35%2C47%2C27&amp;month=8&amp;view=list&amp;year=2026">Canton’s next Board of Trustees meeting is August 25</a></h3>
+          <p>The township’s public calendar lists the Board of Trustees for 7:00–8:00 PM Tuesday in the Township Board Room. The meeting agenda and public materials are posted through Canton’s civic calendar.</p>
+          <p><small>Canton Township · public calendar</small></p>
+        </article>
+      </div>
     </section>
 
-    <section data-brief-section="activities" aria-labelledby="activities-heading">
-      <h2 id="activities-heading">After work: three good options</h2>
-      <p>All suggestions begin in the afternoon or evening, as required for a workday. Scores are the collectors' <em>worth leaving home</em> totals.</p>
-
-      <article>
-        <h3>1. Yoga in the Village — 7:00 PM</h3>
-        <p>Preservation Park / Cherry Hill Village, Canton · Free · <span class="score">99/100</span></p>
-        <p>Exceptional because it combines the highest total with a three-mile trip, no admission charge, strong parking, and an evening start. Weather suitability was scored 6/10, but current conditions could not be verified. <a href="https://cantonmi.gov/calendar.aspx?CID=29%2C32%2C34">Event calendar</a>.</p>
-      </article>
-
-      <article>
-        <h3>2. Third Thursday Tour — 6:00 PM</h3>
-        <p>U-M Kelsey Museum of Archaeology, Ann Arbor · Free · <span class="score">92/100</span></p>
-        <p>Exceptional for its 9/10 reputation rating, indoor weather fit, no admission charge, and unusual museum access, even with the longer 23-mile trip. <a href="https://annarborobserver.com/calendar/2026-08-20/">Ann Arbor calendar listing</a>.</p>
-      </article>
-
-      <article>
-        <h3>3. Introductory Woodcarving: Alligators Two Ways — 5:30 PM</h3>
-        <p>Ann Arbor District Library Downtown, Secret Lab · Free · <span class="score">92/100</span></p>
-        <p>Exceptional for a 9/10 unusualness rating, an indoor setting, and a free hands-on format. <strong>Reservation deadline:</strong> check AADL availability before leaving. <a href="https://annarborobserver.com/calendar/2026-08-20/">Ann Arbor calendar listing</a>.</p>
-      </article>
-
-      <aside aria-labelledby="short-plan-heading">
-        <h3 id="short-plan-heading">A realistic short plan</h3>
-        <p>For the easiest evening, choose the 7:00 PM Canton yoga session. For Ann Arbor, check woodcarving availability first; if it is full, use the 6:00 PM museum tour as the fallback. Do not combine them—the start times overlap.</p>
+    <section data-brief-section="today" aria-labelledby="today-title">
+      <div class="section-heading"><h2 id="today-title">After-work possibilities</h2></div>
+      <div class="story-grid">
+        <article class="card" data-event-end="2026-08-21T21:00:00-04:00">
+          <h3><a href="https://www.downtownplymouth.org/71/Music-in-the-Air-Concerts">Beach Luau Night with Motor City Soul</a> <span class="score">— closest</span></h3>
+          <p class="event-meta"><time datetime="2026-08-21T19:00:00-04:00">7:00 PM</time> · Kellogg Park, Plymouth · Free</p>
+          <p>The simplest Friday choice: a free concert nearby with a beach-luau theme and food vendors. Arrive early enough to park and claim a comfortable spot.</p>
+        </article>
+        <article class="card" data-event-end="2026-08-21T21:00:00-04:00">
+          <h3><a href="https://downtowndetroit.org/event/movie-nights-in-the-d-kpop-demon-hunters/"><cite>KPop Demon Hunters</cite> under the skyline</a> <span class="score">— downtown</span></h3>
+          <p class="event-meta"><time datetime="2026-08-21T19:00:00-04:00">7:00–9:00 PM</time> · Campus Martius Park, Detroit · Free</p>
+          <p>Bring a chair or blanket for the PG-rated hit on the Campus Martius lawn. Arrive by 6:00 PM for a good spot and pre-show activities; closed captions and Jetta’s Popcorn will be available.</p>
+        </article>
+        <article class="card" data-event-end="2026-08-21T23:00:00-04:00">
+          <h3><a href="https://detroitobservatory.umich.edu/visit/month/2026-08/">Telescope Observing through the 1857 Fitz</a> <span class="score">— distinctive</span></h3>
+          <p class="event-meta"><time datetime="2026-08-21T21:00:00-04:00">9:00–11:00 PM</time> · Detroit Observatory, Ann Arbor · Free · No registration</p>
+          <p>Use the historic Fitz telescope and modern instruments under tonight’s mostly clear sky. If clouds interfere, the Observatory remains open for exploring the building and collections.</p>
+        </article>
+      </div>
+      <aside class="short-plan" aria-labelledby="short-plan-title">
+        <h3 id="short-plan-title">A realistic short plan</h3>
+        <p>Keep it easy: dinner near downtown Plymouth, then Motor City Soul at 7:00 PM. If the clear sky holds and you want something more memorable, skip the concert or leave early enough to reach the Detroit Observatory for 9:00 PM observing.</p>
       </aside>
     </section>
 
-    <section data-brief-section="countdowns" aria-labelledby="countdowns-heading">
-      <h2 id="countdowns-heading">Holiday countdown</h2>
-      <p><strong>18 days to Labor Day</strong> — the federal holiday honoring American workers falls on <time datetime="2026-09-07">September 7, 2026</time>.</p>
+    <section class="memory-break" data-brief-section="on-this-day" aria-label="From the archive">
+      <figure class="memory-photo">
+        <a href="https://photos.hurleyhome.com/Family/Family-shots-of-grandpa/i-tpQSx5J/A">
+          <img src="https://photos.smugmug.com/Family/Family-shots-of-grandpa/i-tpQSx5J/0/K9K3rtTqDd58vBHqrCfnswSGkdsrSqN2CGHzJNCk7/L/IMG_6628-L.jpg" alt="A group gathered outdoors at Niagara Falls with mist rising behind them" decoding="async">
+        </a>
+        <figcaption>
+          <span class="archive-kicker">From the archive</span>
+          <strong>Niagara Falls · August 21, 2010</strong>
+          <span>Sixteen summers ago today. <a href="https://photos.hurleyhome.com/Family/Family-shots-of-grandpa/i-tpQSx5J/A">View original.</a></span>
+        </figcaption>
+      </figure>
     </section>
 
-    <section data-brief-section="plan-ahead" aria-labelledby="plan-ahead-heading">
-      <h2 id="plan-ahead-heading">Plan ahead: the next two to six weeks</h2>
-      <p>These events fall between September 3 and September 30 and were verified by the collector on August 20.</p>
-      <article>
-        <h3>VOICES feat. Ki5 &amp; Friends — September 3, 8:00 PM</h3>
-        <p>The Ark, Ann Arbor · $24 · <span class="score">85/100</span>. Opening night of this planning window in the small Ark room. <strong>Reservation deadline:</strong> not stated; tickets are already listed. <a href="https://theark.org/events/month/2026-09/">Organizer calendar and tickets</a>.</p>
-      </article>
-      <article>
-        <h3>Punch Brothers — September 10, 7:00 PM</h3>
-        <p>Royal Oak Music Theatre · $50.28–$105.90 · <span class="score">77/100</span>. A special-event booking where reserving soon improves the chance of a preferred price and availability. <strong>Reservation deadline:</strong> not stated; advance tickets are available. <a href="https://theark.org/event/punch-brothers-260910/">Event and tickets</a>.</p>
-      </article>
-      <article>
-        <h3>Old Car Festival — September 12</h3>
-        <p>Greenfield Village, Dearborn · <span class="score">91/100</span>. The window's highest plan-ahead score reflects a limited annual weekend with hundreds of pre-1933 vehicles; the distinctive scale and Saturday late hours make it exceptional. <strong>Reservation deadline:</strong> participant registration reached capacity and closed June 2; visitor admission tickets are offered by the venue and were already available August 20. <a href="https://www.thehenryford.org/visit/things-to-do/calendar/old-car-festival">Festival details and visitor admission</a>.</p>
-      </article>
-      <article>
-        <h3>Paula Cole — THIS FIRE: 30 — September 24, 8:00 PM</h3>
-        <p>The Ark, Ann Arbor · standard tickets $40–$51.50; VIP soundcheck $121.50 · <span class="score">86/100</span>. <strong>Reservation deadline:</strong> act promptly—the organizer reports low ticket availability, and the VIP package is limited. <a href="https://theark.org/event/paula-cole-this-fire-30/">Event and tickets</a>.</p>
-      </article>
+    <section class="plan-ahead" data-brief-section="plan-ahead" aria-labelledby="plan-ahead-title">
+      <div class="section-heading"><h2 id="plan-ahead-title">Plan ahead: the next two to six weeks</h2></div>
+      <div class="story-grid">
+        <article class="card">
+          <h3><a href="https://blindpigmusic.com/calendar/">Ann Arbor Fall Beard Day Fest</a> <span class="score">— 84/100</span></h3>
+          <p class="event-meta"><time datetime="2026-09-05T19:00:00-04:00">Saturday, September 5 · Doors 7:00 PM</time> · Blind Pig, Ann Arbor · 18+ · $19.85</p>
+          <p>Van Haven, Redemption Road, LÜCID, Unholy Honor, and Keller pack five shades of local rock and metal into one small room. Guests under 21 pay an additional $5 at the door.</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://www.thehenryford.org/visit/things-to-do/calendar/old-car-festival">Old Car Festival</a> <span class="score">— 91/100</span></h3>
+          <p class="event-meta"><time datetime="2026-09-12">Saturday, September 12</time> · Greenfield Village, Dearborn</p>
+          <p>Hundreds of vehicles from the 1890s through 1932 and special Saturday hours until 9:00 PM make the 75th anniversary the strongest family plan. <strong>Deadline:</strong> participant registration is closed, but visitor tickets are on sale.</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://theark.org/event/ann-arbor-django-reinhardt-festival-260912/">Ann Arbor Django Reinhardt Festival</a> <span class="score">— 81/100</span></h3>
+          <p class="event-meta"><time datetime="2026-09-12T20:00:00-04:00">Saturday, September 12 · Doors 7:30 PM · Show 8:00 PM</time> · The Ark, Ann Arbor · $29–$40</p>
+          <p>Andrew Brown hosts guitarist Sam Farthing, violinist Grant Flick, and the full Djangophonique crew for the festival’s fourth year of jazz manouche in The Ark’s intimate room.</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://theark.org/event/joe-pug-willie-watson/">Joe Pug &amp; Willie Watson</a> <span class="score">— 86/100</span></h3>
+          <p class="event-meta"><time datetime="2026-09-25T20:00:00-04:00">Friday, September 25 at 8:00 PM</time> · The Ark, Ann Arbor · $35–$46.50</p>
+          <p>Two lyrically sharp Americana performers share an intimate room on a Friday night. <strong>Deadline:</strong> all-in tickets are available now from The Ark; buy ahead if this pairing is the draw.</p>
+        </article>
+      </div>
     </section>
 
-    <section data-brief-section="science-technology" aria-labelledby="science-heading">
-      <h2 id="science-heading">Science &amp; technology</h2>
-      <article>
-        <h3>AI maps the Arctic's near-freezing soil phase</h3>
-        <p>A NASA-led team reports that GeoCryoAI combined 62.71 million in-situ measurements with 3.3 billion remote-sensing observations to map candidate near-freezing soil conditions across the circumpolar Arctic at 30-meter resolution. The analysis finds a longer spring zero-curtain phase and regional differences relevant to permafrost carbon feedbacks. Caveat: these are model-derived conditions, not direct continent-wide measurements of methane or carbon release; the journal labels the article an unedited version. <a href="https://www.nature.com/articles/s41598-026-61719-9">Peer-reviewed study</a> and <a href="https://science.nasa.gov/blogs/science-news/2026/08/19/hidden-arctic-freeze/">NASA summary</a>.</p>
-      </article>
-      <article>
-        <h3>Milky Way merger history moves farther back</h3>
-        <p>Analysis of Hubble data and globular star clusters finds evidence that a dwarf galaxy called LKH merged with the young Milky Way about 11.8 billion years ago, extending its reconstructed assembly history roughly 1.8 billion years. Caveat: this is a reconstruction from present-day evidence, not a direct observation, and the collector identified no independent replication. <a href="https://www.nature.com/articles/s41550-026-02931-5">Peer-reviewed study</a> and <a href="https://science.nasa.gov/missions/hubble/hubble-solves-merger-mystery-from-milky-ways-early-years/">NASA announcement</a>.</p>
-      </article>
-      <article>
-        <h3>Shaded lunar niches may preserve human-associated microbes</h3>
-        <p>A Science Advances study modeled several human- and spaceflight-associated microbes at the lunar south pole and concluded that shaded small-scale features could permit dormant survival for at least an Earth day, raising contamination-control concerns. Caveat: it did not demonstrate growth or replication on the Moon. <a href="https://science.nasa.gov/humans-in-space/human-related-microbes-may-survive-moons-south-pole-nasa-finds/">NASA study summary</a>.</p>
-      </article>
+    <section data-brief-section="countdowns" aria-labelledby="countdowns-title">
+      <div class="section-heading"><h2 id="countdowns-title">Holiday countdown</h2></div>
+      <div class="countdown">
+        <p><strong>17 days to Labor Day</strong><span class="countdown-detail"><time datetime="2026-09-07">Monday, September 7, 2026</time>, the federal holiday honoring American workers.</span></p>
+      </div>
     </section>
+
+    <section class="science" data-brief-section="science-technology" aria-labelledby="science-title">
+      <div class="section-heading science-heading"><h2 id="science-title">Science &amp; technology</h2><div class="starship-mini" data-brief-section="starship" aria-label="Starship status"><p><span class="rocket" aria-hidden="true">🚀</span> <strong>Starship:</strong> date unknown · <a href="https://www.faa.gov/newsroom/statements/general-statements">FAA</a> · <a href="https://www.spacex.com/launches/mission/?+missionId=starship-flight-test">SpaceX</a></p></div></div>
+      <div class="story-grid">
+        <article class="card">
+          <h3><a href="https://science.nasa.gov/blogs/science-news/2026/08/05/nasas-new-horizons-finds-evidence-of-recent-liquid-on-plutos-surface/">New Horizons finds evidence of recent liquid on Pluto</a></h3>
+          <p>Reanalysis of New Horizons imagery suggests liquid nitrogen may be rising through cracks at the northern edge of Pluto’s Sputnik Planitia. It is a rare clue that the dwarf planet’s surface can still move material today.</p>
+          <p><small>Caveat: this is an interpretation of imagery collected during the 2015 flyby, not a direct observation of liquid flowing today.</small></p>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    <p><small>Prepared from collector results supplied for August 20, 2026. Weather and news collectors were unavailable; unavailable facts were not inferred.</small></p>
+    <div class="footer-inner">
+      <p><small>I’m reading a book about anti-gravity. It’s impossible to put down.</small></p>
+    </div>
   </footer>
 <dialog id="brief-feedback-dialog">
   <form method="dialog">
     <h2>Improve this brief</h2>
     <p id="brief-feedback-context"></p>
     <textarea id="brief-feedback-text" aria-label="Feedback" placeholder="What should change in this section?"></textarea>
-    <p><small>This opens a public GitHub issue for review before the next brief run.</small></p>
+    <p><small>This opens a public GitHub issue for review.</small></p>
     <div class="brief-feedback-actions">
       <button value="cancel">Cancel</button>
       <button id="brief-feedback-submit" value="default">Continue to GitHub</button>
@@ -428,6 +464,30 @@ Submitted from the published daily brief.`;
       window.open(url, "_blank", "noopener,noreferrer");
       dialog.close();
     });
+  })();
+</script>
+<script id="brief-time-theme-script">
+  (() => {
+    const labels = { morning: "Morning light", afternoon: "Daylight", evening: "Evening glow", night: "Night mode" };
+    const colors = { morning: "#345c55", afternoon: "#16453d", evening: "#2d2c49", night: "#0a1418" };
+    const edition = document.querySelector(".dateline time")?.getAttribute("datetime");
+    const cards = document.querySelectorAll('[data-brief-section="today"] article.card');
+    const refresh = () => {
+      const now = new Date();
+      const hour = now.getHours();
+      const theme = hour < 6 ? "night" : hour < 11 ? "morning" : hour < 17 ? "afternoon" : hour < 21 ? "evening" : "night";
+      document.documentElement.dataset.timeTheme = theme;
+      document.getElementById("time-chip").textContent = `${labels[theme]} · ${new Intl.DateTimeFormat([], { hour: "numeric", minute: "2-digit" }).format(now)}`;
+      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", colors[theme]);
+
+      const localDate = [now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-");
+      cards.forEach((card) => {
+        const eventTime = card.dataset.eventEnd || card.querySelector("time[datetime]")?.dateTime;
+        card.hidden = edition === localDate && eventTime ? new Date(eventTime) <= now : false;
+      });
+    };
+    refresh();
+    window.setInterval(refresh, 60_000);
   })();
 </script>
 </body>
