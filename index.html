@@ -29,6 +29,9 @@
       --sky-a: #143f37;
       --sky-b: #286653;
       --glow: rgba(247, 190, 82, .32);
+      --event-hot: #ef765f;
+      --event-sun: #f7ca66;
+      --event-sea: #0e6768;
       --shadow: 0 18px 55px rgba(28, 46, 39, .10);
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: clamp(16px, .2vw + 15px, 18px);
@@ -37,7 +40,7 @@
 
     :root[data-time-theme="morning"] {
       --paper: #f6f0e5; --surface-soft: #f1e5cf; --accent: #4f6e57; --accent-strong: #294a3b;
-      --signal: #cb7647; --signal-soft: #f5d7bd; --sky-a: #345c55; --sky-b: #d08658; --glow: rgba(255, 218, 154, .55);
+      --signal: #df6f54; --signal-soft: #f8ddc5; --sky-a: #075b61; --sky-b: #df765b; --glow: rgba(255, 218, 154, .58);
     }
     :root[data-time-theme="afternoon"] {
       --paper: #f3f0e8; --surface-soft: #e5eee8; --accent: #27604e; --accent-strong: #173f38;
@@ -53,6 +56,7 @@
       --line: #354542; --accent: #8dbca9; --accent-strong: #b5ddcc; --signal: #e2b66e; --signal-soft: #3c3427;
       --masthead-ink: #f4f3ed; --sky-a: #0a1418; --sky-b: #1e3d3e; --glow: rgba(153, 191, 196, .18);
       --shadow: 0 22px 65px rgba(0, 0, 0, .28);
+      --event-hot: #c75e70; --event-sun: #e2b66e; --event-sea: #123f4a;
     }
 
     * { box-sizing: border-box; }
@@ -82,6 +86,25 @@
         linear-gradient(135deg, var(--sky-a), var(--sky-b));
       border-bottom: 1px solid color-mix(in srgb, var(--signal) 70%, transparent);
     }
+    body.event-luau .masthead {
+      background:
+        radial-gradient(circle at 81% 22%, color-mix(in srgb, var(--event-sun) 86%, white) 0 8%, transparent 8.4%),
+        radial-gradient(circle at 92% 42%, color-mix(in srgb, var(--event-hot) 72%, transparent) 0 14%, transparent 29%),
+        linear-gradient(135deg, var(--event-sea), var(--sky-b));
+    }
+    body.event-luau .masthead::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: -8vw;
+      bottom: -20%;
+      width: min(62vw, 760px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      opacity: .42;
+      background: repeating-radial-gradient(ellipse at center, transparent 0 7%, rgba(255,255,255,.2) 7.5% 8.2%, transparent 8.7% 13%);
+      transform: rotate(-12deg) scaleY(.42);
+    }
     .masthead::after {
       content: "";
       position: absolute;
@@ -107,6 +130,8 @@
     h1 { margin: 0; max-width: 8ch; font-family: Georgia, "Times New Roman", serif; font-size: clamp(4rem, 13vw, 9rem); font-weight: 500; letter-spacing: -.065em; }
     .dateline { margin-top: 1rem; font-weight: 700; }
     .dek { max-width: 49rem; margin-top: 1.6rem; padding-left: 1rem; border-left: 3px solid var(--signal); font-size: clamp(1.05rem, 1.7vw, 1.28rem); }
+    .family-note { display: inline-flex; align-items: center; gap: .55rem; margin: 1.25rem 0 0; padding: .5rem .72rem; border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(8,20,19,.2); backdrop-filter: blur(12px); font-size: .86rem; font-weight: 700; }
+    .family-note span { color: color-mix(in srgb, var(--event-sun) 82%, white); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
 
     main { padding: .5rem 0 5rem; }
     section { margin-top: clamp(3.5rem, 8vw, 6rem); }
@@ -171,6 +196,9 @@
     .countdown { padding: clamp(1.2rem, 4vw, 2rem); background: var(--signal-soft); border: 1px solid color-mix(in srgb, var(--signal) 42%, var(--line)); border-radius: 12px; }
     .countdown strong { color: var(--signal); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.5rem, 4vw, 2.4rem); line-height: 1; }
     .countdown p { margin: 0; }
+    .starship-mini { margin-top: 2.2rem; color: var(--muted); font-size: .84rem; }
+    .starship-mini p { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin: 0; padding: .45rem .65rem; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--surface) 82%, transparent); }
+    .starship-mini .rocket { color: var(--signal); font-size: 1rem; }
 
     .collector-list { columns: 2; gap: 3rem; margin: 0; padding-left: 1.2rem; }
     .collector-list li { margin-bottom: .5rem; break-inside: avoid; }
@@ -206,14 +234,15 @@
   .brief-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
 </head>
-<body>
+<body class="event-luau">
   <header class="masthead" data-brief-section="overview">
     <div class="masthead-inner">
       <p class="time-chip" id="time-chip" aria-live="polite">Local edition</p>
-      <p class="eyebrow">Canton &amp; Plymouth · Ann Arbor · Detroit</p>
+      <p class="eyebrow">Canton morning · Tonight’s rhythm: Motor City Soul</p>
       <h1>Daily Brief</h1>
       <p class="dateline"><time datetime="2026-08-21">Friday, August 21, 2026</time> · Workday</p>
       <p class="dek">A clear, warm Friday makes room for one easy family moment and a comfortable evening outside. The page shifts its mood—and removes elapsed starts—as the day moves.</p>
+      <p class="family-note"><span>Family note</span> 🎂 Jimmy’s birthday today</p>
     </div>
   </header>
 
@@ -259,11 +288,6 @@
       <p class="intro">Only future, actionable starts are shown. This list updates itself as event times pass.</p>
       <div class="story-grid">
         <article class="card">
-          <h3>Jimmy’s birthday</h3>
-          <p class="event-meta">Today · Hurley Family calendar</p>
-          <p>Send a birthday message or make a small celebration part of the evening. No fixed time is listed, so this remains a flexible family reminder.</p>
-        </article>
-        <article class="card">
           <h3><a href="https://www.downtownplymouth.org/71/Music-in-the-Air-Concerts">Beach Luau Night with Motor City Soul</a> <span class="score">— closest</span></h3>
           <p class="event-meta"><time datetime="2026-08-21T19:00:00-04:00">7:00 PM</time> · Kellogg Park, Plymouth · Free</p>
           <p>The simplest Friday choice: a free concert nearby with a beach-luau theme and food vendors. Arrive early enough to park and claim a comfortable spot.</p>
@@ -295,9 +319,8 @@
       </figure>
     </section>
 
-    <section data-brief-section="starship" aria-labelledby="starship-title">
-      <div class="section-heading"><h2 id="starship-title">Starship tracker</h2></div>
-      <div class="status"><strong>No confirmed launch date announced.</strong> Public reporting points to a possible late-August Flight 14 attempt, but the date remains tentative and regulatory readiness is not confirmed. <a href="https://www.faa.gov/newsroom/statements/general-statements">FAA status</a> · <a href="https://www.spacex.com/launches/mission/?+missionId=starship-flight-test">SpaceX mission page</a></div>
+    <section class="starship-mini" data-brief-section="starship" aria-label="Starship status">
+      <p><span class="rocket" aria-hidden="true">🚀</span> <strong>Starship:</strong> date unknown · <a href="https://www.faa.gov/newsroom/statements/general-statements">FAA</a> · <a href="https://www.spacex.com/launches/mission/?+missionId=starship-flight-test">SpaceX</a></p>
     </section>
 
     <section class="plan-ahead" data-brief-section="plan-ahead" aria-labelledby="plan-ahead-title">
@@ -348,7 +371,7 @@
       <div class="section-heading"><h2 id="status-title">Collector status</h2></div>
       <ul class="collector-list">
         <li>Weather checked at approximately 6:00 AM EDT</li>
-        <li>Hurley Family calendars checked; Jimmy’s birthday included</li>
+        <li>Hurley Family calendars checked; Jimmy’s birthday included as a masthead note</li>
         <li>SmugMug exact-date scan checked 10,000 public images; four August 21 matches found</li>
         <li>Starship tracker present with source links and no unconfirmed countdown</li>
         <li>Today events checked against official city and university calendars</li>
@@ -359,7 +382,7 @@
 
   <footer>
     <div class="footer-inner">
-      <p><small>Direct edition corrected at 7:05 AM EDT on August 21. Conditions, event details, and availability can change; follow each linked source before leaving or purchasing. Right-click any panel to suggest an improvement.</small></p>
+      <p><small>Direct edition refined at 7:13 AM EDT on August 21. Conditions, event details, and availability can change; follow each linked source before leaving or purchasing. Right-click any panel to suggest an improvement.</small></p>
     </div>
   </footer>
 <dialog id="brief-feedback-dialog">
