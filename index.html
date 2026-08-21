@@ -116,6 +116,8 @@
     }
     .masthead-inner, main, .footer-inner { width: min(1160px, calc(100% - 2.5rem)); margin-inline: auto; }
     .masthead-inner { position: relative; z-index: 1; padding: clamp(5rem, 12vw, 9rem) 0 clamp(2.5rem, 6vw, 4.5rem); }
+    .masthead-tools { display: flex; align-items: center; flex-wrap: wrap; gap: .55rem; margin-top: 1rem; }
+    .masthead-tools .time-chip, .masthead-tools .family-note, .masthead-tools .edition-links { margin: 0; }
     .time-chip { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.4rem; padding: .42rem .68rem; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(8,20,19,.18); backdrop-filter: blur(12px); font-size: .72rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
     .time-chip::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 .25rem color-mix(in srgb, var(--signal) 20%, transparent); }
     .eyebrow {
@@ -211,6 +213,7 @@
     .countdown { padding: clamp(1.2rem, 4vw, 2rem); background: var(--signal-soft); border: 1px solid color-mix(in srgb, var(--signal) 42%, var(--line)); border-radius: 12px; }
     .countdown strong { color: var(--signal); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.5rem, 4vw, 2.4rem); line-height: 1; }
     .countdown p { margin: 0; }
+    .countdown-detail { display: inline-block; margin-left: .65rem; max-width: 34rem; vertical-align: middle; }
     .starship-mini { margin-top: 2.2rem; color: var(--muted); font-size: .84rem; }
     .starship-mini p { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin: 0; padding: .45rem .65rem; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--surface) 82%, transparent); }
     .starship-mini .rocket { color: var(--signal); font-size: 1rem; }
@@ -224,6 +227,8 @@
       .masthead-inner, main, .footer-inner { width: min(100% - 1.3rem, 1120px); }
       .masthead { min-height: 66vh; }
       .weather-grid { grid-template-columns: 1fr; }
+      .masthead-tools { align-items: flex-start; }
+      .countdown-detail { display: block; margin: .7rem 0 0; max-width: none; }
       .story-grid { display: block; }
       .card { margin-top: .85rem; }
       .collector-list { columns: 1; }
@@ -255,13 +260,15 @@
 <body class="event-luau">
   <header class="masthead" data-brief-section="overview">
     <div class="masthead-inner">
-      <p class="time-chip" id="time-chip" aria-live="polite">Local edition</p>
       <p class="eyebrow">Canton morning · Tonight’s rhythm: Motor City Soul</p>
       <h1>Daily Brief</h1>
-      <p class="dateline"><time datetime="2026-08-21">Friday, August 21, 2026</time> · Workday</p>
+      <div class="masthead-tools">
+        <p class="dateline"><time datetime="2026-08-21">Friday, August 21, 2026</time> · Workday</p>
+        <p class="time-chip" id="time-chip" aria-live="polite">Local edition</p>
+        <p class="family-note"><span>Family note</span> 🎂 Jimmy’s birthday today</p>
+        <nav class="edition-links" aria-label="Daily editions"><span aria-current="page">Today · Fri 21</span><a href="tomorrow/">Tomorrow · Sat 22 →</a></nav>
+      </div>
       <p class="dek">A clear, warm Friday makes room for one easy family moment, a little live music, and a comfortable evening outside.</p>
-      <p class="family-note"><span>Family note</span> 🎂 Jimmy’s birthday today</p>
-      <nav class="edition-links" aria-label="Daily editions"><span aria-current="page">Today · Fri 21</span><a href="tomorrow/">Tomorrow · Sat 22 →</a></nav>
     </div>
   </header>
 
@@ -271,23 +278,21 @@
       <div class="weather-grid">
         <div class="group" aria-labelledby="weather-today">
           <h3 id="weather-today">Today</h3>
-          <p>Mostly sunny and pleasant. High 82°F, low 63°F; clear and 56°F at daybreak.</p>
+          <p>Mostly sunny and pleasant. High 82°F, low 63°F; clear and 56°F at daybreak. Dry through evening—good for outdoor plans.</p>
         </div>
         <div class="group" aria-labelledby="weather-tomorrow">
           <h3 id="weather-tomorrow">Tomorrow</h3>
-          <p>Clouds and sun, turning humid with a couple of later showers or a thunderstorm. High 77°F, low 57°F.</p>
+          <p>Clouds and sun, turning humid with a couple of later showers or a thunderstorm. High 77°F, low 57°F. Saturday plans are less certain; <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4824">NWS Canton forecast</a>.</p>
         </div>
         <div class="group" aria-labelledby="weather-almanac">
           <h3 id="weather-almanac">Almanac</h3>
           <p>Tonight’s waxing gibbous moon is about 68% illuminated—one week from full. <a href="https://www.timeanddate.com/moon/usa/canton?month=8">Moon calendar</a></p>
         </div>
       </div>
-      <p class="weather-note"><small>Canton’s dry, mostly sunny forecast fits outdoor plans through this evening. Tomorrow’s later shower and thunderstorm risk makes Saturday plans less certain. Verify before leaving with the <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4824">National Weather Service forecast for Canton</a>.</small></p>
     </section>
 
     <section data-brief-section="news" aria-labelledby="news-title">
       <div class="section-heading"><h2 id="news-title">News digest</h2></div>
-      <p class="intro">A quick read on what matters around metro Detroit today.</p>
       <div class="story-grid">
         <article class="card">
           <h3><a href="https://www.axios.com/local/detroit/2026/08/20/things-to-do-this-weekend-in-metro-detroit-aug-21-23">Metro Detroit's weekend starts crowded</a></h3>
@@ -309,7 +314,6 @@
 
     <section data-brief-section="today" aria-labelledby="today-title">
       <div class="section-heading"><h2 id="today-title">After-work possibilities</h2></div>
-      <p class="intro">A few good ways to spend Friday, from nearby and easy to worth the drive.</p>
       <div class="story-grid">
         <article class="card" data-event-end="2026-08-21T21:00:00-04:00">
           <h3><a href="https://www.downtownplymouth.org/71/Music-in-the-Air-Concerts">Beach Luau Night with Motor City Soul</a> <span class="score">— closest</span></h3>
@@ -379,7 +383,7 @@
     <section data-brief-section="countdowns" aria-labelledby="countdowns-title">
       <div class="section-heading"><h2 id="countdowns-title">Holiday countdown</h2></div>
       <div class="countdown">
-        <p><strong>17 days to Labor Day</strong> — <time datetime="2026-09-07">Monday, September 7, 2026</time>, the federal holiday honoring American workers.</p>
+        <p><strong>17 days to Labor Day</strong><span class="countdown-detail"><time datetime="2026-09-07">Monday, September 7, 2026</time>, the federal holiday honoring American workers.</span></p>
       </div>
     </section>
 
@@ -408,7 +412,7 @@
 
   <footer>
     <div class="footer-inner">
-      <p><small>Friday, August 21 · Canton, Michigan. Conditions, event details, and availability can change; follow each linked source before leaving or purchasing. Right-click any panel to suggest an improvement.</small></p>
+      <p><small>Dad joke: I’m reading a book about anti-gravity. It’s impossible to put down.</small></p>
     </div>
   </footer>
 <dialog id="brief-feedback-dialog">
