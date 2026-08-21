@@ -261,6 +261,9 @@
   #brief-feedback-dialog textarea { width:100%; min-height:9rem; margin:.75rem 0; padding:.75rem; font:inherit; }
   .brief-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
+<style id="original-live-layer-styles">
+  .live-canton-weather { margin:.55rem 0 0; font-size:.88rem; color:var(--muted); }
+</style>
 </head>
 <body class="event-luau">
   <header class="masthead" data-brief-section="overview">
@@ -388,7 +391,17 @@
           <p>MSU researchers and John Ball Zoo turned nine known wild Poweshiek skipperlings into a captive-and-wild population above 1,300. The inch-long butterfly survives in only a few prairie-fen populations, including two in southeast Michigan.</p>
           <p><small>The recovery is real but fragile: researchers still cite habitat loss and insecticides as major threats.</small></p>
         </article>
-      </div>
+      <article class="card">
+  <h3><a href="https://news.mit.edu/2026/new-way-watch-heat-move-through-electronics-0806">A new way to watch heat move through electronics</a></h3>
+  <p>Ultrafast X-rays now let researchers measure heat flow through several layers of a working chip at once, exposing microscopic bottlenecks that conventional surface measurements miss.</p>
+  <p><small>Caveat: The technique is a laboratory measurement platform, not yet a new cooling product.</small></p>
+</article>
+<article class="card">
+  <h3><a href="https://news.mit.edu/index.php/2026/turning-molecules-into-reliable-electronic-devices-0803">Molecular electronics becomes repeatable at chip scale</a></h3>
+  <p>A fabrication platform integrated sub-nanometer molecular layers into more than 1,000 devices that survived tens of thousands of electrical cycles, a step toward practical molecular-scale computing components.</p>
+  <p><small>Caveat: The result demonstrates scalable, durable test devices; commercial applications still require further development.</small></p>
+</article>
+</div>
     </section>
 
   </main>
@@ -444,7 +457,7 @@
       const feedback = input.value.trim();
       if (!feedback) { input.focus(); return; }
       const excerpt = selectedSection?.innerText?.replace(/\s+/g, " ").trim().slice(0, 280) || "";
-      const body = `Panel: ${panelName}
+      const body = `Page URL: ${window.location.href}\nPanel: ${panelName}
 Panel marker: ${panelMarker}
 Panel excerpt: ${excerpt}
 
@@ -480,6 +493,35 @@ Submitted from the published daily brief.`;
     };
     refresh();
     window.setInterval(refresh, 60_000);
+  })();
+</script>
+<script id="original-live-layer-script">
+  (() => {
+    const zone = "America/Detroit";
+    const labels = { dawn:"Dawn", day:"Daylight", dusk:"Evening glow", night:"Night mode" };
+    const themeColors = { dawn:"#6f5148", day:"#16453d", dusk:"#2d2c49", night:"#0a1418" };
+    const hourFormat = new Intl.DateTimeFormat("en-US", { timeZone:zone, hour:"numeric", hourCycle:"h23" });
+    const clockFormat = new Intl.DateTimeFormat("en-US", { timeZone:zone, hour:"numeric", minute:"2-digit", second:"2-digit" });
+    const refreshClock = () => {
+      const now = new Date(); const hour = Number(hourFormat.format(now));
+      const theme = hour < 7 ? "dawn" : hour < 17 ? "day" : hour < 21 ? "dusk" : "night";
+      document.documentElement.dataset.timeTheme = theme === "dawn" ? "morning" : theme === "day" ? "afternoon" : theme === "dusk" ? "evening" : "night";
+      const chip = document.getElementById("time-chip"); if (chip) chip.textContent = `${labels[theme]} · ${clockFormat.format(now)} Detroit`;
+      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", themeColors[theme]);
+    };
+    const weatherCodes = {0:"clear",1:"mostly clear",2:"partly cloudy",3:"overcast",45:"foggy",48:"icy fog",51:"light drizzle",53:"drizzle",55:"heavy drizzle",61:"light rain",63:"rain",65:"heavy rain",71:"light snow",73:"snow",75:"heavy snow",80:"rain showers",81:"rain showers",82:"heavy showers",95:"thunderstorms",96:"storms with hail",99:"severe storms with hail"};
+    const refreshWeather = async () => {
+      const today = document.querySelector("#weather-today")?.closest(".group"); if (!today) return;
+      let live = today.querySelector(".live-canton-weather");
+      if (!live) { live = document.createElement("p"); live.className = "live-canton-weather"; today.append(live); }
+      try {
+        const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=42.3086&longitude=-83.4824&current=temperature_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FDetroit");
+        if (!response.ok) throw new Error("weather unavailable"); const current = (await response.json()).current;
+        live.textContent = `Live in Canton: ${Math.round(current.temperature_2m)}°F · feels ${Math.round(current.apparent_temperature)}° · ${weatherCodes[current.weather_code] || "current conditions"} · wind ${Math.round(current.wind_speed_10m)} mph`;
+      } catch (_) { live.textContent = "Live Canton conditions temporarily unavailable."; }
+    };
+    refreshClock(); refreshWeather();
+    window.setInterval(refreshClock, 1000); window.setInterval(refreshWeather, 10 * 60 * 1000);
   })();
 </script>
 </body>
