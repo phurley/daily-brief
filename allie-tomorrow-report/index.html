@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Allison’s Saturday Playbook · August 22, 2026</title>
+  <style>
+    :root {
+      --night:#12142f; --panel:#1c2145; --ink:#f8f3e8; --muted:#c7c8da;
+      --coral:#ff786f; --gold:#f5c96a; --aqua:#77d8d1; --line:#3b416e;
+    }
+    * { box-sizing:border-box; }
+    html { background:var(--night); }
+    body { margin:0; color:var(--ink); background:radial-gradient(circle at 85% 0,#39265d 0,transparent 34rem),linear-gradient(160deg,#11132e,#171a38 58%,#10162e); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--aqua); text-underline-offset:.18em; }
+    a:hover, a:focus-visible { color:#b4fff9; }
+    .shell { width:min(1120px,calc(100% - 32px)); margin:auto; padding:38px 0 64px; }
+    header { padding:clamp(26px,6vw,64px); border:1px solid var(--line); border-radius:28px; background:linear-gradient(135deg,rgba(255,120,111,.17),rgba(245,201,106,.07) 45%,rgba(119,216,209,.09)); box-shadow:0 24px 70px rgba(0,0,0,.25); }
+    .eyebrow,.label { margin:0 0 8px; color:var(--gold); font-size:.78rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { max-width:800px; margin:0; font-size:clamp(2.25rem,7vw,5rem); line-height:.97; letter-spacing:-.055em; }
+    .lede { max-width:760px; margin:22px 0 0; color:var(--muted); font-size:clamp(1.05rem,2.4vw,1.3rem); }
+    main { display:grid; grid-template-columns:repeat(12,1fr); gap:18px; margin-top:18px; }
+    section { grid-column:span 12; padding:clamp(22px,4vw,36px); border:1px solid var(--line); border-radius:22px; background:rgba(28,33,69,.88); box-shadow:0 16px 42px rgba(0,0,0,.16); }
+    section.half { grid-column:span 6; }
+    h2 { margin:0 0 8px; font-size:clamp(1.55rem,3vw,2.25rem); letter-spacing:-.03em; }
+    h3 { margin:0 0 6px; font-size:1.08rem; }
+    p { margin:8px 0; }
+    .sub,.meta { color:var(--muted); }
+    .meta { margin:0 0 8px; font-size:.88rem; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:18px; }
+    .card,.callout { padding:18px; border:1px solid var(--line); border-radius:16px; background:#171b3a; }
+    .callout { border-left:4px solid var(--coral); }
+    .action { margin-top:12px; padding:12px 14px; border-radius:12px; background:rgba(245,201,106,.1); color:#fff5d6; }
+    .schedule { display:grid; gap:0; margin-top:18px; }
+    .slot { position:relative; padding:0 0 18px 28px; border-left:2px solid var(--line); }
+    .slot::before { content:""; position:absolute; left:-7px; top:5px; width:12px; height:12px; border-radius:50%; background:var(--coral); box-shadow:0 0 0 4px var(--panel); }
+    .slot:last-child { padding-bottom:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:7px; }
+    .source { display:inline-block; margin-top:10px; font-size:.9rem; font-weight:700; }
+    [data-allie-event][hidden],[data-allie-time-empty][hidden] { display:none !important; }
+    .rotation { margin-top:18px; }
+    .rotation .card { border-color:var(--coral); box-shadow:inset 0 1px 0 rgba(255,255,255,.05); }
+    .status { display:inline-block; margin-bottom:10px; padding:4px 9px; border-radius:999px; color:#12142f; background:var(--gold); font-size:.74rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+    footer { margin-top:20px; color:var(--muted); text-align:center; font-size:.86rem; }
+    @media (max-width:760px) { section.half { grid-column:span 12; } .grid { grid-template-columns:1fr; } .shell { width:min(100% - 20px,1120px); padding-top:10px; } header,section { border-radius:18px; } }
+  </style>
+<style id="allie-time-rotation-styles">
+  [data-allie-event][hidden] { display:none !important; }
+  [data-allie-time-empty][hidden] { display:none !important; }
+</style>
+<style id="allie-live-styles">
+  body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:9998; opacity:.08; mix-blend-mode:soft-light; transition:background 1.2s ease; }
+  body[data-allie-theme="dawn"]::before { background:linear-gradient(135deg,#ff9a76,#ffd56a 45%,#8ec5fc); }
+  body[data-allie-theme="day"]::before { background:linear-gradient(135deg,#43cea2,#2f80ed 55%,#f9d423); }
+  body[data-allie-theme="dusk"]::before { background:linear-gradient(135deg,#ff5f6d,#7f53ac 55%,#2c3e70); }
+  body[data-allie-theme="night"]::before { background:linear-gradient(135deg,#090b2b,#29104a 55%,#0b7285); }
+  .allie-live-strip { display:flex; flex-wrap:wrap; align-items:center; gap:.65rem 1rem; padding:.75rem 1rem; margin:0 0 1rem; border:1px solid rgb(255 255 255 / .28); border-radius:999px; background:rgb(10 12 34 / .78); color:#fff; box-shadow:0 10px 30px rgb(0 0 0 / .2); }
+  .allie-live-strip strong { letter-spacing:.03em; }
+  .allie-live-card { padding:1rem; margin:.75rem 0; border-radius:1rem; border:1px solid currentColor; background:rgb(255 255 255 / .1); }
+  .allie-live-score-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:.75rem; }
+  .allie-score { font-size:1.35rem; font-weight:800; }
+  .allie-live-status { opacity:.78; font-size:.85rem; }
+</style>
+<style id="allie-feedback-styles">
+  [data-allie-feedback-selected] { outline:3px solid #f05a9d; outline-offset:4px; }
+  #allie-feedback-dialog { max-width:36rem; width:calc(100% - 2rem); border:0; border-radius:1rem; padding:1.25rem; }
+  #allie-feedback-dialog::backdrop { background:rgb(0 0 0 / .58); }
+  #allie-feedback-dialog textarea { box-sizing:border-box; width:100%; min-height:9rem; margin:.75rem 0; padding:.75rem; }
+  .allie-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
+</style>
+</head>
+<body data-allie-report="tomorrow" data-report-date="2026-08-22">
+  <div class="shell">
+    <header>
+      <p class="eyebrow">Night-before playbook · Saturday, August 22</p>
+      <h1>Tomorrow is built for getting out.</h1>
+      <p class="lede">A dry, near-80°F Saturday is the working forecast. Lock in the one plan that needs a ticket or RSVP tonight, then leave the rest of the day flexible.</p>
+    </header>
+
+    <main>
+      <section data-brief-section="allie-tomorrow-overview">
+        <p class="label">The shape of Saturday</p>
+        <h2>Three clean lanes</h2>
+        <div class="schedule">
+          <div class="slot"><h3>Morning · move</h3><p>Run the 313 starts at 8:30 AM, or take the solo-friendly bike social at 11 AM. The cooler morning is the best active window.</p></div>
+          <div class="slot"><h3>Noon · Lions check</h3><p>Commanders at Lions kicks off at noon at Ford Field. Use the preseason game for health and role clues, not a start/sit verdict.</p></div>
+          <div class="slot"><h3>Evening · choose your energy</h3><p>Detroit City FC starts at 7 PM at Keyworth. Beacon Park runs 6–10 PM, while Dogstar starts at 7 PM at Saint Andrew’s Hall.</p></div>
+        </div>
+        <p class="action"><strong>Do tonight:</strong> register or RSVP for the morning plan, prepay DCFC tickets and parking if that is the night choice, and put water, sunscreen, and a light layer by the door.</p>
+      </section>
+
+      <section class="half" data-brief-section="allie-tomorrow-weather">
+        <p class="label">Weather</p>
+        <h2>Dry and seasonable is the working call</h2>
+        <p class="sub">Confidence: medium. Exact hourly temperature, wind, and rain timing remain provisional.</p>
+        <div class="schedule">
+          <div class="slot"><h3>7–9 AM · low 60s</h3><p>Dry favored. Good for an early run or drive; bring a light layer.</p></div>
+          <div class="slot"><h3>9 AM–noon · upper 60s to mid 70s</h3><p>The strongest flexible window for running, pickleball, volleyball, or errands.</p></div>
+          <div class="slot"><h3>Noon–6 PM · near 80°F</h3><p>Dry favored. Bring water and sun protection for exposed courts, fields, and patios.</p></div>
+          <div class="slot"><h3>6–10 PM · cooling through the 70s</h3><p>Comfortable for an outdoor evening; carry a light layer after sunset.</p></div>
+        </div>
+        <p class="action">One broader forecast product flags isolated late thunderstorms while the NWS regional outlook favors dry weather. Recheck the official hourly forecast Saturday morning.</p>
+        <p>Detroit-specific numerical AQI was not available in the retrieved AirNow data. Check before a long run or extended outdoor court time; AirNow says tomorrow’s forecast is generally available by 4 PM local time.</p>
+        <a class="source" href="https://forecast.weather.gov/MapClick.php?lat=42.3314&amp;lon=-83.0458">Detroit NWS forecast</a> ·
+        <a class="source" href="https://forecast.weather.gov/MapClick.php?lat=42.2808&amp;lon=-83.7430">Ann Arbor NWS forecast</a> ·
+        <a class="source" href="https://forecast.weather.gov/product.php?site=DTX&amp;issuedby=DTX&amp;product=AFD">NWS discussion</a> ·
+        <a class="source" href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a>
+      </section>
+
+      <section class="half" data-brief-section="allie-tomorrow-sports">
+        <p class="label">Sports</p>
+        <h2>A local noon-to-night doubleheader</h2>
+        <article class="card">
+          <p class="meta">12:00 PM · Ford Field · FOX 2 / Lions TV Network</p>
+          <h3>Washington Commanders at Detroit Lions</h3>
+          <p>Josh Dobbs is slated to start and Jared Goff will sit. Lions-linked coverage says a significant number of starters could play, subject to game-day decisions.</p>
+          <p><strong>Fantasy watch:</strong> Sam LaPorta’s hip and official availability. Do not make a season-long roster decision from uneven preseason workloads.</p>
+          <a class="source" href="https://www.detroitlions.com/schedule/">Schedule and tickets</a> ·
+          <a class="source" href="https://www.detroitlions.com/news/detroit-lions-announce-preseason-tv-broadcast-crew">Broadcast details</a> ·
+          <a class="source" href="https://www.detroitlions.com/news/lions-daily-josh-dobbs-juice-scruggs-among-7-players-to-watch-in-lions-commanders">Player watch</a> ·
+          <a class="source" href="https://www.detroitlions.com/news/lions-daily-lions-will-play-significant-amount-of-starters-in-next-preseason-game">Starter update</a>
+        </article>
+        <article class="card" style="margin-top:12px">
+          <p class="meta">7:00 PM · Keyworth Stadium · ESPN+</p>
+          <h3>Tampa Bay Rowdies at Detroit City FC</h3>
+          <p>A nearby, peer-friendly Saturday-night option. The club lists tickets and prepaid parking on its schedule.</p>
+          <p class="action"><strong>Tonight:</strong> no Friday cutoff was published; buy and prepay now for the low-friction plan.</p>
+          <a class="source" href="https://www.detcityfc.com/mens-schedule/">DCFC tickets and parking</a> ·
+          <a class="source" href="https://www.rowdiessoccer.com/schedule/">Streaming listing</a>
+        </article>
+        <p><strong>WNBA:</strong> Fever at Liberty at 7 PM and Sun at Sparks at 9 PM, both on Prime Video.</p>
+        <a class="source" href="https://www.aboutamazon.com/news/entertainment/wnba-schedule-prime-video">Prime Video schedule</a> ·
+        <a class="source" href="https://sun.wnba.com/where-to-watch">Sun viewing guide</a>
+        <p class="sub">The official Pistons schedule lists no game or event for August 22. <a href="https://www.nba.com/pistons/schedule">Pistons schedule</a></p>
+      </section>
+
+      <section data-brief-section="allie-tomorrow-plans" data-allie-time-rotation>
+        <p class="label">Tomorrow’s plan rotation</p>
+        <h2>The active or next verified option</h2>
+        <p class="sub">The report will surface only the active or next card. Inventory counts were not published, so confirm availability before paying or traveling.</p>
+        <div class="rotation">
+          <article class="card" data-allie-event data-start-at="2026-08-22T08:30:00-04:00" data-end-at="2026-08-22T10:00:00-04:00">
+            <span class="status">Morning</span>
+            <p class="meta">8:30–10:00 AM · Palmer Park, Detroit</p>
+            <h3>Run the 313 5K</h3>
+            <p>A natural solo-arrival event for meeting active local peers. The standard 5K is listed at $55 and closes at 8:38 AM Saturday; the $35 economy option closes at 8:30 AM.</p>
+            <p class="action"><strong>Tonight:</strong> register, then set out race clothes, hydration, and the arrival and parking plan.</p>
+            <a class="source" href="https://runsignup.com/Race/Info/MI/Detroit/Runthe313">Official registration</a>
+          </article>
+          <article class="card" hidden data-allie-event data-start-at="2026-08-22T11:00:00-04:00" data-end-at="2026-08-22T13:00:00-04:00">
+            <span class="status">Midday</span>
+            <p class="meta">11:00 AM–1:00 PM · Wheelhouse Detroit to Belle Isle</p>
+            <h3>Pretty Pace Bike Social: Vol. 1</h3>
+            <p>A women-focused, comfort-paced ride that explicitly welcomes solo arrivals. Eventbrite registration is live; bike rental is separate and the organizer strongly recommends reserving one in advance.</p>
+            <p class="action"><strong>Tonight:</strong> RSVP, separately reserve a bike if needed, and prep pink athleisure plus a filled water bottle.</p>
+            <a class="source" href="https://www.eventbrite.com/e/pretty-pace-bike-social-tickets-1997614310176">Official RSVP</a>
+          </article>
+          <article class="card" hidden data-allie-event data-start-at="2026-08-22T13:00:00-04:00" data-end-at="2026-08-22T17:00:00-04:00">
+            <span class="status">Afternoon</span>
+            <p class="meta">1:00–5:00 PM · Check-in at Easy Peasy, Detroit</p>
+            <h3>Bark Crawl 2026</h3>
+            <p>A 21+ charity crawl for humans only; leave pets at home. The official shirt functions as admission, and the route has no required start order.</p>
+            <p class="action"><strong>Tonight:</strong> purchase the shirt/ticket, save 1456 Woodward Ave, and coordinate a rideshare or designated driver.</p>
+            <a class="source" href="https://www.metrodetroitanimals.org/event/3rd-annual-bark-crawl/">Official event page</a> ·
+            <a class="source" href="https://www.wrcjfm.org/events/bark-crawl/">Event listing</a>
+          </article>
+          <div class="callout" data-allie-time-empty hidden>No active or upcoming sourced option remains in tomorrow’s rotation.</div>
+        </div>
+        <p class="action"><strong>Best connection-first choice:</strong> prioritize the bike social. Pairing it with Bark Crawl is possible because the crawl has no set route, but there is no buffer between the posted times.</p>
+      </section>
+
+      <section class="half" data-brief-section="allie-tomorrow-entertainment">
+        <p class="label">Entertainment</p>
+        <h2>Pick the room—or stay in</h2>
+        <div class="grid">
+          <article class="card"><p class="meta">6:00–10:00 PM · Beacon Park</p><h3>Summer Music Series</h3><p>Open-air downtown music spanning soul, pop, and country, with drinks at Lumen Detroit and room to dance.</p><a class="source" href="https://downtowndetroit.org/events/month/2026-08/">Event calendar</a></article>
+          <article class="card"><p class="meta">7:00 PM · Saint Andrew’s Hall</p><h3>Dogstar: All In Now Tour</h3><p>A compact Detroit rock-show alternative with The Backfires.</p><a class="source" href="https://www.livenation.com/event/vv1AFZkoNGkdoE1EC/dogstar-all-in-now-tour">Official event</a></article>
+          <article class="card"><p class="meta">Time not listed · Music Hall</p><h3>John Lee Hooker Celebration</h3><p>A Detroit-rooted blues alternative supporting young artists. Verify timing before making it the plan.</p><a class="source" href="https://www.musichall.org/shows-events?month=8&amp;year=2026">Venue calendar</a></article>
+          <article class="card"><p class="meta">Available Saturday · Hulu</p><h3><em>The Christophers</em></h3><p>An at-home art-world story starring Michaela Coel, James Corden, Jessica Gunning, and Ian McKellen. For the playlist, Sam Smith’s <em>Hazel Eyes</em> was released Friday.</p><a class="source" href="https://apnews.com/article/streaming-august-2026-95a063ef2d8e2acd11ad645e58aee6e5">AP streaming guide</a></article>
+        </div>
+        <p class="sub"><strong>Love Island USA:</strong> no verified Saturday episode time. Use tomorrow to catch up; Peacock lists the Season 8 reunion for Monday, August 31 at 9 PM. <a href="https://www.peacocktv.com/blog/how-many-times-does-love-island-usa-come-on-a-week-schedule">Peacock</a></p>
+      </section>
+
+      <section class="half" data-brief-section="allie-tomorrow-prepare">
+        <p class="label">Prepare tonight</p>
+        <h2>A 15-minute game-company teardown</h2>
+        <div class="callout">
+          <p class="meta">Shakeup Adventures · campaign closes Saturday; exact closing time not verified</p>
+          <p>Capture the campaign page’s first-screen promise, demo moment, price ladder, and comments. Save three ideas for a bootstrapped prototype instead of backing impulsively.</p>
+          <p>The benchmark: a physical hook—shaking dice into a new dungeon—with 30–60 minute play for 2–6 players. The campaign was listed at 1,804 backers and $238K five days before close; treat that as a signal, not a demand forecast.</p>
+          <a class="source" href="https://www.reddit.com/r/boardgames/comments/1vpzno6/weekly_crowdfunding_roundup_august_16_2026_12/">Crowdfunding roundup</a> ·
+          <a class="source" href="https://www.veryspecialgames.com/pages/shakeup-adventure-kickstarter-launch">Creator page</a> ·
+          <a class="source" href="https://www.kickstarter.com/projects/chartypartyjosh/shakeup-adventures-an-infinitely-new-dice-dungeon-crawler/faqs">Campaign FAQ</a>
+        </div>
+      </section>
+
+      <section data-brief-section="allie-tomorrow-family">
+        <p class="label">Family context</p>
+        <h2>No family feeds are configured</h2>
+        <div class="grid">
+          <article class="card"><h3>Calendar</h3><p>Status: not configured. No family calendar events were supplied, so none are shown or inferred for tomorrow.</p></article>
+          <article class="card"><h3>Photo album</h3><p>Status: not configured. No album URL was supplied, so there is no photo prompt or link to include.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>Prepared Friday, August 21, 2026 · Tomorrow-only facts and tonight actions</footer>
+  </div>
+<script id="allie-time-rotation-script">
+  (() => {
+    const refresh = () => {
+      const now = Date.now();
+      document.querySelectorAll("[data-allie-time-rotation]").forEach((rotation) => {
+        const events = [...rotation.querySelectorAll("[data-allie-event]")]
+          .map((element) => ({ element, start: Date.parse(element.dataset.startAt), end: Date.parse(element.dataset.endAt) }))
+          .filter((item) => Number.isFinite(item.start) && Number.isFinite(item.end))
+          .sort((a, b) => a.start - b.start);
+        const chosen = events.find((item) => item.start <= now && now < item.end) ||
+          events.find((item) => now < item.start) || null;
+        events.forEach((item) => { item.element.hidden = item !== chosen; });
+        const empty = rotation.querySelector("[data-allie-time-empty]");
+        if (empty) empty.hidden = chosen !== null;
+      });
+    };
+    refresh(); window.setInterval(refresh, 60000);
+  })();
+</script>
+<script id="allie-live-script">
+  (() => {
+    const scope = "tomorrow";
+    const zone = "America/Detroit";
+    const body = document.body;
+    const formatter = new Intl.DateTimeFormat("en-US", { timeZone: zone, weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit", second:"2-digit" });
+    const hourFormatter = new Intl.DateTimeFormat("en-US", { timeZone: zone, hour:"numeric", hourCycle:"h23" });
+    const dateFormatter = new Intl.DateTimeFormat("en-CA", { timeZone: zone, year:"numeric", month:"2-digit", day:"2-digit" });
+    const reportDate = body.dataset.reportDate || dateFormatter.format(new Date());
+    const pageMain = document.querySelector("main") || body;
+    const liveStrip = document.createElement("div");
+    liveStrip.className = "allie-live-strip";
+    liveStrip.innerHTML = `<strong>Detroit now</strong><time data-allie-live-clock></time><span data-allie-live-weather>Weather updating…</span>`;
+    pageMain.prepend(liveStrip);
+
+    const updateClockAndTheme = () => {
+      const now = new Date(); const hour = Number(hourFormatter.format(now));
+      body.dataset.allieTheme = hour < 7 ? "dawn" : hour < 17 ? "day" : hour < 21 ? "dusk" : "night";
+      liveStrip.querySelector("[data-allie-live-clock]").textContent = formatter.format(now);
+      liveStrip.querySelector("[data-allie-live-clock]").dateTime = now.toISOString();
+    };
+
+    const weatherCodes = {0:"Clear",1:"Mostly clear",2:"Partly cloudy",3:"Overcast",45:"Foggy",48:"Icy fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",61:"Light rain",63:"Rain",65:"Heavy rain",71:"Light snow",73:"Snow",75:"Heavy snow",80:"Rain showers",81:"Rain showers",82:"Heavy showers",95:"Thunderstorms",96:"Storms with hail",99:"Severe storms with hail"};
+    const updateWeather = async () => {
+      const target = liveStrip.querySelector("[data-allie-live-weather]");
+      try {
+        const url = "https://api.open-meteo.com/v1/forecast?latitude=42.3314&longitude=-83.0458&current=temperature_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FDetroit";
+        const response = await fetch(url); if (!response.ok) throw new Error("weather unavailable");
+        const current = (await response.json()).current;
+        target.textContent = `${Math.round(current.temperature_2m)}°F · feels ${Math.round(current.apparent_temperature)}° · ${weatherCodes[current.weather_code] || "Current conditions"} · wind ${Math.round(current.wind_speed_10m)} mph`;
+        target.title = "Live Detroit weather from Open-Meteo";
+      } catch (_) { target.textContent = "Live weather temporarily unavailable"; }
+    };
+
+    const renderGame = (event, league) => {
+      const competition = event.competitions?.[0]; const teams = competition?.competitors || [];
+      const detroit = teams.find((entry) => entry.team?.abbreviation === "DET");
+      if (!detroit) return null;
+      const opponent = teams.find((entry) => entry !== detroit); const status = event.status?.type;
+      const card = document.createElement("article"); card.className = "allie-live-card";
+      const score = status?.state === "pre" ? (status.shortDetail || status.description) : `${detroit.score || "0"} – ${opponent?.score || "0"}`;
+      const title = document.createElement("strong"); title.textContent = `${league === "nba" ? "Pistons" : "Lions"} ${detroit.homeAway === "home" ? "vs" : "at"} ${opponent?.team?.shortDisplayName || "Opponent"}`;
+      const scoreNode = document.createElement("div"); scoreNode.className = "allie-score"; scoreNode.textContent = score;
+      const statusNode = document.createElement("div"); statusNode.className = "allie-live-status"; statusNode.textContent = status?.detail || status?.description || "Game update";
+      card.append(title, scoreNode, statusNode);
+      return card;
+    };
+    const updateScores = async () => {
+      const sports = document.querySelector(`[data-brief-section="allie-${scope}-sports"]`); if (!sports) return;
+      let grid = sports.querySelector("[data-allie-live-scores]");
+      if (!grid) { grid = document.createElement("div"); grid.dataset.allieLiveScores = ""; grid.className = "allie-live-score-grid"; sports.prepend(grid); }
+      try {
+        const date = reportDate.replaceAll("-", "");
+        const feeds = [["nba",`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${date}`],["nfl",`https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${date}`]];
+        const payloads = await Promise.all(feeds.map(async ([league,url]) => { const response = await fetch(url); if (!response.ok) throw new Error("scores unavailable"); return [league, await response.json()]; }));
+        const cards = payloads.flatMap(([league,data]) => (data.events || []).map((event) => renderGame(event, league)).filter(Boolean));
+        grid.replaceChildren(...cards); grid.hidden = cards.length === 0;
+      } catch (_) { grid.hidden = true; }
+    };
+
+    updateClockAndTheme(); updateWeather(); updateScores();
+    window.setInterval(updateClockAndTheme, 1000);
+    window.setInterval(updateWeather, 10 * 60 * 1000);
+    window.setInterval(updateScores, 60 * 1000);
+  })();
+</script>
+<dialog id="allie-feedback-dialog"><form method="dialog">
+  <h2>Improve Allison's tomorrow report</h2><p id="allie-feedback-context"></p>
+  <textarea id="allie-feedback-text" aria-label="Feedback" placeholder="What should change in this panel?"></textarea>
+  <div class="allie-feedback-actions"><button value="cancel">Cancel</button>
+    <button id="allie-feedback-submit" value="default">Continue to GitHub</button></div>
+</form></dialog>
+<script id="allie-feedback-script">
+  (() => {
+    const repository = "phurley/daily-brief";
+    const label = "allie-tomorrow-feedback";
+    const reportScope = "tomorrow";
+    const dialog = document.getElementById("allie-feedback-dialog");
+    const context = document.getElementById("allie-feedback-context");
+    const input = document.getElementById("allie-feedback-text");
+    let selected = null; let panel = "General"; let marker = "General";
+    document.querySelectorAll("[data-brief-section]").forEach((section) => {
+      section.addEventListener("contextmenu", (event) => {
+        event.preventDefault(); selected?.removeAttribute("data-allie-feedback-selected"); selected = section;
+        selected.setAttribute("data-allie-feedback-selected", "");
+        panel = section.querySelector("h1,h2,h3")?.textContent?.trim() || section.dataset.briefSection;
+        marker = `data-brief-section="${section.dataset.briefSection}"`;
+        context.textContent = `Panel: ${panel}`; input.value = ""; dialog.showModal(); input.focus();
+      });
+    });
+    dialog.addEventListener("close", () => { selected?.removeAttribute("data-allie-feedback-selected"); selected = null; });
+    document.getElementById("allie-feedback-submit").addEventListener("click", (event) => {
+      event.preventDefault(); const feedback = input.value.trim(); if (!feedback) { input.focus(); return; }
+      const excerpt = selected?.innerText?.replace(/\s+/g, " ").trim().slice(0, 280) || "";
+      const body = `Report: Allison ${reportScope}\nPage URL: ${window.location.href}\nPanel: ${panel}\nPanel marker: ${marker}\nPanel excerpt: ${excerpt}\n\nRequested implementation change:\n${feedback}`;
+      const url = `https://github.com/${repository}/issues/new?labels=${encodeURIComponent(label)}&title=${encodeURIComponent(`Allison ${reportScope}: ${panel}`)}&body=${encodeURIComponent(body)}`;
+      window.open(url, "_blank", "noopener,noreferrer"); dialog.close();
+    });
+  })();
+</script>
+</body>
+</html>
