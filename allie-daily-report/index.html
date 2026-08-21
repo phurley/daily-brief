@@ -88,6 +88,8 @@
 </style>
 
 
+
+
 <style id="allie-compact-layout">
   main { display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; grid-auto-flow:dense; grid-auto-rows:8px; gap:18px !important; align-items:start; }
   main > section { grid-column:auto !important; align-self:start !important; width:100% !important; height:auto !important; min-height:0 !important; margin:0 !important; box-sizing:border-box; }
@@ -104,7 +106,14 @@
   .allie-score { font-size:1.35rem; font-weight:800; }
   .allie-live-status { opacity:.78; font-size:.85rem; }
 </style>
-</head>
+<style id="allie-market-tracker-styles">
+  #allie-market-tracker { margin:0 0 1rem; padding:1rem; border:1px solid currentColor; border-radius:1rem; background:rgb(255 255 255 / .1); overflow:hidden; }
+  #allie-market-tracker h3 { margin:0 0 .25rem; font-size:1rem; }
+  #allie-market-tracker p { margin:.25rem 0 .75rem; font-size:.82rem; opacity:.82; }
+  #allie-market-tracker tv-tickers { display:block; width:100%; min-height:92px; }
+  #allie-market-tracker .allie-market-placeholder { padding:.75rem; border:1px dashed currentColor; border-radius:.7rem; opacity:.72; }
+</style>
+<script id="allie-market-tracker-widget" type="module" src="https://widgets.tradingview-widget.com/w/en/tv-tickers.js"></script></head>
 <body data-allie-report="daily" data-report-date="2026-08-21">
   <div class="page">
     <header aria-labelledby="page-title">
@@ -202,7 +211,16 @@
         </div>
       </section>
 
-      <section class="money" data-brief-section="allie-daily-money-ai" aria-labelledby="money-title">
+      <section class="money" data-brief-section="allie-daily-money-ai" aria-labelledby="money-title"><!-- allie-market-tracker:start -->
+<div id="allie-market-tracker" data-allie-live-market>
+  <h3>Market pulse</h3>
+  <p>VTI total U.S. market · SPY S&amp;P 500 · QQQ Nasdaq-100 · FXAIX mutual-fund NAV. ETF quotes move during market hours; FXAIX normally posts one NAV per trading day. Informational only.</p>
+  <tv-tickers symbols="AMEX:VTI,AMEX:SPY,NASDAQ:QQQ,NASDAQ:FXAIX" hide-chart>
+    <div class="allie-market-placeholder">Loading current market prices…</div>
+  </tv-tickers>
+</div>
+<!-- allie-market-tracker:end -->
+
         <p class="section-kicker">Money + practical AI</p>
         <h2 id="money-title">Three useful checks, no doomscrolling</h2>
         <div class="money-grid">
@@ -278,6 +296,9 @@
     });
   })();
 </script>
+
+
+
 
 
 
