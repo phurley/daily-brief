@@ -261,8 +261,18 @@
   #brief-feedback-dialog textarea { width:100%; min-height:9rem; margin:.75rem 0; padding:.75rem; font:inherit; }
   .brief-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
+
+
+
 <style id="original-live-layer-styles">
   .live-canton-weather { margin:.55rem 0 0; font-size:.88rem; color:var(--muted); }
+  .time-chip { justify-self:start; width:max-content; max-width:100%; white-space:nowrap; line-height:1.2; }
+  @media (max-width:760px) {
+    .masthead-tools { flex-wrap:wrap; }
+    .masthead-tools .time-chip { width:max-content; }
+    .masthead-tools .family-note { max-width:100%; white-space:normal; }
+    .masthead-tools .edition-links { width:100%; }
+  }
 </style>
 </head>
 <body class="event-luau">
@@ -503,13 +513,16 @@ Submitted from the published daily brief.`;
     window.setInterval(refresh, 60_000);
   })();
 </script>
+
+
+
 <script id="original-live-layer-script">
   (() => {
     const zone = "America/Detroit";
     const labels = { dawn:"Dawn", day:"Daylight", dusk:"Evening glow", night:"Night mode" };
     const themeColors = { dawn:"#6f5148", day:"#16453d", dusk:"#2d2c49", night:"#0a1418" };
     const hourFormat = new Intl.DateTimeFormat("en-US", { timeZone:zone, hour:"numeric", hourCycle:"h23" });
-    const clockFormat = new Intl.DateTimeFormat("en-US", { timeZone:zone, hour:"numeric", minute:"2-digit", second:"2-digit" });
+    const clockFormat = new Intl.DateTimeFormat("en-US", { timeZone:zone, hour:"numeric", minute:"2-digit" });
     const refreshClock = () => {
       const now = new Date(); const hour = Number(hourFormat.format(now));
       const theme = hour < 7 ? "dawn" : hour < 17 ? "day" : hour < 21 ? "dusk" : "night";
@@ -529,7 +542,7 @@ Submitted from the published daily brief.`;
       } catch (_) { live.textContent = "Live Canton conditions temporarily unavailable."; }
     };
     refreshClock(); refreshWeather();
-    window.setInterval(refreshClock, 1000); window.setInterval(refreshWeather, 10 * 60 * 1000);
+    window.setInterval(refreshClock, 60 * 1000); window.setInterval(refreshWeather, 10 * 60 * 1000);
   })();
 </script>
 </body>

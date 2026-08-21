@@ -50,25 +50,26 @@
   [data-allie-event][hidden] { display:none !important; }
   [data-allie-time-empty][hidden] { display:none !important; }
 </style>
-<style id="allie-live-styles">
-  body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:9998; opacity:.08; mix-blend-mode:soft-light; transition:background 1.2s ease; }
-  body[data-allie-theme="dawn"]::before { background:linear-gradient(135deg,#ff9a76,#ffd56a 45%,#8ec5fc); }
-  body[data-allie-theme="day"]::before { background:linear-gradient(135deg,#43cea2,#2f80ed 55%,#f9d423); }
-  body[data-allie-theme="dusk"]::before { background:linear-gradient(135deg,#ff5f6d,#7f53ac 55%,#2c3e70); }
-  body[data-allie-theme="night"]::before { background:linear-gradient(135deg,#090b2b,#29104a 55%,#0b7285); }
-  .allie-live-strip { display:flex; flex-wrap:wrap; align-items:center; gap:.65rem 1rem; padding:.75rem 1rem; margin:0 0 1rem; border:1px solid rgb(255 255 255 / .28); border-radius:999px; background:rgb(10 12 34 / .78); color:#fff; box-shadow:0 10px 30px rgb(0 0 0 / .2); }
-  .allie-live-strip strong { letter-spacing:.03em; }
-  .allie-live-card { padding:1rem; margin:.75rem 0; border-radius:1rem; border:1px solid currentColor; background:rgb(255 255 255 / .1); }
-  .allie-live-score-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:.75rem; }
-  .allie-score { font-size:1.35rem; font-weight:800; }
-  .allie-live-status { opacity:.78; font-size:.85rem; }
-</style>
+
 <style id="allie-feedback-styles">
   [data-allie-feedback-selected] { outline:3px solid #f05a9d; outline-offset:4px; }
   #allie-feedback-dialog { max-width:36rem; width:calc(100% - 2rem); border:0; border-radius:1rem; padding:1.25rem; }
   #allie-feedback-dialog::backdrop { background:rgb(0 0 0 / .58); }
   #allie-feedback-dialog textarea { box-sizing:border-box; width:100%; min-height:9rem; margin:.75rem 0; padding:.75rem; }
   .allie-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
+</style>
+
+
+<style id="allie-live-styles">
+  body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:9998; opacity:.08; mix-blend-mode:soft-light; transition:background 1.2s ease; }
+  body[data-allie-theme="dawn"]::before { background:linear-gradient(135deg,#ff9a76,#ffd56a 45%,#8ec5fc); }
+  body[data-allie-theme="day"]::before { background:linear-gradient(135deg,#43cea2,#2f80ed 55%,#f9d423); }
+  body[data-allie-theme="dusk"]::before { background:linear-gradient(135deg,#ff5f6d,#7f53ac 55%,#2c3e70); }
+  body[data-allie-theme="night"]::before { background:linear-gradient(135deg,#090b2b,#29104a 55%,#0b7285); }
+  .allie-live-card { padding:1rem; margin:.75rem 0; border-radius:1rem; border:1px solid currentColor; background:rgb(255 255 255 / .1); }
+  .allie-live-score-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:.75rem; }
+  .allie-score { font-size:1.35rem; font-weight:800; }
+  .allie-live-status { opacity:.78; font-size:.85rem; }
 </style>
 </head>
 <body data-allie-report="daily" data-report-date="2026-08-21">
@@ -80,13 +81,11 @@
       <div class="scorestrip" aria-label="Today's quick read">
         <div><b>Low–mid 80s</b>Sunny Friday high</div>
         <div><b>4–7 PM</b>Prime outdoor play</div>
-        <div><b>12 PM + 7 PM</b>Saturday Detroit games</div>
+        <div><b>Noon Lions · 7 PM DCFC</b>Ford Field → Keyworth</div>
       </div>
     </header>
 
-    <nav aria-label="Brief sections">
-      <a href="#overview">Start here</a><a href="#weather">Weather</a><a href="#sports">Sports</a><a href="#games">Game lab</a><a href="#social">Go do</a><a href="#culture">Culture</a><a href="#money">Money + AI</a><a href="#family">Family</a>
-    </nav>
+
 
     <main>
       <section id="overview" class="feature" data-brief-section="allie-daily-overview">
@@ -215,72 +214,7 @@
     refresh(); window.setInterval(refresh, 60000);
   })();
 </script>
-<script id="allie-live-script">
-  (() => {
-    const scope = "daily";
-    const zone = "America/Detroit";
-    const body = document.body;
-    const formatter = new Intl.DateTimeFormat("en-US", { timeZone: zone, weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit", second:"2-digit" });
-    const hourFormatter = new Intl.DateTimeFormat("en-US", { timeZone: zone, hour:"numeric", hourCycle:"h23" });
-    const dateFormatter = new Intl.DateTimeFormat("en-CA", { timeZone: zone, year:"numeric", month:"2-digit", day:"2-digit" });
-    const reportDate = body.dataset.reportDate || dateFormatter.format(new Date());
-    const pageMain = document.querySelector("main") || body;
-    const liveStrip = document.createElement("div");
-    liveStrip.className = "allie-live-strip";
-    liveStrip.innerHTML = `<strong>Detroit now</strong><time data-allie-live-clock></time><span data-allie-live-weather>Weather updating…</span>`;
-    pageMain.prepend(liveStrip);
 
-    const updateClockAndTheme = () => {
-      const now = new Date(); const hour = Number(hourFormatter.format(now));
-      body.dataset.allieTheme = hour < 7 ? "dawn" : hour < 17 ? "day" : hour < 21 ? "dusk" : "night";
-      liveStrip.querySelector("[data-allie-live-clock]").textContent = formatter.format(now);
-      liveStrip.querySelector("[data-allie-live-clock]").dateTime = now.toISOString();
-    };
-
-    const weatherCodes = {0:"Clear",1:"Mostly clear",2:"Partly cloudy",3:"Overcast",45:"Foggy",48:"Icy fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",61:"Light rain",63:"Rain",65:"Heavy rain",71:"Light snow",73:"Snow",75:"Heavy snow",80:"Rain showers",81:"Rain showers",82:"Heavy showers",95:"Thunderstorms",96:"Storms with hail",99:"Severe storms with hail"};
-    const updateWeather = async () => {
-      const target = liveStrip.querySelector("[data-allie-live-weather]");
-      try {
-        const url = "https://api.open-meteo.com/v1/forecast?latitude=42.3314&longitude=-83.0458&current=temperature_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FDetroit";
-        const response = await fetch(url); if (!response.ok) throw new Error("weather unavailable");
-        const current = (await response.json()).current;
-        target.textContent = `${Math.round(current.temperature_2m)}°F · feels ${Math.round(current.apparent_temperature)}° · ${weatherCodes[current.weather_code] || "Current conditions"} · wind ${Math.round(current.wind_speed_10m)} mph`;
-        target.title = "Live Detroit weather from Open-Meteo";
-      } catch (_) { target.textContent = "Live weather temporarily unavailable"; }
-    };
-
-    const renderGame = (event, league) => {
-      const competition = event.competitions?.[0]; const teams = competition?.competitors || [];
-      const detroit = teams.find((entry) => entry.team?.abbreviation === "DET");
-      if (!detroit) return null;
-      const opponent = teams.find((entry) => entry !== detroit); const status = event.status?.type;
-      const card = document.createElement("article"); card.className = "allie-live-card";
-      const score = status?.state === "pre" ? (status.shortDetail || status.description) : `${detroit.score || "0"} – ${opponent?.score || "0"}`;
-      const title = document.createElement("strong"); title.textContent = `${league === "nba" ? "Pistons" : "Lions"} ${detroit.homeAway === "home" ? "vs" : "at"} ${opponent?.team?.shortDisplayName || "Opponent"}`;
-      const scoreNode = document.createElement("div"); scoreNode.className = "allie-score"; scoreNode.textContent = score;
-      const statusNode = document.createElement("div"); statusNode.className = "allie-live-status"; statusNode.textContent = status?.detail || status?.description || "Game update";
-      card.append(title, scoreNode, statusNode);
-      return card;
-    };
-    const updateScores = async () => {
-      const sports = document.querySelector(`[data-brief-section="allie-${scope}-sports"]`); if (!sports) return;
-      let grid = sports.querySelector("[data-allie-live-scores]");
-      if (!grid) { grid = document.createElement("div"); grid.dataset.allieLiveScores = ""; grid.className = "allie-live-score-grid"; sports.prepend(grid); }
-      try {
-        const date = reportDate.replaceAll("-", "");
-        const feeds = [["nba",`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${date}`],["nfl",`https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${date}`]];
-        const payloads = await Promise.all(feeds.map(async ([league,url]) => { const response = await fetch(url); if (!response.ok) throw new Error("scores unavailable"); return [league, await response.json()]; }));
-        const cards = payloads.flatMap(([league,data]) => (data.events || []).map((event) => renderGame(event, league)).filter(Boolean));
-        grid.replaceChildren(...cards); grid.hidden = cards.length === 0;
-      } catch (_) { grid.hidden = true; }
-    };
-
-    updateClockAndTheme(); updateWeather(); updateScores();
-    window.setInterval(updateClockAndTheme, 1000);
-    window.setInterval(updateWeather, 10 * 60 * 1000);
-    window.setInterval(updateScores, 60 * 1000);
-  })();
-</script>
 <dialog id="allie-feedback-dialog"><form method="dialog">
   <h2>Improve Allison's daily report</h2><p id="allie-feedback-context"></p>
   <textarea id="allie-feedback-text" aria-label="Feedback" placeholder="What should change in this panel?"></textarea>
@@ -313,6 +247,53 @@
       const url = `https://github.com/${repository}/issues/new?labels=${encodeURIComponent(label)}&title=${encodeURIComponent(`Allison ${reportScope}: ${panel}`)}&body=${encodeURIComponent(body)}`;
       window.open(url, "_blank", "noopener,noreferrer"); dialog.close();
     });
+  })();
+</script>
+
+
+<script id="allie-live-script">
+  (() => {
+    const scope = "daily";
+    const zone = "America/Detroit";
+    const body = document.body;
+    const hourFormatter = new Intl.DateTimeFormat("en-US", { timeZone: zone, hour:"numeric", hourCycle:"h23" });
+    const dateFormatter = new Intl.DateTimeFormat("en-CA", { timeZone: zone, year:"numeric", month:"2-digit", day:"2-digit" });
+    const reportDate = body.dataset.reportDate || dateFormatter.format(new Date());
+
+    const updateTheme = () => {
+      const now = new Date(); const hour = Number(hourFormatter.format(now));
+      body.dataset.allieTheme = hour < 7 ? "dawn" : hour < 17 ? "day" : hour < 21 ? "dusk" : "night";
+    };
+
+    const renderGame = (event, league) => {
+      const competition = event.competitions?.[0]; const teams = competition?.competitors || [];
+      const detroit = teams.find((entry) => entry.team?.abbreviation === "DET");
+      if (!detroit) return null;
+      const opponent = teams.find((entry) => entry !== detroit); const status = event.status?.type;
+      const card = document.createElement("article"); card.className = "allie-live-card";
+      const score = status?.state === "pre" ? (status.shortDetail || status.description) : `${detroit.score || "0"} – ${opponent?.score || "0"}`;
+      const title = document.createElement("strong"); title.textContent = `${league === "nba" ? "Pistons" : "Lions"} ${detroit.homeAway === "home" ? "vs" : "at"} ${opponent?.team?.shortDisplayName || "Opponent"}`;
+      const scoreNode = document.createElement("div"); scoreNode.className = "allie-score"; scoreNode.textContent = score;
+      const statusNode = document.createElement("div"); statusNode.className = "allie-live-status"; statusNode.textContent = status?.detail || status?.description || "Game update";
+      card.append(title, scoreNode, statusNode);
+      return card;
+    };
+    const updateScores = async () => {
+      const sports = document.querySelector(`[data-brief-section="allie-${scope}-sports"]`); if (!sports) return;
+      let grid = sports.querySelector("[data-allie-live-scores]");
+      if (!grid) { grid = document.createElement("div"); grid.dataset.allieLiveScores = ""; grid.className = "allie-live-score-grid"; sports.prepend(grid); }
+      try {
+        const date = reportDate.replaceAll("-", "");
+        const feeds = [["nba",`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${date}`],["nfl",`https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${date}`]];
+        const payloads = await Promise.all(feeds.map(async ([league,url]) => { const response = await fetch(url); if (!response.ok) throw new Error("scores unavailable"); return [league, await response.json()]; }));
+        const cards = payloads.flatMap(([league,data]) => (data.events || []).map((event) => renderGame(event, league)).filter(Boolean));
+        grid.replaceChildren(...cards); grid.hidden = cards.length === 0;
+      } catch (_) { grid.hidden = true; }
+    };
+
+    updateTheme(); updateScores();
+    window.setInterval(updateTheme, 60 * 1000);
+    window.setInterval(updateScores, 60 * 1000);
   })();
 </script>
 </body>
