@@ -228,8 +228,8 @@
       .masthead-inner, main, .footer-inner { width: min(100% - 1.3rem, 1120px); }
       .masthead { min-height: 66vh; }
       .weather-grid { grid-template-columns: 1fr; }
-      .masthead-tools { display: flex; align-items: flex-start; }
-      .masthead-tools .dateline { width: 100%; }
+      .masthead-tools { grid-template-columns: minmax(0, 1fr); align-items: flex-start; }
+      .masthead-tools .dateline, .masthead-tools .family-note { width: fit-content; max-width: 100%; white-space: normal; }
       .masthead-tools .edition-links { flex-wrap: wrap; white-space: normal; }
       .science-heading { display: flex; flex-wrap: wrap; }
       .science-heading::after { flex: 1 1 3rem; }
