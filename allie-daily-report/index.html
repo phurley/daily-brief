@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Allison's Friday Brief — August 21, 2026</title>
+  <style>
+    :root { --ink:#f8f5ff; --muted:#bbb6ca; --panel:#171523; --line:#343046; --pink:#ff4fa3; --blue:#60d7ff; --lime:#c8ff58; --gold:#ffd36a; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#0d0c14; font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--blue); text-underline-offset:.18em; }
+    a:hover { color:#fff; }
+    .shell { width:min(1120px,calc(100% - 28px)); margin:auto; padding:34px 0 70px; }
+    header { border:1px solid var(--line); border-radius:24px; padding:clamp(24px,5vw,54px); background:linear-gradient(135deg,#25122c 0%,#121c32 57%,#15251d 100%); }
+    .eyebrow,.kicker { margin:0 0 8px; color:var(--lime); font-size:.76rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    h1 { margin:0; max-width:850px; font-size:clamp(2.6rem,8vw,6rem); line-height:.92; letter-spacing:-.065em; }
+    h1 span { color:var(--pink); }
+    .lede { max-width:720px; margin:22px 0 0; color:#e5e0ec; font-size:1.08rem; }
+    .scorestrip { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:26px; overflow:hidden; border:1px solid var(--line); border-radius:14px; background:var(--line); }
+    .scorestrip div { padding:14px 16px; background:#11101a; }
+    .scorestrip b { display:block; color:var(--gold); font-size:1.12rem; }
+    nav { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 28px; }
+    nav a { padding:8px 12px; border:1px solid var(--line); border-radius:999px; color:var(--muted); text-decoration:none; font-size:.85rem; }
+    main { display:grid; grid-template-columns:repeat(12,1fr); gap:18px; }
+    section { grid-column:span 12; padding:clamp(20px,4vw,34px); border:1px solid var(--line); border-radius:20px; background:var(--panel); }
+    section.feature { background:linear-gradient(145deg,#202033,#14131f); border-color:#514967; }
+    h2 { margin:0 0 6px; font-size:clamp(1.55rem,4vw,2.4rem); line-height:1.05; letter-spacing:-.035em; }
+    h3 { margin:0 0 7px; font-size:1.08rem; line-height:1.25; }
+    p { margin:7px 0; }
+    .sub { margin:0 0 20px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .card { padding:18px; border:1px solid var(--line); border-radius:14px; background:#11101a; }
+    .card.accent { border-top:4px solid var(--pink); }
+    .meta { color:var(--gold); font-size:.82rem; font-weight:750; letter-spacing:.02em; text-transform:uppercase; }
+    .action { margin-top:12px; padding:10px 12px; border-left:3px solid var(--lime); background:#192016; color:#eefbd9; }
+    .cite { display:inline-block; margin-top:9px; font-size:.86rem; }
+    .rank { display:inline-grid; width:28px; height:28px; margin-right:7px; place-items:center; border-radius:50%; color:#0d0c14; background:var(--lime); font-weight:900; }
+    .weatherline { display:grid; grid-template-columns:120px 1fr; gap:16px; padding:12px 0; border-top:1px solid var(--line); }
+    .weatherline:first-of-type { border-top:0; }
+    .weatherline strong { color:var(--blue); }
+    .note { padding:14px 16px; border:1px dashed #5b536d; border-radius:12px; color:var(--muted); }
+    footer { padding:28px 5px; color:#898397; font-size:.85rem; text-align:center; }
+    [hidden] { display:none !important; }
+    @media (min-width:820px) { section.half { grid-column:span 6; } section.wide { grid-column:span 8; } section.narrow { grid-column:span 4; } }
+    @media (max-width:700px) { .grid,.grid.three,.scorestrip { grid-template-columns:1fr; } .weatherline { grid-template-columns:1fr; gap:2px; } }
+  </style>
+<style id="allie-time-rotation-styles">
+  [data-allie-event][hidden] { display:none !important; }
+  [data-allie-time-empty][hidden] { display:none !important; }
+</style>
+<style id="allie-live-styles">
+  body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:9998; opacity:.08; mix-blend-mode:soft-light; transition:background 1.2s ease; }
+  body[data-allie-theme="dawn"]::before { background:linear-gradient(135deg,#ff9a76,#ffd56a 45%,#8ec5fc); }
+  body[data-allie-theme="day"]::before { background:linear-gradient(135deg,#43cea2,#2f80ed 55%,#f9d423); }
+  body[data-allie-theme="dusk"]::before { background:linear-gradient(135deg,#ff5f6d,#7f53ac 55%,#2c3e70); }
+  body[data-allie-theme="night"]::before { background:linear-gradient(135deg,#090b2b,#29104a 55%,#0b7285); }
+  .allie-live-strip { display:flex; flex-wrap:wrap; align-items:center; gap:.65rem 1rem; padding:.75rem 1rem; margin:0 0 1rem; border:1px solid rgb(255 255 255 / .28); border-radius:999px; background:rgb(10 12 34 / .78); color:#fff; box-shadow:0 10px 30px rgb(0 0 0 / .2); }
+  .allie-live-strip strong { letter-spacing:.03em; }
+  .allie-live-card { padding:1rem; margin:.75rem 0; border-radius:1rem; border:1px solid currentColor; background:rgb(255 255 255 / .1); }
+  .allie-live-score-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:.75rem; }
+  .allie-score { font-size:1.35rem; font-weight:800; }
+  .allie-live-status { opacity:.78; font-size:.85rem; }
+</style>
+<style id="allie-feedback-styles">
+  [data-allie-feedback-selected] { outline:3px solid #f05a9d; outline-offset:4px; }
+  #allie-feedback-dialog { max-width:36rem; width:calc(100% - 2rem); border:0; border-radius:1rem; padding:1.25rem; }
+  #allie-feedback-dialog::backdrop { background:rgb(0 0 0 / .58); }
+  #allie-feedback-dialog textarea { box-sizing:border-box; width:100%; min-height:9rem; margin:.75rem 0; padding:.75rem; }
+  .allie-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
+</style>
+</head>
+<body data-allie-report="daily" data-report-date="2026-08-21">
+  <div class="shell">
+    <header>
+      <p class="eyebrow">Allison's daily briefing · Friday, August 21</p>
+      <h1>Dry skies. <span>Big weekend energy.</span></h1>
+      <p class="lede">A no-rain Friday built for an outdoor workout, followed by a Detroit sports doubleheader tomorrow. Your sharpest move today: check LaPorta's status, pick a Saturday plan, and test one tiny game-company idea.</p>
+      <div class="scorestrip" aria-label="Today's quick read">
+        <div><b>Low–mid 80s</b>Sunny Friday high</div>
+        <div><b>4–7 PM</b>Prime outdoor play</div>
+        <div><b>12 PM + 7 PM</b>Saturday Detroit games</div>
+      </div>
+    </header>
+
+    <nav aria-label="Brief sections">
+      <a href="#overview">Start here</a><a href="#weather">Weather</a><a href="#sports">Sports</a><a href="#games">Game lab</a><a href="#social">Go do</a><a href="#culture">Culture</a><a href="#money">Money + AI</a><a href="#family">Family</a>
+    </nav>
+
+    <main>
+      <section id="overview" class="feature" data-brief-section="allie-daily-overview">
+        <p class="kicker">The Friday play</p>
+        <h2>Three moves worth making</h2>
+        <div class="grid three">
+          <article class="card"><span class="rank">1</span><h3>Get outside late</h3><p>Running is most comfortable after 7 PM; volleyball and pickleball look especially good from 4–7 PM.</p><a class="cite" href="https://forecast.weather.gov/MapClick.php?map_x=207&amp;map_y=197&amp;site=dtx&amp;x=207&amp;y=197">NWS forecast</a></article>
+          <article class="card"><span class="rank">2</span><h3>Choose Saturday's crowd</h3><p>Lions at Ford Field at noon or Detroit City FC at Keyworth at 7 PM. One is a depth-chart check; the other is the higher-energy social outing.</p><a class="cite" href="https://www.detroitlions.com/schedule/">Lions schedule</a> · <a class="cite" href="https://www.detcityfc.com/mens-schedule/">DCFC schedule</a></article>
+          <article class="card"><span class="rank">3</span><h3>Make the tiny prototype</h3><p>Draft a one-sentence box-front promise, then test whether five non-gamer friends can repeat the fantasy and goal.</p><a class="cite" href="https://www.reddit.com/r/boardgames/comments/1vpzno6/weekly_crowdfunding_roundup_august_16_2026_12/">Crowdfunding roundup</a></article>
+        </div>
+      </section>
+
+      <section id="weather" class="half" data-brief-section="allie-daily-weather">
+        <p class="kicker">Weather · Metro Detroit</p>
+        <h2>Green light outdoors</h2>
+        <p class="sub">Sunny, dry and comfortably warm. Temperatures climb from the low 60s early to the low-to-mid 80s, then settle into the 70s tonight.</p>
+        <div class="weatherline"><strong>Now–9 AM</strong><span>About 62–68°F, partly sunny to sunny, with light wind.</span></div>
+        <div class="weatherline"><strong>10 AM–1 PM</strong><span>Sunny, about 72–78°F; light south-to-southeast breeze.</span></div>
+        <div class="weatherline"><strong>2–6 PM</strong><span>About 79–80°F and dry, with a light breeze and possible high-based clouds.</span></div>
+        <div class="weatherline"><strong>7–11 PM</strong><span>Comfortable and rain-free, cooling from about 77°F to 69°F.</span></div>
+        <p class="action"><strong>Do:</strong> bring water mid-afternoon and a light layer after sunset. Ordinary outdoor activity is appropriate; sensitive runners can check the official live air reading first.</p>
+        <a class="cite" href="https://www.airnow.gov/?city=Detroit&amp;country=USA&amp;state=MI">Live AirNow check</a> · <a class="cite" href="https://weather.gfc.state.ga.us/nwsafd/FCSTS/DTXAFDDTX.HTM">NWS Detroit discussion</a>
+      </section>
+
+      <section id="sports" class="half feature" data-brief-section="allie-daily-sports">
+        <p class="kicker">Sports board · Top billing</p>
+        <h2>Lions watch, then a Detroit doubleheader</h2>
+        <article class="card accent">
+          <p class="meta">Saturday · Noon · Ford Field</p>
+          <h3>Commanders at Lions — preseason Week 2</h3>
+          <p>Detroit's only home preseason game is the last in-person look at roles before the August 30 roster deadline. Treat it as depth-chart and late-round fantasy evidence, not a referendum on established starters.</p>
+          <a class="cite" href="https://www.detroitlions.com/schedule/">Official schedule</a>
+        </article>
+        <article class="card" style="margin-top:12px">
+          <p class="meta">Saturday · 7 PM · Keyworth Stadium</p>
+          <h3>Tampa Bay Rowdies at Detroit City FC</h3>
+          <p>The closest high-energy soccer plan this weekend, with ticket and parking details on the club schedule.</p>
+          <a class="cite" href="https://www.detcityfc.com/mens-schedule/">Match details</a>
+        </article>
+        <h3 style="margin-top:20px">Fantasy alert: monitor Sam LaPorta</h3>
+        <p>Dan Campbell said LaPorta is being held out after aggravating a hip in practice. Long-term optimism is not the same as a Week 1 guarantee: keep him on draft boards, but line up a later-round contingency until full participation returns.</p>
+        <a class="cite" href="https://www.cbsnews.com/detroit/news/lions-tight-end-sam-laporta-injures-hip/">LaPorta update</a>
+        <p class="action"><strong>Draft note:</strong> Jahmyr Gibbs remains an elite early-round RB after signing his extension and returning from a minor back issue. Jameson Williams' strong camp gives him upside, especially if LaPorta is limited. Check Saturday's inactive list and first-quarter usage before changing a queue.</p>
+        <p><strong>Tonight:</strong> Golden State Valkyries at Chicago Sky, 7:30 PM — a nearby WNBA option. <a class="cite" href="https://www.wnba.com/game/1022600273/gsv-vs-chi">Game page</a></p>
+        <p><strong>Save the date:</strong> Pistons–Celtics at Little Caesars Arena, October 20 at 3 PM, opening the 2026–27 season. <a class="cite" href="https://www.axios.com/local/detroit/2026/08/12/pistons-celtics-nba-opening-night">Opening-night report</a></p>
+      </section>
+
+      <section id="games" class="wide" data-brief-section="allie-daily-games-business">
+        <p class="kicker">Game-company lab</p>
+        <h2>Sell the hook before the component count</h2>
+        <p class="sub">The useful lesson in this week's campaigns is legibility: a specific fantasy, one tactile moment and a friction-killing promise.</p>
+        <div class="grid">
+          <article class="card"><p class="meta">Closes today</p><h3>Rosalie: a calm fantasy with a crisp premise</h3><p>The 1–4 player rose-gardening game paired “garden robots hybridizing roses” with a deeper 120–180 minute design; the August 16 roundup listed 6,639 backers.</p><p class="action">Test your own box-front promise on five non-gamers before paying for art.</p><a class="cite" href="https://www.brettspiel-news.de/index.php/en/nachrichten-uebersicht/crowdfunding/15814-crowdfunding-bersicht-kw-33-42-brettspiel-kampagnen-im-check">Campaign scan</a></article>
+          <article class="card"><p class="meta">Closes Saturday</p><h3>Shakeup Adventures: show the moment</h3><p>Its pitch puts the physical demo first—shake the dice map, draw a route, complete quests—then removes objections with no DM and no lengthy setup.</p><p class="action">Film a 15-second prototype clip showing one tactile action; put setup time in the first caption and compare email sign-ups.</p><a class="cite" href="https://www.reddit.com/r/boardgames/comments/1vpzno6/weekly_crowdfunding_roundup_august_16_2026_12/">Campaign roundup</a></article>
+          <article class="card"><p class="meta">Realistic first-product lane</p><h3>Learn from a one-card game</h3><p>Rascally Rabbits closed after the snapshot showed 202 backers and $8.7K pledged. Its tiny component bill is closer to a bootstrapped learning vehicle than a sprawling first production.</p><p class="action">Print 30 copies of a card-only microgame. Run three Detroit or Ann Arbor playtests; track teach time, completion and willingness to pay $15–20.</p></article>
+          <article class="card"><p class="meta">Market signal</p><h3>Give the campaign one narrow job</h3><p>A weekly scan counted 42 live campaigns and 18,230 combined backers at measurement time. Competing attention is the constraint.</p><p class="action">Set a prelaunch bar such as 150 qualified emails, split between playtesters and cold leads. Let evidence—not follower count—drive the forecast.</p></article>
+        </div>
+      </section>
+
+      <section id="social" class="narrow" data-brief-section="allie-daily-active-social" data-allie-time-rotation>
+        <p class="kicker">Active + social rotation</p>
+        <h2>Your next move</h2>
+        <p class="sub">The system will surface the active or next option. Confirm availability before traveling or paying.</p>
+        <article class="card accent" data-allie-event data-start-at="2026-08-21T00:00:00-04:00" data-end-at="2026-08-24T00:00:00-04:00">
+          <p class="meta">Today–Sunday · West Bloomfield</p><h3>Paddle Palooza at PickleRage</h3><p>Friday is singles, Saturday is men's and women's doubles, and Sunday is mixed doubles. Registration is closed, but 44 registered players and round-robin play make it a useful scene check for local pickleball regulars.</p><a class="cite" href="https://pickleballtournaments.com/tournaments/paddle-palooza-picklerage-west-bloomfield">Tournament page</a>
+        </article>
+        <article class="card" data-allie-event data-start-at="2026-09-09T00:00:00-04:00" data-end-at="2026-09-10T00:00:00-04:00">
+          <p class="meta">Starts September 9 · Belle Isle</p><h3>Fall sand volleyball</h3><p>Wednesday co-ed league with individual registration: the strongest near-term “show up solo, meet a team” fit. $80 individual; registration deadline September 2.</p><a class="cite" href="https://comeplaydetroit.leaguelab.com/leagues?v=upcoming">League listing</a>
+        </article>
+        <article class="card" data-allie-event data-start-at="2026-09-16T00:00:00-04:00" data-end-at="2026-09-17T00:00:00-04:00">
+          <p class="meta">Starts September 16 · Metro Detroit</p><h3>Fall pickleball at Paddle + Par</h3><p>Weekly Wednesday play, age 18+, with individual signup. $160; registration deadline September 10.</p><a class="cite" href="https://comeplaydetroit.leaguelab.com/leagues?v=upcoming">League listing</a>
+        </article>
+        <article class="card" data-allie-event data-start-at="2026-10-19T20:10:00-04:00" data-end-at="2026-10-19T22:10:00-04:00">
+          <p class="meta">October 19 · 8:10–10:10 PM · Detroit</p><h3>Indoor rec volleyball</h3><p>Co-ed, 18+, individual placement at Detroit City Fieldhouse. Eight regular-season games plus playoffs and a natural post-game hangout upstairs.</p><a class="cite" href="https://comeplaydetroit.leaguelab.com/leagues?v=upcoming">League listing</a>
+        </article>
+        <div class="note" data-allie-time-empty hidden>No current or upcoming sourced event is available in this rotation.</div>
+      </section>
+
+      <section id="culture" class="half" data-brief-section="allie-daily-culture-media">
+        <p class="kicker">Culture + media</p>
+        <h2>Tonight's soundtrack</h2>
+        <div class="grid">
+          <article class="card"><p class="meta">Out today</p><h3>Sam Smith, <em>Hazel Eyes</em></h3><p>A fifth album of warm love songs and a tonal turn from <em>Gloria</em>. Pair it with Weezer's new self-titled “Gold Album” for the commute or pre-going-out playlist.</p><a class="cite" href="https://apnews.com/article/streaming-august-2026-95a063ef2d8e2acd11ad645e58aee6e5">AP streaming guide</a></article>
+          <article class="card"><p class="meta">Tonight · Detroit</p><h3>Dominic Fike at the Fillmore</h3><p>A genuinely close-to-home spontaneous Friday option at 2115 Woodward Avenue.</p><a class="cite" href="https://www.thefillmoredetroit.com/">Venue listing</a></article>
+        </div>
+        <p><strong>Pop calendar:</strong> Taylor Swift has nine VMA nominations; one win would break her current 30-win tie for the all-time record. Watch September 27 at 7:30 PM ET on CBS, MTV or Paramount+. <a class="cite" href="https://apnews.com/article/2026-mtv-vma-nominations-e9ac1be3adfd613c3bc348e83543832e">AP</a></p>
+        <p><strong>Group-watch pick:</strong> The <em>Love Island USA</em> Season 8 reunion streams August 31 at 9 PM ET, co-hosted by Ariana Madix and Andy Cohen. <a class="cite" href="https://www.peacocktv.com/blog/love-island-usa-season-8-reunion-announcement">Peacock</a></p>
+      </section>
+
+      <section id="money" class="half" data-brief-section="allie-daily-money-ai">
+        <p class="kicker">Money + practical AI</p>
+        <h2>Two setup checks for a new-job year</h2>
+        <article class="card"><h3>Capture the match first</h3><p>The 2026 employee 401(k) limit is $24,500; the IRA limit is $7,500. For a single filer, the Roth IRA contribution phase-out is $153,000–$168,000.</p><p class="action">Confirm GM's match, vesting rules, investment choices and payroll cutoffs. Set a percentage that captures the full match; consider an automatic annual increase only if cash flow supports it.</p><p class="sub">Keep an emergency cushion and prioritize high-interest debt. Limits are not contribution recommendations.</p><a class="cite" href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500">IRS limits</a></article>
+        <article class="card" style="margin-top:12px"><h3>Let AI make the first pass—not the final call</h3><p>For a sanitized spreadsheet sample, ask for data-quality checks, candidate metrics, outlier questions and an executive-summary draft. Then reproduce every calculation in approved tools.</p><p class="action">Follow GM data-governance rules: do not upload confidential, personal or restricted data to an unapproved tool. Retain source queries, reconcile totals and label assumptions.</p><a class="cite" href="https://openai.com/academy/data-analysis/">Data-analysis guidance</a></article>
+        <p><strong>15-minute money pulse:</strong> July CPI rose 0.1% month over month and 3.4% over 12 months. Review subscriptions, insurance renewals and grocery/going-out categories; do not reset a long-term plan over one release. <a class="cite" href="https://www.bls.gov/news.release/cpi.htm">BLS</a></p>
+      </section>
+
+      <section id="family" data-brief-section="allie-daily-family">
+        <p class="kicker">Family corner</p>
+        <h2>No family feed connected yet</h2>
+        <div class="grid">
+          <div class="note"><strong>Calendar not configured.</strong><br>No family calendar events are available for today's report.</div>
+          <div class="note"><strong>Photo album not configured.</strong><br>No family album link is available for today's report.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Prepared for Allison · Friday, August 21, 2026 · Every linked item comes from today's isolated report context.</footer>
+  </div>
+<script id="allie-time-rotation-script">
+  (() => {
+    const refresh = () => {
+      const now = Date.now();
+      document.querySelectorAll("[data-allie-time-rotation]").forEach((rotation) => {
+        const events = [...rotation.querySelectorAll("[data-allie-event]")]
+          .map((element) => ({ element, start: Date.parse(element.dataset.startAt), end: Date.parse(element.dataset.endAt) }))
+          .filter((item) => Number.isFinite(item.start) && Number.isFinite(item.end))
+          .sort((a, b) => a.start - b.start);
+        const chosen = events.find((item) => item.start <= now && now < item.end) ||
+          events.find((item) => now < item.start) || null;
+        events.forEach((item) => { item.element.hidden = item !== chosen; });
+        const empty = rotation.querySelector("[data-allie-time-empty]");
+        if (empty) empty.hidden = chosen !== null;
+      });
+    };
+    refresh(); window.setInterval(refresh, 60000);
+  })();
+</script>
+<script id="allie-live-script">
+  (() => {
+    const scope = "daily";
+    const zone = "America/Detroit";
+    const body = document.body;
+    const formatter = new Intl.DateTimeFormat("en-US", { timeZone: zone, weekday:"short", month:"short", day:"numeric", hour:"numeric", minute:"2-digit", second:"2-digit" });
+    const hourFormatter = new Intl.DateTimeFormat("en-US", { timeZone: zone, hour:"numeric", hourCycle:"h23" });
+    const dateFormatter = new Intl.DateTimeFormat("en-CA", { timeZone: zone, year:"numeric", month:"2-digit", day:"2-digit" });
+    const reportDate = body.dataset.reportDate || dateFormatter.format(new Date());
+    const pageMain = document.querySelector("main") || body;
+    const liveStrip = document.createElement("div");
+    liveStrip.className = "allie-live-strip";
+    liveStrip.innerHTML = `<strong>Detroit now</strong><time data-allie-live-clock></time><span data-allie-live-weather>Weather updating…</span>`;
+    pageMain.prepend(liveStrip);
+
+    const updateClockAndTheme = () => {
+      const now = new Date(); const hour = Number(hourFormatter.format(now));
+      body.dataset.allieTheme = hour < 7 ? "dawn" : hour < 17 ? "day" : hour < 21 ? "dusk" : "night";
+      liveStrip.querySelector("[data-allie-live-clock]").textContent = formatter.format(now);
+      liveStrip.querySelector("[data-allie-live-clock]").dateTime = now.toISOString();
+    };
+
+    const weatherCodes = {0:"Clear",1:"Mostly clear",2:"Partly cloudy",3:"Overcast",45:"Foggy",48:"Icy fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",61:"Light rain",63:"Rain",65:"Heavy rain",71:"Light snow",73:"Snow",75:"Heavy snow",80:"Rain showers",81:"Rain showers",82:"Heavy showers",95:"Thunderstorms",96:"Storms with hail",99:"Severe storms with hail"};
+    const updateWeather = async () => {
+      const target = liveStrip.querySelector("[data-allie-live-weather]");
+      try {
+        const url = "https://api.open-meteo.com/v1/forecast?latitude=42.3314&longitude=-83.0458&current=temperature_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FDetroit";
+        const response = await fetch(url); if (!response.ok) throw new Error("weather unavailable");
+        const current = (await response.json()).current;
+        target.textContent = `${Math.round(current.temperature_2m)}°F · feels ${Math.round(current.apparent_temperature)}° · ${weatherCodes[current.weather_code] || "Current conditions"} · wind ${Math.round(current.wind_speed_10m)} mph`;
+        target.title = "Live Detroit weather from Open-Meteo";
+      } catch (_) { target.textContent = "Live weather temporarily unavailable"; }
+    };
+
+    const renderGame = (event, league) => {
+      const competition = event.competitions?.[0]; const teams = competition?.competitors || [];
+      const detroit = teams.find((entry) => entry.team?.abbreviation === "DET");
+      if (!detroit) return null;
+      const opponent = teams.find((entry) => entry !== detroit); const status = event.status?.type;
+      const card = document.createElement("article"); card.className = "allie-live-card";
+      const score = status?.state === "pre" ? (status.shortDetail || status.description) : `${detroit.score || "0"} – ${opponent?.score || "0"}`;
+      const title = document.createElement("strong"); title.textContent = `${league === "nba" ? "Pistons" : "Lions"} ${detroit.homeAway === "home" ? "vs" : "at"} ${opponent?.team?.shortDisplayName || "Opponent"}`;
+      const scoreNode = document.createElement("div"); scoreNode.className = "allie-score"; scoreNode.textContent = score;
+      const statusNode = document.createElement("div"); statusNode.className = "allie-live-status"; statusNode.textContent = status?.detail || status?.description || "Game update";
+      card.append(title, scoreNode, statusNode);
+      return card;
+    };
+    const updateScores = async () => {
+      const sports = document.querySelector(`[data-brief-section="allie-${scope}-sports"]`); if (!sports) return;
+      let grid = sports.querySelector("[data-allie-live-scores]");
+      if (!grid) { grid = document.createElement("div"); grid.dataset.allieLiveScores = ""; grid.className = "allie-live-score-grid"; sports.prepend(grid); }
+      try {
+        const date = reportDate.replaceAll("-", "");
+        const feeds = [["nba",`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${date}`],["nfl",`https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${date}`]];
+        const payloads = await Promise.all(feeds.map(async ([league,url]) => { const response = await fetch(url); if (!response.ok) throw new Error("scores unavailable"); return [league, await response.json()]; }));
+        const cards = payloads.flatMap(([league,data]) => (data.events || []).map((event) => renderGame(event, league)).filter(Boolean));
+        grid.replaceChildren(...cards); grid.hidden = cards.length === 0;
+      } catch (_) { grid.hidden = true; }
+    };
+
+    updateClockAndTheme(); updateWeather(); updateScores();
+    window.setInterval(updateClockAndTheme, 1000);
+    window.setInterval(updateWeather, 10 * 60 * 1000);
+    window.setInterval(updateScores, 60 * 1000);
+  })();
+</script>
+<dialog id="allie-feedback-dialog"><form method="dialog">
+  <h2>Improve Allison's daily report</h2><p id="allie-feedback-context"></p>
+  <textarea id="allie-feedback-text" aria-label="Feedback" placeholder="What should change in this panel?"></textarea>
+  <div class="allie-feedback-actions"><button value="cancel">Cancel</button>
+    <button id="allie-feedback-submit" value="default">Continue to GitHub</button></div>
+</form></dialog>
+<script id="allie-feedback-script">
+  (() => {
+    const repository = "phurley/daily-brief";
+    const label = "allie-daily-feedback";
+    const reportScope = "daily";
+    const dialog = document.getElementById("allie-feedback-dialog");
+    const context = document.getElementById("allie-feedback-context");
+    const input = document.getElementById("allie-feedback-text");
+    let selected = null; let panel = "General"; let marker = "General";
+    document.querySelectorAll("[data-brief-section]").forEach((section) => {
+      section.addEventListener("contextmenu", (event) => {
+        event.preventDefault(); selected?.removeAttribute("data-allie-feedback-selected"); selected = section;
+        selected.setAttribute("data-allie-feedback-selected", "");
+        panel = section.querySelector("h1,h2,h3")?.textContent?.trim() || section.dataset.briefSection;
+        marker = `data-brief-section="${section.dataset.briefSection}"`;
+        context.textContent = `Panel: ${panel}`; input.value = ""; dialog.showModal(); input.focus();
+      });
+    });
+    dialog.addEventListener("close", () => { selected?.removeAttribute("data-allie-feedback-selected"); selected = null; });
+    document.getElementById("allie-feedback-submit").addEventListener("click", (event) => {
+      event.preventDefault(); const feedback = input.value.trim(); if (!feedback) { input.focus(); return; }
+      const excerpt = selected?.innerText?.replace(/\s+/g, " ").trim().slice(0, 280) || "";
+      const body = `Report: Allison ${reportScope}\nPage URL: ${window.location.href}\nPanel: ${panel}\nPanel marker: ${marker}\nPanel excerpt: ${excerpt}\n\nRequested implementation change:\n${feedback}`;
+      const url = `https://github.com/${repository}/issues/new?labels=${encodeURIComponent(label)}&title=${encodeURIComponent(`Allison ${reportScope}: ${panel}`)}&body=${encodeURIComponent(body)}`;
+      window.open(url, "_blank", "noopener,noreferrer"); dialog.close();
+    });
+  })();
+</script>
+</body>
+</html>
