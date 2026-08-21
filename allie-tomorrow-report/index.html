@@ -6,46 +6,44 @@
   <meta name="color-scheme" content="dark">
   <title>Allison’s Saturday Playbook · August 22, 2026</title>
   <style>
-    :root {
-      --night:#12142f; --panel:#1c2145; --ink:#f8f3e8; --muted:#c7c8da;
-      --coral:#ff786f; --gold:#f5c96a; --aqua:#77d8d1; --line:#3b416e;
-    }
+    :root { --night:#11142d; --panel:#1b2042; --card:#151a36; --ink:#fff8ed; --muted:#c7c9db; --coral:#ff7b72; --gold:#f5c96b; --aqua:#79ddd4; --line:#3c426d; }
     * { box-sizing:border-box; }
     html { background:var(--night); }
-    body { margin:0; color:var(--ink); background:radial-gradient(circle at 85% 0,#39265d 0,transparent 34rem),linear-gradient(160deg,#11132e,#171a38 58%,#10162e); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    body { margin:0; color:var(--ink); background:radial-gradient(circle at 85% 0,#3a275d 0,transparent 34rem),linear-gradient(160deg,#10122a,#171a39 58%,#10152d); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
     a { color:var(--aqua); text-underline-offset:.18em; }
-    a:hover, a:focus-visible { color:#b4fff9; }
-    .shell { width:min(1120px,calc(100% - 32px)); margin:auto; padding:38px 0 64px; }
-    header { padding:clamp(26px,6vw,64px); border:1px solid var(--line); border-radius:28px; background:linear-gradient(135deg,rgba(255,120,111,.17),rgba(245,201,106,.07) 45%,rgba(119,216,209,.09)); box-shadow:0 24px 70px rgba(0,0,0,.25); }
-    .eyebrow,.label { margin:0 0 8px; color:var(--gold); font-size:.78rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
-    h1 { max-width:800px; margin:0; font-size:clamp(2.25rem,7vw,5rem); line-height:.97; letter-spacing:-.055em; }
-    .lede { max-width:760px; margin:22px 0 0; color:var(--muted); font-size:clamp(1.05rem,2.4vw,1.3rem); }
+    a:hover,a:focus-visible { color:#c1fff9; }
+    .shell { width:min(1120px,calc(100% - 32px)); margin:auto; padding:36px 0 64px; }
+    header { padding:clamp(28px,6vw,62px); border:1px solid var(--line); border-radius:28px; background:linear-gradient(135deg,rgba(255,123,114,.16),rgba(245,201,107,.07) 48%,rgba(121,221,212,.08)); box-shadow:0 24px 70px rgba(0,0,0,.25); }
+    .eyebrow,.label { margin:0 0 8px; color:var(--gold); font-size:.78rem; font-weight:850; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { max-width:820px; margin:0; font-size:clamp(2.35rem,7vw,5rem); line-height:.98; letter-spacing:-.055em; }
+    .lede { max-width:780px; margin:22px 0 0; color:var(--muted); font-size:clamp(1.05rem,2.4vw,1.28rem); }
     main { display:grid; grid-template-columns:repeat(12,1fr); gap:18px; margin-top:18px; }
-    section { grid-column:span 12; padding:clamp(22px,4vw,36px); border:1px solid var(--line); border-radius:22px; background:rgba(28,33,69,.88); box-shadow:0 16px 42px rgba(0,0,0,.16); }
+    section { grid-column:span 12; padding:clamp(22px,4vw,36px); border:1px solid var(--line); border-radius:22px; background:rgba(27,32,66,.9); box-shadow:0 16px 42px rgba(0,0,0,.16); }
     section.half { grid-column:span 6; }
     h2 { margin:0 0 8px; font-size:clamp(1.55rem,3vw,2.25rem); letter-spacing:-.03em; }
     h3 { margin:0 0 6px; font-size:1.08rem; }
     p { margin:8px 0; }
     .sub,.meta { color:var(--muted); }
-    .meta { margin:0 0 8px; font-size:.88rem; }
+    .meta { margin:0 0 8px; font-size:.9rem; }
     .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:18px; }
-    .card,.callout { padding:18px; border:1px solid var(--line); border-radius:16px; background:#171b3a; }
+    .card,.callout { padding:18px; border:1px solid var(--line); border-radius:16px; background:var(--card); }
+    .card + .card { margin-top:12px; }
+    .grid .card + .card { margin-top:0; }
     .callout { border-left:4px solid var(--coral); }
-    .action { margin-top:12px; padding:12px 14px; border-radius:12px; background:rgba(245,201,106,.1); color:#fff5d6; }
-    .schedule { display:grid; gap:0; margin-top:18px; }
+    .action { margin-top:12px; padding:12px 14px; border-radius:12px; background:rgba(245,201,107,.1); color:#fff4d3; }
+    .schedule { margin-top:18px; }
     .slot { position:relative; padding:0 0 18px 28px; border-left:2px solid var(--line); }
     .slot::before { content:""; position:absolute; left:-7px; top:5px; width:12px; height:12px; border-radius:50%; background:var(--coral); box-shadow:0 0 0 4px var(--panel); }
     .slot:last-child { padding-bottom:0; }
     ul { margin:10px 0 0; padding-left:1.2rem; }
     li + li { margin-top:7px; }
-    .source { display:inline-block; margin-top:10px; font-size:.9rem; font-weight:700; }
+    .source { display:inline-block; margin-top:9px; font-size:.9rem; font-weight:750; }
+    .status { display:inline-block; margin-bottom:10px; padding:4px 9px; border-radius:999px; color:#11142d; background:var(--gold); font-size:.74rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
     [data-allie-event][hidden],[data-allie-time-empty][hidden] { display:none !important; }
-    .rotation { margin-top:18px; }
-    .rotation .card { border-color:var(--coral); box-shadow:inset 0 1px 0 rgba(255,255,255,.05); }
-    .status { display:inline-block; margin-bottom:10px; padding:4px 9px; border-radius:999px; color:#12142f; background:var(--gold); font-size:.74rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
     footer { margin-top:20px; color:var(--muted); text-align:center; font-size:.86rem; }
     @media (max-width:760px) { section.half { grid-column:span 12; } .grid { grid-template-columns:1fr; } .shell { width:min(100% - 20px,1120px); padding-top:10px; } header,section { border-radius:18px; } }
   </style>
+
 <style id="allie-time-rotation-styles">
   [data-allie-event][hidden] { display:none !important; }
   [data-allie-time-empty][hidden] { display:none !important; }
@@ -60,6 +58,11 @@
 </style>
 
 
+<style id="allie-compact-layout">
+  main { display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; grid-auto-flow:dense; grid-auto-rows:8px; gap:18px !important; align-items:start; }
+  main > section { grid-column:auto !important; align-self:start !important; width:100% !important; height:auto !important; min-height:0 !important; margin:0 !important; box-sizing:border-box; }
+  @media (max-width:800px) { main { grid-template-columns:minmax(0,1fr) !important; } }
+</style>
 <style id="allie-live-styles">
   body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:9998; opacity:.08; mix-blend-mode:soft-light; transition:background 1.2s ease; }
   body[data-allie-theme="dawn"]::before { background:linear-gradient(135deg,#ff9a76,#ffd56a 45%,#8ec5fc); }
@@ -76,138 +79,132 @@
   <div class="shell">
     <header>
       <p class="eyebrow">Night-before playbook · Saturday, August 22</p>
-      <h1>Tomorrow is built for getting out.</h1>
-      <p class="lede">A dry, near-80°F Saturday is the working forecast. Lock in the one plan that needs a ticket or RSVP tonight, then leave the rest of the day flexible.</p>
+      <h1>Build Saturday around the storms.</h1>
+      <p class="lede">Late morning through afternoon is the least reliable outdoor window. Pick an indoor anchor, keep travel flexible, and save any outdoor reset for after 7 p.m. if conditions clear.</p>
     </header>
 
     <main>
       <section data-brief-section="allie-tomorrow-overview">
-        <p class="label">The shape of Saturday</p>
-        <h2>Three clean lanes</h2>
+        <p class="label">Tomorrow at a glance</p>
+        <h2>A weather-first Saturday</h2>
         <div class="schedule">
-          <div class="slot"><h3>Morning · move</h3><p>Run the 313 starts at 8:30 AM, or take the solo-friendly bike social at 11 AM. The cooler morning is the best active window.</p></div>
-          <div class="slot"><h3>Noon · Lions check</h3><p>Commanders at Lions kicks off at noon at Ford Field. Use the preseason game for health and role clues, not a start/sit verdict.</p></div>
-          <div class="slot"><h3>Evening · choose your energy</h3><p>Detroit City FC starts at 7 PM at Keyworth. Beacon Park runs 6–10 PM, while Dogstar starts at 7 PM at Saint Andrew’s Hall.</p></div>
+          <div class="slot"><h3>Early morning · decide before leaving</h3><p>Run the 313 starts at 8:30 a.m., but showers or a thunderstorm are possible. Recheck radar; audible thunder means shelter, not a start line.</p></div>
+          <div class="slot"><h3>Noon · Lions at Ford Field</h3><p>Washington Commanders at Detroit Lions begins at noon. Allow extra drive time in the day’s highest-risk storm window.</p></div>
+          <div class="slot"><h3>Afternoon · use the indoor lane</h3><p>The Ann Arbor Bonsai Show runs 10 a.m.–4 p.m.; the Binho tournament runs 3–5 p.m. in Detroit. Both are sturdier choices than an outdoor commitment.</p></div>
+          <div class="slot"><h3>Evening · choose live sports or music</h3><p>Tampa Bay Rowdies at Detroit City FC and Indiana Fever at New York Liberty both begin at 7 p.m.; Dogstar also starts at 7 p.m. in Detroit.</p></div>
         </div>
-        <p class="action"><strong>Do tonight:</strong> register or RSVP for the morning plan, prepay DCFC tickets and parking if that is the night choice, and put water, sunscreen, and a light layer by the door.</p>
+        <p class="action"><strong>Do tonight:</strong> enable weather alerts, stage a rain shell and water-resistant shoes, and secure tickets or prepaid parking if the Lions or Detroit City FC is the plan. No hard Friday ticket cutoff was published.</p>
       </section>
 
       <section class="half" data-brief-section="allie-tomorrow-weather">
         <p class="label">Weather</p>
-        <h2>Dry and seasonable is the working call</h2>
-        <p class="sub">Confidence: medium. Exact hourly temperature, wind, and rain timing remain provisional.</p>
+        <h2>Storm-prone, then cooler</h2>
+        <p class="sub">High near 77°F; upper 50s to around 60 overnight. Overall confidence: medium, because exact storm timing and neighborhood coverage can vary.</p>
         <div class="schedule">
-          <div class="slot"><h3>7–9 AM · low 60s</h3><p>Dry favored. Good for an early run or drive; bring a light layer.</p></div>
-          <div class="slot"><h3>9 AM–noon · upper 60s to mid 70s</h3><p>The strongest flexible window for running, pickleball, volleyball, or errands.</p></div>
-          <div class="slot"><h3>Noon–6 PM · near 80°F</h3><p>Dry favored. Bring water and sun protection for exposed courts, fields, and patios.</p></div>
-          <div class="slot"><h3>6–10 PM · cooling through the 70s</h3><p>Comfortable for an outdoor evening; carry a light layer after sunset.</p></div>
+          <div class="slot"><h3>7–10 a.m. · moderate rain risk</h3><p>Cloudy and unsettled, with a shower or thunderstorm possible. Allow extra time for wet roads and reduced visibility.</p></div>
+          <div class="slot"><h3>10 a.m.–2 p.m. · high rain risk</h3><p>Showers and scattered thunderstorms become increasingly likely across Metro Detroit and Ann Arbor. This is the least reliable outdoor window.</p></div>
+          <div class="slot"><h3>2–7 p.m. · high rain risk</h3><p>Periods of showers and scattered thunderstorms remain possible; lightning and locally heavier rain are the main hazards.</p></div>
+          <div class="slot"><h3>After 7 p.m. · improving</h3><p>Storm chances diminish and skies trend clearer. This is the better outdoor recovery window; bring a light layer.</p></div>
         </div>
-        <p class="action">One broader forecast product flags isolated late thunderstorms while the NWS regional outlook favors dry weather. Recheck the official hourly forecast Saturday morning.</p>
-        <p>Detroit-specific numerical AQI was not available in the retrieved AirNow data. Check before a long run or extended outdoor court time; AirNow says tomorrow’s forecast is generally available by 4 PM local time.</p>
-        <a class="source" href="https://forecast.weather.gov/MapClick.php?lat=42.3314&amp;lon=-83.0458">Detroit NWS forecast</a> ·
-        <a class="source" href="https://forecast.weather.gov/MapClick.php?lat=42.2808&amp;lon=-83.7430">Ann Arbor NWS forecast</a> ·
-        <a class="source" href="https://forecast.weather.gov/product.php?site=DTX&amp;issuedby=DTX&amp;product=AFD">NWS discussion</a> ·
-        <a class="source" href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a>
+        <p class="action">Southwest wind shifts west to northwest as the system passes, with possible gusts near storms. A rain shell is more useful than an umbrella in gusty thunderstorm conditions.</p>
+        <p>No verified Detroit or Ann Arbor forecast AQI value was available. Check before a strenuous run or extended outdoor plan.</p>
+        <a class="source" href="https://www.weather.gov/dtx">NWS Detroit/Pontiac</a> ·
+        <a class="source" href="https://forecast.weather.gov/MapClick.php?lat=42.2808&amp;lon=-83.743">Ann Arbor forecast</a> ·
+        <a class="source" href="https://www.airnow.gov/?city=Detroit&amp;country=USA&amp;state=MI">AirNow Detroit</a> ·
+        <a class="source" href="https://www.michigan.gov/egle/public/learn/air-quality">Michigan air quality</a>
       </section>
 
       <section class="half" data-brief-section="allie-tomorrow-sports">
         <p class="label">Sports</p>
-        <h2>A local noon-to-night doubleheader</h2>
+        <h2>Named games, noon to late night</h2>
         <article class="card">
-          <p class="meta">12:00 PM · Ford Field · FOX 2 / Lions TV Network</p>
+          <p class="meta">Noon ET · Ford Field · Lions TV Network</p>
           <h3>Washington Commanders at Detroit Lions</h3>
-          <p>Josh Dobbs is slated to start and Jared Goff will sit. Lions-linked coverage says a significant number of starters could play, subject to game-day decisions.</p>
-          <p><strong>Fantasy watch:</strong> Sam LaPorta’s hip and official availability. Do not make a season-long roster decision from uneven preseason workloads.</p>
-          <a class="source" href="https://www.detroitlions.com/schedule/">Schedule and tickets</a> ·
-          <a class="source" href="https://www.detroitlions.com/news/detroit-lions-announce-preseason-tv-broadcast-crew">Broadcast details</a> ·
-          <a class="source" href="https://www.detroitlions.com/news/lions-daily-josh-dobbs-juice-scruggs-among-7-players-to-watch-in-lions-commanders">Player watch</a> ·
-          <a class="source" href="https://www.detroitlions.com/news/lions-daily-lions-will-play-significant-amount-of-starters-in-next-preseason-game">Starter update</a>
+          <p>Detroit’s only home preseason game. Watch the interior offensive-line combinations and early series; treat preseason usage as evidence, not a regular-season fantasy decision.</p>
+          <p><strong>Availability checks:</strong> Isiah Pacheco was rehabbing a sprained MCL, Sione Vaki was recovering from an eye injury and broken nose, and the latest sourced status for Ennis Rakestraw Jr. and Mekhi Wingo was unconfirmed.</p>
+          <a class="source" href="https://www.detroitlions.com/schedule/">Official schedule</a> ·
+          <a class="source" href="https://www.detroitlions.com/tickets/single-game-tickets">Tickets</a> ·
+          <a class="source" href="https://www.detroitlions.com/news/recap-lions-at-bengals-altmyer-saylors-hassanein">Player context</a> ·
+          <a class="source" href="https://www.nfl.com/news/2026-nfl-preseason-week-2-10-things-to-watch">Week 2 preview</a>
         </article>
-        <article class="card" style="margin-top:12px">
-          <p class="meta">7:00 PM · Keyworth Stadium · ESPN+</p>
+        <article class="card">
+          <p class="meta">7:00 p.m. ET · Keyworth Stadium, Hamtramck</p>
           <h3>Tampa Bay Rowdies at Detroit City FC</h3>
-          <p>A nearby, peer-friendly Saturday-night option. The club lists tickets and prepaid parking on its schedule.</p>
-          <p class="action"><strong>Tonight:</strong> no Friday cutoff was published; buy and prepay now for the low-friction plan.</p>
-          <a class="source" href="https://www.detcityfc.com/mens-schedule/">DCFC tickets and parking</a> ·
-          <a class="source" href="https://www.rowdiessoccer.com/schedule/">Streaming listing</a>
+          <p>The strongest local Saturday-night live-sports option. The club schedule offers tickets and prepaid parking; it does not state an official broadcast outlet, so confirm on the match page.</p>
+          <a class="source" href="https://www.detcityfc.com/mens-schedule/">Official schedule, tickets, and parking</a>
         </article>
-        <p><strong>WNBA:</strong> Fever at Liberty at 7 PM and Sun at Sparks at 9 PM, both on Prime Video.</p>
-        <a class="source" href="https://www.aboutamazon.com/news/entertainment/wnba-schedule-prime-video">Prime Video schedule</a> ·
-        <a class="source" href="https://sun.wnba.com/where-to-watch">Sun viewing guide</a>
-        <p class="sub">The official Pistons schedule lists no game or event for August 22. <a href="https://www.nba.com/pistons/schedule">Pistons schedule</a></p>
+        <ul>
+          <li><strong>7:00 p.m. ET — Indiana Fever at New York Liberty:</strong> WNBA League Pass is listed on the <a href="https://www.wnba.com/game/ind-vs-nyl-1022600275">official game page</a>.</li>
+          <li><strong>9:00 p.m. ET — Connecticut Sun at Los Angeles Sparks:</strong> check the <a href="https://www.wnba.com/game/con-vs-las-1022600276">official game page</a> for finalized viewing.</li>
+          <li><strong>10:00 p.m. ET — Atlanta Dream at Phoenix Mercury:</strong> WNBA League Pass is listed on the <a href="https://www.wnba.com/game/1022600277?CAMEFROM=CFC_ATL_DREAM_SOCIAL_OGTRAF_20SCHEDULE-RELEASE-OTHERS&amp;game_event=560&amp;location=all&amp;month=all&amp;opponent=all&amp;page_id=105725&amp;season=2026">official game page</a>.</li>
+        </ul>
+        <p class="sub">No Pistons game or season-ticket attendance item falls on August 22. No universal fantasy deadline was found; check Allison’s own platform.</p>
       </section>
 
       <section data-brief-section="allie-tomorrow-plans" data-allie-time-rotation>
-        <p class="label">Tomorrow’s plan rotation</p>
+        <p class="label">Tomorrow’s time rotation</p>
         <h2>The active or next verified option</h2>
-        <p class="sub">The report will surface only the active or next card. Inventory counts were not published, so confirm availability before paying or traveling.</p>
-        <div class="rotation">
-          <article class="card" data-allie-event data-start-at="2026-08-22T08:30:00-04:00" data-end-at="2026-08-22T10:00:00-04:00">
-            <span class="status">Morning</span>
-            <p class="meta">8:30–10:00 AM · Palmer Park, Detroit</p>
-            <h3>Run the 313 5K</h3>
-            <p>A natural solo-arrival event for meeting active local peers. The standard 5K is listed at $55 and closes at 8:38 AM Saturday; the $35 economy option closes at 8:30 AM.</p>
-            <p class="action"><strong>Tonight:</strong> register, then set out race clothes, hydration, and the arrival and parking plan.</p>
-            <a class="source" href="https://runsignup.com/Race/Info/MI/Detroit/Runthe313">Official registration</a>
-          </article>
-          <article class="card" hidden data-allie-event data-start-at="2026-08-22T11:00:00-04:00" data-end-at="2026-08-22T13:00:00-04:00">
-            <span class="status">Midday</span>
-            <p class="meta">11:00 AM–1:00 PM · Wheelhouse Detroit to Belle Isle</p>
-            <h3>Pretty Pace Bike Social: Vol. 1</h3>
-            <p>A women-focused, comfort-paced ride that explicitly welcomes solo arrivals. Eventbrite registration is live; bike rental is separate and the organizer strongly recommends reserving one in advance.</p>
-            <p class="action"><strong>Tonight:</strong> RSVP, separately reserve a bike if needed, and prep pink athleisure plus a filled water bottle.</p>
-            <a class="source" href="https://www.eventbrite.com/e/pretty-pace-bike-social-tickets-1997614310176">Official RSVP</a>
-          </article>
-          <article class="card" hidden data-allie-event data-start-at="2026-08-22T13:00:00-04:00" data-end-at="2026-08-22T17:00:00-04:00">
-            <span class="status">Afternoon</span>
-            <p class="meta">1:00–5:00 PM · Check-in at Easy Peasy, Detroit</p>
-            <h3>Bark Crawl 2026</h3>
-            <p>A 21+ charity crawl for humans only; leave pets at home. The official shirt functions as admission, and the route has no required start order.</p>
-            <p class="action"><strong>Tonight:</strong> purchase the shirt/ticket, save 1456 Woodward Ave, and coordinate a rideshare or designated driver.</p>
-            <a class="source" href="https://www.metrodetroitanimals.org/event/3rd-annual-bark-crawl/">Official event page</a> ·
-            <a class="source" href="https://www.wrcjfm.org/events/bark-crawl/">Event listing</a>
-          </article>
-          <div class="callout" data-allie-time-empty hidden>No active or upcoming sourced option remains in tomorrow’s rotation.</div>
-        </div>
-        <p class="action"><strong>Best connection-first choice:</strong> prioritize the bike social. Pairing it with Bark Crawl is possible because the crawl has no set route, but there is no buffer between the posted times.</p>
+        <p class="sub">These cards are ordered across the day. Only the active or next option displays.</p>
+        <article class="card" data-allie-event data-start-at="2026-08-22T10:00:00-04:00" data-end-at="2026-08-22T16:00:00-04:00">
+          <span class="status">10 a.m.–4 p.m.</span>
+          <h3>Ann Arbor Bonsai Society Bonsai Show and Sale</h3>
+          <p class="meta">Matthaei Botanical Gardens · 1800 N. Dixboro Rd, Ann Arbor · $3</p>
+          <p>A public, walk-in show with demonstrations and a sale. It is the lowest-weather-risk daytime choice and gives easy conversation starters without requiring a formal mixer.</p>
+          <a class="source" href="https://events.umich.edu/event/149624">Official event listing</a>
+        </article>
+        <article class="card" hidden data-allie-event data-start-at="2026-08-22T15:00:00-04:00" data-end-at="2026-08-22T17:00:00-04:00">
+          <span class="status">3–5 p.m.</span>
+          <h3>Binho Tournament at The Regal Eagle</h3>
+          <p class="meta">3537 Vernor West, Detroit · $20 for the 18+ division</p>
+          <p>A structured, indoor head-to-head table-game tournament with repeated play—best aligned with meeting people and exploring the game-company interest. The ticket page was active with no sold-out notice, though checkout was not completed.</p>
+          <a class="source" href="https://www.eventbrite.com/e/binho-tournament-at-the-regal-eagle-tickets-1996707168892">Official ticket page</a>
+        </article>
+        <article class="card" hidden data-allie-event data-start-at="2026-08-22T16:30:00-04:00" data-end-at="2026-08-22T21:00:00-04:00">
+          <span class="status">4:30–9 p.m.</span>
+          <h3>Ann Arbor Roller Derby: Ann Arbor vs. Downriver and Windy City</h3>
+          <p class="meta">Buhr Park Outdoor Ice Arena · 2751 Packard St, Ann Arbor · $18, or $50 VIP for two</p>
+          <p>Doors open at 4:30 p.m.; games begin at 5 and 7 p.m. It is lively and low-pressure, but the outdoor arena makes the plan weather-sensitive. Tickets are linked and door sales are listed; no sellout notice was shown.</p>
+          <a class="source" href="https://www.a2rollerderby.com/schedule/a2rd-vs-downriver-2026-schedule">Official event and tickets</a>
+        </article>
+        <div class="callout" data-allie-time-empty hidden>No active or upcoming sourced option remains in tomorrow’s rotation.</div>
+        <p class="action"><strong>Best weather-resilient social pick:</strong> the 3 p.m. Binho tournament. <strong>Best early active option:</strong> Run the 313 at 8:30 a.m., only after a radar check; <a href="https://runsignup.com/Race/Info/MI/Detroit/Runthe313">registration was open when checked</a>.</p>
       </section>
 
       <section class="half" data-brief-section="allie-tomorrow-entertainment">
         <p class="label">Entertainment</p>
-        <h2>Pick the room—or stay in</h2>
+        <h2>Choose the energy level</h2>
         <div class="grid">
-          <article class="card"><p class="meta">6:00–10:00 PM · Beacon Park</p><h3>Summer Music Series</h3><p>Open-air downtown music spanning soul, pop, and country, with drinks at Lumen Detroit and room to dance.</p><a class="source" href="https://downtowndetroit.org/events/month/2026-08/">Event calendar</a></article>
-          <article class="card"><p class="meta">7:00 PM · Saint Andrew’s Hall</p><h3>Dogstar: All In Now Tour</h3><p>A compact Detroit rock-show alternative with The Backfires.</p><a class="source" href="https://www.livenation.com/event/vv1AFZkoNGkdoE1EC/dogstar-all-in-now-tour">Official event</a></article>
-          <article class="card"><p class="meta">Time not listed · Music Hall</p><h3>John Lee Hooker Celebration</h3><p>A Detroit-rooted blues alternative supporting young artists. Verify timing before making it the plan.</p><a class="source" href="https://www.musichall.org/shows-events?month=8&amp;year=2026">Venue calendar</a></article>
-          <article class="card"><p class="meta">Available Saturday · Hulu</p><h3><em>The Christophers</em></h3><p>An at-home art-world story starring Michaela Coel, James Corden, Jessica Gunning, and Ian McKellen. For the playlist, Sam Smith’s <em>Hazel Eyes</em> was released Friday.</p><a class="source" href="https://apnews.com/article/streaming-august-2026-95a063ef2d8e2acd11ad645e58aee6e5">AP streaming guide</a></article>
+          <article class="card"><p class="meta">4–10 p.m. · J.W. Westcott Company, Detroit</p><h3>Westcott Sessions</h3><p>Suede Brain, Simulation, and Brian McKee, plus local food and boat rides by the Detroit River. Confirm remaining inventory.</p><a class="source" href="https://www.westcottsessions.com/">Organizer</a></article>
+          <article class="card"><p class="meta">7 p.m. · Saint Andrew’s Hall</p><h3>Dogstar with The Backfires</h3><p>A compact downtown band-show option with a current indie-rock angle.</p><a class="source" href="https://www.livenation.com/event/vv1AFZkoNGkdoE1EC/dogstar-all-in-now-tour">Official tickets</a></article>
+          <article class="card"><p class="meta">8 p.m. · The Fillmore Detroit</p><h3>R&amp;B ONLY LIVE</h3><p>A DJ-led sing-and-dance night with a low-ticket warning. Verify Detroit age details before purchase.</p><a class="source" href="https://detroit.rnbonly.com/">Official event</a></article>
+          <article class="card"><p class="meta">On demand</p><h3>Love Island USA Season 8 catch-up</h3><p>No new Saturday episode is reported. Catch up on Peacock before the verified August 31 reunion.</p><a class="source" href="https://www.peacocktv.com/blog/when-is-love-island-usa-season-8-reunion-filmed">Peacock reunion details</a></article>
         </div>
-        <p class="sub"><strong>Love Island USA:</strong> no verified Saturday episode time. Use tomorrow to catch up; Peacock lists the Season 8 reunion for Monday, August 31 at 9 PM. <a href="https://www.peacocktv.com/blog/how-many-times-does-love-island-usa-come-on-a-week-schedule">Peacock</a></p>
+        <p class="action"><strong>Stay-in backups:</strong> Sam Smith’s <em>Hazel Eyes</em>, released Friday, or <em>Outer Banks</em> Season 5, which premiered Thursday on Netflix.</p>
+        <a class="source" href="https://apnews.com/article/streaming-august-2026-95a063ef2d8e2acd11ad645e58aee6e5">New streaming releases</a> ·
+        <a class="source" href="https://www.netflix.com/tudum/articles/outer-banks-season-5">Netflix</a>
       </section>
 
       <section class="half" data-brief-section="allie-tomorrow-prepare">
         <p class="label">Prepare tonight</p>
-        <h2>A 15-minute game-company teardown</h2>
-        <div class="callout">
-          <p class="meta">Shakeup Adventures · campaign closes Saturday; exact closing time not verified</p>
-          <p>Capture the campaign page’s first-screen promise, demo moment, price ladder, and comments. Save three ideas for a bootstrapped prototype instead of backing impulsively.</p>
-          <p>The benchmark: a physical hook—shaking dice into a new dungeon—with 30–60 minute play for 2–6 players. The campaign was listed at 1,804 backers and $238K five days before close; treat that as a signal, not a demand forecast.</p>
-          <a class="source" href="https://www.reddit.com/r/boardgames/comments/1vpzno6/weekly_crowdfunding_roundup_august_16_2026_12/">Crowdfunding roundup</a> ·
-          <a class="source" href="https://www.veryspecialgames.com/pages/shakeup-adventure-kickstarter-launch">Creator page</a> ·
-          <a class="source" href="https://www.kickstarter.com/projects/chartypartyjosh/shakeup-adventures-an-infinitely-new-dice-dungeon-crawler/faqs">Campaign FAQ</a>
-        </div>
+        <h2>No extra work deadline</h2>
+        <p>The preparation collector found no qualifying finance, analytics, AI, or game-business action that must happen before Saturday.</p>
+        <p class="action">Keep tonight practical: charge the phone, enable weather alerts, and recheck radar before leaving for any outdoor plan after 10 a.m.</p>
       </section>
 
       <section data-brief-section="allie-tomorrow-family">
-        <p class="label">Family context</p>
-        <h2>No family feeds are configured</h2>
+        <p class="label">Family</p>
+        <h2>The family calendar is clear for Saturday</h2>
+        <p>Both enabled Hurley Family calendars were checked. There are no actionable family activities listed for August 22.</p>
         <div class="grid">
-          <article class="card"><h3>Calendar</h3><p>Status: not configured. No family calendar events were supplied, so none are shown or inferred for tomorrow.</p></article>
-          <article class="card"><h3>Photo album</h3><p>Status: not configured. No album URL was supplied, so there is no photo prompt or link to include.</p></article>
+          <article class="card"><h3>Birthdays · August 22</h3><p>None listed on either Hurley Family calendar.</p></article>
+          <article class="card"><h3>Anniversaries · August 22</h3><p>None listed on either Hurley Family calendar.</p></article>
         </div>
+        <p class="action"><strong>Shared public photo archive:</strong> no suitable exact-date prior-year match was found. The archive home page was reachable, but the public SmugMug API host was unavailable, so no August 22 candidate metadata could be reviewed or verified.</p>
+        <a class="source" href="https://photos.hurleyhome.com/">Shared public photo archive</a>
       </section>
     </main>
 
-    <footer>Prepared Friday, August 21, 2026 · Tomorrow-only facts and tonight actions</footer>
+    <footer>Prepared Friday, August 21 for Saturday, August 22, 2026 · Times are Eastern.</footer>
   </div>
 <script id="allie-time-rotation-script">
   (() => {
@@ -265,6 +262,28 @@
 </script>
 
 
+
+<script id="allie-compact-layout-script">
+  (() => {
+    const main = document.querySelector("main"); if (!main) return;
+    let pending = false;
+    const layout = () => {
+      pending = false;
+      const computed = getComputedStyle(main);
+      const row = parseFloat(computed.gridAutoRows) || 8;
+      const gap = parseFloat(computed.rowGap) || 18;
+      [...main.children].filter((item) => item.matches("section")).forEach((item) => {
+        item.style.gridRowEnd = "auto";
+        const span = Math.ceil((item.getBoundingClientRect().height + gap) / (row + gap));
+        item.style.gridRowEnd = `span ${span}`;
+      });
+    };
+    const schedule = () => { if (!pending) { pending = true; requestAnimationFrame(layout); } };
+    new ResizeObserver(schedule).observe(main);
+    [...main.children].forEach((item) => new ResizeObserver(schedule).observe(item));
+    window.addEventListener("resize", schedule); schedule();
+  })();
+</script>
 <script id="allie-live-script">
   (() => {
     const scope = "tomorrow";
@@ -308,6 +327,40 @@
     updateTheme(); updateScores();
     window.setInterval(updateTheme, 60 * 1000);
     window.setInterval(updateScores, 60 * 1000);
+  })();
+</script>
+<script id="report-long-press-feedback">
+  (() => {
+    const delay = 650;
+    const sections = [...document.querySelectorAll("[data-brief-section], main > section, main > article")]
+      .filter((section, index, all) => all.findIndex((candidate) => candidate === section || candidate.contains(section)) === index);
+    sections.forEach((section) => {
+      let timer = null; let startX = 0; let startY = 0; let suppressClick = false; let suppressNativeUntil = 0;
+      const cancel = () => { if (timer) window.clearTimeout(timer); timer = null; };
+      section.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || (event.pointerType !== "touch" && event.pointerType !== "pen")) return;
+        cancel(); startX = event.clientX; startY = event.clientY;
+        timer = window.setTimeout(() => {
+          timer = null; suppressClick = true; suppressNativeUntil = Date.now() + 1200;
+          const feedbackEvent = new MouseEvent("contextmenu", { bubbles:true, cancelable:true, clientX:event.clientX, clientY:event.clientY });
+          Object.defineProperty(feedbackEvent, "reportLongPress", { value:true });
+          section.dispatchEvent(feedbackEvent);
+          navigator.vibrate?.(20);
+        }, delay);
+      }, { passive:true });
+      section.addEventListener("pointermove", (event) => {
+        if (Math.hypot(event.clientX - startX, event.clientY - startY) > 12) cancel();
+      }, { passive:true });
+      section.addEventListener("pointerup", cancel, { passive:true });
+      section.addEventListener("pointercancel", cancel, { passive:true });
+      section.addEventListener("contextmenu", (event) => {
+        if (!event.reportLongPress && Date.now() < suppressNativeUntil) { event.preventDefault(); event.stopImmediatePropagation(); }
+      }, true);
+      section.addEventListener("click", (event) => {
+        if (!suppressClick) return;
+        suppressClick = false; event.preventDefault(); event.stopImmediatePropagation();
+      }, true);
+    });
   })();
 </script>
 </body>

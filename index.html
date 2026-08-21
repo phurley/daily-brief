@@ -264,6 +264,8 @@
 
 
 
+
+
 <style id="original-live-layer-styles">
   .live-canton-weather { margin:.55rem 0 0; font-size:.88rem; color:var(--muted); }
   .time-chip { justify-self:start; width:max-content; max-width:100%; white-space:nowrap; line-height:1.2; }
@@ -516,6 +518,9 @@ Submitted from the published daily brief.`;
 
 
 
+
+
+
 <script id="original-live-layer-script">
   (() => {
     const zone = "America/Detroit";
@@ -543,6 +548,40 @@ Submitted from the published daily brief.`;
     };
     refreshClock(); refreshWeather();
     window.setInterval(refreshClock, 60 * 1000); window.setInterval(refreshWeather, 10 * 60 * 1000);
+  })();
+</script>
+<script id="report-long-press-feedback">
+  (() => {
+    const delay = 650;
+    const sections = [...document.querySelectorAll("[data-brief-section], main > section, main > article")]
+      .filter((section, index, all) => all.findIndex((candidate) => candidate === section || candidate.contains(section)) === index);
+    sections.forEach((section) => {
+      let timer = null; let startX = 0; let startY = 0; let suppressClick = false; let suppressNativeUntil = 0;
+      const cancel = () => { if (timer) window.clearTimeout(timer); timer = null; };
+      section.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || (event.pointerType !== "touch" && event.pointerType !== "pen")) return;
+        cancel(); startX = event.clientX; startY = event.clientY;
+        timer = window.setTimeout(() => {
+          timer = null; suppressClick = true; suppressNativeUntil = Date.now() + 1200;
+          const feedbackEvent = new MouseEvent("contextmenu", { bubbles:true, cancelable:true, clientX:event.clientX, clientY:event.clientY });
+          Object.defineProperty(feedbackEvent, "reportLongPress", { value:true });
+          section.dispatchEvent(feedbackEvent);
+          navigator.vibrate?.(20);
+        }, delay);
+      }, { passive:true });
+      section.addEventListener("pointermove", (event) => {
+        if (Math.hypot(event.clientX - startX, event.clientY - startY) > 12) cancel();
+      }, { passive:true });
+      section.addEventListener("pointerup", cancel, { passive:true });
+      section.addEventListener("pointercancel", cancel, { passive:true });
+      section.addEventListener("contextmenu", (event) => {
+        if (!event.reportLongPress && Date.now() < suppressNativeUntil) { event.preventDefault(); event.stopImmediatePropagation(); }
+      }, true);
+      section.addEventListener("click", (event) => {
+        if (!suppressClick) return;
+        suppressClick = false; event.preventDefault(); event.stopImmediatePropagation();
+      }, true);
+    });
   })();
 </script>
 </body>
