@@ -3,50 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
   <title>Allison's Saturday Brief — August 22, 2026</title>
   <style>
-    :root { --ink:#172038; --muted:#5d6680; --paper:#fffaf2; --card:#fff; --blue:#1873e8; --pink:#df267c; --lime:#c8ef45; --line:#dce1eb; --storm:#2e3762; }
-    * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); background:linear-gradient(135deg,#edf6ff 0,#fff8ef 45%,#f9efff 100%); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:#075fc9; font-weight:700; text-underline-offset:.18em; }
-    a:hover { color:var(--pink); }
-    .shell { width:min(1180px,calc(100% - 2rem)); margin:auto; padding:1.25rem 0 2.5rem; }
-    header { position:relative; overflow:hidden; padding:clamp(1.5rem,5vw,4rem); border:2px solid var(--ink); border-radius:1.4rem; color:#fff; background:var(--ink); box-shadow:10px 10px 0 var(--lime); }
-    header::after { content:""; position:absolute; width:18rem; height:18rem; right:-5rem; top:-7rem; border:3rem solid var(--pink); border-radius:50%; opacity:.8; }
-    .eyebrow,.kicker { margin:0 0 .35rem; color:var(--pink); font-size:.75rem; font-weight:900; letter-spacing:.15em; text-transform:uppercase; }
-    header .eyebrow { color:var(--lime); }
-    h1 { position:relative; z-index:1; max-width:750px; margin:.15rem 0 .6rem; font-size:clamp(2.2rem,7vw,5.2rem); line-height:.92; letter-spacing:-.055em; }
-    header p { position:relative; z-index:1; max-width:720px; margin:.3rem 0 0; font-size:1.08rem; }
-    main { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:1rem; margin-top:1.6rem; }
-    section { grid-column:span 6; padding:clamp(1.2rem,3vw,2rem); border:1px solid var(--line); border-radius:1.25rem; background:rgb(255 255 255 / .94); box-shadow:0 12px 35px rgb(35 46 80 / .08); }
-    section.overview,section.sports,section.events { grid-column:1/-1; }
-    h2 { margin:.15rem 0 .65rem; font-size:clamp(1.55rem,3vw,2.25rem); line-height:1.05; letter-spacing:-.035em; }
-    h3 { margin:.25rem 0 .4rem; font-size:1.05rem; line-height:1.22; }
-    p { margin:.4rem 0 .8rem; }
-    .standfirst { color:var(--muted); font-size:1.03rem; }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.85rem; }
-    .grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
-    .card { padding:1rem; border:1px solid var(--line); border-radius:.9rem; background:var(--card); }
-    .tag { display:inline-block; margin-bottom:.3rem; padding:.2rem .5rem; border-radius:99px; color:var(--ink); background:var(--lime); font-size:.69rem; font-weight:900; letter-spacing:.05em; text-transform:uppercase; }
-    .scoreboard { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.7rem; margin-top:1rem; }
-    .game { padding:1rem; border-radius:.9rem; color:#fff; background:var(--storm); }
-    .game time,.event-card time { display:block; color:var(--lime); font-size:.78rem; font-weight:900; text-transform:uppercase; }
-    .game strong { display:block; margin:.3rem 0; line-height:1.2; }
-    .game p { font-size:.86rem; }
-    .game a { color:#fff; font-size:.82rem; }
-    .action { border-left:5px solid var(--blue); padding-left:.85rem; }
-    .warning { padding:.8rem 1rem; border-radius:.8rem; color:#fff; background:#9a3156; }
-    .event-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; }
-    .event-card { border-top:6px solid var(--blue); }
-    .event-card time { color:var(--pink); }
-    .meta,.source-note { color:var(--muted); font-size:.85rem; }
-    .market-space { margin-top:1rem; padding:1rem; border:2px dashed var(--blue); border-radius:.9rem; background:#f1f7ff; }
-    .family { background:linear-gradient(145deg,#fff,#fff7d8); }
-    footer { padding:1.5rem .5rem 0; color:var(--muted); text-align:center; font-size:.85rem; }
+    :root { --ink:#172035; --muted:#596277; --paper:#fffdf8; --line:#dce1ea; --blue:#1261d8; --pink:#d81b70; --lime:#bbd929; --navy:#14223f; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:#f3f5f9; font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    header, main, footer { width:min(1120px,calc(100% - 2rem)); margin-inline:auto; }
+    header { padding:3rem 0 1.5rem; }
+    .kicker { color:var(--pink); font-weight:850; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { margin:.15rem 0 .35rem; font-size:clamp(2.3rem,7vw,5rem); line-height:.95; letter-spacing:-.055em; }
+    h2 { margin:0 0 1rem; font-size:1.65rem; line-height:1.1; }
+    h3 { margin:0 0 .35rem; font-size:1.08rem; line-height:1.25; }
+    p { margin:.35rem 0 .8rem; }
+    a { color:var(--blue); font-weight:700; text-underline-offset:.16em; }
+    .deck { color:var(--muted); font-size:1.12rem; max-width:55rem; }
+    main { display:grid; grid-template-columns:repeat(12,1fr); gap:1rem; padding-bottom:2rem; }
+    section { grid-column:span 6; background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:1.35rem; box-shadow:0 8px 28px rgba(20,34,63,.06); }
+    .wide, .overview, .sports, .events { grid-column:1 / -1; }
+    .overview { background:var(--navy); color:white; border:0; }
+    .overview a { color:#a9caff; }
+    .eyebrow { color:var(--pink); font-size:.76rem; font-weight:850; letter-spacing:.1em; text-transform:uppercase; }
+    .overview .eyebrow { color:var(--lime); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem; }
+    .card { padding:1rem; border:1px solid var(--line); border-radius:14px; background:white; color:var(--ink); }
+    .sports .card { border-top:5px solid var(--blue); }
+    .events .card { border-left:5px solid var(--lime); }
+    .time { display:inline-block; margin-bottom:.5rem; color:var(--pink); font-weight:900; }
+    .note { color:var(--muted); font-size:.92rem; }
+    .tag { display:inline-block; margin:.1rem .2rem .1rem 0; padding:.18rem .5rem; border-radius:999px; background:#eaf1ff; color:#174c9f; font-size:.75rem; font-weight:800; text-transform:uppercase; }
+    .weather-strip { display:flex; flex-wrap:wrap; gap:.5rem; margin:.8rem 0; }
+    .weather-strip span { background:#eaf1ff; border-radius:10px; padding:.5rem .65rem; font-weight:750; }
+    .action { border-left:4px solid var(--pink); padding-left:.75rem; }
+    .source { font-size:.86rem; }
+    .money { background:#f7fae8; }
+    .family { background:#fff0f6; }
     [hidden] { display:none !important; }
-    @media (max-width:900px) { section { grid-column:1/-1; } .scoreboard { grid-template-columns:repeat(2,minmax(0,1fr)); } .grid.three,.event-grid { grid-template-columns:1fr 1fr; } }
-    @media (max-width:620px) { .shell { width:min(100% - 1rem,1180px); } header { box-shadow:5px 5px 0 var(--lime); } .grid,.grid.three,.scoreboard,.event-grid { grid-template-columns:1fr; } section { padding:1.1rem; } }
+    footer { padding:0 0 3rem; color:var(--muted); font-size:.9rem; }
+    @media (max-width:800px) { section { grid-column:1 / -1; } .grid { grid-template-columns:1fr; } header { padding-top:2rem; } }
   </style>
 <style id="allie-compact-layout">
   main { display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; grid-auto-flow:dense; grid-auto-rows:8px; gap:18px !important; align-items:start; }
@@ -84,96 +77,146 @@
 </style>
 </head>
 <body data-allie-report="daily" data-report-date="2026-08-22">
-  <div class="shell">
-    <header>
-      <p class="eyebrow">Saturday · Metro Detroit · August 22, 2026</p>
-      <h1>Make the morning count.</h1>
-      <p>Storms take over the afternoon plan, but the day still has range: a noon Lions checkpoint, two local soccer matches, and an indoor pickleball fallback.</p>
-    </header>
+  <header>
+    <div class="kicker">Saturday · August 22, 2026</div>
+    <h1>Allison's daily brief</h1>
+    <p class="deck">A storm-aware Saturday with Detroit sports stacked tonight, plus low-pressure ways to get moving and meet people in the week ahead.</p>
+  </header>
 
-    <main>
-      <section class="overview" data-brief-section="allie-daily-overview" aria-labelledby="overview-title">
-        <p class="kicker">The quick read</p>
-        <h2 id="overview-title">Your Saturday in three moves</h2>
-        <div class="grid three">
-          <article class="card"><span class="tag">Move</span><h3>Finish outside early</h3><p>Mid-60s and the lowest practical weather risk from 6–9 a.m. make morning the best window for a run, errands, volleyball, or pickleball.</p></article>
-          <article class="card"><span class="tag">Watch</span><h3>Washington Commanders at Detroit Lions · noon</h3><p>Use Detroit's only home preseason game as a role and usage check before fantasy drafts—not as a projection.</p></article>
-          <article class="card"><span class="tag">Make</span><h3>Pitch a tiny game cohort</h3><p>Draft a one-page proposal for two or three compatible designers: shared demo night, opt-in cross-promotion, and one fulfillment quote.</p></article>
-        </div>
-      </section>
+  <main>
+    <section class="overview" data-brief-section="allie-daily-overview" aria-labelledby="overview-title">
+      <div class="eyebrow">The fast read</div>
+      <h2 id="overview-title">Make the afternoon indoor; save the evening for a game</h2>
+      <div class="grid">
+        <div><strong>Weather pivot</strong><p>Rain and thunder risk peaks from 3–6 PM, then falls sharply after 8 PM. Air quality was Good at 8 AM.</p></div>
+        <div><strong>Tonight's choice</strong><p>Indiana Fever–New York Liberty and Tampa Bay Rowdies–Detroit City FC both start at 7 PM ET; Connecticut Sun–Los Angeles Sparks follows at 9 PM ET.</p></div>
+        <div><strong>Best social bet</strong><p>Sunday's Detroit Social Walk Club is the easiest solo arrival; Monday volleyball is the strongest sport-first option.</p></div>
+      </div>
+    </section>
 
-      <section class="weather" data-brief-section="allie-daily-weather" aria-labelledby="weather-title">
-        <p class="kicker">Weather · Metro Detroit</p>
-        <h2 id="weather-title">Warm, unsettled, and storm-first</h2>
-        <p class="standfirst">Expect mid-60s early, near 80°F this afternoon, then cooler overnight. Showers become numerous to widespread as a cold front passes; scattered afternoon thunderstorms carry a Marginal Risk for severe weather.</p>
-        <div class="grid">
-          <article class="card"><span class="tag">6–9 a.m.</span><h3>Lowest-risk outdoor window</h3><p>Mid-60s with light wind. A shower is possible, but this is the practical window to finish an exposed activity.</p></article>
-          <article class="card"><span class="tag">2–7 p.m.</span><h3>Highest-impact window</h3><p>Near 80°F with more numerous showers and storms; locally heavy rain, gusty wind, and small hail are possible. At first thunder, move indoors.</p></article>
-        </div>
-        <p class="warning"><strong>Plan:</strong> choose indoor space or a weather-flexible social venue, carry a light rain layer, allow extra travel time, and check NWS alerts just before leaving.</p>
-        <p class="source-note">No official Southeast Michigan Air Quality Alert was identified at briefing time; storms and lightning are today's main constraint. Recheck <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow</a> or <a href="https://www.michigan.gov/egle/maps-data/miair">MiAir</a> before a long run. Forecast: <a href="https://www.weather.gov/dtx/ExpertForecastOpinionAFD">NWS forecast discussion</a> · <a href="https://forecast.weather.gov/MapClick.php?CityName=Detroit&amp;FcstType=digital&amp;bw=1&amp;e=1&amp;fs=2&amp;site=DTX&amp;state=MI&amp;textField1=42.3831&amp;textField2=-83.1022">Detroit digital forecast</a></p>
-      </section>
+    <section data-brief-section="allie-daily-weather" aria-labelledby="weather-title">
+      <div class="eyebrow">Metro Detroit weather</div>
+      <h2 id="weather-title">Warm, humid, then stormy</h2>
+      <p>The National Weather Service hourly forecast reaches about <strong>79°F near 2 PM</strong>. Southwest winds run 8–9 mph as rain and thunder risk ramps up.</p>
+      <div class="weather-strip" aria-label="Hourly forecast highlights">
+        <span>1 PM · 77°F · 37%</span><span>2 PM · 79°F · 79%</span><span>3 PM · 90% rain</span><span>6 PM · 75°F · 64%</span><span>9 PM · ≤10%</span>
+      </div>
+      <p class="action"><strong>Active-plan call:</strong> move 2–7 PM volleyball, running, or pickleball indoors. Stop immediately for thunder. A more usable outdoor window returns around 8–9 PM, but surfaces may stay wet.</p>
+      <p><span class="tag">AQI 46</span> Good at 8 AM EDT; no air-quality restriction was indicated for most people.</p>
+      <p class="source"><a href="https://forecast.weather.gov/MapClick.php?FcstType=digital&amp;lat=42.38&amp;lg=english&amp;lon=-83.09&amp;unit=0">NWS hourly forecast</a> · <a href="https://www.airnow.gov/?city=Detroit&amp;country=USA&amp;state=MI">AirNow Detroit</a> · <a href="https://www.michigan.gov/egle/maps-data/miair">MiAir</a></p>
+    </section>
 
-      <section class="sports" data-brief-section="allie-daily-sports" aria-labelledby="sports-title">
-        <p class="kicker">Sports · Lead board</p>
-        <h2 id="sports-title">Three local starts, then a WNBA doubleheader</h2>
-        <p class="standfirst">Detroit's noon preseason game and two nearby soccer options anchor the day. Every time below travels with its matchup.</p>
-        <div class="scoreboard">
-          <article class="game"><time datetime="2026-08-22T12:00:00-04:00">Noon ET · Lions TV Network</time><strong>Washington Commanders at Detroit Lions</strong><p>NFL preseason at Ford Field. Detroit's only home preseason game is a useful checkpoint before fantasy drafts and final roster decisions.</p><a href="https://www.detroitlions.com/schedule/">Lions schedule</a></article>
-          <article class="game"><time datetime="2026-08-22T17:00:00-04:00">5 PM ET · B1G+</time><strong>Xavier at Michigan</strong><p>Women's soccer home opener and Heritage Day at U-M Soccer Stadium. Michigan enters 0-0-2.</p><a href="https://mgoblue.com/sports/womens-soccer/schedule">Michigan schedule</a></article>
-          <article class="game"><time datetime="2026-08-22T19:00:00-04:00">7 PM ET</time><strong>Tampa Bay Rowdies at Detroit City FC</strong><p>USL Championship at Keyworth Stadium gives the evening a local soccer nightcap.</p><a href="https://www.detcityfc.com/mens-schedule/">DCFC schedule</a></article>
-          <article class="game"><time datetime="2026-08-22T19:00:00-04:00">7 PM ET · Prime Video</time><strong>Indiana Fever at New York Liberty</strong><p>The strongest WNBA matchup on tonight's three-game slate; Indiana is 13-9 and New York 13-10.</p><a href="https://www.wnbaschedule.com/">WNBA schedule</a></article>
-          <article class="game"><time datetime="2026-08-22T21:00:00-04:00">9 PM ET · Prime Video</time><strong>Connecticut Sun at Los Angeles Sparks</strong><p>A late standings-relevant option for 10-11 Los Angeles against 5-18 Connecticut.</p><a href="https://www.wnbaschedule.com/">WNBA schedule</a></article>
-        </div>
-        <div class="grid" style="margin-top:.85rem">
-          <article class="card"><span class="tag">Fantasy board</span><h3>The official depth chart keeps Detroit's core clear</h3><p>The current unofficial chart lists Jahmyr Gibbs at RB1, Isiah Pacheco at RB2, Amon-Ra St. Brown and Jameson Williams in the starting receiver spots, and Sam LaPorta at TE1. Prioritize Gibbs; treat Pacheco as meaningful contingency depth. A coordinator change under Drew Petzing is the main variable, so watch pace, formations, and targets.</p><a href="https://www.detroitlions.com/team/depth-chart">Unofficial depth chart</a> · <a href="https://www.detroitlions.com/news/goff-talks-new-offense-under-petzing-williams-development-more">Goff on the offense</a></article>
-          <article class="card"><span class="tag">Pistons hold</span><h3>October 5 and October 20</h3><p>Detroit's first preseason game is Phoenix at Pistons on Monday, October 5 at 7 PM ET. The regular-season opener is Boston at Pistons on Tuesday, October 20 at 3 PM ET; Detroit has 19 national-TV appearances scheduled.</p><a href="https://www.nba.com/pistons/news/detroit-pistons-announce-2026-27-season-schedule-presented-by-ticketmaster">Pistons schedule release</a></article>
-        </div>
-        <p class="source-note">Dynasty note: Gibbs signed through 2030 on August 7 after making the Pro Bowl in each of his first three seasons and totaling 49 career scrimmage touchdowns. <a href="https://www.detroitlions.com/news/lions-sign-rb-jahmyr-gibbs-to-contract-extension-through-the-2030-season">Lions announcement</a></p>
-      </section>
+    <section data-brief-section="allie-daily-games-business" aria-labelledby="games-title">
+      <div class="eyebrow">Tabletop founder notebook</div>
+      <h2 id="games-title">Validate the interaction before the inventory</h2>
+      <article>
+        <h3>A 20-second demo is a useful test</h3>
+        <p>STAG, a simultaneous-strategy beetle game, closed at £260,429 from 4,359 backers against an £8,000 goal. Test whether your one-sentence hook and a quick physical demo make players ask for round two before commissioning deep art or components.</p>
+        <p class="source"><a href="https://www.kickstarter.com/projects/splitstonegames/stag-beetle">STAG campaign</a></p>
+      </article>
+      <article>
+        <h3>Print-and-play can be the wedge</h3>
+        <p>Master of Coin raised £9,499 from 1,876 backers on a £1,000 goal. Build a polished 6–12 page printable prototype and a one-page teach; measure downloads, playtest replies, repeat plays, and willingness to pay before choosing a manufacturing run.</p>
+        <p class="source"><a href="https://www.kickstarter.com/projects/postmarkgames/master-of-coin">Master of Coin campaign</a></p>
+      </article>
+      <article>
+        <h3>Draft the boring updates early</h3>
+        <p>Before launch, write the funded, files-to-factory, and proof-approval updates. Price only after written quotes for freight, fulfillment, fees, replacements, and taxes.</p>
+        <p class="source"><a href="https://www.kickstarter.com/projects/ndg-needgames/fabula-ultima-ttjrpg-celebration-edition-bestiary-vol-i/posts/4770238">Fabula Ultima fulfillment update</a></p>
+      </article>
+    </section>
 
-      <section class="games" data-brief-section="allie-daily-games-business" aria-labelledby="games-title">
-        <p class="kicker">Games · Bootstrapped builder</p>
-        <h2 id="games-title">Borrow the cohort; keep product one simple</h2>
-        <p class="standfirst">GameFiesta's 14 small campaigns share discovery, rewards, joint printing, and fulfillment through August 27. The transferable lesson is a crisp table moment and aligned partners—not more components.</p>
-        <div class="grid">
-          <article class="card"><span class="tag">This week</span><h3>Write a microgame cohort pitch</h3><p>Propose one joint demo night, opt-in cross-promotion, and a shared fulfillment quote to two or three non-competing designers with the same likely buyer. Confirm packing and destination economics before promising combined shipping.</p><a href="https://www.backerkit.com/c/collections/gamefiesta">GameFiesta</a> · <a href="https://www.backerkit.com/c/collections/gamefiesta/projects">14-project collection</a></article>
-          <article class="card"><span class="tag">Hook test</span><h3>Sell the social tension first</h3><p>Pintó asks players to draw so some—but not everyone—guess correctly. Write a 12-word “table moment,” run five cold teaches, and revise the hook rather than the art if groups cannot repeat that moment after one round.</p><a href="https://www.backerkit.com/c/projects/pulga-escapista/pinto">Pintó campaign</a></article>
-          <article class="card"><span class="tag">Audience loop</span><h3>Make playtesting do two jobs</h3><p>Bring a print-and-play prototype to one Detroit-area game night. Track teach time, one confusing rule, replay interest, and players' exact description; ask permission for an email only after feedback.</p><a href="https://updates.kickstarter.com/how-to-playtest-your-board-game-before-you-launch-on-kickstarter/">Kickstarter playtesting guide</a></article>
-          <article class="card"><span class="tag">Launch gate</span><h3>Model landed cost before setting the goal</h3><p>Price one exact SKU to the U.S. and Canada: factory, freight, duties or tax handling, pick-pack, postage, fees, replacements, and a 25% schedule buffer. Kickstarter reports $15–$50 acquisition costs per backer in its case study and roughly 9–15 months for many overseas-made campaigns to reach final delivery.</p><a href="https://updates.kickstarter.com/how-to-market-a-tabletop-game-in-7-steps/">Marketing case study</a> · <a href="https://updates.kickstarter.com/from-funded-to-delivered-a-creators-guide-to-fulfillment/">Fulfillment guide</a></article>
-        </div>
-        <p class="source-note">Live funding and backer totals change. Crowdfunding pledges are not retail sales, and joint logistics work only when the products, customs treatment, and fulfillment partner support them.</p>
-      </section>
+    <section class="sports" data-brief-section="allie-daily-sports" aria-labelledby="sports-title">
+      <div class="eyebrow">Scoreboard</div>
+      <h2 id="sports-title">Detroit-heavy Saturday, with two 7 PM headliners</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="time">Final</span>
+          <h3>Washington Commanders 13 · Detroit Lions 17</h3>
+          <p>Detroit's only home preseason game is complete. Treat the win as roster evaluation, not a regular-season fantasy projection; the finale is August 29 at Indianapolis.</p>
+          <p class="source"><a href="https://www.nfl.com/games/commanders-at-lions-2026-pre-2">NFL game page</a></p>
+        </article>
+        <article class="card">
+          <span class="time">7:00 PM ET</span>
+          <h3>Indiana Fever at New York Liberty</h3>
+          <p>The marquee WNBA appointment puts Indiana's Caitlin Clark against New York at Barclays Center.</p>
+          <p class="source"><a href="https://www.wnba.com/game/1022600275/IND-vs-NYL">WNBA game page</a></p>
+        </article>
+        <article class="card">
+          <span class="time">7:00 PM ET</span>
+          <h3>Tampa Bay Rowdies at Detroit City FC</h3>
+          <p>The local in-person choice at Keyworth Stadium in Hamtramck—and a social alternative to watching from home.</p>
+          <p class="source"><a href="https://www.detcityfc.com/mens-schedule/">Detroit City FC schedule</a></p>
+        </article>
+        <article class="card">
+          <span class="time">9:00 PM ET · Prime</span>
+          <h3>Connecticut Sun at Los Angeles Sparks</h3>
+          <p>A late nationally streamed WNBA option after the Lions and DCFC windows.</p>
+          <p class="source"><a href="https://sun.wnba.com/where-to-watch">Connecticut Sun broadcast guide</a></p>
+        </article>
+        <article class="card">
+          <span class="time">Fantasy watch</span>
+          <h3>Detroit Lions backfield</h3>
+          <p>Keep Jahmyr Gibbs as Detroit's primary fantasy asset. Recheck Isiah Pacheco's MCL rehab after the August 29 finale; Jacob Saylors is a deep-bench watch only after 55 rushing yards on eight carries and three catches for 28 yards against Cincinnati.</p>
+          <p class="source"><a href="https://www.detroitlions.com/news/recap-lions-at-bengals-altmyer-saylors-hassanein">Lions preseason recap</a></p>
+        </article>
+        <article class="card">
+          <span class="time">Calendar it</span>
+          <h3>Boston Celtics at Detroit Pistons</h3>
+          <p>The regular-season home opener is Tuesday, October 20 at 3:00 PM ET at Little Caesars Arena. Preseason opens at home against Phoenix on October 5.</p>
+          <p class="source"><a href="https://www.nba.com/pistons/news/detroit-pistons-announce-2026-27-season-schedule-presented-by-ticketmaster">Pistons schedule announcement</a></p>
+        </article>
+      </div>
+    </section>
 
-      <section class="events" data-brief-section="allie-daily-active-social" data-allie-time-rotation aria-labelledby="events-title">
-        <p class="kicker">Active + social · Time-aware</p>
-        <h2 id="events-title">The next good reason to show up solo</h2>
-        <p class="standfirst">This panel is preloaded with verified, near-term options. The live report will show the active or next card by Detroit time.</p>
-        <div class="event-grid">
-          <article class="card event-card" data-allie-event data-start-at="2026-08-22T08:00:00-04:00" data-end-at="2026-08-23T18:00:00-04:00"><time datetime="2026-08-22T08:00:00-04:00">Saturday 8 AM–Sunday 6 PM</time><h3>2026 APP Detroit Open</h3><p>Vibe Credit Union Showplace, Novi. Public spectator tickets are available; player registration is closed. One-day general admission is $26. Saturday features women's and men's doubles; Sunday adds gold-medal matches, music, food, vendors, and recreational courts.</p><p class="meta">Indoor fallback · all ages · confirm ticket type before purchase</p><a href="https://www.theapp.global/tour-schedule/2026-app-detroit">Official event page</a></article>
-          <article class="card event-card" data-allie-event data-start-at="2026-08-23T10:30:00-04:00" data-end-at="2026-08-23T12:00:00-04:00"><time datetime="2026-08-23T10:30:00-04:00">Sunday · 10:30 AM–noon</time><h3>Detroit Social Walk Club</h3><p>Cullen Plaza on the Detroit Riverfront. The official calendar states no registration or age restriction; price is not listed, so verify with the organizer.</p><p class="meta">High social fit: conversation is the activity.</p><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Detroit Riverfront calendar</a></article>
-          <article class="card event-card" data-allie-event data-start-at="2026-08-24T18:00:00-04:00" data-end-at="2026-08-24T21:00:00-04:00"><time datetime="2026-08-24T18:00:00-04:00">Monday · 6–9 PM</time><h3>Volleyball at Valade</h3><p>Robert C. Valade Park on the Detroit Riverfront. This is a Come Play Detroit league session; check signup rules and team or open-player availability before going. Price is not listed.</p><p class="meta">Best sport-first social fit; a second session is listed Thursday, August 27.</p><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Detroit Riverfront calendar</a></article>
-          <article class="card event-card" data-allie-event data-start-at="2026-08-25T18:00:00-04:00" data-end-at="2026-08-25T21:00:00-04:00"><time datetime="2026-08-25T18:00:00-04:00">Tuesday · 6–9 PM</time><h3>Two Mile Tuesdays</h3><p>Detroit Riverfront; confirm the meeting point. The official calendar calls it an introductory, no-pressure run for all paces and ages. Price is not listed.</p><p class="meta">A no-team-required way to try a recurring running group.</p><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Detroit Riverfront calendar</a></article>
-          <article class="card event-card" data-allie-event data-start-at="2026-08-25T19:30:00-04:00" data-end-at="2026-08-25T21:00:00-04:00"><time datetime="2026-08-25T19:30:00-04:00">Tuesday · 7:30–9 PM</time><h3>Court4 pickleball drop-in</h3><p>Court4 Detroit, 4300 Marseilles St. The ladder league is for 3.0+ players; RSVP is required, drop-ins open most weeks, and league players get priority. $22 non-member or $15 member.</p><p class="meta">Four-player courts and repeat weekly play make introductions easier.</p><a href="https://www.court4.club/pickleball-1">Court4 details</a></article>
-          <article class="card event-card" data-allie-event data-start-at="2026-08-27T18:30:00-04:00" data-end-at="2026-08-27T20:00:00-04:00"><time datetime="2026-08-27T18:30:00-04:00">Thursday · 6:30–8 PM</time><h3>Detroit Social Walk Club</h3><p>Cullen Plaza on the Detroit Riverfront. No age or registration restriction is stated; price is not listed, so verify with the organizer.</p><p class="meta">A second high-social-fit walk if Sunday does not work.</p><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Detroit Riverfront calendar</a></article>
-        </div>
-        <p data-allie-time-empty hidden>No active or upcoming sourced event remains in this briefing. Recheck official organizers for new sessions.</p>
-        <p class="source-note">Times use America/Detroit. Dates, places, eligibility, and listed prices were checked August 22; availability and weather-dependent programming can change.</p>
-      </section>
+    <section class="events" data-brief-section="allie-daily-active-social" data-allie-time-rotation aria-labelledby="events-title">
+      <div class="eyebrow">Get out there</div>
+      <h2 id="events-title">Three easy entries into an active week</h2>
+      <div class="grid">
+        <article class="card" data-allie-event data-start-at="2026-08-23T10:30:00-04:00" data-end-at="2026-08-23T12:00:00-04:00">
+          <span class="time">Sun · 10:30 AM–noon</span>
+          <h3>Detroit Social Walk Club</h3>
+          <p>Cullen Plaza on the Detroit Riverfront. A conversation-first group walk and natural solo arrival. No age or registration restriction is stated; price is not listed, so verify with the organizer.</p>
+          <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Official Riverfront calendar</a></p>
+        </article>
+        <article class="card" data-allie-event data-start-at="2026-08-24T18:00:00-04:00" data-end-at="2026-08-24T21:00:00-04:00">
+          <span class="time">Mon · 6:00–9:00 PM</span>
+          <h3>Volleyball at Valade</h3>
+          <p>Valade Park, 2670 Atwater Street. Repeat play and rotating teammates make this the best sport-first social option. Confirm open-player or team availability and registration with Come Play Detroit.</p>
+          <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/05/25/volleyball-at-valade/event-dates">Official event listing</a></p>
+        </article>
+        <article class="card" data-allie-event data-start-at="2026-08-27T18:30:00-04:00" data-end-at="2026-08-27T20:00:00-04:00">
+          <span class="time">Thu · 6:30–8:00 PM</span>
+          <h3>We Run 313 5K/10K Thursday</h3>
+          <p>Detroit Riverfront; confirm the meeting point. Intermediate 5K and 10K groups finish together, giving this recurring run-club option an organized pace and built-in connection.</p>
+          <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Official Riverfront calendar</a></p>
+        </article>
+      </div>
+      <p class="note">Dates, locations, organizer descriptions, and listed times were checked August 22. Registration, price, availability, and weather-dependent programming can change; confirm before leaving.</p>
+      <div data-allie-time-empty hidden>No currently active event card. Check the official listings for the next opportunity.</div>
+    </section>
 
-      <section class="culture" data-brief-section="allie-daily-culture-media" aria-labelledby="culture-title">
-        <p class="kicker">Culture + media</p>
-        <h2 id="culture-title">One album, one sampler, two calendar holds</h2>
-        <div class="grid">
-          <article class="card"><span class="tag">New Friday</span><h3>Sam Smith — <em>Hazel Eyes</em></h3><p>The 12-track fifth album arrived August 21 via Capitol after a rollout led by the single and video “My Guy.” It is today's cleanest full-album Saturday reset.</p><a href="https://au.variety.com/2026/music/news/sam-smith-new-album-hazel-eyes-my-guy-single-37966/">Release coverage</a></article>
-          <article class="card"><span class="tag">15-minute scan</span><h3>New Music Friday</h3><p>Spotify's current U.S. playlist opens with Madonna and Sabrina Carpenter's “Bring Your Love” and also surfaces Lady Gaga, Alex Warren, Zara Larsson, and Shakira.</p><a href="https://open.spotify.com/embed/playlist/37i9dQZF1DX4JAvHpjipBk?wmode=opaque">Spotify playlist</a> · <a href="https://newsroom.spotify.com/2026-06-12/new-music-friday-playlist-editor-videos/">Playlist context</a></article>
-          <article class="card"><span class="tag">September 29 · 7 PM</span><h3>Teddy Swims at Little Caesars Arena</h3><p>The Detroit stop of The UGLY Tour lists Mac Ayres and MarcLo. Check the listing before buying because event details can move.</p><a href="https://www.ticketmaster.com/teddy-swims-tickets/artist/2712573?GCID=0&amp;awtrc=true&amp;c=SEM_TMMCONCERTS_ggl_21995743832_175421778167_teddy+swims+tickets&amp;gclsrcshybbb=aw.ds&amp;landing=c">Ticketmaster listing</a></article>
-          <article class="card"><span class="tag">August 31 · 9 PM ET</span><h3>Love Island USA Season 8 reunion</h3><p>Peacock says the reunion will check in on the finalists and the season's relationships. <em>Beyond the Villa</em> has also been renewed for a third season.</p><a href="https://www.peacocktv.com/stream-tv/love-island?cid=2411evgdigtveownedi25822">Peacock</a> · <a href="https://www.nbcuniversal.com/article/peacocks-love-island-usa-caps-record-breaking-season-reunion-special-and-beyond-villa-season-three">NBCUniversal</a></article>
-        </div>
-        <p class="source-note">No Taylor Swift item appears because the reviewed timely sources did not produce a specific, verifiable release, performance, or tour update for today.</p>
-      </section>
+    <section data-brief-section="allie-daily-culture-media" aria-labelledby="culture-title">
+      <div class="eyebrow">Pop &amp; guilty pleasures</div>
+      <h2 id="culture-title">A late-summer watchlist</h2>
+      <article>
+        <h3>Taylor's VMA stakes are real</h3>
+        <p>Taylor Swift has nine 2026 MTV VMA nominations and is tied with Beyoncé at 30 career VMAs; one win could make her the awards' most-decorated artist.</p>
+        <p class="source"><a href="https://apnews.com/article/2026-mtv-vma-nominations-e9ac1be3adfd613c3bc348e83543832e">AP nomination report</a></p>
+      </article>
+      <article>
+        <h3>Weekend listening lane</h3>
+        <p>Start with Jorja Smith's dance-focused third album, <em>What Are The Odds</em>, then sample beabadoobee's “Memories” and Blond:ish's “Für Elise.”</p>
+        <p class="source"><a href="https://www.officialcharts.com/chart-news/new-music-friday-august-21-2026/">Official Charts new-music roundup</a></p>
+      </article>
+      <article>
+        <h3>Two dates to save</h3>
+        <p>Ed Sheeran's LOOP Tour reaches Ford Field Saturday, August 29 at 5:30 PM. The <em>Love Island USA</em> season 8 reunion streams on Peacock Monday, August 31.</p>
+        <p class="source"><a href="https://www.ticketmaster.com/discover/detroit?categoryId=KZFzniwnSyZfZ7v7nJ&amp;classificationId=KnvZfZ7vAev&amp;tt_scene=anchor_view">Detroit concert listing</a> · <a href="https://www.peacocktv.com/stream-tv/love-island">Peacock</a></p>
+      </article>
+    </section>
 
-      <section class="money" data-brief-section="allie-daily-money-ai" aria-labelledby="money-title"><!-- allie-market-tracker:start -->
+    <section class="money" data-brief-section="allie-daily-money-ai" aria-labelledby="money-title"><!-- allie-market-tracker:start -->
 <div id="allie-market-tracker" data-allie-live-market>
   <h3>Market pulse</h3>
   <p>VTI total U.S. market · SPY S&amp;P 500 · QQQ Nasdaq-100 · FXAIX mutual-fund NAV. ETF quotes move during market hours; FXAIX normally posts one NAV per trading day. Informational only.</p>
@@ -183,28 +226,18 @@
 </div>
 <!-- allie-market-tracker:end -->
 
-        <p class="kicker">Money + practical AI</p>
-        <h2 id="money-title">Two new-job checks and one safer AI habit</h2>
-        <div class="grid three">
-          <article class="card"><span class="tag">Retirement</span><h3>Capture the full employer match</h3><p>The 2026 employee deferral limit for a 401(k), 403(b), or governmental 457 plan is $24,500; the IRA limit is $7,500. Direct Roth IRA contributions for single filers phase out at modified AGI of $153,000–$168,000.</p><p class="meta">Check the match, enrollment deadline, vesting, and fund menu. Preserve emergency cash and required debt payments first.</p><a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500">IRS 2026 limits</a> · <a href="https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-contributions">Contribution rules</a></article>
-          <article class="card"><span class="tag">20-minute audit</span><h3>Use July CPI as a prompt</h3><p>U.S. CPI rose 0.1% in July and 3.4% over 12 months. Review three months of housing, groceries, restaurants, subscriptions, insurance, and commuting; set one guardrail where actual spending drifted.</p><p class="meta">National CPI is not a Metro Detroit budget or a reason to trade.</p><a href="https://www.bls.gov/news.release/archives/cpi_08122026.htm">BLS July CPI</a></article>
-          <article class="card"><span class="tag">Analyst workflow</span><h3>Design with AI; verify at the source</h3><p>In an approved tool, use a sanitized schema or toy sample to draft data-quality tests, metric questions, edge cases, SQL pseudocode, or a summary outline. Run final work in the sanctioned warehouse or BI system and preserve the query, filters, definitions, and assumptions.</p><p class="meta">Never paste restricted GM, customer, employee, financial, or other sensitive data into an unapproved account. Reconcile generated work to trusted reports.</p><a href="https://openai.com/business-data/">Business data controls</a> · <a href="https://help.openai.com/en/articles/20001067-data-access-for-your-managed-chatgpt-account">Managed-account data access</a></article>
-        </div>
-        <div class="market-space"><strong>Live market tracker space</strong><p>The shared tracker will be inserted here after design for VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV. Market context and this panel are educational and informational, not individualized investment, tax, or financial advice.</p></div>
-      </section>
+    </section>
 
-      <section class="family" data-brief-section="allie-daily-family" aria-labelledby="family-title">
-        <p class="kicker">Family corner</p>
-        <h2 id="family-title">A clear family calendar today</h2>
-        <div class="grid">
-          <article class="card"><h3>Hurley Family calendar</h3><p>The family calendar is available. It lists no report-date birthdays, anniversaries, or safe actionable activities for Saturday, August 22.</p></article>
-          <article class="card"><h3>Shared public photo archive</h3><p>No suitable exact-date prior-year match was found. No verified August 22 image candidate was selectable, so there is no photo or location to present without speculation.</p><a href="https://photos.hurleyhome.com/">Shared public archive</a></article>
-        </div>
-      </section>
-    </main>
+    <section class="family wide" data-brief-section="allie-daily-family" aria-labelledby="family-title">
+      <div class="eyebrow">Family check-in</div>
+      <h2 id="family-title">No verified family details today</h2>
+      <p><strong>Birthdays and anniversaries:</strong> the Hurley Family calendar was unavailable, so report-date birthdays and anniversaries could not be verified. No calendar events are shown.</p>
+      <p><strong>Shared photo archive:</strong> no suitable exact-date prior-year match was found. The public archive was reachable, but candidate metadata was not available through the accessible API request path, so no image, date, or location was selected.</p>
+      <p class="source"><a href="https://photos.hurleyhome.com/">Shared public photo archive</a></p>
+    </section>
+  </main>
 
-    <footer>Sourced for Allison · Saturday, August 22, 2026 · Times shown in Eastern Time</footer>
-  </div>
+  <footer>Prepared from the supplied collector context at 6:02 PM EDT on August 22, 2026. Links lead to the cited sources.</footer>
 <script id="allie-compact-layout-script">
   (() => {
     const main = document.querySelector("main"); if (!main) return;
