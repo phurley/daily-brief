@@ -158,7 +158,8 @@
     .weather-grid .group { min-width: 0; padding: 1.35rem; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; box-shadow: 0 8px 24px rgba(34, 53, 44, .06); }
     .weather-grid h3 { color: var(--accent); font-size: .77rem; letter-spacing: .13em; text-transform: uppercase; }
     .weather-grid p { font-family: Georgia, "Times New Roman", serif; font-size: 1.22rem; }
-    .moon-phase-art { display:block; width:clamp(4.5rem,10vw,6rem); height:auto; margin:.9rem auto .15rem; filter:drop-shadow(0 .35rem .55rem rgba(22,35,33,.22)); }
+    .almanac-content { display:grid; grid-template-columns:minmax(0,1fr) clamp(4.25rem,8vw,5.5rem); align-items:center; gap:1rem; }
+    .moon-phase-art { display:block; width:100%; height:auto; filter:drop-shadow(0 .4rem .7rem rgba(22,35,33,.16)); }
 
     .intro { max-width: 47rem; color: var(--muted); }
     .story-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.1rem; margin-top: 1.5rem; }
@@ -310,8 +311,7 @@
         </div>
         <div class="group" aria-labelledby="weather-almanac">
           <h3 id="weather-almanac">Almanac</h3>
-          <p>Saturday’s waxing gibbous moon is six days from full. <a href="https://www.timeanddate.com/moon/usa/canton?month=8">Moon calendar</a></p>
-          <svg class="moon-phase-art" viewBox="0 0 100 100" role="img" aria-label="Waxing gibbous moon, six days before full"><defs><radialGradient id="moon-light" cx="68%" cy="30%"><stop stop-color="#fffdf1"/><stop offset=".72" stop-color="#ead9a9"/><stop offset="1" stop-color="#bf9e69"/></radialGradient><clipPath id="moon-disc"><circle cx="50" cy="50" r="44"/></clipPath></defs><circle cx="50" cy="50" r="44" fill="url(#moon-light)"/><path d="M50 6A44 44 0 0 0 50 94C26 82 26 18 50 6Z" fill="#32434a" opacity=".72" clip-path="url(#moon-disc)"/><g fill="#9b815d" opacity=".28"><circle cx="68" cy="30" r="6"/><circle cx="72" cy="56" r="9"/><circle cx="56" cy="72" r="4"/></g></svg>
+          <div class="almanac-content"><p>Saturday’s waxing gibbous moon is six days from full. <a href="https://www.timeanddate.com/moon/usa/canton?month=8">Moon calendar</a></p><img class="moon-phase-art" src="../assets/moon-waxing-gibbous.png" width="320" height="320" alt="Waxing gibbous moon, six days before full" decoding="async"></div>
         </div>
       </div>
     </section>
