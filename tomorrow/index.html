@@ -274,6 +274,15 @@
 
 
 <style id="original-live-layer-styles">
+  .masthead { isolation:isolate; }
+  .sky-orbit { position:absolute; z-index:0; inset:0; overflow:hidden; pointer-events:none; }
+  .orbit-sun { position:absolute; left:var(--sun-x,76%); top:var(--sun-y,22%); width:clamp(2.4rem,5vw,4.5rem); aspect-ratio:1; border-radius:50%; background:radial-gradient(circle at 35% 32%,#fff9d5 0 12%,#ffd27a 42%,#e98a58 100%); box-shadow:0 0 0 1rem rgba(255,213,128,.09),0 0 4rem rgba(255,189,92,.28); transform:translate(-50%,-50%); transition:left 70s linear,top 70s linear,background 1.2s ease; animation:orbit-glow 5s ease-in-out infinite alternate; }
+  body.event-luau[data-edition-mood="lake"] .masthead { background:radial-gradient(circle at 78% 22%,rgba(194,238,255,.42),transparent 27%),linear-gradient(135deg,#0d3f55,#296f82); }
+  body.event-luau[data-edition-mood="meadow"] .masthead { background:radial-gradient(circle at 78% 22%,rgba(255,228,127,.4),transparent 27%),linear-gradient(135deg,#254d3b,#6f9456); }
+  body.event-luau[data-edition-mood="violet"] .masthead { background:radial-gradient(circle at 78% 22%,rgba(255,195,140,.4),transparent 27%),linear-gradient(135deg,#34294f,#745a89); }
+  body.event-luau[data-edition-mood="cider"] .masthead { background:radial-gradient(circle at 78% 22%,rgba(255,225,154,.45),transparent 27%),linear-gradient(135deg,#5a3c32,#b46b4b); }
+  @keyframes orbit-glow { to { box-shadow:0 0 0 1.35rem rgba(255,213,128,.13),0 0 5rem rgba(255,189,92,.38); } }
+  @media (prefers-reduced-motion:reduce) { .orbit-sun { animation:none; transition:none; } }
   .live-canton-weather { margin:.55rem 0 0; font-size:.88rem; color:var(--muted); }
   .masthead-tools { grid-template-columns:minmax(0,1fr) auto auto; }
   .time-chip { justify-self:start; width:max-content; max-width:100%; white-space:nowrap; line-height:1.2; }
@@ -289,7 +298,7 @@
 </style>
 </head>
 <body class="event-luau">
-  <header class="masthead" data-brief-section="overview">
+  <header class="masthead" data-brief-section="overview"><div class="sky-orbit" aria-hidden="true"><span class="orbit-sun"></span></div>
     <div class="masthead-inner">
       <p class="eyebrow">Canton weekend · Tonight’s rhythm: Jamz &amp; Jokes</p>
       <h1>Daily Brief</h1>
@@ -536,6 +545,11 @@ Submitted from the published daily brief.`;
       const theme = hour < 7 ? "dawn" : hour < 17 ? "day" : hour < 21 ? "dusk" : "night";
       document.documentElement.dataset.timeTheme = theme === "dawn" ? "morning" : theme === "day" ? "afternoon" : theme === "dusk" ? "evening" : "night";
       const chip = document.getElementById("time-chip"); if (chip) chip.textContent = `${labels[theme]} · ${clockFormat.format(now)} Detroit`;
+      const edition = document.querySelector(".dateline time")?.dateTime || now.toISOString().slice(0,10);
+      const day = Number(edition.slice(-2)); document.body.dataset.editionMood = ["lake","meadow","violet","cider"][day % 4];
+      const minutes = Number(new Intl.DateTimeFormat("en-US", { timeZone:zone, hour:"numeric", minute:"2-digit", hourCycle:"h23" }).formatToParts(now).reduce((total,part) => total + (part.type === "hour" ? Number(part.value) * 60 : part.type === "minute" ? Number(part.value) : 0), 0));
+      const progress = Math.max(0, Math.min(1, (minutes - 300) / 960));
+      document.documentElement.style.setProperty("--sun-x", `${8 + progress * 84}%`); document.documentElement.style.setProperty("--sun-y", `${63 - Math.sin(progress * Math.PI) * 48}%`);
       document.querySelector('meta[name="theme-color"]')?.setAttribute("content", themeColors[theme]);
     };
     const weatherCodes = {0:"clear",1:"mostly clear",2:"partly cloudy",3:"overcast",45:"foggy",48:"icy fog",51:"light drizzle",53:"drizzle",55:"heavy drizzle",61:"light rain",63:"rain",65:"heavy rain",71:"light snow",73:"snow",75:"heavy snow",80:"rain showers",81:"rain showers",82:"heavy showers",95:"thunderstorms",96:"storms with hail",99:"severe storms with hail"};
