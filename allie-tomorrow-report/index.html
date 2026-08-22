@@ -3,69 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
-  <title>Allison’s Saturday Playbook · August 22, 2026</title>
+  <title>Allison’s Sunday Playbook · August 23, 2026</title>
   <style>
     :root {
-      --night: #11142d;
-      --panel: #1b2042;
-      --card: #151a36;
-      --ink: #fff8ed;
-      --muted: #c7c9db;
-      --coral: #ff7b72;
-      --gold: #f5c96b;
-      --aqua: #79ddd4;
-      --line: #3c426d;
+      color-scheme: dark;
+      --ink: #f8f5ff;
+      --muted: #bbb6d0;
+      --night: #100f27;
+      --panel: #1b1938;
+      --card: #242044;
+      --line: #3d385f;
+      --coral: #ff796d;
+      --gold: #ffd276;
+      --mint: #7de0c3;
     }
     * { box-sizing: border-box; }
-    html { background: var(--night); }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: radial-gradient(circle at 85% 0, #3a275d 0, transparent 34rem), linear-gradient(160deg, #10122a, #171a39 58%, #10152d);
-      font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    a { color: var(--aqua); text-underline-offset: .18em; }
-    a:hover, a:focus-visible { color: #c1fff9; }
-    .shell { width: min(1120px, calc(100% - 32px)); margin: auto; padding: 36px 0 64px; }
-    header {
-      padding: clamp(28px, 6vw, 62px);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: linear-gradient(135deg, rgba(255,123,114,.16), rgba(245,201,107,.07) 48%, rgba(121,221,212,.08));
-      box-shadow: 0 24px 70px rgba(0,0,0,.25);
-    }
-    .eyebrow, .label { margin: 0 0 8px; color: var(--gold); font-size: .78rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
-    h1 { max-width: 820px; margin: 0; font-size: clamp(2.35rem, 7vw, 5rem); line-height: .98; letter-spacing: -.055em; }
-    .lede { max-width: 780px; margin: 22px 0 0; color: var(--muted); font-size: clamp(1.05rem, 2.4vw, 1.28rem); }
-    main { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 18px; }
-    section { grid-column: span 12; padding: clamp(22px, 4vw, 36px); border: 1px solid var(--line); border-radius: 22px; background: rgba(27,32,66,.9); box-shadow: 0 16px 42px rgba(0,0,0,.16); }
+    body { margin: 0; color: var(--ink); background: radial-gradient(circle at 85% 0%, #352055 0, transparent 32rem), var(--night); font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--gold); text-underline-offset: .2em; }
+    a:hover { color: #fff0bf; }
+    .shell { width: min(1120px, calc(100% - 28px)); margin: 0 auto; padding: 22px 0 40px; }
+    header, section { border: 1px solid var(--line); border-radius: 22px; background: rgba(27, 25, 56, .94); box-shadow: 0 18px 52px rgba(0, 0, 0, .2); }
+    header { padding: clamp(26px, 6vw, 62px); margin-bottom: 18px; background: linear-gradient(125deg, rgba(255, 121, 109, .17), rgba(255, 210, 118, .08) 42%, rgba(27, 25, 56, .96)); }
+    main { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 18px; }
+    section { grid-column: span 12; padding: clamp(20px, 3vw, 30px); }
     section.half { grid-column: span 6; }
-    h2 { margin: 0 0 8px; font-size: clamp(1.55rem, 3vw, 2.25rem); letter-spacing: -.03em; }
-    h3 { margin: 0 0 6px; font-size: 1.08rem; }
-    p { margin: 8px 0; }
-    .sub, .meta { color: var(--muted); }
-    .meta { margin: 0 0 8px; font-size: .9rem; }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
-    .card, .callout { padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--card); }
-    .card + .card { margin-top: 12px; }
-    .grid .card + .card { margin-top: 0; }
-    .callout { border-left: 4px solid var(--coral); }
-    .action { margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: rgba(245,201,107,.1); color: #fff4d3; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 15ch; margin-bottom: 14px; font-size: clamp(2.35rem, 7vw, 5.2rem); line-height: .98; letter-spacing: -.045em; }
+    h2 { margin-bottom: 14px; font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.15; }
+    h3 { margin-bottom: 6px; font-size: 1.06rem; line-height: 1.3; }
+    .eyebrow, .label, .meta { color: var(--muted); font-size: .8rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+    .label { color: var(--coral); }
+    .lede { max-width: 72ch; margin: 0; color: #ded9ee; font-size: 1.12rem; }
+    .sub { color: var(--muted); }
     .schedule { margin-top: 18px; }
-    .slot { position: relative; padding: 0 0 18px 28px; border-left: 2px solid var(--line); }
-    .slot::before { content: ""; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 4px var(--panel); }
+    .slot { position: relative; padding: 0 0 19px 28px; border-left: 2px solid var(--line); }
     .slot:last-child { padding-bottom: 0; }
+    .slot::before { position: absolute; top: 5px; left: -7px; width: 12px; height: 12px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 4px var(--panel); content: ""; }
+    .card { padding: 17px; border: 1px solid var(--line); border-radius: 16px; background: var(--card); }
+    .card + .card { margin-top: 12px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .grid .card + .card { margin-top: 0; }
+    .action { margin-top: 16px; padding: 13px 15px; border-left: 4px solid var(--gold); border-radius: 10px; background: rgba(255, 210, 118, .1); }
+    .status { display: inline-block; margin-bottom: 10px; padding: 4px 9px; border-radius: 999px; color: #151329; background: var(--mint); font-size: .74rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
     ul { margin: 10px 0 0; padding-left: 1.2rem; }
-    li + li { margin-top: 7px; }
-    .source { display: inline-block; margin-top: 9px; font-size: .9rem; font-weight: 750; }
-    .status { display: inline-block; margin-bottom: 10px; padding: 4px 9px; border-radius: 999px; color: #11142d; background: var(--gold); font-size: .74rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    li + li { margin-top: 8px; }
+    .source { display: inline-block; margin-top: 8px; font-size: .9rem; font-weight: 750; }
     [data-allie-event][hidden], [data-allie-time-empty][hidden] { display: none !important; }
-    footer { margin-top: 20px; color: var(--muted); text-align: center; font-size: .86rem; }
-    @media (max-width: 760px) {
+    .market-slot { min-height: 112px; padding: 18px; border: 1px dashed var(--line); border-radius: 15px; background: rgba(255, 255, 255, .03); }
+    footer { padding-top: 20px; color: var(--muted); text-align: center; font-size: .86rem; }
+    @media (max-width: 780px) {
       section.half { grid-column: span 12; }
       .grid { grid-template-columns: 1fr; }
-      .shell { width: min(100% - 20px, 1120px); padding-top: 10px; }
       header, section { border-radius: 18px; }
     }
   </style>
@@ -104,121 +92,143 @@
   .allie-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
 </head>
-<body data-allie-report="tomorrow" data-report-date="2026-08-22">
+<body data-allie-report="tomorrow" data-report-date="2026-08-23">
   <div class="shell">
     <header>
-      <p class="eyebrow">Night-before playbook · Saturday, August 22</p>
-      <h1>Go early—or go indoors.</h1>
-      <p class="lede">Saturday is warm and unsettled, with the clearest outdoor advantage in the morning and the primary shower and thunderstorm risk from 2–8 p.m. Pick the day’s anchor tonight, then keep a weather-proof afternoon fallback.</p>
+      <p class="eyebrow">Night-before playbook · Sunday, August 23</p>
+      <h1>Start social. Keep afternoon flexible.</h1>
+      <p class="lede">Sunday is cooler and breezy, with lingering showers possible and the afternoon the least dependable outdoor block. Choose an early Detroit walk tonight, then keep the indoor game convention ready if radar turns.</p>
     </header>
 
     <main>
       <section data-brief-section="allie-tomorrow-overview">
         <p class="label">Tomorrow at a glance</p>
-        <h2>A Saturday built around one decision</h2>
+        <h2>One strong sequence, two easy pivots</h2>
         <div class="schedule">
-          <div class="slot"><h3>7:00–10:15 a.m. · Run the 313</h3><p>Race-day pickup and registration run 7:00–8:15 a.m.; the 5K starts at 8:30. The remaining listed option is the $35 Economy Package plus a $5 fee, subject to capacity.</p></div>
-          <div class="slot"><h3>Noon · Washington Commanders at Detroit Lions</h3><p>Ford Field hosts Detroit’s only 2026 home preseason game. Josh Dobbs is set to start; Jared Goff will not play.</p></div>
-          <div class="slot"><h3>3:00–5:00 p.m. · indoor social anchor</h3><p>The Binho Tournament at The Regal Eagle is the strongest Detroit weather-proof active-social choice during the primary storm window.</p></div>
-          <div class="slot"><h3>7:00 p.m. · Tampa Bay Rowdies at Detroit City FC</h3><p>Keyworth Stadium offers a live evening option as conditions are forecast to improve toward 8 p.m.; verify radar before leaving.</p></div>
+          <div class="slot"><h3>8:00 a.m. · We Walk Detroit</h3><p>A one-hour Detroit Riverfront fitness walk gets the active part of the day done before the more uncertain afternoon.</p></div>
+          <div class="slot"><h3>10:00 a.m. · Sunday Market 2026</h3><p>Browse local makers in Eastern Market’s Shed 5, with covered space available if a shower arrives.</p></div>
+          <div class="slot"><h3>Noon · Act of Gaming Con</h3><p>The indoor Fenton convention is the weather-resilient board-and-card-game option, with open play and a game library through 6:00 p.m.</p></div>
+          <div class="slot"><h3>7:00 p.m. · Indiana Fever at Chicago Sky</h3><p>The most Allison-relevant national game airs on NBC; Las Vegas Aces vs. Toronto Tempo starts at the same time on WNBA League Pass.</p></div>
         </div>
-        <p class="action"><strong>Do tonight:</strong> choose and register for the morning run, RSVP to the social walk, or confirm a Binho ticket. If attending the Lions or Detroit City FC, check official ticket inventory tonight; no published hard ticket deadline was verified.</p>
+        <p class="action"><strong>Do tonight:</strong> pick the morning walk, set a Sunday radar and AirNow check, pack a light waterproof layer, and confirm organizer details before leaving. If watching basketball, confirm NBC or NBA TV access before Sunday afternoon.</p>
       </section>
 
       <section class="half" data-brief-section="allie-tomorrow-weather">
         <p class="label">Weather</p>
-        <h2>Warm, unsettled, then improving</h2>
-        <p class="sub">High 83°F · Low 61°F · Light southwest wind becoming west-southwest at 5–9 mph · 80% precipitation chance.</p>
+        <h2>Cooler, breezy, and not reliably dry</h2>
+        <p class="sub">No land-based watches, warnings, or advisories were listed in the latest NWS Detroit/Pontiac discussion. Sunday’s concern is scattered or brief lingering showers, not Saturday’s severe-weather setup.</p>
         <div class="schedule">
-          <div class="slot"><h3>6–9 a.m. · lowest-risk window</h3><p>Morning is favored for outdoor activity and travel, though radar should still be checked before leaving.</p></div>
-          <div class="slot"><h3>9 a.m.–2 p.m. · passing-shower chance</h3><p>Temperatures rise toward the low 80s. Keep rain gear accessible and allow a small travel buffer.</p></div>
-          <div class="slot"><h3>2–8 p.m. · primary impact window</h3><p>Showers and a possible thunderstorm are most likely. Allow extra drive time and move indoors immediately when thunder is heard.</p></div>
-          <div class="slot"><h3>After 8 p.m. · partial clearing</h3><p>Showers and thunderstorms are forecast to end around 8 p.m., followed by a cooler night near 61°F. Confirm radar because timing can shift.</p></div>
+          <div class="slot"><h3>6:00–9:00 a.m. · cool and mostly cloudy</h3><p>A leftover shower cannot be ruled out. Bring a light rain layer for an early drive, run, or walk.</p></div>
+          <div class="slot"><h3>9:00 a.m.–1:00 p.m. · usable but flexible</h3><p>Breezy and cooler with substantial cloud cover and a lingering shower possible. Keep an indoor stop in reserve.</p></div>
+          <div class="slot"><h3>1:00–6:00 p.m. · least reliable block</h3><p>An upper disturbance may briefly increase showers. Do not make a weather-sensitive activity the only plan.</p></div>
+          <div class="slot"><h3>6:00–11:00 p.m. · improving trend</h3><p>Residual shower risk should ease, but a dry evening is not guaranteed. Add a light layer for wind and cooler air.</p></div>
         </div>
-        <p class="action">Stage a compact umbrella or light rain shell tonight. Move a run, volleyball, pickleball, or other outdoor plan to morning when possible, with an indoor backup for 2–8 p.m.</p>
-        <p>No date-specific official AQI forecast or Air Quality Alert was located. Recheck Michigan EGLE Saturday morning before prolonged outdoor exertion.</p>
-        <a class="source" href="https://forecast.weather.gov/MapClick.php?TextType=1&amp;f6=1&amp;lat=42.39504&amp;lon=-83.11232&amp;mp=1">NWS Detroit point forecast</a> ·
-        <a class="source" href="https://www.weather.gov/dtx/?mystation=KTTF">NWS Detroit/Pontiac</a> ·
-        <a class="source" href="https://www.michigan.gov/egle/newsroom/mi-environment/2024/11/12/new-air-monitoring-dashboard">Michigan air monitoring</a>
+        <p class="action">Check radar and AirNow Sunday morning before sustained outdoor exertion; no numeric Detroit AQI forecast was available at research time. Favor an indoor social or board-game plan if showers persist.</p>
+        <a class="source" href="https://forecast.weather.gov/product.php?format=ci&amp;highlight=off&amp;issuedby=DTX&amp;product=AFD&amp;site=NWS&amp;version=1">NWS Detroit/Pontiac discussion</a> ·
+        <a class="source" href="https://www.airnow.gov/?city=Detroit&amp;country=USA&amp;state=MI">AirNow Detroit</a> ·
+        <a class="source" href="https://gispub.epa.gov/airnow/?tab=forecast">AirNow forecast map</a>
       </section>
 
       <section class="half" data-brief-section="allie-tomorrow-sports">
         <p class="label">Sports</p>
-        <h2>Named games from noon onward</h2>
+        <h2>Three named WNBA games</h2>
         <article class="card">
-          <p class="meta">Noon ET · Ford Field · Lions TV Network / NFL+ subject to blackout restrictions</p>
-          <h3>Washington Commanders at Detroit Lions</h3>
-          <p>Detroit’s only home preseason game is a backup-quarterback and roster-bubble evaluation, not a regular-season fantasy signal. Josh Dobbs starts, Luke Altmyer follows, and Jared Goff will not play.</p>
-          <p>Recheck official participation news for Sam LaPorta and Ennis Rakestraw Jr. before treating either as available.</p>
-          <a class="source" href="https://www.detroitlions.com/game-day/2026/pre/commanders-vs-lions/">Official game center</a> ·
-          <a class="source" href="https://www.detroitlions.com/schedule/">Lions schedule</a> ·
-          <a class="source" href="https://www.detroitlions.com/news/camp-notes-detroit-lions-dobbs-excited-for-on-field-opportunity-vs-commanders-williams-laporta">Camp notes</a>
+          <p class="meta">4:00 p.m. ET · NBA TV</p>
+          <h3>Seattle Storm at Dallas Wings</h3>
+          <p>Paige Bueckers and the Wings host the nationally televised afternoon game.</p>
+          <a class="source" href="https://storm.wnba.com/news/storm-2026-national-broadcast-schedule-unveiled">Official broadcast schedule</a>
         </article>
         <article class="card">
-          <p class="meta">7:00 p.m. ET · Keyworth Stadium, Hamtramck</p>
-          <h3>Tampa Bay Rowdies at Detroit City FC</h3>
-          <p>The club schedule offers tickets and prepaid parking. It does not name a broadcast outlet, so check matchday information before kickoff.</p>
-          <a class="source" href="https://www.detcityfc.com/mens-schedule/">Official schedule, tickets, and parking</a>
+          <p class="meta">7:00 p.m. ET · NBC</p>
+          <h3>Indiana Fever at Chicago Sky</h3>
+          <p>The best nearby viewing choice, with Caitlin Clark, Aliyah Boston, and Kelsey Mitchell identified as Indiana’s headline core.</p>
+          <a class="source" href="https://www.wnba.com/news/broadcast-schedule-release-2026">Official WNBA broadcast schedule</a>
         </article>
-        <ul>
-          <li><strong>7:00 p.m. ET — Indiana Fever at New York Liberty:</strong> consult the <a href="https://www.wnba.com/game/ind-vs-nyl-1022600275">official game page</a> for finalized viewing.</li>
-          <li><strong>9:00 p.m. ET — Connecticut Sun at Los Angeles Sparks:</strong> consult the <a href="https://www.wnba.com/game/1022600276/CON-vs-LAS">official game page</a> for finalized viewing.</li>
-          <li><strong>10:00 p.m. ET — Atlanta Dream at Phoenix Mercury:</strong> consult the <a href="https://www.wnba.com/game/atl-vs-phx-1022600277">official game page</a> for finalized viewing.</li>
-        </ul>
-        <p class="sub">There is no Pistons game on August 22; the next Pistons action is preseason in October. No universal fantasy-platform deadline was verified for tonight, so check Allison’s own league settings.</p>
-        <a class="source" href="https://www.nba.com/pistons/news/detroit-pistons-announce-2026-27-season-schedule-presented-by-ticketmaster">Pistons schedule announcement</a>
+        <article class="card">
+          <p class="meta">7:00 p.m. ET · WNBA League Pass</p>
+          <h3>Las Vegas Aces vs. Toronto Tempo</h3>
+          <p>A’ja Wilson and the defending-champion Aces are the player draw in Vancouver.</p>
+          <a class="source" href="https://www.wnba.com/game/lva-vs-tor-1022600281">Official game listing</a>
+        </article>
+        <p class="action"><strong>Detroit check:</strong> the Detroit Pistons, Detroit Lions, and Detroit City FC have no game Sunday. No verified sports transaction, ticket, fantasy, or roster deadline falls tonight for August 23.</p>
+        <a class="source" href="https://www.nba.com/pistons/schedule">Pistons schedule</a> ·
+        <a class="source" href="https://www.detroitlions.com/news/detroit-lions-announce-2026-preseason-schedule-nfl">Lions preseason schedule</a> ·
+        <a class="source" href="https://www.detcityfc.com/mens-schedule/">Detroit City FC schedule</a>
       </section>
 
       <section data-brief-section="allie-tomorrow-plans" data-allie-time-rotation>
         <p class="label">Tomorrow’s time rotation</p>
         <h2>The active or next verified option</h2>
-        <p class="sub">Options are ordered across Saturday. The first upcoming card is shown now; the shared time rotation will advance it as the day unfolds.</p>
-        <article class="card" data-allie-event data-start-at="2026-08-22T07:00:00-04:00" data-end-at="2026-08-22T10:15:00-04:00">
-          <span class="status">7:00–10:15 a.m.</span>
-          <h3>Run the 313 5K</h3>
-          <p class="meta">Palmer Park · 910 Merrill Plaisance St, Detroit</p>
-          <p>Race-day pickup and registration are 7:00–8:15 a.m.; the race starts at 8:30. Regular registration is sold out, but the organizer lists a $35 Economy Package plus a $5 fee without a shirt or finisher medal, subject to capacity.</p>
-          <p>It is a 1,100+ participant community event with music, food and drinks, awards, and a post-race celebration. Bring a light rain layer and confirm organizer weather updates.</p>
-          <a class="source" href="https://runscore.runsignup.com/Race/MI/Detroit/Runthe313">Official event</a> ·
-          <a class="source" href="https://runscore.runsignup.com/Race/Register/?raceId=139647">Registration</a>
+        <p class="sub">Options are ordered across Sunday. The shared time rotation will advance through these pre-rendered cards as the day unfolds.</p>
+        <article class="card" data-allie-event data-start-at="2026-08-23T08:00:00-04:00" data-end-at="2026-08-23T09:00:00-04:00">
+          <span class="status">8:00–9:00 a.m.</span>
+          <h3>We Walk Detroit</h3>
+          <p class="meta">Detroit Riverfront · meeting point not specified on the official calendar</p>
+          <p>A one-hour fitness walk and a low-pressure social start. No registration requirement or capacity information is stated, so confirm with the organizer before leaving.</p>
+          <p>The timing avoids the forecast’s least reliable afternoon block; bring a light rain layer.</p>
+          <a class="source" href="https://www.detroitriverfront.org/events/calendar/2026/08">Official Riverfront calendar</a>
         </article>
-        <article class="card" hidden data-allie-event data-start-at="2026-08-22T10:00:00-04:00" data-end-at="2026-08-22T12:30:00-04:00">
-          <span class="status">10:00 a.m.–12:30 p.m.</span>
-          <h3>Walk &amp; Talk About Life’s Big Questions</h3>
-          <p class="meta">Ralph C. Wilson, Jr. Centennial Park · 1801 W Jefferson, Detroit</p>
-          <p>A five-mile walk at roughly 20 minutes per mile, built around rotating two- or three-person conversations. First-timers are welcomed; arriving more than 10 minutes late is discouraged.</p>
-          <p>The listing does not show capacity or an RSVP count. Open the Meetup page tonight to RSVP, confirm space, and check for any weather cancellation.</p>
-          <a class="source" href="https://www.meetup.com/the-board-walks-detroit/events/315844737/">Official Meetup listing</a>
+        <article class="card" hidden data-allie-event data-start-at="2026-08-23T10:00:00-04:00" data-end-at="2026-08-23T16:00:00-04:00">
+          <span class="status">10:00 a.m.–4:00 p.m.</span>
+          <h3>Sunday Market 2026</h3>
+          <p class="meta">Eastern Market Shed 5 · 2934 Russell St., Detroit</p>
+          <p>Browse local craftsmen, artisans, clothing, and apparel. No ticket or entry requirement is stated; the covered shed is a practical shower fallback.</p>
+          <a class="source" href="https://easternmarket.org/events/sunday-market-2026/2026-08-23/">Official event</a>
         </article>
-        <article class="card" hidden data-allie-event data-start-at="2026-08-22T11:00:00-04:00" data-end-at="2026-08-22T19:00:00-04:00">
-          <span class="status">11:00 a.m.–7:00 p.m.</span>
-          <h3>MeggaXP 2026</h3>
-          <p class="meta">Commonwealth Commerce Center · 209 E Washington Ave, Jackson · free parking</p>
-          <p>An indoor day trip with a board-game library, demos, contests, cosplay karaoke, music trivia, vendors, and a Taylor Swift sing-along. The ticket page was active and did not show sold out when checked; complete checkout to confirm inventory.</p>
-          <a class="source" href="https://www.eventbrite.com/e/meggaxp-2026-tickets-1987305719905">Official ticket page</a>
+        <article class="card" hidden data-allie-event data-start-at="2026-08-23T10:30:00-04:00" data-end-at="2026-08-23T12:00:00-04:00">
+          <span class="status">10:30 a.m.–noon</span>
+          <h3>Detroit Social Walk Club</h3>
+          <p class="meta">Cullen Plaza · Detroit Riverfront</p>
+          <p>The strongest direct peer-social fit: meet at Cullen Plaza for a Riverfront walk. No registration requirement or availability count is stated, so confirm day-of details.</p>
+          <a class="source" href="https://www.detroitriverfront.org/events/calendar/2026/events/calendar/2026/08/23/detroit-social-walk-club">Official event</a>
         </article>
-        <article class="card" hidden data-allie-event data-start-at="2026-08-22T15:00:00-04:00" data-end-at="2026-08-22T17:00:00-04:00">
-          <span class="status">3:00–5:00 p.m.</span>
-          <h3>Binho Tournament at The Regal Eagle</h3>
-          <p class="meta">3537 Vernor West, Detroit · $20 listed for the 18+ division</p>
-          <p>A compact indoor board-game-style tournament that is easy to attend solo. The live listing did not show a sold-out notice when checked; complete checkout to confirm capacity.</p>
-          <a class="source" href="https://www.eventbrite.com/e/binho-tournament-at-the-regal-eagle-tickets-1996707168892">Official ticket page</a>
+        <article class="card" hidden data-allie-event data-start-at="2026-08-23T12:00:00-04:00" data-end-at="2026-08-23T18:00:00-04:00">
+          <span class="status">Noon–6:00 p.m.</span>
+          <h3>Act of Gaming Con</h3>
+          <p class="meta">Fenton Village Players · 14197 Torrey Rd., Fenton</p>
+          <p>Indoor open play with tabletop board and card games, a game library, large tables, and typically Werewolf or Blood on the Clocktower sessions. Single-day admission is listed at $5; confirm before making the regional drive.</p>
+          <a class="source" href="https://www.exploreflintandgenesee.org/event/act-of-gaming-con/1016/">Official listing</a>
         </article>
-        <div class="callout" data-allie-time-empty hidden>No active or upcoming sourced option remains in tomorrow’s rotation.</div>
-        <p class="action"><strong>Tonight’s call:</strong> Run the 313 for an early active start, the Board Walks for the strongest peer conversation, or Binho for the most weather-resilient Detroit social plan. No verified tomorrow-specific volleyball or pickleball session with a public registration page was found.</p>
+        <article class="card" hidden data-allie-event data-start-at="2026-08-23T15:00:00-04:00" data-end-at="2026-08-23T19:00:00-04:00">
+          <span class="status">3:00–7:00 p.m.</span>
+          <h3>Detroit House Collective Sundays</h3>
+          <p class="meta">Dequindre Cut · Detroit Riverfront</p>
+          <p>A low-commitment outdoor music option for casual mingling. The time overlaps the possible afternoon showers; confirm day-of details and choose it only if radar supports the plan.</p>
+          <a class="source" href="https://www.detroitriverfront.org/events/calendar/2026/events/calendar/2026/08/23/detroit-house-collective-sundays">Official event</a>
+        </article>
+        <div data-allie-time-empty hidden>No active or upcoming sourced option remains in Sunday’s rotation.</div>
+        <p class="action"><strong>Tonight’s call:</strong> choose We Walk Detroit for the earliest active start, Detroit Social Walk Club for the best peer conversation, or Act of Gaming Con for the strongest indoor backup. No verified volleyball, pickleball, or running event was found for Sunday in the official calendars reviewed.</p>
+        <a class="source" href="https://forecast.weather.gov/MapClick.php?lat=42.3314&amp;lon=-83.0458">NWS Detroit point forecast used for plan checks</a>
       </section>
 
       <section class="half" data-brief-section="allie-tomorrow-entertainment">
         <p class="label">Entertainment</p>
-        <h2>Three ways out, three ways in</h2>
-        <div class="grid">
-          <article class="card"><p class="meta">Doors 4:00 p.m. · show 7:00 p.m. · J.W. Westcott Company riverfront</p><h3>Westcott Sessions</h3><p>Suede Brain, Simulation, and Brian McKee, with food vendors and boat tours.</p><a class="source" href="https://www.westcottsessions.com/">Organizer</a></article>
-          <article class="card"><p class="meta">7:00 p.m. · Saint Andrew’s Hall</p><h3>Dogstar with The Backfires</h3><p>A downtown live-band option for an indie-rock change of pace.</p><a class="source" href="https://www.livenation.com/event/vv1AFZkoNGkdoE1EC/dogstar-all-in-now-tour">Official listing</a></article>
-          <article class="card"><p class="meta">Saturday · The Fillmore Detroit · confirm start time</p><h3>R&amp;B ONLY LIVE</h3><p>A social, DJ-led sing-and-dance format spanning classic and contemporary R&amp;B. The organizer confirms the date and venue but not a start time on its Detroit page.</p><a class="source" href="https://detroit.rnbonly.com/">Official event</a></article>
-          <article class="card"><p class="meta">Fresh Saturday listen</p><h3>Sam Smith · <em>Hazel Eyes</em></h3><p>The album’s Friday, August 21 streaming and purchase release makes it a current-pop stay-in or pregame pick.</p><a class="source" href="https://www.universal-music.co.jp/sam-smith/products/00881061079699/">Official release</a></article>
-          <article class="card"><p class="meta">On demand · Peacock</p><h3>Love Island USA Season 8 catch-up</h3><p>No Saturday episode is claimed. Catch up before the verified Monday, August 31 reunion.</p><a class="source" href="https://www.nbcuniversal.com/article/peacocks-love-island-usa-caps-record-breaking-season-reunion-special-and-beyond-villa-season-three">NBCUniversal</a></article>
-          <article class="card"><p class="meta">All 10 episodes · Netflix</p><h3>Outer Banks Season 5</h3><p>A breezy ensemble-drama backup; Netflix confirms the fifth season is the final one.</p><a class="source" href="https://www.netflix.com/tudum/articles/outer-banks-season-5">Netflix</a></article>
-        </div>
+        <h2>Sunday’s verified watch-and-go list</h2>
+        <article class="card">
+          <p class="meta">Noon–7:00 p.m. · Eastern Market Shed 5 · 21+</p>
+          <h3>Detroit Bourbon &amp; Blues Festival</h3>
+          <p>A ticketed social outing with live blues, food vendors, cocktail classes at noon, 1:30 p.m., and 3:30 p.m., and general-admission tasting from 2:00–5:00 p.m.</p>
+          <a class="source" href="https://www.detroitbourbonandblues.com/">Official festival site</a>
+        </article>
+        <article class="card">
+          <p class="meta">8:00 p.m. ET · TLC</p>
+          <h3>Double Lives of Suburban Wives — series premiere</h3>
+          <p>A new Sunday-night reality option centered on interpersonal secrets and group drama.</p>
+          <a class="source" href="https://www.tvinsider.com/network/tlc/schedule/">Verified network schedule listing</a>
+        </article>
+        <article class="card">
+          <p class="meta">8:00 p.m. ET · TLC</p>
+          <h3>90 Day Fiancé — Last Fling Before the Ring</h3>
+          <p>A relationship-chaos alternative for a live watch or group-text companion.</p>
+          <a class="source" href="https://www.tvinsider.com/network/tlc/schedule/">Verified network schedule listing</a>
+        </article>
+        <article class="card">
+          <p class="meta">10:00 and 11:00 p.m. ET · TLC</p>
+          <h3>Little Singles — episode 9 and season finale</h3>
+          <p>A late two-episode dating-reality run and the closest match to the requested Love Island energy on the verified Sunday schedule.</p>
+          <a class="source" href="https://www.tvinsider.com/network/tlc/schedule/">Verified network schedule listing</a>
+        </article>
+        <p class="sub">No Love Island USA episode or Taylor Swift release or broadcast is included because no verified August 23 timing was found.</p>
       </section>
 
       <section class="half" data-brief-section="allie-tomorrow-prepare"><!-- allie-market-tracker:start -->
@@ -232,31 +242,28 @@
 <!-- allie-market-tracker:end -->
 
         <p class="label">Prepare tonight</p>
-        <h2>A real 3 p.m. deadline</h2>
-        <article class="card">
-          <p class="meta">Deadline: Saturday, August 22 at 3:00 p.m. ET</p>
-          <h3>Mable AI Game Jam #1</h3>
-          <p>If a small mobile-game prototype is already in hand, reserve time tonight to polish it, test it on a phone, and prepare the required Discord submission plus three pieces of substantive peer feedback.</p>
-          <p>Eligibility requires the Discord submission and feedback on three other entries, not only an itch.io upload. This is a practical, low-scope way to test a bootstrapped game idea.</p>
-          <a class="source" href="https://itch.io/jam/mable-ai-game-jam-1">Official jam page</a>
-        </article>
-        <p class="action"><strong>Market context:</strong> the shared live tracker will cover VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV here. It is informational, not investment advice.</p>
+        <h2>No qualifying deadline tonight</h2>
+        <p>No verified finance, analytics, AI, or game-business item requires action before Sunday.</p>
+        <div class="market-slot">
+          <h3>Reserved for the shared live market tracker</h3>
+          <p>The injected tracker covers VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV. Market information is informational, not investment advice.</p>
+        </div>
       </section>
 
       <section data-brief-section="allie-tomorrow-family">
         <p class="label">Family</p>
-        <h2>The Hurley Family calendar is clear for Saturday</h2>
-        <p>Both available Hurley Family calendars were checked. No safe actionable family activities are listed for August 22.</p>
+        <h2>The Hurley Family calendar is clear for Sunday</h2>
+        <p>Both available Hurley Family calendars were checked. No safe actionable family activities are listed for August 23.</p>
         <div class="grid">
-          <article class="card"><h3>Birthdays · August 22</h3><p>None listed.</p></article>
-          <article class="card"><h3>Anniversaries · August 22</h3><p>None listed.</p></article>
+          <article class="card"><h3>Birthdays · August 23</h3><p>None listed.</p></article>
+          <article class="card"><h3>Anniversaries · August 23</h3><p>None listed.</p></article>
         </div>
-        <p class="action"><strong>Shared public photo archive:</strong> no suitable exact-date prior-year match was found. No candidate could be reviewed or verified because the archive could not be resolved during the public SmugMug API request.</p>
+        <p class="action"><strong>Shared public photo archive:</strong> no suitable exact-date prior-year match was found. The archive API could not be resolved from the collector environment, so no image metadata or candidate could be verified.</p>
         <a class="source" href="https://photos.hurleyhome.com/">Shared public photo archive</a>
       </section>
     </main>
 
-    <footer>Prepared Friday, August 21 for Saturday, August 22, 2026 · Times are Eastern.</footer>
+    <footer>Prepared Saturday, August 22 for Sunday, August 23, 2026 · Times are Eastern.</footer>
   </div>
 <script id="allie-compact-layout-script">
   (() => {
