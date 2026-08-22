@@ -155,11 +155,16 @@
       border-radius: 10px;
     }
     .weather-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
-    .weather-grid .group { min-width: 0; padding: 1.35rem; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; box-shadow: 0 8px 24px rgba(34, 53, 44, .06); }
+    .weather-grid .group { position:relative; min-width: 0; padding: 1.35rem; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; box-shadow: 0 8px 24px rgba(34, 53, 44, .06); }
     .weather-grid h3 { color: var(--accent); font-size: .77rem; letter-spacing: .13em; text-transform: uppercase; }
+    .weather-symbol { position:absolute; top:1rem; right:1.15rem; color:var(--signal); font-size:2rem; line-height:1; opacity:.88; }
     .weather-grid p { font-family: Georgia, "Times New Roman", serif; font-size: 1.22rem; }
-    .almanac-content { display:grid; grid-template-columns:minmax(0,1fr) clamp(4.25rem,8vw,5.5rem); align-items:center; gap:1rem; }
+    .almanac-content { display:grid; grid-template-columns:minmax(0,1fr) clamp(2.75rem,5vw,3.5rem); align-items:center; gap:.8rem; }
     .moon-phase-art { display:block; width:100%; height:auto; filter:drop-shadow(0 .4rem .7rem rgba(22,35,33,.16)); }
+    .solar-facts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; margin:1rem 0 0; }
+    .solar-facts div { padding:.45rem .55rem; border-left:2px solid color-mix(in srgb,var(--signal) 70%,transparent); background:color-mix(in srgb,var(--signal-soft) 48%,transparent); }
+    .solar-facts dt { color:var(--muted); font-size:.68rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .solar-facts dd { margin:.18rem 0 0; color:var(--accent-strong); font-family:Georgia,"Times New Roman",serif; font-size:1rem; font-weight:700; }
 
     .intro { max-width: 47rem; color: var(--muted); }
     .story-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.1rem; margin-top: 1.5rem; }
@@ -302,16 +307,16 @@
       <div class="section-heading"><h2 id="weather-title">Weather</h2></div>
       <div class="weather-grid">
         <div class="group" aria-labelledby="weather-today">
-          <h3 id="weather-today">Today</h3>
+          <h3 id="weather-today">Today</h3><span class="weather-symbol" aria-hidden="true">☀</span>
           <p>Clouds and sun, humid, with a couple of showers or a thunderstorm mainly later. High 77°F, low 57°F. The Plymouth market gets the drier morning window.</p>
         </div>
         <div class="group" aria-labelledby="weather-tomorrow">
-          <h3 id="weather-tomorrow">Tomorrow</h3>
+          <h3 id="weather-tomorrow">Tomorrow</h3><span class="weather-symbol" aria-hidden="true">⛅</span>
           <p>Partly sunny and breezy with a stray shower possible. High 77°F, low 51°F; later plans are best indoors. <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4824">NWS Canton forecast</a>.</p>
         </div>
         <div class="group" aria-labelledby="weather-almanac">
-          <h3 id="weather-almanac">Almanac</h3>
-          <div class="almanac-content"><p>Saturday’s waxing gibbous moon is six days from full. <a href="https://www.timeanddate.com/moon/usa/canton?month=8">Moon calendar</a></p><img class="moon-phase-art" src="../assets/moon-waxing-gibbous.png" width="320" height="320" alt="Waxing gibbous moon, six days before full" decoding="async"></div>
+          <h3 id="weather-almanac">Almanac</h3><span class="weather-symbol" aria-hidden="true">✦</span>
+          <div class="almanac-content"><div><p>Saturday’s waxing gibbous moon is six days from full. <a href="https://www.timeanddate.com/moon/usa/canton?month=8">Moon calendar</a></p><dl class="solar-facts"><div><dt>Sunrise</dt><dd>6:42 AM</dd></div><div><dt>Sunset</dt><dd>8:13 PM</dd></div></dl></div><img class="moon-phase-art" src="../assets/moon-waxing-gibbous.png" width="320" height="320" alt="Waxing gibbous moon, six days before full" decoding="async"></div>
         </div>
       </div>
     </section>
