@@ -31,6 +31,8 @@
         "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
         "title": { "type": "string", "minLength": 1 },
         "url": { "type": "string", "format": "uri" },
+        "imageUrl": { "type": "string", "format": "uri" },
+        "imageAlt": { "type": "string", "minLength": 1 },
         "start": { "type": "string", "format": "date-time" },
         "end": { "type": "string", "format": "date-time" },
         "dateLabel": { "type": "string", "minLength": 1 },
