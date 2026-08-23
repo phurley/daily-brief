@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phurley.github.io/daily-brief/schemas/events.schema.json",
+  "title": "Daily Brief Events",
+  "description": "Today's recommendations and scored plan-ahead events for the Daily Brief.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "editionDate", "today", "easyAnswer", "planAhead"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "editionDate": { "type": "string", "format": "date" },
+    "today": {
+      "type": "array",
+      "maxItems": 12,
+      "items": { "$ref": "#/$defs/event" }
+    },
+    "easyAnswer": { "type": "string", "minLength": 1 },
+    "planAhead": {
+      "type": "array",
+      "maxItems": 30,
+      "items": { "$ref": "#/$defs/event" }
+    }
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "url", "start", "dateLabel", "venue", "city", "category", "summary"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "start": { "type": "string", "format": "date-time" },
+        "end": { "type": "string", "format": "date-time" },
+        "dateLabel": { "type": "string", "minLength": 1 },
+        "venue": { "type": "string", "minLength": 1 },
+        "city": { "type": "string", "minLength": 1 },
+        "region": { "type": "string", "minLength": 1 },
+        "price": { "type": "string", "minLength": 1 },
+        "ageRestriction": { "type": "string", "minLength": 1 },
+        "registration": { "type": "string", "minLength": 1 },
+        "category": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "distanceMiles": { "type": "number", "minimum": 0 },
+        "deadline": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
