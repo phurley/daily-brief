@@ -20,6 +20,8 @@ const state = {
   signatures: new Map(),
   selectedDate: "",
   today: dateKey(new Date()),
+  photoIndex: 0,
+  photoTimer: null,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -89,6 +91,15 @@ function safeLink(label, url) {
     return node("a", { text: label, href: parsed.href, target: "_blank", rel: "noopener noreferrer" });
   } catch {
     return document.createTextNode(label);
+  }
+}
+
+function safeImageUrl(url) {
+  try {
+    const parsed = new URL(url);
+    return ["http:", "https:"].includes(parsed.protocol) ? parsed.href : "";
+  } catch {
+    return "";
   }
 }
 
@@ -194,6 +205,7 @@ function renderMasthead() {
   const location = state.data.weather?.location;
   $("#location-label").textContent = location ? `${location.name}, ${location.region}` : "Canton, Michigan";
   document.title = `Daily Brief — ${displayDate(state.selectedDate)}`;
+  renderDayContext();
 }
 
 function weatherCard(label, title, big, body, facts = []) {
@@ -275,19 +287,119 @@ function occursOn(item, key) {
   return false;
 }
 
+const CALENDAR_ICONS = {
+  anniversary: "♥",
+  appointment: "▣",
+  birthday: "●",
+  event: "◇",
+  holiday: "✦",
+  other: "•",
+  reminder: "◌",
+  task: "✓",
+};
+
+function calendarItemsForDate(key) {
+  const calendarItems = (state.data.calendar?.items || [])
+    .filter((item) => occursOn(item, key) && item.status !== "cancelled")
+    .map((item) => ({ ...item, occurrenceDate: key }));
+  const publicHolidays = (state.data.almanac?.holidays || [])
+    .filter((holiday) => holiday.date === key)
+    .map((holiday) => ({
+      id: `almanac-${holiday.date}-${holiday.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`,
+      type: "holiday",
+      title: holiday.name,
+      date: holiday.date,
+      occurrenceDate: key,
+      description: holiday.description,
+      source: "almanac",
+    }));
+  const seen = new Set();
+  return [...calendarItems, ...publicHolidays]
+    .filter((item) => {
+      const identity = `${item.occurrenceDate}:${item.title.toLowerCase().replace(/[^a-z0-9]/g, "")}`;
+      if (seen.has(identity)) return false;
+      seen.add(identity);
+      return true;
+    })
+    .sort((a, b) => (a.startTime || "99:99").localeCompare(b.startTime || "99:99") || a.title.localeCompare(b.title));
+}
+
+function upcomingCalendarItems(fromKey, windowDays = 21, limit = 4) {
+  const results = [];
+  for (let offset = 1; offset <= windowDays && results.length < limit; offset += 1) {
+    const key = shiftDate(fromKey, offset);
+    results.push(...calendarItemsForDate(key));
+  }
+  return results.slice(0, limit);
+}
+
+function shortDateParts(key) {
+  const parts = new Intl.DateTimeFormat("en-US", { timeZone: "UTC", month: "short", day: "numeric" })
+    .formatToParts(new Date(`${key}T12:00:00Z`));
+  return {
+    month: parts.find((part) => part.type === "month")?.value || "",
+    day: parts.find((part) => part.type === "day")?.value || "",
+  };
+}
+
+function renderDayContext() {
+  const exact = calendarItemsForDate(state.selectedDate);
+  const context = exact.length ? exact.slice(0, 3) : upcomingCalendarItems(state.selectedDate, 14, 1);
+  const children = context.map((item) => {
+    const isUpcoming = item.occurrenceDate !== state.selectedDate;
+    const when = isUpcoming ? new Intl.DateTimeFormat("en-US", { timeZone: "UTC", weekday: "short", month: "short", day: "numeric" }).format(new Date(`${item.occurrenceDate}T12:00:00Z`)) : item.startTime ? displayTime(item.startTime) : "";
+    return node("span", { className: "day-context__item" }, [
+      node("span", { className: "day-context__icon", text: CALENDAR_ICONS[item.type] || "•", "aria-hidden": "true" }),
+      document.createTextNode(`${isUpcoming ? "Next: " : ""}${item.title}${when ? ` · ${when}` : ""}`),
+    ]);
+  });
+  replaceChildren("#day-context", children);
+}
+
 function renderCalendar() {
-  const items = (state.data.calendar?.items || [])
-    .filter((item) => occursOn(item, state.selectedDate) && item.status !== "cancelled")
-    .sort((a, b) => (a.startTime || "99:99").localeCompare(b.startTime || "99:99"));
+  const items = calendarItemsForDate(state.selectedDate);
   const children = items.map((item) => {
-    const details = [item.location, item.description].filter(Boolean).join(" · ");
+    const details = [
+      item.status === "tentative" ? "Tentative" : "",
+      item.person,
+      item.location,
+      item.description,
+    ].filter(Boolean).join(" · ");
+    const title = node("h3");
+    title.append(item.url ? safeLink(item.title, item.url) : document.createTextNode(item.title));
+    const time = node("time", { className: "timeline__time", datetime: item.startTime || state.selectedDate }, [
+      node("span", { text: CALENDAR_ICONS[item.type] || "•", "aria-hidden": "true" }),
+      document.createTextNode(` ${item.startTime ? displayTime(item.startTime) : item.type}`),
+    ]);
     return node("article", { className: "timeline__item" }, [
-      node("time", { className: "timeline__time", text: item.startTime ? displayTime(item.startTime) : item.type, datetime: item.startTime || state.selectedDate }),
-      node("div", {}, [node("h3", { text: item.title }), details ? node("p", { text: details }) : null]),
+      time,
+      node("div", {}, [title, details ? node("p", { text: details }) : null]),
     ]);
   });
   replaceChildren("#calendar-list", children.length ? children : [emptyState()]);
   $("#calendar-note").textContent = message("calendar", "note", "The things worth remembering.");
+
+  const upcoming = upcomingCalendarItems(state.selectedDate);
+  const target = $("#calendar-upcoming");
+  target.replaceChildren();
+  if (upcoming.length) {
+    target.append(node("h3", { text: "Coming up" }));
+    const list = node("ul", { className: "calendar-upcoming__list" });
+    for (const item of upcoming) {
+      const date = shortDateParts(item.occurrenceDate);
+      list.append(node("li", { className: "calendar-upcoming__item" }, [
+        node("time", { className: "calendar-upcoming__date", datetime: item.occurrenceDate }, [
+          node("small", { text: date.month }),
+          document.createTextNode(date.day),
+        ]),
+        node("p", {}, [
+          document.createTextNode(item.title),
+          node("span", { text: ` · ${item.type}` }),
+        ]),
+      ]));
+    }
+    target.append(list);
+  }
 }
 
 function uniqueEvents() {
@@ -368,15 +480,91 @@ function renderStarship() {
   target.append(node("strong", { text: `Starship · ${launch.estimateLabel}` }), document.createTextNode(` — ${message("starship", "note", launch.summary)}`));
 }
 
+function stopPhotoShow() {
+  window.clearInterval(state.photoTimer);
+  state.photoTimer = null;
+}
+
+function showPhoto(index, { restart = true } = {}) {
+  const slides = [...document.querySelectorAll(".memory__slide")];
+  const dots = [...document.querySelectorAll(".memory__dot")];
+  if (!slides.length) return;
+  state.photoIndex = (index + slides.length) % slides.length;
+  slides.forEach((slide, position) => {
+    const active = position === state.photoIndex;
+    slide.classList.toggle("is-active", active);
+    slide.setAttribute("aria-hidden", String(!active));
+  });
+  dots.forEach((dot, position) => {
+    const active = position === state.photoIndex;
+    dot.classList.toggle("is-active", active);
+    dot.setAttribute("aria-current", active ? "true" : "false");
+  });
+  if (restart) startPhotoShow();
+}
+
+function startPhotoShow() {
+  stopPhotoShow();
+  const slideCount = document.querySelectorAll(".memory__slide").length;
+  if (slideCount < 2 || document.hidden || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  state.photoTimer = window.setInterval(() => showPhoto(state.photoIndex + 1, { restart: false }), 11000);
+}
+
 function renderPhoto() {
+  stopPhotoShow();
+  state.photoIndex = 0;
   const day = state.data.photos?.days?.find((item) => item.date === state.selectedDate);
-  const photo = day?.photos?.[0];
+  const photos = (day?.photos || []).filter((photo) => safeImageUrl(photo.imageUrl));
   const section = $("#photo-section");
-  section.hidden = !photo;
-  if (!photo) return;
-  $("#photo-image").src = photo.imageUrl;
-  $("#photo-image").alt = photo.description;
-  $("#photo-caption").textContent = `${photo.description} · ${photo.location} · ${photo.takenDate.slice(0, 4)}`;
+  section.hidden = photos.length === 0;
+  replaceChildren("#photo-slides", []);
+  replaceChildren("#photo-position", []);
+  if (!photos.length) return;
+
+  const slides = photos.map((photo, index) => {
+    const image = node("img", {
+      src: safeImageUrl(photo.imageUrl),
+      alt: photo.description,
+      loading: index === 0 ? "eager" : "lazy",
+      decoding: "async",
+    });
+    const overlay = node("figcaption", { className: "memory__overlay" }, [
+      node("p", { className: "section-number", text: `From this day · Photo ${index + 1} of ${photos.length}` }),
+      node("h3", { text: photo.description }),
+      node("p", { className: "memory__meta" }, [
+        node("span", { text: `⌖ ${photo.location}` }),
+        node("time", { text: displayDate(photo.takenDate, { year: true }), datetime: photo.takenDate }),
+      ]),
+    ]);
+    return node("figure", {
+      className: `memory__slide${index === 0 ? " is-active" : ""}`,
+      "aria-hidden": String(index !== 0),
+    }, [image, overlay]);
+  });
+  replaceChildren("#photo-slides", slides);
+
+  const controls = $("#photo-controls");
+  controls.hidden = photos.length < 2;
+  if (photos.length > 1) {
+    const dots = photos.map((photo, index) => {
+      const dot = node("button", {
+        className: `memory__dot${index === 0 ? " is-active" : ""}`,
+        type: "button",
+        "aria-label": `Show photo ${index + 1}: ${photo.description}`,
+        "aria-current": index === 0 ? "true" : "false",
+      });
+      dot.addEventListener("click", () => showPhoto(index));
+      return dot;
+    });
+    replaceChildren("#photo-position", dots);
+    $("#photo-previous").onclick = () => showPhoto(state.photoIndex - 1);
+    $("#photo-next").onclick = () => showPhoto(state.photoIndex + 1);
+    section.onmouseenter = stopPhotoShow;
+    section.onmouseleave = startPhotoShow;
+    section.onfocusin = stopPhotoShow;
+    section.onfocusout = startPhotoShow;
+    startPhotoShow();
+  }
 }
 
 function renderErrors() {
@@ -517,6 +705,7 @@ function bindEvents() {
   $("#next-day").addEventListener("click", () => selectDate(shiftDate(state.selectedDate, 1)));
   $("#today-button").addEventListener("click", () => selectDate(state.today));
   $("#new-joke").addEventListener("click", () => loadJoke({ force: true }));
+  document.addEventListener("visibilitychange", () => document.hidden ? stopPhotoShow() : startPhotoShow());
   window.addEventListener("popstate", () => selectDate(new URL(window.location).searchParams.get("date") || state.today, { history: false }));
 }
 

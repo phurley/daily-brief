@@ -12,13 +12,16 @@ rendered in the browser from schema-backed JSON.
   entirely in this file.
 - `app.js` loads and checks every schema-backed data document, filters it for
   the selected date, renders with safe DOM APIs, polls for changes every 15
-  minutes, and maintains the yesterday/today/tomorrow navigation window.
+  minutes, maintains the yesterday/today/tomorrow navigation window, blends
+  calendar and almanac observances, and runs the optional daily photo carousel.
 - Root `*.json` files contain generated content. Their contracts live in
   `schemas/`.
 
-The optional `photos.json` document is loaded when present and otherwise
-omitted without an error. `brief-preferences.json` is not displayed because it
-does not have a schema-backed public content contract.
+The `photos.json` document may contain zero to five photographs for a date.
+Multiple photographs become a slow, accessible crossfade carousel with all
+description, location, and date metadata overlaid inside the image.
+`brief-preferences.json` is not displayed because it does not have a
+schema-backed public content contract.
 
 ## Local preview
 

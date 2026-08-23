@@ -38,6 +38,7 @@
           <span id="location-label">Canton, Michigan</span>
           <span id="live-status" role="status" aria-live="polite">Loading the brief…</span>
         </div>
+        <div id="day-context" class="day-context" aria-label="Calendar highlights"></div>
       </div>
     </header>
 
@@ -58,6 +59,7 @@
           <p id="calendar-note">The things worth remembering.</p>
         </header>
         <div id="calendar-list" class="timeline"></div>
+        <div id="calendar-upcoming" class="calendar-upcoming"></div>
       </section>
 
       <section id="events-section" class="panel panel--events" aria-labelledby="events-title">
@@ -71,14 +73,13 @@
       </section>
 
       <section id="photo-section" class="memory" aria-labelledby="photo-title" hidden>
-        <figure>
-          <img id="photo-image" alt="">
-          <figcaption>
-            <p class="section-number">From this day</p>
-            <h2 id="photo-title">A little time travel</h2>
-            <p id="photo-caption"></p>
-          </figcaption>
-        </figure>
+        <h2 id="photo-title" class="visually-hidden">Photos from this day</h2>
+        <div id="photo-slides" class="memory__slides" aria-live="off"></div>
+        <div id="photo-controls" class="memory__controls" hidden>
+          <button id="photo-previous" type="button" aria-label="Previous photo">←</button>
+          <div id="photo-position" class="memory__position" aria-label="Choose photo"></div>
+          <button id="photo-next" type="button" aria-label="Next photo">→</button>
+        </div>
       </section>
 
       <section id="news-section" class="panel panel--news" aria-labelledby="news-title">
