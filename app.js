@@ -253,35 +253,87 @@ function moonIlluminationPath(percent, waxing) {
 }
 
 function moonGraphic(moon) {
-  const waxing = moon.phase.startsWith("waxing") || moon.phase === "first-quarter";
+  const waxing = moon.phase?.startsWith("waxing") || moon.phase === "first-quarter";
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("class", "moon-disc");
   svg.setAttribute("viewBox", "0 0 100 100");
   svg.setAttribute("role", "img");
   svg.setAttribute("aria-label", moon.imageAlt || `${moon.summary}, ${Math.round(moon.illuminationPercent)} percent illuminated`);
+  const definitions = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+  const clip = document.createElementNS("http://www.w3.org/2000/svg", "clipPath");
+  clip.setAttribute("id", "moon-illumination-clip");
+  const lightShape = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  lightShape.setAttribute("d", moonIlluminationPath(moon.illuminationPercent, waxing));
+  clip.append(lightShape);
+  definitions.append(clip);
   const dark = document.createElementNS("http://www.w3.org/2000/svg", "circle");
   dark.setAttribute("class", "moon-disc__dark");
   dark.setAttribute("cx", "50");
   dark.setAttribute("cy", "50");
   dark.setAttribute("r", "46");
-  const light = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  light.setAttribute("class", "moon-disc__light");
-  light.setAttribute("d", moonIlluminationPath(moon.illuminationPercent, waxing));
-  svg.append(dark, light);
+  const texture = document.createElementNS("http://www.w3.org/2000/svg", "image");
+  texture.setAttribute("class", "moon-disc__texture");
+  texture.setAttribute("href", "assets/moon-waxing-gibbous.png");
+  texture.setAttribute("x", "4");
+  texture.setAttribute("y", "4");
+  texture.setAttribute("width", "92");
+  texture.setAttribute("height", "92");
+  texture.setAttribute("clip-path", "url(#moon-illumination-clip)");
+  svg.append(definitions, dark, texture);
   return svg;
 }
 
-function moonWeatherCard(day, holiday) {
-  const moon = day.moon;
-  const detail = node("div", {}, [
-    node("strong", { className: "weather-card__big", text: `${Math.round(moon.illuminationPercent)}%` }),
-    node("h3", { text: moon.phase.replaceAll("-", " ") }),
-    moon.moonrise ? node("p", { text: `Moonrise ${displayTime(moon.moonrise)}` }) : null,
+function forecastLabel(key) {
+  if (key === state.today) return "Today";
+  if (key === shiftDate(state.today, 1)) return "Tomorrow";
+  return new Intl.DateTimeFormat("en-US", { timeZone: "UTC", weekday: "short" }).format(new Date(`${key}T12:00:00Z`));
+}
+
+function forecastRangeCard(days) {
+  const columns = days.filter(Boolean).map((forecast) => node("div", { className: "forecast-day" }, [
+    node("span", { className: "weather-card__label", text: forecastLabel(forecast.date) }),
+    node("div", { className: "forecast-day__headline" }, [
+      node("span", { className: "forecast-day__icon", text: forecast.icon, "aria-hidden": "true" }),
+      node("strong", { text: `${Math.round(forecast.highF)}° / ${Math.round(forecast.lowF)}°` }),
+    ]),
+    node("h3", { text: forecast.conditionText }),
+    node("p", { className: "forecast-day__detail", text: `${forecast.precipitationChancePercent}% rain · ${forecast.narrative}` }),
+  ]));
+  return node("article", { className: "weather-card weather-card--forecast" }, columns);
+}
+
+function skyWeatherCard(day, forecast, holiday) {
+  const sunrise = forecast?.sunrise || day?.sunrise;
+  const sunset = forecast?.sunset || day?.sunset;
+  const riseDate = sunrise ? new Date(sunrise) : null;
+  const setDate = sunset ? new Date(sunset) : null;
+  const now = new Date();
+  const progress = state.selectedDate === state.today && riseDate && setDate
+    ? Math.min(1, Math.max(0, (now - riseDate) / (setDate - riseDate)))
+    : .5;
+  const daylight = node("div", { className: "daylight-visual" }, [
+    node("span", { className: "weather-card__label", text: "Daylight" }),
+    node("div", { className: "daylight-track", style: `--sun-position: ${(progress * 100).toFixed(1)}%` }, [
+      node("span", { className: "daylight-track__sun", "aria-hidden": "true" }),
+    ]),
+    node("div", { className: "daylight-times" }, [
+      node("span", {}, [node("small", { text: "Rise" }), document.createTextNode(displayTime(sunrise) || "—")]),
+      node("span", {}, [node("small", { text: "Set" }), document.createTextNode(displayTime(sunset) || "—")]),
+    ]),
   ]);
-  return node("article", { className: "weather-card moon-card" }, [
-    node("span", { className: "weather-card__label", text: "Night sky" }),
-    node("div", { className: "moon-layout" }, [moonGraphic(moon), detail]),
-    holiday ? node("p", { text: holiday.description }) : null,
+  const moon = day?.moon;
+  const night = moon ? node("div", { className: "moon-layout" }, [
+    moonGraphic(moon),
+    node("div", {}, [
+      node("strong", { className: "moon-percent", text: `${Math.round(moon.illuminationPercent)}%` }),
+      node("span", { className: "moon-phase", text: moon.phase.replaceAll("-", " ") }),
+      moon.moonrise ? node("small", { text: `Rises ${displayTime(moon.moonrise)}` }) : null,
+    ]),
+  ]) : null;
+  return node("article", { className: "weather-card weather-card--sky" }, [
+    daylight,
+    night,
+    holiday ? node("p", { className: "sky-holiday", text: holiday.description }) : null,
   ]);
 }
 
@@ -292,6 +344,7 @@ function renderWeather() {
   const day = almanac?.days?.find((item) => item.date === state.selectedDate);
   const holiday = almanac?.holidays?.find((item) => item.date === state.selectedDate);
   const current = state.selectedDate === state.today ? weather?.current : null;
+  const nextForecast = weather?.daily?.find((item) => item.date === shiftDate(state.selectedDate, 1));
   const cards = [];
 
   if (forecast) {
@@ -301,24 +354,15 @@ function renderWeather() {
       `${Math.round(current?.temperatureF ?? forecast.highF)}°`,
       forecast.narrative,
       current ? [["Feels", `${Math.round(current.feelsLikeF)}°`], ["Wind", `${Math.round(current.wind.speedMph)} mph ${current.wind.direction}`]] : [["High", `${Math.round(forecast.highF)}°`], ["Low", `${Math.round(forecast.lowF)}°`]],
-      { icon: current?.icon || forecast.icon },
+      { icon: current?.icon || forecast.icon, className: "weather-card--now" },
     ));
-    cards.push(weatherCard("The range", "High & low", `${Math.round(forecast.highF)}° / ${Math.round(forecast.lowF)}°`, forecast.conditionText, [["Rain", `${forecast.precipitationChancePercent}%`]]));
+    cards.push(forecastRangeCard([forecast, nextForecast]));
   }
   if (forecast || day) {
-    cards.push(weatherCard("Daylight", "Sunrise to sunset", "", "", [
-      ["Rise", displayTime(forecast?.sunrise || day?.sunrise)],
-      ["Set", displayTime(forecast?.sunset || day?.sunset)],
-    ]));
-  }
-  if (day?.moon) {
-    cards.push(moonWeatherCard(day, holiday));
-  } else if (holiday) {
-    cards.push(weatherCard("Almanac", holiday.name, "", holiday.description));
+    cards.push(skyWeatherCard(day, forecast, holiday));
   }
 
   replaceChildren("#weather-grid", cards.length ? cards : [emptyState()]);
-  $("#weather-intro").textContent = message("almanac", "note", "The shape of the day, from first light onward.");
   updateAtmosphere(forecast);
 }
 
@@ -503,23 +547,22 @@ function renderEvents() {
   const end = shiftDate(state.selectedDate, 30);
   const future = allEvents
     .filter((event) => eventEndDate(event) >= state.selectedDate && eventStartDate(event) > state.selectedDate && eventStartDate(event) <= end)
-    .sort((a, b) => a.start.localeCompare(b.start))
-    .slice(0, 6);
+    .sort((a, b) => a.start.localeCompare(b.start));
   const plan = $("#plan-ahead");
-  plan.replaceChildren();
+  plan.hidden = future.length === 0;
+  $("#plan-ahead-title").textContent = message("plan-ahead", "section-heading", "Worth penciling in");
+  const claims = [];
   if (future.length) {
-    plan.append(node("h3", { text: message("plan-ahead", "section-heading", "Worth penciling in") }));
-    const list = node("div", { className: "claim-grid" });
     for (const event of future) {
       const title = node("strong");
       title.append(safeLink(event.title, event.url));
-      list.append(node("article", { className: "claim" }, [
+      claims.push(node("article", { className: "claim" }, [
         node("time", { text: event.dateLabel, datetime: eventStartDate(event) }),
         title,
       ]));
     }
-    plan.append(list);
   }
+  replaceChildren("#claims-list", claims);
   refreshShelfControls();
 }
 
@@ -549,14 +592,6 @@ function renderStories(kind) {
   if (kind === "news") $("#news-title").textContent = message(section, "section-heading", "The local signal");
   else $("#geek-title").textContent = message(section, "section-heading", "Science & technology");
   refreshShelfControls();
-}
-
-function renderStarship() {
-  const launch = state.data.geeknews?.starshipEstimatedLaunch;
-  const target = $("#starship");
-  target.replaceChildren();
-  if (!launch || state.data.geeknews.editionDate > state.selectedDate) return;
-  target.append(node("strong", { text: `Starship · ${launch.estimateLabel}` }), document.createTextNode(` — ${message("starship", "note", launch.summary)}`));
 }
 
 function launchDateKey(launch) {
@@ -591,8 +626,11 @@ function renderRocketLaunches() {
   const target = $("#rocket-launches");
   target.replaceChildren();
   const launches = state.launches;
-  target.hidden = launches.length === 0;
-  if (!launches.length) return;
+  const starship = state.data.geeknews?.editionDate <= state.selectedDate
+    ? state.data.geeknews?.starshipEstimatedLaunch
+    : null;
+  target.hidden = launches.length === 0 && !starship;
+  if (target.hidden) return;
 
   const todaysLaunches = launches.filter((launch) => launchDateKey(launch) === state.today);
   const isUseful = (launch) => {
@@ -600,26 +638,27 @@ function renderRocketLaunches() {
     return name.toLowerCase() !== "tbd" && !launch.vehicle?.name?.toLowerCase().includes("unconfirmed");
   };
   const featured = todaysLaunches.find(isUseful) || launches.find(isUseful) || todaysLaunches[0] || launches[0];
-  const title = todaysLaunches.length
-    ? `${todaysLaunches.length} launch${todaysLaunches.length === 1 ? "" : "es"} on today’s board`
-    : "No launches on today’s board";
-  const detail = node("p");
-  if (todaysLaunches.length) {
-    detail.append(safeLink(featured.name || featured.missions?.[0]?.name || "Scheduled launch", launchLink(featured)));
-    detail.append(document.createTextNode(` · ${launchDateTime(featured)}`));
-    if (todaysLaunches.length > 1) detail.append(document.createTextNode(` · +${todaysLaunches.length - 1} more`));
-  } else {
-    detail.append(document.createTextNode("Next: "));
-    detail.append(safeLink(featured.name || featured.missions?.[0]?.name || "Scheduled launch", launchLink(featured)));
+  const line = node("div", { className: "rocket-launches__line" });
+  if (featured) {
+    const title = todaysLaunches.length
+      ? `${todaysLaunches.length} launch${todaysLaunches.length === 1 ? "" : "es"} today`
+      : "No launches today · Next";
+    line.append(node("strong", { text: title }), document.createTextNode(" · "));
+    line.append(safeLink(featured.name || featured.missions?.[0]?.name || "Scheduled launch", launchLink(featured)));
     const location = featured.pad?.location?.name;
-    detail.append(document.createTextNode(` · ${launchDateTime(featured)}${location ? ` · ${location}` : ""}`));
+    line.append(document.createTextNode(` · ${launchDateTime(featured)}${location ? ` · ${location}` : ""}`));
+    if (todaysLaunches.length > 1) line.append(document.createTextNode(` · +${todaysLaunches.length - 1} more`));
+  }
+  if (starship) {
+    if (featured) line.append(document.createTextNode(" · "));
+    line.append(node("strong", { text: `Starship ${starship.estimateLabel}` }));
   }
 
   const attribution = safeLink("Data by RocketLaunch.Live", "https://www.rocketlaunch.live/");
   if (attribution.nodeType === Node.ELEMENT_NODE) attribution.className = "rocket-launches__source";
   target.append(
     node("span", { className: "rocket-launches__icon", text: "↗", "aria-hidden": "true" }),
-    node("div", { className: "rocket-launches__copy" }, [node("strong", { text: title }), detail]),
+    line,
     attribution,
   );
 }
@@ -861,7 +900,6 @@ function render() {
   renderStories("news");
   renderStories("geeknews");
   renderRocketLaunches();
-  renderStarship();
   renderUpdatedLabel();
   updateNavigation();
   refreshShelfControls();

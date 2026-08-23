@@ -7,8 +7,8 @@
     <meta name="description" content="A living daily brief for southeast Michigan.">
     <title>Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="theme.css?v=20260823-4">
-    <script type="module" src="app.js?v=20260823-4"></script>
+    <link rel="stylesheet" href="theme.css?v=20260823-5">
+    <script type="module" src="app.js?v=20260823-5"></script>
   </head>
   <body>
     <a class="skip-link" href="#brief">Skip to the brief</a>
@@ -23,37 +23,34 @@
         <p id="masthead-eyebrow" class="eyebrow">Your southeast Michigan daily brief</p>
         <h1 id="page-title">A good day,<br>well considered.</h1>
         <p id="masthead-summary" class="sky__summary">Gathering the weather, local signals, and a few worthwhile detours.</p>
-        <nav class="date-nav" aria-label="Brief date">
-          <button id="previous-day" class="date-nav__button" type="button">
-            <span aria-hidden="true">←</span> <span class="date-nav__label">Yesterday</span>
-          </button>
-          <button id="today-button" class="date-nav__today" type="button">Today</button>
-          <button id="next-day" class="date-nav__button" type="button">
-            <span class="date-nav__label">Tomorrow</span> <span aria-hidden="true">→</span>
-          </button>
-        </nav>
-        <div class="sky__meta">
-          <time id="edition-date"></time>
-          <span id="location-label">Canton, Michigan</span>
-          <span id="live-status" role="status" aria-live="polite">Loading the brief…</span>
+        <div class="masthead-controls">
+          <nav class="date-nav" aria-label="Brief date">
+            <button id="previous-day" class="date-nav__button" type="button">
+              <span aria-hidden="true">←</span> <span class="date-nav__label">Yesterday</span>
+            </button>
+            <button id="today-button" class="date-nav__today" type="button">Today</button>
+            <button id="next-day" class="date-nav__button" type="button">
+              <span class="date-nav__label">Tomorrow</span> <span aria-hidden="true">→</span>
+            </button>
+          </nav>
+          <div class="sky__meta">
+            <time id="edition-date"></time>
+            <span id="location-label">Canton, Michigan</span>
+            <span id="live-status" role="status" aria-live="polite">Loading the brief…</span>
+          </div>
+          <div id="day-context" class="day-context" aria-label="Calendar highlights"></div>
         </div>
-        <div id="day-context" class="day-context" aria-label="Calendar highlights"></div>
       </div>
     </header>
 
     <main id="brief" class="shell brief" tabindex="-1">
-      <section id="weather-section" class="panel panel--weather" aria-labelledby="weather-title">
-        <header class="section-heading">
-          <p class="section-number">01 / Outside</p>
-          <h2 id="weather-title">Weather &amp; almanac</h2>
-          <p id="weather-intro">The shape of the day, from first light onward.</p>
-        </header>
+      <section id="weather-section" class="panel panel--weather" aria-label="Weather and almanac">
         <div id="weather-grid" class="weather-grid"></div>
       </section>
 
       <section id="calendar-section" class="panel panel--calendar" aria-labelledby="calendar-title">
         <header class="section-heading">
-          <p class="section-number">02 / Your day</p>
+          <p class="section-number">01 / Your day</p>
           <h2 id="calendar-title">On the calendar</h2>
           <p id="calendar-note">The things worth remembering.</p>
         </header>
@@ -63,7 +60,7 @@
 
       <section id="events-section" class="panel panel--events" aria-labelledby="events-title">
         <header class="section-heading">
-          <p class="section-number">03 / Go somewhere</p>
+          <p class="section-number">02 / Go somewhere</p>
           <h2 id="events-title">Nearby &amp; notable</h2>
           <p id="events-note">Good reasons to leave the house.</p>
         </header>
@@ -72,7 +69,14 @@
           <div id="events-list" class="card-grid shelf__track"></div>
           <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More events" data-shelf-next>→</button>
         </div>
-        <div id="plan-ahead" class="plan-ahead"></div>
+        <div id="plan-ahead" class="plan-ahead" hidden>
+          <h3 id="plan-ahead-title">Worth penciling in</h3>
+          <div class="shelf" data-shelf>
+            <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous dates worth claiming" data-shelf-previous>←</button>
+            <div id="claims-list" class="claim-grid shelf__track"></div>
+            <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More dates worth claiming" data-shelf-next>→</button>
+          </div>
+        </div>
       </section>
 
       <section id="photo-section" class="memory" aria-labelledby="photo-title" hidden>
@@ -87,7 +91,7 @@
 
       <section id="news-section" class="panel panel--news" aria-labelledby="news-title">
         <header class="section-heading">
-          <p class="section-number">04 / Close to home</p>
+          <p class="section-number">03 / Close to home</p>
           <h2 id="news-title">The local signal</h2>
           <p id="news-note">What is moving around Michigan.</p>
         </header>
@@ -100,12 +104,11 @@
 
       <section id="geek-section" class="panel panel--geek" aria-labelledby="geek-title">
         <header class="section-heading">
-          <p class="section-number">05 / Farther out</p>
+          <p class="section-number">04 / Farther out</p>
           <h2 id="geek-title">Science &amp; technology</h2>
           <p id="geek-note">Interesting machinery, ideas, and horizons.</p>
         </header>
         <aside id="rocket-launches" class="rocket-launches" aria-live="polite" hidden></aside>
-        <aside id="starship" class="launch-note"></aside>
         <div class="shelf" data-shelf>
           <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous science stories" data-shelf-previous>←</button>
           <div id="geek-list" class="story-list shelf__track"></div>
