@@ -25,6 +25,7 @@ const state = {
   today: dateKey(new Date()),
   photoIndex: 0,
   photoTimer: null,
+  eventExpiryTimer: null,
   launches: [],
 };
 
@@ -526,7 +527,25 @@ function eventEndDate(event) {
 function eventIsActiveOn(event, key) {
   const start = eventStartDate(event);
   const end = eventEndDate(event);
-  return Boolean(start && end && start <= key && end >= key);
+  if (!(start && end && start <= key && end >= key)) return false;
+  if (key !== state.today || !event.end) return true;
+  const closingTime = Date.parse(event.end);
+  return Number.isNaN(closingTime) || closingTime > Date.now();
+}
+
+function scheduleEventExpiry(events) {
+  window.clearTimeout(state.eventExpiryTimer);
+  state.eventExpiryTimer = null;
+  if (state.selectedDate !== state.today) return;
+  const now = Date.now();
+  const nextClosingTime = events
+    .filter((event) => eventStartDate(event) <= state.today && eventEndDate(event) >= state.today && event.end)
+    .map((event) => Date.parse(event.end))
+    .filter((time) => !Number.isNaN(time) && time > now)
+    .sort((a, b) => a - b)[0];
+  if (!nextClosingTime) return;
+  const delay = Math.min(nextClosingTime - now + 250, 2147483647);
+  state.eventExpiryTimer = window.setTimeout(() => renderEvents(), delay);
 }
 
 function renderEvents() {
@@ -573,6 +592,7 @@ function renderEvents() {
     }
   }
   replaceChildren("#claims-list", claims);
+  scheduleEventExpiry(allEvents);
   refreshShelfControls();
 }
 
