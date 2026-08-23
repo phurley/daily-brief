@@ -28,6 +28,10 @@ const state = {
   launches: [],
 };
 
+let claimHoverTimer = null;
+let claimHideTimer = null;
+let activeClaim = null;
+
 const $ = (selector) => document.querySelector(selector);
 
 function dateKey(date) {
@@ -526,6 +530,7 @@ function eventIsActiveOn(event, key) {
 }
 
 function renderEvents() {
+  hideEventPreview();
   const allEvents = uniqueEvents();
   const events = allEvents
     .filter((event) => eventIsActiveOn(event, state.selectedDate))
@@ -556,7 +561,12 @@ function renderEvents() {
     for (const event of future) {
       const title = node("strong");
       title.append(safeLink(event.title, event.url));
-      claims.push(node("article", { className: "claim" }, [
+      claims.push(node("article", {
+        className: "claim",
+        dataset: { eventId: event.id },
+        "aria-haspopup": "dialog",
+        "aria-expanded": "false",
+      }, [
         node("time", { text: event.dateLabel, datetime: eventStartDate(event) }),
         title,
       ]));
@@ -564,6 +574,126 @@ function renderEvents() {
   }
   replaceChildren("#claims-list", claims);
   refreshShelfControls();
+}
+
+function eventPreviewFacts(event) {
+  return [
+    ["When", event.dateLabel],
+    ["Where", [event.venue, event.city, event.region].filter(Boolean).join(" · ")],
+    ["Price", event.price],
+    ["Registration", event.registration],
+    ["Distance", event.distanceMiles != null ? `${event.distanceMiles} miles` : ""],
+  ].filter(([, value]) => value);
+}
+
+function positionEventPreview(anchor) {
+  const preview = $("#event-preview");
+  const anchorRect = anchor.getBoundingClientRect();
+  const previewRect = preview.getBoundingClientRect();
+  const gutter = 12;
+  const left = Math.min(
+    window.innerWidth - previewRect.width - gutter,
+    Math.max(gutter, anchorRect.left + anchorRect.width / 2 - previewRect.width / 2),
+  );
+  const above = anchorRect.top - previewRect.height - 10;
+  const top = above >= gutter
+    ? above
+    : Math.min(window.innerHeight - previewRect.height - gutter, anchorRect.bottom + 10);
+  preview.style.left = `${Math.max(gutter, left)}px`;
+  preview.style.top = `${Math.max(gutter, top)}px`;
+  preview.style.visibility = "visible";
+}
+
+function showEventPreview(claim, { focus = false } = {}) {
+  window.clearTimeout(claimHoverTimer);
+  window.clearTimeout(claimHideTimer);
+  const event = uniqueEvents().find((item) => item.id === claim.dataset.eventId);
+  if (!event) return;
+
+  if (activeClaim && activeClaim !== claim) activeClaim.setAttribute("aria-expanded", "false");
+  activeClaim = claim;
+  claim.setAttribute("aria-expanded", "true");
+  const preview = $("#event-preview");
+  const title = node("h3");
+  title.append(safeLink(event.title, event.url));
+  const facts = node("dl", { className: "event-preview__facts" });
+  for (const [term, value] of eventPreviewFacts(event)) {
+    facts.append(node("div", {}, [node("dt", { text: term }), node("dd", { text: value })]));
+  }
+  const close = node("button", { className: "event-preview__close", type: "button", text: "×", "aria-label": "Close event details" });
+  close.addEventListener("click", () => hideEventPreview({ restoreFocus: true }));
+  preview.replaceChildren(node("article", { className: "card event-preview__card" }, [
+    close,
+    node("span", { className: "card-meta", text: [event.dateLabel, event.category].filter(Boolean).join(" · ") }),
+    title,
+    node("p", { text: event.summary }),
+    facts,
+  ]));
+  preview.hidden = false;
+  preview.style.visibility = "hidden";
+  positionEventPreview(claim);
+  if (focus) preview.focus({ preventScroll: true });
+}
+
+function hideEventPreview({ restoreFocus = false } = {}) {
+  window.clearTimeout(claimHoverTimer);
+  window.clearTimeout(claimHideTimer);
+  const preview = $("#event-preview");
+  if (!preview) return;
+  const claim = activeClaim;
+  if (claim) claim.setAttribute("aria-expanded", "false");
+  activeClaim = null;
+  preview.hidden = true;
+  preview.style.visibility = "hidden";
+  if (restoreFocus) claim?.querySelector("a")?.focus({ preventScroll: true });
+}
+
+function scheduleEventPreviewHide() {
+  window.clearTimeout(claimHideTimer);
+  claimHideTimer = window.setTimeout(() => hideEventPreview(), 180);
+}
+
+function bindClaimDetails() {
+  const plan = $("#plan-ahead");
+  const preview = $("#event-preview");
+  plan.addEventListener("pointerover", (pointerEvent) => {
+    if (pointerEvent.pointerType && pointerEvent.pointerType !== "mouse") return;
+    const claim = pointerEvent.target.closest(".claim");
+    if (!claim || claim.contains(pointerEvent.relatedTarget)) return;
+    window.clearTimeout(claimHideTimer);
+    window.clearTimeout(claimHoverTimer);
+    claimHoverTimer = window.setTimeout(() => showEventPreview(claim), 700);
+  });
+  plan.addEventListener("pointerout", (pointerEvent) => {
+    const claim = pointerEvent.target.closest(".claim");
+    if (!claim || claim.contains(pointerEvent.relatedTarget) || preview.contains(pointerEvent.relatedTarget)) return;
+    window.clearTimeout(claimHoverTimer);
+    scheduleEventPreviewHide();
+  });
+  plan.addEventListener("contextmenu", (contextEvent) => {
+    const claim = contextEvent.target.closest(".claim");
+    if (!claim) return;
+    contextEvent.preventDefault();
+    showEventPreview(claim);
+  });
+  plan.addEventListener("keydown", (keyEvent) => {
+    if (!(keyEvent.key === "ContextMenu" || (keyEvent.shiftKey && keyEvent.key === "F10"))) return;
+    const claim = keyEvent.target.closest(".claim");
+    if (!claim) return;
+    keyEvent.preventDefault();
+    showEventPreview(claim, { focus: true });
+  });
+  preview.addEventListener("pointerenter", () => window.clearTimeout(claimHideTimer));
+  preview.addEventListener("pointerleave", scheduleEventPreviewHide);
+  $("#claims-list").addEventListener("scroll", () => hideEventPreview(), { passive: true });
+  document.addEventListener("pointerdown", (pointerEvent) => {
+    if (activeClaim && !activeClaim.contains(pointerEvent.target) && !preview.contains(pointerEvent.target)) hideEventPreview();
+  });
+  document.addEventListener("keydown", (keyEvent) => {
+    if (keyEvent.key === "Escape" && !preview.hidden) hideEventPreview({ restoreFocus: true });
+  });
+  window.addEventListener("scroll", () => hideEventPreview(), { passive: true });
+  window.addEventListener("resize", () => activeClaim && positionEventPreview(activeClaim));
 }
 
 function renderStories(kind) {
@@ -962,6 +1092,7 @@ function bindEvents() {
   $("#today-button").addEventListener("click", () => selectDate(state.today));
   $("#new-joke").addEventListener("click", () => loadJoke({ force: true }));
   bindShelfControls();
+  bindClaimDetails();
   document.addEventListener("visibilitychange", () => document.hidden ? stopPhotoShow() : startPhotoShow());
   window.addEventListener("popstate", () => selectDate(new URL(window.location).searchParams.get("date") || state.today, { history: false }));
 }
