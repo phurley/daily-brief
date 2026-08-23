@@ -13,7 +13,8 @@ rendered in the browser from schema-backed JSON.
 - `app.js` loads and checks every schema-backed data document, filters it for
   the selected date, renders with safe DOM APIs, polls for changes every 15
   minutes, maintains the yesterday/today/tomorrow navigation window, blends
-  calendar and almanac observances, and runs the optional daily photo carousel.
+  calendar and almanac observances, runs the optional daily photo carousel, and
+  caches the free RocketLaunch.Live next-launch feed in local storage.
 - Root `*.json` files contain generated content. Their contracts live in
   `schemas/`.
 
