@@ -21,19 +21,20 @@
     "story": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "title", "summary", "source", "publishedAt", "locations", "topics"],
+      "required": ["id", "title", "summary", "url", "source", "publishedAt", "locations", "topics"],
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
         "title": { "type": "string", "minLength": 1 },
         "summary": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "photo": { "$ref": "#/$defs/photo" },
         "source": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["name", "url"],
+          "required": ["name"],
           "properties": {
             "name": { "type": "string", "minLength": 1 },
-            "publication": { "type": "string", "minLength": 1 },
-            "url": { "type": "string", "format": "uri" }
+            "publication": { "type": "string", "minLength": 1 }
           }
         },
         "publishedAt": { "type": "string", "format": "date-time" },
@@ -48,6 +49,17 @@
           "uniqueItems": true,
           "items": { "type": "string", "minLength": 1 }
         }
+      }
+    },
+    "photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "alt"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "alt": { "type": "string", "minLength": 1 },
+        "credit": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" }
       }
     }
   }
