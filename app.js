@@ -478,7 +478,7 @@ function renderCalendar() {
       node("div", {}, [title, details ? node("p", { text: details }) : null]),
     ]);
   });
-  replaceChildren("#calendar-list", children.length ? children : [emptyState()]);
+  replaceChildren("#calendar-list", children);
   $("#calendar-note").textContent = message("calendar", "note", "The things worth remembering.");
 
   const upcoming = upcomingCalendarItems(state.selectedDate);
