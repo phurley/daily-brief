@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-23T18:14:20Z",
+  "generatedAt": "2026-08-23T21:56:24.024Z",
   "messages": [
     {
       "id": "masthead-eyebrow-2026-08-23",
@@ -15,12 +15,12 @@
       "date": "2026-08-23",
       "section": "masthead",
       "role": "headline",
-      "text": "Classic cars, consequential signals, and a week taking shape",
+      "text": "A clear afternoon, a listening-room night, and the week on deck",
       "order": 1,
       "sourceItemIds": [
-        "cruisin-hines-2026",
-        "canada-retaliatory-tariffs-september-2026",
-        "openai-pauses-frontier-training-for-cyber-safeguards"
+        "tray-wellington-band-2026",
+        "roman-telescope-clears-flight-readiness-review",
+        "canada-retaliatory-tariffs-september-2026"
       ]
     },
     {
@@ -28,60 +28,40 @@
       "date": "2026-08-23",
       "section": "masthead",
       "role": "summary",
-      "text": "A close-to-home outing tops Sunday's menu. Beyond Canton, Canada-U.S. trade friction leads the Michigan news while security and economics begin to dictate AI's pace.",
+      "text": "Clear and breezy right now, with light-drizzle odds later. The best near-term move is a low-key local outing; tonight, The Ark has the sharpest ticketed pick.",
       "order": 2,
       "sourceItemIds": [
         "cruisin-hines-2026",
-        "canada-retaliatory-tariffs-september-2026",
-        "openai-pauses-frontier-training-for-cyber-safeguards",
-        "ai-shifts-it-services-from-hours-to-outcomes"
+        "tray-wellington-band-2026"
       ]
+    },
+    {
+      "id": "weather-note-2026-08-23",
+      "date": "2026-08-23",
+      "section": "weather",
+      "role": "note",
+      "text": "Canton is clear at 74.5°F with a west wind; the forecast tops out near 75°F, with a 22% chance of drizzle.",
+      "order": 0
     },
     {
       "id": "almanac-note-2026-08-23",
       "date": "2026-08-23",
       "section": "almanac",
       "role": "note",
-      "text": "The waxing gibbous moon is 78% illuminated and rises at 6:10 PM, well before sunset.",
+      "text": "Late-August light lingers until 8:22 PM. The waxing gibbous moon is 78% illuminated and rises at 6:10 PM.",
       "order": 0
-    },
-    {
-      "id": "news-heading-2026-08-23",
-      "date": "2026-08-23",
-      "section": "news",
-      "role": "section-heading",
-      "text": "Borders, budgets, and local authority",
-      "order": 0,
-      "sourceItemIds": [
-        "canada-retaliatory-tariffs-september-2026",
-        "washtenaw-immigration-lawsuit-dismissed-2026",
-        "michigan-revenue-above-estimates-july-2026"
-      ]
-    },
-    {
-      "id": "news-summary-2026-08-23",
-      "date": "2026-08-23",
-      "section": "news",
-      "role": "summary",
-      "text": "The trade breakdown with Canada carries the largest Michigan economic stakes. A federalism ruling in Washtenaw County and modestly stronger state revenue round out a news cycle centered on who controls resources—and what happens next.",
-      "order": 1,
-      "sourceItemIds": [
-        "canada-retaliatory-tariffs-september-2026",
-        "washtenaw-immigration-lawsuit-dismissed-2026",
-        "michigan-revenue-above-estimates-july-2026"
-      ]
     },
     {
       "id": "today-heading-2026-08-23",
       "date": "2026-08-23",
       "section": "today",
       "role": "section-heading",
-      "text": "Sunday still has room for a good detour",
+      "text": "Choose your Sunday speed",
       "order": 0,
       "sourceItemIds": [
         "cruisin-hines-2026",
-        "she-moves-plymouth-2026",
-        "historic-base-ball-greenfield-village-2026-08-23"
+        "tray-wellington-band-2026",
+        "she-moves-plymouth-2026"
       ]
     },
     {
@@ -89,12 +69,11 @@
       "date": "2026-08-23",
       "section": "today",
       "role": "recommendation",
-      "text": "The easy answer is Cruisin' Hines: about 12 miles away, free for spectators, and running until 4 PM. For a shorter hop, She Moves fills downtown Plymouth; for something odder and slower, Greenfield Village plays base ball by 1867 rules.",
+      "text": "The easy daytime answer is Cruisin' Hines: free for spectators, about 12 miles away, and running until 4 PM. Tonight, Tray Wellington at The Ark brings adventurous banjo and bluegrass to Ann Arbor at 7:30.",
       "order": 1,
       "sourceItemIds": [
         "cruisin-hines-2026",
-        "she-moves-plymouth-2026",
-        "historic-base-ball-greenfield-village-2026-08-23"
+        "tray-wellington-band-2026"
       ]
     },
     {
@@ -102,10 +81,36 @@
       "date": "2026-08-23",
       "section": "calendar",
       "role": "note",
-      "text": "Heather's birthday is Wednesday—three days away.",
+      "text": "A family birthday arrives Wednesday—three days away.",
       "order": 0,
       "sourceItemIds": [
         "heather-s-birthday-2026-08-26"
+      ]
+    },
+    {
+      "id": "news-heading-2026-08-23",
+      "date": "2026-08-23",
+      "section": "news",
+      "role": "section-heading",
+      "text": "Michigan's big signals: trade, budgets, and local power",
+      "order": 0,
+      "sourceItemIds": [
+        "canada-retaliatory-tariffs-september-2026",
+        "michigan-revenue-above-estimates-july-2026",
+        "washtenaw-immigration-lawsuit-dismissed-2026"
+      ]
+    },
+    {
+      "id": "news-summary-2026-08-23",
+      "date": "2026-08-23",
+      "section": "news",
+      "role": "summary",
+      "text": "Canada's planned tariff response puts cross-border manufacturing and agriculture in focus. Elsewhere, Michigan revenue is running ahead of forecasts, while a court affirmed Washtenaw County's control of its own local resources.",
+      "order": 1,
+      "sourceItemIds": [
+        "canada-retaliatory-tariffs-september-2026",
+        "michigan-revenue-above-estimates-july-2026",
+        "washtenaw-immigration-lawsuit-dismissed-2026"
       ]
     },
     {
@@ -113,12 +118,12 @@
       "date": "2026-08-23",
       "section": "plan-ahead",
       "role": "section-heading",
-      "text": "A few dates worth claiming early",
+      "text": "The week gets interesting quickly",
       "order": 0,
       "sourceItemIds": [
+        "jds-stage-bistro-opening-2026",
         "rush-fifty-something-detroit-2026",
-        "detroit-jazz-festival-2026",
-        "plymouth-fall-festival-2026"
+        "emus-on-the-loose-2026"
       ]
     },
     {
@@ -126,38 +131,38 @@
       "date": "2026-08-23",
       "section": "plan-ahead",
       "role": "recommendation",
-      "text": "Check Rush seats first—the Detroit dates are Wednesday and Friday. Then circle the free Detroit Jazz Festival over Labor Day weekend and Plymouth's Fall Festival September 11–13.",
+      "text": "Book or browse now: JDs Stage Bistro opens Tuesday in Chelsea, Rush plays Detroit Wednesday and Friday, and Canton's $10 Emu-sical opens Friday.",
       "order": 1,
       "sourceItemIds": [
+        "jds-stage-bistro-opening-2026",
         "rush-fifty-something-detroit-2026",
-        "detroit-jazz-festival-2026",
-        "plymouth-fall-festival-2026"
+        "emus-on-the-loose-2026"
       ]
     },
     {
-      "id": "science-heading-2026-08-23",
+      "id": "science-technology-heading-2026-08-23",
       "date": "2026-08-23",
       "section": "science-technology",
       "role": "section-heading",
-      "text": "AI meets the brakes—and the balance sheet",
+      "text": "Space is having a quietly excellent week",
       "order": 0,
       "sourceItemIds": [
-        "openai-pauses-frontier-training-for-cyber-safeguards",
-        "openai-cuts-gpt-5-6-sol-api-pricing",
-        "ai-shifts-it-services-from-hours-to-outcomes"
+        "roman-telescope-clears-flight-readiness-review",
+        "nasa-starling-demonstrates-gps-free-autonomous-navigation",
+        "hubble-reveals-early-milky-way-merger"
       ]
     },
     {
-      "id": "science-summary-2026-08-23",
+      "id": "science-technology-summary-2026-08-23",
       "date": "2026-08-23",
       "section": "science-technology",
       "role": "summary",
-      "text": "The signal is no longer just faster models: cyber capability paused a training run, frontier pricing moved sharply lower, and services contracts are shifting from hours worked to outcomes delivered. AI is now changing both the safety envelope and the business model.",
+      "text": "NASA's Starling mission navigated without GPS, Roman cleared flight readiness ahead of its August 30 target, and Hubble traced a formative Milky Way collision.",
       "order": 1,
       "sourceItemIds": [
-        "openai-pauses-frontier-training-for-cyber-safeguards",
-        "openai-cuts-gpt-5-6-sol-api-pricing",
-        "ai-shifts-it-services-from-hours-to-outcomes"
+        "nasa-starling-demonstrates-gps-free-autonomous-navigation",
+        "roman-telescope-clears-flight-readiness-review",
+        "hubble-reveals-early-milky-way-merger"
       ]
     },
     {
@@ -165,20 +170,16 @@
       "date": "2026-08-23",
       "section": "starship",
       "role": "note",
-      "text": "Flight 14 remains no earlier than September. Ship 41 has completed static-fire testing, but SpaceX has not posted an official launch date.",
+      "text": "Flight 14 remains no earlier than September. Ship 41 completed static-fire testing, but SpaceX has not posted an official date.",
       "order": 0
     },
     {
-      "id": "countdown-note-2026-08-23",
+      "id": "footer-note-2026-08-23",
       "date": "2026-08-23",
-      "section": "countdowns",
+      "section": "footer",
       "role": "note",
-      "text": "15 days to Labor Day—and several of the best nearby plans are already clustered around that weekend.",
-      "order": 0,
-      "sourceItemIds": [
-        "michigan-state-fair-2026",
-        "detroit-jazz-festival-2026"
-      ]
+      "text": "Breezy daylight, a rising moon, and one good plan is plenty.",
+      "order": 0
     }
   ]
 }
