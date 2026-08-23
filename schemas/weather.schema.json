@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phurley.github.io/daily-brief/schemas/weather.schema.json",
+  "title": "Daily Brief Weather",
+  "description": "Current conditions and the daily forecast used by the Daily Brief weather panel.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "location", "current", "daily", "sources"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "location": { "$ref": "#/$defs/location" },
+    "current": { "$ref": "#/$defs/currentConditions" },
+    "daily": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "items": { "$ref": "#/$defs/dailyForecast" }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    }
+  },
+  "$defs": {
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "region", "latitude", "longitude", "timeZone"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "region": { "type": "string", "minLength": 1 },
+        "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+        "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+        "timeZone": { "type": "string", "minLength": 1 }
+      }
+    },
+    "currentConditions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observedAt", "temperatureF", "feelsLikeF", "conditionCode", "conditionText", "icon", "precipitationIn", "humidityPercent", "wind"],
+      "properties": {
+        "observedAt": { "type": "string", "format": "date-time" },
+        "temperatureF": { "type": "number" },
+        "feelsLikeF": { "type": "number" },
+        "conditionCode": { "type": "integer", "minimum": 0 },
+        "conditionText": { "type": "string", "minLength": 1 },
+        "icon": { "type": "string", "minLength": 1 },
+        "precipitationIn": { "type": "number", "minimum": 0 },
+        "humidityPercent": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "wind": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["speedMph", "directionDegrees", "direction"],
+          "properties": {
+            "speedMph": { "type": "number", "minimum": 0 },
+            "gustMph": { "type": "number", "minimum": 0 },
+            "directionDegrees": { "type": "number", "minimum": 0, "exclusiveMaximum": 360 },
+            "direction": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "dailyForecast": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "highF", "lowF", "conditionCode", "conditionText", "icon", "precipitationChancePercent", "sunrise", "sunset", "narrative"],
+      "properties": {
+        "date": { "type": "string", "format": "date" },
+        "highF": { "type": "number" },
+        "lowF": { "type": "number" },
+        "conditionCode": { "type": "integer", "minimum": 0 },
+        "conditionText": { "type": "string", "minLength": 1 },
+        "icon": { "type": "string", "minLength": 1 },
+        "precipitationChancePercent": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "sunrise": { "type": "string", "format": "date-time" },
+        "sunset": { "type": "string", "format": "date-time" },
+        "narrative": { "type": "string", "minLength": 1 }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "retrievedAt"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "retrievedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}
