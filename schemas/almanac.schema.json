@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://phurley.github.io/daily-brief/schemas/almanac.schema.json",
   "title": "Daily Brief Almanac",
-  "description": "A rolling week of solar, lunar, and holiday facts for the Daily Brief.",
+  "description": "Solar, lunar, and holiday facts for the previous, current, and next calendar months.",
   "type": "object",
   "additionalProperties": false,
   "required": ["schemaVersion", "generatedAt", "location", "days", "holidays", "sources"],
@@ -23,13 +23,13 @@
     },
     "days": {
       "type": "array",
-      "minItems": 7,
-      "maxItems": 14,
+      "minItems": 89,
+      "maxItems": 92,
       "items": { "$ref": "#/$defs/day" }
     },
     "holidays": {
       "type": "array",
-      "maxItems": 12,
+      "maxItems": 24,
       "items": { "$ref": "#/$defs/holiday" }
     },
     "sources": {
