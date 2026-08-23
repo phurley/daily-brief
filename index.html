@@ -1,588 +1,126 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#173f38">
-  <title>Daily Brief — Sunday, August 23, 2026</title>
-  <script>
-    (() => {
-      const hour = new Date().getHours();
-      const theme = hour < 6 ? "night" : hour < 11 ? "morning" : hour < 17 ? "afternoon" : hour < 21 ? "evening" : "night";
-      document.documentElement.dataset.timeTheme = theme;
-    })();
-  </script>
-  <style>
-    :root {
-      color-scheme: light;
-      --ink: #172622;
-      --muted: #62706b;
-      --paper: #f3f0e8;
-      --surface: #fffdf8;
-      --surface-soft: #e8eee8;
-      --line: #c9d0ca;
-      --accent: #27604e;
-      --accent-strong: #173f38;
-      --signal: #d79a33;
-      --signal-soft: #f6e7bf;
-      --masthead-ink: #fffdf8;
-      --sky-a: #143f37;
-      --sky-b: #286653;
-      --glow: rgba(247, 190, 82, .32);
-      --event-hot: #ef765f;
-      --event-sun: #f7ca66;
-      --event-sea: #0e6768;
-      --shadow: 0 18px 55px rgba(28, 46, 39, .10);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: clamp(16px, .2vw + 15px, 18px);
-      line-height: 1.62;
-    }
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#233f4a">
+    <meta name="description" content="A living daily brief for southeast Michigan.">
+    <title>Daily Brief</title>
+    <link rel="stylesheet" href="theme.css">
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#brief">Skip to the brief</a>
 
-    :root[data-time-theme="morning"] {
-      --paper: #f6f0e5; --surface-soft: #f1e5cf; --accent: #4f6e57; --accent-strong: #294a3b;
-      --signal: #df6f54; --signal-soft: #f8ddc5; --sky-a: #075b61; --sky-b: #df765b; --glow: rgba(255, 218, 154, .58);
-    }
-    :root[data-time-theme="afternoon"] {
-      --paper: #f3f0e8; --surface-soft: #e5eee8; --accent: #27604e; --accent-strong: #173f38;
-      --signal: #c58b2f; --signal-soft: #f6e7bf; --sky-a: #16453d; --sky-b: #3f7a62; --glow: rgba(250, 198, 83, .38);
-    }
-    :root[data-time-theme="evening"] {
-      --paper: #f3ede9; --surface-soft: #eee2df; --accent: #775065; --accent-strong: #3c3045;
-      --signal: #d17658; --signal-soft: #f6d8ca; --sky-a: #2d2c49; --sky-b: #93565d; --glow: rgba(241, 147, 95, .42);
-    }
-    :root[data-time-theme="night"] {
-      color-scheme: dark;
-      --ink: #e8ece9; --muted: #aebbb7; --paper: #111918; --surface: #192321; --surface-soft: #202d2a;
-      --line: #354542; --accent: #8dbca9; --accent-strong: #b5ddcc; --signal: #e2b66e; --signal-soft: #3c3427;
-      --masthead-ink: #f4f3ed; --sky-a: #0a1418; --sky-b: #1e3d3e; --glow: rgba(153, 191, 196, .18);
-      --shadow: 0 22px 65px rgba(0, 0, 0, .28);
-      --event-hot: #c75e70; --event-sun: #e2b66e; --event-sea: #123f4a;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      transition: color .4s ease, background-color .4s ease;
-    }
-
-    a { color: var(--accent-strong); text-decoration-color: var(--signal); text-decoration-thickness: .1em; text-underline-offset: .2em; }
-    a:hover { color: var(--signal); }
-    a:focus-visible { outline: 3px solid var(--signal); outline-offset: 4px; border-radius: 3px; }
-    p { margin: .6rem 0 0; }
-    small { font-size: .82rem; line-height: 1.55; }
-
-    .masthead {
-      position: relative;
-      overflow: hidden;
-      min-height: min(72vh, 700px);
-      display: grid;
-      align-items: end;
-      color: var(--masthead-ink);
-      background:
-        radial-gradient(circle at 82% 25%, var(--glow) 0 4%, transparent 24%),
-        linear-gradient(135deg, var(--sky-a), var(--sky-b));
-      border-bottom: 1px solid color-mix(in srgb, var(--signal) 70%, transparent);
-    }
-    body.event-luau .masthead {
-      background:
-        radial-gradient(circle at 81% 22%, color-mix(in srgb, var(--event-sun) 86%, white) 0 8%, transparent 8.4%),
-        radial-gradient(circle at 92% 42%, color-mix(in srgb, var(--event-hot) 72%, transparent) 0 14%, transparent 29%),
-        linear-gradient(135deg, var(--event-sea), var(--sky-b));
-    }
-    body.event-luau .masthead::before {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      right: -8vw;
-      bottom: -20%;
-      width: min(62vw, 760px);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      opacity: .42;
-      background: repeating-radial-gradient(ellipse at center, transparent 0 7%, rgba(255,255,255,.2) 7.5% 8.2%, transparent 8.7% 13%);
-      transform: rotate(-12deg) scaleY(.42);
-    }
-    .masthead::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: .4;
-      background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, transparent, #000);
-    }
-    .masthead-inner, main, .footer-inner { width: min(1160px, calc(100% - 2.5rem)); margin-inline: auto; }
-    .masthead-inner { position: relative; z-index: 1; padding: clamp(5rem, 12vw, 9rem) 0 clamp(2.5rem, 6vw, 4.5rem); }
-    .masthead-tools { display: grid; grid-template-columns: minmax(0, 1.05fr) auto auto; align-items: center; gap: .55rem; margin-top: 1rem; }
-    .masthead-tools .time-chip, .masthead-tools .family-note, .masthead-tools .edition-links { margin: 0; }
-    .time-chip { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.4rem; padding: .42rem .68rem; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(8,20,19,.18); backdrop-filter: blur(12px); font-size: .72rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
-    .time-chip::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 .25rem color-mix(in srgb, var(--signal) 20%, transparent); }
-    .eyebrow {
-      margin: 0 0 1.3rem;
-      color: color-mix(in srgb, var(--signal) 75%, white);
-      font-size: .74rem;
-      font-weight: 800;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-    h1, h2, h3 { line-height: 1.15; }
-    h1 { margin: 0; max-width: 8ch; font-family: Georgia, "Times New Roman", serif; font-size: clamp(4rem, 13vw, 9rem); font-weight: 500; letter-spacing: -.065em; }
-    .dateline { min-width: 0; margin: 0; padding: .55rem .75rem; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(8,20,19,.18); backdrop-filter: blur(12px); font-size: .86rem; font-weight: 750; white-space: nowrap; }
-    .dek { max-width: 49rem; margin-top: 1.6rem; padding-left: 1rem; border-left: 3px solid var(--signal); font-size: clamp(1.05rem, 1.7vw, 1.28rem); }
-    .family-note { display: inline-flex; align-items: center; min-width: 0; gap: .55rem; margin: 1.25rem 0 0; padding: .5rem .72rem; border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(8,20,19,.2); backdrop-filter: blur(12px); font-size: .8rem; font-weight: 700; white-space: nowrap; }
-    .family-note span { color: color-mix(in srgb, var(--event-sun) 82%, white); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
-    .edition-links { display: flex; gap: .4rem; margin-top: 1.1rem; font-size: .76rem; font-weight: 750; white-space: nowrap; }
-    .edition-links a, .edition-links span { padding: .48rem .62rem; color: var(--masthead-ink); border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(8,20,19,.2); backdrop-filter: blur(12px); text-decoration: none; }
-    .edition-links a:hover { color: color-mix(in srgb, var(--event-sun) 82%, white); border-color: color-mix(in srgb, var(--event-sun) 70%, white); }
-
-    main { padding: .5rem 0 5rem; }
-    section { margin-top: clamp(3.5rem, 8vw, 6rem); }
-    .section-heading { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
-    .section-heading::after { content: ""; height: 1px; background: var(--line); }
-    h2 { margin: 0; color: var(--accent-strong); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9rem, 4vw, 2.9rem); letter-spacing: -.035em; }
-    h3 { margin: 0; font-size: clamp(1.08rem, 2vw, 1.3rem); }
-
-    .status {
-      margin: 0 0 1.25rem;
-      padding: .9rem 1rem;
-      color: var(--ink);
-      background: var(--signal-soft);
-      border: 1px solid color-mix(in srgb, var(--signal) 42%, var(--line));
-      border-left: 5px solid var(--signal);
-      border-radius: 10px;
-    }
-    .weather-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
-    .weather-grid .group { position:relative; min-width: 0; padding: 1.35rem; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; box-shadow: 0 8px 24px rgba(34, 53, 44, .06); }
-    .weather-grid h3 { color: var(--accent); font-size: .77rem; letter-spacing: .13em; text-transform: uppercase; }
-    .weather-symbol { position:absolute; top:1rem; right:1.15rem; color:var(--signal); font-size:2rem; line-height:1; opacity:.88; }
-    .weather-grid p { font-family: Georgia, "Times New Roman", serif; font-size: 1.22rem; }
-    .almanac-content { display:grid; grid-template-columns:minmax(0,1fr) clamp(2.75rem,5vw,3.5rem); align-items:center; gap:.8rem; }
-    .moon-phase-art { display:block; width:100%; height:auto; filter:drop-shadow(0 .4rem .7rem rgba(22,35,33,.16)); }
-    .solar-facts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; margin:1rem 0 0; }
-    .solar-facts div { padding:.45rem .55rem; border-left:2px solid color-mix(in srgb,var(--signal) 70%,transparent); background:color-mix(in srgb,var(--signal-soft) 48%,transparent); }
-    .solar-facts dt { color:var(--muted); font-size:.68rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
-    .solar-facts dd { margin:.18rem 0 0; color:var(--accent-strong); font-family:Georgia,"Times New Roman",serif; font-size:1rem; font-weight:700; }
-
-    .intro { max-width: 47rem; color: var(--muted); }
-    .story-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.1rem; margin-top: 1.5rem; }
-    .card {
-      grid-column: span 4;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      padding: 1.35rem;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--accent);
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(34, 53, 44, .06);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .card h3 a { overflow-wrap: anywhere; }
-    .event-meta { color: var(--muted); font-size: .9rem; }
-    .score { display: inline-block; color: var(--signal); font-size: .78em; font-variant-numeric: tabular-nums; white-space: nowrap; }
-    .plan-ahead .card { grid-column: span 6; border-top-color: var(--signal); }
-    .science .card { grid-column: span 4; border-top-color: var(--accent-strong); }
-    .science .card p { font-size: .94rem; }
-    .science .card small { display: block; margin-top: auto; padding-top: .8rem; color: var(--muted); }
-
-    .memory-break {
-      position: relative;
-      width: min(1320px, calc(100vw - 1rem));
-      margin-inline: 50%;
-      transform: translateX(-50%);
-    }
-    .memory-photo {
-      position: relative;
-      overflow: hidden;
-      margin: 0;
-      color: #fff;
-      background: var(--event-sea);
-      border-radius: 20px;
-      box-shadow: 0 28px 80px color-mix(in srgb, var(--event-sea) 28%, transparent);
-    }
-    .memory-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(5,18,20,.86), transparent 58%); }
-    .memory-photo > a { display: block; }
-    .memory-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 7; object-fit: cover; object-position: center 44%; transition: transform .7s ease; }
-    .memory-photo:hover img { transform: scale(1.018); }
-    .memory-photo figcaption { position: absolute; z-index: 1; right: clamp(1.2rem, 4vw, 3rem); bottom: clamp(1.2rem, 4vw, 2.6rem); left: clamp(1.2rem, 4vw, 3rem); display: grid; gap: .24rem; color: rgba(255,255,255,.84); text-shadow: 0 2px 18px rgba(0,0,0,.38); }
-    .memory-photo figcaption strong { color: #fff; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.45rem, 4vw, 2.8rem); line-height: 1.05; }
-    .memory-photo figcaption a { color: #fff; text-decoration-color: var(--event-sun); }
-    .archive-kicker { color: var(--event-sun); font-size: .7rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
-
-    .short-plan { margin-top: 1.25rem; padding: clamp(1.25rem, 3vw, 2rem); color: var(--masthead-ink); background: linear-gradient(135deg, var(--sky-a), var(--sky-b)); border-radius: 12px; box-shadow: var(--shadow); }
-    .short-plan h3 { color: color-mix(in srgb, var(--signal) 70%, white); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; }
-    .countdown { padding: clamp(1.2rem, 4vw, 2rem); background: var(--signal-soft); border: 1px solid color-mix(in srgb, var(--signal) 42%, var(--line)); border-radius: 12px; }
-    .countdown strong { color: var(--signal); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.5rem, 4vw, 2.4rem); line-height: 1; }
-    .countdown p { margin: 0; }
-    .countdown-detail { display: inline-block; margin-left: .65rem; max-width: 34rem; vertical-align: middle; }
-    .starship-mini { margin-top: 2.2rem; color: var(--muted); font-size: .84rem; }
-    .science-heading { grid-template-columns: auto auto 1fr; }
-    .science-heading .starship-mini { margin: 0; }
-    .starship-mini p { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin: 0; padding: .45rem .65rem; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--surface) 82%, transparent); }
-    .starship-mini .rocket { color: var(--signal); font-size: 1rem; }
-
-    .collector-list { columns: 2; gap: 3rem; margin: 0; padding-left: 1.2rem; }
-    .collector-list li { margin-bottom: .5rem; break-inside: avoid; }
-    footer { color: var(--masthead-ink); background: var(--sky-a); }
-    .footer-inner { padding: 1.5rem 0; }
-
-    @media (max-width: 760px) {
-      .masthead-inner, main, .footer-inner { width: min(100% - 1.3rem, 1120px); }
-      .masthead { min-height: 66vh; }
-      .weather-grid { grid-template-columns: 1fr; }
-      .masthead-tools { display: flex; align-items: flex-start; }
-      .masthead-tools .dateline { width: 100%; }
-      .masthead-tools .edition-links { flex-wrap: wrap; white-space: normal; }
-      .science-heading { display: flex; flex-wrap: wrap; }
-      .science-heading::after { flex: 1 1 3rem; }
-      .countdown-detail { display: block; margin: .7rem 0 0; max-width: none; }
-      .story-grid { display: block; }
-      .card { margin-top: .85rem; }
-      .collector-list { columns: 1; }
-      .memory-break { width: 100vw; }
-      .memory-photo { border-radius: 0; }
-      .memory-photo img { aspect-ratio: 4 / 3; }
-    }
-    @media (min-width: 761px) and (max-width: 980px) {
-      .card, .science .card { grid-column: span 6; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
-    @media print {
-      body { background: #fff; }
-      .masthead { background: #fff; color: var(--ink); }
-      .eyebrow { color: var(--accent-strong); }
-      .card, .weather-grid, .short-plan { box-shadow: none; }
-      a { color: inherit; }
-    }
-  </style>
-<style id="brief-feedback-styles">
-  [data-brief-feedback-selected] { outline:3px solid #c56a2d; outline-offset:4px; }
-  #brief-feedback-dialog { max-width:36rem; width:calc(100% - 2rem); border:0; border-radius:1rem;
-    padding:1.25rem; box-shadow:0 1.5rem 5rem rgb(0 0 0 / .35); }
-  #brief-feedback-dialog::backdrop { background:rgb(0 0 0 / .55); }
-  #brief-feedback-dialog textarea { width:100%; min-height:9rem; margin:.75rem 0; padding:.75rem; font:inherit; }
-  .brief-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
-</style>
-
-
-
-
-
-<style id="original-live-layer-styles">
-  .masthead { isolation:isolate; }
-  .sky-orbit { position:absolute; z-index:0; inset:0; overflow:hidden; pointer-events:none; }
-  .orbit-sun { position:absolute; left:var(--sun-x,76%); top:var(--sun-y,22%); width:clamp(2.4rem,5vw,4.5rem); aspect-ratio:1; border-radius:50%; background:radial-gradient(circle at 35% 32%,#fff9d5 0 12%,#ffd27a 42%,#e98a58 100%); box-shadow:0 0 0 1rem rgba(255,213,128,.09),0 0 4rem rgba(255,189,92,.28); transform:translate(-50%,-50%); transition:left 70s linear,top 70s linear,background 1.2s ease; animation:orbit-glow 5s ease-in-out infinite alternate; }
-  body.event-luau[data-edition-mood="lake"] .masthead { background:radial-gradient(circle at 78% 22%,rgba(194,238,255,.42),transparent 27%),linear-gradient(135deg,#0d3f55,#296f82); }
-  body.event-luau[data-edition-mood="meadow"] .masthead { background:radial-gradient(circle at 78% 22%,rgba(255,228,127,.4),transparent 27%),linear-gradient(135deg,#254d3b,#6f9456); }
-  body.event-luau[data-edition-mood="violet"] .masthead { background:radial-gradient(circle at 78% 22%,rgba(255,195,140,.4),transparent 27%),linear-gradient(135deg,#34294f,#745a89); }
-  body.event-luau[data-edition-mood="cider"] .masthead { background:radial-gradient(circle at 78% 22%,rgba(255,225,154,.45),transparent 27%),linear-gradient(135deg,#5a3c32,#b46b4b); }
-  @keyframes orbit-glow { to { box-shadow:0 0 0 1.35rem rgba(255,213,128,.13),0 0 5rem rgba(255,189,92,.38); } }
-  @media (prefers-reduced-motion:reduce) { .orbit-sun { animation:none; transition:none; } }
-  .live-canton-weather { margin:.55rem 0 0; font-size:.88rem; color:var(--muted); }
-  .masthead-tools { grid-template-columns:minmax(0,1fr) auto auto; }
-  .time-chip { justify-self:start; width:max-content; max-width:100%; white-space:nowrap; line-height:1.2; }
-  .masthead-tools .family-note { grid-column:1 / -1; justify-self:start; max-width:min(100%,46rem); white-space:normal; border-radius:1rem; }
-  .masthead-tools .family-note { gap:.7rem; padding:.65rem 1rem; }
-  .masthead-tools .edition-links { grid-column:3; grid-row:1; justify-self:end; }
-  @media (max-width:760px) {
-    .masthead-tools { flex-wrap:wrap; }
-    .masthead-tools .time-chip { width:max-content; }
-    .masthead-tools .family-note { width:100%; max-width:100%; }
-    .masthead-tools .edition-links { width:100%; }
-  }
-</style>
-</head>
-<body class="event-luau">
-  <header class="masthead" data-brief-section="overview"><div class="sky-orbit" aria-hidden="true"><span class="orbit-sun"></span></div>
-    <div class="masthead-inner">
-      <p class="eyebrow">Plymouth Sunday · Daylight rhythm: small stages &amp; fresh air</p>
-      <h1>Daily Brief</h1>
-      <div class="masthead-tools">
-        <p class="dateline"><time datetime="2026-08-23">Sunday, August 23, 2026</time> · Weekend</p>
-        <p class="time-chip" id="time-chip" aria-live="polite">Local edition</p>
-        <nav class="edition-links" aria-label="Daily editions"><span aria-current="page">Today · Sun 23</span><a href="tomorrow/">Tomorrow preview</a></nav>
+    <header class="sky" aria-labelledby="page-title">
+      <div class="sky__texture" aria-hidden="true"></div>
+      <div class="celestial" aria-hidden="true">
+        <span class="celestial__sun"></span>
+        <span class="celestial__moon"></span>
       </div>
-      <p class="dek">A breezy Sunday puts a lively Plymouth afternoon within easy reach, then offers an intimate roots set or a comedy-club night after dark.</p>
-    </div>
-  </header>
+      <div class="shell sky__content">
+        <nav class="date-nav" aria-label="Brief date">
+          <button id="previous-day" class="date-nav__button" type="button">
+            <span aria-hidden="true">←</span> <span class="date-nav__label">Yesterday</span>
+          </button>
+          <button id="today-button" class="date-nav__today" type="button">Today</button>
+          <button id="next-day" class="date-nav__button" type="button">
+            <span class="date-nav__label">Tomorrow</span> <span aria-hidden="true">→</span>
+          </button>
+        </nav>
 
-  <main>
-    <section data-brief-section="weather" aria-labelledby="weather-title">
-      <div class="section-heading"><h2 id="weather-title">Weather</h2></div>
-      <div class="weather-grid">
-        <div class="group" aria-labelledby="weather-today">
-          <h3 id="weather-today">Today</h3><span class="weather-symbol" aria-hidden="true">☀</span>
-          <p>Partly sunny and breezy with a stray shower possible. High 77°F, low 51°F; the Plymouth daytime plan has the better weather margin. <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4824">NWS Canton forecast</a>.</p>
-        </div>
-        <div class="group" aria-labelledby="weather-tomorrow">
-          <h3 id="weather-tomorrow">Tomorrow</h3><span class="weather-symbol" aria-hidden="true">⛅</span>
-          <p>Partly sunny and breezy with a stray shower possible. High 77°F, low 51°F; later plans are best indoors. <a href="https://forecast.weather.gov/MapClick.php?lat=42.3086&amp;lon=-83.4824">NWS Canton forecast</a>.</p>
-        </div>
-        <div class="group" aria-labelledby="weather-almanac">
-          <h3 id="weather-almanac">Almanac</h3><span class="weather-symbol" aria-hidden="true">✦</span>
-          <div class="almanac-content"><div><p>Sunday’s waxing gibbous moon is five days from full. <a href="https://www.timeanddate.com/moon/usa/canton?month=8">Moon calendar</a></p><dl class="solar-facts"><div><dt>Sunrise</dt><dd>6:43 AM</dd></div><div><dt>Sunset</dt><dd>8:11 PM</dd></div></dl></div><img class="moon-phase-art" src="assets/moon-waxing-gibbous.png" width="320" height="320" alt="Waxing gibbous moon, five days before full" decoding="async"></div>
+        <p id="masthead-eyebrow" class="eyebrow">Your southeast Michigan daily brief</p>
+        <h1 id="page-title">A good day,<br>well considered.</h1>
+        <p id="masthead-summary" class="sky__summary">Gathering the weather, local signals, and a few worthwhile detours.</p>
+        <div class="sky__meta">
+          <time id="edition-date"></time>
+          <span id="location-label">Canton, Michigan</span>
+          <span id="live-status" role="status" aria-live="polite">Loading the brief…</span>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section data-brief-section="news" aria-labelledby="news-title">
-      <div class="section-heading"><h2 id="news-title">News digest</h2></div>
-      <div class="story-grid">
-        <article class="card">
-          <h3><a href="https://wdet.org/2026/08/20/lathrup-village-plans-first-city-arboretum/">A neighborhood arboretum takes root</a></h3>
-          <p>Lathrup Village is turning a public green triangle into its first arboretum, beginning with Michigan-native trees and educational signs. The longer plan may add seating, gardens, and gathering space while helping manage stormwater.</p>
-          <p><small>WDET · published August 20</small></p>
-        </article>
-        <article class="card">
-          <h3><a href="https://wdet.org/2026/08/11/abdul-el-sayed-metro-interview/">The Abdul El-Sayed campaign enters its next chapter</a></h3>
-          <p>In a WDET interview after his Democratic Senate primary win, El-Sayed discusses the money gap he overcame, Detroit voters who did not support him, and why he says his core message will stay intact.</p>
-          <p><small>WDET · The Metro · published August 11</small></p>
-        </article>
-        <article class="card">
-          <h3><a href="https://cantonmi.gov/calendar.aspx?CID=28%2C35%2C47%2C27&amp;month=8&amp;view=list&amp;year=2026">Canton’s cleanup day is Saturday</a></h3>
-          <p>Canton’s Environmental and Public Works calendar lists a community cleanup from 8:00 AM–4:00 PM Saturday, August 22. It is the township’s practical chance to bring neighborhood cleanup work into one organized day.</p>
-          <p><small>Canton Township · Environmental and Public Works calendar</small></p>
-        </article>
+    <main id="brief" class="shell brief" tabindex="-1">
+      <section id="weather-section" class="panel panel--weather" aria-labelledby="weather-title">
+        <header class="section-heading">
+          <p class="section-number">01 / Outside</p>
+          <h2 id="weather-title">Weather &amp; almanac</h2>
+          <p id="weather-intro">The shape of the day, from first light onward.</p>
+        </header>
+        <div id="weather-grid" class="weather-grid"></div>
+      </section>
+
+      <section id="calendar-section" class="panel panel--calendar" aria-labelledby="calendar-title">
+        <header class="section-heading">
+          <p class="section-number">02 / Your day</p>
+          <h2 id="calendar-title">On the calendar</h2>
+          <p id="calendar-note">The things worth remembering.</p>
+        </header>
+        <div id="calendar-list" class="timeline"></div>
+      </section>
+
+      <section id="events-section" class="panel panel--events" aria-labelledby="events-title">
+        <header class="section-heading">
+          <p class="section-number">03 / Go somewhere</p>
+          <h2 id="events-title">Nearby &amp; notable</h2>
+          <p id="events-note">Good reasons to leave the house.</p>
+        </header>
+        <div id="events-list" class="card-grid"></div>
+        <div id="plan-ahead" class="plan-ahead"></div>
+      </section>
+
+      <section id="photo-section" class="memory" aria-labelledby="photo-title" hidden>
+        <figure>
+          <img id="photo-image" alt="">
+          <figcaption>
+            <p class="section-number">From this day</p>
+            <h2 id="photo-title">A little time travel</h2>
+            <p id="photo-caption"></p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="news-section" class="panel panel--news" aria-labelledby="news-title">
+        <header class="section-heading">
+          <p class="section-number">04 / Close to home</p>
+          <h2 id="news-title">The local signal</h2>
+          <p id="news-note">What is moving around Michigan.</p>
+        </header>
+        <div id="news-list" class="story-list"></div>
+      </section>
+
+      <section id="geek-section" class="panel panel--geek" aria-labelledby="geek-title">
+        <header class="section-heading">
+          <p class="section-number">05 / Farther out</p>
+          <h2 id="geek-title">Science &amp; technology</h2>
+          <p id="geek-note">Interesting machinery, ideas, and horizons.</p>
+        </header>
+        <aside id="starship" class="launch-note"></aside>
+        <div id="geek-list" class="story-list"></div>
+      </section>
+
+      <section class="joke" aria-labelledby="joke-title">
+        <p class="section-number">One last thing</p>
+        <h2 id="joke-title">Today’s dad joke</h2>
+        <blockquote id="dad-joke">Warming up the punchline…</blockquote>
+        <button id="new-joke" type="button">That one hurt. Try another.</button>
+      </section>
+
+      <section id="data-errors" class="data-errors" aria-labelledby="data-errors-title" hidden>
+        <h2 id="data-errors-title">A few sources missed the train</h2>
+        <ul id="data-error-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer__inner">
+        <p>Daily Brief <span aria-hidden="true">·</span> Canton, Michigan</p>
+        <p id="updated-label">Waiting for data.</p>
       </div>
-    </section>
+    </footer>
 
-    <section data-brief-section="today" aria-labelledby="today-title">
-      <div class="section-heading"><h2 id="today-title">Sunday, already taking shape</h2></div>
-      <div class="story-grid">
-        <article class="card" data-event-end="2026-08-23T16:00:00-04:00"><h3><a href="https://www.michigan.org/event/she-moves-womens-wellness-experience">SHE Moves Plymouth</a> <span class="score">— close by</span></h3><p class="event-meta"><time datetime="2026-08-23T11:00:00-04:00">11:00 AM–4:00 PM</time> · Kellogg Park &amp; The Gathering Pavilion, Plymouth · $35 · registration encouraged</p><p>A beginner-friendly Pilates class, women-owned marketplace, local food, and wellness activations make this an easy daytime Plymouth loop.</p></article>
-        <article class="card" data-event-end="2026-08-23T21:30:00-04:00"><h3><a href="https://theark.org/event/tray-wellington-band-260823/">Tray Wellington Band</a> <span class="score">— intimate music</span></h3><p class="event-meta"><time datetime="2026-08-23T19:30:00-04:00">Doors 7:00 PM · Show 7:30 PM</time> · The Ark, Ann Arbor · $29–$40</p><p>The award-winning banjo player brings a forward-looking bluegrass and roots set to The Ark’s 316 S. Main room.</p></article>
-        <article class="card" data-event-end="2026-08-23T20:30:00-04:00"><h3><a href="https://www.comedycastle.com/events/">Big Jay Oakerson</a> <span class="score">— comedy</span></h3><p class="event-meta"><time datetime="2026-08-23T19:00:00-04:00">7:00 PM</time> · Mark Ridley’s Comedy Castle, Royal Oak · $42–$47 · 18+</p><p>Oakerson closes his weekend run in the club’s single-room setting; the listed price range and age rule come directly from the venue.</p></article>
-      </div>
-      <aside class="short-plan" aria-labelledby="short-plan-title">
-        <h3 id="short-plan-title">The easy answer</h3>
-        <p>Plymouth in the afternoon, then choose your evening temperature: inventive banjo-forward roots at The Ark or a comedy-club set in Royal Oak.</p>
-      </aside>
-    </section>
-
-
-    <section class="plan-ahead" data-brief-section="plan-ahead" aria-labelledby="plan-ahead-title">
-      <div class="section-heading"><h2 id="plan-ahead-title">Plan ahead: the next two to six weeks</h2></div>
-      <div class="story-grid">
-        <article class="card">
-          <h3><a href="https://blindpigmusic.com/calendar/">Ann Arbor Fall Beard Day Fest</a> <span class="score">— 84/100</span></h3>
-          <p class="event-meta"><time datetime="2026-09-05T19:00:00-04:00">Saturday, September 5 · Doors 7:00 PM</time> · Blind Pig, Ann Arbor · 18+ · $19.85</p>
-          <p>Van Haven, Redemption Road, LÜCID, Unholy Honor, and Keller pack five shades of local rock and metal into one small room. Guests under 21 pay an additional $5 at the door.</p>
-        </article>
-        <article class="card">
-          <h3><a href="https://www.thehenryford.org/visit/things-to-do/calendar/old-car-festival">Old Car Festival</a> <span class="score">— 91/100</span></h3>
-          <p class="event-meta"><time datetime="2026-09-12">Saturday, September 12</time> · Greenfield Village, Dearborn</p>
-          <p>Hundreds of vehicles from the 1890s through 1932 and special Saturday hours until 9:00 PM make the 75th anniversary the strongest family plan. <strong>Deadline:</strong> participant registration is closed, but visitor tickets are on sale.</p>
-        </article>
-        <article class="card">
-          <h3><a href="https://theark.org/event/ann-arbor-django-reinhardt-festival-260912/">Ann Arbor Django Reinhardt Festival</a> <span class="score">— 81/100</span></h3>
-          <p class="event-meta"><time datetime="2026-09-12T20:00:00-04:00">Saturday, September 12 · Doors 7:30 PM · Show 8:00 PM</time> · The Ark, Ann Arbor · $29–$40</p>
-          <p>Andrew Brown hosts guitarist Sam Farthing, violinist Grant Flick, and the full Djangophonique crew for the festival’s fourth year of jazz manouche in The Ark’s intimate room.</p>
-        </article>
-        <article class="card">
-          <h3><a href="https://theark.org/event/joe-pug-willie-watson/">Joe Pug &amp; Willie Watson</a> <span class="score">— 86/100</span></h3>
-          <p class="event-meta"><time datetime="2026-09-25T20:00:00-04:00">Friday, September 25 at 8:00 PM</time> · The Ark, Ann Arbor · $35–$46.50</p>
-          <p>Two lyrically sharp Americana performers share an intimate room on a Friday night. <strong>Deadline:</strong> all-in tickets are available now from The Ark; buy ahead if this pairing is the draw.</p>
-        </article>
-      </div>
-    </section>
-
-    <section data-brief-section="countdowns" aria-labelledby="countdowns-title">
-      <div class="section-heading"><h2 id="countdowns-title">Holiday countdown</h2></div>
-      <div class="countdown">
-        <p><strong>16 days to Labor Day</strong><span class="countdown-detail"><time datetime="2026-09-07">Monday, September 7, 2026</time>, the federal holiday honoring American workers.</span></p>
-      </div>
-    </section>
-
-    <section class="science" data-brief-section="science-technology" aria-labelledby="science-title">
-      <div class="section-heading science-heading"><h2 id="science-title">Science &amp; technology</h2><div class="starship-mini" data-brief-section="starship" aria-label="Starship status"><p><span class="rocket" aria-hidden="true">🚀</span> <strong>Starship:</strong> date unknown · <a href="https://www.faa.gov/newsroom/statements/general-statements">FAA</a> · <a href="https://www.spacex.com/launches/mission/?+missionId=starship-flight-test">SpaceX</a></p></div></div>
-      <div class="story-grid">
-        <article class="card">
-          <h3><a href="https://www.michiganpublic.org/environment-climate-change/2026-08-20/butterfly-returns-from-brink-of-extinction-with-help-of-msu-researchers-and-grand-rapids-zoo">Nine butterflies became more than 1,300</a></h3>
-          <p>MSU researchers and John Ball Zoo turned nine known wild Poweshiek skipperlings into a captive-and-wild population above 1,300. The inch-long butterfly survives in only a few prairie-fen populations, including two in southeast Michigan.</p>
-          <p><small>The recovery is real but fragile: researchers still cite habitat loss and insecticides as major threats.</small></p>
-        </article>
-      <article class="card">
-  <h3><a href="https://news.mit.edu/2026/new-way-watch-heat-move-through-electronics-0806">A new way to watch heat move through electronics</a></h3>
-  <p>Ultrafast X-rays now let researchers measure heat flow through several layers of a working chip at once, exposing microscopic bottlenecks that conventional surface measurements miss.</p>
-  <p><small>Caveat: The technique is a laboratory measurement platform, not yet a new cooling product.</small></p>
-</article>
-<article class="card">
-  <h3><a href="https://news.mit.edu/index.php/2026/turning-molecules-into-reliable-electronic-devices-0803">Molecular electronics becomes repeatable at chip scale</a></h3>
-  <p>A fabrication platform integrated sub-nanometer molecular layers into more than 1,000 devices that survived tens of thousands of electrical cycles, a step toward practical molecular-scale computing components.</p>
-  <p><small>Caveat: The result demonstrates scalable, durable test devices; commercial applications still require further development.</small></p>
-</article>
-</div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <p><small>I’m reading a book about anti-gravity. It’s impossible to put down.</small></p>
-    </div>
-  </footer>
-<dialog id="brief-feedback-dialog">
-  <form method="dialog">
-    <h2>Improve this brief</h2>
-    <p id="brief-feedback-context"></p>
-    <textarea id="brief-feedback-text" aria-label="Feedback" placeholder="What should change in this section?"></textarea>
-    <p><small>This opens a public GitHub issue for review.</small></p>
-    <div class="brief-feedback-actions">
-      <button value="cancel">Cancel</button>
-      <button id="brief-feedback-submit" value="default">Continue to GitHub</button>
-    </div>
-  </form>
-</dialog>
-<script id="brief-feedback-script">
-  (() => {
-    const repository = "phurley/daily-brief";
-    const dialog = document.getElementById("brief-feedback-dialog");
-    const context = document.getElementById("brief-feedback-context");
-    const input = document.getElementById("brief-feedback-text");
-    let selectedSection = null;
-    let panelName = "General";
-    let panelMarker = "General";
-    const openFeedback = (section) => {
-      selectedSection?.removeAttribute("data-brief-feedback-selected");
-      selectedSection = section;
-      selectedSection.setAttribute("data-brief-feedback-selected", "");
-      panelName = section.dataset.briefSection || section.querySelector("h1,h2,h3")?.textContent?.trim() || "General";
-      panelMarker = section.dataset.briefSection ? `data-brief-section="${section.dataset.briefSection}"` : panelName;
-      context.textContent = `Panel: ${panelName}`;
-      input.value = "";
-      dialog.showModal();
-      input.focus();
-    };
-    const sections = [...document.querySelectorAll("[data-brief-section], main > section, main > article")]
-      .filter((section, index, all) => all.findIndex((candidate) => candidate === section || candidate.contains(section)) === index);
-    sections.forEach((section) => {
-      section.addEventListener("contextmenu", (event) => { event.preventDefault(); openFeedback(section); });
-    });
-    dialog.addEventListener("close", () => {
-      selectedSection?.removeAttribute("data-brief-feedback-selected");
-      selectedSection = null;
-    });
-    document.getElementById("brief-feedback-submit").addEventListener("click", (event) => {
-      event.preventDefault();
-      const feedback = input.value.trim();
-      if (!feedback) { input.focus(); return; }
-      const excerpt = selectedSection?.innerText?.replace(/\s+/g, " ").trim().slice(0, 280) || "";
-      const body = `Page URL: ${window.location.href}\nPanel: ${panelName}
-Panel marker: ${panelMarker}
-Panel excerpt: ${excerpt}
-
-Requested implementation change:
-${feedback}
-
-Submitted from the published daily brief.`;
-      const url = `https://github.com/${repository}/issues/new?labels=brief-feedback&title=${encodeURIComponent(`Daily brief: ${panelName}`)}&body=${encodeURIComponent(body)}`;
-      window.open(url, "_blank", "noopener,noreferrer");
-      dialog.close();
-    });
-  })();
-</script>
-<script id="brief-time-theme-script">
-  (() => {
-    const labels = { morning: "Morning light", afternoon: "Daylight", evening: "Evening glow", night: "Night mode" };
-    const colors = { morning: "#345c55", afternoon: "#16453d", evening: "#2d2c49", night: "#0a1418" };
-    const edition = document.querySelector(".dateline time")?.getAttribute("datetime");
-    const cards = document.querySelector('[data-brief-section="today"] > .story-grid')?.querySelectorAll('article.card') || [];
-    const refresh = () => {
-      const now = new Date();
-      const hour = now.getHours();
-      const theme = hour < 6 ? "night" : hour < 11 ? "morning" : hour < 17 ? "afternoon" : hour < 21 ? "evening" : "night";
-      document.documentElement.dataset.timeTheme = theme;
-      document.getElementById("time-chip").textContent = `${labels[theme]} · ${new Intl.DateTimeFormat([], { hour: "numeric", minute: "2-digit" }).format(now)}`;
-      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", colors[theme]);
-
-      const localDate = [now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-");
-      cards.forEach((card) => {
-        const eventTime = card.dataset.eventEnd || card.querySelector("time[datetime]")?.dateTime;
-        card.hidden = edition === localDate && eventTime ? new Date(eventTime) <= now : false;
-      });
-    };
-    refresh();
-    window.setInterval(refresh, 60_000);
-  })();
-</script>
-
-
-
-
-
-
-<script id="original-live-layer-script">
-  (() => {
-    const zone = "America/Detroit";
-    const labels = { dawn:"Dawn", day:"Daylight", dusk:"Evening glow", night:"Night mode" };
-    const themeColors = { dawn:"#6f5148", day:"#16453d", dusk:"#2d2c49", night:"#0a1418" };
-    const hourFormat = new Intl.DateTimeFormat("en-US", { timeZone:zone, hour:"numeric", hourCycle:"h23" });
-    const clockFormat = new Intl.DateTimeFormat("en-US", { timeZone:zone, hour:"numeric", minute:"2-digit" });
-    const refreshClock = () => {
-      const now = new Date(); const hour = Number(hourFormat.format(now));
-      const theme = hour < 7 ? "dawn" : hour < 17 ? "day" : hour < 21 ? "dusk" : "night";
-      document.documentElement.dataset.timeTheme = theme === "dawn" ? "morning" : theme === "day" ? "afternoon" : theme === "dusk" ? "evening" : "night";
-      const chip = document.getElementById("time-chip"); if (chip) chip.textContent = `${labels[theme]} · ${clockFormat.format(now)} Detroit`;
-      const edition = document.querySelector(".dateline time")?.dateTime || now.toISOString().slice(0,10);
-      const day = Number(edition.slice(-2)); document.body.dataset.editionMood = ["lake","meadow","violet","cider"][day % 4];
-      const minutes = Number(new Intl.DateTimeFormat("en-US", { timeZone:zone, hour:"numeric", minute:"2-digit", hourCycle:"h23" }).formatToParts(now).reduce((total,part) => total + (part.type === "hour" ? Number(part.value) * 60 : part.type === "minute" ? Number(part.value) : 0), 0));
-      const progress = Math.max(0, Math.min(1, (minutes - 300) / 960));
-      document.documentElement.style.setProperty("--sun-x", `${8 + progress * 84}%`); document.documentElement.style.setProperty("--sun-y", `${63 - Math.sin(progress * Math.PI) * 48}%`);
-      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", themeColors[theme]);
-    };
-    const weatherCodes = {0:"clear",1:"mostly clear",2:"partly cloudy",3:"overcast",45:"foggy",48:"icy fog",51:"light drizzle",53:"drizzle",55:"heavy drizzle",61:"light rain",63:"rain",65:"heavy rain",71:"light snow",73:"snow",75:"heavy snow",80:"rain showers",81:"rain showers",82:"heavy showers",95:"thunderstorms",96:"storms with hail",99:"severe storms with hail"};
-    const refreshWeather = async () => {
-      const today = document.querySelector("#weather-today")?.closest(".group"); if (!today) return;
-      let live = today.querySelector(".live-canton-weather");
-      if (!live) { live = document.createElement("p"); live.className = "live-canton-weather"; today.append(live); }
-      try {
-        const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=42.3086&longitude=-83.4824&current=temperature_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FDetroit");
-        if (!response.ok) throw new Error("weather unavailable"); const current = (await response.json()).current;
-        live.textContent = `Live in Canton: ${Math.round(current.temperature_2m)}°F · feels ${Math.round(current.apparent_temperature)}° · ${weatherCodes[current.weather_code] || "current conditions"} · wind ${Math.round(current.wind_speed_10m)} mph`;
-      } catch (_) { live.textContent = "Live Canton conditions temporarily unavailable."; }
-    };
-    refreshClock(); refreshWeather();
-    window.setInterval(refreshClock, 60 * 1000); window.setInterval(refreshWeather, 10 * 60 * 1000);
-  })();
-</script>
-<script id="report-long-press-feedback">
-  (() => {
-    const delay = 650;
-    const sections = [...document.querySelectorAll("[data-brief-section], main > section, main > article")]
-      .filter((section, index, all) => all.findIndex((candidate) => candidate === section || candidate.contains(section)) === index);
-    sections.forEach((section) => {
-      let timer = null; let startX = 0; let startY = 0; let suppressClick = false; let suppressNativeUntil = 0;
-      const cancel = () => { if (timer) window.clearTimeout(timer); timer = null; };
-      section.addEventListener("pointerdown", (event) => {
-        if (!event.isPrimary || (event.pointerType !== "touch" && event.pointerType !== "pen")) return;
-        cancel(); startX = event.clientX; startY = event.clientY;
-        timer = window.setTimeout(() => {
-          timer = null; suppressClick = true; suppressNativeUntil = Date.now() + 1200;
-          const feedbackEvent = new MouseEvent("contextmenu", { bubbles:true, cancelable:true, clientX:event.clientX, clientY:event.clientY });
-          Object.defineProperty(feedbackEvent, "reportLongPress", { value:true });
-          section.dispatchEvent(feedbackEvent);
-          navigator.vibrate?.(20);
-        }, delay);
-      }, { passive:true });
-      section.addEventListener("pointermove", (event) => {
-        if (Math.hypot(event.clientX - startX, event.clientY - startY) > 12) cancel();
-      }, { passive:true });
-      section.addEventListener("pointerup", cancel, { passive:true });
-      section.addEventListener("pointercancel", cancel, { passive:true });
-      section.addEventListener("contextmenu", (event) => {
-        if (!event.reportLongPress && Date.now() < suppressNativeUntil) { event.preventDefault(); event.stopImmediatePropagation(); }
-      }, true);
-      section.addEventListener("click", (event) => {
-        if (!suppressClick) return;
-        suppressClick = false; event.preventDefault(); event.stopImmediatePropagation();
-      }, true);
-    });
-  })();
-</script>
-</body>
+    <template id="empty-template">
+      <p class="empty-state">Nothing scheduled here for this date. A little white space is good news.</p>
+    </template>
+  </body>
 </html>
