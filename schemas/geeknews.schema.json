@@ -2,50 +2,39 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://phurley.github.io/daily-brief/schemas/geeknews.schema.json",
   "title": "Daily Brief Geek News",
-  "description": "Science and technology stories, spaceflight watch, and the footer joke for the Daily Brief.",
+  "description": "A dedicated Starship launch estimate and sourced science and technology stories for the Daily Brief.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "generatedAt", "editionDate", "spaceflight", "stories", "footerJoke"],
+  "required": ["schemaVersion", "generatedAt", "editionDate", "starshipEstimatedLaunch", "stories"],
   "properties": {
     "schemaVersion": { "const": "1.0.0" },
     "generatedAt": { "type": "string", "format": "date-time" },
     "editionDate": { "type": "string", "format": "date" },
-    "spaceflight": {
-      "type": "array",
-      "maxItems": 10,
-      "items": { "$ref": "#/$defs/spaceflightItem" }
-    },
+    "starshipEstimatedLaunch": { "$ref": "#/$defs/starshipEstimatedLaunch" },
     "stories": {
       "type": "array",
       "minItems": 1,
       "maxItems": 10,
       "items": { "$ref": "#/$defs/story" }
-    },
-    "footerJoke": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["text"],
-      "properties": {
-        "text": { "type": "string", "minLength": 1 },
-        "attribution": { "type": "string", "minLength": 1 }
-      }
     }
   },
   "$defs": {
-    "spaceflightItem": {
+    "starshipEstimatedLaunch": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["program", "status", "statusLabel", "targetDate", "sources"],
+      "required": ["status", "estimateLabel", "estimatedLaunchAt", "confidence", "summary", "sources"],
       "properties": {
-        "program": { "type": "string", "minLength": 1 },
         "status": { "enum": ["scheduled", "targeted", "delayed", "completed", "unknown"] },
-        "statusLabel": { "type": "string", "minLength": 1 },
-        "targetDate": {
+        "estimateLabel": { "type": "string", "minLength": 1 },
+        "estimatedLaunchAt": {
           "oneOf": [
             { "type": "string", "format": "date-time" },
             { "type": "null" }
           ]
         },
+        "confidence": { "enum": ["low", "medium", "high", "official"] },
+        "summary": { "type": "string", "minLength": 1 },
+        "photo": { "$ref": "#/$defs/photo" },
         "sources": {
           "type": "array",
           "minItems": 1,
@@ -56,13 +45,22 @@
     "story": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "title", "summary", "caveat", "source", "publishedAt", "topics"],
+      "required": ["id", "title", "summary", "url", "source", "publishedAt", "topics"],
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
         "title": { "type": "string", "minLength": 1 },
         "summary": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "photo": { "$ref": "#/$defs/photo" },
         "caveat": { "type": "string", "minLength": 1 },
-        "source": { "$ref": "#/$defs/source" },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string", "minLength": 1 }
+          }
+        },
         "publishedAt": { "type": "string", "format": "date-time" },
         "topics": {
           "type": "array",
@@ -80,6 +78,17 @@
       "properties": {
         "name": { "type": "string", "minLength": 1 },
         "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "alt"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "alt": { "type": "string", "minLength": 1 },
+        "credit": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" }
       }
     }
   }
