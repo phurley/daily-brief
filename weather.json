@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-23T17:59:25Z",
+  "generatedAt": "2026-08-23T18:01:31Z",
   "location": {
     "name": "Canton",
     "region": "Michigan",
@@ -9,19 +9,19 @@
     "timeZone": "America/Detroit"
   },
   "current": {
-    "observedAt": "2026-08-23T13:45:00-04:00",
+    "observedAt": "2026-08-23T14:00:00-04:00",
     "temperatureF": 73.2,
-    "feelsLikeF": 71.2,
+    "feelsLikeF": 70.3,
     "conditionCode": 0,
     "conditionText": "Clear",
     "icon": "☀",
     "precipitationIn": 0.0,
-    "humidityPercent": 49,
+    "humidityPercent": 48,
     "wind": {
-      "speedMph": 13.3,
+      "speedMph": 13.6,
       "directionDegrees": 297,
       "direction": "WNW",
-      "gustMph": 19.2
+      "gustMph": 19.7
     }
   },
   "daily": [
@@ -114,7 +114,7 @@
     {
       "name": "Open-Meteo",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=42.3086&longitude=-83.4824&current=temperature_2m,apparent_temperature,precipitation,weather_code,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDetroit&forecast_days=7",
-      "retrievedAt": "2026-08-23T17:59:25Z"
+      "retrievedAt": "2026-08-23T18:01:31Z"
     }
   ]
 }
