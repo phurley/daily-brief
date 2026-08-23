@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phurley.github.io/daily-brief/schemas/photos.schema.json",
+  "title": "Daily Brief Photos",
+  "description": "A rolling daily selection of public family photographs for the current collection window, chosen from the same month and day in prior years.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "timeZone",
+    "collectionStart",
+    "collectionEnd",
+    "days"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "timeZone": {
+      "const": "America/Detroit"
+    },
+    "collectionStart": {
+      "type": "string",
+      "format": "date"
+    },
+    "collectionEnd": {
+      "type": "string",
+      "format": "date"
+    },
+    "days": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 62,
+      "description": "One entry for every calendar date from collectionStart through collectionEnd, sorted ascending with no gaps or duplicate dates.",
+      "items": {
+        "$ref": "#/$defs/day"
+      }
+    }
+  },
+  "$defs": {
+    "day": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "date",
+        "photos"
+      ],
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "photos": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 5,
+          "description": "Zero to five best photographs whose original takenDate has the same month and day as date. Array order is best first.",
+          "items": {
+            "$ref": "#/$defs/photo"
+          }
+        }
+      }
+    },
+    "photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "imageUrl",
+        "takenDate",
+        "location",
+        "description"
+      ],
+      "properties": {
+        "imageUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "A public direct URL to the actual photograph, not a gallery, album, API, or thumbnail page."
+        },
+        "takenDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
