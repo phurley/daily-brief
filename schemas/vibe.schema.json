@@ -26,7 +26,7 @@
           "type": "string",
           "description": "The page section that consumes this message, expressed as a kebab-case key.",
           "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-          "not": { "enum": ["footer", "footer-joke", "dad-joke"] }
+          "not": { "enum": ["footer-joke", "dad-joke"] }
         },
         "role": {
           "enum": ["eyebrow", "headline", "section-heading", "summary", "recommendation", "transition", "note"]
