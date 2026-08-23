@@ -4,55 +4,82 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Allison’s Monday Playbook · August 24, 2026</title>
+  <title>Allison's Monday Playbook · August 24, 2026</title>
   <style>
     :root {
-      --night: #12112a;
-      --panel: #1d1a3a;
-      --card: #29254b;
-      --ink: #fffaf2;
-      --muted: #cac4dc;
-      --line: #484167;
-      --coral: #ff8178;
-      --gold: #ffd27f;
-      --mint: #82dfc6;
+      --night: #0c1028;
+      --night-2: #15183b;
+      --panel: #1b1e46;
+      --panel-2: #20244f;
+      --card: #252955;
+      --ink: #fff9ec;
+      --muted: #cbc9dc;
+      --coral: #ff7c72;
+      --coral-soft: rgba(255,124,114,.14);
+      --gold: #f6c85f;
+      --gold-soft: rgba(246,200,95,.13);
+      --mint: #9de4c1;
+      --line: rgba(255,255,255,.13);
+      --line-strong: rgba(255,255,255,.22);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     * { box-sizing: border-box; }
     html { background: var(--night); }
     body {
       margin: 0;
       color: var(--ink);
-      background: radial-gradient(circle at 88% 0, #422454 0, transparent 32rem), var(--night);
-      font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 83% 2%, rgba(255,124,114,.17) 0, transparent 22rem),
+        radial-gradient(circle at 12% 26%, rgba(85,91,181,.25) 0, transparent 28rem),
+        linear-gradient(155deg, #0b1027 0%, #151536 48%, #0c1731 100%);
+      line-height: 1.58;
     }
-    a { color: var(--gold); text-underline-offset: .2em; }
-    a:hover, a:focus-visible { color: #fff1c6; }
-    .shell { width: min(74rem, calc(100% - 2rem)); margin: 0 auto; padding: 3.5rem 0 2rem; }
-    header { max-width: 55rem; padding: 1rem 0 2rem; }
-    h1 { max-width: 13ch; margin: .2rem 0 .8rem; font-size: clamp(2.7rem, 8vw, 5.7rem); line-height: .96; letter-spacing: -.055em; }
-    h2 { margin: .15rem 0 .65rem; font-size: clamp(1.45rem, 3vw, 2.1rem); line-height: 1.08; }
-    h3 { margin: 0 0 .35rem; font-size: 1.05rem; line-height: 1.25; }
-    p { margin: .45rem 0; }
-    main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
-    section { min-width: 0; padding: clamp(1.1rem, 3vw, 1.6rem); border: 1px solid var(--line); border-radius: 1.25rem; background: var(--panel); }
-    section.wide { grid-column: 1 / -1; }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
-    .card, .slot, .callout { margin-top: .75rem; padding: 1rem; border: 1px solid var(--line); border-radius: .9rem; background: var(--card); }
-    .slot { border-left: .28rem solid var(--coral); }
-    .callout { border-color: color-mix(in srgb, var(--mint) 60%, var(--line)); background: color-mix(in srgb, var(--mint) 9%, var(--card)); }
-    .action { margin-top: 1rem; padding: .85rem 1rem; border-radius: .8rem; color: #171226; background: var(--gold); }
-    .action strong { color: #171226; }
-    .eyebrow, .label, .meta { color: var(--gold); font-size: .77rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    a { color: var(--gold); text-decoration-thickness: .08em; text-underline-offset: .2em; }
+    a:hover { color: #ffe09a; }
+    a:focus-visible { outline: .18rem solid var(--mint); outline-offset: .2rem; border-radius: .15rem; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 12ch; margin-bottom: .85rem; font-size: clamp(2.8rem, 7.5vw, 6.4rem); line-height: .91; letter-spacing: -.064em; text-wrap: balance; }
+    h2 { margin-bottom: .75rem; font-size: clamp(1.45rem, 2.8vw, 2.05rem); line-height: 1.08; letter-spacing: -.032em; text-wrap: balance; }
+    h3 { margin-bottom: .4rem; font-size: 1.04rem; line-height: 1.26; letter-spacing: -.01em; }
+    p:last-child { margin-bottom: 0; }
+    .shell { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding: clamp(2rem, 6vw, 5.25rem) 0 2.5rem; }
+    header { position: relative; isolation: isolate; margin-bottom: 1rem; padding: clamp(1.5rem, 4vw, 3.2rem); overflow: hidden; border: 1px solid var(--line-strong); border-radius: 1.6rem; background: linear-gradient(118deg, rgba(34,37,86,.96), rgba(22,25,61,.88)); box-shadow: 0 1.5rem 4rem rgba(0,0,0,.24); }
+    header::before { content: ""; position: absolute; z-index: -1; width: 21rem; height: 21rem; right: -5rem; top: -9rem; border: 1px solid rgba(246,200,95,.32); border-radius: 50%; box-shadow: 0 0 0 3rem rgba(255,124,114,.045), 0 0 0 6rem rgba(246,200,95,.035); }
+    header::after { content: ""; position: absolute; right: clamp(1.5rem, 5vw, 4rem); bottom: clamp(1.4rem, 4vw, 3rem); width: clamp(4rem, 11vw, 8rem); height: .42rem; border-radius: 99rem; background: linear-gradient(90deg, var(--coral), var(--gold)); box-shadow: 0 0 1.2rem rgba(255,124,114,.3); }
+    main { columns: 2 32rem; column-gap: 1rem; }
+    section { display: inline-block; width: 100%; min-width: 0; margin: 0 0 1rem; padding: clamp(1.1rem, 2.6vw, 1.55rem); break-inside: avoid; border: 1px solid var(--line); border-radius: 1.25rem; background: linear-gradient(145deg, rgba(255,255,255,.042), transparent 44%), var(--panel); box-shadow: 0 .9rem 2.5rem rgba(0,0,0,.17); }
+    section:nth-child(even) { background: linear-gradient(145deg, rgba(255,124,114,.035), transparent 44%), var(--panel-2); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+    .card, .slot, .callout { position: relative; margin-top: .72rem; padding: .92rem 1rem; border: 1px solid var(--line); border-radius: .8rem; background: rgba(37,41,85,.92); }
+    .card, .slot { padding-left: 1.35rem; }
+    .card::before, .slot::before { content: ""; position: absolute; left: .62rem; top: 1.15rem; width: .38rem; height: .38rem; border: .13rem solid var(--coral); border-radius: 50%; background: var(--panel); box-shadow: 0 0 0 .18rem var(--coral-soft); }
+    .slot::after { content: ""; position: absolute; left: .86rem; top: 1.82rem; bottom: .65rem; width: 1px; background: linear-gradient(var(--coral), transparent); opacity: .48; }
+    .callout { background: rgba(157,228,193,.075); border-color: rgba(157,228,193,.36); }
+    .action { margin-top: .85rem; padding: .88rem 1rem; border: 1px solid rgba(246,200,95,.55); border-radius: .75rem; color: var(--ink); background: linear-gradient(110deg, var(--gold-soft), var(--coral-soft)); }
+    .action::before { content: "✓"; display: inline-grid; width: 1.35rem; height: 1.35rem; margin-right: .52rem; place-items: center; border-radius: .3rem; color: #1a1730; background: var(--gold); font-size: .83rem; font-weight: 900; vertical-align: -.08rem; }
+    .action strong { color: var(--gold); }
+    .eyebrow, .label, .meta { color: var(--gold); font-size: .72rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow { margin-bottom: 1rem; }
+    .label { display: flex; align-items: center; gap: .55rem; margin-bottom: .55rem; }
+    .label::before { content: ""; width: 1.45rem; height: .18rem; border-radius: 99rem; background: var(--coral); }
+    .meta { margin-bottom: .42rem; line-height: 1.4; }
     .lede, .muted { color: var(--muted); }
-    .lede { max-width: 47rem; font-size: 1.15rem; }
-    .status { display: inline-block; margin-bottom: .55rem; padding: .2rem .55rem; border-radius: 99rem; color: #121025; background: var(--mint); font-size: .74rem; font-weight: 850; }
-    .source { display: inline-block; margin-top: .55rem; font-size: .86rem; }
+    .lede { max-width: 51rem; margin-bottom: 0; font-size: clamp(1rem, 2vw, 1.16rem); }
+    .status { display: inline-block; margin-bottom: .68rem; padding: .26rem .62rem; border: 1px solid rgba(157,228,193,.45); border-radius: .42rem; color: #d7ffec; background: rgba(157,228,193,.1); font-size: .72rem; font-weight: 850; letter-spacing: .025em; }
+    .source { display: inline-block; margin-top: .38rem; font-size: .84rem; }
+    .source-list { margin-bottom: 0; color: var(--muted); font-size: .84rem; line-height: 1.7; }
     [data-allie-event][hidden], [data-allie-time-empty][hidden] { display: none !important; }
-    footer { padding: 2rem 0 0; color: var(--muted); font-size: .86rem; text-align: center; }
-    @media (max-width: 760px) {
-      main, .grid { grid-template-columns: 1fr; }
-      section.wide { grid-column: auto; }
-      .shell { padding-top: 2rem; }
+    footer { padding: 1.2rem 1rem 0; color: var(--muted); font-size: .83rem; text-align: center; }
+    @media (max-width: 700px) {
+      .shell { width: min(100% - 1rem, 38rem); padding-top: .5rem; }
+      header { padding: 1.3rem 1.1rem 1.5rem; border-radius: 0 0 1.25rem 1.25rem; }
+      header::after { display: none; }
+      main { columns: 1; }
+      .grid { grid-template-columns: 1fr; }
+      section { border-radius: 1rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; }
     }
   </style>
 <style id="allie-compact-layout">
@@ -94,147 +121,154 @@
   <div class="shell">
     <header>
       <p class="eyebrow">Night-before playbook · Monday, August 24</p>
-      <h1>Pack light. Pick your people plan.</h1>
-      <p class="lede">Monday looks dry, sunny, and mild. Choose drumming, volleyball, or a group run tonight, then leave the evening open for the two named WNBA matchups or a fresh reality-TV watch.</p>
+      <h1>A dry Monday with room to choose.</h1>
+      <p class="lede">Set out a light layer, pick one social plan before leaving tomorrow, and keep the evening flexible for WNBA or a reality-TV finish.</p>
     </header>
 
     <main>
       <section class="wide" data-brief-section="allie-tomorrow-overview">
         <p class="label">Tomorrow at a glance</p>
-        <h2>Three decisions make Monday easy</h2>
+        <h2>Make Monday easy tonight</h2>
         <div class="grid">
           <article class="slot">
-            <p class="meta">Tonight · choose and confirm</p>
-            <h3>Drumming, volleyball, or the group run</h3>
-            <p>Reserve a rental drum in advance if needed, or confirm an RSVP for volleyball or the run. Remaining general capacity is not shown for any of the three listings.</p>
+            <p class="meta">Tonight · choose</p>
+            <h3>Run, ride, or learn a tabletop game</h3>
+            <p>Kerrytown asks for preregistration, while the Ypsilanti run is the easiest spontaneous option. ShadowDark is free open play; call ahead tonight only if a guaranteed seat matters.</p>
           </article>
           <article class="slot">
-            <p class="meta">Morning · layer up</p>
-            <h3>A cool, low-disruption commute</h3>
-            <p>Set out sunglasses and a light wind-resistant layer. The forecast is dry, with the afternoon reaching about 76°F.</p>
+            <p class="meta">Morning · prepare</p>
+            <h3>Light layer, no default rain gear</h3>
+            <p>Monday is expected to stay dry, with a possible early low-cloud concern and a noticeable west-northwest breeze on exposed routes.</p>
           </article>
           <article class="slot">
-            <p class="meta">8:00 p.m. · WNBA League Pass listed</p>
+            <p class="meta">8:00 PM EDT · USA Network</p>
             <h3>Golden State Valkyries at Minnesota Lynx</h3>
-            <p>The earlier of Monday’s two verified WNBA games begins at 8:00 p.m. Eastern.</p>
+            <p>The earlier nationally available WNBA game is the main sports watch, with Minnesota guard Olivia Miles the individual player to track.</p>
           </article>
           <article class="slot">
-            <p class="meta">10:00 p.m. · Peacock</p>
-            <h3>Atlanta Dream at Los Angeles Sparks</h3>
-            <p>The late-night WNBA option follows at 10:00 p.m. Eastern.</p>
+            <p class="meta">8:00 PM ET · Bravo</p>
+            <h3>The Real Housewives of Atlanta reunion</h3>
+            <p>Season 17 Reunion, Part 3 is the strongest reality-TV fit and is also listed as available on Peacock on August 24.</p>
           </article>
         </div>
-        <p class="action"><strong>Do tonight:</strong> make the activity choice, check that its RSVP accepts you, and pack water, sunglasses, grippy shoes if playing volleyball, plus a light layer for the cooler evening.</p>
+        <p class="action"><strong>Five-minute setup:</strong> set out a light jacket, water, and a charged phone; then confirm the plan that matches tomorrow's energy.</p>
       </section>
 
       <section data-brief-section="allie-tomorrow-weather">
         <p class="label">Weather</p>
-        <h2>Sunny, breezy, and comfortably cool</h2>
-        <p>Detroit’s official point forecast calls for a high near 76°F, west-northwest wind at 9–13 mph with gusts up to 21 mph, then a mostly clear night near 57°F.</p>
+        <h2>Dry, breezy, and cooler than usual</h2>
+        <p>NWS Detroit/Pontiac expects a dry Monday across Metro Detroit, with daytime highs in the lower to upper 70s and slightly below-normal late-August temperatures.</p>
         <article class="slot">
-          <p class="meta">6:30–9:30 a.m.</p>
-          <h3>Cool, dry commute</h3>
-          <p>Low weather disruption is expected. A light layer will help with the cool start and breeze.</p>
+          <p class="meta">6:30–9:00 AM EDT</p>
+          <h3>Cool commute, possible low clouds</h3>
+          <p>An early low cloud deck or ceiling concern is possible. No rain or wet-road plan is indicated; a light layer will help on the walk to and from parking.</p>
         </article>
         <article class="slot">
-          <p class="meta">11:00 a.m.–5:00 p.m.</p>
-          <h3>Best outdoor window</h3>
-          <p>Sunny near 76°F with no precipitation listed. Gusts may matter for ball sports, so secure loose gear.</p>
+          <p class="meta">11:30 AM–2:00 PM EDT</p>
+          <h3>Low-risk outdoor window</h3>
+          <p>Dry conditions head toward a high in the 70s. It is a comfortable window for a lunch walk, errands, or a short run.</p>
         </article>
         <article class="slot">
-          <p class="meta">5:00–9:00 p.m.</p>
-          <h3>Dry, then cooler</h3>
-          <p>Conditions remain dry into a mostly clear night. Bring a layer as temperatures head toward 57°F.</p>
+          <p class="meta">5:00–8:30 PM EDT</p>
+          <h3>Green light for an active plan</h3>
+          <p>It remains dry while temperatures ease from the day's peak. Open courts and waterfront paths may feel cooler in the breeze, so bring the light layer back home.</p>
         </article>
-        <p class="callout"><strong>Air quality check:</strong> no Detroit-specific numeric AQI forecast or active alert for Monday was available from the official pages retrieved. Check AirNow or Michigan EGLE before a hard run; this is not a claim that air quality will be Good.</p>
-        <a class="source" href="https://forecast.weather.gov/MapClick.php?lat=42.383&amp;lon=-83.1022">NWS Detroit point forecast</a> ·
-        <a class="source" href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a> ·
-        <a class="source" href="https://www.michigan.gov/egle/public/learn/air-quality">Michigan EGLE air quality</a>
+        <p class="callout"><strong>Air quality:</strong> an official next-day Detroit AQI value was unavailable at collection time, and no action-day notice was verified. Check the official local page before a hard outdoor workout, especially if sensitive to ozone or smoke.</p>
+        <p class="source-list"><a href="https://forecast.weather.gov/product.php?issuedby=DTX&amp;product=AFD&amp;site=DTX">NWS Detroit/Pontiac forecast discussion</a> · <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a> · <a href="https://www.michigan.gov/egle/public/learn/air-quality">Michigan EGLE air quality</a></p>
       </section>
 
       <section data-brief-section="allie-tomorrow-sports">
         <p class="label">Sports</p>
-        <h2>A two-game WNBA night</h2>
+        <h2>Two named WNBA matchups</h2>
         <article class="card">
-          <p class="meta">8:00 p.m. ET · WNBA League Pass listed</p>
+          <p class="meta">8:00 PM EDT · USA Network</p>
           <h3>Golden State Valkyries at Minnesota Lynx</h3>
-          <p>Target Center in Minneapolis hosts Monday’s earlier national-league watch.</p>
-          <a class="source" href="https://www.wnba.com/game/gsv-vs-min-1022600282">Official game page</a>
+          <p>Target Center in Minneapolis hosts the earlier game. Minnesota rookie guard Olivia Miles enters as the August 18 Western Conference Player of the Week.</p>
+          <a class="source" href="https://lynx.wnba.com/news/minnesota-lynx-announce-2026-broadcast-schedule">Minnesota broadcast schedule</a> ·
+          <a class="source" href="https://lynx.wnba.com/news/minnesota-lynx-guard-olivia-miles-named-western-conference-player-of-the-week">Olivia Miles update</a>
         </article>
         <article class="card">
-          <p class="meta">10:00 p.m. ET · Peacock</p>
+          <p class="meta">10:00 PM EDT · Peacock</p>
           <h3>Atlanta Dream at Los Angeles Sparks</h3>
-          <p>The late game is at Crypto.com Arena in Los Angeles.</p>
-          <a class="source" href="https://www.wnba.com/game/1022600283">Official game page</a>
+          <p>The other Monday WNBA game is the optional West Coast follow-up at crypto.com Arena in Los Angeles.</p>
+          <a class="source" href="https://dream.wnba.com/news/atlanta-dream-renews-partnership-with-gray-media-for-local-broadcasts-and-announces-2026-national-broadcast-schedule">Atlanta broadcast schedule</a>
         </article>
         <div class="callout">
-          <h3>No local attendance decision Monday</h3>
-          <p>The Detroit Pistons, Detroit Lions, and Detroit City FC do not play Monday. The Lions’ next preseason game is at Indianapolis on Saturday, August 29 at 1:00 p.m. EDT; Detroit City FC’s next fixture is at Louisville City FC that Saturday.</p>
+          <h3>No Pistons, Lions, or Detroit City FC game Monday</h3>
+          <p>The Pistons are in the NBA offseason. The Lions next play at Indianapolis on Saturday, August 29 at 1:00 PM EDT, and Detroit City FC next plays at Louisville City FC that Saturday at 8:00 PM EDT.</p>
         </div>
-        <p class="muted"><strong>Fantasy note:</strong> no verified tonight deadline applies. Sam LaPorta’s hip issue is a monitor, not a Monday lineup move; recheck Detroit’s next injury or practice update before drafting or setting a preseason slate.</p>
-        <a class="source" href="https://www.detroitlions.com/schedule/">Detroit Lions schedule</a> ·
-        <a class="source" href="https://www.detroitlions.com/news/camp-notes-laporta-full-go-at-practice">Lions camp report</a> ·
-        <a class="source" href="https://www.nfl.com/teams/detroit-lions/">NFL Detroit Lions page</a>
+        <p class="muted"><strong>Lions roster and fantasy watch:</strong> Monday may bring transaction monitoring after Sunday's reduction from 85 to 80 players. Do not make an add/drop solely on a roster-bubble signal; recheck after the August 30 final cutdown and August 31 waiver period.</p>
+        <p class="source-list"><a href="https://www.detroitlions.com/schedule/">Detroit Lions schedule</a> · <a href="https://www.detcityfc.com/mens-schedule/">Detroit City FC schedule</a> · <a href="https://www.detroitlions.com/team/transactions/">Detroit Lions transactions</a> · <a href="https://www.wnba.com/keydates">WNBA key dates</a></p>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-plans" data-allie-time-rotation>
-        <p class="label">Tomorrow’s time rotation</p>
+        <p class="label">Tomorrow's time rotation</p>
         <h2>The active or next verified option</h2>
-        <p class="muted">These three options are ordered across Monday. The shared time rotation will display only the active or next card.</p>
+        <p class="muted">The cards are ordered by Monday start time. Listings without a published end time rotate away immediately after their start rather than implying an unverified duration; the shared rotation displays only the active or next card.</p>
 
-        <article class="card" data-allie-event data-start-at="2026-08-24T16:00:00-04:00" data-end-at="2026-08-24T18:00:00-04:00">
-          <span class="status">4:00–6:00 p.m. · suggested $10–30</span>
-          <h3>African Drum Lessons in Royal Oak</h3>
-          <p class="meta">Centennial Commons · E 3rd St &amp; S Troy St, Royal Oak</p>
-          <p>Beginners and experienced players are welcome for an interactive West African djembe lesson. Bring a drum or reserve one in advance; the listing names only three $10 rentals.</p>
-          <p>Confirm on Meetup before leaving. General RSVP capacity is not displayed.</p>
-          <a class="source" href="https://www.meetup.com/detroit-drumming-circle-meetup/events/315978639/?eventOrigin=group_upcoming_events">Official event listing</a>
+        <article class="card" data-allie-event data-start-at="2026-08-24T18:00:00-04:00" data-end-at="2026-08-24T18:00:01-04:00">
+          <span class="status">6:00 PM EDT · free · end time not published</span>
+          <h3>Monday Night Group Run</h3>
+          <p class="meta">Arbor Brewing Company — Corner Brewery · Ypsilanti</p>
+          <p>Run anywhere from 0.1 to 5K with an inclusive, beginner-friendly group. No RSVP, fee, or capacity requirement is published, so arrive ready to run.</p>
+          <p>The brewery start and finish make this the easiest spontaneous, low-pressure social option.</p>
+          <a class="source" href="https://www.annarborrunningcompany.com/pages/group-runs">Organizer's group-run page</a>
         </article>
 
-        <article class="card" hidden data-allie-event data-start-at="2026-08-24T18:00:00-04:00" data-end-at="2026-08-24T20:00:00-04:00">
-          <span class="status">6:00–8:00 p.m. · all skill levels</span>
-          <h3>Volleyball at Gallup Park</h3>
-          <p class="meta">3175 Gallup Park Rd, Ann Arbor</p>
-          <p>Grass volleyball with multiple hosts. Bring grippy shoes and water; follow the organizer’s directions over the wooden bridge to the third parking lot, then across the pond to the play area.</p>
-          <p>RSVP through the official page and treat capacity as unconfirmed until it accepts the RSVP. Forecast gusts could affect play.</p>
-          <a class="source" href="https://www.meetup.com/a2adventurers/events/315979965/?eventOrigin=city_outdoor_activities_events">Official event listing</a>
+        <article class="card" hidden data-allie-event data-start-at="2026-08-24T18:00:00-04:00" data-end-at="2026-08-24T21:00:00-04:00">
+          <span class="status">6:00–9:00 PM EDT · free</span>
+          <h3>ShadowDark Open Play</h3>
+          <p class="meta">R U Game · 1345 E Michigan Ave, Saline</p>
+          <p>New and experienced players are welcome. Pre-generated characters and rules teaching are provided, making introductions natural in a cooperative learn-as-you-play format.</p>
+          <p>No ticket, RSVP, or capacity limit is listed. Call the store before driving only if a guaranteed seat matters.</p>
+          <a class="source" href="https://r-u-game.com/">R U Game</a> ·
+          <a class="source" href="https://annarborobserver.com/calendar/week/2026-08-23/">Verified weekly listing</a>
         </article>
 
-        <article class="card" hidden data-allie-event data-start-at="2026-08-24T18:30:00-04:00" data-end-at="2026-08-24T20:00:00-04:00">
-          <span class="status">6:30–8:00 p.m. · generally about five miles</span>
+        <article class="card" hidden data-allie-event data-start-at="2026-08-24T18:00:00-04:00" data-end-at="2026-08-24T18:00:01-04:00">
+          <span class="status">6:00 PM EDT · arrive 10 minutes early if new · end time not published</span>
+          <h3>Ann Arbor Velo Club group ride</h3>
+          <p class="meta">Barton Nature Area · 1010 W Huron River Dr, Ann Arbor</p>
+          <p>A moderate-paced 20-mile ride for riders prepared with a helmet, water, and flat-repair supplies. Nonmembers sign a waiver at the start.</p>
+          <p>No advance registration or capacity limit is published. Conversation is likeliest before and after the ride.</p>
+          <a class="source" href="https://annarborveloclub.org/">Ann Arbor Velo Club</a>
+        </article>
+
+        <article class="card" hidden data-allie-event data-start-at="2026-08-24T18:30:00-04:00" data-end-at="2026-08-24T18:30:01-04:00">
+          <span class="status">6:30 PM EDT · free · end time not published</span>
           <h3>Monday Group Run from Kerrytown</h3>
-          <p class="meta">Kerrytown Clocktower · Ann Arbor</p>
-          <p>Routes have ways to shorten them. Be ready to run at 6:30 p.m.; bring ID and a wallet if joining the group’s possible food or drink stop afterward.</p>
-          <p>Use the official page to RSVP or confirm attendance; no public remaining-capacity indicator is shown.</p>
-          <a class="source" href="https://www.meetup.com/a2runners/events/315980475/?eventOrigin=city_sports_and_fitness_events">Official event listing</a>
+          <p class="meta">Kerrytown Clock Tower · Ann Arbor</p>
+          <p>Beginner and advanced groups cover 3 to 5 miles, followed by coffee-shop socializing. Preregistration is requested, and no remaining-capacity count is published, so RSVP before leaving.</p>
+          <a class="source" href="https://www.meetup.com/a2runners/">Ann Arbor Runners listing</a>
         </article>
 
         <div data-allie-time-empty hidden>No active or upcoming sourced Monday option remains in the rotation.</div>
-        <p class="action"><strong>Choose one:</strong> volleyball is the clearest sports-and-social match; the run offers a possible food-and-drink extension; drumming is the novel early alternative. Volleyball and the run overlap.</p>
+        <p class="action"><strong>Choose tonight:</strong> Kerrytown is the best overall social fit, Ypsilanti is easiest to do spontaneously, ShadowDark is the novel indoor option, and the ride is the structured endurance alternative.</p>
       </section>
 
       <section data-brief-section="allie-tomorrow-entertainment">
         <p class="label">Entertainment</p>
-        <h2>Fresh Monday streaming picks</h2>
+        <h2>Three fresh Monday options</h2>
         <article class="card">
-          <p class="meta">Monday · release time not verified · Bravo / Peacock</p>
+          <p class="meta">8:00 PM ET · Bravo · Peacock availability listed August 24</p>
           <h3>The Real Housewives of Atlanta — Season 17 Reunion, Part 3</h3>
-          <p>The most directly on-profile option: a fresh reunion episode for an easy post-work reality-TV watch.</p>
-          <a class="source" href="https://www.tomsguide.com/entertainment/peacock/new-on-peacock-in-august-2026-all-the-new-shows-and-movies-to-watch">August streaming listing</a>
+          <p>The concluding reunion installment is the most direct fun-reality-TV match for an easy post-work watch.</p>
+          <a class="source" href="https://www.tvline.com/2227083/august-2026-tv-schedule-what-to-watch-printable-calendar-premieres-finales-list/">August TV schedule</a> ·
+          <a class="source" href="https://www.tomsguide.com/entertainment/peacock/new-on-peacock-in-august-2026-all-the-new-shows-and-movies-to-watch">Peacock's August listing</a>
         </article>
         <article class="card">
           <p class="meta">Monday · release time not verified · Peacock</p>
           <h3>Days of Our Lives — Season 62 premiere</h3>
-          <p>A campy, high-melodrama premiere when the mood calls for something fun and unserious.</p>
-          <a class="source" href="https://www.tomsguide.com/entertainment/peacock/new-on-peacock-in-august-2026-all-the-new-shows-and-movies-to-watch">August streaming listing</a>
+          <p>A new-season, high-melodrama choice for an intentionally unserious watch.</p>
+          <a class="source" href="https://www.tomsguide.com/entertainment/peacock/new-on-peacock-in-august-2026-all-the-new-shows-and-movies-to-watch">Peacock's August listing</a>
         </article>
         <article class="card">
-          <p class="meta">Monday · three-episode binge · The Roku Channel</p>
-          <h3>NFL Hometown Eats</h3>
-          <p>A sports-adjacent food series featuring NFL players and celebrity guests, including a Davante Adams episode.</p>
-          <a class="source" href="https://www.tvline.com/2239886/what-to-watch-week-of-august-23-2026-tv-shows-movies/">Weekly viewing listing</a>
+          <p class="meta">Monday · release time not verified · The Roku Channel</p>
+          <h3>NFL Hometown Eats — three-episode binge</h3>
+          <p>A light sports-and-food binge with NFL-player pairings, including Davante Adams.</p>
+          <a class="source" href="https://www.tvline.com/2227083/august-2026-tv-schedule-what-to-watch-printable-calendar-premieres-finales-list/">August TV schedule</a>
         </article>
-        <p class="callout">No verified Monday pop release or Metro Detroit or Ann Arbor pop event was identified in the reviewed sources, so none is asserted here.</p>
+        <p class="callout">No verified Monday pop release or Metro Detroit or Ann Arbor pop event was identified in the reviewed listings, so none is included.</p>
       </section>
 
       <section data-brief-section="allie-tomorrow-prepare"><!-- allie-market-tracker:start -->
@@ -247,32 +281,30 @@
 </div>
 <!-- allie-market-tracker:end -->
 
-        
-        <p class="label">Prepare for Monday</p>
-        <h2>Two short data checkpoints</h2>
+        <p class="label">Prepare tonight</p>
+        <h2>Only if either deadline applies</h2>
         <article class="card">
-          <p class="meta">8:30 a.m. ET</p>
-          <h3>Chicago Fed National Activity Index</h3>
-          <p>Set a 10-minute check-in for the July 2026 release. Compare the headline, three-month average, and category contributions with the prior reading.</p>
-          <a class="source" href="https://www.chicagofed.org/research/data/data-release-calendar">Chicago Fed release calendar</a> ·
-          <a class="source" href="https://www.chicagofed.org/research/data/cfnai/current-data">CFNAI current data</a>
+          <p class="meta">Monday, August 24 · 11:59 PM Anywhere on Earth</p>
+          <h3>AAAI-27 AI Alignment supplementary material and code</h3>
+          <p>If an AI Alignment track submission is already in, package the reproducible code, supplementary files, and final upload checklist tonight. The full-paper deadline has already passed.</p>
+          <a class="source" href="https://aaai.org/conference/aaai/aaai-27/aia-call/">Official AAAI-27 call</a>
         </article>
         <article class="card">
-          <p class="meta">10:00 a.m. ET</p>
-          <h3>Chicago Fed Survey of Economic Conditions</h3>
-          <p>Open the August 2026 release when it posts and save one takeaway relevant to Midwest demand or hiring for the week.</p>
-          <a class="source" href="https://www.chicagofed.org/research/data/data-release-calendar">Chicago Fed release calendar</a>
+          <p class="meta">Monday, August 24 · exact cutoff time not stated</p>
+          <h3>TOMMI Games Award 2026 publisher entry</h3>
+          <p>If a qualifying youth-focused game falls in the eligible publishing window, check eligibility and budget tonight, complete the online entry, and line up the required 20 games or codes. The listed standard fee is €299 plus VAT per title; late entries may be accepted.</p>
+          <a class="source" href="https://tommi.kids/en/kindersoftwarepreis/teilnehmen/publisher/">TOMMI publisher entry details</a>
         </article>
         <div class="callout">
-          <h3>Live market tracker space</h3>
-          <p>The shared tracker added after design covers VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV. It is informational, not investment advice.</p>
+          <h3>Space reserved for the shared live market tracker</h3>
+          <p>It will cover VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV after design. It is informational, not investment advice.</p>
         </div>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-family">
         <p class="label">Family</p>
-        <h2>The family calendar is clear Monday</h2>
-        <p>The available Hurley Family calendar contains no safe actionable events for August 24.</p>
+        <h2>The available family calendar is clear Monday</h2>
+        <p>The Hurley Family calendar is available and contains no safe actionable events for August 24.</p>
         <div class="grid">
           <article class="card">
             <h3>Birthdays · August 24</h3>
@@ -283,12 +315,12 @@
             <p>None listed.</p>
           </article>
         </div>
-        <p class="callout"><strong>Shared public photo archive:</strong> no suitable exact-date match was found. The public API endpoint could not be reached in this run, so no image, date, location, or metadata is asserted.</p>
+        <p class="callout"><strong>Shared public photo archive:</strong> no suitable exact-date match was found. The archive could not be reached through the available network paths, so no image, capture date, location, or descriptive metadata is asserted.</p>
         <a class="source" href="https://photos.hurleyhome.com/">Shared public photo archive</a>
       </section>
     </main>
 
-    <footer>Prepared Sunday, August 23 for Monday, August 24, 2026 · Times are Eastern.</footer>
+    <footer>Prepared Sunday, August 23 for Monday, August 24, 2026 · Times are Eastern unless otherwise noted.</footer>
   </div>
 <script id="allie-compact-layout-script">
   (() => {
