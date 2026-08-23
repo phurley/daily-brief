@@ -297,7 +297,7 @@ function forecastRangeCard(days) {
       node("strong", { text: `${Math.round(forecast.highF)}° / ${Math.round(forecast.lowF)}°` }),
     ]),
     node("h3", { text: forecast.conditionText }),
-    node("p", { className: "forecast-day__detail", text: `${forecast.precipitationChancePercent}% rain · ${forecast.narrative}` }),
+    node("p", { className: "forecast-day__detail", text: `${forecast.precipitationChancePercent}% chance of rain`, title: forecast.narrative }),
   ]));
   return node("article", { className: "weather-card weather-card--forecast" }, columns);
 }
