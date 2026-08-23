@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phurley.github.io/daily-brief/schemas/calendar.schema.json",
+  "title": "Daily Brief Calendar",
+  "description": "Birthdays, appointments, reminders, and other dated items used by the Daily Brief.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "timeZone", "items"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "timeZone": { "type": "string", "minLength": 1 },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/calendarItem" }
+    }
+  },
+  "$defs": {
+    "calendarItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "title", "date"],
+      "dependentRequired": {
+        "endTime": ["startTime"]
+      },
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "type": {
+          "enum": ["birthday", "appointment", "reminder", "anniversary", "holiday", "event", "task", "other"]
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "date": { "type": "string", "format": "date" },
+        "startTime": {
+          "type": "string",
+          "description": "Local 24-hour time in HH:MM format.",
+          "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]$"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "Local 24-hour time in HH:MM format.",
+          "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]$"
+        },
+        "timeZone": {
+          "type": "string",
+          "description": "Overrides the file-level IANA time zone for this item.",
+          "minLength": 1
+        },
+        "status": { "enum": ["confirmed", "tentative", "completed", "cancelled"] },
+        "person": { "type": "string", "minLength": 1 },
+        "location": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "remindBeforeMinutes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "integer", "minimum": 0 }
+        },
+        "recurrence": { "$ref": "#/$defs/recurrence" }
+      }
+    },
+    "recurrence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frequency"],
+      "properties": {
+        "frequency": { "enum": ["daily", "weekly", "monthly", "yearly"] },
+        "interval": { "type": "integer", "minimum": 1, "default": 1 },
+        "daysOfWeek": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "enum": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"] }
+        },
+        "until": { "type": "string", "format": "date" }
+      }
+    }
+  }
+}
