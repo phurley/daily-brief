@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phurley.github.io/daily-brief/schemas/geeknews.schema.json",
+  "title": "Daily Brief Geek News",
+  "description": "Science and technology stories, spaceflight watch, and the footer joke for the Daily Brief.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "editionDate", "spaceflight", "stories", "footerJoke"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "editionDate": { "type": "string", "format": "date" },
+    "spaceflight": {
+      "type": "array",
+      "maxItems": 10,
+      "items": { "$ref": "#/$defs/spaceflightItem" }
+    },
+    "stories": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": { "$ref": "#/$defs/story" }
+    },
+    "footerJoke": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "attribution": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "$defs": {
+    "spaceflightItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["program", "status", "statusLabel", "targetDate", "sources"],
+      "properties": {
+        "program": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["scheduled", "targeted", "delayed", "completed", "unknown"] },
+        "statusLabel": { "type": "string", "minLength": 1 },
+        "targetDate": {
+          "oneOf": [
+            { "type": "string", "format": "date-time" },
+            { "type": "null" }
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/source" }
+        }
+      }
+    },
+    "story": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "summary", "caveat", "source", "publishedAt", "topics"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "title": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "caveat": { "type": "string", "minLength": 1 },
+        "source": { "$ref": "#/$defs/source" },
+        "publishedAt": { "type": "string", "format": "date-time" },
+        "topics": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "localConnection": { "type": "string", "minLength": 1 }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}
