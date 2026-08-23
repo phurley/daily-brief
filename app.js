@@ -212,12 +212,13 @@ function renderMasthead() {
   renderDayContext();
 }
 
-function weatherCard(label, title, big, body, facts = []) {
-  const card = node("article", { className: "weather-card" }, [
+function weatherCard(label, title, big, body, facts = [], options = {}) {
+  const card = node("article", { className: `weather-card${options.className ? ` ${options.className}` : ""}` }, [
     node("span", { className: "weather-card__label", text: label }),
     big ? node("strong", { className: "weather-card__big", text: big }) : null,
     node("h3", { text: title }),
     body ? node("p", { text: body }) : null,
+    options.icon ? node("span", { className: "weather-card__icon", text: options.icon, "aria-hidden": "true" }) : null,
   ]);
   if (facts.length) {
     const list = node("dl", { className: "weather-facts" });
@@ -227,6 +228,61 @@ function weatherCard(label, title, big, body, facts = []) {
     card.append(list);
   }
   return card;
+}
+
+function moonIlluminationPath(percent, waxing) {
+  const illumination = Math.min(1, Math.max(0, percent / 100));
+  const center = 50;
+  const radius = 46;
+  const steps = 64;
+  const terminator = [];
+  const limb = [];
+  for (let index = 0; index <= steps; index += 1) {
+    const y = -radius + (radius * 2 * index) / steps;
+    const width = Math.sqrt(Math.max(0, radius ** 2 - y ** 2));
+    const boundary = waxing
+      ? center + (1 - 2 * illumination) * width
+      : center + (2 * illumination - 1) * width;
+    terminator.push([boundary, center + y]);
+    limb.push([center + (waxing ? width : -width), center + y]);
+  }
+  const points = waxing
+    ? [...terminator, ...limb.reverse()]
+    : [...limb, ...terminator.reverse()];
+  return `${points.map(([x, y], index) => `${index ? "L" : "M"}${x.toFixed(2)},${y.toFixed(2)}`).join(" ")} Z`;
+}
+
+function moonGraphic(moon) {
+  const waxing = moon.phase.startsWith("waxing") || moon.phase === "first-quarter";
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", "moon-disc");
+  svg.setAttribute("viewBox", "0 0 100 100");
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", moon.imageAlt || `${moon.summary}, ${Math.round(moon.illuminationPercent)} percent illuminated`);
+  const dark = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  dark.setAttribute("class", "moon-disc__dark");
+  dark.setAttribute("cx", "50");
+  dark.setAttribute("cy", "50");
+  dark.setAttribute("r", "46");
+  const light = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  light.setAttribute("class", "moon-disc__light");
+  light.setAttribute("d", moonIlluminationPath(moon.illuminationPercent, waxing));
+  svg.append(dark, light);
+  return svg;
+}
+
+function moonWeatherCard(day, holiday) {
+  const moon = day.moon;
+  const detail = node("div", {}, [
+    node("strong", { className: "weather-card__big", text: `${Math.round(moon.illuminationPercent)}%` }),
+    node("h3", { text: moon.phase.replaceAll("-", " ") }),
+    moon.moonrise ? node("p", { text: `Moonrise ${displayTime(moon.moonrise)}` }) : null,
+  ]);
+  return node("article", { className: "weather-card moon-card" }, [
+    node("span", { className: "weather-card__label", text: "Night sky" }),
+    node("div", { className: "moon-layout" }, [moonGraphic(moon), detail]),
+    holiday ? node("p", { text: holiday.description }) : null,
+  ]);
 }
 
 function renderWeather() {
@@ -245,8 +301,9 @@ function renderWeather() {
       `${Math.round(current?.temperatureF ?? forecast.highF)}°`,
       forecast.narrative,
       current ? [["Feels", `${Math.round(current.feelsLikeF)}°`], ["Wind", `${Math.round(current.wind.speedMph)} mph ${current.wind.direction}`]] : [["High", `${Math.round(forecast.highF)}°`], ["Low", `${Math.round(forecast.lowF)}°`]],
+      { icon: current?.icon || forecast.icon },
     ));
-    cards.push(weatherCard("The range", "High & low", `${Math.round(forecast.highF)}° / ${Math.round(forecast.lowF)}°`, forecast.conditionText, [["Rain", `${forecast.precipitationChancePercent}%`], ["Icon", forecast.icon]]));
+    cards.push(weatherCard("The range", "High & low", `${Math.round(forecast.highF)}° / ${Math.round(forecast.lowF)}°`, forecast.conditionText, [["Rain", `${forecast.precipitationChancePercent}%`]]));
   }
   if (forecast || day) {
     cards.push(weatherCard("Daylight", "Sunrise to sunset", "", "", [
@@ -255,10 +312,7 @@ function renderWeather() {
     ]));
   }
   if (day?.moon) {
-    cards.push(weatherCard("Night sky", day.moon.summary, `${Math.round(day.moon.illuminationPercent)}%`, holiday?.description || "", [
-      ["Moonrise", displayTime(day.moon.moonrise) || "—"],
-      ["Phase", day.moon.phase.replaceAll("-", " ")],
-    ]));
+    cards.push(moonWeatherCard(day, holiday));
   } else if (holiday) {
     cards.push(weatherCard("Almanac", holiday.name, "", holiday.description));
   }
@@ -413,9 +467,25 @@ function uniqueEvents() {
   return [...map.values()];
 }
 
+function eventStartDate(event) {
+  return event.start?.slice(0, 10) || "";
+}
+
+function eventEndDate(event) {
+  return (event.end || event.start)?.slice(0, 10) || "";
+}
+
+function eventIsActiveOn(event, key) {
+  const start = eventStartDate(event);
+  const end = eventEndDate(event);
+  return Boolean(start && end && start <= key && end >= key);
+}
+
 function renderEvents() {
   const allEvents = uniqueEvents();
-  const events = allEvents.filter((event) => event.start?.slice(0, 10) === state.selectedDate);
+  const events = allEvents
+    .filter((event) => eventIsActiveOn(event, state.selectedDate))
+    .sort((a, b) => (b.score || 0) - (a.score || 0) || a.start.localeCompare(b.start));
   const cards = events.map((event) => {
     const title = node("h3");
     title.append(safeLink(event.title, event.url));
@@ -432,21 +502,25 @@ function renderEvents() {
 
   const end = shiftDate(state.selectedDate, 30);
   const future = allEvents
-    .filter((event) => event.start?.slice(0, 10) > state.selectedDate && event.start.slice(0, 10) <= end)
+    .filter((event) => eventEndDate(event) >= state.selectedDate && eventStartDate(event) > state.selectedDate && eventStartDate(event) <= end)
     .sort((a, b) => a.start.localeCompare(b.start))
     .slice(0, 6);
   const plan = $("#plan-ahead");
   plan.replaceChildren();
   if (future.length) {
     plan.append(node("h3", { text: message("plan-ahead", "section-heading", "Worth penciling in") }));
-    const list = node("ol");
+    const list = node("div", { className: "claim-grid" });
     for (const event of future) {
-      const item = node("li");
-      item.append(safeLink(event.title, event.url), document.createTextNode(` — ${event.dateLabel}`));
-      list.append(item);
+      const title = node("strong");
+      title.append(safeLink(event.title, event.url));
+      list.append(node("article", { className: "claim" }, [
+        node("time", { text: event.dateLabel, datetime: eventStartDate(event) }),
+        title,
+      ]));
     }
     plan.append(list);
   }
+  refreshShelfControls();
 }
 
 function renderStories(kind) {
@@ -474,6 +548,7 @@ function renderStories(kind) {
   $(noteSelector).textContent = [message(section, "summary", fallback), carryForward].filter(Boolean).join(" ");
   if (kind === "news") $("#news-title").textContent = message(section, "section-heading", "The local signal");
   else $("#geek-title").textContent = message(section, "section-heading", "Science & technology");
+  refreshShelfControls();
 }
 
 function renderStarship() {
@@ -743,6 +818,40 @@ function updateNavigation() {
   next.setAttribute("aria-label", `Show ${displayDate(shiftDate(state.selectedDate, 1))}`);
 }
 
+function updateShelfControl(shelf) {
+  const track = shelf.querySelector(".shelf__track");
+  const previous = shelf.querySelector("[data-shelf-previous]");
+  const next = shelf.querySelector("[data-shelf-next]");
+  if (!track || !previous || !next) return;
+  const overflow = track.scrollWidth > track.clientWidth + 2;
+  previous.hidden = !overflow;
+  next.hidden = !overflow;
+  if (!overflow) return;
+  previous.disabled = track.scrollLeft <= 2;
+  next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+}
+
+function refreshShelfControls() {
+  window.requestAnimationFrame(() => {
+    document.querySelectorAll("[data-shelf]").forEach(updateShelfControl);
+  });
+}
+
+function bindShelfControls() {
+  document.querySelectorAll("[data-shelf]").forEach((shelf) => {
+    const track = shelf.querySelector(".shelf__track");
+    const previous = shelf.querySelector("[data-shelf-previous]");
+    const next = shelf.querySelector("[data-shelf-next]");
+    if (!track || !previous || !next) return;
+    const move = (direction) => track.scrollBy({ left: direction * track.clientWidth * .88, behavior: "smooth" });
+    previous.addEventListener("click", () => move(-1));
+    next.addEventListener("click", () => move(1));
+    track.addEventListener("scroll", () => updateShelfControl(shelf), { passive: true });
+    updateShelfControl(shelf);
+  });
+  window.addEventListener("resize", refreshShelfControls);
+}
+
 function render() {
   renderMasthead();
   renderWeather();
@@ -755,6 +864,7 @@ function render() {
   renderStarship();
   renderUpdatedLabel();
   updateNavigation();
+  refreshShelfControls();
 }
 
 function selectDate(key, { history = true } = {}) {
@@ -813,6 +923,7 @@ function bindEvents() {
   $("#next-day").addEventListener("click", () => selectDate(shiftDate(state.selectedDate, 1)));
   $("#today-button").addEventListener("click", () => selectDate(state.today));
   $("#new-joke").addEventListener("click", () => loadJoke({ force: true }));
+  bindShelfControls();
   document.addEventListener("visibilitychange", () => document.hidden ? stopPhotoShow() : startPhotoShow());
   window.addEventListener("popstate", () => selectDate(new URL(window.location).searchParams.get("date") || state.today, { history: false }));
 }

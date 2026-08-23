@@ -7,8 +7,8 @@
     <meta name="description" content="A living daily brief for southeast Michigan.">
     <title>Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="theme.css?v=20260823-3">
-    <script type="module" src="app.js?v=20260823-3"></script>
+    <link rel="stylesheet" href="theme.css?v=20260823-4">
+    <script type="module" src="app.js?v=20260823-4"></script>
   </head>
   <body>
     <a class="skip-link" href="#brief">Skip to the brief</a>
@@ -20,6 +20,9 @@
         <span class="celestial__moon"></span>
       </div>
       <div class="shell sky__content">
+        <p id="masthead-eyebrow" class="eyebrow">Your southeast Michigan daily brief</p>
+        <h1 id="page-title">A good day,<br>well considered.</h1>
+        <p id="masthead-summary" class="sky__summary">Gathering the weather, local signals, and a few worthwhile detours.</p>
         <nav class="date-nav" aria-label="Brief date">
           <button id="previous-day" class="date-nav__button" type="button">
             <span aria-hidden="true">←</span> <span class="date-nav__label">Yesterday</span>
@@ -29,10 +32,6 @@
             <span class="date-nav__label">Tomorrow</span> <span aria-hidden="true">→</span>
           </button>
         </nav>
-
-        <p id="masthead-eyebrow" class="eyebrow">Your southeast Michigan daily brief</p>
-        <h1 id="page-title">A good day,<br>well considered.</h1>
-        <p id="masthead-summary" class="sky__summary">Gathering the weather, local signals, and a few worthwhile detours.</p>
         <div class="sky__meta">
           <time id="edition-date"></time>
           <span id="location-label">Canton, Michigan</span>
@@ -68,7 +67,11 @@
           <h2 id="events-title">Nearby &amp; notable</h2>
           <p id="events-note">Good reasons to leave the house.</p>
         </header>
-        <div id="events-list" class="card-grid"></div>
+        <div class="shelf" data-shelf>
+          <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous events" data-shelf-previous>←</button>
+          <div id="events-list" class="card-grid shelf__track"></div>
+          <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More events" data-shelf-next>→</button>
+        </div>
         <div id="plan-ahead" class="plan-ahead"></div>
       </section>
 
@@ -88,7 +91,11 @@
           <h2 id="news-title">The local signal</h2>
           <p id="news-note">What is moving around Michigan.</p>
         </header>
-        <div id="news-list" class="story-list"></div>
+        <div class="shelf" data-shelf>
+          <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous local stories" data-shelf-previous>←</button>
+          <div id="news-list" class="story-list shelf__track"></div>
+          <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More local stories" data-shelf-next>→</button>
+        </div>
       </section>
 
       <section id="geek-section" class="panel panel--geek" aria-labelledby="geek-title">
@@ -99,7 +106,11 @@
         </header>
         <aside id="rocket-launches" class="rocket-launches" aria-live="polite" hidden></aside>
         <aside id="starship" class="launch-note"></aside>
-        <div id="geek-list" class="story-list"></div>
+        <div class="shelf" data-shelf>
+          <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous science stories" data-shelf-previous>←</button>
+          <div id="geek-list" class="story-list shelf__track"></div>
+          <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More science stories" data-shelf-next>→</button>
+        </div>
       </section>
 
       <section class="joke" aria-labelledby="joke-title">
