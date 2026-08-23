@@ -189,6 +189,7 @@
     .science .card { grid-column: span 4; border-top-color: var(--accent-strong); }
     .science .card p { font-size: .94rem; }
     .science .card small { display: block; margin-top: auto; padding-top: .8rem; color: var(--muted); }
+    .next-day-fallback[hidden] { display: none; }
 
     .memory-break {
       position: relative;
@@ -370,6 +371,14 @@
           <p>PTD Productions closes its run of Eric Coble’s dark satire about a theatre company caught between art, commerce, censorship, and a city in uproar. Adult content includes nudity and strong language.</p>
         </article>
       </div>
+      <div class="next-day-fallback" id="next-day-fallback" hidden aria-live="polite">
+        <div class="section-heading"><h2>Sunday, already taking shape</h2></div>
+        <div class="story-grid">
+          <article class="card"><h3><a href="https://www.michigan.org/event/she-moves-womens-wellness-experience">SHE Moves Plymouth</a> <span class="score">— close by</span></h3><p class="event-meta"><time datetime="2026-08-23T11:00:00-04:00">11:00 AM–4:00 PM Sunday</time> · Kellogg Park &amp; The Gathering Pavilion, Plymouth · $35 · registration encouraged</p><p>A beginner-friendly Pilates class, women-owned marketplace, local food, and wellness activations make this an easy daytime Plymouth loop.</p></article>
+          <article class="card"><h3><a href="https://theark.org/event/tray-wellington-band-260823/">Tray Wellington Band</a> <span class="score">— intimate music</span></h3><p class="event-meta"><time datetime="2026-08-23T19:30:00-04:00">Doors 7:00 PM · Show 7:30 PM Sunday</time> · The Ark, Ann Arbor · $29–$40</p><p>The award-winning banjo player brings a forward-looking bluegrass and roots set to The Ark’s 316 S. Main room.</p></article>
+          <article class="card"><h3><a href="https://www.comedycastle.com/events/">Big Jay Oakerson</a> <span class="score">— comedy</span></h3><p class="event-meta"><time datetime="2026-08-23T19:00:00-04:00">7:00 PM Sunday</time> · Mark Ridley’s Comedy Castle, Royal Oak · $42–$47 · 18+</p><p>Oakerson closes his weekend run in the club’s single-room setting; the listed price range and age rule come directly from the venue.</p></article>
+        </div>
+      </div>
       <aside class="short-plan" aria-labelledby="short-plan-title">
         <h3 id="short-plan-title">The easy answer</h3>
         <p>Market in Plymouth before lunch, then stay local for Jamz &amp; Jokes. It is the rare Canton option that combines live music and comedy indoors on a storm-prone evening.</p>
@@ -503,7 +512,7 @@ Submitted from the published daily brief.`;
     const labels = { morning: "Morning light", afternoon: "Daylight", evening: "Evening glow", night: "Night mode" };
     const colors = { morning: "#345c55", afternoon: "#16453d", evening: "#2d2c49", night: "#0a1418" };
     const edition = document.querySelector(".dateline time")?.getAttribute("datetime");
-    const cards = document.querySelectorAll('[data-brief-section="today"] article.card');
+    const cards = document.querySelector('[data-brief-section="today"] > .story-grid')?.querySelectorAll('article.card') || [];
     const refresh = () => {
       const now = new Date();
       const hour = now.getHours();
@@ -517,6 +526,8 @@ Submitted from the published daily brief.`;
         const eventTime = card.dataset.eventEnd || card.querySelector("time[datetime]")?.dateTime;
         card.hidden = edition === localDate && eventTime ? new Date(eventTime) <= now : false;
       });
+      const fallback = document.getElementById("next-day-fallback");
+      if (fallback && edition === localDate) fallback.hidden = !Array.from(cards).every((card) => card.hidden);
     };
     refresh();
     window.setInterval(refresh, 60_000);
