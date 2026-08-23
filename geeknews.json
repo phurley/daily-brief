@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-23T19:48:28Z",
+  "generatedAt": "2026-08-23T19:50:00Z",
   "editionDate": "2026-08-23",
   "starshipEstimatedLaunch": {
     "status": "targeted",
@@ -24,81 +24,6 @@
     ]
   },
   "stories": [
-    {
-      "id": "openai-pauses-frontier-training-for-cyber-safeguards",
-      "title": "OpenAI pauses frontier training as cyber capability nears a critical threshold",
-      "summary": "OpenAI says it paused a major reinforcement-learning run and tightened workload isolation, network controls, and continuous monitoring after an internal model showed potentially critical cyber capability. The disclosure is unusually concrete evidence that frontier-model security is becoming a constraint on development speed, not merely a deployment concern.",
-      "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
-      "source": {
-        "name": "OpenAI"
-      },
-      "publishedAt": "2026-08-18T00:00:00Z",
-      "topics": [
-        "artificial intelligence",
-        "cybersecurity",
-        "AI safety"
-      ]
-    },
-    {
-      "id": "openai-cuts-gpt-5-6-sol-api-pricing",
-      "title": "OpenAI cuts GPT-5.6 Sol API pricing for three months",
-      "summary": "OpenAI reduced standard short-context pricing for GPT-5.6 Sol to $4 per million input tokens and $20 per million output tokens, versus $5 and $30 previously. The temporary cut applies to the API and eligible ChatGPT Work and Codex credits, signaling intensifying price competition at the frontier-model tier.",
-      "url": "https://www.reuters.com/technology/openai-cuts-developer-pricing-frontier-gpt-56-sol-model-by-more-than-20-2026-08-21/",
-      "source": {
-        "name": "Reuters"
-      },
-      "publishedAt": "2026-08-21T21:29:00Z",
-      "topics": [
-        "artificial intelligence",
-        "developer tools",
-        "AI economics"
-      ]
-    },
-    {
-      "id": "github-copilot-agent-sessions-arrive-in-slack",
-      "title": "GitHub brings shared Copilot agent sessions into Slack",
-      "summary": "GitHub's Slack integration can now start cloud agent sessions from a message, use permitted repository context, investigate failures, implement and validate changes, and open pull requests. The public preview for Copilot Business and Enterprise moves coding agents into the team's shared conversation instead of keeping them inside an individual developer's editor.",
-      "url": "https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack/",
-      "source": {
-        "name": "GitHub Changelog"
-      },
-      "publishedAt": "2026-08-21T00:00:00Z",
-      "topics": [
-        "developer tools",
-        "coding agents",
-        "collaboration"
-      ]
-    },
-    {
-      "id": "robot-world-models-face-real-world-data-bottleneck",
-      "title": "Robot makers say world models—not hardware—are now the central bottleneck",
-      "summary": "ACE Robotics expects an embodied-AI breakthrough by late 2027, while industry leaders caution broad commercial use could still take years. The key constraint is high-quality real-world training data that lets robots generalize across unfamiliar physical environments, shifting attention from athletic demos to useful autonomous work.",
-      "url": "https://www.reuters.com/technology/ace-robotics-ceo-says-robot-brains-will-have-chatgpt-moment-by-end-2027-2026-08-21/",
-      "source": {
-        "name": "Reuters"
-      },
-      "publishedAt": "2026-08-21T10:03:00Z",
-      "topics": [
-        "robotics",
-        "embodied AI",
-        "automation"
-      ]
-    },
-    {
-      "id": "ai-shifts-it-services-from-hours-to-outcomes",
-      "title": "AI pushes IT-services contracts away from billable hours",
-      "summary": "Large outsourcing firms are increasingly tying fees to business outcomes as customers demand faster delivery and price reductions of roughly 25% to 30%. The change is an early, measurable example of AI productivity altering software-services economics and weakening headcount as a competitive advantage.",
-      "url": "https://www.reuters.com/world/india/ai-reshapes-indias-it-services-sector-contracts-clients-demand-more-less-2026-08-20/",
-      "source": {
-        "name": "Reuters"
-      },
-      "publishedAt": "2026-08-20T23:02:00Z",
-      "topics": [
-        "software engineering",
-        "jobs",
-        "AI economics"
-      ]
-    },
     {
       "id": "nasa-starling-demonstrates-gps-free-autonomous-navigation",
       "title": "NASA's Starling satellites demonstrate GPS-free autonomous navigation",
