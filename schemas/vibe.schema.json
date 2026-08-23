@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phurley.github.io/daily-brief/schemas/vibe.schema.json",
+  "title": "Daily Brief Vibe",
+  "description": "Dated editorial copy that gives each Daily Brief section its voice. Footer jokes are intentionally excluded.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "messages"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "messages": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/vibeMessage" }
+    }
+  },
+  "$defs": {
+    "vibeMessage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "date", "section", "role", "text"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "date": { "type": "string", "format": "date" },
+        "section": {
+          "type": "string",
+          "description": "The page section that consumes this message, expressed as a kebab-case key.",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "not": { "enum": ["footer", "footer-joke", "dad-joke"] }
+        },
+        "role": {
+          "enum": ["eyebrow", "headline", "section-heading", "summary", "recommendation", "transition", "note"]
+        },
+        "text": { "type": "string", "minLength": 1 },
+        "format": { "enum": ["plain-text", "markdown"], "default": "plain-text" },
+        "order": { "type": "integer", "minimum": 0 },
+        "sourceItemIds": {
+          "type": "array",
+          "description": "Optional IDs of weather, news, event, calendar, or geek-news records that informed this copy.",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}
