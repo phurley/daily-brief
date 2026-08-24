@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-24T09:07:30Z",
+  "generatedAt": "2026-08-24T13:16:42Z",
   "location": {
     "name": "Canton",
     "region": "Michigan",
@@ -9,33 +9,33 @@
     "timeZone": "America/Detroit"
   },
   "current": {
-    "observedAt": "2026-08-24T05:00:00-04:00",
-    "temperatureF": 52.3,
-    "feelsLikeF": 49.4,
+    "observedAt": "2026-08-24T09:15:00-04:00",
+    "temperatureF": 60.4,
+    "feelsLikeF": 56.6,
     "conditionCode": 0,
     "conditionText": "Clear",
     "icon": "☀",
     "precipitationIn": 0.0,
-    "humidityPercent": 82,
+    "humidityPercent": 66,
     "wind": {
-      "speedMph": 5.0,
-      "directionDegrees": 249,
-      "direction": "WSW",
-      "gustMph": 13.2
+      "speedMph": 8.5,
+      "directionDegrees": 284,
+      "direction": "WNW",
+      "gustMph": 18.8
     }
   },
   "daily": [
     {
       "date": "2026-08-24",
-      "highF": 76.1,
-      "lowF": 51.8,
-      "conditionCode": 0,
-      "conditionText": "Clear",
-      "icon": "☀",
+      "highF": 75.3,
+      "lowF": 53.0,
+      "conditionCode": 3,
+      "conditionText": "Overcast",
+      "icon": "☁",
       "precipitationChancePercent": 1,
       "sunrise": "2026-08-24T06:51:00-04:00",
       "sunset": "2026-08-24T20:21:00-04:00",
-      "narrative": "Clear with a high near 76°F and a low around 52°F; 1% chance of precipitation."
+      "narrative": "Overcast with a high near 75°F and a low around 53°F; 1% chance of precipitation."
     },
     {
       "date": "2026-08-25",
@@ -44,77 +44,77 @@
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
-      "precipitationChancePercent": 1,
+      "precipitationChancePercent": 0,
       "sunrise": "2026-08-25T06:52:00-04:00",
       "sunset": "2026-08-25T20:19:00-04:00",
-      "narrative": "Overcast with a high near 80°F and a low around 55°F; 1% chance of precipitation."
+      "narrative": "Overcast with a high near 80°F and a low around 55°F; 0% chance of precipitation."
     },
     {
       "date": "2026-08-26",
-      "highF": 82.8,
-      "lowF": 60.3,
-      "conditionCode": 80,
-      "conditionText": "Light rain showers",
-      "icon": "🌦",
+      "highF": 83.7,
+      "lowF": 57.5,
+      "conditionCode": 81,
+      "conditionText": "Rain showers",
+      "icon": "🌧",
       "precipitationChancePercent": 45,
       "sunrise": "2026-08-26T06:53:00-04:00",
       "sunset": "2026-08-26T20:18:00-04:00",
-      "narrative": "Light rain showers with a high near 83°F and a low around 60°F; 45% chance of precipitation."
+      "narrative": "Rain showers with a high near 84°F and a low around 58°F; 45% chance of precipitation."
     },
     {
       "date": "2026-08-27",
-      "highF": 84.8,
+      "highF": 85.2,
       "lowF": 64.1,
-      "conditionCode": 81,
-      "conditionText": "Rain showers",
-      "icon": "🌧",
+      "conditionCode": 51,
+      "conditionText": "Light drizzle",
+      "icon": "🌦",
       "precipitationChancePercent": 45,
       "sunrise": "2026-08-27T06:54:00-04:00",
       "sunset": "2026-08-27T20:16:00-04:00",
-      "narrative": "Rain showers with a high near 85°F and a low around 64°F; 45% chance of precipitation."
+      "narrative": "Light drizzle with a high near 85°F and a low around 64°F; 45% chance of precipitation."
     },
     {
       "date": "2026-08-28",
-      "highF": 86.8,
-      "lowF": 65.7,
-      "conditionCode": 51,
-      "conditionText": "Light drizzle",
-      "icon": "🌦",
+      "highF": 87.9,
+      "lowF": 65.2,
+      "conditionCode": 3,
+      "conditionText": "Overcast",
+      "icon": "☁",
       "precipitationChancePercent": 3,
       "sunrise": "2026-08-28T06:55:00-04:00",
       "sunset": "2026-08-28T20:14:00-04:00",
-      "narrative": "Light drizzle with a high near 87°F and a low around 66°F; 3% chance of precipitation."
+      "narrative": "Overcast with a high near 88°F and a low around 65°F; 3% chance of precipitation."
     },
     {
       "date": "2026-08-29",
-      "highF": 80.7,
-      "lowF": 65.5,
-      "conditionCode": 51,
-      "conditionText": "Light drizzle",
-      "icon": "🌦",
+      "highF": 81.6,
+      "lowF": 65.9,
+      "conditionCode": 3,
+      "conditionText": "Overcast",
+      "icon": "☁",
       "precipitationChancePercent": 6,
       "sunrise": "2026-08-29T06:56:00-04:00",
       "sunset": "2026-08-29T20:13:00-04:00",
-      "narrative": "Light drizzle with a high near 81°F and a low around 66°F; 6% chance of precipitation."
+      "narrative": "Overcast with a high near 82°F and a low around 66°F; 6% chance of precipitation."
     },
     {
       "date": "2026-08-30",
-      "highF": 81.2,
-      "lowF": 68.4,
-      "conditionCode": 81,
-      "conditionText": "Rain showers",
-      "icon": "🌧",
+      "highF": 77.6,
+      "lowF": 67.4,
+      "conditionCode": 53,
+      "conditionText": "Drizzle",
+      "icon": "🌦",
       "precipitationChancePercent": 30,
       "sunrise": "2026-08-30T06:57:00-04:00",
       "sunset": "2026-08-30T20:11:00-04:00",
-      "narrative": "Rain showers with a high near 81°F and a low around 68°F; 30% chance of precipitation."
+      "narrative": "Drizzle with a high near 78°F and a low around 67°F; 30% chance of precipitation."
     }
   ],
   "sources": [
     {
       "name": "Open-Meteo",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=42.3086&longitude=-83.4824&current=temperature_2m,apparent_temperature,precipitation,weather_code,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDetroit&forecast_days=7",
-      "retrievedAt": "2026-08-24T09:07:30Z"
+      "retrievedAt": "2026-08-24T13:16:42Z"
     }
   ]
 }
