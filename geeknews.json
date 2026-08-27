@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T08:32:02Z",
-  "editionDate": "2026-08-26",
+  "generatedAt": "2026-08-27T08:30:36Z",
+  "editionDate": "2026-08-27",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 2026",
     "estimatedLaunchAt": null,
     "confidence": "medium",
-    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of August 26, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 2026; no precise launch time is defensible.",
+    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of August 27, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 2026; no precise launch time is defensible.",
     "sources": [
       {
         "name": "SpaceX launches",
@@ -64,6 +64,38 @@
         "astronomy",
         "Milky Way",
         "galaxy evolution"
+      ]
+    },
+    {
+      "id": "nasa-tests-lunar-landing-plume-physics",
+      "title": "NASA begins its most flight-relevant lunar landing plume tests",
+      "summary": "NASA has begun firing a simulated lander plume into lunar-regolith simulant inside a 60-foot vacuum sphere at Langley. Cameras and other instruments are measuring crater formation, ejecta geometry, and particle speeds to validate models for how rocket exhaust could endanger landers, surface equipment, and crews on the Moon—and eventually help prepare for Mars landings.",
+      "url": "https://www.nasa.gov/missions/artemis/nasa-begins-moon-mission-plume-surface-interaction-tests/",
+      "source": {
+        "name": "NASA"
+      },
+      "publishedAt": "2026-08-26T00:00:00Z",
+      "topics": [
+        "space",
+        "Moon",
+        "engineering",
+        "planetary science"
+      ]
+    },
+    {
+      "id": "nasa-dsn-dss23-enters-operations",
+      "title": "NASA’s newest deep-space antenna begins operations at Goldstone",
+      "summary": "NASA’s 34-meter Deep Space Station 23 antenna has entered service after completing its test campaign, already tracking Chandra and communicating with missions including Psyche, Juno, Mars Reconnaissance Orbiter, and Voyager 1. The new multifrequency dish expands the Deep Space Network’s capacity for the growing fleet of deep-space missions and is a completed, operational infrastructure milestone.",
+      "url": "https://www.nasa.gov/technology/space-comms/deep-space-network/new-next-gen-dish-adds-muscle-to-nasas-deep-space-network/",
+      "source": {
+        "name": "NASA Jet Propulsion Laboratory"
+      },
+      "publishedAt": "2026-08-25T00:00:00Z",
+      "topics": [
+        "space",
+        "deep space communications",
+        "engineering",
+        "space infrastructure"
       ]
     }
   ]
