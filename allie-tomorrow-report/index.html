@@ -4,86 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Allison's Thursday Playbook — August 27, 2026</title>
+  <title>Allison's Friday Playbook — August 28, 2026</title>
   <style>
-    :root {
-      --night: #10112b;
-      --panel: #1b1d40;
-      --panel-soft: #24264d;
-      --ink: #fffaf3;
-      --muted: #bbbcd3;
-      --coral: #ff7b78;
-      --gold: #f8c86a;
-      --aqua: #78d7d0;
-      --line: rgba(255,255,255,.14);
-      --shadow: 0 18px 50px rgba(0,0,0,.24);
-    }
-    * { box-sizing: border-box; }
-    html { background: var(--night); }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 10% 0%, rgba(255,123,120,.18), transparent 32rem),
-        radial-gradient(circle at 90% 12%, rgba(120,215,208,.12), transparent 30rem),
-        var(--night);
-      font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    a { color: var(--aqua); text-underline-offset: .2em; }
-    a:hover { color: #b2f3ee; }
-    .shell { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
-    header { max-width: 900px; padding: 5.5rem 0 3rem; }
-    .eyebrow, .label, .meta, .status {
-      margin: 0 0 .55rem;
-      color: var(--gold);
-      font-size: .76rem;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-    h1, h2, h3 { line-height: 1.12; }
-    h1 { max-width: 850px; margin: 0; font-size: clamp(2.7rem, 7vw, 5.6rem); letter-spacing: -.055em; }
-    h2 { margin: .1rem 0 1rem; font-size: clamp(1.65rem, 3.4vw, 2.45rem); letter-spacing: -.035em; }
-    h3 { margin: .1rem 0 .5rem; font-size: 1.08rem; }
-    p { margin: .45rem 0 1rem; }
-    .lede { max-width: 740px; margin-top: 1.35rem; color: #dedeea; font-size: 1.15rem; }
-    main { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.15rem; padding-bottom: 2rem; }
-    section {
-      min-width: 0;
-      padding: clamp(1.25rem, 3vw, 2rem);
-      border: 1px solid var(--line);
-      border-radius: 1.35rem;
-      background: linear-gradient(145deg, rgba(36,38,77,.96), rgba(27,29,64,.96));
-      box-shadow: var(--shadow);
-    }
-    section.wide { grid-column: 1 / -1; }
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .8rem; }
-    .card, .slot, .callout {
-      margin-top: .8rem;
-      padding: 1rem;
-      border: 1px solid var(--line);
-      border-radius: .95rem;
-      background: rgba(255,255,255,.045);
-    }
-    .slot { border-top: 3px solid var(--coral); }
-    .card { border-left: 3px solid var(--aqua); }
-    .callout { border-color: rgba(248,200,106,.42); background: rgba(248,200,106,.08); }
-    .card > :last-child, .slot > :last-child, .callout > :last-child { margin-bottom: 0; }
-    .muted, .source-list { color: var(--muted); }
-    .source-list { font-size: .86rem; }
-    .source { font-size: .86rem; font-weight: 700; }
-    .action { margin-top: 1rem; padding-left: .9rem; border-left: 3px solid var(--coral); }
-    .timeline { position: relative; }
-    .timeline::before { content: ""; position: absolute; inset: 0 auto 0 .45rem; width: 1px; background: var(--line); }
-    .timeline .card { position: relative; margin-left: 1.15rem; }
-    .timeline .card::before { content: ""; position: absolute; left: -1.5rem; top: 1.2rem; width: .65rem; height: .65rem; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 5px var(--panel); }
-    [hidden] { display: none !important; }
-    footer { padding: 1.5rem 0 3.5rem; color: var(--muted); font-size: .86rem; }
-    @media (max-width: 780px) {
-      header { padding-top: 3.5rem; }
-      main, .grid { grid-template-columns: 1fr; }
-      section.wide { grid-column: auto; }
-    }
+    :root { --bg:#11132d; --panel:#1d2044; --ink:#fffaf2; --muted:#c8c7d8; --coral:#ff817c; --gold:#f4c76c; --aqua:#82d9d2; --line:rgba(255,255,255,.15); }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--bg); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:var(--aqua); text-underline-offset:.2em; }
+    .shell { width:min(1100px,calc(100% - 2rem)); margin:auto; }
+    header { padding:4.5rem 0 2.5rem; max-width:850px; }
+    .eyebrow,.label,.meta { color:var(--gold); font-size:.78rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+    h1 { margin:.25rem 0 1rem; font-size:clamp(2.5rem,7vw,5.25rem); line-height:1; letter-spacing:-.05em; }
+    h2 { margin:.15rem 0 1rem; font-size:clamp(1.6rem,3vw,2.35rem); line-height:1.1; }
+    h3 { margin:.1rem 0 .45rem; line-height:1.2; }
+    p { margin:.45rem 0 1rem; }
+    .lede,.muted,.sources { color:var(--muted); }
+    main { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; padding-bottom:2rem; }
+    section { min-width:0; padding:clamp(1.2rem,3vw,1.9rem); border:1px solid var(--line); border-radius:1.2rem; background:var(--panel); }
+    section.wide { grid-column:1/-1; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; }
+    .card,.callout { margin-top:.8rem; padding:1rem; border:1px solid var(--line); border-radius:.9rem; background:rgba(255,255,255,.045); }
+    .card { border-left:3px solid var(--aqua); }
+    .callout { border-color:rgba(244,199,108,.5); }
+    .card > :last-child,.callout > :last-child { margin-bottom:0; }
+    .sources { font-size:.86rem; }
+    ul { padding-left:1.2rem; }
+    li + li { margin-top:.45rem; }
+    [hidden] { display:none !important; }
+    footer { padding:1rem 0 3rem; color:var(--muted); font-size:.86rem; }
+    @media (max-width:800px) { main,.grid { grid-template-columns:1fr; } section.wide { grid-column:auto; } header { padding-top:3rem; } }
   </style>
 <style id="allie-compact-layout">
   main { display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; grid-auto-flow:dense; grid-auto-rows:8px; gap:18px !important; align-items:start; }
@@ -120,150 +68,158 @@
   .allie-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
 </head>
-<body data-allie-report="tomorrow" data-report-date="2026-08-27">
+<body data-allie-report="tomorrow" data-report-date="2026-08-28">
   <div class="shell">
     <header>
-      <p class="eyebrow">Night-before playbook · Thursday, August 27</p>
-      <h1>Keep Thursday light, social, and outdoors.</h1>
-      <p class="lede">A dry low-80s day leaves room for a downtown lunch stop or a free evening in Grand Circus Park. Tonight's useful work is simple: choose a plan, set any professional reminders, and leave the umbrella behind.</p>
+      <p class="eyebrow">Night-before playbook · Friday, August 28</p>
+      <h1>A sunny Friday built for getting out.</h1>
+      <p class="lede">Tomorrow is dry and mostly sunny, with Detroit near 80°F and Ann Arbor near 81°F. The cleanest social arc is Ann Arbor: Make-a-Zine Night, then free music on Main Street; Michigan volleyball is the strong spectator alternative.</p>
     </header>
 
     <main>
       <section class="wide" data-brief-section="allie-tomorrow-overview">
         <p class="label">Tomorrow at a glance</p>
-        <h2>One easy plan, two optional watch windows</h2>
+        <h2>Choose one lane tonight</h2>
         <div class="grid">
-          <article class="slot">
-            <p class="meta">11:00 AM–3:00 PM</p>
-            <h3>Low-friction lunch stop</h3>
-            <p>Thursday Markets and Downtown Street Eats share Cadillac Square. Both are verified walk-in options, so either can fit a downtown opening without advance registration.</p>
+          <article class="card">
+            <p class="meta">10:00–11:00 AM</p>
+            <h3>Detroit Social Walk Club</h3>
+            <p>Meet at Cullen Plaza for a public riverfront walk. No registration requirement is shown; bring water and comfortable walking shoes.</p>
           </article>
-          <article class="slot">
-            <p class="meta">5:00–9:00 PM</p>
-            <h3>Best social choice</h3>
-            <p>Bourbon Garden at Grand Circus Park is the strongest peer-friendly option: free admission, live jazz, food, drinks, and a long outdoor window.</p>
+          <article class="card">
+            <p class="meta">6:00 PM onward</p>
+            <h3>Ann Arbor maker night</h3>
+            <p>Start at free Make-a-Zine Night from 6:00–8:00 PM, then walk to Lost in Processing on Main Street from 7:00–9:00 PM. The overlap means leaving the zine event early.</p>
           </article>
-          <article class="slot">
-            <p class="meta">8:00 PM onward</p>
-            <h3>Stay-home alternative</h3>
-            <p>Big Brother's 1,000th episode airs at 8:00 PM ET. Golden State Valkyries at New York Liberty also tips at 8:00 PM ET on Prime Video.</p>
+          <article class="card">
+            <p class="meta">6:00 PM</p>
+            <h3>Michigan volleyball</h3>
+            <p>Michigan Wolverines women's volleyball hosts the LIU Sharks at Cliff Keen Arena. Check the linked ticket seller for live inventory and price before leaving.</p>
           </article>
         </div>
-        <p class="action"><strong>Tonight:</strong> pick the lunch or evening plan, then set only the reminders you actually want: gamescom Awesome Indies at 2:00 PM, Workday at 4:30 PM, or Marvell at 4:45 PM ET.</p>
+        <div class="callout">
+          <h3>Do tonight</h3>
+          <p>Request the Make-a-Zine preregistration if choosing the maker route, reserve D&amp;D if choosing tabletop play because space is limited, or check Michigan volleyball ticket inventory. Set out water, sunscreen, sunglasses, comfortable shoes, and a light evening layer.</p>
+        </div>
+        <p class="sources"><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Detroit Riverfront calendar</a> · <a href="https://www.meetup.com/allhandsactive/events/">All Hands Active events</a> · <a href="https://mainstreetannarbor.org/a2-summer-streets">A2 Summer Streets</a> · <a href="https://mgoblue.com/sports/wvball/schedule">Michigan volleyball schedule</a> · <a href="https://www.ticketmaster.com/search?q=michigan+wolverines+women%27s+volleyball">Michigan volleyball tickets</a></p>
       </section>
 
       <section data-brief-section="allie-tomorrow-weather">
         <p class="label">Weather</p>
-        <h2>Dry, comfortable, then mostly clear</h2>
-        <p>Metro Detroit starts cloudy and gradually clears to mostly sunny skies. Expect a high near 82–83°F, a light west-northwest wind around 5–8 mph, and a mostly clear Thursday night near 63°F.</p>
+        <h2>Dry, mostly sunny, and comfortable</h2>
+        <p>Detroit reaches about 80°F and Ann Arbor about 81°F, followed by a mostly clear night near 61°F in Detroit and 59°F in Ann Arbor. Official point forecasts show no rain or thunderstorm chance for Friday or Friday night.</p>
         <article class="card">
-          <p class="meta">6:30–9:30 AM EDT</p>
-          <h3>Normal commute</h3>
-          <p>Clouds linger through mid-morning before beginning to clear. No Thursday precipitation is forecast, so roads should be dry and no weather delay needs to be built in.</p>
+          <p class="meta">7:00–9:00 AM</p>
+          <h3>Cool, dry commute</h3>
+          <p>Mostly sunny after a cool start, warming through the 60s with a light north wind near 5–6 mph. Driving, cycling, and walking impacts are low.</p>
         </article>
         <article class="card">
-          <p class="meta">11:00 AM–4:30 PM EDT</p>
-          <h3>Sunscreen for the warmest window</h3>
-          <p>Gradual clearing brings mostly sunny conditions near the day's 82–83°F high. The light west-northwest wind should not interfere with lunch or an outdoor break.</p>
+          <p class="meta">11:00 AM–2:00 PM</p>
+          <h3>Best active window</h3>
+          <p>Mostly sunny and near the upper 70s to about 80°F. Bring water and sun protection for a walk, run, outdoor lunch, volleyball, or pickleball.</p>
         </article>
         <article class="card">
-          <p class="meta">5:00–9:30 PM EDT</p>
-          <h3>Good outdoor-plan fit</h3>
-          <p>Dry, clearing conditions favor a run, volleyball, pickleball, or the Bourbon Garden. Bring water; a light layer may help later as the night cools.</p>
+          <p class="meta">4:00 PM onward</p>
+          <h3>Easy outdoor evening</h3>
+          <p>Mostly sunny becoming mostly clear, easing from the upper 70s into the upper 60s and low 70s. A light layer will be useful after dark.</p>
         </article>
         <div class="callout">
-          <h3>Tonight's setup</h3>
-          <p>Set out sunglasses and sunscreen. No umbrella is indicated for Thursday, though wet pavement could remain if Wednesday-night storms pass through. Southeast Michigan's air-quality forecast is Good; check AirNow before a prolonged hard workout or if haze is visible.</p>
+          <h3>Air-quality check</h3>
+          <p>No Detroit-specific next-day AQI value was retrievable, so no air-quality action day is established here. Check AirNow shortly before prolonged vigorous outdoor exercise.</p>
         </div>
-        <p class="source-list"><a href="https://forecast.weather.gov/MapClick.php?lat=42.383&amp;lon=-83.1022">NWS Detroit point forecast</a> · <a href="https://forecast.weather.gov/MapClick.php?FcstType=text&amp;TextType=2&amp;lat=42.383&amp;lg=english&amp;lon=-83.1022&amp;unit=0">NWS text forecast</a> · <a href="https://www.michigan.gov/egle/about/organization/air-quality/air-quality-monitoring">Michigan EGLE air quality</a> · <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">EPA AirNow Detroit</a></p>
+        <p class="sources"><a href="https://forecast.weather.gov/MapClick.php?lat=42.37219&amp;lon=-83.09176">NWS Detroit point forecast</a> · <a href="https://forecast.weather.gov/MapClick.php?FcstType=text&amp;lat=42.2752&amp;lg=en&amp;lon=-83.7336&amp;unit=1">NWS Ann Arbor point forecast</a> · <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a> · <a href="https://www.weather.gov/dtx/">NWS Detroit office</a></p>
       </section>
 
       <section data-brief-section="allie-tomorrow-sports">
         <p class="label">Sports</p>
-        <h2>WNBA first, targeted preseason second</h2>
+        <h2>WNBA and final-week NFL preseason</h2>
+        <p>There is no Pistons game or Detroit City FC men's match Friday. Detroit Lions attention belongs on Saturday's 1:00 PM ET preseason finale at the Indianapolis Colts, not a Friday roster move.</p>
         <article class="card">
-          <p class="meta">8:00 PM ET · Prime Video</p>
-          <h3>Golden State Valkyries at New York Liberty</h3>
-          <p>The earlier WNBA option is at Barclays Center in Brooklyn.</p>
-          <p class="source-list"><a href="https://www.wnba.com/game/gsv-vs-nyl-1022600289">Official game page</a> · <a href="https://valkyries.wnba.com/news/gameday-preview-20260827">Valkyries preview</a></p>
+          <p class="meta">7:00 PM ET · NFL+</p>
+          <h3>Three NFL preseason games</h3>
+          <p>Washington Commanders at Baltimore Ravens; Houston Texans at Carolina Panthers; and Atlanta Falcons at Miami Dolphins. Out-of-market blackouts may apply.</p>
         </article>
         <article class="card">
-          <p class="meta">10:00 PM ET · Prime Video</p>
-          <h3>Washington Mystics at Phoenix Mercury</h3>
-          <p>The late WNBA option follows from Phoenix.</p>
-          <a class="source" href="https://www.wnba.com/game/was-vs-phx-1022600290">Official game page</a>
+          <p class="meta">7:30 PM ET · ION</p>
+          <h3>Two WNBA games</h3>
+          <p>Connecticut Sun at Indiana Fever and Portland Fire at Atlanta Dream. Sun–Fever is the closest WNBA option to Metro Detroit.</p>
+        </article>
+        <article class="card">
+          <p class="meta">8:00 PM ET · CBS / NFL+</p>
+          <h3>Four NFL preseason games</h3>
+          <p>New Orleans Saints at Dallas Cowboys; Arizona Cardinals at Green Bay Packers; Seattle Seahawks at Kansas City Chiefs; and Cincinnati Bengals at Philadelphia Eagles. Bengals–Eagles is on CBS; Packers–Cardinals is the NFC North option.</p>
+        </article>
+        <article class="card">
+          <p class="meta">9:00 PM and 10:00 PM ET</p>
+          <h3>Late games</h3>
+          <p>Minnesota Vikings at Denver Broncos begins at 9:00 PM on NFL+. At 10:00 PM on ION, Washington Mystics visit the Los Angeles Sparks and Toronto Tempo visit the Las Vegas Aces.</p>
         </article>
         <div class="callout">
-          <h3>NFL preseason schedule</h3>
-          <p><strong>7:00 PM:</strong> Pittsburgh Steelers at Buffalo Bills on NFL Network and NFL+.</p>
-          <p><strong>8:00 PM:</strong> New England Patriots at Cleveland Browns on Prime Video and NFL+; San Francisco 49ers at Las Vegas Raiders is listed for local broadcast only.</p>
-          <p><strong>10:00 PM:</strong> Los Angeles Rams at Los Angeles Chargers on NFL Network and NFL+.</p>
-          <a class="source" href="https://www.nfl.com/schedules/2026/by-week/preseason-week-3">Official NFL preseason Week 3 schedule</a>
+          <h3>Lions watch, no Friday transaction</h3>
+          <p>Christian Izien's undisclosed injury could keep him out of Week 1. Tay Martin is competing for one of the final receiver spots; watch Saturday usage before considering a deep-league add. The initial 53-player roster is the Sunday watch item.</p>
         </div>
-        <p class="muted">The Detroit Lions and Detroit Pistons do not play Thursday. No Allison-relevant league or team deadline requiring action tonight was verified. Treat preseason usage as provisional; Detroit's final roster reduction is Sunday, August 30 at 6:00 PM ET.</p>
-        <p class="source-list"><a href="https://www.detroitlions.com/schedule/">Lions schedule</a> · <a href="https://operations.nfl.com/calendar-events/nfl-important-dates">NFL important dates</a> · <a href="https://www.nba.com/pistons/news/detroit-pistons-announce-2026-27-season-schedule-presented-by-ticketmaster">Pistons schedule announcement</a></p>
+        <p class="sources"><a href="https://cdn.wnba.com/sites/1611661331/2026/01/2026-Schedule_Print.pdf">WNBA schedule</a> · <a href="https://www.wnba.com/game/1022600291?location=all&amp;month=all&amp;opponent=all&amp;season=2026">Portland at Atlanta</a> · <a href="https://www.nfl.com/_amp/nfl-make-your-plan-to-watch-the-2026-nfl-preseason">NFL preseason viewing guide</a> · <a href="https://www.detroitlions.com/schedule/">Lions schedule</a> · <a href="https://www.detroitlions.com/news/detroit-lions-training-camp-day-18-observations-gibbs-brown-williams">Lions camp observations</a> · <a href="https://www.nfl.com/news/nfl-training-camp-roster-faqs-defining-injured-reserve-pup-list-nfi-and-more">NFL roster FAQ</a> · <a href="https://www.nba.com/pistons/news/detroit-pistons-announce-2026-27-season-schedule-presented-by-ticketmaster">Pistons schedule announcement</a> · <a href="https://www.detcityfc.com/mens-schedule/">Detroit City FC schedule</a></p>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-plans">
-        <p class="label">Tomorrow's plan rotation</p>
-        <h2>The active or next verified option</h2>
-        <p class="muted">Three official Detroit opportunities are ordered across Thursday. The shared time rotation will show only the active or next card.</p>
-        <div class="timeline" data-allie-time-rotation>
-          <article class="card" data-allie-event data-start-at="2026-08-27T11:00:00-04:00" data-end-at="2026-08-27T15:00:00-04:00">
-            <p class="status">11:00 AM–3:00 PM EDT · free · walk in</p>
-            <h3>Thursday Markets at Cadillac Square</h3>
-            <p class="meta">Cadillac Square · 662 Woodward Ave, Detroit</p>
-            <p>A public pop-up of small businesses and artisans. No RSVP, ticket, capacity limit, or age restriction is listed. It runs beside Downtown Street Eats, making it an easy lunch-hour browse with some bootstrapped-business inspiration.</p>
-            <a class="source" href="https://downtowndetroit.org/event/thursday-markets-at-cadillac-square-14/">Official Downtown Detroit Partnership listing</a>
+        <p class="label">Plans</p>
+        <h2>The active or next option</h2>
+        <p class="muted">This rotation is ordered through Friday and will show only the active or next verified option.</p>
+        <div data-allie-time-rotation>
+          <article class="card" data-allie-event data-start-at="2026-08-28T10:00:00-04:00" data-end-at="2026-08-28T11:00:00-04:00">
+            <p class="meta">10:00–11:00 AM EDT · Detroit</p>
+            <h3>Detroit Social Walk Club</h3>
+            <p>Cullen Plaza on the Detroit Riverfront. Public, no RSVP requirement shown, and a high-fit low-pressure social format. Bring water and comfortable walking shoes.</p>
+            <p class="sources"><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Official calendar</a></p>
           </article>
-
-          <article class="card" hidden data-allie-event data-start-at="2026-08-27T11:00:00-04:00" data-end-at="2026-08-27T15:00:00-04:00">
-            <p class="status">11:00 AM–3:00 PM EDT · walk in</p>
-            <h3>Downtown Street Eats</h3>
-            <p class="meta">Cadillac Square · 662 Woodward Ave, Detroit</p>
-            <p>The official lineup lists Fun Food Express, Cousins Maine Lobster, Sonny's Hamburgers, Buffy's Mexi-Casian Grill, Nu Deli, Mr. Creole, and Vegano Italiano. No RSVP, ticket, capacity limit, or age restriction is listed; food purchases are separate.</p>
-            <a class="source" href="https://downtowndetroit.org/event/downtown-street-eats-91/">Official Downtown Detroit Partnership listing</a>
+          <article class="card" data-allie-event data-start-at="2026-08-28T18:00:00-04:00" data-end-at="2026-08-28T20:00:00-04:00" hidden>
+            <p class="meta">6:00–8:00 PM EDT · Ann Arbor</p>
+            <h3>Make-a-Zine Night</h3>
+            <p>All Hands Active, basement, 255 E. Liberty St., Suite 225. Free with donations welcome; all skill levels are invited, and preregistration is requested.</p>
+            <p class="sources"><a href="https://www.meetup.com/allhandsactive/events/">Official event listing</a></p>
           </article>
-
-          <article class="card" hidden data-allie-event data-start-at="2026-08-27T17:00:00-04:00" data-end-at="2026-08-27T21:00:00-04:00">
-            <p class="status">5:00–9:00 PM EDT · free admission · best social fit</p>
-            <h3>Bourbon Garden at Grand Circus Park</h3>
-            <p class="meta">Grand Circus Park · 101-157 Witherell St, Detroit</p>
-            <p>Free weekly live jazz, local food vendors, a bourbon bar and cocktails, themed activities, and communal outdoor space make this the strongest verified peer-friendly choice. No RSVP, ticket, or capacity limit is listed; drinks and food are for purchase, with alcohol subject to applicable age rules.</p>
-            <a class="source" href="https://downtowndetroit.org/event/bourbon-garden-at-grand-circus-park/2026-08-27/">Official Downtown Detroit Partnership listing</a>
+          <article class="card" data-allie-event data-start-at="2026-08-28T18:00:00-04:00" data-end-at="2026-08-28T22:00:00-04:00" hidden>
+            <p class="meta">6:00–10:00 PM EDT · Ann Arbor</p>
+            <h3>D&amp;D Adventurers League</h3>
+            <p>Sylvan Factory, 2459 W. Stadium Blvd. The cooperative tabletop session costs $10; space is limited and preregistration is strongly recommended.</p>
+            <p class="sources"><a href="https://www.sylvanfactory.com/">Sylvan Factory</a></p>
           </article>
-
-          <p data-allie-time-empty hidden>No active or upcoming verified Thursday option remains.</p>
+          <article class="card" data-allie-event data-start-at="2026-08-28T18:30:00-04:00" data-end-at="2026-08-28T20:30:00-04:00" hidden>
+            <p class="meta">6:30–8:30 PM EDT · Ann Arbor</p>
+            <h3>Fireside Fun</h3>
+            <p>Free at Leslie Science &amp; Nature Center. All are invited; bring optional outdoor games, s'mores supplies, and a camp chair. No registration is stated.</p>
+            <p class="sources"><a href="https://www.lesliesnc.org/">Leslie Science &amp; Nature Center</a></p>
+          </article>
+          <article class="card" data-allie-event data-start-at="2026-08-28T19:00:00-04:00" data-end-at="2026-08-28T21:00:00-04:00" hidden>
+            <p class="meta">7:00–9:00 PM EDT · Ann Arbor</p>
+            <h3>Lost in Processing at A2 Summer Streets</h3>
+            <p>Free public outdoor music on Main Street by Conor O'Neill's, with no registration or age restriction listed.</p>
+            <p class="sources"><a href="https://mainstreetannarbor.org/a2-summer-streets">Official event page</a></p>
+          </article>
+          <p data-allie-time-empty hidden>No upcoming Friday option remains in this rotation.</p>
         </div>
-        <p class="callout"><strong>Reality check:</strong> no exact-date Metro Detroit volleyball, running, pickleball, or tabletop event could be verified from an official organizer source. These three outdoor options have no stated indoor fallback.</p>
       </section>
 
       <section data-brief-section="allie-tomorrow-entertainment">
         <p class="label">Entertainment</p>
-        <h2>A milestone episode or a Detroit night out</h2>
+        <h2>Pick a concert, dance floor, or couch</h2>
         <article class="card">
-          <p class="meta">8:00–9:30 PM ET · CBS</p>
-          <h3>Big Brother — 1,000th episode</h3>
-          <p>A live eviction, BB Blockbuster, former-Houseguest appearances, fan votes, and a new Season 28 twist make this the closest live reality-TV fit. Paramount+ Premium carries the local CBS affiliate live; either Paramount+ plan has it on demand the following day.</p>
-          <p class="source-list"><a href="https://www.paramountplus.com/sneak-peak/big-brother-1000th-episode/">Paramount+ preview</a> · <a href="https://www.paramountpressexpress.com/cbs-entertainment/shows/big-brother/releases">CBS releases</a></p>
+          <p class="meta">7:00 PM EDT · Sterling Heights</p>
+          <h3>The Fray with Dashboard Confessional and Colony House</h3>
+          <p>A pop-adjacent Friday-night concert at Michigan Lottery Amphitheatre at Freedom Hill.</p>
+          <p class="sources"><a href="https://www.313presents.com/events/?camefrom=CFC_313PRE_313web_">313 Presents events</a> · <a href="https://www.ticketmaster.com/discover/detroit?date=thismonth&amp;page=1&amp;tt_scene=anchor_view">Ticketmaster Detroit</a></p>
         </article>
         <article class="card">
-          <p class="meta">7:30 PM ET · Fox Theatre Detroit</p>
-          <h3>Jill Scott — To Whom This May Concern Tour</h3>
-          <p>A verified downtown R&amp;B concert at 2211 Woodward Ave. for a full night-out alternative.</p>
-          <p class="source-list"><a href="https://www.livenation.com/event/vv1AFZkotGkd8EaLb/jill-scott-to-whom-this-may-concern-tour">Live Nation event</a> · <a href="https://www.ticketmaster.com/jill-scott-to-whom-this-may-detroit-michigan-08-27-2026/event/08006469D09C97D8?tt_scene=anchor_view">Ticketmaster event</a></p>
+          <p class="meta">8:00 PM EDT · Detroit</p>
+          <h3>Bop To The Top or Morris Day and the Time</h3>
+          <p>Bop To The Top is an ages-18-and-up pop dance party at The Fillmore Detroit. Morris Day and the Time brings danceable funk and R&amp;B to Music Hall Center at 350 Madison.</p>
+          <p class="sources"><a href="https://www.ticketmaster.com/discover/detroit?date=thismonth&amp;page=1&amp;tt_scene=anchor_view">Bop To The Top listing</a> · <a href="https://www.musichall.org/shows-events/morris-day">Music Hall event page</a> · <a href="https://www.livenation.com/event/vv1AFZk8JGkeUx7SH/morris-day-and-the-time">Live Nation listing</a></p>
         </article>
         <article class="card">
-          <p class="meta">Thursday release · Netflix</p>
-          <h3>Leanne — Season 2</h3>
-          <p>The returning sitcom brings back Leanne and Carol for new family chaos, with guest stars including Lainey Wilson and Jaime Pressly. Netflix does not state a release hour.</p>
-          <p class="source-list"><a href="https://www.netflix.com/tudum/articles/leanne-morgan-comedy-series-season-2">Netflix Tudum</a> · <a href="https://www.netflix.com/tudum/articles/new-on-netflix?pubDate=20250502">New on Netflix</a></p>
-        </article>
-        <article class="card">
-          <p class="meta">Episodes 1–4 available · Netflix</p>
-          <h3>Mom Knows Best?</h3>
-          <p>A fresh reality-TV mini-binge in which nine mothers secretly watch their adult children in a student-house setup and bet on their choices.</p>
-          <p class="source-list"><a href="https://about.netflix.com/en/news/mom-knows-best-now-playing-on-netflix">Netflix announcement</a> · <a href="https://about.netflix.com/en/news/do-moms-really-know-best-netflix-is-releasing-the-trailer-for-mom-knows-best-a-new-reality-show-hosted-by-claudia-raia">Netflix trailer announcement</a></p>
+          <p class="meta">Available Friday · Stay in</p>
+          <h3>Fresh listening and viewing</h3>
+          <p>Sara Bareilles releases <em>Good Grief</em>, and Alabama Shakes releases <em>I Must Be Dreaming</em>; exact streaming hours were not verified. Netflix's thriller <em>The Whisper Man</em> is available Friday. For reality TV, the first four episodes of <em>Mom Knows Best?</em> are already available; no new <em>Love Island USA</em> episode was verified for Friday.</p>
+          <p class="sources"><a href="https://sarabmusic.com/">Sara Bareilles</a> · <a href="https://music.apple.com/us/album/i-must-be-dreaming/6784718868">Alabama Shakes on Apple Music</a> · <a href="https://media.netflix.com/en/only-on-netflix/81278442">The Whisper Man</a> · <a href="https://about.netflix.com/en/news/do-moms-really-know-best-netflix-is-releasing-the-trailer-for-mom-knows-best-a-new-reality-show-hosted-by-claudia-raia">Mom Knows Best?</a> · <a href="https://www.peacocktv.com/stream-tv/love-island?cid=2411evgdigtveownedi25822">Love Island USA</a></p>
         </article>
       </section>
 
@@ -277,58 +233,47 @@
 </div>
 <!-- allie-market-tracker:end -->
 
-        <p class="label">Prepare tonight</p>
-        <h2>Save only the useful Thursday windows</h2>
+        <p class="label">Prepare</p>
+        <h2>Two 10:00 AM reminders</h2>
+        <p class="muted">This panel is ready for the shared live tracker covering VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV. Market information is informational, not investment advice.</p>
         <article class="card">
-          <p class="meta">Thursday · 2:00–3:15 PM ET</p>
-          <h3>Bookmark gamescom Awesome Indies</h3>
-          <p>The English-language indie showcase centers new concepts and creative teams, making it the most direct game-business inspiration in tomorrow's lineup.</p>
-          <p class="source-list"><a href="https://www.gamescom.global/en/video/gamescom-awesome-indies-2026">Official livestream page</a> · <a href="https://www.gamescom.global/en/gamescom-opening-night-live-unveils-first-highlights-more-than-1700-exhibitors-at-the-worlds-biggest-gaming-event">Official gamescom program context</a></p>
+          <p class="meta">Friday · 10:00 AM ET</p>
+          <h3>Jackson Hole remarks</h3>
+          <p>Tonight, block 20 minutes to watch or catch the key points from Fed Chair Kevin Warsh's remarks. The symposium theme is financial innovation, payments, and policy, making it relevant to practical AI and fintech trends.</p>
+          <p class="sources"><a href="https://www.kansascityfed.org/newsroom/2026-news-releases/kansas-city-fed-to-host-annual-jackson-hole-economic-policy-symposium-2026/">Kansas City Fed</a></p>
         </article>
         <article class="card">
-          <p class="meta">Thursday · reminder at 4:25 PM ET</p>
-          <h3>Workday earnings webcast at 4:30 PM</h3>
-          <p>Its focus across enterprise AI, HR, finance, and IT makes the outlook potentially useful professional context. Save the official investor link tonight if you want the live call.</p>
-          <a class="source" href="https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-to-Announce-Fiscal-2027-Second-Quarter-Financial-Results-on-August-27-2026/default.aspx">Workday investor relations</a>
+          <p class="meta">Friday · 10:00 AM ET</p>
+          <h3>Michigan consumer sentiment</h3>
+          <p>Tonight, set a reminder to check the final August University of Michigan consumer-sentiment release and its inflation-expectations update.</p>
+          <p class="sources"><a href="https://www.sca.isr.umich.edu/">Surveys of Consumers</a> · <a href="https://data.sca.isr.umich.edu/fetchdoc.php?docid=79628">Release document</a></p>
         </article>
-        <article class="card">
-          <p class="meta">Thursday · 4:45 PM ET</p>
-          <h3>Marvell earnings webcast</h3>
-          <p>Marvell reports fiscal 2027 second-quarter results. Its AI-memory infrastructure portfolio gives the call a focused analytics-work angle; save the official investor page tonight if that is useful.</p>
-          <a class="source" href="https://investor.marvell.com/?src=sub">Marvell investor relations</a>
-        </article>
-        <div class="callout">
-          <h3>Live market context</h3>
-          <p>This panel is ready for the shared tracker covering VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV. It is informational, not investment advice.</p>
-        </div>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-family">
         <p class="label">Family</p>
-        <h2>No private family details can be confirmed</h2>
+        <h2>Family calendar unavailable</h2>
+        <p>The Hurley Family calendar could not be loaded for Friday, August 28. Because that calendar is the sole authority, no family events or actions are shown.</p>
         <div class="grid">
-          <article class="slot">
-            <p class="meta">Thursday calendar</p>
-            <h3>Calendar unavailable</h3>
-            <p>The authoritative Hurley Family calendar could not be read. No event or free-time claim is made.</p>
+          <article class="card">
+            <h3>Birthdays</h3>
+            <p>Report-date birthdays are unavailable because the family calendar is unavailable.</p>
           </article>
-          <article class="slot">
-            <p class="meta">August 27 milestones</p>
-            <h3>Birthdays and anniversaries unavailable</h3>
-            <p>Report-date birthdays and anniversaries could not be confirmed because the family calendar is unavailable. Check the family calendar directly before assuming there are none.</p>
+          <article class="card">
+            <h3>Anniversaries</h3>
+            <p>Report-date anniversaries are unavailable because the family calendar is unavailable.</p>
           </article>
-          <article class="slot">
-            <p class="meta">Shared public photo archive</p>
-            <h3>No suitable exact-date match found</h3>
-            <p>The public archive host could not be resolved during collection, so no prior-year August 27 candidates could be retrieved or reviewed. No image, date, location, or caption detail is asserted.</p>
-            <a class="source" href="https://photos.hurleyhome.com/">Public photo archive</a>
+          <article class="card">
+            <h3>Shared photo archive</h3>
+            <p>No suitable exact-date prior-year match was found for August 28. No photo or caption is presented.</p>
           </article>
         </div>
+        <p class="sources"><a href="https://photos.hurleyhome.com/">Shared public photo archive</a></p>
       </section>
     </main>
 
     <footer>
-      <p>Prepared Wednesday evening for Thursday, August 27, 2026. Times are Eastern unless noted; availability can change, so use the linked official source before leaving.</p>
+      <p>Prepared Thursday, August 27, 2026 for Friday, August 28. Times are Eastern. Recheck dynamic registration, ticket inventory, and forecasts before leaving.</p>
     </footer>
   </div>
 <script id="allie-compact-layout-script">
