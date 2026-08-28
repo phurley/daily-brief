@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Allison's Daily Brief — August 27, 2026</title>
+  <title>Allison's Daily Brief — Friday, August 28, 2026</title>
   <style>
     :root {
-      --ink: #f9fbff;
-      --muted: #aeb9cf;
-      --night: #090b18;
-      --panel: #12162a;
-      --line: #2a3152;
+      --ink: #f8f9ff;
+      --muted: #b8bfd2;
+      --night: #0a0c19;
+      --panel: #14182c;
+      --line: #303756;
       --pink: #ff4fa3;
-      --blue: #58c8ff;
-      --lime: #c9ff4c;
-      --gold: #ffd56a;
+      --blue: #62d0ff;
+      --lime: #caff4f;
+      --gold: #ffd36b;
     }
     * { box-sizing: border-box; }
     html { background: var(--night); }
@@ -23,8 +23,8 @@
       margin: 0;
       color: var(--ink);
       background:
-        radial-gradient(circle at 90% 4%, rgb(88 200 255 / .15), transparent 24rem),
-        radial-gradient(circle at 6% 18%, rgb(255 79 163 / .12), transparent 28rem),
+        radial-gradient(circle at 90% 4%, rgb(98 208 255 / .14), transparent 25rem),
+        radial-gradient(circle at 6% 16%, rgb(255 79 163 / .12), transparent 29rem),
         var(--night);
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.55;
@@ -33,16 +33,11 @@
     a:hover { color: var(--lime); }
     .shell { width: min(1160px, calc(100% - 2rem)); margin: 0 auto; padding: 2rem 0 4rem; }
     header { padding: 2.2rem 0 1.5rem; border-bottom: 1px solid var(--line); }
-    .eyebrow, .kicker, .tag {
-      font-size: .75rem;
-      font-weight: 850;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-    }
+    .eyebrow, .kicker, .tag { font-size: .75rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
     .eyebrow { color: var(--lime); }
-    h1 { max-width: 850px; margin: .35rem 0; font-size: clamp(2.5rem, 8vw, 5.8rem); line-height: .92; letter-spacing: -.055em; }
-    .dek { max-width: 760px; margin: 1rem 0 0; color: var(--muted); font-size: 1.08rem; }
-    .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1rem; padding-top: 1rem; }
+    h1 { max-width: 900px; margin: .35rem 0; font-size: clamp(2.5rem, 8vw, 5.8rem); line-height: .92; letter-spacing: -.055em; }
+    .dek { max-width: 780px; margin: 1rem 0 0; color: var(--muted); font-size: 1.08rem; }
+    main { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1rem; padding-top: 1rem; }
     section {
       grid-column: span 6;
       min-width: 0;
@@ -53,29 +48,24 @@
       box-shadow: 0 18px 45px rgb(0 0 0 / .16);
     }
     section.wide { grid-column: 1 / -1; }
-    section.sports { border-color: rgb(88 200 255 / .45); }
-    section.active { border-color: rgb(201 255 76 / .38); }
-    section.family { border-color: rgb(255 79 163 / .38); }
+    section.sports { border-color: rgb(98 208 255 / .5); }
+    section.active { border-color: rgb(202 255 79 / .42); }
+    section.family { border-color: rgb(255 79 163 / .42); }
     .section-head { display: flex; gap: 1rem; align-items: baseline; justify-content: space-between; margin-bottom: 1rem; }
     h2 { margin: 0; font-size: clamp(1.45rem, 3vw, 2.1rem); letter-spacing: -.035em; }
     h3 { margin: 0 0 .35rem; font-size: 1.05rem; line-height: 1.28; }
     p { margin: .35rem 0 .8rem; }
     .kicker { color: var(--pink); white-space: nowrap; }
-    .lead { max-width: 850px; color: #e9edf7; font-size: 1.08rem; }
+    .lead { max-width: 880px; color: #edf0f9; font-size: 1.08rem; }
     .muted, .fine { color: var(--muted); }
     .fine { font-size: .82rem; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .75rem; }
-    article, .callout {
-      padding: 1rem;
-      border: 1px solid var(--line);
-      border-radius: .85rem;
-      background: rgb(5 7 18 / .35);
-    }
+    article, .callout { padding: 1rem; border: 1px solid var(--line); border-radius: .85rem; background: rgb(5 7 18 / .35); }
     article p:last-child, .callout p:last-child { margin-bottom: 0; }
     .tag { display: inline-block; margin-bottom: .5rem; color: var(--lime); }
     .time { color: var(--gold); font-weight: 800; }
     .scoreline { display: flex; flex-wrap: wrap; gap: .5rem; margin: .75rem 0; }
-    .scoreline span { padding: .35rem .6rem; border-radius: 999px; background: #202744; font-size: .86rem; }
+    .scoreline span { padding: .35rem .6rem; border-radius: 999px; background: #222944; font-size: .86rem; }
     ul { margin: .55rem 0; padding-left: 1.2rem; }
     li + li { margin-top: .4rem; }
     .source { margin-top: .75rem; font-size: .78rem; color: var(--muted); }
@@ -126,61 +116,64 @@
   .allie-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
 </head>
-<body data-allie-report="daily" data-report-date="2026-08-27">
+<body data-allie-report="daily" data-report-date="2026-08-28">
   <div class="shell">
     <header>
-      <div class="eyebrow">Thursday · Metro Detroit · August 27, 2026</div>
-      <h1>Make the evening count.</h1>
-      <p class="dek">Dry courts, two strong Riverfront ways to meet people, a compact WNBA doubleheader, and one very practical move for the game-company notebook.</p>
+      <div class="eyebrow">Friday · Metro Detroit · August 28, 2026</div>
+      <h1>Sun out. Weekend queued.</h1>
+      <p class="dek">A clear outdoor day, one national WNBA game tonight, Lions and Detroit City FC tomorrow, plus a short list of social plans and game-company moves worth acting on.</p>
     </header>
 
-    <main class="grid">
+    <main>
       <section class="wide" data-brief-section="allie-daily-overview">
         <div class="section-head">
-          <h2>Tonight's board</h2>
+          <h2>Friday in three moves</h2>
           <span class="kicker">The short version</span>
         </div>
         <div class="cards">
           <article>
-            <span class="tag">Move</span>
-            <h3>Choose your Riverfront lane</h3>
-            <p><strong>Volleyball at Valade Park, 6–9 PM</strong>, is the best sport-plus-repeat-social fit. <strong>We Run 313 at 6:30 PM</strong> is the running-first alternative. Their starts overlap, so pick one.</p>
-            <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Detroit Riverfront calendar</a></p>
+            <span class="tag">Get outside</span>
+            <h3>Use the dry window</h3>
+            <p>It is sunny, essentially rain-free and near 80°F late this afternoon. Run in the cooler morning or after 7 PM; volleyball and pickleball look especially good from late afternoon through sunset.</p>
+            <p class="source"><a href="https://forecast.weather.gov/MapClick.php?CityName=Detroit&amp;FcstType=digital&amp;degrees=C&amp;e=1&amp;lg=ep&amp;site=DTX&amp;state=MI&amp;textField1=42.3831&amp;textField2=-83.1022">NWS Detroit hourly forecast</a></p>
           </article>
           <article>
-            <span class="tag">Watch</span>
-            <h3>WNBA doubleheader</h3>
-            <p><strong>Golden State Valkyries at New York Liberty, 8 PM</strong>, then <strong>Washington Mystics at Phoenix Mercury, 10 PM</strong> on Prime Video.</p>
-            <p class="source"><a href="https://www.wnba.com/game/was-vs-phx-1022600290">WNBA game page</a> <a href="https://www.wnba.com/news/category/game-recap">WNBA recaps</a></p>
+            <span class="tag">Watch tonight</span>
+            <h3>Connecticut Sun at Indiana Fever</h3>
+            <p><strong>7:30 PM ET on ION.</strong> Indiana's recent team coverage highlighted Caitlin Clark's 37-point, 10-assist performance at Chicago on August 24.</p>
+            <p class="source"><a href="https://www.wnba.com/game/1022600292/CON-vs-IND">WNBA game page</a> <a href="https://fever.wnba.com/news">Indiana Fever news</a></p>
           </article>
           <article>
-            <span class="tag">Build</span>
-            <h3>Prototype with less</h3>
-            <p>Make a one-page bill of materials tonight. Replace every custom component with a commodity equivalent for two playtests; only the pieces that measurably improve comprehension or delight earn their cost.</p>
-            <p class="source"><a href="https://pandagm.com/tool_file/crowdfundingguidebook/">Panda guidebook</a></p>
+            <span class="tag">Build smarter</span>
+            <h3>Write the 12-word tactile hook</h3>
+            <p>Describe what players physically do in one sentence and test it with strangers before adding systems or commissioning more art. If they cannot repeat the hook after one demo, simplify the loop.</p>
+            <p class="source"><a href="https://www.tabletopanalytics.com/endingsoon">Tabletop Analytics ending-soon campaigns</a></p>
           </article>
         </div>
       </section>
 
       <section data-brief-section="allie-daily-weather">
         <div class="section-head">
-          <h2>Dry-window forecast</h2>
-          <span class="kicker">6–9 PM wins</span>
+          <h2>Outdoor green light</h2>
+          <span class="kicker">Dry all day</span>
         </div>
-        <p class="lead">Mostly sunny to partly cloudy near <strong>80°F at 6 PM</strong>, falling to <strong>74°F by 9 PM</strong>. Light northwest wind, 13–14% rain chance, and no forecast thunder.</p>
+        <p class="lead">Mostly sunny and dry: around <strong>61°F this morning</strong>, reaching <strong>80–81°F late afternoon</strong>, then sliding into the upper 60s late tonight. Winds stay light at roughly 3–7 mph.</p>
         <div class="scoreline">
-          <span>6 PM · 80°F</span><span>8 PM · 76°F</span><span>Midnight · 68°F</span><span>Overnight · ~60°F</span>
+          <span>6–8 AM · 61–62°F</span>
+          <span>Noon · 74°F</span>
+          <span>1–5 PM · 76–80°F</span>
+          <span>10 PM–midnight · 70–68°F</span>
         </div>
         <ul>
-          <li>Good conditions for volleyball, running, pickleball, a walk, or a patio.</li>
-          <li>Bring water for a hard session; bring a light layer after 9 PM.</li>
-          <li>No active Detroit/Pontiac watches, warnings, or advisories were reported at the latest check.</li>
-          <li>Location-specific AirNow AQI was unavailable; sensitive athletes should check the live reading before leaving.</li>
+          <li><strong>Run:</strong> aim for 7–10 AM or after 7 PM.</li>
+          <li><strong>Volleyball or pickleball:</strong> late afternoon through sunset offers light wind and temperatures easing from around 80°F into the mid-70s.</li>
+          <li><strong>Air quality:</strong> Southeast Michigan is forecast Good, with ozone the lead pollutant and no general-public activity restriction indicated.</li>
+          <li><strong>Pack:</strong> no rain gear needed for ordinary outdoor plans; bring a light layer only if staying out late.</li>
         </ul>
-        <p class="source"><a href="https://forecast.weather.gov/MapClick.php?CityName=Detroit&amp;FcstType=digital&amp;bw=1&amp;e=1&amp;fs=2&amp;menu=1&amp;site=DTX&amp;state=MI&amp;textField1=42.3831&amp;textField2=-83.1022">NWS hourly</a> <a href="https://www.weather.gov/dtx/A">NWS Detroit</a> <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a></p>
+        <p class="source"><a href="https://forecast.weather.gov/MapClick.php?CityName=Detroit&amp;FcstType=digital&amp;degrees=C&amp;e=1&amp;lg=ep&amp;site=DTX&amp;state=MI&amp;textField1=42.3831&amp;textField2=-83.1022">NWS Detroit</a> <a href="https://forecast.weather.gov/MapClick.php?lat=42.245&amp;lon=-83.319">NWS Detroit Metro Airport</a> <a href="https://www.airnow.gov/?city=Detroit&amp;country=USA&amp;state=MI">AirNow Detroit</a> <a href="https://www.michigan.gov/egle/public/learn/air-quality">Michigan air quality</a></p>
       </section>
 
-      <section data-brief-section="allie-daily-family" class="family">
+      <section class="family" data-brief-section="allie-daily-family">
         <div class="section-head">
           <h2>Family check-in</h2>
           <span class="kicker">Private by design</span>
@@ -188,169 +181,147 @@
         <div class="callout unavailable">
           <h3>Hurley Family calendar unavailable</h3>
           <p>The authoritative family calendar could not be accessed, so no calendar plans can be safely shown.</p>
-          <p><strong>Birthdays on August 27:</strong> unavailable to verify.</p>
-          <p><strong>Anniversaries on August 27:</strong> unavailable to verify.</p>
+          <p><strong>Birthdays on August 28:</strong> unavailable to verify.</p>
+          <p><strong>Anniversaries on August 28:</strong> unavailable to verify.</p>
         </div>
         <div class="callout unavailable" style="margin-top:.75rem">
           <h3>On this date in the shared archive</h3>
-          <p>No suitable exact-date prior-year match was found. The photo collector did not return a verified selection, so no image, date, or location is presented.</p>
+          <p>No suitable exact-date prior-year match was found. The public archive host could not be resolved during collection, so no candidate metadata, date or location could be verified.</p>
           <p class="source"><a href="https://photos.hurleyhome.com/">Shared public photo archive</a></p>
         </div>
       </section>
 
       <section class="wide sports" data-brief-section="allie-daily-sports">
         <div class="section-head">
-          <h2>Sports — the live card</h2>
-          <span class="kicker">Tonight + next</span>
+          <h2>Sports — tonight and next</h2>
+          <span class="kicker">High-signal card</span>
         </div>
         <div class="cards">
           <article>
-            <span class="tag">8:00 PM EDT · Tonight</span>
-            <h3>Golden State Valkyries at New York Liberty</h3>
-            <p>Golden State comes in after an 89–64 win over Connecticut on August 26. A clean opening game for the evening doubleheader.</p>
-            <p class="source"><a href="https://valkyries.wnba.com/news/golden-state-valkyries-announce-national-television-broadcast-schedule-20260422">Valkyries schedule</a></p>
+            <span class="tag">Tonight · 7:30 PM ET · ION</span>
+            <h3>Connecticut Sun at Indiana Fever</h3>
+            <p>Indiana's final game before a break is the Friday watch. Caitlin Clark and Kelsey Mitchell are the high-usage backcourt headline; confirm any late availability on the official game page.</p>
+            <p class="source"><a href="https://www.wnba.com/game/1022600292/CON-vs-IND">WNBA game page</a> <a href="https://sun.wnba.com/where-to-watch">Sun viewing guide</a> <a href="https://fever.wnba.com/news">Fever news</a></p>
           </article>
           <article>
-            <span class="tag">10:00 PM EDT · Tonight</span>
-            <h3>Washington Mystics at Phoenix Mercury</h3>
-            <p>Prime Video. Immediate rematch of Washington's 94–84 win in Phoenix on August 25.</p>
-            <p class="source"><a href="https://www.wnba.com/game/was-vs-phx-1022600290">WNBA game page</a> <a href="https://mystics.wnba.com/news/mystics-announce-2026-regular-season-schedule">Mystics schedule</a></p>
-          </article>
-          <article>
-            <span class="tag">Saturday · 1:00 PM EDT</span>
+            <span class="tag">Saturday · 1:00 PM ET</span>
             <h3>Detroit Lions at Indianapolis Colts</h3>
-            <p>NFL Network and the local Lions TV Network. Detroit's final preseason game is the last live audition before Sunday's initial 53-player roster deadline.</p>
-            <p class="source"><a href="https://www.detroitlions.com/schedule/">Lions schedule</a> <a href="https://www.detroitlions.com/news/camp-notes-campbell-reflects-on-lions-2026-training-camp-hutchinson-pacheco">Lions camp notes</a></p>
+            <p>The final preseason game is the last live audition before Detroit reduces the roster to 53 on Sunday. Watch depth-chart roles and Gibbs' availability or usage; do not overreact to veteran snap counts.</p>
+            <p class="source"><a href="https://www.detroitlions.com/schedule/">Lions schedule</a> <a href="https://www.detroitlions.com/news/camp-notes-campbell-reflects-on-lions-2026-training-camp-hutchinson-pacheco">Lions camp notes</a> <a href="https://www.nfl.com/news/nfl-roster-cuts-tracker-team-by-team-player-moves-ahead-of-2026-season">NFL roster tracker</a></p>
           </article>
           <article>
-            <span class="tag">Saturday · 8:00 PM EDT</span>
+            <span class="tag">Saturday · 8:00 PM ET</span>
             <h3>Detroit City FC at Louisville City FC</h3>
-            <p>Le Rouge travels after a 1–0 home win over Tampa Bay. Check Detroit City FC match coverage.</p>
-            <p class="source"><a href="https://www.detcityfc.com/mens-schedule/">Detroit City schedule</a></p>
+            <p>DCFC heads to Lynn Family Stadium after a 1–0 home win over Tampa Bay on August 22.</p>
+            <p class="source"><a href="https://www.detcityfc.com/mens-schedule/">Detroit City FC schedule</a></p>
+          </article>
+          <article>
+            <span class="tag">Pistons calendar · October 5</span>
+            <h3>Phoenix Suns at Detroit Pistons</h3>
+            <p><strong>7:00 PM ET at Little Caesars Arena.</strong> It is the next Pistons game and first home look at the 2026–27 group. The regular season follows at home against Boston on October 20 at 3:00 PM ET on NBC and Peacock.</p>
+            <p class="source"><a href="https://www.nba.com/team/1610612765/schedule">Pistons schedule</a> <a href="https://www.nba.com/news/key-dates">NBA key dates</a></p>
           </article>
         </div>
-        <div class="cards" style="margin-top:.75rem">
-          <article class="action">
-            <span class="tag">Fantasy watch</span>
-            <h3>Jameson Williams: positive deep-work signal</h3>
-            <p>Williams caught a deep touchdown from Jared Goff in first-team work Wednesday after returning the prior week from two practices missed with a minor shoulder issue. Encouraging, but not enough by itself to move him sharply up a draft board.</p>
-            <p class="source"><a href="https://www.detroitlions.com/news/detroit-lions-training-camp-day-18-observations-gibbs-brown-williams">Camp day 18</a> <a href="https://www.detroitlions.com/news/detroit-lions-training-camp-day-15-observations-williams-moore-goff">Camp day 15</a></p>
-          </article>
-          <article class="action">
-            <span class="tag">Fantasy watch</span>
-            <h3>Jahmyr Gibbs: check Saturday's workload</h3>
-            <p>After an early-camp minor back issue and contract-related absence, Gibbs was making high-leverage first-team plays, including a wheel-route touchdown in red-zone work. Monitor final practice participation; passing-game use still drives the upside.</p>
-            <p class="source"><a href="https://www.detroitlions.com/news/detroit-lions-training-camp-day-7-observations-gibbs-goff-williams">Camp day 7</a> <a href="https://www.detroitlions.com/news/detroit-lions-training-camp-day-13-observations-hutchinson-gibbs-teslaa">Camp day 13</a></p>
-          </article>
-          <article>
-            <span class="tag">Calendar it</span>
-            <h3>Boston Celtics at Detroit Pistons</h3>
-            <p><strong>October 20 at 3:00 PM EDT</strong> at Little Caesars Arena, on NBC and Peacock. It is Detroit's 2026–27 home opener; preseason home dates are October 5 vs. Phoenix and October 16 vs. Toronto.</p>
-            <p class="source"><a href="https://www.nba.com/news/2026-27-nba-regular-season-schedule">NBA schedule release</a> <a href="https://www.nba.com/team/1610612765/schedule">Pistons schedule</a></p>
-          </article>
+        <div class="callout action" style="margin-top:.75rem">
+          <h3>Fantasy note</h3>
+          <p>Detroit's final camp practice offered a positive health-and-chemistry signal: Jared Goff led a 99-yard scenario drive with completions to Jameson Williams, Sam LaPorta, Amon-Ra St. Brown and Isaac TeSlaa, and Jahmyr Gibbs finished it with a goal-line score. Keep the core pass catchers and Gibbs in their established tiers while monitoring the final injury reports and roster roles.</p>
+          <p class="fine">Draft calendar: Detroit opens Sunday, September 13, at home against New Orleans at 1:00 PM ET on FOX, then plays Buffalo on Thursday night.</p>
+          <p class="source"><a href="https://www.detroitlions.com/news/twentyman-training-camp-day-19-observations-goff-stbrown-gibbs">Lions practice observations</a> <a href="https://www.detroitlions.com/news/lions-announce-2026-schedule">Lions 2026 schedule announcement</a></p>
         </div>
       </section>
 
       <section data-brief-section="allie-daily-games-business">
         <div class="section-head">
-          <h2>Game-company lab</h2>
-          <span class="kicker">Build small</span>
+          <h2>Game-company notebook</h2>
+          <span class="kicker">Small-first tactics</span>
         </div>
         <article class="action">
-          <span class="tag">Tonight's move</span>
-          <h3>Write the prototype bill of materials</h3>
-          <p>Track component, function, quantity, unique shape or finish, and a removable substitute. Run two playtests using standard cards, cubes, and same-shape chits.</p>
-          <p class="source"><a href="https://pandagm.com/wp-content/uploads/2022/07/Crowdfunding-Guidebook-V2-0226.pdf">Panda crowdfunding guidebook</a></p>
+          <span class="tag">Campaign teardown</span>
+          <h3>Study Spirit Train's first screen</h3>
+          <p>The 1–4 player fantasy worker-placement campaign had raised $276,399 from 1,817 backers against a $10,000 goal when tracked this week, an average pledge of $152.</p>
+          <p><strong>Do this:</strong> record its hero promise, base-versus-deluxe offer, component shots and first-screen proof. Then make a one-page version for your own prototype that sells the game before lore or stretch goals.</p>
+          <p class="fine">Funding totals are time-sensitive snapshots, not forecasts.</p>
+          <p class="source"><a href="https://www.tabletopanalytics.com/endingsoon">Tabletop Analytics</a></p>
         </article>
-        <div class="cards" style="margin-top:.75rem">
-          <article>
-            <h3>Whisperwood: study the loop, not the total</h3>
-            <p>About $544,337 from 2,895 backers against a $100,000 goal, ending September 2. Its puzzle contest and small participation reward are a useful acquisition-loop model; its established publisher audience makes the total a poor first-project forecast.</p>
-            <p class="source"><a href="https://www.kicktraq.com/projects/cardboardalchemy/whisperwood/">Kicktraq snapshot</a> <a href="https://cardboardalchemy.com/whisperwood/">Whisperwood</a></p>
-          </article>
-          <article>
-            <h3>Spirit Train: sharpen the promise</h3>
-            <p>An August 23 roundup listed £7.7k from 90 backers after three days. The hook—conductors guiding lost souls through an in-between realm—is immediately legible. For a first test, aim for 20 paid or committed playtesters and a transparent unit-cost sheet.</p>
-            <p class="source"><a href="https://www.reddit.com/r/boardgames/comments/1vw4gje/weekly_crowdfunding_roundup_august_23_2026_20/">Crowdfunding roundup</a> <a href="https://boardgamegeek.com/project/link/version/804289?location=bggexplorehome">Campaign link</a></p>
-          </article>
-          <article>
-            <h3>Price fulfillment before choosing a platform</h3>
-            <p>Compare a 250-unit small run with a crowdfunding run. Include manufacturing, freight, pick-and-pack, fees, samples, and replacement reserve. Vendor material is a checklist, not an independent quote.</p>
-            <p class="source"><a href="https://www.maydaygames.com/pages/crowdfunding-small-print-run-support">Small-run support</a> <a href="https://www.maydaygames.com/blogs/news/board-game-publisher-services">Publisher services</a></p>
-          </article>
-        </div>
-        <p class="fine">Campaign amounts are snapshots accessed August 27 and can change before their deadlines.</p>
+        <article class="action" style="margin-top:.75rem">
+          <span class="tag">First-launch rule</span>
+          <h3>Make a learning release</h3>
+          <p>Kickstarter's July SideQuest experiment used two-week funding windows, affordable rewards, shipping included during the campaign and no pledge managers.</p>
+          <p><strong>Do this:</strong> cap SKUs, avoid complicated add-ons, quote shipping from final package dimensions before launch and plan one cross-promo partner.</p>
+          <p class="source"><a href="https://updates.kickstarter.com/meet-sidequest-a-community-effort-to-bring-tabletop-crowdfunding-back-to-basics/">Kickstarter SideQuest</a> <a href="https://help.kickstarter.com/hc/en-us/articles/115005134073-How-do-I-charge-shipping-on-my-rewards">Kickstarter shipping guidance</a></p>
+        </article>
+        <article class="action" style="margin-top:.75rem">
+          <span class="tag">Michigan field research · September 4–6</span>
+          <h3>GrandCon, DeVos Place</h3>
+          <p>Learn-to-play sessions, workshops, panels, exhibitors and a 3,000-title library make this a practical place to observe how unfamiliar players choose and learn games.</p>
+          <p><strong>If going:</strong> bring one sheet and a teachable prototype, schedule five 10-minute demos, ask players what they think the objective is before teaching, and log where explanations stall.</p>
+          <p class="source"><a href="https://www.grand-con.com/">GrandCon</a></p>
+        </article>
       </section>
 
       <section class="active" data-brief-section="allie-daily-active-social" data-allie-time-rotation>
         <div class="section-head">
-          <h2>Go do something</h2>
-          <span class="kicker">Solo-friendly</span>
+          <h2>Your next social move</h2>
+          <span class="kicker">Active + participatory</span>
         </div>
-        <p class="lead">The Riverfront choices overlap tonight. Pick one start instead of trying to stack them.</p>
-        <div class="cards">
-          <article data-allie-event data-start-at="2026-08-27T18:00:00-04:00" data-end-at="2026-08-27T21:00:00-04:00">
-            <span class="tag">Tonight · 6:00–9:00 PM EDT</span>
-            <h3>Volleyball at Valade</h3>
-            <p>Robert C. Valade Park. Come Play Detroit's recurring league is the strongest sport-and-repeat-social fit. Confirm individual or free-agent availability before going; registration may apply.</p>
-            <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Official calendar</a></p>
-          </article>
-          <article data-allie-event data-start-at="2026-08-27T18:00:00-04:00" data-end-at="2026-08-27T22:00:00-04:00">
-            <span class="tag">Tonight · 6:00–10:00 PM EDT</span>
-            <h3>Ride For Unity — Kickoff</h3>
-            <p>Roosevelt Park. Community bike ride, 5K walk/run, entertainment, food vendors, local organizations, and a closing drone show. All ages; the accessible listing did not display a ticket price and states no refunds.</p>
-            <p class="source"><a href="https://www.eventbrite.com/e/ride-for-unity-kickoff-tickets-1994995438059">Organizer listing</a></p>
-          </article>
-          <article data-allie-event data-start-at="2026-08-27T18:00:00-04:00" data-end-at="2026-08-27T19:00:00-04:00">
-            <span class="tag">Tonight · 6:00–7:00 PM EDT</span>
-            <h3>Zumba Dance Fitness</h3>
-            <p>Ralph C. Wilson, Jr. Centennial Park. Outdoor full-body class with Vamonos! No partner needed; price was not listed, so confirm with the organizer.</p>
-            <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Official calendar</a></p>
-          </article>
-          <article data-allie-event data-start-at="2026-08-30T16:00:00-04:00" data-end-at="2026-08-30T19:00:00-04:00">
-            <span class="tag">Sunday · 4:00–7:00 PM EDT</span>
-            <h3>Drumming on the Riverfront</h3>
-            <p>A participatory drum-and-dance circle exploring global rhythms. The exact Riverfront park and price were not listed; confirm before heading out.</p>
-            <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/08">Official calendar</a></p>
-          </article>
-        </div>
-        <div data-allie-time-empty hidden class="callout unavailable">
-          <h3>No remaining timed pick</h3>
-          <p>The sourced active-social options in this briefing have ended.</p>
+        <article data-allie-event data-start-at="2026-09-03T18:00:00-04:00" data-end-at="2026-09-03T21:00:00-04:00">
+          <span class="tag">Thursday, September 3 · 6–9 PM</span>
+          <h3>Volleyball at Valade with Come Play Detroit</h3>
+          <p><strong>Robert C. Valade Park, Detroit.</strong> Co-ed 4v4 sand league play, with eight regular-season games and single-elimination playoffs. Registration is required; price is not listed on the official Riverfront page.</p>
+          <p>Best volleyball-first fit: the recurring team format creates repeat contact and easy conversation.</p>
+          <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/09/03/volleyball-at-valade/event-dates">Official event listing</a></p>
+        </article>
+        <article data-allie-event data-start-at="2026-09-05T18:30:00-04:00" data-end-at="2026-09-05T20:00:00-04:00">
+          <span class="tag">Saturday, September 5 · 6:30–8:00 PM</span>
+          <h3>Detroit Social Walk Club</h3>
+          <p><strong>Cullen Plaza, Detroit.</strong> A women's social walking club with no age restriction stated on the official listing. Price is not listed.</p>
+          <p>Strong solo-attendee option, with additional September dates on September 10 and 24.</p>
+          <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/09/05/detroit-social-walk-club/event-dates">Official event listing</a></p>
+        </article>
+        <article data-allie-event data-start-at="2026-09-06T16:00:00-04:00" data-end-at="2026-09-06T19:00:00-04:00">
+          <span class="tag">Sunday, September 6 · 4–7 PM · Free</span>
+          <h3>Drumming on the Riverfront</h3>
+          <p><strong>Cullen Plaza, Detroit.</strong> An interactive drum and dance circle open to all experience levels. Bring an instrument or use one provided on site.</p>
+          <p>Shared rhythm and movement make this an easy alternative to a standard meetup.</p>
+          <p class="source"><a href="https://www.detroitriverfront.org/events/calendar/2026/09/06/drumming-on-the-riverfront">Official event listing</a></p>
+        </article>
+        <article data-allie-event data-start-at="2026-09-19T09:00:00-04:00" data-end-at="2026-09-19T11:00:00-04:00">
+          <span class="tag">Saturday, September 19 · 9–11 AM</span>
+          <h3>Gourdy's Pumpkin Run</h3>
+          <p><strong>William G. Milliken State Park and Harbor, Detroit.</strong> A festive 5K run or walk and post-race celebration for all ages and abilities. Registration price is not listed on the Michigan DNR page.</p>
+          <p class="source"><a href="https://www.michigan.gov/dnr/things-to-do/calendar/2026/09/19/william-g-milliken-state-park---gourdys-pumpkin-run">Michigan DNR event page</a></p>
+        </article>
+        <div data-allie-time-empty hidden>
+          <p>No upcoming timed event from today's sourced list remains active. Check the official event pages for later dates.</p>
         </div>
       </section>
 
       <section data-brief-section="allie-daily-culture-media">
         <div class="section-head">
-          <h2>Pop-culture queue</h2>
-          <span class="kicker">Playful, current</span>
+          <h2>Pop + reality queue</h2>
+          <span class="kicker">New Music Friday</span>
         </div>
         <div class="cards">
           <article>
-            <span class="tag">Watch now</span>
-            <h3>A timely Taylor performance</h3>
-            <p>A Grammy Museum program video surfaced this week with Taylor Swift performing a mashup of “All Too Well,” “I Knew It, I Knew You,” and “August.” Fresh, compact, and rumor-free.</p>
-            <p class="source"><a href="https://au.variety.com/2026/music/news/taylor-swift-sings-mashup-all-too-well-i-knew-it-i-knew-you-and-august-in-grammy-museum-video-39683/">Variety Australia</a></p>
-          </article>
-          <article>
-            <span class="tag">Friday listening</span>
-            <h3>Olivia first, then WILDCHILD</h3>
-            <p>The August 28 New Music Friday guide lists a new Olivia Rodrigo single and Alex Warren's second album, <em>WILDCHILD</em>. Easy refresh for the commute or run playlist.</p>
+            <span class="tag">Single · out today</span>
+            <h3>Olivia Rodrigo — “serena joy”</h3>
+            <p>A Dan Nigro-written protest song from the sessions for Olivia's June album. A portion of net proceeds supports the Daisy Chain Fields Fund.</p>
             <p class="source"><a href="https://www.officialcharts.com/chart-news/new-music-friday-august-28-2026/">Official Charts</a></p>
           </article>
           <article>
-            <span class="tag">Friday or Saturday</span>
-            <h3>Bop To The Top or Ed Sheeran</h3>
-            <p>The 18+ pop party is at the Fillmore Detroit Friday at 8 PM; Ed Sheeran's LOOP Tour reaches Ford Field Saturday at 5:30 PM.</p>
-            <p class="source"><a href="https://www.ticketmaster.com/discover/detroit?categoryId=KZFzniwnSyZfZ7v7nJ&amp;classificationId=KnvZfZ7vAev&amp;tt_scene=anchor_view">Ticketmaster Detroit</a></p>
+            <span class="tag">Album · out today</span>
+            <h3>Alex Warren — WILDCHILD</h3>
+            <p>The 13-song sophomore album is the full-length choice for a commute, run or weekend hang.</p>
+            <p class="source"><a href="https://www.alexwarrenofficial.com/">Alex Warren official site</a> <a href="https://shop.alexwarrenofficial.com/products/wildchild-cd-t-shirt-fan-pack">Official store track list</a></p>
           </article>
           <article>
-            <span class="tag">Monday · 9:00 PM EDT</span>
-            <h3>Love Island USA reunion</h3>
-            <p>Peacock released the Season 8 reunion trailer today. Ariana Madix and Andy Cohen host Monday's stream, with post-Villa relationship updates and unresolved conflicts.</p>
-            <p class="source"><a href="https://www.peacocktv.com/blog/love-island-usa-season-8-reunion-trailer-watch">Peacock</a></p>
+            <span class="tag">Monday · 9:00 PM ET · Peacock</span>
+            <h3>Love Island USA Season 8 reunion</h3>
+            <p>Ariana Madix and Andy Cohen co-host relationship updates, unseen Villa material and the season's biggest conflicts. Set the group-chat reminder now.</p>
+            <p class="source"><a href="https://www.peacocktv.com/blog/love-island-usa-season-8-reunion-trailer-watch">Peacock reunion preview</a> <a href="https://www.peacocktv.com/blog/who-won-love-island-usa-season-8-spoilers">Peacock season recap</a></p>
           </article>
         </div>
+        <p class="fine">No genuinely fresh, verifiable Taylor Swift update was found for this report date.</p>
       </section>
 
       <section data-brief-section="allie-daily-money-ai"><!-- allie-market-tracker:start -->
@@ -365,39 +336,35 @@
 
         <div class="section-head">
           <h2>Money + AI</h2>
-          <span class="kicker">Useful, low drama</span>
+          <span class="kicker">Practical, not noisy</span>
         </div>
         <article class="action">
-          <span class="tag">New-job checklist</span>
-          <h3>Capture the match, then set the percentage</h3>
-          <p>The 2026 employee limit for a 401(k), 403(b), or governmental 457 is <strong>$24,500</strong>; the combined traditional-and-Roth IRA limit is <strong>$7,500</strong>. During benefits enrollment, confirm the workplace match and choose a sustainable per-paycheck contribution.</p>
-          <p class="fine">The IRA limit is shared across traditional and Roth accounts. For single filers, the 2026 Roth IRA phaseout is $153,000–$168,000 of modified AGI. Verify plan and tax details; this is educational, not investment advice.</p>
-          <p class="source"><a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500">IRS 2026 limits</a></p>
+          <span class="tag">New-job benefits</span>
+          <h3>Confirm the match before choosing the percentage</h3>
+          <p>For 2026, the employee contribution limit is $24,500 for 401(k), 403(b) and governmental 457 plans. The combined traditional-and-Roth IRA limit is $7,500 for someone under 50; for single filers, direct Roth IRA contributions phase out from $153,000 to $168,000 of modified AGI.</p>
+          <p>During GM enrollment, verify the match formula and vesting rules, then choose a sustainable per-paycheck percentage that captures the full match without squeezing near-term cash.</p>
+          <p class="fine">The IRA cap is shared across traditional and Roth accounts, and eligibility or deductibility depends on tax situation and plan details. Educational information, not individualized tax or investment advice.</p>
+          <p class="source"><a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500">IRS 2026 limits</a> <a href="https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits">IRS IRA limits</a></p>
         </article>
-        <div class="cards" style="margin-top:.75rem">
-          <article>
-            <h3>Saver's Match: a 2027 note, not 2026 cash</h3>
-            <p>The match can equal up to 50% of the first $2,000 in qualifying retirement contributions, subject to income rules. For a single filer, 2027 MAGI of $35,500 or more is ineligible. Mechanics are still being developed, so do not budget around it.</p>
-            <p class="source"><a href="https://www.irs.gov/pub/irs-irbs/irb26-35.pdf">IRS guidance</a></p>
-          </article>
-          <article>
-            <h3>Update Power BI before October</h3>
-            <p>August's update lets Copilot Summary and Copilot Narrative read visuals revealed through display-only bookmarks, while respecting row- and object-level security. Desktop releases from March 2026 or earlier lose OneDrive and SharePoint save-and-share support starting in October.</p>
-            <p class="fine">Test every bookmark state and validate measures, filters, and generated narrative before sharing.</p>
-            <p class="source"><a href="https://learn.microsoft.com/en-nz/power-bi/fundamentals/whats-new">Power BI what's new</a></p>
-          </article>
-          <article>
-            <h3>Ask AI for the audit trail</h3>
-            <p>Reusable prompt: “Use only this approved extract; show the calculation steps, assumptions, excluded rows, and a validation query.” Independently reproduce important numbers in the governed environment.</p>
-            <p class="fine">Use only employer-approved tools and data; never upload confidential or proprietary information to an unapproved service.</p>
-            <p class="source"><a href="https://openai.com/academy/data-analysis/">OpenAI data-analysis guidance</a></p>
-          </article>
-        </div>
+        <article class="action" style="margin-top:.75rem">
+          <span class="tag">Analytics workflow</span>
+          <h3>Test bookmark-aware Power BI summaries</h3>
+          <p>Power BI's August update says Copilot Summary and Copilot Narrative can read report visuals hidden by default and revealed through display-only bookmarks; row-level and object-level security remain enforced. Desktop releases from March 2026 or earlier lose OneDrive and SharePoint save-and-share support starting in October.</p>
+          <p>Test the generated summary across intended bookmark states, and verify measures, filters and prose before sharing. Follow GM's approved-data and approved-AI-tool policies.</p>
+          <p class="source"><a href="https://learn.microsoft.com/en-nz/power-bi/fundamentals/whats-new">Power BI what's new</a></p>
+        </article>
+        <article class="action" style="margin-top:.75rem">
+          <span class="tag">Safer prompt habit</span>
+          <h3>Ask for the audit trail</h3>
+          <p>For an approved extract, request the metric, timeframe, comparison groups, assumptions, formulas, missing-data checks and unusual spikes. Ask for calculation steps, excluded rows and a validation query, then independently reproduce decision-critical numbers in the governed analytics environment.</p>
+          <p class="fine">Never upload confidential, proprietary or personal data to an unapproved service.</p>
+          <p class="source"><a href="https://openai.com/academy/data-analysis/">OpenAI Academy: data analysis</a></p>
+        </article>
       </section>
     </main>
 
     <footer>
-      Built from collector material dated August 27, 2026. Links lead to the supplied source pages; schedules and campaign totals can change. Finance content is informational and not investment advice.
+      Prepared for Allison from the dated sources linked in each panel. Schedules, availability and campaign totals can change; check the official source before acting.
     </footer>
   </div>
 <script id="allie-compact-layout-script">
