@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-28T08:30:17Z",
-  "editionDate": "2026-08-28",
+  "generatedAt": "2026-08-29T08:31:32Z",
+  "editionDate": "2026-08-29",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 2026",
     "estimatedLaunchAt": null,
     "confidence": "medium",
-    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of August 28, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 2026; no precise launch time is defensible.",
+    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of August 29, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 2026; no precise launch time is defensible.",
     "sources": [
       {
         "name": "SpaceX launches",
@@ -113,6 +113,23 @@
         "satellites",
         "spaceflight"
       ]
+    },
+    {
+      "id": "nasa-swift-resumes-xray-ultraviolet-observations",
+      "title": "NASA’s Swift observatory resumes X-ray and ultraviolet science",
+      "summary": "NASA has restarted Swift’s X-ray and ultraviolet/optical instruments after months in low-drag mode intended to preserve the observatory for an attempted orbital boost. The boost spacecraft will no longer capture Swift, but the 21-year-old mission can again rapidly observe transient cosmic events while NASA estimates it has roughly one to two months above the altitude where operations become difficult.",
+      "url": "https://science.nasa.gov/blogs/swift/2026/08/28/nasas-swift-restarts-science-observations/",
+      "source": {
+        "name": "NASA Swift"
+      },
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "topics": [
+        "space",
+        "astronomy",
+        "X-ray astronomy",
+        "space missions"
+      ],
+      "caveat": "Swift’s third instrument, the Burst Alert Telescope, remains offline as the team works to return it to data collection."
     }
   ]
 }
