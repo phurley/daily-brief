@@ -19,10 +19,18 @@ rendered in the browser from schema-backed JSON.
   `schemas/`.
 
 The `photos.json` document may contain zero to five photographs for a date.
-Multiple photographs become a slow, accessible crossfade carousel with all
-description, location, and date metadata overlaid inside the image.
+Multiple photographs become a slow, accessible crossfade carousel with only
+location and original date overlaid inside the image. Descriptions remain as
+image alt text for accessibility.
 `brief-preferences.json` is not displayed because it does not have a
 schema-backed public content contract.
+
+`weather-appearance.mjs` maps weather codes to clear, partly cloudy, overcast,
+rain, snow, fog, and storm styling, with an independent wind layer. It uses
+current observations up to 90 minutes old for today, otherwise the selected
+date's forecast; the header labels that distinction. Weather motion respects
+the system's reduced-motion preference. Run its regression checks with
+`node --test scripts/weather-appearance.test.mjs`.
 
 ## Local preview
 

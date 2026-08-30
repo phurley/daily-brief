@@ -1,3 +1,5 @@
+import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
+
 const TIME_ZONE = "America/Detroit";
 const REFRESH_MS = 15 * 60 * 1000;
 const LAUNCH_CACHE_MS = 30 * 60 * 1000;
@@ -349,12 +351,13 @@ function renderWeather() {
   const day = almanac?.days?.find((item) => item.date === state.selectedDate);
   const holiday = almanac?.holidays?.find((item) => item.date === state.selectedDate);
   const current = state.selectedDate === state.today ? weather?.current : null;
+  const appearance = weatherAppearance({ date: state.selectedDate, today: state.today, forecast, current });
   const nextForecast = weather?.daily?.find((item) => item.date === shiftDate(state.selectedDate, 1));
   const cards = [];
 
   if (forecast) {
     cards.push(weatherCard(
-      current ? "Right now" : "Forecast",
+      current ? appearance.source === "current" ? "Right now" : `Observed ${displayTime(current.observedAt)}` : "Forecast",
       current?.conditionText || forecast.conditionText,
       `${Math.round(current?.temperatureF ?? forecast.highF)}°`,
       forecast.narrative,
@@ -900,8 +903,6 @@ function renderPhoto() {
       decoding: "async",
     });
     const overlay = node("figcaption", { className: "memory__overlay" }, [
-      node("p", { className: "section-number", text: `From this day · Photo ${index + 1} of ${photos.length}` }),
-      node("h3", { text: photo.description }),
       node("p", { className: "memory__meta" }, [
         node("span", { text: `⌖ ${photo.location}` }),
         node("time", { text: displayDate(photo.takenDate, { year: true }), datetime: photo.takenDate }),
@@ -957,10 +958,27 @@ function renderUpdatedLabel() {
 
 function updateAtmosphere(forecast) {
   const root = document.documentElement;
-  const month = Number(state.today.slice(5, 7));
+  const month = Number(state.selectedDate.slice(5, 7));
   root.dataset.season = [12, 1, 2].includes(month) ? "winter" : [3, 4, 5].includes(month) ? "spring" : [6, 7, 8].includes(month) ? "summer" : "autumn";
-  const text = (forecast?.conditionText || state.data.weather?.current?.conditionText || "").toLowerCase();
-  root.dataset.weather = /rain|storm|shower/.test(text) ? "rain" : /cloud|overcast|fog/.test(text) ? "cloud" : "clear";
+  const appearance = weatherAppearance({ date: state.selectedDate, today: state.today, forecast, current: state.data.weather?.current });
+  root.dataset.weather = appearance.family;
+  root.dataset.wind = appearance.wind;
+  root.dataset.precipitation = appearance.intensity;
+  const label = $("#weather-atmosphere-note");
+  label.hidden = appearance.source === "unavailable";
+  label.textContent = appearance.label;
+  // One bounded set of decorative particles, reused across refreshes and dates.
+  const precipitation = $("#sky-precipitation");
+  if (!precipitation.childElementCount) {
+    precipitation.append(...Array.from({ length: 48 }, (_, index) => {
+      const particle = node("i");
+      particle.style.setProperty("--x", `${(index * 37) % 103}%`);
+      particle.style.setProperty("--delay", `${-((index * 13) % 31)}s`);
+      particle.style.setProperty("--duration", `${7 + (index % 7)}s`);
+      particle.style.setProperty("--size", `${2 + (index % 4)}px`);
+      return particle;
+    }));
+  }
   updateSky();
 }
 

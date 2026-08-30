@@ -7,8 +7,8 @@
     <meta name="description" content="A living daily brief for southeast Michigan.">
     <title>Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="theme.css?v=20260823-9">
-    <script type="module" src="app.js?v=20260823-9"></script>
+    <link rel="stylesheet" href="theme.css?v=20260830-1">
+    <script type="module" src="app.js?v=20260830-1"></script>
   </head>
   <body>
     <a class="skip-link" href="#brief">Skip to the brief</a>
@@ -19,8 +19,14 @@
         <span class="celestial__sun"></span>
         <span class="celestial__moon"></span>
       </div>
+      <div class="weather-scene" aria-hidden="true">
+        <div class="weather-scene__clouds"><i></i><i></i><i></i></div>
+        <div id="sky-precipitation" class="weather-scene__precipitation"></div>
+        <div class="weather-scene__wind"><i></i><i></i><i></i><i></i></div>
+      </div>
       <div class="shell sky__content">
         <p id="masthead-eyebrow" class="eyebrow">Your southeast Michigan daily brief</p>
+        <p id="weather-atmosphere-note" class="weather-atmosphere-note" hidden></p>
         <h1 id="page-title">A good day,<br>well considered.</h1>
         <p id="masthead-summary" class="sky__summary">Gathering the weather, local signals, and a few worthwhile detours.</p>
         <div class="masthead-controls">
