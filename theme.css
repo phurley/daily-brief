@@ -26,7 +26,7 @@
   --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
   --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --cloud-opacity: 0;
-  --cloud-speed: 65s;
+  --cloud-speed: 90s;
   --sun-strength: 1;
   --weather-tint: transparent;
   font-family: var(--sans);
@@ -133,8 +133,8 @@ h1 { max-width: 18ch; margin: .35rem 0 0; font-size: clamp(2.9rem, 5.7vw, 4.65re
 :root[data-weather="fog"] { --cloud-opacity: .8; --sun-strength: .12; --weather-tint: #9aadb11b; }
 :root:not([data-sky-phase="night"]):is([data-weather="rain"], [data-weather="storm"]) { --paper: #e6edf1; --panel: #f8fafb; --paper-deep: #d6e1e8; }
 :root:not([data-sky-phase="night"])[data-weather="snow"] { --paper: #eef5fa; --panel: #fcfdff; --paper-deep: #dce9f2; }
-:root[data-wind="breezy"] { --cloud-speed: 35s; }
-:root[data-wind="windy"] { --cloud-speed: 14s; }
+:root[data-wind="breezy"] { --cloud-speed: 55s; }
+:root[data-wind="windy"] { --cloud-speed: 28s; }
 :root[data-weather="cloud"] .sky { --sky-top: hsl(211 15% calc(var(--sky-light) - 5%)); --sky-bottom: hsl(207 16% calc(var(--sky-light) + 14%)); }
 :root[data-weather="rain"] .sky { --sky-top: hsl(210 29% calc(var(--sky-light) - 13%)); --sky-bottom: hsl(203 23% calc(var(--sky-light) + 5%)); }
 :root[data-weather="storm"] .sky { --sky-top: hsl(227 27% calc(var(--sky-light) - 19%)); --sky-bottom: hsl(216 24% calc(var(--sky-light) - 1%)); }
@@ -150,28 +150,28 @@ h1 { max-width: 18ch; margin: .35rem 0 0; font-size: clamp(2.9rem, 5.7vw, 4.65re
 .weather-scene__clouds i:nth-child(3) { left: -8%; top: -4%; width: 45%; height: 28%; animation-delay: -15s; opacity: .6; }
 :root:is([data-weather="cloud"], [data-weather="rain"], [data-weather="storm"]) .weather-scene__clouds { background: linear-gradient(#c0cddd33, transparent 75%); }
 :root[data-weather="partly-cloudy"] .weather-scene__clouds i { height: 16%; width: 23%; filter: blur(5px); }
-:root[data-weather="fog"] .weather-scene__clouds { inset: -30%; filter: blur(24px); background: repeating-linear-gradient(172deg, transparent 0 12%, #d9e5e660 24%, transparent 38%); animation: cloud-drift 35s ease-in-out infinite alternate; }
+:root[data-weather="fog"] .weather-scene__clouds { inset: -30%; filter: blur(24px); background: repeating-linear-gradient(172deg, transparent 0 12%, #d9e5e660 24%, transparent 38%); animation: cloud-drift 75s ease-in-out infinite alternate; }
 .weather-scene__precipitation { display: none; position: absolute; inset: -50px -8% 0; }
 .weather-scene__precipitation i { position: absolute; left: var(--x); top: -35px; }
 :root:is([data-weather="rain"], [data-weather="storm"]) .weather-scene__precipitation { display: block; transform: skewX(-12deg); }
-:root:is([data-weather="rain"], [data-weather="storm"]) .weather-scene__precipitation i { width: 1px; height: 28px; opacity: .5; background: linear-gradient(transparent, #d5eeff); animation: rainfall .95s var(--delay) linear infinite; }
-:root[data-precipitation="light"] .weather-scene__precipitation i { height: 17px; opacity: .38; animation-duration: 1.5s; }
+:root:is([data-weather="rain"], [data-weather="storm"]) .weather-scene__precipitation i { width: 1px; height: 23px; opacity: .34; background: linear-gradient(transparent, #d5eeff); animation: rainfall 1.8s var(--delay) linear infinite; }
+:root[data-precipitation="light"] .weather-scene__precipitation i { height: 14px; opacity: .25; animation-duration: 2.8s; }
 :root[data-precipitation="light"] .weather-scene__precipitation i:nth-child(2n) { display: none; }
-:root[data-precipitation="heavy"] .weather-scene__precipitation i { opacity: .7; animation-duration: .7s; }
+:root[data-precipitation="heavy"] .weather-scene__precipitation i { opacity: .48; animation-duration: 1.25s; }
 :root[data-weather="snow"] .weather-scene__precipitation { display: block; }
-:root[data-weather="snow"] .weather-scene__precipitation i { width: var(--size); height: var(--size); border-radius: 50%; background: #f3fbff; opacity: .78; box-shadow: 0 0 5px #e5f5ff80; animation: snowfall var(--duration) var(--delay) linear infinite; }
+:root[data-weather="snow"] .weather-scene__precipitation i { width: var(--size); height: var(--size); border-radius: 50%; background: #f3fbff; opacity: .58; box-shadow: 0 0 5px #e5f5ff60; animation: snowfall calc(var(--duration) * 1.6) var(--delay) linear infinite; }
 :root[data-wind="windy"] .weather-scene__precipitation { transform: skewX(-27deg); }
 .weather-scene__wind { display: none; position: absolute; inset: 0; }
 :root:is([data-wind="breezy"], [data-wind="windy"]) .weather-scene__wind { display: block; }
-.weather-scene__wind i { position: absolute; left: -35%; top: 18%; width: 32%; height: 3rem; border-top: 2px solid #e5f5ff80; border-radius: 50%; animation: wind-sweep 8s -3s linear infinite; }
+.weather-scene__wind i { position: absolute; left: -35%; top: 18%; width: 32%; height: 3rem; border-top: 1px solid #e5f5ff66; border-radius: 50%; animation: wind-sweep 14s -3s linear infinite; }
 .weather-scene__wind i:nth-child(2) { top: 38%; width: 21%; animation-delay: -6s; }
 .weather-scene__wind i:nth-child(3) { top: 63%; width: 38%; animation-delay: -1s; }
 .weather-scene__wind i:nth-child(4) { top: 78%; width: 27%; animation-delay: -4.5s; }
-:root[data-wind="windy"] .weather-scene__wind i { animation-duration: 4.5s; border-top-width: 3px; }
+:root[data-wind="windy"] .weather-scene__wind i { animation-duration: 9s; }
 @keyframes cloud-drift { from { transform: translateX(-6%); } to { transform: translateX(18%); } }
 @keyframes rainfall { to { translate: 0 650px; } }
 @keyframes snowfall { 50% { translate: 28px 320px; } to { translate: -12px 650px; } }
-@keyframes wind-sweep { from { transform: translateX(0); opacity: 0; } 20%, 70% { opacity: .7; } to { transform: translateX(440%); opacity: 0; } }
+@keyframes wind-sweep { from { transform: translateX(0); opacity: 0; } 20%, 70% { opacity: .4; } to { transform: translateX(440%); opacity: 0; } }
 
 .brief { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: .85rem; padding-block: 1rem clamp(3rem, 6vw, 5rem); }
 .panel, .joke, .data-errors { grid-column: 1 / -1; padding: clamp(1.1rem, 2.5vw, 1.8rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); box-shadow: 0 .6rem 1.8rem rgba(36,50,48,.045); }
