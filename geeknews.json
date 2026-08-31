@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-30T08:31:38Z",
-  "editionDate": "2026-08-30",
+  "generatedAt": "2026-08-31T08:30:15Z",
+  "editionDate": "2026-08-31",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 2026",
     "estimatedLaunchAt": null,
     "confidence": "medium",
-    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of August 30, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 2026; no precise launch time is defensible.",
+    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of August 31, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 2026; no precise launch time is defensible.",
     "sources": [
       {
         "name": "SpaceX launches",
@@ -130,6 +130,23 @@
         "space missions"
       ],
       "caveat": "Swift’s third instrument, the Burst Alert Telescope, remains offline as the team works to return it to data collection."
+    },
+    {
+      "id": "roman-telescope-launches-toward-l2",
+      "title": "NASA’s Roman telescope launches toward its dark-universe survey",
+      "summary": "NASA’s Nancy Grace Roman Space Telescope launched aboard a Falcon Heavy and separated from the rocket’s second stage, beginning its roughly three-month journey to the Sun–Earth L2 point. After commissioning, Roman will conduct wide, deep visible-to-near-infrared surveys to probe dark energy and dark matter and build a census of exoplanets.",
+      "url": "https://science.nasa.gov/blogs/roman/2026/08/30/nasa-concludes-roman-space-telescope-launch-coverage/",
+      "source": {
+        "name": "NASA Roman"
+      },
+      "publishedAt": "2026-08-30T00:00:00Z",
+      "topics": [
+        "space",
+        "astronomy",
+        "dark energy",
+        "exoplanets",
+        "science missions"
+      ]
     }
   ]
 }
