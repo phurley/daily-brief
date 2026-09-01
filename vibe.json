@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-31T09:15:45.902Z",
+  "generatedAt": "2026-09-01T09:16:20.689Z",
   "messages": [
     {
       "id": "masthead-eyebrow-2026-08-23",
@@ -1130,6 +1130,185 @@
       "section": "footer",
       "role": "note",
       "text": "A little rain, a little opera, and a telescope heading out of town.",
+      "order": 0
+    },
+    {
+      "id": "masthead-eyebrow-2026-09-01",
+      "date": "2026-09-01",
+      "section": "masthead",
+      "role": "eyebrow",
+      "text": "Tuesday, September 1 · Canton, Michigan",
+      "order": 0
+    },
+    {
+      "id": "masthead-headline-2026-09-01",
+      "date": "2026-09-01",
+      "section": "masthead",
+      "role": "headline",
+      "text": "A steamy September start, games tonight, and robots below the waves",
+      "order": 1,
+      "sourceItemIds": [
+        "game-night-sylvan-factory-2026-09-01",
+        "noaa-lrauvs-expand-seafloor-scallop-survey",
+        "pccs-athletics-activities-investment-2026"
+      ]
+    },
+    {
+      "id": "masthead-summary-2026-09-01",
+      "date": "2026-09-01",
+      "section": "masthead",
+      "role": "summary",
+      "text": "September begins hot and overcast, with an easy game-night option in Ann Arbor. Nearby, Plymouth-Canton schools are lowering activity fees; far offshore, NOAA robots are extending the seafloor survey.",
+      "order": 2,
+      "sourceItemIds": [
+        "game-night-sylvan-factory-2026-09-01",
+        "pccs-athletics-activities-investment-2026",
+        "noaa-lrauvs-expand-seafloor-scallop-survey"
+      ]
+    },
+    {
+      "id": "weather-note-2026-09-01",
+      "date": "2026-09-01",
+      "section": "weather",
+      "role": "note",
+      "text": "Overcast and hot, with a high near 95°F, a low around 69°F, and a 10% chance of precipitation.",
+      "order": 0
+    },
+    {
+      "id": "almanac-note-2026-09-01",
+      "date": "2026-09-01",
+      "section": "almanac",
+      "role": "note",
+      "text": "The waning gibbous moon is 82.3% illuminated and rises at 9:59 PM, long after the 8:07 PM sunset.",
+      "order": 0
+    },
+    {
+      "id": "today-heading-2026-09-01",
+      "date": "2026-09-01",
+      "section": "today",
+      "role": "section-heading",
+      "text": "Pick your kind of low-pressure social night",
+      "order": 0,
+      "sourceItemIds": [
+        "game-night-sylvan-factory-2026-09-01",
+        "english-country-dance-2026-09-01",
+        "trivia-with-terry-argus-2026-09-01"
+      ]
+    },
+    {
+      "id": "today-recommendation-2026-09-01",
+      "date": "2026-09-01",
+      "section": "today",
+      "role": "recommendation",
+      "text": "The easy answer is Sylvan Factory’s free Game Night from 5–10 PM: board games, mini painting, and beginner-friendly RPG one-shots. For a more old-school spin, English country dancing starts at 7 PM with live music and no partner needed.",
+      "order": 1,
+      "sourceItemIds": [
+        "game-night-sylvan-factory-2026-09-01",
+        "english-country-dance-2026-09-01"
+      ]
+    },
+    {
+      "id": "calendar-note-2026-09-01",
+      "date": "2026-09-01",
+      "section": "calendar",
+      "role": "note",
+      "text": "Labor Day is six days away.",
+      "order": 0,
+      "sourceItemIds": [
+        "labor-day-2026-09-07"
+      ]
+    },
+    {
+      "id": "news-heading-2026-09-01",
+      "date": "2026-09-01",
+      "section": "news",
+      "role": "section-heading",
+      "text": "A little more room to join in",
+      "order": 0,
+      "sourceItemIds": [
+        "pccs-athletics-activities-investment-2026",
+        "plymouth-library-senior-tech-survey-2026",
+        "textile-road-closure-ypsilanti-township-2026"
+      ]
+    },
+    {
+      "id": "news-summary-2026-09-01",
+      "date": "2026-09-01",
+      "section": "news",
+      "role": "summary",
+      "text": "Plymouth-Canton schools have approved $500,000 for athletics and activities, reducing participation fees and adding support for clubs and performance groups. Plymouth District Library is also collecting input to shape fall technology classes.",
+      "order": 1,
+      "sourceItemIds": [
+        "pccs-athletics-activities-investment-2026",
+        "plymouth-library-senior-tech-survey-2026"
+      ]
+    },
+    {
+      "id": "plan-ahead-heading-2026-09-01",
+      "date": "2026-09-01",
+      "section": "plan-ahead",
+      "role": "section-heading",
+      "text": "Tomorrow’s small rooms are doing their thing",
+      "order": 0,
+      "sourceItemIds": [
+        "jeremy-siegrist-north-star-2026-09-02",
+        "arks-open-stage-2026-09-02",
+        "poetry-open-mic-north-star-2026-09-02"
+      ]
+    },
+    {
+      "id": "plan-ahead-recommendation-2026-09-01",
+      "date": "2026-09-01",
+      "section": "plan-ahead",
+      "role": "recommendation",
+      "text": "Tomorrow, catch Jeremy Siegrist’s free early set at North Star, take the microphone at The Ark’s $3 Open Stage, or settle into the North Star poetry open mic.",
+      "order": 1,
+      "sourceItemIds": [
+        "jeremy-siegrist-north-star-2026-09-02",
+        "arks-open-stage-2026-09-02",
+        "poetry-open-mic-north-star-2026-09-02"
+      ]
+    },
+    {
+      "id": "science-technology-heading-2026-09-01",
+      "date": "2026-09-01",
+      "section": "science-technology",
+      "role": "section-heading",
+      "text": "Robots are mapping the places ships can’t reach",
+      "order": 0,
+      "sourceItemIds": [
+        "noaa-lrauvs-expand-seafloor-scallop-survey",
+        "roman-telescope-launches-toward-l2",
+        "nasa-swift-resumes-xray-ultraviolet-observations"
+      ]
+    },
+    {
+      "id": "science-technology-summary-2026-09-01",
+      "date": "2026-09-01",
+      "section": "science-technology",
+      "role": "summary",
+      "text": "NOAA’s long-range underwater robots have gathered more than 68,000 images along over 200 nautical miles of seafloor for the Atlantic sea-scallop assessment. Roman continues toward Sun–Earth L2, while Swift is back to X-ray and ultraviolet work.",
+      "order": 1,
+      "sourceItemIds": [
+        "noaa-lrauvs-expand-seafloor-scallop-survey",
+        "roman-telescope-launches-toward-l2",
+        "nasa-swift-resumes-xray-ultraviolet-observations"
+      ]
+    },
+    {
+      "id": "starship-note-2026-09-01",
+      "date": "2026-09-01",
+      "section": "starship",
+      "role": "note",
+      "text": "Flight 14 remains no earlier than September; neither SpaceX nor current launch tracking supports a more precise time.",
+      "order": 0
+    },
+    {
+      "id": "footer-note-2026-09-01",
+      "date": "2026-09-01",
+      "section": "footer",
+      "role": "note",
+      "text": "Heat outside, board games inside, robots far below—September has range.",
       "order": 0
     }
   ]
