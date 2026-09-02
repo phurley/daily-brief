@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T08:30:50Z",
-  "editionDate": "2026-09-01",
+  "generatedAt": "2026-09-02T08:30:25Z",
+  "editionDate": "2026-09-02",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 2026",
     "estimatedLaunchAt": null,
     "confidence": "medium",
-    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 1, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 2026; no precise launch time is defensible.",
+    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 2, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 2026; no precise launch time is defensible.",
     "sources": [
       {
         "name": "SpaceX launches",
@@ -163,6 +163,40 @@
         "seafloor surveying",
         "fisheries science"
       ]
+    },
+    {
+      "id": "noaa-documents-post-2014-gulf-stream-intensification",
+      "title": "Satellite record reveals a rapid post-2014 intensification of the Gulf Stream",
+      "summary": "A NOAA and University of Miami study of 31 years of satellite-altimeter observations found that the Gulf Stream downstream of the Florida Straits weakened until 2014, then shifted northward, stabilized, and rapidly strengthened through 2023. The result ties the change to wind-driven strengthening of the subtropical gyre and matters for North Atlantic heat transport, weather, sea level, and marine ecosystems.",
+      "url": "https://www.aoml.noaa.gov/satellite-data-reveals-gulf-stream-intensification/",
+      "source": {
+        "name": "NOAA Atlantic Oceanographic and Meteorological Laboratory"
+      },
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "topics": [
+        "ocean science",
+        "climate",
+        "satellite observations",
+        "Gulf Stream"
+      ],
+      "caveat": "The observed downstream Gulf Stream change should not be read as a direct measure of the broader Atlantic Meridional Overturning Circulation (AMOC), which responds to different forcings."
+    },
+    {
+      "id": "esa-records-samba-targeted-reentry-science",
+      "title": "ESA records a precision-targeted satellite reentry for debris science",
+      "summary": "ESA deliberately guided the Cluster satellite Samba to a remote South Pacific reentry and flew an instrumented aircraft from Tonga to observe it. The satellite reentered at 21:39:38 UTC on August 31, with the final prediction accurate to the second; 29 of 30 airborne instruments recorded its breakup, yielding rare measurements of how a spacecraft heats, fragments, and sheds materials.",
+      "url": "https://www.esa.int/Space_Safety/Space_Debris/Samba_s_fiery_farewell_recorded",
+      "source": {
+        "name": "European Space Agency"
+      },
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "topics": [
+        "space safety",
+        "engineering",
+        "space debris",
+        "atmospheric reentry"
+      ],
+      "caveat": "ESA says the images and instrument data are still being processed, so detailed material-by-material results are not yet available."
     }
   ]
 }
