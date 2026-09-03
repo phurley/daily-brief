@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-02T08:30:25Z",
-  "editionDate": "2026-09-02",
+  "generatedAt": "2026-09-03T08:31:30Z",
+  "editionDate": "2026-09-03",
   "starshipEstimatedLaunch": {
     "status": "targeted",
-    "estimateLabel": "No earlier than September 2026",
+    "estimateLabel": "No earlier than September 15, 2026",
     "estimatedLaunchAt": null,
     "confidence": "medium",
-    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 2, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 2026; no precise launch time is defensible.",
+    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 3, Next Spaceflight lists the first orbital Starship attempt as no earlier than September 15, 2026; no precise launch time is defensible.",
     "sources": [
       {
         "name": "SpaceX launches",
@@ -197,6 +197,40 @@
         "atmospheric reentry"
       ],
       "caveat": "ESA says the images and instrument data are still being processed, so detailed material-by-material results are not yet available."
+    },
+    {
+      "id": "hubble-discovers-saturn-south-pole-decagon",
+      "title": "Hubble finds a giant, evolving decagon around Saturn’s south pole",
+      "summary": "NASA’s Hubble observations have revealed a 10-sided atmospheric wave embedded in Saturn’s south-polar jet stream—the first large regular-sided jet pattern seen in the planet’s southern hemisphere. The structure reaches through multiple atmospheric layers and had faint precursors in data from 2023, giving researchers a chance to watch a giant-planet circulation pattern develop.",
+      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-tracks-new-decagon-encircling-saturns-south-pole/",
+      "source": {
+        "name": "NASA Hubble"
+      },
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "topics": [
+        "space",
+        "planetary science",
+        "Saturn",
+        "atmospheric dynamics"
+      ],
+      "caveat": "Scientists do not yet know whether the new decagon will become a long-lived stable feature like Saturn’s northern hexagon or continue evolving."
+    },
+    {
+      "id": "nasa-multipoint-sounding-rocket-probes-sporadic-e",
+      "title": "A multi-sensor rocket finds unexpected structure in radio-disrupting ionospheric clouds",
+      "summary": "New peer-reviewed results from NASA’s SpEED Demon sounding rocket provide the first simultaneous multi-point measurements inside a sporadic-E layer, a metal-ion cloud that can disrupt long-distance radio and GPS signals. Five detectors showed the layer was uneven and structured rather than a simple sheet, including a split into two peaks during descent—evidence that atmospheric turbulence shapes the plasma.",
+      "url": "https://science.nasa.gov/science-research/heliophysics/nasa-rocket-takes-first-multi-point-look-inside-radio-disrupting-clouds/",
+      "source": {
+        "name": "NASA"
+      },
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "topics": [
+        "heliophysics",
+        "ionosphere",
+        "sounding rockets",
+        "radio science"
+      ],
+      "caveat": "The proposed Kelvin–Helmholtz turbulence explanation is plausible but unconfirmed because the flight did not directly measure local winds and electric fields."
     }
   ]
 }
