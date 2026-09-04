@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-03T08:31:30Z",
-  "editionDate": "2026-09-03",
+  "generatedAt": "2026-09-04T08:30:33Z",
+  "editionDate": "2026-09-04",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 15, 2026",
     "estimatedLaunchAt": null,
     "confidence": "medium",
-    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 3, Next Spaceflight lists the first orbital Starship attempt as no earlier than September 15, 2026; no precise launch time is defensible.",
+    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 4, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 15, 2026; no precise launch time is defensible.",
     "sources": [
       {
         "name": "SpaceX launches",
@@ -231,6 +231,23 @@
         "radio science"
       ],
       "caveat": "The proposed Kelvin–Helmholtz turbulence explanation is plausible but unconfirmed because the flight did not directly measure local winds and electric fields."
+    },
+    {
+      "id": "bepicolombo-separates-transfer-module-mercury-arrival",
+      "title": "BepiColombo successfully sheds its transfer stage on approach to Mercury",
+      "summary": "After almost eight years and billions of kilometres in flight, ESA and JAXA’s BepiColombo mission successfully separated its Mercury Transfer Module more than 200 million kilometres from Earth. The Mercury Planetary Orbiter and Magnetospheric Orbiter are now operating as a composite spacecraft on the next leg toward Mercury orbit insertion in November, a key milestone toward the first two-spacecraft scientific mission at the planet.",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo/Latest_updates_BepiColombo_s_arrival_at_Mercury",
+      "source": {
+        "name": "European Space Agency"
+      },
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "topics": [
+        "spaceflight",
+        "planetary science",
+        "Mercury",
+        "BepiColombo"
+      ],
+      "caveat": "The two orbiters have not yet entered Mercury orbit; ESA schedules orbital insertion for November 2026 and science operations for April 2027."
     }
   ]
 }
