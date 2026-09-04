@@ -1,4 +1,5 @@
 import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
+import { orderNewsStories, orderScienceStories } from "./story-order.mjs?v=20260904-1";
 
 const TIME_ZONE = "America/Detroit";
 const REFRESH_MS = 15 * 60 * 1000;
@@ -29,6 +30,9 @@ const state = {
   photoTimer: null,
   eventExpiryTimer: null,
   launches: [],
+  scienceShuffleSeed: globalThis.crypto?.getRandomValues
+    ? globalThis.crypto.getRandomValues(new Uint32Array(1))[0]
+    : Date.now(),
 };
 
 let claimHoverTimer = null;
@@ -281,10 +285,12 @@ function moonGraphic(moon) {
   const texture = document.createElementNS("http://www.w3.org/2000/svg", "image");
   texture.setAttribute("class", "moon-disc__texture");
   texture.setAttribute("href", "assets/moon-waxing-gibbous.png");
-  texture.setAttribute("x", "4");
-  texture.setAttribute("y", "4");
-  texture.setAttribute("width", "92");
-  texture.setAttribute("height", "92");
+  // The source photo includes transparent padding. Zoom it to the lunar limb
+  // so the dark phase backing does not read as a ring around the photograph.
+  texture.setAttribute("x", "-3");
+  texture.setAttribute("y", "-3");
+  texture.setAttribute("width", "106");
+  texture.setAttribute("height", "106");
   texture.setAttribute("clip-path", "url(#moon-illumination-clip)");
   svg.append(definitions, dark, texture);
   return svg;
@@ -725,7 +731,10 @@ function renderStories(kind) {
   const noteSelector = kind === "news" ? "#news-note" : "#geek-note";
   const section = kind === "news" ? "news" : "science-technology";
   const editionAvailable = data?.editionDate && data.editionDate <= state.selectedDate;
-  const stories = editionAvailable ? data.stories || [] : [];
+  const availableStories = editionAvailable ? data.stories || [] : [];
+  const stories = kind === "news"
+    ? orderNewsStories(availableStories, { today: state.today, dateKey })
+    : orderScienceStories(availableStories, state.scienceShuffleSeed);
   const children = stories.map((story) => {
     const title = node("h3");
     title.append(safeLink(story.title, story.url));
