@@ -7,7 +7,7 @@
   "additionalProperties": false,
   "required": ["schemaVersion", "generatedAt", "editionDate", "stories"],
   "properties": {
-    "schemaVersion": { "const": "1.0.0" },
+    "schemaVersion": { "const": "1.1.0" },
     "generatedAt": { "type": "string", "format": "date-time" },
     "editionDate": { "type": "string", "format": "date" },
     "stories": {
@@ -20,7 +20,7 @@
     "story": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "title", "summary", "url", "source", "publishedAt", "locations", "topics"],
+      "required": ["id", "title", "summary", "url", "source", "publishedAt", "addedAt", "localityIndex", "locations", "topics"],
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
         "title": { "type": "string", "minLength": 1 },
@@ -37,6 +37,17 @@
           }
         },
         "publishedAt": { "type": "string", "format": "date-time" },
+        "addedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the collector first found and added the story to the Daily Brief."
+        },
+        "localityIndex": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4,
+          "description": "Geographic relevance: 0 Canton/Plymouth; 1 immediately surrounding communities; 2 Ypsilanti/Ann Arbor; 3 Detroit and other metro Detroit suburbs; 4 statewide Michigan or elsewhere. Use the lowest applicable index."
+        },
         "locations": {
           "type": "array",
           "uniqueItems": true,
