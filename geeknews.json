@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-04T08:30:33Z",
-  "editionDate": "2026-09-04",
+  "generatedAt": "2026-09-05T16:18:27Z",
+  "editionDate": "2026-09-05",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 15, 2026",
     "estimatedLaunchAt": null,
     "confidence": "medium",
-    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 4, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 15, 2026; no precise launch time is defensible.",
+    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 5, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 15, 2026; no precise launch time is defensible.",
     "sources": [
       {
         "name": "SpaceX launches",
@@ -248,6 +248,23 @@
         "BepiColombo"
       ],
       "caveat": "The two orbiters have not yet entered Mercury orbit; ESA schedules orbital insertion for November 2026 and science operations for April 2027."
+    },
+    {
+      "id": "nasa-x59-validates-flight-models-through-25-flights",
+      "title": "NASA’s X-59 completes 25 flights with flight behavior matching its models",
+      "summary": "NASA’s quiet-supersonic X-59 research aircraft has completed 25 test flights, including a 72-minute flight to Mach 1.2 and 49,000 feet. NASA reports that its handling, stability margin, and flight loads have closely matched the preflight digital-twin predictions, without unexpected aerodynamic instability or excessive vibration—clearing the way for acoustic-validation flights that will directly measure its low-boom sonic thumps.",
+      "url": "https://www.nasa.gov/blogs/quesst/2026/09/04/nasas-x-59-aircraft-builds-momentum-through-25th-flight/",
+      "source": {
+        "name": "NASA"
+      },
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "topics": [
+        "aeronautics",
+        "supersonic flight",
+        "flight testing",
+        "engineering"
+      ],
+      "caveat": "The key low-boom claim is not yet validated: NASA’s dedicated acoustic measurement campaign is the next phase."
     }
   ]
 }
