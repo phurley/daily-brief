@@ -4,142 +4,91 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Allison’s Friday Playbook · September 4, 2026</title>
+  <title>Allison’s Sunday Playbook · September 6, 2026</title>
   <style>
     :root {
       --night: #11142f;
-      --night-2: #1b1d43;
-      --panel: rgba(30, 33, 73, .9);
-      --panel-2: rgba(40, 43, 89, .78);
-      --ink: #fbf7ef;
-      --muted: #c3c3d7;
-      --coral: #ff7d7d;
-      --gold: #f6c768;
-      --mint: #80d8c3;
-      --blue: #8fb6ff;
-      --line: rgba(255, 255, 255, .13);
-      --shadow: 0 24px 60px rgba(2, 4, 20, .3);
-      --radius: 24px;
+      --panel: #1c2045;
+      --panel-soft: #242852;
+      --ink: #fffaf1;
+      --muted: #c5c7dc;
+      --coral: #ff8585;
+      --gold: #f5ca72;
+      --mint: #85ddc6;
+      --blue: #a8c8ff;
+      --line: rgba(255,255,255,.13);
     }
     * { box-sizing: border-box; }
     html { background: var(--night); }
     body {
       margin: 0;
-      color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at 12% 2%, rgba(255, 125, 125, .16), transparent 28rem),
-        radial-gradient(circle at 90% 12%, rgba(143, 182, 255, .14), transparent 30rem),
-        linear-gradient(150deg, var(--night), #141734 48%, #10122b);
       min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(255,133,133,.16), transparent 28rem),
+        radial-gradient(circle at 92% 10%, rgba(168,200,255,.13), transparent 30rem),
+        linear-gradient(145deg, #11142f, #151837 55%, #10122a);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.55;
     }
-    a { color: #c9ddff; text-underline-offset: .2em; }
+    a { color: var(--blue); text-underline-offset: .2em; }
     a:hover { color: #fff; }
-    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 64px; }
-    .masthead { padding: 20px 4px 30px; }
-    .eyebrow {
-      margin: 0 0 10px;
-      color: var(--gold);
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: .17em;
-      text-transform: uppercase;
-    }
+    .shell { width: min(1120px, calc(100% - 30px)); margin: 0 auto; padding: 44px 0 60px; }
+    header { padding: 12px 3px 28px; }
     h1, h2, h3, p { margin-top: 0; }
-    h1 { margin-bottom: 12px; font-size: clamp(2.45rem, 8vw, 5.6rem); line-height: .98; letter-spacing: -.055em; }
-    h2 { margin-bottom: 8px; font-size: clamp(1.55rem, 3vw, 2.35rem); line-height: 1.08; letter-spacing: -.035em; }
-    h3 { margin-bottom: 6px; font-size: 1.05rem; }
-    .lede { max-width: 780px; margin-bottom: 0; color: var(--muted); font-size: clamp(1.04rem, 2vw, 1.22rem); }
-    .date-line { color: var(--coral); font-weight: 750; }
-    main { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 18px; }
+    h1 { margin-bottom: 12px; font-size: clamp(2.6rem, 8vw, 5.4rem); line-height: .98; letter-spacing: -.055em; }
+    h2 { margin-bottom: 7px; font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.08; letter-spacing: -.035em; }
+    h3 { margin-bottom: 6px; font-size: 1.08rem; }
+    .eyebrow { margin: 0 0 9px; color: var(--gold); font-size: .76rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+    .lede { max-width: 800px; margin: 0; color: var(--muted); font-size: clamp(1.03rem, 2vw, 1.2rem); }
+    .date { color: var(--coral); font-weight: 800; }
+    main { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); gap: 18px; }
     section {
       grid-column: span 6;
-      padding: clamp(20px, 3vw, 30px);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: linear-gradient(145deg, var(--panel), var(--panel-2));
-      box-shadow: var(--shadow);
+      padding: clamp(20px, 3vw, 29px);
       overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 23px;
+      background: linear-gradient(145deg, rgba(28,32,69,.95), rgba(36,40,82,.82));
+      box-shadow: 0 22px 55px rgba(3,5,22,.28);
     }
     section.wide { grid-column: 1 / -1; }
-    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
-    .section-kicker { margin: 4px 0 0; color: var(--muted); font-size: .91rem; }
-    .badge {
-      flex: 0 0 auto;
-      padding: 6px 10px;
-      border: 1px solid rgba(246, 199, 104, .35);
-      border-radius: 999px;
-      color: var(--gold);
-      background: rgba(246, 199, 104, .08);
-      font-size: .72rem;
-      font-weight: 800;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    .callout {
-      padding: 18px;
-      border-left: 3px solid var(--coral);
-      border-radius: 0 14px 14px 0;
-      background: rgba(255, 125, 125, .08);
-    }
-    .callout p:last-child, .item p:last-child, .event p:last-child { margin-bottom: 0; }
-    .checklist, .clean-list { margin: 0; padding: 0; list-style: none; }
-    .checklist { display: grid; gap: 10px; }
-    .checklist li { position: relative; padding-left: 30px; color: #eceaf3; }
-    .checklist li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: .22em;
-      width: 16px;
-      height: 16px;
-      border: 2px solid var(--mint);
-      border-radius: 5px;
-    }
-    .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px 0; }
-    .stat { padding: 14px; border: 1px solid var(--line); border-radius: 16px; background: rgba(8, 10, 34, .26); }
-    .stat strong { display: block; color: var(--gold); font-size: 1.55rem; line-height: 1.1; }
+    .section-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
+    .kicker, .quiet, .meta { color: var(--muted); }
+    .kicker { margin: 0; font-size: .9rem; }
+    .badge { flex: 0 0 auto; padding: 6px 10px; border: 1px solid rgba(245,202,114,.35); border-radius: 999px; color: var(--gold); background: rgba(245,202,114,.08); font-size: .7rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .callout { padding: 17px 18px; border-left: 3px solid var(--coral); border-radius: 0 14px 14px 0; background: rgba(255,133,133,.08); }
+    .callout p:last-child, .card p:last-child, .event p:last-child { margin-bottom: 0; }
+    .stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin: 17px 0; }
+    .stat, .card, .event { padding: 16px 17px; border: 1px solid var(--line); border-radius: 16px; background: rgba(8,10,35,.28); }
+    .stat strong { display: block; color: var(--gold); font-size: 1.45rem; line-height: 1.1; }
     .stat span { color: var(--muted); font-size: .78rem; }
-    .timeline { display: grid; gap: 12px; }
-    .item, .event {
-      position: relative;
-      padding: 17px 18px;
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      background: rgba(10, 12, 39, .27);
-    }
-    .item time, .event time { display: block; margin-bottom: 5px; color: var(--coral); font-size: .78rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
-    .meta { margin-bottom: 8px; color: var(--muted); font-size: .87rem; }
+    .checklist, .clean-list { margin: 0; padding: 0; list-style: none; }
+    .checklist { display: grid; gap: 9px; }
+    .checklist li { position: relative; padding-left: 29px; }
+    .checklist li::before { content: ""; position: absolute; left: 0; top: .22em; width: 15px; height: 15px; border: 2px solid var(--mint); border-radius: 5px; }
+    .grid, .timeline { display: grid; gap: 12px; }
+    .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    time, .time { display: block; margin-bottom: 5px; color: var(--coral); font-size: .77rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
     .source { margin: 11px 0 0; font-size: .78rem; }
-    .source a { color: var(--blue); }
-    .weather-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .risk-high { color: #ffaaa3; }
-    .risk-moderate { color: var(--gold); }
-    .choice-label { margin-bottom: 12px; color: var(--mint); font-size: .77rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
-    .event h3 { font-size: 1.28rem; }
-    .event-details { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; margin: 14px 0; }
+    .source-set { margin-top: 16px; color: var(--muted); font-size: .78rem; }
+    .event h3 { font-size: 1.3rem; }
+    .event-details { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px 18px; margin: 13px 0; }
     .event-details p { margin: 0; }
-    .event-details strong { display: block; color: var(--muted); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
-    .fallback { color: var(--muted); font-style: italic; }
-    .entertainment-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-    .entertainment-grid .item:first-child { grid-column: 1 / -1; border-color: rgba(255, 125, 125, .35); }
-    .quiet { color: var(--muted); }
-    .family-status { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .status-box { padding: 17px; border: 1px solid var(--line); border-radius: 17px; background: rgba(10, 12, 39, .25); }
-    .status-box h3 { color: var(--gold); }
-    footer { padding: 28px 4px 0; color: #999bb9; font-size: .8rem; }
+    .event-details strong { display: block; color: var(--muted); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+    [data-allie-time-empty][hidden] { display: none; }
+    .family-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+    footer { padding: 25px 3px 0; color: #9b9db9; font-size: .78rem; }
     @media (max-width: 820px) {
       .shell { width: min(100% - 22px, 700px); padding-top: 24px; }
       main { display: block; }
       section { margin-bottom: 14px; }
-      .weather-grid, .entertainment-grid, .family-status { grid-template-columns: 1fr; }
-      .entertainment-grid .item:first-child { grid-column: auto; }
+      .grid, .family-grid { grid-template-columns: 1fr; }
     }
-    @media (max-width: 520px) {
+    @media (max-width: 540px) {
       .stats, .event-details { grid-template-columns: 1fr; }
       .section-head { display: block; }
-      .badge { display: inline-block; margin-top: 8px; }
+      .badge { display: inline-block; margin-top: 9px; }
     }
   </style>
 <style id="allie-compact-layout">
@@ -177,12 +126,12 @@
   .allie-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
 </head>
-<body data-allie-report="tomorrow" data-report-date="2026-09-04">
+<body data-allie-report="tomorrow" data-report-date="2026-09-06">
   <div class="shell">
-    <header class="masthead">
+    <header>
       <p class="eyebrow">Night-before playbook · Allison</p>
-      <h1>Friday, lined up.</h1>
-      <p class="lede"><span class="date-line">September 4, 2026</span> brings a wet commute, a strong indoor night out, an early Team USA opener, and one market-moving morning release worth putting on the radar tonight.</p>
+      <h1>Sunday, ready.</h1>
+      <p class="lede"><span class="date">September 6, 2026</span> is dry, warm, and unusually easy to shape: a free daytime festival, an optional downtown music stretch, and a hosted game table at night.</p>
     </header>
 
     <main>
@@ -190,24 +139,24 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">01 · The shape of tomorrow</p>
-            <h2>Make the indoor plan tonight</h2>
-            <p class="section-kicker">A short setup list for a changeable Friday.</p>
+            <h2>Make Game Night the anchor</h2>
+            <p class="kicker">One decision tonight unlocks the strongest solo-social option.</p>
           </div>
-          <span class="badge">Medium-high forecast confidence</span>
+          <span class="badge">Sunday setup</span>
         </div>
         <div class="callout">
-          <p><strong>The cleanest route:</strong> RSVP for the 8:30 p.m. indoor volleyball session, complete the 2SP waiver if needed, and set aside $10 cash. If art and design sound better, RSVP for the 5 p.m. Mutual Assembly opening instead; it overlaps the 6 p.m. Travel In Peace program.</p>
+          <p><strong>The clean route:</strong> buy the $5 Game Night Detroit ticket tonight because the official listing warns that the event fills up. Tomorrow, start with the Detroit Sandwich Party or the Detroit Jazz Festival, then head to the hosted tables in Hamtramck for 5 p.m.</p>
         </div>
-        <div class="stats" aria-label="Tomorrow at a glance">
-          <div class="stat"><strong>82–83°F</strong><span>Detroit / Ann Arbor highs</span></div>
-          <div class="stat"><strong>60%</strong><span>daytime rain chance</span></div>
-          <div class="stat"><strong>8:15 a.m.</strong><span>USA vs. China</span></div>
+        <div class="stats" aria-label="Sunday at a glance">
+          <div class="stat"><strong>78°F</strong><span>mostly sunny high</span></div>
+          <div class="stat"><strong>11 a.m.</strong><span>Sandwich Party opens</span></div>
+          <div class="stat"><strong>5 p.m.</strong><span>Game Night starts</span></div>
         </div>
         <ul class="checklist">
-          <li>Pack a waterproof shell or umbrella and shoes that handle wet pavement.</li>
-          <li>Allow extra drive time in the morning; check forecast, radar, and active alerts before both commutes.</li>
-          <li>Set a 10-minute block for the 8:30 a.m. August jobs report.</li>
-          <li>Choose and RSVP for one Friday-night plan before its trip across Metro Detroit.</li>
+          <li>Buy the Game Night Detroit ticket before assuming door availability.</li>
+          <li>If a tiny online game prototype sounds fun, register and join the Nimble Game Jam Discord tonight; submissions close at 11 a.m. Sunday.</li>
+          <li>Set out sunscreen and sunglasses, plus a light layer for the evening.</li>
+          <li>Recheck the point forecast—and AirNow before sustained outdoor exercise—close to departure.</li>
         </ul>
       </section>
 
@@ -215,69 +164,48 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">02 · Weather</p>
-            <h2>Rain bookends the useful middle</h2>
-            <p class="section-kicker">Mostly cloudy, with a cooler high in the low 80s and a low near 65°F.</p>
+            <h2>Mostly sunny, dry, around 78°F</h2>
+            <p class="kicker">Detroit and Ann Arbor forecasts agree; overall confidence is high.</p>
           </div>
-          <span class="badge">Wet pavement first</span>
+          <span class="badge">No rain gear</span>
         </div>
-        <div class="weather-grid">
-          <article class="item">
-            <time>6:00–9:00 a.m. EDT</time>
-            <h3 class="risk-high">High rain risk · morning commute</h3>
-            <p>Showers are likely and a thunderstorm is possible. Roads may already be wet after overnight rain. Leave extra time, avoid standing water, and do not wait outdoors through thunder.</p>
+        <div class="grid">
+          <article class="card">
+            <time>8–10 a.m. EDT</time>
+            <h3>Cool-to-mild start</h3>
+            <p>Dry and mostly sunny with a light northeast breeze. Weather-related travel impact is low.</p>
           </article>
-          <article class="item">
-            <time>9:00 a.m.–2:00 p.m. EDT</time>
-            <h3 class="risk-moderate">Moderate early, lower near midday</h3>
-            <p>Rain risk eases after late morning, though clouds remain. This is the best available outdoor errand or lunch window; keep a rain layer close.</p>
-          </article>
-          <article class="item">
-            <time>2:00–7:00 p.m. EDT</time>
-            <h3 class="risk-moderate">Moderate rain risk · evening commute</h3>
-            <p>Another shower chance returns after 2 p.m. in Detroit and after 4 p.m. in Ann Arbor. Check radar before leaving and keep departure flexible.</p>
-          </article>
-          <article class="item">
-            <time>7:00 p.m.–midnight EDT</time>
-            <h3 class="risk-moderate">Moderate rain risk · evening</h3>
-            <p>Showers may linger before 7 p.m. and redevelop after 8 p.m. in Detroit; Ann Arbor retains a shower chance. Indoor or easily cancellable plans are safest.</p>
+          <article class="card">
+            <time>4–7 p.m. EDT</time>
+            <h3>Easy evening travel</h3>
+            <p>Dry and mostly sunny, trending partly cloudier into the evening with light wind. Weather-related travel impact remains low.</p>
           </article>
         </div>
-        <div class="callout" style="margin-top:16px">
-          <p><strong>Active-plan rule:</strong> running, volleyball, pickleball, and other outdoor plans need an indoor backup. Thunder means go indoors immediately; a covered pavilion, tent, or vehicle is not a lightning-safe substitute. No date-specific September 4 AQI category or alert was verified, so check AirNow before sustained outdoor exercise.</p>
+        <div class="callout" style="margin-top:12px">
+          <p><strong>Plan around the sun, not rain:</strong> the forecast supports running, pickleball, volleyball, walking, or a Detroit or Ann Arbor outing. Detroit falls toward 60°F overnight and Ann Arbor toward 57°F, so pack a jacket or sweatshirt for later. No active NWS Detroit/Pontiac watches, warnings, or advisories were listed when checked. A specific Detroit AQI forecast was unavailable, so check AirNow if smoke or ozone conditions change.</p>
         </div>
-        <p class="source">Sources: <a href="https://forecast.weather.gov/MapClick.php?CityName=Detroit&amp;site=DTX&amp;state=MI&amp;textField1=42.3831&amp;textField2=-83.1022">NWS Detroit forecast</a> · <a href="https://forecast.weather.gov/MapClick.php?CityName=Ann+Arbor&amp;e=0&amp;site=DTX&amp;state=MI&amp;textField1=42.2754&amp;textField2=-83.7308">NWS Ann Arbor forecast</a> · <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a></p>
+        <p class="source-set">Sources: <a href="https://forecast.weather.gov/MapClick.php?TextType=1&amp;f6=1&amp;lat=42.39504&amp;lon=-83.11232&amp;mp=1">NWS Detroit point forecast</a> · <a href="https://forecast.weather.gov/MapClick.php?FcstType=text&amp;lat=42.2836&amp;lg=en&amp;lon=-83.7455&amp;unit=0">NWS Ann Arbor point forecast</a> · <a href="https://www.weather.gov/dtx/">NWS Detroit/Pontiac hazards</a> · <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a></p>
       </section>
 
       <section data-brief-section="allie-tomorrow-sports">
         <div class="section-head">
           <div>
             <p class="eyebrow">03 · Sports</p>
-            <h2>Team USA starts early</h2>
-            <p class="section-kicker">No Pistons or Lions game Friday.</p>
+            <h2>One confirmed Sunday watch</h2>
+            <p class="kicker">No Pistons, Lions, or Detroit City FC game Sunday.</p>
           </div>
-          <span class="badge">Watch</span>
+          <span class="badge">WNBA</span>
         </div>
-        <div class="timeline">
-          <article class="item">
-            <time>5:30 a.m. EDT · HBO Max</time>
-            <h3>Japan vs. Mali / Australia vs. Puerto Rico</h3>
-            <p>Two FIBA Women’s World Cup opening-day games begin at the same time in Berlin.</p>
-          </article>
-          <article class="item">
-            <time>8:15 a.m. EDT · TNT, truTV, or HBO Max</time>
-            <h3>USA vs. China</h3>
-            <p>The best watch of the day: Team USA opens the FIBA Women’s World Cup, whose winner qualifies for the 2028 Olympics.</p>
-          </article>
-          <article class="item">
-            <time>2:15 p.m. / 3:00 p.m. EDT</time>
-            <h3>Italy vs. Czechia / France vs. Hungary</h3>
-            <p>HBO Max carries both; France vs. Hungary is also on truTV. Both are opening-day group games in Berlin.</p>
-          </article>
+        <article class="card">
+          <time datetime="2026-09-06T20:30:00-04:00">8:30 p.m. EDT · Golden State Valkyries at Minnesota Lynx</time>
+          <h3>Golden State at Minnesota</h3>
+          <p>The road game is at Target Center in Minneapolis. Check the WNBA app or League Pass for the Michigan feed; a national carrier was not verified from the official schedule source.</p>
+          <p class="source"><a href="https://cdn.nba.com/teams/uploads/sites/1610612744/2025/06/GSV-Notes-LVA-0607.pdf">Golden State Valkyries official game-notes schedule</a></p>
+        </article>
+        <div class="callout" style="margin-top:12px">
+          <p><strong>No fantasy lock tomorrow:</strong> the Detroit Lions do not play Sunday and open September 13 against the New Orleans Saints at Ford Field at 1 p.m. EDT on FOX. Review your own league settings before making waiver or lineup moves; there is no universal Sunday-night deadline.</p>
         </div>
-        <div class="callout" style="margin-top:16px">
-          <p><strong>No tonight lineup lock:</strong> no official deadline tied to a September 4 Lions, Pistons, WNBA, or verified local soccer event was found. Detroit’s NFL opener is Sunday, September 13, against New Orleans at 1 p.m.; official preseason notes make Jared Goff, Aidan Hutchinson, and Jahmyr Gibbs holds to monitor, not Friday start-sit decisions.</p>
-        </div>
-        <p class="source">Sources: <a href="https://valkyries.wnba.com/news/golden-state-valkyries-to-represent-five-countries-at-the-2026-fiba-world-cup-in-berlin-20260826">FIBA World Cup schedule via Golden State Valkyries</a> · <a href="https://www.detroitlions.com/schedule/2026/">Detroit Lions schedule</a> · <a href="https://www.detroitlions.com/news/detroit-lions-breaking-down-first-five-games-of-2026-season-goff-hutchinson-gibbs">Detroit Lions player preview</a> · <a href="https://www.nba.com/team/1610612765/schedule">Detroit Pistons schedule</a></p>
+        <p class="source-set">Schedule checks: <a href="https://www.detroitlions.com/schedule/">Detroit Lions</a> · <a href="https://www.nba.com/news/2026-27-nba-regular-season-schedule">NBA regular-season schedule</a> · <a href="https://www.detcityfc.com/mens-schedule/">Detroit City FC</a></p>
       </section>
 
       <section data-brief-section="allie-tomorrow-prepare"><!-- allie-market-tracker:start -->
@@ -292,74 +220,74 @@
 
         <div class="section-head">
           <div>
-            <p class="eyebrow">04 · Prepare</p>
-            <h2>One data point at 8:30</h2>
-            <p class="section-kicker">Keep the morning scan focused.</p>
+            <p class="eyebrow">04 · Prepare tonight</p>
+            <h2>A tiny game-company experiment</h2>
+            <p class="kicker">The only verified preparation item that needs action before Sunday.</p>
           </div>
-          <span class="badge">10 minutes</span>
+          <span class="badge">11 a.m. deadline</span>
         </div>
-        <article class="item">
-          <time datetime="2026-09-04T08:30:00-04:00">8:30 a.m. EDT · Friday</time>
-          <h3>August Employment Situation</h3>
-          <p>Block 10 minutes to scan payrolls, unemployment, and wage growth before market or start-of-day work decisions. The BLS release is the one verified next-day finance and analytics event worth preparing for tonight.</p>
-          <p class="source"><a href="https://www.bls.gov/news.release/empsit.htm">Bureau of Labor Statistics release</a></p>
+        <article class="card">
+          <time datetime="2026-09-06T11:00:00-04:00">Submit by 11:00 a.m. EDT Sunday</time>
+          <h3>Nimble Game Jam</h3>
+          <p>If a low-stakes game-company test sounds useful, register on itch.io and join the Discord tonight, then use Sunday morning to finish a tiny playable prototype. The free online 48-hour jam permits AI tools and offers industry feedback.</p>
+          <p class="source"><a href="https://nimblefox.ai/game-jam">Nimble Fox Game Jam</a> · <a href="https://gamejam.gg/">live jam calendar</a></p>
         </article>
-        <p class="quiet" style="margin:16px 0 0">The shared live market tracker will appear here with VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV. It is informational, not investment advice.</p>
+        <p class="quiet" style="margin:15px 0 0">The shared live market tracker will be placed here after design. It covers VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV and is informational, not investment advice.</p>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-plans">
         <div class="section-head">
           <div>
             <p class="eyebrow">05 · Plans</p>
-            <h2>Your next live option</h2>
-            <p class="section-kicker">Three verified indoor choices, ordered through Friday evening. RSVP before traveling.</p>
+            <h2>Your active—or next—Sunday option</h2>
+            <p class="kicker">Three verified choices ordered across the day. The live report displays only the active or next card.</p>
           </div>
           <span class="badge">Time-aware</span>
         </div>
         <div data-allie-time-rotation>
-          <article class="event" data-allie-event data-start-at="2026-09-04T17:00:00-04:00" data-end-at="2026-09-04T21:00:00-04:00">
-            <p class="choice-label">5:00–9:00 p.m. EDT · Creative Friday evening</p>
-            <h3>Mutual Assembly opening</h3>
-            <p class="meta">Vander · 626 Harper Ave Ste B, Detroit</p>
-            <p>Hand-coded visual art and live algorithmic dance music at a Detroit Month of Design opening. It is a strong novel, conversation-friendly fit for someone in data and AI.</p>
+          <article class="event" data-allie-event data-start-at="2026-09-06T11:00:00-04:00" data-end-at="2026-09-06T17:00:00-04:00">
+            <time datetime="2026-09-06T11:00:00-04:00">11:00 a.m.–5:00 p.m. EDT</time>
+            <h3>Detroit Sandwich Party</h3>
+            <p class="meta">Eastern Market, Shed 5 · 2934 Russell St, Detroit</p>
+            <p>A free, one-day festival with sample-size sandwiches and drinks sold by vendors. It is easy to browse solo; the organizer also links a volunteer sign-up if a built-in social role appeals, though volunteer requirements are not stated.</p>
             <div class="event-details">
-              <p><strong>Entry</strong>Public exhibition; cost not stated</p>
-              <p><strong>Action tonight</strong>RSVP requested; capacity and walk-in admission are not stated</p>
-              <p><strong>Weather fit</strong>Indoor; bring a rain layer for the trip</p>
-              <p><strong>Timing</strong>Overlaps Travel In Peace from 6–8:30 p.m.</p>
+              <p><strong>Entry</strong>Free; no attendee registration listed</p>
+              <p><strong>Availability</strong>Walk-in when checked</p>
+              <p><strong>Weather</strong>Excellent; bring sunscreen</p>
+              <p><strong>Tonight</strong>Use the volunteer route only if its form still accepts submissions</p>
             </div>
-            <p class="source"><a href="https://stamps.umich.edu/news/stamps-community-at-2026-detroit-month-of-design">Organizer-affiliated event listing</a> · <a href="https://designcore.org/detroit-month-of-design/">Detroit Month of Design</a></p>
+            <p class="source"><a href="https://linktr.ee/detroitsandwichparty">organizer links</a> · <a href="https://visitdetroit.com/inside-the-d/10-things-to-do-in-detroit-this-weekend/">Visit Detroit confirmation</a></p>
           </article>
 
-          <article class="event" data-allie-event data-start-at="2026-09-04T18:00:00-04:00" data-end-at="2026-09-04T20:30:00-04:00">
-            <p class="choice-label">6:00–8:30 p.m. EDT · Film, music, conversation</p>
-            <h3>Travel In Peace: An Ode to Mom</h3>
-            <p class="meta">The LOVE Building · 4731 Grand River Ave., Detroit</p>
-            <p>A documentary premiere, album preview, and artist/filmmaker panel centered on grief and healing through art, music, and storytelling.</p>
+          <article class="event" data-allie-event data-start-at="2026-09-06T12:30:00-04:00" data-end-at="2026-09-06T23:00:00-04:00">
+            <time datetime="2026-09-06T12:30:00-04:00">12:30–11:00 p.m. EDT</time>
+            <h3>Detroit Jazz Festival — Sunday program</h3>
+            <p class="meta">Hart Plaza · 1 Hart Plaza, Detroit</p>
+            <p>A free downtown festival with low-pressure movement between stages, food vendors, and a natural shared topic. All 2026 stages are at Hart Plaza.</p>
             <div class="event-details">
-              <p><strong>Entry</strong>Public event; cost not stated</p>
-              <p><strong>Action tonight</strong>RSVP requested; no capacity or sold-out notice is published</p>
-              <p><strong>Social fit</strong>A conversation-forward, small-community option</p>
-              <p><strong>Weather fit</strong>Indoor and not dependent on fair weather</p>
+              <p><strong>Entry</strong>Free general admission; no registration</p>
+              <p><strong>Bring</strong>Water bottle, purse, or backpack allowed</p>
+              <p><strong>Leave home</strong>Coolers and outside alcohol are prohibited</p>
+              <p><strong>Weather</strong>Excellent; bring a late-night layer</p>
             </div>
-            <p class="source"><a href="https://www.thelovebuilding.org/travel-in-peace-premiere">Organizer event page</a> · <a href="https://www.thelovebuilding.org/love-list-events">LOVE Building events</a></p>
+            <p class="source"><a href="https://www.detroitjazzfest.org/faq/">official festival FAQ</a> · <a href="https://www.detroitjazzfest.org/">official festival site</a></p>
           </article>
 
-          <article class="event" data-allie-event data-start-at="2026-09-04T20:30:00-04:00" data-end-at="2026-09-04T23:55:00-04:00">
-            <p class="choice-label">8:30–11:55 p.m. EDT · Most social and active</p>
-            <h3>Indoors Volleyball at 2SP</h3>
-            <p class="meta">2SP Sports Performance · 29235 Stephenson Hwy, Madison Heights</p>
-            <p>A recurring mixed-skill team sport where arriving solo is normal, with sustained time to meet active peers. All ages and skill levels are welcome.</p>
+          <article class="event" data-allie-event data-start-at="2026-09-06T17:00:00-04:00" data-end-at="2026-09-06T20:00:00-04:00">
+            <time datetime="2026-09-06T17:00:00-04:00">5:00–8:00 p.m. EDT</time>
+            <h3>Game Night Detroit — September Edition</h3>
+            <p class="meta">Florian East Lagers &amp; Ales · 9350 Joseph Campau Ave, Hamtramck</p>
+            <p>Vault of Midnight’s hosts teach the games, making solo arrival normal and conversation easy. Announced selections include Azure, Magical Athlete, Moon Colony Bloodbath, High Society, and Clank: Catacombs; selections can change.</p>
             <div class="event-details">
-              <p><strong>Cost</strong>$10 cash per person</p>
-              <p><strong>Action tonight</strong>RSVP on Meetup and complete the 2SP waiver if it is not already on file</p>
-              <p><strong>Bring</strong>$10 cash; organizers request a profile photo</p>
-              <p><strong>Weather fit</strong>Entirely indoors</p>
+              <p><strong>Entry</strong>$5 ticket required</p>
+              <p><strong>Availability</strong>No remaining-ticket count shown; event can fill</p>
+              <p><strong>Eligibility</strong>Open to new and seasoned players</p>
+              <p><strong>Tonight</strong>Buy promptly rather than assuming door availability</p>
             </div>
-            <p class="source"><a href="https://www.meetup.com/metro-detroit-athletes/events/315355849/">Meetup event and RSVP</a> · <a href="https://www.2spsportsperformance.com/athlete-info/">2SP athlete and waiver information</a></p>
+            <p class="source"><a href="https://www.vaultofmidnight.com/events-add/xcplyhmty88454h-xfxss-2st85">official listing and ticket link</a></p>
           </article>
 
-          <p class="fallback" data-allie-time-empty hidden>These verified Friday options have ended. No later plan was verified in this plans collection.</p>
+          <p data-allie-time-empty hidden>No remaining verified Sunday plan is active or upcoming.</p>
         </div>
       </section>
 
@@ -367,73 +295,68 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">06 · Entertainment</p>
-            <h2>Fresh Friday picks</h2>
-            <p class="section-kicker">Only September 4 releases and events; unverified release hours stay unstated.</p>
+            <h2>Choose live, late, or couch</h2>
+            <p class="kicker">Three Sunday-specific options; no timely Sunday Taylor Swift or Love Island item was verified.</p>
           </div>
-          <span class="badge">Pop + reality</span>
+          <span class="badge">Sunday night</span>
         </div>
-        <div class="entertainment-grid">
-          <article class="item">
-            <time>Available September 4 · Netflix</time>
-            <h3>Earle Meets World — series premiere</h3>
-            <p>The new unscripted series follows Gen-Z creator Alix Earle, her friends, and her family. It is the closest verified tomorrow launch to a fun, messy, Love Island-adjacent reality watch; no release hour was verified.</p>
-            <p class="source"><a href="https://www.netflix.com/tudum/articles/earle-meets-world-cast-instagrams-tiktok">Netflix series guide</a> · <a href="https://www.netflix.com/tudum/articles/new-on-netflix">New on Netflix</a></p>
+        <div class="grid">
+          <article class="card">
+            <time datetime="2026-09-06T19:30:00-04:00">7:30 p.m. EDT</time>
+            <h3>Jill Scott — To Whom This May Concern Tour</h3>
+            <p class="meta">Fox Theatre · 2211 Woodward Ave, Detroit</p>
+            <p>A polished downtown R&amp;B/pop-adjacent night out. Tickets were listed as available when checked; confirm current inventory before leaving.</p>
+            <p class="source"><a href="https://www.ticketmaster.com/search?q=jill+scott+detroit&amp;tt_scene=anchor_view">Ticketmaster listing</a> · <a href="https://www.axs.com/events/1367394/jill-scott-rescheduled-from-826-tickets?staticDetails=staticDetails">AXS listing</a></p>
           </article>
-          <article class="item">
-            <time>Released September 4 · music services</time>
-            <h3>Rebecca Black — Age of the Exhibitionist</h3>
-            <p>A current 12-track pop release for a pre-going-out listen or post-work reset. No platform release hour was verified.</p>
-            <p class="source"><a href="https://music.apple.com/us/album/age-of-the-exhibitionist/6783569945">Apple Music listing</a> · <a href="https://rebeccablack.co/products/age-of-the-exhibitionist-vinyl-metallic-gold-signed">Artist store listing</a></p>
+          <article class="card">
+            <time datetime="2026-09-06T20:00:00-04:00">Doors 8:00 p.m. EDT · 21+</time>
+            <h3>Detroit Love: Carl Craig b2b Matthew Dear</h3>
+            <p class="meta">TV Lounge · 2548 Grand River Ave, Detroit</p>
+            <p>A dance-forward Detroit alternative with ERNO and a billed four-hour Carl Craig/Matthew Dear set. Ticket waves differ only by price.</p>
+            <p class="source"><a href="https://www.eventim.com/eventseries/detroit-love-labor-day-weekend-carl-craig-b2b-matthew-dear-4213174/">official event listing</a></p>
           </article>
-          <article class="item">
-            <time>Premiering September 4 · Apple TV</time>
-            <h3>Mayday</h3>
-            <p>A new Ryan Reynolds and Kenneth Branagh buddy action-comedy for a lighter, low-effort night in. No release hour was verified.</p>
-            <p class="source"><a href="https://www.apple.com/tv-pr/originals/mayday/">Apple TV title page</a></p>
-          </article>
-          <article class="item">
-            <time>7:00 p.m. EDT · El Club, Detroit</time>
-            <h3>Mietze Conte</h3>
-            <p>A verified dance/electronic show for an earlier-night live-music alternative.</p>
-            <p class="source"><a href="https://www.ticketmaster.com/search?q=Mietze+Conte&amp;tt_scene=anchor_view">Ticketmaster listing</a></p>
-          </article>
-          <article class="item">
-            <time>10:00 p.m.–2:00 a.m. EDT · Big Pink, Detroit</time>
-            <h3>PINK RODEO: Beyoncé Night</h3>
-            <p>A late, social, pop-forward option built around Beyoncé music.</p>
-            <p class="source"><a href="https://djbnb.com/event/33546">Event listing</a> · <a href="https://ra.co/events/us/detroit?startDate=2026-09-04">Resident Advisor Detroit listings</a></p>
+          <article class="card">
+            <time datetime="2026-09-06T21:00:00-04:00">9:00 p.m. EDT · Food Network</time>
+            <h3>The Great Food Truck Race finale</h3>
+            <p>“Sweet &amp; Savory: The Legends of Louisville” is a light competitive reality-TV choice after a day out; Sunday’s date, time, and season-finale designation were independently listed.</p>
+            <p class="source"><a href="https://www.tvline.com/2251083/what-to-watch-week-of-september-6-2026-tv-shows-movies/">TVLine schedule</a> · <a href="https://www.theviewersguide.com/tvbuzzdaily/upcoming/the-great-food-truck-race/s19e8">The Viewers Guide listing</a></p>
           </article>
         </div>
-        <p class="quiet" style="margin:16px 0 0">No timely Taylor Swift item or Love Island broadcast was verified for September 4.</p>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-family">
         <div class="section-head">
           <div>
             <p class="eyebrow">07 · Family</p>
-            <h2>Family check-in</h2>
-            <p class="section-kicker">Calendar authority and archive result are kept separate.</p>
+            <h2>No private details guessed</h2>
+            <p class="kicker">The Hurley Family calendar is the sole authority for this panel.</p>
           </div>
-          <span class="badge">Privacy-safe</span>
+          <span class="badge">Calendar unavailable</span>
         </div>
-        <div class="family-status">
-          <article class="status-box">
-            <h3>Friday calendar</h3>
-            <p>The Hurley Family calendar is unavailable for this run, so no safe actionable events can be verified for September 4.</p>
-            <p><strong>Birthdays:</strong> unavailable — none can be verified.</p>
-            <p><strong>Anniversaries:</strong> unavailable — none can be verified.</p>
+        <div class="family-grid">
+          <article class="card">
+            <h3>Sunday calendar</h3>
+            <p>The Hurley Family calendar is unavailable, so no event-specific family action can be shown safely.</p>
           </article>
-          <article class="status-box">
-            <h3>On this date in the family archive</h3>
-            <p>No suitable exact-date prior-year photo match was found. No public image metadata with a verifiable original capture date was retrievable, so no image, location, or caption is presented.</p>
-            <p class="source"><a href="https://photos.hurleyhome.com/">Shared public photo archive</a></p>
+          <article class="card">
+            <h3>September 6 birthdays &amp; anniversaries</h3>
+            <p>The report-date birthday and anniversary check is unavailable because the authoritative family calendar is unavailable. None are inferred.</p>
+          </article>
+          <article class="card">
+            <h3>Shared public photo archive</h3>
+            <p>No suitable exact-date prior-year match was found for September 6. The public archive host could not be resolved, so no candidates could be retrieved or reviewed and no photo is presented.</p>
+            <p class="source"><a href="https://photos.hurleyhome.com/">shared public photo archive</a></p>
+          </article>
+          <article class="card">
+            <h3>Tonight’s family action</h3>
+            <p>No safe calendar-based action is available from the supplied family context.</p>
           </article>
         </div>
       </section>
     </main>
 
     <footer>
-      Prepared for Allison’s Friday, September 4, 2026. Times are EDT unless noted. Source links are attached directly to the decisions they support.
+      <p>Prepared Saturday evening for Sunday, September 6, 2026. Links are the supplied verification sources; recheck time-sensitive ticket and forecast details before leaving.</p>
     </footer>
   </div>
 <script id="allie-compact-layout-script">
