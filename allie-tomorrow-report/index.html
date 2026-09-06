@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Allison’s Sunday Playbook · September 6, 2026</title>
+  <title>Allison’s Monday Playbook · September 7, 2026</title>
   <style>
     :root {
-      --night: #11142f;
-      --panel: #1c2045;
-      --panel-soft: #242852;
+      --night: #10142f;
+      --panel: #1a2044;
+      --panel-soft: #242a51;
       --ink: #fffaf1;
-      --muted: #c5c7dc;
-      --coral: #ff8585;
-      --gold: #f5ca72;
-      --mint: #85ddc6;
-      --blue: #a8c8ff;
-      --line: rgba(255,255,255,.13);
+      --muted: #c7cadc;
+      --coral: #ff8b82;
+      --gold: #f3cb72;
+      --mint: #83dcc2;
+      --blue: #abcaff;
+      --line: rgba(255,255,255,.14);
     }
     * { box-sizing: border-box; }
     html { background: var(--night); }
@@ -25,59 +25,60 @@
       min-height: 100vh;
       color: var(--ink);
       background:
-        radial-gradient(circle at 12% 0%, rgba(255,133,133,.16), transparent 28rem),
-        radial-gradient(circle at 92% 10%, rgba(168,200,255,.13), transparent 30rem),
-        linear-gradient(145deg, #11142f, #151837 55%, #10122a);
+        radial-gradient(circle at 10% 0%, rgba(255,139,130,.16), transparent 31rem),
+        radial-gradient(circle at 92% 8%, rgba(171,202,255,.13), transparent 29rem),
+        linear-gradient(145deg, #10142f, #151938 58%, #0f122a);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.55;
     }
     a { color: var(--blue); text-underline-offset: .2em; }
-    a:hover { color: #fff; }
-    .shell { width: min(1120px, calc(100% - 30px)); margin: 0 auto; padding: 44px 0 60px; }
+    a:hover, a:focus-visible { color: #fff; }
+    .shell { width: min(1120px, calc(100% - 30px)); margin: 0 auto; padding: 44px 0 58px; }
     header { padding: 12px 3px 28px; }
     h1, h2, h3, p { margin-top: 0; }
-    h1 { margin-bottom: 12px; font-size: clamp(2.6rem, 8vw, 5.4rem); line-height: .98; letter-spacing: -.055em; }
-    h2 { margin-bottom: 7px; font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.08; letter-spacing: -.035em; }
+    h1 { margin-bottom: 12px; font-size: clamp(2.7rem, 8vw, 5.6rem); line-height: .98; letter-spacing: -.055em; }
+    h2 { margin-bottom: 7px; font-size: clamp(1.55rem, 3vw, 2.2rem); line-height: 1.08; letter-spacing: -.035em; }
     h3 { margin-bottom: 6px; font-size: 1.08rem; }
     .eyebrow { margin: 0 0 9px; color: var(--gold); font-size: .76rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
-    .lede { max-width: 800px; margin: 0; color: var(--muted); font-size: clamp(1.03rem, 2vw, 1.2rem); }
+    .lede { max-width: 820px; margin: 0; color: var(--muted); font-size: clamp(1.03rem, 2vw, 1.2rem); }
     .date { color: var(--coral); font-weight: 800; }
-    main { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); gap: 18px; }
+    main { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 18px; }
     section {
       grid-column: span 6;
       padding: clamp(20px, 3vw, 29px);
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 23px;
-      background: linear-gradient(145deg, rgba(28,32,69,.95), rgba(36,40,82,.82));
+      background: linear-gradient(145deg, rgba(26,32,68,.96), rgba(36,42,81,.84));
       box-shadow: 0 22px 55px rgba(3,5,22,.28);
     }
     section.wide { grid-column: 1 / -1; }
     .section-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
     .kicker, .quiet, .meta { color: var(--muted); }
     .kicker { margin: 0; font-size: .9rem; }
-    .badge { flex: 0 0 auto; padding: 6px 10px; border: 1px solid rgba(245,202,114,.35); border-radius: 999px; color: var(--gold); background: rgba(245,202,114,.08); font-size: .7rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
-    .callout { padding: 17px 18px; border-left: 3px solid var(--coral); border-radius: 0 14px 14px 0; background: rgba(255,133,133,.08); }
+    .badge { flex: 0 0 auto; padding: 6px 10px; border: 1px solid rgba(243,203,114,.35); border-radius: 999px; color: var(--gold); background: rgba(243,203,114,.08); font-size: .7rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .callout { padding: 17px 18px; border-left: 3px solid var(--coral); border-radius: 0 14px 14px 0; background: rgba(255,139,130,.08); }
     .callout p:last-child, .card p:last-child, .event p:last-child { margin-bottom: 0; }
-    .stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin: 17px 0; }
-    .stat, .card, .event { padding: 16px 17px; border: 1px solid var(--line); border-radius: 16px; background: rgba(8,10,35,.28); }
-    .stat strong { display: block; color: var(--gold); font-size: 1.45rem; line-height: 1.1; }
+    .stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 17px 0; }
+    .stat, .card, .event { padding: 16px 17px; border: 1px solid var(--line); border-radius: 16px; background: rgba(8,10,35,.29); }
+    .stat strong { display: block; color: var(--gold); font-size: 1.4rem; line-height: 1.1; }
     .stat span { color: var(--muted); font-size: .78rem; }
     .checklist, .clean-list { margin: 0; padding: 0; list-style: none; }
     .checklist { display: grid; gap: 9px; }
     .checklist li { position: relative; padding-left: 29px; }
     .checklist li::before { content: ""; position: absolute; left: 0; top: .22em; width: 15px; height: 15px; border: 2px solid var(--mint); border-radius: 5px; }
     .grid, .timeline { display: grid; gap: 12px; }
-    .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     time, .time { display: block; margin-bottom: 5px; color: var(--coral); font-size: .77rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
     .source { margin: 11px 0 0; font-size: .78rem; }
     .source-set { margin-top: 16px; color: var(--muted); font-size: .78rem; }
     .event h3 { font-size: 1.3rem; }
-    .event-details { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px 18px; margin: 13px 0; }
+    .event-details { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 9px 18px; margin: 13px 0; }
     .event-details p { margin: 0; }
     .event-details strong { display: block; color: var(--muted); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
-    [data-allie-time-empty][hidden] { display: none; }
-    .family-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+    [data-allie-time-rotation] { display: grid; gap: 12px; }
+    [data-allie-time-empty][hidden], [data-allie-event][hidden] { display: none; }
+    .family-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
     footer { padding: 25px 3px 0; color: #9b9db9; font-size: .78rem; }
     @media (max-width: 820px) {
       .shell { width: min(100% - 22px, 700px); padding-top: 24px; }
@@ -126,12 +127,12 @@
   .allie-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
 </head>
-<body data-allie-report="tomorrow" data-report-date="2026-09-06">
+<body data-allie-report="tomorrow" data-report-date="2026-09-07">
   <div class="shell">
     <header>
       <p class="eyebrow">Night-before playbook · Allison</p>
-      <h1>Sunday, ready.</h1>
-      <p class="lede"><span class="date">September 6, 2026</span> is dry, warm, and unusually easy to shape: a free daytime festival, an optional downtown music stretch, and a hosted game table at night.</p>
+      <h1>Monday, made easy.</h1>
+      <p class="lede"><span class="date">September 7, 2026</span> is a dry, comfortable Labor Day with four verified public outings, an open sports calendar, and no U.S. market session.</p>
     </header>
 
     <main>
@@ -139,24 +140,24 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">01 · The shape of tomorrow</p>
-            <h2>Make Game Night the anchor</h2>
-            <p class="kicker">One decision tonight unlocks the strongest solo-social option.</p>
+            <h2>Choose the vibe, then leave the rest light</h2>
+            <p class="kicker">No rain plan and no sports deadline are competing for the day.</p>
           </div>
-          <span class="badge">Sunday setup</span>
+          <span class="badge">Labor Day</span>
         </div>
         <div class="callout">
-          <p><strong>The clean route:</strong> buy the $5 Game Night Detroit ticket tonight because the official listing warns that the event fills up. Tomorrow, start with the Detroit Sandwich Party or the Detroit Jazz Festival, then head to the hosted tables in Hamtramck for 5 p.m.</p>
+          <p><strong>The easy default:</strong> walk into the free Detroit Jazz Festival after Hart Plaza gates open at 12:30 p.m. For a livelier evening, continue to the free Hamtramck Labor Day Festival; choose Arts, Beats &amp; Eats if a ticketed Royal Oak day sounds better.</p>
         </div>
-        <div class="stats" aria-label="Sunday at a glance">
-          <div class="stat"><strong>78°F</strong><span>mostly sunny high</span></div>
-          <div class="stat"><strong>11 a.m.</strong><span>Sandwich Party opens</span></div>
-          <div class="stat"><strong>5 p.m.</strong><span>Game Night starts</span></div>
+        <div class="stats" aria-label="Monday at a glance">
+          <div class="stat"><strong>78°F</strong><span>daytime high</span></div>
+          <div class="stat"><strong>0–10%</strong><span>rain chance</span></div>
+          <div class="stat"><strong>4</strong><span>verified public options</span></div>
         </div>
         <ul class="checklist">
-          <li>Buy the Game Night Detroit ticket before assuming door availability.</li>
-          <li>If a tiny online game prototype sounds fun, register and join the Nimble Game Jam Discord tonight; submissions close at 11 a.m. Sunday.</li>
-          <li>Set out sunscreen and sunglasses, plus a light layer for the evening.</li>
-          <li>Recheck the point forecast—and AirNow before sustained outdoor exercise—close to departure.</li>
+          <li>Set out sunscreen, sunglasses, comfortable shoes, and a light layer for the cool start or after sunset.</li>
+          <li>If Royal Oak wins, buy the $15 Arts, Beats &amp; Eats admission through the organizer’s live purchase flow.</li>
+          <li>If Holly wins, buy ahead or confirm Renaissance Festival gate availability before departing.</li>
+          <li>Leave fantasy lineups alone tonight unless your own league has a separate draft or waiver setting to confirm.</li>
         </ul>
       </section>
 
@@ -164,48 +165,58 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">02 · Weather</p>
-            <h2>Mostly sunny, dry, around 78°F</h2>
-            <p class="kicker">Detroit and Ann Arbor forecasts agree; overall confidence is high.</p>
+            <h2>Mostly sunny, dry, and near 78°F</h2>
+            <p class="kicker">Comfortable for the commute and outdoor plans; overall forecast confidence is high.</p>
           </div>
-          <span class="badge">No rain gear</span>
+          <span class="badge">No umbrella</span>
         </div>
         <div class="grid">
           <article class="card">
-            <time>8–10 a.m. EDT</time>
-            <h3>Cool-to-mild start</h3>
-            <p>Dry and mostly sunny with a light northeast breeze. Weather-related travel impact is low.</p>
+            <time>7–9 a.m. EDT · Morning commute</time>
+            <h3>Cool, bright start</h3>
+            <p>Mostly sunny to partly cloudy, about 59–64°F, with a light east to east-northeast wind near 5 mph. Rain chance is 0–10%; dry roads and no meaningful weather delay are expected.</p>
           </article>
           <article class="card">
-            <time>4–7 p.m. EDT</time>
-            <h3>Easy evening travel</h3>
-            <p>Dry and mostly sunny, trending partly cloudier into the evening with light wind. Weather-related travel impact remains low.</p>
+            <time>11 a.m.–2 p.m. EDT · Midday</time>
+            <h3>Best outdoor stretch begins</h3>
+            <p>Mostly sunny and about 71–77°F with an east wind of 5–10 mph. Rain chance is 0–10%; use sunscreen for a walk, run, or outdoor lunch.</p>
+          </article>
+          <article class="card">
+            <time>5–9 p.m. EDT · Evening plans</time>
+            <h3>Comfortable through sunset</h3>
+            <p>Mostly clear to partly cloudy, easing from the low 70s toward the mid-60s with a light easterly wind. Outdoor volleyball, pickleball, a run, or a patio plan should be comfortable.</p>
+          </article>
+          <article class="card">
+            <span class="time">Air quality · Detroit</span>
+            <h3>Good, with moderate confidence</h3>
+            <p>Forecast AQI is about 33, with no Air Quality Action Day indicated in the consulted sources. Normal outdoor activity is appropriate; anyone unusually sensitive to ozone or smoke can recheck in the morning.</p>
           </article>
         </div>
         <div class="callout" style="margin-top:12px">
-          <p><strong>Plan around the sun, not rain:</strong> the forecast supports running, pickleball, volleyball, walking, or a Detroit or Ann Arbor outing. Detroit falls toward 60°F overnight and Ann Arbor toward 57°F, so pack a jacket or sweatshirt for later. No active NWS Detroit/Pontiac watches, warnings, or advisories were listed when checked. A specific Detroit AQI forecast was unavailable, so check AirNow if smoke or ozone conditions change.</p>
+          <p><strong>Pack for temperature, not precipitation:</strong> the late-morning-through-early-evening window is mild, dry, and lightly breezy. A light layer helps around the overnight low of 59°F; no weather-driven commute buffer is needed on the current forecast.</p>
         </div>
-        <p class="source-set">Sources: <a href="https://forecast.weather.gov/MapClick.php?TextType=1&amp;f6=1&amp;lat=42.39504&amp;lon=-83.11232&amp;mp=1">NWS Detroit point forecast</a> · <a href="https://forecast.weather.gov/MapClick.php?FcstType=text&amp;lat=42.2836&amp;lg=en&amp;lon=-83.7455&amp;unit=0">NWS Ann Arbor point forecast</a> · <a href="https://www.weather.gov/dtx/">NWS Detroit/Pontiac hazards</a> · <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a></p>
+        <p class="source-set">Sources: <a href="https://forecast.weather.gov/MapClick.php?lat=42.23139&amp;lon=-83.33083">National Weather Service point forecast</a> · <a href="https://www.michigan.gov/egle/public/learn/air-quality">Michigan air quality guidance</a> · <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a></p>
       </section>
 
       <section data-brief-section="allie-tomorrow-sports">
         <div class="section-head">
           <div>
             <p class="eyebrow">03 · Sports</p>
-            <h2>One confirmed Sunday watch</h2>
-            <p class="kicker">No Pistons, Lions, or Detroit City FC game Sunday.</p>
+            <h2>A genuinely open night</h2>
+            <p class="kicker">No Allison-priority game needs a seat, screen, or lineup call Monday.</p>
           </div>
-          <span class="badge">WNBA</span>
+          <span class="badge">No game</span>
         </div>
-        <article class="card">
-          <time datetime="2026-09-06T20:30:00-04:00">8:30 p.m. EDT · Golden State Valkyries at Minnesota Lynx</time>
-          <h3>Golden State at Minnesota</h3>
-          <p>The road game is at Target Center in Minneapolis. Check the WNBA app or League Pass for the Michigan feed; a national carrier was not verified from the official schedule source.</p>
-          <p class="source"><a href="https://cdn.nba.com/teams/uploads/sites/1610612744/2025/06/GSV-Notes-LVA-0607.pdf">Golden State Valkyries official game-notes schedule</a></p>
-        </article>
+        <ul class="clean-list timeline">
+          <li class="card"><strong>Detroit Pistons:</strong> no game Monday. NBA training camps begin September 29; Detroit’s first listed preseason game is October 5 against the Phoenix Suns. <a href="https://www.nba.com/news/key-dates?os=0">NBA key dates</a></li>
+          <li class="card"><strong>Detroit Lions:</strong> no game Monday. Detroit opens Sunday, September 13 at 1:00 p.m. EDT against the New Orleans Saints at Ford Field. <a href="https://www.detroitlions.com/news/lions-announce-2026-schedule">Lions schedule announcement</a></li>
+          <li class="card"><strong>WNBA:</strong> no games Monday during the league-wide FIBA Women’s Basketball World Cup break, August 31–September 16. <a href="https://www.wnba.com/keydates">WNBA key dates</a></li>
+          <li class="card"><strong>Detroit City FC:</strong> no match Monday. Le Rouge next plays Sacramento Republic FC away on Saturday, September 12 at 10:00 p.m. EDT. <a href="https://www.detcityfc.com/mens-schedule/">Detroit City FC schedule</a></li>
+        </ul>
         <div class="callout" style="margin-top:12px">
-          <p><strong>No fantasy lock tomorrow:</strong> the Detroit Lions do not play Sunday and open September 13 against the New Orleans Saints at Ford Field at 1 p.m. EDT on FOX. Review your own league settings before making waiver or lineup moves; there is no universal Sunday-night deadline.</p>
+          <p><strong>Tonight’s decision:</strong> there is no league-wide Lions or NFL fantasy deadline tonight or Monday. If your league has not drafted, confirm its own draft and waiver settings; otherwise wait for the official Lions injury report closer to the September 13 opener.</p>
         </div>
-        <p class="source-set">Schedule checks: <a href="https://www.detroitlions.com/schedule/">Detroit Lions</a> · <a href="https://www.nba.com/news/2026-27-nba-regular-season-schedule">NBA regular-season schedule</a> · <a href="https://www.detcityfc.com/mens-schedule/">Detroit City FC</a></p>
+        <p class="source-set"><a href="https://www.nfl.com/news/2026-27-national-football-league-important-dates">NFL 2026–27 important dates</a></p>
       </section>
 
       <section data-brief-section="allie-tomorrow-prepare"><!-- allie-market-tracker:start -->
@@ -221,106 +232,131 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">04 · Prepare tonight</p>
-            <h2>A tiny game-company experiment</h2>
-            <p class="kicker">The only verified preparation item that needs action before Sunday.</p>
+            <h2>Move Monday market tasks to Tuesday</h2>
+            <p class="kicker">One practical holiday adjustment—nothing else needs manufacturing.</p>
           </div>
-          <span class="badge">11 a.m. deadline</span>
+          <span class="badge">Markets closed</span>
         </div>
         <article class="card">
-          <time datetime="2026-09-06T11:00:00-04:00">Submit by 11:00 a.m. EDT Sunday</time>
-          <h3>Nimble Game Jam</h3>
-          <p>If a low-stakes game-company test sounds useful, register on itch.io and join the Discord tonight, then use Sunday morning to finish a tiny playable prototype. The free online 48-hour jam permits AI tools and offers industry feedback.</p>
-          <p class="source"><a href="https://nimblefox.ai/game-jam">Nimble Fox Game Jam</a> · <a href="https://gamejam.gg/">live jam calendar</a></p>
+          <span class="time">Before Monday · Labor Day</span>
+          <h3>Finish any time-sensitive trade setup tonight</h3>
+          <p>If a U.S. stock or ETF trade must be handled before Tuesday, place or adjust it before the holiday; otherwise set the market or analytics check for Tuesday. NYSE and Nasdaq list Monday, September 7 as closed, and the BLS calendar lists no Monday data release.</p>
+          <p class="source"><a href="https://www.nyse.com/trade/hours-calendars">NYSE calendar</a> · <a href="https://www.nasdaq.com/market-activity/stock-market-holiday-schedule">Nasdaq holiday schedule</a> · <a href="https://www.bls.gov/schedule/2026/09_sched_list.htm">BLS September calendar</a></p>
         </article>
-        <p class="quiet" style="margin:15px 0 0">The shared live market tracker will be placed here after design. It covers VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV and is informational, not investment advice.</p>
+        <p class="quiet" style="margin:15px 0 0">The shared live market tracker will be placed here after design. It covers VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV. It is informational, not investment advice.</p>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-plans">
         <div class="section-head">
           <div>
             <p class="eyebrow">05 · Plans</p>
-            <h2>Your active—or next—Sunday option</h2>
-            <p class="kicker">Three verified choices ordered across the day. The live report displays only the active or next card.</p>
+            <h2>Your active—or next—Monday option</h2>
+            <p class="kicker">Four verified choices ordered across the day. The live report displays only the active or next card.</p>
           </div>
           <span class="badge">Time-aware</span>
         </div>
         <div data-allie-time-rotation>
-          <article class="event" data-allie-event data-start-at="2026-09-06T11:00:00-04:00" data-end-at="2026-09-06T17:00:00-04:00">
-            <time datetime="2026-09-06T11:00:00-04:00">11:00 a.m.–5:00 p.m. EDT</time>
-            <h3>Detroit Sandwich Party</h3>
-            <p class="meta">Eastern Market, Shed 5 · 2934 Russell St, Detroit</p>
-            <p>A free, one-day festival with sample-size sandwiches and drinks sold by vendors. It is easy to browse solo; the organizer also links a volunteer sign-up if a built-in social role appeals, though volunteer requirements are not stated.</p>
+          <article class="event" data-allie-event data-start-at="2026-09-07T09:00:00-04:00" data-end-at="2026-09-07T19:00:00-04:00">
+            <time datetime="2026-09-07T09:00:00-04:00">9:00 a.m.–7:00 p.m. EDT</time>
+            <h3>Michigan Renaissance Festival · Labor Day opening</h3>
+            <p class="meta">12600 Dixie Hwy, Holly</p>
+            <p>A playful, participatory day with entertainment, artisans, food, a pub crawl, and shows. It operates rain or shine and is farther from Allison’s preferred Detroit and Ann Arbor core.</p>
             <div class="event-details">
-              <p><strong>Entry</strong>Free; no attendee registration listed</p>
-              <p><strong>Availability</strong>Walk-in when checked</p>
-              <p><strong>Weather</strong>Excellent; bring sunscreen</p>
-              <p><strong>Tonight</strong>Use the volunteer route only if its form still accepts submissions</p>
+              <p><strong>Entry</strong>$29.95 adult gate admission plus fees</p>
+              <p><strong>Availability</strong>Official ticket link active; confirm gate availability</p>
+              <p><strong>Weather</strong>Long outdoor day; dress for walking</p>
+              <p><strong>Tonight</strong>Buy ahead or confirm the gate</p>
             </div>
-            <p class="source"><a href="https://linktr.ee/detroitsandwichparty">organizer links</a> · <a href="https://visitdetroit.com/inside-the-d/10-things-to-do-in-detroit-this-weekend/">Visit Detroit confirmation</a></p>
+            <p class="source"><a href="https://www.michrenfest.com/">official festival site</a> · <a href="https://www.michrenfest.com/tickets/">tickets</a></p>
           </article>
 
-          <article class="event" data-allie-event data-start-at="2026-09-06T12:30:00-04:00" data-end-at="2026-09-06T23:00:00-04:00">
-            <time datetime="2026-09-06T12:30:00-04:00">12:30–11:00 p.m. EDT</time>
-            <h3>Detroit Jazz Festival — Sunday program</h3>
-            <p class="meta">Hart Plaza · 1 Hart Plaza, Detroit</p>
-            <p>A free downtown festival with low-pressure movement between stages, food vendors, and a natural shared topic. All 2026 stages are at Hart Plaza.</p>
+          <article class="event" hidden data-allie-event data-start-at="2026-09-07T11:00:00-04:00" data-end-at="2026-09-07T21:00:00-04:00">
+            <time datetime="2026-09-07T11:00:00-04:00">11:00 a.m.–9:00 p.m. EDT</time>
+            <h3>Arts, Beats &amp; Eats · Royal Oak</h3>
+            <p class="meta">301 W 4th St, Royal Oak</p>
+            <p>Roam art, food, and music across a large downtown festival. The Fine Art Fair runs until 5:00 p.m.; Ginuwine is listed at 6:00 p.m. and Kool &amp; The Gang at 7:45 p.m. on the National Stage.</p>
             <div class="event-details">
-              <p><strong>Entry</strong>Free general admission; no registration</p>
-              <p><strong>Bring</strong>Water bottle, purse, or backpack allowed</p>
-              <p><strong>Leave home</strong>Coolers and outside alcohol are prohibited</p>
-              <p><strong>Weather</strong>Excellent; bring a late-night layer</p>
+              <p><strong>Entry</strong>$15 plus the platform fee</p>
+              <p><strong>Availability</strong>Purchase flow live; limited VIP also on sale</p>
+              <p><strong>Weather</strong>Rain or shine; comfortable shoes</p>
+              <p><strong>Tonight</strong>Buy admission if this is the pick</p>
             </div>
-            <p class="source"><a href="https://www.detroitjazzfest.org/faq/">official festival FAQ</a> · <a href="https://www.detroitjazzfest.org/">official festival site</a></p>
+            <p class="source"><a href="https://artsbeatseats.com/">official festival site</a> · <a href="https://artsbeatseats.com/beats/">music lineup</a> · <a href="https://www.showpass.com/2026abe/">ticket checkout</a></p>
           </article>
 
-          <article class="event" data-allie-event data-start-at="2026-09-06T17:00:00-04:00" data-end-at="2026-09-06T20:00:00-04:00">
-            <time datetime="2026-09-06T17:00:00-04:00">5:00–8:00 p.m. EDT</time>
-            <h3>Game Night Detroit — September Edition</h3>
-            <p class="meta">Florian East Lagers &amp; Ales · 9350 Joseph Campau Ave, Hamtramck</p>
-            <p>Vault of Midnight’s hosts teach the games, making solo arrival normal and conversation easy. Announced selections include Azure, Magical Athlete, Moon Colony Bloodbath, High Society, and Clank: Catacombs; selections can change.</p>
+          <article class="event" hidden data-allie-event data-start-at="2026-09-07T12:00:00-04:00" data-end-at="2026-09-07T23:00:00-04:00">
+            <time datetime="2026-09-07T12:00:00-04:00">Noon–11:00 p.m. EDT</time>
+            <h3>Hamtramck Labor Day Festival</h3>
+            <p class="meta">Joseph Campau, Hamtramck · stages at Casmere and Caniff</p>
+            <p>A free street festival with boat races at noon, music from 12:30 p.m., a 1:30 p.m. parade, and wrestling afterward. The evening lineup includes Nancy Friday, Pretty Island, and Saves The Day.</p>
             <div class="event-details">
-              <p><strong>Entry</strong>$5 ticket required</p>
-              <p><strong>Availability</strong>No remaining-ticket count shown; event can fill</p>
-              <p><strong>Eligibility</strong>Open to new and seasoned players</p>
-              <p><strong>Tonight</strong>Buy promptly rather than assuming door availability</p>
+              <p><strong>Entry</strong>Free; no registration required</p>
+              <p><strong>Availability</strong>Walk-up; no reservation published</p>
+              <p><strong>Weather</strong>Outdoor and well matched to the forecast</p>
+              <p><strong>Social fit</strong>Lively, easy to browse solo</p>
             </div>
-            <p class="source"><a href="https://www.vaultofmidnight.com/events-add/xcplyhmty88454h-xfxss-2st85">official listing and ticket link</a></p>
+            <p class="source"><a href="https://hamtownfest.com/">official festival site</a> · <a href="https://hamtownfest.com/schedule/">official schedule</a></p>
           </article>
 
-          <p data-allie-time-empty hidden>No remaining verified Sunday plan is active or upcoming.</p>
+          <article class="event" hidden data-allie-event data-start-at="2026-09-07T12:30:00-04:00" data-end-at="2026-09-07T19:30:00-04:00">
+            <time datetime="2026-09-07T12:30:00-04:00">12:30–7:30 p.m. EDT · Hart Plaza gates</time>
+            <h3>Detroit Jazz Festival · Monday program</h3>
+            <p class="meta">Hart Plaza, 1 Hart Plaza, Detroit</p>
+            <p>The lowest-friction social choice: a large, free downtown festival with multiple stages. Hart Plaza highlights include the MSU Jazz Orchestra at 1:00 p.m., The Django Festival Allstars at 3:00 p.m., Ron Carter &amp; Foursight at 5:00 p.m., and the Coltrane 100 set at 6:00 p.m.</p>
+            <div class="event-details">
+              <p><strong>Entry</strong>Free; no registration required</p>
+              <p><strong>Availability</strong>Walk-up when checked; schedule may change</p>
+              <p><strong>Weather</strong>Excellent; use sun protection</p>
+              <p><strong>Social fit</strong>High; easy solo arrival</p>
+            </div>
+            <p class="source"><a href="https://www.detroitjazzfest.org/2026-festival-map-schedule/">official map and schedule</a> · <a href="https://www.detroitjazzfest.org/events/">official events</a></p>
+          </article>
+
+          <article class="event" hidden data-allie-time-empty>
+            <h3>Tomorrow’s verified options have ended</h3>
+            <p>No later verified public plan remains in this report. Keep the evening open or use one of the sourced TV choices.</p>
+          </article>
         </div>
+        <p class="quiet" style="margin:15px 0 0">No official September 7 open-play volleyball, running group, pickleball session, or tabletop event met the date, time, venue, eligibility, and availability verification threshold. Reconfirm weather and schedule changes before leaving.</p>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-entertainment">
         <div class="section-head">
           <div>
             <p class="eyebrow">06 · Entertainment</p>
-            <h2>Choose live, late, or couch</h2>
-            <p class="kicker">Three Sunday-specific options; no timely Sunday Taylor Swift or Love Island item was verified.</p>
+            <h2>Pick one live set or one 8 p.m. couch lane</h2>
+            <p class="kicker">All items are verified for Monday; no unverified Taylor Swift or Love Island item is padded in.</p>
           </div>
-          <span class="badge">Sunday night</span>
+          <span class="badge">Monday only</span>
         </div>
         <div class="grid">
           <article class="card">
-            <time datetime="2026-09-06T19:30:00-04:00">7:30 p.m. EDT</time>
-            <h3>Jill Scott — To Whom This May Concern Tour</h3>
-            <p class="meta">Fox Theatre · 2211 Woodward Ave, Detroit</p>
-            <p>A polished downtown R&amp;B/pop-adjacent night out. Tickets were listed as available when checked; confirm current inventory before leaving.</p>
-            <p class="source"><a href="https://www.ticketmaster.com/search?q=jill+scott+detroit&amp;tt_scene=anchor_view">Ticketmaster listing</a> · <a href="https://www.axs.com/events/1367394/jill-scott-rescheduled-from-826-tickets?staticDetails=staticDetails">AXS listing</a></p>
+            <time>11:30 a.m.–6:00 p.m. EDT · Detroit Jazz Festival</time>
+            <h3>Free finale across Hart Plaza and Detroit Jazz Hall</h3>
+            <p>Choose one set or build an afternoon around Teiku at 1:45 p.m., the Himiko Kikuchi Tottori Young Lions Trio at 2:00 p.m., Ron Carter &amp; Foursight at 5:00 p.m., Joey Alexander Trio at 5:15 p.m., and Coltrane 100 with Joe Lovano at 6:00 p.m.</p>
+            <p class="source"><a href="https://www.detroitjazzfest.org/event/detroit-jazz-festival-2026-september-7/">official Monday program</a></p>
           </article>
           <article class="card">
-            <time datetime="2026-09-06T20:00:00-04:00">Doors 8:00 p.m. EDT · 21+</time>
-            <h3>Detroit Love: Carl Craig b2b Matthew Dear</h3>
-            <p class="meta">TV Lounge · 2548 Grand River Ave, Detroit</p>
-            <p>A dance-forward Detroit alternative with ERNO and a billed four-hour Carl Craig/Matthew Dear set. Ticket waves differ only by price.</p>
-            <p class="source"><a href="https://www.eventim.com/eventseries/detroit-love-labor-day-weekend-carl-craig-b2b-matthew-dear-4213174/">official event listing</a></p>
+            <time>5:00 p.m. EDT · Aretha Franklin Amphitheatre</time>
+            <h3>Glasses after Dark: Love, Soul and Hip Hop</h3>
+            <p>A higher-energy waterfront concert. Live Nation lists Blackstreet, The Lox, Freeway, Beanie Sigel, Adina Howard, Sisqó, and Tweet.</p>
+            <p class="source"><a href="https://www.livenation.com/event/vvG1OZ_CBwVgIt/glasses-after-dark-love-soul-and-hip-hop">Live Nation event listing</a></p>
           </article>
           <article class="card">
-            <time datetime="2026-09-06T21:00:00-04:00">9:00 p.m. EDT · Food Network</time>
-            <h3>The Great Food Truck Race finale</h3>
-            <p>“Sweet &amp; Savory: The Legends of Louisville” is a light competitive reality-TV choice after a day out; Sunday’s date, time, and season-finale designation were independently listed.</p>
-            <p class="source"><a href="https://www.tvline.com/2251083/what-to-watch-week-of-september-6-2026-tv-shows-movies/">TVLine schedule</a> · <a href="https://www.theviewersguide.com/tvbuzzdaily/upcoming/the-great-food-truck-race/s19e8">The Viewers Guide listing</a></p>
+            <time>8:00 p.m. ET · Fox</time>
+            <h3>Beat Shazam · Season 8 finale</h3>
+            <p>Two finale episodes make the cleanest couch choice for current-song guessing, friendly competition, and a fun reality-adjacent finish.</p>
+            <p class="source"><a href="https://www.tvline.com/2245919/september-2026-tv-schedule-what-to-watch-printable-calendar-premieres-finales-list/">TVLine September schedule</a></p>
           </article>
+          <article class="card">
+            <time>8:00 p.m. ET · TLC</time>
+            <h3>90 Day: The Last Resort · “The Last Ditch Effort”</h3>
+            <p>The new Season 3, Episode 15 is the closest verified relationship-drama pick: TLC’s synopsis centers on Rebecca and Zied, Kara and Guillermo, and Patrick and Thais.</p>
+            <p class="source"><a href="https://www.tvinsider.com/network/tlc/schedule/">TLC schedule via TV Insider</a></p>
+          </article>
+        </div>
+        <div class="callout" style="margin-top:12px">
+          <p><strong>Alternate 8 p.m. option:</strong> CBS’s <em>America’s Tailgate</em> is scheduled with John Legend, Sheryl Crow, Chase Rice, Gabby Barrett, Whitney Cummings, and NFL personalities Josh Allen, Kyle Long, and Russell Wilson. <a href="https://www.tvline.com/2245919/september-2026-tv-schedule-what-to-watch-printable-calendar-premieres-finales-list/">Schedule source</a></p>
         </div>
       </section>
 
@@ -328,35 +364,29 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">07 · Family</p>
-            <h2>No private details guessed</h2>
-            <p class="kicker">The Hurley Family calendar is the sole authority for this panel.</p>
+            <h2>A clear family calendar</h2>
+            <p class="kicker">The Hurley Family calendar is available and has no report-date events.</p>
           </div>
-          <span class="badge">Calendar unavailable</span>
+          <span class="badge">Calendar available</span>
         </div>
         <div class="family-grid">
           <article class="card">
-            <h3>Sunday calendar</h3>
-            <p>The Hurley Family calendar is unavailable, so no event-specific family action can be shown safely.</p>
+            <span class="time">Monday, September 7</span>
+            <h3>No birthdays or anniversaries listed</h3>
+            <p>No all-day birthday, anniversary, or actionable family activity appears on the report date. There is nothing to coordinate from the family calendar tonight.</p>
           </article>
           <article class="card">
-            <h3>September 6 birthdays &amp; anniversaries</h3>
-            <p>The report-date birthday and anniversary check is unavailable because the authoritative family calendar is unavailable. None are inferred.</p>
-          </article>
-          <article class="card">
-            <h3>Shared public photo archive</h3>
-            <p>No suitable exact-date prior-year match was found for September 6. The public archive host could not be resolved, so no candidates could be retrieved or reviewed and no photo is presented.</p>
-            <p class="source"><a href="https://photos.hurleyhome.com/">shared public photo archive</a></p>
-          </article>
-          <article class="card">
-            <h3>Tonight’s family action</h3>
-            <p>No safe calendar-based action is available from the supplied family context.</p>
+            <span class="time">Shared public photo archive · September 7</span>
+            <h3>No suitable exact-date match was found</h3>
+            <p>The public archive host could not be resolved, so no prior-year September 7 candidates could be retrieved or reviewed. No photo, date, location, or detail is inferred.</p>
+            <p class="source"><a href="https://photos.hurleyhome.com/">shared public archive</a></p>
           </article>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Prepared Saturday evening for Sunday, September 6, 2026. Links are the supplied verification sources; recheck time-sensitive ticket and forecast details before leaving.</p>
+      <p>Prepared Sunday evening for Monday, September 7, 2026 · Metro Detroit times are EDT · Verify live schedules shortly before departure.</p>
     </footer>
   </div>
 <script id="allie-compact-layout-script">
