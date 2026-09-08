@@ -562,7 +562,7 @@ function renderEvents() {
   const allEvents = uniqueEvents();
   const events = allEvents
     .filter((event) => eventIsActiveOn(event, state.selectedDate))
-    .sort((a, b) => (b.score || 0) - (a.score || 0) || a.start.localeCompare(b.start));
+    .sort((a, b) => Date.parse(a.start) - Date.parse(b.start) || (b.score || 0) - (a.score || 0));
   const cards = events.map((event) => {
     const title = node("h3");
     title.append(safeLink(event.title, event.url));
