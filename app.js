@@ -1,4 +1,5 @@
 import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
+import { eventDateLabel } from "./event-time.mjs?v=20260908-1";
 import { orderNewsStories, orderScienceStories } from "./story-order.mjs?v=20260904-1";
 
 const TIME_ZONE = "America/Detroit";
@@ -173,7 +174,7 @@ async function refreshData({ initial = false } = {}) {
   }
   const results = await Promise.all(DOCUMENTS.map((document) => loadDocument(document, Date.now())));
   const nextErrors = [];
-  let changed = initial;
+  let changed = initial || state.today !== previousToday;
 
   for (const result of results) {
     if (result.error) {
@@ -567,7 +568,7 @@ function renderEvents() {
     const title = node("h3");
     title.append(safeLink(event.title, event.url));
     return node("article", { className: "card" }, [
-      node("span", { className: "card-meta", text: [event.dateLabel, event.category].filter(Boolean).join(" · ") }),
+      node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
       title,
       node("p", { text: event.summary }),
       node("p", { className: "card__footer", text: [event.venue, event.city, event.price, event.distanceMiles != null ? `${event.distanceMiles} mi` : ""].filter(Boolean).join(" · ") }),
@@ -595,7 +596,7 @@ function renderEvents() {
         "aria-haspopup": "dialog",
         "aria-expanded": "false",
       }, [
-        node("time", { text: event.dateLabel, datetime: eventStartDate(event) }),
+        node("time", { text: eventDateLabel(event), datetime: eventStartDate(event) }),
         title,
       ]));
     }
@@ -607,7 +608,7 @@ function renderEvents() {
 
 function eventPreviewFacts(event) {
   return [
-    ["When", event.dateLabel],
+    ["When", eventDateLabel(event)],
     ["Where", [event.venue, event.city, event.region].filter(Boolean).join(" · ")],
     ["Price", event.price],
     ["Registration", event.registration],
@@ -653,7 +654,7 @@ function showEventPreview(claim, { focus = false } = {}) {
   close.addEventListener("click", () => hideEventPreview({ restoreFocus: true }));
   preview.replaceChildren(node("article", { className: "card event-preview__card" }, [
     close,
-    node("span", { className: "card-meta", text: [event.dateLabel, event.category].filter(Boolean).join(" · ") }),
+    node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
     title,
     node("p", { text: event.summary }),
     facts,

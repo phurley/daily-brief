@@ -34,6 +34,15 @@ the system's reduced-motion preference. Run its regression checks with
 
 ## Local preview
 
+Event collectors must store timing only as absolute `start` and optional `end`
+timestamps with timezone offsets. Do not write `dateLabel`, or use relative
+timing words such as today, tonight, tomorrow, or yesterday in generated event
+copy (including `easyAnswer`). Use explicit calendar dates when prose needs a
+date, and preserve official event titles. Never invent an unknown end time.
+`event-time.mjs` derives labels in America/Detroit for cards, claims, and previews:
+Today, Tonight (starts at 6 PM or later), Tomorrow, Yesterday, or a calendar date.
+
+
 ```sh
 python3 -m http.server 4173
 ```
