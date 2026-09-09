@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2828DAE603B1EE3D4138FD73 /* BriefData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19D9206A8D3825A34FAA8F /* BriefData.swift */; };
 		40634CD3817971329DAE2C72 /* DailyBriefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC6A34D23EB93013CC5916 /* DailyBriefApp.swift */; };
+		BEBC0E2555B1FAD47B2FFDC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EC0C9AC9C2264E6E3D7C83 /* Assets.xcassets */; };
 		CEA8010A81EC540D8F049034 /* DailyBriefWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8418A90DEE0D89F7A4AAA2 /* DailyBriefWidgets.swift */; };
 		E4EBC674D18F9B3037C2E192 /* DailyBriefWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		00FB8272A70586ED83DCDF6E /* DailyBrief.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DailyBrief.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F19D9206A8D3825A34FAA8F /* BriefData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefData.swift; sourceTree = "<group>"; };
+		94EC0C9AC9C2264E6E3D7C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = DailyBriefWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8418A90DEE0D89F7A4AAA2 /* DailyBriefWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBriefWidgets.swift; sourceTree = "<group>"; };
 		AEAC6A34D23EB93013CC5916 /* DailyBriefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBriefApp.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		0FF7FB924297AE682D33C0B8 /* DailyBrief */ = {
 			isa = PBXGroup;
 			children = (
+				94EC0C9AC9C2264E6E3D7C83 /* Assets.xcassets */,
 				AEAC6A34D23EB93013CC5916 /* DailyBriefApp.swift */,
 			);
 			path = DailyBrief;
@@ -89,6 +92,7 @@
 			buildConfigurationList = E891F109240E9548287FAFEB /* Build configuration list for PBXNativeTarget "DailyBrief" */;
 			buildPhases = (
 				974B8F1C818494E1BAB69FBF /* Sources */,
+				6D6C25AE8D86AAC8AE243426 /* Resources */,
 				0729CD360700583234E55B40 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -150,6 +154,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D6C25AE8D86AAC8AE243426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEBC0E2555B1FAD47B2FFDC9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		974B8F1C818494E1BAB69FBF /* Sources */ = {
