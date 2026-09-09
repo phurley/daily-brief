@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2828DAE603B1EE3D4138FD73 /* BriefData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19D9206A8D3825A34FAA8F /* BriefData.swift */; };
+		40634CD3817971329DAE2C72 /* DailyBriefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC6A34D23EB93013CC5916 /* DailyBriefApp.swift */; };
+		CEA8010A81EC540D8F049034 /* DailyBriefWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8418A90DEE0D89F7A4AAA2 /* DailyBriefWidgets.swift */; };
+		E4EBC674D18F9B3037C2E192 /* DailyBriefWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4AC04ED480B047AB63F25D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAECAB07D18D89FE18C16536 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2F02BACB63143ACE6B9538C;
+			remoteInfo = DailyBriefWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0729CD360700583234E55B40 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E4EBC674D18F9B3037C2E192 /* DailyBriefWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00FB8272A70586ED83DCDF6E /* DailyBrief.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DailyBrief.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F19D9206A8D3825A34FAA8F /* BriefData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefData.swift; sourceTree = "<group>"; };
+		A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = DailyBriefWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC8418A90DEE0D89F7A4AAA2 /* DailyBriefWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBriefWidgets.swift; sourceTree = "<group>"; };
+		AEAC6A34D23EB93013CC5916 /* DailyBriefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBriefApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0FF7FB924297AE682D33C0B8 /* DailyBrief */ = {
+			isa = PBXGroup;
+			children = (
+				AEAC6A34D23EB93013CC5916 /* DailyBriefApp.swift */,
+			);
+			path = DailyBrief;
+			sourceTree = "<group>";
+		};
+		1977928A7F5672F70544B567 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00FB8272A70586ED83DCDF6E /* DailyBrief.app */,
+				A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFC0604476B533BF2AAE940E = {
+			isa = PBXGroup;
+			children = (
+				0FF7FB924297AE682D33C0B8 /* DailyBrief */,
+				D13171D63052F1DFF6B78714 /* DailyBriefWidgets */,
+				1977928A7F5672F70544B567 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D13171D63052F1DFF6B78714 /* DailyBriefWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				6F19D9206A8D3825A34FAA8F /* BriefData.swift */,
+				AC8418A90DEE0D89F7A4AAA2 /* DailyBriefWidgets.swift */,
+			);
+			path = DailyBriefWidgets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07683AD8F59A6204364614BA /* DailyBrief */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E891F109240E9548287FAFEB /* Build configuration list for PBXNativeTarget "DailyBrief" */;
+			buildPhases = (
+				974B8F1C818494E1BAB69FBF /* Sources */,
+				0729CD360700583234E55B40 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B20A11F33D62A5AF807AABB3 /* PBXTargetDependency */,
+			);
+			name = DailyBrief;
+			packageProductDependencies = (
+			);
+			productName = DailyBrief;
+			productReference = 00FB8272A70586ED83DCDF6E /* DailyBrief.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2F02BACB63143ACE6B9538C /* DailyBriefWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C6AEF76D965F197BA68375 /* Build configuration list for PBXNativeTarget "DailyBriefWidgets" */;
+			buildPhases = (
+				EC8778B63BE25DBE91D2A23E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyBriefWidgets;
+			packageProductDependencies = (
+			);
+			productName = DailyBriefWidgets;
+			productReference = A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAECAB07D18D89FE18C16536 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 0DA0E9DA4763D4A65F4B9A84 /* Build configuration list for PBXProject "DailyBrief" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CFC0604476B533BF2AAE940E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1977928A7F5672F70544B567 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07683AD8F59A6204364614BA /* DailyBrief */,
+				C2F02BACB63143ACE6B9538C /* DailyBriefWidgets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		974B8F1C818494E1BAB69FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40634CD3817971329DAE2C72 /* DailyBriefApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8778B63BE25DBE91D2A23E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2828DAE603B1EE3D4138FD73 /* BriefData.swift in Sources */,
+				CEA8010A81EC540D8F049034 /* DailyBriefWidgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B20A11F33D62A5AF807AABB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2F02BACB63143ACE6B9538C /* DailyBriefWidgets */;
+			targetProxy = E4AC04ED480B047AB63F25D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DC573BFACAB7A2D3C4E99EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Brief";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phurley.dailybrief;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57BC3652DC8431520C1724C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6628A20667F276BD97BD0D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Brief";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phurley.dailybrief;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		690A14D1DE0850E51BE46ED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9193744261A94ACB15B268B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Brief Widgets";
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phurley.dailybrief.widgets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBCA32097C1BE404004E3C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Brief Widgets";
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phurley.dailybrief.widgets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DA0E9DA4763D4A65F4B9A84 /* Build configuration list for PBXProject "DailyBrief" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57BC3652DC8431520C1724C3 /* Debug */,
+				690A14D1DE0850E51BE46ED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		20C6AEF76D965F197BA68375 /* Build configuration list for PBXNativeTarget "DailyBriefWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9193744261A94ACB15B268B6 /* Debug */,
+				BBCA32097C1BE404004E3C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E891F109240E9548287FAFEB /* Build configuration list for PBXNativeTarget "DailyBrief" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC573BFACAB7A2D3C4E99EE /* Debug */,
+				6628A20667F276BD97BD0D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAECAB07D18D89FE18C16536 /* Project object */;
+}
