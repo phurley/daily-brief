@@ -30,20 +30,36 @@ struct EventsDocument: Decodable { let today: [BriefEvent] }
 struct PhotosDocument: Decodable { let days: [PhotoDay] }
 struct PhotoDay: Decodable { let date: String; let photos: [BriefPhoto] }
 
-struct BriefEvent: Decodable, Identifiable {
+struct BriefEvent: Codable, Identifiable {
     let id: String
     let title: String
     let start: String
     let venue: String?
     let city: String?
+    let url: URL?
+    let summary: String?
+    let price: String?
+    let registration: String?
 
     var time: String {
         guard let date = ISO8601DateFormatter().date(from: start) else { return "Today" }
-        return date.formatted(date: .omitted, time: .shortened)
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(identifier: "America/Detroit")
+        formatter.timeStyle = .short
+        return formatter.string(from: date)
     }
 
     var place: String {
         [venue, city].compactMap { $0 }.joined(separator: " · ")
+    }
+
+    var destination: URL? {
+        guard let url, ["https", "http"].contains(url.scheme?.lowercased() ?? "") else { return nil }
+        var components = URLComponents()
+        components.scheme = "dailybrief"
+        components.host = "event"
+        components.queryItems = [URLQueryItem(name: "url", value: url.absoluteString)]
+        return components.url
     }
 }
 

@@ -7,6 +7,14 @@ struct DailyBriefApp: App {
         WindowGroup {
             BriefWebView(url: URL(string: "https://phurley.github.io/daily-brief/")!)
                 .ignoresSafeArea(edges: .bottom)
+                .onOpenURL { incoming in
+                    guard incoming.scheme == "dailybrief", incoming.host == "event",
+                          let components = URLComponents(url: incoming, resolvingAgainstBaseURL: false),
+                          let value = components.queryItems?.first(where: { $0.name == "url" })?.value,
+                          let url = URL(string: value),
+                          ["https", "http"].contains(url.scheme?.lowercased() ?? "") else { return }
+                    UIApplication.shared.open(url)
+                }
         }
     }
 }

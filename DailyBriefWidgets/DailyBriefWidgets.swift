@@ -1,6 +1,7 @@
 import SwiftUI
 import WidgetKit
 import UIKit
+import AppIntents
 
 @main
 struct DailyBriefWidgets: WidgetBundle {
@@ -13,6 +14,23 @@ struct DailyBriefWidgets: WidgetBundle {
 struct EventsEntry: TimelineEntry {
     let date: Date
     let events: [BriefEvent]
+    var index: Int = 0
+    var unavailable: Bool = false
+    var event: BriefEvent? { events.isEmpty ? nil : events[((index % events.count) + events.count) % events.count] }
+}
+
+struct SelectEventIntent: AppIntent {
+    static var title: LocalizedStringResource = "Show another event"
+    static var openAppWhenRun = false
+    @Parameter(title: "Event index") var index: Int
+    init() {}
+    init(index: Int) { self.index = index }
+    func perform() async throws -> some IntentResult {
+        UserDefaults.standard.set(index, forKey: "eventIndex")
+        UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "eventSelectionTime")
+        WidgetCenter.shared.reloadTimelines(ofKind: "DailyEventsWidget")
+        return .result()
+    }
 }
 
 struct EventsProvider: TimelineProvider {
@@ -22,9 +40,30 @@ struct EventsProvider: TimelineProvider {
     }
     func getTimeline(in context: Context, completion: @escaping (Timeline<EventsEntry>) -> Void) {
         Task {
-            let events = (try? await BriefData.loadEvents()) ?? []
-            let entry = EventsEntry(date: .now, events: events)
-            completion(Timeline(entries: [entry], policy: .after(.now.addingTimeInterval(30 * 60))))
+            let now = Date()
+            var events: [BriefEvent] = []
+            var unavailable = false
+            do {
+                events = try await BriefData.loadEvents()
+                UserDefaults.standard.set(try JSONEncoder().encode(events), forKey: "cachedEvents")
+            } catch {
+                unavailable = true
+                if let data = UserDefaults.standard.data(forKey: "cachedEvents") {
+                    events = (try? JSONDecoder().decode([BriefEvent].self, from: data)) ?? []
+                }
+            }
+            let selectionTime = UserDefaults.standard.double(forKey: "eventSelectionTime")
+            if selectionTime == 0 {
+                UserDefaults.standard.set(now.timeIntervalSince1970, forKey: "eventSelectionTime")
+            }
+            let elapsed = selectionTime == 0 ? 0 : max(0, Int((now.timeIntervalSince1970 - selectionTime) / 300))
+            let index = UserDefaults.standard.integer(forKey: "eventIndex") + elapsed
+            // WidgetKit schedules these snapshots; it does not run animation timers.
+            let entries = (0..<6).map { step in
+                EventsEntry(date: now.addingTimeInterval(Double(step) * 300),
+                            events: events, index: events.isEmpty ? 0 : ((index + step) % events.count + events.count) % events.count, unavailable: unavailable)
+            }
+            completion(Timeline(entries: entries, policy: .after(now.addingTimeInterval(1800))))
         }
     }
 }
@@ -37,35 +76,62 @@ struct DailyEventsWidget: Widget {
         }
         .configurationDisplayName("Today’s events")
         .description("A quick look at nearby events from Daily Brief.")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 
 struct EventsWidgetView: View {
     let entry: EventsEntry
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.widgetFamily) private var family
+    private var ink: Color { colorScheme == .dark ? .white : Color(red: 0.08, green: 0.18, blue: 0.21) }
     var body: some View {
-        VStack(alignment: .leading, spacing: 7) {
-            Label("Nearby & notable", systemImage: "calendar")
-                .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
-            if entry.events.isEmpty {
-                Spacer()
-                Text("No events on today’s brief.").font(.headline)
-                Spacer()
-            } else {
-                ForEach(entry.events.prefix(2)) { event in
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(event.title).font(.headline).lineLimit(1)
-                        Text([event.time, event.place].filter { !$0.isEmpty }.joined(separator: " · "))
-                            .font(.caption).foregroundStyle(.secondary).lineLimit(1)
-                    }
-                }
+        VStack(alignment: .leading, spacing: 5) {
+            HStack {
+                Text("NEARBY & NOTABLE").font(.system(size: 10, weight: .bold))
                 Spacer(minLength: 0)
-                if entry.events.count > 2 { Text("+\(entry.events.count - 2) more today").font(.caption2).foregroundStyle(.secondary) }
+                if entry.unavailable { Image(systemName: "wifi.slash").font(.caption2).accessibilityLabel("Offline, showing saved events") }
+            }.foregroundStyle(ink.opacity(0.75))
+            if let event = entry.event {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(event.title).font(.system(family == .systemSmall ? .subheadline : .headline, design: .rounded, weight: .bold))
+                        .lineLimit(2)
+                    Text(event.time + " · " + event.place)
+                        .font(.caption).lineLimit(family == .systemLarge ? 3 : 1)
+                    if family != .systemSmall {
+                        if let summary = event.summary {
+                            Text(summary).font(.caption).lineLimit(family == .systemLarge ? 7 : 2)
+                        }
+                        if family == .systemLarge {
+                            if let price = event.price { Label(price, systemImage: "ticket").font(.caption) }
+                            if let registration = event.registration { Text(registration).font(.caption).lineLimit(3) }
+                        }
+                    }
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                Spacer(minLength: 0)
+                HStack {
+                    Button(intent: SelectEventIntent(index: entry.index - 1)) {
+                        Image(systemName: "chevron.left").frame(width: 30, height: 26)
+                    }.accessibilityLabel("Previous event")
+                    Spacer(minLength: 0)
+                    Text("\(entry.index % entry.events.count + 1) / \(entry.events.count)")
+                        .font(.caption2.monospacedDigit())
+                    Spacer(minLength: 0)
+                    Button(intent: SelectEventIntent(index: entry.index + 1)) {
+                        Image(systemName: "chevron.right").frame(width: 30, height: 26)
+                    }.accessibilityLabel("Next event")
+                }.buttonStyle(.plain)
+            } else {
+                Spacer()
+                Text(entry.unavailable ? "Events couldn’t be loaded." : "No events on today’s brief.").font(.headline)
+                Spacer()
             }
         }
-        .containerBackground(for: .widget) { Color(red: 0.91, green: 0.95, blue: 0.94) }
-        .widgetURL(BriefData.baseURL)
+        .foregroundStyle(ink)
+        .containerBackground(for: .widget) {
+            colorScheme == .dark ? Color(red: 0.08, green: 0.16, blue: 0.19) : Color(red: 0.91, green: 0.95, blue: 0.94)
+        }
+        .widgetURL(entry.event?.destination)
     }
 }
 
