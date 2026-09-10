@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-09T08:31:46Z",
-  "editionDate": "2026-09-09",
+  "generatedAt": "2026-09-10T08:31:16Z",
+  "editionDate": "2026-09-10",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 15, 2026",
     "estimatedLaunchAt": null,
     "confidence": "medium",
-    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 9, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 15, 2026; no precise launch time is defensible.",
+    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 10, Next Spaceflight continues to list the first orbital Starship attempt as no earlier than September 15, 2026; no precise launch time is defensible.",
     "sources": [
       {
         "name": "SpaceX launches",
@@ -282,6 +282,23 @@
         "planet formation"
       ],
       "caveat": "The reason the smallest bodies retain their original-looking surfaces remains unresolved; the teams are still assessing whether collisions are rarer than expected or whether the objects preserve primordial compositions."
+    },
+    {
+      "id": "chandra-discovers-hypersoft-xray-sources",
+      "title": "Chandra finds a new class of ultraviolet-bright, hypersoft X-ray sources",
+      "summary": "Researchers mining Chandra observations of six galaxies identified 84 ‘hypersoft X-ray sources’ that emit unusually low-energy X-rays alongside intense ultraviolet radiation. Their spectral signature is unlike any known class and points to compact objects—possibly white dwarfs, neutron stars, or black holes—accreting from companions; the population could help account for missing Type Ia supernova progenitors and a poorly explained source of interstellar-gas ionization.",
+      "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-unveils-mysterious-x-ray-objects/",
+      "source": {
+        "name": "NASA Chandra"
+      },
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "topics": [
+        "space",
+        "astrophysics",
+        "X-ray astronomy",
+        "stellar evolution"
+      ],
+      "caveat": "The study has not yet identified what physical systems produce the hypersoft X-ray sources; their link to Type Ia progenitors and interstellar-gas ionization remains a proposed explanation."
     }
   ]
 }
