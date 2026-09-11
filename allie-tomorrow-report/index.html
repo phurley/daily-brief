@@ -3,35 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Allison’s Friday Playbook · September 11, 2026</title>
+  <meta name="color-scheme" content="dark">
+  <title>Allison’s Saturday Playbook · September 12, 2026</title>
   <style>
-    :root { color-scheme: dark; --ink:#fffaf4; --muted:#c9c2d4; --night:#121128; --panel:#24203d; --line:#50486e; --coral:#ff8578; --gold:#ffd36b; --blue:#9edcff; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:linear-gradient(150deg,#111025,#282146 58%,#17142e); color:var(--ink); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:var(--blue); text-underline-offset:.2em; }
-    .shell { width:min(1120px,calc(100% - 2rem)); margin:auto; padding:3.5rem 0 4rem; }
-    header { max-width:820px; margin-bottom:2rem; }
-    .eyebrow,.kicker { color:var(--gold); font-size:.78rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
-    h1 { margin:.25rem 0 .6rem; font-size:clamp(2.35rem,7vw,5.2rem); line-height:.96; letter-spacing:-.05em; }
-    h2 { margin:0 0 .7rem; font-size:1.55rem; letter-spacing:-.02em; }
-    h3 { margin:.1rem 0 .45rem; font-size:1.04rem; }
-    p { margin:.4rem 0 .8rem; }
-    .lede { color:var(--muted); font-size:1.12rem; }
-    main { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; align-items:start; }
-    section { min-width:0; padding:1.35rem; border:1px solid var(--line); border-radius:1.2rem; background:rgba(36,32,61,.94); box-shadow:0 18px 45px rgba(0,0,0,.16); }
-    .wide { grid-column:1/-1; }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; }
-    .card { padding:1rem; border:1px solid var(--line); border-radius:.9rem; background:#1b1831; }
-    .card p:last-child { margin-bottom:0; }
-    .status { display:inline-block; margin:.15rem .25rem .45rem 0; padding:.22rem .58rem; border-radius:999px; background:#353052; color:var(--gold); font-size:.78rem; font-weight:750; }
-    .action { border-left:.25rem solid var(--coral); padding-left:.8rem; }
-    .timeline { display:grid; gap:.75rem; }
-    .timeline .card { border-left:.3rem solid var(--gold); }
-    ul { margin:.5rem 0 0; padding-left:1.2rem; }
-    li + li { margin-top:.35rem; }
-    .fine { color:var(--muted); font-size:.88rem; }
-    [hidden] { display:none !important; }
-    @media (max-width:760px) { .shell{width:min(100% - 1rem,700px);padding-top:2rem} main,.grid{grid-template-columns:1fr}.wide{grid-column:auto} section{padding:1.05rem} }
+    :root {
+      color-scheme: dark;
+      --night: #111327;
+      --panel: #1c2138;
+      --panel-deep: #15192d;
+      --ink: #fffaf1;
+      --muted: #c6c8d4;
+      --line: #3d4563;
+      --sun: #ffd36e;
+      --coral: #ff8f7f;
+      --sky: #9edcff;
+      --mint: #8fe0c2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 84% 2%, rgba(77, 117, 185, .28), transparent 28rem),
+        linear-gradient(150deg, #101225 0%, #252844 58%, #15182c 100%);
+      color: var(--ink);
+      font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--sky); text-decoration-thickness: .08em; text-underline-offset: .18em; }
+    a:hover { color: #d7f1ff; }
+    .shell { width: min(1120px, calc(100% - 2rem)); margin: auto; padding: 3.5rem 0 4rem; }
+    .masthead { max-width: 880px; margin-bottom: 2rem; }
+    .eyebrow, .kicker { color: var(--sun); font-size: .76rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { margin: .25rem 0 .75rem; font-size: clamp(2.7rem, 8vw, 5.7rem); line-height: .94; letter-spacing: -.055em; }
+    h2 { margin: .1rem 0 .8rem; font-size: clamp(1.45rem, 3vw, 1.9rem); line-height: 1.1; letter-spacing: -.025em; }
+    h3 { margin: .18rem 0 .42rem; font-size: 1.04rem; line-height: 1.3; }
+    p { margin: .4rem 0 .8rem; }
+    .lede { max-width: 760px; color: var(--muted); font-size: 1.13rem; }
+    main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+    section { min-width: 0; padding: 1.35rem; border: 1px solid var(--line); border-radius: 1.25rem; background: rgba(28, 33, 56, .95); box-shadow: 0 20px 50px rgba(0, 0, 0, .17); }
+    .wide { grid-column: 1 / -1; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+    .card { padding: 1rem; border: 1px solid var(--line); border-radius: .95rem; background: var(--panel-deep); }
+    .card p:last-child { margin-bottom: 0; }
+    .action { border-left: .3rem solid var(--coral); }
+    .plan { border-left: .3rem solid var(--sun); }
+    .status { display: inline-block; margin: .1rem .22rem .45rem 0; padding: .22rem .6rem; border-radius: 99rem; background: #303752; color: var(--sun); font-size: .78rem; font-weight: 800; }
+    .weather-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin: .8rem 0; }
+    .weather-band div { padding: .8rem; border-radius: .8rem; background: var(--panel-deep); }
+    .weather-band strong { display: block; color: var(--mint); font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; }
+    .timeline { display: grid; gap: .75rem; }
+    .fine { color: var(--muted); font-size: .88rem; }
+    .source-row { margin-top: .85rem; padding-top: .7rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+    ul { margin: .45rem 0 .2rem; padding-left: 1.2rem; }
+    li + li { margin-top: .38rem; }
+    [hidden] { display: none !important; }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 1rem, 700px); padding-top: 2rem; }
+      main, .grid, .weather-band { grid-template-columns: 1fr; }
+      .wide { grid-column: auto; }
+      section { padding: 1.05rem; }
+    }
   </style>
 <style id="allie-compact-layout">
   main { display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; grid-auto-flow:dense; grid-auto-rows:8px; gap:18px !important; align-items:start; }
@@ -68,125 +98,139 @@
   .allie-feedback-actions { display:flex; justify-content:flex-end; gap:.5rem; }
 </style>
 </head>
-<body data-allie-report="tomorrow" data-report-date="2026-09-11">
+<body data-allie-report="tomorrow" data-report-date="2026-09-12">
   <div class="shell">
-    <header>
-      <div class="eyebrow">Night-before playbook · Friday, September 11</div>
-      <h1>Friday is wide open.</h1>
-      <p class="lede">Sunny and near 78°F, with an unusually good spread of outdoor, creative, and analytical options. Pick the shape of the day tonight.</p>
+    <header class="masthead">
+      <div class="eyebrow">Night-before playbook · Saturday, September 12</div>
+      <h1>Build a bright Saturday.</h1>
+      <p class="lede">Mostly sunny, warm, and dry around Metro Detroit. Make the one choice that shapes the day tonight: an early run, Michigan’s noon Maize Out, a structured social activity, or an evening show.</p>
     </header>
 
     <main>
       <section class="wide" data-brief-section="allie-tomorrow-overview">
         <div class="kicker">The short version</div>
-        <h2>Three decisions for tonight</h2>
+        <h2>Three choices to make tonight</h2>
         <div class="grid">
           <article class="card action">
-            <h3>Choose Friday’s energy</h3>
-            <p>For active and social, check registration for the <a href="https://runsignup.com/Race/Info/MI/RochesterHills/PrefixCharity5KFunRunCarShow">Prefix Charity 5K</a>. For practical AI, the <a href="https://events.umich.edu/event/149738">Friday Night AI robotics talk</a> is free and open to the public. Both begin at 6:30 PM.</p>
+            <h3>Choose the opening move</h3>
+            <p><a href="https://secure.info-komen.org/site/TR/RacefortheCure/RaceforTheCure?fr_id=11236&amp;pg=entry">Detroit Race for the Cure</a> opens at 7:00 AM, with the timed 5K and 1-mile walk at 9:00 AM; online and onsite registration remain available. Beacon Park’s free <a href="https://downtowndetroit.org/event/summer-saturdays-with-the-boll-family-ymca-at-beacon-park/2026-09-12/">Tai Chi</a> starts at 9:30 AM and requests pre-registration.</p>
           </article>
           <article class="card action">
-            <h3>Handle the real deadlines</h3>
-            <p>Before tonight’s 8:35 PM 49ers–Rams kickoff, lock any players from those teams in your fantasy lineup. Friday is also the stated registration deadline for <a href="https://www.stonewalldetroit.org/volleyball">Stonewall Detroit fall volleyball</a>, or until sold out.</p>
+            <h3>Decide on the Maize Out</h3>
+            <p><a href="https://mgoblue.com/sports/2026/9/7/michigan-monday-game-2-vs-oklahoma">Michigan hosts No. 11 Oklahoma</a> at noon at Michigan Stadium. If attending, plan around the 9:45 AM Wolverine Walk; the first 70,000 fans receive maize rally towels.</p>
+          </article>
+          <article class="card action">
+            <h3>Reserve the best social fit</h3>
+            <p>The free <a href="https://www.meetup.com/ypsi-improv/events/315431961/">Outdoor Improv Skills &amp; Games</a> session welcomes all experience levels at 2:00 PM; RSVP before going. The 8:00 PM <a href="https://www.meetup.com/ann-arbor-pickleballers/events/316456656/">Pickleball at Wolverine</a> round robin welcomes all levels and asks participants to join and RSVP.</p>
           </article>
           <article class="card">
-            <h3>Set two morning reminders</h3>
-            <p>Set 8:25 AM for the 8:30 AM August CPI release, then reserve 10 minutes after 10:00 AM for the preliminary September Michigan Consumer Survey reading and its inflation-expectations context.</p>
-          </article>
-          <article class="card">
-            <h3>Pack for the temperature swing</h3>
-            <p>Set out a light morning layer, sunglasses, sunscreen, and a light jacket for after sunset. No rain backup appears necessary.</p>
+            <h3>Pack for sun, then a cooler finish</h3>
+            <p>Set out sunscreen and water for the warm afternoon, plus a light layer for the low-60s-to-low-70s morning and the upper-60s late evening. The current forecast indicates no rain gear.</p>
           </article>
         </div>
       </section>
 
       <section data-brief-section="allie-tomorrow-weather">
         <div class="kicker">Weather</div>
-        <h2>Sunny, calm, and mild</h2>
-        <span class="status">Detroit 78°F</span><span class="status">Ann Arbor 78°F</span><span class="status">0% rain</span>
-        <p>The morning commute starts around 58–63°F in Detroit and 55–61°F in Ann Arbor under clear to mostly sunny skies. By midday, both areas reach roughly 70–75°F with light wind.</p>
-        <p><strong>After work:</strong> Detroit is about 76°F easing to 70°F from 4–8 PM; Ann Arbor moves from the upper 70s through the 60s after sunset. Conditions stay sunny, then clear or mostly clear.</p>
-        <p class="action"><strong>Outdoor call:</strong> green light for a run, volleyball, pickleball, patio, or walking plan. Air quality is forecast Good for Southeast Michigan, with no active alert.</p>
-        <p class="fine">Sources: <a href="https://forecast.weather.gov/MapClick.php?lat=42.33143&amp;lon=-83.04575">NWS Detroit</a> · <a href="https://forecast.weather.gov/MapClick.php?lat=42.28034&amp;lon=-83.74894">NWS Ann Arbor</a> · <a href="https://www.airnow.gov/?city=Detroit&amp;state=MI&amp;country=USA">AirNow Detroit</a> · <a href="https://www.michigan.gov/egle/public/learn/air-quality">Michigan EGLE</a></p>
+        <h2>Dry, sunny, and warm</h2>
+        <span class="status">High near 83°F</span><span class="status">Low near 66°F</span><span class="status">0% rain</span>
+        <div class="weather-band">
+          <div><strong>7–10 AM</strong>Mostly sunny; low 60s rising into the upper 60s or low 70s. A light layer works early.</div>
+          <div><strong>10 AM–6 PM</strong>Mostly sunny, near 83°F, with south-southwest wind at 5–9 mph. Bring water, sunscreen, and use shade breaks.</div>
+          <div><strong>6–11 PM</strong>Partly cloudy; cooling through the 70s toward the upper 60s. Outdoor dinner or games remain workable.</div>
+        </div>
+        <p><strong>Outdoor call:</strong> excellent for running, volleyball, pickleball, a patio, or a Detroit/Ann Arbor outing. No Detroit-specific next-day AQI value was available, so check AirNow before vigorous outdoor activity if smoke or respiratory sensitivity is a concern.</p>
+        <p class="source-row">Sources: <a href="https://forecast.weather.gov/MapClick.php?TextType=1&amp;f6=1&amp;lat=42.39504&amp;lon=-83.11232&amp;mp=1">NWS forecast</a> · <a href="https://forecast.weather.gov/MapClick.php?FcstType=digital&amp;lat=42.2311&amp;lg=english&amp;lon=-83.3312&amp;unit=0">NWS digital forecast</a> · <a href="https://www.airnow.gov/">AirNow</a> · <a href="https://gispub.epa.gov/airnow/?tab=forecast">AirNow forecast map</a></p>
       </section>
 
       <section data-brief-section="allie-tomorrow-sports">
         <div class="kicker">Sports</div>
-        <h2>A light Detroit pro-sports Friday</h2>
-        <p class="action"><strong>Tonight, before 8:35 PM · San Francisco 49ers vs. Los Angeles Rams:</strong> lock starters, bench players, or Thursday-game picks. There is no NFL game Friday, and Lions players do not lock until Sunday. <a href="https://www.nfl.com/nfl-schedule-release/">NFL schedule</a></p>
-        <p><strong>5:00 PM · Detroit Central vs. Detroit Cody:</strong> the Lions High School Football Game of the Week is the local in-person option. Confirm venue and ticket details with the schools before going. <a href="https://www.detroitlions.com/football-education/high-school-tackle-football">Lions listing</a></p>
-        <p><strong>6:30 PM · Gotham FC at Racing Louisville FC</strong> on NWSL+. <strong>7:30 PM · Rutgers at Boston College</strong> on ESPN2. <strong>8:00 PM · No. 23 Missouri at Kansas</strong> on FOX. <strong>10:00 PM · Angel City FC vs. Denver Summit FC</strong> on NWSL+.</p>
-        <p class="fine"><a href="https://images.nwslsoccer.com/image/private/t_q-good/prd/fhex5zv75l2rizw6tx6d.pdf">NWSL schedule</a> · <a href="https://bigten.org/fb/article/60083/">Big Ten football</a> · <a href="https://www.ncaa.com/news/football/article/college-football-tv-schedule-game-times-preview">NCAA football guide</a> · <a href="https://www.nwslsoccer.com/news/2026-nwsl-schedule-release-how-to-watch-denver-summit-fc">NWSL viewing guide</a></p>
-        <p><strong>Sunday setup:</strong> New Orleans Saints at Detroit Lions is Sunday at 1:00 PM on FOX at Ford Field. Recheck Friday’s final injury designations before lineup choices; do not overreact to Wednesday’s estimated practice report. <a href="https://www.detroitlions.com/schedule/">Lions schedule</a> · <a href="https://www.detroitlions.com/news/lions-vs-saints-practice-report-sept-9-rolder-rakestraw-moore">practice report</a></p>
-        <p>No Pistons game Friday. No WNBA games Friday during the league’s FIBA Women’s Basketball World Cup break. <a href="https://www.nba.com/team/1610612765/schedule">Pistons schedule</a> · <a href="https://www.wnba.com/webview/news/2026-fiba-world-cup-faq-and-things-to-know">WNBA break details</a></p>
+        <h2>A local doubleheader</h2>
+        <p><strong>Noon ET · Michigan Wolverines vs. No. 11 Oklahoma Sooners:</strong> Michigan Stadium’s first Michigan–Oklahoma meeting, on FOX and Learfield Michigan Sports Network radio. It is a Maize Out, with the Wolverine Walk at 9:45 AM. <a href="https://mgoblue.com/sports/2026/9/7/michigan-monday-game-2-vs-oklahoma">Official preview</a></p>
+        <p><strong>6:00 PM ET · Michigan Wolverines vs. South Florida Bulls volleyball:</strong> an Ann Arbor alternative after football, on ESPN+. Confirm venue and ticket details before leaving. <a href="https://mgoblue.com/coverage">Michigan live events</a></p>
+        <p><strong>10:00 PM ET · Detroit City FC at Sacramento Republic FC:</strong> stream the road match on ESPN+. DCFC enters on a six-match league unbeaten run; Darren Smith is questionable, while Connor Rutz, Rafa Mentzingen, and Preston Tabort Etaka are out. <a href="https://www.detcityfc.com/news/2026/09/10/detroit-city-fc-travels-to-sacramento/">Match preview</a></p>
+        <p class="action"><strong>Saturday fantasy check:</strong> the Detroit Lions host the New Orleans Saints Sunday at 1:00 PM ET on FOX. Use the final official injury report before locking Sunday players; monitor Alvin Kamara and Detroit defenders Christian Izien, Derrick Moore, and Mekhi Wingo. <a href="https://www.nfl.com/injuries/">NFL injuries</a> · <a href="https://www.detroitlions.com/news/lions-vs-saints-practice-report-sept-10-moore-rakestraw-izien">Lions practice report</a></p>
+        <p class="fine">No Pistons game Saturday; Detroit’s first listed preseason game is October 5. No WNBA games Saturday during the World Cup break. <a href="https://www.nba.com/pistons/news/detroit-pistons-announce-2026-27-season-schedule-presented-by-ticketmaster">Pistons schedule</a> · <a href="https://www.wnba.com/keydates">WNBA key dates</a> · <a href="https://www.detroitlions.com/news/lions-announce-2026-schedule">Lions schedule</a></p>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-plans">
         <div class="kicker">Plans · active or next option displays</div>
-        <h2>Friday rotation</h2>
+        <h2>Saturday’s verified rotation</h2>
         <div class="timeline" data-allie-time-rotation>
-          <article class="card" data-allie-event data-start-at="2026-09-11T12:00:00-04:00" data-end-at="2026-09-11T20:00:00-04:00">
-            <span class="status">Noon–8 PM · Ann Arbor</span>
-            <h3>Street Art Encounter</h3>
-            <p>A free, public downtown open-air event. The hands-on A2AC Community Mural Wall runs noon–5 PM at 117 W. Liberty St.; window paint and sidewalk chalk are supplied, with no materials or registration stated.</p>
-            <a href="https://mainstreetannarbor.org/street-art-encounter">Official event</a>
+          <article class="card plan" data-allie-event data-start-at="2026-09-12T07:00:00-04:00" data-end-at="2026-09-12T12:00:00-04:00">
+            <span class="status">7:00 AM–noon · Detroit</span>
+            <h3>2026 Detroit Race for the Cure</h3>
+            <p>Campus Martius Park opens at 7:00 AM; the opening ceremony is 8:30 AM, and the timed 5K plus 1-mile family-fun walk start at 9:00 AM. Adult registration is $45 and remains available online and onsite.</p>
+            <p><a href="https://secure.info-komen.org/site/TR/RacefortheCure/RaceforTheCure?fr_id=11236&amp;pg=entry">Official registration</a> · <a href="https://downtowndetroit.org/events/">Downtown Detroit events</a></p>
           </article>
-          <article class="card" hidden data-allie-event data-start-at="2026-09-11T14:00:00-04:00" data-end-at="2026-09-11T20:00:00-04:00">
-            <span class="status">2–8 PM · Detroit</span>
-            <h3>Season Fair VIP Preview</h3>
-            <p>Friday’s indoor preview at the Shepherd, 1265 Parkview St., features eleven exhibitors. The $100 VIP ticket includes Friday entry plus general admission Saturday and Sunday; check inventory before buying or leaving.</p>
-            <a href="https://season-fair.com/">Official event and tickets</a>
+          <article class="card plan" hidden data-allie-event data-start-at="2026-09-12T09:30:00-04:00" data-end-at="2026-09-12T11:00:00-04:00">
+            <span class="status">9:30–11:00 AM · Detroit</span>
+            <h3>Tai Chi with Vernice</h3>
+            <p>A free outdoor Beacon Park class, open to everyone age 12+. Pre-registration is requested; bring comfortable movement clothes and a refillable bottle.</p>
+            <p><a href="https://downtowndetroit.org/event/summer-saturdays-with-the-boll-family-ymca-at-beacon-park/2026-09-12/">Official event</a></p>
           </article>
-          <article class="card" hidden data-allie-event data-start-at="2026-09-11T18:30:00-04:00" data-end-at="2026-09-11T19:30:00-04:00">
-            <span class="status">6:30–7:30 PM · Ann Arbor</span>
-            <h3>Friday Night AI: How to Build a Robot from Scratch</h3>
-            <p>A free public Michigan AI Lab discussion at the Ann Arbor District Library Downtown, 4th Floor Meeting Room, covering mechanical design, fabrication, sensing, control, safety, and programming. No ticket or registration is listed.</p>
-            <a href="https://events.umich.edu/event/149738">Official event</a>
+          <article class="card plan" hidden data-allie-event data-start-at="2026-09-12T11:00:00-04:00" data-end-at="2026-09-12T23:00:00-04:00">
+            <span class="status">11:00 AM–11:00 PM · Detroit</span>
+            <h3>Dally in the Alley</h3>
+            <p>A free, volunteer-run street festival in the Cass Corridor at Hancock and Second, with live music, local art, food, drinks, and vendors. No registration is stated; confirm day-of updates with the organizer.</p>
+            <p><a href="https://events.wayne.edu/2026/09/12/dally-in-the-alley-107841">Wayne State listing</a> · <a href="https://dallyinthealley.com/">Organizer</a></p>
           </article>
-          <article class="card" hidden data-allie-event data-start-at="2026-09-11T18:30:00-04:00" data-end-at="2026-09-11T21:00:00-04:00">
-            <span class="status">6:30–9 PM · Rochester Hills</span>
-            <h3>Prefix Charity 5K Fun Run</h3>
-            <p>Choose the 5K run/walk for $25 or the 1-mile for $15 on the Clinton River Trail beside Prefix headquarters, 1400 S. Livernois. Same-day signup closes at 6:15 PM for the 5K and 6:10 PM for the mile; check availability before leaving.</p>
-            <a href="https://runsignup.com/Race/Info/MI/RochesterHills/PrefixCharity5KFunRunCarShow">Official registration</a>
+          <article class="card plan" hidden data-allie-event data-start-at="2026-09-12T14:00:00-04:00" data-end-at="2026-09-12T16:00:00-04:00">
+            <span class="status">2:00–4:00 PM · Ypsilanti</span>
+            <h3>Outdoor Improv Skills &amp; Games</h3>
+            <p>A free Riverside Park session with warm-ups, group games, scene work, and a closing creative-project discussion. No experience is needed; ages 16+ are recommended. RSVP before going.</p>
+            <p><a href="https://www.meetup.com/ypsi-improv/events/315431961/">Organizer listing and RSVP</a></p>
+          </article>
+          <article class="card plan" hidden data-allie-event data-start-at="2026-09-12T19:00:00-04:00" data-end-at="2026-09-13T02:00:00-04:00">
+            <span class="status">7:00 PM–2:00 AM · Sterling Heights</span>
+            <h3>Growler Party &amp; Board Game Night</h3>
+            <p>A 21+ game night where newcomers are explicitly welcome. Bring one growler or two howlers/crowlers of Michigan craft beer, hard cider, or hard seltzer; drinking and trading are optional, but bringing the specified container is required. Join and RSVP.</p>
+            <p><a href="https://www.meetup.com/metro-detroit-game-night/events/312686338/">Organizer listing and RSVP</a></p>
+          </article>
+          <article class="card plan" hidden data-allie-event data-start-at="2026-09-12T20:00:00-04:00" data-end-at="2026-09-12T22:00:00-04:00">
+            <span class="status">8:00–10:00 PM · Ann Arbor</span>
+            <h3>Pickleball at Wolverine</h3>
+            <p>An organizer-led round robin for all skill levels; no membership is required. Arrive early. If two or more courts are used, the fee is $5; if fewer than eight attend, one court is free. Join, RSVP, and verify before leaving.</p>
+            <p><a href="https://www.meetup.com/ann-arbor-pickleballers/events/316456656/">Organizer listing and RSVP</a></p>
           </article>
           <div class="card" hidden data-allie-time-empty>
-            <h3>Friday’s rotation has ended</h3>
-            <p>The verified Friday options are over.</p>
+            <h3>Saturday’s rotation has ended</h3>
+            <p>The verified Saturday options are over.</p>
           </div>
         </div>
-        <p class="action"><strong>Friday deadline:</strong> Stonewall Detroit fall volleyball registration runs through September 11 or until sold out. The eight-week indoor season runs October 1–December 10; games are Thursdays at 8, 9, and 10 PM at Detroit City Fieldhouse. Registration is $70, with a waiver program available. <a href="https://www.stonewalldetroit.org/volleyball">Check and register</a></p>
+        <p class="source-row">Outdoor forecast reference: <a href="https://forecast.weather.gov/MapClick.php?lat=42.28034&amp;lon=-83.74894">NWS Ann Arbor</a>. Recheck conditions before outdoor plans.</p>
       </section>
 
       <section class="wide" data-brief-section="allie-tomorrow-entertainment">
         <div class="kicker">Entertainment</div>
-        <h2>Pick a show, a concert, or a new-release soundtrack</h2>
+        <h2>Four verified ways to go out</h2>
         <div class="grid">
           <article class="card">
-            <span class="status">Available Friday · Hulu</span>
-            <h3>The Secret Lives of Mormon Wives, Season 5</h3>
-            <p>All five episodes were released September 10, making this the fresh reality-TV option for Friday. Hulu does not state a Friday-specific release hour.</p>
-            <a href="https://press.hulu.com/shows/the-secret-lives-of-mormon-wives/">Hulu press page</a> · <a href="https://www.hulu.com/hub/reality/collections/9181">Hulu reality collection</a>
+            <span class="status">7:00 PM · Detroit</span>
+            <h3>saint harison presents the ghosted tour</h3>
+            <p>An earlier, smaller-room music option at The Shelter.</p>
+            <p><a href="https://www.ticketmaster.com/discover/detroit?categoryId=KZFzniwnSyZfZ7v7nJ&amp;date=thisweekend&amp;tt_scene=anchor_view">Ticketmaster listing</a></p>
           </article>
           <article class="card">
-            <span class="status">Friday release · Apple Music</span>
-            <h3>Bloc Party — Anatomy Of A Brief Romance</h3>
-            <p>Apple Music lists the 14-track album for September 11, without a release hour—an energetic alternative-pop/indie queue for the commute or before going out.</p>
-            <a href="https://music.apple.com/us/album/anatomy-of-a-brief-romance/1895408368">Album page</a>
+            <span class="status">7:00 PM · Detroit</span>
+            <h3>Atsuko Okatsuka: The Big Bowl Tour</h3>
+            <p>A comedy alternative at The Fillmore Detroit.</p>
+            <p><a href="https://www.ticketmaster.com/venue/65587?tab=addOns&amp;tt_scene=anchor_view">Venue listing</a> · <a href="https://www.ticketmaster.com/discover/detroit?tt_scene=anchor_view">Detroit events</a></p>
           </article>
           <article class="card">
-            <span class="status">8 PM · Ann Arbor</span>
-            <h3>Rainbow Girls with Jordan Smart</h3>
-            <p>Doors open at 7:30 PM at The Ark, 316 S. Main St. The venue lists tickets at $29–$40.</p>
-            <a href="https://theark.org/event/rainbow-girls-260911/">The Ark</a>
+            <span class="status">8:00 PM · Detroit</span>
+            <h3>Lily Allen Performs West End Girl</h3>
+            <p>The clearest pop-forward option, at the Fox Theatre Detroit.</p>
+            <p><a href="https://www.ticketmaster.com/event/0800647621D82972?camefrom=CFC_313PRE_313web_lillyallen&amp;tt_scene=anchor_view">Event listing</a> · <a href="https://www.ticketmaster.com/fox-theatre-detroit-billets-detroit/venue/65547?tt_scene=anchor_view">Venue listing</a></p>
           </article>
           <article class="card">
-            <span class="status">7 PM · Detroit</span>
-            <h3>Carly Pearce — Honest Woman: Up Close</h3>
-            <p>A contemporary country-pop concert at Saint Andrew’s Hall.</p>
-            <a href="https://www.ticketmaster.com/discover/detroit?categoryId=KZFzniwnSyZfZ7v7nJ&amp;date=thismonth&amp;tt_scene=anchor_view">Ticketmaster Detroit listing</a>
+            <span class="status">8:00 PM · Sterling Heights</span>
+            <h3>Dermot Kennedy: The Weight of the Woods Tour</h3>
+            <p>A same-night pop alternative at Michigan Lottery Amphitheatre at Freedom Hill.</p>
+            <p><a href="https://www.ticketmaster.com/discover/detroit?categoryId=KZFzniwnSyZfZ7v7nJ&amp;date=thisweekend&amp;tt_scene=anchor_view">Ticketmaster listing</a></p>
           </article>
         </div>
-        <p class="fine">No date-specific Love Island USA episode or Taylor Swift release or performance was verified for September 11.</p>
+        <p class="fine">The music options overlap; choose one. No reliable Saturday date-and-time listing was verified for Love Island or comparable reality TV.</p>
       </section>
 
       <section data-brief-section="allie-tomorrow-prepare"><!-- allie-market-tracker:start -->
@@ -200,20 +244,19 @@
 <!-- allie-market-tracker:end -->
 
         <div class="kicker">Prepare tonight</div>
-        <h2>Two tiny data rituals</h2>
-        <p class="action"><strong>8:25 AM reminder:</strong> read the 8:30 AM August CPI release, then save headline and core month-over-month and year-over-year figures in market or budgeting notes. <a href="https://www.newyorkfed.org/research/calendars/i-sep26.html">New York Fed calendar</a> · <a href="https://fred.stlouisfed.org/releases/calendar?rid=10&amp;y=2026">FRED release calendar</a></p>
-        <p class="action"><strong>After 10:00 AM:</strong> block 10 minutes to capture the preliminary September Michigan Consumer Survey reading and its inflation-expectations context alongside CPI. <a href="https://data.sca.isr.umich.edu/fetchdoc.php?docid=79628">Survey source</a></p>
-        <p class="fine">The shared live tracker may show VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV here. Market information is informational, not investment advice.</p>
+        <h2>One career move</h2>
+        <p class="action"><strong>Day of Data Detroit:</strong> register before the free Ann Arbor event begins Saturday at 10:30 AM. Capacity is limited to 135. If you have a practical analytics or AI topic, the window to propose a 45–60 minute session closes September 12; no closing time is specified. <a href="https://dayofdata.org/2026-09-12-dayofdata1164/">Event and registration</a></p>
+        <p class="fine">This panel is reserved for the shared live market tracker covering VTI, SPY, QQQ, and the once-daily FXAIX mutual-fund NAV. Market information is informational, not investment advice.</p>
       </section>
 
       <section data-brief-section="allie-tomorrow-family">
         <div class="kicker">Family</div>
-        <h2>Friday family check</h2>
-        <p><strong>Hurley Family calendar:</strong> available. No safe actionable activities are listed for September 11.</p>
-        <p><strong>Birthdays on September 11:</strong> none listed.</p>
-        <p><strong>Anniversaries on September 11:</strong> none listed.</p>
-        <p><strong>Shared public photo archive:</strong> no suitable exact-date prior-year match was found. No public API candidate metadata was retrievable in this run, so no September 11 image could be reviewed or selected.</p>
-        <p class="fine"><a href="https://photos.hurleyhome.com/">Shared public photo archive</a></p>
+        <h2>Saturday family check</h2>
+        <p><strong>Hurley Family calendar:</strong> available. No safe actionable activities are listed for September 12.</p>
+        <p><strong>Birthdays on September 12:</strong> none listed.</p>
+        <p><strong>Anniversaries on September 12:</strong> none listed.</p>
+        <p><strong>Shared public photo archive:</strong> no suitable exact-date prior-year match was found. The archive host did not resolve from this workspace, so no September 12 candidate could be verified and no image was selected.</p>
+        <p class="source-row"><a href="https://photos.hurleyhome.com/">Shared public photo archive</a></p>
       </section>
     </main>
   </div>
