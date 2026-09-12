@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-11T08:30:40Z",
-  "editionDate": "2026-09-11",
+  "generatedAt": "2026-09-12T08:30:45Z",
+  "editionDate": "2026-09-12",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
     "estimatedLaunchAt": null,
     "confidence": "medium",
-    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 11, Next Spaceflight lists the first orbital Starship attempt as no earlier than September 18, 2026; no precise launch time is defensible.",
+    "summary": "SpaceX’s launch page does not list an official Flight 14 date. As of September 12, Next Spaceflight lists the first orbital Starship attempt as no earlier than September 18, 2026; its listed time is an independent estimate, not an official SpaceX schedule.",
     "sources": [
       {
         "name": "SpaceX launches",
@@ -299,6 +299,23 @@
         "stellar evolution"
       ],
       "caveat": "The study has not yet identified what physical systems produce the hypersoft X-ray sources; their link to Type Ia progenitors and interstellar-gas ionization remains a proposed explanation."
+    },
+    {
+      "id": "usgs-detects-zebra-mussel-edna-colorado-river-utah",
+      "title": "USGS detects zebra mussel environmental DNA in Utah’s Colorado River for the first time",
+      "summary": "Autonomous eDNA samplers deployed near the Colorado River by Moab found zebra mussel genetic material in June and July, the first such detection in Utah. The field result gives managers an earlier warning of a potentially damaging invasive species and time to intensify sampling and consider control measures before a population is established.",
+      "url": "https://www.usgs.gov/centers/norock/news/environmental-dna-monitoring-leads-early-detection-invasive-zebra-mussel-dna",
+      "source": {
+        "name": "U.S. Geological Survey"
+      },
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "topics": [
+        "ecology",
+        "invasive species",
+        "environmental DNA",
+        "freshwater science"
+      ],
+      "caveat": "The detection establishes zebra mussel DNA, not a confirmed living population; follow-up sampling is needed to determine whether mussels themselves are present."
     }
   ]
 }
