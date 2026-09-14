@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-14T05:02:35Z",
+  "generatedAt": "2026-09-14T15:03:27Z",
   "location": {
     "name": "Canton",
     "region": "Michigan",
@@ -9,112 +9,112 @@
     "timeZone": "America/Detroit"
   },
   "current": {
-    "observedAt": "2026-09-14T01:00:00-04:00",
-    "temperatureF": 54.0,
-    "feelsLikeF": 51.4,
+    "observedAt": "2026-09-14T11:00:00-04:00",
+    "temperatureF": 62.4,
+    "feelsLikeF": 61.5,
     "conditionCode": 0,
     "conditionText": "Clear",
     "icon": "☀",
     "precipitationIn": 0.0,
-    "humidityPercent": 76,
+    "humidityPercent": 62,
     "wind": {
-      "speedMph": 4.1,
-      "directionDegrees": 311,
-      "direction": "NW",
-      "gustMph": 11.0
+      "speedMph": 2.8,
+      "directionDegrees": 14,
+      "direction": "NNE",
+      "gustMph": 8.7
     }
   },
   "daily": [
     {
       "date": "2026-09-14",
       "highF": 71.5,
-      "lowF": 48.9,
+      "lowF": 47.6,
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
-      "precipitationChancePercent": 0,
+      "precipitationChancePercent": 1,
       "sunrise": "2026-09-14T07:12:00-04:00",
       "sunset": "2026-09-14T19:45:00-04:00",
-      "narrative": "Overcast with a high near 72°F and a low around 49°F; 0% chance of precipitation."
+      "narrative": "Overcast with a high near 72°F and a low around 48°F; 1% chance of precipitation."
     },
     {
       "date": "2026-09-15",
-      "highF": 75.3,
-      "lowF": 60.0,
+      "highF": 73.8,
+      "lowF": 56.4,
       "conditionCode": 63,
       "conditionText": "Rain",
       "icon": "🌧",
-      "precipitationChancePercent": 50,
+      "precipitationChancePercent": 53,
       "sunrise": "2026-09-15T07:13:00-04:00",
       "sunset": "2026-09-15T19:43:00-04:00",
-      "narrative": "Rain with a high near 75°F and a low around 60°F; 50% chance of precipitation."
+      "narrative": "Rain with a high near 74°F and a low around 56°F; 53% chance of precipitation."
     },
     {
       "date": "2026-09-16",
-      "highF": 78.2,
+      "highF": 78.7,
+      "lowF": 63.0,
+      "conditionCode": 3,
+      "conditionText": "Overcast",
+      "icon": "☁",
+      "precipitationChancePercent": 53,
+      "sunrise": "2026-09-16T07:15:00-04:00",
+      "sunset": "2026-09-16T19:41:00-04:00",
+      "narrative": "Overcast with a high near 79°F and a low around 63°F; 53% chance of precipitation."
+    },
+    {
+      "date": "2026-09-17",
+      "highF": 83.7,
+      "lowF": 65.6,
+      "conditionCode": 51,
+      "conditionText": "Light drizzle",
+      "icon": "🌦",
+      "precipitationChancePercent": 49,
+      "sunrise": "2026-09-17T07:16:00-04:00",
+      "sunset": "2026-09-17T19:39:00-04:00",
+      "narrative": "Light drizzle with a high near 84°F and a low around 66°F; 49% chance of precipitation."
+    },
+    {
+      "date": "2026-09-18",
+      "highF": 75.5,
+      "lowF": 65.6,
+      "conditionCode": 3,
+      "conditionText": "Overcast",
+      "icon": "☁",
+      "precipitationChancePercent": 14,
+      "sunrise": "2026-09-18T07:17:00-04:00",
+      "sunset": "2026-09-18T19:38:00-04:00",
+      "narrative": "Overcast with a high near 76°F and a low around 66°F; 14% chance of precipitation."
+    },
+    {
+      "date": "2026-09-19",
+      "highF": 95.3,
+      "lowF": 64.1,
+      "conditionCode": 51,
+      "conditionText": "Light drizzle",
+      "icon": "🌦",
+      "precipitationChancePercent": 46,
+      "sunrise": "2026-09-19T07:18:00-04:00",
+      "sunset": "2026-09-19T19:36:00-04:00",
+      "narrative": "Light drizzle with a high near 95°F and a low around 64°F; 46% chance of precipitation."
+    },
+    {
+      "date": "2026-09-20",
+      "highF": 73.8,
       "lowF": 62.9,
       "conditionCode": 53,
       "conditionText": "Drizzle",
       "icon": "🌦",
-      "precipitationChancePercent": 56,
-      "sunrise": "2026-09-16T07:15:00-04:00",
-      "sunset": "2026-09-16T19:41:00-04:00",
-      "narrative": "Drizzle with a high near 78°F and a low around 63°F; 56% chance of precipitation."
-    },
-    {
-      "date": "2026-09-17",
-      "highF": 74.6,
-      "lowF": 62.1,
-      "conditionCode": 51,
-      "conditionText": "Light drizzle",
-      "icon": "🌦",
-      "precipitationChancePercent": 53,
-      "sunrise": "2026-09-17T07:16:00-04:00",
-      "sunset": "2026-09-17T19:39:00-04:00",
-      "narrative": "Light drizzle with a high near 75°F and a low around 62°F; 53% chance of precipitation."
-    },
-    {
-      "date": "2026-09-18",
-      "highF": 77.5,
-      "lowF": 60.0,
-      "conditionCode": 3,
-      "conditionText": "Overcast",
-      "icon": "☁",
-      "precipitationChancePercent": 16,
-      "sunrise": "2026-09-18T07:17:00-04:00",
-      "sunset": "2026-09-18T19:38:00-04:00",
-      "narrative": "Overcast with a high near 78°F and a low around 60°F; 16% chance of precipitation."
-    },
-    {
-      "date": "2026-09-19",
-      "highF": 71.0,
-      "lowF": 62.0,
-      "conditionCode": 80,
-      "conditionText": "Light rain showers",
-      "icon": "🌦",
-      "precipitationChancePercent": 45,
-      "sunrise": "2026-09-19T07:18:00-04:00",
-      "sunset": "2026-09-19T19:36:00-04:00",
-      "narrative": "Light rain showers with a high near 71°F and a low around 62°F; 45% chance of precipitation."
-    },
-    {
-      "date": "2026-09-20",
-      "highF": 72.0,
-      "lowF": 63.3,
-      "conditionCode": 51,
-      "conditionText": "Light drizzle",
-      "icon": "🌦",
-      "precipitationChancePercent": 45,
+      "precipitationChancePercent": 46,
       "sunrise": "2026-09-20T07:19:00-04:00",
       "sunset": "2026-09-20T19:34:00-04:00",
-      "narrative": "Light drizzle with a high near 72°F and a low around 63°F; 45% chance of precipitation."
+      "narrative": "Drizzle with a high near 74°F and a low around 63°F; 46% chance of precipitation."
     }
   ],
   "sources": [
     {
       "name": "Open-Meteo",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=42.3086&longitude=-83.4824&current=temperature_2m,apparent_temperature,precipitation,weather_code,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDetroit&forecast_days=7",
-      "retrievedAt": "2026-09-14T05:02:35Z"
+      "retrievedAt": "2026-09-14T15:03:27Z"
     }
   ]
 }
