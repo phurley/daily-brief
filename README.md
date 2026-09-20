@@ -19,6 +19,11 @@ rendered in the browser from schema-backed JSON.
   `schemas/`.
 - `scripts/update_calendar.py` collects the family Google/iCloud calendars
   into `calendar.json`; `scripts/update_weather.py` does the same for weather.
+- `vibe-check/` writes `vibe.json`, the dated editorial copy for each section.
+  Its Node generator imports the same almanac/sky modules the page uses and
+  asks a low-cost OpenRouter model for the copy. It refreshes after each hourly
+  collection (step 4 of `data-collect/run_collect.sh`) and also has an hourly
+  launchd timer. See `vibe-check/README.md`.
 
 ## Family calendar
 
