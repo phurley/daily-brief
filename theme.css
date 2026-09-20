@@ -315,7 +315,6 @@ button.calendar-day:hover { border-color: color-mix(in srgb, var(--accent) 45%, 
 .calendar-agenda__heading:first-child { margin-top: 0; }
 .calendar-agenda__list { display: grid; gap: .5rem; }
 .calendar-agenda__empty { margin: 0 0 .4rem; color: var(--muted); font-size: .8rem; }
-.calendar-agenda__more { margin: .1rem 0 .4rem; color: var(--muted); font-size: .72rem; font-style: italic; }
 .agenda-item { display: block; width: 100%; padding: .55rem .65rem; color: inherit; border: 1px solid var(--line); border-left: .18rem solid var(--accent); border-radius: .55rem; background: color-mix(in srgb, var(--paper) 55%, transparent); font: inherit; text-align: left; cursor: pointer; }
 .agenda-item:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
 .agenda-item.is-selected { border-color: var(--accent); background: color-mix(in srgb, var(--sun) 14%, transparent); }

@@ -533,24 +533,8 @@ function shiftMonth(monthKey, delta) {
   return `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, "0")}`;
 }
 
-function eventsOnDay(key, events = uniqueEvents()) {
-  return events.filter((event) => eventIsActiveOn(event, key)).sort(compareEventsForDisplay);
-}
-
-// Walks forward day by day so multi-day windows are surfaced once by their id.
-function upcomingEventEntries(fromKey, { windowDays = 60, limit = 8 } = {}) {
-  const events = uniqueEvents();
-  const entries = [];
-  const seen = new Set();
-  for (let offset = 0; offset <= windowDays && entries.length < limit; offset += 1) {
-    for (const event of eventsOnDay(shiftDate(fromKey, offset), events)) {
-      if (seen.has(event.id)) continue;
-      seen.add(event.id);
-      entries.push({ event, key: shiftDate(fromKey, offset) });
-      if (entries.length >= limit) break;
-    }
-  }
-  return entries;
+function eventsOnDay(key, events = uniqueEvents(), comparator = compareEventsForDisplay) {
+  return events.filter((event) => eventIsActiveOn(event, key)).sort(comparator);
 }
 
 function agendaEntry(event, key, { withDate = false } = {}) {
@@ -567,39 +551,25 @@ function agendaEntry(event, key, { withDate = false } = {}) {
   ]);
 }
 
-// The agenda favors a readable digest over an exhaustive list; the full set
-// still lives in "Nearby & notable" below the calendar.
-const AGENDA_DAY_LIMIT = 8;
-
 function renderEventCalendarAgenda(events) {
   const list = $("#calendar-agenda-list");
   list.replaceChildren();
   const selected = state.calendarSelected;
   $("#calendar-agenda-title").textContent = displayDate(selected, { year: true });
 
-  const dayEvents = eventsOnDay(selected, events);
-  const upcoming = upcomingEventEntries(shiftDate(selected, 1), { limit: 8 });
-  state.calendarEntries = [
-    ...dayEvents.slice(0, AGENDA_DAY_LIMIT).map((event) => ({ event, key: selected })),
-    ...upcoming.map(({ event, key }) => ({ event, key })),
-  ];
+  // The calendar is the complete view: every event active that day, sorted by
+  // rating so the list doubles as a surface for tuning the score.
+  const dayEvents = eventsOnDay(selected, events, compareEventsByRating);
+  state.calendarEntries = dayEvents.map((event) => ({ event, key: selected }));
   if (!state.calendarEntries.some((entry) => entry.event.id === state.calendarEventId)) {
     state.calendarEventId = state.calendarEntries[0]?.event.id || "";
   }
 
-  list.append(node("h4", { className: "calendar-agenda__heading", text: dayEvents.length ? "On this day" : "Nothing scheduled" }));
+  list.append(node("h4", { className: "calendar-agenda__heading", text: dayEvents.length ? `On this day · ${dayEvents.length}` : "Nothing scheduled" }));
   if (dayEvents.length) {
-    for (const event of dayEvents.slice(0, AGENDA_DAY_LIMIT)) list.append(agendaEntry(event, selected));
-    if (dayEvents.length > AGENDA_DAY_LIMIT) {
-      list.append(node("p", { className: "calendar-agenda__more", text: `+${dayEvents.length - AGENDA_DAY_LIMIT} more — see “Nearby & notable” for the full list.` }));
-    }
+    for (const event of dayEvents) list.append(agendaEntry(event, selected));
   } else {
     list.append(node("p", { className: "calendar-agenda__empty", text: "Pick another day — days with events are dotted on the grid." }));
-  }
-
-  if (upcoming.length) {
-    list.append(node("h4", { className: "calendar-agenda__heading", text: "Coming up" }));
-    for (const { event, key } of upcoming) list.append(agendaEntry(event, key, { withDate: true }));
   }
 }
 
@@ -796,6 +766,14 @@ function compareEventsForDisplay(a, b) {
   return Number(eventSpansDays(a)) - Number(eventSpansDays(b))
     || Date.parse(a.start) - Date.parse(b.start)
     || (b.score || 0) - (a.score || 0);
+}
+
+// The calendar doubles as the rating-tuning surface: within a day the highest
+// rated events lead, with long-running windows always kept at the bottom.
+function compareEventsByRating(a, b) {
+  return Number(eventSpansDays(a)) - Number(eventSpansDays(b))
+    || (b.score || 0) - (a.score || 0)
+    || Date.parse(a.start) - Date.parse(b.start);
 }
 
 function eventIsActiveOn(event, key) {
