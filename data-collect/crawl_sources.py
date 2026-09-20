@@ -1651,6 +1651,15 @@ def _parse_ics(text: str, url: str) -> str:
         if description:
             entry += f" -- {re.sub(r'\\s+', ' ', description)[:300]}"
         out.append(entry)
+        # Continuation lines (same shape as the RSS render): the event's own
+        # page when the feed states it, and the UID (The Events Calendar UIDs
+        # are ``post_id-start-end@host`` and resolve to the event page).
+        uid = (event.get("UID") or "").strip()
+        if uid:
+            out.append(f"  uid: {uid}")
+        url_value = (event.get("URL") or "").strip()
+        if url_value:
+            out.append(f"  url: {url_value}")
     if len(out) == 2:
         out.append("(no VEVENT entries found)")
     return "\n".join(out)

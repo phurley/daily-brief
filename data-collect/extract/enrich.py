@@ -361,12 +361,14 @@ def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
                 )
             except llm.LLMError:
                 return False
+            before = {f: bool(record.get(f)) for f in _FIELDS}
             for field in _FIELDS:
                 value = data.get(field)
                 if isinstance(value, str) and value.strip().lower() not in ("", "null", "none", "n/a"):
                     record.setdefault(field, value.strip())
-            if not missing():
+            if any(record.get(f) and not before[f] for f in _FIELDS):
                 filled_by = filled_by or "llm"
+            if not missing():
                 return True
         return False
 

@@ -286,41 +286,63 @@ def parse_rss_markdown(body: str, fallback_url: str = "") -> list[dict[str, Any]
 def parse_ics_markdown(body: str, fallback_url: str = "") -> list[dict[str, Any]]:
     feed_url = _feed_url(body, fallback_url)
     out: list[dict[str, Any]] = []
+    last: Optional[dict[str, Any]] = None
     for line in body.splitlines():
         m = ICS_ITEM_RE.match(line)
-        if not m:
+        if m:
+            when = m.group("when").strip()
+            rest = m.group("rest").strip()
+            # Format: `{summary} @ {location} -- {description}` (parts optional).
+            description = ""
+            if " -- " in rest:
+                rest, description = rest.split(" -- ", 1)
+            location = ""
+            if " @ " in rest:
+                rest, location = rest.split(" @ ", 1)
+            title = rest
+            start_raw, end_raw = when, ""
+            if " to " in when:
+                start_raw, end_raw = when.split(" to ", 1)
+            if not title:
+                continue
+            item = {
+                "item_id": _item_id("ics", feed_url, start_raw, title),
+                "feed_kind": "ics",
+                "feed_url": feed_url,
+                "title": title.strip(),
+                "url": None,
+                "start": normalize_ics_datetime(start_raw),
+                "end": normalize_ics_datetime(end_raw),
+                "venue": location.strip(),
+                "summary": description.strip(),
+            }
+            out.append(item)
+            last = item
             continue
-        when = m.group("when").strip()
-        rest = m.group("rest").strip()
-        # Format: `{summary} @ {location} -- {description}` (parts optional).
-        description = ""
-        if " -- " in rest:
-            rest, description = rest.split(" -- ", 1)
-        location = ""
-        if " @ " in rest:
-            rest, location = rest.split(" @ ", 1)
-        title = rest
-        start_raw, end_raw = when, ""
-        if " to " in when:
-            start_raw, end_raw = when.split(" to ", 1)
-        if not title:
-            continue
-        out.append({
-            "item_id": _item_id("ics", feed_url, start_raw, title),
-            "feed_kind": "ics",
-            "feed_url": feed_url,
-            "title": title.strip(),
-            "url": None,
-            "start": normalize_ics_datetime(start_raw),
-            "end": normalize_ics_datetime(end_raw),
-            "venue": location.strip(),
-            "summary": description.strip(),
-        })
+        # Continuation lines (same shape as the RSS render): `  url: …` /
+        # `  uid: …` following the item they belong to.
+        cont = FEED_CONT_RE.match(line)
+        if cont and last is not None:
+            key, value = cont.group(1).lower(), cont.group(2).strip()
+            if key == "url" and value.startswith("http") and not last.get("url"):
+                last["url"] = value
+            elif key == "uid" and value and not last.get("_uid"):
+                last["_uid"] = value
+    for item in out:
+        # The Events Calendar UIDs are ``post_id-start-end@host``; WordPress
+        # resolves ``/?p=post_id`` to the event's pretty URL, so a site-wide
+        # ical without per-VEVENT URLs still yields usable event page links.
+        uid = item.pop("_uid", None)
+        if not item.get("url") and uid:
+            m = re.match(r"^(\d+)-\d+-\d+@([\w.-]+)$", uid)
+            if m:
+                item["url"] = f"https://{m.group(2)}/?p={m.group(1)}"
     if len(out) == 1:
         # A per-event ICS block (Squarespace ``?format=ical`` etc.) describes
         # one event; its page URL is the feed URL minus the ical flag. This
         # joins the item to the crawled page and satisfies publish's url field.
-        out[0]["url"] = _event_url_from_ical_url(feed_url)
+        if not out[0].get("url"):
+            out[0]["url"] = _event_url_from_ical_url(feed_url)
     return out
 
 
