@@ -13,7 +13,7 @@ rendered in the browser from schema-backed JSON.
 - `app.js` loads and checks every schema-backed data document, filters it for
   the selected date, renders with safe DOM APIs, polls for changes every 15
   minutes, maintains the yesterday/today/tomorrow navigation window, blends
-  calendar and almanac observances, runs the optional daily photo carousel, and
+  weather, calendar, and computed almanac facts, runs the optional photo carousel, and
   caches the free RocketLaunch.Live next-launch feed in local storage.
 - Root `*.json` files contain generated content. Their contracts live in
   `schemas/`.
@@ -80,6 +80,16 @@ date, and preserve official event titles. Never invent an unknown end time.
 `event-time.mjs` derives labels in America/Detroit for cards, claims, and previews:
 Today, Tonight (starts at 6 PM or later), Tomorrow, Yesterday, or a calendar date.
 
+
+## Almanac
+
+There is no almanac data file. Solar and lunar facts (sunrise, sunset,
+daylight, moon phase and rise/set) are derived at render time by
+`almanac-calc.mjs` for whichever date is selected — yesterday, today, or
+tomorrow — from the observing location in `weather.json`. Holidays come from
+`calendar.json` alongside the family events. The numerical regression checks
+compare `almanac-calc.mjs` against captured MET Norway values in
+`scripts/fixtures/almanac-reference.json`.
 
 ```sh
 python3 -m http.server 4173

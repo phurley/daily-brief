@@ -10,8 +10,9 @@ import {
   nextFullMoon,
 } from "../almanac-calc.mjs";
 
+// Captured MET Norway reference values, kept only for these regression checks.
 const almanac = JSON.parse(
-  readFileSync(new URL("../almanac.json", import.meta.url), "utf8"),
+  readFileSync(new URL("./fixtures/almanac-reference.json", import.meta.url), "utf8"),
 );
 const location = almanac.location;
 

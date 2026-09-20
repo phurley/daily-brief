@@ -3,7 +3,7 @@
 // Computes the astronomical facts used by the Daily Brief almanac instead of
 // fetching them. Given a date and a location it returns sunrise, sunset, solar
 // noon, daylight minutes, moon phase, illumination, days until full, and
-// moonrise/moonset — the same shape as the `days` entries in almanac.json.
+// moonrise/moonset — the shape the app's sky card consumes.
 //
 // Solar position uses the NOAA/Meeus low-precision series; lunar position uses
 // the periodic series from Meeus, "Astronomical Algorithms" (ch. 47). Phase is
@@ -1021,7 +1021,7 @@ function formatEvent(date, timeZone) {
  * @param {{moonReferenceHourUtc?: number}} [options]  Instant at which the
  *   phase and illumination are sampled, as an hour of UTC on `dateString`.
  *   Defaults to 06:00 UTC, matching the MET Norway sunrise reference.
- * @returns A day object compatible with schemas/almanac.schema.json.
+ * @returns A day object with the solar and lunar facts the sky card renders.
  */
 export function computeAlmanacDay(dateString, location, options = {}) {
   const { latitude, longitude, timeZone } = location;

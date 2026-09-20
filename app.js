@@ -1,3 +1,4 @@
+import { computeAlmanacDay } from "./almanac-calc.mjs?v=20260920-1";
 import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
 import { eventDateLabel } from "./event-time.mjs?v=20260908-1";
 import { orderNewsStories, orderScienceStories } from "./story-order.mjs?v=20260904-1";
@@ -12,7 +13,6 @@ const LAUNCH_API_URL = "https://fdo.rocketlaunch.live/json/launches/next/5";
 // schema-backed document is a one-line registry change, not a rendering rewrite.
 const DOCUMENTS = [
   ["weather", "weather.json", "schemas/weather.schema.json", true],
-  ["almanac", "almanac.json", "schemas/almanac.schema.json", true],
   ["calendar", "calendar.json", "schemas/calendar.schema.json", true],
   ["events", "events.json", "schemas/events.schema.json", true],
   ["news", "news.json", "schemas/news.schema.json", true],
@@ -320,7 +320,7 @@ function forecastRangeCard(days) {
   return node("article", { className: "weather-card weather-card--forecast" }, columns);
 }
 
-function skyWeatherCard(day, forecast, holiday) {
+function skyWeatherCard(day, forecast) {
   const sunrise = forecast?.sunrise || day?.sunrise;
   const sunset = forecast?.sunset || day?.sunset;
   const riseDate = sunrise ? new Date(sunrise) : null;
@@ -351,16 +351,21 @@ function skyWeatherCard(day, forecast, holiday) {
   return node("article", { className: "weather-card weather-card--sky" }, [
     daylight,
     night,
-    holiday ? node("p", { className: "sky-holiday", text: holiday.description }) : null,
   ]);
 }
 
 function renderWeather() {
   const weather = state.data.weather;
   const forecast = weather?.daily?.find((day) => day.date === state.selectedDate);
-  const almanac = state.data.almanac;
-  const day = almanac?.days?.find((item) => item.date === state.selectedDate);
-  const holiday = almanac?.holidays?.find((item) => item.date === state.selectedDate);
+  const location = weather?.location;
+  let day = null;
+  if (location) {
+    try {
+      day = computeAlmanacDay(state.selectedDate, location);
+    } catch (error) {
+      console.warn(`Could not compute the almanac for ${state.selectedDate}:`, error);
+    }
+  }
   const current = state.selectedDate === state.today ? weather?.current : null;
   const appearance = weatherAppearance({ date: state.selectedDate, today: state.today, forecast, current });
   const nextForecast = weather?.daily?.find((item) => item.date === shiftDate(state.selectedDate, 1));
@@ -378,7 +383,7 @@ function renderWeather() {
     cards.push(forecastRangeCard([forecast, nextForecast]));
   }
   if (forecast || day) {
-    cards.push(skyWeatherCard(day, forecast, holiday));
+    cards.push(skyWeatherCard(day, forecast));
   }
 
   replaceChildren("#weather-grid", cards.length ? cards : [emptyState()]);
@@ -423,19 +428,8 @@ function calendarItemsForDate(key) {
   const calendarItems = (state.data.calendar?.items || [])
     .filter((item) => occursOn(item, key) && item.status !== "cancelled")
     .map((item) => ({ ...item, occurrenceDate: key }));
-  const publicHolidays = (state.data.almanac?.holidays || [])
-    .filter((holiday) => holiday.date === key)
-    .map((holiday) => ({
-      id: `almanac-${holiday.date}-${holiday.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`,
-      type: "holiday",
-      title: holiday.name,
-      date: holiday.date,
-      occurrenceDate: key,
-      description: holiday.description,
-      source: "almanac",
-    }));
   const seen = new Set();
-  return [...calendarItems, ...publicHolidays]
+  return calendarItems
     .filter((item) => {
       const identity = `${item.occurrenceDate}:${item.title.toLowerCase().replace(/[^a-z0-9]/g, "")}`;
       if (seen.has(identity)) return false;

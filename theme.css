@@ -232,7 +232,6 @@ h1 { max-width: 18ch; margin: .35rem 0 0; font-size: clamp(2.9rem, 5.7vw, 4.65re
 .moon-percent { color: var(--accent-dark); font-family: var(--serif); font-size: 1.7rem; line-height: 1; }
 .moon-phase { font-family: var(--serif); font-size: .82rem; text-transform: capitalize; }
 .moon-layout small { color: var(--muted); font-size: .65rem; }
-.sky-holiday { margin-top: 0 !important; color: var(--muted); font-size: .68rem; }
 
 .timeline { display: grid; gap: .65rem; }
 .timeline:empty { display: none; }
