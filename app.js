@@ -32,6 +32,8 @@ const state = {
   eventExpiryTimer: null,
   calendarMonth: "",
   calendarSelected: "",
+  calendarEventId: "",
+  calendarEntries: [],
   launches: [],
   scienceShuffleSeed: globalThis.crypto?.getRandomValues
     ? globalThis.crypto.getRandomValues(new Uint32Array(1))[0]
@@ -558,12 +560,16 @@ function upcomingEventEntries(fromKey, { windowDays = 60, limit = 8 } = {}) {
 }
 
 function agendaEntry(event, key, { withDate = false } = {}) {
-  const title = node("strong");
-  title.append(safeLink(event.title, event.url));
   const when = withDate ? shortDateLabel(key) : eventDateLabel(event);
-  return node("article", { className: "agenda-item" }, [
-    node("p", { className: "agenda-item__meta", text: [when, event.venue, event.city].filter(Boolean).join(" · ") }),
-    title,
+  const selected = event.id === state.calendarEventId;
+  return node("button", {
+    className: `agenda-item${selected ? " is-selected" : ""}`,
+    type: "button",
+    dataset: { eventId: event.id, date: key },
+    "aria-pressed": String(selected),
+  }, [
+    node("span", { className: "agenda-item__meta", text: [when, event.venue, event.city].filter(Boolean).join(" · ") }),
+    node("strong", { text: event.title }),
   ]);
 }
 
@@ -578,6 +584,15 @@ function renderEventCalendarAgenda(events) {
   $("#calendar-agenda-title").textContent = displayDate(selected, { year: true });
 
   const dayEvents = eventsOnDay(selected, events);
+  const upcoming = upcomingEventEntries(shiftDate(selected, 1), { limit: 8 });
+  state.calendarEntries = [
+    ...dayEvents.slice(0, AGENDA_DAY_LIMIT).map((event) => ({ event, key: selected })),
+    ...upcoming.map(({ event, key }) => ({ event, key })),
+  ];
+  if (!state.calendarEntries.some((entry) => entry.event.id === state.calendarEventId)) {
+    state.calendarEventId = state.calendarEntries[0]?.event.id || "";
+  }
+
   list.append(node("h4", { className: "calendar-agenda__heading", text: dayEvents.length ? "On this day" : "Nothing scheduled" }));
   if (dayEvents.length) {
     for (const event of dayEvents.slice(0, AGENDA_DAY_LIMIT)) list.append(agendaEntry(event, selected));
@@ -588,11 +603,59 @@ function renderEventCalendarAgenda(events) {
     list.append(node("p", { className: "calendar-agenda__empty", text: "Pick another day — days with events are dotted on the grid." }));
   }
 
-  const upcoming = upcomingEventEntries(shiftDate(selected, 1), { limit: 8 });
   if (upcoming.length) {
     list.append(node("h4", { className: "calendar-agenda__heading", text: "Coming up" }));
     for (const { event, key } of upcoming) list.append(agendaEntry(event, key, { withDate: true }));
   }
+}
+
+// The detail panel below the grid answers "what do we know about this event?"
+// and keeps a link back to the original listing.
+function renderEventCalendarDetail() {
+  const detail = $("#calendar-detail");
+  const content = $("#calendar-detail-content");
+  const entry = state.calendarEntries.find((candidate) => candidate.event.id === state.calendarEventId);
+  content.replaceChildren();
+  if (!entry) {
+    detail.hidden = true;
+    return;
+  }
+  detail.hidden = false;
+  const { event } = entry;
+  const index = state.calendarEntries.indexOf(entry);
+  const title = node("h3", { className: "calendar-detail__title" });
+  title.append(safeLink(event.title, event.url));
+  const facts = node("dl", { className: "calendar-detail__facts" });
+  for (const [term, value] of eventPreviewFacts(event)) {
+    facts.append(node("div", {}, [node("dt", { text: term }), node("dd", { text: value })]));
+  }
+  const link = safeLink("View full event ↗", event.url);
+  if (link.nodeType === 1) link.className = "calendar-detail__link";
+  content.append(
+    node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
+    title,
+    node("p", { className: "calendar-detail__summary", text: event.summary }),
+    facts,
+    link,
+    node("p", { className: "calendar-detail__position", text: `Event ${index + 1} of ${state.calendarEntries.length} in view` }),
+  );
+}
+
+function selectCalendarEvent(eventId) {
+  state.calendarEventId = eventId;
+  for (const item of document.querySelectorAll("#calendar-agenda-list .agenda-item")) {
+    const selected = item.dataset.eventId === eventId;
+    item.classList.toggle("is-selected", selected);
+    item.setAttribute("aria-pressed", String(selected));
+  }
+  renderEventCalendarDetail();
+}
+
+function stepCalendarEvent(delta) {
+  if (!state.calendarEntries.length) return;
+  const index = state.calendarEntries.findIndex((entry) => entry.event.id === state.calendarEventId);
+  const next = (index + delta + state.calendarEntries.length) % state.calendarEntries.length;
+  selectCalendarEvent(state.calendarEntries[next].event.id);
 }
 
 function renderEventCalendarGrid(events) {
@@ -643,6 +706,7 @@ function renderEventCalendar() {
   $("#calendar-dialog-title").textContent = monthLabel(state.calendarMonth);
   renderEventCalendarGrid(events);
   renderEventCalendarAgenda(events);
+  renderEventCalendarDetail();
 }
 
 function selectCalendarDay(key) {
@@ -651,12 +715,17 @@ function selectCalendarDay(key) {
   renderEventCalendar();
 }
 
+function setCalendarOpenState(open) {
+  document.querySelectorAll("[data-calendar-open]").forEach((button) => button.setAttribute("aria-expanded", String(open)));
+}
+
 function openEventCalendar() {
   const dialog = $("#calendar-dialog");
   state.calendarSelected = state.selectedDate;
   state.calendarMonth = state.selectedDate.slice(0, 7);
+  state.calendarEventId = "";
   renderEventCalendar();
-  $("#calendar-open").setAttribute("aria-expanded", "true");
+  setCalendarOpenState(true);
   if (typeof dialog.showModal === "function") dialog.showModal();
   else dialog.setAttribute("open", "");
   $("#calendar-close").focus({ preventScroll: true });
@@ -664,13 +733,13 @@ function openEventCalendar() {
 
 function closeEventCalendar() {
   const dialog = $("#calendar-dialog");
-  $("#calendar-open").setAttribute("aria-expanded", "false");
+  setCalendarOpenState(false);
   if (dialog.open) dialog.close();
   else dialog.removeAttribute("open");
 }
 
 function bindEventCalendar() {
-  $("#calendar-open").addEventListener("click", openEventCalendar);
+  document.querySelectorAll("[data-calendar-open]").forEach((button) => button.addEventListener("click", openEventCalendar));
   $("#calendar-close").addEventListener("click", closeEventCalendar);
   $("#calendar-previous").addEventListener("click", () => {
     state.calendarMonth = shiftMonth(state.calendarMonth, -1);
@@ -685,7 +754,22 @@ function bindEventCalendar() {
     const cell = clickEvent.target.closest("[data-date]");
     if (cell) selectCalendarDay(cell.dataset.date);
   });
-  $("#calendar-dialog").addEventListener("close", () => $("#calendar-open").setAttribute("aria-expanded", "false"));
+  $("#calendar-agenda-list").addEventListener("click", (clickEvent) => {
+    const item = clickEvent.target.closest("[data-event-id]");
+    if (item) selectCalendarEvent(item.dataset.eventId);
+  });
+  $("#calendar-detail-previous").addEventListener("click", () => stepCalendarEvent(-1));
+  $("#calendar-detail-next").addEventListener("click", () => stepCalendarEvent(1));
+  $("#calendar-dialog").addEventListener("keydown", (keyEvent) => {
+    if (keyEvent.key === "ArrowRight") {
+      keyEvent.preventDefault();
+      stepCalendarEvent(1);
+    } else if (keyEvent.key === "ArrowLeft") {
+      keyEvent.preventDefault();
+      stepCalendarEvent(-1);
+    }
+  });
+  $("#calendar-dialog").addEventListener("close", () => setCalendarOpenState(false));
   $("#calendar-dialog").addEventListener("click", (clickEvent) => {
     if (clickEvent.target === $("#calendar-dialog")) closeEventCalendar();
   });
