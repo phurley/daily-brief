@@ -49,6 +49,18 @@ def route(triage: jev.Triage) -> Route:
     # explicit news+news case (sweep showed broader rules cost event recall).
     news_digest = triage.kind == "news" and triage.schema_hint == "news"
     schema = "event" if (triage.attend_on_date and not news_digest) else "news"
+    # Gate-lab rule: journalism about an event whose attendable details are
+    # missing from the text reliably fails event extraction (no date/venue to
+    # extract) — divert to news. On 179 labeled candidates this moves 11% of
+    # re-work records to news with 0/99 clean events lost.
+    if (
+        schema == "event"
+        and triage.is_article_about_event
+        and triage.article_conf >= jev.ARTICLE_ROUTE_CONFIDENCE
+        and triage.details_missing
+        and triage.details_conf >= jev.ARTICLE_ROUTE_CONFIDENCE
+    ):
+        schema = "news"
     array = triage.item_count in ("2", "3+")
     mode = f"{schema}_{'array' if array else 'single'}"
     cap = RECORD_CAP[triage.item_count]
@@ -56,4 +68,6 @@ def route(triage: jev.Triage) -> Route:
         f"item_count={triage.item_count} attend={triage.attend_on_date} "
         f"kind={triage.kind} schema={triage.schema_hint} relevance={triage.relevance}"
     )
+    if schema == "news" and triage.attend_on_date and not news_digest:
+        reason += " article_divert"
     return Route("extract", schema, mode, cap, reason)

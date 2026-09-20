@@ -17,7 +17,10 @@ Built and running:
 - `extract/jev.py`: stage-4 task contract + router + deterministic stub.
 - Gold rounds 1–2, sampler, scorer.
 
-Not built: dedupe (5), router (6), extraction (7), validation (8), store (9).
+Also built since: dedupe (5, `extract/dedupe.py`), deterministic router (6,
+`extract/router.py`), LLM extraction (7, `extract/extraction.py` + `extract/llm.py`
++ `extract/prompts.py`), validation+publish (8, `extract/publish.py`), and the
+incremental idempotent store (9, `extract/pipeline.py`).
 
 ## Immediate, crawler-independent
 
@@ -99,15 +102,27 @@ trigger. Keep it; add a counter in `funnel.json` to alert if it grows.
   (`/api/alpha/decisions`, `typesafe/jev-1.13`), `TypeSafeJevClient`, and the
   one-call `TRIAGE` task + `triage_record()`. Gold: accept P0.92 / R0.79,
   router acc 0.68. See `gold/round2/CHARACTERIZATION-REPORT.md`.
+  Gate-lab (2026-09-20, 179 labeled candidates, `gate_lab.py`): two extra
+  filter questions ride along in the same call — `is_listicle` (drop at
+  conf >= 0.60; precision 1.00, zero good candidates dropped) and
+  `is_article_about_event` + `details_missing` (router diverts journalism-
+  about-an-event to news extraction; 11% of re-work fixed, 0/99 clean events
+  lost). Aggressive drop rules (roundup / low-value-filler phrasings) all
+  traded real events for re-work reduction and were rejected.
 - **Extraction (7): done (first pass)** — `extract/prompts.py` (event/news ×
   single/array JSON schemas + prompts), `extract/llm.py` (OpenRouter chat,
   structured output), `extract/extraction.py` (triage → route → extract), and
   `extract/bench.py` (model comparison). Benchmark: all models 100% schema;
-  date accuracy is the differentiator; default is `qwen/qwen-2.5-72b-instruct`.
+  date accuracy is the differentiator; default is `qwen/qwen3-32b`
+  (`qwen/qwen-2.5-72b-instruct` was retired by OpenRouter).
   See `gold/round2/MODEL-BENCH.md`.
-- **Validation (8) → store (9):** pending — assign ids/addedAt/localityIndex,
-  enforce `events.schema.json` / `news.schema.json`, ISO Eastern dates,
-  venue/date sanity, idempotent upsert.
+- **Validation (8) → store (9): done** — `extract/pipeline.py` assigns
+  ids/addedAt/localityIndex and merges records into the cumulative
+  `processed/extracted_records.jsonl` (fingerprinted via
+  `processed/extraction_index.jsonl`); `extract/publish.py` enforces
+  `schemas/events.schema.json` / `schemas/news.schema.json` per record and per
+  document and refuses to write an invalid file. See
+  [`DATAFLOW.md`](DATAFLOW.md).
 
 ## Recommended order
 
@@ -115,7 +130,7 @@ trigger. Keep it; add a counter in `funnel.json` to alert if it grows.
    findings and now feed the coverage metrics the crawler work needs.
 2. ~~**F5 dedupe**~~ **done** — `extract/dedupe.py`, run as a post-pass.
 3. **F6/F7** as the crawler changes land.
-4. Stages 6–9.
+4. ~~Stages 6–9~~ **done** — see [`DATAFLOW.md`](DATAFLOW.md).
 
 ## Round-3 gold watch-list
 

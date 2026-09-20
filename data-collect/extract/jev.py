@@ -27,6 +27,7 @@ from __future__ import annotations
 import argparse
 import http.client
 import json
+import re
 import sys
 import time
 import urllib.error
@@ -171,6 +172,48 @@ _IS_SINGLE_NEWS_FIELD = {
     "true": "One news story/article",
     "false": "Not one news story",
 }
+#: A listicle is an *article written as a list* ("5 Ways to ...", "10 Best ...",
+#: "7 Events Celebrating ...") where each item is too brief to carry its own
+#: date, venue, or details. This is deliberately distinct from ``is_list``: a
+#: calendar, index, or events page with complete per-item details is a list but
+#: NOT a listicle — those are high-value and must be kept.
+_IS_LISTICLE_FIELD = {
+    "type": "bool",
+    "question": (
+        "Is this chunk a listicle — an article written as a numbered or "
+        "curated list (e.g. '5 Ways to...', '10 Best...', '7 Events "
+        "Celebrating...') whose items are too brief to have their own date, "
+        "venue, or details? Calendar and event-listing pages with complete "
+        "per-item details are NOT listicles."
+    ),
+    "true": "A listicle article (curated list, items too thin to extract)",
+    "false": "Not a listicle (single story/event, or a detailed listing)",
+}
+#: Journalism about an event (preview/review/feature) rather than the event
+#: listing itself. Paired with ``_DETAILS_MISSING_FIELD`` this diverts
+#: articles to news extraction instead of producing invalid event records.
+_ARTICLE_ABOUT_EVENT_FIELD = {
+    "type": "bool",
+    "question": (
+        "Is this journalism ABOUT an event — a preview, review, feature, or "
+        "announcement article — rather than the event's listing itself? "
+        "(The event's date/venue may be mentioned only in passing.)"
+    ),
+    "true": "An article about an event",
+    "false": "The event listing itself, or not about an event",
+}
+#: The event's attendable details (date + venue) are absent from the text.
+#: Gate-lab: best single predictor of failed event extraction (P .49 / R .74
+#: on re-work outcomes) — usable as a routing signal, not a drop rule.
+_DETAILS_MISSING_FIELD = {
+    "type": "bool",
+    "question": (
+        "Does this chunk mention one or more events but NOT state the date "
+        "and venue needed to attend each one?"
+    ),
+    "true": "Event details (date/venue) are missing",
+    "false": "Attendable details are stated",
+}
 _SCHEMA_FIELD = {
     "type": "enum",
     "values": ["event", "news", "notice", "mixed", "none"],
@@ -224,6 +267,9 @@ TRIAGE: dict[str, Any] = {
         "is_content": CANDIDATE_GATE["fields"]["is_content"],
         "kind": CANDIDATE_GATE["fields"]["kind"],
         "is_list": _IS_LIST_FIELD,
+        "is_listicle": _IS_LISTICLE_FIELD,
+        "is_article_about_event": _ARTICLE_ABOUT_EVENT_FIELD,
+        "details_missing": _DETAILS_MISSING_FIELD,
         "is_single_event": _IS_SINGLE_EVENT_FIELD,
         "is_single_news": _IS_SINGLE_NEWS_FIELD,
         "item_count": _ITEM_COUNT_FIELD,
@@ -249,6 +295,38 @@ RELEVANCE_FLOOR = 2          # below this -> not brief-worthy
 ROUTING_FIELDS = ("is_content", "kind")
 
 SKIP_KINDS = {"nav", "other"}
+
+#: A confident ``is_listicle`` drops the candidate at the gate: listicle items
+#: are too thin to extract (no per-item date/venue) and the articles are
+#: low-value filler for a daily brief. Gate-lab on 179 labeled candidates:
+#: precision 1.00 at conf >= 0.60 with zero good candidates dropped.
+LISTICLE_DROP_CONFIDENCE = 0.60
+
+#: Route threshold for the article-about-event divert (see ``extract/router``).
+#: Gate-lab: diverts 11% of re-work to news with 0/99 clean events lost.
+ARTICLE_ROUTE_CONFIDENCE = 0.60
+
+#: Mechanical listicle guess used by the offline stub and as an evaluation
+#: baseline: a numbered/curated headline ("5 Ways to ...", "Top 10 ...",
+#: "7 Fall Festivals ..."). The Jev question is the real detector; this is
+#: only cheap evidence.
+_LISTICLE_HEAD_RE = re.compile(
+    r"^\W*(?:top\s+|best\s+|our\s+|the\s+)?\d{1,2}\s+(?:[a-z]+\s+){0,2}?"
+    r"(?:ways|things|events|reasons|spots|places|restaurants|bars|signs|facts|"
+    r"ideas|tips|questions|gifts|books|songs|movies|photos|stories|deals|"
+    r"festivals|activities|attractions|destinations|experiences|hidden|"
+    r"must|essential)(?!,)",
+    re.IGNORECASE,
+)
+
+
+def _looks_like_listicle(state: str) -> bool:
+    """Cheap listicle guess from the head of a chunk state (stub only)."""
+    try:
+        text = state.split("CHUNK:", 1)[1]
+    except IndexError:
+        text = state
+    return bool(_LISTICLE_HEAD_RE.match(text.strip()[:120]))
 
 
 # --------------------------------------------------------------------------- #
@@ -632,6 +710,10 @@ class StubJevClient:
         return {
             "is_content": {"value": is_content, "confidence": conf},
             "kind": {"value": kind, "confidence": conf},
+            "is_listicle": {
+                "value": _looks_like_listicle(state),
+                "confidence": 0.8,
+            },
             "dated": {"value": has_date, "confidence": conf if has_date else 0.6},
             "timeframe": {
                 "value": "future" if has_date else "undated",
@@ -672,7 +754,15 @@ class Triage:
     relevance: int
     kind: str
     confidence: float         # confidence over is_content
+    is_listicle: bool = False
+    is_article_about_event: bool = False
+    article_conf: float = 0.0
+    details_missing: bool = False
+    details_conf: float = 0.0
     raw: dict[str, Any] = field(default_factory=dict)
+
+#: Sentinel for an unanswered optional field (value False, confidence 0).
+_NO_FIELD = FieldDecision(value=False, confidence=0.0)
 
 
 def triage_from_raw(
@@ -689,12 +779,20 @@ def triage_from_raw(
     relevance = int(d.value("relevance", 0) or 0)
     item_count = d.value("item_count", "0")
     content_conf = d.fields["is_content"].confidence if "is_content" in d.fields else 0.0
+    listicle_field = d.fields.get("is_listicle")
+    is_listicle = bool(listicle_field.value) if listicle_field else False
+    listicle_drop = bool(
+        listicle_field
+        and listicle_field.value
+        and listicle_field.confidence >= LISTICLE_DROP_CONFIDENCE
+    )
     accepted = (
         content_conf >= accept_confidence
         and is_content
         and kind not in SKIP_KINDS
         and relevance >= relevance_floor
         and item_count != "0"
+        and not listicle_drop
     )
     return Triage(
         chunk_id=chunk_id,
@@ -705,6 +803,13 @@ def triage_from_raw(
         relevance=relevance,
         kind=kind,
         confidence=content_conf,
+        is_listicle=is_listicle,
+        is_article_about_event=bool(
+            (d.fields.get("is_article_about_event") or _NO_FIELD).value
+        ),
+        article_conf=(d.fields.get("is_article_about_event") or _NO_FIELD).confidence,
+        details_missing=bool((d.fields.get("details_missing") or _NO_FIELD).value),
+        details_conf=(d.fields.get("details_missing") or _NO_FIELD).confidence,
         raw=raw,
     )
 
