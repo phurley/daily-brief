@@ -31,6 +31,7 @@ import re
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from typing import Any, Optional
+from urllib.parse import parse_qsl, urlsplit, urlunsplit
 
 from . import dates as _dates
 
@@ -50,6 +51,36 @@ FEED_ITEM_RE = re.compile(
 FEED_CONT_RE = re.compile(r"^\s{2,}([A-Za-z_]+):\s?(.*)$")
 _FEED_KEYS = {"author", "categories", "image", "media", "summary", "content"}
 ICS_ITEM_RE = re.compile(r"^-\s+(?P<when>.*?):\s+(?P<rest>.*)$")
+
+
+def _ical_param(keys_value: tuple[str, str]) -> bool:
+    """True for an ical-ish query parameter: Squarespace ``format=ical``,
+    The Events Calendar ``ical=1`` / ``?ical``."""
+    key, value = keys_value
+    key, value = key.lower(), (value or "").lower()
+    if key in ("format", "feed", "type"):
+        return value == "ical"
+    return key.startswith("ical")
+
+
+def _event_url_from_ical_url(feed_url: str) -> Optional[str]:
+    """Per-event ICS feeds point at the event page once the ical flag is
+    stripped: Squarespace ``/events/x?format=ical`` -> ``/events/x``, The
+    Events Calendar ``/event/x/?ical=1`` -> ``/event/x/``. Returns None for
+    calendar URLs without an ical-ish query (a whole ``.ics`` file), where
+    the items have no URL of their own.
+
+    The whole query is dropped: per-event ical links sometimes carry extra
+    parameters (``?ical=1&post_type=tribe_events``) that are not part of the
+    event page URL."""
+    if not feed_url:
+        return None
+    parts = urlsplit(feed_url)
+    if parts.scheme == "webcal":
+        parts = parts._replace(scheme="https")
+    if not any(_ical_param(kv) for kv in parse_qsl(parts.query, keep_blank_values=True)):
+        return None
+    return urlunsplit((parts.scheme or "https", parts.netloc, parts.path, "", ""))
 
 
 def feed_kind(body: str) -> Optional[str]:
@@ -281,6 +312,11 @@ def parse_ics_markdown(body: str, fallback_url: str = "") -> list[dict[str, Any]
             "venue": location.strip(),
             "summary": description.strip(),
         })
+    if len(out) == 1:
+        # A per-event ICS block (Squarespace ``?format=ical`` etc.) describes
+        # one event; its page URL is the feed URL minus the ical flag. This
+        # joins the item to the crawled page and satisfies publish's url field.
+        out[0]["url"] = _event_url_from_ical_url(feed_url)
     return out
 
 

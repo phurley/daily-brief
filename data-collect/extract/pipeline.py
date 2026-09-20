@@ -1,22 +1,33 @@
 #!/usr/bin/env python3
-"""Full extraction pipeline: processed chunks -> triage -> route -> records.
+"""Incremental extraction pipeline: processed chunks -> triage -> route -> records.
 
-    .venv/bin/python -m extract.pipeline --max-items 400 --extract-limit 150
+    .venv/bin/python -m extract.pipeline [--max-items N] [--extract-limit N]
 
-Reads canonical, in-window chunks and feed items from ``processed/``, prioritises
-the ones most likely to be brief-worthy, triages with Jev (concurrent), routes,
-extracts with the light model (concurrent), and writes schema-shaped records.
+Reads canonical, in-window chunks and feed items from ``processed/`` and turns
+the ones most likely to be brief-worthy into schema-shaped records. Two files
+under ``processed/`` make the run incremental (stage 9's idempotent store):
 
-Everything is bounded: ``--max-items`` caps Jev calls, ``--extract-limit`` caps
-generation calls. Record ids/addedAt/localityIndex are assigned here, not by the
-model.
+* ``extraction_index.jsonl`` — a fingerprint for every candidate that has been
+  through the Jev gate (and, when accepted, extraction), keyed by
+  ``(source_slug, EXTRACTOR_VERSION, chunk_id/item_id)``. A candidate is
+  reprocessed only when its content changes or the extractor is bumped.
+* ``extracted_records.jsonl`` — the cumulative record store. New records are
+  merged by id (newest wins) and the store is pruned by age;
+  ``extract.publish`` reads it exactly as before.
+
+Selection is bounded twice over: candidates whose newest known date is more
+than ``--stale-days`` in the past are never triaged at all (a daily brief is
+forward-looking), and ``--max-items`` caps Jev calls per run. Because processed
+candidates are never re-paid for, the steady-state hourly cost is just the new
+candidates that the crawler brought in.
+
+Record ids/addedAt/localityIndex are assigned here, not by the model.
 """
 
 from __future__ import annotations
 
 import argparse
 import concurrent.futures as futures
-import hashlib
 import json
 import re
 import threading
@@ -29,12 +40,21 @@ from . import dates, enrich, jev, llm, prompts, router, scoring
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_PROCESSED = SCRIPT_DIR / "processed"
 DEFAULT_OUT = SCRIPT_DIR / "processed" / "extracted_records.jsonl"
+DEFAULT_INDEX = SCRIPT_DIR / "processed" / "extraction_index.jsonl"
+
+#: Bump when prompts, routing or extraction logic change meaningfully; doing so
+#: re-extracts every candidate once (fingerprints include the version).
+EXTRACTOR_VERSION = 1
+
+STALE_DAYS = 2.0          # never triage candidates dated older than this
+RECORD_MAX_AGE_DAYS = 183  # prune the store past this age (roughly 6 months)
+
 _CONTENT_HINTS = {"event", "news", "notice", "agenda"}
 _NULLISH = {"", "null", "none", "n/a", "unknown", "not specified"}
 
 
 # --------------------------------------------------------------------------- #
-# Loading + prioritisation
+# Loading + incremental state
 # --------------------------------------------------------------------------- #
 
 def load_candidates(processed: Path) -> list[dict[str, Any]]:
@@ -67,16 +87,113 @@ def load_candidates(processed: Path) -> list[dict[str, Any]]:
     return items
 
 
+def _fingerprint(rec: dict[str, Any]) -> str:
+    cid = rec.get("chunk_id") or rec.get("item_id") or ""
+    return f"{rec.get('source_slug')}:{EXTRACTOR_VERSION}:{cid}"
+
+
+def _store_fingerprint(record: dict[str, Any]) -> Optional[str]:
+    """Fingerprint of the candidate a stored record came from."""
+    origin = record.get("origin") or {}
+    slug, cid = origin.get("source_slug"), origin.get("chunk_id")
+    return f"{slug}:{EXTRACTOR_VERSION}:{cid}" if slug and cid else None
+
+
+def load_index(path: Path) -> set[str]:
+    done: set[str] = set()
+    if not path.is_file():
+        return done
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        try:
+            done.add(json.loads(line)["fp"])
+        except (json.JSONDecodeError, KeyError, TypeError):
+            continue
+    return done
+
+
+def append_index(path: Path, entries: list[dict[str, Any]]) -> None:
+    if not entries:
+        return
+    with path.open("a", encoding="utf-8") as fh:
+        for entry in entries:
+            fh.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+
+def load_store(path: Path) -> list[dict[str, Any]]:
+    if not path.is_file():
+        return []
+    records = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            try:
+                records.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+    return records
+
+
+def _record_age_days(record: dict[str, Any], ref: datetime) -> Optional[float]:
+    iso = record.get("start") or record.get("publishedAt") or record.get("addedAt")
+    if not iso:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=dates.EASTERN)
+    return (dt - ref).total_seconds() / 86400
+
+
+def _prune_store(records: list[dict[str, Any]], ref: datetime,
+                 max_age_days: float) -> list[dict[str, Any]]:
+    kept = []
+    for record in records:
+        age = _record_age_days(record, ref)
+        if age is None or age > -max_age_days:
+            kept.append(record)
+    return kept
+
+
+# --------------------------------------------------------------------------- #
+# Selection: date-sorted, stale-excluded
+# --------------------------------------------------------------------------- #
+
+def candidate_days(rec: dict[str, Any], ref: datetime) -> Optional[float]:
+    """Signed days from *ref* to the candidate's newest known date.
+
+    Feed items carry their publish (RSS) or event (ICS) date as ``age_days``;
+    dates scanned from the text sit in ``signals.date_spans``. ``None`` means
+    undated (kept: the Jev gate decides those).
+    """
+    days: list[float] = []
+    age = rec.get("age_days")
+    if isinstance(age, (int, float)):
+        days.append(float(age))
+    for span in (rec.get("signals") or {}).get("date_spans") or []:
+        iso = span.get("iso") if isinstance(span, dict) else None
+        if not iso:
+            continue
+        try:
+            dt = datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=dates.EASTERN)
+        days.append((dt - ref).total_seconds() / 86400)
+    return max(days) if days else None
+
+
 def priority(rec: dict[str, Any], ref: datetime) -> tuple:
-    sig = rec.get("signals", {})
-    recency = sig.get("date_recency", "none")
-    days = sig.get("nearest_days_from_ref")
-    near = abs(days) if isinstance(days, (int, float)) else 999
+    """Nearest-to-today first: the brief cares about now and the near future.
+    Undated candidates sort last; feeds beat chunks on ties (mechanical)."""
+    days = candidate_days(rec, ref)
     return (
+        1 if days is None else 0,
+        abs(days) if days is not None else 999.0,
         0 if rec["_kind"] == "feed" else 1,
-        0 if recency in ("today", "future") else 1,
-        0 if rec.get("article_crawled") else 1,
-        near,
         str(rec.get("chunk_id") or rec.get("item_id") or ""),
     )
 
@@ -146,7 +263,16 @@ def finalize(record: dict[str, Any], origin: dict[str, Any]) -> Optional[dict[st
 
 def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         model: Optional[str], enrich_events: bool = True,
-        enrich_limit: int = 200) -> tuple[list[dict[str, Any]], dict[str, int]]:
+        enrich_limit: int = 200) -> tuple[list[dict[str, Any]], dict[str, int],
+                                          list[tuple[dict[str, Any], str]]]:
+    """Triage + extract ``items``; return (records, stats, processed).
+
+    ``processed`` is a list of ``(candidate, outcome)`` for the candidates that
+    were fully handled this run and may be fingerprinted: ``"rejected"`` by the
+    Jev gate, or ``"extracted"`` (accepted, within the limit). Accepted
+    candidates beyond ``--extract-limit`` are *not* included — they stay
+    un-fingerprinted and are retried on a later run.
+    """
     jev_client = jev.make_client()
 
     def triage_one(rec: dict[str, Any]) -> tuple[dict[str, Any], jev.Triage]:
@@ -156,7 +282,18 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
     with futures.ThreadPoolExecutor(max_workers=workers) as pool:
         for rec, tri in pool.map(triage_one, items):
             triaged.append((rec, tri))
-    accepted = [(r, t) for r, t in triaged if t.accepted][:extract_limit]
+
+    processed: list[tuple[dict[str, Any], str]] = []
+    accepted: list[tuple[dict[str, Any], jev.Triage]] = []
+    deferred = 0
+    for rec, tri in triaged:
+        if not tri.accepted:
+            processed.append((rec, "rejected"))
+        elif len(accepted) < extract_limit:
+            accepted.append((rec, tri))
+            processed.append((rec, "extracted"))
+        else:
+            deferred += 1  # leave un-fingerprinted; retried next run
 
     chat = llm.make_chat_client(model) if accepted else None
     enrich_lock = threading.Lock()
@@ -212,20 +349,31 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
     stats = {
         "selected": len(items),
         "accepted": len(accepted),
+        "deferred": deferred,
+        "rejected": len(processed) - len(accepted),
         "extracted_records": len(finalized),
         "enriched": enrich_state["ok"],
         "modes": {m: sum(1 for _, t in accepted if router.route(t).mode == m)
                   for m in ("event_single", "event_array", "news_single", "news_array")},
     }
-    return finalized, stats
+    return finalized, stats, processed
 
 
 def main(argv: Optional[list[str]] = None) -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--processed", type=Path, default=DEFAULT_PROCESSED)
-    p.add_argument("--out", type=Path, default=DEFAULT_OUT)
-    p.add_argument("--max-items", type=int, default=400)
-    p.add_argument("--extract-limit", type=int, default=150)
+    p.add_argument("--out", type=Path, default=DEFAULT_OUT,
+                   help="cumulative record store (merged, pruned)")
+    p.add_argument("--index", type=Path, default=DEFAULT_INDEX,
+                   help="fingerprint index of processed candidates")
+    p.add_argument("--max-items", type=int, default=2000,
+                   help="Jev-triage cap per run (default 2000)")
+    p.add_argument("--extract-limit", type=int, default=800,
+                   help="generation-call cap per run (default 800)")
+    p.add_argument("--stale-days", type=float, default=STALE_DAYS,
+                   help="never triage candidates dated older than this (default 2)")
+    p.add_argument("--record-max-age-days", type=float, default=RECORD_MAX_AGE_DAYS,
+                   help="prune the record store past this age (default 183)")
     p.add_argument("--workers", type=int, default=12)
     p.add_argument("--model", default=None)
     p.add_argument("--reference-date", default=None)
@@ -237,14 +385,54 @@ def main(argv: Optional[list[str]] = None) -> int:
 
     ref = dates.parse_reference(opts.reference_date)
     candidates = load_candidates(opts.processed)
-    selected = select(candidates, opts.max_items, ref)
-    print(f"candidates={len(candidates)} selected={len(selected)}")
-    records, stats = run(selected, workers=opts.workers, extract_limit=opts.extract_limit,
-                         model=opts.model, enrich_events=opts.enrich_events,
-                         enrich_limit=opts.enrich_limit)
-    opts.out.write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in records) + "\n", encoding="utf-8")
+    done = load_index(opts.index)
+    store = load_store(opts.out)
+
+    if not done and store:
+        # Bootstrap the index from a pre-incremental store so the candidates
+        # behind those records are never paid for twice.
+        fps = sorted({fp for fp in (_store_fingerprint(r) for r in store) if fp})
+        append_index(opts.index, [{"fp": fp, "ts": "", "outcome": "bootstrapped"} for fp in fps])
+        done = set(fps)
+
+    fresh: list[dict[str, Any]] = []
+    skipped_done = skipped_stale = 0
+    for rec in candidates:
+        if _fingerprint(rec) in done:
+            skipped_done += 1
+            continue
+        days = candidate_days(rec, ref)
+        if days is not None and days < -opts.stale_days:
+            skipped_stale += 1
+            continue
+        fresh.append(rec)
+    selected = select(fresh, opts.max_items, ref)
+    print(f"candidates={len(candidates)} done={skipped_done} stale={skipped_stale} "
+          f"fresh={len(fresh)} selected={len(selected)} store={len(store)}")
+    if not selected:
+        print("nothing to do")
+        return 0
+
+    records, stats, processed = run(selected, workers=opts.workers,
+                                    extract_limit=opts.extract_limit,
+                                    model=opts.model, enrich_events=opts.enrich_events,
+                                    enrich_limit=opts.enrich_limit)
+
+    # Merge into the cumulative store (newest wins by id), then prune by age.
+    by_id = {r.get("id"): r for r in store if r.get("id")}
+    for record in records:
+        by_id[record["id"]] = record
+    kept = _prune_store(list(by_id.values()), ref, opts.record_max_age_days)
+    kept.sort(key=lambda r: (r.get("kind") or "", r.get("id") or ""))
+    opts.out.write_text(
+        "\n".join(json.dumps(r, ensure_ascii=False) for r in kept) + "\n",
+        encoding="utf-8",
+    )
+    stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    append_index(opts.index, [{"fp": _fingerprint(r), "ts": stamp, "outcome": outcome}
+                              for r, outcome in processed])
     print(json.dumps(stats, indent=2))
-    print(f"wrote {len(records)} records -> {opts.out}")
+    print(f"store: {len(store)} + {len(records)} new -> {len(kept)} records -> {opts.out}")
     return 0
 
 

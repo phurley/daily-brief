@@ -9,6 +9,7 @@ chosen model rejects `response_format`.
 
 from __future__ import annotations
 
+import http.client
 import json
 import re
 import time
@@ -18,7 +19,10 @@ from typing import Any, Optional
 
 from . import env
 
-DEFAULT_MODEL = "qwen/qwen-2.5-72b-instruct"  # best key-field accuracy in gold/round2/MODEL-BENCH.md
+# Successor to the benchmarked qwen/qwen-2.5-72b-instruct (retired by
+# OpenRouter). Override with OPENROUTER_EXTRACT_MODEL in the environment/.env
+# to re-run the model bench and pick a replacement.
+DEFAULT_MODEL = "qwen/qwen3-32b"
 DEFAULT_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 _RETRYABLE = {429, 500, 502, 503, 524, 529}
 
@@ -28,6 +32,8 @@ class LLMError(RuntimeError):
 
 
 def _strip_fences(text: str) -> str:
+    if not text:
+        return ""
     text = text.strip()
     if text.startswith("```"):
         text = re.sub(r"^```[a-zA-Z]*\n?", "", text)
@@ -124,6 +130,9 @@ class ChatClient:
                 result["error"] = f"json: {exc}"
         except urllib.error.HTTPError as exc:
             result["error"] = f"HTTP {exc.code}: {exc.read().decode('utf-8', 'replace')[:200]}"
+        except (urllib.error.URLError, http.client.HTTPException, TimeoutError,
+                OSError, KeyError) as exc:
+            result["error"] = f"{type(exc).__name__}: {exc}"
         except (urllib.error.URLError, TimeoutError, OSError, KeyError) as exc:
             result["error"] = f"{type(exc).__name__}: {exc}"
         result["latency"] = round(time.time() - started, 2)
@@ -138,7 +147,12 @@ class ChatClient:
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as resp:
                     data = json.loads(resp.read().decode("utf-8"))
-                content = data["choices"][0]["message"]["content"]
+                choice = (data.get("choices") or [{}])[0]
+                content = (choice.get("message") or {}).get("content")
+                if not content:
+                    raise LLMError(
+                        f"empty content (finish_reason={choice.get('finish_reason')})"
+                    )
                 return json.loads(_strip_fences(content))
             except urllib.error.HTTPError as exc:
                 detail = exc.read().decode("utf-8", "replace")[:300]
@@ -147,7 +161,8 @@ class ChatClient:
                     time.sleep(self.backoff * (2 ** attempt))
                     continue
                 raise LLMError(last) from exc
-            except (urllib.error.URLError, TimeoutError, OSError, KeyError, json.JSONDecodeError) as exc:
+            except (urllib.error.URLError, http.client.HTTPException, TimeoutError,
+                    OSError, KeyError, json.JSONDecodeError) as exc:
                 last = f"{type(exc).__name__}: {exc}"
                 if attempt < self.retries:
                     time.sleep(self.backoff * (2 ** attempt))
@@ -157,4 +172,8 @@ class ChatClient:
 
 
 def make_chat_client(model: Optional[str] = None, **kwargs: Any) -> ChatClient:
-    return ChatClient(model=model or DEFAULT_MODEL, **kwargs)
+    env.load_dotenv()
+    return ChatClient(
+        model=model or env.getenv("OPENROUTER_EXTRACT_MODEL") or DEFAULT_MODEL,
+        **kwargs,
+    )

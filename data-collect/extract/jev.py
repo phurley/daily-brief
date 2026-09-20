@@ -25,6 +25,7 @@ loading ``.env``. See :func:`make_client`.
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import sys
 import time
@@ -485,7 +486,7 @@ class HttpJevClient:
                     time.sleep(self._delay(attempt, exc.headers.get("Retry-After")))
                     continue
                 raise JevError(last_error) from exc
-            except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            except (urllib.error.URLError, http.client.HTTPException, TimeoutError, OSError) as exc:
                 last_error = f"{type(exc).__name__}: {exc}"
                 if attempt < self.retries:
                     time.sleep(self._delay(attempt, None))

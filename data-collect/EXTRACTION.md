@@ -333,6 +333,13 @@ Implemented, standard-library only:
   one-call `TRIAGE` task + `triage_record()`, `OpenRouterJevClient` /
   `TypeSafeJevClient`, and a deterministic `StubJevClient`.
 - `extract/pipeline.py` (full run) and `extract/publish.py` (stage 8/9):
+  the pipeline is **incremental** — every triaged/extracted candidate is
+  fingerprinted (`source_slug` : `EXTRACTOR_VERSION` : `chunk_id`/`item_id`)
+  into `processed/extraction_index.jsonl` and never re-paid for; records
+  accumulate in the cumulative store `processed/extracted_records.jsonl`
+  (merged by id, pruned at 183 days), which is what `publish` reads.
+  Selection is date-sorted (nearest-to-today first) and skips candidates whose
+  newest known date is more than 2 days past (`--stale-days`).
   `publish` normalizes + validates each record against the root schemas and
   writes schema-shaped `events.json` (v2.0.0, single `events` array) and
   `news.json` (v1.1.0) — it **refuses to write** if the document fails

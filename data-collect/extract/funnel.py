@@ -716,6 +716,21 @@ def process_source(
                 it["age_days"] = dates.age_days(dt, ref)
                 it["recency"] = dates.recency(dt, ref)
                 entries = [(dt, False, role)]
+                if is_ics:
+                    # DTSTART is authoritative: the item's title/summary often
+                    # carries no date for the scanners to find. Promote it into
+                    # the signals used for prioritisation, the Jev hints, and
+                    # the extraction prompt's known_dates.
+                    known = [it["start"]]
+                    if it.get("end"):
+                        known.append(it["end"])
+                    signals["has_date"] = True
+                    signals["has_time"] = "T00:00:00" not in it["start"]
+                    signals["dates"] = [stamp]
+                    signals["normalized_dates"] = known
+                    signals["date_recency"] = it["recency"]
+                    signals["has_future_date"] = it["recency"] == "future"
+                    signals["nearest_days_from_ref"] = it["age_days"]
             except ValueError:
                 pass
         if do_filter:

@@ -49,12 +49,12 @@ _PATTERNS = [
     ),
     re.compile(r"(?P<mo>\d{1,2})/(?P<d>\d{1,2})/(?P<y>\d{2,4})(?!\d)"),
     re.compile(
-        rf"(?P<mon>{_MONTH_RE})\.?\s+(?P<d>\d{{1,2}})(?!\d)(?:st|nd|rd|th)?"
+        rf"(?P<mon>{_MONTH_RE})\.?(?![A-Za-z])\s+(?P<d>\d{{1,2}})(?!\d)(?:st|nd|rd|th)?"
         r"(?:\s*,?\s*(?P<y>\d{4}))?",
         re.IGNORECASE,
     ),
     re.compile(
-        rf"(?P<d>\d{{1,2}})(?!\d)(?:st|nd|rd|th)?\s+(?P<mon>{_MONTH_RE})\.?"
+        rf"(?P<d>\d{{1,2}})(?!\d)(?:st|nd|rd|th)?\s+(?P<mon>{_MONTH_RE})\.?(?![A-Za-z])"
         r"(?:\s*,?\s*(?P<y>\d{4}))?",
         re.IGNORECASE,
     ),

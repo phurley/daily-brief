@@ -168,29 +168,48 @@ Without a key/template the provider is disabled automatically.
 Because it is only a fallback, usage is tiny: only the handful of sources that
 survive every mechanical tier.
 
-## Scheduling from cron
+## Scheduled collection (hourly)
 
-Run the collector hourly; the program itself decides which sources are due, so
-there is no need to schedule per-source. `run_crawler.sh` wraps it to serialize
-runs (no overlap), keep the Mac awake, and log with timestamps.
+`run_collect.sh` runs the full two-step pipeline and publishes the result:
+
+1. `crawl_sources.py` — crawls only sources whose `frequency` is due.
+2. `python3 -m extract` → `python3 -m extract.pipeline` → `python3 -m extract.publish`
+   — builds `events.json` / `news.json` at the repo root.
+3. Commits and pushes `events.json` / `news.json` when they changed.
+
+It serializes runs (no overlap), keeps the Mac awake for the whole run, and
+appends timestamped output to `data-collect/cron.log`.
+
+On this Mac it is installed as a `launchd` agent
+(`~/Library/LaunchAgents/com.dailybrief.collect.plist`, `StartInterval` 3600),
+because cron does **not** fire while the Mac is asleep and launchd coalesces
+missed runs on wake. `caffeinate` only prevents sleep *during* a run.
 
 ```sh
-crontab -e
-# add:
-0 * * * * /Users/phurley/daily-brief/data-collect/run_crawler.sh --concurrency 8
+launchctl print gui/$(id -u)/com.dailybrief.collect          # status
+launchctl kickstart -k gui/$(id -u)/com.dailybrief.collect   # run now
+launchctl bootout gui/$(id -u)/com.dailybrief.collect        # stop hourly runs
 ```
 
 - Cadence: hourly matches the shortest `frequency`; `4hours`/`daily`/`weekly`/
-  `monthly` sources only run when due. Each invocation exits immediately with
-  `0 source(s) due` when everything is current.
-- Output is appended to `data-collect/cron.log`.
-- Test it first: `./run_crawler.sh --dry-run`, then `./run_crawler.sh --force`.
-- Review: `.venv/bin/python crawl_sources.py --status` / `--errors`.
-- macOS specifics: cron does **not** fire while the Mac is asleep. `caffeinate`
-  only prevents sleep *during* a run; if the machine may sleep, use a `launchd`
-  `StartCalendarInterval` job or a `pmset` wake schedule instead.
-- If cron gets `Operation not permitted`, grant `/usr/sbin/cron` Full Disk
-  Access in System Settings → Privacy & Security.
+  `monthly` sources only run when due. With nothing due, step 1 exits
+  immediately; the funnel still re-runs over the existing corpus.
+- Test without publishing: `COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2`.
+- Review: `.venv/bin/python crawl_sources.py --status` / `--errors`; `tail -f cron.log`.
+- Env knobs: `COLLECT_MAX_ITEMS` (2000), `COLLECT_EXTRACT_LIMIT` (800),
+  `COLLECT_CONCURRENCY` (8), `COLLECT_OUT_DIR`, `COLLECT_NO_PUSH`.
+- Incremental funnel: every triaged/extracted candidate is fingerprinted in
+  `processed/extraction_index.jsonl` and never paid for again; records
+  accumulate in `processed/extracted_records.jsonl`. `COLLECT_MAX_ITEMS` is a
+  per-run cap, not a steady-state cost — candidates dated more than 2 days
+  in the past are skipped entirely and the rest are sorted nearest-to-today
+  first.
+- Extraction model: `OPENROUTER_EXTRACT_MODEL` (default `qwen/qwen3-32b`); the
+  previously benchmarked `qwen/qwen-2.5-72b-instruct` was retired by OpenRouter.
+- cron alternative: `0 * * * * /Users/phurley/daily-brief/data-collect/run_collect.sh`.
+  If cron gets `Operation not permitted`, grant `/usr/sbin/cron` Full Disk Access.
+
+The crawler-only wrapper `run_crawler.sh` still exists for manual step-1 runs.
 
 ## Output layout
 

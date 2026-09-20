@@ -120,7 +120,11 @@ DATE_TOKEN_RE = re.compile(
     r"|\b\d{1,2}:\d{2}\s*(?:am|pm)\b",
     re.IGNORECASE,
 )
-ASSET_URL_RE = re.compile(r"https?://[^\s)\]\"'<>]+", re.IGNORECASE)
+ASSET_URL_RE = re.compile(r"(?:https?|webcal)://[^\s)\]\"'<>]+", re.IGNORECASE)
+_ICAL_QUERY_RE = re.compile(
+    r"(?:^|[&;])(?:format=ical|feed=ical|ical(?:=1|=true)?)(?=$|[&;])",
+    re.IGNORECASE,
+)
 MAX_ASSET_BYTES = 30 * 1024 * 1024
 HTTP_USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -1223,16 +1227,42 @@ def _page_score(page: PageResult) -> tuple[int, int]:
     return (1 if page.success and page.markdown.strip() else 0, len(page.markdown))
 
 
+def _is_ical_url(url: str) -> bool:
+    """True for ICS calendar links: ``.ics`` files, ``webcal://`` feeds, and
+    the query-style per-event calendars that Squarespace (``?format=ical``)
+    and The Events Calendar (``?ical=1``) link from every event page."""
+    if not url:
+        return False
+    lowered = url.lower()
+    if lowered.startswith("webcal://"):
+        return True
+    if _extension(url) == ".ics":
+        return True
+    return bool(_ICAL_QUERY_RE.search(urlparse(url).query))
+
+
+def _webcal_to_http(url: str) -> str:
+    """``webcal://`` is ICS over HTTP(S); fetchers reject the raw scheme."""
+    lowered = url.lower()
+    if lowered.startswith("webcal://"):
+        return "https://" + url[len("webcal://"):]
+    return url
+
+
 def _harvest_asset_urls(pages: list[PageResult]) -> list[str]:
-    """Find linked pdf/ics/xml/rss/atom/json URLs in crawled markdown."""
+    """Find linked pdf/ics/xml/rss/atom/json URLs in crawled markdown.
+
+    ICS calendars are also matched by query (``?format=ical``, ``?ical=1``) or
+    ``webcal://`` scheme, because Squarespace and The Events Calendar expose
+    per-event iCal feeds that way instead of as ``.ics`` files."""
     found: list[str] = []
     for page in pages:
         if not page.markdown:
             continue
         for match in ASSET_URL_RE.finditer(page.markdown):
             url = match.group(0).rstrip(".,;:)]}")
-            if _extension(url) in ASSET_EXTENSIONS:
-                found.append(url)
+            if _extension(url) in ASSET_EXTENSIONS or _is_ical_url(url):
+                found.append(_webcal_to_http(url))
     return _dedupe_strings(found)
 
 
@@ -1379,7 +1409,7 @@ def _fetch_resource(url: str, timeout: int) -> PageResult:
                 or "<feed" in head
                 or "<rdf" in head
             )
-            if ext == ".ics" or "calendar" in content_type:
+            if ext == ".ics" or _is_ical_url(url) or "calendar" in content_type:
                 markdown = _parse_ics(text, url)
             elif (
                 ext in (".xml", ".rss", ".atom") or "xml" in content_type or looks_xml
@@ -1624,7 +1654,7 @@ def _parse_ics(text: str, url: str) -> str:
 
 
 def _unescape_ics(value: str) -> str:
-    return (
+    return html.unescape(
         value.replace("\\,", ",")
         .replace("\\;", ";")
         .replace("\\n", " ")
