@@ -1,0 +1,37 @@
+{
+  "_comment": [
+    "Copy this file to calendars.json and replace the placeholder URLs.",
+    "calendars.json is git-ignored because the secret iCal addresses are",
+    "bearer credentials: anyone with the URL can read the whole calendar.",
+    "",
+    "Google: Calendar settings -> 'Secret address in iCal format'",
+    "  https://calendar.google.com/calendar/ical/<id>/private-<hash>/basic.ics",
+    "iCloud: Calendar -> Share Calendar -> Public Calendar -> copy the webcal:// link",
+    "",
+    "A source `url` may also point at a public HTML calendar page; the collector",
+    "then discovers rel=\"alternate\" type=\"text/calendar\" and webcal/.ics links.",
+    "`${VAR}` references are read from the environment so CI can inject secrets."
+  ],
+  "timeZone": "America/Detroit",
+  "historyDays": 14,
+  "horizonDays": 550,
+  "sources": [
+    {
+      "name": "Family",
+      "person": "Family",
+      "url": "${GOOGLE_FAMILY_ICS}",
+      "link": "https://calendar.google.com/calendar/embed?src=REPLACE%40group.calendar.google.com"
+    },
+    {
+      "name": "Allie (iCloud)",
+      "person": "Allie",
+      "url": "webcal://p00-caldav.icloud.com/published/2/REPLACE_WITH_TOKEN"
+    },
+    {
+      "name": "School district",
+      "person": "School",
+      "url": "https://example.org/district-calendar",
+      "_comment": "An HTML page; the ICS feed is discovered automatically."
+    }
+  ]
+}

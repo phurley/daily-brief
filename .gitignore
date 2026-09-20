@@ -1,2 +1,9 @@
 .DS_Store
 xcuserdata/
+
+# Family calendar feed config (contains secret iCal bearer URLs).
+calendars.json
+
+# Python bytecode from local scripts.
+__pycache__/
+*.pyc

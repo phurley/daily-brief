@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://daily-brief.local/schemas/source.schema.json",
+  "title": "Daily Brief Source Catalog",
+  "description": "Catalog of news, government, venue, and community sources used by the Daily Brief collector. The document contains a single top-level `sources` array.",
+  "type": "object",
+  "properties": {
+    "sources": {
+      "type": "array",
+      "title": "Sources",
+      "description": "Complete list of monitored sources. Each entry describes one outlet, venue, park, museum, or institution.",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    }
+  },
+  "required": ["sources"],
+  "additionalProperties": false,
+  "$defs": {
+    "source": {
+      "type": "object",
+      "title": "Source",
+      "description": "A single monitored source.",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "locality_index",
+        "location",
+        "category",
+        "type",
+        "frequency",
+        "url",
+        "description"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "description": "Human-readable unique name of the source.",
+          "minLength": 1
+        },
+        "locality_index": {
+          "type": "integer",
+          "title": "Locality Index",
+          "description": "Geographic tier of the source. Legend: 0 = Canton Township; 1 = Surrounding cities (Plymouth, Livonia, Westland, Wayne, Belleville, Northville); 2 = Ypsilanti & Ann Arbor; 3 = Detroit & Metro Detroit; 4 = Statewide Michigan.",
+          "minimum": 0,
+          "maximum": 4,
+          "examples": [0, 1, 2, 3, 4]
+        },
+        "location": {
+          "type": "string",
+          "title": "Location",
+          "description": "Free-text geographic description of the source's coverage or physical location, e.g. \"Canton, MI\" or \"Detroit & Metro Region, MI\".",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "title": "Category",
+          "description": "Fine-grained editorial/operational category for the source (e.g. \"Township / Government\", \"Live Music Venue\", \"Regional Local News\").",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "title": "Type",
+          "description": "Broad classification of the source (e.g. \"Official Government\", \"Venue\", \"Student Journalism\", \"Public Broadcast\").",
+          "minLength": 1
+        },
+        "frequency": {
+          "type": "string",
+          "title": "Frequency",
+          "description": "How often the source is expected to be polled or is known to publish. \"4hours\" denotes four-times-daily polling.",
+          "enum": ["hourly", "4hours", "daily", "weekly", "monthly"]
+        },
+        "url": {
+          "type": "string",
+          "title": "URL",
+          "description": "Primary website URL for the source. Must be an absolute http(s) URL.",
+          "format": "uri",
+          "pattern": "^https?://.+",
+          "minLength": 1
+        },
+        "events_url": {
+          "type": ["string", "null"],
+          "title": "Events URL",
+          "description": "Direct calendar/events URL when one exists; null when the source has no dedicated events page.",
+          "format": "uri",
+          "pattern": "^https?://.+"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description",
+          "description": "Short summary of what the source covers and why it is monitored.",
+          "minLength": 1
+        },
+        "engine": {
+          "type": "string",
+          "title": "Collection Engine",
+          "description": "Collection strategy. 'auto' (default) fetches feeds and crawls over plain HTTP (with curl_cffi TLS impersonation) first, escalating to a headless browser only when the result looks blocked or JS-shell-like, and to a commercial scraping API only as a last resort. 'http' forces the plain-HTTP crawler. 'browser' forces the headless-browser crawler. 'api' fetches seeds through the configured scraping API. All engines produce the same content.md/meta.json output.",
+          "enum": ["auto", "browser", "http", "api"],
+          "default": "auto"
+        },
+        "crawl_urls": {
+          "type": "array",
+          "title": "Crawl URLs",
+          "description": "Additional seed URLs crawled in addition to `url` and `events_url`. Useful for server-rendered event/listing routes that the landing page does not link directly (e.g. a Drupal views feed).",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://.+"
+          },
+          "uniqueItems": true
+        },
+        "feed_urls": {
+          "type": "array",
+          "title": "Feed URLs",
+          "description": "RSS/Atom/ICS/JSON-feed URLs fetched over plain HTTP and converted to text. May also be a public Instagram profile URL (recent post captions, which often carry event dates and ticket links, are extracted). Best-effort structured, dated content that bypasses page rendering.",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://.+"
+          },
+          "uniqueItems": true
+        },
+        "max_pages": {
+          "type": "integer",
+          "title": "Max Pages",
+          "description": "Optional per-source override of the global --max-pages page budget (useful for bounding pathologically slow or paywalled sources).",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}

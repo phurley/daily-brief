@@ -1,0 +1,997 @@
+{
+  "sources": [
+    {
+      "name": "Charter Township of Canton - Official News & Announcements",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "Township / Government",
+      "type": "Official Government",
+      "frequency": "daily",
+      "url": "https://www.canton-mi.org",
+      "events_url": "https://www.canton-mi.org/calendar.aspx",
+      "description": "Official municipal news, township board agendas, public notices, and township-wide event calendars.",
+      "feed_urls": []
+    },
+    {
+      "name": "Canton Public Library (CPL) News & Events",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "Library Local Reporting",
+      "type": "Library",
+      "frequency": "weekly",
+      "url": "https://www.cantonpl.org",
+      "events_url": "https://www.cantonpl.org/events",
+      "description": "Local library programming, community reporting, literacy events, and community blog posts.",
+      "feed_urls": [
+        "https://www.cantonpl.org/news/feed/",
+        "https://www.cantonpl.org/faq/programs/feed/"
+      ]
+    },
+    {
+      "name": "Plymouth-Canton Community Schools (PCCS) News",
+      "locality_index": 0,
+      "location": "Canton & Plymouth, MI",
+      "category": "High School / K-12 Education",
+      "type": "School District",
+      "frequency": "weekly",
+      "url": "https://www.pccsk12.com",
+      "events_url": "https://www.pccsk12.com/about-pccs/news",
+      "description": "News and updates across Plymouth-Canton Educational Park (Canton High, Plymouth High, Salem High).",
+      "feed_urls": []
+    },
+    {
+      "name": "The Perspective (P-CEP Student Newspaper)",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "High School Media",
+      "type": "Student Journalism",
+      "frequency": "daily",
+      "url": "https://the-perspective.org/",
+      "description": "Student-run journalism covering events, sports, and student life at Plymouth-Canton Educational Park.",
+      "feed_urls": [
+        "https://the-perspective.org/feed/"
+      ]
+    },
+    {
+      "name": "88.1 The Park (WSDP-FM)",
+      "locality_index": 0,
+      "location": "Canton & Plymouth, MI",
+      "category": "High School / Local Radio",
+      "type": "Student / Community Broadcast",
+      "frequency": "daily",
+      "url": "https://www.881thepark.com",
+      "events_url": "https://www.881thepark.com/events/",
+      "description": "Award-winning student-operated radio station broadcasting news, high school sports, and local community announcements.",
+      "feed_urls": [
+        "https://www.881thepark.com/feed/"
+      ]
+    },
+    {
+      "name": "Canton Focus / Local Patch - Canton",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "Hyperlocal News",
+      "type": "Digital News Outlet",
+      "frequency": "4hours",
+      "url": "https://patch.com/michigan/canton-mi",
+      "events_url": "https://patch.com/michigan/canton-mi/calendar",
+      "description": "Community news, local police reports, local business updates, and user-submitted events.",
+      "feed_urls": [
+        "https://patch.com/rss/patch_editorial_content"
+      ]
+    },
+    {
+      "name": "Canton Chamber of Commerce",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "Business & Events",
+      "type": "Chamber of Commerce",
+      "frequency": "weekly",
+      "url": "https://www.cantonchamber.com",
+      "events_url": "https://www.cantonchamber.com/events",
+      "description": "Local business announcements, ribbon cuttings, networking events, and annual community festivals.",
+      "feed_urls": []
+    },
+    {
+      "name": "The Village Theater at Cherry Hill",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "Performing Arts & Community Venue",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://cantonmi.gov/1396/Village-Theater",
+      "events_url": "https://cantonmi.gov/1396/Village-Theater",
+      "description": "A 400-seat performing arts center hosting small-venue concerts, acoustic performances, dance recitals, fine art gallery exhibits, and local performing arts shows.",
+      "feed_urls": []
+    },
+    {
+      "name": "Canton Historical Society",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "Local History & Museum",
+      "type": "Venue",
+      "frequency": "monthly",
+      "url": "https://cantonhistoricalsocietymi.org/",
+      "events_url": "https://cantonhistoricalsocietymi.org/events/",
+      "description": "Canton Historical Society and museum: local history, exhibits, and community historical events in Canton, MI."
+    },
+    {
+      "name": "Heritage Park - Canton",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "Township Park & Outdoor Event Hub",
+      "type": "Park / Nature Preserve",
+      "frequency": "weekly",
+      "url": "https://www.canton-mi.org/147/Heritage-Park",
+      "events_url": "https://www.cantonfun.org/calendar.aspx",
+      "description": "Canton's flagship park featuring an outdoor amphitheater for summer concerts, splash pad, walking trails, ponds, and township festivals.",
+      "feed_urls": []
+    },
+    {
+      "name": "Maybury State Park",
+      "locality_index": 1,
+      "location": "Northville, MI",
+      "category": "State Park & Nature Preserve",
+      "type": "Park / Nature Preserve",
+      "frequency": "monthly",
+      "url": "http://www.michigandnr.com/parksandtrails/Details.aspx?id=469&type=SPRK",
+      "events_url": "https://www.michigan.gov/dnr/places/state-parks/maybury",
+      "description": "State park located in Northville offering forested hiking, mountain biking, horseback riding, nature programs, and an educational working farm.",
+      "feed_urls": []
+    },
+    {
+      "name": "Huron-Clinton Metroparks System",
+      "locality_index": 1,
+      "location": "Regional / Western Wayne & Washtenaw, MI",
+      "category": "Regional Park District",
+      "type": "Park / Nature Preserve",
+      "frequency": "weekly",
+      "url": "http://www.metroparks.com/",
+      "events_url": "https://www.metroparks.com/events/",
+      "description": "Network of 13 regional Metroparks including nearby Lower Huron, Willow, and Huron Meadows, offering nature centers, outdoor events, trails, and watercraft rentals.",
+      "feed_urls": [
+        "https://www.metroparks.com/category/news-and-updates/feed/",
+        "https://www.metroparks.com/feed/"
+      ]
+    },
+    {
+      "name": "Nankin Mills Nature Center (Wayne County Parks)",
+      "locality_index": 1,
+      "location": "Westland, MI",
+      "category": "County Park & Nature Center",
+      "type": "Park / Nature Preserve",
+      "frequency": "monthly",
+      "url": "https://www.waynecounty.com/departments/dps/parks/nankin-mills.aspx",
+      "events_url": "https://www.waynecounty.com/departments/dps/parks/home.aspx",
+      "description": "Historic mill and nature interpretive center along Hines Park, hosting wildlife exhibits, nature walks, and environmental education programming.",
+      "feed_urls": []
+    },
+    {
+      "name": "Plymouth Historical Museum",
+      "locality_index": 1,
+      "location": "Plymouth, MI",
+      "category": "Local History & Museum",
+      "type": "Venue",
+      "frequency": "monthly",
+      "url": "http://www.plymouthhistory.org/",
+      "events_url": "http://www.plymouthhistory.org/events/",
+      "description": "Adjacent historical museum focusing on local Plymouth and Western Wayne history, Abraham Lincoln memorabilia, and the history of the Daisy Air Rifle company.",
+      "feed_urls": []
+    },
+    {
+      "name": "The Westland Comet (John Glenn High School)",
+      "locality_index": 1,
+      "location": "Westland, MI",
+      "category": "High School Media",
+      "type": "Student Journalism",
+      "frequency": "weekly",
+      "url": "https://wwcsd.net/schools/high-schools/john-glenn-high-school/",
+      "events_url": null,
+      "description": "High school news source for John Glenn High School in adjacent Wayne-Westland Community Schools.",
+      "feed_urls": [
+        "https://www.wwcsd.net/pub/news/feeds/john_glenn_hs_upcoming_events",
+        "https://www.wwcsd.net/pub/news/feeds/virtual-newsletter"
+      ]
+    },
+    {
+      "name": "Wayne High School Zebra News",
+      "locality_index": 1,
+      "location": "Wayne, MI",
+      "category": "High School Media",
+      "type": "Student Journalism",
+      "frequency": "weekly",
+      "url": "https://wwcsd.net/schools/high-schools/wayne-memorial-high-school/",
+      "events_url": null,
+      "description": "Student news, sports coverage, and school event reporting for Wayne Memorial High School.",
+      "feed_urls": [
+        "https://www.wwcsd.net/pub/news/feeds/wm_upcoming_events",
+        "https://www.wwcsd.net/pub/news/feeds/virtual-newsletter"
+      ]
+    },
+    {
+      "name": "The Schoolcraft Connection (Schoolcraft College)",
+      "locality_index": 1,
+      "location": "Livonia, MI",
+      "category": "Higher Ed / Community College Media",
+      "type": "Student Journalism",
+      "frequency": "daily",
+      "url": "https://www.schoolcraftconnection.com",
+      "events_url": null,
+      "description": "Student-led newspaper serving Schoolcraft College, which serves many residents in Canton, Livonia, and Plymouth.",
+      "feed_urls": [
+        "https://schoolcraftconnection.com/category/campus-life/campus-events/feed/",
+        "https://schoolcraftconnection.com/category/news/community/feed/"
+      ]
+    },
+    {
+      "name": "Hometown Life (Observer & Eccentric)",
+      "locality_index": 1,
+      "location": "Canton, Plymouth, Livonia, MI",
+      "category": "Hyperlocal News",
+      "type": "Local Newspaper Network",
+      "frequency": "daily",
+      "url": "https://www.hometownlife.com",
+      "events_url": "https://www.hometownlife.com/things-to-do/events/",
+      "description": "Coverage focused on Western Wayne County, including high school sports, local dining, and township politics.",
+      "engine": "http",
+      "feed_urls": []
+    },
+    {
+      "name": "Leslie Science & Nature Center",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Nature Center & Preserve",
+      "type": "Park / Nature Preserve",
+      "frequency": "monthly",
+      "url": "http://www.discoverscienceandnature.org/",
+      "events_url": "https://www.discoverscienceandnature.org/events",
+      "description": "50-acre natural space featuring raptor enclosures, a Critter House, public environmental education programs, and hiking trails.",
+      "feed_urls": [
+        "https://discoverscienceandnature.org/announcements?format=rss",
+        "https://discoverscienceandnature.org/site-features?format=rss"
+      ]
+    },
+    {
+      "name": "The Blind Pig",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Live Music Venue",
+      "type": "Venue",
+      "frequency": "daily",
+      "url": "http://www.blindpigmusic.com/",
+      "events_url": "http://www.blindpigmusic.com/calendar.html",
+      "description": "Legendary long-standing indie music club and intimate venue presenting live rock, hip-hop, electronic, and alternative acts.",
+      "feed_urls": []
+    },
+    {
+      "name": "Blue LLaMA Jazz Club",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Jazz Club & Dining Venue",
+      "type": "Venue",
+      "frequency": "daily",
+      "url": "https://www.bluellamaclub.com/",
+      "events_url": "https://www.bluellamaclub.com/events",
+      "description": "Upscale downtown club offering top-tier national and regional live jazz performances paired with fine dining.",
+      "feed_urls": [
+        "https://bluellamaclub.com/events/feed/"
+      ]
+    },
+    {
+      "name": "Michigan Flight Museum",
+      "locality_index": 2,
+      "location": "Ypsilanti / Belleville, MI",
+      "category": "Aviation & History Museum",
+      "type": "Venue",
+      "frequency": "monthly",
+      "url": "https://miflightmuseum.org/",
+      "events_url": "https://miflightmuseum.org/events/",
+      "description": "Aviation history museum located at Willow Run Airport featuring vintage aircraft, Rosie the Riveter exhibits, and historic flight demonstrations.",
+      "feed_urls": []
+    },
+    {
+      "name": "Michigan Firehouse Museum",
+      "locality_index": 2,
+      "location": "Ypsilanti, MI",
+      "category": "History & Educational Museum",
+      "type": "Venue",
+      "frequency": "monthly",
+      "url": "https://www.michiganfirehousemuseum.org/",
+      "events_url": "https://www.michiganfirehousemuseum.org/events",
+      "description": "Museum housed in a historic 1898 firehouse dedicated to preserving the history of firefighting apparatus, gear, and heritage.",
+      "feed_urls": [
+        "https://michiganfirehousemuseum.org/feed/"
+      ]
+    },
+    {
+      "name": "Matthaei Botanical Gardens & Nichols Arboretum",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Botanical Conservatory & Outdoor Park",
+      "type": "Park / Nature Preserve",
+      "frequency": "weekly",
+      "url": "https://mbgna.umich.edu/",
+      "events_url": "https://mbgna.umich.edu/events/",
+      "description": "U-M botanical conservatories and outdoor arboretum featuring display gardens, outdoor Shakespeare performances, botanical exhibits, nature trails, and acoustic events.",
+      "feed_urls": []
+    },
+    {
+      "name": "The Purple Rose Theatre Company",
+      "locality_index": 2,
+      "location": "Chelsea, MI",
+      "category": "Professional Regional Theatre",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://www.purplerosetheatre.org/",
+      "events_url": "https://www.purplerosetheatre.org/shows-and-events/",
+      "description": "Acclaimed regional Equity theater founded by Jeff Daniels, dedicated to producing original American plays and new works.",
+      "feed_urls": [
+        "https://www.purplerosetheatre.org/feed/"
+      ]
+    },
+    {
+      "name": "The Pioneer Optimist (Ann Arbor Pioneer High School)",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "High School Media",
+      "type": "Student Journalism",
+      "frequency": "daily",
+      "url": "https://pioneeroptimist.com/",
+      "events_url": null,
+      "description": "Student news publication covering news, sports, culture, and events at Pioneer High School.",
+      "feed_urls": [
+        "https://pioneeroptimist.com/feed/",
+        "https://pioneeroptimist.com/category/news/feed/"
+      ]
+    },
+    {
+      "name": "The Communicator (Ann Arbor Community High School)",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "High School Media",
+      "type": "Student Journalism",
+      "frequency": "daily",
+      "url": "https://chscommunicator.com/",
+      "events_url": null,
+      "description": "Award-winning student web and print news publication covering Ann Arbor youth, local policy, and arts.",
+      "feed_urls": [
+        "https://chscommunicator.com/feed/",
+        "https://chscommunicator.com/feed/atom/"
+      ]
+    },
+    {
+      "name": "The Huron Emery (Ann Arbor Huron High School)",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "High School Media",
+      "type": "Student Journalism",
+      "frequency": "daily",
+      "url": "https://thehuronemery.com/",
+      "events_url": null,
+      "description": "Student news outlet reporting on Huron High School affairs, athletics, and Ann Arbor community stories.",
+      "feed_urls": [
+        "https://thehuronemery.com/feed/",
+        "https://thehuronemery.com/category/news/feed/"
+      ]
+    },
+    {
+      "name": "The Skyline Post (Ann Arbor Skyline High School)",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "High School Media",
+      "type": "Student Journalism",
+      "frequency": "daily",
+      "url": "https://skylinepost.org/",
+      "events_url": null,
+      "description": "Student digital news publication covering student life, environmental issues, sports, and local school board actions.",
+      "feed_urls": [
+        "https://skylinepost.org/feed/",
+        "https://skylinepost.org/category/news/feed/"
+      ]
+    },
+    {
+      "name": "The Washtenaw Voice (Washtenaw Community College)",
+      "locality_index": 2,
+      "location": "Ann Arbor / Ypsilanti, MI",
+      "category": "Higher Ed / Community College Media",
+      "type": "Student Journalism",
+      "frequency": "daily",
+      "url": "https://www.washtenawvoice.com",
+      "events_url": null,
+      "description": "Student-run news publication covering Washtenaw Community College, local education, campus life, and regional developments.",
+      "feed_urls": [
+        "https://www.washtenawvoice.com/feed/"
+      ]
+    },
+    {
+      "name": "Eastern Echo (Eastern Michigan University)",
+      "locality_index": 2,
+      "location": "Ypsilanti, MI",
+      "category": "Higher Ed Media",
+      "type": "College Journalism",
+      "frequency": "daily",
+      "url": "https://www.easternecho.com",
+      "events_url": null,
+      "description": "Independent student media covering Eastern Michigan University campus life, Ypsilanti local news, culture, and local government.",
+      "feed_urls": []
+    },
+    {
+      "name": "The Michigan Daily (University of Michigan)",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Higher Ed Media",
+      "type": "College Journalism",
+      "frequency": "hourly",
+      "url": "https://www.michigandaily.com",
+      "events_url": null,
+      "description": "Daily independent student newspaper at U-M covering university affairs, city politics, sports, arts, and local research.",
+      "feed_urls": [
+        "https://www.michigandaily.com/michigan-in-color/mic-news/feed/",
+        "https://www.michigandaily.com/news/ann-arbor/feed/"
+      ]
+    },
+    {
+      "name": "Ypsilanti District Library (YDL)",
+      "locality_index": 2,
+      "location": "Ypsilanti, MI",
+      "category": "Library Local Reporting",
+      "type": "Library",
+      "frequency": "weekly",
+      "url": "https://www.ypsilibrary.org",
+      "events_url": "https://www.ypsilibrary.org/events/",
+      "description": "Local community events, workshops, exhibits, and reporting on Ypsilanti neighborhoods.",
+      "feed_urls": [
+        "https://www.ypsilibrary.org/feed/"
+      ]
+    },
+    {
+      "name": "WEMU 89.1 FM",
+      "locality_index": 2,
+      "location": "Ypsilanti & Ann Arbor, MI",
+      "category": "Public Radio / News",
+      "type": "Public Broadcast",
+      "frequency": "daily",
+      "url": "https://www.wemu.org",
+      "events_url": "https://www.wemu.org/community-calendar",
+      "description": "NPR affiliate based at EMU covering local Washtenaw county news, jazz, local politics, and environment.",
+      "feed_urls": []
+    },
+    {
+      "name": "All About Ann Arbor (WDIV ClickOnDetroit)",
+      "locality_index": 2,
+      "location": "Ann Arbor & Ypsilanti, MI",
+      "category": "Regional News & Lifestyle",
+      "type": "Digital Media",
+      "frequency": "4hours",
+      "url": "https://www.clickondetroit.com/all-about-ann-arbor/",
+      "events_url": "https://www.clickondetroit.com/all-about-ann-arbor/events/",
+      "description": "Comprehensive local coverage of dining, local culture, events, and community news in Washtenaw County.",
+      "feed_urls": []
+    },
+    {
+      "name": "MLive / The Ann Arbor News",
+      "locality_index": 2,
+      "location": "Ann Arbor, Ypsilanti & Surrounding, MI",
+      "category": "Regional Newspaper",
+      "type": "Digital Mainstream News",
+      "frequency": "hourly",
+      "url": "https://www.mlive.com/ann-arbor/",
+      "events_url": null,
+      "description": "Major news outlet covering Washtenaw County politics, real estate, U-M sports, local dining, and breaking news.",
+      "engine": "http",
+      "feed_urls": [
+        "https://www.mlive.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "name": "Ann Arbor Observer",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Local Magazine & Events",
+      "type": "Print & Digital Monthly",
+      "frequency": "daily",
+      "url": "https://annarborobserver.com",
+      "events_url": "https://annarborobserver.com/calendar/",
+      "description": "Detailed community features, local business shifts, and the definitive event calendar for the Ann Arbor/Ypsi area.",
+      "feed_urls": [
+        "https://annarborobserver.com/calendar/feed/",
+        "https://annarborobserver.com/feed/"
+      ]
+    },
+    {
+      "name": "Ann Arbor District Library (AADL)",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Library Local Reporting",
+      "type": "Library",
+      "frequency": "daily",
+      "url": "https://aadl.org",
+      "events_url": "https://aadl.org/events",
+      "description": "Extensive community archive, local podcasting, publishing, and daily public event programming.",
+      "engine": "http",
+      "crawl_urls": [
+        "https://aadl.org/events-feed/upcoming",
+        "https://aadl.org/events-feed/exhibits"
+      ],
+      "feed_urls": [
+        "https://aadl.org/rss.xml"
+      ]
+    },
+    {
+      "name": "Current Magazine",
+      "locality_index": 2,
+      "location": "Ann Arbor & Ypsilanti, MI",
+      "category": "Arts, Culture & Nightlife",
+      "type": "Alternative Monthly",
+      "frequency": "weekly",
+      "url": "https://www.ecurrent.com",
+      "events_url": "https://www.ecurrent.com/calendar/",
+      "description": "Focuses on the Washtenaw County entertainment, dining, music scene, nightlife, and cultural events.",
+      "feed_urls": [
+        "https://www.ecurrent.com/category/events/feed/",
+        "https://www.ecurrent.com/feed/"
+      ]
+    },
+    {
+      "name": "The Ark",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Music Venue & Cultural Arts",
+      "type": "Venue",
+      "frequency": "daily",
+      "url": "https://www.theark.org",
+      "events_url": "https://www.theark.org/shows/",
+      "description": "Intimate non-profit music venue in downtown Ann Arbor presenting acoustic, folk, Americana, and roots music concerts.",
+      "feed_urls": [
+        "https://theark.org/events/feed/"
+      ]
+    },
+    {
+      "name": "North Star Lounge",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Music Venue & Lounge",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "http://nstarlounge.com/",
+      "events_url": "http://nstarlounge.com/calendar",
+      "description": "Intimate vegan music lounge and bar in Kerrytown hosting live acoustic shows, jazz, bluegrass, and small-venue musical performances.",
+      "engine": "http",
+      "feed_urls": [
+        "http://nstarlounge.com/events?format=rss"
+      ]
+    },
+    {
+      "name": "Ann Arbor Comedy Showcase",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Comedy Venue",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://www.aacomedy.com",
+      "events_url": "https://www.aacomedy.com/calendar",
+      "description": "Cozy basement comedy club featuring touring stand-up comedians, local talent, and open mic nights.",
+      "engine": "http",
+      "feed_urls": []
+    },
+    {
+      "name": "University of Michigan Museum of Art (UMMA)",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Art Museum",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://www.umma.umich.edu",
+      "events_url": "https://www.umma.umich.edu/events",
+      "description": "One of the largest university art museums in the country, showcasing historic and contemporary collections, rotating exhibitions, and artist talks.",
+      "feed_urls": []
+    },
+    {
+      "name": "University of Michigan Museum of Natural History",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Science & History Museum",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://lsa.umich.edu/mnh",
+      "events_url": "https://lsa.umich.edu/mnh/u-m-students/events.html",
+      "description": "Museum featuring interactive exhibits on paleontology, prehistoric life, planetarium shows, and scientific discoveries.",
+      "feed_urls": []
+    },
+    {
+      "name": "Kerrytown Concert House",
+      "locality_index": 2,
+      "location": "Ann Arbor, MI",
+      "category": "Music & Performance Venue",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://www.kerrytownconcerthouse.com",
+      "events_url": "https://www.kerrytownconcerthouse.com/events/",
+      "description": "Historic venue presenting intimate chamber music, jazz concerts, avant-garde performances, and cabaret.",
+      "feed_urls": []
+    },
+    {
+      "name": "Belle Isle State Park & Anna Scripps Whitcomb Conservatory",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "State Park, Conservatory & Island Preserve",
+      "type": "Park / Nature Preserve",
+      "frequency": "weekly",
+      "url": "https://www.belleisleconservancy.org/",
+      "events_url": "https://www.belleisleconservancy.org/events",
+      "description": "982-acre island state park in the Detroit River containing an aquarium, botanical conservatory, nature center, beach, and historic fountain.",
+      "feed_urls": []
+    },
+    {
+      "name": "Detroit Riverfront Conservancy / Detroit Riverwalk",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Urban Waterfront Park & Promenade",
+      "type": "Park / Nature Preserve",
+      "frequency": "weekly",
+      "url": "http://www.detroitriverfront.org/",
+      "events_url": "https://detroitriverfront.org/things-to-do/events",
+      "description": "Award-winning 3.5-mile riverfront promenade featuring plazas, parks, outdoor fitness classes, seasonal concerts, and festivals.",
+      "feed_urls": []
+    },
+    {
+      "name": "Campus Martius Park (Downtown Detroit Partnership)",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Urban Plaza & Event Park",
+      "type": "Park / Nature Preserve",
+      "frequency": "weekly",
+      "url": "https://downtowndetroit.org/experience-detroit/parks/campus-martius-park/",
+      "events_url": "https://downtowndetroit.org/events/",
+      "description": "Detroit's gathering square hosting live outdoor music, winter ice skating, outdoor movie nights, dining pop-ups, and holiday festivities.",
+      "feed_urls": [
+        "https://downtowndetroit.org/feed/"
+      ]
+    },
+    {
+      "name": "Marble Bar",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Live Electronic Music & Nightlife Venue",
+      "type": "Venue",
+      "frequency": "daily",
+      "url": "https://themarblebar.com/",
+      "events_url": "https://themarblebar.com/events",
+      "description": "Acclaimed Detroit underground venue featuring indoor and outdoor stages hosting electronic music, techno, house, and indie DJ showcases.",
+      "feed_urls": []
+    },
+    {
+      "name": "Tangent Gallery & Hastings Street Ballroom",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Art Space & Experimental Venue",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://tangentgallery.com/",
+      "events_url": "https://tangentgallery.com/events",
+      "description": "Industrial art gallery and ballroom hosting avant-garde performances, fire arts, indie music festivals, and community art shows.",
+      "feed_urls": [
+        "https://www.instagram.com/tangentgallery/"
+      ],
+      "engine": "http"
+    },
+    {
+      "name": "Cranbrook Art Museum",
+      "locality_index": 3,
+      "location": "Bloomfield Hills, MI",
+      "category": "Art & Design Museum",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://cranbrookartmuseum.org/",
+      "events_url": "https://cranbrookartmuseum.org/events/",
+      "description": "Renowned contemporary art, design, and architectural museum set on a scenic mid-century campus featuring sculpture gardens and interactive art installations.",
+      "feed_urls": []
+    },
+    {
+      "name": "Cliff Bell's",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Jazz Club & Dining Venue",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "http://cliffbells.com/",
+      "events_url": "http://cliffbells.com/events/",
+      "description": "Historic, restored 1930s Art Deco jazz club serving creative cuisine alongside live nightly jazz performances.",
+      "feed_urls": []
+    },
+    {
+      "name": "Trinosophes",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Art Space & Experimental Venue",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "http://www.trinosophes.com/",
+      "events_url": "http://www.trinosophes.com/events",
+      "description": "Independent gallery, coffeehouse, and performance space in Eastern Market hosting avant-garde music, poetry, and art exhibits.",
+      "feed_urls": [
+        "https://trinosophes.com/rss"
+      ]
+    },
+    {
+      "name": "The Magic Bag",
+      "locality_index": 3,
+      "location": "Ferndale / Metro Detroit, MI",
+      "category": "Live Music & Comedy Venue",
+      "type": "Venue",
+      "frequency": "daily",
+      "url": "http://www.themagicbag.com/",
+      "events_url": "http://www.themagicbag.com/shows",
+      "description": "Intimate vintage theater space known for hosting touring indie musicians, stand-up comedy, and tribute band concerts.",
+      "feed_urls": []
+    },
+    {
+      "name": "Motown Museum",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Music History Museum",
+      "type": "Venue",
+      "frequency": "monthly",
+      "url": "http://www.motownmuseum.org/",
+      "events_url": "http://www.motownmuseum.org/events/",
+      "description": "Historic home of Hitsville U.S.A., showcasing the birth of the Motown sound, iconic recording Studio A, and music artifacts.",
+      "feed_urls": [
+        "https://www.motownmuseum.org/event/feed/",
+        "https://www.motownmuseum.org/category/events/feed/"
+      ]
+    },
+    {
+      "name": "Museum of Contemporary Art Detroit (MOCAD)",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Contemporary Art Museum",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "http://mocadetroit.org/",
+      "events_url": "http://mocadetroit.org/calendar/",
+      "description": "Non-collecting contemporary art venue showcasing rotating visual art exhibitions, live experimental music, and artist discussions.",
+      "feed_urls": [
+        "https://mocadetroit.org/feed/"
+      ]
+    },
+    {
+      "name": "Ford Piquette Avenue Plant Museum",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Automotive History Museum",
+      "type": "Venue",
+      "frequency": "monthly",
+      "url": "http://www.fordpiquetteplant.org/",
+      "events_url": "http://www.fordpiquetteplant.org/events/",
+      "description": "The birthplace of the Ford Model T and an iconic historic industrial site hosting educational tours, auto history exhibits, and special events.",
+      "feed_urls": []
+    },
+    {
+      "name": "WDET 101.9 FM",
+      "locality_index": 3,
+      "location": "Detroit & Metro Region, MI",
+      "category": "Public Radio / Metro News",
+      "type": "NPR / Community Public Broadcast",
+      "frequency": "daily",
+      "url": "https://wdet.org",
+      "events_url": "https://wdet.org/events/",
+      "description": "Detroit’s public radio station offering local news, music programming, community conversations, and regional events.",
+      "feed_urls": [
+        "https://wdet.org/feed/"
+      ]
+    },
+    {
+      "name": "Metro Times",
+      "locality_index": 3,
+      "location": "Detroit Metro Area, MI",
+      "category": "Alternative News & Culture",
+      "type": "Weekly Alternative Media",
+      "frequency": "daily",
+      "url": "https://www.metrotimes.com",
+      "events_url": "https://www.metrotimes.com/detroit/EventSearch",
+      "description": "Coverage of Metro Detroit arts, music, dining, nightlife, progressive politics, and major regional events.",
+      "feed_urls": [
+        "https://www.metrotimes.com/feed/"
+      ]
+    },
+    {
+      "name": "Outlier Media",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Investigative / Community Journalism",
+      "type": "Nonprofit Digital Newsroom",
+      "frequency": "daily",
+      "url": "https://outliermedia.org",
+      "events_url": null,
+      "description": "Service-oriented, community-driven journalism covering housing, transit, and local issues in Detroit.",
+      "feed_urls": [
+        "https://outliermedia.org/feed/",
+        "https://outliermedia.org/category/how-to-thrive/community/feed/"
+      ]
+    },
+    {
+      "name": "Daily Detroit",
+      "locality_index": 3,
+      "location": "Detroit & Surrounding Suburbs, MI",
+      "category": "Local Podcast & News",
+      "type": "Digital Audio & Web",
+      "frequency": "daily",
+      "url": "https://www.dailydetroit.com",
+      "events_url": null,
+      "description": "Daily news podcast and blog tracking developments, culture, transit, and neighborhood stories in Metro Detroit.",
+      "feed_urls": [
+        "https://www.dailydetroit.com/rss/"
+      ]
+    },
+    {
+      "name": "Model D Media",
+      "locality_index": 3,
+      "location": "Detroit & Metro Suburbs, MI",
+      "category": "Community & Innovation",
+      "type": "Online Magazine",
+      "frequency": "weekly",
+      "url": "https://www.modeldmedia.com",
+      "events_url": null,
+      "description": "Features stories on neighborhood developments, creative culture, local entrepreneurs, and community leaders.",
+      "feed_urls": [
+        "https://modeldmedia.com/community-development/feed/",
+        "https://modeldmedia.com/community-health-wellness/feed/"
+      ]
+    },
+    {
+      "name": "Visit Detroit",
+      "locality_index": 3,
+      "location": "Detroit & Metro Area, MI",
+      "category": "Tourism & Events Hub",
+      "type": "Convention & Visitors Bureau",
+      "frequency": "weekly",
+      "url": "https://visitdetroit.com",
+      "events_url": "https://visitdetroit.com/events/",
+      "description": "Comprehensive database of major concerts, festivals, sports, museum exhibits, and family events across Metro Detroit.",
+      "feed_urls": []
+    },
+    {
+      "name": "Fox Theatre Detroit",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Major Entertainment Venue",
+      "type": "Venue",
+      "frequency": "daily",
+      "url": "https://www.313presents.com/venues-events/fox-theatre",
+      "events_url": "https://www.313presents.com/events/search?venue=fox-theatre",
+      "description": "Iconic, ornate landmark theater hosting national touring musicians, stand-up comedy specials, and major stage productions.",
+      "feed_urls": []
+    },
+    {
+      "name": "Detroit Opera House",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Performing Arts Venue",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://www.detroitopera.org",
+      "events_url": "https://www.detroitopera.org/events-tickets/",
+      "description": "Historic theater presenting opera productions, national ballet tours, contemporary dance, and orchestral concerts.",
+      "feed_urls": [
+        "https://detroitopera.org/feed/"
+      ]
+    },
+    {
+      "name": "Detroit Institute of Arts (DIA)",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Art Museum & Cultural Center",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://dia.org",
+      "events_url": "https://dia.org/events",
+      "description": "World-class art museum featuring over 100 galleries, Friday night live music, film screenings at the Detroit Film Theatre, and special exhibitions.",
+      "engine": "http",
+      "crawl_urls": [
+        "https://dia.org/events"
+      ],
+      "feed_urls": [
+        "https://dia.org/rss.xml"
+      ]
+    },
+    {
+      "name": "The Majestic Theatre Complex",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Music & Concert Venue",
+      "type": "Venue",
+      "frequency": "daily",
+      "url": "http://www.majesticdetroit.com",
+      "events_url": "http://www.majesticdetroit.com/events/",
+      "description": "Historic Midtown music venue hosting touring indie bands, concerts, comedy, and live performances across the Majestic Theatre and Magic Stick stages.",
+      "feed_urls": []
+    },
+    {
+      "name": "Charles H. Wright Museum of African American History",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Cultural & History Museum",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://www.thewright.org",
+      "events_url": "https://www.thewright.org/events",
+      "description": "Major museum dedicated to African American history and culture, offering exhibitions, lecture series, film screenings, and musical events.",
+      "engine": "http",
+      "crawl_urls": [
+        "https://www.thewright.org/events"
+      ],
+      "feed_urls": [
+        "https://www.thewright.org/rss.xml"
+      ]
+    },
+    {
+      "name": "Michigan Science Center (MiSci)",
+      "locality_index": 3,
+      "location": "Detroit, MI",
+      "category": "Science Museum",
+      "type": "Venue",
+      "frequency": "weekly",
+      "url": "https://www.mi-sci.org",
+      "events_url": "https://www.mi-sci.org/events/",
+      "description": "Interactive science center featuring hands-on exhibits, IMAX dome theater shows, planetarium, and evening adult science nights.",
+      "feed_urls": [
+        "https://www.mi-sci.org/feed/"
+      ]
+    },
+    {
+      "name": "Bridge Michigan",
+      "locality_index": 4,
+      "location": "Michigan (Statewide)",
+      "category": "Statewide News & Policy",
+      "type": "Nonprofit Nonpartisan Journalism",
+      "frequency": "4hours",
+      "url": "https://www.bridgemi.com",
+      "events_url": "https://www.bridgemi.com/events",
+      "description": "In-depth, nonpartisan reporting on Michigan state politics, education, economy, environment, and healthcare.",
+      "feed_urls": [
+        "https://bridgemi.com/category/events/feed/",
+        "https://bridgemi.com/feed/"
+      ]
+    },
+    {
+      "name": "Michigan Radio (Michigan Public)",
+      "locality_index": 4,
+      "location": "Michigan (Statewide)",
+      "category": "Statewide Public News",
+      "type": "Public Broadcast Network",
+      "frequency": "daily",
+      "url": "https://www.michiganpublic.org",
+      "events_url": "https://www.michiganpublic.org/community-calendar",
+      "description": "Statewide NPR news network covering public policy, local stories, statewide issues, and cultural affairs.",
+      "feed_urls": [
+        "https://www.michiganpublic.org/index.rss"
+      ]
+    },
+    {
+      "name": "Michigan Advance",
+      "locality_index": 4,
+      "location": "Michigan (Statewide)",
+      "category": "State Government & Policy",
+      "type": "Independent Newsroom",
+      "frequency": "daily",
+      "url": "https://michiganadvance.com",
+      "events_url": null,
+      "description": "In-depth coverage of state capitol news, health care, environmental issues, civil rights, and labor.",
+      "feed_urls": [
+        "https://michiganadvance.com/feed/localFeed/"
+      ]
+    },
+    {
+      "name": "Chalkbeat Detroit / Michigan",
+      "locality_index": 4,
+      "location": "Metro Detroit & Michigan",
+      "category": "Statewide K-12 Education",
+      "type": "Nonprofit Education Newsroom",
+      "frequency": "daily",
+      "url": "https://detroit.chalkbeat.org",
+      "events_url": null,
+      "description": "Reporting focused on public education policy, school districts, equity, and student outcomes across Michigan.",
+      "feed_urls": []
+    }
+  ]
+}

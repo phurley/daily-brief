@@ -17,6 +17,44 @@ rendered in the browser from schema-backed JSON.
   caches the free RocketLaunch.Live next-launch feed in local storage.
 - Root `*.json` files contain generated content. Their contracts live in
   `schemas/`.
+- `scripts/update_calendar.py` collects the family Google/iCloud calendars
+  into `calendar.json`; `scripts/update_weather.py` does the same for weather.
+
+## Family calendar
+
+`scripts/update_calendar.py` builds `calendar.json` from the unauthenticated
+ICAL feeds Google and iCloud publish. Those URLs need no OAuth: Google exposes
+a "Secret address in iCal format" per calendar, and iCloud exposes a
+`webcal://` link when you share a calendar publicly. No CalDAV client or login
+is involved.
+
+```sh
+cp calendars.example.json calendars.json   # then add your feed URLs
+python3 scripts/update_calendar.py
+python3 scripts/update_calendar.py --dry-run --verbose
+```
+
+`calendars.json` is git-ignored because those feed URLs are bearer credentials.
+In CI the same JSON is supplied through the `CALENDARS_JSON` repository secret,
+which `.github/workflows/update-calendar.yml` uses to refresh `calendar.json`
+once a day and commit it when it changes.
+
+The collector:
+
+1. fetches each feed (a `webcal://` URL is rewritten to `https://`);
+2. if a source URL is an HTML page rather than an ICS file, it discovers
+   `rel="alternate" type="text/calendar"` and `webcal://` / `*.ics` links on
+   the page and uses those feeds;
+3. expands RRULEs and maps each occurrence onto `schemas/calendar.schema.json`,
+   storing simple recurring series as a `recurrence` block that `app.js`
+   already knows how to expand;
+4. de-duplicates the same event arriving from several calendars and prefers the
+   record with the most detail (location, description, and a click-through
+   `url`).
+
+Feeds cannot be filtered server-side by date range, so the whole calendar is
+fetched and only a rolling window (`historyDays` back, `horizonDays` forward)
+is kept. Both are configurable at the top of `calendars.json`.
 
 The `photos.json` document may contain zero to five photographs for a date.
 Multiple photographs become a slow, accessible crossfade carousel with only

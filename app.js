@@ -522,7 +522,7 @@ function renderCalendar() {
 function uniqueEvents() {
   const events = state.data.events;
   const map = new Map();
-  for (const item of [...(events?.pastWeek || []), ...(events?.today || []), ...(events?.planAhead || [])]) map.set(item.id, item);
+  for (const item of Array.isArray(events?.events) ? events.events : []) map.set(item.id, item);
   return [...map.values()];
 }
 
@@ -576,7 +576,7 @@ function renderEvents() {
   });
   replaceChildren("#events-list", cards.length ? cards : [emptyState()]);
   $("#events-title").textContent = message("today", "section-heading", "Nearby & notable");
-  $("#events-note").textContent = message("today", "recommendation", state.data.events?.easyAnswer || "Good reasons to leave the house.");
+  $("#events-note").textContent = message("today", "recommendation", "Good reasons to leave the house.");
 
   const end = shiftDate(state.selectedDate, 30);
   const future = allEvents

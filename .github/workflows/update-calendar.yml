@@ -1,0 +1,64 @@
+name: Update calendar
+
+on:
+  schedule:
+    - cron: "23 9 * * *" # once a day (offset from the top of the hour)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-calendar
+  cancel-in-progress: false
+
+jobs:
+  update-calendar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Feed URLs are bearer credentials, so they live in the repo secret
+      # CALENDARS_JSON (the same JSON shape as calendars.example.json).
+      # Without it there is nothing to collect; skip instead of failing.
+      - name: Check for calendar config
+        id: config
+        env:
+          CALENDARS_JSON: ${{ secrets.CALENDARS_JSON }}
+        run: |
+          if [ -n "$CALENDARS_JSON" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "CALENDARS_JSON secret not set; skipping calendar update."
+          fi
+
+      - name: Collect calendars
+        if: steps.config.outputs.configured == 'true'
+        env:
+          CALENDARS_JSON: ${{ secrets.CALENDARS_JSON }}
+        run: python scripts/update_calendar.py
+
+      - name: Validate against schema
+        if: steps.config.outputs.configured == 'true'
+        run: |
+          pip install --quiet check-jsonschema
+          check-jsonschema --schemafile schemas/calendar.schema.json calendar.json
+
+      - name: Commit and push if changed
+        if: steps.config.outputs.configured == 'true'
+        run: |
+          if git diff --quiet calendar.json; then
+            echo "calendar.json unchanged; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add calendar.json
+          git commit -m "Update calendar.json"
+          git pull --rebase origin main
+          git push

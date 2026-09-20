@@ -1,0 +1,14 @@
+# Python dependencies for the source crawler (crawl_sources.py).
+#
+# Install into the local virtualenv:
+#     python3 -m venv .venv
+#     .venv/bin/python -m pip install -r requirements.txt
+#     .venv/bin/crawl4ai-setup          # installs the Chromium browser
+#
+# crawl4ai drives a headless Chromium browser for JS-heavy event calendars.
+# pypdf extracts text from the PDF calendars many venues/governments publish.
+
+crawl4ai>=0.9.3,<0.10
+pypdf>=6,<7
+fonttools>=4,<5
+curl_cffi>=0.7,<1
