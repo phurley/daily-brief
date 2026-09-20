@@ -382,8 +382,31 @@ Implemented, standard-library only:
   from nine positive / four negative Nouls; see `gold/round2/SCORING.md`. The
   events schema is now a single un-capped `events` array
   (`schemas/events.schema.json`, v2.0.0).
-- `extract/score_gate.py` / `extract/characterize.py`: evaluate gate and
-  characterization against a labeled gold set.
+- `extract/bench.py` / `bench_live.py` (live-corpus variant): evaluate gate and
+  extraction models against labeled gold or a live sample.
+
+  Live model bench (2026-09-20, 12 mixed-mode candidates, judged by
+  gpt-4.1-mini) — first-try schema validity, cost/call, p50 latency, judge
+  score, key-field accuracy, fabrication rate:
+
+  | model | sch% | $/call | p50 | judge | key_ok | fab |
+  |---|---|---|---|---|---|---|
+  | **qwen/qwen3-32b (default)** | 100% | 0.00056 | 20.8s | 4.25 | **92%** | **0%** |
+  | google/gemini-3.1-flash-lite | 100% | 0.00116 | 2.0s | 4.17 | 83% | 8% |
+  | google/gemini-2.5-flash | 100% | 0.00185 | 2.5s | 4.42 | 75% | 8% |
+  | google/gemini-2.5-flash-lite | 100% | 0.00035 | 1.5s | 4.33 | 75% | 25% |
+  | deepseek/deepseek-v4.1-flash | 100% | 0.00192 | 11.8s | 4.58 | 83% | 8% |
+  | openai/gpt-4o-mini | 100% | 0.00042 | 3.6s | 3.75 | 83% | 17% |
+  | openai/gpt-4.1-mini | 100% | 0.00102 | 2.7s | 4.00 | 67% | 17% |
+  | z-ai/glm-5.3-flash | 100% | 0.00145 | 8.4s | 4.17 | 67% | 17% |
+  | qwen/qwen3.6–3.8-flash | 100% | 0.0005–0.0044 | 16–38s | 3.8–4.0 | 58–67% | 17% |
+  | qwen/qwen3.5-flash-02-23 | **0%** | — | 2.6s | 1.0 | 0% | 100% |
+
+  The incumbent wins on what matters for re-work: highest key-field accuracy
+  (92%), zero fabrication, and lowest cost-per-correct-record. Newer qwen
+  flash generations regressed. `google/gemini-3.1-flash-lite` is the
+  documented fast alternative (~10x lower latency at 2x cost, slightly lower
+  accuracy) via `OPENROUTER_EXTRACT_MODEL` for burst situations.
 
 Corpus result on the current crawl (72 sources, `--reference-date 2026-09-19`):
 **17,838 chunks → 14,776 kept / 3,062 filtered**; **3,948 feed items → 1,244 kept
