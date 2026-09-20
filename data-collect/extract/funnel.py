@@ -31,11 +31,12 @@ What it does, per source:
                            heading-aware chunks with provenance, mechanical
                            candidate hints, and normalized Eastern-assumed dates
                            with recency signals.
-    4. Recency filter    - keep all future dates and undated records; drop known
-                           event dates older than --max-age-days (14) and
-                           publish/ambiguous dates older than
-                           --publish-max-age-days (183). Bias: when in doubt,
-                           keep more. Disable with --no-filter.
+    4. Recency filter    - keep all future dates and undated records; drop
+                           events that are over (end date before today) or
+                           whose start-only date is older than
+                           --max-age-days (7); drop publish/ambiguous dates
+                           older than --publish-max-age-days (183). Bias: when
+                           in doubt, keep more. Disable with --no-filter.
 
 The output is deliberately model-free: stage 4 (the Jev candidate gate) consumes
 ``chunks.jsonl``. See ``EXTRACTION.md`` for the full pipeline.
@@ -49,7 +50,7 @@ import json
 import re
 import sys
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterator, Optional
 
@@ -60,6 +61,12 @@ SCRIPT_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_SOURCE_FILE = SCRIPT_DIR / "source.json"
 DEFAULT_CRAWL_DIR = SCRIPT_DIR / "crawl"
 DEFAULT_OUT_DIR = SCRIPT_DIR / "processed"
+
+#: Forward-looking event policy (intake): a daily brief plans ahead, it does
+#: not maintain a past view. An event is dropped when it is over (its end
+#: date is before today) or, when only a start is known, when that start is
+#: more than this many days old.
+EVENT_START_GRACE_DAYS = 7
 FUNNEL_VERSION = "0.1.0"
 
 MARKER_RE = re.compile(r"<!--\s*(page|asset|jsonld)\s+(\d+)\s*-->")
@@ -711,6 +718,7 @@ def process_source(
         # ICS DTSTART is a known event date; an RSS pubDate is a publish date.
         role = "event" if is_ics else "publish"
         entries: list[tuple[datetime, bool, str]] = []
+        end_dt: Optional[datetime] = None
         stamp = it.get("start") if is_ics else it.get("publishedAt")
         if stamp:
             try:
@@ -727,6 +735,10 @@ def process_source(
                     known = [it["start"]]
                     if it.get("end"):
                         known.append(it["end"])
+                        try:
+                            end_dt = datetime.fromisoformat(it["end"])
+                        except ValueError:
+                            end_dt = None
                     signals["has_date"] = True
                     signals["has_time"] = "T00:00:00" not in it["start"]
                     signals["dates"] = [stamp]
@@ -737,9 +749,26 @@ def process_source(
             except ValueError:
                 pass
         if do_filter:
-            keep, reason = dates.within_window(
-                entries, ref, known_days=known_days, publish_days=publish_days
-            )
+            if is_ics and entries:
+                # Forward-looking policy: drop events that are over (end date
+                # before today) or whose start-only date is past the grace
+                # window. An end in the future keeps long-running events
+                # (exhibitions, festivals) regardless of how they started.
+                ref_day = ref.astimezone(dates.EASTERN).date()
+                if end_dt is not None:
+                    if end_dt.astimezone(dates.EASTERN).date() < ref_day:
+                        keep, reason = False, "event_ended"
+                    else:
+                        keep, reason = True, "event_ongoing"
+                elif dt.astimezone(dates.EASTERN).date() < ref_day - timedelta(
+                        days=EVENT_START_GRACE_DAYS):
+                    keep, reason = False, "start_stale"
+                else:
+                    keep, reason = True, "event_within_grace"
+            else:
+                keep, reason = dates.within_window(
+                    entries, ref, known_days=known_days, publish_days=publish_days
+                )
         else:
             keep, reason = True, "unfiltered"
         if drop_oaa and signals["locality"]["out_of_area"]:
@@ -901,8 +930,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--reference-date", default=None,
                    help="YYYY-MM-DD reference for date recency (default: today Eastern)")
     # Recency filter: known event dates vs publish/ambiguous dates.
-    p.add_argument("--max-age-days", type=int, default=14,
-                   help="drop known event dates older than N days (default 14)")
+    p.add_argument("--max-age-days", type=int, default=7,
+                   help="drop start-only event dates older than N days (default 7; "
+                        "events with an end date are kept until that end passes)")
     p.add_argument("--publish-max-age-days", type=int, default=183,
                    help="keep publish/ambiguous dates up to N days old (default 183)")
     p.add_argument("--no-filter", dest="filter_dates", action="store_false",

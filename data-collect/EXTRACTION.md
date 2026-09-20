@@ -225,8 +225,9 @@ government → notice/agenda schema.
 
 ### 8. Validate / reconcile (mechanical) — **implemented** in `extract/publish.py`
 - JSON schema validation; ISO-8601 normalized to `America/Detroit`.
-- Reject records missing required fields or with dates outside the publish window
-  (events older than 14 days are dropped).
+- Reject records missing required fields or with dates outside the publish
+  window: an event is dropped when it is over — its end date passed before
+  the edition day — or, start-only, when the start is older than 7 days.
 - URL/image provenance is carried from the crawler/feed metadata.
 - A Jev "does this record faithfully match the source chunk?" verifier remains a
   possible later refinement; the current publish gate is mechanical schema
@@ -355,7 +356,8 @@ Implemented, standard-library only:
   structured event items with authoritative dates, like ICS.
 - `extract/dates.py`: date normalizer (Eastern-assumed, DST-aware) feeding
   recency signals into chunks and feed items.
-- Two-tier recency filter (14-day known event / 183-day publish) writing
+- Forward-looking recency filter (drop events that are over or whose
+  start-only date is older than 7 days; publish dates get 183 days), writing
   `*_dropped.jsonl` for audit.
 - Per-item locality detection (`extract/locality.py`) and feed→page join
   (`extract/urls.py`), with an opt-in `--drop-out-of-area`.

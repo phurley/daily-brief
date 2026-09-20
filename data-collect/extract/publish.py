@@ -64,7 +64,8 @@ def _parse_dt(value: Any) -> Optional[datetime]:
     return dt if dt.tzinfo else dt.replace(tzinfo=dates.EASTERN)
 
 
-def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None) -> Optional[dict[str, Any]]:
+def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None,
+             edition: Optional[datetime] = None) -> Optional[dict[str, Any]]:
     if record.get("kind") != "event":
         return None
     event: dict[str, Any] = {}
@@ -85,8 +86,17 @@ def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None) -> Optio
     if any(not event.get(k) for k in EVENT_REQUIRED):
         return None
     if cutoff is not None:
+        # Forward-looking: an event is stale only when it is over. With an
+        # end date, that means the end passed before the edition day (a
+        # running exhibition with an old start is still plannable);
+        # start-only events get the max_event_age_days grace window.
         start = _parse_dt(event.get("start"))
-        if start is not None and start < cutoff:
+        end = _parse_dt(event.get("end"))
+        if end is not None:
+            edition_day = edition.date() if edition is not None else cutoff.date()
+            if end.date() < edition_day:
+                return None
+        elif start is not None and start < cutoff:
             return None  # stale event; brief is forward-looking
     return event
 
@@ -156,7 +166,7 @@ def _doc_validator(name: str):
 
 
 def build(records: list[dict[str, Any]], edition_date: str,
-          generated_at: str, max_event_age_days: int = 14) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+          generated_at: str, max_event_age_days: int = 7) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     event_validator = _validator("events.schema.json", "event")
     story_validator = _validator("news.schema.json", "story")
     edition_dt = datetime.combine(datetime.fromisoformat(edition_date).date(), time.min, tzinfo=dates.EASTERN)
@@ -169,7 +179,7 @@ def build(records: list[dict[str, Any]], edition_date: str,
     for record in _dedupe(records):
         if record.get("kind") == "event":
             stats["events_in"] += 1
-            event = to_event(record, cutoff)
+            event = to_event(record, cutoff, edition_dt)
             if event is not None and event_validator.is_valid(event):
                 events.append(event)
                 stats["events_out"] += 1
@@ -202,8 +212,9 @@ def main(argv: Optional[list[str]] = None) -> int:
     p.add_argument("--records", type=Path, default=DEFAULT_RECORDS)
     p.add_argument("--out", type=Path, default=ROOT, help="directory to write into (default: repo root)")
     p.add_argument("--edition-date", default=None, help="YYYY-MM-DD (default: today Eastern)")
-    p.add_argument("--max-event-age-days", type=int, default=14,
-                   help="drop events whose start is older than this (default 14)")
+    p.add_argument("--max-event-age-days", type=int, default=7,
+                   help="drop start-only events whose start is older than this (default 7; "
+                        "events with an end are kept until that end passes)")
     p.add_argument("--dry-run", action="store_true")
     opts = p.parse_args(argv)
 
