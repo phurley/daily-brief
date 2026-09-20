@@ -315,6 +315,10 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                 records = []
         if route.schema == "event":
             if enrich_events and chat is not None:
+                # Richer sources first: ticketing / FB-event / ical links found
+                # in the candidate's own text often carry the date/venue the
+                # article page lacks.
+                links = enrich.detail_links(rec)
                 for r in records:
                     if not any(not r.get(f) for f in ("start", "venue", "city")):
                         continue
@@ -325,7 +329,7 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                     if not allowed:
                         break
                     before = sum(1 for f in ("start", "venue", "city") if r.get(f))
-                    enrich.enrich_event(r, chat)
+                    enrich.enrich_event(r, chat, detail_links=links)
                     if sum(1 for f in ("start", "venue", "city") if r.get(f)) > before:
                         with enrich_lock:
                             enrich_state["ok"] += 1

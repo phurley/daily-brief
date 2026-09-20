@@ -60,14 +60,14 @@ just lose guaranteed type-safety and honest confidence.
   ├───────────────────────────────────────────────────────────────────┤
   │ 4. Candidate gate      [JEV]         is_content / kind / dated /    │
   │                                       timeframe / relevance + conf  │
-  │ 5. Dedupe              [mech + JEV]  URL canon + simhash; Jev       │
-  │                                       "same item?" pair tiebreak    │
+  │ 5. Dedupe              [mechanical]  content_hash + title + simhash │
+  │                                       clustering; marks is_canonical│
   │ 6. Router              [mechanical]  (source.type,url_class,kind)   │
   │                                       → schema/prompt/model tier    │
   │ 7. Extraction          [LLM]         structured JSON: title,        │
   │                                       summary, dates, venue, url    │
-  │ 8. Validate            [mech + JEV]  schema, TZ, sanity, Jev        │
-  │                                       verifier "matches source?"    │
+  │ 8. Validate            [mechanical]  schema (per-record + per-doc), │
+  │                                       TZ, sanity; refuse bad write  │
   │ 9. Store               [mechanical]  idempotent upsert by stable id │
   └───────────────────────────────────────────────────────────────────┘
                        output: records + review queue
@@ -223,18 +223,23 @@ deliberately gives up. Force JSON-schema structured outputs:
 Route by `source.type`: venue → event schema; news outlet → article schema;
 government → notice/agenda schema.
 
-### 8. Validate / reconcile (mechanical + Jev)
+### 8. Validate / reconcile (mechanical) — **implemented** in `extract/publish.py`
 - JSON schema validation; ISO-8601 normalized to `America/Detroit`.
-- Reject dates outside a sane window; URL must belong to the source domain.
-- Venue gazetteer matching.
-- Jev verifier: "does this record faithfully match the source chunk?"
-  (bool + confidence). Below threshold → review queue, not the brief.
+- Reject records missing required fields or with dates outside the publish window
+  (events older than 14 days are dropped).
+- URL/image provenance is carried from the crawler/feed metadata.
+- A Jev "does this record faithfully match the source chunk?" verifier remains a
+  possible later refinement; the current publish gate is mechanical schema
+  validation (per record and per document).
 
-### 9. Store (mechanical)
-SQLite (or JSONL) keyed by a stable id:
-`sha1(source_slug | url | normalized_title | normalized_start)`.
-Upsert on re-crawl. Persist Jev confidence, model/prompt version, and full
-provenance. Publish gate = validator pass × calibrated confidence.
+### 9. Store (mechanical) — **implemented** in `extract/pipeline.py`
+JSONL keyed by a stable id:
+`slug(title)-kind-YYYY-MM-DD` (see `finalize()`).
+Records accumulate in `processed/extracted_records.jsonl`, merged by id on
+re-crawl. Full provenance is carried under `origin` (source, chunk id, url),
+and the event score / images are attached. Candidates already paid for are
+tracked by fingerprint in `processed/extraction_index.jsonl`.
+Publish gate = schema validation (per record and per document).
 
 ## Repository layout
 
@@ -250,11 +255,30 @@ data-collect/
     meta.json
   extract/
     __init__.py
-    funnel.py              stages 0–3 (mechanical), CLI
-    jev.py                 stage 4 contract: task vocab + request/response
-                           schema + pluggable runner (stub until access lands)
     __main__.py            python -m extract
-  processed/               OUTPUT (funnel owns this tree)
+    funnel.py              stages 0–3 + recency filter (mechanical), CLI
+    feeds.py               network-free RSS/Atom/ICS/raw-XML parser
+    dates.py               Eastern-assumed, DST-aware date normalization
+    locality.py            per-item coverage/locality detection
+    urls.py                canonical URL index + feed→page join
+    dedupe.py              stage 5: content_hash/title/SimHash clustering
+    jev.py                 stage 4 contract: task vocab + clients + gate
+    router.py              stage 6: deterministic triage → extraction route
+    prompts.py             event/news × single/array prompts + JSON schemas
+    llm.py                 OpenRouter chat client (structured outputs)
+    extraction.py          stage 7 runner (triage → route → extract)
+    enrich.py              bounded event fallback (URL date / ical parse /
+                          richer linked pages / fetch + touchup)
+    scoring.py             event score 0–100 from triage Noul answers
+    pipeline.py            incremental triage→extract→store (stages 4–9)
+    publish.py             stage 8/9: validate → events.json / news.json
+    sample.py              gold-set sampler
+    score_gate.py          gate precision/recall against gold
+    score_gold.py          gold label scoring
+    characterize.py        characterization experiments
+    bench.py               model comparison
+    test_jev.py            offline interface tests
+  processed/               OUTPUT (funnel/pipeline own this tree)
     <slug>/
       chunks.jsonl         in-window chunk records (input to stage 4)
       chunks_dropped.jsonl date-filtered-out chunks (audit)
@@ -262,6 +286,9 @@ data-collect/
       feed_items_dropped.jsonl
       funnel.json          per-source stats + input fingerprint
       pages.jsonl          cleaned page text (only with --emit-pages)
+    extraction_index.jsonl     fingerprints of candidates already paid for
+    extracted_records.jsonl    cumulative record store (input to publish)
+    dedupe.json                duplicate totals
     summary.json           aggregate run stats
     .state.json            per-source fingerprints for --changed-only
 ```
@@ -321,7 +348,10 @@ Implemented, standard-library only:
   removal, heading-aware chunking, candidate hints, change detection, and the
   read-only-input guard.
 - `extract/feeds.py`: network-free RSS/Atom/ICS parser producing
-  `feed_items.jsonl` (feeds are not chunked by default).
+  `feed_items.jsonl` (feeds are not chunked by default). Schema.org **JSON-LD
+  `Event` blocks** (rendered by the crawler as `# Structured data (JSON-LD)`
+  pages) are parsed the same way: `startDate`/`endDate`/venue/url become
+  structured event items with authoritative dates, like ICS.
 - `extract/dates.py`: date normalizer (Eastern-assumed, DST-aware) feeding
   recency signals into chunks and feed items.
 - Two-tier recency filter (14-day known event / 183-day publish) writing
@@ -358,11 +388,15 @@ Corpus result on the current crawl (72 sources, `--reference-date 2026-09-19`):
 ~2k future, ~2k publish/ambiguous within 6 months, ~0.7k known events within
 2 weeks; 245 4xx and 54 duplicate pages dropped.
 
-Not yet built (next passes):
+Built since the first pass (see [`DATAFLOW.md`](DATAFLOW.md) for the
+end-to-end map):
 
-- Real Jev client + calibrated thresholds tuned on a gold set.
+- Real Jev clients (`OpenRouterJevClient`, `TypeSafeJevClient`) + calibrated
+  thresholds tuned on the round-2 gold set.
 - Dedupe (stage 5), the deterministic router (6), LLM extraction (7),
-  validation (8), and the idempotent store (9).
+  validation/publish (8), and the idempotent store (9).
+- The incremental pipeline (`extract/pipeline.py`) and scheduled publisher
+  (`run_collect.sh`).
 
 
 ## Gold set
@@ -388,9 +422,12 @@ larger sample; compare via `score_gold`. Open `gold/README.md` for procedure.
 ## Suggested order of work
 
 1. ~~**Funnel (this pass)** — stages 0–3, runnable, inspectable output.~~ **done**
-2. **Gold set** — hand-label ~100 chunks; use it to tune Jev thresholds and the
-   router. Calibrated confidence only helps if you measure it.
-3. **Jev gate** — wire the real API once off the waitlist; until then run the
-   stub/cheap-LLM stand-in behind the same interface.
-4. **Dedupe + router + extraction** — add the OpenRouter tier.
-5. **Validation + store** — publish gate and idempotent upsert.
+2. ~~**Gold set** — hand-label ~100 chunks; use it to tune Jev thresholds and the
+   router. Calibrated confidence only helps if you measure it.~~ **done (rounds 1–2)**
+3. ~~**Jev gate** — wire the real API once off the waitlist.~~ **done**
+4. ~~**Dedupe + router + extraction** — add the OpenRouter tier.~~ **done**
+5. ~~**Validation + store** — publish gate and idempotent upsert.~~ **done**
+
+Next: see [`FUNNEL-RECOMMENDATIONS.md`](FUNNEL-RECOMMENDATIONS.md) for the
+funnel backlog and [`CRAWLER-RECOMMENDATIONS.md`](CRAWLER-RECOMMENDATIONS.md)
+for collector work.

@@ -104,6 +104,9 @@ SEED_KEYWORDS = [
     "exhibition", "program", "programs", "festival", "meeting",
     "agenda", "notice", "news", "article", "story", "stories",
     "press", "announcement", "community", "today", "week", "month",
+    # Ticketing/detail pages carry the richest event data (and often the
+    # JSON-LD Event markup the funnel parses structurally).
+    "ticket", "tickets", "eventbrite", "etix", "showclix",
 ]
 
 # Non-HTML resources worth harvesting: they frequently carry dated events.

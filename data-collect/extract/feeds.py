@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import hashlib
 import html
+import json
 import re
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
@@ -37,6 +38,7 @@ from . import dates as _dates
 
 RSS_HEADING = "# Feed:"
 ICS_HEADING = "# Calendar feed (ICS):"
+JSONLD_HEADING = "# Structured data (JSON-LD):"
 RSS_EMPTY = "(no feed entries found)"
 ICS_EMPTY = "(no VEVENT entries found)"
 
@@ -84,12 +86,14 @@ def _event_url_from_ical_url(feed_url: str) -> Optional[str]:
 
 
 def feed_kind(body: str) -> Optional[str]:
-    """Return ``'rss'``, ``'ics'``, ``'raw'``, or ``None`` for a feed block."""
+    """Return ``'rss'``, ``'ics'``, ``'jsonld'``, ``'raw'``, or ``None``."""
     stripped = body.lstrip()
     if stripped.startswith(RSS_HEADING) or RSS_EMPTY in body:
         return "rss"
     if stripped.startswith(ICS_HEADING) or ICS_EMPTY in body:
         return "ics"
+    if stripped.startswith(JSONLD_HEADING):
+        return "jsonld"
     if RAW_FEED_RE.search(body):
         return "raw"
     return None
@@ -320,6 +324,93 @@ def parse_ics_markdown(body: str, fallback_url: str = "") -> list[dict[str, Any]
     return out
 
 
+def _jsonld_heading_url(body: str, fallback: str) -> str:
+    for line in body.splitlines():
+        s = line.strip()
+        if s.startswith(JSONLD_HEADING):
+            return s[len(JSONLD_HEADING):].strip() or fallback
+    return fallback
+
+
+def _jsonld_venue(location: Any) -> str:
+    """schema.org location: a string, a Place, a PostalAddress, or a list."""
+    if isinstance(location, str):
+        return location.strip()
+    if isinstance(location, dict):
+        name = location.get("name")
+        if isinstance(name, str) and name.strip():
+            return name.strip()
+        return _jsonld_venue(location.get("address"))
+    if isinstance(location, list) and location:
+        return _jsonld_venue(location[0])
+    return ""
+
+
+def _iso_or_none(value: Any) -> Optional[str]:
+    """schema.org startDate/endDate -> ISO-8601 (naive date -> Eastern)."""
+    raw = str(value or "").strip()
+    if not raw:
+        return None
+    if len(raw) == 10:  # date-only (all-day event)
+        raw += "T00:00:00"
+    try:
+        dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=_dates.EASTERN)
+    return dt.isoformat()
+
+
+def parse_jsonld_markdown(body: str, fallback_url: str = "") -> list[dict[str, Any]]:
+    """Parse the crawler's rendered JSON-LD blocks into event feed items.
+
+    A schema.org ``Event`` object carries exactly the fields whose absence
+    causes failed event extraction: ``startDate``/``endDate``, the venue
+    (``location.name``) and the event's own URL. Like ICS items, the dates are
+    authoritative, so downstream they are treated as structured events.
+    """
+    feed_url = _jsonld_heading_url(body, fallback_url)
+    out: list[dict[str, Any]] = []
+    for block in re.findall(r"```json\n(.*?)```", body, re.S):
+        try:
+            data = json.loads(block)
+        except json.JSONDecodeError:
+            continue
+        objs: list[Any] = list(data) if isinstance(data, list) else [data]
+        graph: list[Any] = []
+        for obj in objs:
+            if isinstance(obj, dict) and isinstance(obj.get("@graph"), list):
+                graph.extend(obj["@graph"])
+            else:
+                graph.append(obj)
+        for obj in graph:
+            if not isinstance(obj, dict):
+                continue
+            types = obj.get("@type")
+            types = types if isinstance(types, list) else [types]
+            if "Event" not in {str(t) for t in types}:
+                continue
+            title = html.unescape(str(obj.get("name") or "")).strip()
+            if not title:
+                continue
+            start = _iso_or_none(obj.get("startDate"))
+            summary = html.unescape(str(obj.get("description") or ""))
+            summary = re.sub(r"<[^>]+>", " ", summary)
+            out.append({
+                "item_id": _item_id("jsonld", feed_url, str(obj.get("startDate") or ""), title),
+                "feed_kind": "jsonld",
+                "feed_url": feed_url,
+                "title": title,
+                "url": str(obj.get("url") or "").strip() or None,
+                "start": start,
+                "end": _iso_or_none(obj.get("endDate")),
+                "venue": _jsonld_venue(obj.get("location")),
+                "summary": re.sub(r"\s+", " ", summary).strip(),
+            })
+    return out
+
+
 def parse_feed_markdown(body: str, fallback_url: str = "") -> tuple[str, list[dict[str, Any]]]:
     """Return ``(kind, records)`` for a feed block; kind is '' if none."""
     kind = feed_kind(body)
@@ -327,6 +418,8 @@ def parse_feed_markdown(body: str, fallback_url: str = "") -> tuple[str, list[di
         return "rss", parse_rss_markdown(body, fallback_url)
     if kind == "ics":
         return "ics", parse_ics_markdown(body, fallback_url)
+    if kind == "jsonld":
+        return "jsonld", parse_jsonld_markdown(body, fallback_url)
     if kind == "raw":
         return "rss", parse_raw_feed_markdown(body, fallback_url)
     return "", []
@@ -337,7 +430,7 @@ def dedupe_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     seen: set[Any] = set()
     out: list[dict[str, Any]] = []
     for it in items:
-        if it.get("feed_kind") == "ics":
+        if it.get("feed_kind") in ("ics", "jsonld"):
             key = it.get("item_id")
         else:
             key = it.get("url") or it.get("item_id")

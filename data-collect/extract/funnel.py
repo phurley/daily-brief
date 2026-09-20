@@ -62,7 +62,7 @@ DEFAULT_CRAWL_DIR = SCRIPT_DIR / "crawl"
 DEFAULT_OUT_DIR = SCRIPT_DIR / "processed"
 FUNNEL_VERSION = "0.1.0"
 
-MARKER_RE = re.compile(r"<!--\s*(page|asset)\s+(\d+)\s*-->")
+MARKER_RE = re.compile(r"<!--\s*(page|asset|jsonld)\s+(\d+)\s*-->")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*#*\s*$")
 IMAGE_ONLY_RE = re.compile(r"^\s*!\[[^\]]*\]\([^)]*\)\s*$")
 LINK_RE = re.compile(r"\[[^\]]*\]\([^)]*\)")
@@ -698,7 +698,9 @@ def process_source(
             source_tier=locality_index,
             source_location=location,
         )
-        is_ics = it.get("feed_kind") == "ics"
+        # ICS and JSON-LD Event items are structured events with authoritative
+        # dates; RSS items are news with only a publish timestamp.
+        is_ics = it.get("feed_kind") in ("ics", "jsonld")
         if is_ics:
             hint = "event"
         else:
@@ -717,10 +719,11 @@ def process_source(
                 it["recency"] = dates.recency(dt, ref)
                 entries = [(dt, False, role)]
                 if is_ics:
-                    # DTSTART is authoritative: the item's title/summary often
-                    # carries no date for the scanners to find. Promote it into
-                    # the signals used for prioritisation, the Jev hints, and
-                    # the extraction prompt's known_dates.
+                    # The structured start (ICS DTSTART / JSON-LD startDate) is
+                    # authoritative: the item's title/summary often carries no
+                    # date for the scanners to find. Promote it into the signals
+                    # used for prioritisation, the Jev hints, and the extraction
+                    # prompt's known_dates.
                     known = [it["start"]]
                     if it.get("end"):
                         known.append(it["end"])
