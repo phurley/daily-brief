@@ -39,18 +39,23 @@ In CI the same JSON is supplied through the `CALENDARS_JSON` repository secret,
 which `.github/workflows/update-calendar.yml` uses to refresh `calendar.json`
 once a day and commit it when it changes.
 
+On this Mac the same refresh runs nightly via launchd:
+`scripts/run_calendar.sh` collects the feeds, then commits and pushes
+`calendar.json` when it changed. Install it with
+`scripts/launchd/com.dailybrief.calendar.plist` (03:30 local).
+
 The collector:
 
 1. fetches each feed (a `webcal://` URL is rewritten to `https://`);
 2. if a source URL is an HTML page rather than an ICS file, it discovers
    `rel="alternate" type="text/calendar"` and `webcal://` / `*.ics` links on
    the page and uses those feeds;
-3. expands RRULEs and maps each occurrence onto `schemas/calendar.schema.json`,
-   storing simple recurring series as a `recurrence` block that `app.js`
-   already knows how to expand;
-4. de-duplicates the same event arriving from several calendars and prefers the
-   record with the most detail (location, description, and a click-through
-   `url`).
+3. expands RRULEs into concrete occurrences across the rolling window and
+   maps each one onto `schemas/calendar.schema.json`, so the published data is
+   always forward-looking;
+4. de-duplicates the same event arriving from several calendars, then keeps
+   only a light reminder (id, type, title, date, and any start/end time).
+   People, locations, descriptions, and links are dropped.
 
 Feeds cannot be filtered server-side by date range, so the whole calendar is
 fetched and only a rolling window (`historyDays` back, `horizonDays` forward)

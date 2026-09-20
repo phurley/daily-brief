@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Nightly Daily Brief calendar refresh.
+
+  Collects the family/robotics ICS feeds into calendar.json, then commits and
+  pushes it when it changed. Feed URLs live in the git-ignored calendars.json.
+
+  Install:
+    cp scripts/launchd/com.dailybrief.calendar.plist ~/Library/LaunchAgents/
+    launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.dailybrief.calendar.plist
+
+  Edit the /Users/phurley/daily-brief paths below if this checkout lives
+  somewhere else. launchd (not cron) is used because cron does not fire while
+  the Mac is asleep and launchd coalesces missed runs on wake.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.dailybrief.calendar</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/phurley/daily-brief/scripts/run_calendar.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/phurley/daily-brief</string>
+
+    <!-- Once a night at 03:30 local time. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>3</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/phurley/daily-brief/data-collect/launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/phurley/daily-brief/data-collect/launchd.log</string>
+</dict>
+</plist>

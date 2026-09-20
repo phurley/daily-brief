@@ -10,6 +10,10 @@ without authentication, so no OAuth or CalDAV client is needed.
 The script is intentionally dependency-free (stdlib only) so it can run from
 cron or a GitHub Actions job with just ``python3``.
 
+Only a light reminder is published: each item keeps its id, type, title,
+date, and (for timed events) start/end time. People, locations, descriptions,
+and links from the feeds are never written to ``calendar.json``.
+
 What it does
 ------------
 1. Reads feed definitions from ``calendars.json`` (or the ``CALENDARS_JSON``
@@ -64,6 +68,10 @@ OPTIONAL_FIELDS = [
     "url",
     "recurrence",
 ]
+# Only these fields are published. Feeds can carry private details (people,
+# locations, descriptions, links); the brief only needs a light reminder, so
+# everything else is dropped before calendar.json is written.
+PUBLIC_FIELDS = ("id", "type", "title", "date", "startTime", "endTime")
 
 
 # --------------------------------------------------------------------------
@@ -548,53 +556,6 @@ def make_id(title: str, when: date, start_time: str | None, uid: str | None) -> 
     return base
 
 
-def clean_recurrence(rule: dict, dtstart: date) -> dict | None:
-    """Map an RRULE onto the schema's recurrence shape, or return None.
-
-    app.js expands recurrence as daily/interval, weekly + daysOfWeek, monthly
-    on the start day-of-month, and yearly on the start month/day. Anything
-    outside that subset is expanded server-side instead, because the schema
-    cannot represent it faithfully.
-    """
-    freq = rule.get("FREQ")
-    if freq not in ("DAILY", "WEEKLY", "MONTHLY", "YEARLY"):
-        return None
-    unsupported = {"BYSETPOS", "BYYEARDAY", "BYWEEKNO", "BYHOUR", "BYMINUTE", "BYSECOND", "WKST"}
-    if unsupported & set(rule):
-        return None
-
-    recurrence: dict = {"frequency": freq.lower()}
-    interval = int(rule.get("INTERVAL", "1") or 1)
-    if interval > 1:
-        recurrence["interval"] = interval
-
-    if freq == "WEEKLY":
-        if rule.get("BYMONTHDAY") or rule.get("BYMONTH"):
-            return None
-        if rule.get("BYDAY"):
-            days = [code for _ordinal, code in _parse_byday(rule["BYDAY"])]
-            if not days:
-                return None
-            recurrence["daysOfWeek"] = sorted(set(days), key=WEEKDAY_CODES.index)
-    elif freq == "MONTHLY":
-        if rule.get("BYDAY") or rule.get("BYMONTH"):
-            return None
-        if rule.get("BYMONTHDAY"):
-            if [int(x) for x in rule["BYMONTHDAY"].split(",")] != [dtstart.day]:
-                return None
-    elif freq == "YEARLY":
-        if rule.get("BYDAY"):
-            return None
-        if rule.get("BYMONTHDAY") and [int(x) for x in rule["BYMONTHDAY"].split(",")] != [dtstart.day]:
-            return None
-        if rule.get("BYMONTH") and [int(x) for x in rule["BYMONTH"].split(",")] != [dtstart.month]:
-            return None
-    elif freq == "DAILY":
-        if rule.get("BYDAY") or rule.get("BYMONTHDAY") or rule.get("BYMONTH"):
-            return None
-    return recurrence
-
-
 def compose_item(
     title: str,
     item_type: str,
@@ -689,40 +650,9 @@ def build_items(components: list[dict], source: dict, tz: ZoneInfo, window_start
         if end_dt and not all_day and end_dt.date() == dtstart_value.date() and end_dt > dtstart_value:
             base_end = end_dt.strftime("%H:%M")
 
-        # A recurring series with no exceptions/deviations can be stored once
-        # and expanded by app.js, which keeps calendar.json small.
-        recurrence = None
-        if rule and not exdates and not rdates and rule.get("FREQ") in ("DAILY", "WEEKLY", "MONTHLY", "YEARLY"):
-            recurrence = clean_recurrence(rule, dtstart_value.date())
-            if recurrence is not None:
-                until_date = None
-                if rule.get("UNTIL"):
-                    until_date = _parse_until(rule["UNTIL"], tz).date()
-                elif rule.get("COUNT"):
-                    limit = int(rule["COUNT"])
-                    found = None
-                    for index, occurrence_date in enumerate(_occurrence_dates(dtstart_value.date(), rule), start=1):
-                        found = occurrence_date
-                        if index >= limit:
-                            break
-                    if found is None:
-                        recurrence = None
-                    else:
-                        until_date = found
-                if recurrence is not None:
-                    if (until_date and until_date < window_start) or dtstart_value.date() > window_end:
-                        recurrence = None
-                    else:
-                        if until_date:
-                            recurrence["until"] = until_date.isoformat()
-                        item = compose_item(
-                            title, item_type, dtstart_value.date(), base_start, base_end,
-                            status, person, location, description, link, uid,
-                        )
-                        item["recurrence"] = recurrence
-                        items.append(item)
-                        continue
-
+        # Recurrences are expanded into concrete occurrences inside the window so
+        # the published data is always forward-looking (birthdays reappear each
+        # year, monthly tasks show every instance, etc.).
         for occurrence in expand_occurrences(dtstart_value, rule, exdates, rdates, window_start, window_end):
             start_time = None if all_day else occurrence.strftime("%H:%M")
             end_time = None
@@ -825,7 +755,7 @@ def main() -> int:
     tz_name = config.get("timeZone", "America/Detroit")
     tz = ZoneInfo(tz_name)
     today = datetime.now(tz).date()
-    window_start = today - timedelta(days=int(config.get("historyDays", 14)))
+    window_start = today - timedelta(days=int(config.get("historyDays", 7)))
     window_end = today + timedelta(days=int(config.get("horizonDays", 550)))
 
     all_items: list[dict] = []
@@ -851,6 +781,8 @@ def main() -> int:
     unique_ids(items)
     for item in items:
         item.pop("_uid", None)
+        for key in [key for key in item if key not in PUBLIC_FIELDS]:
+            item.pop(key)
 
     document = {
         "schemaVersion": "1.0.0",
