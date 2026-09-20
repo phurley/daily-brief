@@ -36,11 +36,13 @@ from pathlib import Path
 from typing import Any, Optional
 
 from . import dates, enrich, jev, llm, prompts, router, scoring
+from .funnel import slugify
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_PROCESSED = SCRIPT_DIR / "processed"
 DEFAULT_OUT = SCRIPT_DIR / "processed" / "extracted_records.jsonl"
 DEFAULT_INDEX = SCRIPT_DIR / "processed" / "extraction_index.jsonl"
+DEFAULT_SOURCE_FILE = SCRIPT_DIR / "source.json"
 
 #: Bump when prompts, routing or extraction logic change meaningfully; doing so
 #: re-extracts every candidate once (fingerprints include the version).
@@ -56,6 +58,21 @@ _NULLISH = {"", "null", "none", "n/a", "unknown", "not specified"}
 # --------------------------------------------------------------------------- #
 # Loading + incremental state
 # --------------------------------------------------------------------------- #
+
+def load_enrich_hints(source_file: Path) -> dict[str, str]:
+    """slug -> manual ``enrich_strategy`` hint from the source catalog."""
+    hints: dict[str, str] = {}
+    try:
+        catalog = json.loads(source_file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return hints
+    for source in catalog.get("sources", []):
+        if isinstance(source, dict) and source.get("name"):
+            mode = source.get("enrich_strategy")
+            if isinstance(mode, str) and mode in ("auto", "jsonld", "ical", "llm", "url_date", "none"):
+                hints[slugify(str(source["name"]))] = mode
+    return hints
+
 
 def load_candidates(processed: Path) -> list[dict[str, Any]]:
     items: list[dict[str, Any]] = []
@@ -263,7 +280,8 @@ def finalize(record: dict[str, Any], origin: dict[str, Any]) -> Optional[dict[st
 
 def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         model: Optional[str], enrich_events: bool = True,
-        enrich_limit: int = 200) -> tuple[list[dict[str, Any]], dict[str, int],
+        enrich_limit: int = 200,
+        enrich_hints: Optional[dict[str, str]] = None) -> tuple[list[dict[str, Any]], dict[str, int],
                                           list[tuple[dict[str, Any], str]]]:
     """Triage + extract ``items``; return (records, stats, processed).
 
@@ -298,6 +316,8 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
     chat = llm.make_chat_client(model) if accepted else None
     enrich_lock = threading.Lock()
     enrich_state = {"used": 0, "ok": 0}
+    hints = enrich_hints or {}
+    learned = enrich.learned_strategies()
 
     def extract_one(pair: tuple[dict[str, Any], jev.Triage]) -> dict[str, Any]:
         rec, tri = pair
@@ -329,7 +349,11 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                     if not allowed:
                         break
                     before = sum(1 for f in ("start", "venue", "city") if r.get(f))
-                    enrich.enrich_event(r, chat, detail_links=links)
+                    slug = rec.get("source_slug") or ""
+                    enrich.enrich_event(
+                        r, chat, detail_links=links,
+                        strategy=hints.get(slug) or learned.get(slug) or "auto",
+                        source_slug=slug)
                     if sum(1 for f in ("start", "venue", "city") if r.get(f)) > before:
                         with enrich_lock:
                             enrich_state["ok"] += 1
@@ -365,6 +389,8 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
 
 def main(argv: Optional[list[str]] = None) -> int:
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--source-file", type=Path, default=DEFAULT_SOURCE_FILE,
+                   help="source catalog for per-source detail_parse hints")
     p.add_argument("--processed", type=Path, default=DEFAULT_PROCESSED)
     p.add_argument("--out", type=Path, default=DEFAULT_OUT,
                    help="cumulative record store (merged, pruned)")
@@ -420,7 +446,8 @@ def main(argv: Optional[list[str]] = None) -> int:
     records, stats, processed = run(selected, workers=opts.workers,
                                     extract_limit=opts.extract_limit,
                                     model=opts.model, enrich_events=opts.enrich_events,
-                                    enrich_limit=opts.enrich_limit)
+                                    enrich_limit=opts.enrich_limit,
+                                    enrich_hints=load_enrich_hints(opts.source_file))
 
     # Merge into the cumulative store (newest wins by id), then prune by age.
     by_id = {r.get("id"): r for r in store if r.get("id")}

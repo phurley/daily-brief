@@ -14,8 +14,10 @@ from __future__ import annotations
 import html
 import json
 import re
+import threading
 import urllib.request
 from datetime import datetime, time, timezone
+from pathlib import Path
 from typing import Any, Optional
 
 from . import dates, llm
@@ -135,71 +137,275 @@ def date_from_url(url: str) -> Optional[str]:
     return None
 
 
-def fetch_text(url: str, timeout: float = 20.0, limit: int = 12000) -> str:
+def fetch_html(url: str, timeout: float = 20.0, limit: int = 400_000) -> str:
+    """Fetch a page's raw HTML (bounded); callers derive text/JSON-LD from it."""
     try:
         request = urllib.request.Request(url, headers=_HEADERS)
         with urllib.request.urlopen(request, timeout=timeout) as response:
-            raw = response.read(400_000).decode("utf-8", "replace")
+            return response.read(limit).decode("utf-8", "replace")
     except Exception:
         return ""
+
+
+def _html_to_text(raw: str, limit: int = 12000) -> str:
     raw = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", raw, flags=re.S | re.I)
     text = html.unescape(re.sub(r"<[^>]+>", " ", raw))
     return re.sub(r"\s+", " ", text).strip()[:limit]
 
 
-def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
-                  detail_links: Optional[list[str]] = None) -> dict[str, Any]:
-    """Fill missing event fields, preferring richer sources.
+def fetch_text(url: str, timeout: float = 20.0, limit: int = 12000) -> str:
+    return _html_to_text(fetch_html(url, timeout=timeout), limit=limit)
 
-    Order of attack:
-    1. a date embedded in the URL;
-    2. an ical feed among ``detail_links`` (deterministic DTSTART parse, no LLM);
-    3. the richest linked page (ticketing / FB-event / event site) for the
-       touch-up model — the article page often lacks the details while the
-       linked event page has them;
-    4. the record's own page.
+
+_JSONLD_BLOCK_RE = re.compile(
+    r"<script[^>]*application/ld\+json[^>]*>(.*?)</script>", re.S | re.I
+)
+
+
+def _venue_city_from_place(place: Any) -> tuple[str, str]:
+    """(venue, city) from one schema.org Place / string."""
+    if isinstance(place, str):
+        city = re.search(r"([A-Za-z .]+),\s*[A-Z]{2}\b", place)
+        return place.strip(), (city.group(1).strip() if city else "")
+    if isinstance(place, dict):
+        name = str(place.get("name") or "").strip()
+        addr = place.get("address")
+        if isinstance(addr, dict):
+            return name, str(addr.get("addressLocality") or "").strip()
+        if isinstance(addr, str):
+            city = re.search(r"([A-Za-z .]+),\s*[A-Z]{2}\b", addr)
+            return name, (city.group(1).strip() if city else "")
+        return name, ""
+    return "", ""
+
+
+def _jsonld_venue_city(location: Any) -> tuple[str, str]:
+    """(venue, city) from a schema.org location (string/Place/list).
+
+    Lists may mix ``VirtualLocation`` (a link, no name) with the actual
+    ``Place`` — prefer entries that carry a name.
     """
-    links = [u for u in (detail_links or []) if isinstance(u, str) and u.startswith("http")]
-    missing = [f for f in ("start", "venue", "city", "category") if not record.get(f)]
-    if not missing:
+    if isinstance(location, list):
+        named = [item for item in location
+                 if isinstance(item, dict) and item.get("name")]
+        if named:
+            return _venue_city_from_place(named[0])
+        return _venue_city_from_place(location[0]) if location else ("", "")
+    return _venue_city_from_place(location)
+
+
+def _jsonld_event_fields(raw_html: str) -> dict[str, Any]:
+    """Deterministic event fields from JSON-LD ``Event`` blocks in a page.
+
+    Detail pages that carry schema.org Event markup (ticketing sites, venue
+    calendars, university event systems) state exactly the fields whose
+    absence fails extraction — parsed here with no LLM call.
+    """
+    for match in _JSONLD_BLOCK_RE.finditer(raw_html):
+        try:
+            data = json.loads(match.group(1).strip())
+        except Exception:  # noqa: BLE001 - tolerate malformed JSON-LD
+            continue
+        objs: list[Any] = list(data) if isinstance(data, list) else [data]
+        graph: list[Any] = []
+        for obj in objs:
+            if isinstance(obj, dict) and isinstance(obj.get("@graph"), list):
+                graph.extend(obj["@graph"])
+            else:
+                graph.append(obj)
+        for obj in graph:
+            if not isinstance(obj, dict):
+                continue
+            types = obj.get("@type")
+            types = types if isinstance(types, list) else [types]
+            if "Event" not in {str(t) for t in types}:
+                continue
+            start = obj.get("startDate")
+            if not start:
+                continue
+            venue, city = _jsonld_venue_city(obj.get("location"))
+            image = obj.get("image")
+            if isinstance(image, list):
+                image = image[0] if image else None
+            return {
+                "start": str(start),
+                "end": str(obj.get("endDate") or "") or None,
+                "venue": venue or None,
+                "city": city or None,
+                "url": (str(obj.get("url") or "").strip() or None),
+                "imageUrl": (str(image).strip() if image else None),
+            }
+    return {}
+
+
+# --------------------------------------------------------------------------- #
+# Per-source best-strategy cache
+# --------------------------------------------------------------------------- #
+
+#: Learned ``{slug: {"strategy": ..., "learned": ...}}``. The first time a
+#: source's events enrich successfully, the step that filled the fields is
+#: recorded and tried first from then on (the "fresh explore", learned from
+#: real outcomes rather than a dedicated probe). Manual per-source hints in
+#: ``source.json`` (``enrich_strategy``) always win.
+_STRATEGIES_PATH = Path(__file__).resolve().parent.parent / "processed" / "enrich_strategies.json"
+_STRATEGIES_LOCK = threading.Lock()
+
+
+def learned_strategies() -> dict[str, str]:
+    try:
+        data = json.loads(_STRATEGIES_PATH.read_text(encoding="utf-8"))
+        return {slug: entry.get("strategy") for slug, entry in data.items()
+                if isinstance(entry, dict)}
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def _learn_strategy(slug: str, strategy: str) -> None:
+    if not slug:
+        return
+    try:
+        with _STRATEGIES_LOCK:
+            try:
+                data = json.loads(_STRATEGIES_PATH.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                data = {}
+            data[slug] = {"strategy": strategy,
+                          "learned": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+            _STRATEGIES_PATH.parent.mkdir(parents=True, exist_ok=True)
+            _STRATEGIES_PATH.write_text(json.dumps(data, indent=1), encoding="utf-8")
+    except OSError:
+        pass
+
+
+def _step_order(strategy: str) -> list[str]:
+    """Enrichment steps to try, preferred strategy first, rest as fallback.
+
+    The auto order puts the rich deterministic parses (ical feeds, JSON-LD
+    Event markup) before the URL-date guess — a date-only guess preempts a
+    fetch that could also fill venue/city/end."""
+    auto = ["links_ical", "jsonld", "page_ical", "url_date", "llm"]
+    preferred = {
+        "ical": ["links_ical", "page_ical"],
+        "jsonld": ["jsonld"],
+        "llm": ["llm"],
+        "url_date": ["url_date"],
+    }.get(strategy)
+    if not preferred:
+        return auto
+    return preferred + [step for step in auto if step not in preferred]
+
+
+def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
+                  detail_links: Optional[list[str]] = None,
+                  strategy: str = "auto",
+                  source_slug: Optional[str] = None) -> dict[str, Any]:
+    """Fill missing event fields, trying the source's best strategy first.
+
+    Steps, in fallback order: an ical feed among ``detail_links`` (no LLM), a
+    date embedded in the URL, then the richest fetchable page (ticketing /
+    FB-event / event site, else the record's own page) parsed as — JSON-LD
+    ``Event`` markup (no LLM), an ical link inside the page (no LLM), the
+    touch-up model.
+
+    ``strategy`` names the step to try first (learned per source, or the
+    manual ``enrich_strategy`` hint); everything else remains a fallback, so a
+    page-shape change self-heals. ``"none"`` skips enrichment entirely.
+    """
+    if strategy == "none":
         return record
-    if "start" in missing:
-        for url in links:
-            times = _ical_times(url)
-            if times[0]:
-                record["start"] = times[0]
-                if times[1] and not record.get("end"):
-                    record["end"] = times[1]
-                missing.remove("start")
+    steps = _step_order(strategy)
+    links = [u for u in (detail_links or []) if isinstance(u, str) and u.startswith("http")]
+
+    def missing() -> list[str]:
+        return [f for f in ("start", "venue", "city", "category") if not record.get(f)]
+
+    if not missing():
+        return record
+    filled_by: Optional[str] = None
+    fetched = False
+
+    def page_steps(raw: str) -> bool:
+        """Run the fetch-page steps on one page; True when the record is complete."""
+        nonlocal filled_by
+        if "jsonld" in steps:
+            fields = _jsonld_event_fields(raw)
+            if fields.get("start"):
+                for key in ("start", "end", "venue", "city", "url", "imageUrl"):
+                    if fields.get(key) and not record.get(key):
+                        record[key] = fields[key]
+                filled_by = filled_by or "jsonld"
+                if not missing():
+                    return True
+        if "page_ical" in steps and "start" in missing():
+            for ical_url in _ICAL_URL_RE.findall(raw)[:2]:
+                start, end = _ical_times(ical_url)
+                if start:
+                    record["start"] = start
+                    if end and not record.get("end"):
+                        record["end"] = end
+                    filled_by = filled_by or "ical"
+                    break
+        if "llm" in steps and chat is not None and missing():
+            text = _html_to_text(raw)
+            if not text:
+                return False
+            user = (
+                f"EVENT: {record.get('title')}\n"
+                f"Missing fields: {', '.join(missing())}\n\n"
+                f"PAGE TEXT:\n{text}"
+            )
+            try:
+                data = chat.complete_json(
+                    [{"role": "system", "content": _SYSTEM}, {"role": "user", "content": user}],
+                    TOUCHUP_SCHEMA, schema_name="event_touchup",
+                )
+            except llm.LLMError:
+                return False
+            for field in _FIELDS:
+                value = data.get(field)
+                if isinstance(value, str) and value.strip().lower() not in ("", "null", "none", "n/a"):
+                    record.setdefault(field, value.strip())
+            if not missing():
+                filled_by = filled_by or "llm"
+                return True
+        return False
+
+    # ical feeds among the candidate's own links (deterministic, no fetch).
+    if "links_ical" in steps and "start" in missing():
+        for url in [u for u in links if _is_ical_url(u)]:
+            start, end = _ical_times(url)
+            if start:
+                record["start"] = start
+                if end and not record.get("end"):
+                    record["end"] = end
+                filled_by = "ical"
                 break
-    if "start" in missing:
+
+    # fetch the richest page available and parse it (rich deterministic parses
+    # first; the URL-date guess comes after so it cannot preempt them).
+    if missing():
+        for url in [u for u in links if not _is_ical_url(u)] + [record.get("url") or ""]:
+            if not url:
+                continue
+            raw = fetch_html(url)
+            if not raw:
+                continue
+            fetched = True
+            if page_steps(raw):
+                break
+
+    # a date embedded in the URL (weakest signal: start only, no time/venue).
+    if "url_date" in steps and "start" in missing():
         guess = date_from_url(record.get("url") or "")
         if guess:
             record["start"] = guess
-            missing.remove("start")
-    if not missing:
-        return record
-    text = ""
-    for url in [u for u in links if not _is_ical_url(u)] + [record.get("url") or ""]:
-        text = fetch_text(url)
-        if text:
-            break
-    if not text:
-        return record
-    user = (
-        f"EVENT: {record.get('title')}\n"
-        f"Missing fields: {', '.join(missing)}\n\n"
-        f"PAGE TEXT:\n{text}"
-    )
-    try:
-        data = chat.complete_json(
-            [{"role": "system", "content": _SYSTEM}, {"role": "user", "content": user}],
-            TOUCHUP_SCHEMA, schema_name="event_touchup",
-        )
-    except llm.LLMError:
-        return record
-    for field in _FIELDS:
-        value = data.get(field)
-        if isinstance(value, str) and value.strip().lower() not in ("", "null", "none", "n/a"):
-            record.setdefault(field, value.strip())
+            if not filled_by:
+                filled_by = "url_date"
+
+    # Learn what worked (or that nothing does) for this source.
+    if source_slug:
+        if filled_by:
+            _learn_strategy(source_slug, filled_by)
+        elif fetched:
+            _learn_strategy(source_slug, "none")
     return record

@@ -128,6 +128,13 @@
           "title": "Max Pages",
           "description": "Optional per-source override of the global --max-pages page budget (useful for bounding pathologically slow or paywalled sources).",
           "minimum": 1
+        },
+        "enrich_strategy": {
+          "type": "string",
+          "title": "Best Enrich Strategy",
+          "description": "Hint for the best event-enrichment strategy for this source. 'auto' (default) learns per source: the first strategy that fills missing fields is cached under processed/enrich_strategies.json and tried first thereafter (JSON-LD Event markup, an ical feed, the URL-embedded date, or the touch-up model), with the full chain as fallback so page-shape changes self-heal. Set 'jsonld', 'ical', 'llm', or 'url_date' to try that strategy first; 'none' disables detail fetches for sources whose pages are dead ends (forms, third-party landing pages).",
+          "enum": ["auto", "jsonld", "ical", "llm", "url_date", "none"],
+          "default": "auto"
         }
       }
     }

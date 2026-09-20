@@ -267,8 +267,9 @@ data-collect/
     prompts.py             event/news × single/array prompts + JSON schemas
     llm.py                 OpenRouter chat client (structured outputs)
     extraction.py          stage 7 runner (triage → route → extract)
-    enrich.py              bounded event fallback (URL date / ical parse /
-                          richer linked pages / fetch + touchup)
+    enrich.py              bounded event fallback; best strategy learned per
+                          source (ical / JSON-LD Event parse / URL date /
+                          touch-up model), cached in enrich_strategies.json
     scoring.py             event score 0–100 from triage Noul answers
     pipeline.py            incremental triage→extract→store (stages 4–9)
     publish.py             stage 8/9: validate → events.json / news.json
