@@ -189,6 +189,34 @@ _IS_LISTICLE_FIELD = {
     "true": "A listicle article (curated list, items too thin to extract)",
     "false": "Not a listicle (single story/event, or a detailed listing)",
 }
+#: Lottery/lotto entries (draw results, winning numbers, jackpot totals) are
+#: dropped at the gate: they name no attendable happening and are filler for a
+#: local brief. A raffle or prize giveaway tied to a specific event is NOT a
+#: lottery entry.
+_IS_LOTTERY_FIELD = {
+    "type": "bool",
+    "question": (
+        "Is this chunk about a lottery or lotto \u2014 draw results, winning "
+        "numbers, jackpot amounts, or how/where to play? (A raffle or prize "
+        "giveaway tied to a specific event is NOT a lottery entry.)"
+    ),
+    "true": "A lottery/lotto entry, draw, or result",
+    "false": "Not lottery/lotto related",
+}
+#: Sports coverage (scores, fixtures, standings, team/player news, broadcast
+#: schedules) is dropped at the gate. A non-sport community event that merely
+#: happens at a sports venue is NOT sports coverage.
+_IS_SPORTS_FIELD = {
+    "type": "bool",
+    "question": (
+        "Is this chunk primarily about sports \u2014 a game, match, or "
+        "competition, a team or player, scores, standings, fixtures, or sports "
+        "broadcast coverage? (A non-sport community event held at a sports "
+        "venue, or a listing that merely includes a game, is NOT sports coverage.)"
+    ),
+    "true": "Sports event, team, or sports coverage",
+    "false": "Not about sports",
+}
 #: Journalism about an event (preview/review/feature) rather than the event
 #: listing itself. Paired with ``_DETAILS_MISSING_FIELD`` this diverts
 #: articles to news extraction instead of producing invalid event records.
@@ -268,6 +296,8 @@ TRIAGE: dict[str, Any] = {
         "kind": CANDIDATE_GATE["fields"]["kind"],
         "is_list": _IS_LIST_FIELD,
         "is_listicle": _IS_LISTICLE_FIELD,
+        "is_lottery": _IS_LOTTERY_FIELD,
+        "is_sports": _IS_SPORTS_FIELD,
         "is_article_about_event": _ARTICLE_ABOUT_EVENT_FIELD,
         "details_missing": _DETAILS_MISSING_FIELD,
         "is_single_event": _IS_SINGLE_EVENT_FIELD,
@@ -302,6 +332,13 @@ SKIP_KINDS = {"nav", "other"}
 #: precision 1.00 at conf >= 0.60 with zero good candidates dropped.
 LISTICLE_DROP_CONFIDENCE = 0.60
 
+#: Lottery/lotto and sports coverage are dropped at the gate too. Both are
+#: confident-only drops (an uncertain call keeps the candidate) and both need
+#: a labeled round before their thresholds can be tuned; 0.60 matches the
+#: listicle rule until then.
+LOTTERY_DROP_CONFIDENCE = 0.60
+SPORTS_DROP_CONFIDENCE = 0.60
+
 #: Route threshold for the article-about-event divert (see ``extract/router``).
 #: Gate-lab: diverts 11% of re-work to news with 0/99 clean events lost.
 ARTICLE_ROUTE_CONFIDENCE = 0.60
@@ -320,13 +357,42 @@ _LISTICLE_HEAD_RE = re.compile(
 )
 
 
-def _looks_like_listicle(state: str) -> bool:
-    """Cheap listicle guess from the head of a chunk state (stub only)."""
+def _chunk_head(state: str, limit: int = 600) -> str:
+    """Return the candidate's own text from a chunk state, for stub heuristics."""
     try:
         text = state.split("CHUNK:", 1)[1]
     except IndexError:
         text = state
-    return bool(_LISTICLE_HEAD_RE.match(text.strip()[:120]))
+    return text[:limit]
+
+
+def _looks_like_listicle(state: str) -> bool:
+    """Cheap listicle guess from the head of a chunk state (stub only)."""
+    return bool(_LISTICLE_HEAD_RE.match(_chunk_head(state, 120).strip()))
+
+
+#: Mechanical lottery/sports guesses used by the offline stub only; the Jev
+#: questions are the real detectors.
+_LOTTERY_RE = re.compile(
+    r"\b(?:lottery|lotto|powerball|mega\s?millions|jackpot|"
+    r"winning\s+numbers?|draw\s+results?)\b",
+    re.IGNORECASE,
+)
+_SPORTS_RE = re.compile(
+    r"\b(?:sports?|football|basketball|baseball|softball|soccer|hockey|"
+    r"volleyball|wrestling|lacrosse|golf|tennis|track\s+and\s+field|"
+    r"cross[- ]country|varsity|playoffs?|standings|box\s+score|"
+    r"vs\.?|athletics?|touchdowns?|home\s+run)\b",
+    re.IGNORECASE,
+)
+
+
+def _looks_like_lottery(state: str) -> bool:
+    return bool(_LOTTERY_RE.search(_chunk_head(state)))
+
+
+def _looks_like_sports(state: str) -> bool:
+    return bool(_SPORTS_RE.search(_chunk_head(state)))
 
 
 # --------------------------------------------------------------------------- #
@@ -714,6 +780,14 @@ class StubJevClient:
                 "value": _looks_like_listicle(state),
                 "confidence": 0.8,
             },
+            "is_lottery": {
+                "value": _looks_like_lottery(state),
+                "confidence": 0.8,
+            },
+            "is_sports": {
+                "value": _looks_like_sports(state),
+                "confidence": 0.8,
+            },
             "dated": {"value": has_date, "confidence": conf if has_date else 0.6},
             "timeframe": {
                 "value": "future" if has_date else "undated",
@@ -755,6 +829,10 @@ class Triage:
     kind: str
     confidence: float         # confidence over is_content
     is_listicle: bool = False
+    is_lottery: bool = False
+    lottery_conf: float = 0.0
+    is_sports: bool = False
+    sports_conf: float = 0.0
     is_article_about_event: bool = False
     article_conf: float = 0.0
     details_missing: bool = False
@@ -786,6 +864,18 @@ def triage_from_raw(
         and listicle_field.value
         and listicle_field.confidence >= LISTICLE_DROP_CONFIDENCE
     )
+    lottery_field = d.fields.get("is_lottery")
+    lottery_drop = bool(
+        lottery_field
+        and lottery_field.value
+        and lottery_field.confidence >= LOTTERY_DROP_CONFIDENCE
+    )
+    sports_field = d.fields.get("is_sports")
+    sports_drop = bool(
+        sports_field
+        and sports_field.value
+        and sports_field.confidence >= SPORTS_DROP_CONFIDENCE
+    )
     accepted = (
         content_conf >= accept_confidence
         and is_content
@@ -793,6 +883,8 @@ def triage_from_raw(
         and relevance >= relevance_floor
         and item_count != "0"
         and not listicle_drop
+        and not lottery_drop
+        and not sports_drop
     )
     return Triage(
         chunk_id=chunk_id,
@@ -804,6 +896,10 @@ def triage_from_raw(
         kind=kind,
         confidence=content_conf,
         is_listicle=is_listicle,
+        is_lottery=bool((d.fields.get("is_lottery") or _NO_FIELD).value),
+        lottery_conf=(d.fields.get("is_lottery") or _NO_FIELD).confidence,
+        is_sports=bool((d.fields.get("is_sports") or _NO_FIELD).value),
+        sports_conf=(d.fields.get("is_sports") or _NO_FIELD).confidence,
         is_article_about_event=bool(
             (d.fields.get("is_article_about_event") or _NO_FIELD).value
         ),

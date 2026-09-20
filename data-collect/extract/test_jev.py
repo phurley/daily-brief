@@ -145,6 +145,60 @@ class JevInterfaceTest(unittest.TestCase):
         result = jev.gate_chunks([record], client)
         self.assertEqual(len(result.accepted), 1)
 
+    @staticmethod
+    def _raw(**flags):
+        raw = {
+            "is_content": {"value": True, "confidence": 0.9},
+            "kind": {"value": "news", "confidence": 0.9},
+            "relevance": {"value": 3, "confidence": 0.9},
+            "item_count": {"value": "1", "confidence": 0.9},
+        }
+        raw.update(flags)
+        return raw
+
+    def test_lottery_and_sports_drop_at_high_confidence(self):
+        self.assertTrue(jev.triage_from_raw("ok", self._raw()).accepted)
+
+        lotto = jev.triage_from_raw(
+            "lotto", self._raw(is_lottery={"value": True, "confidence": 0.9})
+        )
+        self.assertTrue(lotto.is_lottery)
+        self.assertFalse(lotto.accepted)
+
+        sports = jev.triage_from_raw(
+            "sports", self._raw(is_sports={"value": True, "confidence": 0.9})
+        )
+        self.assertTrue(sports.is_sports)
+        self.assertFalse(sports.accepted)
+
+    def test_lottery_and_sports_need_confidence(self):
+        # An uncertain flag must not drop the candidate.
+        tri = jev.triage_from_raw(
+            "maybe",
+            self._raw(
+                is_lottery={"value": True, "confidence": 0.2},
+                is_sports={"value": True, "confidence": 0.3},
+            ),
+        )
+        self.assertTrue(tri.accepted)
+
+    def test_stub_detects_lottery_and_sports(self):
+        client = jev.StubJevClient()
+
+        def raw(text):
+            rec = {
+                "chunk_id": "x",
+                "url_class": "news",
+                "signals": {"has_date": False, "event_terms": [], "news_terms": ["a", "b"]},
+                "text": text,
+            }
+            return client.decide(jev.TRIAGE, jev.chunk_state(rec))
+
+        self.assertTrue(raw("Powerball winning numbers for Wednesday.")["is_lottery"]["value"])
+        self.assertTrue(raw("Michigan football beats Ohio State; final score.")["is_sports"]["value"])
+        self.assertFalse(raw("City council meets Sept 30.")["is_lottery"]["value"])
+        self.assertFalse(raw("City council meets Sept 30.")["is_sports"]["value"])
+
     def test_record_text_handles_feed_records(self):
         # Feed items have no `text` key; the state must not be empty.
         feed = {

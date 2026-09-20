@@ -186,7 +186,7 @@ flowchart TD
     SORT --> CAP{"within --max-items?"}
     CAP -->|no| DEFER["leave un-fingerprinted, retry next run"]
     CAP -->|yes| JEVCALL["Jev TRIAGE (one call)<br/>is_content · kind · item_count · attend_on_date<br/>relevance · event-score Nouls"]
-    JEVCALL --> ACCEPT{"accepted?<br/>conf ≥ 0.5 · is_content · relevance ≥ 2<br/>kind not nav/other · item_count ≠ 0"}
+    JEVCALL --> ACCEPT{"accepted?<br/>conf ≥ 0.5 · is_content · relevance ≥ 2<br/>kind not nav/other · item_count ≠ 0<br/>not listicle/lottery/sports (conf ≥ 0.6)"}
     ACCEPT -->|no| REJECT["record as rejected in index"]
     ACCEPT -->|yes, within --extract-limit| ROUTE["router.route<br/>count × attend → event/news × single/array"]
     ACCEPT -->|beyond limit| DEFER
@@ -210,6 +210,9 @@ Design rules:
   run cheap: steady-state cost is only newly-crawled candidates.
 - **Event scoring rides along in the triage call** (nine positive / four
   negative Nouls → `extract/scoring.py`, 0–100, neutral = 50).
+- **Content-class drops ride along too**: `is_listicle`, `is_lottery`, and
+  `is_sports` are confident-only drops (conf ≥ 0.60) applied before routing, so
+  listicles, lotto results, and sports coverage never reach generation.
 - **Enrichment is bounded** (`--enrich-limit`, default 200) and best-effort;
   failures leave the record for publish to drop.
 - Accepted candidates beyond `--extract-limit` are left un-fingerprinted on

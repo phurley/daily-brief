@@ -122,7 +122,11 @@ fallbacks; `extract/feeds.py` still routes `feed_kind == "raw"` through
   conf >= 0.60; precision 1.00, zero good candidates dropped) and
   `is_article_about_event` + `details_missing` (router diverts journalism-
   about-an-event to news extraction; 11% of re-work fixed, 0/99 clean events
-  lost). Aggressive drop rules (roundup / low-value-filler phrasings) all
+  lost). Two further confident-only drops ride along in `TRIAGE`:
+  `is_lottery` (lotto draws/winning numbers/jackpots) and `is_sports` (games,
+  teams, scores, standings, fixtures), both at conf >= 0.60. Unlike
+  `is_listicle`, these have not been calibrated on a labeled round yet.
+  Aggressive drop rules (roundup / low-value-filler phrasings) all
   traded real events for re-work reduction and were rejected.
 - **Extraction (7): done (first pass)** — `extract/prompts.py` (event/news ×
   single/array JSON schemas + prompts), `extract/llm.py` (OpenRouter chat,

@@ -143,7 +143,7 @@ what catches a Canton-labelled Patch feed returning Illinois/Georgia items.
 crawled pages and each feed item gains `article_crawled` / `article_page_index`,
 so enrichment can reuse a page instead of fetching it.
 
-### 4. Recency filter (mechanical)
+### 4a. Recency filter (mechanical)
 A two-tier filter drops stale dated records before the Jev gate:
 
 - **Known date** — a date found in content that probably marks a real event
@@ -164,7 +164,7 @@ This is the input contract for the Jev gate. Chunk `char_start`/`char_end` are
 offsets into the *cleaned* page text; `page_char_offset` gives the raw offset of
 that page's block within `content.md` for drill-down provenance.
 
-### 4. Candidate gate (Jev)
+### 4b. Candidate gate (Jev)
 One task per chunk, entirely enum/bool/number outputs:
 
 ```
@@ -173,12 +173,25 @@ kind         : enum[event, news, notice, agenda, listing, nav, other]
 dated        : bool
 timeframe    : enum[past, today, future, recurring, undated]
 relevance    : 0..4
+is_listicle  : bool
+is_lottery   : bool
+is_sports    : bool
 ```
 
 Use confidence to route:
 - high-confidence `nav`/`other` → drop;
+- **`is_listicle` → drop** at `LISTICLE_DROP_CONFIDENCE` (0.60);
+- **`is_lottery` → drop** (lottery/lotto draws, winning numbers, jackpots) at
+  `LOTTERY_DROP_CONFIDENCE` (0.60);
+- **`is_sports` → drop** (games, teams, scores, standings, fixtures) at
+  `SPORTS_DROP_CONFIDENCE` (0.60);
 - high-confidence `event`/`news`/`notice`/`agenda` → extraction queue;
 - low confidence → LLM triage tier (or review queue), never a guess.
+
+The three content-class drops are confident-only: an uncertain flag keeps the
+candidate. `is_listicle` was calibrated on gold round 2 (precision 1.00 at
+conf ≥ 0.60, zero good candidates dropped); `is_lottery`/`is_sports` use the
+same 0.60 floor until a labeled round tunes them.
 
 At $0.042/MTok this can run on every changed chunk on every run.
 

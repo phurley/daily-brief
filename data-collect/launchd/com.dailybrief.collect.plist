@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Hourly Daily Brief collection job.
+
+  Install (see README "Scheduled collection (hourly)"):
+    cp launchd/com.dailybrief.collect.plist ~/Library/LaunchAgents/
+    launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.dailybrief.collect.plist
+
+  Edit the three /Users/phurley/daily-brief/data-collect paths below if this
+  checkout lives somewhere else. launchd (not cron) is used because cron does
+  not fire while the Mac is asleep and launchd coalesces missed runs on wake.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.dailybrief.collect</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/phurley/daily-brief/data-collect/run_collect.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/phurley/daily-brief/data-collect</string>
+
+    <!-- Every hour. launchd coalesces missed runs after sleep/wake. -->
+    <key>StartInterval</key>
+    <integer>3600</integer>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/phurley/daily-brief/data-collect/launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/phurley/daily-brief/data-collect/launchd.log</string>
+</dict>
+</plist>

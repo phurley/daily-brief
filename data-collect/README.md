@@ -170,20 +170,36 @@ survive every mechanical tier.
 
 ## Scheduled collection (hourly)
 
-`run_collect.sh` runs the full two-step pipeline and publishes the result:
+`run_collect.sh` is the one entry point: it runs the full pipeline and publishes
+the result. It serializes runs (no overlap), keeps the Mac awake for the whole
+run, and appends timestamped output to `data-collect/cron.log`.
 
 1. `crawl_sources.py` — crawls only sources whose `frequency` is due.
 2. `python3 -m extract` → `python3 -m extract.pipeline` → `python3 -m extract.publish`
    — builds `events.json` / `news.json` at the repo root.
 3. Commits and pushes `events.json` / `news.json` when they changed.
 
-It serializes runs (no overlap), keeps the Mac awake for the whole run, and
-appends timestamped output to `data-collect/cron.log`.
+For individual stages or a manual run, see [Extraction](#extraction) below;
+`run_crawler.sh` runs only step 1.
 
-On this Mac it is installed as a `launchd` agent
-(`~/Library/LaunchAgents/com.dailybrief.collect.plist`, `StartInterval` 3600),
-because cron does **not** fire while the Mac is asleep and launchd coalesces
-missed runs on wake. `caffeinate` only prevents sleep *during* a run.
+### Configure the hourly job (launchd)
+
+A ready-to-install agent is tracked at
+[`launchd/com.dailybrief.collect.plist`](launchd/com.dailybrief.collect.plist)
+(`StartInterval` 3600). Edit its three `/Users/phurley/…` paths if the checkout
+lives elsewhere, then install:
+
+```sh
+cd data-collect
+cp launchd/com.dailybrief.collect.plist ~/Library/LaunchAgents/
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.dailybrief.collect.plist
+```
+
+`launchd` is used instead of cron because cron does **not** fire while the Mac
+is asleep and launchd coalesces missed runs on wake. `caffeinate` only prevents
+sleep *during* a run.
+
+Manage the job:
 
 ```sh
 launchctl print gui/$(id -u)/com.dailybrief.collect          # status
@@ -191,13 +207,35 @@ launchctl kickstart -k gui/$(id -u)/com.dailybrief.collect   # run now
 launchctl bootout gui/$(id -u)/com.dailybrief.collect        # stop hourly runs
 ```
 
+#### Cron alternative
+
+```cron
+0 * * * * /Users/phurley/daily-brief/data-collect/run_collect.sh
+```
+
+If cron gets `Operation not permitted`, grant `/usr/sbin/cron` Full Disk Access
+(System Settings → Privacy & Security → Full Disk Access).
+
+### What it commits and pushes
+
+Step 3 stages exactly `events.json` and `news.json` (repo root). When they
+changed it commits as `daily-brief bot <phurley@gmail.com>`, pulls
+`--rebase --autostash origin main`, and pushes; unchanged files mean nothing is
+committed. The checkout must therefore have a configured `origin` remote. To
+verify a run end to end without committing or pushing anything:
+
+```sh
+COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
+```
+
+### Run knobs and review
+
 - Cadence: hourly matches the shortest `frequency`; `4hours`/`daily`/`weekly`/
   `monthly` sources only run when due. With nothing due, step 1 exits
   immediately; the funnel still re-runs over the existing corpus.
-- Test without publishing: `COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2`.
 - Review: `.venv/bin/python crawl_sources.py --status` / `--errors`; `tail -f cron.log`.
 - Env knobs: `COLLECT_MAX_ITEMS` (2000), `COLLECT_EXTRACT_LIMIT` (800),
-  `COLLECT_CONCURRENCY` (8), `COLLECT_OUT_DIR`, `COLLECT_NO_PUSH`.
+  `COLLECT_CONCURRENCY` (8), `COLLECT_OUT_DIR` (repo root), `COLLECT_NO_PUSH`.
 - Incremental funnel: every triaged/extracted candidate is fingerprinted in
   `processed/extraction_index.jsonl` and never paid for again; records
   accumulate in `processed/extracted_records.jsonl`. `COLLECT_MAX_ITEMS` is a
@@ -206,10 +244,6 @@ launchctl bootout gui/$(id -u)/com.dailybrief.collect        # stop hourly runs
   first.
 - Extraction model: `OPENROUTER_EXTRACT_MODEL` (default `qwen/qwen3-32b`); the
   previously benchmarked `qwen/qwen-2.5-72b-instruct` was retired by OpenRouter.
-- cron alternative: `0 * * * * /Users/phurley/daily-brief/data-collect/run_collect.sh`.
-  If cron gets `Operation not permitted`, grant `/usr/sbin/cron` Full Disk Access.
-
-The crawler-only wrapper `run_crawler.sh` still exists for manual step-1 runs.
 
 ## Output layout
 
