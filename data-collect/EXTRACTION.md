@@ -118,9 +118,10 @@ network-free — it reads only the already-crawled markdown. It also handles
 **raw RSS/Atom XML**: some feed URLs are served as `text/html` (and crawled as
 pages), so the unrendered `<item>`/`<entry>` XML reaches `content.md`; the
 fallback parser recovers those items instead of chunking the XML as text.
-Found in round 2 on Bridge Michigan (see `gold/round2/FINDINGS.md`). Collector
-changes that would remove the need for a per-article second fetch are proposed
-in [`CRAWLER-RECOMMENDATIONS.md`](CRAWLER-RECOMMENDATIONS.md).
+Found in round 2 on Bridge Michigan (see the local round-2 gold report under
+`gold/round2/`). Collector changes that would remove the need for a per-article
+second fetch are implemented; see
+[`CRAWLER-RECOMMENDATIONS.md`](CRAWLER-RECOMMENDATIONS.md).
 
 **Dates are normalized.** `extract/dates.py` turns every absolute date found in
 a chunk into ISO-8601. Dates with an explicit offset keep it; **dates without a
@@ -379,9 +380,9 @@ Implemented, standard-library only:
   validation. Records carry `imageUrl`/`imageAlt` (events) and `photo`
   (stories), joined from the crawler's per-page image / feed image.
 - Event scoring rides along in the triage call (`extract/scoring.py`), 0–100
-  from nine positive / four negative Nouls; see `gold/round2/SCORING.md`. The
-  events schema is now a single un-capped `events` array
-  (`schemas/events.schema.json`, v2.0.0).
+  from nine positive / four negative Nouls; see the local
+  `gold/round2/SCORING.md`. The events schema is now a single un-capped
+  `events` array (`schemas/events.schema.json`, v2.0.0).
 - `extract/bench.py` / `bench_live.py` (live-corpus variant): evaluate gate and
   extraction models against labeled gold or a live sample.
 
@@ -427,8 +428,11 @@ end-to-end map):
 
 ## Gold set
 
-Hand-labeled samples live in `gold/` (tracked; labels are not reproducible).
-Each round records its seed and corpus fingerprint so rounds are comparable.
+Hand-labeled samples live in `gold/`. That directory is **local-only and
+gitignored** (`.gitignore` → `gold/`): labels are hand-made and not
+reproducible, and no round is committed, so the `gold/round*/…` paths referenced
+below (and elsewhere in this doc) exist only on the machine that ran them. Each
+round records its seed and corpus fingerprint so rounds are comparable.
 
 ```sh
 python3 -m extract.sample --n 80 --seed 5 --per-source-cap 2 \
@@ -437,13 +441,16 @@ python3 -m extract.sample --n 80 --seed 5 --per-source-cap 2 \
 python3 -m extract.score_gold gold/round1/labels.jsonl
 ```
 
-**Round 1** (80 chunks, 51-source corpus) is complete; see
-`gold/round1/FINDINGS.md`. Headline results: only 21% of chunks are actionable
-now, mechanical `hint` precision is ~0.4–0.5, feeds are the most mechanical
-source, documents/homepages are mostly noise, and staleness/locality dominate.
+**Round 1** (80 chunks, 51-source corpus) was run locally; see
+`gold/round1/FINDINGS.md` (if present). Headline results: only 21% of chunks are
+actionable now, mechanical `hint` precision is ~0.4–0.5, feeds are the most
+mechanical source, documents/homepages are mostly noise, and
+staleness/locality dominate.
 
-**Round 2** runs after full collection (~75 sources) with a fresh seed and a
-larger sample; compare via `score_gold`. Open `gold/README.md` for procedure.
+**Round 2** was run locally after full collection (~75 sources) with a fresh
+seed and a larger sample; compare via `score_gold`. Its reports
+(`CHARACTERIZATION-REPORT.md`, `MODEL-BENCH.md`, `SCORING.md`) are cited
+throughout this doc but are not committed to the repo.
 
 ## Suggested order of work
 

@@ -244,21 +244,27 @@ assets, words, error); use `--prune N` to cap growth.
 | `--no-magic` / `--no-stealth` | off | disable anti-bot niceties |
 | `--fail-on-error` | off | non-zero exit if any crawl failed |
 
-## Extraction (next stage)
+## Extraction
 
 The crawler intentionally over-collects; `crawl/` is read-only input to the
-extraction funnel. See [`EXTRACTION.md`](EXTRACTION.md) for the design. The
-mechanical stages (segment, de-boilerplate, chunk) already run:
+extraction funnel. See [`EXTRACTION.md`](EXTRACTION.md) for the stage design
+and [`DATAFLOW.md`](DATAFLOW.md) for the end-to-end data flow map. The full
+pipeline (mechanical funnel → triage/route/extract → validate/publish) already
+runs:
 
 ```sh
 python3 -m extract                  # crawl/ -> processed/ (never writes crawl/)
 python3 -m extract --stats          # stats only, write nothing
+python3 -m extract.pipeline         # triage -> route -> extract -> store
+python3 -m extract.publish          # validate + write events.json / news.json
 ```
 
-Output lands in `processed/<slug>/chunks.jsonl`, the input to the Jev candidate
-gate (`extract/jev.py`).
+Output lands in `processed/<slug>/chunks.jsonl` (the input to the Jev candidate
+gate, `extract/jev.py`) and accumulates in `processed/extracted_records.jsonl`
+for `extract.publish`. `run_collect.sh` chains all of the above.
 
-Feed handling improvement proposals for the collector (preserve feed metadata,
-seed article crawls from feed links, body-sniff feed detection) are in
-[`CRAWLER-RECOMMENDATIONS.md`](CRAWLER-RECOMMENDATIONS.md), and the funnel-side
-backlog is in [`FUNNEL-RECOMMENDATIONS.md`](FUNNEL-RECOMMENDATIONS.md).
+Feed-handling design notes for the collector (preserve feed metadata, seed
+article crawls from feed links, body-sniff feed detection) are in
+[`CRAWLER-RECOMMENDATIONS.md`](CRAWLER-RECOMMENDATIONS.md) — all implemented —
+and the remaining funnel-side backlog is in
+[`FUNNEL-RECOMMENDATIONS.md`](FUNNEL-RECOMMENDATIONS.md).

@@ -135,6 +135,13 @@ HTTP_USER_AGENT = (
 )
 # pypdf is noisy about malformed/stale PDF links; those are handled per-URL.
 logging.getLogger("pypdf").setLevel(logging.ERROR)
+# crawl4ai's deep-crawl link validator logs a warning for every non-HTTP link
+# it encounters while traversing (mailto:, webcal:, sms:, internal:, …). Those
+# are normal in event-calendar pages and are already discarded before any
+# fetch, so the scheme check runs ahead of the filter chain and cannot be
+# silenced there; quiet the two strategies instead.
+logging.getLogger("crawl4ai.deep_crawling.bfs_strategy").setLevel(logging.ERROR)
+logging.getLogger("crawl4ai.deep_crawling.bff_strategy").setLevel(logging.ERROR)
 
 # curl_cffi impersonates Chrome's TLS/JA3 fingerprint and clears WAFs that block
 # plain HTTP clients (Cloudflare bot management, DataDome, etc.). Optional.

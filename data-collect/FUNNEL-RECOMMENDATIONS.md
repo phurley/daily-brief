@@ -45,22 +45,32 @@ trailing slashes) now indexes crawled pages by URL, and each feed item gets
 `article_crawled` / `article_page_index` / `article_page_sha256`.
 
 Band-aid result: join rate rose **14% → 20%** (179 → 250 of 1,244 kept items)
-by fixing tracking-param mismatches. The rest needs crawler R2 (feed item URLs
-as crawl seeds). `funnel.json` reports `feed_items_joined`.
+by fixing tracking-param mismatches. The rest needed crawler R2 (feed item URLs
+as crawl seeds), which has since landed (see
+[`CRAWLER-RECOMMENDATIONS.md`](CRAWLER-RECOMMENDATIONS.md)) — the join rate on
+the current 73-source corpus is **46.5% (846 of 1,819 kept feed items)**.
+`funnel.json` reports `feed_items_joined`.
 
-### F3 — Feed enrichment fallback (stage 6)
+### F3 — Feed enrichment fallback (stage 6) — **open, deprioritized**
 For kept feed items that are article-like (`media != audio`), self-hosted, and
 **not** joined in F2, do a bounded second fetch of the article and merge into the
 `news` shape (full summary, author, photo, locations, topics). Only for items
 that survive the recency filter and Jev gate — never for the ~32% of feed items
 that are podcast/CDN. Behind a flag until the crawler's R2 lands.
 
+**Verified state:** R2 has landed and the join rate is now 46.5%, so this is far
+less valuable than when written. Note `extract/enrich.py` is *not* this feature:
+it fills missing **event** fields (`start`/`venue`/`city`) from the event page or
+linked detail pages, not article bodies for unjoined feed items. No feed-item
+article fetch exists.
+
 ### F4 — Undated policy
 47/100 kept chunks in round 2 were undated, mostly nav/other. The filter
 deliberately keeps them ("when in doubt, keep more"), so this is a Jev-gate job.
-Decision needed: leave as-is and let the gate drop them, or require a weak
-content signal (heading + non-link text + length) before they reach the gate.
-Recommend leaving as-is for now and measuring drop rate in round 3.
+**Verified state — decided: leave as-is.** `extract/dates.py` (`filter_record`,
+`"undated"` branch) still keeps every undated record, and `extract/pipeline.py`
+notes the Jev gate decides them. Measuring the round-3 drop rate is still the
+open follow-up.
 
 ### F5 — Dedupe (stage 5) — **done** (`extract/dedupe.py`)
 Sources overlap heavily (township ↔ library ↔ Patch ↔ Focus all carry the same
@@ -92,6 +102,11 @@ use `jev.record_text()`.
 ### F7 — Raw-XML fallback becomes a safety net **[crawler-dep]**
 Once crawler R3 body-sniffs feeds, the `feed_kind == "raw"` path should rarely
 trigger. Keep it; add a counter in `funnel.json` to alert if it grows.
+
+**Verified state — open (low priority).** R3 has landed. `funnel.json` does have
+a `raw` key, but it counts *segmented content blocks*, not raw-XML feed
+fallbacks; `extract/feeds.py` still routes `feed_kind == "raw"` through
+`parse_raw_feed_markdown`, so no alert counter exists yet.
 
 ## Later stages
 
@@ -139,3 +154,7 @@ trigger. Keep it; add a counter in `funnel.json` to alert if it grows.
 - Feed coverage: does F2 (plus crawler R2) lift the 14% join rate?
 - Undated drop rate: what fraction of the 47% undated kept chunks the Jev gate
   rejects.
+
+Round 3 has not been run: the sampler/scorer exist (`extract/sample.py`,
+`extract/score_gold.py`) but `gold/` is local-only and no round-3 artifacts are
+committed.

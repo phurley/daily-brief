@@ -4,6 +4,12 @@ Audience: `crawl_sources.py` (the collector). Goal: make RSS/Atom actually
 useful downstream without a second fetch per article, while keeping
 `content.md` + `meta.json` as the two-file standard.
 
+> **Status: implemented.** All six items (R1–R6) shipped in `crawl_sources.py`
+> and are kept here as the design rationale. The funnel-side join rate rose
+> from 14% → 20% (tracking-param fix) → **46.5% (846/1,819 kept feed items)**
+> once R2 seeded HTML crawls from feed links. The per-article second fetch is
+> correspondingly no longer on the critical path.
+
 ## Why (evidence from the funnel, 72-source corpus)
 
 - Feeds are the most reliable, dated, structured material we collect: **1,244
@@ -24,7 +30,7 @@ Net: the feed is a great index that we then throw away the metadata for, and we
 don't reuse its links for the HTML crawl. Fix those two things and most of the
 "RSS needs a second fetch" problem disappears.
 
-## R1 — Preserve the feed fields we already have (renderer)
+## R1 — Preserve the feed fields we already have (renderer) — **done**
 
 Change `_parse_feed` to emit a still-markdown, still-`content.md` format that
 keeps author, categories, image, media kind, and a fuller body. Proposed shape:
@@ -55,7 +61,7 @@ parser that ignores unknown `key: value` lines still works. The funnel's
 `extract/feeds.parse_rss_markdown` will be updated in the same change to read
 `author`/`categories`/`image`/`media` and the `summary:` field.
 
-## R2 — Seed the HTML crawl from feed item links (highest leverage)
+## R2 — Seed the HTML crawl from feed item links (highest leverage) — **done**
 
 Feeds are already fetched **first** in `Crawler.fetch`, so their item links are
 available before the HTML crawl starts. Use them:
@@ -76,7 +82,7 @@ its page budget on the source's actual current articles instead of nav pages.
 Guardrails: cap added seeds (e.g. `min(max_pages, 20)`), keep `max_pages`
 authoritative, and skip links already in the page budget.
 
-## R3 — Classify feeds by body, not content-type
+## R3 — Classify feeds by body, not content-type — **done**
 
 `_fetch_resource` routes on extension/`content_type`. A feed served as
 `text/html` falls through to `_parse_html`, producing the raw-XML-in-markdown
@@ -92,7 +98,7 @@ if looks_xml_feed or ext in (".xml", ".rss", ".atom") or "xml" in content_type:
 Also apply the same sniff in `_discover_feeds_in_pages` so a feed discovered as
 a page is recognized and re-fetched/parsed as a feed rather than chunked.
 
-## R4 — Feed-primary routing and feed hygiene
+## R4 — Feed-primary routing and feed hygiene — **done**
 
 `Crawler.fetch` currently gates the browser tier on `feed_words < FEED_MIN_WORDS`
 (150 words of rendered markdown). That proxy is weak. Prefer **parsed item count
@@ -110,7 +116,7 @@ Feed hygiene in `_feed_urls_for` / auto-feed discovery:
 - Keep the current "feeds are configuration, not assets" behavior (independent
   of `--no-assets`).
 
-## R5 — Summarize feeds in `meta.json`
+## R5 — Summarize feeds in `meta.json` — **done**
 
 Keep the two-file standard; add a compact, bounded `feeds` block to
 `meta.crawl` for routing and downstream joins (no full bodies — those stay in
@@ -134,7 +140,7 @@ This gives the funnel a reliable source of feed item URLs to join against
 (`meta.crawl.pages`) without re-parsing markdown, and lets it measure feed
 coverage per source.
 
-## R6 — Mark media/enclosures so downstream can skip non-articles
+## R6 — Mark media/enclosures so downstream can skip non-articles — **done**
 
 WDET's feeds yield **393 kept items that are podcast/CDN URLs**
 (`play.cdnstream1.com`), which can never be enriched into `news.schema` stories.
@@ -142,16 +148,16 @@ With R1's `media:` field, the funnel can route `media=audio` to a different
 treatment instead of attempting an article fetch. Cheap and removes ~32% of kept
 feed volume from the article-enrichment path.
 
-## Priority
+## Priority (all shipped)
 
 | # | Change | Effort | Impact |
 | --- | --- | --- | --- |
-| 1 | R2 seed crawl from feed links | M | High — removes the need for a second fetch |
-| 2 | R1 preserve author/categories/image/full summary | S | High — recovers fields already fetched |
-| 3 | R3 body-sniff feed detection | S | Medium — fixes raw-XML-in-content.md |
-| 4 | R6 mark audio/enclosure media | S | Medium — skips podcast CDN items |
-| 5 | R4 feed-primary routing + feed hygiene | S | Medium — saves crawl budget |
-| 6 | R5 `meta.crawl.feeds` summary | S | Medium — enables joins/coverage metrics |
+| 1 | R2 seed crawl from feed links ✅ | M | High — removes the need for a second fetch |
+| 2 | R1 preserve author/categories/image/full summary ✅ | S | High — recovers fields already fetched |
+| 3 | R3 body-sniff feed detection ✅ | S | Medium — fixes raw-XML-in-content.md |
+| 4 | R6 mark audio/enclosure media ✅ | S | Medium — skips podcast CDN items |
+| 5 | R4 feed-primary routing + feed hygiene ✅ | S | Medium — saves crawl budget |
+| 6 | R5 `meta.crawl.feeds` summary ✅ | S | Medium — enables joins/coverage metrics |
 
 ## Coordination
 
