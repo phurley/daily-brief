@@ -34,7 +34,12 @@ it never reads a half-written document, and only ever stages `vibe.json`.
 Output goes to `vibe.log`; each run's model input is kept in `cache/` for audit.
 
 Env knobs: `VIBE_NODE`, `VIBE_NO_PUSH`, `VIBE_DRY_RUN`, `VIBE_WAIT_LIMIT`,
-`OPENROUTER_VIBE_MODEL`, `VIBE_RETENTION_HOURS`.
+`VIBE_MIN_INTERVAL`, `VIBE_SKIP_COLLECT_WAIT`, `OPENROUTER_VIBE_MODEL`,
+`VIBE_RETENTION_HOURS`.
+
+`VIBE_MIN_INTERVAL` (default 50 minutes) skips a run when `vibe.json` was
+refreshed more recently than that. This lets the collector chain and the
+standalone launchd timer coexist without duplicate API calls or commit churn.
 
 ## Model
 

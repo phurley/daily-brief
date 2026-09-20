@@ -70,6 +70,21 @@ if [ -z "$NODE" ] || [ ! -x "$NODE" ]; then
     exit 1
 fi
 
+# Skip if vibe.json was refreshed very recently. The collector chain and the
+# standalone launchd timer can both fire in the same hour; this keeps that to
+# one generation (and one commit) per interval.
+MIN_INTERVAL="${VIBE_MIN_INTERVAL:-50}"
+if [ "$MIN_INTERVAL" -gt 0 ]; then
+    last_ms="$(VIBE_LAST_FILE="$ROOT/vibe.json" "$NODE" -e 'try{const d=JSON.parse(require("fs").readFileSync(process.env.VIBE_LAST_FILE,"utf8"));process.stdout.write(String(Date.parse(d.generatedAt)||0))}catch{process.stdout.write("0")}' 2>/dev/null)"
+    if [ -n "$last_ms" ] && [ "$last_ms" != "0" ]; then
+        age=$(( $(date +%s) - last_ms / 1000 ))
+        if [ "$age" -lt $((MIN_INTERVAL * 60)) ]; then
+            echo "$STAMP [skip] vibe.json refreshed ${age}s ago (< ${MIN_INTERVAL}m)"
+            exit 0
+        fi
+    fi
+fi
+
 cd "$DIR" || exit 1
 
 set -- 
