@@ -30,6 +30,8 @@ const state = {
   photoIndex: 0,
   photoTimer: null,
   eventExpiryTimer: null,
+  calendarMonth: "",
+  calendarSelected: "",
   launches: [],
   scienceShuffleSeed: globalThis.crypto?.getRandomValues
     ? globalThis.crypto.getRandomValues(new Uint32Array(1))[0]
@@ -519,6 +521,176 @@ function renderCalendar() {
   }
 }
 
+function shortDateLabel(key) {
+  return new Intl.DateTimeFormat("en-US", { timeZone: "UTC", weekday: "short", month: "short", day: "numeric" })
+    .format(new Date(`${key}T12:00:00Z`));
+}
+
+function monthLabel(monthKey) {
+  return new Intl.DateTimeFormat("en-US", { timeZone: "UTC", month: "long", year: "numeric" })
+    .format(new Date(`${monthKey}-01T12:00:00Z`));
+}
+
+function shiftMonth(monthKey, delta) {
+  const [year, month] = monthKey.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1 + delta, 1));
+  return `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, "0")}`;
+}
+
+function eventsOnDay(key, events = uniqueEvents()) {
+  return events.filter((event) => eventIsActiveOn(event, key)).sort(compareEventsForDisplay);
+}
+
+// Walks forward day by day so multi-day windows are surfaced once by their id.
+function upcomingEventEntries(fromKey, { windowDays = 60, limit = 8 } = {}) {
+  const events = uniqueEvents();
+  const entries = [];
+  const seen = new Set();
+  for (let offset = 0; offset <= windowDays && entries.length < limit; offset += 1) {
+    for (const event of eventsOnDay(shiftDate(fromKey, offset), events)) {
+      if (seen.has(event.id)) continue;
+      seen.add(event.id);
+      entries.push({ event, key: shiftDate(fromKey, offset) });
+      if (entries.length >= limit) break;
+    }
+  }
+  return entries;
+}
+
+function agendaEntry(event, key, { withDate = false } = {}) {
+  const title = node("strong");
+  title.append(safeLink(event.title, event.url));
+  const when = withDate ? shortDateLabel(key) : eventDateLabel(event);
+  return node("article", { className: "agenda-item" }, [
+    node("p", { className: "agenda-item__meta", text: [when, event.venue, event.city].filter(Boolean).join(" · ") }),
+    title,
+  ]);
+}
+
+// The agenda favors a readable digest over an exhaustive list; the full set
+// still lives in "Nearby & notable" below the calendar.
+const AGENDA_DAY_LIMIT = 8;
+
+function renderEventCalendarAgenda(events) {
+  const list = $("#calendar-agenda-list");
+  list.replaceChildren();
+  const selected = state.calendarSelected;
+  $("#calendar-agenda-title").textContent = displayDate(selected, { year: true });
+
+  const dayEvents = eventsOnDay(selected, events);
+  list.append(node("h4", { className: "calendar-agenda__heading", text: dayEvents.length ? "On this day" : "Nothing scheduled" }));
+  if (dayEvents.length) {
+    for (const event of dayEvents.slice(0, AGENDA_DAY_LIMIT)) list.append(agendaEntry(event, selected));
+    if (dayEvents.length > AGENDA_DAY_LIMIT) {
+      list.append(node("p", { className: "calendar-agenda__more", text: `+${dayEvents.length - AGENDA_DAY_LIMIT} more — see “Nearby & notable” for the full list.` }));
+    }
+  } else {
+    list.append(node("p", { className: "calendar-agenda__empty", text: "Pick another day — days with events are dotted on the grid." }));
+  }
+
+  const upcoming = upcomingEventEntries(shiftDate(selected, 1), { limit: 8 });
+  if (upcoming.length) {
+    list.append(node("h4", { className: "calendar-agenda__heading", text: "Coming up" }));
+    for (const { event, key } of upcoming) list.append(agendaEntry(event, key, { withDate: true }));
+  }
+}
+
+function renderEventCalendarGrid(events) {
+  const grid = $("#calendar-grid");
+  grid.replaceChildren();
+  const [year, month] = state.calendarMonth.split("-").map(Number);
+  const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
+  const leading = new Date(Date.UTC(year, month - 1, 1)).getUTCDay();
+  const cellCount = Math.ceil((leading + daysInMonth) / 7) * 7;
+  for (let index = 0; index < cellCount; index += 1) {
+    const dayNumber = index - leading + 1;
+    const inMonth = dayNumber >= 1 && dayNumber <= daysInMonth;
+    const date = new Date(Date.UTC(year, month - 1, dayNumber));
+    const key = date.toISOString().slice(0, 10);
+    const classes = ["calendar-day"];
+    if (!inMonth) classes.push("calendar-day--outside");
+    if (key === state.today) classes.push("calendar-day--today");
+    if (key === state.calendarSelected) classes.push("calendar-day--selected");
+
+    if (!inMonth) {
+      grid.append(node("span", { className: classes.join(" "), "aria-hidden": "true" }, [
+        node("span", { className: "calendar-day__number", text: String(date.getUTCDate()) }),
+      ]));
+      continue;
+    }
+
+    const dayEvents = eventsOnDay(key, events);
+    if (dayEvents.length) classes.push("calendar-day--has-events");
+    const cell = node("button", {
+      className: classes.join(" "),
+      type: "button",
+      dataset: { date: key },
+      "aria-pressed": String(key === state.calendarSelected),
+      "aria-label": `${displayDate(key, { year: true })}, ${dayEvents.length ? `${dayEvents.length} event${dayEvents.length === 1 ? "" : "s"}` : "no events"}`,
+    });
+    cell.append(node("span", { className: "calendar-day__number", text: String(dayNumber) }));
+    if (dayEvents.length) {
+      const dots = node("span", { className: "calendar-day__dots", "aria-hidden": "true" });
+      for (const event of dayEvents.slice(0, 4)) dots.append(node("i"));
+      cell.append(dots);
+    }
+    grid.append(cell);
+  }
+}
+
+function renderEventCalendar() {
+  const events = uniqueEvents();
+  $("#calendar-dialog-title").textContent = monthLabel(state.calendarMonth);
+  renderEventCalendarGrid(events);
+  renderEventCalendarAgenda(events);
+}
+
+function selectCalendarDay(key) {
+  state.calendarSelected = key;
+  state.calendarMonth = key.slice(0, 7);
+  renderEventCalendar();
+}
+
+function openEventCalendar() {
+  const dialog = $("#calendar-dialog");
+  state.calendarSelected = state.selectedDate;
+  state.calendarMonth = state.selectedDate.slice(0, 7);
+  renderEventCalendar();
+  $("#calendar-open").setAttribute("aria-expanded", "true");
+  if (typeof dialog.showModal === "function") dialog.showModal();
+  else dialog.setAttribute("open", "");
+  $("#calendar-close").focus({ preventScroll: true });
+}
+
+function closeEventCalendar() {
+  const dialog = $("#calendar-dialog");
+  $("#calendar-open").setAttribute("aria-expanded", "false");
+  if (dialog.open) dialog.close();
+  else dialog.removeAttribute("open");
+}
+
+function bindEventCalendar() {
+  $("#calendar-open").addEventListener("click", openEventCalendar);
+  $("#calendar-close").addEventListener("click", closeEventCalendar);
+  $("#calendar-previous").addEventListener("click", () => {
+    state.calendarMonth = shiftMonth(state.calendarMonth, -1);
+    renderEventCalendar();
+  });
+  $("#calendar-next").addEventListener("click", () => {
+    state.calendarMonth = shiftMonth(state.calendarMonth, 1);
+    renderEventCalendar();
+  });
+  $("#calendar-today").addEventListener("click", () => selectCalendarDay(state.today));
+  $("#calendar-grid").addEventListener("click", (clickEvent) => {
+    const cell = clickEvent.target.closest("[data-date]");
+    if (cell) selectCalendarDay(cell.dataset.date);
+  });
+  $("#calendar-dialog").addEventListener("close", () => $("#calendar-open").setAttribute("aria-expanded", "false"));
+  $("#calendar-dialog").addEventListener("click", (clickEvent) => {
+    if (clickEvent.target === $("#calendar-dialog")) closeEventCalendar();
+  });
+}
+
 function uniqueEvents() {
   const events = state.data.events;
   const map = new Map();
@@ -532,6 +704,20 @@ function eventStartDate(event) {
 
 function eventEndDate(event) {
   return (event.end || event.start)?.slice(0, 10) || "";
+}
+
+// An event with a multi-day window stays listed after single-day happenings so a
+// long-running exhibition never buries the one-night-only items happening today.
+function eventSpansDays(event) {
+  const start = eventStartDate(event);
+  const end = eventEndDate(event);
+  return Boolean(start && end && start !== end);
+}
+
+function compareEventsForDisplay(a, b) {
+  return Number(eventSpansDays(a)) - Number(eventSpansDays(b))
+    || Date.parse(a.start) - Date.parse(b.start)
+    || (b.score || 0) - (a.score || 0);
 }
 
 function eventIsActiveOn(event, key) {
@@ -563,7 +749,7 @@ function renderEvents() {
   const allEvents = uniqueEvents();
   const events = allEvents
     .filter((event) => eventIsActiveOn(event, state.selectedDate))
-    .sort((a, b) => Date.parse(a.start) - Date.parse(b.start) || (b.score || 0) - (a.score || 0));
+    .sort(compareEventsForDisplay);
   const cards = events.map((event) => {
     const title = node("h3");
     title.append(safeLink(event.title, event.url));
@@ -581,7 +767,7 @@ function renderEvents() {
   const end = shiftDate(state.selectedDate, 30);
   const future = allEvents
     .filter((event) => eventEndDate(event) >= state.selectedDate && eventStartDate(event) > state.selectedDate && eventStartDate(event) <= end)
-    .sort((a, b) => a.start.localeCompare(b.start));
+    .sort(compareEventsForDisplay);
   const plan = $("#plan-ahead");
   plan.hidden = future.length === 0;
   $("#plan-ahead-title").textContent = message("plan-ahead", "section-heading", "Worth penciling in");
@@ -1081,6 +1267,7 @@ function render() {
   renderUpdatedLabel();
   updateNavigation();
   refreshShelfControls();
+  if ($("#calendar-dialog")?.open) renderEventCalendar();
 }
 
 function selectDate(key, { history = true } = {}) {
@@ -1141,6 +1328,7 @@ function bindEvents() {
   $("#new-joke").addEventListener("click", () => loadJoke({ force: true }));
   bindShelfControls();
   bindClaimDetails();
+  bindEventCalendar();
   document.addEventListener("visibilitychange", () => document.hidden ? stopPhotoShow() : startPhotoShow());
   window.addEventListener("popstate", () => selectDate(new URL(window.location).searchParams.get("date") || state.today, { history: false }));
 }
@@ -1148,6 +1336,8 @@ function bindEvents() {
 async function init() {
   const requestedDate = new URL(window.location).searchParams.get("date") || state.today;
   state.selectedDate = clampDate(requestedDate);
+  state.calendarSelected = state.selectedDate;
+  state.calendarMonth = state.selectedDate.slice(0, 7);
   if (requestedDate !== state.selectedDate) {
     const url = new URL(window.location);
     if (state.selectedDate === state.today) url.searchParams.delete("date");

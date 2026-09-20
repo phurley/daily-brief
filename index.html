@@ -7,8 +7,8 @@
     <meta name="description" content="A living daily brief for southeast Michigan.">
     <title>Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="theme.css?v=20260830-2">
-    <script type="module" src="app.js?v=20260908-2"></script>
+    <link rel="stylesheet" href="theme.css?v=20260920-1">
+    <script type="module" src="app.js?v=20260920-1"></script>
   </head>
   <body>
     <a class="skip-link" href="#brief">Skip to the brief</a>
@@ -61,6 +61,7 @@
         </header>
         <div id="calendar-list" class="timeline"></div>
         <div id="calendar-upcoming" class="calendar-upcoming"></div>
+        <button id="calendar-open" class="calendar-open" type="button" aria-haspopup="dialog" aria-expanded="false">Open the event calendar</button>
       </section>
 
       <section id="events-section" class="panel panel--events" aria-labelledby="events-title">
@@ -131,6 +132,35 @@
     </main>
 
     <aside id="event-preview" class="event-preview" role="dialog" aria-modal="false" aria-label="Event details" tabindex="-1" hidden></aside>
+
+    <dialog id="calendar-dialog" class="calendar-dialog" aria-labelledby="calendar-dialog-title">
+      <div class="calendar-dialog__shell">
+        <header class="calendar-dialog__header">
+          <div>
+            <p class="calendar-dialog__eyebrow">Upcoming events</p>
+            <h2 id="calendar-dialog-title" class="calendar-dialog__month">Event calendar</h2>
+          </div>
+          <div class="calendar-dialog__controls">
+            <button id="calendar-previous" type="button" aria-label="Previous month">←</button>
+            <button id="calendar-today" type="button">This month</button>
+            <button id="calendar-next" type="button" aria-label="Next month">→</button>
+            <button id="calendar-close" class="calendar-dialog__close" type="button" aria-label="Close calendar">×</button>
+          </div>
+        </header>
+        <div class="calendar-dialog__body">
+          <div class="calendar-grid-wrap">
+            <div class="calendar-weekdays" aria-hidden="true">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Event calendar days"></div>
+          </div>
+          <aside class="calendar-agenda" aria-label="Agenda">
+            <h3 id="calendar-agenda-title">Agenda</h3>
+            <div id="calendar-agenda-list" class="calendar-agenda__list"></div>
+          </aside>
+        </div>
+      </div>
+    </dialog>
 
     <footer>
       <div class="shell footer__inner">
