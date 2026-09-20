@@ -7,8 +7,8 @@
     <meta name="description" content="A living daily brief for southeast Michigan.">
     <title>Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="theme.css?v=20260920-3">
-    <script type="module" src="app.js?v=20260920-3"></script>
+    <link rel="stylesheet" href="theme.css?v=20260920-5">
+    <script type="module" src="app.js?v=20260920-5"></script>
   </head>
   <body>
     <a class="skip-link" href="#brief">Skip to the brief</a>
@@ -151,23 +151,25 @@
           </div>
         </header>
         <div class="calendar-dialog__body">
-          <div class="calendar-grid-wrap">
-            <div class="calendar-weekdays" aria-hidden="true">
-              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          <div class="calendar-main">
+            <div class="calendar-grid-wrap">
+              <div class="calendar-weekdays" aria-hidden="true">
+                <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+              </div>
+              <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Event calendar days"></div>
             </div>
-            <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Event calendar days"></div>
+            <div id="calendar-detail" class="calendar-detail" hidden>
+              <div class="calendar-detail__nav">
+                <button id="calendar-detail-previous" type="button" aria-label="Previous event">←</button>
+                <button id="calendar-detail-next" type="button" aria-label="Next event">→</button>
+              </div>
+              <div id="calendar-detail-content" class="calendar-detail__content" aria-live="polite"></div>
+            </div>
           </div>
           <aside class="calendar-agenda" aria-label="Agenda">
             <h3 id="calendar-agenda-title">Agenda</h3>
             <div id="calendar-agenda-list" class="calendar-agenda__list"></div>
           </aside>
-        </div>
-        <div id="calendar-detail" class="calendar-detail" hidden>
-          <div class="calendar-detail__nav">
-            <button id="calendar-detail-previous" type="button" aria-label="Previous event">←</button>
-            <button id="calendar-detail-next" type="button" aria-label="Next event">→</button>
-          </div>
-          <div id="calendar-detail-content" class="calendar-detail__content" aria-live="polite"></div>
         </div>
       </div>
     </dialog>

@@ -540,13 +540,22 @@ function eventsOnDay(key, events = uniqueEvents(), comparator = compareEventsFor
 function agendaEntry(event, key, { withDate = false } = {}) {
   const when = withDate ? shortDateLabel(key) : eventDateLabel(event);
   const selected = event.id === state.calendarEventId;
+  const meta = node("span", { className: "agenda-item__meta" }, [
+    node("span", { className: "agenda-item__where", text: [when, event.venue, event.city].filter(Boolean).join(" · ") }),
+    event.score != null ? node("span", {
+      className: "agenda-item__score",
+      text: String(event.score),
+      title: `Rating ${event.score} of 100`,
+      "aria-label": `Rating ${event.score} of 100`,
+    }) : null,
+  ]);
   return node("button", {
     className: `agenda-item${selected ? " is-selected" : ""}`,
     type: "button",
     dataset: { eventId: event.id, date: key },
     "aria-pressed": String(selected),
   }, [
-    node("span", { className: "agenda-item__meta", text: [when, event.venue, event.city].filter(Boolean).join(" · ") }),
+    meta,
     node("strong", { text: event.title }),
   ]);
 }
@@ -850,6 +859,7 @@ function renderEvents() {
 
 function eventPreviewFacts(event) {
   return [
+    ["Rating", event.score != null ? `${event.score} / 100` : ""],
     ["When", eventDateLabel(event)],
     ["Where", [event.venue, event.city, event.region].filter(Boolean).join(" · ")],
     ["Price", event.price],
