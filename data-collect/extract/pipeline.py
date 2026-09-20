@@ -59,6 +59,47 @@ _NULLISH = {"", "null", "none", "n/a", "unknown", "not specified"}
 # Loading + incremental state
 # --------------------------------------------------------------------------- #
 
+def load_source_specs(source_file: Path) -> dict[str, dict[str, Any]]:
+    """slug -> per-source extraction specs from the catalog.
+
+    Includes the auto-derived venue default: an event extracted from a
+    Venue-type source happens at that venue unless its text says otherwise,
+    so ``default_venue``/``default_city`` are filled from the source name and
+    location when not set explicitly.
+    """
+    specs: dict[str, dict[str, Any]] = {}
+    try:
+        catalog = json.loads(source_file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return specs
+    for source in catalog.get("sources", []):
+        if not isinstance(source, dict) or not source.get("name"):
+            continue
+        slug = slugify(str(source["name"]))
+        spec: dict[str, Any] = {
+            "content_mode": source.get("content_mode") or "auto",
+            "default_venue": source.get("default_venue"),
+            "default_city": source.get("default_city"),
+        }
+        if source.get("type") == "Venue":
+            location = str(source.get("location") or "")
+            spec["default_venue"] = spec["default_venue"] or str(source["name"]).strip()
+            spec["default_city"] = spec["default_city"] or location.split(",")[0].strip()
+        specs[slug] = spec
+    return specs
+
+
+def apply_source_defaults(record: dict[str, Any],
+                          spec: Optional[dict[str, Any]]) -> None:
+    """Fill a record's missing venue/city from the source defaults (in place)."""
+    if not spec:
+        return
+    if not record.get("venue") and spec.get("default_venue"):
+        record["venue"] = spec["default_venue"]
+    if not record.get("city") and spec.get("default_city"):
+        record["city"] = spec["default_city"]
+
+
 def load_enrich_hints(source_file: Path) -> dict[str, str]:
     """slug -> manual ``enrich_strategy`` hint from the source catalog."""
     hints: dict[str, str] = {}
@@ -281,7 +322,8 @@ def finalize(record: dict[str, Any], origin: dict[str, Any]) -> Optional[dict[st
 def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         model: Optional[str], enrich_events: bool = True,
         enrich_limit: int = 200,
-        enrich_hints: Optional[dict[str, str]] = None) -> tuple[list[dict[str, Any]], dict[str, int],
+        enrich_hints: Optional[dict[str, str]] = None,
+        source_specs: Optional[dict[str, dict[str, Any]]] = None) -> tuple[list[dict[str, Any]], dict[str, int],
                                           list[tuple[dict[str, Any], str]]]:
     """Triage + extract ``items``; return (records, stats, processed).
 
@@ -321,7 +363,8 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
 
     def extract_one(pair: tuple[dict[str, Any], jev.Triage]) -> dict[str, Any]:
         rec, tri = pair
-        route = router.route(tri)
+        route = router.route(tri, content_mode=(source_specs or {}).get(
+            rec.get("source_slug") or "", {}).get("content_mode", "auto"))
         records: list[dict[str, Any]] = []
         if chat is not None:
             try:
@@ -373,6 +416,8 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         for rec in out["records"]:
             clean = finalize(rec, out["origin"])
             if clean:
+                apply_source_defaults(clean, (source_specs or {}).get(
+                    (clean.get("origin") or {}).get("source_slug") or ""))
                 finalized.append(clean)
     stats = {
         "selected": len(items),
@@ -447,7 +492,8 @@ def main(argv: Optional[list[str]] = None) -> int:
                                     extract_limit=opts.extract_limit,
                                     model=opts.model, enrich_events=opts.enrich_events,
                                     enrich_limit=opts.enrich_limit,
-                                    enrich_hints=load_enrich_hints(opts.source_file))
+                                    enrich_hints=load_enrich_hints(opts.source_file),
+                                    source_specs=load_source_specs(opts.source_file))
 
     # Merge into the cumulative store (newest wins by id), then prune by age.
     by_id = {r.get("id"): r for r in store if r.get("id")}

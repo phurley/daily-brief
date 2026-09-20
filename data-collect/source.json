@@ -37,7 +37,9 @@
       "url": "https://www.pccsk12.com",
       "events_url": "https://www.pccsk12.com/about-pccs/news",
       "description": "News and updates across Plymouth-Canton Educational Park (Canton High, Plymouth High, Salem High).",
-      "feed_urls": []
+      "feed_urls": [],
+      "default_venue": "Plymouth-Canton Community Schools",
+      "default_city": "Plymouth"
     },
     {
       "name": "The Perspective (P-CEP Student Newspaper)",
@@ -515,7 +517,9 @@
       ],
       "feed_urls": [
         "https://aadl.org/rss.xml"
-      ]
+      ],
+      "default_venue": "Ann Arbor District Library",
+      "default_city": "Ann Arbor"
     },
     {
       "name": "Current Magazine",
@@ -530,7 +534,8 @@
       "feed_urls": [
         "https://www.ecurrent.com/category/events/feed/",
         "https://www.ecurrent.com/feed/"
-      ]
+      ],
+      "content_mode": "news"
     },
     {
       "name": "The Ark",
@@ -775,7 +780,7 @@
       "frequency": "daily",
       "url": "https://wdet.org",
       "events_url": "https://wdet.org/events/",
-      "description": "Detroit’s public radio station offering local news, music programming, community conversations, and regional events.",
+      "description": "Detroit\u2019s public radio station offering local news, music programming, community conversations, and regional events.",
       "feed_urls": [
         "https://wdet.org/feed/"
       ]

@@ -135,6 +135,23 @@
           "description": "Hint for the best event-enrichment strategy for this source. 'auto' (default) learns per source: the first strategy that fills missing fields is cached under processed/enrich_strategies.json and tried first thereafter (JSON-LD Event markup, an ical feed, the URL-embedded date, or the touch-up model), with the full chain as fallback so page-shape changes self-heal. Set 'jsonld', 'ical', 'llm', or 'url_date' to try that strategy first; 'none' disables detail fetches for sources whose pages are dead ends (forms, third-party landing pages).",
           "enum": ["auto", "jsonld", "ical", "llm", "url_date", "none"],
           "default": "auto"
+        },
+        "content_mode": {
+          "type": "string",
+          "title": "Content Mode",
+          "description": "Force the extraction route for this source's candidates. 'auto' (default) lets the Jev gate + router decide per candidate. 'news' always extracts as news stories — for article-heavy sources (magazines, newspapers) whose event coverage is journalism, not listings. 'event' always extracts as events — for pure calendar feeds.",
+          "enum": ["auto", "news", "event"],
+          "default": "auto"
+        },
+        "default_venue": {
+          "type": "string",
+          "title": "Default Event Venue",
+          "description": "Fallback venue for events extracted from this source when the text does not state one. For sources of type Venue this is auto-derived from the source name (an event at North Star Lounge happens at North Star Lounge), so it only needs to be set explicitly for other sources whose events share a location (e.g. a school district's events default to the district)."
+        },
+        "default_city": {
+          "type": "string",
+          "title": "Default Event City",
+          "description": "Fallback city for events extracted from this source (auto-derived from the source location for Venue-type sources)."
         }
       }
     }

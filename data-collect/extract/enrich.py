@@ -68,6 +68,25 @@ _DETAIL_HOST_RE = re.compile(
 )
 _ICAL_URL_RE = re.compile(r"https?://[^\s)\]\"'<>]*\?(?:[^\s)\]\"'<>]*&)?(?:format=ical|ical=1)", re.IGNORECASE)
 
+#: Detail pages that can never yield event data — third-party forms, course
+#: platforms, mailing-list archives, social posts. Fetching them is wasted
+#: money; enriching from them is impossible.
+_DEAD_END_RE = re.compile(
+    r"https?://(?:[a-z0-9-]+\.)*(?:"
+    r"docs\.google\.com/forms"
+    r"|forms\.gle"
+    r"|teachable\.com"
+    r"|mailchi\.mp"
+    r"|linkedin\.com/posts"
+    r"|facebook\.com/l\.php"
+    r")",
+    re.IGNORECASE,
+)
+
+
+def _is_dead_end(url: str) -> bool:
+    return bool(url) and bool(_DEAD_END_RE.match(url))
+
 
 def detail_links(record: dict[str, Any]) -> list[str]:
     """Ticketing / FB-event / ical links found in a candidate's own text."""
@@ -387,7 +406,7 @@ def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
     # first; the URL-date guess comes after so it cannot preempt them).
     if missing():
         for url in [u for u in links if not _is_ical_url(u)] + [record.get("url") or ""]:
-            if not url:
+            if not url or _is_dead_end(url):
                 continue
             raw = fetch_html(url)
             if not raw:

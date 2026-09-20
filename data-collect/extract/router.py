@@ -41,8 +41,13 @@ class Route:
     reason: str
 
 
-def route(triage: jev.Triage) -> Route:
-    """Map a triage decision to a deterministic extraction route."""
+def route(triage: jev.Triage, content_mode: str = "auto") -> Route:
+    """Map a triage decision to a deterministic extraction route.
+
+    ``content_mode`` is the per-source override from the catalog: ``news``/
+    ``event`` force the route (for article-heavy or pure-calendar sources);
+    ``auto`` (default) decides per candidate.
+    """
     if not triage.accepted or triage.item_count == "0":
         return Route("skip", "none", "skip", 0, f"not accepted (kind={triage.kind})")
     # News digests that merely mention dates fire attend_on_date; divert only the
@@ -61,6 +66,10 @@ def route(triage: jev.Triage) -> Route:
         and triage.details_conf >= jev.ARTICLE_ROUTE_CONFIDENCE
     ):
         schema = "news"
+    if content_mode == "news":
+        schema = "news"
+    elif content_mode == "event":
+        schema = "event"
     array = triage.item_count in ("2", "3+")
     mode = f"{schema}_{'array' if array else 'single'}"
     cap = RECORD_CAP[triage.item_count]
@@ -70,4 +79,6 @@ def route(triage: jev.Triage) -> Route:
     )
     if schema == "news" and triage.attend_on_date and not news_digest:
         reason += " article_divert"
+    if content_mode != "auto":
+        reason += f" forced_{content_mode}"
     return Route("extract", schema, mode, cap, reason)
