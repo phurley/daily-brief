@@ -1,0 +1,9 @@
+# Secrets (API keys). Keep .env.example tracked.
+.env
+.env.*
+!.env.example
+
+# Run output and the per-run audit context.
+vibe.log
+launchd.log
+cache/

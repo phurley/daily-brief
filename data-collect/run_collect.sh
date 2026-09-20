@@ -1,9 +1,10 @@
 #!/bin/sh
-# Full two-step Daily Brief collection and publish.
+# Full Daily Brief collection, publish, and editorial refresh.
 #
 #   1. crawl_sources.py  -> data-collect/crawl/   (only sources that are due)
 #   2. extraction funnel -> repo-root events.json / news.json
 #   3. git commit + push the two JSON files when they changed
+#   4. vibe-check/run.sh -> refresh repo-root vibe.json (best-effort)
 #
 # Serialized with a lock, keeps the Mac awake, appends to data-collect/cron.log.
 # Designed to run hourly from cron/launchd: the crawler itself decides which
@@ -32,6 +33,14 @@ LOCK="/tmp/dailybrief-collect.lock"
 LOG="$DIR/cron.log"
 STAMP="$(date '+%Y-%m-%d %H:%M:%S')"
 
+# Final step: refresh the editorial vibe now that the documents are published.
+# Best-effort: a vibe failure must never fail the data collection.
+run_vibe() {
+    [ "${VIBE_ENABLED:-1}" = "1" ] || return 0
+    echo "--- step 4/4: editorial vibe ---"
+    VIBE_SKIP_COLLECT_WAIT=1 "$ROOT/vibe-check/run.sh" || echo "vibe-check failed; data push is unaffected"
+}
+
 # Re-exec once under caffeinate so the whole run (crawl + funnel + push) keeps
 # the Mac awake, not just the crawl. Same PID, so the lock below still works.
 if [ "${DAILYBRIEF_CAFFEINATED:-}" != "1" ]; then
@@ -54,7 +63,7 @@ echo "$STAMP [start] collect $*"
 cd "$DIR" || exit 1
 
 # --- step 1: crawl only the sources that are due --------------------------- #
-echo "--- step 1/3: crawl (due sources only) ---"
+echo "--- step 1/4: crawl (due sources only) ---"
 "$PY" crawl_sources.py --concurrency "${COLLECT_CONCURRENCY:-8}" "$@"
 crawl_rc=$?
 if [ "$crawl_rc" -ne 0 ]; then
@@ -63,7 +72,7 @@ if [ "$crawl_rc" -ne 0 ]; then
 fi
 
 # --- step 2: mechanical funnel + extraction + publish ---------------------- #
-echo "--- step 2/3: extraction funnel ---"
+echo "--- step 2/4: extraction funnel ---"
 "$PY" -m extract || { echo "extract failed"; exit 1; }
 "$PY" -m extract.pipeline \
     --max-items "${COLLECT_MAX_ITEMS:-2000}" \
@@ -73,6 +82,7 @@ echo "--- step 2/3: extraction funnel ---"
 RECORDS="$DIR/processed/extracted_records.jsonl"
 if [ ! -s "$RECORDS" ]; then
     echo "no extracted records this run; keeping existing events.json/news.json"
+    run_vibe
     echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0 (no records)"
     exit 0
 fi
@@ -87,11 +97,12 @@ if [ "${COLLECT_NO_PUSH:-}" = "1" ]; then
     exit 0
 fi
 
-echo "--- step 3/3: commit + push events.json/news.json ---"
+echo "--- step 3/4: commit + push events.json/news.json ---"
 cd "$ROOT" || exit 1
 git add events.json news.json
 if git diff --cached --quiet; then
     echo "events.json/news.json unchanged; nothing to push"
+    run_vibe
     echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0 (unchanged)"
     exit 0
 fi
@@ -103,6 +114,7 @@ if ! git pull --rebase --autostash origin main; then
     exit 1
 fi
 if git push; then
+    run_vibe
     echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0 (pushed)"
 else
     echo "push failed; leaving commit local"

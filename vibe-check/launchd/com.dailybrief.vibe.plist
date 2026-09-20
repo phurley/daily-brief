@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Hourly Daily Brief vibe-check job.
+
+  Runs at :40 each hour. run.sh waits for the collector lock to clear, so it
+  always reads complete weather/events/news documents even if the hourly
+  collection is still finishing.
+
+  Install (see README):
+    cp launchd/com.dailybrief.vibe.plist ~/Library/LaunchAgents/
+    launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.dailybrief.vibe.plist
+
+  Edit the three /Users/phurley/daily-brief/vibe-check paths below if this
+  checkout lives somewhere else.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.dailybrief.vibe</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/phurley/daily-brief/vibe-check/run.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/phurley/daily-brief/vibe-check</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Minute</key>
+        <integer>40</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/phurley/daily-brief/vibe-check/launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/phurley/daily-brief/vibe-check/launchd.log</string>
+</dict>
+</plist>
