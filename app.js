@@ -851,8 +851,10 @@ function renderEvents() {
   const selected = state.selectedDate;
   const active = allEvents.filter((event) => eventIsActiveOn(event, selected));
   const stillRunning = (event) => eventSpansDays(event) && eventEndDate(event) > selected;
-  const todayEvents = active.filter((event) => !stillRunning(event)).sort(compareEventsForDisplay);
-  const ongoingEvents = active.filter(stillRunning).sort(compareEventsForDisplay);
+  // Brief lanes are rating-first (best bets lead); the calendar keeps its own
+  // date grid for the day-by-day view.
+  const todayEvents = active.filter((event) => !stillRunning(event)).sort(compareEventsByRating);
+  const ongoingEvents = active.filter(stillRunning).sort(compareEventsByRating);
 
   replaceChildren("#events-list", todayEvents.length ? todayEvents.map(eventCard) : [emptyState()]);
   $("#today-lane-title").textContent = `${relativeDayWord(selected)} only`;
@@ -864,7 +866,7 @@ function renderEvents() {
   const horizon = shiftDate(selected, 30);
   const future = allEvents
     .filter((event) => eventStartDate(event) > selected && eventStartDate(event) <= horizon)
-    .sort(compareEventsForDisplay);
+    .sort(compareEventsByRating);
   const plan = $("#plan-ahead");
   plan.hidden = future.length === 0;
   replaceChildren("#claims-list", future.map(claimCard));
