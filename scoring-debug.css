@@ -37,6 +37,8 @@
 
 .scoring-events { display: grid; gap: .6rem; }
 .score-event { padding: .8rem .9rem; border: 1px solid var(--line); border-top: .18rem solid var(--accent); border-radius: .8rem; background: var(--panel); }
+.score-event.is-multi { background: var(--paper-deep); border-top-color: color-mix(in srgb, var(--muted) 70%, var(--line)); }
+.multi-badge { margin-right: .4rem; padding: .05rem .35rem; color: var(--muted); border: 1px solid var(--line); border-radius: 99rem; font-size: .55rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
 .score-event__head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .75rem; align-items: start; }
 .score-event__rank { display: grid; width: 1.7rem; height: 1.7rem; place-items: center; color: var(--muted); border: 1px solid var(--line); border-radius: 50%; font-size: .72rem; font-weight: 800; }
 .score-event__title h3 { margin: 0; font-size: 1.02rem; line-height: 1.25; }

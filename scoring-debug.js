@@ -173,10 +173,15 @@ function eventCard(item, index) {
   } catch {
     title.textContent = item.event.title;
   }
+  const multi = isMultiDay(item.event);
   const metaBits = [eventDateLabel(item.event), item.event.venue, item.event.city, item.event.category].filter(Boolean);
+  const meta = el("p", { className: "score-event__meta" }, [
+    multi ? el("span", { className: "multi-badge", text: "multi-day" }) : null,
+    document.createTextNode(metaBits.join(" · ")),
+  ]);
   const head = el("header", { className: "score-event__head" }, [
     el("span", { className: "score-event__rank", text: String(index + 1) }),
-    el("div", { className: "score-event__title" }, [title, el("p", { className: "score-event__meta", text: metaBits.join(" · ") })]),
+    el("div", { className: "score-event__title" }, [title, meta]),
     scoreBlock(item),
   ]);
 
@@ -193,7 +198,7 @@ function eventCard(item, index) {
     ]),
     breakdownTable(item),
   );
-  return el("article", { className: "score-event", dataset: { id: item.event.id } }, [head, details]);
+  return el("article", { className: `score-event${multi ? " is-multi" : ""}`, dataset: { id: item.event.id } }, [head, details]);
 }
 
 function renderEvents() {
