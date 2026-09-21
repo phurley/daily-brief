@@ -51,7 +51,7 @@ NEG_WEIGHTS: dict[str, float] = {
     "punk_metal_or_rock": 0.20,
     "dance": 0.16,
     "sales_related": 0.24,
-    "children_activity": 0.24,
+    "children_activity": 0.40,
     "running": 0.20,
     "exercise": 0.20,
     "employment_related": 0.24,
