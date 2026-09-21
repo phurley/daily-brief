@@ -256,8 +256,11 @@ _SCHEMA_FIELD = {
 }
 
 #: Event-scoring rubric: positive and negative qualities asked as Nouls during
-#: triage (composite scoring). Weights live in ``extract/scoring.py``.
+#: triage (composite scoring). Weights live in ``extract/scoring.py``. Positives
+#: are asked first, then negatives; the order is the order persisted in
+#: ``scoring.signals``.
 SCORING_QUESTIONS: dict[str, str] = {
+    # positive
     "funny": "Is this event comedic, funny, or light-hearted entertainment?",
     "distinctive": "Is this event distinctive, unusual, or a one-of-a-kind experience rather than generic?",
     "live": "Is this a live performance or in-person participation, rather than a screening, recording, or static display?",
@@ -265,11 +268,29 @@ SCORING_QUESTIONS: dict[str, str] = {
     "technical_science": "Is this event related to science, technology, engineering, or technical craft?",
     "artsy": "Is this event artistic, creative, or aesthetically oriented?",
     "progressive": "Does this event have a progressive, experimental, or socially forward-leaning character?",
-    "sporting": "Is this primarily a sporting event, game, or sports competition?",
+    "outdoors": "Is this event primarily held outdoors or focused on nature \u2014 a hike, trail/nature walk, park, farm, or garden visit?",
+    "theatre": "Is this primarily a theatre or stage production \u2014 a play, musical, opera, or dramatic performance?",
+    # negative
+    "sporting": (
+        "Is this primarily a sports event or competition \u2014 a game, match, race, "
+        "tournament, or athletic contest? Include team sports, individual "
+        "athletics, equestrian/horse shows and racing, motorsports, and similar "
+        "competitive events."
+    ),
     "recurring": "Is this a recurring, routine event (a weekly/monthly/regular series) rather than a special one-off?",
     "craft_fair_shopping": "Is this primarily a craft fair, market, or shopping/retail event?",
     "religious": "Is this primarily a religious service or faith-based gathering?",
     "large_venue": "Is this event held at a large venue \u2014 an arena, stadium, big amphitheater, convention center, or major festival ground?",
+    "substance_recovery": "Is this primarily a substance-use recovery meeting or support group (AA, NA, SMART Recovery, or similar)?",
+    "popular_music_cover_band": "Is this primarily live music by a cover or tribute band playing well-known songs?",
+    "market_or_shop": "Is this primarily a market or shopping event \u2014 a farmers market, flea market, vendor market, or retail sale?",
+    "punk_metal_or_rock": "Is this primarily punk, metal, hard rock, or similar loud/heavy live music?",
+    "dance": "Is this primarily a dance event \u2014 a dance party, social dance, or dance class/performance (not a theatre production)?",
+    "sales_related": "Is this primarily a sales pitch, promotion, or commercial sales event rather than a community happening?",
+    "children_activity": "Is this primarily an activity for young children \u2014 story time, play group, kids' craft, or family/kid-focused program?",
+    "running": "Is this primarily a running event \u2014 a race, fun run, 5K/marathon, or training run?",
+    "exercise": "Is this primarily an exercise or fitness class/workout \u2014 yoga, aerobics, strength training, or similar?",
+    "employment_related": "Is this primarily a job fair, hiring event, career workshop, or employment-related program?",
 }
 
 SCORING_TASK: dict[str, Any] = {

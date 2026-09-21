@@ -181,17 +181,101 @@ def to_story(record: dict[str, Any]) -> Optional[dict[str, Any]]:
     return story
 
 
+def _norm_title(title: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (title or "").lower()).strip()
+
+
+def _same_title(a: str, b: str) -> bool:
+    """True when two titles name the same thing: equal after normalization, or
+    one is the other's base title with a subtitle separator (so
+    ``Witches Night Bazaar: Autumnal Equinox`` matches ``Witches Night Bazaar``)."""
+    na, nb = _norm_title(a), _norm_title(b)
+    if not na or not nb:
+        return False
+    if na == nb:
+        return True
+    short_raw, long_raw = (a, b) if len(na) <= len(nb) else (b, a)
+    if not _norm_title(long_raw).startswith(_norm_title(short_raw) + " "):
+        return False
+    idx = long_raw.lower().find(short_raw.lower())
+    if idx < 0:
+        return False  # punctuation differs too much to be a safe subtitle match
+    rest = long_raw[idx + len(short_raw):]
+    return rest.lstrip()[:1] in (":", "|", "\u2014", "\u2013", "-")
+
+
+def _dedupe_day(record: dict[str, Any]) -> str:
+    return str(record.get("start") or record.get("publishedAt") or "")[:10]
+
+
+def _compatible(a: dict[str, Any], b: dict[str, Any]) -> bool:
+    """Whether two same-kind records are the same item and may be merged.
+
+    Exact normalized titles always match. A base/subtitle pair (``Witches Night
+    Bazaar`` vs ``Witches Night Bazaar: Autumnal Equinox``) only matches when it
+    is really the same happening: a shared real date, no conflicting venue, and
+    start times within a few hours. This keeps distinct sessions of a series
+    (Dolly Day films, SynthFest workshops, per-branch voter drives) apart.
+    """
+    na, nb = _norm_title(a.get("title") or ""), _norm_title(b.get("title") or "")
+    if not na or not nb:
+        return False
+    if na == nb:
+        return True
+    if not _same_title(a.get("title") or "", b.get("title") or ""):
+        return False
+    day_a, day_b = _dedupe_day(a), _dedupe_day(b)
+    if not day_a or day_a != day_b:
+        return False
+    venue_a = _norm_title(a.get("venue") or "")
+    venue_b = _norm_title(b.get("venue") or "")
+    if venue_a and venue_b and venue_a != venue_b:
+        return False
+    start_a, start_b = _parse_dt(a.get("start")), _parse_dt(b.get("start"))
+    if start_a and start_b and abs((start_a - start_b).total_seconds()) > 4 * 3600:
+        return False
+    return True
+
+
+def _richness(record: dict[str, Any]) -> tuple:
+    """Sortable completeness so a duplicate pair keeps the better record."""
+    score = record.get("score")
+    has_score = isinstance(score, (int, float)) and not isinstance(score, bool)
+    return (
+        1 if record.get("imageUrl") else 0,
+        1 if has_score else 0,
+        int(score) if has_score else 0,
+        len(record.get("summary") or ""),
+        sum(1 for f in ("venue", "city", "region", "price", "registration",
+                        "category", "end", "publishedAt", "deadline") if record.get(f)),
+        len(record.get("topics") or []),
+    )
+
+
 def _dedupe(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    seen: set = set()
-    out: list[dict[str, Any]] = []
+    """Collapse same-kind records on the same day whose titles name the same
+    event, keeping the richest one (not merely the first)."""
+    best: dict[tuple, dict[str, Any]] = {}
+    order: list[tuple] = []
+    by_day: dict[tuple, list[tuple]] = {}
     for r in records:
-        key = (r.get("kind"), (r.get("title") or "").lower().strip(),
-               str(r.get("start") or r.get("publishedAt") or "")[:16])
-        if key in seen:
-            continue
-        seen.add(key)
-        out.append(r)
-    return out
+        kind = r.get("kind")
+        day = _dedupe_day(r)
+        key = (kind, day, _norm_title(r.get("title") or ""))
+        bucket = by_day.setdefault((kind, day), [])
+        match = key if key in best else None
+        if match is None:
+            for k in bucket:
+                if _compatible(best[k], r):
+                    match = k
+                    break
+        if match is None:
+            best[key] = r
+            order.append(key)
+            bucket.append(key)
+        elif _richness(r) > _richness(best[match]):
+            best[match] = r
+    return [best[k] for k in order]
 
 
 def _validator(name: str, def_name: str):

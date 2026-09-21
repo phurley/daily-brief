@@ -30,12 +30,20 @@
       "weight": 0.08,
       "polarity": "positive"
     },
+    "theatre": {
+      "weight": 0.12,
+      "polarity": "positive"
+    },
+    "outdoors": {
+      "weight": 0.1,
+      "polarity": "positive"
+    },
     "recurring": {
       "weight": 0.15,
       "polarity": "negative"
     },
     "sporting": {
-      "weight": 0.12,
+      "weight": 0.15,
       "polarity": "negative"
     },
     "large_venue": {
@@ -48,6 +56,46 @@
     },
     "religious": {
       "weight": 0.08,
+      "polarity": "negative"
+    },
+    "substance_recovery": {
+      "weight": 0.12,
+      "polarity": "negative"
+    },
+    "popular_music_cover_band": {
+      "weight": 0.1,
+      "polarity": "negative"
+    },
+    "market_or_shop": {
+      "weight": 0.12,
+      "polarity": "negative"
+    },
+    "punk_metal_or_rock": {
+      "weight": 0.1,
+      "polarity": "negative"
+    },
+    "dance": {
+      "weight": 0.08,
+      "polarity": "negative"
+    },
+    "sales_related": {
+      "weight": 0.12,
+      "polarity": "negative"
+    },
+    "children_activity": {
+      "weight": 0.12,
+      "polarity": "negative"
+    },
+    "running": {
+      "weight": 0.1,
+      "polarity": "negative"
+    },
+    "exercise": {
+      "weight": 0.1,
+      "polarity": "negative"
+    },
+    "employment_related": {
+      "weight": 0.12,
       "polarity": "negative"
     }
   }

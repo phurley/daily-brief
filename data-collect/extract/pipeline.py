@@ -400,23 +400,28 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                     if sum(1 for f in ("start", "venue", "city") if r.get(f)) > before:
                         with enrich_lock:
                             enrich_state["ok"] += 1
-        # Jev triage answered the 12 scoring Nouls in the same call. Persist the
-        # per-question probabilities on every record so the weights can be
-        # re-tuned from stored data; the composite score is event-only.
-        event_score = scoring.score_answers(tri.raw)
+        # Score each record from its OWN fields, not the whole chunk, so a single
+        # sporting event inside a mixed listing registers its own ``sporting``
+        # signal. Triage still supplies the content flags; ``tri.raw`` is the
+        # fallback if the scoring call fails (scoring is best-effort).
         content_flags = {
             "is_lottery": bool(tri.is_lottery),
             "lotteryConfidence": round(float(tri.lottery_conf), 4),
             "is_sports": bool(tri.is_sports),
             "sportsConfidence": round(float(tri.sports_conf), 4),
         }
+        is_event = route.schema == "event"
         for r in records:
+            r.setdefault("kind", route.schema)
             r["contentFlags"] = content_flags
-            if route.schema == "event":
-                r["score"] = event_score
-                r["scoring"] = scoring.detail(tri.raw, event_score)
-            else:
-                r["scoring"] = scoring.detail(tri.raw)
+            try:
+                _, answers = scoring.score_record(r, jev_client, kind=route.schema)
+            except Exception:  # noqa: BLE001 - scoring is best-effort
+                answers = tri.raw
+            breakdown = scoring.detail(answers, with_score=is_event)
+            r["scoring"] = breakdown
+            if is_event:
+                r["score"] = breakdown["score"]
         return {"origin": rec, "triage": tri, "route": route, "records": records}
 
     results: list[dict[str, Any]] = []

@@ -21,6 +21,7 @@ from typing import Any, Optional
 from . import jev
 
 #: positive quality -> weight. Boosts the rare, discriminating qualities.
+#: Initial values; re-tune against the ``scoring.signals`` published in the JSON.
 POS_WEIGHTS: dict[str, float] = {
     "distinctive": 0.24,        # boosted
     "eclectic": 0.16,           # boosted
@@ -29,14 +30,27 @@ POS_WEIGHTS: dict[str, float] = {
     "funny": 0.12,
     "artsy": 0.10,
     "progressive": 0.08,
+    "theatre": 0.12,
+    "outdoors": 0.10,
 }
-#: negative quality -> penalty weight.
+#: negative quality -> penalty weight. Negatives may legitimately clamp a score
+#: to 0; that is intended for the qualities below.
 NEG_WEIGHTS: dict[str, float] = {
     "recurring": 0.15,
-    "sporting": 0.12,
+    "sporting": 0.15,
     "large_venue": 0.12,
     "craft_fair_shopping": 0.10,
     "religious": 0.08,
+    "substance_recovery": 0.12,
+    "popular_music_cover_band": 0.10,
+    "market_or_shop": 0.12,
+    "punk_metal_or_rock": 0.10,
+    "dance": 0.08,
+    "sales_related": 0.12,
+    "children_activity": 0.12,
+    "running": 0.10,
+    "exercise": 0.10,
+    "employment_related": 0.12,
 }
 
 #: The questions live in jev so triage can ask them in the same call.
@@ -66,27 +80,42 @@ def signal_probabilities(raw: dict[str, Any]) -> dict[str, float]:
     return out
 
 
-def detail(raw: dict[str, Any], score: Optional[int] = None) -> dict[str, Any]:
+def score_probabilities(probabilities: dict[str, float]) -> int:
+    """Combine rounded Noul probabilities into a 0-100 score.
+
+    Takes the *stored* (already rounded) signals so the published ``score`` is
+    exactly reproducible from ``scoring.signals`` (the JS scoring page and its
+    test re-derive it). Missing signals count as 0.
+    """
+    # Positives then negatives, as declared in POS_WEIGHTS/NEG_WEIGHTS. This is
+    # also the order ``scripts/export_scoring_weights.py`` writes, so the JS
+    # tuner reproduces scores bit-for-bit (the test checks every event).
+    raw = BASE
+    for name, weight in POS_WEIGHTS.items():
+        raw += weight * float(probabilities.get(name, 0.0) or 0.0)
+    for name, weight in NEG_WEIGHTS.items():
+        raw -= weight * float(probabilities.get(name, 0.0) or 0.0)
+    return max(0, min(SCALE, round(SCALE * min(1.0, max(0.0, raw)))))
+
+
+def detail(raw: dict[str, Any], *, with_score: bool = False) -> dict[str, Any]:
     """The persisted breakdown: ``{score?, signals}``.
 
-    ``score`` is the event-fit composite and is omitted for non-events (the
-    questions are event-oriented); ``signals`` is kept for every record so the
-    weights can be re-tuned from stored answers.
+    ``score`` is the event-fit composite, computed from the rounded ``signals``
+    so it is reproducible, and is omitted for non-events (the questions are
+    event-oriented). ``signals`` is kept for every record so the weights can be
+    re-tuned from stored answers.
     """
-    breakdown: dict[str, Any] = {"signals": signal_probabilities(raw)}
-    if score is not None:
-        breakdown["score"] = int(score)
+    signals = signal_probabilities(raw)
+    breakdown: dict[str, Any] = {"signals": signals}
+    if with_score:
+        breakdown["score"] = score_probabilities(signals)
     return breakdown
 
 
 def score_answers(answers: dict[str, Any]) -> int:
-    """Combine Noul probabilities into a 0-100 score (missing answers -> 0)."""
-    raw = BASE
-    for name, weight in POS_WEIGHTS.items():
-        raw += weight * float(answers.get(name, {}).get("probability", 0.0))
-    for name, weight in NEG_WEIGHTS.items():
-        raw -= weight * float(answers.get(name, {}).get("probability", 0.0))
-    return max(0, min(SCALE, round(SCALE * min(1.0, max(0.0, raw)))))
+    """Score raw Jev answers; identical to scoring the rounded signals."""
+    return score_probabilities(signal_probabilities(answers))
 
 
 def event_state(record: dict[str, Any]) -> str:
@@ -98,10 +127,31 @@ def event_state(record: dict[str, Any]) -> str:
     return "EVENT:\n" + json.dumps(fields, ensure_ascii=False)
 
 
-def score_event(record: dict[str, Any], client: jev.JevClient) -> tuple[int, dict[str, Any]]:
-    raw = client.decide(SCORING_TASK, event_state(record))
+def news_state(record: dict[str, Any]) -> str:
+    """Compact state for scoring a story: its own fields, not the whole chunk."""
+    import json
+
+    fields = {k: record.get(k) for k in ("title", "summary", "topics", "locations")}
+    return "STORY:\n" + json.dumps(fields, ensure_ascii=False)
+
+
+def score_record(record: dict[str, Any], client: jev.JevClient,
+                 *, kind: Optional[str] = None) -> tuple[int, dict[str, Any]]:
+    """Score one record (event or story) from its own fields.
+
+    Scoring the record rather than the source chunk is what lets a single
+    sporting event in a mixed listing register its own ``sporting`` signal.
+    """
+    kind = kind or record.get("kind") or "event"
+    state = event_state(record) if kind == "event" else news_state(record)
+    raw = client.decide(SCORING_TASK, state)
     answers = {name: spec for name, spec in raw.items()}
-    return score_answers(answers), answers
+    return score_probabilities(signal_probabilities(answers)), answers
+
+
+def score_event(record: dict[str, Any], client: jev.JevClient) -> tuple[int, dict[str, Any]]:
+    """Back-compat alias for scoring a single event."""
+    return score_record(record, client, kind="event")
 
 
 def main(argv: Optional[list[str]] = None) -> int:

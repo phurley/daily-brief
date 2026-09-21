@@ -26,7 +26,28 @@ class ScoringBreakdownTest(unittest.TestCase):
     def test_detail_includes_score_only_when_given(self):
         raw = {"distinctive": {"probability": 0.5}}
         self.assertEqual(scoring.detail(raw), {"signals": {"distinctive": 0.5}})
-        self.assertEqual(scoring.detail(raw, score=77)["score"], 77)
+        with_score = scoring.detail(raw, with_score=True)
+        self.assertEqual(with_score["score"], scoring.score_probabilities({"distinctive": 0.5}))
+
+    def test_score_is_reproducible_from_rounded_signals(self):
+        # A score must be exactly re-derivable from the stored (rounded) signals.
+        raw = {"distinctive": {"probability": 0.123456789},
+               "sporting": {"probability": 0.987654321}}
+        detail = scoring.detail(raw, with_score=True)
+        self.assertEqual(detail["score"], scoring.score_probabilities(detail["signals"]))
+        self.assertEqual(scoring.score_answers(raw), detail["score"])
+
+    def test_signal_set_includes_new_categories(self):
+        expected = {
+            "outdoors", "theatre",
+            "substance_recovery", "popular_music_cover_band", "market_or_shop",
+            "punk_metal_or_rock", "dance", "sales_related", "children_activity",
+            "running", "exercise", "employment_related",
+        }
+        self.assertEqual(len(scoring.SIGNAL_NAMES), 24)
+        self.assertTrue(expected.issubset(set(scoring.SIGNAL_NAMES)))
+        for name in expected:
+            self.assertIn(name, scoring.POS_WEIGHTS if name in scoring.POS_WEIGHTS else scoring.NEG_WEIGHTS)
 
 
 if __name__ == "__main__":

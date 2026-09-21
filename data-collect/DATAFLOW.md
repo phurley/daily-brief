@@ -208,9 +208,10 @@ Design rules:
 - **Idempotent by fingerprint.** A candidate is re-paid for only when its
   content changes or `EXTRACTOR_VERSION` is bumped. This is what makes an hourly
   run cheap: steady-state cost is only newly-crawled candidates.
-- **Event scoring rides along in the triage call** (seven positive / five
+- **Event scoring runs per record, not per chunk** (nine positive / fifteen
   negative Nouls → `extract/scoring.py`, 0–100, neutral = 50); the per-question
-  probabilities are stored on the record and published under `scoring`.
+  probabilities are stored on the record and published under `scoring`. The
+  score is derived from the rounded signals, so it is reproducible.
 - **Content-class drops ride along too**: `is_listicle`, `is_lottery`, and
   `is_sports` are confident-only drops (conf ≥ 0.60) applied before routing, so
   listicles, lotto results, and sports coverage never reach generation.
@@ -230,7 +231,7 @@ Design rules:
 flowchart TD
     R["extracted_records.jsonl"] --> NORM["to_event / to_story<br/>clean nullish, require fields, parse dates"]
     NORM --> SCHEMA["per-record jsonschema validation<br/>against schemas/events|news.schema.json"]
-    SCHEMA --> DEDUP["dedupe by kind + title + date"]
+    SCHEMA --> DEDUP["dedupe by kind + day; base/subtitle<br/>title, same venue & close time; keep richest"]
     DEDUP --> FLAGS["drop contentFlags lottery/sports<br/>conf >= 0.6"]
     FLAGS --> CUT["events: drop start older than editionDate − 14d"]
     CUT --> DOC["build documents"]
@@ -245,7 +246,7 @@ flowchart TD
 - Images are joined from the crawler/feed data (`imageUrl`/`imageAlt` for events,
   `photo` for stories).
 - The stored Jev `scoring` breakdown is passed through as an optional
-  `{score?, signals}` block on both events and stories; `signals` is the 12
+  `{score?, signals}` block on both events and stories; `signals` is the 24
   per-question Noul probabilities behind the event score.
 - Records whose `contentFlags` mark them lottery/sports (conf ≥ 0.60) are
   dropped, a durable backstop for records extracted before the gate rules.

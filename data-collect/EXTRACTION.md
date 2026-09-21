@@ -392,17 +392,21 @@ Implemented, standard-library only:
   `news.json` (v1.1.0) — it **refuses to write** if the document fails
   validation. Records carry `imageUrl`/`imageAlt` (events) and `photo`
   (stories), joined from the crawler's per-page image / feed image.
-- Event scoring rides along in the triage call (`extract/scoring.py`), 0–100
-  from seven positive / five negative Nouls; see the local
-  `gold/round2/SCORING.md`. The events schema is now a single un-capped
-  `events` array (`schemas/events.schema.json`, v2.0.0).
+- Event scoring runs **per record** (`extract/scoring.py`), not per source
+  chunk: the extracted event's own fields are scored, so a single sporting event
+  inside a mixed listing still registers its own `sporting` signal. 0–100 from
+  nine positive / fifteen negative Nouls; see the local `gold/round2/SCORING.md`.
+  The events schema is a single un-capped `events` array
+  (`schemas/events.schema.json`, v2.0.0).
 - The per-question Noul probabilities behind the score are persisted on every
   record and published as an optional `scoring` block (schema: `$defs/scoring`)
-  — `{score?, signals:{question: P(yes)}}` — on both events and stories, so the
-  weights in `extract/scoring.py` can be re-tuned from real data. Publish also
-  drops any record whose stored `contentFlags` mark it as **lottery** or
-  **sports** at conf ≥ 0.60, a durable backstop for records that predate the
-  gate rules.
+  — `{score?, signals:{question: P(yes)}}` — on both events and stories. The
+  score is computed from the **rounded** signals, so it is exactly reproducible
+  from the published JSON (the `scoring.mjs` debug page and its test re-derive
+  it), and the weights in `extract/scoring.py` can be re-tuned from real data.
+  Publish also drops any record whose stored `contentFlags` mark it as
+  **lottery** or **sports** at conf ≥ 0.60, a durable backstop for records that
+  predate the gate rules.
 - `extract/bench.py` / `bench_live.py` (live-corpus variant): evaluate gate and
   extraction models against labeled gold or a live sample.
 
