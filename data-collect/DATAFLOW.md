@@ -215,6 +215,10 @@ Design rules:
 - **Content-class drops ride along too**: `is_listicle`, `is_lottery`, and
   `is_sports` are confident-only drops (conf ≥ 0.60) applied before routing, so
   listicles, lotto results, and sports coverage never reach generation.
+- **Listing pages resolve to the detail link**: when a record inherits the
+  page URL, `urls.title_link` looks for the markdown link on the item's own
+  title and uses it (exact title match, image links skipped), so a festival in a
+  metro events guide links to its own page instead of the guide.
 - **Enrichment is bounded** (`--enrich-limit`, default 200) and best-effort;
   failures leave the record for publish to drop.
 - Accepted candidates beyond `--extract-limit` are left un-fingerprinted on

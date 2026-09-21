@@ -35,7 +35,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-from . import dates, enrich, jev, llm, prompts, router, scoring
+from . import dates, enrich, jev, llm, prompts, router, scoring, urls
 from .funnel import slugify
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
@@ -422,6 +422,13 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
             r["scoring"] = breakdown
             if is_event:
                 r["score"] = breakdown["score"]
+            # On a listing page the model often inherits the page URL; prefer the
+            # detail link on the item's own title when one is present.
+            page_url = rec.get("url")
+            if not r.get("url") or r.get("url") == page_url:
+                detail = urls.title_link(rec.get("text"), r.get("title"), page_url=page_url)
+                if detail:
+                    r["url"] = detail
         return {"origin": rec, "triage": tri, "route": route, "records": records}
 
     results: list[dict[str, Any]] = []

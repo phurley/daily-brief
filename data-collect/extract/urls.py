@@ -3,7 +3,45 @@
 
 from __future__ import annotations
 
-from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+import re
+from urllib.parse import parse_qsl, unquote, urlencode, urlsplit, urlunsplit
+
+#: Markdown link; the negative lookbehind skips image links (``![alt](cdn)``).
+_MD_LINK_RE = re.compile(r"(?<!!)\[([^\]]+)\]\(\s*(https?://[^\s\)]+)\s*\)")
+
+
+def _title_key(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", unquote(text or "").lower()).strip()
+
+
+def title_link(text: str | None, title: str | None, *, page_url: str | None = None) -> str | None:
+    """The most specific URL for an item on a listing page.
+
+    Listing pages link each item's own title to its detail page, while the
+    extracted record often inherits the listing URL. Find the markdown link
+    whose label matches the item title (exactly or as a prefix) and return it,
+    skipping the page itself and image/emoji links. Returns None when there is
+    no confident match, so callers keep the existing URL.
+    """
+    target = _title_key(title or "")
+    if not text or len(target) < 6:
+        return None
+    page = canonical_url(page_url) if page_url else ""
+    for label, url in _MD_LINK_RE.findall(text):
+        # Skip image links: both plain ``![alt](cdn)`` and an image wrapped in a
+        # link ``[![alt](cdn)](detail)`` show up in listing pages.
+        if label.lstrip().startswith("!") or "](" in label:
+            continue
+        if re.search(r"\.(?:png|jpe?g|gif|webp|svg|ico|avif)(?:[?#]|$)", url, re.I):
+            continue
+        # Exact (normalized) match only: a prefix match could bind an item to a
+        # different session of the same series.
+        if _title_key(label) != target:
+            continue
+        if page and canonical_url(url) == page:
+            continue
+        return url.rstrip(".,;:)]}")
+    return None
 
 _TRACKING_EXACT = {
     "ref", "source", "campaign", "fbclid", "gclid", "yclid", "igshid",
