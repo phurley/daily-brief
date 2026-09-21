@@ -256,9 +256,10 @@ h1 { max-width: 18ch; margin: .35rem 0 0; font-size: clamp(2.9rem, 5.7vw, 4.65re
 .card h3 { margin: .35rem 0 0; font-size: 1.18rem; }
 .card > p:not(.card__footer) { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 5; font-size: .85rem; }
 .card__footer { margin-top: auto; padding-top: .8rem; color: var(--muted); font-size: .75rem; }
-.plan-ahead { margin-top: .9rem; padding-top: .85rem; border-top: 1px solid var(--line); }
-.plan-ahead[hidden] { display: none; }
-.plan-ahead h3 { margin: 0 0 .6rem; color: var(--accent-dark); font-size: 1.3rem; }
+.event-lane { margin-top: .9rem; padding-top: .85rem; border-top: 1px solid var(--line); }
+.event-lane--first { margin-top: 0; padding-top: 0; border-top: 0; }
+.event-lane[hidden] { display: none; }
+.event-lane h3 { margin: 0 0 .6rem; color: var(--accent-dark); font-size: 1.3rem; }
 .claim-grid { display: grid; gap: .45rem; }
 .claim { display: block; min-width: 0; padding: .65rem .7rem; color: inherit; border: 1px solid var(--line); border-radius: .7rem; background: color-mix(in srgb, var(--sun) 7%, transparent); text-decoration: none; }
 .claim:hover { color: inherit; border-color: color-mix(in srgb, var(--accent) 48%, var(--line)); }
@@ -353,7 +354,7 @@ button.calendar-day:hover { border-color: color-mix(in srgb, var(--accent) 45%, 
 .shelf__track::-webkit-scrollbar { display: none; }
 .shelf__track > * { scroll-snap-align: start; }
 #events-list.shelf__track { grid-auto-columns: calc((100% - 1.95rem) / 4); }
-#claims-list.shelf__track { grid-auto-columns: calc((100% - 1.35rem) / 4); gap: .45rem; }
+#claims-list.shelf__track, #ongoing-list.shelf__track { grid-auto-columns: calc((100% - 1.35rem) / 4); gap: .45rem; }
 .shelf__arrow { position: absolute; z-index: 3; top: 50%; display: grid; width: 2rem; height: 2rem; place-items: center; padding: 0; color: var(--ink); border: 1px solid var(--line); border-radius: 50%; background: var(--panel); box-shadow: 0 .25rem .8rem rgba(20,35,35,.12); cursor: pointer; transform: translateY(-50%); }
 .shelf__arrow:hover:not(:disabled) { color: var(--accent); border-color: var(--accent); }
 .shelf__arrow:disabled { opacity: .28; cursor: default; }
@@ -405,7 +406,7 @@ footer { color: #dce8e4; background: #14282b; }
   .weather-grid { grid-template-columns: .9fr 1.35fr 1.15fr; }
   .shelf__track { grid-auto-columns: calc((100% - .65rem) / 2); }
   #events-list.shelf__track { grid-auto-columns: calc((100% - .65rem) / 2); }
-  #claims-list.shelf__track { grid-auto-columns: calc((100% - .9rem) / 3); }
+  #claims-list.shelf__track, #ongoing-list.shelf__track { grid-auto-columns: calc((100% - .9rem) / 3); }
 }
 @media (max-width: 620px) {
   .shell { width: min(100% - 1.1rem, 76rem); }
@@ -419,7 +420,7 @@ footer { color: #dce8e4; background: #14282b; }
   .weather-card { min-height: 0; }
   .weather-card--forecast { min-height: 14rem; }
   .shelf__track { grid-auto-columns: 88%; }
-  #events-list.shelf__track, #claims-list.shelf__track { grid-auto-columns: 88%; }
+  #events-list.shelf__track, #claims-list.shelf__track, #ongoing-list.shelf__track { grid-auto-columns: 88%; }
   .shelf__arrow--previous { left: -.35rem; }
   .shelf__arrow--next { right: -.35rem; }
   .rocket-launches__source { margin-left: .35rem; }

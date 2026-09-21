@@ -809,50 +809,66 @@ function scheduleEventExpiry(events) {
   state.eventExpiryTimer = window.setTimeout(() => renderEvents(), delay);
 }
 
+function relativeDayWord(key) {
+  if (key === state.today) return "Today";
+  return key < state.today ? "Yesterday" : "Tomorrow";
+}
+
+function eventCard(event) {
+  const title = node("h3");
+  title.append(safeLink(event.title, event.url));
+  return node("article", { className: "card" }, [
+    node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
+    title,
+    node("p", { text: event.summary }),
+    node("p", { className: "card__footer", text: [event.venue, event.city, event.price, event.distanceMiles != null ? `${event.distanceMiles} mi` : ""].filter(Boolean).join(" · ") }),
+  ]);
+}
+
+function claimCard(event) {
+  const title = node("strong");
+  title.append(safeLink(event.title, event.url));
+  return node("article", {
+    className: "claim",
+    dataset: { eventId: event.id },
+    "aria-haspopup": "dialog",
+    "aria-expanded": "false",
+  }, [
+    node("time", { text: eventDateLabel(event), datetime: eventStartDate(event) }),
+    title,
+  ]);
+}
+
+// Three lanes: single-day (and multi-day that ends on the selected date) first,
+// then multi-day windows still running past it, then everything starting later.
 function renderEvents() {
   hideEventPreview();
   const allEvents = uniqueEvents();
-  const events = allEvents
-    .filter((event) => eventIsActiveOn(event, state.selectedDate))
-    .sort(compareEventsForDisplay);
-  const cards = events.map((event) => {
-    const title = node("h3");
-    title.append(safeLink(event.title, event.url));
-    return node("article", { className: "card" }, [
-      node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
-      title,
-      node("p", { text: event.summary }),
-      node("p", { className: "card__footer", text: [event.venue, event.city, event.price, event.distanceMiles != null ? `${event.distanceMiles} mi` : ""].filter(Boolean).join(" · ") }),
-    ]);
-  });
-  replaceChildren("#events-list", cards.length ? cards : [emptyState()]);
-  $("#events-title").textContent = message("today", "section-heading", "Nearby & notable");
-  $("#events-note").textContent = message("today", "recommendation", "Good reasons to leave the house.");
+  const selected = state.selectedDate;
+  const active = allEvents.filter((event) => eventIsActiveOn(event, selected));
+  const stillRunning = (event) => eventSpansDays(event) && eventEndDate(event) > selected;
+  const todayEvents = active.filter((event) => !stillRunning(event)).sort(compareEventsForDisplay);
+  const ongoingEvents = active.filter(stillRunning).sort(compareEventsForDisplay);
 
-  const end = shiftDate(state.selectedDate, 30);
+  replaceChildren("#events-list", todayEvents.length ? todayEvents.map(eventCard) : [emptyState()]);
+  $("#today-lane-title").textContent = `${relativeDayWord(selected)} only`;
+
+  const ongoingLane = $("#ongoing-lane");
+  ongoingLane.hidden = ongoingEvents.length === 0;
+  replaceChildren("#ongoing-list", ongoingEvents.map(claimCard));
+
+  const horizon = shiftDate(selected, 30);
   const future = allEvents
-    .filter((event) => eventEndDate(event) >= state.selectedDate && eventStartDate(event) > state.selectedDate && eventStartDate(event) <= end)
+    .filter((event) => eventStartDate(event) > selected && eventStartDate(event) <= horizon)
     .sort(compareEventsForDisplay);
   const plan = $("#plan-ahead");
   plan.hidden = future.length === 0;
-  $("#plan-ahead-title").textContent = message("plan-ahead", "section-heading", "Worth penciling in");
-  const claims = [];
-  if (future.length) {
-    for (const event of future) {
-      const title = node("strong");
-      title.append(safeLink(event.title, event.url));
-      claims.push(node("article", {
-        className: "claim",
-        dataset: { eventId: event.id },
-        "aria-haspopup": "dialog",
-        "aria-expanded": "false",
-      }, [
-        node("time", { text: eventDateLabel(event), datetime: eventStartDate(event) }),
-        title,
-      ]));
-    }
-  }
-  replaceChildren("#claims-list", claims);
+  replaceChildren("#claims-list", future.map(claimCard));
+
+  $("#events-title").textContent = message("today", "section-heading", "Nearby & notable");
+  $("#events-note").textContent = message("today", "recommendation", "Good reasons to leave the house.");
+  $("#ongoing-lane-title").textContent = message("ongoing", "section-heading", "Still running");
+  $("#plan-ahead-title").textContent = message("plan-ahead", "section-heading", "Looking ahead");
   scheduleEventExpiry(allEvents);
   refreshShelfControls();
 }
@@ -936,9 +952,9 @@ function scheduleEventPreviewHide() {
 }
 
 function bindClaimDetails() {
-  const plan = $("#plan-ahead");
+  const surface = $("#events-section");
   const preview = $("#event-preview");
-  plan.addEventListener("pointerover", (pointerEvent) => {
+  surface.addEventListener("pointerover", (pointerEvent) => {
     if (pointerEvent.pointerType && pointerEvent.pointerType !== "mouse") return;
     const claim = pointerEvent.target.closest(".claim");
     if (!claim || claim.contains(pointerEvent.relatedTarget)) return;
@@ -946,19 +962,19 @@ function bindClaimDetails() {
     window.clearTimeout(claimHoverTimer);
     claimHoverTimer = window.setTimeout(() => showEventPreview(claim), 700);
   });
-  plan.addEventListener("pointerout", (pointerEvent) => {
+  surface.addEventListener("pointerout", (pointerEvent) => {
     const claim = pointerEvent.target.closest(".claim");
     if (!claim || claim.contains(pointerEvent.relatedTarget) || preview.contains(pointerEvent.relatedTarget)) return;
     window.clearTimeout(claimHoverTimer);
     scheduleEventPreviewHide();
   });
-  plan.addEventListener("contextmenu", (contextEvent) => {
+  surface.addEventListener("contextmenu", (contextEvent) => {
     const claim = contextEvent.target.closest(".claim");
     if (!claim) return;
     contextEvent.preventDefault();
     showEventPreview(claim);
   });
-  plan.addEventListener("keydown", (keyEvent) => {
+  surface.addEventListener("keydown", (keyEvent) => {
     if (!(keyEvent.key === "ContextMenu" || (keyEvent.shiftKey && keyEvent.key === "F10"))) return;
     const claim = keyEvent.target.closest(".claim");
     if (!claim) return;
@@ -967,7 +983,9 @@ function bindClaimDetails() {
   });
   preview.addEventListener("pointerenter", () => window.clearTimeout(claimHideTimer));
   preview.addEventListener("pointerleave", scheduleEventPreviewHide);
-  $("#claims-list").addEventListener("scroll", () => hideEventPreview(), { passive: true });
+  for (const selector of ["#ongoing-list", "#claims-list"]) {
+    $(selector).addEventListener("scroll", () => hideEventPreview(), { passive: true });
+  }
   document.addEventListener("pointerdown", (pointerEvent) => {
     if (activeClaim && !activeClaim.contains(pointerEvent.target) && !preview.contains(pointerEvent.target)) hideEventPreview();
   });
