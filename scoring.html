@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#233f4a">
+    <meta name="description" content="Live tuning view for the Daily Brief event scoring algorithm.">
+    <title>Scoring debug — Daily Brief</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="theme.css?v=20260920-7">
+    <link rel="stylesheet" href="scoring-debug.css?v=20260920-1">
+    <script type="module" src="scoring-debug.js?v=20260920-1"></script>
+  </head>
+  <body class="scoring-body">
+    <header class="scoring-header">
+      <div>
+        <p class="scoring-eyebrow">Daily Brief · tuning</p>
+        <h1>Event scoring debug</h1>
+        <p class="scoring-lede">
+          Every event active on the chosen day, with its full Jev breakdown. Change the
+          weights and the ranking recomputes live. Weights are exported from
+          <code>data-collect/extract/scoring.py</code> via <code>scripts/export_scoring_weights.py</code>;
+          new signals found in the data appear automatically at weight&nbsp;0.
+        </p>
+      </div>
+      <nav class="scoring-links" aria-label="Related pages">
+        <a href="index.html">← Back to the Daily Brief</a>
+      </nav>
+    </header>
+
+    <section class="scoring-controls" aria-label="View controls">
+      <label>Day <input type="date" id="day-input"></label>
+      <button id="today-button" type="button">Today</button>
+      <label>Sort
+        <select id="sort-select">
+          <option value="rating">Rating (recomputed)</option>
+          <option value="published">Published score</option>
+          <option value="start">Start time</option>
+        </select>
+      </label>
+      <label>Base <input type="number" id="base-input" step="0.01" min="0" max="1"></label>
+      <button id="reset-button" type="button">Reset weights</button>
+      <button id="copy-button" type="button">Copy weights JSON</button>
+      <span id="status" class="scoring-status" role="status" aria-live="polite"></span>
+    </section>
+
+    <div class="scoring-layout">
+      <aside class="weight-panel" aria-labelledby="weight-title">
+        <div class="weight-panel__head">
+          <h2 id="weight-title">Weights</h2>
+        </div>
+        <p class="weight-panel__hint">Positive weights add to the raw score, penalties subtract; the result is clamped to 0–100.</p>
+        <div id="weight-list" class="weight-list"></div>
+      </aside>
+
+      <main class="scoring-main">
+        <div id="summary" class="scoring-summary" role="status" aria-live="polite"></div>
+        <div id="event-list" class="scoring-events"></div>
+      </main>
+    </div>
+  </body>
+</html>

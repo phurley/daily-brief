@@ -1,0 +1,73 @@
+/* Scoring debug page. Relies on theme.css for the palette/typography tokens. */
+
+.scoring-body { margin: 0; padding: clamp(1rem, 3vw, 2.2rem) clamp(1rem, 3vw, 2.5rem) 4rem; }
+
+.scoring-header { display: flex; gap: 1.5rem; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; margin-bottom: 1rem; }
+.scoring-header h1 { margin: .15rem 0 .3rem; color: var(--accent-dark); font-family: var(--serif); font-size: clamp(1.9rem, 3.4vw, 2.9rem); letter-spacing: -.03em; }
+.scoring-eyebrow { margin: 0; color: var(--muted); font-size: .62rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+.scoring-lede { max-width: 52rem; margin: 0; color: var(--muted); font-size: .85rem; line-height: 1.5; }
+.scoring-lede code { padding: .05rem .3rem; border: 1px solid var(--line); border-radius: .3rem; font-size: .8em; }
+.scoring-links a { color: var(--accent-dark); font-size: .8rem; font-weight: 700; }
+
+.scoring-controls { position: sticky; z-index: 5; top: 0; display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: end; margin-bottom: 1rem; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); box-shadow: 0 .5rem 1.5rem rgba(36,50,48,.06); }
+.scoring-controls label { display: grid; gap: .2rem; color: var(--muted); font-size: .58rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.scoring-controls input, .scoring-controls select { padding: .35rem .5rem; color: var(--ink); border: 1px solid var(--line); border-radius: .5rem; background: var(--paper); font: inherit; font-size: .82rem; }
+.scoring-controls button { align-self: end; padding: .45rem .8rem; color: var(--ink); border: 1px solid var(--line); border-radius: 99rem; background: transparent; font: inherit; font-size: .75rem; font-weight: 700; cursor: pointer; }
+.scoring-controls button:hover { color: var(--accent); border-color: var(--accent); }
+.scoring-status { margin-left: auto; color: var(--muted); font-size: .7rem; }
+
+.scoring-layout { display: grid; grid-template-columns: minmax(17rem, 21rem) minmax(0, 1fr); gap: 1rem; align-items: start; }
+
+.weight-panel { position: sticky; top: 5.4rem; padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
+.weight-panel__head { display: flex; align-items: baseline; justify-content: space-between; }
+.weight-panel h2 { margin: 0; color: var(--accent-dark); font-size: 1.2rem; }
+.weight-panel__hint { margin: .25rem 0 .7rem; color: var(--muted); font-size: .7rem; }
+.weight-new { color: var(--accent); font-size: .65rem; font-weight: 800; }
+.weight-list { display: grid; gap: .35rem; }
+.weight-row { display: grid; grid-template-columns: minmax(0, 1fr) auto 4.6rem; gap: .4rem; align-items: center; }
+.weight-name { display: flex; gap: .35rem; align-items: center; min-width: 0; font-size: .78rem; font-weight: 700; text-transform: capitalize; }
+.weight-badge { padding: 0 .3rem; color: var(--paper); border-radius: 99rem; background: var(--accent); font-size: .5rem; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+.weight-polarity, .weight-value { padding: .25rem .3rem; color: var(--ink); border: 1px solid var(--line); border-radius: .4rem; background: var(--paper); font: inherit; font-size: .72rem; }
+.weight-value { width: 100%; text-align: right; }
+
+.scoring-summary { display: flex; flex-wrap: wrap; gap: .4rem .8rem; align-items: center; margin-bottom: .8rem; color: var(--muted); font-size: .74rem; }
+.scoring-summary strong { color: var(--accent-dark); }
+.scoring-summary .is-drift { color: var(--accent); font-weight: 750; }
+.scoring-summary .is-new { color: var(--leaf); font-weight: 750; }
+
+.scoring-events { display: grid; gap: .6rem; }
+.score-event { padding: .8rem .9rem; border: 1px solid var(--line); border-top: .18rem solid var(--accent); border-radius: .8rem; background: var(--panel); }
+.score-event__head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .75rem; align-items: start; }
+.score-event__rank { display: grid; width: 1.7rem; height: 1.7rem; place-items: center; color: var(--muted); border: 1px solid var(--line); border-radius: 50%; font-size: .72rem; font-weight: 800; }
+.score-event__title h3 { margin: 0; font-size: 1.02rem; line-height: 1.25; }
+.score-event__title a { color: var(--accent-dark); text-decoration: none; }
+.score-event__title a:hover { text-decoration: underline; }
+.score-event__meta { margin: .25rem 0 0; color: var(--muted); font-size: .7rem; }
+.score-event__scores { display: grid; gap: .1rem; justify-items: end; white-space: nowrap; }
+.score-big { color: var(--accent-dark); font-family: var(--serif); font-size: 1.7rem; line-height: 1; }
+.score-published { color: var(--muted); font-size: .62rem; }
+.score-published.is-drift { color: var(--accent); font-weight: 800; }
+.score-note { color: var(--muted); font-size: .6rem; }
+
+.score-event__breakdown { margin-top: .6rem; }
+.score-event__breakdown summary { display: flex; gap: .75rem; align-items: baseline; cursor: pointer; color: var(--muted); font-size: .68rem; }
+.score-event__breakdown summary .summary-label { color: var(--accent-dark); font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.summary-top { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.breakdown-wrap { margin-top: .5rem; overflow-x: auto; }
+.breakdown { width: 100%; border-collapse: collapse; font-size: .74rem; }
+.breakdown th { padding: .2rem .4rem; color: var(--muted); font-size: .55rem; font-weight: 850; letter-spacing: .08em; text-align: left; text-transform: uppercase; }
+.breakdown td { padding: .25rem .4rem; border-top: 1px solid var(--line); }
+.sig-name { text-transform: capitalize; }
+.p-viz { display: flex; gap: .45rem; align-items: center; }
+.bar { display: inline-block; width: 5rem; height: .45rem; overflow: hidden; border-radius: 99rem; background: color-mix(in srgb, var(--line) 70%, transparent); }
+.bar__fill { display: block; height: 100%; background: var(--leaf); }
+.bar--negative .bar__fill { background: var(--accent); }
+.breakdown td.is-pos { color: var(--leaf); font-weight: 750; }
+.breakdown td.is-neg { color: var(--accent); font-weight: 750; }
+.breakdown-foot { margin: .5rem 0 0; color: var(--muted); font-size: .65rem; }
+.breakdown-empty { margin: .4rem 0 0; color: var(--muted); font-size: .75rem; }
+
+@media (max-width: 900px) {
+  .scoring-layout { grid-template-columns: 1fr; }
+  .weight-panel { position: static; }
+}

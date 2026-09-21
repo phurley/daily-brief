@@ -110,3 +110,23 @@ because browsers do not allow the app to fetch local JSON from a `file://` URL.
 
 GitHub Pages deploys directly from the root of `main`. No build step or
 JavaScript toolchain is required.
+
+## Scoring debug page
+
+`scoring.html` is a standalone tuning view for the event-fit score. Pick a day
+to see every active event with its full Jev breakdown, then drag the weights
+and watch the ranking recompute live. The page also flags events whose
+published `score` differs from the recomputed rating.
+
+The weights live in `data-collect/extract/scoring.py`. Export them for the page
+after any change:
+
+```sh
+python3 scripts/export_scoring_weights.py
+```
+
+The page merges `scoring-weights.json` with the signal names found in
+`events.json`, so a brand-new signal appears automatically (at weight 0) — no
+page edit required. `scoring.mjs` mirrors the Python math (including Python's
+banker's rounding) and is covered by `node --test scripts/scoring.test.mjs`,
+which asserts it reproduces every stored `scoring.score`.

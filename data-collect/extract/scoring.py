@@ -46,6 +46,11 @@ SCORING_TASK: dict[str, Any] = jev.SCORING_TASK
 #: weights above can be re-tuned against real answers later.
 SIGNAL_NAMES: tuple[str, ...] = tuple(jev.SCORING_QUESTIONS.keys())
 
+#: Neutral starting point and output range for the composite score. Exported for
+#: the browser debug page via ``scripts/export_scoring_weights.py``.
+BASE = 0.5
+SCALE = 100
+
 
 def build_questions(task: dict[str, Any] | None = None) -> dict[str, Any]:
     return jev.build_questions(task or SCORING_TASK)
@@ -76,12 +81,12 @@ def detail(raw: dict[str, Any], score: Optional[int] = None) -> dict[str, Any]:
 
 def score_answers(answers: dict[str, Any]) -> int:
     """Combine Noul probabilities into a 0-100 score (missing answers -> 0)."""
-    raw = 0.5
+    raw = BASE
     for name, weight in POS_WEIGHTS.items():
         raw += weight * float(answers.get(name, {}).get("probability", 0.0))
     for name, weight in NEG_WEIGHTS.items():
         raw -= weight * float(answers.get(name, {}).get("probability", 0.0))
-    return max(0, min(100, round(100 * min(1.0, max(0.0, raw)))))
+    return max(0, min(SCALE, round(SCALE * min(1.0, max(0.0, raw)))))
 
 
 def event_state(record: dict[str, Any]) -> str:

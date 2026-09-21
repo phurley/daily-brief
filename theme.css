@@ -291,6 +291,8 @@ h1 { max-width: 18ch; margin: .35rem 0 0; font-size: clamp(2.9rem, 5.7vw, 4.65re
 .calendar-dialog__controls { display: flex; gap: .35rem; align-items: center; }
 .calendar-dialog__controls button { display: grid; min-width: 2rem; height: 2rem; place-items: center; padding: 0 .6rem; color: var(--ink); border: 1px solid var(--line); border-radius: 99rem; background: transparent; font: inherit; font-size: .72rem; cursor: pointer; }
 .calendar-dialog__controls button:hover { color: var(--accent); border-color: var(--accent); }
+.calendar-dialog__debug { display: grid; height: 2rem; place-items: center; padding: 0 .6rem; color: var(--muted); border: 1px solid var(--line); border-radius: 99rem; font-size: .66rem; font-weight: 750; text-decoration: none; }
+.calendar-dialog__debug:hover { color: var(--accent); border-color: var(--accent); }
 .calendar-dialog__close { font-size: 1.15rem !important; }
 .calendar-dialog__body { display: grid; flex: 1; grid-template-columns: minmax(0, 1.6fr) minmax(15rem, 24rem); min-height: 0; overflow-x: hidden; }
 .calendar-main { display: flex; min-width: 0; min-height: 0; flex-direction: column; overflow-x: hidden; }

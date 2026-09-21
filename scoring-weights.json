@@ -1,0 +1,54 @@
+{
+  "base": 0.5,
+  "scale": 100,
+  "signals": {
+    "distinctive": {
+      "weight": 0.24,
+      "polarity": "positive"
+    },
+    "eclectic": {
+      "weight": 0.16,
+      "polarity": "positive"
+    },
+    "technical_science": {
+      "weight": 0.14,
+      "polarity": "positive"
+    },
+    "live": {
+      "weight": 0.12,
+      "polarity": "positive"
+    },
+    "funny": {
+      "weight": 0.12,
+      "polarity": "positive"
+    },
+    "artsy": {
+      "weight": 0.1,
+      "polarity": "positive"
+    },
+    "progressive": {
+      "weight": 0.08,
+      "polarity": "positive"
+    },
+    "recurring": {
+      "weight": 0.15,
+      "polarity": "negative"
+    },
+    "sporting": {
+      "weight": 0.12,
+      "polarity": "negative"
+    },
+    "large_venue": {
+      "weight": 0.12,
+      "polarity": "negative"
+    },
+    "craft_fair_shopping": {
+      "weight": 0.1,
+      "polarity": "negative"
+    },
+    "religious": {
+      "weight": 0.08,
+      "polarity": "negative"
+    }
+  }
+}
