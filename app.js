@@ -473,25 +473,29 @@ function renderDayContext() {
 
 function renderCalendar() {
   const items = calendarItemsForDate(state.selectedDate);
-  const children = items.map((item) => {
+  const label = node("h3", { className: "calendar-entries__label", text: relativeDayWord(state.selectedDate) });
+  const entries = items.map((item) => {
+    const title = node("h3", { className: "calendar-entry__title" });
+    title.append(item.url ? safeLink(item.title, item.url) : document.createTextNode(item.title));
+    const meta = [
+      `${CALENDAR_ICONS[item.type] || "•"} ${item.startTime ? displayTime(item.startTime) : item.type}`,
+      item.location,
+      item.person,
+    ].filter(Boolean).join(" · ");
     const details = [
       item.status === "tentative" ? "Tentative" : "",
-      item.person,
-      item.location,
       item.description,
     ].filter(Boolean).join(" · ");
-    const title = node("h3");
-    title.append(item.url ? safeLink(item.title, item.url) : document.createTextNode(item.title));
-    const time = node("time", { className: "timeline__time", datetime: item.startTime || state.selectedDate }, [
-      node("span", { text: CALENDAR_ICONS[item.type] || "•", "aria-hidden": "true" }),
-      document.createTextNode(` ${item.startTime ? displayTime(item.startTime) : item.type}`),
-    ]);
-    return node("article", { className: "timeline__item" }, [
-      time,
-      node("div", {}, [title, details ? node("p", { text: details }) : null]),
+    return node("article", { className: "calendar-entry" }, [
+      node("span", { className: "calendar-entry__meta", text: meta }),
+      title,
+      details ? node("p", { className: "calendar-entry__details", text: details }) : null,
     ]);
   });
-  replaceChildren("#calendar-list", children);
+  replaceChildren("#calendar-list", [
+    label,
+    ...(entries.length ? entries : [node("p", { className: "calendar-entries__empty", text: "Nothing scheduled." })]),
+  ]);
   $("#calendar-note").textContent = message("calendar", "note", "The things worth remembering.");
 
   const upcoming = upcomingCalendarItems(state.selectedDate);
