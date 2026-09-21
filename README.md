@@ -60,7 +60,13 @@ The collector:
    always forward-looking;
 4. de-duplicates the same event arriving from several calendars, then keeps
    only a light reminder (id, type, title, date, and any start/end time).
-   People, locations, descriptions, and links are dropped.
+   People, locations, descriptions, and links are dropped;
+5. when `OPENROUTER_API_KEY` is present (see `data-collect/.env`), asks a small
+   OpenRouter model (`qwen/qwen3-32b` by default) to collapse near-duplicates
+   the exact key misses — e.g. "Collin's Birthday" vs "Collin's BDay" — and to
+   strip times from all-day occasions. The pass is best-effort; `--no-llm`
+   skips it and `--llm-model` (or `llmModel` in `calendars.json`) overrides the
+   model.
 
 Feeds cannot be filtered server-side by date range, so the whole calendar is
 fetched and only a rolling window (`historyDays` back, `horizonDays` forward)

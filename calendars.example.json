@@ -15,6 +15,14 @@
   "timeZone": "America/Detroit",
   "historyDays": 7,
   "horizonDays": 550,
+  "_llmComment": [
+    "Optional LLM refinement after de-duplication. It collapses near-duplicate",
+    "entries (e.g. \"Collin's Birthday\" vs \"Collin's BDay\") and removes times",
+    "from all-day occasions. Needs OPENROUTER_API_KEY (see data-collect/.env).",
+    "Set \"llmModel\" to override the default qwen/qwen3-32b, or run the script",
+    "with --no-llm to skip the pass entirely."
+  ],
+  "llmModel": "qwen/qwen3-32b",
   "sources": [
     {
       "name": "Family",

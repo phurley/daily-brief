@@ -41,6 +41,10 @@ jobs:
         if: steps.config.outputs.configured == 'true'
         env:
           CALENDARS_JSON: ${{ secrets.CALENDARS_JSON }}
+          # Optional: enables the LLM de-dup / all-day pass. Without it the
+          # collector still runs, just with the deterministic de-dup only.
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_CALENDAR_MODEL: ${{ vars.OPENROUTER_CALENDAR_MODEL }}
         run: python scripts/update_calendar.py
 
       - name: Validate against schema

@@ -25,6 +25,9 @@ What it does
    rolling window, and maps each occurrence onto schemas/calendar.schema.json.
 4. De-duplicates the same event coming from multiple calendars and writes
    ``calendar.json``.
+5. When ``OPENROUTER_API_KEY`` is available, asks a small OpenRouter model to
+   collapse near-duplicate entries the exact key misses and to strip times from
+   all-day occasions. This pass is best-effort; ``--no-llm`` disables it.
 
 Configuration lives in ``calendars.json`` (git-ignored). See
 ``calendars.example.json``.
@@ -41,6 +44,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -72,6 +76,16 @@ OPTIONAL_FIELDS = [
 # locations, descriptions, links); the brief only needs a light reminder, so
 # everything else is dropped before calendar.json is written.
 PUBLIC_FIELDS = ("id", "type", "title", "date", "startTime", "endTime")
+
+# Optional post-processing pass. A small, cheap OpenRouter model collapses
+# near-duplicate entries that the deterministic (title, date, time) key misses
+# (e.g. "Collin's Birthday" vs "Collin's BDay") and strips bogus times from
+# all-day occasions (birthdays, anniversaries, holidays). Override the model
+# with OPENROUTER_CALENDAR_MODEL or `llmModel` in calendars.json.
+DEFAULT_LLM_MODEL = "qwen/qwen3-32b"
+OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
+LLM_TIMEOUT = 90.0
+LLM_RETRYABLE = {429, 500, 502, 503, 524, 529}
 
 
 # --------------------------------------------------------------------------
@@ -734,6 +748,171 @@ def unique_ids(items: list[dict]) -> None:
 
 
 # --------------------------------------------------------------------------
+# Optional LLM refinement
+# --------------------------------------------------------------------------
+LLM_SYSTEM_PROMPT = """You clean up a family calendar feed. The user sends a JSON object {"items": [...]}. Each item has an id, type, title, date (YYYY-MM-DD) and optional startTime/endTime in 24-hour local time.
+
+Do exactly two things and return JSON matching the schema.
+
+1. duplicateGroups: Identify items that describe the SAME real-world occurrence on the SAME date, because two subscribed calendars carry the same event. For example, on one date "Collin's Birthday" and "Collin's BDay" are duplicates. The prefix "AMANDA" on a title (e.g. "AMANDA    Greg Sturtz's B-day") is noise from a phone contact and the same event as "Greg Sturtz's B-day". For each duplicate group set `keep` to the single id to retain and `drop` to the other ids. When choosing `keep`, prefer the clearest title, a more specific type (birthday/anniversary/holiday over event), and the variant without a time. Different people on the same date (e.g. "Allison's Birthday" and "Andrea's Birthday") are NOT duplicates. Items on different dates are NEVER duplicates. When unsure, do not merge.
+
+2. allDay: List the ids of items that are really all-day occasions (birthdays, anniversaries, holidays, festivals) but wrongly carry a startTime/endTime. Remove their times. Do NOT list genuine timed events that have a real start time (meetings, appointments, rehearsals, classes, ceremonies, performances, games). Only list ids that currently have a startTime. When unsure, keep the time.
+
+Return only ids that appear in the input. Use empty arrays when there is nothing to change."""
+
+LLM_REFINE_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["duplicateGroups", "allDay"],
+    "properties": {
+        "duplicateGroups": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "required": ["keep", "drop"],
+                "properties": {
+                    "keep": {"type": "string"},
+                    "drop": {"type": "array", "items": {"type": "string"}},
+                },
+            },
+        },
+        "allDay": {"type": "array", "items": {"type": "string"}},
+    },
+}
+
+
+def load_dotenv() -> None:
+    """Fill missing environment variables from a local ``.env`` file.
+
+    The calendar job lives at the repo root while the OpenRouter key sits in
+    ``data-collect/.env`` (git-ignored). Real environment variables always win.
+    """
+    for candidate in (REPO / ".env", REPO / "data-collect" / ".env"):
+        if not candidate.is_file():
+            continue
+        for raw in candidate.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key:
+                os.environ.setdefault(key, value)
+
+
+def _strip_fences(text: str) -> str:
+    text = (text or "").strip()
+    if text.startswith("```"):
+        text = re.sub(r"^```[a-zA-Z]*\n?", "", text)
+        text = re.sub(r"\n?```$", "", text)
+    return text.strip()
+
+
+def _llm_request(messages: list[dict], schema: dict, model: str, api_key: str) -> dict:
+    """POST to OpenRouter and return the parsed JSON response."""
+    payload = {
+        "model": model,
+        "messages": messages,
+        "temperature": 0,
+        "response_format": {
+            "type": "json_schema",
+            "json_schema": {"name": "calendar_refinement", "strict": True, "schema": schema},
+        },
+    }
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    last = "unknown error"
+    for attempt in range(4):
+        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        request = urllib.request.Request(OPENROUTER_ENDPOINT, data=body, headers=headers)
+        try:
+            with urllib.request.urlopen(request, timeout=LLM_TIMEOUT) as response:
+                data = json.loads(response.read().decode("utf-8"))
+            choice = (data.get("choices") or [{}])[0]
+            content = (choice.get("message") or {}).get("content")
+            if not content:
+                raise ValueError(f"empty content (finish_reason={choice.get('finish_reason')})")
+            return json.loads(_strip_fences(content))
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", "replace")[:300]
+            last = f"HTTP {exc.code}: {detail}"
+            # Some models reject response_format; fall back to plain JSON once.
+            if exc.code == 400 and "response_format" in payload:
+                payload.pop("response_format")
+                continue
+            if exc.code in LLM_RETRYABLE and attempt < 3:
+                time.sleep(1.0 * (2 ** attempt))
+                continue
+            raise RuntimeError(last) from exc
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError, json.JSONDecodeError) as exc:
+            last = f"{type(exc).__name__}: {exc}"
+            if attempt < 3:
+                time.sleep(1.0 * (2 ** attempt))
+                continue
+            raise RuntimeError(last) from exc
+    raise RuntimeError(last)
+
+
+def apply_refinement(items: list[dict], result: dict) -> tuple[list[dict], int, int]:
+    by_id = {item["id"]: item for item in items}
+    dropped: set[str] = set()
+    for group in result.get("duplicateGroups") or []:
+        keep = group.get("keep")
+        if keep not in by_id:
+            continue
+        for drop in group.get("drop") or []:
+            if drop != keep and drop in by_id:
+                dropped.add(drop)
+    stripped = 0
+    for item_id in result.get("allDay") or []:
+        item = by_id.get(item_id)
+        if item and item.get("startTime"):
+            item.pop("startTime", None)
+            item.pop("endTime", None)
+            stripped += 1
+    remaining = [item for item in items if item["id"] not in dropped]
+    return remaining, len(dropped), stripped
+
+
+def refine_with_llm(items: list[dict], *, model: str, verbose: bool) -> list[dict]:
+    """Ask a small OpenRouter model to de-duplicate and fix all-day times.
+
+    Best-effort: any missing key or API failure leaves the deterministic output
+    untouched. Only ids from the input are referenced, so a hallucinated id is
+    ignored rather than trusted.
+    """
+    if len(items) < 2:
+        return items
+    load_dotenv()
+    api_key = os.environ.get("OPENROUTER_API_KEY") or os.environ.get("OPENROUTE_API_KEY")
+    if not api_key:
+        if verbose:
+            print("  · no OPENROUTER_API_KEY; skipping LLM refinement")
+        return items
+
+    payload = {
+        "items": [
+            {key: item[key] for key in ("id", "type", "title", "date", "startTime", "endTime") if key in item}
+            for item in items
+        ]
+    }
+    messages = [
+        {"role": "system", "content": LLM_SYSTEM_PROMPT},
+        {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
+    ]
+    try:
+        result = _llm_request(messages, LLM_REFINE_SCHEMA, model, api_key)
+    except RuntimeError as exc:
+        print(f"!! LLM refinement failed ({exc}); keeping deterministic calendar", file=sys.stderr)
+        return items
+
+    remaining, dropped, stripped = apply_refinement(items, result)
+    print(f"  · LLM refinement ({model}): dropped {dropped} duplicate(s), cleared times on {stripped} all-day item(s)")
+    return remaining
+
+
+# --------------------------------------------------------------------------
 # Output
 # --------------------------------------------------------------------------
 def output_path(config: dict, override: str | None) -> Path:
@@ -748,9 +927,12 @@ def main() -> int:
     parser.add_argument("--config", default=str(DEFAULT_CONFIG))
     parser.add_argument("--output", default=None)
     parser.add_argument("--dry-run", action="store_true", help="print a summary without writing calendar.json")
+    parser.add_argument("--no-llm", action="store_true", help="skip the OpenRouter de-dup/all-day refinement pass")
+    parser.add_argument("--llm-model", default=None, help=f"OpenRouter model for refinement (default {DEFAULT_LLM_MODEL})")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
 
+    load_dotenv()
     config = load_config(Path(args.config))
     tz_name = config.get("timeZone", "America/Detroit")
     tz = ZoneInfo(tz_name)
@@ -779,6 +961,15 @@ def main() -> int:
 
     items = dedupe(all_items)
     unique_ids(items)
+    if not args.no_llm:
+        model = (
+            args.llm_model
+            or config.get("llmModel")
+            or os.environ.get("OPENROUTER_CALENDAR_MODEL")
+            or DEFAULT_LLM_MODEL
+        )
+        items = refine_with_llm(items, model=model, verbose=args.verbose)
+        unique_ids(items)
     for item in items:
         item.pop("_uid", None)
         for key in [key for key in item if key not in PUBLIC_FIELDS]:
