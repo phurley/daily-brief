@@ -29,7 +29,7 @@ crawler itself decides what is due.
 ## How it decides what to crawl
 
 Each source has a `frequency` in `source.json` (`hourly`, `4hours`, `daily`,
-`weekly`, `monthly`). A source is crawled when its **last successful** run is
+`weekly`, `2weeks`, `monthly`). A source is crawled when its **last successful** run is
 older than that period. `--force` ignores the schedule. Because scheduling keys
 off success, a source that fails but succeeded recently is not hammered every
 run; once it is overdue it is retried until it succeeds.

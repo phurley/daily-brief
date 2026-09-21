@@ -73,7 +73,7 @@ flowchart TD
 ### 2.1 Scheduling
 
 A source is due when `now >= last_successful_run + frequency` (`hourly`,
-`4hours`, `daily`, `weekly`, `monthly`). Scheduling keys off **success**, so a
+`4hours`, `daily`, `weekly`, `2weeks`, `monthly`). Scheduling keys off **success**, so a
 failure does not hammer the source every hour; once overdue it is retried until
 it succeeds. `--force` ignores the schedule.
 

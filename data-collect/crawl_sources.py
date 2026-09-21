@@ -71,6 +71,7 @@ FREQUENCY_SECONDS: dict[str, int] = {
     "4hours": 4 * 60 * 60,
     "daily": 24 * 60 * 60,
     "weekly": 7 * 24 * 60 * 60,
+    "2weeks": 14 * 24 * 60 * 60,
     "monthly": 30 * 24 * 60 * 60,
 }
 DEFAULT_FREQUENCY = "daily"
