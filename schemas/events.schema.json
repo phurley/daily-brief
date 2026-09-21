@@ -38,8 +38,23 @@
         "category": { "type": "string", "minLength": 1 },
         "summary": { "type": "string", "minLength": 1 },
         "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "scoring": { "$ref": "#/$defs/scoring" },
         "distanceMiles": { "type": "number", "minimum": 0 },
         "deadline": { "type": "string", "minLength": 1 }
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "description": "Diagnostic breakdown behind the event-fit score, kept for tuning the weights in extract/scoring.py. Not surfaced in the UI.",
+      "additionalProperties": false,
+      "required": ["signals"],
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "signals": {
+          "type": "object",
+          "description": "Per-question Jev Noul P(yes), 0-1, keyed by question name.",
+          "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
       }
     }
   }

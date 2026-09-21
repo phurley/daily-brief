@@ -19,7 +19,7 @@ from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-from . import dates
+from . import dates, jev
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent.parent
@@ -54,6 +54,46 @@ def _valid_id(value: Any) -> Optional[str]:
     return slug or None
 
 
+def _scoring(record: dict[str, Any]) -> Optional[dict[str, Any]]:
+    """Pass through the stored Jev scoring breakdown, sanitized for the schema.
+
+    Shape: ``{"score": 0-100?, "signals": {question: P(yes)}}``. Returns None
+    when there is nothing usable so the field is simply omitted.
+    """
+    stored = record.get("scoring")
+    if not isinstance(stored, dict):
+        return None
+    signals = stored.get("signals")
+    clean = {
+        str(k): max(0.0, min(1.0, float(v)))
+        for k, v in (signals or {}).items()
+        if isinstance(v, (int, float)) and not isinstance(v, bool)
+    }
+    if not clean:
+        return None
+    out: dict[str, Any] = {"signals": clean}
+    score = stored.get("score")
+    if isinstance(score, (int, float)) and not isinstance(score, bool):
+        out["score"] = max(0, min(100, int(score)))
+    return out
+
+
+def _content_dropped(record: dict[str, Any]) -> bool:
+    """True when the triage content flags say this is lottery or sports.
+
+    Defense-in-depth for records that predate the drops or slipped through a
+    concurrent run; new candidates are dropped at the gate in ``jev.py``.
+    """
+    flags = record.get("contentFlags")
+    if not isinstance(flags, dict):
+        return False
+    if flags.get("is_lottery") and float(flags.get("lotteryConfidence") or 0.0) >= jev.LOTTERY_DROP_CONFIDENCE:
+        return True
+    if flags.get("is_sports") and float(flags.get("sportsConfidence") or 0.0) >= jev.SPORTS_DROP_CONFIDENCE:
+        return True
+    return False
+
+
 def _parse_dt(value: Any) -> Optional[datetime]:
     if not value:
         return None
@@ -78,6 +118,9 @@ def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None,
             event[key] = value
     if isinstance(record.get("score"), (int, float)):
         event["score"] = max(0, min(100, int(record["score"])))
+    scoring = _scoring(record)
+    if scoring:
+        event["scoring"] = scoring
     if event.get("imageUrl"):
         event.setdefault("imageAlt", event.get("title"))
     else:
@@ -123,6 +166,9 @@ def to_story(record: dict[str, Any]) -> Optional[dict[str, Any]]:
         pub = _clean(source.get("publication")) or _clean(record.get("publication"))
         if pub and pub != name:
             story["source"]["publication"] = pub
+    scoring = _scoring(record)
+    if scoring:
+        story["scoring"] = scoring
     image = _clean(record.get("imageUrl"))
     if image:
         photo = {"url": image, "alt": _clean(record.get("imageAlt")) or story.get("title")}
@@ -174,9 +220,12 @@ def build(records: list[dict[str, Any]], edition_date: str,
 
     events, stories = [], []
     stats = {"events_in": 0, "events_out": 0, "events_stale": 0,
-             "stories_in": 0, "stories_out": 0}
+             "stories_in": 0, "stories_out": 0, "content_dropped": 0}
 
     for record in _dedupe(records):
+        if _content_dropped(record):
+            stats["content_dropped"] += 1
+            continue
         if record.get("kind") == "event":
             stats["events_in"] += 1
             event = to_event(record, cutoff, edition_dt)
@@ -227,7 +276,8 @@ def main(argv: Optional[list[str]] = None) -> int:
     # Final whole-document validation before writing anything.
     ev_ok = _doc_validator("events.schema.json").is_valid(events_doc)
     nw_ok = _doc_validator("news.schema.json").is_valid(news_doc)
-    print(f"records in: {len(records)}  deduped: {len(_dedupe(records))}")
+    print(f"records in: {len(records)}  deduped: {len(_dedupe(records))}  "
+          f"content-dropped: {stats['content_dropped']}")
     print(f"events.json: {stats['events_out']}/{stats['events_in']} kept (stale {stats['events_stale']})  valid={ev_ok}")
     print(f"news.json:   {stats['stories_out']}/{stats['stories_in']} kept  valid={nw_ok}")
     if not (ev_ok and nw_ok):

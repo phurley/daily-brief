@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Jev event scoring (0-100).
 
-Nine positive and four negative Noul questions, evaluated in one Jev call and
-combined with weights in code (composite scoring). Locality is deliberately
+Seven positive and five negative Noul questions, evaluated in one Jev call and
+combined with weights in code (composite scoring). The per-question
+probabilities are persisted on every record (and published as a ``scoring``
+block) so these weights can be re-tuned against real answers. Locality is deliberately
 light; there is no timeliness or family-friendly term (events are shown sorted by
 date anyway). Tune the weights below.
 
@@ -40,9 +42,36 @@ NEG_WEIGHTS: dict[str, float] = {
 #: The questions live in jev so triage can ask them in the same call.
 SCORING_TASK: dict[str, Any] = jev.SCORING_TASK
 
+#: The tunable signal set, in ask order. Persisted alongside every record so the
+#: weights above can be re-tuned against real answers later.
+SIGNAL_NAMES: tuple[str, ...] = tuple(jev.SCORING_QUESTIONS.keys())
+
 
 def build_questions(task: dict[str, Any] | None = None) -> dict[str, Any]:
     return jev.build_questions(task or SCORING_TASK)
+
+
+def signal_probabilities(raw: dict[str, Any]) -> dict[str, float]:
+    """Per-question P(yes) behind the score, compacted for JSON storage."""
+    out: dict[str, float] = {}
+    for name in SIGNAL_NAMES:
+        spec = raw.get(name)
+        if isinstance(spec, dict) and spec.get("probability") is not None:
+            out[name] = round(float(spec["probability"]), 4)
+    return out
+
+
+def detail(raw: dict[str, Any], score: Optional[int] = None) -> dict[str, Any]:
+    """The persisted breakdown: ``{score?, signals}``.
+
+    ``score`` is the event-fit composite and is omitted for non-events (the
+    questions are event-oriented); ``signals`` is kept for every record so the
+    weights can be re-tuned from stored answers.
+    """
+    breakdown: dict[str, Any] = {"signals": signal_probabilities(raw)}
+    if score is not None:
+        breakdown["score"] = int(score)
+    return breakdown
 
 
 def score_answers(answers: dict[str, Any]) -> int:

@@ -400,10 +400,23 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                     if sum(1 for f in ("start", "venue", "city") if r.get(f)) > before:
                         with enrich_lock:
                             enrich_state["ok"] += 1
-            # Scoring rode along in the triage call; apply it to this chunk's events.
-            event_score = scoring.score_answers(tri.raw)
-            for r in records:
+        # Jev triage answered the 12 scoring Nouls in the same call. Persist the
+        # per-question probabilities on every record so the weights can be
+        # re-tuned from stored data; the composite score is event-only.
+        event_score = scoring.score_answers(tri.raw)
+        content_flags = {
+            "is_lottery": bool(tri.is_lottery),
+            "lotteryConfidence": round(float(tri.lottery_conf), 4),
+            "is_sports": bool(tri.is_sports),
+            "sportsConfidence": round(float(tri.sports_conf), 4),
+        }
+        for r in records:
+            r["contentFlags"] = content_flags
+            if route.schema == "event":
                 r["score"] = event_score
+                r["scoring"] = scoring.detail(tri.raw, event_score)
+            else:
+                r["scoring"] = scoring.detail(tri.raw)
         return {"origin": rec, "triage": tri, "route": route, "records": records}
 
     results: list[dict[str, Any]] = []

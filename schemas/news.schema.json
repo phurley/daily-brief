@@ -58,6 +58,21 @@
           "minItems": 1,
           "uniqueItems": true,
           "items": { "type": "string", "minLength": 1 }
+        },
+        "scoring": { "$ref": "#/$defs/scoring" }
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "description": "Diagnostic Jev scoring signals kept for tuning extract/scoring.py. The composite score is event-only, so stories normally carry only signals.",
+      "additionalProperties": false,
+      "required": ["signals"],
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "signals": {
+          "type": "object",
+          "description": "Per-question Jev Noul P(yes), 0-1, keyed by question name.",
+          "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
         }
       }
     },
