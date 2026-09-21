@@ -281,7 +281,12 @@ SCORING_QUESTIONS: dict[str, str] = {
     "craft_fair_shopping": "Is this primarily a craft fair, market, or shopping/retail event?",
     "religious": "Is this primarily a religious service or faith-based gathering?",
     "large_venue": "Is this event held at a large venue \u2014 an arena, stadium, big amphitheater, convention center, or major festival ground?",
-    "substance_recovery": "Is this primarily a substance-use recovery meeting or support group (AA, NA, SMART Recovery, or similar)?",
+    "substance_recovery": (
+        "Is this primarily about substance-use recovery or a sober/recovery "
+        "community \u2014 a recovery meeting or support group (AA, NA, SMART "
+        "Recovery, or similar), or a recovery/sober-themed event, festival, "
+        "walk, or fundraiser?"
+    ),
     "popular_music_cover_band": "Is this primarily live music by a cover or tribute band playing well-known songs?",
     "market_or_shop": "Is this primarily a market or shopping event \u2014 a farmers market, flea market, vendor market, or retail sale?",
     "punk_metal_or_rock": "Is this primarily punk, metal, hard rock, or similar loud/heavy live music?",
