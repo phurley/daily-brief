@@ -263,13 +263,15 @@ SCORING_QUESTIONS: dict[str, str] = {
     # positive
     "funny": "Is this event comedic, funny, or light-hearted entertainment?",
     "distinctive": "Is this event distinctive, unusual, or a one-of-a-kind experience rather than generic?",
-    "live": "Is this a live performance or in-person participation, rather than a screening, recording, or static display?",
     "eclectic": "Is this event eclectic, genre-blending, or hard to put in a single category?",
     "technical_science": "Is this event related to science, technology, engineering, or technical craft?",
     "artsy": "Is this event artistic, creative, or aesthetically oriented?",
     "progressive": "Does this event have a progressive, experimental, or socially forward-leaning character?",
     "outdoors": "Is this event primarily held outdoors or focused on nature \u2014 a hike, trail/nature walk, park, farm, or garden visit?",
     "theatre": "Is this primarily a theatre or stage production \u2014 a play, musical, opera, or dramatic performance?",
+    "live_music": "Is this primarily live music \u2014 a concert, band, or DJ performance?",
+    "live_comedy": "Is this primarily live comedy \u2014 a stand-up, improv, or sketch performance?",
+    "farmer_market": "Is this primarily a farmers market or farm/produce stand \u2014 fresh food and local growers rather than retail goods?",
     # negative
     "sporting": (
         "Is this primarily a sports event or competition \u2014 a game, match, race, "

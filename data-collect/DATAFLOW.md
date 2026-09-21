@@ -208,7 +208,7 @@ Design rules:
 - **Idempotent by fingerprint.** A candidate is re-paid for only when its
   content changes or `EXTRACTOR_VERSION` is bumped. This is what makes an hourly
   run cheap: steady-state cost is only newly-crawled candidates.
-- **Event scoring runs per record, not per chunk** (nine positive / fifteen
+- **Event scoring runs per record, not per chunk** (eleven positive / fifteen
   negative Nouls → `extract/scoring.py`, 0–100, neutral = 50); the per-question
   probabilities are stored on the record and published under `scoring`. The
   score is derived from the rounded signals, so it is reproducible.
@@ -250,7 +250,7 @@ flowchart TD
 - Images are joined from the crawler/feed data (`imageUrl`/`imageAlt` for events,
   `photo` for stories).
 - The stored Jev `scoring` breakdown is passed through as an optional
-  `{score?, signals}` block on both events and stories; `signals` is the 24
+  `{score?, signals}` block on both events and stories; `signals` is the 26
   per-question Noul probabilities behind the event score.
 - Records whose `contentFlags` mark them lottery/sports (conf ≥ 0.60) are
   dropped, a durable backstop for records extracted before the gate rules.

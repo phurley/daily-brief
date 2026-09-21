@@ -35,7 +35,7 @@ test("contributions are signed and ordered by magnitude", () => {
   const distinctive = rows.find((row) => row.name === "distinctive");
   const recurring = rows.find((row) => row.name === "recurring");
   assert.equal(distinctive.delta, 0.24);
-  assert.equal(recurring.delta, -0.075);
+  assert.equal(recurring.delta, -0.15);
   assert.ok(rows.indexOf(distinctive) < rows.indexOf(recurring));
 });
 

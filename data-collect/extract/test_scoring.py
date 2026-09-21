@@ -15,12 +15,12 @@ class ScoringBreakdownTest(unittest.TestCase):
     def test_signal_probabilities(self):
         raw = {
             "distinctive": {"value": True, "confidence": 0.9, "probability": 0.81234},
-            "live": {"value": False, "confidence": 0.8, "probability": 0.2},
+            "live_music": {"value": False, "confidence": 0.8, "probability": 0.2},
             "ignored": {"value": True, "confidence": 0.5},  # no probability
         }
         signals = scoring.signal_probabilities(raw)
         self.assertEqual(signals["distinctive"], 0.8123)
-        self.assertEqual(signals["live"], 0.2)
+        self.assertEqual(signals["live_music"], 0.2)
         self.assertNotIn("ignored", signals)
 
     def test_detail_includes_score_only_when_given(self):
@@ -44,10 +44,13 @@ class ScoringBreakdownTest(unittest.TestCase):
             "punk_metal_or_rock", "dance", "sales_related", "children_activity",
             "running", "exercise", "employment_related",
         }
-        self.assertEqual(len(scoring.SIGNAL_NAMES), 24)
+        self.assertEqual(len(scoring.SIGNAL_NAMES), 26)
+        self.assertNotIn("live", scoring.SIGNAL_NAMES)  # too broad; replaced by live_music/live_comedy
         self.assertTrue(expected.issubset(set(scoring.SIGNAL_NAMES)))
         for name in expected:
             self.assertIn(name, scoring.POS_WEIGHTS if name in scoring.POS_WEIGHTS else scoring.NEG_WEIGHTS)
+        # A farmers market must net positive against the market_or_shop penalty.
+        self.assertGreater(scoring.POS_WEIGHTS["farmer_market"], scoring.NEG_WEIGHTS["market_or_shop"])
 
 
 if __name__ == "__main__":

@@ -14,10 +14,6 @@
       "weight": 0.14,
       "polarity": "positive"
     },
-    "live": {
-      "weight": 0.12,
-      "polarity": "positive"
-    },
     "funny": {
       "weight": 0.12,
       "polarity": "positive"
@@ -38,64 +34,76 @@
       "weight": 0.1,
       "polarity": "positive"
     },
+    "live_music": {
+      "weight": 0.12,
+      "polarity": "positive"
+    },
+    "live_comedy": {
+      "weight": 0.12,
+      "polarity": "positive"
+    },
+    "farmer_market": {
+      "weight": 0.26,
+      "polarity": "positive"
+    },
     "recurring": {
-      "weight": 0.15,
+      "weight": 0.3,
       "polarity": "negative"
     },
     "sporting": {
-      "weight": 0.15,
+      "weight": 0.3,
       "polarity": "negative"
     },
     "large_venue": {
-      "weight": 0.12,
+      "weight": 0.24,
       "polarity": "negative"
     },
     "craft_fair_shopping": {
-      "weight": 0.1,
+      "weight": 0.2,
       "polarity": "negative"
     },
     "religious": {
-      "weight": 0.08,
+      "weight": 0.16,
       "polarity": "negative"
     },
     "substance_recovery": {
-      "weight": 0.12,
+      "weight": 0.24,
       "polarity": "negative"
     },
     "popular_music_cover_band": {
-      "weight": 0.1,
+      "weight": 0.2,
       "polarity": "negative"
     },
     "market_or_shop": {
-      "weight": 0.12,
+      "weight": 0.24,
       "polarity": "negative"
     },
     "punk_metal_or_rock": {
-      "weight": 0.1,
+      "weight": 0.2,
       "polarity": "negative"
     },
     "dance": {
-      "weight": 0.08,
+      "weight": 0.16,
       "polarity": "negative"
     },
     "sales_related": {
-      "weight": 0.12,
+      "weight": 0.24,
       "polarity": "negative"
     },
     "children_activity": {
-      "weight": 0.12,
+      "weight": 0.24,
       "polarity": "negative"
     },
     "running": {
-      "weight": 0.1,
+      "weight": 0.2,
       "polarity": "negative"
     },
     "exercise": {
-      "weight": 0.1,
+      "weight": 0.2,
       "polarity": "negative"
     },
     "employment_related": {
-      "weight": 0.12,
+      "weight": 0.24,
       "polarity": "negative"
     }
   }

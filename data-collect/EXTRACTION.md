@@ -395,7 +395,7 @@ Implemented, standard-library only:
 - Event scoring runs **per record** (`extract/scoring.py`), not per source
   chunk: the extracted event's own fields are scored, so a single sporting event
   inside a mixed listing still registers its own `sporting` signal. 0–100 from
-  nine positive / fifteen negative Nouls; see the local `gold/round2/SCORING.md`.
+  eleven positive / fifteen negative Nouls; see the local `gold/round2/SCORING.md`.
   The events schema is a single un-capped `events` array
   (`schemas/events.schema.json`, v2.0.0).
 - The per-question Noul probabilities behind the score are persisted on every

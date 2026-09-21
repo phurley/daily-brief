@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Jev event scoring (0-100).
 
-Seven positive and five negative Noul questions, evaluated in one Jev call and
-combined with weights in code (composite scoring). The per-question
+Eleven positive and fifteen negative Noul questions, evaluated in one Jev call
+and combined with weights in code (composite scoring). The per-question
 probabilities are persisted on every record (and published as a ``scoring``
 block) so these weights can be re-tuned against real answers. Locality is deliberately
 light; there is no timeliness or family-friendly term (events are shown sorted by
@@ -26,31 +26,35 @@ POS_WEIGHTS: dict[str, float] = {
     "distinctive": 0.24,        # boosted
     "eclectic": 0.16,           # boosted
     "technical_science": 0.14,  # boosted
-    "live": 0.12,
     "funny": 0.12,
     "artsy": 0.10,
     "progressive": 0.08,
     "theatre": 0.12,
     "outdoors": 0.10,
+    "live_music": 0.12,
+    "live_comedy": 0.12,
+    # Slightly above the market_or_shop penalty below, so a farmers market nets
+    # positive while a plain market/shop still loses.
+    "farmer_market": 0.26,
 }
-#: negative quality -> penalty weight. Negatives may legitimately clamp a score
-#: to 0; that is intended for the qualities below.
+#: negative quality -> penalty weight. Doubled so the negative categories bite;
+#: they may legitimately clamp a score to 0, which is intended.
 NEG_WEIGHTS: dict[str, float] = {
-    "recurring": 0.15,
-    "sporting": 0.15,
-    "large_venue": 0.12,
-    "craft_fair_shopping": 0.10,
-    "religious": 0.08,
-    "substance_recovery": 0.12,
-    "popular_music_cover_band": 0.10,
-    "market_or_shop": 0.12,
-    "punk_metal_or_rock": 0.10,
-    "dance": 0.08,
-    "sales_related": 0.12,
-    "children_activity": 0.12,
-    "running": 0.10,
-    "exercise": 0.10,
-    "employment_related": 0.12,
+    "recurring": 0.30,
+    "sporting": 0.30,
+    "large_venue": 0.24,
+    "craft_fair_shopping": 0.20,
+    "religious": 0.16,
+    "substance_recovery": 0.24,
+    "popular_music_cover_band": 0.20,
+    "market_or_shop": 0.24,
+    "punk_metal_or_rock": 0.20,
+    "dance": 0.16,
+    "sales_related": 0.24,
+    "children_activity": 0.24,
+    "running": 0.20,
+    "exercise": 0.20,
+    "employment_related": 0.24,
 }
 
 #: The questions live in jev so triage can ask them in the same call.
