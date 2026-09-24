@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-24T20:00:12Z",
+  "generatedAt": "2026-09-24T23:14:36Z",
   "location": {
     "name": "Canton",
     "region": "Michigan",
@@ -9,25 +9,25 @@
     "timeZone": "America/Detroit"
   },
   "current": {
-    "observedAt": "2026-09-24T16:00:00-04:00",
-    "temperatureF": 70.5,
-    "feelsLikeF": 64.3,
+    "observedAt": "2026-09-24T19:00:00-04:00",
+    "temperatureF": 63.9,
+    "feelsLikeF": 59.0,
     "conditionCode": 0,
     "conditionText": "Clear",
     "icon": "☀",
     "precipitationIn": 0.0,
-    "humidityPercent": 37,
+    "humidityPercent": 41,
     "wind": {
-      "speedMph": 11.2,
-      "directionDegrees": 84,
-      "direction": "E",
-      "gustMph": 15.7
+      "speedMph": 5.9,
+      "directionDegrees": 61,
+      "direction": "ENE",
+      "gustMph": 13.2
     }
   },
   "daily": [
     {
       "date": "2026-09-24",
-      "highF": 70.5,
+      "highF": 70.1,
       "lowF": 50.6,
       "conditionCode": 1,
       "conditionText": "Mostly clear",
@@ -39,27 +39,27 @@
     },
     {
       "date": "2026-09-25",
-      "highF": 69.1,
-      "lowF": 46.5,
+      "highF": 69.8,
+      "lowF": 47.6,
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
       "precipitationChancePercent": 0,
       "sunrise": "2026-09-25T07:24:00-04:00",
       "sunset": "2026-09-25T19:25:00-04:00",
-      "narrative": "Overcast with a high near 69°F and a low around 46°F; 0% chance of precipitation."
+      "narrative": "Overcast with a high near 70°F and a low around 48°F; 0% chance of precipitation."
     },
     {
       "date": "2026-09-26",
       "highF": 75.3,
-      "lowF": 47.8,
-      "conditionCode": 1,
-      "conditionText": "Mostly clear",
-      "icon": "🌤",
+      "lowF": 46.1,
+      "conditionCode": 0,
+      "conditionText": "Clear",
+      "icon": "☀",
       "precipitationChancePercent": 0,
       "sunrise": "2026-09-26T07:25:00-04:00",
       "sunset": "2026-09-26T19:23:00-04:00",
-      "narrative": "Mostly clear with a high near 75°F and a low around 48°F; 0% chance of precipitation."
+      "narrative": "Clear with a high near 75°F and a low around 46°F; 0% chance of precipitation."
     },
     {
       "date": "2026-09-27",
@@ -92,10 +92,10 @@
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
-      "precipitationChancePercent": 5,
+      "precipitationChancePercent": 2,
       "sunrise": "2026-09-29T07:28:00-04:00",
       "sunset": "2026-09-29T19:18:00-04:00",
-      "narrative": "Overcast with a high near 74°F and a low around 56°F; 5% chance of precipitation."
+      "narrative": "Overcast with a high near 74°F and a low around 56°F; 2% chance of precipitation."
     },
     {
       "date": "2026-09-30",
@@ -104,17 +104,17 @@
       "conditionCode": 51,
       "conditionText": "Light drizzle",
       "icon": "🌦",
-      "precipitationChancePercent": 33,
+      "precipitationChancePercent": 23,
       "sunrise": "2026-09-30T07:29:00-04:00",
       "sunset": "2026-09-30T19:16:00-04:00",
-      "narrative": "Light drizzle with a high near 72°F and a low around 62°F; 33% chance of precipitation."
+      "narrative": "Light drizzle with a high near 72°F and a low around 62°F; 23% chance of precipitation."
     }
   ],
   "sources": [
     {
       "name": "Open-Meteo",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=42.3086&longitude=-83.4824&current=temperature_2m,apparent_temperature,precipitation,weather_code,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDetroit&forecast_days=7",
-      "retrievedAt": "2026-09-24T20:00:12Z"
+      "retrievedAt": "2026-09-24T23:14:36Z"
     }
   ]
 }
