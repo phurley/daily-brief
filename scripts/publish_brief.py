@@ -52,6 +52,7 @@ def sync_checkout(commit, captured):
     """Fast-forward when safe. Never stash, rebase or overwrite newer source work."""
     index = Path(output('git', 'rev-parse', '--path-format=absolute', '--git-path', 'index'))
     original_index = index.read_bytes()
+    regenerated = {}
     # Git permits a fast-forward over staged content identical to the new tree.
     # Stage only our captured files that are still identical to the published copy.
     for name, data in captured.items():
@@ -59,13 +60,28 @@ def sync_checkout(commit, captured):
         if not path.is_file() or path.read_bytes() != data:
             continue
         blob = subprocess.run(['git', 'rev-parse', f'{commit}:{name}'], cwd=ROOT, capture_output=True, text=True)
-        if blob.returncode == 0 and output('git', 'hash-object', '--', name) == blob.stdout.strip():
+        if blob.returncode != 0:
+            continue
+        if name in DERIVED and output('git', 'hash-object', '--', name) != blob.stdout.strip():
+            # The collector may pass a preliminary shortlist. The edition build
+            # regenerates it; replace only the captured copy we still own.
+            regenerated[name] = data
+            fresh = subprocess.check_output(['git', 'show', f'{commit}:{name}'], cwd=ROOT)
+            temporary = path.with_name(path.name + '.dailybrief-tmp')
+            temporary.write_bytes(fresh)
+            os.replace(temporary, path)
+        if output('git', 'hash-object', '--', name) == blob.stdout.strip():
             run('git', 'add', '--', name)
     result = subprocess.run(['git', 'merge', '--ff-only', '--no-autostash', commit], cwd=ROOT)
     if result.returncode:
         temporary = index.with_name('index.dailybrief-tmp')
         temporary.write_bytes(original_index)
         os.replace(temporary, index)
+        for name, data in regenerated.items():
+            path = ROOT / name
+            temporary = path.with_name(path.name + '.dailybrief-tmp')
+            temporary.write_bytes(data)
+            os.replace(temporary, path)
         print('Publication succeeded. Local edits prevent a safe fast-forward; checkout and index preserved. Future publications still start from origin/main.')
 
 

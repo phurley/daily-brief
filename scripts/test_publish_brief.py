@@ -99,7 +99,7 @@ class PublicationRaceTest(unittest.TestCase):
     def build(self,where):
         subprocess.run([NODE,'scripts/build_edition.mjs'],cwd=where,env=self.env,check=True,stdout=subprocess.DEVNULL)
 
-    def publish(self,mode):
+    def publish(self,mode,sources=None):
         fake=self.root/'bin';fake.mkdir()
         marker=self.root/'raced'
         body=f"""#!{sys.executable}
@@ -115,7 +115,7 @@ if sys.argv[1:2]==['push']:
 os.execv({self.git!r},[{self.git!r},*sys.argv[1:]])
 """
         (fake/'git').write_text(body);(fake/'git').chmod(0o755)
-        return subprocess.run([sys.executable,'scripts/publish_brief.py','weather.json'],cwd=self.repo,env={**self.env,'PATH':str(fake)+os.pathsep+os.environ['PATH']},stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
+        return subprocess.run([sys.executable,'scripts/publish_brief.py',*(sources or ['weather.json'])],cwd=self.repo,env={**self.env,'PATH':str(fake)+os.pathsep+os.environ['PATH']},stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
 
     def test_competing_writer_rebuilds_preserving_both_sources_and_local_edits(self):
         result=self.publish('race')
@@ -128,6 +128,17 @@ os.execv({self.git!r},[{self.git!r},*sys.argv[1:]])
         self.assertEqual((self.repo/'notes.txt').read_text(),'unrelated staged edit')
         self.assertEqual(self.command('diff','--cached','--name-only').strip(),'notes.txt')
         self.assertNotIn('UU ',self.command('status','--short'))
+
+    def test_collector_preliminary_recommendations_are_rebuilt_and_sync_cleanly(self):
+        p=self.repo/'recommendations.json'
+        document=json.loads(p.read_text());document['generatedAt']='2026-10-09T11:00:00Z'
+        p.write_text(json.dumps(document))
+        result=self.publish('race',['weather.json','recommendations.json'])
+        self.assertEqual(result.returncode,0,result.stdout)
+        self.assertEqual(self.command('rev-parse','HEAD'),self.command('rev-parse','origin/main'))
+        self.assertEqual(json.loads(p.read_text())['generatedAt'],'2026-10-09T12:00:00.000Z')
+        self.assertEqual(self.command('diff','--cached','--name-only').strip(),'notes.txt')
+        self.assertEqual(self.command('diff','--name-only','--','recommendations.json').strip(),'')
 
     def test_exhausted_retries_preserve_checkout_and_recovery_commit(self):
         result=self.publish('reject')
