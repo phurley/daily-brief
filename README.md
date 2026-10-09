@@ -136,3 +136,19 @@ The page merges `scoring-weights.json` with the signal names found in
 page edit required. `scoring.mjs` mirrors the Python math (including Python's
 banker's rounding) and is covered by `node --test scripts/scoring.test.mjs`,
 which asserts it reproduces every stored `scoring.score`.
+
+## Starship status and forecasting
+
+`starship.json` is independent of the science digest and the free worldwide
+next-five launch strip. Its card distinguishes operator targets, outside
+reports and the Daily Brief forecast, with dated evidence, uncertainty,
+source health and change explanations. Evidence expires after six hours;
+a passed target never implies a completed mission. The initial forecast runs
+in shadow mode while immutable history accumulates.
+
+On kitchen.local, `com.dailybrief.starship` collects at :25 hourly. Existing
+editorial runs read the canonical record and share the browser's freshness
+checks. Local recurring Git writers share a publication lock and scoped
+commits. See [Starship operations and recurring-task inventory](starship/README.md)
+for installation, tests, source limitations, evidence review, history evaluation
+and recovery. No paid launch-provider dependency is required.

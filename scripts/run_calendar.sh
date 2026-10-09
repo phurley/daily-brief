@@ -51,6 +51,8 @@ fi
 
 # Only ever stage/snapshot calendar.json so a concurrent edit elsewhere in the
 # work tree is never swept into this commit.
+. "$ROOT/scripts/git-publish-lock.sh"
+acquire_publish_lock
 git add -- calendar.json
 if git diff --cached --quiet -- calendar.json; then
     echo "calendar.json unchanged; nothing to push"

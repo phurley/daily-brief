@@ -1,3 +1,4 @@
+import { starshipView, targetLabel, usableLaunchCache, launchDateKey, launchDateTime } from "./starship.mjs?v=20261009-1";
 import { computeAlmanacDay } from "./almanac-calc.mjs?v=20260920-1";
 import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
 import { eventDateLabel } from "./event-time.mjs?v=20260908-1";
@@ -5,7 +6,6 @@ import { orderNewsStories, orderScienceStories } from "./story-order.mjs?v=20260
 
 const TIME_ZONE = "America/Detroit";
 const REFRESH_MS = 15 * 60 * 1000;
-const LAUNCH_CACHE_MS = 30 * 60 * 1000;
 const LAUNCH_CACHE_KEY = "daily-brief-rocket-launches:v1";
 const LAUNCH_API_URL = "https://fdo.rocketlaunch.live/json/launches/next/5";
 
@@ -16,6 +16,7 @@ const DOCUMENTS = [
   ["calendar", "calendar.json", "schemas/calendar.schema.json", true],
   ["events", "events.json", "schemas/events.schema.json", true],
   ["news", "news.json", "schemas/news.schema.json", true],
+  ["starship", "starship.json", "schemas/starship.schema.json", true],
   ["geeknews", "geeknews.json", "schemas/geeknews.schema.json", true],
   ["vibe", "vibe.json", "schemas/vibe.schema.json", true],
   ["photos", "photos.json", "schemas/photos.schema.json", false],
@@ -35,6 +36,8 @@ const state = {
   calendarEventId: "",
   calendarEntries: [],
   launches: [],
+  launchCacheFallback: false,
+  launchFetchedAt: null,
   scienceShuffleSeed: globalThis.crypto?.getRandomValues
     ? globalThis.crypto.getRandomValues(new Uint32Array(1))[0]
     : Date.now(),
@@ -194,6 +197,7 @@ async function refreshData({ initial = false } = {}) {
 
   state.errors = nextErrors;
   if (changed) render();
+  else renderStarship(); // Expiry can change without a new JSON signature.
   renderErrors();
   const checked = new Intl.DateTimeFormat("en-US", { timeZone: TIME_ZONE, hour: "numeric", minute: "2-digit" }).format(new Date());
   status.textContent = changed && !initial ? `Updated at ${checked}` : `Live · checked ${checked}`;
@@ -1033,30 +1037,6 @@ function renderStories(kind) {
   refreshShelfControls();
 }
 
-function launchDateKey(launch) {
-  const instant = launch.t0 || launch.win_open;
-  if (instant) return dateKey(new Date(instant));
-  const estimate = launch.est_date;
-  if (estimate?.year && estimate?.month && estimate?.day) {
-    return `${estimate.year}-${String(estimate.month).padStart(2, "0")}-${String(estimate.day).padStart(2, "0")}`;
-  }
-  return "";
-}
-
-function launchDateTime(launch) {
-  const instant = launch.t0 || launch.win_open;
-  if (!instant) return launch.date_str || "Date to be confirmed";
-  return new Intl.DateTimeFormat("en-US", {
-    timeZone: TIME_ZONE,
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-    timeZoneName: "short",
-  }).format(new Date(instant));
-}
-
 function launchLink(launch) {
   return launch.slug ? `https://www.rocketlaunch.live/launch/${launch.slug}` : "https://www.rocketlaunch.live/";
 }
@@ -1065,10 +1045,7 @@ function renderRocketLaunches() {
   const target = $("#rocket-launches");
   target.replaceChildren();
   const launches = state.launches;
-  const starship = state.data.geeknews?.editionDate <= state.selectedDate
-    ? state.data.geeknews?.starshipEstimatedLaunch
-    : null;
-  target.hidden = launches.length === 0 && !starship;
+  target.hidden = launches.length === 0;
   if (target.hidden) return;
 
   const todaysLaunches = launches.filter((launch) => launchDateKey(launch) === state.today);
@@ -1080,17 +1057,19 @@ function renderRocketLaunches() {
   const line = node("div", { className: "rocket-launches__line" });
   if (featured) {
     const title = todaysLaunches.length
-      ? `${todaysLaunches.length} launch${todaysLaunches.length === 1 ? "" : "es"} today`
-      : "No launches today · Next";
+      ? `${todaysLaunches.length} launch${todaysLaunches.length === 1 ? "" : "es"} targeted today`
+      : "Next in the worldwide feed";
     line.append(node("strong", { text: title }), document.createTextNode(" · "));
     line.append(safeLink(featured.name || featured.missions?.[0]?.name || "Scheduled launch", launchLink(featured)));
     const location = featured.pad?.location?.name;
     line.append(document.createTextNode(` · ${launchDateTime(featured)}${location ? ` · ${location}` : ""}`));
     if (todaysLaunches.length > 1) line.append(document.createTextNode(` · +${todaysLaunches.length - 1} more`));
   }
-  if (starship) {
-    if (featured) line.append(document.createTextNode(" · "));
-    line.append(node("strong", { text: `Starship ${starship.estimateLabel}` }));
+  if (featured?.t0 || featured?.win_open) {
+    line.title = `Source time: ${featured.t0 || featured.win_open}`;
+  }
+  if (state.launchCacheFallback) {
+    line.append(node("span", { text: ` · Cached feed from ${new Date(state.launchFetchedAt).toLocaleString("en-US", { timeZone: TIME_ZONE })} Detroit time (live feed unavailable; maximum age 6 hours).` }));
   }
 
   const attribution = safeLink("Data by RocketLaunch.Live", "https://www.rocketlaunch.live/");
@@ -1102,12 +1081,45 @@ function renderRocketLaunches() {
   );
 }
 
+function renderStarship() {
+  const wasOpen = $("#starship-status details")?.open;
+  const record = state.data.starship;
+  const view = starshipView(record);
+  const card = $("#starship-status");
+  const timestamp = (value) => value ? new Date(value).toLocaleString("en-US", { timeZone: TIME_ZONE, timeZoneName: "short" }) : "Not yet verified";
+  const official = node("p", {}, [node("strong", { text: "Official target: " }), document.createTextNode(view.officialTarget ? targetLabel(view.officialTarget.target) : "No current verified target.")]);
+  if (view.officialTarget) official.append(document.createTextNode(" · "), safeLink("Operator announcement", view.officialTarget.sourceUrl));
+  const children = [
+    node("h3", { id: "starship-title", text: record?.mission.label || "Starship status" }),
+    node("p", { className: "starship-status__summary", text: view.summary }),
+    official,
+    node("p", {}, [node("strong", { text: "Daily Brief forecast: " }), document.createTextNode(record?.mode === "shadow" ? "Under evaluation; no forecast published yet." : view.forecast?.summary || "Insufficient current evidence.")]),
+    node("p", { className: "story__source", text: `Current status · Last checked: ${timestamp(record?.lastAttemptAt)} · Last verified: ${timestamp(view.lastVerifiedAt)}${view.fresh ? "" : " · Evidence stale or unavailable"}` }),
+    node("p", { text: `What changed: ${record?.whatChanged || "Awaiting the first independent source collection."}` }),
+  ];
+  for (const id of record?.outsideReports || []) {
+    const report = record.evidence.find((e) => e.id === id);
+    if (report?.target) children.push(node("p", {}, [node("strong", { text: "Outside report (not an operator target): " }), safeLink(targetLabel(report.target), report.sourceUrl), document.createTextNode(` · observed ${timestamp(report.observedAt)}; see evidence for uncertainty.`)]));
+  }
+  const details = node("details", {}, [node("summary", { text: "Evidence, uncertainty and source health" })]);
+  details.open = Boolean(wasOpen);
+  details.append(node("p", { text: (view.uncertainty || []).join(" ") }));
+  if (record?.officialTarget) details.append(node("p", { text: `Last recorded operator wording (${view.officialTarget ? "current" : "historical or disputed"}): ${record.officialTarget.target.label}. Precision: ${record.officialTarget.target.precision}; NET: ${record.officialTarget.target.net ? "yes" : "no"}; source timezone: ${record.officialTarget.target.timeZone}. Announced: ${timestamp(record.officialTarget.announcedAt)}.` }));
+  for (const conflict of record?.conflicts || []) details.append(node("p", { text: conflict.explanation }));
+  for (const evidence of record?.evidence || []) {
+    details.append(node("p", {}, [safeLink(`${evidence.sourceType} · ${evidence.claimType} · ${evidence.verification}`, evidence.sourceUrl), document.createTextNode(` — ${evidence.excerpt} Published: ${evidence.publishedAt ? timestamp(evidence.publishedAt) : "unknown"}; observed: ${timestamp(evidence.observedAt)}. Claim confidence: ${evidence.claimConfidence}${evidence.target ? `; precision: ${evidence.target.precision}; NET: ${evidence.target.net ? "yes" : "no"}` : ""}.`)]));
+  }
+  for (const source of record?.sourceHealth || []) details.append(node("p", {}, [safeLink(source.id, source.url), document.createTextNode(`: ${source.state}. ${source.detail}`)]));
+  for (const outcome of record?.outcomes || []) details.append(node("p", { text: `Recorded mission outcome: ${outcome.missionId} — ${outcome.outcome}${outcome.actualLiftoffAt ? `; liftoff ${timestamp(outcome.actualLiftoffAt)}` : ""}. This does not establish the next mission's target.` }));
+  if (record?.previousSnapshot) details.append(safeLink("Previous evidence snapshot", new URL(record.previousSnapshot, window.location.href).href));
+  children.push(details);
+  card.replaceChildren(...children);
+}
+
 function readLaunchCache({ allowStale = false } = {}) {
   try {
     const cached = JSON.parse(localStorage.getItem(LAUNCH_CACHE_KEY) || "null");
-    if (!cached || !Array.isArray(cached.launches) || typeof cached.fetchedAt !== "number") return null;
-    if (!allowStale && Date.now() - cached.fetchedAt > LAUNCH_CACHE_MS) return null;
-    return cached.launches;
+    return usableLaunchCache(cached, allowStale);
   } catch {
     return null;
   }
@@ -1122,20 +1134,27 @@ function writeLaunchCache(launches) {
 async function loadRocketLaunches() {
   const cached = readLaunchCache();
   if (cached) {
-    state.launches = cached;
+    state.launches = cached.launches;
+    state.launchFetchedAt = cached.fetchedAt;
+    state.launchCacheFallback = false;
     renderRocketLaunches();
     return;
   }
   try {
-    const response = await fetch(LAUNCH_API_URL, { headers: { Accept: "application/json" } });
+    const response = await fetch(LAUNCH_API_URL, { headers: { Accept: "application/json" }, signal: AbortSignal.timeout(15000) });
     if (!response.ok) throw new Error(`RocketLaunch.Live returned ${response.status}`);
     const payload = await response.json();
     const launchEnvelope = payload.response || payload;
     if (!Array.isArray(launchEnvelope.result)) throw new Error("RocketLaunch.Live returned an unexpected response");
     state.launches = launchEnvelope.result;
+    state.launchCacheFallback = false;
+    state.launchFetchedAt = Date.now();
     writeLaunchCache(state.launches);
   } catch {
-    state.launches = readLaunchCache({ allowStale: true }) || [];
+    const fallback = readLaunchCache({ allowStale: true });
+    state.launches = fallback?.launches || [];
+    state.launchFetchedAt = fallback?.fetchedAt || null;
+    state.launchCacheFallback = Boolean(fallback);
   }
   renderRocketLaunches();
 }
@@ -1354,6 +1373,7 @@ function render() {
   renderStories("news");
   renderStories("geeknews");
   renderRocketLaunches();
+  renderStarship();
   renderUpdatedLabel();
   updateNavigation();
   refreshShelfControls();
@@ -1440,7 +1460,14 @@ async function init() {
   await Promise.all([refreshData({ initial: true }), loadJoke(), loadRocketLaunches()]);
   window.setInterval(refreshData, REFRESH_MS);
   window.setInterval(loadRocketLaunches, REFRESH_MS);
-  window.setInterval(updateSky, 60 * 1000);
+  window.setInterval(() => {
+    updateSky();
+    renderStarship();
+    if (state.launchFetchedAt && !usableLaunchCache({ fetchedAt: state.launchFetchedAt, launches: state.launches }, true)) {
+      state.launches = [];
+      renderRocketLaunches();
+    }
+  }, 60 * 1000);
 }
 
 init();

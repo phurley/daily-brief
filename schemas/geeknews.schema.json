@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://phurley.github.io/daily-brief/schemas/geeknews.schema.json",
   "title": "Daily Brief Geek News",
-  "description": "A dedicated Starship launch estimate and sourced science and technology stories for the Daily Brief.",
+  "description": "Sourced science and technology stories. starshipEstimatedLaunch is a legacy compatibility field; current consumers use starship.json.",
   "type": "object",
   "additionalProperties": false,
   "required": ["schemaVersion", "generatedAt", "editionDate", "starshipEstimatedLaunch", "stories"],

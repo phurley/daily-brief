@@ -7,3 +7,8 @@ calendars.json
 # Python bytecode from local scripts.
 __pycache__/
 *.pyc
+
+# Starship diagnostics; evidence snapshots remain versioned.
+starship/*.log
+starship/*.tmp-*
+starship.json.tmp-*

@@ -100,6 +100,8 @@ fi
 cd "$ROOT" || exit 1
 # Only ever stage/snapshot vibe.json so unrelated work in the tree is never
 # swept into this commit.
+. "$ROOT/scripts/git-publish-lock.sh"
+acquire_publish_lock
 git add -- vibe.json
 if git diff --cached --quiet -- vibe.json; then
     echo "$STAMP [done] exit=0 (unchanged)"

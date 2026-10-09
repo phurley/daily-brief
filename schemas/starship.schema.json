@@ -1,0 +1,575 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "mode",
+    "generatedAt",
+    "lastAttemptAt",
+    "lastSuccessAt",
+    "lastVerifiedAt",
+    "expiresAt",
+    "mission",
+    "status",
+    "statusEffectiveAt",
+    "officialTarget",
+    "outsideReports",
+    "forecast",
+    "evidence",
+    "conflicts",
+    "sourceHealth",
+    "outcomes",
+    "whatChanged",
+    "previousSnapshot",
+    "snapshot"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "modelVersion": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "shadow",
+        "live"
+      ]
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lastAttemptAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lastSuccessAt": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "lastVerifiedAt": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "expiresAt": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "mission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "vehicleIds"
+      ],
+      "properties": {
+        "id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "vehicleIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "unannounced",
+        "targeted",
+        "plausible",
+        "delayed",
+        "target-passed",
+        "uncertain",
+        "underway"
+      ]
+    },
+    "statusEffectiveAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "officialTarget": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "evidenceId",
+            "sourceUrl",
+            "announcedAt",
+            "target"
+          ],
+          "properties": {
+            "evidenceId": {
+              "type": "string"
+            },
+            "sourceUrl": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https?://"
+            },
+            "announcedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "target": {
+              "$ref": "#/$defs/target"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "outsideReports": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forecast": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "summary",
+        "window",
+        "basisIds",
+        "uncertainty"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "unannounced",
+            "targeted",
+            "plausible",
+            "delayed",
+            "target-passed",
+            "uncertain",
+            "underway"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        },
+        "window": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/target"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "basisIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "uncertainty": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "evidenceIds",
+          "explanation"
+        ],
+        "properties": {
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "explanation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sourceHealth": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "url",
+          "state",
+          "lastAttemptAt",
+          "lastSuccessAt",
+          "parserVersion",
+          "contentHash",
+          "detail"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://"
+          },
+          "state": {
+            "enum": [
+              "ok",
+              "stale",
+              "no-dated-evidence",
+              "error"
+            ]
+          },
+          "lastAttemptAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastSuccessAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "parserVersion": {
+            "type": "string"
+          },
+          "contentHash": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outcomes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "missionId",
+          "evidenceId",
+          "outcome",
+          "actualLiftoffAt",
+          "recordedAt"
+        ],
+        "properties": {
+          "missionId": {
+            "type": "string"
+          },
+          "evidenceId": {
+            "type": "string"
+          },
+          "outcome": {
+            "enum": [
+              "launched",
+              "completed",
+              "failed",
+              "cancelled"
+            ]
+          },
+          "actualLiftoffAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "recordedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "whatChanged": {
+      "type": "string"
+    },
+    "previousSnapshot": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "snapshot": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Daily Brief Starship evidence and forecast",
+  "$defs": {
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "precision",
+        "label",
+        "lower",
+        "upper",
+        "net",
+        "timeZone"
+      ],
+      "properties": {
+        "precision": {
+          "enum": [
+            "unknown",
+            "quarter",
+            "month",
+            "day",
+            "window",
+            "exact"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lower": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "upper": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "net": {
+          "type": "boolean"
+        },
+        "timeZone": {
+          "type": "string"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sourceId",
+        "sourceUrl",
+        "sourceType",
+        "publishedAt",
+        "observedAt",
+        "missionId",
+        "claimType",
+        "excerpt",
+        "verification",
+        "claimConfidence",
+        "originId",
+        "supersedes",
+        "parserVersion"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "sourceId": {
+          "type": "string"
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "sourceType": {
+          "enum": [
+            "operator",
+            "regulator",
+            "local-authority",
+            "reporter",
+            "editorial"
+          ]
+        },
+        "publishedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "missionId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "claimType": {
+          "enum": [
+            "target",
+            "readiness",
+            "regulatory",
+            "notice",
+            "delay",
+            "scrub",
+            "underway",
+            "outcome"
+          ]
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "verification": {
+          "enum": [
+            "verified",
+            "unverified",
+            "retracted",
+            "superseded"
+          ]
+        },
+        "claimConfidence": {
+          "enum": [
+            "confirmed",
+            "reported"
+          ]
+        },
+        "originId": {
+          "type": "string"
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parserVersion": {
+          "type": "string"
+        },
+        "target": {
+          "$ref": "#/$defs/target"
+        },
+        "authorization": {
+          "type": "boolean"
+        },
+        "noticeDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "outcome": {
+          "enum": [
+            "launched",
+            "completed",
+            "failed",
+            "cancelled"
+          ]
+        },
+        "actualLiftoffAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

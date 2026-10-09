@@ -36,6 +36,10 @@ STAMP="$(date '+%Y-%m-%d %H:%M:%S')"
 # Final step: refresh the editorial vibe now that the documents are published.
 # Best-effort: a vibe failure must never fail the data collection.
 run_vibe() {
+    if [ "${PUBLISH_LOCK:-}" ]; then
+        rm -f "$PUBLISH_LOCK"
+        PUBLISH_LOCK=""
+    fi
     [ "${VIBE_ENABLED:-1}" = "1" ] || return 0
     echo "--- step 4/4: editorial vibe ---"
     VIBE_SKIP_COLLECT_WAIT=1 "$ROOT/vibe-check/run.sh" || echo "vibe-check failed; data push is unaffected"
@@ -99,15 +103,17 @@ fi
 
 echo "--- step 3/4: commit + push events.json/news.json ---"
 cd "$ROOT" || exit 1
+. "$ROOT/scripts/git-publish-lock.sh"
+acquire_publish_lock
 git add events.json news.json
-if git diff --cached --quiet; then
+if git diff --cached --quiet -- events.json news.json; then
     echo "events.json/news.json unchanged; nothing to push"
     run_vibe
     echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0 (unchanged)"
     exit 0
 fi
 git -c user.name="daily-brief bot" -c user.email="phurley@gmail.com" \
-    commit -m "Update events.json and news.json" || { echo "commit failed"; exit 1; }
+    commit -m "Update events.json and news.json" -- events.json news.json || { echo "commit failed"; exit 1; }
 if ! git pull --rebase --autostash origin main; then
     echo "pull --rebase failed; leaving commit local"
     echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=1 (push failed)"

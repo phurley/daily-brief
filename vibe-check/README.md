@@ -59,3 +59,14 @@ launchctl print gui/$(id -u)/com.dailybrief.vibe | head
 ```
 
 Remove with `launchctl bootout gui/$(id -u)/com.dailybrief.vibe`.
+## Starship freshness
+
+The generator reads `starship.json` through the shared `editorialStarship`
+function in `../starship.mjs`, not the legacy estimate in `geeknews.json`.
+Its model context includes freshness, conflicts, verification time and source
+attribution. Expired targets and shadow forecasts are withheld. The
+`starship/note` output is set deterministically to the canonical current summary
+after model validation, so generated copy cannot upgrade an expired estimate.
+The independent Starship launchd collector runs at :25; this timer stays at :40.
+Git publication now uses `scripts/git-publish-lock.sh`, shared with the other
+local writers. See `../starship/README.md` for the complete schedule inventory.

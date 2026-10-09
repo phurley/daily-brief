@@ -20,6 +20,7 @@
  */
 
 import fs from "node:fs";
+import { editorialStarship } from "../starship.mjs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -53,7 +54,7 @@ const SECTIONS = [
   { section: "plan-ahead", role: "recommendation", guide: "1-2 sentences recommending specific upcoming options by name." },
   { section: "science-technology", role: "section-heading", guide: "A short heading for the science/technology roundup (max ~55 chars). Point at the finding, not the field." },
   { section: "science-technology", role: "summary", guide: "2 sentences on the two best science/tech stories, with the specific finding or milestone." },
-  { section: "starship", role: "note", guide: "One sentence on the current Starship launch estimate, or say the schedule is unset if there is no estimate." },
+  { section: "starship", role: "note", guide: "Use the canonical Starship summary verbatim; expired evidence and shadow forecasts must not become current predictions." },
   { section: "footer", role: "note", guide: "One warm, aphoristic closing line. No advice clichés, no emoji." },
 ];
 
@@ -226,7 +227,7 @@ function buildContext(dateKey) {
     summary: truncate(story.summary),
     localConnection: story.localConnection || undefined,
   }));
-  const starship = geeknews.starshipEstimatedLaunch || null;
+  const starship = editorialStarship(readJson(path.join(ROOT, "starship.json"), null));
 
   const showers = (onThisDate?.skyEvents?.activeMeteorShowers || []).map((s) => `${s.name} (peak ${s.peak.slice(0, 10)}, ZHR ${s.zhr})`);
   const eclipse = onThisDate?.skyEvents?.upcomingEclipses?.[0];
@@ -256,7 +257,7 @@ function buildContext(dateKey) {
     eventsToday: eventFor(dateKey),
     eventsTomorrow: eventFor(tomorrow),
     news: stories,
-    geeknews: { starship: starship ? { estimateLabel: starship.estimateLabel, summary: truncate(starship.summary) } : null, stories: geekStories },
+    geeknews: { starship, stories: geekStories },
   };
 }
 
@@ -289,6 +290,7 @@ function buildMessages(context) {
     "You are the staff writer for a small, calm local daily brief for Canton, Michigan.",
     "Write like a thoughtful local editor: warm, specific, practical, quietly confident.",
     "Use only facts present in the context. Never invent names, times, or figures. When a fact is missing, stay general rather than guess.",
+    "Starship: respect freshness, source attribution and shadow mode. Use its current summary; do not use expired targets or turn unknown milestones into facts.",
     "Recommendations must name real options from the context, with their time.",
     "Return every requested section/role exactly once.",
     `Avoid: ${ANTI_PATTERNS.join("; ")}.`,
@@ -430,6 +432,8 @@ async function main() {
   const messages = buildMessages(context);
   const { data, usage } = await callModel(messages, apiKey, model);
   const generated = validateGenerated(data.messages);
+  // Enforce the freshness contract even if the model ignores its instructions.
+  generated.set("starship/note", { text: context.geeknews.starship.summary });
 
   const eyebrowMessage = { id: idFor(dateKey, "masthead", "eyebrow"), date: dateKey, section: "masthead", role: "eyebrow", text: eyebrow(dateKey, FALLBACK_LOCATION), order: -1 };
   const fresh = [eyebrowMessage, ...buildMessagesFile(dateKey, generated)];
