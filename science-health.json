@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-09T19:05:51.564595Z",
+  "generatedAt": "2026-10-09T19:15:20.412804Z",
   "status": "ok",
   "lastSuccessfulCheckAt": "2026-10-09T18:57:35.412035Z",
   "documentGeneratedAt": "2026-10-09T18:59:39.346079Z",
@@ -8,7 +8,7 @@
   "sources": {
     "nasa": {
       "name": "NASA",
-      "staleAfterHours": 12,
+      "staleAfterHours": 36,
       "lastAttemptAt": "2026-10-09T18:57:35.412035Z",
       "lastSuccessAt": "2026-10-09T18:57:35.412035Z",
       "lastNewStoryAt": "2026-10-09T18:57:35.412035Z",
@@ -20,7 +20,7 @@
     },
     "jpl": {
       "name": "NASA JPL",
-      "staleAfterHours": 24,
+      "staleAfterHours": 36,
       "lastAttemptAt": "2026-10-09T18:57:35.412035Z",
       "lastSuccessAt": "2026-10-09T18:57:35.412035Z",
       "lastNewStoryAt": "2026-10-09T18:57:35.412035Z",
@@ -32,7 +32,7 @@
     },
     "esa": {
       "name": "ESA",
-      "staleAfterHours": 24,
+      "staleAfterHours": 36,
       "lastAttemptAt": "2026-10-09T18:57:35.412035Z",
       "lastSuccessAt": "2026-10-09T18:57:35.412035Z",
       "lastNewStoryAt": "2026-10-09T18:57:35.412035Z",
@@ -44,7 +44,7 @@
     },
     "nsf": {
       "name": "NSF",
-      "staleAfterHours": 48,
+      "staleAfterHours": 36,
       "lastAttemptAt": "2026-10-09T18:57:35.412035Z",
       "lastSuccessAt": "2026-10-09T18:57:35.412035Z",
       "lastNewStoryAt": "2026-10-09T18:57:35.412035Z",
@@ -56,7 +56,7 @@
     },
     "umich": {
       "name": "University of Michigan News",
-      "staleAfterHours": 24,
+      "staleAfterHours": 36,
       "lastAttemptAt": "2026-10-09T18:57:35.412035Z",
       "lastSuccessAt": "2026-10-09T18:57:35.412035Z",
       "lastNewStoryAt": "2026-10-09T18:57:35.412035Z",
@@ -90,7 +90,7 @@
       "social-science": 4,
       "technology": 17
     },
-    "newestStoryAgeHours": 2.11,
+    "newestStoryAgeHours": 2.27,
     "maxPublicationLagHours": 965.66
   }
 }
