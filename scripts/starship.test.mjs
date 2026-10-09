@@ -149,3 +149,14 @@ test("generic launch-thread boilerplate does not appear in the Starship communit
   assert.equal(starshipView(run([e]), now).communityOutlook.length, 0);
   assert.equal(starshipView(run([{ ...e, sourceUrl: "https://www.reddit.com/r/spacex/comments/abc/development/def/", excerpt: "Comment — Maybe next month" }]), now).communityOutlook.length, 1);
 });
+
+test("daily production freshness lasts 24 hours and an outage does not extend it", async () => {
+  const { readFileSync } = await import("node:fs");
+  const { ttlHours } = JSON.parse(readFileSync(new URL("../starship/config.json", import.meta.url)));
+  const previous = run([claim()], { ttlHours });
+  assert.equal(previous.expiresAt, "2026-10-10T17:00:00.000Z");
+  assert.equal(starshipView(previous, new Date("2026-10-10T16:59:59Z")).fresh, true);
+  assert.equal(starshipView(previous, new Date("2026-10-10T17:00:00Z")).fresh, false);
+  const next = run(previous.evidence, { previous, ttlHours, now: new Date("2026-10-10T18:00:00Z"), sourceHealth: [{ state: "error" }] });
+  assert.equal(next.expiresAt, previous.expiresAt);
+});

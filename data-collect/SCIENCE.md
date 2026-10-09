@@ -153,7 +153,7 @@ There is no user crontab. These launchd jobs are the active equivalent:
 | --- | --- | --- |
 | `com.dailybrief.science` | daily at 06:00 local (Detroit) | `scripts/launchd/com.dailybrief.science.plist` |
 | `com.dailybrief.collect` | every 3600 seconds | `data-collect/launchd/com.dailybrief.collect.plist` |
-| `com.dailybrief.starship` | hourly at :25 | `scripts/launchd/com.dailybrief.starship.plist` |
+| `com.dailybrief.starship` | daily at 07:25 America/Detroit | `scripts/launchd/com.dailybrief.starship.plist` |
 | `com.dailybrief.vibe` | hourly at :40 | `vibe-check/launchd/com.dailybrief.vibe.plist` |
 | `com.dailybrief.calendar` | daily at 03:30 local | `scripts/launchd/com.dailybrief.calendar.plist` |
 | `com.dailybrief.edition` | daily at 00:05 local | `scripts/launchd/com.dailybrief.edition.plist` |

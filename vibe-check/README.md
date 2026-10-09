@@ -67,7 +67,8 @@ Its model context includes freshness, conflicts, verification time and source
 attribution. Expired targets and shadow forecasts are withheld. The
 `starship/note` output is set deterministically to the canonical current summary
 after model validation, so generated copy cannot upgrade an expired estimate.
-The independent Starship launchd collector runs at :25; this timer stays at :40.
+The independent Starship launchd collector runs daily at 07:25 America/Detroit;
+the editorial timer stays hourly at :40.
 Git publication now uses `scripts/git-publish-lock.sh`, shared with the other
 local writers. See `../starship/README.md` for the complete schedule inventory.
 

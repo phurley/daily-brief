@@ -304,7 +304,7 @@ and the remaining funnel-side backlog is in
 [`FUNNEL-RECOMMENDATIONS.md`](FUNNEL-RECOMMENDATIONS.md).
 ### Independent Starship collection
 
-Starship evidence is collected by `../starship/run.sh` at :25 hourly via
+Starship evidence is collected by `../starship/run.sh` daily at 07:25 America/Detroit via
 `com.dailybrief.starship`. It has its own schema, source health, snapshots and
 expiry, and does not depend on a successful general collection or inclusion in
 the next-five global launch feed. The existing step 4 editorial refresh reads

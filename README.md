@@ -145,11 +145,11 @@ which asserts it reproduces every stored `scoring.score`.
 `starship.json` is independent of the science digest and the free worldwide
 next-five launch strip. Its card distinguishes operator targets, outside
 reports and the Daily Brief forecast, with dated evidence, uncertainty,
-source health and change explanations. Evidence expires after six hours;
+source health and change explanations. Evidence expires after 24 hours;
 a passed target never implies a completed mission. The initial forecast runs
 in shadow mode while immutable history accumulates.
 
-On kitchen.local, `com.dailybrief.starship` collects at :25 hourly. Existing
+On kitchen.local, `com.dailybrief.starship` collects daily at 07:25 America/Detroit. Existing
 editorial runs read the canonical record and share the browser's freshness
 checks. Local recurring Git writers share a publication lock and scoped
 commits. See [Starship operations and recurring-task inventory](starship/README.md)

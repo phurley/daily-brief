@@ -93,7 +93,7 @@ There is no user crontab on kitchen.local; these are launchd agents:
 | `com.dailybrief.vibe` | Hourly at :40, also chained from collection | `vibe-check/run.sh` |
 | `com.dailybrief.calendar` | Daily 03:30 | `scripts/run_calendar.sh` |
 | `com.dailybrief.science` | Daily at 06:00 Detroit time; browser order rotates every four hours | `data-collect/run_science.sh` |
-| `com.dailybrief.starship` | Hourly at :25 | `starship/run.sh` |
+| `com.dailybrief.starship` | Daily at 07:25 America/Detroit | `starship/run.sh` |
 | `com.dailybrief.edition` | Daily 00:05; date rollover without AI/network collection | `scripts/run_edition.sh` |
 
 All publishing entry points now call `scripts/publish_brief.py`. It shares the existing macOS shlock publication mutex (flock in Linux CI),

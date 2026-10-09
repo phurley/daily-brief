@@ -4,7 +4,8 @@
   <key>Label</key><string>com.dailybrief.starship</string>
   <key>ProgramArguments</key><array><string>/Users/phurley/daily-brief/starship/run.sh</string></array>
   <key>WorkingDirectory</key><string>/Users/phurley/daily-brief</string>
-  <key>StartCalendarInterval</key><dict><key>Minute</key><integer>25</integer></dict>
+  <!-- Daily at 07:25 America/Detroit (the kitchen.local system timezone). -->
+  <key>StartCalendarInterval</key><dict><key>Hour</key><integer>7</integer><key>Minute</key><integer>25</integer></dict>
   <key>RunAtLoad</key><false/>
   <key>EnvironmentVariables</key><dict><key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string></dict>
   <key>StandardOutPath</key><string>/Users/phurley/daily-brief/starship/collector.log</string>

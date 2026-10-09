@@ -1,5 +1,5 @@
 #!/bin/sh
-# Independent hourly source collection, immutable history and publication.
+# Independent daily source collection, immutable history and publication.
 set -eu
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 NODE="${STARSHIP_NODE:-/opt/homebrew/bin/node}"

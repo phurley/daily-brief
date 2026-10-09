@@ -8,10 +8,9 @@ neither consumer reads it. Its September 14 estimate was imported once as
 
 ## Collection and rollout
 
-On kitchen.local, `com.dailybrief.starship` runs `starship/run.sh` at **:25 every
-hour**, using the existing `data-collect/.venv` and `/opt/homebrew/bin/node`.
-This runs independently of the general crawler and before the standalone
-editorial timer at :40. The collector's own editorial chain may run at another
+On kitchen.local, `com.dailybrief.starship` runs `starship/run.sh` at **07:25 daily (America/Detroit)**, using the existing `data-collect/.venv` and `/opt/homebrew/bin/node`.
+This runs independently of the general crawler and before the morning standalone
+editorial timer at 07:40. The collector's own editorial chain may run at another
 time; it reads the latest atomic Starship record with the same freshness gate.
 
 The initial mode is **shadow** (`config.json`). The public card shows verified
@@ -102,7 +101,7 @@ to America/Detroit. Claim confirmation describes evidence, not liftoff odds.
 
 `lastAttemptAt` records every run; `lastSuccessAt` requires a successfully parsed
 source. `lastVerifiedAt` requires a verified, mission-associated claim, and
-`expiresAt` is six hours later. Source outages do not renew that deadline.
+`expiresAt` is 24 hours later, matching daily collection. Source outages do not renew that deadline.
 Reviewed claims also expire unless reverified. A passed target requests an
 update; it never creates a successful launch or cancellation. Unknown readiness
 or authorization remains unknown. The initial plausible state requires a
@@ -133,7 +132,7 @@ six-hour absolute fallback cap, labels cached fallback data, distinguishes
 
 | Job | Schedule on kitchen.local / GitHub | Publication |
 | --- | --- | --- |
-| `com.dailybrief.starship` | Local hourly at :25 | `starship.json`, immutable history |
+| `com.dailybrief.starship` | Local daily at 07:25 America/Detroit | `starship.json`, immutable history |
 | `com.dailybrief.collect` | Local 3600-second interval | events/news, then editorial |
 | `com.dailybrief.vibe` | Local hourly at :40 | freshness-gated editorial |
 | `com.dailybrief.calendar` | Local 03:30 | family calendar |
@@ -162,7 +161,7 @@ behavior.
 
 ## r/SpaceX community outlook
 
-The existing hourly :25 Starship job also reads the public r/SpaceX new/hot
+The daily 07:25 America/Detroit Starship job also reads the public r/SpaceX new/hot
 Atom feeds and up to two recent Starship development-thread comment feeds.
 No additional scheduler or Reddit credentials are required. Requests are bounded;
 blocked, malformed or partially failing feeds are exposed in source health.
