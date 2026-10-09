@@ -4,7 +4,7 @@ Run with the crawler Python: python starship/test_browser.py
 import functools
 import http.server
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import threading
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -21,6 +21,7 @@ fixture = json.loads((ROOT / "starship/history/2026-10-09T18-53-41.415Z.json").r
 at = datetime.now(timezone.utc).isoformat()
 fixture["sourceHealth"].append({"id": "reddit-spacex", "url": "https://www.reddit.com/r/spacex/", "state": "ok", "lastAttemptAt": at, "lastSuccessAt": at, "parserVersion": "fixture", "contentHash": None, "detail": "Fixture community feed"})
 fixture["evidence"].append({"id": "community-fixture", "sourceId": "reddit-spacex", "sourceUrl": "https://www.reddit.com/r/spacex/comments/fixture/outlook/", "sourceType": "community", "publishedAt": at, "observedAt": at, "missionId": None, "claimType": "discussion", "excerpt": "Starship next launch could be months away — a community guess.", "verification": "unverified", "claimConfidence": "reported", "originId": "fixture", "supersedes": [], "parserVersion": "fixture", "communityKind": "speculation", "linkedSourceUrls": ["https://www.spacex.com/launches/"]})
+fixture["communityEstimate"] = {"state": "estimated", "missionId": "starship-flight-15", "summary": "Best guess: November or later; timing remains tentative.", "rationale": "The development thread reports a tentative NET target.", "windowStart": None, "windowEnd": None, "caveats": ["The target can slip."], "sources": [{"id": "fixture", "url": "https://www.reddit.com/r/spacex/comments/fixture/outlook/", "title": "Development thread", "excerpt": "Flight 15 has a tentative target; this is community speculation.", "observedAt": at}], "generatedAt": at, "expiresAt": (datetime.now(timezone.utc)+timedelta(hours=24)).isoformat(), "model": "fixture", "version": "fixture"}
 launch = {"name": "Test window launch", "slug": "fixture", "win_open": "2026-10-10T15:30:00Z"}
 try:
     with sync_playwright() as p:
@@ -35,13 +36,14 @@ try:
                 page.route("**/json/launches/next/5", lambda route: route.fulfill(json={"result": [launch]}))
                 page.route("https://icanhazdadjoke.com/**", lambda route: route.fulfill(json={"joke": "A fixture joke."}))
                 page.goto(f"http://127.0.0.1:{server.server_port}/", wait_until="networkidle")
-                card = page.locator("#rocket-launches")
+                card = page.locator("#starship-estimate-details")
                 card.wait_for()
-                assert "Starship: best guess date pending" in card.inner_text()
-                assert page.locator("#starship-status").count() == 0
-                assert "Window opens at" in card.inner_text()
-                assert "Data by RocketLaunch.Live" in card.inner_text()
-                assert page.locator(".rocket-launches__starship").get_attribute("title") == "Previous target passed; awaiting update."
+                card.locator("summary").click()
+                assert "RocketLaunch.Live" not in card.inner_text()
+                assert "Best guess: November or later" in card.inner_text()
+                assert "Not an official launch announcement" in card.inner_text()
+                assert "Window opens at" in page.locator("#rocket-launches").inner_text()
+                assert "/r/spacex/" in card.locator("a").first.get_attribute("href")
                 assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Overflow at {width}px"
                 card.screenshot(path=f"/tmp/starship-{width}.png")
                 # Feed success must not change canonical freshness; fallback is
@@ -51,12 +53,17 @@ try:
                     page.unroute("**/json/launches/next/5")
                     page.route("**/json/launches/next/5", lambda route: route.abort())
                     page.reload(wait_until="networkidle")
-                    assert "Starship: best guess date pending" in card.inner_text()
                     if age_hours == 2:
                         assert "Cached feed" in page.locator("#rocket-launches").inner_text()
                     else:
-                        assert "Test window launch" not in card.inner_text()
-                        assert "Data by RocketLaunch.Live" not in card.inner_text()
+                        assert "best guess" in page.locator("#rocket-launches").inner_text().lower()
+                        assert "Test window launch" not in page.locator("#rocket-launches").inner_text()
+                        assert "Data by RocketLaunch.Live" not in page.locator("#rocket-launches").inner_text()
+                fixture["communityEstimate"]["expiresAt"] = (datetime.now(timezone.utc)-timedelta(seconds=1)).isoformat()
+                page.reload(wait_until="networkidle")
+                assert card.count() == 0
+                assert "best guess date pending" in page.locator("#rocket-launches").inner_text()
+                fixture["communityEstimate"]["expiresAt"] = (datetime.now(timezone.utc)+timedelta(hours=24)).isoformat()
                 assert not errors, errors
                 page.close()
             print("Browser checks passed: desktop/mobile, attribution, precision, stale Starship and bounded feed fallback")

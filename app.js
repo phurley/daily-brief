@@ -1290,12 +1290,30 @@ function renderRocketLaunches() {
 
   const view = starshipView(state.data.starship);
   const estimate = view.officialTarget?.target || view.forecast?.window;
+  const guess = view.communityEstimate;
+  const guessLabel = guess?.windowStart ? `best guess ${guess.windowEnd ? "" : "NET "}${new Intl.DateTimeFormat('en-US', {month:'short', day:'numeric', year:'numeric', timeZone:'UTC'}).format(new Date(guess.windowStart))}${guess.windowEnd ? ` – ${guess.windowEnd}` : ""} · unverified` : guess?.summary;
   const starship = node('span', {className:'rocket-launches__starship'}, [
     node('strong', {text:'Starship: '}),
-    estimate ? safeLink(`best guess ${targetLabel(estimate)}`, view.officialTarget?.sourceUrl || 'https://www.spacex.com/launches/')
+    estimate ? safeLink(`target ${targetLabel(estimate)}`, view.officialTarget?.sourceUrl || 'https://www.spacex.com/launches/')
+      : guess ? safeLink(guessLabel, guess.sources[0].url)
       : document.createTextNode(view.status === 'underway' ? 'attempt underway' : 'best guess date pending'),
   ]);
-  starship.title = view.summary;
+  starship.title = guess ? `${guess.summary} ${guess.rationale}` : view.summary;
+  const oldDetails = $("#starship-estimate-details");
+  const wasOpen = oldDetails?.open;
+  oldDetails?.remove();
+  if (guess && !estimate) {
+    const details = node('details', {id:'starship-estimate-details', className:'starship-outlook'}, [
+      node('summary', {text:'Starship launch best guess · why and sources'}),
+      node('p', {text:guess.summary}),
+      node('p', {text:guess.rationale}),
+      node('p', {text:guess.caveats.join(' ')}),
+      node('p', {className:'story__source', text:`Unverified community estimate · Updated ${new Date(guess.generatedAt).toLocaleString('en-US', {timeZone:TIME_ZONE, timeZoneName:'short'})} · Not an official launch announcement`}),
+    ]);
+    details.open = Boolean(wasOpen);
+    for (const source of guess.sources) details.append(node('p', {}, [safeLink(source.title, source.url), document.createTextNode(` — ${source.excerpt}`)]));
+    target.after(details);
+  }
   if (featured) line.append(document.createTextNode(' · '));
   line.append(starship);
 

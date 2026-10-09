@@ -13,6 +13,19 @@ ROOT = Path(__file__).resolve().parent.parent
 def validate(record):
     schema = json.loads((ROOT / "schemas/starship.schema.json").read_text())
     Draft202012Validator(schema, format_checker=FormatChecker()).validate(record)
+    estimate = record.get("communityEstimate")
+    if estimate:
+        from urllib.parse import urlparse
+        assert datetime.fromisoformat(estimate["expiresAt"].replace("Z", "+00:00")) > datetime.fromisoformat(estimate["generatedAt"].replace("Z", "+00:00"))
+        if estimate["state"] == "estimated":
+            assert estimate["sources"] and re.fullmatch(r"starship-flight-\d+", estimate["missionId"] or ""), "Estimate needs mission and sources"
+        else:
+            assert not estimate["windowStart"] and not estimate["windowEnd"]
+        if estimate["windowEnd"]:
+            assert estimate["windowStart"] and estimate["windowStart"] <= estimate["windowEnd"]
+        for source in estimate["sources"]:
+            url = urlparse(source["url"])
+            assert url.scheme == "https" and url.hostname in ("reddit.com", "www.reddit.com", "old.reddit.com") and not url.username and not url.password and url.path.lower().startswith("/r/spacex/"), "Estimate needs public r/SpaceX sources"
     ids = [e["id"] for e in record["evidence"]]
     assert len(ids) == len(set(ids)), "Duplicate evidence IDs"
     for e in record["evidence"]:

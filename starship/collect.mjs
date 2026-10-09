@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
+import { collectEstimate } from "./estimate.mjs";
 import { reconcile } from "../starship.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -33,6 +34,18 @@ for (const health of sourceHealth) {
 const now = new Date();
 const record = reconcile({ evidence: [...merged.values()], previous, mode: config.mode, ttlHours: config.ttlHours, now, sourceHealth, activeMission: config.activeMission });
 record.lastAttemptAt = attemptedAt.toISOString();
+if (config.communityEstimate?.enabled) {
+  const { estimate, health } = await collectEstimate(record, previous, config.communityEstimate);
+  record.communityEstimate = estimate;
+  if (health) {
+    health.lastSuccessAt ||= previous?.sourceHealth.find(s => s.id === health.id)?.lastSuccessAt || null;
+    record.sourceHealth.push(health);
+  } else {
+    const priorHealth = previous?.sourceHealth.find(s => s.id === "reddit-estimate");
+    if (priorHealth) record.sourceHealth.push(priorHealth);
+  }
+  if (estimate?.summary !== previous?.communityEstimate?.summary && estimate) record.whatChanged += ` Community best guess: ${estimate.summary}`;
+}
 const filename = now.toISOString().replaceAll(":", "-") + ".json";
 record.snapshot = `starship/history/${filename}`;
 const text = JSON.stringify(record, null, 2) + "\n";

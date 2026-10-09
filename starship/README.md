@@ -191,3 +191,43 @@ Tests: `(cd starship && ../data-collect/.venv/bin/python -m unittest test_reddit
 and `node --test scripts/starship.test.mjs`. Existing parser, schema and browser
 checks still apply. The collector process timeout is six minutes to accommodate
 the bounded additional feed requests; its per-request timeout stays 25 seconds.
+
+## Automated launch best guess
+
+The existing 07:25 job now also calls `estimate.mjs`, controlled by
+`config.communityEstimate.enabled`. It uses the existing private
+`vibe-check/.env` OpenRouter key (or `OPENROUTER_API_KEY`) and two bounded API
+requests: a search of r/SpaceX, followed by a structured synthesis of the actual
+retrieved excerpts. The search model's prose is discarded. Search uses
+OpenRouter's `openrouter:web_search` server tool with the Parallel engine,
+at most two searches and ten results. The synthesis has no search or other tools.
+The default model is `google/gemini-2.5-flash-lite`; override with
+`OPENROUTER_STARSHIP_MODEL`. Only public Reddit material and public mission
+status are sent; household data is not included.
+
+The launch strip displays the tentative date/NET wording marked **unverified**,
+with expandable reasoning, caveats, links, source excerpts and update time.
+This is a separate community estimate; the existing official-status forecast
+remains in shadow mode. It cannot verify an operator target, readiness or FAA
+authorization, and is excluded from the general editorial model's fact input.
+
+`communityEstimate` is an optional, versioned part of `starship.json` and its
+immutable history. Estimates expire after 24 hours. Repeated runs within 20
+hours reuse the original record without renewing it or making API calls. An API
+failure retains the original expiry and records `reddit-estimate` source health;
+a completed search with insufficient evidence publishes an unavailable result.
+Passed dates, completed/different missions, nonexistent citations and quoted
+text absent from retrieval are rejected. The model must reject old content,
+consider disagreements, preserve NET lower bounds and avoid invented odds/ranges.
+Search indexes can be stale, and these semantic judgments remain model judgments,
+not verified launch predictions. Inspect the cited excerpts.
+
+Each API call has a 90-second timeout. API cost is recorded in source health;
+initial search tests were roughly one cent, plus a small synthesis token cost.
+No new scheduler is installed. Disable this feature by setting
+`communityEstimate.enabled` to false. `STARSHIP_FORCE_ESTIMATE=1` bypasses the
+20-hour reuse gate for an intentional diagnostic run. `STARSHIP_DRY_RUN=1`
+still makes API calls but writes and publishes nothing.
+
+Checks: `node --test scripts/starship-estimate.test.mjs scripts/starship.test.mjs`,
+the existing Python validator tests, and `starship/test_browser.py`.

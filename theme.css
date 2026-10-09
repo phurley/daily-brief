@@ -554,3 +554,6 @@ section[aria-busy="true"] { min-height: 10rem; }
 .story-load-status:empty { display: none; }
 
 #recommendation-status:empty { display: none; }
+
+.starship-outlook { margin: -.25rem 0 .75rem; padding: .5rem .75rem; border: 1px solid var(--line); border-radius: .6rem; font-size: .8rem; overflow-wrap: anywhere; }
+.starship-outlook summary { cursor: pointer; color: var(--accent-dark); }

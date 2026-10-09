@@ -108,6 +108,16 @@ export function communityOutlook(record, now = new Date()) {
     }).slice(0, 3);
 }
 
+export function communityEstimateView(record, now = new Date()) {
+  const estimate = record?.communityEstimate;
+  if (!estimate || estimate.state !== "estimated" || !validInstant(estimate.generatedAt) || !validInstant(estimate.expiresAt) || Date.parse(estimate.generatedAt) > +now || Date.parse(estimate.expiresAt) <= +now) return null;
+  if ((record.outcomes || []).some(o => o.missionId === estimate.missionId) || (record.mission?.id && estimate.missionId !== record.mission.id)) return null;
+  if (["delayed", "underway"].includes(record.status) && Date.parse(record.statusEffectiveAt) >= Date.parse(estimate.generatedAt)) return null;
+  // Passing even a tentative lower bound calls for a fresh estimate.
+  if ((estimate.windowEnd || estimate.windowStart) && (estimate.windowEnd || estimate.windowStart) < dayKey(now)) return null;
+  return estimate;
+}
+
 export function starshipView(record, now = new Date()) {
   if (!record) return { fresh: false, status: "unannounced", summary: "Starship status unavailable; awaiting verified evidence.", officialTarget: null, forecast: null, lastVerifiedAt: null, uncertainty: ["No canonical record available."] };
   const fresh = Boolean(record.lastVerifiedAt && record.expiresAt && Date.parse(record.lastVerifiedAt) <= +now && Date.parse(record.expiresAt) > +now);
@@ -118,11 +128,11 @@ export function starshipView(record, now = new Date()) {
   const effectiveStatus = record.status === "targeted" && !targetFresh ? "unannounced" : record.status;
   const status = passed && !invalidated ? "target-passed" : fresh ? effectiveStatus : record.status === "target-passed" || record.status === "delayed" ? record.status : "unannounced";
   const summary = status === "target-passed" ? "Previous target passed; awaiting update." : status === "delayed" ? "Operator reported a delay or scrub; awaiting an updated target." : !fresh || status === "unannounced" ? "Date unannounced; insufficient current evidence." : record.status === "targeted" ? `Operator targeting ${targetLabel(record.officialTarget?.target)}.` : record.status === "underway" ? "Attempt underway, according to the operator." : record.forecast.summary;
-  return { communityOutlook: communityOutlook(record, now), fresh, status, summary, officialTarget: fresh && targetFresh && !passed && !invalidated && !record.conflicts.length ? record.officialTarget : null, forecast: fresh && targetFresh && !passed && record.mode === "live" ? record.forecast : null, lastVerifiedAt: record.lastVerifiedAt, uncertainty: record.forecast.uncertainty };
+  return { communityEstimate: communityEstimateView(record, now), communityOutlook: communityOutlook(record, now), fresh, status, summary, officialTarget: fresh && targetFresh && !passed && !invalidated && !record.conflicts.length ? record.officialTarget : null, forecast: fresh && targetFresh && !passed && record.mode === "live" ? record.forecast : null, lastVerifiedAt: record.lastVerifiedAt, uncertainty: record.forecast.uncertainty };
 }
 
 export function editorialStarship(record, now = new Date()) {
-  const { communityOutlook: leads, ...view } = starshipView(record, now);
+  const { communityOutlook: leads, communityEstimate: estimate, ...view } = starshipView(record, now);
   return { ...view, mode: record?.mode || "shadow", conflicts: record?.conflicts || [], sources: view.officialTarget ? [view.officialTarget.sourceUrl] : [], instruction: "Use only the current summary and officialTarget. Shadow forecasts and expired targets are not current predictions. Never infer completion from a passed date." };
 }
 

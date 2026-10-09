@@ -25,5 +25,9 @@
       "type": "community",
       "url": "https://www.reddit.com/r/spacex/"
     }
-  ]
+  ],
+  "communityEstimate": {
+    "enabled": true,
+    "model": "google/gemini-2.5-flash-lite"
+  }
 }
