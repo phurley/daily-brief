@@ -1,3 +1,5 @@
+import { rankEvents, eventDay, validateManifest, validateSection } from "./brief-selection.mjs";
+import { fetchJSON, readSavedEdition, saveEdition } from "./edition-client.mjs";
 import { isEventRecommended, eventDisplayTitle } from "./event-status.mjs?v=20261009-1";
 import { starshipView, targetLabel, usableLaunchCache, launchDateKey, launchDateTime } from "./starship.mjs?v=20261009-1";
 import { computeAlmanacDay } from "./almanac-calc.mjs?v=20260920-1";
@@ -12,7 +14,7 @@ import { selectBestBets, rankEvent, eventStatus } from './ranking.mjs?v=20261009
 import { preferenceStore, feedback, seriesKey } from './preferences.mjs?v=20261009-2';
 let preferences;
 let rankingWeights;
-let showAllEvents = false;
+
 let feedbackNotice = '';
 
 const TIME_ZONE = "America/Detroit";
@@ -159,57 +161,119 @@ function validateTopLevel(data, schema, name) {
   }
 }
 
-async function fetchJson(path, stamp) {
-  const separator = path.includes("?") ? "&" : "?";
-  const response = await fetch(`${path}${separator}v=${stamp}`, { cache: "no-store" });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-  return response.json();
-}
+const schemaCache = new Map();
+let refreshing = false;
+let lastCheck = 0;
+let manifest = null;
+let savedMode = false;
+let fullEvents = null;
+let archiveRequest = null;
+let showAllEvents = false;
+const fullStories = {};
+const storyLimits = {news:10,geeknews:10};
+const sectionStates = {};
+const sectionSelectors = {weather: '#weather-section', events:'#events-section', news:'#news-section', geeknews:'#geek-section'};
 
-async function loadDocument([name, dataPath, schemaPath, required], stamp) {
+async function fetchJson(path) { return fetchJSON(path); }
+async function loadDocument([name, dataPath, schemaPath, required]) {
   try {
-    const [data, schema] = await Promise.all([fetchJson(dataPath, stamp), fetchJson(schemaPath, stamp)]);
+    if (!schemaCache.has(schemaPath)) schemaCache.set(schemaPath, fetchJSON(schemaPath, {cache:'force-cache'}).catch(error => {schemaCache.delete(schemaPath); throw error;}));
+    const [data, schema] = await Promise.all([fetchJSON(dataPath), schemaCache.get(schemaPath)]);
     validateTopLevel(data, schema, dataPath);
-    return { name, data, signature: JSON.stringify(data), required };
-  } catch (error) {
-    return { name, error: error.message, required };
+    if (!['photos','calendar'].includes(name)) validateSection(name,data);
+    return {name, data, required};
+  } catch (error) { return {name, error:error.message, required}; }
+}
+function configureRanking(config) {
+  let storage;try{storage=window.localStorage}catch{}
+  preferences=preferenceStore(storage, config?.preferences || {});
+  rankingWeights=config?.weights || null;
+  try {
+    const weights=JSON.parse(storage?.getItem('daily-brief:weights:v2') || 'null');
+    if(weights?.rulesVersion===2 && weights.signals && Number.isFinite(weights.base) && Number.isFinite(weights.scale)) rankingWeights=weights;
+  }catch{}
+}
+function updateFreshness() {
+  const label = manifest ? `Edition ${manifest.editionDate} · published ${new Date(manifest.generatedAt).toLocaleString('en-US', {timeZone:TIME_ZONE, month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}` : 'Full-document compatibility view';
+  $('#live-status').textContent = `${savedMode ? 'Saved brief · ' : ''}${label}${state.errors.length ? ' · some sources unavailable' : ''}`;
+  for (const [name,selector] of Object.entries(sectionSelectors)) {
+    const target = $(selector);
+    target.setAttribute('aria-busy', String(sectionStates[name] === 'loading'));
+    let note = target.querySelector('.section-freshness');
+    if (!note) { note = node('p', {className:'section-freshness',role:'status'}); target.prepend(note); }
+    const updated = state.data[name]?.generatedAt;
+    note.textContent = sectionStates[name] === 'loading' ? 'Loading…' : sectionStates[name] === 'error' ? 'Unavailable. Refresh to retry.' : updated ? `${savedMode ? 'Saved · ' : ''}Source updated ${new Date(updated).toLocaleString('en-US', {timeZone:TIME_ZONE,month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}` : 'No data available.';
   }
 }
-
 async function refreshData({ initial = false } = {}) {
-  const status = $("#live-status");
-  if (!initial) status.textContent = "Checking for updates…";
+  if (refreshing || document.hidden) return;
+  refreshing = true;
   const previousToday = state.today;
   state.today = dateKey(new Date());
   if (state.today !== previousToday && state.selectedDate === previousToday) {
     state.selectedDate = state.today;
-    const url = new URL(window.location);
-    url.searchParams.delete("date");
-    window.history.replaceState({ date: state.today }, "", url);
+    const url = new URL(window.location); url.searchParams.delete('date');
+    window.history.replaceState({date:state.today}, '', url);
     loadJoke();
   }
-  const results = await Promise.all(DOCUMENTS.map((document) => loadDocument(document, Date.now())));
-  const nextErrors = [];
-  let changed = initial || state.today !== previousToday;
-
-  for (const result of results) {
-    if (result.error) {
-      if (result.required) nextErrors.push(`${result.name}: ${result.error}`);
-      continue;
+  state.errors = [];
+  try {
+    const next = validateManifest(await fetchJSON('brief-manifest.json', {timeout:5000}));
+    if (manifest?.editionId !== next.editionId) {
+      manifest = next; fullEvents = null; archiveRequest = null;
+      for(const name of Object.keys(fullStories)) delete fullStories[name];
+      storyLimits.news=10;storyLimits.geeknews=10;
+      // An edition is coherent: old sections are cleared before the new set renders.
+      for (const name of Object.keys(next.sections)) {delete state.data[name]; sectionStates[name]='loading';}
+      render();updateFreshness();
     }
-    if (state.signatures.get(result.name) !== result.signature) {
-      state.data[result.name] = result.data;
-      state.signatures.set(result.name, result.signature);
-      changed = true;
+    savedMode = false;
+    await Promise.all(Object.entries(next.sections).map(async ([name,descriptor]) => {
+      try {
+        if (!state.data[name]) {
+          const data = validateSection(name, await fetchJSON(descriptor.url,{sha256:descriptor.sha256,cache:'force-cache'}));
+          state.data[name] = data;
+          if(name==='rankingConfig') configureRanking(data);
+          sectionStates[name] = 'ready'; render(); updateFreshness();
+        }
+      } catch(error) { sectionStates[name]='error';state.errors.push(`${name}: ${error.message}`);updateFreshness(); }
+    }));
+    if (!state.errors.length && !saveEdition(next, Object.fromEntries(Object.keys(next.sections).map(name=>[name,state.data[name]])))) {
+      state.errors.push('Browser storage unavailable; this edition cannot be saved for offline reopening.');
     }
+  } catch(error) {
+    savedMode = Boolean(manifest);
+    state.errors.push(`Edition: ${error.message}`);
+    // Rollback path: only use full documents when no compatible saved edition exists.
+    if (!manifest) await Promise.all(DOCUMENTS.filter(([name])=>!['photos','calendar'].includes(name)).map(async descriptor => {
+      const result = await loadDocument(descriptor);
+      sectionStates[result.name] = result.error ? 'error' : 'ready';
+      if(result.error) state.errors.push(`${result.name}: ${result.error}`);
+      else {state.data[result.name]=result.data;render();updateFreshness();}
+    }));
+  } finally {
+    lastCheck=Date.now();refreshing=false;
+    if (initial || state.today!==previousToday) render();
+    updateFreshness();renderErrors();renderStarship();
+    $('#refresh-brief').disabled=false;
   }
-
-  state.errors = nextErrors;
-  if (changed) render();
-  else renderStarship(); // Expiry can change without a new JSON signature.
-  renderErrors();
-  const checked = new Intl.DateTimeFormat("en-US", { timeZone: TIME_ZONE, hour: "numeric", minute: "2-digit" }).format(new Date());
-  status.textContent = changed && !initial ? `Updated at ${checked}` : `Live · checked ${checked}`;
+}
+async function ensureFullEvents() {
+  if(fullEvents) return fullEvents;
+  if(archiveRequest) return archiveRequest;
+  const editionId=manifest?.editionId;
+  archiveRequest=(async()=>{
+    const descriptor=manifest?.archives?.events;
+    const data=validateSection('events',await fetchJSON('events.json', {sha256:descriptor?.sha256, timeout:12000}));
+    if(manifest?.editionId!==editionId) throw new Error('Edition changed; reopen the calendar to retry.');
+    fullEvents=data.events;return fullEvents;
+  })();
+  try{return await archiveRequest}finally{archiveRequest=null}
+}
+async function loadFamilyCalendar() {
+  const result=await loadDocument(DOCUMENTS.find(([name])=>name==='calendar'));
+  if(result.error) {$('#calendar-note').textContent='Calendar unavailable. Close and reopen to retry.';return;}
+  state.data.calendar=result.data;renderCalendar();renderDayContext();
 }
 
 function messagesFor(section) {
@@ -226,7 +290,7 @@ function renderMasthead() {
   const relative = state.selectedDate === state.today ? "Today" : state.selectedDate < state.today ? "Yesterday" : "Tomorrow";
   const forecast = state.data.weather?.daily?.find((day) => day.date === state.selectedDate);
   $("#masthead-eyebrow").textContent = message("masthead", "eyebrow", `${relative} · Canton, Michigan`);
-  $("#page-title").textContent = message("masthead", "headline", relative === "Today" ? "A good day, well considered." : `${relative}, in view.`);
+  $('#page-title').replaceChildren(node('span',{className:'desktop-title',text:message('masthead','headline',relative==='Today'?'A good day, well considered.':`${relative}, in view.`)}),node('span',{className:'mobile-title',text:`${relative}’s daily brief`}));
   $("#masthead-summary").textContent = message(
     "masthead",
     "summary",
@@ -399,6 +463,7 @@ function renderWeather() {
     cards.push(skyWeatherCard(day, forecast));
   }
 
+  $('#weather-summary').textContent = forecast ? `${forecast.conditionText} · ${Math.round(current?.temperatureF ?? forecast.highF)}° · High ${Math.round(forecast.highF)}° / low ${Math.round(forecast.lowF)}° · ${forecast.precipitationChancePercent}% rain` : 'Weather unavailable for this date.';
   replaceChildren("#weather-grid", cards.length ? cards : [emptyState()]);
   updateAtmosphere(forecast);
 }
@@ -692,7 +757,7 @@ function renderEventCalendarGrid(events) {
 }
 
 function renderEventCalendar() {
-  const events = uniqueEvents();
+  const events = fullEvents || uniqueEvents();
   $("#calendar-dialog-title").textContent = monthLabel(state.calendarMonth);
   renderEventCalendarGrid(events);
   renderEventCalendarAgenda(events);
@@ -709,7 +774,9 @@ function setCalendarOpenState(open) {
   document.querySelectorAll("[data-calendar-open]").forEach((button) => button.setAttribute("aria-expanded", String(open)));
 }
 
-function openEventCalendar() {
+let calendarOpener = null;
+async function openEventCalendar(openEvent) {
+  calendarOpener = openEvent?.currentTarget || document.activeElement;
   const dialog = $("#calendar-dialog");
   state.calendarSelected = state.selectedDate;
   state.calendarMonth = state.selectedDate.slice(0, 7);
@@ -718,7 +785,11 @@ function openEventCalendar() {
   setCalendarOpenState(true);
   if (typeof dialog.showModal === "function") dialog.showModal();
   else dialog.setAttribute("open", "");
-  $("#calendar-close").focus({ preventScroll: true });
+  $('#calendar-load-status').textContent='Loading the complete calendar…';
+  $('#calendar-close').focus({ preventScroll: true });
+  try {await ensureFullEvents(); if(dialog.open) renderEventCalendar(); $('#calendar-load-status').textContent='Complete calendar loaded.';}
+  catch(error) {$('#calendar-load-status').textContent=`Showing selected events only. ${error.message}`;}
+
 }
 
 function closeEventCalendar() {
@@ -759,7 +830,7 @@ function bindEventCalendar() {
       stepCalendarEvent(-1);
     }
   });
-  $("#calendar-dialog").addEventListener("close", () => setCalendarOpenState(false));
+  $("#calendar-dialog").addEventListener("close", () => {setCalendarOpenState(false); calendarOpener?.focus({preventScroll:true});});
   $("#calendar-dialog").addEventListener("click", (clickEvent) => {
     if (clickEvent.target === $("#calendar-dialog")) closeEventCalendar();
   });
@@ -773,11 +844,11 @@ function uniqueEvents() {
 }
 
 function eventStartDate(event) {
-  return event.start?.slice(0, 10) || "";
+  return eventDay(event.start);
 }
 
 function eventEndDate(event) {
-  return (event.end || event.start)?.slice(0, 10) || "";
+  return eventDay(event.end || event.start);
 }
 
 // An event with a multi-day window stays listed after single-day happenings so a
@@ -796,11 +867,7 @@ function compareEventsForDisplay(a, b) {
 
 // The calendar doubles as the rating-tuning surface: within a day the highest
 // rated events lead, with long-running windows always kept at the bottom.
-function compareEventsByRating(a, b) {
-  return Number(eventSpansDays(a)) - Number(eventSpansDays(b))
-    || (b.score || 0) - (a.score || 0)
-    || Date.parse(a.start) - Date.parse(b.start);
-}
+function compareEventsByRating(a, b) { return rankEvents(a,b); }
 
 function eventIsActiveOn(event, key) {
   const start = eventStartDate(event);
@@ -835,9 +902,12 @@ function feedbackControls(event) {
   const controls = node('div', { className: 'event-feedback', 'aria-label': `Feedback for ${event.title}` });
   for (const [action, label] of [['more', 'More like this'], ['less', 'Less like this'], ['hide', 'Hide this occurrence'], ['favorite', preferences.get().favorites.includes(seriesKey(event)) ? 'Unfavorite' : 'Favorite']]) {
     const button = node('button', { type: 'button', text: label });
-    button.addEventListener('click', () => {
+    button.addEventListener('click', async () => {
+      button.disabled=true;
+      try { await ensureFullEvents(); } catch { /* Apply to saved candidates when offline. */ }
       const persisted = preferences.set(feedback(preferences.get(), event, action));
       feedbackNotice = persisted ? 'Feedback saved on this browser. Undo is available.' : 'Feedback applied for this session; browser storage is unavailable.';
+      if(!fullEvents) feedbackNotice += ' Full candidates are unavailable; using the saved selection.';
       renderEvents();
       $('#recommendation-status').focus({ preventScroll: true });
     });
@@ -864,7 +934,7 @@ function renderPreferenceControls() {
     $('#today-lane').before(panel);
   }
   const button = (label, action) => { const b = node('button', { type: 'button', text: label }); b.addEventListener('click', action); return b; };
-  const toggle = button(showAllEvents ? 'Show best bets' : 'Show all events', () => { showAllEvents = !showAllEvents; renderEvents(); });
+  const toggle = button('See all events', () => { $('#events-all').open=true; $('#events-all').scrollIntoView({block:'start'}); });
   toggle.setAttribute('aria-pressed', String(showAllEvents));
   const undo = button('Undo feedback', () => { const saved = preferences.undo(); feedbackNotice = saved ? 'Last preference change undone.' : 'Undone for this session; browser storage is unavailable.'; renderEvents(); });
   undo.disabled = !preferences.canUndo();
@@ -884,12 +954,13 @@ function renderPreferenceControls() {
 function eventCard(event, ranking) {
   const title = node("h3");
   title.append(safeLink(eventDisplayTitle(event), event.url));
-  return node("article", { className: "card" }, [
+  return node("article", { className: "card", dataset:{eventId:event.id} }, [
     node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
     title,
     node("p", { text: event.summary }),
     node("p", { className: "card__footer", text: [event.venue, event.city, event.price || 'Price unknown', event.distanceMiles != null ? `${event.distanceMiles} mi` : 'Distance unknown', eventStatus(event) === 'cancelled' ? 'CANCELED' : ''].filter(Boolean).join(" · ") }),
     recommendationDetails(event, ranking),
+    detailButton(event),
   ]);
 }
 
@@ -904,6 +975,7 @@ function claimCard(event) {
   }, [
     node("time", { text: eventDateLabel(event), datetime: eventStartDate(event) }),
     title,
+    detailButton(event),
   ]);
 }
 
@@ -911,31 +983,53 @@ function claimCard(event) {
 // then multi-day windows still running past it, then everything starting later.
 function renderEvents() {
   hideEventPreview();
-  const allEvents = uniqueEvents();
+  const allEvents = fullEvents || uniqueEvents();
   const selected = state.selectedDate;
   renderPreferenceControls();
   const best = selectBestBets(allEvents, { day: selected, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
   const horizon = shiftDate(selected, preferences.get().ranking.horizonDays);
-  const visible = showAllEvents
-    ? allEvents.filter(e => eventEndDate(e) >= selected && eventStartDate(e) <= horizon).sort(compareEventsForDisplay)
-    : best.map(row => row.event);
+  const visible = best.map(row => row.event);
   const rows = new Map(best.map(row => [row.event, row]));
   replaceChildren('#events-list', visible.length ? visible.map(event => eventCard(event, rows.get(event))) : [node('p', { text: 'No matching best bets. Open the full calendar or adjust your preferences.' })]);
-  $('#today-lane-title').textContent = showAllEvents ? 'All events · chronological' : `${visible.length} best bets`;
+  $('#today-lane-title').textContent = `${visible.length} best bets`;
   $('#ongoing-lane').hidden = true;
   $('#plan-ahead').hidden = true;
   replaceChildren('#ongoing-list', []);
   replaceChildren('#claims-list', []);
   $('#events-title').textContent = 'Nearby & notable';
-  $('#events-note').textContent = showAllEvents ? 'The full selection, including notices and hidden occurrences.' : 'A varied shortlist for the selected day and the weeks ahead. Use “Why this?” to tune it.';
+  $('#events-note').textContent = 'A varied shortlist for the selected day and weeks ahead. Use “Why this?” to tune it.';
+  if(showAllEvents && fullEvents) {
+    const all=eventsOnDay(selected,fullEvents,compareEventsByRating);
+    replaceChildren('#events-all-list',all.length ? all.map(event=>eventCard(event)) : [emptyState()]);
+    $('#events-all-summary').textContent=`See all · ${all.length} events on this date`;
+  }
   scheduleEventExpiry(allEvents);
   refreshShelfControls();
+}
+
+function detailButton(event) {
+  const button=node('button',{type:'button',className:'event-details-button',text:'Details','aria-label':`Details for ${event.title}`,'aria-haspopup':'dialog'});
+  button.addEventListener('click',()=>openEventDetails(event,button));
+  return button;
+}
+function openEventDetails(event,opener) {
+  hideEventPreview();
+  const dialog=$('#event-details-dialog');
+  $('#event-details-title').textContent=event.title;
+  const facts=node('dl',{className:'event-preview__facts'});
+  for(const [term,value] of eventPreviewFacts(event)) facts.append(node('div',{},[node('dt',{text:term}),node('dd',{text:value})]));
+  const signals=Object.entries(event.scoring?.signals || {}).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([name,value])=>`${name.replaceAll('_',' ')}: ${Math.round(value*100)}%`).join(' · ');
+  $('#event-details-content').replaceChildren(node('p',{text:event.summary}),facts,
+    node('p',{text:signals ? `Score signals (estimated topic matches): ${signals}. The rating combines these signals with distance and preferences.` : 'Score explanation is not available for this event.'}),safeLink('Visit website ↗',event.url));
+  dialog.onclose=()=>{if(opener.isConnected) opener.focus({preventScroll:true});else $('[data-calendar-open]').focus();};
+  dialog.showModal();$('#event-details-close').focus();
 }
 
 function eventPreviewFacts(event) {
   return [
     ["Rating", event.score != null ? `${event.score} / 100` : ""],
-    ["When", eventDateLabel(event)],
+    ["When", `${eventDateLabel(event)} · ${displayTime(event.start)}${event.end ? ` – ${displayTime(event.end)}` : " (end time not supplied)"}`],
+    ["Booking deadline", event.deadline],
     ["Where", [event.venue, event.city, event.region].filter(Boolean).join(" · ")],
     ["Price", event.price],
     ["Registration", event.registration],
@@ -1061,10 +1155,10 @@ function renderStories(kind) {
   const noteSelector = kind === "news" ? "#news-note" : "#geek-note";
   const section = kind === "news" ? "news" : "science-technology";
   const editionAvailable = data?.editionDate && data.editionDate <= state.selectedDate;
-  const availableStories = editionAvailable ? data.stories || [] : [];
+  const availableStories = editionAvailable ? (fullStories[kind]?.stories || data.stories || []) : [];
   const digest = kind === "geeknews" ? selectScienceDigest({ ...data, stories: availableStories }, state.selectedDate) : null;
   const stories = kind === "news"
-    ? orderRankedNews(availableStories, { now: Date.now(), preferences: preferences.get() })
+    ? orderRankedNews(availableStories, { now: Date.now(), preferences: preferences.get() }).slice(0,storyLimits[kind])
     : digest.stories;
   const renderStory = (story) => {
     const title = node("h3");
@@ -1084,10 +1178,13 @@ function renderStories(kind) {
   };
   const children = stories.map(renderStory);
   if (kind === "geeknews" && digest.archive.length) children.push(node("details", { className: "story science-archive" }, [
-    node("summary", { text: `Archive / background (${digest.archive.length})` }), ...digest.archive.map(renderStory),
+    node("summary", { text: `Archive / background (${digest.archive.length})` }), ...digest.archive.slice(0,storyLimits[kind]).map(renderStory),
   ]));
   replaceChildren(selector, children.length ? children : [emptyState()]);
 
+  const more = document.querySelector(`[data-more-stories="${kind}"]`);
+  more.hidden = Boolean(fullStories[kind] && storyLimits[kind] >= availableStories.length);
+  if (!more.disabled) more.textContent = `More ${kind === 'news' ? 'local' : 'science'} stories · ${stories.length} shown`;
   const carryForward = data?.editionDate && data.editionDate !== state.selectedDate && editionAvailable
     ? `Latest available digest: ${displayDate(data.editionDate)}.`
     : "";
@@ -1421,7 +1518,7 @@ function bindShelfControls() {
     const previous = shelf.querySelector("[data-shelf-previous]");
     const next = shelf.querySelector("[data-shelf-next]");
     if (!track || !previous || !next) return;
-    const move = (direction) => track.scrollBy({ left: direction * track.clientWidth * .88, behavior: "smooth" });
+    const move = (direction) => track.scrollBy({ left: direction * track.clientWidth * .88, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
     previous.addEventListener("click", () => move(-1));
     next.addEventListener("click", () => move(1));
     track.addEventListener("scroll", () => updateShelfControl(shelf), { passive: true });
@@ -1462,7 +1559,7 @@ function selectDate(key, { history = true } = {}) {
   }
   render();
   loadJoke();
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
 }
 
 const fallbackJokes = [
@@ -1485,7 +1582,7 @@ async function loadJoke({ force = false } = {}) {
 
   $("#dad-joke").textContent = "Warming up the punchline…";
   try {
-    const response = await fetch("https://icanhazdadjoke.com/", { headers: { Accept: "application/json" } });
+    const response = await fetch("https://icanhazdadjoke.com/", { signal:AbortSignal.timeout(8000), headers: { Accept: "application/json" } });
     if (!response.ok) throw new Error("joke service unavailable");
     const { joke } = await response.json();
     if (!joke) throw new Error("empty joke");
@@ -1502,10 +1599,53 @@ function bindEvents() {
   $("#next-day").addEventListener("click", () => selectDate(shiftDate(state.selectedDate, 1)));
   $("#today-button").addEventListener("click", () => selectDate(state.today));
   $("#new-joke").addEventListener("click", () => loadJoke({ force: true }));
+  document.querySelectorAll('[data-more-stories]').forEach(button=>button.addEventListener('click',async()=>{
+    const kind=button.dataset.moreStories;button.disabled=true;button.textContent='Loading archive…';
+    const editionId=manifest?.editionId;
+    try {
+      if(!fullStories[kind]) {
+        const data=validateSection(kind,await fetchJSON(`${kind}.json`,{sha256:manifest?.archives?.[kind]?.sha256,timeout:12000}));
+        if(manifest?.editionId!==editionId) throw new Error('Edition changed. Try again.');
+        fullStories[kind]=data;
+      }
+      storyLimits[kind]+=20;button.disabled=false;renderStories(kind);
+    } catch(error){button.disabled=false;button.textContent=`Retry archive: ${error.message}`;}
+  }));
+  $('#events-section').addEventListener('toggle',async event=>{
+    if((event.target.closest('#recommendation-controls') || event.target.classList.contains('recommendation-details')) && event.target.open) {
+      try {await ensureFullEvents();} catch(error){feedbackNotice=`Full candidates unavailable: ${error.message}`;}
+    }
+  },true);
+  $('#refresh-brief').addEventListener('click',()=>{$('#refresh-brief').disabled=true;refreshData();});
+  $('#event-details-close').addEventListener('click',()=>$('#event-details-dialog').close());
+  $('#family-calendar').addEventListener('toggle',()=>{if($('#family-calendar').open) loadFamilyCalendar();});
+  $('#events-all').addEventListener('toggle',async()=>{
+    showAllEvents=$('#events-all').open;
+    if(!showAllEvents) return;
+    $('#events-all-summary').textContent='Loading all events…';
+    try {await ensureFullEvents();renderEvents();} catch(error){$('#events-all-summary').textContent=`Unavailable. Close and reopen to retry. ${error.message}`;}
+  });
+  document.querySelectorAll('.section-nav a').forEach(link=>link.addEventListener('click',event=>{
+    const target=document.querySelector(link.getAttribute('href'));if(!target) return;
+    event.preventDefault();target.focus({preventScroll:true});
+    window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-document.querySelector('.section-nav').getBoundingClientRect().height-12,behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
+    history.replaceState(history.state,'',link.getAttribute('href'));
+  }));
   bindShelfControls();
   bindClaimDetails();
+  document.querySelectorAll('dialog').forEach(dialog=>dialog.addEventListener('keydown',event=>{
+    if(event.key!=='Tab') return;
+    const focusable=[...dialog.querySelectorAll('button:not(:disabled),a[href],summary,[tabindex="0"]')].filter(el=>el.getClientRects().length);
+    const first=focusable[0],last=focusable.at(-1);
+    if(event.shiftKey && document.activeElement===first) {event.preventDefault();last?.focus();}
+    else if(!event.shiftKey && document.activeElement===last) {event.preventDefault();first?.focus();}
+  }));
   bindEventCalendar();
-  document.addEventListener("visibilitychange", () => document.hidden ? stopPhotoShow() : startPhotoShow());
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden) stopPhotoShow();
+    else {startPhotoShow();if(Date.now()-lastCheck>REFRESH_MS || state.today!==dateKey(new Date())) refreshData();}
+  });
+  window.addEventListener('online',()=>refreshData());
   window.addEventListener("popstate", () => selectDate(new URL(window.location).searchParams.get("date") || state.today, { history: false }));
 }
 
@@ -1520,21 +1660,23 @@ async function init() {
     else url.searchParams.set("date", state.selectedDate);
     window.history.replaceState({ date: state.selectedDate }, "", url);
   }
-  let storage;
-  try { storage = window.localStorage; } catch { /* Private mode can disable storage. */ }
-  const [defaults, weights] = await Promise.all([fetchJson('brief-preferences.json', Date.now()).catch(() => ({})), fetchJson('scoring-weights.json', Date.now()).catch(() => null)]);
-  preferences = preferenceStore(storage, defaults);
-  rankingWeights = weights;
-  try {
-    const saved = JSON.parse(storage?.getItem('daily-brief:weights:v2') || 'null');
-    if (saved?.rulesVersion === 2 && saved.signals && Number.isFinite(saved.base) && Number.isFinite(saved.scale)) rankingWeights = saved;
-  } catch { /* Invalid tuning falls back to exported defaults. */ }
+  configureRanking();
   bindEvents();
   updateNavigation();
   updateSky();
-  await Promise.all([refreshData({ initial: true }), loadJoke(), loadRocketLaunches()]);
+  $('#weather-details').open=!window.matchMedia('(max-width:620px)').matches;
+  $('#edition-notes').open=!window.matchMedia('(max-width:620px)').matches;
+  const saved=readSavedEdition();
+  if(saved) {manifest=saved.manifest;Object.assign(state.data,saved.data);configureRanking(saved.data.rankingConfig);savedMode=true;render();updateFreshness();}
+  else {for(const name of Object.keys(sectionSelectors)) sectionStates[name]='loading';render();updateFreshness();}
+  refreshData({initial:true});loadJoke();loadRocketLaunches();
+  if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{state.errors.push('Offline shell unavailable in this browser.');renderErrors();});
+  const photosObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)) {
+    photosObserver.disconnect();loadDocument(DOCUMENTS.find(([name])=>name==='photos')).then(result=>{if(result.data){state.data.photos=result.data;renderPhoto();}});
+  }},{rootMargin:'200px'});
+  photosObserver.observe($('#geek-section'));
   window.setInterval(refreshData, REFRESH_MS);
-  window.setInterval(loadRocketLaunches, REFRESH_MS);
+  window.setInterval(()=>{if(!document.hidden) loadRocketLaunches();}, REFRESH_MS);
   window.setInterval(() => {
     updateSky();
     renderStarship();

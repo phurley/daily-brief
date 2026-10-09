@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Daily Brief widget best bets v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "editionId",
+    "editionDate",
+    "generatedAt",
+    "sourceGeneratedAt",
+    "events"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "editionId": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "editionDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceGeneratedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "events": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "$ref": "events.schema.json#/$defs/event"
+      }
+    }
+  }
+}

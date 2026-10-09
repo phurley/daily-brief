@@ -37,3 +37,24 @@ targets:
         DEVELOPMENT_TEAM: 87EUDMJ2TV
         PRODUCT_BUNDLE_IDENTIFIER: com.phurley.dailybrief.widgets
         INFOPLIST_KEY_CFBundleDisplayName: Daily Brief Widgets
+  DailyBriefTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - DailyBriefTests
+      - DailyBriefWidgets/BriefData.swift
+    dependencies:
+      - target: DailyBrief
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.phurley.dailybrief.tests
+        DEVELOPMENT_TEAM: 87EUDMJ2TV
+schemes:
+  DailyBrief:
+    build:
+      targets:
+        DailyBrief: all
+    test:
+      targets:
+        - DailyBriefTests

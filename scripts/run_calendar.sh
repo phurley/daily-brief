@@ -45,34 +45,7 @@ if ! "$PY" scripts/update_calendar.py; then
 fi
 
 if [ "${CALENDAR_NO_PUSH:-}" = "1" ]; then
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] push skipped (CALENDAR_NO_PUSH=1)"
-    exit 0
-fi
-
-# Only ever stage/snapshot calendar.json so a concurrent edit elsewhere in the
-# work tree is never swept into this commit.
-. "$ROOT/scripts/git-publish-lock.sh"
-acquire_publish_lock
-git add -- calendar.json
-if git diff --cached --quiet -- calendar.json; then
-    echo "calendar.json unchanged; nothing to push"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] unchanged"
-    exit 0
-fi
-
-git -c user.name="daily-brief bot" -c user.email="phurley@gmail.com" \
-    commit -m "Refresh calendar snapshot" -- calendar.json || { echo "commit failed"; exit 1; }
-
-if ! git pull --rebase --autostash origin main; then
-    echo "pull --rebase failed; leaving commit local"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] push failed"
-    exit 1
-fi
-
-if git push; then
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] pushed"
+    "$PY" scripts/publish_brief.py --no-push
 else
-    echo "push failed; leaving commit local"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] push failed"
-    exit 1
+    "$PY" scripts/publish_brief.py calendar.json
 fi

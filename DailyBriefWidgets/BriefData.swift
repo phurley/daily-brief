@@ -2,35 +2,30 @@ import Foundation
 
 enum BriefData {
     static let baseURL = URL(string: "https://phurley.github.io/daily-brief/")!
-    static let eventsURL = baseURL.appending(path: "recommendations.json")
+    static let eventsURL = baseURL.appending(path: "widget-events.json")
     static let photosURL = baseURL.appending(path: "photos.json")
 
-    static func dayKey(_ date: Date) -> String {
+    static var today: String { dateKey(.now) }
+    static func dateKey(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.timeZone = TimeZone(identifier: "America/Detroit")
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: date)
     }
-
-    static var today: String {
-        let formatter = DateFormatter()
-        formatter.calendar = Calendar(identifier: .gregorian)
-        formatter.timeZone = TimeZone(identifier: "America/Detroit")
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: .now)
+    static var nextMidnight: Date {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(identifier: "America/Detroit")!
+        return calendar.date(byAdding: .day, value: 1, to: calendar.startOfDay(for: .now))!
     }
-
-    static func loadEvents() async throws -> [BriefEvent] {
-        let (data, _) = try await URLSession.shared.data(from: eventsURL)
+    static func loadEvents() async throws -> EventsDocument {
+        let request = URLRequest(url: eventsURL, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 10)
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw URLError(.badServerResponse) }
         let document = try JSONDecoder().decode(EventsDocument.self, from: data)
-        return (document.days.first(where: { $0.date == today })?.events ?? []).filter { event in
-            let parser = ISO8601DateFormatter()
-            guard let start = parser.date(from: event.start) else { return false }
-            let end = event.end.flatMap { parser.date(from: $0) }
-            guard dayKey(start) <= today && dayKey(end ?? start) >= today else { return false }
-            return end.map { $0 > .now } ?? true
-        }
+        guard document.schemaVersion == 1, document.editionDate == today else { throw URLError(.cannotParseResponse) }
+        return document
     }
 
     static func loadPhoto() async throws -> BriefPhoto? {
@@ -40,8 +35,19 @@ enum BriefData {
     }
 }
 
-struct EventsDocument: Decodable { let days: [RecommendationDay] }
-struct RecommendationDay: Decodable { let date: String; let events: [BriefEvent] }
+struct EventsDocument: Codable {
+    let schemaVersion: Int
+    let editionId: String
+    let editionDate: String
+    let generatedAt: String
+    let sourceGeneratedAt: String
+    let events: [BriefEvent]
+}
+struct CachedEvents: Codable {
+    let document: EventsDocument
+    let fetchedAt: Date
+    func usable(on date: Date) -> Bool { document.schemaVersion == 1 && document.editionDate == BriefData.dateKey(date) }
+}
 struct PhotosDocument: Decodable { let days: [PhotoDay] }
 struct PhotoDay: Decodable { let date: String; let photos: [BriefPhoto] }
 
@@ -57,11 +63,16 @@ struct BriefEvent: Codable, Identifiable {
     let price: String?
     let registration: String?
 
+    func hasEnded(at date: Date) -> Bool {
+        guard let end, let closing = ISO8601DateFormatter().date(from: end) else { return false }
+        return closing <= date
+    }
     var time: String {
-        guard let date = ISO8601DateFormatter().date(from: start) else { return "Today" }
+        guard let date = ISO8601DateFormatter().date(from: start) else { return "Time unavailable" }
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(identifier: "America/Detroit")
         formatter.timeStyle = .short
+        if BriefData.dateKey(date) != BriefData.today { formatter.dateStyle = .short }
         return formatter.string(from: date)
     }
 

@@ -484,3 +484,75 @@ footer { color: #dce8e4; background: #14282b; }
 #geek-list .story > div > p { display: block; overflow: visible; -webkit-line-clamp: unset; }
 #geek-list .story details { margin-top: .6rem; }
 #geek-list .story details > summary { cursor: pointer; color: var(--muted); }
+/* Compact brief and touch-accessible dialogs. */
+.section-nav { position: sticky; top: 0; z-index: 20; display: flex; flex-wrap: wrap; justify-content: center; background: var(--panel); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top); }
+.section-nav a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: .3rem .7rem; font-size: .85rem; font-weight: 750; }
+section[id] { scroll-margin-top: 7rem; }
+section:focus { outline: none; }
+summary { min-height: 44px; padding: .5rem 0; cursor: pointer; font-weight: 700; }
+.weather-summary { margin: 0; font-size: 1rem; font-weight: 750; }
+.section-freshness { margin: 0 0 .5rem; color: var(--muted); font-size: .7rem; overflow-wrap: anywhere; }
+section[aria-busy="true"] { min-height: 10rem; }
+#refresh-brief, .event-details-button { min-height: 44px; min-width: 44px; padding: .4rem .8rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--panel); color: var(--ink); cursor: pointer; }
+.date-nav button, .calendar-icon-button, .shelf__arrow { min-height: 44px; min-width: 44px; }
+.events-all-list { display: grid; grid-template-columns: minmax(0,1fr); gap: .7rem; }
+.events-all-list .card { min-height: 0; }
+.event-details-button { align-self: flex-start; margin-top: .5rem; font-size: .85rem; }
+.calendar-dialog { overflow: auto; }
+.calendar-dialog__body { overflow: auto; }
+.calendar-main { overflow: visible; }
+.calendar-dialog__header > *, .calendar-dialog__controls, .calendar-agenda__list > *, .agenda-item { min-width: 0; }
+.calendar-dialog__header { flex-wrap: wrap; }
+.calendar-dialog__controls { flex-wrap: wrap; }
+.calendar-dialog__controls button, .calendar-detail__nav button { min-width: 44px; min-height: 44px; height: auto; }
+.calendar-agenda { overflow-x: visible; }
+.calendar-agenda__list { grid-template-columns: minmax(0,1fr); }
+.agenda-item__where { overflow: visible; white-space: normal; overflow-wrap: anywhere; }
+.calendar-detail__content, .calendar-detail__facts dd, .event-preview__facts dd { overflow-wrap: anywhere; }
+.calendar-load-status { margin: 0; padding: .25rem 1rem; color: var(--muted); font-size: .75rem; }
+.event-details-dialog { width: min(36rem,calc(100vw - 1rem)); max-width: none; max-height: calc(100dvh - 1rem); padding: 0 1rem max(1rem,env(safe-area-inset-bottom)); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 1rem; overflow-wrap: anywhere; }
+.event-details-dialog::backdrop { background: #0b181a99; }
+.event-details-dialog > header { position: sticky; top: 0; display: flex; align-items: flex-start; gap: .5rem; background: var(--panel); padding: .75rem 0; z-index: 1; }
+.event-details-dialog h2 { flex: 1; min-width: 0; margin: 0; font-size: 1.4rem; }
+#event-details-close { flex: none; min-height: 44px; padding: .5rem; border-radius: .5rem; border: 1px solid var(--line); color: var(--ink); background: var(--panel); cursor: pointer; }
+.event-details-dialog .event-preview__facts dd { font-size: .95rem; }
+.event-details-dialog .event-preview__facts dt { font-size: .75rem; }
+@media (max-width:760px) {
+ .calendar-dialog__body { grid-template-columns: minmax(0,1fr); }
+ .calendar-dialog__header { gap: .4rem; padding: .65rem; }
+ .calendar-dialog__header > div:first-child { flex-basis: 100%; }
+ .calendar-dialog__controls { width: 100%; gap: .3rem; }
+ #calendar-close { margin-left: auto; }
+ .calendar-grid-wrap, .calendar-agenda { padding: .65rem; }
+ .calendar-day { padding: .2rem; min-height: 44px; }
+}
+@media (max-width:620px) {
+ .sky, .sky__content { min-height: 0; }
+ .sky__content { padding: .7rem 0; }
+ .sky h1 { font-size: 1.8rem; line-height: 1.15; margin: .35rem 0; }
+ .sky__summary { font-size: .85rem; margin: .3rem 0; }
+ .sky__meta { font-size: .65rem; }
+ .weather-atmosphere-note, .day-context { display: none; }
+ .sky__content > .eyebrow { font-size: .65rem; }
+ .weather-card--forecast { min-height: 0; }
+ .panel { padding: .8rem; }
+ .panel--events { order: 1; }
+ .panel--weather { order: 0; }
+ .panel--calendar { order: 4; }
+ .panel--news { order: 2; }
+ .panel--geek { order: 3; }
+ .memory, .joke, .data-errors { order: 5; }
+ .event-details-dialog { margin: auto auto 0; }
+}
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+.mobile-title { display: none; }
+@media (min-width:621px) { #edition-notes > summary { display: none; } }
+@media (max-width:620px) {
+ .desktop-title { display: none; }
+ .mobile-title { display: inline; }
+ #edition-notes > summary { font-size: .8rem; }
+ #location-label { display: none; }
+ .sky__meta { align-items: center; }
+ .sky__meta #live-status { border: 0; background: transparent; border-radius: 0; padding: .2rem 0; flex-basis: 100%; }
+}
+.archive-button { min-height: 44px; margin-top: .5rem; padding: .4rem .8rem; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: .5rem; cursor: pointer; }

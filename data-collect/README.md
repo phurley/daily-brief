@@ -338,3 +338,11 @@ and publishes `recommendations.json` with the same data commit. Existing signals
 are rescored on publish; no extra model call or timer is required. The installed
 hourly collector already points to this script. See [ranking operations](../RANKING.md)
 for configuration, offline replay and widget/editorial consistency.
+## Compact edition publication
+
+This job now calls `scripts/publish_brief.py` after generation to commit its
+source and matching compact web/widget edition together. The shared publisher
+serializes local Git changes, rebases and rebuilds on remote races, and excludes
+unrelated edits. Existing no-push modes build locally without publishing. See
+[mobile edition operations](../docs/mobile-edition.md) for the full launchd and
+GitHub schedule inventory, midnight rollover, cache lifecycle and checks.

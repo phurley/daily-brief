@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2828DAE603B1EE3D4138FD73 /* BriefData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19D9206A8D3825A34FAA8F /* BriefData.swift */; };
 		40634CD3817971329DAE2C72 /* DailyBriefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC6A34D23EB93013CC5916 /* DailyBriefApp.swift */; };
+		523770315315B807E9564FD7 /* BriefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704544340A91884A14FF15F8 /* BriefTests.swift */; };
+		9B1F6E18F34442E4880CEB32 /* BriefData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19D9206A8D3825A34FAA8F /* BriefData.swift */; };
 		BEBC0E2555B1FAD47B2FFDC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EC0C9AC9C2264E6E3D7C83 /* Assets.xcassets */; };
 		CEA8010A81EC540D8F049034 /* DailyBriefWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8418A90DEE0D89F7A4AAA2 /* DailyBriefWidgets.swift */; };
 		E4EBC674D18F9B3037C2E192 /* DailyBriefWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -21,6 +23,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = C2F02BACB63143ACE6B9538C;
 			remoteInfo = DailyBriefWidgets;
+		};
+		EFBFEE714CFC5CDC262C3336 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAECAB07D18D89FE18C16536 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07683AD8F59A6204364614BA;
+			remoteInfo = DailyBrief;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -39,10 +48,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00FB8272A70586ED83DCDF6E /* DailyBrief.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyBrief.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00FB8272A70586ED83DCDF6E /* DailyBrief.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DailyBrief.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		230DA120A907E1FA5F29F473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		35214E4AF71182A62C005792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49A54510A2241F3A66446DC5 /* DailyBriefTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DailyBriefTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F19D9206A8D3825A34FAA8F /* BriefData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefData.swift; sourceTree = "<group>"; };
+		704544340A91884A14FF15F8 /* BriefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefTests.swift; sourceTree = "<group>"; };
 		94EC0C9AC9C2264E6E3D7C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyBriefWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = DailyBriefWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8418A90DEE0D89F7A4AAA2 /* DailyBriefWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBriefWidgets.swift; sourceTree = "<group>"; };
 		AEAC6A34D23EB93013CC5916 /* DailyBriefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBriefApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +66,7 @@
 			children = (
 				94EC0C9AC9C2264E6E3D7C83 /* Assets.xcassets */,
 				AEAC6A34D23EB93013CC5916 /* DailyBriefApp.swift */,
+				35214E4AF71182A62C005792 /* Info.plist */,
 			);
 			path = DailyBrief;
 			sourceTree = "<group>";
@@ -61,15 +75,25 @@
 			isa = PBXGroup;
 			children = (
 				00FB8272A70586ED83DCDF6E /* DailyBrief.app */,
+				49A54510A2241F3A66446DC5 /* DailyBriefTests.xctest */,
 				A545AD1E26EB79C295B933E2 /* DailyBriefWidgets.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2742B7258AABAFBCED1F9CC3 /* DailyBriefTests */ = {
+			isa = PBXGroup;
+			children = (
+				704544340A91884A14FF15F8 /* BriefTests.swift */,
+			);
+			path = DailyBriefTests;
 			sourceTree = "<group>";
 		};
 		CFC0604476B533BF2AAE940E = {
 			isa = PBXGroup;
 			children = (
 				0FF7FB924297AE682D33C0B8 /* DailyBrief */,
+				2742B7258AABAFBCED1F9CC3 /* DailyBriefTests */,
 				D13171D63052F1DFF6B78714 /* DailyBriefWidgets */,
 				1977928A7F5672F70544B567 /* Products */,
 			);
@@ -80,6 +104,7 @@
 			children = (
 				6F19D9206A8D3825A34FAA8F /* BriefData.swift */,
 				AC8418A90DEE0D89F7A4AAA2 /* DailyBriefWidgets.swift */,
+				230DA120A907E1FA5F29F473 /* Info.plist */,
 			);
 			path = DailyBriefWidgets;
 			sourceTree = "<group>";
@@ -107,6 +132,24 @@
 			productReference = 00FB8272A70586ED83DCDF6E /* DailyBrief.app */;
 			productType = "com.apple.product-type.application";
 		};
+		25C20465B4EA29CCBEB46A6F /* DailyBriefTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86DCD942D7B57995AFA46FD7 /* Build configuration list for PBXNativeTarget "DailyBriefTests" */;
+			buildPhases = (
+				1AFEAA5C74D90DEB6A8F4E1F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60B518123840280DD2142DAA /* PBXTargetDependency */,
+			);
+			name = DailyBriefTests;
+			packageProductDependencies = (
+			);
+			productName = DailyBriefTests;
+			productReference = 49A54510A2241F3A66446DC5 /* DailyBriefTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C2F02BACB63143ACE6B9538C /* DailyBriefWidgets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20C6AEF76D965F197BA68375 /* Build configuration list for PBXNativeTarget "DailyBriefWidgets" */;
@@ -132,6 +175,17 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					07683AD8F59A6204364614BA = {
+						DevelopmentTeam = 87EUDMJ2TV;
+					};
+					25C20465B4EA29CCBEB46A6F = {
+						DevelopmentTeam = 87EUDMJ2TV;
+					};
+					C2F02BACB63143ACE6B9538C = {
+						DevelopmentTeam = 87EUDMJ2TV;
+					};
+				};
 			};
 			buildConfigurationList = 0DA0E9DA4763D4A65F4B9A84 /* Build configuration list for PBXProject "DailyBrief" */;
 			developmentRegion = en;
@@ -149,6 +203,7 @@
 			targets = (
 				07683AD8F59A6204364614BA /* DailyBrief */,
 				C2F02BACB63143ACE6B9538C /* DailyBriefWidgets */,
+				25C20465B4EA29CCBEB46A6F /* DailyBriefTests */,
 			);
 		};
 /* End PBXProject section */
@@ -165,6 +220,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1AFEAA5C74D90DEB6A8F4E1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B1F6E18F34442E4880CEB32 /* BriefData.swift in Sources */,
+				523770315315B807E9564FD7 /* BriefTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		974B8F1C818494E1BAB69FBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +249,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		60B518123840280DD2142DAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07683AD8F59A6204364614BA /* DailyBrief */;
+			targetProxy = EFBFEE714CFC5CDC262C3336 /* PBXContainerItemProxy */;
+		};
 		B20A11F33D62A5AF807AABB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C2F02BACB63143ACE6B9538C /* DailyBriefWidgets */;
@@ -197,8 +266,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 2;
-				MARKETING_VERSION = 1.0;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 87EUDMJ2TV;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -214,6 +281,24 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		21315BB07725DF9BB26CA929 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 87EUDMJ2TV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phurley.dailybrief.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyBrief.app/DailyBrief";
+			};
+			name = Release;
 		};
 		57BC3652DC8431520C1724C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -249,6 +334,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -267,6 +353,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -283,8 +370,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 2;
-				MARKETING_VERSION = 1.0;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 87EUDMJ2TV;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -335,6 +420,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -347,6 +433,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +450,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 87EUDMJ2TV;
 				INFOPLIST_FILE = DailyBriefWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Brief Widgets";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,11 +462,30 @@
 			};
 			name = Debug;
 		};
+		9DCBD1C4DD7EDDEF43C6D9B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 87EUDMJ2TV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phurley.dailybrief.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyBrief.app/DailyBrief";
+			};
+			name = Debug;
+		};
 		BBCA32097C1BE404004E3C47 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 87EUDMJ2TV;
 				INFOPLIST_FILE = DailyBriefWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Brief Widgets";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,6 +514,15 @@
 			buildConfigurations = (
 				9193744261A94ACB15B268B6 /* Debug */,
 				BBCA32097C1BE404004E3C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		86DCD942D7B57995AFA46FD7 /* Build configuration list for PBXNativeTarget "DailyBriefTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DCBD1C4DD7EDDEF43C6D9B9 /* Debug */,
+				21315BB07725DF9BB26CA929 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

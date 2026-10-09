@@ -391,7 +391,7 @@ function buildMessagesFile(dateKey, generated) {
     section,
     role,
     text: String(generated.get(`${section}/${role}`).text).replace(/\s+/g, " ").trim(),
-    order: index,
+    order: index + 1,
   }));
 }
 
@@ -436,14 +436,14 @@ async function main() {
   generated.set("science-technology/section-heading", { text: scienceCopy.heading });
   generated.set("science-technology/summary", { text: scienceCopy.summary });
 
-  const eyebrowMessage = { id: idFor(dateKey, "masthead", "eyebrow"), date: dateKey, section: "masthead", role: "eyebrow", text: eyebrow(dateKey, FALLBACK_LOCATION), order: -1 };
+  const eyebrowMessage = { id: idFor(dateKey, "masthead", "eyebrow"), date: dateKey, section: "masthead", role: "eyebrow", text: eyebrow(dateKey, FALLBACK_LOCATION), order: 0 };
   const fresh = [eyebrowMessage, ...buildMessagesFile(dateKey, generated)].map(item => item.section === "science-technology" ? { ...item, sourceItemIds: context.geeknews.selectedIds } : item);
 
   const existing = readJson(VIBE_PATH, { schemaVersion: "1.0.0", generatedAt: null, messages: [] });
   const output = {
     schemaVersion: "1.0.0",
     generatedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
-    messages: mergeMessages(existing, dateKey, fresh),
+    messages: mergeMessages(existing, dateKey, fresh).map(item => item.order < 0 ? { ...item, order: 0 } : item),
   };
 
   if (args.has("--print") || args.has("--dry-run")) {

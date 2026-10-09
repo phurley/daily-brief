@@ -214,3 +214,13 @@ push/editorial disabled before activation of scheduled publishing.
 The installed science LaunchAgent was then kicked once with publishing enabled:
 launchd reports one run and exit 0, and its health refresh committed and pushed
 successfully. All 66 JavaScript tests in the isolated integration snapshot passed.
+
+
+### Compact edition integration
+
+The existing scheduled job now routes publication through
+`scripts/publish_brief.py` (science via `scripts/push_generated.sh`). It commits
+source output and the matching compact web/widget edition together under the
+shared publication lock. Schedules and collection behavior are unchanged. See
+[mobile edition operations](../docs/mobile-edition.md) for cache and rollover
+behavior.

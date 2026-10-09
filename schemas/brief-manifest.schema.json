@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Daily Brief compact edition manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "editionId",
+    "editionDate",
+    "generatedAt",
+    "sections",
+    "archives"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "editionId": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "editionDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sections": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weather",
+        "events",
+        "news",
+        "geeknews",
+        "vibe",
+        "starship",
+        "scienceHealth",
+        "rankingConfig"
+      ],
+      "properties": {
+        "weather": {
+          "$ref": "#/$defs/section"
+        },
+        "events": {
+          "$ref": "#/$defs/section"
+        },
+        "news": {
+          "$ref": "#/$defs/section"
+        },
+        "geeknews": {
+          "$ref": "#/$defs/section"
+        },
+        "vibe": {
+          "$ref": "#/$defs/section"
+        },
+        "starship": {
+          "$ref": "#/$defs/section"
+        },
+        "scienceHealth": {
+          "$ref": "#/$defs/section"
+        },
+        "rankingConfig": {
+          "$ref": "#/$defs/section"
+        }
+      }
+    },
+    "archives": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "events",
+        "news",
+        "geeknews"
+      ],
+      "properties": {
+        "events": {
+          "$ref": "#/$defs/archive"
+        },
+        "news": {
+          "$ref": "#/$defs/archive"
+        },
+        "geeknews": {
+          "$ref": "#/$defs/archive"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "sha256",
+        "schemaVersion",
+        "generatedAt",
+        "editionDate"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "pattern": "^editions/[a-z]+-[a-f0-9]{64}\\.json$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "schemaVersion": {
+          "type": "string"
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "editionDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "archive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "sha256",
+        "schemaVersion"
+      ],
+      "properties": {
+        "url": {
+          "enum": [
+            "events.json",
+            "news.json",
+            "geeknews.json"
+          ]
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "schemaVersion": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

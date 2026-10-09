@@ -1,0 +1,9 @@
+{
+  "name": "daily-brief-checks",
+  "private": true,
+  "scripts": {
+    "test": "node --test scripts/*.test.mjs",
+    "test:mobile": "node scripts/mobile-browser-check.cjs"
+  },
+  "devDependencies": { "playwright": "1.64.0" }
+}

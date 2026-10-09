@@ -89,3 +89,11 @@ Event context uses the same `ranking.mjs` selector as cards and the published
 reasons, applies public defaults only, and never reads private browser feedback.
 The existing :40 launchd job and post-collection chain require no new timer.
 See [ranking operations](../RANKING.md).
+## Compact edition publication
+
+This job now calls `scripts/publish_brief.py` after generation to commit its
+source and matching compact web/widget edition together. The shared publisher
+serializes local Git changes, rebases and rebuilds on remote races, and excludes
+unrelated edits. Existing no-push modes build locally without publishing. See
+[mobile edition operations](../docs/mobile-edition.md) for the full launchd and
+GitHub schedule inventory, midnight rollover, cache lifecycle and checks.

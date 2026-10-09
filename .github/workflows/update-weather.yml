@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-weather
+  group: publish-brief
   cancel-in-progress: false
 
 jobs:
@@ -30,15 +30,9 @@ jobs:
           pip install --quiet check-jsonschema
           check-jsonschema --schemafile schemas/weather.schema.json weather.json
 
-      - name: Commit and push if changed
-        run: |
-          if git diff --quiet weather.json; then
-            echo "weather.json unchanged; nothing to commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add weather.json
-          git commit -m "Update weather.json"
-          git pull --rebase origin main
-          git push
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Publish source and compact edition
+        run: python scripts/publish_brief.py weather.json

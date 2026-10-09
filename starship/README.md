@@ -149,3 +149,13 @@ operate in separate checkouts and are handled by the existing pull/rebase step.
 A failed push is retained locally and retried by the next Starship publication.
 Check `launchctl print gui/$(id -u)/com.dailybrief.starship`, the log and the
 record's `lastAttemptAt`/source health after installing or changing a schedule.
+
+
+### Compact edition integration
+
+The existing scheduled job now routes publication through
+`scripts/publish_brief.py` (science via `scripts/push_generated.sh`). It commits
+source output and the matching compact web/widget edition together under the
+shared publication lock. Schedules and collection behavior are unchanged. See
+[mobile edition operations](../docs/mobile-edition.md) for cache and rollover
+behavior.

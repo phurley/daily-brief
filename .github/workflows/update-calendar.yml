@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-calendar
+  group: publish-brief
   cancel-in-progress: false
 
 jobs:
@@ -53,16 +53,10 @@ jobs:
           pip install --quiet check-jsonschema
           check-jsonschema --schemafile schemas/calendar.schema.json calendar.json
 
-      - name: Commit and push if changed
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Publish source and compact edition
         if: steps.config.outputs.configured == 'true'
-        run: |
-          if git diff --quiet calendar.json; then
-            echo "calendar.json unchanged; nothing to commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add calendar.json
-          git commit -m "Update calendar.json"
-          git pull --rebase origin main
-          git push
+        run: python scripts/publish_brief.py calendar.json

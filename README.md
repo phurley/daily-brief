@@ -10,11 +10,14 @@ rendered in the browser from schema-backed JSON.
 - `theme.css` owns the visual system, responsive layout, seasonal palettes,
   weather atmosphere, and time-synchronized sky. Most redesigns should happen
   entirely in this file.
-- `app.js` loads and checks every schema-backed data document, filters it for
-  the selected date, renders with safe DOM APIs, polls for changes every 15
-  minutes, maintains the yesterday/today/tomorrow navigation window, blends
-  weather, calendar, and computed almanac facts, runs the optional photo carousel, and
-  caches the free RocketLaunch.Live next-launch feed in local storage.
+- `app.js` progressively loads compact edition sections, shows source freshness,
+  provides phone navigation and accessible event dialogs, and lazily loads full
+  archives. It revalidates while visible every 15 minutes and saves the last
+  complete edition for offline reopening with the service worker shell.
+- `scripts/build_edition.mjs` publishes the versioned manifest, compact sections,
+  and dated widget best bets. `scripts/publish_brief.py` serializes publication
+  across recurring collectors and includes the derived artifacts in each commit.
+  See [mobile edition operations and validation](docs/mobile-edition.md).
 - Root `*.json` files contain generated content. Their contracts live in
   `schemas/`.
 - `scripts/update_calendar.py` collects the family Google/iCloud calendars
@@ -114,8 +117,8 @@ python3 -m http.server 4173
 Open [http://localhost:4173](http://localhost:4173). A web server is required
 because browsers do not allow the app to fetch local JSON from a `file://` URL.
 
-GitHub Pages deploys directly from the root of `main`. No build step or
-JavaScript toolchain is required.
+GitHub Pages deploys directly from the root of `main`. No application bundler is required. Node 22+ builds compact data during
+publication; optional npm dependencies run browser regression checks.
 
 ## Scoring debug page
 

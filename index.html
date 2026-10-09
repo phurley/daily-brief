@@ -7,12 +7,15 @@
     <meta name="description" content="A living daily brief for southeast Michigan.">
     <title>Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="theme.css?v=20261009-science-1">
-    <script type="module" src="app.js?v=20261009-science-1"></script>
+    <link rel="stylesheet" href="theme.css?v=20261009-5">
+    <script type="module" src="app.js?v=20261009-5"></script>
   </head>
   <body>
     <a class="skip-link" href="#brief">Skip to the brief</a>
 
+    <nav class="section-nav" aria-label="Brief sections">
+      <a href="#weather-section">Weather</a><a href="#events-section">Events</a><a href="#news-section">News</a><a href="#geek-section">Science</a>
+    </nav>
     <header class="sky" aria-labelledby="page-title">
       <div class="sky__texture" aria-hidden="true"></div>
       <div class="celestial" aria-hidden="true">
@@ -28,7 +31,7 @@
         <p id="masthead-eyebrow" class="eyebrow">Your southeast Michigan daily brief</p>
         <p id="weather-atmosphere-note" class="weather-atmosphere-note" hidden></p>
         <h1 id="page-title">A good day,<br>well considered.</h1>
-        <p id="masthead-summary" class="sky__summary">Gathering the weather, local signals, and a few worthwhile detours.</p>
+        <details id="edition-notes"><summary>Edition notes</summary><p id="masthead-summary" class="sky__summary">Gathering the weather, local signals, and a few worthwhile detours.</p></details>
         <div class="masthead-controls">
           <nav class="date-nav" aria-label="Brief date">
             <button id="previous-day" class="date-nav__button" type="button">
@@ -42,7 +45,7 @@
           <div class="sky__meta">
             <time id="edition-date"></time>
             <span id="location-label">Canton, Michigan</span>
-            <span id="live-status" role="status" aria-live="polite">Loading the brief…</span>
+            <span id="live-status" role="status" aria-live="polite">Loading the brief…</span><button id="refresh-brief" type="button">Refresh</button>
           </div>
           <div id="day-context" class="day-context" aria-label="Calendar highlights"></div>
         </div>
@@ -50,20 +53,21 @@
     </header>
 
     <main id="brief" class="shell brief" tabindex="-1">
-      <section id="weather-section" class="panel panel--weather" aria-label="Weather and almanac">
-        <div id="weather-grid" class="weather-grid"></div>
+      <section tabindex="-1" id="weather-section" class="panel panel--weather" aria-label="Weather and almanac">
+        <p id="weather-summary" class="weather-summary">Loading weather…</p>
+        <details id="weather-details"><summary>Weather details &amp; almanac</summary><div id="weather-grid" class="weather-grid"></div></details>
       </section>
 
       <section id="calendar-section" class="panel panel--calendar" aria-labelledby="calendar-title">
-        <header class="section-heading">
+        <details id="family-calendar"><summary>Family calendar</summary><header class="section-heading">
           <h2 id="calendar-title">On the calendar</h2>
           <p id="calendar-note">The things worth remembering.</p>
         </header>
         <div id="calendar-list" class="calendar-entries"></div>
-        <div id="calendar-upcoming" class="calendar-upcoming"></div>
+        <div id="calendar-upcoming" class="calendar-upcoming"></div></details>
       </section>
 
-      <section id="events-section" class="panel panel--events" aria-labelledby="events-title">
+      <section tabindex="-1" id="events-section" class="panel panel--events" aria-labelledby="events-title">
         <header class="section-heading section-heading--events">
           <h2 id="events-title">Nearby &amp; notable</h2>
           <p id="events-note">Good reasons to leave the house.</p>
@@ -97,6 +101,7 @@
             <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More upcoming events" data-shelf-next>→</button>
           </div>
         </div>
+        <details id="events-all"><summary id="events-all-summary">See all events on this date</summary><div id="events-all-list" class="events-all-list"></div></details>
       </section>
 
       <section id="photo-section" class="memory" aria-labelledby="photo-title" hidden>
@@ -109,7 +114,7 @@
         </div>
       </section>
 
-      <section id="news-section" class="panel panel--news" aria-labelledby="news-title">
+      <section tabindex="-1" id="news-section" class="panel panel--news" aria-labelledby="news-title">
         <header class="section-heading">
           <h2 id="news-title">The local signal</h2>
           <p id="news-note">What is moving around Michigan.</p>
@@ -118,10 +123,10 @@
           <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous local stories" data-shelf-previous>←</button>
           <div id="news-list" class="story-list shelf__track"></div>
           <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More local stories" data-shelf-next>→</button>
-        </div>
+        </div><button class="archive-button" data-more-stories="news" type="button">More local stories</button>
       </section>
 
-      <section id="geek-section" class="panel panel--geek" aria-labelledby="geek-title">
+      <section tabindex="-1" id="geek-section" class="panel panel--geek" aria-labelledby="geek-title">
         <header class="section-heading">
           <h2 id="geek-title">Science &amp; technology</h2>
           <p id="geek-note">Interesting machinery, ideas, and horizons.</p>
@@ -132,7 +137,7 @@
           <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous science stories" data-shelf-previous>←</button>
           <div id="geek-list" class="story-list shelf__track"></div>
           <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More science stories" data-shelf-next>→</button>
-        </div>
+        </div><button class="archive-button" data-more-stories="geeknews" type="button">More science stories</button>
       </section>
 
       <section class="joke" aria-labelledby="joke-title">
@@ -157,20 +162,19 @@
             <h2 id="calendar-dialog-title" class="calendar-dialog__month">Event calendar</h2>
           </div>
           <div class="calendar-dialog__controls">
-            <a class="calendar-dialog__debug" href="scoring.html" title="Tune the scoring weights">Score debug</a>
             <button id="calendar-previous" type="button" aria-label="Previous month">←</button>
             <button id="calendar-today" type="button">This month</button>
             <button id="calendar-next" type="button" aria-label="Next month">→</button>
             <button id="calendar-close" class="calendar-dialog__close" type="button" aria-label="Close calendar">×</button>
           </div>
         </header>
-        <div class="calendar-dialog__body">
+        <p id="calendar-load-status" class="calendar-load-status" role="status"></p><div class="calendar-dialog__body">
           <div class="calendar-main">
             <div class="calendar-grid-wrap">
               <div class="calendar-weekdays" aria-hidden="true">
                 <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
               </div>
-              <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Event calendar days"></div>
+              <div id="calendar-grid" class="calendar-grid" role="group" aria-label="Event calendar days"></div>
             </div>
             <div id="calendar-detail" class="calendar-detail" hidden>
               <div class="calendar-detail__nav">
@@ -188,10 +192,14 @@
       </div>
     </dialog>
 
+    <dialog id="event-details-dialog" class="event-details-dialog" aria-labelledby="event-details-title">
+      <header><h2 id="event-details-title">Event details</h2><button id="event-details-close" type="button" aria-label="Close event details">Close</button></header>
+      <div id="event-details-content"></div>
+    </dialog>
     <footer>
       <div class="shell footer__inner">
         <p>Daily Brief <span aria-hidden="true">·</span> Canton, Michigan</p>
-        <p id="updated-label">Waiting for data.</p>
+        <a href="scoring.html">Score debug</a><p id="updated-label">Waiting for data.</p>
       </div>
     </footer>
 

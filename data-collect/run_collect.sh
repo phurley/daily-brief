@@ -3,7 +3,7 @@
 #
 #   1. crawl_sources.py  -> data-collect/crawl/   (only sources that are due)
 #   2. extraction funnel -> repo-root events.json / news.json
-#   3. select recommendations, then commit + push all three data documents
+#   3. build compact edition + widget payload; commit/push source and derived files
 #   4. vibe-check/run.sh -> refresh repo-root vibe.json (best-effort)
 #
 # Serialized with a lock, keeps the Mac awake, appends to data-collect/cron.log.
@@ -97,52 +97,38 @@ echo "--- step 2/4: extraction funnel ---"
     --extract-limit "${COLLECT_EXTRACT_LIMIT:-800}" \
     || { echo "pipeline failed"; exit 1; }
 
+OUT_DIR="${COLLECT_OUT_DIR:-$ROOT}"
 RECORDS="$DIR/processed/extracted_records.jsonl"
 if [ ! -s "$RECORDS" ]; then
     echo "no extracted records this run; keeping existing events.json/news.json"
-    run_vibe
+    if [ "$OUT_DIR" != "$ROOT" ]; then exit 0; fi
+    if [ "${COLLECT_NO_PUSH:-}" != "1" ]; then
+        "$PY" "$ROOT/scripts/publish_brief.py" events.json news.json recommendations.json || exit 1
+        run_vibe
+    else
+        "$PY" "$ROOT/scripts/publish_brief.py" --no-push || exit 1
+    fi
     echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0 (no records)"
     exit 0
 fi
 
-OUT_DIR="${COLLECT_OUT_DIR:-$ROOT}"
 "$PY" -m extract.publish --out "$OUT_DIR" || { echo "publish failed"; exit 1; }
 
-# Public shortlist shares the browser/editorial selector; never read private profiles.
+# Shared shortlist also runs for custom output/no-push replay.
 NODE="$(command -v node || true)"
 [ -n "$NODE" ] || NODE=/opt/homebrew/bin/node
 "$NODE" "$ROOT/scripts/select-best-bets.mjs" --events "$OUT_DIR/events.json" --out "$OUT_DIR/recommendations.json" || { echo "shortlist failed"; exit 1; }
 
-# --- step 3: commit + push the published JSON ------------------------------ #
+# --- step 3: publish source and matching compact edition -------------------- #
+if [ "$OUT_DIR" != "$ROOT" ]; then
+    echo "Custom output directory; repository publication skipped"
+    exit 0
+fi
 if [ "${COLLECT_NO_PUSH:-}" = "1" ]; then
-    echo "--- step 3/3: push skipped (COLLECT_NO_PUSH=1) ---"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0 (no push)"
-    exit 0
-fi
-
-echo "--- step 3/4: commit + push events.json/news.json/recommendations.json ---"
-cd "$ROOT" || exit 1
-. "$ROOT/scripts/git-publish-lock.sh"
-acquire_publish_lock
-git add events.json news.json recommendations.json
-if git diff --cached --quiet -- events.json news.json recommendations.json; then
-    echo "events.json/news.json/recommendations.json unchanged; nothing to push"
-    run_vibe
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0 (unchanged)"
-    exit 0
-fi
-git -c user.name="daily-brief bot" -c user.email="phurley@gmail.com" \
-    commit -m "Update events, news, and recommendations" -- events.json news.json recommendations.json || { echo "commit failed"; exit 1; }
-if ! git pull --rebase --autostash origin main; then
-    echo "pull --rebase failed; leaving commit local"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=1 (push failed)"
-    exit 1
-fi
-if git push; then
-    run_vibe
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0 (pushed)"
+    echo "push skipped (COLLECT_NO_PUSH=1)"
+    "$PY" "$ROOT/scripts/publish_brief.py" --no-push || exit 1
 else
-    echo "push failed; leaving commit local"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=1 (push failed)"
-    exit 1
+    "$PY" "$ROOT/scripts/publish_brief.py" events.json news.json recommendations.json || exit 1
+    run_vibe
 fi
+echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0"

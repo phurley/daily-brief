@@ -16,7 +16,9 @@ struct EventsEntry: TimelineEntry {
     let events: [BriefEvent]
     var index: Int = 0
     var unavailable: Bool = false
-    var event: BriefEvent? { events.isEmpty ? nil : events[((index % events.count) + events.count) % events.count] }
+    var editionDate: String = BriefData.today
+    var fetchedAt: Date? = nil
+    var event: BriefEvent? { events.isEmpty || editionDate != BriefData.dateKey(date) ? nil : events[((index % events.count) + events.count) % events.count] }
 }
 
 struct SelectEventIntent: AppIntent {
@@ -43,13 +45,21 @@ struct EventsProvider: TimelineProvider {
             let now = Date()
             var events: [BriefEvent] = []
             var unavailable = false
+            var fetchedAt: Date? = nil
+            var editionDate = BriefData.today
             do {
-                events = try await BriefData.loadEvents()
-                UserDefaults.standard.set(try JSONEncoder().encode(events), forKey: "cachedEvents")
+                let document = try await BriefData.loadEvents()
+                events = document.events
+                editionDate = document.editionDate
+                fetchedAt = now
+                UserDefaults.standard.set(try JSONEncoder().encode(CachedEvents(document: document, fetchedAt: now)), forKey: "cachedEventsV1")
             } catch {
                 unavailable = true
-                if let data = UserDefaults.standard.data(forKey: "cachedEvents") {
-                    events = (try? JSONDecoder().decode([BriefEvent].self, from: data)) ?? []
+                if let data = UserDefaults.standard.data(forKey: "cachedEventsV1"),
+                   let cached = try? JSONDecoder().decode(CachedEvents.self, from: data), cached.usable(on: now) {
+                    events = cached.document.events
+                    editionDate = cached.document.editionDate
+                    fetchedAt = cached.fetchedAt
                 }
             }
             let selectionTime = UserDefaults.standard.double(forKey: "eventSelectionTime")
@@ -59,11 +69,18 @@ struct EventsProvider: TimelineProvider {
             let elapsed = selectionTime == 0 ? 0 : max(0, Int((now.timeIntervalSince1970 - selectionTime) / 300))
             let index = UserDefaults.standard.integer(forKey: "eventIndex") + elapsed
             // WidgetKit schedules these snapshots; it does not run animation timers.
-            let entries = (0..<6).map { step in
-                EventsEntry(date: now.addingTimeInterval(Double(step) * 300),
-                            events: events, index: events.isEmpty ? 0 : ((index + step) % events.count + events.count) % events.count, unavailable: unavailable)
+            let midnight = BriefData.nextMidnight
+            var entries = (0..<6).compactMap { step -> EventsEntry? in
+                let date = now.addingTimeInterval(Double(step) * 300)
+                guard date < midnight else { return nil }
+                let active = events.filter { !$0.hasEnded(at: date) }
+                return EventsEntry(date: date, events: active,
+                    index: active.isEmpty ? 0 : ((index + step) % active.count + active.count) % active.count,
+                    unavailable: unavailable, editionDate: editionDate, fetchedAt: fetchedAt)
             }
-            completion(Timeline(entries: entries, policy: .after(now.addingTimeInterval(1800))))
+            // Explicit midnight tombstone: iOS can defer the next network refresh.
+            entries.append(EventsEntry(date: midnight, events: [], unavailable: true, editionDate: BriefData.dateKey(midnight)))
+            completion(Timeline(entries: entries, policy: .after(min(now.addingTimeInterval(1800), midnight))))
         }
     }
 }
@@ -74,7 +91,7 @@ struct DailyEventsWidget: Widget {
         StaticConfiguration(kind: kind, provider: EventsProvider()) { entry in
             EventsWidgetView(entry: entry)
         }
-        .configurationDisplayName("Today’s events")
+        .configurationDisplayName("Daily best bets")
         .description("A quick look at nearby events from Daily Brief.")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
@@ -88,10 +105,13 @@ struct EventsWidgetView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack {
-                Text("NEARBY & NOTABLE").font(.system(size: 10, weight: .bold))
+                Text(entry.unavailable ? "SAVED BEST BETS" : "DAILY BEST BETS").font(.system(size: 10, weight: .bold))
                 Spacer(minLength: 0)
                 if entry.unavailable { Image(systemName: "wifi.slash").font(.caption2).accessibilityLabel("Offline, showing saved events") }
             }.foregroundStyle(ink.opacity(0.75))
+            if entry.unavailable, let fetchedAt = entry.fetchedAt {
+                Text("Saved " + fetchedAt.formatted(date: .omitted, time: .shortened)).font(.caption2)
+            }
             if let event = entry.event {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(event.title).font(.system(family == .systemSmall ? .subheadline : .headline, design: .rounded, weight: .bold))

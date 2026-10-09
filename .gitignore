@@ -12,3 +12,7 @@ __pycache__/
 starship/*.log
 starship/*.tmp-*
 starship.json.tmp-*
+# Optional browser test dependencies and output.
+node_modules/
+test-results/
+editions/*.tmp-*

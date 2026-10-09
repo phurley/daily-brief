@@ -128,3 +128,12 @@ for a reproducible replay. Inspect `data-collect/cron.log` for collection/select
 failures and `vibe-check/vibe.log` for editorial failures. The publisher's existing
 job lock and shared Git lock remain required. Do not run a second overlapping
 collector or add a new cron entry for the shortlist.
+
+
+## Compact edition integration
+
+Plan 5 publication rebuilds `recommendations.json` and `widget-events.json` using
+the same public selector, together with the versioned web manifest. Widgets use
+the dated compact feed; browser feedback stays private. All publishers now pass
+through `scripts/publish_brief.py`, using the existing shared macOS publication
+mutex. See [mobile edition operations](docs/mobile-edition.md).

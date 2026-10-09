@@ -100,33 +100,10 @@ set --
 if [ "${VIBE_DRY_RUN:-}" = "1" ]; then set -- --dry-run --print; fi
 "$NODE" generate.mjs "$@" || { echo "$STAMP [done] exit=1 (generate failed)"; exit 1; }
 
-if [ "${VIBE_DRY_RUN:-}" = "1" ] || [ "${VIBE_NO_PUSH:-}" = "1" ]; then
-    echo "$STAMP [done] exit=0 (push skipped)"
-    exit 0
-fi
-
-# --- commit + push only vibe.json ------------------------------------------ #
+if [ "${VIBE_DRY_RUN:-}" = "1" ]; then exit 0; fi
 cd "$ROOT" || exit 1
-# Only ever stage/snapshot vibe.json so unrelated work in the tree is never
-# swept into this commit.
-. "$ROOT/scripts/git-publish-lock.sh"
-acquire_publish_lock
-git add -- vibe.json
-if git diff --cached --quiet -- vibe.json; then
-    echo "$STAMP [done] exit=0 (unchanged)"
-    exit 0
-fi
-DATE="$(date '+%Y-%m-%d')"
-git -c user.name="daily-brief bot" -c user.email="phurley@gmail.com" \
-    commit -m "Update daily editorial vibe for $DATE" -- vibe.json \
-    || { echo "$STAMP [done] exit=1 (commit failed)"; exit 1; }
-if ! git pull --rebase --autostash origin main; then
-    echo "$STAMP [done] exit=1 (pull --rebase failed; commit left local)"
-    exit 1
-fi
-if git push; then
-    echo "$STAMP [done] exit=0 (pushed)"
+if [ "${VIBE_NO_PUSH:-}" = "1" ]; then
+    BRIEF_NODE="$NODE" /usr/bin/python3 scripts/publish_brief.py --no-push
 else
-    echo "$STAMP [done] exit=1 (push failed; commit left local)"
-    exit 1
+    BRIEF_NODE="$NODE" /usr/bin/python3 scripts/publish_brief.py vibe.json
 fi
