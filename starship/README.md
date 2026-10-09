@@ -13,8 +13,10 @@ This runs independently of the general crawler and before the morning standalone
 editorial timer at 07:40. The collector's own editorial chain may run at another
 time; it reads the latest atomic Starship record with the same freshness gate.
 
-The initial mode is **shadow** (`config.json`). The public card shows verified
-operator status, outside reports, source health and uncertainty. The rule-based
+The initial mode is **shadow** (`config.json`). The public launch line shows the
+current operator target as a best-guess date, preserving date precision, or date
+pending. Outside reports, source health and uncertainty remain in `starship.json`
+and the immutable evidence history. The rule-based
 forecast is saved in immutable snapshots but withheld from public and editorial
 predictions until `mode` is deliberately changed to `live` after reviewing
 history. An unavailable target is a supported result, not a fabricated forecast.
@@ -176,8 +178,9 @@ not observed within 24 hours are hidden from the outlook; retractions, known
 completed missions and known different missions are excluded. Reposts sharing
 an underlying URL are displayed once and never counted as corroboration.
 
-The public card shows up to three leads under **Community outlook · unverified**,
-separately from operator targets and the shadow/live rule-based forecast. Forum
+The shared view retains up to three community leads, separately from operator
+targets and the shadow/live rule-based forecast. The compact public launch line
+does not display these leads or turn discussion prose into a launch date. Forum
 text is excluded from the editorial model's fact input. Community evidence
 cannot select a mission, reset `lastVerifiedAt`, supersede operator evidence,
 or establish a target, authorization, readiness, or terminal outcome. Follow

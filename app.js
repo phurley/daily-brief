@@ -10,7 +10,7 @@ import { orderNewsStories } from "./story-order.mjs?v=20261009-1";
 import { scienceView, scienceRotationSlot, scienceFreshness, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261009-rotation-1";
 
 import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
-import { selectBestBets, rankEvent, eventStatus } from './ranking.mjs?v=20261009-identity1';
+import { selectEventLanes, rankEvent, eventStatus } from './ranking.mjs?v=20261009-layout-1';
 import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
 let rankingWeights;
@@ -173,6 +173,10 @@ let archiveRequest = null;
 let showAllEvents = false;
 const fullStories = {};
 const storyLimits = {news:10,geeknews:10};
+const storyRequests = {};
+const displayedStories = {news:[],geeknews:[]};
+const storyPools = {news:[],geeknews:[]};
+const storyTracks = {news:'#news-list',geeknews:'#geek-list'};
 const sectionStates = {};
 const sectionSelectors = {weather: '#weather-section', events:'#events-section', news:'#news-section', geeknews:'#geek-section'};
 
@@ -947,7 +951,11 @@ function feedbackControls(event) {
       feedbackNotice = persisted ? 'Feedback saved on this browser. Undo is available.' : 'Feedback applied for this session; browser storage is unavailable.';
       if(!fullEvents) feedbackNotice += ' Full candidates are unavailable; using the saved selection.';
       renderEvents();
-      $('#recommendation-status').focus({ preventScroll: true });
+      if ($('#event-details-dialog').open) {
+        button.disabled=false;
+        button.textContent=action === 'favorite' ? (isFavorite(preferences.get(),event) ? 'Unfavorite' : 'Favorite') : label;
+        $('#event-details-status').textContent=feedbackNotice;
+      } else $('#recommendation-status').focus({ preventScroll: true });
     });
     controls.append(button);
   }
@@ -955,8 +963,7 @@ function feedbackControls(event) {
 }
 
 function recommendationDetails(event, ranking) {
-  const details = node('details', { className: 'recommendation-details' });
-  details.append(node('summary', { text: 'Why this?' }));
+  const details = node('div', { className: 'recommendation-details' });
   const row = ranking || rankEvent(event, { day: state.selectedDate, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
   details.append(node('p', { text: row.ineligible ? `Not in best bets: ${row.ineligible}` : row.reasons.join(' · ') || 'Neutral fit; no recorded preferences.' }));
   details.append(node('p', { text: `Taste ${row.components.taste} · Practicality ${row.components.practicality} · Novelty ${row.components.novelty} · Data quality ${row.components.quality}. Ranking points, not a probability.` }));
@@ -983,13 +990,13 @@ function renderPreferenceControls() {
   const count = node('input', { type: 'number', min: 1, max: 20, value: p.ranking.limit, required: '' });
   const distance = node('input', { type: 'number', min: 0, step: 'any', value: p.constraints.maxDistanceMiles ?? '', placeholder: 'No limit' });
   const exact = node('input', { type: 'checkbox' }); exact.checked = p.constraints.selectedDayOnly;
-  form.append(node('label', {}, ['Best bets: ', count].map(x => typeof x === 'string' ? document.createTextNode(x) : x)), node('label', {}, [document.createTextNode('Maximum miles (unknown distances excluded when set): '), distance]), node('label', {}, [exact, document.createTextNode('Selected day only')]), node('button', { type: 'submit', text: 'Save preferences' }));
+  form.append(node('label', {}, ['Best bets per lane: ', count].map(x => typeof x === 'string' ? document.createTextNode(x) : x)), node('label', {}, [document.createTextNode('Maximum miles (unknown distances excluded when set): '), distance]), node('label', {}, [exact, document.createTextNode('Selected day only')]), node('button', { type: 'submit', text: 'Save preferences' }));
   form.addEventListener('submit', e => { e.preventDefault(); const next = preferences.get(); next.ranking.limit = Number(count.value); next.constraints.maxDistanceMiles = distance.value === '' ? null : Number(distance.value); next.constraints.selectedDayOnly = exact.checked; const saved = preferences.set(next); feedbackNotice = saved ? 'Preferences saved on this browser.' : 'Applied for this session; browser storage is unavailable.'; renderEvents(); });
   settings.append(form, node('p', { text: `${p.hiddenOccurrences.length} hidden occurrences · ${p.favorites.length} favorites · Category adjustments: ${Object.entries(p.topicAffinities).map(([name, value]) => `${name} ${value > 0 ? '+' : ''}${value}`).join(', ') || 'none'}` }), button('Reset preferences and feedback', () => { const saved = preferences.reset(); feedbackNotice = saved ? 'Preferences reset. Undo is available.' : 'Reset for this session; browser storage is unavailable.'; renderEvents(); }));
   panel.replaceChildren(toggle, button('Open full calendar', openEventCalendar), undo, settings, node('p', { id: 'recommendation-status', role: 'status', tabindex: '-1', text: [feedbackNotice,candidateNotice].filter(Boolean).join(' ') }));
 }
 
-function eventCard(event, ranking) {
+function eventCard(event) {
   const title = node("h3");
   title.append(safeLink(eventDisplayTitle(event), event.url));
   return node("article", { className: "card", dataset:{eventId:event.id} }, [
@@ -997,7 +1004,6 @@ function eventCard(event, ranking) {
     title,
     node("p", { text: event.summary }),
     node("p", { className: "card__footer", text: [event.venue, event.city, event.price || 'Price unknown', event.distanceMiles != null ? `${event.distanceMiles} mi` : 'Distance unknown', eventStatus(event) === 'cancelled' ? 'CANCELED' : ''].filter(Boolean).join(" · ") }),
-    recommendationDetails(event, ranking),
     detailButton(event),
   ]);
 }
@@ -1024,18 +1030,17 @@ function renderEvents() {
   const allEvents = fullEvents || uniqueEvents();
   const selected = state.selectedDate;
   renderPreferenceControls();
-  const best = selectBestBets(allEvents, { day: selected, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
-  const horizon = shiftDate(selected, preferences.get().ranking.horizonDays);
-  const visible = best.map(row => row.event);
-  const rows = new Map(best.map(row => [row.event, row]));
-  replaceChildren('#events-list', visible.length ? visible.map(event => eventCard(event, rows.get(event))) : [node('p', { text: 'No matching best bets. Open the full calendar or adjust your preferences.' })]);
-  $('#today-lane-title').textContent = `${visible.length} best bets`;
-  $('#ongoing-lane').hidden = true;
-  $('#plan-ahead').hidden = true;
-  replaceChildren('#ongoing-list', []);
-  replaceChildren('#claims-list', []);
+  const lanes = selectEventLanes(allEvents, { day: selected, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
+  for (const [lane, selector, renderCard] of [['today','#events-list',eventCard],['ongoing','#ongoing-list',claimCard],['future','#claims-list',claimCard]]) {
+    replaceChildren(selector, lanes[lane].length ? lanes[lane].map(({event}) => renderCard(event)) : [node('p', { text: 'No matching events in this lane.' })]);
+  }
+  $('#today-lane-title').textContent = selected === state.today ? 'Today' : displayDate(selected);
+  $('#ongoing-lane-title').textContent = 'Ongoing';
+  $('#plan-ahead-title').textContent = 'Future';
+  $('#ongoing-lane').hidden = false;
+  $('#plan-ahead').hidden = false;
   $('#events-title').textContent = 'Nearby & notable';
-  $('#events-note').textContent = 'A varied shortlist for the selected day and weeks ahead. Use “Why this?” to tune it.';
+  $('#events-note').textContent = 'Ranked picks for today, ongoing events, and the weeks ahead.';
   if(showAllEvents && fullEvents) {
     const all=eventsOnDay(selected,fullEvents,compareEventsByRating);
     replaceChildren('#events-all-list',all.length ? all.map(event=>eventCard(event)) : [emptyState()]);
@@ -1047,7 +1052,8 @@ function renderEvents() {
 }
 
 function detailButton(event) {
-  const button=node('button',{type:'button',className:'event-details-button',text:'Details','aria-label':`Details for ${event.title}`,'aria-haspopup':'dialog'});
+  const button=node('button',{type:'button',className:'event-details-button',title:'Details','aria-label':`Details for ${event.title}`,'aria-haspopup':'dialog'});
+  button.append(node('span',{'aria-hidden':'true',text:'ⓘ'}));
   button.addEventListener('click',()=>openEventDetails(event,button));
   return button;
 }
@@ -1059,7 +1065,7 @@ function openEventDetails(event,opener) {
   for(const [term,value] of eventPreviewFacts(event)) facts.append(node('div',{},[node('dt',{text:term}),node('dd',{text:value})]));
   const signals=Object.entries(event.scoring?.signals || {}).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([name,value])=>`${name.replaceAll('_',' ')}: ${Math.round(value*100)}%`).join(' · ');
   $('#event-details-content').replaceChildren(node('p',{text:event.summary}),facts,
-    node('p',{text:signals ? `Score signals (estimated topic matches): ${signals}. The rating combines these signals with distance and preferences.` : 'Score explanation is not available for this event.'}),safeLink('Visit website ↗',event.url));
+    node('p',{text:signals ? `Score signals (estimated topic matches): ${signals}. The rating combines these signals with distance and preferences.` : 'Score explanation is not available for this event.'}),recommendationDetails(event),node('p',{id:'event-details-status',role:'status'}),safeLink('Visit website ↗',event.url));
   dialog.onclose=()=>{if(opener.isConnected) opener.focus({preventScroll:true});else $('[data-calendar-open]').focus();};
   dialog.showModal();$('#event-details-close').focus();
 }
@@ -1194,7 +1200,7 @@ function refreshScienceRotation() {
   if (!document.hidden && slot !== lastScienceSlot) renderStories("geeknews");
 }
 
-function renderStories(kind) {
+function renderStories(kind, {append = false} = {}) {
   const data = state.data[kind];
   const selector = kind === "news" ? "#news-list" : "#geek-list";
   const noteSelector = kind === "news" ? "#news-note" : "#geek-note";
@@ -1205,15 +1211,20 @@ function renderStories(kind) {
   const scienceDoc = { ...data, stories: availableStories };
   const digest = kind === "geeknews" ? scienceView(scienceDoc, state.selectedDate, scienceNow) : null;
   if (digest) lastScienceSlot = `${scienceDate(new Date(scienceNow).toISOString())}:${scienceRotationSlot(scienceNow)}`;
-  const stories = kind === "news"
-    ? orderRankedNews(availableStories, { now: Date.now(), preferences: preferences.get() }).slice(0,storyLimits[kind])
-    : digest.stories;
+  const pool = kind === 'news'
+    ? orderRankedNews(availableStories, { now: Date.now(), preferences: preferences.get() })
+    : [...digest.stories, ...digest.archive];
+  storyPools[kind] = pool;
+  const prior = append ? displayedStories[kind] : [];
+  const seen = new Set(prior.map(story => story.id));
+  const stories = [...prior, ...pool.filter(story => !seen.has(story.id)).slice(0, Math.max(0, storyLimits[kind] - prior.length))];
+  displayedStories[kind] = stories;
   const renderStory = (story) => {
     const title = node("h3");
     title.append(safeLink(story.title, story.url));
     const source = [story.source?.name, story.source?.publication].filter(Boolean).join(" · ");
-    return node("article", { className: "story" }, [
-      node("div", {}, [title, node("p", { text: story.finding || story.summary }),
+    return node("article", { className: "story", dataset: {storyId: story.id} }, [
+      node("div", {}, [title, kind === "geeknews" && digest.archive.some(item => item.id === story.id) ? node("p", {className:"story__source",text:"Archive / background"}) : null, node("p", { text: story.finding || story.summary }),
         kind === "geeknews" && story.significance ? node("details", {}, [node("summary", { text: "Why it matters" }), node("p", { text: story.significance })]) : null,
         kind === "geeknews" ? node("p", { className: "story__caveat", text: `Limitations: ${story.caveat || "Evidence limitations not verified."}` }) : null,
         kind === "geeknews" ? node("p", { className: "story__source", text: `Published ${scienceDate(story.publishedAt)} · ${story.evidenceType || "unknown"}${story.verifiedAt ? "" : " · archived, not reverified"}` }) : null,
@@ -1224,15 +1235,10 @@ function renderStories(kind) {
       node("p", { className: "story__source", text: source }),
     ]);
   };
-  const children = stories.map(renderStory);
-  if (kind === "geeknews" && digest.archive.length) children.push(node("details", { className: "story science-archive" }, [
-    node("summary", { text: `Archive / background (${digest.archive.length})` }), ...digest.archive.slice(0,storyLimits[kind]).map(renderStory),
-  ]));
-  replaceChildren(selector, children.length ? children : [emptyState()]);
-
-  const more = document.querySelector(`[data-more-stories="${kind}"]`);
-  more.hidden = Boolean(fullStories[kind] && storyLimits[kind] >= availableStories.length);
-  if (!more.disabled) more.textContent = `More ${kind === 'news' ? 'local' : 'science'} stories · ${stories.length} shown`;
+  const track = $(selector);
+  if (append && prior.length) track.append(...stories.slice(prior.length).map(renderStory));
+  else replaceChildren(selector, stories.length ? stories.map(renderStory) : [emptyState()]);
+  $(`[data-story-status="${kind}"]`).textContent = '';
   const carryForward = data?.editionDate && data.editionDate !== state.selectedDate && editionAvailable
     ? `Latest available digest: ${displayDate(data.editionDate)}.`
     : "";
@@ -1256,8 +1262,7 @@ function renderRocketLaunches() {
   const target = $("#rocket-launches");
   target.replaceChildren();
   const launches = state.launches;
-  target.hidden = launches.length === 0;
-  if (target.hidden) return;
+  target.hidden = false;
 
   const todaysLaunches = launches.filter((launch) => launchDateKey(launch) === state.today);
   const isUseful = (launch) => {
@@ -1283,58 +1288,28 @@ function renderRocketLaunches() {
     line.append(node("span", { text: ` · Cached feed from ${new Date(state.launchFetchedAt).toLocaleString("en-US", { timeZone: TIME_ZONE })} Detroit time (live feed unavailable; maximum age 6 hours).` }));
   }
 
+  const view = starshipView(state.data.starship);
+  const estimate = view.officialTarget?.target || view.forecast?.window;
+  const starship = node('span', {className:'rocket-launches__starship'}, [
+    node('strong', {text:'Starship: '}),
+    estimate ? safeLink(`best guess ${targetLabel(estimate)}`, view.officialTarget?.sourceUrl || 'https://www.spacex.com/launches/')
+      : document.createTextNode(view.status === 'underway' ? 'attempt underway' : 'best guess date pending'),
+  ]);
+  starship.title = view.summary;
+  if (featured) line.append(document.createTextNode(' · '));
+  line.append(starship);
+
   const attribution = safeLink("Data by RocketLaunch.Live", "https://www.rocketlaunch.live/");
   if (attribution.nodeType === Node.ELEMENT_NODE) attribution.className = "rocket-launches__source";
   target.append(
     node("span", { className: "rocket-launches__icon", text: "↗", "aria-hidden": "true" }),
     line,
-    attribution,
+    ...(featured ? [attribution] : []),
   );
 }
 
 function renderStarship() {
-  const wasOpen = $("#starship-status details")?.open;
-  const record = state.data.starship;
-  const view = starshipView(record);
-  const card = $("#starship-status");
-  const timestamp = (value) => value ? new Date(value).toLocaleString("en-US", { timeZone: TIME_ZONE, timeZoneName: "short" }) : "Not yet verified";
-  const official = node("p", {}, [node("strong", { text: "Official target: " }), document.createTextNode(view.officialTarget ? targetLabel(view.officialTarget.target) : "No current verified target.")]);
-  if (view.officialTarget) official.append(document.createTextNode(" · "), safeLink("Operator announcement", view.officialTarget.sourceUrl));
-  const children = [
-    node("h3", { id: "starship-title", text: record?.mission.label || "Starship status" }),
-    node("p", { className: "starship-status__summary", text: view.summary }),
-    official,
-    node("p", {}, [node("strong", { text: "Daily Brief forecast: " }), document.createTextNode(record?.mode === "shadow" ? "Under evaluation; no forecast published yet." : view.forecast?.summary || "Insufficient current evidence.")]),
-    node("p", { className: "story__source", text: `Current status · Last checked: ${timestamp(record?.lastAttemptAt)} · Last verified: ${timestamp(view.lastVerifiedAt)}${view.fresh ? "" : " · Evidence stale or unavailable"}` }),
-    node("p", { text: `What changed: ${record?.whatChanged || "Awaiting the first independent source collection."}` }),
-  ];
-  for (const id of record?.outsideReports || []) {
-    const report = record.evidence.find((e) => e.id === id);
-    if (report?.target) children.push(node("p", {}, [node("strong", { text: "Outside report (not an operator target): " }), safeLink(targetLabel(report.target), report.sourceUrl), document.createTextNode(` · observed ${timestamp(report.observedAt)}; see evidence for uncertainty.`)]));
-  }
-  if (record?.sourceHealth?.some((s) => s.id === "reddit-spacex")) {
-    const outlook = node("section", { className: "starship-community", "aria-label": "Community outlook" }, [node("h4", { text: "Community outlook · unverified" }), node("p", { text: "Longer-range discussion from r/SpaceX. Dates and milestones here are community reports or guesses; linked sources require independent verification." })]);
-    for (const lead of view.communityOutlook || []) {
-      const item = node("p", {}, [safeLink(`r/SpaceX · ${lead.communityKind || "discussion"}`, lead.sourceUrl), document.createTextNode(` — ${lead.excerpt} Posted ${timestamp(lead.publishedAt)}.`)]);
-      for (const url of lead.linkedSourceUrls || []) item.append(document.createTextNode(" · "), safeLink("Linked source (unverified)", url));
-      outlook.append(item);
-    }
-    if (!view.communityOutlook?.length) outlook.append(node("p", { text: "No recent community outlook available. Older or unavailable feeds do not extend verified targets." }));
-    children.push(outlook);
-  }
-  const details = node("details", {}, [node("summary", { text: "Evidence, uncertainty and source health" })]);
-  details.open = Boolean(wasOpen);
-  details.append(node("p", { text: (view.uncertainty || []).join(" ") }));
-  if (record?.officialTarget) details.append(node("p", { text: `Last recorded operator wording (${view.officialTarget ? "current" : "historical or disputed"}): ${record.officialTarget.target.label}. Precision: ${record.officialTarget.target.precision}; NET: ${record.officialTarget.target.net ? "yes" : "no"}; source timezone: ${record.officialTarget.target.timeZone}. Announced: ${timestamp(record.officialTarget.announcedAt)}.` }));
-  for (const conflict of record?.conflicts || []) details.append(node("p", { text: conflict.explanation }));
-  for (const evidence of record?.evidence || []) {
-    details.append(node("p", {}, [safeLink(`${evidence.sourceType} · ${evidence.claimType} · ${evidence.verification}`, evidence.sourceUrl), document.createTextNode(` — ${evidence.excerpt} Published: ${evidence.publishedAt ? timestamp(evidence.publishedAt) : "unknown"}; observed: ${timestamp(evidence.observedAt)}. Claim confidence: ${evidence.claimConfidence}${evidence.target ? `; precision: ${evidence.target.precision}; NET: ${evidence.target.net ? "yes" : "no"}` : ""}.`)]));
-  }
-  for (const source of record?.sourceHealth || []) details.append(node("p", {}, [safeLink(source.id, source.url), document.createTextNode(`: ${source.state}. ${source.detail}`)]));
-  for (const outcome of record?.outcomes || []) details.append(node("p", { text: `Recorded mission outcome: ${outcome.missionId} — ${outcome.outcome}${outcome.actualLiftoffAt ? `; liftoff ${timestamp(outcome.actualLiftoffAt)}` : ""}. This does not establish the next mission's target.` }));
-  if (record?.previousSnapshot) details.append(safeLink("Previous evidence snapshot", new URL(record.previousSnapshot, window.location.href).href));
-  children.push(details);
-  card.replaceChildren(...children);
+  renderRocketLaunches();
 }
 
 function readLaunchCache({ allowStale = false } = {}) {
@@ -1551,17 +1526,51 @@ function updateNavigation() {
   next.setAttribute("aria-label", `Show ${displayDate(shiftDate(state.selectedDate, 1))}`);
 }
 
+function storyKind(track) {
+  return Object.keys(storyTracks).find(kind => storyTracks[kind] === `#${track.id}`);
+}
+function hasMoreStories(kind) {
+  if (!kind || !state.data[kind]?.editionDate || state.data[kind].editionDate > state.selectedDate) return false;
+  return !fullStories[kind] || storyPools[kind].some(story => !displayedStories[kind].some(shown => shown.id === story.id));
+}
+async function loadMoreStories(kind) {
+  if (!hasMoreStories(kind) || storyRequests[kind]) return;
+  const token = {}; storyRequests[kind] = token;
+  const status = $(`[data-story-status="${kind}"]`);
+  const track = $(storyTracks[kind]);
+  const editionId = manifest?.editionId, selectedDate = state.selectedDate;
+  status.textContent = 'Loading more stories…';
+  track.setAttribute('aria-busy','true');
+  try {
+    if (!fullStories[kind]) {
+      const data = validateSection(kind, await fetchJSON(`${kind}.json`, {sha256:manifest?.archives?.[kind]?.sha256,timeout:12000}));
+      if (manifest?.editionId !== editionId) throw new Error('Edition changed. Refresh and scroll again.');
+      fullStories[kind] = data;
+    }
+    if (state.selectedDate !== selectedDate || manifest?.editionId !== editionId) return;
+    storyLimits[kind] = displayedStories[kind].length + 20;
+    renderStories(kind, {append:true});
+    status.textContent = hasMoreStories(kind) ? 'More stories loaded.' : 'All available stories loaded.';
+  } catch(error) {
+    status.textContent = `Could not load more stories. Scroll again to retry. ${error.message}`;
+  } finally {
+    if (storyRequests[kind] === token) delete storyRequests[kind];
+    track.setAttribute('aria-busy','false');
+    refreshShelfControls();
+  }
+}
+function atShelfEnd(track) { return track.scrollLeft + track.clientWidth >= track.scrollWidth - 8; }
 function updateShelfControl(shelf) {
-  const track = shelf.querySelector(".shelf__track");
-  const previous = shelf.querySelector("[data-shelf-previous]");
-  const next = shelf.querySelector("[data-shelf-next]");
+  const track = shelf.querySelector('.shelf__track');
+  const previous = shelf.querySelector('[data-shelf-previous]');
+  const next = shelf.querySelector('[data-shelf-next]');
   if (!track || !previous || !next) return;
   const overflow = track.scrollWidth > track.clientWidth + 2;
+  const more = hasMoreStories(storyKind(track));
   previous.hidden = !overflow;
-  next.hidden = !overflow;
-  if (!overflow) return;
+  next.hidden = !overflow && !more;
   previous.disabled = track.scrollLeft <= 2;
-  next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+  next.disabled = atShelfEnd(track) && !more;
 }
 
 function refreshShelfControls() {
@@ -1578,8 +1587,24 @@ function bindShelfControls() {
     if (!track || !previous || !next) return;
     const move = (direction) => track.scrollBy({ left: direction * track.clientWidth * .88, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
     previous.addEventListener("click", () => move(-1));
-    next.addEventListener("click", () => move(1));
-    track.addEventListener("scroll", () => updateShelfControl(shelf), { passive: true });
+    const kind = storyKind(track);
+    const extend = () => kind && atShelfEnd(track) && loadMoreStories(kind);
+    next.addEventListener('click', async () => { await extend(); move(1); });
+    let lastLeft = track.scrollLeft;
+    track.addEventListener('scroll', () => {
+      const forward = track.scrollLeft > lastLeft;
+      lastLeft = track.scrollLeft;
+      updateShelfControl(shelf);
+      if (forward) extend();
+    }, {passive:true});
+    if (kind) {
+      track.tabIndex = 0;
+      track.addEventListener('wheel', event => { if (event.deltaX > 0 || event.shiftKey && event.deltaY > 0) extend(); }, {passive:true});
+      let touchX = null;
+      track.addEventListener('touchstart', event => { touchX = event.touches[0]?.clientX; }, {passive:true});
+      track.addEventListener('touchmove', event => { if (touchX != null && touchX - event.touches[0]?.clientX > 20) extend(); }, {passive:true});
+      track.addEventListener('keydown', event => { if (event.key === 'ArrowRight' || event.key === 'End') extend(); });
+    }
     updateShelfControl(shelf);
   });
   window.addEventListener("resize", refreshShelfControls);
@@ -1657,20 +1682,8 @@ function bindEvents() {
   $("#next-day").addEventListener("click", () => selectDate(shiftDate(state.selectedDate, 1)));
   $("#today-button").addEventListener("click", () => selectDate(state.today));
   $("#new-joke").addEventListener("click", () => loadJoke({ force: true }));
-  document.querySelectorAll('[data-more-stories]').forEach(button=>button.addEventListener('click',async()=>{
-    const kind=button.dataset.moreStories;button.disabled=true;button.textContent='Loading archive…';
-    const editionId=manifest?.editionId;
-    try {
-      if(!fullStories[kind]) {
-        const data=validateSection(kind,await fetchJSON(`${kind}.json`,{sha256:manifest?.archives?.[kind]?.sha256,timeout:12000}));
-        if(manifest?.editionId!==editionId) throw new Error('Edition changed. Try again.');
-        fullStories[kind]=data;
-      }
-      storyLimits[kind]+=20;button.disabled=false;renderStories(kind);
-    } catch(error){button.disabled=false;button.textContent=`Retry archive: ${error.message}`;}
-  }));
   $('#events-section').addEventListener('toggle',async event=>{
-    if((event.target.closest('#recommendation-controls') || event.target.classList.contains('recommendation-details')) && event.target.open) {
+    if(event.target.closest('#recommendation-controls') && event.target.open) {
       try {await ensureFullEvents();} catch(error){feedbackNotice=`Full candidates unavailable: ${error.message}`;}
     }
   },true);

@@ -88,3 +88,16 @@ export function selectBestBets(events, { day, now = Date.now(), preferences = {}
   for (const row of ranked) { if (selected.length >= limits.limit) break; take(row); }
   return selected;
 }
+
+// Keep date lanes independent so a high-scoring future event cannot crowd out today.
+export function selectEventLanes(events, options = {}) {
+  const day = options.day || localDay(options.now ?? Date.now());
+  const lanes = { today: [], ongoing: [], future: [] };
+  for (const event of events) {
+    const start = localDay(event.start), end = localDay(event.end || event.start);
+    const lane = start > day ? 'future' : end > day ? 'ongoing' : 'today';
+    lanes[lane].push(event);
+  }
+  return Object.fromEntries(Object.entries(lanes).map(([lane, candidates]) =>
+    [lane, selectBestBets(candidates, { ...options, day })]));
+}

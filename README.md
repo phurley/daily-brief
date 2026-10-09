@@ -147,9 +147,9 @@ which asserts it reproduces every stored `scoring.score`.
 ## Starship status and forecasting
 
 `starship.json` is independent of the science digest and the free worldwide
-next-five launch strip. Its card distinguishes operator targets, outside
-reports and the Daily Brief forecast, with dated evidence, uncertainty,
-source health and change explanations. Evidence expires after 24 hours;
+next-five launch feed. The page shows a compact Starship best-guess date on the
+launch line, or date pending when no usable target is available. The canonical
+record retains dated evidence, uncertainty, source health and change explanations. Evidence expires after 24 hours;
 a passed target never implies a completed mission. The initial forecast runs
 in shadow mode while immutable history accumulates.
 
@@ -172,8 +172,9 @@ for source intervals, verification, diagnostics and the recurring-job inventory.
 
 ## Household recommendations
 
-The brief selects up to seven varied best bets with “Why this?” explanations,
-browser-local feedback, favorites, hide, undo and reset. The complete calendar
+The brief selects up to seven varied picks per Today, Ongoing and Future lane.
+A small bottom-right info icon opens explanations and browser-local feedback,
+favorites and hide; preferences retain undo and reset. The complete calendar
 remains available. News has a separate freshness/locality/topic rubric. Widgets
 and editorial context share the public event selector. See [ranking and recurring
 operations](RANKING.md) for preferences, tests, saved-edition comparison, rollout

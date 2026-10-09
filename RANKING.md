@@ -1,15 +1,18 @@
 # Household recommendations
 
-The brief shows up to seven best bets across the selected day and the next 30
-days. “Show all events” and the full chronological calendar preserve the complete
-collection, including cancellation notices and hidden occurrences. “Why this?”
-shows taste, practicality, novelty and data-quality points, plus unknown facts.
+The brief shows up to seven best bets in each Today, Ongoing and Future lane
+across the selected day and the next 30 days. “Show all events” and the full chronological calendar preserve the complete
+collection, including cancellation notices and hidden occurrences. The small info
+icon opens a details dialog with taste, practicality, novelty and data-quality
+points, unknown facts and feedback controls.
 Points are an inspectable ordering rule, not a probability of enjoyment.
 
 `ranking.mjs` is the common, deterministic selector for the browser,
 `vibe-check/generate.mjs`, and `scripts/select-best-bets.mjs`. A fixed edition,
 reference timestamp, preferences, and weights produce the same occurrence IDs.
-Live views remove events as known end times pass. Seven is a maximum: we do not
+The browser and compact publisher use `selectEventLanes` to rank each lane
+independently; widgets and editorial still use the combined public shortlist.
+Live views remove events as known end times pass. Seven per lane is a maximum: we do not
 fill below the score floor or violate diversity limits to reach a quota. One slot
 is reserved for an eligible option active on the selected day. Limits per venue,
 category and series are editable in `brief-preferences.json`.

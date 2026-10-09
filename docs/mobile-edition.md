@@ -12,13 +12,13 @@ contracts; this increment does not introduce a competing recommendation system.
 - `brief-manifest.json`: contract version 1, content-derived edition ID, Detroit
   edition date, publication time, section schema versions, source timestamps,
   content-addressed section URLs and SHA-256 hashes, and lazy archive hashes.
-- `editions/<section>-<sha256>.json`: weather, shared best bets for adjacent dates plus a small candidate pool, ten
+- `editions/<section>-<sha256>.json`: weather, ranked picks in today, ongoing and future lanes for adjacent dates plus a small candidate pool, ten
   local stories, the shared verified science digest, dedicated Starship status,
   science health, public ranking defaults/weights, and dated editorial copy. Section
   documents keep their existing schemas. A source's original timestamp is never
   advanced just because publication ran.
 - `widget-events.json`: the dated public best bets (seven by default) from the same selector
-  and in the same order as the web brief, with edition ID/date and source timestamp.
+  using the same ranking rules as the web brief, with edition ID/date and source timestamp.
 
 `ranking.mjs` selects events for the publisher and web; `news-ranking.mjs` and
 `science.mjs` select the other digests. The compact candidate pool preserves
@@ -34,7 +34,7 @@ Publication writes section files atomically, then the widget and finally the
 manifest. Unchanged input/selection retains the publication timestamp. At most
 two generations of section files remain in Git. The publisher rejects compact
 section data above 250,000 gzip bytes. Full events/news/science stay in their
-existing root files and load only on calendar, See all, or More stories actions.
+existing root files and load only on calendar, See all, preference changes, or scrolling to the end of a story shelf.
 Their hashes must match the manifest; an edition change asks the user to refresh
 and retry instead of silently combining source generations.
 
@@ -49,8 +49,22 @@ external images are promised offline.
 ## Browser behavior and cache lifecycle
 
 The four section shortcuts are immediately available. Mobile masthead notes and
-weather/almanac details expand explicitly. Events have separate Details and
-website actions, and See all opens a vertical list. Calendar Close remains in the
+weather/almanac details expand explicitly. Events appear in Today, Ongoing and
+Future lanes, each with its own ranked selection and per-lane preference limit.
+Multi-day events ending on the selected date appear in Today; those continuing
+past it appear in Ongoing. The small info icon at each card's bottom right opens
+the details dialog, including ranking reasons and feedback. Titles open websites.
+See all opens a vertical list.
+
+Local and science shelves append up to 20 more cards when the reader scrolls to
+the end, swipes beyond it, presses Right/End, or uses the shelf arrow. Archive
+requests are deduplicated and retain card order and scroll position. Errors
+appear beneath the shelf; another scroll or arrow action retries. Older science
+cards are labelled Archive / background and retain evidence qualifiers.
+
+Starship is a short best-guess date on the worldwide launch line. It preserves
+the source's date precision and shows date pending when no current usable target
+exists. The independent Starship collector and evidence history remain intact. Calendar Close remains in the
 header; native modal dialogs include Escape, focus trapping and focus return.
 Reduced-motion preferences apply to scrolling as well as animation.
 
@@ -81,7 +95,7 @@ edition keeps its original date even across midnight and failed refreshes.
 Refresh runs every 15 minutes while visible, on reconnection, and on foreground
 when overdue or the Detroit date changes. Hidden tabs do not start refresh work.
 Jokes and live rocket launches are bounded, noncritical requests; the saved
-science source still contains its dated Starship estimate.
+Starship section supplies the current target without enlarging the launch line.
 
 ## Recurring publishers (kitchen.local and GitHub)
 
@@ -192,3 +206,7 @@ shortlist surviving reload. `python3 scripts/test_publish_brief.py` includes a
 competing publisher and exhausted retries in isolated repositories. The deploy
 workflow also runs after successful weather/calendar/edition workflows because
 commits made with `GITHUB_TOKEN` do not trigger a new push workflow.
+October 9 layout follow-up: all six installed launchd agents were compared with
+the repository templates and confirmed loaded. This presentation change adds no
+recurring job; the existing edition publishers include candidates for all three
+lanes on their next run. Science remains daily 06:00 and Starship daily 07:25.

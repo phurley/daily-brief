@@ -5,7 +5,7 @@ import {gzipSync} from 'node:zlib';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {BRIEF_VERSION,SECTION_VERSIONS,detroitDate,eventDay,bestBets,rankEvents,validateSection} from '../brief-selection.mjs';
-import {selectBestBets,rankEvent} from '../ranking.mjs';
+import {selectBestBets,selectEventLanes,rankEvent} from '../ranking.mjs';
 import {orderRankedNews} from '../news-ranking.mjs';
 import {selectScienceDigest} from '../science.mjs';
 const root=resolve(process.argv[2] || dirname(fileURLToPath(import.meta.url))+'/..');
@@ -25,6 +25,8 @@ const selection=(day)=>selectBestBets(source.events.events,{day,now:+now,prefere
 const dates=[-1,0,1].map(offset=>{const d=new Date(date+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+offset);return d.toISOString().slice(0,10)});
 const selected=new Map();
 for (const day of dates) for (const event of selection(day)) selected.set(event.id,event);
+for (const day of dates) for (const rows of Object.values(selectEventLanes(source.events.events,{day,now:+now,preferences,weights})))
+ for (const {event} of rows) selected.set(event.id,event);
 // A small candidate pool supports immediate browsing; personalization fetches the full archive on demand.
 const candidates=source.events.events.map(event=>rankEvent(event,{day:date,now:+now,preferences,weights})).filter(row=>!row.ineligible).sort((a,b)=>b.score-a.score).slice(0,40);
 for(const {event} of candidates) selected.set(event.id,event);

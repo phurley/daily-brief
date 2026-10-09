@@ -35,19 +35,13 @@ try:
                 page.route("**/json/launches/next/5", lambda route: route.fulfill(json={"result": [launch]}))
                 page.route("https://icanhazdadjoke.com/**", lambda route: route.fulfill(json={"joke": "A fixture joke."}))
                 page.goto(f"http://127.0.0.1:{server.server_port}/", wait_until="networkidle")
-                card = page.locator("#starship-status")
+                card = page.locator("#rocket-launches")
                 card.wait_for()
-                assert "Previous target passed; awaiting update." in card.inner_text()
-                assert "Under evaluation; no forecast published yet." in card.inner_text()
-                assert "RocketLaunch.Live" not in card.inner_text()
-                assert "Community outlook · unverified" in card.inner_text()
-                assert "a community guess" in card.inner_text()
-                assert "Linked source (unverified)" in card.inner_text()
-                assert "Window opens at" in page.locator("#rocket-launches").inner_text()
-                assert "Starship" not in page.locator("#rocket-launches").inner_text()
-                card.locator("summary").click()
-                assert "unverified" in card.inner_text()
-                assert "spacex" in card.inner_text()
+                assert "Starship: best guess date pending" in card.inner_text()
+                assert page.locator("#starship-status").count() == 0
+                assert "Window opens at" in card.inner_text()
+                assert "Data by RocketLaunch.Live" in card.inner_text()
+                assert page.locator(".rocket-launches__starship").get_attribute("title") == "Previous target passed; awaiting update."
                 assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Overflow at {width}px"
                 card.screenshot(path=f"/tmp/starship-{width}.png")
                 # Feed success must not change canonical freshness; fallback is
@@ -57,11 +51,12 @@ try:
                     page.unroute("**/json/launches/next/5")
                     page.route("**/json/launches/next/5", lambda route: route.abort())
                     page.reload(wait_until="networkidle")
-                    assert "Evidence stale or unavailable" in card.inner_text()
+                    assert "Starship: best guess date pending" in card.inner_text()
                     if age_hours == 2:
                         assert "Cached feed" in page.locator("#rocket-launches").inner_text()
                     else:
-                        assert page.locator("#rocket-launches").is_hidden()
+                        assert "Test window launch" not in card.inner_text()
+                        assert "Data by RocketLaunch.Live" not in card.inner_text()
                 assert not errors, errors
                 page.close()
             print("Browser checks passed: desktop/mobile, attribution, precision, stale Starship and bounded feed fallback")

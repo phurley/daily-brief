@@ -1,6 +1,6 @@
 // Generated at deployment from the content of every shell asset. A waiting worker activates on the next launch;
 // never swap code beneath an already-open edition.
-const SHELL='daily-brief-shell-897cd6b309ca5ec7d34c5a3c79abd80f92cf54702daf9dd232bb2bc47eb0ac34';
+const SHELL='daily-brief-shell-f0e1a80d514d43a8befa43d8f87d59e9a5fdb373de6e8d3e17f172ee79ef7848';
 const DATA='daily-brief-sections-v1';
 const SHELL_FILES=["almanac-calc.mjs","app.js","assets/moon-waxing-gibbous.png","aurora.mjs","brief-selection.mjs","edition-client.mjs","event-status.mjs","event-time.mjs","favicon.svg","index.html","news-ranking.mjs","on-this-date.mjs","preferences.mjs","ranking.mjs","science.mjs","scoring-debug.css","scoring-debug.js","scoring.html","scoring.mjs","sky-events.mjs","starship.mjs","story-order.mjs","theme.css","weather-appearance.mjs"];
 self.addEventListener('install',event=>event.waitUntil(caches.open(SHELL).then(cache=>cache.addAll(SHELL_FILES.map(path=>new Request(path,{cache:'reload'}))))));

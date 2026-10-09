@@ -7,8 +7,8 @@
     <meta name="description" content="A living daily brief for southeast Michigan.">
     <title>Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="theme.css?v=20261009-5">
-    <script type="module" src="app.js?v=20261009-rotation-2"></script>
+    <link rel="stylesheet" href="theme.css?v=20261009-layout-1">
+    <script type="module" src="app.js?v=20261009-layout-1"></script>
   </head>
   <body>
     <a class="skip-link" href="#brief">Skip to the brief</a>
@@ -123,7 +123,7 @@
           <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous local stories" data-shelf-previous>←</button>
           <div id="news-list" class="story-list shelf__track"></div>
           <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More local stories" data-shelf-next>→</button>
-        </div><button class="archive-button" data-more-stories="news" type="button">More local stories</button>
+        </div><p class="story-load-status" data-story-status="news" role="status"></p>
       </section>
 
       <section tabindex="-1" id="geek-section" class="panel panel--geek" aria-labelledby="geek-title">
@@ -131,13 +131,12 @@
           <h2 id="geek-title">Science &amp; technology</h2>
           <p id="geek-note">Interesting machinery, ideas, and horizons.</p>
         </header>
-        <aside id="starship-status" class="starship-status" aria-labelledby="starship-title" aria-live="polite"><h3 id="starship-title">Starship status</h3><p>Awaiting verified evidence.</p></aside>
         <aside id="rocket-launches" class="rocket-launches" aria-live="polite" hidden></aside>
         <div class="shelf" data-shelf>
           <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous science stories" data-shelf-previous>←</button>
           <div id="geek-list" class="story-list shelf__track"></div>
           <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More science stories" data-shelf-next>→</button>
-        </div><button class="archive-button" data-more-stories="geeknews" type="button">More science stories</button>
+        </div><p class="story-load-status" data-story-status="geeknews" role="status"></p>
       </section>
 
       <section class="joke" aria-labelledby="joke-title">
