@@ -1,5 +1,5 @@
 // Shared by the collector, browser and editorial generator. No network or DOM.
-export const MODEL_VERSION = "rules-1.0.0";
+export const MODEL_VERSION = "rules-1.0.1";
 export const TIME_ZONE = "America/Detroit";
 export const dayKey = (date, zone = TIME_ZONE) => new Intl.DateTimeFormat("en-CA", { timeZone: zone, year: "numeric", month: "2-digit", day: "2-digit" }).format(date);
 const validInstant = (value) => typeof value === "string" && /T.*(?:Z|[+-]\d\d:\d\d)$/.test(value) && Number.isFinite(Date.parse(value));
@@ -29,7 +29,7 @@ export function reconcile({ evidence, previous = null, mode = "shadow", ttlHours
   const at = now.toISOString();
   const superseded = new Set(evidence.flatMap((e) => e.verification === "verified" && e.publishedAt && Date.parse(e.publishedAt) <= +now && Date.parse(e.observedAt) <= +now ? e.supersedes : []));
   const active = evidence.filter((e) => e.verification === "verified" && !superseded.has(e.id) && e.publishedAt && Date.parse(e.publishedAt) <= +now && Date.parse(e.observedAt) <= +now);
-  const byRecent = (a, b) => b.publishedAt.localeCompare(a.publishedAt);
+  const byRecent = (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
   const terminal = active.filter((e) => e.claimType === "outcome" && e.sourceType === "operator");
   const finished = new Set(terminal.map((e) => e.missionId));
   const candidates = active.filter((e) => e.missionId && !finished.has(e.missionId)).sort(byRecent);
@@ -43,11 +43,11 @@ export function reconcile({ evidence, previous = null, mode = "shadow", ttlHours
   const targetKey = (t) => JSON.stringify([t.precision, t.lower, t.upper, t.net, t.timeZone]);
   const conflicts = [];
   for (const e of targets) {
-    if (latest && e.id !== latest.id && e.originId !== latest.originId && targetKey(e.target) !== targetKey(latest.target)) {
+    if (latest && e.id !== latest.id && targetKey(e.target) !== targetKey(latest.target)) {
       conflicts.push({ evidenceIds: [latest.id, e.id], explanation: "Sources give different targets; no dates have been averaged. Supersede an older claim only after verification." });
     }
   }
-  const lastVerifiedAt = current.length ? current.map((e) => e.observedAt).sort().at(-1) : (previous?.mission.id === missionId ? previous.lastVerifiedAt : null);
+  const lastVerifiedAt = current.length ? current.map((e) => e.observedAt).sort((a, b) => Date.parse(a) - Date.parse(b)).at(-1) : (previous?.mission.id === missionId ? previous.lastVerifiedAt : null);
   const expiresAt = lastVerifiedAt ? new Date(Date.parse(lastVerifiedAt) + ttlHours * 3600000).toISOString() : null;
   const fresh = Boolean(expiresAt && Date.parse(expiresAt) > +now);
   const targetFresh = latest && +now - Date.parse(latest.observedAt) <= ttlHours * 3600000;

@@ -29,7 +29,8 @@ data-collect/.venv/bin/python -m playwright install chromium
 STARSHIP_NO_PUSH=1 starship/run.sh        # collect + validate + write, no git
 STARSHIP_DRY_RUN=1 starship/run.sh        # collect + validate, no writes or git
 /opt/homebrew/bin/node --test scripts/starship.test.mjs
-(cd starship && ../data-collect/.venv/bin/python -m unittest test_sources.py)
+(cd starship && ../data-collect/.venv/bin/python -m unittest test_sources.py test_validation.py)
+data-collect/.venv/bin/python starship/test_browser.py
 data-collect/.venv/bin/python starship/validate.py < starship.json
 /opt/homebrew/bin/node starship/evaluate.mjs
 ```

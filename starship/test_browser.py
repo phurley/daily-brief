@@ -15,6 +15,8 @@ class QuietHandler(http.server.SimpleHTTPRequestHandler):
 
 server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(QuietHandler, directory=str(ROOT)))
 threading.Thread(target=server.serve_forever, daemon=True).start()
+# The immutable first snapshot is a reproducible passed-target fixture.
+fixture = json.loads((ROOT / "starship/history/2026-10-09T18-53-41.415Z.json").read_text())
 launch = {"name": "Test window launch", "slug": "fixture", "win_open": "2026-10-10T15:30:00Z"}
 try:
     with sync_playwright() as p:
@@ -24,6 +26,7 @@ try:
                 page = browser.new_page(viewport={"width": width, "height": 1000})
                 errors = []
                 page.on("pageerror", lambda error: errors.append(str(error)))
+                page.route("**/starship.json?*", lambda route: route.fulfill(json=fixture))
                 page.route("**/json/launches/next/5", lambda route: route.fulfill(json={"result": [launch]}))
                 page.route("https://icanhazdadjoke.com/**", lambda route: route.fulfill(json={"joke": "A fixture joke."}))
                 page.goto(f"http://127.0.0.1:{server.server_port}/", wait_until="networkidle")

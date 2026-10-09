@@ -1,4 +1,3 @@
-import copy
 import json
 import unittest
 from pathlib import Path
@@ -29,7 +28,7 @@ class ContractTests(unittest.TestCase):
             validate(self.record)
 
     def test_generic_regulatory_update_cannot_be_authorization(self):
-        self.claim.update(claimType="regulatory", sourceType="regulator", authorization=True)
+        self.claim.update(claimType="regulatory", sourceType="regulator", authorization=True, missionId=None)
         with self.assertRaises(AssertionError):
             validate(self.record)
 

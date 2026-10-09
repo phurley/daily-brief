@@ -51,7 +51,8 @@ test("contradictions are retained; repeated reporting is not independent corrobo
   assert.equal(record.conflicts.length, 1);
   assert.equal(record.forecast.window, null);
   assert.equal(starshipView(record, now).officialTarget, null);
-  assert.equal(run([claim(), { ...outside, originId: "announcement-1" }]).conflicts.length, 0);
+  assert.equal(run([claim(), { ...outside, originId: "announcement-1" }]).conflicts.length, 1);
+  assert.equal(run([claim(), { ...outside, originId: "announcement-1", target: target() }]).conflicts.length, 0);
   assert.equal(run([claim(), claim({ id: "same", originId: "other", target: target({ label: "Oct 10" }) })]).conflicts.length, 0);
 });
 test("explicit supersession and retraction; future evidence cannot rewrite history", () => {
@@ -110,4 +111,10 @@ test("browser expiry cannot turn a newer readiness observation into a fresh targ
   assert.equal(view.status, "unannounced");
   assert.equal(view.officialTarget, null);
   assert.doesNotMatch(view.summary, /Operator targeting/);
+});
+
+test("publication ordering compares instants across source timezones", () => {
+  const older = claim({ id: "old", publishedAt: "2026-10-09T12:00:00-04:00" });
+  const newer = claim({ id: "new", publishedAt: "2026-10-09T11:30:00-05:00", supersedes: ["old"] });
+  assert.equal(run([older, newer]).officialTarget.evidenceId, "new");
 });
