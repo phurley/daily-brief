@@ -16,6 +16,21 @@ final class BriefTests: XCTestCase {
         let unsupported = EventsDocument(schemaVersion: 2, editionId: "test", editionDate: "2026-10-09", generatedAt: "", sourceGeneratedAt: "", events: [])
         XCTAssertFalse(CachedEvents(document: unsupported, fetchedAt: Date()).usable(on: parse.date(from: "2026-10-09T12:00:00Z")!))
     }
+    func testDateOnlyTimesRemainUnknownAndRealMidnightKeepsItsTime() throws {
+        let parse = ISO8601DateFormatter()
+        let today = parse.date(from: "2026-10-09T16:00:00Z")!
+        func event(_ precision: String?) throws -> BriefEvent {
+            var data: [String: Any] = ["id":"test", "title":"Event", "start":"2026-10-09T00:00:00-04:00"]
+            if let precision { data["timePrecision"] = precision }
+            return try JSONDecoder().decode(BriefEvent.self, from: JSONSerialization.data(withJSONObject:data))
+        }
+        for precision in ["date", "unknown"] {
+            XCTAssertEqual(try event(precision).timeLabel(relativeTo: today), "Today · Time not confirmed")
+            XCTAssertTrue(try event(precision).timeLabel(relativeTo: today.addingTimeInterval(-86400)).contains("Time not confirmed"))
+        }
+        XCTAssertFalse(try event("time").timeLabel(relativeTo: today).contains("not confirmed"))
+        XCTAssertFalse(try event(nil).timeLabel(relativeTo: today).contains("not confirmed"))
+    }
     func testURLPolicyAndRetryErrorState() {
         var failure: String?
         let coordinator = BriefWebView.Coordinator(baseURL: URL(string:"https://phurley.github.io/daily-brief/")!, failure: Binding(get: {failure}, set: {failure=$0}))

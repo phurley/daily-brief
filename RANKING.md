@@ -137,3 +137,10 @@ the same public selector, together with the versioned web manifest. Widgets use
 the dated compact feed; browser feedback stays private. All publishers now pass
 through `scripts/publish_brief.py`, using the existing shared macOS publication
 mutex. See [mobile edition operations](docs/mobile-edition.md).
+
+
+Saved event preferences and custom scoring weights trigger a full candidate fetch
+when the brief loads or its edition changes. The compact public pool remains the
+fast initial view; it is not the final personalized pool. When the full archive
+cannot be loaded, the page explains that preferences are applied only to the
+compact selection and retries on refresh. Browser feedback remains local.

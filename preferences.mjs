@@ -61,3 +61,10 @@ export function preferenceStore(storage, defaults = {}) {
     reset() { return this.set(base); },
   };
 }
+
+// Only event-affecting settings require the full event candidate pool.
+export function hasEventPersonalization(current, defaults = {}) {
+  const a = normalizePreferences(current), b = normalizePreferences(defaults);
+  return ['topicAffinities','venueAffinities','favorites','hiddenOccurrences','overrides','constraints','ranking']
+    .some(key => JSON.stringify(a[key]) !== JSON.stringify(b[key]));
+}

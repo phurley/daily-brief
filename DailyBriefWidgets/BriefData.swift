@@ -62,17 +62,24 @@ struct BriefEvent: Codable, Identifiable {
     let summary: String?
     let price: String?
     let registration: String?
+    let timePrecision: String?
 
     func hasEnded(at date: Date) -> Bool {
         guard let end, let closing = ISO8601DateFormatter().date(from: end) else { return false }
         return closing <= date
     }
-    var time: String {
+    var time: String { timeLabel(relativeTo: .now) }
+    func timeLabel(relativeTo reference: Date) -> String {
         guard let date = ISO8601DateFormatter().date(from: start) else { return "Time unavailable" }
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(identifier: "America/Detroit")
+        if ["date", "unknown"].contains(timePrecision ?? "") {
+            formatter.dateStyle = .short
+            let day = BriefData.dateKey(date) == BriefData.dateKey(reference) ? "Today" : formatter.string(from: date)
+            return day + " · Time not confirmed"
+        }
         formatter.timeStyle = .short
-        if BriefData.dateKey(date) != BriefData.today { formatter.dateStyle = .short }
+        if BriefData.dateKey(date) != BriefData.dateKey(reference) { formatter.dateStyle = .short }
         return formatter.string(from: date)
     }
 

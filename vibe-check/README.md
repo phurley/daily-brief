@@ -96,7 +96,7 @@ See [ranking operations](../RANKING.md).
 
 This job now calls `scripts/publish_brief.py` after generation to commit its
 source and matching compact web/widget edition together. The shared publisher
-serializes local Git changes, rebases and rebuilds on remote races, and excludes
+serializes local publication, rebuilds from the latest remote on races, and excludes
 unrelated edits. Existing no-push modes build locally without publishing. See
 [mobile edition operations](../docs/mobile-edition.md) for the full launchd and
 GitHub schedule inventory, midnight rollover, cache lifecycle and checks.

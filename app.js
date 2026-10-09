@@ -11,11 +11,13 @@ import { scienceView, scienceRotationSlot, scienceFreshness, scienceDate, scienc
 
 import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
 import { selectBestBets, rankEvent, eventStatus } from './ranking.mjs?v=20261009-identity1';
-import { preferenceStore, feedback, seriesKey, isFavorite } from './preferences.mjs?v=20261009-identity1';
+import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
 let rankingWeights;
 
 let feedbackNotice = '';
+let candidateNotice = '';
+let personalizationAttempt = null;
 
 const TIME_ZONE = "America/Detroit";
 const REFRESH_MS = 15 * 60 * 1000;
@@ -219,28 +221,50 @@ async function refreshData({ initial = false } = {}) {
   state.errors = [];
   try {
     const next = validateManifest(await fetchJSON('brief-manifest.json', {timeout:5000}));
-    if (manifest?.editionId !== next.editionId) {
+    const complete = manifest && Object.keys(manifest.sections).every(name => state.data[name]);
+    const replacing = complete && manifest.editionId !== next.editionId;
+    const staged = {};
+    if (!complete && manifest?.editionId !== next.editionId) {
       manifest = next; fullEvents = null; archiveRequest = null;
       for(const name of Object.keys(fullStories)) delete fullStories[name];
-      storyLimits.news=10;storyLimits.geeknews=10;
-      // An edition is coherent: old sections are cleared before the new set renders.
-      for (const name of Object.keys(next.sections)) {delete state.data[name]; sectionStates[name]='loading';}
+      for(const name of Object.keys(next.sections)) {delete state.data[name];sectionStates[name]='loading';}
       render();updateFreshness();
     }
-    savedMode = false;
+    // First visits can render sections progressively. A working edition stays
+    // intact while its replacement is fetched and validated in isolation.
     await Promise.all(Object.entries(next.sections).map(async ([name,descriptor]) => {
       try {
-        if (!state.data[name]) {
-          const data = validateSection(name, await fetchJSON(descriptor.url,{sha256:descriptor.sha256,cache:'force-cache'}));
+        const reusable = manifest?.sections[name]?.sha256 === descriptor.sha256 && state.data[name];
+        const data = reusable || validateSection(name, await fetchJSON(descriptor.url,{sha256:descriptor.sha256,cache:'force-cache'}));
+        staged[name] = data;
+        if (!replacing) {
+          if(name==='rankingConfig' && data !== state.data[name]) configureRanking(data);
           state.data[name] = data;
-          if(name==='rankingConfig') configureRanking(data);
-          sectionStates[name] = 'ready'; render(); updateFreshness();
+          sectionStates[name]='ready';render();updateFreshness();
         }
-      } catch(error) { sectionStates[name]='error';state.errors.push(`${name}: ${error.message}`);updateFreshness(); }
+      } catch(error) {
+        if (!replacing) sectionStates[name]='error';
+        state.errors.push(`${name}: ${error.message}`);updateFreshness();
+      }
     }));
-    if (!state.errors.length && !saveEdition(next, Object.fromEntries(Object.keys(next.sections).map(name=>[name,state.data[name]])))) {
-      state.errors.push('Browser storage unavailable; this edition cannot be saved for offline reopening.');
+    if (replacing && state.errors.length) {
+      savedMode = true;
+      state.errors.push('Refresh incomplete; keeping the previous complete edition.');
+    } else if (!state.errors.length) {
+      if (replacing) {
+        manifest = next; fullEvents = null; archiveRequest = null;
+        for(const name of Object.keys(fullStories)) delete fullStories[name];
+        storyLimits.news=10;storyLimits.geeknews=10;
+        Object.assign(state.data,staged);
+        configureRanking(staged.rankingConfig);
+        for(const name of Object.keys(next.sections)) sectionStates[name]='ready';
+        render();
+      }
+      savedMode = false;
+      if (!saveEdition(next,staged)) state.errors.push('Browser storage unavailable; this edition cannot be saved for offline reopening.');
     }
+    personalizationAttempt = null;
+    await restorePersonalizedEvents();
   } catch(error) {
     savedMode = Boolean(manifest);
     state.errors.push(`Edition: ${error.message}`);
@@ -270,6 +294,20 @@ async function ensureFullEvents() {
   })();
   try{return await archiveRequest}finally{archiveRequest=null}
 }
+async function restorePersonalizedEvents() {
+  if (!manifest?.archives?.events || !state.data.events || !state.data.rankingConfig || fullEvents) return;
+  const defaults = state.data.rankingConfig;
+  if (!hasEventPersonalization(preferences.get(), defaults.preferences) &&
+      JSON.stringify(rankingWeights) === JSON.stringify(defaults.weights)) {candidateNotice='';return;}
+  const key = `${manifest.editionId}:${JSON.stringify(preferences.get())}:${JSON.stringify(rankingWeights)}`;
+  if (personalizationAttempt === key) return;
+  personalizationAttempt = key;
+  candidateNotice = 'Loading all candidates for your saved preferences…';
+  try {await ensureFullEvents();candidateNotice='';}
+  catch {candidateNotice='Full candidates unavailable; saved preferences are applied to the compact selection. Refresh to retry.';}
+  renderEvents();
+}
+
 async function loadFamilyCalendar() {
   const result=await loadDocument(DOCUMENTS.find(([name])=>name==='calendar'));
   if(result.error) {$('#calendar-note').textContent='Calendar unavailable. Close and reopen to retry.';return;}
@@ -948,7 +986,7 @@ function renderPreferenceControls() {
   form.append(node('label', {}, ['Best bets: ', count].map(x => typeof x === 'string' ? document.createTextNode(x) : x)), node('label', {}, [document.createTextNode('Maximum miles (unknown distances excluded when set): '), distance]), node('label', {}, [exact, document.createTextNode('Selected day only')]), node('button', { type: 'submit', text: 'Save preferences' }));
   form.addEventListener('submit', e => { e.preventDefault(); const next = preferences.get(); next.ranking.limit = Number(count.value); next.constraints.maxDistanceMiles = distance.value === '' ? null : Number(distance.value); next.constraints.selectedDayOnly = exact.checked; const saved = preferences.set(next); feedbackNotice = saved ? 'Preferences saved on this browser.' : 'Applied for this session; browser storage is unavailable.'; renderEvents(); });
   settings.append(form, node('p', { text: `${p.hiddenOccurrences.length} hidden occurrences · ${p.favorites.length} favorites · Category adjustments: ${Object.entries(p.topicAffinities).map(([name, value]) => `${name} ${value > 0 ? '+' : ''}${value}`).join(', ') || 'none'}` }), button('Reset preferences and feedback', () => { const saved = preferences.reset(); feedbackNotice = saved ? 'Preferences reset. Undo is available.' : 'Reset for this session; browser storage is unavailable.'; renderEvents(); }));
-  panel.replaceChildren(toggle, button('Open full calendar', openEventCalendar), undo, settings, node('p', { id: 'recommendation-status', role: 'status', tabindex: '-1', text: feedbackNotice }));
+  panel.replaceChildren(toggle, button('Open full calendar', openEventCalendar), undo, settings, node('p', { id: 'recommendation-status', role: 'status', tabindex: '-1', text: [feedbackNotice,candidateNotice].filter(Boolean).join(' ') }));
 }
 
 function eventCard(event, ranking) {
@@ -1004,6 +1042,7 @@ function renderEvents() {
     $('#events-all-summary').textContent=`See all · ${all.length} events on this date`;
   }
   scheduleEventExpiry(allEvents);
+  void restorePersonalizedEvents();
   refreshShelfControls();
 }
 
@@ -1689,7 +1728,7 @@ async function init() {
   if(saved) {manifest=saved.manifest;Object.assign(state.data,saved.data);configureRanking(saved.data.rankingConfig);savedMode=true;render();updateFreshness();}
   else {for(const name of Object.keys(sectionSelectors)) sectionStates[name]='loading';render();updateFreshness();}
   refreshData({initial:true});loadJoke();loadRocketLaunches();
-  if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{state.errors.push('Offline shell unavailable in this browser.');renderErrors();});
+  if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).catch(()=>{state.errors.push('Offline shell unavailable in this browser.');renderErrors();});
   const photosObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)) {
     photosObserver.disconnect();loadDocument(DOCUMENTS.find(([name])=>name==='photos')).then(result=>{if(result.data){state.data.photos=result.data;renderPhoto();}});
   }},{rootMargin:'200px'});

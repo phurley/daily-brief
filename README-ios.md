@@ -32,3 +32,8 @@ dispatch, scheme policy, retry state and cache validity at Detroit midnight.
 Physical-device browser handoff and VoiceOver are still manual acceptance checks.
 See [mobile edition operations](docs/mobile-edition.md) for recurring publication
 and offline cache behavior.
+
+
+The widget preserves `timePrecision` from the event feed. Date-only and unknown
+times show “Time not confirmed”; a verified midnight time still displays normally.
+Native regression coverage lives in `DailyBriefTests/BriefTests.swift`.

@@ -144,7 +144,7 @@ Starship collector: the local launchd job owns it. All local scheduled Git
 writers now use `scripts/git-publish-lock.sh` (`/tmp/dailybrief-publish.lock`)
 and path-scoped commits. The collector releases that lock before chaining
 vibe-check. Per-job `shlock` PID locks still serialize collection. GitHub jobs
-operate in separate checkouts and are handled by the existing pull/rebase step.
+operate in separate checkouts; the shared publisher rebuilds against the latest remote after a racing push.
 A failed push is retained locally and retried by the next Starship publication.
 Check `launchctl print gui/$(id -u)/com.dailybrief.starship`, the log and the
 record's `lastAttemptAt`/source health after installing or changing a schedule.

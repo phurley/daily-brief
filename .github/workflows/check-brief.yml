@@ -8,6 +8,9 @@ on:
       - '*.css'
       - '*.html'
       - 'scripts/**'
+      - 'preferences.mjs'
+      - 'DailyBriefWidgets/**'
+      - 'DailyBriefTests/**'
       - 'package*.json'
       - '.github/workflows/check-brief.yml'
   pull_request:
@@ -23,6 +26,7 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
+      - run: npm run build:shell
       - run: npm test
       - run: python3 scripts/test_publish_brief.py
       - run: npx playwright install --with-deps chromium webkit
@@ -32,3 +36,5 @@ jobs:
           trap 'kill $!' EXIT
           npm run test:mobile
           BRIEF_BROWSER=webkit npm run test:mobile
+          npm run test:integration
+          BRIEF_BROWSER=webkit npm run test:integration

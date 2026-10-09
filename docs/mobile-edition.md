@@ -71,8 +71,8 @@ full-document loader remains as a progressive compatibility path.
 
 `sw.js` pre-caches the shell, required modules and moon texture. It caches at most
 32 immutable section responses; manifest checks remain network-only. It never
-caches family calendar, preferences, or third-party API responses. Bump the shell
-cache name for every shell release and data/cache contract version for incompatible
+caches family calendar, preferences, or third-party API responses. The deploy workflow generates the shell
+cache name from all shell assets and the worker template; bump the data/cache contract version for incompatible
 payloads. The new worker waits for old pages to close, avoiding a code swap beneath
 an open edition. Activation removes only obsolete Daily Brief caches. Browser
 cache eviction may remove offline capability; opening online rebuilds it. A saved
@@ -96,12 +96,18 @@ There is no user crontab on kitchen.local; these are launchd agents:
 | `com.dailybrief.starship` | Daily at 07:25 America/Detroit | `starship/run.sh` |
 | `com.dailybrief.edition` | Daily 00:05; date rollover without AI/network collection | `scripts/run_edition.sh` |
 
-All publishing entry points now call `scripts/publish_brief.py`. It shares the existing macOS shlock publication mutex (flock in Linux CI),
-rebases, rebuilds, and commits only the named source
-files plus manifest/widget/section files. It retries a racing remote push up to
-three times, rebuilding after rebases. Unrelated staged changes are excluded. Unsubmitted source changes from another
-collector are excluded from the compact snapshot too: non-owned inputs come
-from HEAD until their owning job publishes them.
+All publishing entry points call `scripts/publish_brief.py` under the shared
+publication lock. The writer captures only its named source output, creates a
+disposable checkout of `origin/main`, and rebuilds/commits the matching edition
+there. After a rejected push it discards that checkout and starts from the new
+remote revision, up to three attempts. Generated commits are never rebased.
+Other writers' unsubmitted local files and staged changes are excluded.
+
+After success, the collector checkout fast-forwards if Git can do so safely.
+If unrelated local edits prevent that, publication still succeeds and the local
+checkout/index stay intact; future runs continue from `origin/main`. If all pushes
+fail, captured source files remain local and the last candidate commit is retained
+under `refs/dailybrief/failed/<timestamp>-<pid>` for inspection with `git show`.
 `--no-push` builds only: no Git mutation, network collection, or push. Collector
 custom output directories are not published from the repository.
 
@@ -169,3 +175,20 @@ acceptance checks; automated DOM focus and simulator dispatch tests do not certi
 those experiences. The initial science/Starship source was dated September 14;
 this change exposes source age and now consumes the separately refreshed
 science/Starship feeds, without fabricating a current launch estimate.
+
+
+## Integration recovery checks
+
+A complete displayed edition is retained while a replacement downloads. Any
+section failure keeps the previous complete edition, labels it as saved, and
+allows refresh to retry; a first visit still renders available sections promptly.
+Saved event preferences or custom weights automatically load the full candidate
+archive and rerank on initial load, reload, and edition changes. If unavailable,
+the page explicitly identifies the compact selection as the fallback.
+
+`npm run test:integration` covers automatic service-worker upgrades with offline
+reopening, failed edition replacement/retry, and a favorite outside the public
+shortlist surviving reload. `python3 scripts/test_publish_brief.py` includes a
+competing publisher and exhausted retries in isolated repositories. The deploy
+workflow also runs after successful weather/calendar/edition workflows because
+commits made with `GITHUB_TOKEN` do not trigger a new push workflow.

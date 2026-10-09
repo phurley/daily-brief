@@ -218,10 +218,10 @@ If cron gets `Operation not permitted`, grant `/usr/sbin/cron` Full Disk Access
 
 ### What it commits and pushes
 
-Step 3 stages exactly `events.json` and `news.json` (repo root). When they
-changed it commits as `daily-brief bot <phurley@gmail.com>`, pulls
-`--rebase --autostash origin main`, and pushes; unchanged files mean nothing is
-committed. The checkout must therefore have a configured `origin` remote. To
+Step 3 captures `events.json`, `news.json`, and the derived recommendations, then
+builds and commits their matching compact edition in a temporary checkout of
+`origin/main`. A competing push triggers a fresh rebuild, without rebasing generated
+files or modifying unrelated local work. The checkout needs an `origin` remote. To
 verify a run end to end without committing or pushing anything:
 
 ```sh
@@ -342,7 +342,7 @@ for configuration, offline replay and widget/editorial consistency.
 
 This job now calls `scripts/publish_brief.py` after generation to commit its
 source and matching compact web/widget edition together. The shared publisher
-serializes local Git changes, rebases and rebuilds on remote races, and excludes
+serializes local publication, rebuilds from the latest remote on races, and excludes
 unrelated edits. Existing no-push modes build locally without publishing. See
 [mobile edition operations](../docs/mobile-edition.md) for the full launchd and
 GitHub schedule inventory, midnight rollover, cache lifecycle and checks.

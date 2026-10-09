@@ -3,7 +3,11 @@
   "private": true,
   "scripts": {
     "test": "node --test scripts/*.test.mjs",
-    "test:mobile": "node scripts/mobile-browser-check.cjs"
+    "test:mobile": "node scripts/mobile-browser-check.cjs",
+    "build:shell": "node scripts/build_shell.mjs",
+    "test:integration": "node scripts/integration-browser-check.cjs"
   },
-  "devDependencies": { "playwright": "1.64.0" }
+  "devDependencies": {
+    "playwright": "1.64.0"
+  }
 }

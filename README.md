@@ -117,8 +117,12 @@ python3 -m http.server 4173
 Open [http://localhost:4173](http://localhost:4173). A web server is required
 because browsers do not allow the app to fetch local JSON from a `file://` URL.
 
-GitHub Pages deploys directly from the root of `main`. No application bundler is required. Node 22+ builds compact data during
-publication; optional npm dependencies run browser regression checks.
+GitHub Pages deploys `main` through `.github/workflows/deploy-pages.yml`.
+Deployment runs `node scripts/build_shell.mjs` to generate the service worker's
+cache version from the shell contents, so code changes cannot reuse an old cache.
+No application bundler is required. Node 22+ builds compact data during publication;
+optional npm dependencies run browser regression checks. Before a local preview,
+run `npm run build:shell`.
 
 ## Scoring debug page
 

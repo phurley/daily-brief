@@ -182,7 +182,7 @@ an explicit retry. All source health thresholds are 36 hours, allowing the norma
 
 The existing GitHub Actions calendar schedule (`23 9 * * *`, UTC) remains a
 calendar-only fallback and does not need a science key or duplicate science job.
-Its concurrent remote commits are handled by each local writer's rebase/push.
+Concurrent remote commits are handled by the shared publisher's fresh-checkout rebuild and push retries.
 
 ## Sample review and rollout checks
 
