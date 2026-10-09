@@ -20,5 +20,8 @@ if ! git diff --cached --quiet -- "$@"; then
     git -c user.name="daily-brief bot" -c user.email="phurley@gmail.com" commit --only -m "$message" -- "$@"
 fi
 # Always retry a previous failed push, even when this run produced no changes.
-git pull --rebase --autostash origin main
+git fetch origin main
+if ! git merge-base --is-ancestor origin/main HEAD; then
+    git rebase --autostash origin/main
+fi
 git push origin HEAD:main

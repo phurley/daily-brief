@@ -210,3 +210,7 @@ Twelve Python fixture/integration checks and nine focused JavaScript checks pass
 All five installed LaunchAgent property lists match their tracked definitions;
 there is no user crontab. The science wrapper also completed with exit 0 using
 push/editorial disabled before activation of scheduled publishing.
+
+The installed science LaunchAgent was then kicked once with publishing enabled:
+launchd reports one run and exit 0, and its health refresh committed and pushed
+successfully. All 66 JavaScript tests in the isolated integration snapshot passed.
