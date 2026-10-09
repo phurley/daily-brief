@@ -287,7 +287,12 @@ def run(config, out, state_dir, *, now=None, force=False, fetcher=fetch, extract
             h.setdefault(field, None)
         health["sources"][key] = h
         last = parse_date(h.get("lastAttemptAt"))
-        if not force and last and (now-last).total_seconds() < source["intervalHours"] * 3600:
+        # A daily source is due on each Detroit date, even after a late prior
+        # run or the 23-hour spring DST day. Shorter intervals retain duration gates.
+        daily = source["intervalHours"] == 24
+        already_checked = last and (last.astimezone(ZoneInfo("America/Detroit")).date() == now.astimezone(ZoneInfo("America/Detroit")).date()
+                                    if daily else (now-last).total_seconds() < source["intervalHours"] * 3600)
+        if not force and already_checked:
             if h.get("errors"): failures.append(f"{key}: previous attempt failed")
             continue
         print(f"[{stamp}] fetching {key}", flush=True)

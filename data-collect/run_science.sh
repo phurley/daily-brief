@@ -1,5 +1,5 @@
 #!/bin/sh
-# Hourly independent science refresh. Source intervals live in science-sources.json.
+# Daily independent science refresh. Browser rotation needs no collector job.
 DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$DIR/.." && pwd)"
 LOCK=/tmp/dailybrief-science.lock

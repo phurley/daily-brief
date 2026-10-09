@@ -316,7 +316,7 @@ before running the editorial chain. See `../starship/README.md` for operations.
 
 ## Independent science publication
 
-`run_science.sh` has its own hourly launchd timer and `science-sources.json` catalog.
+`run_science.sh` has its own daily 6 AM launchd timer (Detroit time) and `science-sources.json` catalog.
 It atomically publishes validated `geeknews.json`, with separate source health.
 It bypasses the local-event gate. See [SCIENCE.md](SCIENCE.md) for source intervals,
 evidence verification, diagnostics, selection and installation.

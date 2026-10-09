@@ -1,8 +1,8 @@
 // Bump with shell/contract changes. A waiting worker activates on the next launch;
 // never swap code beneath an already-open edition.
-const SHELL='daily-brief-shell-v1-20261009-5';
+const SHELL='daily-brief-shell-v1-20261009-rotation-1';
 const DATA='daily-brief-sections-v1';
-const SHELL_FILES=['./','index.html','theme.css?v=20261009-5','app.js?v=20261009-5','brief-selection.mjs','edition-client.mjs','almanac-calc.mjs?v=20260920-1','weather-appearance.mjs?v=20260830-1','event-time.mjs?v=20260908-1','story-order.mjs?v=20261009-1','event-status.mjs?v=20261009-1','starship.mjs?v=20261009-1','science.mjs?v=20261009-1','news-ranking.mjs?v=20261009-2','ranking.mjs?v=20261009-2','preferences.mjs?v=20261009-2','scoring.mjs?v=20261009-2','favicon.svg','assets/moon-waxing-gibbous.png'];
+const SHELL_FILES=['./','index.html','theme.css?v=20261009-5','app.js?v=20261009-rotation-1','brief-selection.mjs','edition-client.mjs','almanac-calc.mjs?v=20260920-1','weather-appearance.mjs?v=20260830-1','event-time.mjs?v=20260908-1','story-order.mjs?v=20261009-1','event-status.mjs?v=20261009-1','starship.mjs?v=20261009-1','science.mjs?v=20261009-rotation-1','news-ranking.mjs?v=20261009-2','ranking.mjs?v=20261009-2','preferences.mjs?v=20261009-2','scoring.mjs?v=20261009-2','favicon.svg','assets/moon-waxing-gibbous.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(SHELL).then(cache=>cache.addAll(SHELL_FILES))));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
  for(const key of await caches.keys()) if(key.startsWith('daily-brief-') && key!==SHELL && key!==DATA) await caches.delete(key);

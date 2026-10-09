@@ -7,7 +7,7 @@ import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
 import { eventDateLabel } from "./event-time.mjs?v=20260908-1";
 import { orderNewsStories } from "./story-order.mjs?v=20261009-1";
 
-import { selectScienceDigest, scienceFreshness, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261009-1";
+import { scienceView, scienceRotationSlot, scienceFreshness, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261009-rotation-1";
 
 import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
 import { selectBestBets, rankEvent, eventStatus } from './ranking.mjs?v=20261009-2';
@@ -1149,6 +1149,12 @@ function bindClaimDetails() {
   window.addEventListener("resize", () => activeClaim && positionEventPreview(activeClaim));
 }
 
+let lastScienceSlot;
+function refreshScienceRotation() {
+  const slot = `${scienceDate(new Date().toISOString())}:${scienceRotationSlot()}`;
+  if (!document.hidden && slot !== lastScienceSlot) renderStories("geeknews");
+}
+
 function renderStories(kind) {
   const data = state.data[kind];
   const selector = kind === "news" ? "#news-list" : "#geek-list";
@@ -1156,7 +1162,10 @@ function renderStories(kind) {
   const section = kind === "news" ? "news" : "science-technology";
   const editionAvailable = data?.editionDate && data.editionDate <= state.selectedDate;
   const availableStories = editionAvailable ? (fullStories[kind]?.stories || data.stories || []) : [];
-  const digest = kind === "geeknews" ? selectScienceDigest({ ...data, stories: availableStories }, state.selectedDate) : null;
+  const scienceNow = Date.now();
+  const scienceDoc = { ...data, stories: availableStories };
+  const digest = kind === "geeknews" ? scienceView(scienceDoc, state.selectedDate, scienceNow) : null;
+  if (digest) lastScienceSlot = `${scienceDate(new Date(scienceNow).toISOString())}:${scienceRotationSlot(scienceNow)}`;
   const stories = kind === "news"
     ? orderRankedNews(availableStories, { now: Date.now(), preferences: preferences.get() }).slice(0,storyLimits[kind])
     : digest.stories;
@@ -1190,7 +1199,7 @@ function renderStories(kind) {
     : "";
   const fallback = kind === "news" ? "What is moving around Michigan." : "Interesting machinery, ideas, and horizons.";
   const freshness = scienceFreshness(data, state.data.scienceHealth);
-  const scienceNote = kind === "geeknews" ? scienceEditorial(scienceContext(data, state.data.scienceHealth, state.selectedDate)).summary : "";
+  const scienceNote = kind === "geeknews" ? scienceEditorial(scienceContext(scienceDoc, state.data.scienceHealth, state.selectedDate, scienceNow)).summary : "";
   const checkLabel = freshness.lastChecked ? new Date(freshness.lastChecked).toLocaleString("en-US", { timeZone: TIME_ZONE }) : "not verified";
   const scienceStatus = `Last checked: ${checkLabel}. Newest verified story: ${scienceDate(freshness.newestStory)}.${freshness.stale ? " Science collection is overdue or incomplete; showing the last valid edition." : ""}`;
   $(noteSelector).textContent = kind === "geeknews" ? [scienceNote, scienceStatus, carryForward].filter(Boolean).join(" ")
@@ -1643,7 +1652,7 @@ function bindEvents() {
   bindEventCalendar();
   document.addEventListener('visibilitychange',()=>{
     if(document.hidden) stopPhotoShow();
-    else {startPhotoShow();if(Date.now()-lastCheck>REFRESH_MS || state.today!==dateKey(new Date())) refreshData();}
+    else {startPhotoShow();refreshScienceRotation();if(Date.now()-lastCheck>REFRESH_MS || state.today!==dateKey(new Date())) refreshData();}
   });
   window.addEventListener('online',()=>refreshData());
   window.addEventListener("popstate", () => selectDate(new URL(window.location).searchParams.get("date") || state.today, { history: false }));
@@ -1688,3 +1697,4 @@ async function init() {
 }
 
 init();
+    refreshScienceRotation();

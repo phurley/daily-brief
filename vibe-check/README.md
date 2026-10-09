@@ -74,7 +74,9 @@ local writers. See `../starship/README.md` for the complete schedule inventory.
 
 ## Science context and scheduling
 
-Science uses `../science.mjs` for the same selected IDs and order as the page.
+Science uses `../science.mjs` for the same daily selected IDs and four-hour order
+as the page at generation time. The browser derives its intro locally whenever
+the order rotates; rotation triggers no collection, editorial call, or commit.
 Context includes full caveats, publication dates, evidence type and freshness;
 the science section copy is deterministic and dated. The independent science
 job triggers a refresh after publication; the standalone timer waits for its

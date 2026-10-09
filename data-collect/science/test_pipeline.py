@@ -27,7 +27,7 @@ class PipelineTest(unittest.TestCase):
         self.calls += 1
         return copy.deepcopy(RESULT)
     def run_pipeline(self, **kw):
-        return run(self.config, self.out, self.state, now=kw.pop('now',NOW), force=True,
+        return run(self.config, self.out, self.state, now=kw.pop('now',NOW), force=kw.pop('force',True),
                    fetcher=kw.pop('fetcher',self.fetch), extractor=kw.pop('extractor',self.extract),
                    selector=kw.pop('selector', lambda d: {'date':d['editionDate'],'selectedIds':[s['id'] for s in d['stories']],'reasons':{}}), **kw)
     def doc(self): return json.loads((self.out/'geeknews.json').read_text())
@@ -109,6 +109,21 @@ class PipelineTest(unittest.TestCase):
         self.run_pipeline(extractor=lambda *a:result)
         self.assertNotIn('Invented',self.doc()['stories'][0]['caveat'])
         self.assertIn('does not specify',self.doc()['stories'][0]['caveat'])
+    def test_daily_schedule_handles_late_runs_and_spring_dst(self):
+        self.config['sources'] = [{**SOURCE, 'intervalHours':24, 'staleAfterHours':36}]
+        self.feed = b'<rss><channel/></rss>'
+        first = datetime(2026, 3, 7, 12, tzinfo=timezone.utc)  # 07:00 EST, late run
+        self.run_pipeline(now=first, force=False)
+        with patch.object(self, 'fetch', wraps=self.fetch) as fetch:
+            self.run_pipeline(now=first+timedelta(hours=3), force=False)
+            fetch.assert_not_called()
+            next_morning = datetime(2026, 3, 8, 10, tzinfo=timezone.utc)  # 06:00 EDT
+            health = self.run_pipeline(now=next_morning, force=False)
+            self.assertEqual(fetch.call_count, 1)
+            self.assertEqual(health['lastSuccessfulCheckAt'], '2026-03-08T10:00:00Z')
+            self.run_pipeline(now=next_morning+timedelta(minutes=5), force=True)
+            self.assertEqual(fetch.call_count, 2)
+
     def test_stable_existing_id_and_date(self):
         old={'schemaVersion':'1.0.0','generatedAt':'2026-10-08T12:00:00Z','editionDate':'2026-10-08','stories':[{'id':'original-id','title':'Original','summary':'Original summary','url':'https://science.example/study','source':{'name':'Fixture Science'},'publishedAt':'2026-10-08T12:00:00Z','topics':['biology']}]}
         atomic_json(self.out/'geeknews.json',old)

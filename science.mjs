@@ -1,4 +1,4 @@
-// One deterministic daily digest for the browser, publisher and editorial job.
+// One daily selection; deterministic browser ordering changes every four hours.
 const DAY = 86400000;
 const time = (value) => Number.isFinite(Date.parse(value)) ? Date.parse(value) : 0;
 export const scienceDate = (value) => time(value) ? new Intl.DateTimeFormat("en-CA", {
@@ -58,17 +58,34 @@ export function selectScienceDigest(doc = {}, date, { limit = 6, reset = false }
     archive: all.filter(s => !ids.has(s.id)), date };
 }
 
+// Rotation is presentation only: the publisher keeps the daily selection intact.
+// Detroit wall-clock slots also remain stable through the repeated DST hour.
+export function scienceRotationSlot(now = Date.now()) {
+  const hour = Number(new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Detroit", hour: "2-digit", hourCycle: "h23",
+  }).format(new Date(now)));
+  return Math.floor(hour / 4);
+}
+
+export function scienceView(doc, date, now = Date.now()) {
+  const digest = selectScienceDigest(doc, date);
+  const slot = date === scienceDate(new Date(now).toISOString()) ? scienceRotationSlot(now) : 0;
+  const offset = digest.stories.length ? slot % digest.stories.length : 0;
+  const stories = [...digest.stories.slice(offset), ...digest.stories.slice(0, offset)];
+  return { ...digest, stories, selectedIds: stories.map(story => story.id) };
+}
+
 export function scienceFreshness(doc = {}, health, now = Date.now()) {
   const sources = Object.values(health?.sources || {});
-  const overdue = sources.filter(s => !time(s.lastSuccessAt) || now - time(s.lastSuccessAt) > (s.staleAfterHours || 24) * 3600000);
-  const stale = !health || health.status !== "ok" || now - time(health.generatedAt) > 3 * 3600000 || overdue.length > 0;
+  const overdue = sources.filter(s => !time(s.lastSuccessAt) || now - time(s.lastSuccessAt) > (s.staleAfterHours || 36) * 3600000);
+  const stale = !health || health.status !== "ok" || now - time(health.generatedAt) > 36 * 3600000 || overdue.length > 0;
   const newest = (doc.stories || []).filter(s => s.verifiedAt).sort((a,b) => time(b.publishedAt)-time(a.publishedAt))[0]?.publishedAt;
   return { stale, lastChecked: health?.lastSuccessfulCheckAt || null, newestStory: newest || null,
     overdueSources: overdue.map(s => s.name), status: health?.status || "unknown" };
 }
 
 export function scienceContext(doc, health, date, now = Date.now()) {
-  const digest = selectScienceDigest(doc, date);
+  const digest = scienceView(doc, date, now);
   return { ...scienceFreshness(doc, health, now), selectedIds: digest.selectedIds,
     stories: digest.stories.map(s => ({ id: s.id, title: s.title, summary: s.summary,
       finding: s.finding, significance: s.significance, caveat: s.caveat || "Evidence limitations not verified.",

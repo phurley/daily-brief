@@ -1,6 +1,6 @@
 # Science digest operations
 
-Science has its own domain, catalog, state and hourly launchd job. It bypasses
+Science has its own domain, catalog, state and daily 6 AM launchd job (Detroit time). It bypasses
 the local-event gate. U-M research is collected independently from its existing
 local-news route; accepted findings keep their Ann Arbor connection. Launch-date
 forecasting remains outside this pipeline; the legacy launch object is preserved.
@@ -44,11 +44,11 @@ and separately records supplied article modification timestamps.
 
 | Source | Fetch interval | Overdue after successful fetch | Feed |
 | --- | --- | --- | --- |
-| NASA | 3 hours | 12 hours | https://www.nasa.gov/feed/ |
-| NASA JPL | 6 hours | 24 hours | https://www.nasa.gov/centers-and-facilities/jpl/feed/ |
-| ESA Space Science | 6 hours | 24 hours | https://www.esa.int/rssfeed/Our_Activities/Space_Science |
-| NSF | 12 hours | 48 hours | https://www.nsf.gov/rss/rss_www_news.xml |
-| U-M | 6 hours | 24 hours | https://news.umich.edu/feed/ |
+| NASA | daily | 36 hours | https://www.nasa.gov/feed/ |
+| NASA JPL | daily | 36 hours | https://www.nasa.gov/centers-and-facilities/jpl/feed/ |
+| ESA Space Science | daily | 36 hours | https://www.esa.int/rssfeed/Our_Activities/Space_Science |
+| NSF | daily | 36 hours | https://www.nsf.gov/rss/rss_www_news.xml |
+| U-M | daily | 36 hours | https://news.umich.edu/feed/ |
 
 Catalogs: [NASA](https://www.nasa.gov/rss-feeds/),
 [JPL](https://www.jpl.nasa.gov/rss/),
@@ -105,7 +105,7 @@ Public `science-health.json` records per-source `lastAttemptAt`, `lastSuccessAt`
 separates `documentGeneratedAt` from `newestVerifiedStoryAt`. Counts reflect each
 source's last due run, not the entire catalog. It also reports topic/source
 counts, newest story age, and maximum publication lag. The browser computes age
-at render time, including a three-hour scheduler heartbeat timeout. Quiet feeds
+at render time, including a 36-hour scheduler heartbeat timeout. Quiet feeds
 are not stale solely because they have no new article.
 
 ## Selection, caveats and continuing stories
@@ -117,9 +117,14 @@ age, configured source quality, optional household topic interests, and penaltie
 for repeated sources and topics. NASA and JPL share a concentration group.
 Selection IDs and per-story explanations are saved in the public edition.
 
-A day's order remains stable. A new same-day research paper, preprint or verified
-mission milestone may reset selection; other arrivals fill vacancies or wait
-until the next daily selection. Dates use America/Detroit. Optional preferences
+The daily publisher saves six selected IDs. Browser JavaScript cyclically reorders
+those six in four-hour Detroit slots (00:00, 04:00, 08:00, 12:00, 16:00, 20:00).
+Viewers with the same edition and clock slot see the same order. Open visible
+pages check the slot each minute and returning tabs update immediately; past/future
+date views keep their base order. No fetch, model call, publication-date change,
+commit, or recurring rotation job is involved. The displayed intro uses that
+same view. A manual refresh with materially new findings may reset the day's
+selection. Dates use America/Detroit. Optional preferences
 are read from positive `topicAffinities` and `newsTopicAffinities` in the shared
 `brief-preferences.json` household profile;
 the selected topic list is published so browser and editorial scoring agree.
@@ -146,11 +151,12 @@ There is no user crontab. These launchd jobs are the active equivalent:
 
 | Job | Cadence | Tracked configuration |
 | --- | --- | --- |
-| `com.dailybrief.science` | every 3600 seconds | `scripts/launchd/com.dailybrief.science.plist` |
+| `com.dailybrief.science` | daily at 06:00 local (Detroit) | `scripts/launchd/com.dailybrief.science.plist` |
 | `com.dailybrief.collect` | every 3600 seconds | `data-collect/launchd/com.dailybrief.collect.plist` |
 | `com.dailybrief.starship` | hourly at :25 | `scripts/launchd/com.dailybrief.starship.plist` |
 | `com.dailybrief.vibe` | hourly at :40 | `vibe-check/launchd/com.dailybrief.vibe.plist` |
 | `com.dailybrief.calendar` | daily at 03:30 local | `scripts/launchd/com.dailybrief.calendar.plist` |
+| `com.dailybrief.edition` | daily at 00:05 local | `scripts/launchd/com.dailybrief.edition.plist` |
 
 Install/reload the science timer (not a second cron entry):
 
@@ -169,6 +175,10 @@ commits only named outputs, serializes Git operations and retries a previously
 failed push even when the current output is unchanged. The vibe timer waits for
 the science lock unless invoked by the science chain itself. Collection remains
 independent: science is not appended after a fallible local-events stage.
+All science sources are checked once per Detroit calendar date, allowing late
+runs and DST transitions without skipping the next morning. `--force` permits
+an explicit retry. All source health thresholds are 36 hours, allowing the normal
+24-hour interval plus delay. Failures still become visible immediately.
 
 The existing GitHub Actions calendar schedule (`23 9 * * *`, UTC) remains a
 calendar-only fallback and does not need a science key or duplicate science job.
@@ -221,6 +231,18 @@ successfully. All 66 JavaScript tests in the isolated integration snapshot passe
 The existing scheduled job now routes publication through
 `scripts/publish_brief.py` (science via `scripts/push_generated.sh`). It commits
 source output and the matching compact web/widget edition together under the
-shared publication lock. Schedules and collection behavior are unchanged. See
+shared publication lock. The science cadence is daily; other collection schedules are unchanged. See
 [mobile edition operations](../docs/mobile-edition.md) for cache and rollover
 behavior.
+
+
+### Daily collection and client rotation rollout
+
+On October 9, the science LaunchAgent was reloaded with a 06:00 calendar trigger;
+its installed plist matches the tracked file and the old hourly interval is gone.
+A no-push wrapper run completed successfully and updated the source thresholds
+without refetching already-checked sources or changing their verification dates.
+Thirteen Python science tests and all 89 JavaScript tests passed. A Chromium
+browser check crossed the 16:00 Detroit slot while offline: the same six cards
+reordered, the intro matched the new lead, and all six caveats remained visible,
+with no JavaScript errors. The shell and module cache versions were bumped.
