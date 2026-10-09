@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-10-09T19:16:56.425Z",
+  "generatedAt": "2026-10-09T19:17:36.119Z",
   "days": [
     {
       "date": "2026-10-09",
       "events": [
         {
-          "id": "edgefest-30-freedom-at-the-edge-the-rosc-event-2026-10-09",
+          "id": "occ-d28105ea0e81db966db9f5b2",
           "title": "Edgefest 30: Freedom at the Edge: The Roscoe Mitchell Ensemble",
           "summary": "A musical event featuring the Roscoe Mitchell Ensemble as part of Edgefest 30, celebrating freedom at the edge.",
           "url": "https://dia.org/events/edgefest-30-freedom-edge-roscoe-mitchell-ensemble?ref=/node/62&event_date=2026-10-09",
@@ -18,6 +18,45 @@
           "category": "Music",
           "imageUrl": "https://dia.org/sites/default/files/styles/responsive_image_full_width_480_x_auto_/public/2025-04/45.454-d1.jpg.webp?itok=NP5ZMclW",
           "imageAlt": "Edgefest 30: Freedom at the Edge: The Roscoe Mitchell Ensemble",
+          "status": "scheduled",
+          "occurrenceId": "occ-d28105ea0e81db966db9f5b2",
+          "canonicalUrl": "https://dia.org/events/edgefest-30-freedom-edge-roscoe-mitchell-ensemble?event_date=2026-10-09&ref=%2Fnode%2F62",
+          "venueId": "detroit institute of arts dia|detroit",
+          "timePrecision": "date",
+          "aliases": [
+            "edgefest-30-freedom-at-the-edge-the-rosc-event-2026-10-09"
+          ],
+          "legacyOccurrenceKeys": [
+            "edgefest-30-freedom-at-the-edge-the-rosc-event-2026-10-09|2026-10-09T00:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "edgefest 30: freedom at the edge: the roscoe mitchell ensemble|detroit institute of arts (dia)"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-00cd5f31d568c25eb9f84874",
+              "sourceId": "detroit-institute-of-arts-dia",
+              "canonicalUrl": "https://dia.org/events/edgefest-30-freedom-edge-roscoe-mitchell-ensemble?event_date=2026-10-09&ref=%2Fnode%2F62",
+              "observedAt": "2026-10-09T06:49:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-00cd5f31d568c25eb9f84874",
+              "start": "src-00cd5f31d568c25eb9f84874",
+              "venue": "src-00cd5f31d568c25eb9f84874",
+              "registration": "src-00cd5f31d568c25eb9f84874",
+              "url": "src-00cd5f31d568c25eb9f84874",
+              "imageUrl": "src-00cd5f31d568c25eb9f84874",
+              "status": "src-00cd5f31d568c25eb9f84874"
+            },
+            "conflicts": {}
+          },
           "score": 97,
           "scoring": {
             "signals": {
@@ -53,7 +92,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "edgefest-30-freedom-at-the-edge-the-rosc-event-2026-10-09|2026-10-09T00:00:00-04:00",
+            "occurrenceId": "occ-d28105ea0e81db966db9f5b2",
             "score": 109,
             "components": {
               "taste": 97,
@@ -74,7 +113,7 @@
           }
         },
         {
-          "id": "big-fun-murder-an-improvised-murder-myst-event-2026-10-09",
+          "id": "occ-77253682399c2156feaab9c1",
           "title": "Big Fun Murder | An Improvised Murder Mystery",
           "summary": "Improv murder mystery show at Go Comedy! featuring new eras and victims every Friday in October.",
           "url": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
@@ -87,6 +126,46 @@
           "category": "Improv",
           "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
           "imageAlt": "Metro Times logo",
+          "status": "scheduled",
+          "occurrenceId": "occ-77253682399c2156feaab9c1",
+          "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+          "venueId": "go comedy improv theater|ferndale",
+          "timePrecision": "time",
+          "aliases": [
+            "big-fun-murder-an-improvised-murder-myst-event-2026-10-09"
+          ],
+          "legacyOccurrenceKeys": [
+            "big-fun-murder-an-improvised-murder-myst-event-2026-10-09|2026-10-09T21:30:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "big fun murder | an improvised murder mystery|go comedy! improv theater"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-8597f16c2dd7a37c57a6d585",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+              "observedAt": "2026-10-09T09:31:47-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-8597f16c2dd7a37c57a6d585",
+              "start": "src-8597f16c2dd7a37c57a6d585",
+              "end": "src-8597f16c2dd7a37c57a6d585",
+              "venue": "src-8597f16c2dd7a37c57a6d585",
+              "registration": "src-8597f16c2dd7a37c57a6d585",
+              "url": "src-8597f16c2dd7a37c57a6d585",
+              "imageUrl": "src-8597f16c2dd7a37c57a6d585",
+              "status": "src-8597f16c2dd7a37c57a6d585"
+            },
+            "conflicts": {}
+          },
           "score": 97,
           "scoring": {
             "signals": {
@@ -122,7 +201,7 @@
           },
           "localityTier": "unknown",
           "recommendation": {
-            "occurrenceId": "big-fun-murder-an-improvised-murder-myst-event-2026-10-09|2026-10-09T21:30:00-04:00",
+            "occurrenceId": "occ-77253682399c2156feaab9c1",
             "score": 109,
             "components": {
               "taste": 97,
@@ -142,7 +221,7 @@
           }
         },
         {
-          "id": "if-stones-could-talk-oakwood-cemetery-to-event-2026-10-09",
+          "id": "occ-688df648699868d427ad12bc",
           "title": "If Stones Could Talk Oakwood Cemetery Tours",
           "summary": "Experience Northville's past as costumed actors bring the stories of Oakwood Cemetery's earliest residents to life in this beloved annual guided tour event presented with the Northville Historical Society. Also featuring a Boo Bar and the opening of the art exhibition Off-Center: Art That Pushes Boundaries.",
           "url": "https://community.metrotimes.com/event/if-stones-could-talk-oakwood-cemetery-tours-41834767",
@@ -155,6 +234,46 @@
           "category": "Guided tour",
           "imageUrl": "https://community.metrotimes.com/foundation/images/icons/ticket-regular-blue.svg",
           "imageAlt": "If Stones Could Talk Oakwood Cemetery Tours",
+          "status": "scheduled",
+          "occurrenceId": "occ-688df648699868d427ad12bc",
+          "canonicalUrl": "https://community.metrotimes.com/event/if-stones-could-talk-oakwood-cemetery-tours-41834767",
+          "venueId": "northville art house|northville",
+          "timePrecision": "time",
+          "aliases": [
+            "if-stones-could-talk-oakwood-cemetery-to-event-2026-10-09"
+          ],
+          "legacyOccurrenceKeys": [
+            "if-stones-could-talk-oakwood-cemetery-to-event-2026-10-09|2026-10-09T17:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "if stones could talk oakwood cemetery tours|northville art house"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-e978099a58ff1dde79313f01",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/if-stones-could-talk-oakwood-cemetery-tours-41834767",
+              "observedAt": "2026-10-09T06:49:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-e978099a58ff1dde79313f01",
+              "start": "src-e978099a58ff1dde79313f01",
+              "end": "src-e978099a58ff1dde79313f01",
+              "venue": "src-e978099a58ff1dde79313f01",
+              "registration": "src-e978099a58ff1dde79313f01",
+              "url": "src-e978099a58ff1dde79313f01",
+              "imageUrl": "src-e978099a58ff1dde79313f01",
+              "status": "src-e978099a58ff1dde79313f01"
+            },
+            "conflicts": {}
+          },
           "score": 96,
           "scoring": {
             "signals": {
@@ -190,7 +309,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "if-stones-could-talk-oakwood-cemetery-to-event-2026-10-09|2026-10-09T17:00:00-04:00",
+            "occurrenceId": "occ-688df648699868d427ad12bc",
             "score": 108,
             "components": {
               "taste": 96,
@@ -210,7 +329,7 @@
           }
         },
         {
-          "id": "theatre-l-my-daddy-is-haunted-event-2026-10-09",
+          "id": "occ-c39c33686acde8ce054a56a8",
           "title": "Theatre L: My Daddy is Haunted",
           "summary": "Hammer Horror meets National Lampoons Vacation in the original horror comedy, My Daddy is Haunted! 164 years ago, Sterling Mandrake was accused of heresy and burned alive by a righteous nun. Since then, his castle lay dormant, perched upon a crumbling mountain. That is until the Maplesquatch family arrives for a vacation they’ll never forget! The fun soon turns to terror as something starts to happen to dear old dad. Is that creepy painting alive? What’s with all the bugs? Is their daddy haunted? Come find out for yourself. If you dare! Special Halloween show with costume karaoke after party!",
           "url": "https://community.metrotimes.com/event/theatre-l-my-daddy-is-haunted-3134031814",
@@ -222,6 +341,45 @@
           "category": "Performance",
           "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
           "imageAlt": "Theatre L: My Daddy is Haunted",
+          "status": "scheduled",
+          "occurrenceId": "occ-c39c33686acde8ce054a56a8",
+          "canonicalUrl": "https://community.metrotimes.com/event/theatre-l-my-daddy-is-haunted-3134031814",
+          "venueId": "planet ant theatre|detroit",
+          "timePrecision": "time",
+          "aliases": [
+            "theatre-l-my-daddy-is-haunted-event-2026-10-09"
+          ],
+          "legacyOccurrenceKeys": [
+            "theatre-l-my-daddy-is-haunted-event-2026-10-09|2026-10-09T20:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "theatre l: my daddy is haunted|planet ant theatre"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-277c1165c4e13fd56f2cf2f0",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/theatre-l-my-daddy-is-haunted-3134031814",
+              "observedAt": "2026-10-09T09:31:47-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-277c1165c4e13fd56f2cf2f0",
+              "start": "src-277c1165c4e13fd56f2cf2f0",
+              "venue": "src-277c1165c4e13fd56f2cf2f0",
+              "registration": "src-277c1165c4e13fd56f2cf2f0",
+              "url": "src-277c1165c4e13fd56f2cf2f0",
+              "imageUrl": "src-277c1165c4e13fd56f2cf2f0",
+              "status": "src-277c1165c4e13fd56f2cf2f0"
+            },
+            "conflicts": {}
+          },
           "score": 96,
           "scoring": {
             "signals": {
@@ -257,7 +415,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "theatre-l-my-daddy-is-haunted-event-2026-10-09|2026-10-09T20:00:00-04:00",
+            "occurrenceId": "occ-c39c33686acde8ce054a56a8",
             "score": 108,
             "components": {
               "taste": 96,
@@ -277,7 +435,7 @@
           }
         },
         {
-          "id": "fay-victor-s-herbie-nichols-sung-event-2026-10-10",
+          "id": "occ-31fe4d88097b84133631714c",
           "title": "Fay Victor's Herbie Nichols SUNG",
           "summary": "A performance featuring Fay Victor (voice, lyrics & conceptualist), Anthony Coleman (piano), Devon Gates (bass), and Tom Rainey (drums) as part of Edgefest 30. Sponsored by Keith Martin and Michael Starsinic.",
           "url": "https://kerrytownconcerthouse.com/event/edgefest-30-freedom-at-the-edge",
@@ -288,6 +446,45 @@
           "category": "Music",
           "imageUrl": "https://kerrytownconcerthouse.com/wp-content/plugins/the-events-calendar/src/resources/images/tribe-loading.gif",
           "imageAlt": "Fay Victor's Herbie Nichols SUNG",
+          "status": "scheduled",
+          "occurrenceId": "occ-31fe4d88097b84133631714c",
+          "canonicalUrl": "https://kerrytownconcerthouse.com/event/edgefest-30-freedom-at-the-edge",
+          "venueId": "kerrytown concert house|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "fay-victor-s-herbie-nichols-sung-event-2026-10-10"
+          ],
+          "legacyOccurrenceKeys": [
+            "fay-victor-s-herbie-nichols-sung-event-2026-10-10|2026-10-10T22:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "fay victor's herbie nichols sung|kerrytown concert house"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-3982a9a5bb735b901ec39110",
+              "sourceId": "kerrytown-concert-house",
+              "canonicalUrl": "https://kerrytownconcerthouse.com/event/edgefest-30-freedom-at-the-edge",
+              "observedAt": "2026-09-20T14:28:46-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-3982a9a5bb735b901ec39110",
+              "start": "src-3982a9a5bb735b901ec39110",
+              "venue": "src-3982a9a5bb735b901ec39110",
+              "registration": "src-3982a9a5bb735b901ec39110",
+              "url": "src-3982a9a5bb735b901ec39110",
+              "imageUrl": "src-3982a9a5bb735b901ec39110",
+              "status": "src-3982a9a5bb735b901ec39110"
+            },
+            "conflicts": {}
+          },
           "score": 100,
           "scoring": {
             "signals": {
@@ -323,7 +520,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "fay-victor-s-herbie-nichols-sung-event-2026-10-10|2026-10-10T22:00:00-04:00",
+            "occurrenceId": "occ-31fe4d88097b84133631714c",
             "score": 108,
             "components": {
               "taste": 100,
@@ -344,7 +541,7 @@
           }
         },
         {
-          "id": "drag-becomes-her-event-2026-10-11",
+          "id": "occ-bb8dfae75682a43917123582",
           "title": "Drag Becomes Her",
           "summary": "Local drag stars Alex Suarez, Perry Dox, and Virgil Ciel take over the Michigan Theater with mainstage performances before and after the camp-tastic Halloween classic, plus special surprises during the movie itself.",
           "url": "https://marquee-arts.org/event-page/?showingId=1034654&eventId=1034650",
@@ -354,6 +551,44 @@
           "category": "Entertainment",
           "imageUrl": "https://npr.brightspotcdn.com/dims4/default/619b329/2147483647/strip/true/crop/800x450+140+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff9%2F4b%2Fca178be4476a87c151145f941a2e%2Ffound-fest-web-header-2-1-1.jpg",
           "imageAlt": "Found Footage Horror Festival promotional image",
+          "status": "scheduled",
+          "occurrenceId": "occ-bb8dfae75682a43917123582",
+          "canonicalUrl": "https://marquee-arts.org/event-page/?eventId=1034650&showingId=1034654",
+          "venueId": "the michigan|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "drag-becomes-her-event-2026-10-11"
+          ],
+          "legacyOccurrenceKeys": [
+            "drag-becomes-her-event-2026-10-11|2026-10-11T18:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "drag becomes her|the michigan"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-bb5af3cdc56a4134015355a0",
+              "sourceId": "wemu-89-1-fm",
+              "canonicalUrl": "https://marquee-arts.org/event-page/?eventId=1034650&showingId=1034654",
+              "observedAt": "2026-10-09T06:49:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-bb5af3cdc56a4134015355a0",
+              "start": "src-bb5af3cdc56a4134015355a0",
+              "venue": "src-bb5af3cdc56a4134015355a0",
+              "url": "src-bb5af3cdc56a4134015355a0",
+              "imageUrl": "src-bb5af3cdc56a4134015355a0",
+              "status": "src-bb5af3cdc56a4134015355a0"
+            },
+            "conflicts": {}
+          },
           "score": 100,
           "scoring": {
             "signals": {
@@ -389,7 +624,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "drag-becomes-her-event-2026-10-11|2026-10-11T18:00:00-04:00",
+            "occurrenceId": "occ-bb8dfae75682a43917123582",
             "score": 108,
             "components": {
               "taste": 100,
@@ -410,7 +645,7 @@
           }
         },
         {
-          "id": "off-book-the-improvised-musical-event-2026-10-11",
+          "id": "occ-ec13d4d470123663552d5f11",
           "title": "Off Book the Improvised Musical",
           "summary": "An improvised musical event where the story, songs, and dialogue are created spontaneously.",
           "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
@@ -420,6 +655,44 @@
           "category": "Music",
           "imageUrl": "https://theark.org/wp-content/uploads/2025/01/OffBookMusical-scaled-1-scaled-e1736364981622.jpg",
           "imageAlt": "Off Book the Improvised Musical",
+          "status": "scheduled",
+          "occurrenceId": "occ-ec13d4d470123663552d5f11",
+          "canonicalUrl": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
+          "venueId": "the ark|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "off-book-the-improvised-musical-event-2026-10-11"
+          ],
+          "legacyOccurrenceKeys": [
+            "off-book-the-improvised-musical-event-2026-10-11|2026-10-11T18:30:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "off book the improvised musical|the ark"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-e9a465f42905b857818f3d51",
+              "sourceId": "the-ark",
+              "canonicalUrl": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
+              "observedAt": "2026-10-09T06:49:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-e9a465f42905b857818f3d51",
+              "start": "src-e9a465f42905b857818f3d51",
+              "venue": "src-e9a465f42905b857818f3d51",
+              "url": "src-e9a465f42905b857818f3d51",
+              "imageUrl": "src-e9a465f42905b857818f3d51",
+              "status": "src-e9a465f42905b857818f3d51"
+            },
+            "conflicts": {}
+          },
           "score": 100,
           "scoring": {
             "signals": {
@@ -455,7 +728,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "off-book-the-improvised-musical-event-2026-10-11|2026-10-11T18:30:00-04:00",
+            "occurrenceId": "occ-ec13d4d470123663552d5f11",
             "score": 108,
             "components": {
               "taste": 100,
@@ -481,7 +754,7 @@
       "date": "2026-10-10",
       "events": [
         {
-          "id": "fay-victor-s-herbie-nichols-sung-event-2026-10-10",
+          "id": "occ-31fe4d88097b84133631714c",
           "title": "Fay Victor's Herbie Nichols SUNG",
           "summary": "A performance featuring Fay Victor (voice, lyrics & conceptualist), Anthony Coleman (piano), Devon Gates (bass), and Tom Rainey (drums) as part of Edgefest 30. Sponsored by Keith Martin and Michael Starsinic.",
           "url": "https://kerrytownconcerthouse.com/event/edgefest-30-freedom-at-the-edge",
@@ -492,6 +765,45 @@
           "category": "Music",
           "imageUrl": "https://kerrytownconcerthouse.com/wp-content/plugins/the-events-calendar/src/resources/images/tribe-loading.gif",
           "imageAlt": "Fay Victor's Herbie Nichols SUNG",
+          "status": "scheduled",
+          "occurrenceId": "occ-31fe4d88097b84133631714c",
+          "canonicalUrl": "https://kerrytownconcerthouse.com/event/edgefest-30-freedom-at-the-edge",
+          "venueId": "kerrytown concert house|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "fay-victor-s-herbie-nichols-sung-event-2026-10-10"
+          ],
+          "legacyOccurrenceKeys": [
+            "fay-victor-s-herbie-nichols-sung-event-2026-10-10|2026-10-10T22:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "fay victor's herbie nichols sung|kerrytown concert house"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-3982a9a5bb735b901ec39110",
+              "sourceId": "kerrytown-concert-house",
+              "canonicalUrl": "https://kerrytownconcerthouse.com/event/edgefest-30-freedom-at-the-edge",
+              "observedAt": "2026-09-20T14:28:46-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-3982a9a5bb735b901ec39110",
+              "start": "src-3982a9a5bb735b901ec39110",
+              "venue": "src-3982a9a5bb735b901ec39110",
+              "registration": "src-3982a9a5bb735b901ec39110",
+              "url": "src-3982a9a5bb735b901ec39110",
+              "imageUrl": "src-3982a9a5bb735b901ec39110",
+              "status": "src-3982a9a5bb735b901ec39110"
+            },
+            "conflicts": {}
+          },
           "score": 100,
           "scoring": {
             "signals": {
@@ -527,7 +839,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "fay-victor-s-herbie-nichols-sung-event-2026-10-10|2026-10-10T22:00:00-04:00",
+            "occurrenceId": "occ-31fe4d88097b84133631714c",
             "score": 112,
             "components": {
               "taste": 100,
@@ -548,7 +860,7 @@
           }
         },
         {
-          "id": "drag-becomes-her-event-2026-10-11",
+          "id": "occ-bb8dfae75682a43917123582",
           "title": "Drag Becomes Her",
           "summary": "Local drag stars Alex Suarez, Perry Dox, and Virgil Ciel take over the Michigan Theater with mainstage performances before and after the camp-tastic Halloween classic, plus special surprises during the movie itself.",
           "url": "https://marquee-arts.org/event-page/?showingId=1034654&eventId=1034650",
@@ -558,6 +870,44 @@
           "category": "Entertainment",
           "imageUrl": "https://npr.brightspotcdn.com/dims4/default/619b329/2147483647/strip/true/crop/800x450+140+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff9%2F4b%2Fca178be4476a87c151145f941a2e%2Ffound-fest-web-header-2-1-1.jpg",
           "imageAlt": "Found Footage Horror Festival promotional image",
+          "status": "scheduled",
+          "occurrenceId": "occ-bb8dfae75682a43917123582",
+          "canonicalUrl": "https://marquee-arts.org/event-page/?eventId=1034650&showingId=1034654",
+          "venueId": "the michigan|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "drag-becomes-her-event-2026-10-11"
+          ],
+          "legacyOccurrenceKeys": [
+            "drag-becomes-her-event-2026-10-11|2026-10-11T18:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "drag becomes her|the michigan"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-bb5af3cdc56a4134015355a0",
+              "sourceId": "wemu-89-1-fm",
+              "canonicalUrl": "https://marquee-arts.org/event-page/?eventId=1034650&showingId=1034654",
+              "observedAt": "2026-10-09T06:49:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-bb5af3cdc56a4134015355a0",
+              "start": "src-bb5af3cdc56a4134015355a0",
+              "venue": "src-bb5af3cdc56a4134015355a0",
+              "url": "src-bb5af3cdc56a4134015355a0",
+              "imageUrl": "src-bb5af3cdc56a4134015355a0",
+              "status": "src-bb5af3cdc56a4134015355a0"
+            },
+            "conflicts": {}
+          },
           "score": 100,
           "scoring": {
             "signals": {
@@ -593,7 +943,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "drag-becomes-her-event-2026-10-11|2026-10-11T18:00:00-04:00",
+            "occurrenceId": "occ-bb8dfae75682a43917123582",
             "score": 108,
             "components": {
               "taste": 100,
@@ -614,7 +964,7 @@
           }
         },
         {
-          "id": "off-book-the-improvised-musical-event-2026-10-11",
+          "id": "occ-ec13d4d470123663552d5f11",
           "title": "Off Book the Improvised Musical",
           "summary": "An improvised musical event where the story, songs, and dialogue are created spontaneously.",
           "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
@@ -624,6 +974,44 @@
           "category": "Music",
           "imageUrl": "https://theark.org/wp-content/uploads/2025/01/OffBookMusical-scaled-1-scaled-e1736364981622.jpg",
           "imageAlt": "Off Book the Improvised Musical",
+          "status": "scheduled",
+          "occurrenceId": "occ-ec13d4d470123663552d5f11",
+          "canonicalUrl": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
+          "venueId": "the ark|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "off-book-the-improvised-musical-event-2026-10-11"
+          ],
+          "legacyOccurrenceKeys": [
+            "off-book-the-improvised-musical-event-2026-10-11|2026-10-11T18:30:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "off book the improvised musical|the ark"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-e9a465f42905b857818f3d51",
+              "sourceId": "the-ark",
+              "canonicalUrl": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
+              "observedAt": "2026-10-09T06:49:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-e9a465f42905b857818f3d51",
+              "start": "src-e9a465f42905b857818f3d51",
+              "venue": "src-e9a465f42905b857818f3d51",
+              "url": "src-e9a465f42905b857818f3d51",
+              "imageUrl": "src-e9a465f42905b857818f3d51",
+              "status": "src-e9a465f42905b857818f3d51"
+            },
+            "conflicts": {}
+          },
           "score": 100,
           "scoring": {
             "signals": {
@@ -659,7 +1047,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "off-book-the-improvised-musical-event-2026-10-11|2026-10-11T18:30:00-04:00",
+            "occurrenceId": "occ-ec13d4d470123663552d5f11",
             "score": 108,
             "components": {
               "taste": 100,
@@ -680,7 +1068,7 @@
           }
         },
         {
-          "id": "synthfest-solder-an-oscillator-event-2026-10-10",
+          "id": "occ-997a13d4b506767df49e1e36",
           "title": "SynthFest | Solder an Oscillator",
           "summary": "A public event where attendees can solder an oscillator as part of SynthFest.",
           "url": "https://aadl.org/node/665878",
@@ -691,6 +1079,45 @@
           "price": "Free",
           "registration": "Public Event",
           "category": "Music",
+          "status": "scheduled",
+          "occurrenceId": "occ-997a13d4b506767df49e1e36",
+          "canonicalUrl": "https://aadl.org/node/665878",
+          "venueId": "downtown library secret lab annex|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "synthfest-solder-an-oscillator-event-2026-10-10"
+          ],
+          "legacyOccurrenceKeys": [
+            "synthfest-solder-an-oscillator-event-2026-10-10|2026-10-10T12:30:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "synthfest | solder an oscillator|downtown library: secret lab annex"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-b1427c8ff310e3aab1a06674",
+              "sourceId": "ann-arbor-district-library-aadl",
+              "canonicalUrl": "https://aadl.org/node/665878",
+              "observedAt": "2026-10-09T12:18:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-b1427c8ff310e3aab1a06674",
+              "start": "src-b1427c8ff310e3aab1a06674",
+              "end": "src-b1427c8ff310e3aab1a06674",
+              "venue": "src-b1427c8ff310e3aab1a06674",
+              "registration": "src-b1427c8ff310e3aab1a06674",
+              "url": "src-b1427c8ff310e3aab1a06674",
+              "status": "src-b1427c8ff310e3aab1a06674"
+            },
+            "conflicts": {}
+          },
           "score": 95,
           "scoring": {
             "signals": {
@@ -726,7 +1153,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "synthfest-solder-an-oscillator-event-2026-10-10|2026-10-10T12:30:00-04:00",
+            "occurrenceId": "occ-997a13d4b506767df49e1e36",
             "score": 107,
             "components": {
               "taste": 95,
@@ -746,7 +1173,7 @@
           }
         },
         {
-          "id": "kickstand-productions-presents-rome-stre-event-2026-10-11",
+          "id": "occ-649c234d4aa5c8511fcd2dac",
           "title": "Kickstand Productions Presents Rome Streetz w/ Fergie Baby & Sha Hef & GameChangers",
           "summary": "Amadeus meets Bridgerton in this hilarious comedy of ambition, romance, and musical rivalry. When the royal maestro dies in 18th-century Vienna, two composers vie for his position. Love, pistols at dawn, and outrageous sarcasm will prove that one of them is a misunderstood genius and the other... is a maestro.",
           "url": "https://community.metrotimes.com/event/kickstand-productions-presents-rome-streetz-w-fergie-baby-and-sha-hef-and-gamechangers-42029514",
@@ -757,6 +1184,45 @@
           "category": "Live/Concert",
           "imageUrl": "https://media2.metrotimes.com/metrotimes/imager/kickstand-productions-presents-rome-streetz-w-fergie-baby-and-sha-hef-and-gamechangers/u/r-bigsquare/42029513/252ecb43-5fe0-4347-9ee1-7efe477c1728_source.webp?cb=1789762380",
           "imageAlt": "Image: Kickstand Productions Presents Rome Streetz w/ Fergie Baby & Sha Hef & GameChangers",
+          "status": "scheduled",
+          "occurrenceId": "occ-649c234d4aa5c8511fcd2dac",
+          "canonicalUrl": "https://community.metrotimes.com/event/kickstand-productions-presents-rome-streetz-w-fergie-baby-and-sha-hef-and-gamechangers-42029514",
+          "venueId": "the loving touch|ferndale",
+          "timePrecision": "time",
+          "aliases": [
+            "kickstand-productions-presents-rome-stre-event-2026-10-11"
+          ],
+          "legacyOccurrenceKeys": [
+            "kickstand-productions-presents-rome-stre-event-2026-10-11|2026-10-11T20:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "kickstand productions presents rome streetz w/ fergie baby & sha hef & gamechangers|the loving touch"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-d6b6bfa6918eb9be4569c5cc",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/kickstand-productions-presents-rome-streetz-w-fergie-baby-and-sha-hef-and-gamechangers-42029514",
+              "observedAt": "2026-10-09T06:49:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-d6b6bfa6918eb9be4569c5cc",
+              "start": "src-d6b6bfa6918eb9be4569c5cc",
+              "venue": "src-d6b6bfa6918eb9be4569c5cc",
+              "registration": "src-d6b6bfa6918eb9be4569c5cc",
+              "url": "src-d6b6bfa6918eb9be4569c5cc",
+              "imageUrl": "src-d6b6bfa6918eb9be4569c5cc",
+              "status": "src-d6b6bfa6918eb9be4569c5cc"
+            },
+            "conflicts": {}
+          },
           "score": 96,
           "scoring": {
             "signals": {
@@ -792,7 +1258,7 @@
           },
           "localityTier": "unknown",
           "recommendation": {
-            "occurrenceId": "kickstand-productions-presents-rome-stre-event-2026-10-11|2026-10-11T20:00:00-04:00",
+            "occurrenceId": "occ-649c234d4aa5c8511fcd2dac",
             "score": 104,
             "components": {
               "taste": 96,
@@ -813,7 +1279,7 @@
           }
         },
         {
-          "id": "off-book-tour-de-force-a-force-of-tour-2-event-2026-10-14",
+          "id": "occ-35c1883fb5c9745c789cb22f",
           "title": "Off-Book Tour de Force: A Force of Tour 261014",
           "summary": "A comedic and spoken word stage performance featuring Zach and The Jess.",
           "url": "https://www.thezachandthejess.com/podcast-off-book.html",
@@ -825,6 +1291,45 @@
           "category": "Comedy, Spoken Word/Stage",
           "imageUrl": "https://theark.org/wp-content/uploads/2025/05/All-chairs-seating-chart-corrected-May-2025-copy-scaled.jpg",
           "imageAlt": "Off-Book Tour de Force: A Force of Tour 261014",
+          "status": "scheduled",
+          "occurrenceId": "occ-35c1883fb5c9745c789cb22f",
+          "canonicalUrl": "https://www.thezachandthejess.com/podcast-off-book.html",
+          "venueId": "the ark|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "off-book-tour-de-force-a-force-of-tour-2-event-2026-10-14"
+          ],
+          "legacyOccurrenceKeys": [
+            "off-book-tour-de-force-a-force-of-tour-2-event-2026-10-14|2026-10-14T19:30:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "off-book tour de force: a force of tour 261014|the ark"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-d1a7621ada3f9d3899b0e8f6",
+              "sourceId": "the-ark",
+              "canonicalUrl": "https://www.thezachandthejess.com/podcast-off-book.html",
+              "observedAt": "2026-10-09T06:49:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "imageUrl": "src-d1a7621ada3f9d3899b0e8f6",
+              "registration": "src-d1a7621ada3f9d3899b0e8f6",
+              "start": "src-d1a7621ada3f9d3899b0e8f6",
+              "title": "src-d1a7621ada3f9d3899b0e8f6",
+              "url": "src-d1a7621ada3f9d3899b0e8f6",
+              "venue": "src-d1a7621ada3f9d3899b0e8f6",
+              "status": "src-d1a7621ada3f9d3899b0e8f6"
+            },
+            "conflicts": {}
+          },
           "score": 100,
           "scoring": {
             "signals": {
@@ -860,7 +1365,7 @@
           },
           "localityTier": "unknown",
           "recommendation": {
-            "occurrenceId": "off-book-tour-de-force-a-force-of-tour-2-event-2026-10-14|2026-10-14T19:30:00-04:00",
+            "occurrenceId": "occ-35c1883fb5c9745c789cb22f",
             "score": 104,
             "components": {
               "taste": 100,
@@ -880,7 +1385,7 @@
           }
         },
         {
-          "id": "code-switch-distributing-blackness-repro-event-2026-10-15",
+          "id": "occ-079f568391b80b3417608fc3",
           "title": "Code Switch: Distributing Blackness, Reprogramming Internet Art",
           "summary": "Code Switch: Distributing Blackness, Reprogramming Internet Art is a multi-sited exhibition exploring and redefining the history of 'Black data,' centering contributions by artists of African descent to new media art and digital practice. It builds on a historic archival timeline of radical visions from Black makers and brings together contemporary artists to examine the relationship between body and machine in the context of cybercultures and technology.",
           "url": "https://mocadetroit.org/exhibition/code-switch-distributing-blackness-reprogramming-internet-art/",
@@ -890,6 +1395,44 @@
           "category": "Art",
           "imageUrl": "https://mocadetroit.org/wp-content/uploads/2026/03/Code-Switch-1.gif",
           "imageAlt": "Graphic designed by Pacific.",
+          "status": "scheduled",
+          "occurrenceId": "occ-079f568391b80b3417608fc3",
+          "canonicalUrl": "https://mocadetroit.org/exhibition/code-switch-distributing-blackness-reprogramming-internet-art/",
+          "venueId": "museum of contemporary art detroit mocad|detroit",
+          "timePrecision": "date",
+          "aliases": [
+            "code-switch-distributing-blackness-repro-event-2026-10-15"
+          ],
+          "legacyOccurrenceKeys": [
+            "code-switch-distributing-blackness-repro-event-2026-10-15|2026-10-15T00:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "code switch: distributing blackness, reprogramming internet art|museum of contemporary art detroit (mocad)"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-ae82c4e53292dcffd419fe6a",
+              "sourceId": "museum-of-contemporary-art-detroit-mocad",
+              "canonicalUrl": "https://mocadetroit.org/exhibition/code-switch-distributing-blackness-reprogramming-internet-art/",
+              "observedAt": "2026-10-09T06:49:14-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "imageUrl": "src-ae82c4e53292dcffd419fe6a",
+              "start": "src-ae82c4e53292dcffd419fe6a",
+              "title": "src-ae82c4e53292dcffd419fe6a",
+              "url": "src-ae82c4e53292dcffd419fe6a",
+              "venue": "src-ae82c4e53292dcffd419fe6a",
+              "status": "src-ae82c4e53292dcffd419fe6a"
+            },
+            "conflicts": {}
+          },
           "score": 100,
           "scoring": {
             "signals": {
@@ -925,7 +1468,7 @@
           },
           "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "code-switch-distributing-blackness-repro-event-2026-10-15|2026-10-15T00:00:00-04:00",
+            "occurrenceId": "occ-079f568391b80b3417608fc3",
             "score": 104,
             "components": {
               "taste": 100,
