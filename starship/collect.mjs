@@ -15,7 +15,7 @@ const attemptedAt = new Date();
 const read = (file, fallback) => fs.existsSync(file) ? JSON.parse(fs.readFileSync(file)) : fallback;
 const previous = read(path.join(ROOT, "starship.json"), null);
 const reviewed = read(path.join(HERE, "reviewed-evidence.json"), { evidence: [] });
-const collected = spawnSync(PYTHON, [path.join(HERE, "sources.py"), path.join(HERE, "config.json"), attemptedAt.toISOString()], { encoding: "utf8", timeout: 240000, maxBuffer: 8 * 1024 * 1024 });
+const collected = spawnSync(PYTHON, [path.join(HERE, "sources.py"), path.join(HERE, "config.json"), attemptedAt.toISOString()], { encoding: "utf8", timeout: 360000, maxBuffer: 8 * 1024 * 1024 });
 if (collected.status !== 0) throw new Error(collected.stderr || collected.error?.message || "Source adapters failed");
 const { evidence: observed, sourceHealth } = JSON.parse(collected.stdout);
 // Keep prior claims and explicit retractions, including during an outage. A new

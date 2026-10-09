@@ -1,5 +1,5 @@
 // Shared by the collector, browser and editorial generator. No network or DOM.
-export const MODEL_VERSION = "rules-1.0.1";
+export const MODEL_VERSION = "rules-1.1.0";
 export const TIME_ZONE = "America/Detroit";
 export const dayKey = (date, zone = TIME_ZONE) => new Intl.DateTimeFormat("en-CA", { timeZone: zone, year: "numeric", month: "2-digit", day: "2-digit" }).format(date);
 const validInstant = (value) => typeof value === "string" && /T.*(?:Z|[+-]\d\d:\d\d)$/.test(value) && Number.isFinite(Date.parse(value));
@@ -27,8 +27,8 @@ export function targetLabel(target) {
 
 export function reconcile({ evidence, previous = null, mode = "shadow", ttlHours = 6, now = new Date(), sourceHealth = [], activeMission = null }) {
   const at = now.toISOString();
-  const superseded = new Set(evidence.flatMap((e) => e.verification === "verified" && e.publishedAt && Date.parse(e.publishedAt) <= +now && Date.parse(e.observedAt) <= +now ? e.supersedes : []));
-  const active = evidence.filter((e) => e.verification === "verified" && !superseded.has(e.id) && e.publishedAt && Date.parse(e.publishedAt) <= +now && Date.parse(e.observedAt) <= +now);
+  const superseded = new Set(evidence.flatMap((e) => e.sourceType !== "community" && e.verification === "verified" && e.publishedAt && Date.parse(e.publishedAt) <= +now && Date.parse(e.observedAt) <= +now ? e.supersedes : []));
+  const active = evidence.filter((e) => e.sourceType !== "community" && e.verification === "verified" && !superseded.has(e.id) && e.publishedAt && Date.parse(e.publishedAt) <= +now && Date.parse(e.observedAt) <= +now);
   const byRecent = (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
   const terminal = active.filter((e) => e.claimType === "outcome" && e.sourceType === "operator");
   const finished = new Set(terminal.map((e) => e.missionId));
@@ -87,6 +87,27 @@ export function reconcile({ evidence, previous = null, mode = "shadow", ttlHours
   };
 }
 
+// Community outlook has its own horizon and never changes verified freshness.
+export function communityOutlook(record, now = new Date()) {
+  const seen = new Set();
+  const forwardLooking = (e) => /\b(next|upcoming|future|development|predict|guess)\b/i.test(e.excerpt.split(" — ")[0]);
+  return (record?.evidence || []).filter((e) => e.sourceType === "community" && e.verification === "unverified" && e.claimType === "discussion")
+    .filter((e) => {
+      const publishedAge = +now - Date.parse(e.publishedAt);
+      const observedAge = +now - Date.parse(e.observedAt);
+      // Reject generic Falcon/Dragon threads that only mention Starship in
+      // boilerplate, including leads saved by the initial broad parser.
+      const topic = e.sourceId !== "reddit-spacex" || /\bstarship\b|\bstarbase\b|\bsuper\s*heavy\b|\b(?:ship|booster)\s+\d+/i.test(e.excerpt.split(" — ")[0]) || new URL(e.sourceUrl).pathname.split("/").filter(Boolean).length > 5;
+      const sameMission = !record.mission?.id || !e.missionId || record.mission.id === e.missionId;
+      const completed = (record.outcomes || []).some((o) => o.missionId === e.missionId);
+      return topic && sameMission && !completed && publishedAge >= 0 && publishedAge <= 30 * 86400000 && observedAge >= 0 && observedAge <= 24 * 3600000;
+    }).sort((a, b) => Number(forwardLooking(b)) - Number(forwardLooking(a)) || Number(b.communityKind === "speculation") - Number(a.communityKind === "speculation") || Date.parse(b.publishedAt) - Date.parse(a.publishedAt) || Date.parse(b.observedAt) - Date.parse(a.observedAt))
+    .filter((e) => {
+      if (seen.has(e.originId) || seen.has(e.sourceUrl)) return false;
+      seen.add(e.originId); seen.add(e.sourceUrl); return true;
+    }).slice(0, 3);
+}
+
 export function starshipView(record, now = new Date()) {
   if (!record) return { fresh: false, status: "unannounced", summary: "Starship status unavailable; awaiting verified evidence.", officialTarget: null, forecast: null, lastVerifiedAt: null, uncertainty: ["No canonical record available."] };
   const fresh = Boolean(record.lastVerifiedAt && record.expiresAt && Date.parse(record.lastVerifiedAt) <= +now && Date.parse(record.expiresAt) > +now);
@@ -97,11 +118,11 @@ export function starshipView(record, now = new Date()) {
   const effectiveStatus = record.status === "targeted" && !targetFresh ? "unannounced" : record.status;
   const status = passed && !invalidated ? "target-passed" : fresh ? effectiveStatus : record.status === "target-passed" || record.status === "delayed" ? record.status : "unannounced";
   const summary = status === "target-passed" ? "Previous target passed; awaiting update." : status === "delayed" ? "Operator reported a delay or scrub; awaiting an updated target." : !fresh || status === "unannounced" ? "Date unannounced; insufficient current evidence." : record.status === "targeted" ? `Operator targeting ${targetLabel(record.officialTarget?.target)}.` : record.status === "underway" ? "Attempt underway, according to the operator." : record.forecast.summary;
-  return { fresh, status, summary, officialTarget: fresh && targetFresh && !passed && !invalidated && !record.conflicts.length ? record.officialTarget : null, forecast: fresh && targetFresh && !passed && record.mode === "live" ? record.forecast : null, lastVerifiedAt: record.lastVerifiedAt, uncertainty: record.forecast.uncertainty };
+  return { communityOutlook: communityOutlook(record, now), fresh, status, summary, officialTarget: fresh && targetFresh && !passed && !invalidated && !record.conflicts.length ? record.officialTarget : null, forecast: fresh && targetFresh && !passed && record.mode === "live" ? record.forecast : null, lastVerifiedAt: record.lastVerifiedAt, uncertainty: record.forecast.uncertainty };
 }
 
 export function editorialStarship(record, now = new Date()) {
-  const view = starshipView(record, now);
+  const { communityOutlook: leads, ...view } = starshipView(record, now);
   return { ...view, mode: record?.mode || "shadow", conflicts: record?.conflicts || [], sources: view.officialTarget ? [view.officialTarget.sourceUrl] : [], instruction: "Use only the current summary and officialTarget. Shadow forecasts and expired targets are not current predictions. Never infer completion from a passed date." };
 }
 

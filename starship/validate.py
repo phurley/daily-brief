@@ -16,6 +16,8 @@ def validate(record):
     ids = [e["id"] for e in record["evidence"]]
     assert len(ids) == len(set(ids)), "Duplicate evidence IDs"
     for e in record["evidence"]:
+        if e["sourceType"] == "community":
+            assert e["verification"] != "verified" and e["claimType"] == "discussion" and not e.get("authorization"), "Community leads cannot authenticate mission claims"
         if e["verification"] == "verified" and e["claimType"] in ("target", "readiness", "delay", "scrub", "underway", "outcome"):
             assert e["missionId"] and e["publishedAt"], "Mission claims need mission association and publication date"
         if e["claimType"] == "target":

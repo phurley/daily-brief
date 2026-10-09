@@ -4,6 +4,7 @@ Run with the crawler Python: python starship/test_browser.py
 import functools
 import http.server
 import json
+from datetime import datetime, timezone
 import threading
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -17,16 +18,20 @@ server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(Qui
 threading.Thread(target=server.serve_forever, daemon=True).start()
 # The immutable first snapshot is a reproducible passed-target fixture.
 fixture = json.loads((ROOT / "starship/history/2026-10-09T18-53-41.415Z.json").read_text())
+at = datetime.now(timezone.utc).isoformat()
+fixture["sourceHealth"].append({"id": "reddit-spacex", "url": "https://www.reddit.com/r/spacex/", "state": "ok", "lastAttemptAt": at, "lastSuccessAt": at, "parserVersion": "fixture", "contentHash": None, "detail": "Fixture community feed"})
+fixture["evidence"].append({"id": "community-fixture", "sourceId": "reddit-spacex", "sourceUrl": "https://www.reddit.com/r/spacex/comments/fixture/outlook/", "sourceType": "community", "publishedAt": at, "observedAt": at, "missionId": None, "claimType": "discussion", "excerpt": "Starship next launch could be months away — a community guess.", "verification": "unverified", "claimConfidence": "reported", "originId": "fixture", "supersedes": [], "parserVersion": "fixture", "communityKind": "speculation", "linkedSourceUrls": ["https://www.spacex.com/launches/"]})
 launch = {"name": "Test window launch", "slug": "fixture", "win_open": "2026-10-10T15:30:00Z"}
 try:
     with sync_playwright() as p:
         browser = p.chromium.launch()
         try:
             for width in (1280, 390):
-                page = browser.new_page(viewport={"width": width, "height": 1000})
+                page = browser.new_page(service_workers="block", viewport={"width": width, "height": 1000})
                 errors = []
                 page.on("pageerror", lambda error: errors.append(str(error)))
-                page.route("**/starship.json?*", lambda route: route.fulfill(json=fixture))
+                page.route("**/brief-manifest.json*", lambda route: route.fulfill(status=404, body="Compatibility-view fixture"))
+                page.route("**/starship.json*", lambda route: route.fulfill(json=fixture))
                 page.route("**/json/launches/next/5", lambda route: route.fulfill(json={"result": [launch]}))
                 page.route("https://icanhazdadjoke.com/**", lambda route: route.fulfill(json={"joke": "A fixture joke."}))
                 page.goto(f"http://127.0.0.1:{server.server_port}/", wait_until="networkidle")
@@ -35,6 +40,9 @@ try:
                 assert "Previous target passed; awaiting update." in card.inner_text()
                 assert "Under evaluation; no forecast published yet." in card.inner_text()
                 assert "RocketLaunch.Live" not in card.inner_text()
+                assert "Community outlook · unverified" in card.inner_text()
+                assert "a community guess" in card.inner_text()
+                assert "Linked source (unverified)" in card.inner_text()
                 assert "Window opens at" in page.locator("#rocket-launches").inner_text()
                 assert "Starship" not in page.locator("#rocket-launches").inner_text()
                 card.locator("summary").click()

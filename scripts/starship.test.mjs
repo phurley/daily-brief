@@ -118,3 +118,34 @@ test("publication ordering compares instants across source timezones", () => {
   const newer = claim({ id: "new", publishedAt: "2026-10-09T11:30:00-05:00", supersedes: ["old"] });
   assert.equal(run([older, newer]).officialTarget.evidenceId, "new");
 });
+
+test("community leads cannot select a mission, reverify, authorize, or complete it", () => {
+  const e = claim({ sourceType: "community", claimType: "discussion", verification: "unverified", communityKind: "speculation", linkedSourceUrls: ["https://www.spacex.com/launches/"], excerpt: "Maybe in November" });
+  const record = run([e]);
+  assert.equal(record.mission.id, null);
+  assert.equal(record.lastVerifiedAt, null);
+  assert.equal(record.officialTarget, null);
+  assert.equal(record.forecast.window, null);
+  assert.deepEqual(record.outcomes, []);
+  assert.equal(starshipView(record, now).communityOutlook.length, 1);
+  assert.equal(editorialStarship(record, now).communityOutlook, undefined);
+  // Defensive even if a malformed input claims community evidence is verified.
+  const forged = run([claim(), { ...e, id: "forged", verification: "verified", claimType: "outcome", supersedes: ["target-1"], outcome: "launched" }]);
+  assert.equal(forged.officialTarget.evidenceId, "target-1");
+  assert.deepEqual(forged.outcomes, []);
+});
+test("community outlook expires, deduplicates sources and excludes other/completed missions", () => {
+  const e = claim({ sourceType: "community", claimType: "discussion", verification: "unverified", communityKind: "speculation" });
+  const record = run([e, { ...e, id: "repost" }, { ...e, id: "old", originId: "old", publishedAt: "2026-08-01T12:00:00Z" }, { ...e, id: "outage", originId: "outage", observedAt: "2026-10-07T12:00:00Z" }]);
+  assert.equal(starshipView(record, now).communityOutlook.length, 1);
+  assert.equal(starshipView(record, new Date("2026-10-11T18:00:00Z")).communityOutlook.length, 0);
+  assert.equal(starshipView(run([e], { activeMission: "starship-flight-15" }), now).communityOutlook.length, 0);
+  const outcome = claim({ id: "finished", claimType: "outcome", outcome: "completed" });
+  assert.equal(starshipView(run([e, outcome]), now).communityOutlook.length, 0);
+});
+
+test("generic launch-thread boilerplate does not appear in the Starship community outlook", () => {
+  const e = claim({ sourceId: "reddit-spacex", sourceType: "community", claimType: "discussion", verification: "unverified", sourceUrl: "https://www.reddit.com/r/spacex/comments/abc/dragon/", excerpt: "Dragon launch thread — Statistics include Starship launches" });
+  assert.equal(starshipView(run([e]), now).communityOutlook.length, 0);
+  assert.equal(starshipView(run([{ ...e, sourceUrl: "https://www.reddit.com/r/spacex/comments/abc/development/def/", excerpt: "Comment — Maybe next month" }]), now).communityOutlook.length, 1);
+});

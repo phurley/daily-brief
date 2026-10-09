@@ -1273,6 +1273,16 @@ function renderStarship() {
     const report = record.evidence.find((e) => e.id === id);
     if (report?.target) children.push(node("p", {}, [node("strong", { text: "Outside report (not an operator target): " }), safeLink(targetLabel(report.target), report.sourceUrl), document.createTextNode(` · observed ${timestamp(report.observedAt)}; see evidence for uncertainty.`)]));
   }
+  if (record?.sourceHealth?.some((s) => s.id === "reddit-spacex")) {
+    const outlook = node("section", { className: "starship-community", "aria-label": "Community outlook" }, [node("h4", { text: "Community outlook · unverified" }), node("p", { text: "Longer-range discussion from r/SpaceX. Dates and milestones here are community reports or guesses; linked sources require independent verification." })]);
+    for (const lead of view.communityOutlook || []) {
+      const item = node("p", {}, [safeLink(`r/SpaceX · ${lead.communityKind || "discussion"}`, lead.sourceUrl), document.createTextNode(` — ${lead.excerpt} Posted ${timestamp(lead.publishedAt)}.`)]);
+      for (const url of lead.linkedSourceUrls || []) item.append(document.createTextNode(" · "), safeLink("Linked source (unverified)", url));
+      outlook.append(item);
+    }
+    if (!view.communityOutlook?.length) outlook.append(node("p", { text: "No recent community outlook available. Older or unavailable feeds do not extend verified targets." }));
+    children.push(outlook);
+  }
   const details = node("details", {}, [node("summary", { text: "Evidence, uncertainty and source health" })]);
   details.open = Boolean(wasOpen);
   details.append(node("p", { text: (view.uncertainty || []).join(" ") }));

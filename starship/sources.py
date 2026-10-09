@@ -172,6 +172,12 @@ def collect(config, at):
     evidence, health = [], []
     for source in config["sources"]:
         try:
+            if source["id"] == "reddit-spacex":
+                from reddit import collect_reddit
+                claims, result = collect_reddit(source)
+                evidence.extend(claims)
+                health.append(result)
+                continue
             pages = asyncio.run(spacex_pages(source["url"])) if source["id"] == "spacex" and config.get("renderSpaceX") else [(source["url"], fetch_html(source["url"]))]
             parsed = []
             for url, html in pages:

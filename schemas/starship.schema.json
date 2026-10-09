@@ -469,7 +469,8 @@
             "regulator",
             "local-authority",
             "reporter",
-            "editorial"
+            "editorial",
+            "community"
           ]
         },
         "publishedAt": {
@@ -506,7 +507,8 @@
             "delay",
             "scrub",
             "underway",
-            "outcome"
+            "outcome",
+            "discussion"
           ]
         },
         "excerpt": {
@@ -568,6 +570,21 @@
               "type": "null"
             }
           ]
+        },
+        "communityKind": {
+          "enum": [
+            "speculation",
+            "linked-report",
+            "discussion"
+          ]
+        },
+        "linkedSourceUrls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://"
+          }
         }
       }
     }

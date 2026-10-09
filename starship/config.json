@@ -5,8 +5,25 @@
   "activeMission": null,
   "renderSpaceX": true,
   "sources": [
-    {"id": "spacex", "type": "operator", "url": "https://www.spacex.com/launches/"},
-    {"id": "faa", "type": "regulator", "url": "https://www.faa.gov/space/stakeholder_engagement/spacex_starship"},
-    {"id": "cameron", "type": "local-authority", "url": "https://www.cameroncountytx.gov/spacex/"}
+    {
+      "id": "spacex",
+      "type": "operator",
+      "url": "https://www.spacex.com/launches/"
+    },
+    {
+      "id": "faa",
+      "type": "regulator",
+      "url": "https://www.faa.gov/space/stakeholder_engagement/spacex_starship"
+    },
+    {
+      "id": "cameron",
+      "type": "local-authority",
+      "url": "https://www.cameroncountytx.gov/spacex/"
+    },
+    {
+      "id": "reddit-spacex",
+      "type": "community",
+      "url": "https://www.reddit.com/r/spacex/"
+    }
   ]
 }

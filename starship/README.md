@@ -159,3 +159,33 @@ source output and the matching compact web/widget edition together under the
 shared publication lock. Schedules and collection behavior are unchanged. See
 [mobile edition operations](../docs/mobile-edition.md) for cache and rollover
 behavior.
+
+## r/SpaceX community outlook
+
+The existing hourly :25 Starship job also reads the public r/SpaceX new/hot
+Atom feeds and up to two recent Starship development-thread comment feeds.
+No additional scheduler or Reddit credentials are required. Requests are bounded;
+blocked, malformed or partially failing feeds are exposed in source health.
+
+Posts/comments remain `sourceType: community`, `claimType: discussion`, and
+`verification: unverified`, including posts carrying an "Official" flair.
+The source permalink, original publication date, observation date, excerpt and
+up to five linked source URLs are retained. Date suggestions remain in their
+original wording; Reddit text does not manufacture precise timestamps or odds.
+Speculation is listed ahead of general discussion. Posts older than 30 days or
+not observed within 24 hours are hidden from the outlook; retractions, known
+completed missions and known different missions are excluded. Reposts sharing
+an underlying URL are displayed once and never counted as corroboration.
+
+The public card shows up to three leads under **Community outlook · unverified**,
+separately from operator targets and the shadow/live rule-based forecast. Forum
+text is excluded from the editorial model's fact input. Community evidence
+cannot select a mission, reset `lastVerifiedAt`, supersede operator evidence,
+or establish a target, authorization, readiness, or terminal outcome. Follow
+an item's linked primary source and verify it independently before creating a
+separate reviewed primary-source claim. A source link alone is not verification.
+
+Tests: `(cd starship && ../data-collect/.venv/bin/python -m unittest test_reddit.py)`
+and `node --test scripts/starship.test.mjs`. Existing parser, schema and browser
+checks still apply. The collector process timeout is six minutes to accommodate
+the bounded additional feed requests; its per-request timeout stays 25 seconds.
