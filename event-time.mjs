@@ -31,6 +31,7 @@ export function eventDateLabel(event, now = new Date()) {
       year: day.slice(0, 4) !== today.slice(0, 4) ? "numeric" : undefined,
     }).format(date);
   };
+  if (["date", "unknown"].includes(event.timePrecision)) return `${label(start)} · Time to be confirmed`;
   const beginning = `${label(start)}, ${timeFormatter.format(start)}`;
   if (!end || Number.isNaN(end.getTime()) || end <= start) return beginning;
   if (dayKey(start) === dayKey(end)) return `${beginning}–${timeFormatter.format(end)}`;

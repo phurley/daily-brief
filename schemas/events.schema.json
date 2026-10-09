@@ -40,7 +40,15 @@
         "score": { "type": "integer", "minimum": 0, "maximum": 100 },
         "scoring": { "$ref": "#/$defs/scoring" },
         "distanceMiles": { "type": "number", "minimum": 0 },
-        "deadline": { "type": "string", "minLength": 1 }
+        "deadline": { "type": "string", "minLength": 1 },
+        "occurrenceId": {"type": "string"},
+        "canonicalUrl": {"type": "string"},
+        "venueId": {"type": "string"},
+        "timePrecision": {"enum": ["time", "date", "unknown"]},
+        "status": {"enum": ["scheduled", "canceled", "postponed", "rescheduled"]},
+        "aliases": {"type": "array", "items": {"type": "string"}},
+        "sources": {"type": "array", "items": {"type": "object"}},
+        "identity": {"type": "object"}
       }
     },
     "scoring": {

@@ -311,6 +311,7 @@ def parse_ics_markdown(body: str, fallback_url: str = "") -> list[dict[str, Any]
                 "feed_url": feed_url,
                 "title": title.strip(),
                 "url": None,
+                "timePrecision": "time" if " " in start_raw else "date",
                 "start": normalize_ics_datetime(start_raw),
                 "end": normalize_ics_datetime(end_raw),
                 "venue": location.strip(),
@@ -326,13 +327,22 @@ def parse_ics_markdown(body: str, fallback_url: str = "") -> list[dict[str, Any]
             key, value = cont.group(1).lower(), cont.group(2).strip()
             if key == "url" and value.startswith("http") and not last.get("url"):
                 last["url"] = value
-            elif key == "uid" and value and not last.get("_uid"):
-                last["_uid"] = value
+            elif key == "uid" and value:
+                last["sourceEventId"] = value
+            elif key == "recurrence_id" and value:
+                last["recurrenceId"] = value
+            elif key == "recurrence_rule" and value:
+                last["recurrenceRule"] = value
+            elif key == "last_modified" and value:
+                last["sourceUpdatedAt"] = normalize_date(value)
+            elif key == "status" and value in ("CANCELLED", "CONFIRMED"):
+                last["status"] = "canceled" if value == "CANCELLED" else "scheduled"
+                last["statusEvidence"] = "STATUS:" + value
     for item in out:
         # The Events Calendar UIDs are ``post_id-start-end@host``; WordPress
         # resolves ``/?p=post_id`` to the event's pretty URL, so a site-wide
         # ical without per-VEVENT URLs still yields usable event page links.
-        uid = item.pop("_uid", None)
+        uid = item.get("sourceEventId")
         if not item.get("url") and uid:
             m = re.match(r"^(\d+)-\d+-\d+@([\w.-]+)$", uid)
             if m:
@@ -425,6 +435,12 @@ def parse_jsonld_markdown(body: str, fallback_url: str = "") -> list[dict[str, A
                 "feed_url": feed_url,
                 "title": title,
                 "url": str(obj.get("url") or "").strip() or None,
+                "sourceEventId": str(obj.get("@id") or obj.get("identifier") or ""),
+                "status": {"EventCancelled": "canceled", "EventPostponed": "postponed", "EventRescheduled": "rescheduled", "EventScheduled": "scheduled"}.get(str(obj.get("eventStatus") or "").rsplit("/", 1)[-1]),
+                "statusEvidence": str(obj.get("eventStatus") or ""),
+                "previousStart": _iso_or_none(obj.get("previousStartDate")),
+                "sourceUpdatedAt": _iso_or_none(obj.get("dateModified")),
+                "timePrecision": "time" if "T" in str(obj.get("startDate")) else "date",
                 "start": start,
                 "end": _iso_or_none(obj.get("endDate")),
                 "venue": _jsonld_venue(obj.get("location")),

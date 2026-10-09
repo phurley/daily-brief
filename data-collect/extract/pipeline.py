@@ -35,7 +35,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-from . import dates, enrich, jev, llm, prompts, router, scoring, urls
+from . import dates, enrich, identity, jev, llm, prompts, router, scoring, urls
 from .funnel import slugify
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
@@ -80,6 +80,7 @@ def load_source_specs(source_file: Path) -> dict[str, dict[str, Any]]:
             "content_mode": source.get("content_mode") or "auto",
             "default_venue": source.get("default_venue"),
             "default_city": source.get("default_city"),
+            "identity_authority": source.get("identity_authority") or ("organizer" if source.get("type") == "Venue" else "unknown"),
         }
         if source.get("type") == "Venue":
             location = str(source.get("location") or "")
@@ -147,7 +148,12 @@ def load_candidates(processed: Path) -> list[dict[str, Any]]:
 
 def _fingerprint(rec: dict[str, Any]) -> str:
     cid = rec.get("chunk_id") or rec.get("item_id") or ""
-    return f"{rec.get('source_slug')}:{EXTRACTOR_VERSION}:{cid}"
+    base = f"{rec.get('source_slug')}:{EXTRACTOR_VERSION}:{cid}"
+    if rec.get("_kind") == "feed":
+        content = {k: rec.get(k) for k in ("title", "summary", "content", "url", "start", "end",
+                                          "venue", "status", "recurrenceId", "sourceUpdatedAt")}
+        return base + ":" + identity.digest(content)
+    return base
 
 
 def _store_fingerprint(record: dict[str, Any]) -> Optional[str]:
@@ -312,12 +318,42 @@ def finalize(record: dict[str, Any], origin: dict[str, Any]) -> Optional[dict[st
         "source_slug": origin.get("source_slug"),
         "url": origin.get("url"),
     }
+    if kind == "event":
+        # Structured feed fields are source evidence, not model-generated IDs.
+        if origin.get("feed_kind") in ("ics", "jsonld"):
+            for key in ("sourceEventId", "recurrenceId", "recurrenceRule", "sourceUpdatedAt",
+                        "start", "end", "venue", "timePrecision", "status", "statusEvidence", "previousStart"):
+                if origin.get(key):
+                    record[key] = origin[key]
+        evidence = record.get("statusEvidence")
+        source_text = jev.record_text(origin)
+        if evidence and evidence not in source_text and evidence != origin.get("statusEvidence"):
+            record.pop("statusEvidence", None)
+            record.pop("status", None)
+        record["observedAt"] = record["addedAt"]
+        record["sourceId"] = origin.get("source_slug") or ""
+        record = identity.prepare(record)
+        record["aliases"] = [record["id"]]
+        record["id"] = record["sourceRecordId"]
     return record
 
 
 # --------------------------------------------------------------------------- #
 # Pipeline
 # --------------------------------------------------------------------------- #
+
+def structured_event(candidate, spec=None):
+    """Use a complete structured feed as the base; incomplete feeds use extraction."""
+    if candidate.get("feed_kind") not in ("ics", "jsonld"):
+        return None
+    city = candidate.get("city") or (spec or {}).get("default_city")
+    if not city or not all(candidate.get(k) for k in ("title", "summary", "start", "venue", "url")):
+        return None
+    result = {k: candidate[k] for k in ("title", "summary", "start", "end", "venue", "url",
+              "status", "statusEvidence", "timePrecision", "sourceEventId", "recurrenceId",
+              "recurrenceRule", "sourceUpdatedAt", "previousStart") if candidate.get(k)}
+    return dict(result, kind="event", city=city, category=candidate.get("category") or "Event")
+
 
 def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         model: Optional[str], enrich_events: bool = True,
@@ -357,7 +393,7 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
 
     chat = llm.make_chat_client(model) if accepted else None
     enrich_lock = threading.Lock()
-    enrich_state = {"used": 0, "ok": 0}
+    enrich_state = {"used": 0, "ok": 0, "mechanical": 0}
     hints = enrich_hints or {}
     learned = enrich.learned_strategies()
 
@@ -366,7 +402,12 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         route = router.route(tri, content_mode=(source_specs or {}).get(
             rec.get("source_slug") or "", {}).get("content_mode", "auto"))
         records: list[dict[str, Any]] = []
-        if chat is not None:
+        base = structured_event(rec, (source_specs or {}).get(rec.get("source_slug"))) if route.schema == "event" else None
+        if base:
+            records = [base]
+            with enrich_lock:
+                enrich_state["mechanical"] += 1
+        elif chat is not None:
             try:
                 data = chat.complete_json(
                     prompts.build_messages(route.mode, rec, route.record_cap),
@@ -443,9 +484,19 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
             if clean:
                 apply_source_defaults(clean, (source_specs or {}).get(
                     (clean.get("origin") or {}).get("source_slug") or ""))
+                if clean.get("kind") == "event":
+                    clean["sourceAuthority"] = (source_specs or {}).get(
+                        clean.get("sourceId"), {}).get("identity_authority", "unknown")
+                    # Defaults must participate in snapshot identity.
+                    clean.pop("sourceRecordId", None)
+                    clean.pop("venueId", None)
+                    clean = identity.prepare(clean)
+                    clean["id"] = clean["sourceRecordId"]
                 finalized.append(clean)
     stats = {
         "selected": len(items),
+        "mechanical_feeds": enrich_state["mechanical"],
+        "generation_calls": len(accepted) - enrich_state["mechanical"],
         "accepted": len(accepted),
         "deferred": deferred,
         "rejected": len(processed) - len(accepted),
@@ -474,6 +525,8 @@ def main(argv: Optional[list[str]] = None) -> int:
                    help="never triage candidates dated older than this (default 2)")
     p.add_argument("--record-max-age-days", type=float, default=RECORD_MAX_AGE_DAYS,
                    help="prune the record store past this age (default 183)")
+    p.add_argument("--reextract-source", action="append", default=[],
+                   help="targeted source slug refresh; still bounded by --max-items/--extract-limit")
     p.add_argument("--workers", type=int, default=12)
     p.add_argument("--model", default=None)
     p.add_argument("--reference-date", default=None)
@@ -498,7 +551,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     fresh: list[dict[str, Any]] = []
     skipped_done = skipped_stale = 0
     for rec in candidates:
-        if _fingerprint(rec) in done:
+        if _fingerprint(rec) in done and rec.get("source_slug") not in opts.reextract_source:
             skipped_done += 1
             continue
         days = candidate_days(rec, ref)
@@ -513,6 +566,15 @@ def main(argv: Optional[list[str]] = None) -> int:
         print("nothing to do")
         return 0
 
+    # Preserve original candidate text and feed metadata for bounded replay,
+    # independently of mutable crawl/processed files and extracted snapshots.
+    candidate_archive = opts.out.with_name("source_candidate_archive.jsonl")
+    archived_candidates = load_index(candidate_archive)
+    append_index(candidate_archive, [
+        {"fp": _fingerprint(r), "candidate": r} for r in selected
+        if _fingerprint(r) not in archived_candidates
+    ])
+
     records, stats, processed = run(selected, workers=opts.workers,
                                     extract_limit=opts.extract_limit,
                                     model=opts.model, enrich_events=opts.enrich_events,
@@ -520,16 +582,30 @@ def main(argv: Optional[list[str]] = None) -> int:
                                     enrich_hints=load_enrich_hints(opts.source_file),
                                     source_specs=load_source_specs(opts.source_file))
 
-    # Merge into the cumulative store (newest wins by id), then prune by age.
-    by_id = {r.get("id"): r for r in store if r.get("id")}
+    # Preserve event source snapshots independently of presentation IDs. Never
+    # overwrite separate sessions or source evidence sharing a legacy title ID.
+    def store_key(r):
+        return identity.prepare(r)["sourceRecordId"] if r.get("kind") == "event" else r.get("id")
+    by_id = {store_key(r): r for r in store if r.get("id")}
     for record in records:
-        by_id[record["id"]] = record
+        by_id[store_key(record)] = record
+    archive = opts.out.with_name("event_source_archive.jsonl")
+    archived = {r.get("sourceRecordId") for r in load_store(archive)}
+    with archive.open("a", encoding="utf-8") as fh:
+        for r in by_id.values():
+            if r.get("kind") == "event":
+                snapshot = identity.prepare(r)
+                if snapshot["sourceRecordId"] not in archived:
+                    fh.write(json.dumps(snapshot, ensure_ascii=False) + "\n")
+                    archived.add(snapshot["sourceRecordId"])
     kept = _prune_store(list(by_id.values()), ref, opts.record_max_age_days)
     kept.sort(key=lambda r: (r.get("kind") or "", r.get("id") or ""))
-    opts.out.write_text(
+    temporary = opts.out.with_suffix(".jsonl.tmp")
+    temporary.write_text(
         "\n".join(json.dumps(r, ensure_ascii=False) for r in kept) + "\n",
         encoding="utf-8",
     )
+    temporary.replace(opts.out)
     stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
     append_index(opts.index, [{"fp": _fingerprint(r), "ts": stamp, "outcome": outcome}
                               for r, outcome in processed])

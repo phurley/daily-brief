@@ -1665,6 +1665,10 @@ def _parse_ics(text: str, url: str) -> str:
         uid = (event.get("UID") or "").strip()
         if uid:
             out.append(f"  uid: {uid}")
+        for key, label in (("RECURRENCE-ID", "recurrence_id"), ("RRULE", "recurrence_rule"),
+                           ("STATUS", "status"), ("LAST-MODIFIED", "last_modified")):
+            if event.get(key):
+                out.append(f"  {label}: {event[key]}")
         url_value = (event.get("URL") or "").strip()
         if url_value:
             out.append(f"  url: {url_value}")

@@ -28,3 +28,8 @@ test("missing or invalid ends do not fabricate a range", () => {
   assert.equal(eventDateLabel({ start: "2026-09-08T18:00:00-04:00", end: "invalid" }, now), "Tonight, 6:00 PM");
   assert.equal(eventDateLabel({ start: "invalid" }, now), "Date to be confirmed");
 });
+
+test("date-only records do not advertise invented midnight times", () => {
+  assert.equal(eventDateLabel({ start: "2026-10-09T00:00:00-04:00", timePrecision: "date" },
+    new Date("2026-10-09T12:00:00-04:00")), "Today · Time to be confirmed");
+});

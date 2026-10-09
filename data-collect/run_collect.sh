@@ -25,6 +25,8 @@
 #                                          a steady-state cost)
 #   COLLECT_EXTRACT_LIMIT[800]          funnel --extract-limit (generation calls)
 #   COLLECT_CONCURRENCY  [8]            crawler --concurrency
+#   EVENT_IDENTITY_MODE [shadow]       legacy, shadow, or canonical publication
+#   EVENT_IDENTITY_FUZZY[0]            1 enables constrained detail-URL typo matching
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$DIR/.." && pwd)"
@@ -65,6 +67,15 @@ exec >> "$LOG" 2>&1
 echo "$STAMP [start] collect $*"
 
 cd "$DIR" || exit 1
+
+# Pin the rollout policy for scheduled and manual runs alike. Validate before
+# spending crawler/model work; the publisher reads these exported variables.
+EVENT_IDENTITY_MODE="${EVENT_IDENTITY_MODE:-shadow}"
+EVENT_IDENTITY_FUZZY="${EVENT_IDENTITY_FUZZY:-0}"
+case "$EVENT_IDENTITY_MODE" in legacy|shadow|canonical) ;; *) echo "invalid EVENT_IDENTITY_MODE"; exit 1 ;; esac
+case "$EVENT_IDENTITY_FUZZY" in 0|1) ;; *) echo "invalid EVENT_IDENTITY_FUZZY"; exit 1 ;; esac
+export EVENT_IDENTITY_MODE EVENT_IDENTITY_FUZZY
+echo "event identity: mode=$EVENT_IDENTITY_MODE fuzzy=$EVENT_IDENTITY_FUZZY"
 
 # --- step 1: crawl only the sources that are due --------------------------- #
 echo "--- step 1/4: crawl (due sources only) ---"

@@ -19,6 +19,7 @@
  *   VIBE_RETENTION_HOURS      default 24
  */
 
+import { isEventRecommended } from "../event-status.mjs";
 import fs from "node:fs";
 import { editorialStarship } from "../starship.mjs";
 import path from "node:path";
@@ -202,6 +203,7 @@ function buildContext(dateKey) {
 
   const eventFor = (key) =>
     (events.events || [])
+      .filter(isEventRecommended)
       .filter((event) => datePart(event.start) === key)
       .sort((a, b) => (b.score || 0) - (a.score || 0) || (a.distanceMiles ?? 99) - (b.distanceMiles ?? 99))
       .slice(0, 10)

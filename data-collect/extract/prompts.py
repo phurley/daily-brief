@@ -25,6 +25,13 @@ _SYSTEM = (
 )
 
 _EVENT_FIELDS = {
+    "status": {"type": ["string", "null"], "enum": ["scheduled", "canceled", "postponed", "rescheduled", None],
+               "description": "Only explicit source status. Null when unstated; absence never means cancellation."},
+    "statusEvidence": {"type": ["string", "null"], "description": "Exact source quote supporting status, or null."},
+    "previousStart": {"type": ["string", "null"], "description": "Explicit original datetime for a reschedule, otherwise null."},
+    "timePrecision": {"type": ["string", "null"], "enum": ["time", "date", "unknown", None],
+                      "description": "time only if an actual start time is stated; date for a known day only; unknown otherwise."},
+    "performers": {"type": ["array", "null"], "items": {"type": "string"}, "description": "Explicit performer names, or null."},
     "title": {"type": "string", "description": "The event's name/title."},
     "summary": {"type": "string", "description": "One or two sentences describing the event."},
     "start": {

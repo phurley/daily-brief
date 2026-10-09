@@ -186,24 +186,33 @@ def _annotate(
         titles[i] = title
         tokens[i] = title_tokens(title)
 
+        # Before extraction, only definite news may use title/SimHash
+        # suppression. Events and mixed listings require identical content AND
+        # matching structured occurrence context, so recurrence cannot vanish.
+        is_news = record.get("candidate_hint") == "news" and record.get("feed_kind") not in ("ics", "jsonld")
         chash = record.get("content_hash")
         if not chash and text:
             chash = hashlib.sha256(
                 re.sub(r"\s+", " ", text).encode("utf-8", "replace")
             ).hexdigest()
         if chash:
+            if not is_news:
+                chash = json.dumps([chash, record.get("source_slug"), record.get("url"),
+                                    record.get("start"), record.get("end"), record.get("venue"),
+                                    record.get("recurrenceId"), record.get("status"),
+                                    (record.get("signals") or {}).get("normalized_dates")], sort_keys=True)
             if chash in by_hash:
                 uf.union(i, by_hash[chash])
             else:
                 by_hash[chash] = i
 
-        if len(title) >= 25 and title not in _GENERIC_TITLES:
+        if is_news and len(title) >= 25 and title not in _GENERIC_TITLES:
             if title in by_title:
                 uf.union(i, by_title[title])
             else:
                 by_title[title] = i
 
-        if len(text) >= 120 and title not in _GENERIC_TITLES:
+        if is_news and len(text) >= 120 and title not in _GENERIC_TITLES:
             sims[i] = simhash(text)
             for band in range(_BANDS):
                 key = (band, (sims[i] >> (band * _BAND_BITS)) & ((1 << _BAND_BITS) - 1))

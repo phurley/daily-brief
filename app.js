@@ -1,3 +1,4 @@
+import { isEventRecommended, eventDisplayTitle } from "./event-status.mjs?v=20261009-1";
 import { starshipView, targetLabel, usableLaunchCache, launchDateKey, launchDateTime } from "./starship.mjs?v=20261009-1";
 import { computeAlmanacDay } from "./almanac-calc.mjs?v=20260920-1";
 import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
@@ -564,7 +565,7 @@ function agendaEntry(event, key, { withDate = false } = {}) {
     "aria-pressed": String(selected),
   }, [
     meta,
-    node("strong", { text: event.title }),
+    node("strong", { text: eventDisplayTitle(event) }),
   ]);
 }
 
@@ -605,7 +606,7 @@ function renderEventCalendarDetail() {
   const { event } = entry;
   const index = state.calendarEntries.indexOf(entry);
   const title = node("h3", { className: "calendar-detail__title" });
-  title.append(safeLink(event.title, event.url));
+  title.append(safeLink(eventDisplayTitle(event), event.url));
   const facts = node("dl", { className: "calendar-detail__facts" });
   for (const [term, value] of eventPreviewFacts(event)) {
     facts.append(node("div", {}, [node("dt", { text: term }), node("dd", { text: value })]));
@@ -824,7 +825,7 @@ function relativeDayWord(key) {
 
 function eventCard(event) {
   const title = node("h3");
-  title.append(safeLink(event.title, event.url));
+  title.append(safeLink(eventDisplayTitle(event), event.url));
   return node("article", { className: "card" }, [
     node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
     title,
@@ -835,7 +836,7 @@ function eventCard(event) {
 
 function claimCard(event) {
   const title = node("strong");
-  title.append(safeLink(event.title, event.url));
+  title.append(safeLink(eventDisplayTitle(event), event.url));
   return node("article", {
     className: "claim",
     dataset: { eventId: event.id },
@@ -851,7 +852,7 @@ function claimCard(event) {
 // then multi-day windows still running past it, then everything starting later.
 function renderEvents() {
   hideEventPreview();
-  const allEvents = uniqueEvents();
+  const allEvents = uniqueEvents().filter(isEventRecommended);
   const selected = state.selectedDate;
   const active = allEvents.filter((event) => eventIsActiveOn(event, selected));
   const stillRunning = (event) => eventSpansDays(event) && eventEndDate(event) > selected;
@@ -923,7 +924,7 @@ function showEventPreview(claim, { focus = false } = {}) {
   claim.setAttribute("aria-expanded", "true");
   const preview = $("#event-preview");
   const title = node("h3");
-  title.append(safeLink(event.title, event.url));
+  title.append(safeLink(eventDisplayTitle(event), event.url));
   const facts = node("dl", { className: "event-preview__facts" });
   for (const [term, value] of eventPreviewFacts(event)) {
     facts.append(node("div", {}, [node("dt", { text: term }), node("dd", { text: value })]));

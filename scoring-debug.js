@@ -197,6 +197,10 @@ function eventCard(item, index) {
       el("span", { className: "summary-top", text: item.has ? topContributors(item) : "" }),
     ]),
     breakdownTable(item),
+    el("pre", { text: item.event.identity ? JSON.stringify({
+      occurrenceId: item.event.occurrenceId, status: item.event.status,
+      ...item.event.identity, sources: item.event.sources,
+    }, null, 2) : "" }),
   );
   return el("article", { className: `score-event${multi ? " is-multi" : ""}`, dataset: { id: item.event.id } }, [head, details]);
 }

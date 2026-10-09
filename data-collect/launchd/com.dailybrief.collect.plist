@@ -33,6 +33,11 @@
 
     <key>EnvironmentVariables</key>
     <dict>
+        <!-- Identity remains in shadow until the labeled benchmark supports rollout. -->
+        <key>EVENT_IDENTITY_MODE</key>
+        <string>shadow</string>
+        <key>EVENT_IDENTITY_FUZZY</key>
+        <string>0</string>
         <key>PATH</key>
         <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
     </dict>
