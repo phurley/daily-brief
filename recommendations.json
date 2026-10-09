@@ -1,11 +1,131 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-10-09T21:12:54.388Z",
+  "generatedAt": "2026-10-09T23:21:27.115Z",
   "days": [
     {
       "date": "2026-10-09",
       "events": [
+        {
+          "id": "occ-77253682399c2156feaab9c1",
+          "title": "Big Fun Murder | An Improvised Murder Mystery",
+          "summary": "Immersive murder mystery improv show with 5 different eras and new victims each night at Go Comedy! Improv Theater. New costumes and themes every Friday in October.",
+          "url": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+          "start": "2026-10-09T21:30:00-04:00",
+          "end": "2026-11-06T21:30:00-05:00",
+          "venue": "Go Comedy! Improv Theater",
+          "city": "Ferndale",
+          "price": "$20",
+          "registration": "https://tinyurl.com/BFMatGo",
+          "category": "Improv",
+          "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
+          "imageAlt": "Metro Times logo",
+          "status": "scheduled",
+          "occurrenceId": "occ-77253682399c2156feaab9c1",
+          "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+          "venueId": "go comedy improv theater|ferndale",
+          "timePrecision": "time",
+          "aliases": [
+            "big-fun-murder-an-improvised-murder-myst-event-2026-10-09",
+            "src-005a4759b33c878fb6683cb7"
+          ],
+          "legacyOccurrenceKeys": [
+            "big-fun-murder-an-improvised-murder-myst-event-2026-10-09|2026-10-09T21:30:00-04:00",
+            "src-005a4759b33c878fb6683cb7|2026-10-09T21:30:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "big fun murder | an improvised murder mystery|go comedy! improv theater"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-005a4759b33c878fb6683cb7",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+              "observedAt": "2026-10-09T19:21:20-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled",
+              "statusEvidence": "Continues through Nov. 6"
+            },
+            {
+              "sourceRecordId": "src-8597f16c2dd7a37c57a6d585",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+              "observedAt": "2026-10-09T09:31:47-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "exact-title-time-venue",
+              "new-occurrence"
+            ],
+            "fields": {
+              "status": "src-005a4759b33c878fb6683cb7",
+              "title": "src-005a4759b33c878fb6683cb7",
+              "start": "src-005a4759b33c878fb6683cb7",
+              "end": "src-005a4759b33c878fb6683cb7",
+              "venue": "src-005a4759b33c878fb6683cb7",
+              "registration": "src-005a4759b33c878fb6683cb7",
+              "url": "src-005a4759b33c878fb6683cb7",
+              "imageUrl": "src-005a4759b33c878fb6683cb7"
+            },
+            "conflicts": {}
+          },
+          "score": 100,
+          "scoring": {
+            "signals": {
+              "funny": 0.97,
+              "distinctive": 0.76,
+              "eclectic": 0.51,
+              "technical_science": 0.02,
+              "artsy": 0.97,
+              "progressive": 0.21,
+              "outdoors": 0.02,
+              "theatre": 0.9,
+              "live_music": 0.02,
+              "live_comedy": 0.98,
+              "farmer_market": 0.01,
+              "sporting": 0.02,
+              "recurring": 0.91,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.01,
+              "large_venue": 0.02,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.01,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.02,
+              "sales_related": 0.7,
+              "children_activity": 0.03,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.01
+            },
+            "score": 100,
+            "rulesVersion": 2
+          },
+          "localityTier": "unknown",
+          "recommendation": {
+            "occurrenceId": "occ-77253682399c2156feaab9c1",
+            "score": 112,
+            "components": {
+              "taste": 100,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 0
+            },
+            "reasons": [
+              "distinctive +18",
+              "live comedy +12",
+              "Available on selected day +12"
+            ],
+            "unknowns": [
+              "Distance unknown",
+              "Status unconfirmed"
+            ]
+          }
+        },
         {
           "id": "occ-7c6051895983c10befcc810a",
           "title": "30th Annual Edgefest: Kerrytown Concert House",
@@ -218,114 +338,6 @@
               "Distance unknown",
               "Status unconfirmed",
               "Price unknown"
-            ]
-          }
-        },
-        {
-          "id": "occ-77253682399c2156feaab9c1",
-          "title": "Big Fun Murder | An Improvised Murder Mystery",
-          "summary": "Improv murder mystery show at Go Comedy! featuring new eras and victims every Friday in October.",
-          "url": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
-          "start": "2026-10-09T21:30:00-04:00",
-          "end": "2026-11-06T21:30:00-05:00",
-          "venue": "Go Comedy! Improv Theater",
-          "city": "Ferndale",
-          "price": "$20.00",
-          "registration": "https://tinyurl.com/BFMatGo",
-          "category": "Improv",
-          "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
-          "imageAlt": "Metro Times logo",
-          "status": "scheduled",
-          "occurrenceId": "occ-77253682399c2156feaab9c1",
-          "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
-          "venueId": "go comedy improv theater|ferndale",
-          "timePrecision": "time",
-          "aliases": [
-            "big-fun-murder-an-improvised-murder-myst-event-2026-10-09"
-          ],
-          "legacyOccurrenceKeys": [
-            "big-fun-murder-an-improvised-murder-myst-event-2026-10-09|2026-10-09T21:30:00-04:00"
-          ],
-          "legacySeriesKeys": [
-            "big fun murder | an improvised murder mystery|go comedy! improv theater"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-8597f16c2dd7a37c57a6d585",
-              "sourceId": "metro-times",
-              "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
-              "observedAt": "2026-10-09T09:31:47-04:00",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "new-occurrence"
-            ],
-            "fields": {
-              "title": "src-8597f16c2dd7a37c57a6d585",
-              "start": "src-8597f16c2dd7a37c57a6d585",
-              "end": "src-8597f16c2dd7a37c57a6d585",
-              "venue": "src-8597f16c2dd7a37c57a6d585",
-              "registration": "src-8597f16c2dd7a37c57a6d585",
-              "url": "src-8597f16c2dd7a37c57a6d585",
-              "imageUrl": "src-8597f16c2dd7a37c57a6d585",
-              "status": "src-8597f16c2dd7a37c57a6d585"
-            },
-            "conflicts": {}
-          },
-          "score": 97,
-          "scoring": {
-            "signals": {
-              "funny": 0.97,
-              "distinctive": 0.63,
-              "eclectic": 0.33,
-              "technical_science": 0.02,
-              "artsy": 0.97,
-              "progressive": 0.24,
-              "outdoors": 0.02,
-              "theatre": 0.88,
-              "live_music": 0.02,
-              "live_comedy": 0.98,
-              "farmer_market": 0.01,
-              "sporting": 0.02,
-              "recurring": 0.95,
-              "craft_fair_shopping": 0.01,
-              "religious": 0.01,
-              "large_venue": 0.03,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.02,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.02,
-              "dance": 0.02,
-              "sales_related": 0.63,
-              "children_activity": 0.03,
-              "running": 0.01,
-              "exercise": 0.01,
-              "employment_related": 0.01
-            },
-            "score": 97,
-            "rulesVersion": 2
-          },
-          "localityTier": "unknown",
-          "recommendation": {
-            "occurrenceId": "occ-77253682399c2156feaab9c1",
-            "score": 109,
-            "components": {
-              "taste": 97,
-              "practicality": 12,
-              "novelty": 0,
-              "quality": 0
-            },
-            "reasons": [
-              "distinctive +15",
-              "live comedy +12",
-              "Available on selected day +12"
-            ],
-            "unknowns": [
-              "Distance unknown",
-              "Status unconfirmed"
             ]
           }
         },
@@ -1055,6 +1067,115 @@
           }
         },
         {
+          "id": "occ-ded887c762f8ba31907d7f7e",
+          "title": "My Daddy is Haunted! - An Original Horror Comedy",
+          "summary": "Horror comedy performance at PLANET ANT THEATRE. Hammer Horror meets National Lampoons Vacation in the original horror comedy, My Daddy is Haunted! 164 years ago, Sterling Mandrake was accused of heresy and burned alive by a righteous nun. Since then, his castle lay dormant, perched upon a crumbling mountain. That is until the Maplesquatch family arrives for a vacation they’ll never forget! The fun soon turns to terror as something starts to happen to dear old dad. Is that creepy painting alive? What’s with all the bugs? Is their daddy haunted? Come find out for yourself. If you dare! Special Halloween show with costume karaoke after party!",
+          "url": "https://community.metrotimes.com/event/my-daddy-is-haunted-an-original-horror-comedy-42068466",
+          "start": "2026-10-10T20:00:00-04:00",
+          "venue": "PLANET ANT THEATRE",
+          "city": "Detroit",
+          "price": "$30 online/$35 door",
+          "registration": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted",
+          "category": "Performance",
+          "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
+          "imageAlt": "My Daddy is Haunted! - An Original Horror Comedy",
+          "status": "scheduled",
+          "occurrenceId": "occ-ded887c762f8ba31907d7f7e",
+          "canonicalUrl": "https://community.metrotimes.com/event/my-daddy-is-haunted-an-original-horror-comedy-42068466",
+          "venueId": "planet ant theatre|detroit",
+          "timePrecision": "time",
+          "aliases": [
+            "my-daddy-is-haunted-an-original-horror-c-event-2026-10-10",
+            "src-75e1297742f012b0f8987e70"
+          ],
+          "legacyOccurrenceKeys": [
+            "my-daddy-is-haunted-an-original-horror-c-event-2026-10-10|2026-10-10T20:00:00-04:00",
+            "src-75e1297742f012b0f8987e70|2026-10-10T20:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "my daddy is haunted! - an original horror comedy|planet ant theatre"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-75e1297742f012b0f8987e70",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/my-daddy-is-haunted-an-original-horror-comedy-42068466",
+              "observedAt": "2026-10-09T19:21:20-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "status": "src-75e1297742f012b0f8987e70",
+              "title": "src-75e1297742f012b0f8987e70",
+              "start": "src-75e1297742f012b0f8987e70",
+              "venue": "src-75e1297742f012b0f8987e70",
+              "registration": "src-75e1297742f012b0f8987e70",
+              "url": "src-75e1297742f012b0f8987e70",
+              "imageUrl": "src-75e1297742f012b0f8987e70"
+            },
+            "conflicts": {}
+          },
+          "score": 96,
+          "scoring": {
+            "signals": {
+              "funny": 0.95,
+              "distinctive": 0.79,
+              "eclectic": 0.86,
+              "technical_science": 0.04,
+              "artsy": 0.98,
+              "progressive": 0.17,
+              "outdoors": 0.02,
+              "theatre": 0.97,
+              "live_music": 0.03,
+              "live_comedy": 0.21,
+              "farmer_market": 0.01,
+              "sporting": 0.02,
+              "recurring": 0.06,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.02,
+              "large_venue": 0.03,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.02,
+              "sales_related": 0.71,
+              "children_activity": 0.1,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.01
+            },
+            "score": 96,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "recommendation": {
+            "occurrenceId": "occ-ded887c762f8ba31907d7f7e",
+            "score": 108,
+            "components": {
+              "taste": 96,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 0
+            },
+            "reasons": [
+              "distinctive +19",
+              "eclectic +14",
+              "Available on selected day +12"
+            ],
+            "unknowns": [
+              "Distance unknown",
+              "Status unconfirmed"
+            ]
+          }
+        },
+        {
           "id": "occ-bb8dfae75682a43917123582",
           "title": "Drag Becomes Her",
           "summary": "Local drag stars Alex Suarez, Perry Dox, and Virgil Ciel take over the Michigan Theater with mainstage performances before and after the camp-tastic Halloween classic, plus special surprises during the movie itself.",
@@ -1467,125 +1588,6 @@
               "distinctive +20",
               "eclectic +14",
               "Available on selected day +12"
-            ],
-            "unknowns": [
-              "Distance unknown",
-              "Status unconfirmed"
-            ]
-          }
-        },
-        {
-          "id": "occ-25d7ff707620ba57645bb988",
-          "title": "Packard Farmers Market",
-          "summary": "The Packard Farmers Market returns for the 2026 season at the historic Packard Proving Grounds, bringing together local farmers, artisans, bakers, makers, and small businesses in a one-of-a-kind setting where history and community meet. Formerly known as the Shelby Farmers Market, the newly rebranded Packard Farmers Market reflects its deep connection to the Packard Proving Grounds and its mission to support the preservation of this iconic historic site.",
-          "url": "https://community.metrotimes.com/event/packard-farmers-market-41215958",
-          "start": "2026-05-16T09:00:00-04:00",
-          "end": "2026-10-10T14:00:00-04:00",
-          "venue": "Packard Proving Grounds Historic Site",
-          "city": "Shelby charter Township",
-          "price": "Free",
-          "registration": "https://eventvesta.com/events/134625/t/tickets",
-          "category": "Food",
-          "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
-          "imageAlt": "Packard Farmers Market",
-          "status": "scheduled",
-          "occurrenceId": "occ-25d7ff707620ba57645bb988",
-          "canonicalUrl": "https://community.metrotimes.com/event/packard-farmers-market-41215958",
-          "venueId": "packard proving grounds historic site|shelby charter township",
-          "timePrecision": "time",
-          "aliases": [
-            "packard-farmers-market-event-2026-05-16",
-            "src-7da8a8d5f6cc035fa1923322"
-          ],
-          "legacyOccurrenceKeys": [
-            "packard-farmers-market-event-2026-05-16|2026-05-16T09:00:00-04:00",
-            "src-7da8a8d5f6cc035fa1923322|2026-05-16T09:00:00-04:00"
-          ],
-          "legacySeriesKeys": [
-            "packard farmers market|packard proving grounds historic site"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-7da8a8d5f6cc035fa1923322",
-              "sourceId": "metro-times",
-              "canonicalUrl": "https://community.metrotimes.com/event/packard-farmers-market-41215958",
-              "observedAt": "2026-10-09T17:12:32-04:00",
-              "sourceAuthority": "unknown",
-              "status": "scheduled"
-            },
-            {
-              "sourceRecordId": "src-1a63c08f352c4dce0e32179f",
-              "sourceId": "metro-times",
-              "canonicalUrl": "https://community.metrotimes.com/event/packard-farmers-market-41215958",
-              "observedAt": "2026-10-09T09:31:47-04:00",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "exact-title-time-venue",
-              "new-occurrence"
-            ],
-            "fields": {
-              "status": "src-7da8a8d5f6cc035fa1923322",
-              "title": "src-7da8a8d5f6cc035fa1923322",
-              "start": "src-7da8a8d5f6cc035fa1923322",
-              "end": "src-7da8a8d5f6cc035fa1923322",
-              "venue": "src-7da8a8d5f6cc035fa1923322",
-              "registration": "src-7da8a8d5f6cc035fa1923322",
-              "url": "src-7da8a8d5f6cc035fa1923322",
-              "imageUrl": "src-7da8a8d5f6cc035fa1923322"
-            },
-            "conflicts": {}
-          },
-          "score": 100,
-          "scoring": {
-            "signals": {
-              "funny": 0.08,
-              "distinctive": 0.82,
-              "eclectic": 0.45,
-              "technical_science": 0.12,
-              "artsy": 0.47,
-              "progressive": 0.25,
-              "outdoors": 0.71,
-              "theatre": 0.01,
-              "live_music": 0.02,
-              "live_comedy": 0.01,
-              "farmer_market": 0.84,
-              "sporting": 0.02,
-              "recurring": 0.79,
-              "craft_fair_shopping": 0.95,
-              "religious": 0.01,
-              "large_venue": 0.16,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.02,
-              "market_or_shop": 0.98,
-              "punk_metal_or_rock": 0.01,
-              "dance": 0.01,
-              "sales_related": 0.29,
-              "children_activity": 0.06,
-              "running": 0.01,
-              "exercise": 0.01,
-              "employment_related": 0.02
-            },
-            "score": 100,
-            "rulesVersion": 2
-          },
-          "localityTier": "unknown",
-          "recommendation": {
-            "occurrenceId": "occ-25d7ff707620ba57645bb988",
-            "score": 104,
-            "components": {
-              "taste": 100,
-              "practicality": 4,
-              "novelty": 0,
-              "quality": 0
-            },
-            "reasons": [
-              "farmer market +22",
-              "distinctive +20",
-              "Still running +4"
             ],
             "unknowns": [
               "Distance unknown",
