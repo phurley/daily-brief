@@ -1689,6 +1689,7 @@ async function init() {
   window.setInterval(() => {
     updateSky();
     renderStarship();
+    refreshScienceRotation();
     if (state.launchFetchedAt && !usableLaunchCache({ fetchedAt: state.launchFetchedAt, launches: state.launches }, true)) {
       state.launches = [];
       renderRocketLaunches();
@@ -1697,4 +1698,3 @@ async function init() {
 }
 
 init();
-    refreshScienceRotation();
