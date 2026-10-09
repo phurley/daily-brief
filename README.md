@@ -76,8 +76,8 @@ The `photos.json` document may contain zero to five photographs for a date.
 Multiple photographs become a slow, accessible crossfade carousel with only
 location and original date overlaid inside the image. Descriptions remain as
 image alt text for accessibility.
-`brief-preferences.json` is not displayed because it does not have a
-schema-backed public content contract.
+`brief-preferences.json` supplies public ranking defaults under
+`schemas/preferences.schema.json`; personal feedback stays in browser storage.
 
 `weather-appearance.mjs` maps weather codes to clear, partly cloudy, overcast,
 rain, snow, fog, and storm styling, with an independent wind layer. It uses
@@ -153,9 +153,20 @@ commits. See [Starship operations and recurring-task inventory](starship/README.
 for installation, tests, source limitations, evidence review, history evaluation
 and recovery. No paid launch-provider dependency is required.
 
+
 ## Science digest
 
 `data-collect/run_science.sh` independently refreshes science and source health
 hourly. Cards and editorial context share stable selection, publication dates,
 evidence labels and visible caveats. See [the science runbook](data-collect/SCIENCE.md)
 for source intervals, verification, diagnostics and the recurring-job inventory.
+
+
+## Household recommendations
+
+The brief selects up to seven varied best bets with “Why this?” explanations,
+browser-local feedback, favorites, hide, undo and reset. The complete calendar
+remains available. News has a separate freshness/locality/topic rubric. Widgets
+and editorial context share the public event selector. See [ranking and recurring
+operations](RANKING.md) for preferences, tests, saved-edition comparison, rollout
+limits and the hourly publication path.

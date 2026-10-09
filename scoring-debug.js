@@ -9,14 +9,17 @@ import {
   discoverSignals,
   mergeSignals,
   hasSignals,
-} from "./scoring.mjs?v=20260920-1";
+} from "./scoring.mjs?v=20261009-2";
 
+import { selectBestBets } from './ranking.mjs?v=20261009-2';
 const TIME_ZONE = "America/Detroit";
 const DEFAULT_BASE = 0.5;
 const DEFAULT_SCALE = 100;
 
 const state = {
   events: [],
+  preferences: {},
+  referenceTime: Date.now(),
   weights: null,
   defaults: null,
   order: [],
@@ -148,7 +151,7 @@ function breakdownTable(item) {
       el("span", { className: "bar__fill", style: `width:${(magnitude * 100).toFixed(0)}%` }),
     ]);
     body.append(el("tr", {}, [
-      el("td", {}, [el("span", { className: "sig-name", text: prettySignal(row.name) })]),
+      el("td", {}, [el("span", { className: "sig-name", text: prettySignal(row.name) + (row.appliedProbability !== row.probability ? ' (retail overlap adjusted)' : '') })]),
       el("td", {}, [el("span", { className: "p-viz" }, [bar, el("span", { text: `${pct}%` })])]),
       el("td", { text: `${row.polarity === "negative" ? "−" : "+"}${row.weight.toFixed(2)}` }),
       el("td", { className: row.delta < 0 ? "is-neg" : "is-pos", text: `${row.delta >= 0 ? "+" : "−"}${Math.abs(row.delta).toFixed(3)}` }),
@@ -197,15 +200,19 @@ function eventCard(item, index) {
       el("span", { className: "summary-top", text: item.has ? topContributors(item) : "" }),
     ]),
     breakdownTable(item),
-    el("pre", { text: item.event.identity ? JSON.stringify({
-      occurrenceId: item.event.occurrenceId, status: item.event.status,
-      ...item.event.identity, sources: item.event.sources,
-    }, null, 2) : "" }),
   );
   return el("article", { className: `score-event${multi ? " is-multi" : ""}`, dataset: { id: item.event.id } }, [head, details]);
 }
 
+function renderBestBets() {
+  const base = selectBestBets(state.events, { day: state.day, now: state.referenceTime, preferences: state.preferences, weights: state.defaults });
+  const tuned = selectBestBets(state.events, { day: state.day, now: state.referenceTime, preferences: state.preferences, weights: state.weights });
+  const titleList = rows => rows.map((r, i) => `${i + 1}. ${r.event.title} (${r.score})`).join(' · ') || 'No eligible events';
+  $('#shortlist-comparison').replaceChildren(el('p', { text: `Exported defaults: ${titleList(base)}` }), el('p', { text: `Preview weights: ${titleList(tuned)}` }));
+}
+
 function renderEvents() {
+  renderBestBets();
   const scrollTop = document.scrollingElement.scrollTop;
   const active = state.events.filter((event) => isActiveOn(event, state.day));
   const evaluated = sortEvaluated(active.map(evaluate));
@@ -267,6 +274,7 @@ function scheduleRender() {
 
 function copyWeights() {
   const payload = {
+    rulesVersion: state.weights.rulesVersion,
     base: state.weights.base,
     scale: state.weights.scale,
     signals: Object.fromEntries(state.order.map((name) => [name, { weight: state.weights.signals[name].weight, polarity: state.weights.signals[name].polarity }])),
@@ -287,6 +295,22 @@ function resetWeights() {
 }
 
 function bindControls() {
+  $('#save-button').addEventListener('click', () => {
+    try { localStorage.setItem('daily-brief:weights:v2', JSON.stringify(state.weights)); $('#status').textContent = 'Saved on this browser. Reload the brief to apply.'; }
+    catch { $('#status').textContent = 'Browser storage unavailable; weights were not saved.'; }
+  });
+  $('#clear-saved-button').addEventListener('click', () => {
+    try { localStorage.removeItem('daily-brief:weights:v2'); resetWeights(); $('#status').textContent = 'Saved weights cleared. Reload the brief to use defaults.'; }
+    catch { $('#status').textContent = 'Browser storage unavailable.'; }
+  });
+  $('#edition-file').addEventListener('change', async e => {
+    try {
+      const doc = JSON.parse(await e.target.files[0].text());
+      if (!Array.isArray(doc.events) || !doc.editionDate || !Number.isFinite(Date.parse(doc.generatedAt))) throw new Error('Choose a saved events.json document');
+      state.events = doc.events; state.day = doc.editionDate; state.referenceTime = Date.parse(doc.generatedAt);
+      $('#day-input').value = state.day; renderEvents(); $('#status').textContent = 'Saved edition loaded locally; no upload.';
+    } catch (error) { $('#status').textContent = error.message; }
+  });
   $("#day-input").addEventListener("change", (changeEvent) => {
     if (changeEvent.target.value) {
       state.day = changeEvent.target.value;
@@ -330,6 +354,7 @@ async function init() {
   const { signals, added } = mergeSignals(baseConfig, discovered);
   state.added = added;
   state.weights = {
+    rulesVersion: baseConfig.rulesVersion || 1,
     base: Number.isFinite(baseConfig.base) ? baseConfig.base : DEFAULT_BASE,
     scale: Number.isFinite(baseConfig.scale) ? baseConfig.scale : DEFAULT_SCALE,
     signals,
@@ -337,6 +362,8 @@ async function init() {
   state.defaults = structuredClone(state.weights);
   state.order = Object.keys(signals);
 
+  state.preferences = await fetchJson('brief-preferences.json').catch(() => ({}));
+  state.referenceTime = Date.parse(eventsDoc?.generatedAt) || Date.now();
   state.day = eventsDoc?.editionDate || todayKey();
   $("#day-input").value = state.day;
   state.sort = $("#sort-select").value;

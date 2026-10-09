@@ -302,16 +302,6 @@ article crawls from feed links, body-sniff feed detection) are in
 [`CRAWLER-RECOMMENDATIONS.md`](CRAWLER-RECOMMENDATIONS.md) — all implemented —
 and the remaining funnel-side backlog is in
 [`FUNNEL-RECOMMENDATIONS.md`](FUNNEL-RECOMMENDATIONS.md).
-
-## Event identity rollout
-
-The hourly collector now computes persistent occurrence identity and a private merge audit.
-The checked-in and installed collector launchd definitions explicitly use
-`EVENT_IDENTITY_MODE=shadow` and `EVENT_IDENTITY_FUZZY=0`. No separate identity timer
-is required: publication runs after extraction in `run_collect.sh`. See
-[IDENTITY.md](IDENTITY.md) for preview, validation, archive, migration and rollback
-commands. Reload the collector LaunchAgent after changing its environment.
-
 ### Independent Starship collection
 
 Starship evidence is collected by `../starship/run.sh` at :25 hourly via
@@ -323,9 +313,28 @@ remain unchanged. All local recurring Git publishers share
 `../scripts/git-publish-lock.sh`; the collector releases the publication lock
 before running the editorial chain. See `../starship/README.md` for operations.
 
+
 ## Independent science publication
 
 `run_science.sh` has its own hourly launchd timer and `science-sources.json` catalog.
 It atomically publishes validated `geeknews.json`, with separate source health.
 It bypasses the local-event gate. See [SCIENCE.md](SCIENCE.md) for source intervals,
 evidence verification, diagnostics, selection and installation.
+
+## Event identity rollout
+
+The hourly collector now computes persistent occurrence identity and a private merge audit.
+The checked-in and installed collector launchd definitions explicitly use
+`EVENT_IDENTITY_MODE=shadow` and `EVENT_IDENTITY_FUZZY=0`. No separate identity timer
+is required: publication runs after extraction in `run_collect.sh`. See
+[IDENTITY.md](IDENTITY.md) for preview, validation, archive, migration and rollback
+commands. Reload the collector LaunchAgent after changing its environment.
+
+
+### Household ranking output
+
+After events/news publish, `run_collect.sh` runs `scripts/select-best-bets.mjs`
+and publishes `recommendations.json` with the same data commit. Existing signals
+are rescored on publish; no extra model call or timer is required. The installed
+hourly collector already points to this script. See [ranking operations](../RANKING.md)
+for configuration, offline replay and widget/editorial consistency.

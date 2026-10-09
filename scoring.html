@@ -8,8 +8,8 @@
     <title>Scoring debug — Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="theme.css?v=20260920-7">
-    <link rel="stylesheet" href="scoring-debug.css?v=20260920-2">
-    <script type="module" src="scoring-debug.js?v=20260920-2"></script>
+    <link rel="stylesheet" href="scoring-debug.css?v=20261009-2">
+    <script type="module" src="scoring-debug.js?v=20261009-2"></script>
   </head>
   <body class="scoring-body">
     <header class="scoring-header">
@@ -41,6 +41,9 @@
       <label>Base <input type="number" id="base-input" step="0.01" min="0" max="1"></label>
       <button id="reset-button" type="button">Reset weights</button>
       <button id="copy-button" type="button">Copy weights JSON</button>
+      <button id="save-button" type="button">Save weights on this browser</button>
+      <button id="clear-saved-button" type="button">Clear saved weights</button>
+      <label>Compare saved edition <input id="edition-file" type="file" accept=".json,application/json"></label>
       <span id="status" class="scoring-status" role="status" aria-live="polite"></span>
     </section>
 
@@ -54,6 +57,7 @@
       </aside>
 
       <main class="scoring-main">
+        <details><summary>Best bets: defaults versus preview</summary><div id="shortlist-comparison"></div></details>
         <div id="summary" class="scoring-summary" role="status" aria-live="polite"></div>
         <div id="event-list" class="scoring-events"></div>
       </main>

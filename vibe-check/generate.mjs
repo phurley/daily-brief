@@ -27,6 +27,8 @@ import { fileURLToPath } from "node:url";
 
 import { scienceContext, scienceEditorial } from "../science.mjs";
 import { computeAlmanacDay } from "../almanac-calc.mjs";
+import { orderRankedNews } from '../news-ranking.mjs';
+import { selectBestBets, localDay } from '../ranking.mjs';
 import { getOnThisDate } from "../on-this-date.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -202,24 +204,20 @@ function buildContext(dateKey) {
       location: item.location || undefined,
     }));
 
-  const eventFor = (key) =>
-    (events.events || [])
-      .filter(isEventRecommended)
-      .filter((event) => datePart(event.start) === key)
-      .sort((a, b) => (b.score || 0) - (a.score || 0) || (a.distanceMiles ?? 99) - (b.distanceMiles ?? 99))
-      .slice(0, 10)
-      .map((event) => ({
-        title: event.title,
-        time: event.start,
-        venue: event.venue,
-        city: event.city,
-        price: event.price,
-        distanceMiles: event.distanceMiles,
-        category: event.category,
-        summary: truncate(event.summary),
-      }));
+  const preferences = readJson(path.join(ROOT, 'brief-preferences.json'), {});
+  const weights = readRequiredJson(path.join(ROOT, 'scoring-weights.json'));
+  const bestBets = selectBestBets(events.events || [], { day: dateKey, now: Date.now(), preferences, weights });
+  const eventFor = (upcoming) => bestBets
+    .filter(({ event }) => isEventRecommended(event))
+    .filter(({ event }) => upcoming ? localDay(event.start) > dateKey : localDay(event.start) <= dateKey)
+    .map(({ event, occurrenceId, reasons }) => ({
+      id: event.id, occurrenceId, title: event.title, time: event.start,
+      venue: event.venue, city: event.city, price: event.price,
+      distanceMiles: event.distanceMiles, category: event.category,
+      summary: truncate(event.summary), reasons,
+    }));
 
-  const stories = (news.stories || []).slice(0, 6).map((story) => ({
+  const stories = orderRankedNews(news.stories || [], { now: Date.now(), preferences }).slice(0, 6).map((story) => ({
     title: story.title,
     source: story.source?.name,
     summary: truncate(story.summary),
@@ -253,8 +251,8 @@ function buildContext(dateKey) {
         }
       : null,
     calendar: calendarItems,
-    eventsToday: eventFor(dateKey),
-    eventsTomorrow: eventFor(tomorrow),
+    eventsToday: eventFor(false),
+    eventsUpcoming: eventFor(true),
     news: stories,
     geeknews: { starship, ...science },
   };
@@ -432,11 +430,11 @@ async function main() {
   const messages = buildMessages(context);
   const { data, usage } = await callModel(messages, apiKey, model);
   const generated = validateGenerated(data.messages);
+  // Enforce the freshness contract even if the model ignores its instructions.
+  generated.set("starship/note", { text: context.geeknews.starship.summary });
   const scienceCopy = scienceEditorial(context.geeknews);
   generated.set("science-technology/section-heading", { text: scienceCopy.heading });
   generated.set("science-technology/summary", { text: scienceCopy.summary });
-  // Enforce the freshness contract even if the model ignores its instructions.
-  generated.set("starship/note", { text: context.geeknews.starship.summary });
 
   const eyebrowMessage = { id: idFor(dateKey, "masthead", "eyebrow"), date: dateKey, section: "masthead", role: "eyebrow", text: eyebrow(dateKey, FALLBACK_LOCATION), order: -1 };
   const fresh = [eyebrowMessage, ...buildMessagesFile(dateKey, generated)].map(item => item.section === "science-technology" ? { ...item, sourceItemIds: context.geeknews.selectedIds } : item);

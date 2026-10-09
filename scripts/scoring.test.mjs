@@ -35,7 +35,7 @@ test("contributions are signed and ordered by magnitude", () => {
   const distinctive = rows.find((row) => row.name === "distinctive");
   const recurring = rows.find((row) => row.name === "recurring");
   assert.equal(distinctive.delta, 0.24);
-  assert.equal(recurring.delta, -0.15);
+  assert.equal(Math.abs(recurring.delta), 0);
   assert.ok(rows.indexOf(distinctive) < rows.indexOf(recurring));
 });
 
@@ -50,4 +50,13 @@ test("new signals are discovered and added at zero weight", () => {
 
 test("raw value reflects the weighted sum before clamping", () => {
   assert.equal(computeRaw({ distinctive: 1 }, weights), 0.74);
+});
+
+test("produce markets avoid retail overlap and recurrence is not dislike", () => {
+  assert.equal(computeScore({ farmer_market: 1, market_or_shop: 1, craft_fair_shopping: 1, sales_related: 1, recurring: 1 }, weights), 76);
+  assert.equal(computeScore({ craft_fair_shopping: 1, market_or_shop: 1 }, weights), 30);
+  assert.equal(computeScore({ live_music: 1, recurring: 1 }, weights), 62);
+  assert.equal(computeScore({ sales_related: 1 }, weights), 26);
+  const legacy = JSON.parse(readFileSync(new URL('../scoring-weights-legacy.json', import.meta.url)));
+  assert.equal(computeScore({ live_music: 1, recurring: 1 }, legacy), 32);
 });

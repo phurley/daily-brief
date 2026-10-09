@@ -38,6 +38,11 @@
         "category": { "type": "string", "minLength": 1 },
         "summary": { "type": "string", "minLength": 1 },
         "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "status": {"type": "string", "enum": ["scheduled", "confirmed", "cancelled", "canceled", "postponed", "unknown", "completed"]},
+        "occurrenceId": {"type": "string", "minLength": 1},
+        "seriesId": {"type": "string", "minLength": 1},
+        "sourceUpdatedAt": {"type": "string", "format": "date-time"},
+        "localityTier": {"type": "string", "enum": ["nearby", "regional", "distant", "unknown"]},
         "distanceMiles": { "type": "number", "minimum": 0 },
         "deadline": { "type": "string", "minLength": 1 }
       }

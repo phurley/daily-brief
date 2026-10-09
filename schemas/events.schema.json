@@ -5,91 +5,344 @@
   "description": "Scored events for the Daily Brief. Bucketing (today/upcoming/past) is left to the consumer from editionDate.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "generatedAt", "editionDate", "events"],
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "editionDate",
+    "events"
+  ],
   "properties": {
-    "schemaVersion": { "const": "2.0.0" },
-    "generatedAt": { "type": "string", "format": "date-time" },
-    "editionDate": { "type": "string", "format": "date" },
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "editionDate": {
+      "type": "string",
+      "format": "date"
+    },
     "events": {
       "type": "array",
       "description": "All scored events; no maximum.",
-      "items": { "$ref": "#/$defs/event" }
+      "items": {
+        "$ref": "#/$defs/event"
+      }
     }
   },
   "$defs": {
     "event": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "title", "url", "start", "venue", "city", "category", "summary"],
+      "required": [
+        "id",
+        "title",
+        "url",
+        "start",
+        "venue",
+        "city",
+        "category",
+        "summary"
+      ],
       "properties": {
-        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
-        "title": { "type": "string", "minLength": 1 },
-        "url": { "type": "string", "format": "uri" },
-        "imageUrl": { "type": "string", "format": "uri" },
-        "imageAlt": { "type": "string", "minLength": 1 },
-        "start": { "type": "string", "format": "date-time", "description": "Verified absolute start date and time with timezone offset. Do not supply dateLabel or relative timing text such as today, tonight, tomorrow, or yesterday; the browser generates it." },
-        "end": { "type": "string", "format": "date-time", "description": "Verified absolute closing date and time with timezone offset. Omit when unknown; never invent a closing time." },
-        "venue": { "type": "string", "minLength": 1 },
-        "city": { "type": "string", "minLength": 1 },
-        "region": { "type": "string", "minLength": 1 },
-        "price": { "type": "string", "minLength": 1 },
-        "ageRestriction": { "type": "string", "minLength": 1 },
-        "registration": { "type": "string", "minLength": 1 },
-        "category": { "type": "string", "minLength": 1 },
-        "summary": { "type": "string", "minLength": 1 },
-        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
-        "scoring": { "$ref": "#/$defs/scoring" },
-        "distanceMiles": { "type": "number", "minimum": 0 },
-        "deadline": { "type": "string", "minLength": 1 },
-        "occurrenceId": {"type": "string"},
-        "canonicalUrl": {"type": "string"},
-        "venueId": {"type": "string"},
-        "timePrecision": {"enum": ["time", "date", "unknown"]},
-        "status": {"enum": ["scheduled", "canceled", "postponed", "rescheduled"]},
-        "aliases": {"type": "array", "items": {"type": "string"}},
-        "sources": {"type": "array", "items": {"type": "object"}},
-        "identity": {"type": "object"}
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "imageUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "imageAlt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Verified absolute start date and time with timezone offset. Do not supply dateLabel or relative timing text such as today, tonight, tomorrow, or yesterday; the browser generates it."
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Verified absolute closing date and time with timezone offset. Omit when unknown; never invent a closing time."
+        },
+        "venue": {
+          "type": "string",
+          "minLength": 1
+        },
+        "city": {
+          "type": "string",
+          "minLength": 1
+        },
+        "region": {
+          "type": "string",
+          "minLength": 1
+        },
+        "price": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ageRestriction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "registration": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "scoring": {
+          "$ref": "#/$defs/scoring"
+        },
+        "status": {
+          "enum": [
+            "scheduled",
+            "confirmed",
+            "cancelled",
+            "canceled",
+            "postponed",
+            "rescheduled",
+            "unknown",
+            "completed"
+          ]
+        },
+        "occurrenceId": {
+          "type": "string"
+        },
+        "seriesId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceUpdatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "localityTier": {
+          "type": "string",
+          "enum": [
+            "nearby",
+            "regional",
+            "distant",
+            "unknown"
+          ]
+        },
+        "distanceMiles": {
+          "type": "number",
+          "minimum": 0
+        },
+        "deadline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonicalUrl": {
+          "type": "string"
+        },
+        "venueId": {
+          "type": "string"
+        },
+        "timePrecision": {
+          "enum": [
+            "time",
+            "date",
+            "unknown"
+          ]
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "identity": {
+          "type": "object"
+        }
       }
     },
     "scoring": {
       "type": "object",
-      "description": "Diagnostic breakdown behind the event-fit score, kept for tuning the weights in extract/scoring.py. Not surfaced in the UI.",
+      "description": "Diagnostic breakdown behind the event-fit score, kept for tuning the weights in extract/scoring.py. Used for inspectable ranking; the rating is not a probability.",
       "additionalProperties": false,
-      "required": ["signals"],
+      "required": [
+        "signals"
+      ],
       "properties": {
-        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "rulesVersion": {
+          "type": "integer",
+          "minimum": 1
+        },
         "signals": {
           "type": "object",
           "description": "Per-question Jev Noul P(yes), 0-1, keyed by question name. Positive: funny, distinctive, eclectic, technical_science, artsy, progressive, outdoors, theatre, live_music, live_comedy, farmer_market. Negative: sporting, recurring, craft_fair_shopping, religious, large_venue, substance_recovery, popular_music_cover_band, market_or_shop, punk_metal_or_rock, dance, sales_related, children_activity, running, exercise, employment_related.",
           "properties": {
-            "funny": { "type": "number", "minimum": 0, "maximum": 1 },
-            "distinctive": { "type": "number", "minimum": 0, "maximum": 1 },
-            "eclectic": { "type": "number", "minimum": 0, "maximum": 1 },
-            "technical_science": { "type": "number", "minimum": 0, "maximum": 1 },
-            "artsy": { "type": "number", "minimum": 0, "maximum": 1 },
-            "progressive": { "type": "number", "minimum": 0, "maximum": 1 },
-            "outdoors": { "type": "number", "minimum": 0, "maximum": 1 },
-            "theatre": { "type": "number", "minimum": 0, "maximum": 1 },
-            "live_music": { "type": "number", "minimum": 0, "maximum": 1 },
-            "live_comedy": { "type": "number", "minimum": 0, "maximum": 1 },
-            "farmer_market": { "type": "number", "minimum": 0, "maximum": 1 },
-            "sporting": { "type": "number", "minimum": 0, "maximum": 1 },
-            "recurring": { "type": "number", "minimum": 0, "maximum": 1 },
-            "craft_fair_shopping": { "type": "number", "minimum": 0, "maximum": 1 },
-            "religious": { "type": "number", "minimum": 0, "maximum": 1 },
-            "large_venue": { "type": "number", "minimum": 0, "maximum": 1 },
-            "substance_recovery": { "type": "number", "minimum": 0, "maximum": 1 },
-            "popular_music_cover_band": { "type": "number", "minimum": 0, "maximum": 1 },
-            "market_or_shop": { "type": "number", "minimum": 0, "maximum": 1 },
-            "punk_metal_or_rock": { "type": "number", "minimum": 0, "maximum": 1 },
-            "dance": { "type": "number", "minimum": 0, "maximum": 1 },
-            "sales_related": { "type": "number", "minimum": 0, "maximum": 1 },
-            "children_activity": { "type": "number", "minimum": 0, "maximum": 1 },
-            "running": { "type": "number", "minimum": 0, "maximum": 1 },
-            "exercise": { "type": "number", "minimum": 0, "maximum": 1 },
-            "employment_related": { "type": "number", "minimum": 0, "maximum": 1 }
+            "funny": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "distinctive": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "eclectic": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "technical_science": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "artsy": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "progressive": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "outdoors": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "theatre": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "live_music": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "live_comedy": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "farmer_market": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "sporting": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "recurring": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "craft_fair_shopping": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "religious": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "large_venue": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "substance_recovery": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "popular_music_cover_band": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "market_or_shop": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "punk_metal_or_rock": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "dance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "sales_related": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "children_activity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "running": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "exercise": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "employment_related": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
           },
-          "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
         }
       }
     }

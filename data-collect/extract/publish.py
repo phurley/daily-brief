@@ -16,12 +16,13 @@ import argparse
 import json
 import os
 import re
+import math
 from datetime import datetime, time, timedelta, timezone
 from functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional
 
-from . import dates, identity, jev
+from . import dates, identity, jev, scoring as event_scoring
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent.parent
@@ -114,7 +115,7 @@ def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None,
     event["id"] = _valid_id(record.get("id"))
     for key in ("title", "summary", "url", "start", "end", "venue", "city", "region",
                 "price", "ageRestriction", "registration", "category",
-                "imageUrl", "imageAlt", "deadline"):
+                "imageUrl", "imageAlt", "deadline", "status", "occurrenceId", "seriesId", "sourceUpdatedAt", "localityTier"):
         value = _clean(record.get(key))
         if value:
             event[key] = value
@@ -126,6 +127,21 @@ def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None,
     scoring = _scoring(record)
     if scoring:
         event["scoring"] = scoring
+    distance = record.get("distanceMiles")
+    if isinstance(distance, (int, float)) and not isinstance(distance, bool) and math.isfinite(distance) and distance >= 0:
+        event["distanceMiles"] = distance
+    if scoring:
+        score = event_scoring.score_probabilities(scoring["signals"])
+        event["score"] = scoring["score"] = score
+        scoring["rulesVersion"] = event_scoring.RULES_VERSION
+    if "localityTier" not in event:
+        city = str(event.get("city", "")).lower()
+        if city in ("canton", "plymouth"):
+            event["localityTier"] = "nearby"
+        elif city in ("ann arbor", "ypsilanti", "detroit", "livonia", "dearborn", "northville", "novi", "westland"):
+            event["localityTier"] = "regional"
+        else:
+            event["localityTier"] = "unknown"
     if event.get("imageUrl"):
         event.setdefault("imageAlt", event.get("title"))
     else:
@@ -166,6 +182,12 @@ def to_story(record: dict[str, Any]) -> Optional[dict[str, Any]]:
     story["addedAt"] = _clean(record.get("addedAt")) or datetime.now(dates.EASTERN).isoformat(timespec="seconds")
     if isinstance(record.get("localityIndex"), int):
         story["localityIndex"] = record["localityIndex"]
+    if isinstance(record.get("urgentLocal"), bool):
+        story["urgentLocal"] = record["urgentLocal"]
+    if record.get("evidenceQuality") in ("primary", "reported", "opinion", "unknown"):
+        story["evidenceQuality"] = record["evidenceQuality"]
+    if isinstance(record.get("entities"), list):
+        story["entities"] = [e for e in record["entities"] if isinstance(e, str) and e.strip()]
     story["locations"] = _clean(record.get("locations") or [])
     topics = _clean(record.get("topics") or [])
     story["topics"] = topics or ["local"]

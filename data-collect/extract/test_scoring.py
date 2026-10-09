@@ -12,6 +12,12 @@ from . import scoring
 
 
 class ScoringBreakdownTest(unittest.TestCase):
+    def test_overlap_and_recurring_examples(self):
+        self.assertEqual(scoring.score_probabilities(dict(farmer_market=1, market_or_shop=1, craft_fair_shopping=1, sales_related=1, recurring=1)), 76)
+        self.assertEqual(scoring.score_probabilities(dict(craft_fair_shopping=1, market_or_shop=1)), 30)
+        self.assertEqual(scoring.score_probabilities(dict(live_music=1, recurring=1)), 62)
+        self.assertEqual(scoring.score_probabilities(dict(sales_related=1)), 26)
+
     def test_signal_probabilities(self):
         raw = {
             "distinctive": {"value": True, "confidence": 0.9, "probability": 0.81234},

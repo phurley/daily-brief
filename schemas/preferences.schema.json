@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Daily Brief public ranking defaults; keep personal feedback in browser storage",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "profileId",
+    "updatedAt",
+    "topicAffinities",
+    "venueAffinities",
+    "newsTopicAffinities",
+    "favorites",
+    "hiddenOccurrences",
+    "overrides",
+    "constraints",
+    "ranking"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "profileId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "topicAffinities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": -40,
+        "maximum": 40
+      }
+    },
+    "venueAffinities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": -40,
+        "maximum": 40
+      }
+    },
+    "newsTopicAffinities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": -40,
+        "maximum": 40
+      }
+    },
+    "overrides": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": -40,
+        "maximum": 40
+      }
+    },
+    "favorites": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "hiddenOccurrences": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxDistanceMiles": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "selectedDayOnly": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ranking": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "maxPerVenue": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "maxPerCategory": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "maxPerSeries": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "minScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "horizonDays": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 90
+        }
+      }
+    }
+  }
+}

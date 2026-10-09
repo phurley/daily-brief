@@ -17,11 +17,20 @@ export function signalConfig(config) {
   return config && typeof config === "object" && config.signals ? config.signals : {};
 }
 
+export function effectiveProbability(name, signals, config) {
+  let p = Number(signals?.[name] ?? 0);
+  if (config?.rulesVersion >= 2) {
+    if (["market_or_shop", "craft_fair_shopping", "sales_related"].includes(name)) p *= 1 - Number(signals?.farmer_market ?? 0);
+    if (name === "market_or_shop") p *= 1 - Number(signals?.craft_fair_shopping ?? 0);
+  }
+  return p;
+}
+
 export function computeRaw(signals, config) {
   const base = Number.isFinite(config?.base) ? config.base : DEFAULT_BASE;
   let raw = base;
   for (const [name, spec] of Object.entries(signalConfig(config))) {
-    const probability = Number(signals?.[name] ?? 0);
+    const probability = effectiveProbability(name, signals, config);
     const weight = Number(spec?.weight ?? 0);
     if (!Number.isFinite(probability) || !Number.isFinite(weight)) continue;
     raw += (spec?.polarity === "negative" ? -1 : 1) * weight * probability;
@@ -40,10 +49,11 @@ export function contributions(signals, config) {
   return Object.entries(signalConfig(config))
     .map(([name, spec]) => {
       const probability = Number(signals?.[name] ?? 0);
+      const appliedProbability = effectiveProbability(name, signals, config);
       const weight = Number(spec?.weight ?? 0);
       const polarity = spec?.polarity === "negative" ? "negative" : "positive";
-      const delta = (polarity === "negative" ? -1 : 1) * weight * probability;
-      return { name, probability, weight, polarity, delta };
+      const delta = (polarity === "negative" ? -1 : 1) * weight * appliedProbability;
+      return { name, probability, appliedProbability, weight, polarity, delta };
     })
     .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta) || a.name.localeCompare(b.name));
 }

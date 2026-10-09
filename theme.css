@@ -463,13 +463,22 @@ footer { color: #dce8e4; background: #14282b; }
 .starship-status details { border-top: 1px solid var(--line); padding-top: .6rem; margin-top: .8rem; overflow-wrap: anywhere; }
 .starship-status summary { cursor: pointer; color: var(--accent-dark); }
 .starship-status details p { font-size: .85rem; color: var(--muted); }
-
 /* Science limitations remain visible; long archive is explicitly expandable. */
 .story__caveat { border-left: 2px solid currentColor; padding-left: .65rem; }
 .science-archive > summary { cursor: pointer; font-weight: 600; }
 .science-archive .story { margin-top: 1rem; }
 .story a + a { margin-left: .7rem; }
 /* Best bets and private household feedback */
+.recommendation-controls, .event-feedback, .recommendation-settings { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.recommendation-controls { margin: 1rem 0; }
+.recommendation-controls > details, .recommendation-controls > p { flex-basis: 100%; }
+.recommendation-controls button, .event-feedback button, .recommendation-settings input { font: inherit; padding: .45rem .7rem; border: 1px solid currentColor; border-radius: .4rem; background: transparent; color: inherit; }
+.recommendation-settings label { display: flex; gap: .4rem; align-items: center; }
+.recommendation-settings input[type=number] { width: 6rem; }
+.recommendation-details { margin-top: .8rem; font-size: .85rem; }
+.recommendation-details summary { cursor: pointer; }
+.recommendation-details p { margin: .6rem 0; }
+.event-feedback button { cursor: pointer; }
 
 /* Science evidence qualifiers must never be clipped by the generic story clamp. */
 #geek-list .story > div > p { display: block; overflow: visible; -webkit-line-clamp: unset; }

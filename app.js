@@ -4,7 +4,16 @@ import { computeAlmanacDay } from "./almanac-calc.mjs?v=20260920-1";
 import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
 import { eventDateLabel } from "./event-time.mjs?v=20260908-1";
 import { orderNewsStories } from "./story-order.mjs?v=20261009-1";
+
 import { selectScienceDigest, scienceFreshness, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261009-1";
+
+import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
+import { selectBestBets, rankEvent, eventStatus } from './ranking.mjs?v=20261009-2';
+import { preferenceStore, feedback, seriesKey } from './preferences.mjs?v=20261009-2';
+let preferences;
+let rankingWeights;
+let showAllEvents = false;
+let feedbackNotice = '';
 
 const TIME_ZONE = "America/Detroit";
 const REFRESH_MS = 15 * 60 * 1000;
@@ -542,7 +551,7 @@ function shiftMonth(monthKey, delta) {
 }
 
 function eventsOnDay(key, events = uniqueEvents(), comparator = compareEventsForDisplay) {
-  return events.filter((event) => eventIsActiveOn(event, key)).sort(comparator);
+  return events.filter((event) => eventStartDate(event) <= key && eventEndDate(event) >= key).sort(comparator);
 }
 
 function agendaEntry(event, key, { withDate = false } = {}) {
@@ -575,8 +584,8 @@ function renderEventCalendarAgenda(events) {
   $("#calendar-agenda-title").textContent = displayDate(selected, { year: true });
 
   // The calendar is the complete view: every event active that day, sorted by
-  // rating so the list doubles as a surface for tuning the score.
-  const dayEvents = eventsOnDay(selected, events, compareEventsByRating);
+  // start time; preference ranking only affects best bets.
+  const dayEvents = eventsOnDay(selected, events, compareEventsForDisplay);
   state.calendarEntries = dayEvents.map((event) => ({ event, key: selected }));
   if (!state.calendarEntries.some((entry) => entry.event.id === state.calendarEventId)) {
     state.calendarEventId = state.calendarEntries[0]?.event.id || "";
@@ -822,14 +831,65 @@ function relativeDayWord(key) {
   return key < state.today ? "Yesterday" : "Tomorrow";
 }
 
-function eventCard(event) {
+function feedbackControls(event) {
+  const controls = node('div', { className: 'event-feedback', 'aria-label': `Feedback for ${event.title}` });
+  for (const [action, label] of [['more', 'More like this'], ['less', 'Less like this'], ['hide', 'Hide this occurrence'], ['favorite', preferences.get().favorites.includes(seriesKey(event)) ? 'Unfavorite' : 'Favorite']]) {
+    const button = node('button', { type: 'button', text: label });
+    button.addEventListener('click', () => {
+      const persisted = preferences.set(feedback(preferences.get(), event, action));
+      feedbackNotice = persisted ? 'Feedback saved on this browser. Undo is available.' : 'Feedback applied for this session; browser storage is unavailable.';
+      renderEvents();
+      $('#recommendation-status').focus({ preventScroll: true });
+    });
+    controls.append(button);
+  }
+  return controls;
+}
+
+function recommendationDetails(event, ranking) {
+  const details = node('details', { className: 'recommendation-details' });
+  details.append(node('summary', { text: 'Why this?' }));
+  const row = ranking || rankEvent(event, { day: state.selectedDate, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
+  details.append(node('p', { text: row.ineligible ? `Not in best bets: ${row.ineligible}` : row.reasons.join(' · ') || 'Neutral fit; no recorded preferences.' }));
+  details.append(node('p', { text: `Taste ${row.components.taste} · Practicality ${row.components.practicality} · Novelty ${row.components.novelty} · Data quality ${row.components.quality}. Ranking points, not a probability.` }));
+  if (row.unknowns.length) details.append(node('p', { text: row.unknowns.join(' · ') }));
+  details.append(feedbackControls(event));
+  return details;
+}
+
+function renderPreferenceControls() {
+  let panel = $('#recommendation-controls');
+  if (!panel) {
+    panel = node('div', { id: 'recommendation-controls', className: 'recommendation-controls' });
+    $('#today-lane').before(panel);
+  }
+  const button = (label, action) => { const b = node('button', { type: 'button', text: label }); b.addEventListener('click', action); return b; };
+  const toggle = button(showAllEvents ? 'Show best bets' : 'Show all events', () => { showAllEvents = !showAllEvents; renderEvents(); });
+  toggle.setAttribute('aria-pressed', String(showAllEvents));
+  const undo = button('Undo feedback', () => { const saved = preferences.undo(); feedbackNotice = saved ? 'Last preference change undone.' : 'Undone for this session; browser storage is unavailable.'; renderEvents(); });
+  undo.disabled = !preferences.canUndo();
+  const settings = node('details');
+  settings.append(node('summary', { text: 'Recommendation preferences' }), node('p', { text: 'Household profile on this browser. More/less adjusts this event category; favorites apply to its series. Feedback stays on this device.' }));
+  const form = node('form', { className: 'recommendation-settings' });
+  const p = preferences.get();
+  const count = node('input', { type: 'number', min: 1, max: 20, value: p.ranking.limit, required: '' });
+  const distance = node('input', { type: 'number', min: 0, step: 'any', value: p.constraints.maxDistanceMiles ?? '', placeholder: 'No limit' });
+  const exact = node('input', { type: 'checkbox' }); exact.checked = p.constraints.selectedDayOnly;
+  form.append(node('label', {}, ['Best bets: ', count].map(x => typeof x === 'string' ? document.createTextNode(x) : x)), node('label', {}, [document.createTextNode('Maximum miles (unknown distances excluded when set): '), distance]), node('label', {}, [exact, document.createTextNode('Selected day only')]), node('button', { type: 'submit', text: 'Save preferences' }));
+  form.addEventListener('submit', e => { e.preventDefault(); const next = preferences.get(); next.ranking.limit = Number(count.value); next.constraints.maxDistanceMiles = distance.value === '' ? null : Number(distance.value); next.constraints.selectedDayOnly = exact.checked; const saved = preferences.set(next); feedbackNotice = saved ? 'Preferences saved on this browser.' : 'Applied for this session; browser storage is unavailable.'; renderEvents(); });
+  settings.append(form, node('p', { text: `${p.hiddenOccurrences.length} hidden occurrences · ${p.favorites.length} favorites · Category adjustments: ${Object.entries(p.topicAffinities).map(([name, value]) => `${name} ${value > 0 ? '+' : ''}${value}`).join(', ') || 'none'}` }), button('Reset preferences and feedback', () => { const saved = preferences.reset(); feedbackNotice = saved ? 'Preferences reset. Undo is available.' : 'Reset for this session; browser storage is unavailable.'; renderEvents(); }));
+  panel.replaceChildren(toggle, button('Open full calendar', openEventCalendar), undo, settings, node('p', { id: 'recommendation-status', role: 'status', tabindex: '-1', text: feedbackNotice }));
+}
+
+function eventCard(event, ranking) {
   const title = node("h3");
   title.append(safeLink(eventDisplayTitle(event), event.url));
   return node("article", { className: "card" }, [
     node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
     title,
     node("p", { text: event.summary }),
-    node("p", { className: "card__footer", text: [event.venue, event.city, event.price, event.distanceMiles != null ? `${event.distanceMiles} mi` : ""].filter(Boolean).join(" · ") }),
+    node("p", { className: "card__footer", text: [event.venue, event.city, event.price || 'Price unknown', event.distanceMiles != null ? `${event.distanceMiles} mi` : 'Distance unknown', eventStatus(event) === 'cancelled' ? 'CANCELED' : ''].filter(Boolean).join(" · ") }),
+    recommendationDetails(event, ranking),
   ]);
 }
 
@@ -851,34 +911,23 @@ function claimCard(event) {
 // then multi-day windows still running past it, then everything starting later.
 function renderEvents() {
   hideEventPreview();
-  const allEvents = uniqueEvents().filter(isEventRecommended);
+  const allEvents = uniqueEvents();
   const selected = state.selectedDate;
-  const active = allEvents.filter((event) => eventIsActiveOn(event, selected));
-  const stillRunning = (event) => eventSpansDays(event) && eventEndDate(event) > selected;
-  // Brief lanes are rating-first (best bets lead); the calendar keeps its own
-  // date grid for the day-by-day view.
-  const todayEvents = active.filter((event) => !stillRunning(event)).sort(compareEventsByRating);
-  const ongoingEvents = active.filter(stillRunning).sort(compareEventsByRating);
-
-  replaceChildren("#events-list", todayEvents.length ? todayEvents.map(eventCard) : [emptyState()]);
-  $("#today-lane-title").textContent = `${relativeDayWord(selected)} only`;
-
-  const ongoingLane = $("#ongoing-lane");
-  ongoingLane.hidden = ongoingEvents.length === 0;
-  replaceChildren("#ongoing-list", ongoingEvents.map(claimCard));
-
-  const horizon = shiftDate(selected, 30);
-  const future = allEvents
-    .filter((event) => eventStartDate(event) > selected && eventStartDate(event) <= horizon)
-    .sort(compareEventsByRating);
-  const plan = $("#plan-ahead");
-  plan.hidden = future.length === 0;
-  replaceChildren("#claims-list", future.map(claimCard));
-
-  $("#events-title").textContent = message("today", "section-heading", "Nearby & notable");
-  $("#events-note").textContent = message("today", "recommendation", "Good reasons to leave the house.");
-  $("#ongoing-lane-title").textContent = message("ongoing", "section-heading", "Still running");
-  $("#plan-ahead-title").textContent = message("plan-ahead", "section-heading", "Looking ahead");
+  renderPreferenceControls();
+  const best = selectBestBets(allEvents, { day: selected, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
+  const horizon = shiftDate(selected, preferences.get().ranking.horizonDays);
+  const visible = showAllEvents
+    ? allEvents.filter(e => eventEndDate(e) >= selected && eventStartDate(e) <= horizon).sort(compareEventsForDisplay)
+    : best.map(row => row.event);
+  const rows = new Map(best.map(row => [row.event, row]));
+  replaceChildren('#events-list', visible.length ? visible.map(event => eventCard(event, rows.get(event))) : [node('p', { text: 'No matching best bets. Open the full calendar or adjust your preferences.' })]);
+  $('#today-lane-title').textContent = showAllEvents ? 'All events · chronological' : `${visible.length} best bets`;
+  $('#ongoing-lane').hidden = true;
+  $('#plan-ahead').hidden = true;
+  replaceChildren('#ongoing-list', []);
+  replaceChildren('#claims-list', []);
+  $('#events-title').textContent = 'Nearby & notable';
+  $('#events-note').textContent = showAllEvents ? 'The full selection, including notices and hidden occurrences.' : 'A varied shortlist for the selected day and the weeks ahead. Use “Why this?” to tune it.';
   scheduleEventExpiry(allEvents);
   refreshShelfControls();
 }
@@ -1015,7 +1064,7 @@ function renderStories(kind) {
   const availableStories = editionAvailable ? data.stories || [] : [];
   const digest = kind === "geeknews" ? selectScienceDigest({ ...data, stories: availableStories }, state.selectedDate) : null;
   const stories = kind === "news"
-    ? orderNewsStories(availableStories, { today: state.today, dateKey })
+    ? orderRankedNews(availableStories, { now: Date.now(), preferences: preferences.get() })
     : digest.stories;
   const renderStory = (story) => {
     const title = node("h3");
@@ -1471,6 +1520,15 @@ async function init() {
     else url.searchParams.set("date", state.selectedDate);
     window.history.replaceState({ date: state.selectedDate }, "", url);
   }
+  let storage;
+  try { storage = window.localStorage; } catch { /* Private mode can disable storage. */ }
+  const [defaults, weights] = await Promise.all([fetchJson('brief-preferences.json', Date.now()).catch(() => ({})), fetchJson('scoring-weights.json', Date.now()).catch(() => null)]);
+  preferences = preferenceStore(storage, defaults);
+  rankingWeights = weights;
+  try {
+    const saved = JSON.parse(storage?.getItem('daily-brief:weights:v2') || 'null');
+    if (saved?.rulesVersion === 2 && saved.signals && Number.isFinite(saved.base) && Number.isFinite(saved.scale)) rankingWeights = saved;
+  } catch { /* Invalid tuning falls back to exported defaults. */ }
   bindEvents();
   updateNavigation();
   updateSky();

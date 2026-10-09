@@ -36,6 +36,9 @@
             "publication": { "type": "string", "minLength": 1 }
           }
         },
+        "urgentLocal": { "type": "boolean" },
+        "evidenceQuality": { "enum": ["primary", "reported", "opinion", "unknown"] },
+        "entities": { "type": "array", "items": { "type": "string" } },
         "publishedAt": { "type": "string", "format": "date-time" },
         "addedAt": {
           "type": "string",

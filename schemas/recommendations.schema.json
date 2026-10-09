@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Daily Brief public recommendations",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "rankingVersion",
+    "generatedAt",
+    "days"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "rankingVersion": {
+      "const": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "days": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "date",
+          "events"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "events": {
+            "type": "array",
+            "maxItems": 20,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "start",
+                "recommendation"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "start": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "recommendation": {
+                  "type": "object",
+                  "required": [
+                    "occurrenceId",
+                    "score",
+                    "components",
+                    "reasons",
+                    "unknowns"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "occurrenceId": {
+                      "type": "string"
+                    },
+                    "score": {
+                      "type": "number"
+                    },
+                    "components": {
+                      "type": "object",
+                      "required": [
+                        "taste",
+                        "practicality",
+                        "novelty",
+                        "quality"
+                      ],
+                      "additionalProperties": {
+                        "type": "number"
+                      }
+                    },
+                    "reasons": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "unknowns": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -12,6 +12,22 @@ from . import publish
 
 
 class PublishScoringTest(unittest.TestCase):
+    def test_event_distance_status_and_rescoring(self):
+        record = dict(kind='event', id='market', title='Market', summary='Produce',
+                      url='https://example.com', start='2026-10-09T12:00:00-04:00',
+                      venue='Market', city='Canton', category='market', distanceMiles=0,
+                      status='cancelled', occurrenceId='market-friday',
+                      scoring={'score': 8, 'signals': {'farmer_market': 1, 'recurring': 1, 'market_or_shop': 1}})
+        event = publish.to_event(record)
+        self.assertEqual(event['distanceMiles'], 0)
+        self.assertEqual(event['status'], 'cancelled')
+        self.assertEqual(event['occurrenceId'], 'market-friday')
+        self.assertEqual(event['score'], 76)
+        self.assertEqual(event['scoring']['rulesVersion'], 2)
+        self.assertEqual(event['localityTier'], 'nearby')
+        for invalid in (-1, True, float('nan'), '12'):
+            self.assertNotIn('distanceMiles', publish.to_event({**record, 'distanceMiles': invalid}))
+
     def test_scoring_passthrough_sanitizes(self):
         record = {
             "scoring": {

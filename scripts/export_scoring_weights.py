@@ -41,7 +41,7 @@ def build_config() -> dict:
         else:
             polarity, weight = "positive", 0.0
         signals[name] = {"weight": weight, "polarity": polarity}
-    return {"base": scoring.BASE, "scale": scoring.SCALE, "signals": signals}
+    return {"rulesVersion": scoring.RULES_VERSION, "base": scoring.BASE, "scale": scoring.SCALE, "signals": signals}
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -5,13 +5,13 @@ Eleven positive and fifteen negative Noul questions, evaluated in one Jev call
 and combined with weights in code (composite scoring). The per-question
 probabilities are persisted on every record (and published as a ``scoring``
 block) so these weights can be re-tuned against real answers. Locality is deliberately
-light; there is no timeliness or family-friendly term (events are shown sorted by
-date anyway). Tune the weights below.
+light. Practicality, explicit preferences, and shortlist diversity are handled
+by ranking.mjs. Recurrence alone is not dislike. Tune the weights below.
 
     score = clamp(0.5 + Σ pos_weight·p(pos) − Σ neg_weight·p(neg), 0, 1) · 100
 
 A neutral event with no signals scores 50. Nouls return the probability of "yes",
-so each term is naturally probabilistic.
+but the combined rating is an ordinal preference score, not a probability.
 """
 
 from __future__ import annotations
@@ -33,14 +33,13 @@ POS_WEIGHTS: dict[str, float] = {
     "outdoors": 0.10,
     "live_music": 0.12,
     "live_comedy": 0.12,
-    # Slightly above the market_or_shop penalty below, so a farmers market nets
-    # positive while a plain market/shop still loses.
+    # Produce markets attenuate generic retail penalties (rules version 2).
     "farmer_market": 0.26,
 }
 #: negative quality -> penalty weight. Doubled so the negative categories bite;
 #: they may legitimately clamp a score to 0, which is intended.
 NEG_WEIGHTS: dict[str, float] = {
-    "recurring": 0.30,
+    "recurring": 0.0,  # recurrence is not dislike; selection caps repeated series
     "sporting": 0.30,
     "large_venue": 0.24,
     "craft_fair_shopping": 0.20,
@@ -68,6 +67,17 @@ SIGNAL_NAMES: tuple[str, ...] = tuple(jev.SCORING_QUESTIONS.keys())
 #: the browser debug page via ``scripts/export_scoring_weights.py``.
 BASE = 0.5
 SCALE = 100
+RULES_VERSION = 2
+
+
+def effective_probability(name: str, probabilities: dict[str, float]) -> float:
+    """Produce markets are not generic retail; craft and retail do not stack."""
+    p = float(probabilities.get(name, 0.0) or 0.0)
+    if name in ("market_or_shop", "craft_fair_shopping", "sales_related"):
+        p *= 1 - float(probabilities.get("farmer_market", 0.0) or 0.0)
+    if name == "market_or_shop":
+        p *= 1 - float(probabilities.get("craft_fair_shopping", 0.0) or 0.0)
+    return p
 
 
 def build_questions(task: dict[str, Any] | None = None) -> dict[str, Any]:
@@ -98,7 +108,7 @@ def score_probabilities(probabilities: dict[str, float]) -> int:
     for name, weight in POS_WEIGHTS.items():
         raw += weight * float(probabilities.get(name, 0.0) or 0.0)
     for name, weight in NEG_WEIGHTS.items():
-        raw -= weight * float(probabilities.get(name, 0.0) or 0.0)
+        raw -= weight * effective_probability(name, probabilities)
     return max(0, min(SCALE, round(SCALE * min(1.0, max(0.0, raw)))))
 
 

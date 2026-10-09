@@ -3,7 +3,7 @@
 #
 #   1. crawl_sources.py  -> data-collect/crawl/   (only sources that are due)
 #   2. extraction funnel -> repo-root events.json / news.json
-#   3. git commit + push the two JSON files when they changed
+#   3. select recommendations, then commit + push all three data documents
 #   4. vibe-check/run.sh -> refresh repo-root vibe.json (best-effort)
 #
 # Serialized with a lock, keeps the Mac awake, appends to data-collect/cron.log.
@@ -38,9 +38,12 @@ STAMP="$(date '+%Y-%m-%d %H:%M:%S')"
 # Final step: refresh the editorial vibe now that the documents are published.
 # Best-effort: a vibe failure must never fail the data collection.
 run_vibe() {
-    if [ "${PUBLISH_LOCK:-}" ]; then
+    # Release the shared Git lock before the chained writer acquires it, but
+    # retain the collection lock until this process exits.
+    if [ -n "${PUBLISH_LOCK:-}" ]; then
         rm -f "$PUBLISH_LOCK"
         PUBLISH_LOCK=""
+        trap 'rm -f "$LOCK"' EXIT
     fi
     [ "${VIBE_ENABLED:-1}" = "1" ] || return 0
     echo "--- step 4/4: editorial vibe ---"
@@ -105,6 +108,11 @@ fi
 OUT_DIR="${COLLECT_OUT_DIR:-$ROOT}"
 "$PY" -m extract.publish --out "$OUT_DIR" || { echo "publish failed"; exit 1; }
 
+# Public shortlist shares the browser/editorial selector; never read private profiles.
+NODE="$(command -v node || true)"
+[ -n "$NODE" ] || NODE=/opt/homebrew/bin/node
+"$NODE" "$ROOT/scripts/select-best-bets.mjs" --events "$OUT_DIR/events.json" --out "$OUT_DIR/recommendations.json" || { echo "shortlist failed"; exit 1; }
+
 # --- step 3: commit + push the published JSON ------------------------------ #
 if [ "${COLLECT_NO_PUSH:-}" = "1" ]; then
     echo "--- step 3/3: push skipped (COLLECT_NO_PUSH=1) ---"
@@ -112,19 +120,19 @@ if [ "${COLLECT_NO_PUSH:-}" = "1" ]; then
     exit 0
 fi
 
-echo "--- step 3/4: commit + push events.json/news.json ---"
+echo "--- step 3/4: commit + push events.json/news.json/recommendations.json ---"
 cd "$ROOT" || exit 1
 . "$ROOT/scripts/git-publish-lock.sh"
 acquire_publish_lock
-git add events.json news.json
-if git diff --cached --quiet -- events.json news.json; then
-    echo "events.json/news.json unchanged; nothing to push"
+git add events.json news.json recommendations.json
+if git diff --cached --quiet -- events.json news.json recommendations.json; then
+    echo "events.json/news.json/recommendations.json unchanged; nothing to push"
     run_vibe
     echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0 (unchanged)"
     exit 0
 fi
 git -c user.name="daily-brief bot" -c user.email="phurley@gmail.com" \
-    commit -m "Update events.json and news.json" -- events.json news.json || { echo "commit failed"; exit 1; }
+    commit -m "Update events, news, and recommendations" -- events.json news.json recommendations.json || { echo "commit failed"; exit 1; }
 if ! git pull --rebase --autostash origin main; then
     echo "pull --rebase failed; leaving commit local"
     echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=1 (push failed)"

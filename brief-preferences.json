@@ -1,1 +1,24 @@
-{}
+{
+  "schemaVersion": "1.0.0",
+  "profileId": "household",
+  "updatedAt": null,
+  "topicAffinities": {},
+  "venueAffinities": {},
+  "newsTopicAffinities": {},
+  "favorites": [],
+  "hiddenOccurrences": [],
+  "overrides": {},
+  "constraints": {
+    "maxDistanceMiles": null,
+    "selectedDayOnly": false
+  },
+  "ranking": {
+    "version": 1,
+    "limit": 7,
+    "maxPerVenue": 2,
+    "maxPerCategory": 3,
+    "maxPerSeries": 1,
+    "minScore": 35,
+    "horizonDays": 30
+  }
+}

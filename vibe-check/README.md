@@ -71,6 +71,7 @@ The independent Starship launchd collector runs at :25; this timer stays at :40.
 Git publication now uses `scripts/git-publish-lock.sh`, shared with the other
 local writers. See `../starship/README.md` for the complete schedule inventory.
 
+
 ## Science context and scheduling
 
 Science uses `../science.mjs` for the same selected IDs and order as the page.
@@ -79,3 +80,12 @@ the science section copy is deterministic and dated. The independent science
 job triggers a refresh after publication; the standalone timer waits for its
 lock. `VIBE_SKIP_SCIENCE_WAIT=1` is reserved for that chain. See the
 [science runbook](../data-collect/SCIENCE.md) for scheduler details.
+
+
+### Household event selection
+
+Event context uses the same `ranking.mjs` selector as cards and the published
+`recommendations.json` widget feed. It includes selected occurrence IDs and
+reasons, applies public defaults only, and never reads private browser feedback.
+The existing :40 launchd job and post-collection chain require no new timer.
+See [ranking operations](../RANKING.md).

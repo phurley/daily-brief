@@ -32,6 +32,7 @@ _EVENT_FIELDS = {
     "timePrecision": {"type": ["string", "null"], "enum": ["time", "date", "unknown", None],
                       "description": "time only if an actual start time is stated; date for a known day only; unknown otherwise."},
     "performers": {"type": ["array", "null"], "items": {"type": "string"}, "description": "Explicit performer names, or null."},
+    "deadline": {"type": ["string", "null"], "description": "Explicit booking deadline as ISO datetime with timezone offset, or null. Never infer."},
     "title": {"type": "string", "description": "The event's name/title."},
     "summary": {"type": "string", "description": "One or two sentences describing the event."},
     "start": {
@@ -52,6 +53,9 @@ _EVENT_FIELDS = {
     "imageAlt": {"type": ["string", "null"], "description": "Short alt text for the image."},
 }
 _NEWS_FIELDS = {
+    "entities": {"type": "array", "items": {"type": "string"}, "description": "Named people and organizations explicitly mentioned."},
+    "urgentLocal": {"type": "boolean", "description": "True only for an explicit current actionable local safety/service alert (e.g. evacuation or boil-water notice), not a general crime or politics story."},
+    "evidenceQuality": {"type": "string", "enum": ["primary", "reported", "opinion", "unknown"], "description": "primary: original official notice or study; reported: attributed reporting; opinion: commentary; unknown otherwise. Describes provenance, never certifies truth."},
     "title": {"type": "string", "description": "The story's headline."},
     "summary": {"type": "string", "description": "Two or three sentences summarising the story."},
     "url": {"type": ["string", "null"], "description": "URL for the story."},
