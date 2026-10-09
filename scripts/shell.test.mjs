@@ -14,6 +14,11 @@ test('deployment cache changes with shell contents, including modules, but not d
   await writeFile(resolve(root,'starship.json'),'new data');assert.equal(await buildShell(root),old);
   await writeFile(resolve(root,'starship.mjs'),'updated module');const updated=await buildShell(root);assert.notEqual(updated,old);
   await writeFile(resolve(root,'app.js'),'updated UI');assert.notEqual(await buildShell(root),updated);
+  await mkdir(resolve(root,'nested'));await writeFile(resolve(root,'nested/dependency.mjs'),'export const value=1;');
+  await writeFile(resolve(root,'starship.mjs'),"export {value} from './nested/dependency.mjs?v=1';");
+  const nested=await buildShell(root);
+  await writeFile(resolve(root,'nested/dependency.mjs'),'export const value=2;');
+  assert.notEqual(await buildShell(root),nested);
   const worker=await readFile(resolve(root,'sw.js'),'utf8');assert.ok(worker.includes('starship.mjs'));assert.ok(!worker.includes('__SHELL_HASH__'));
  } finally {await rm(root,{recursive:true,force:true});}
 });
