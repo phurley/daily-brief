@@ -3,7 +3,8 @@ import { starshipView, targetLabel, usableLaunchCache, launchDateKey, launchDate
 import { computeAlmanacDay } from "./almanac-calc.mjs?v=20260920-1";
 import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
 import { eventDateLabel } from "./event-time.mjs?v=20260908-1";
-import { orderNewsStories, orderScienceStories } from "./story-order.mjs?v=20260904-1";
+import { orderNewsStories } from "./story-order.mjs?v=20261009-1";
+import { selectScienceDigest, scienceFreshness, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261009-1";
 
 const TIME_ZONE = "America/Detroit";
 const REFRESH_MS = 15 * 60 * 1000;
@@ -19,6 +20,7 @@ const DOCUMENTS = [
   ["news", "news.json", "schemas/news.schema.json", true],
   ["starship", "starship.json", "schemas/starship.schema.json", true],
   ["geeknews", "geeknews.json", "schemas/geeknews.schema.json", true],
+  ["scienceHealth", "science-health.json", "schemas/science-health.schema.json", false],
   ["vibe", "vibe.json", "schemas/vibe.schema.json", true],
   ["photos", "photos.json", "schemas/photos.schema.json", false],
 ];
@@ -39,9 +41,6 @@ const state = {
   launches: [],
   launchCacheFallback: false,
   launchFetchedAt: null,
-  scienceShuffleSeed: globalThis.crypto?.getRandomValues
-    ? globalThis.crypto.getRandomValues(new Uint32Array(1))[0]
-    : Date.now(),
 };
 
 let claimHoverTimer = null;
@@ -1014,27 +1013,44 @@ function renderStories(kind) {
   const section = kind === "news" ? "news" : "science-technology";
   const editionAvailable = data?.editionDate && data.editionDate <= state.selectedDate;
   const availableStories = editionAvailable ? data.stories || [] : [];
+  const digest = kind === "geeknews" ? selectScienceDigest({ ...data, stories: availableStories }, state.selectedDate) : null;
   const stories = kind === "news"
     ? orderNewsStories(availableStories, { today: state.today, dateKey })
-    : orderScienceStories(availableStories, state.scienceShuffleSeed);
-  const children = stories.map((story) => {
+    : digest.stories;
+  const renderStory = (story) => {
     const title = node("h3");
     title.append(safeLink(story.title, story.url));
     const source = [story.source?.name, story.source?.publication].filter(Boolean).join(" · ");
     return node("article", { className: "story" }, [
-      node("div", {}, [title, node("p", { text: story.summary })]),
+      node("div", {}, [title, node("p", { text: story.finding || story.summary }),
+        kind === "geeknews" && story.significance ? node("details", {}, [node("summary", { text: "Why it matters" }), node("p", { text: story.significance })]) : null,
+        kind === "geeknews" ? node("p", { className: "story__caveat", text: `Limitations: ${story.caveat || "Evidence limitations not verified."}` }) : null,
+        kind === "geeknews" ? node("p", { className: "story__source", text: `Published ${scienceDate(story.publishedAt)} · ${story.evidenceType || "unknown"}${story.verifiedAt ? "" : " · archived, not reverified"}` }) : null,
+        kind === "geeknews" ? safeLink(`Read the primary source: ${story.source?.name || story.title}`, story.primarySourceUrl || story.url) : null,
+        kind === "geeknews" && story.paperUrl ? safeLink("Read the linked research paper", story.paperUrl) : null,
+        kind === "geeknews" && digest.previously[story.id]?.length ? node("details", {}, [node("summary", { text: "Previously" }), ...digest.previously[story.id].map(previous => node("p", {}, [safeLink(`${scienceDate(previous.publishedAt)}: ${previous.title}`, previous.url)]))]) : null,
+      ]),
       node("p", { className: "story__source", text: source }),
     ]);
-  });
+  };
+  const children = stories.map(renderStory);
+  if (kind === "geeknews" && digest.archive.length) children.push(node("details", { className: "story science-archive" }, [
+    node("summary", { text: `Archive / background (${digest.archive.length})` }), ...digest.archive.map(renderStory),
+  ]));
   replaceChildren(selector, children.length ? children : [emptyState()]);
 
   const carryForward = data?.editionDate && data.editionDate !== state.selectedDate && editionAvailable
     ? `Latest available digest: ${displayDate(data.editionDate)}.`
     : "";
   const fallback = kind === "news" ? "What is moving around Michigan." : "Interesting machinery, ideas, and horizons.";
-  $(noteSelector).textContent = [message(section, "summary", fallback), carryForward].filter(Boolean).join(" ");
+  const freshness = scienceFreshness(data, state.data.scienceHealth);
+  const scienceNote = kind === "geeknews" ? scienceEditorial(scienceContext(data, state.data.scienceHealth, state.selectedDate)).summary : "";
+  const checkLabel = freshness.lastChecked ? new Date(freshness.lastChecked).toLocaleString("en-US", { timeZone: TIME_ZONE }) : "not verified";
+  const scienceStatus = `Last checked: ${checkLabel}. Newest verified story: ${scienceDate(freshness.newestStory)}.${freshness.stale ? " Science collection is overdue or incomplete; showing the last valid edition." : ""}`;
+  $(noteSelector).textContent = kind === "geeknews" ? [scienceNote, scienceStatus, carryForward].filter(Boolean).join(" ")
+    : [message(section, "summary", fallback), carryForward].filter(Boolean).join(" ");
   if (kind === "news") $("#news-title").textContent = message(section, "section-heading", "The local signal");
-  else $("#geek-title").textContent = message(section, "section-heading", "Science & technology");
+  else $("#geek-title").textContent = "Science & technology";
   refreshShelfControls();
 }
 

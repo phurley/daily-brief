@@ -1,0 +1,13 @@
+{
+  "domain": "science",
+  "historyDays": 45,
+  "maxArticlesPerSource": 4,
+  "interests": [],
+  "sources": [
+    {"id":"nasa","name":"NASA","group":"NASA","quality":2,"url":"https://www.nasa.gov/feed/","catalogUrl":"https://www.nasa.gov/rss-feeds/","articleDomains":["nasa.gov"],"intervalHours":3,"staleAfterHours":12,"milestoneClusters":{"Nancy Grace Roman Space Telescope":"roman-milestones","SPHEREx":"spherex-milestones","Europa Clipper":"europa-clipper-milestones"}},
+    {"id":"jpl","name":"NASA JPL","group":"NASA","quality":2,"url":"https://www.nasa.gov/centers-and-facilities/jpl/feed/","catalogUrl":"https://www.nasa.gov/rss-feeds/","articleDomains":["nasa.gov"],"intervalHours":6,"staleAfterHours":24,"milestoneClusters":{"Europa Clipper":"europa-clipper-milestones","SPHEREx":"spherex-milestones"}},
+    {"id":"esa","name":"ESA","group":"ESA","quality":2,"url":"https://www.esa.int/rssfeed/Our_Activities/Space_Science","catalogUrl":"https://www.esa.int/Services/RSS_Feeds","articleDomains":["esa.int"],"intervalHours":6,"staleAfterHours":24,"milestoneClusters":{"Euclid":"euclid-milestones","Juice":"juice-milestones"}},
+    {"id":"nsf","name":"NSF","group":"NSF","quality":2,"url":"https://www.nsf.gov/rss/rss_www_news.xml","catalogUrl":"https://www.nsf.gov/rss","articleDomains":["nsf.gov"],"intervalHours":12,"staleAfterHours":48},
+    {"id":"umich","name":"University of Michigan News","group":"U-M","quality":2,"url":"https://news.umich.edu/feed/","catalogUrl":"https://news.umich.edu/","articleDomains":["news.umich.edu"],"intervalHours":6,"staleAfterHours":24,"localConnection":"University of Michigan research in Ann Arbor."}
+  ]
+}

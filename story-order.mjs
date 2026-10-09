@@ -1,5 +1,3 @@
-const SCIENCE_SHUFFLE_WINDOW_MS = 2 * 24 * 60 * 60 * 1000;
-
 function storyTime(story) {
   const value = Date.parse(story?.publishedAt || "");
   return Number.isFinite(value) ? value : Number.NEGATIVE_INFINITY;
@@ -17,20 +15,6 @@ function addedDate(story, dateKey) {
 
 function localityIndex(story) {
   return Number.isInteger(story?.localityIndex) ? story.localityIndex : Number.POSITIVE_INFINITY;
-}
-
-function stableUnitInterval(value) {
-  let hash = 2166136261;
-  for (let index = 0; index < value.length; index += 1) {
-    hash ^= value.charCodeAt(index);
-    hash = Math.imul(hash, 16777619);
-  }
-  hash ^= hash >>> 16;
-  hash = Math.imul(hash, 0x85ebca6b);
-  hash ^= hash >>> 13;
-  hash = Math.imul(hash, 0xc2b2ae35);
-  hash ^= hash >>> 16;
-  return (hash >>> 0) / 4294967296;
 }
 
 function storyTieBreak(a, b) {
@@ -56,13 +40,5 @@ export function orderNewsStories(stories, { today, dateKey }) {
     const publishedDifference = storyTime(b) - storyTime(a);
     if (publishedDifference) return publishedDifference;
     return storyTieBreak(a, b);
-  });
-}
-
-export function orderScienceStories(stories, shuffleSeed) {
-  return [...stories].sort((a, b) => {
-    const aScore = storyTime(a) + stableUnitInterval(`${shuffleSeed}:${a?.id || a?.title || ""}`) * SCIENCE_SHUFFLE_WINDOW_MS;
-    const bScore = storyTime(b) + stableUnitInterval(`${shuffleSeed}:${b?.id || b?.title || ""}`) * SCIENCE_SHUFFLE_WINDOW_MS;
-    return bScore - aScore || storyTieBreak(a, b);
   });
 }

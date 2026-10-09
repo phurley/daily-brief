@@ -152,3 +152,10 @@ checks. Local recurring Git writers share a publication lock and scoped
 commits. See [Starship operations and recurring-task inventory](starship/README.md)
 for installation, tests, source limitations, evidence review, history evaluation
 and recovery. No paid launch-provider dependency is required.
+
+## Science digest
+
+`data-collect/run_science.sh` independently refreshes science and source health
+hourly. Cards and editorial context share stable selection, publication dates,
+evidence labels and visible caveats. See [the science runbook](data-collect/SCIENCE.md)
+for source intervals, verification, diagnostics and the recurring-job inventory.

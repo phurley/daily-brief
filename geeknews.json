@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-14T08:31:54Z",
-  "editionDate": "2026-09-14",
+  "generatedAt": "2026-10-09T18:59:39.346079Z",
+  "editionDate": "2026-10-09",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -21,148 +21,918 @@
   },
   "stories": [
     {
-      "id": "nasa-starling-demonstrates-gps-free-autonomous-navigation",
-      "title": "NASA's Starling satellites demonstrate GPS-free autonomous navigation",
-      "summary": "The FALCON experiment used onboard cameras and a catalog of space objects to determine Starling's orbit without GPS or ground navigation. Over three days it also improved orbit estimates for more than 200 tracked objects, a step toward autonomous lunar satellite swarms and better collision avoidance.",
-      "url": "https://www.nasa.gov/blogs/smallsatellites/2026/08/17/nasas-starling-mission-opens-new-frontiers-in-space-navigation/",
+      "id": "science-174527e0ab0de8a5",
+      "title": "NASA Demonstrates Next-Generation Heat Shield Technologies",
+      "summary": "NASA is testing next-generation heat shield materials and designs, including 3D-printed heat shields and flexible MERINO materials, using experimental capsules carried aboard a Northrop Grumman Cygnus XL cargo spacecraft during its re-entry into Earth's atmosphere.",
+      "finding": "NASA is testing next-generation heat shield materials and designs, including 3D-printed heat shields and flexible MERINO materials, using experimental capsules carried aboard a Northrop Grumman Cygnus XL cargo spacecraft during its re-entry into Earth's atmosphere.",
+      "significance": "This method provides a cost-effective way to gather real-world flight data on new thermal protection systems, which are crucial for ensuring the safety of future crewed and uncrewed missions to destinations like the Moon and Mars.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies",
+      "primarySourceUrl": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies",
       "source": {
         "name": "NASA"
       },
-      "publishedAt": "2026-08-17T00:00:00Z",
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-09T16:59:24Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:59:36.257899Z",
+      "evidenceType": "agency-announcement",
       "topics": [
-        "space",
-        "autonomous systems",
-        "satellites"
-      ]
+        "technology",
+        "physics",
+        "astronomy"
+      ],
+      "entities": [
+        "NASA",
+        "International Space Station",
+        "Kentucky Reentry Probe Experiment (KREPE-3)",
+        "University of Kentucky"
+      ],
+      "milestoneStatus": "completed",
+      "sourceUpdatedAt": "2026-10-09T16:59:26Z"
     },
     {
-      "id": "roman-telescope-clears-flight-readiness-review",
-      "title": "NASA's Roman telescope clears its flight-readiness review",
-      "summary": "NASA and SpaceX certified the Nancy Grace Roman Space Telescope to proceed into final launch preparations, targeting no earlier than 7:26 a.m. EDT on August 30 aboard Falcon Heavy. Roman's wide-field surveys are designed to study dark energy, dark matter, exoplanets, and the universe's evolution.",
-      "url": "https://science.nasa.gov/blogs/roman/2026/08/21/teams-complete-flight-readiness-review-for-nasas-roman-telescope/",
-      "source": {
-        "name": "NASA Science"
-      },
-      "publishedAt": "2026-08-21T16:49:00Z",
-      "topics": [
-        "space",
-        "astronomy",
-        "science missions"
-      ]
-    },
-    {
-      "id": "hubble-reveals-early-milky-way-merger",
-      "title": "Hubble identifies a major merger from the Milky Way’s infancy",
-      "summary": "Hubble measurements of 39 inner-Milky-Way globular clusters, combined with Gaia data, isolate a third cluster population that points to an ancient collision with a dwarf galaxy dubbed LKH. The result pushes definitive evidence of the Galaxy’s assembly history about 1.8 billion years farther back, to roughly 11.8 billion years ago.",
-      "url": "https://science.nasa.gov/missions/hubble/hubble-solves-merger-mystery-from-milky-ways-early-years/",
-      "source": {
-        "name": "NASA Hubble"
-      },
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "topics": [
-        "space",
-        "astronomy",
-        "Milky Way",
-        "galaxy evolution"
-      ]
-    },
-    {
-      "id": "nasa-tests-lunar-landing-plume-physics",
-      "title": "NASA begins its most flight-relevant lunar landing plume tests",
-      "summary": "NASA has begun firing a simulated lander plume into lunar-regolith simulant inside a 60-foot vacuum sphere at Langley. Cameras and other instruments are measuring crater formation, ejecta geometry, and particle speeds to validate models for how rocket exhaust could endanger landers, surface equipment, and crews on the Moon—and eventually help prepare for Mars landings.",
-      "url": "https://www.nasa.gov/missions/artemis/nasa-begins-moon-mission-plume-surface-interaction-tests/",
+      "id": "science-e4f2618d2f0ea370",
+      "title": "Cosmic House of Mirrors",
+      "summary": "The James Webb Space Telescope captured an image of the galaxy cluster MACS J0454.1-0300, revealing distant galaxies whose light is bent and magnified by gravitational lensing, creating a \"house of mirrors\" effect.",
+      "finding": "The James Webb Space Telescope captured an image of the galaxy cluster MACS J0454.1-0300, revealing distant galaxies whose light is bent and magnified by gravitational lensing, creating a \"house of mirrors\" effect.",
+      "significance": "This phenomenon demonstrates how massive objects in space can distort and amplify light from more distant objects, providing insights into the distribution of mass and the nature of light in the universe.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/image-article/cosmic-house-of-mirrors",
+      "primarySourceUrl": "https://www.nasa.gov/image-article/cosmic-house-of-mirrors",
       "source": {
         "name": "NASA"
       },
-      "publishedAt": "2026-08-26T00:00:00Z",
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-09T13:57:24Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "explanatory-background",
       "topics": [
-        "space",
-        "Moon",
-        "engineering",
-        "planetary science"
-      ]
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "James Webb Space Telescope",
+        "MACS J0454.1-0300",
+        "NASA"
+      ],
+      "milestoneStatus": "unknown"
     },
     {
-      "id": "nasa-dsn-dss23-enters-operations",
-      "title": "NASA’s newest deep-space antenna begins operations at Goldstone",
-      "summary": "NASA’s 34-meter Deep Space Station 23 antenna has entered service after completing its test campaign, already tracking Chandra and communicating with missions including Psyche, Juno, Mars Reconnaissance Orbiter, and Voyager 1. The new multifrequency dish expands the Deep Space Network’s capacity for the growing fleet of deep-space missions and is a completed, operational infrastructure milestone.",
-      "url": "https://www.nasa.gov/technology/space-comms/deep-space-network/new-next-gen-dish-adds-muscle-to-nasas-deep-space-network/",
+      "id": "science-57f3a3d36dfa1845",
+      "title": "APOD: 2026 October 9 – Stickney Crater",
+      "summary": "Streaks on Phobos suggest loose material slid down inside Stickney Crater walls over time, and light bluish regions near the crater's rim could indicate a relatively freshly exposed surface.",
+      "finding": "Streaks on Phobos suggest loose material slid down inside Stickney Crater walls over time, and light bluish regions near the crater's rim could indicate a relatively freshly exposed surface.",
+      "significance": "These observations provide clues about the geological processes occurring on Phobos, a moon of Mars, including potential recent surface activity and the nature of its composition.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-9-stickney-crater",
+      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-october-9-stickney-crater",
       "source": {
-        "name": "NASA Jet Propulsion Laboratory"
+        "name": "NASA"
       },
-      "publishedAt": "2026-08-25T00:00:00Z",
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-09T04:05:00Z",
+      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
+      "checkedAt": "2026-10-09T18:56:33.050646Z",
+      "verifiedAt": "2026-10-09T18:56:33.050646Z",
+      "evidenceType": "explanatory-background",
       "topics": [
-        "space",
-        "deep space communications",
-        "engineering",
-        "space infrastructure"
-      ]
+        "astronomy",
+        "planetary-science"
+      ],
+      "entities": [
+        "Stickney Crater",
+        "Phobos",
+        "Mars",
+        "HiRISE camera",
+        "Mars Reconnaissance Orbiter"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-10-09T04:05:00Z"
     },
     {
-      "id": "esa-launches-mtg-i2-weather-satellite",
-      "title": "Europe launches a high-frequency weather imager for severe-storm nowcasting",
-      "summary": "ESA launched the MTG-I2 weather satellite aboard Ariane 6, completing the first operational trio of Meteosat Third Generation satellites. Once commissioned, its Flexible Combined Imager and Lightning Imager will provide high-resolution views of developing weather across Europe and northern Africa every 2.5 minutes, strengthening severe-weather, wildfire, pollution, and climate monitoring.",
-      "url": "https://www.esa.int/Newsroom/Press_Releases/MTG-I2_completes_Europe_s_latest_weather_trio",
+      "id": "science-74da31eddbb7c532",
+      "title": "Floodwaters Overwhelm Thailand",
+      "summary": "Persistent heavy rains in late September and early October 2026 caused widespread flooding across Thailand, inundating agricultural and aquaculture lands, particularly in Prachin Buri province along the Bang Pakong River.",
+      "finding": "Persistent heavy rains in late September and early October 2026 caused widespread flooding across Thailand, inundating agricultural and aquaculture lands, particularly in Prachin Buri province along the Bang Pakong River.",
+      "significance": "The flooding affected millions of people, caused dozens of deaths, and damaged an estimated 270,000 hectares of farmland, highlighting the vulnerability of the region to extreme weather events.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/floodwaters-overwhelm-thailand",
+      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/floodwaters-overwhelm-thailand",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-09T04:01:00Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "earth-science",
+        "technology"
+      ],
+      "entities": [
+        "Thailand",
+        "NASA",
+        "Landsat",
+        "Bang Pakong River",
+        "Gulf of Thailand"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-10-09T12:21:40Z"
+    },
+    {
+      "id": "science-106b657c30ff37f7",
+      "title": "NASA Briefing to Highlight Contributions to Martian Moons Mission",
+      "summary": "NASA will contribute a gamma-ray and neutron spectrometer, a surface sampler mechanism, and communications and navigation support to Japan's Martian Moons eXploration (MMX) mission.",
+      "finding": "NASA will contribute a gamma-ray and neutron spectrometer, a surface sampler mechanism, and communications and navigation support to Japan's Martian Moons eXploration (MMX) mission.",
+      "significance": "These contributions will aid in the MMX mission's survey of Mars' moons, Phobos and Deimos, and the eventual collection and delivery of a surface sample from Phobos to Earth.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/news-release/nasa-briefing-to-highlight-contributions-to-martian-moons-mission",
+      "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-briefing-to-highlight-contributions-to-martian-moons-mission",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-08T20:22:12Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "technology",
+        "earth-science"
+      ],
+      "entities": [
+        "NASA",
+        "Martian Moons eXploration",
+        "MMX",
+        "Phobos",
+        "Deimos"
+      ],
+      "milestoneStatus": "planned"
+    },
+    {
+      "id": "science-fd82550bcb5ef02d",
+      "title": "NASA’s SPHEREx Telescope Sees Menagerie of Brown Dwarfs",
+      "summary": "NASA's SPHEREx telescope has detected chemically rich atmospheres on brown dwarfs, containing molecules like water, carbon dioxide, carbon monoxide, and methane.",
+      "finding": "NASA's SPHEREx telescope has detected chemically rich atmospheres on brown dwarfs, containing molecules like water, carbon dioxide, carbon monoxide, and methane.",
+      "significance": "These findings reveal that brown dwarfs, which blur the line between stars and exoplanets, have complex atmospheres similar to those of giant planets in our solar system, challenging existing models.",
+      "caveat": "The source indicates that current theoretical models struggle to match the observed data, particularly concerning cloudy transitions in brown dwarf atmospheres, suggesting a need for further investigation.",
+      "url": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs",
+      "primarySourceUrl": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs",
+      "source": {
+        "name": "NASA JPL"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-08T18:22:48Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy",
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "SPHEREx",
+        "brown dwarfs",
+        "The Astrophysical Journal",
+        "JPL"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://iopscience.iop.org/article/10.3847/1538-4357/ae9d66",
+      "sourceUpdatedAt": "2026-10-08T18:22:49Z"
+    },
+    {
+      "id": "science-63bdbcb865b29ff9",
+      "title": "NSF–UKRI metascience statement",
+      "summary": "The US National Science Foundation (NSF) and UK Research and Innovation (UKRI) will collaborate on metascience, applying scientific methods to study and improve how research is funded, practiced, and evaluated.",
+      "finding": "The US National Science Foundation (NSF) and UK Research and Innovation (UKRI) will collaborate on metascience, applying scientific methods to study and improve how research is funded, practiced, and evaluated.",
+      "significance": "This partnership aims to enhance the effectiveness and efficiency of scientific endeavors by treating the scientific enterprise itself as a subject of study and improvement.",
+      "caveat": "The article outlines intentions and future plans for collaboration, with specific joint work to be identified in the coming months.",
+      "url": "https://www.nsf.gov/news/nsf-ukri-metascience-statement",
+      "primarySourceUrl": "https://www.nsf.gov/news/nsf-ukri-metascience-statement",
+      "source": {
+        "name": "NSF"
+      },
+      "sourceGroup": "NSF",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-08T13:26:57Z",
+      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
+      "checkedAt": "2026-10-09T18:56:33.050646Z",
+      "verifiedAt": "2026-10-09T18:56:33.050646Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "technology",
+        "social-science"
+      ],
+      "entities": [
+        "National Science Foundation",
+        "NSF",
+        "United Kingdom Research and Innovation",
+        "UKRI"
+      ],
+      "milestoneStatus": "planned",
+      "sourceUpdatedAt": "2026-10-08T13:26:57Z"
+    },
+    {
+      "id": "science-f433a319fc4cd0e6",
+      "title": "Solar Orbiter tracks origin of mysterious magnetic switchbacks",
+      "summary": "The Solar Orbiter spacecraft has traced the origin of a magnetic switchback in the solar wind back to the Sun's surface, identifying a specific mix of charged oxygen and carbon particles that formed in hot magnetic field loops at the Sun's surface. This suggests that both interchange reconnection and waves/turbulence are involved in switchback formation, operating at different stages.",
+      "finding": "The Solar Orbiter spacecraft has traced the origin of a magnetic switchback in the solar wind back to the Sun's surface, identifying a specific mix of charged oxygen and carbon particles that formed in hot magnetic field loops at the Sun's surface. This suggests that both interchange reconnection and waves/turbulence are involved in switchback formation, operating at different stages.",
+      "significance": "Understanding the formation and movement of magnetic switchbacks helps explain how the Sun heats its atmosphere and accelerates solar wind particles. This knowledge is crucial for predicting and preparing for extreme space weather events that can impact infrastructure and technology on Earth and in space.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_tracks_origin_of_mysterious_magnetic_switchbacks",
+      "primarySourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_tracks_origin_of_mysterious_magnetic_switchbacks",
+      "source": {
+        "name": "ESA"
+      },
+      "sourceGroup": "ESA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-08T09:00:00Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:59:39.291827Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "Solar Orbiter",
+        "Sun",
+        "solar wind",
+        "magnetic switchbacks",
+        "Nature Astronomy"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41550-026-02928-0"
+    },
+    {
+      "id": "science-b89177a69ceadc8f",
+      "title": "As voters weigh incumbents, U-M research complicates case for congressional term limits",
+      "summary": "Experienced lawmakers' offices develop greater capacity to assist constituents with navigating federal agencies, a function that constitutes about half of their work.",
+      "finding": "Experienced lawmakers' offices develop greater capacity to assist constituents with navigating federal agencies, a function that constitutes about half of their work.",
+      "significance": "This finding challenges the common justification for term limits, which often assumes lawmakers become less responsive over time, and suggests that the \"startup costs\" of new offices may hinder constituent service and policy work.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://news.umich.edu/as-voters-weigh-incumbents-u-m-research-complicates-case-for-congressional-term-limits",
+      "primarySourceUrl": "https://news.umich.edu/as-voters-weigh-incumbents-u-m-research-complicates-case-for-congressional-term-limits",
+      "source": {
+        "name": "University of Michigan News"
+      },
+      "sourceGroup": "U-M",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-07T15:01:11Z",
+      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
+      "checkedAt": "2026-10-09T18:56:33.050646Z",
+      "verifiedAt": "2026-10-09T18:56:33.050646Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "social-science",
+        "law",
+        "politics"
+      ],
+      "entities": [
+        "Congress",
+        "University of Michigan",
+        "Devin Judge-Lord",
+        "U.S. federal agencies",
+        "Gerald R. Ford School of Public Policy"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://onlinelibrary.wiley.com/doi/10.1111/ajps.70031",
+      "sourceUpdatedAt": "2026-10-07T18:05:02Z",
+      "localConnection": "University of Michigan research in Ann Arbor."
+    },
+    {
+      "id": "science-718e414f27ebb381",
+      "title": "Mars’s oddest cloud may be even odder than we thought",
+      "summary": "Scientists have modeled Mars's Arsia Mons Elongated Cloud (AMEC) and found that its formation likely involves homogeneous nucleation, a process where water vapor directly freezes into ice particles without needing atmospheric specks, a phenomenon previously considered theoretical and unobserved in planetary atmospheres.",
+      "finding": "Scientists have modeled Mars's Arsia Mons Elongated Cloud (AMEC) and found that its formation likely involves homogeneous nucleation, a process where water vapor directly freezes into ice particles without needing atmospheric specks, a phenomenon previously considered theoretical and unobserved in planetary atmospheres.",
+      "significance": "This finding suggests that Mars's atmosphere can reach extreme humidity levels, enabling rare physical processes to occur, and highlights the importance of considering unlikely atmospheric phenomena when exploring planets.",
+      "caveat": "While the modeling successfully reproduced the AMEC, some aspects do not exactly match observations, and the source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought",
+      "primarySourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought",
+      "source": {
+        "name": "ESA"
+      },
+      "sourceGroup": "ESA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-07T15:00:00Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy",
+        "earth-science",
+        "physics"
+      ],
+      "entities": [
+        "Mars Express",
+        "Arsia Mons Elongated Cloud",
+        "Mars",
+        "Jorge Hernández-Bernal",
+        "European Space Agency"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41561-026-02089-9"
+    },
+    {
+      "id": "science-7fee815af46df2a9",
+      "title": "Polarized America obsesses over small voting problems—or sweeps issues under rug",
+      "summary": "Testing has revealed that some election systems, which are not supposed to be connected to the internet, have been compromised. The slow process of patching these systems is a significant concern, especially with the rapid advancement of AI's ability to discover vulnerabilities.",
+      "finding": "Testing has revealed that some election systems, which are not supposed to be connected to the internet, have been compromised. The slow process of patching these systems is a significant concern, especially with the rapid advancement of AI's ability to discover vulnerabilities.",
+      "significance": "Hand-marked paper ballots are identified as the most secure election technology currently available. The findings highlight the need for policy reform to ensure election technology vendors identify security problems more effectively and that states promptly apply available security patches.",
+      "caveat": "While vulnerabilities have been identified, there is no evidence that these flaws have been exploited to alter election outcomes. The article does not specify material limitations of the testing or independent verification status.",
+      "url": "https://news.umich.edu/polarized-america-obsesses-over-small-voting-problems-or-sweeps-issues-under-rug",
+      "primarySourceUrl": "https://news.umich.edu/polarized-america-obsesses-over-small-voting-problems-or-sweeps-issues-under-rug",
+      "source": {
+        "name": "University of Michigan News"
+      },
+      "sourceGroup": "U-M",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-07T12:00:00Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "technology",
+        "social-science",
+        "law"
+      ],
+      "entities": [
+        "CISA",
+        "Alex Halderman",
+        "University of Michigan"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-10-07T20:01:49Z",
+      "localConnection": "University of Michigan research in Ann Arbor."
+    },
+    {
+      "id": "science-4a043f055772e664",
+      "title": "Podcast: Could holographic 3D printing be real?",
+      "summary": "A U.S. National Science Foundation-supported researcher, Rajesh Menon, is discussing his work that combines optical systems with cutting-edge nanofabrication, potentially leading to holographic 3D printing.",
+      "finding": "A U.S. National Science Foundation-supported researcher, Rajesh Menon, is discussing his work that combines optical systems with cutting-edge nanofabrication, potentially leading to holographic 3D printing.",
+      "significance": "This research could lead to transformative technologies by merging different scientific disciplines for advanced fabrication methods.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nsf.gov/news/podcast-could-holographic-3d-printing-be-real",
+      "primarySourceUrl": "https://www.nsf.gov/news/podcast-could-holographic-3d-printing-be-real",
+      "source": {
+        "name": "NSF"
+      },
+      "sourceGroup": "NSF",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-06T21:02:14Z",
+      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
+      "checkedAt": "2026-10-09T18:56:33.050646Z",
+      "verifiedAt": "2026-10-09T18:56:33.050646Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "technology",
+        "physics",
+        "engineering"
+      ],
+      "entities": [
+        "U.S. National Science Foundation",
+        "Rajesh Menon"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-10-06T21:02:14Z"
+    },
+    {
+      "id": "science-785e57922ae85254",
+      "title": "NASA’s Curiosity Rover Catches Stunning Martian Dawn",
+      "summary": "NASA's Curiosity rover captured a detailed panorama of wind-carved Martian cliffs known as yardangs, revealing striking blue hues in the early morning light.",
+      "finding": "NASA's Curiosity rover captured a detailed panorama of wind-carved Martian cliffs known as yardangs, revealing striking blue hues in the early morning light.",
+      "significance": "This image provides the most detailed view yet of these distant Martian features, which scientists are eager to study to understand their formation and the history of Mars.",
+      "caveat": "The exact cause of the yardang layer remains uncertain, with one hypothesis suggesting it may be ash from ancient volcanic eruptions. Further data collection is planned.",
+      "url": "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-rover-catches-stunning-martian-dawn",
+      "primarySourceUrl": "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-rover-catches-stunning-martian-dawn",
+      "source": {
+        "name": "NASA JPL"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-06T15:30:07Z",
+      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
+      "checkedAt": "2026-10-09T18:56:33.050646Z",
+      "verifiedAt": "2026-10-09T18:56:33.050646Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "earth-science",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "Curiosity Rover",
+        "Mars",
+        "Mount Sharp",
+        "Gale Crater"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-10-06T15:30:09Z"
+    },
+    {
+      "id": "science-189a59772523fe89",
+      "title": "Webb captures commotion from nebula’s stellar jets",
+      "summary": "The James Webb Space Telescope has revealed previously hidden stars in the NGC 7129 stellar nursery, using infrared light to penetrate dust clouds. It observed a central star, LkH(alpha) 234, and its surrounding outflows and younger stars, showing different stages of stellar evolution and their impact on the environment.",
+      "finding": "The James Webb Space Telescope has revealed previously hidden stars in the NGC 7129 stellar nursery, using infrared light to penetrate dust clouds. It observed a central star, LkH(alpha) 234, and its surrounding outflows and younger stars, showing different stages of stellar evolution and their impact on the environment.",
+      "significance": "This observation provides insight into how stars form and evolve, and how they shape their surrounding molecular clouds, potentially influencing future star formation and the eventual erosion of these clouds over millions of years.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Webb_captures_commotion_from_nebula_s_stellar_jets",
+      "primarySourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Webb_captures_commotion_from_nebula_s_stellar_jets",
+      "source": {
+        "name": "ESA"
+      },
+      "sourceGroup": "ESA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-06T13:00:00Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "James Webb Space Telescope",
+        "NGC 7129",
+        "LkH(alpha) 234"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-91ede4635e9f72e8",
+      "title": "Abortion bans make healthcare more expensive",
+      "summary": "State abortion bans implemented after the Supreme Court's Dobbs decision are associated with increased out-of-pocket health insurance premium costs for women, with a more pronounced impact on Black and Hispanic women.",
+      "finding": "State abortion bans implemented after the Supreme Court's Dobbs decision are associated with increased out-of-pocket health insurance premium costs for women, with a more pronounced impact on Black and Hispanic women.",
+      "significance": "These findings suggest that abortion bans impose financial burdens on women and families through increased healthcare costs, extending beyond access to abortion services.",
+      "caveat": "Preprint / working paper; peer review is not established. The source does not specify material limitations; independent verification is not established.",
+      "url": "https://news.umich.edu/abortion-bans-make-healthcare-more-expensive",
+      "primarySourceUrl": "https://news.umich.edu/abortion-bans-make-healthcare-more-expensive",
+      "source": {
+        "name": "University of Michigan News"
+      },
+      "sourceGroup": "U-M",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-05T15:05:47Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "health",
+        "social-science",
+        "law"
+      ],
+      "entities": [
+        "University of Michigan",
+        "Supreme Court",
+        "Dobbs decision",
+        "Joelle Abramowitz",
+        "Olga Aristova"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7564838",
+      "sourceUpdatedAt": "2026-10-07T16:55:33Z",
+      "localConnection": "University of Michigan research in Ann Arbor."
+    },
+    {
+      "id": "science-3bf2aef00178636c",
+      "title": "Science begins for Smile",
+      "summary": "The European-Chinese Smile mission has been declared ready to begin science operations, following a commissioning period after its launch on May 19 and reaching its target orbit on June 20.",
+      "finding": "The European-Chinese Smile mission has been declared ready to begin science operations, following a commissioning period after its launch on May 19 and reaching its target orbit on June 20.",
+      "significance": "The mission will study how Earth responds to solar wind, aiming to improve understanding of solar storms, geomagnetic storms, and space weather.",
+      "caveat": "While the soft X-ray imager (SXI) is working well, it is currently detecting too much unwanted stray light when pointed at Earth. Adjustments are being made, and the unwanted light is expected to naturally decrease by mid-October.",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Smile/Science_begins_for_Smile",
+      "primarySourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Smile/Science_begins_for_Smile",
+      "source": {
+        "name": "ESA"
+      },
+      "sourceGroup": "ESA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-09-30T07:05:00Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy",
+        "earth-science",
+        "physics"
+      ],
+      "entities": [
+        "Smile",
+        "European Space Agency",
+        "Chinese Academy of Sciences",
+        "SXI",
+        "UVI"
+      ],
+      "milestoneStatus": "completed"
+    },
+    {
+      "id": "science-22b661cdd9e9935f",
+      "title": "US-India Satellite Captures Time-lapse Video of Volcanic Eruption",
+      "summary": "The NASA-ISRO Synthetic Aperture Radar (NISAR) mission has captured a time-lapse video showing the spread of lava from the Krasheninnikov volcano on Russia's Kamchatka Peninsula, using data collected from December 2025 to mid-August 2026.",
+      "finding": "The NASA-ISRO Synthetic Aperture Radar (NISAR) mission has captured a time-lapse video showing the spread of lava from the Krasheninnikov volcano on Russia's Kamchatka Peninsula, using data collected from December 2025 to mid-August 2026.",
+      "significance": "This demonstrates NISAR's capability to monitor the development of natural hazards with high precision and reliability, offering potential benefits for scientific understanding and emergency response.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/missions/nisar/us-india-satellite-captures-time-lapse-video-of-volcanic-eruption",
+      "primarySourceUrl": "https://www.nasa.gov/missions/nisar/us-india-satellite-captures-time-lapse-video-of-volcanic-eruption",
+      "source": {
+        "name": "NASA JPL"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-09-24T15:47:17Z",
+      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
+      "checkedAt": "2026-10-09T18:56:33.050646Z",
+      "verifiedAt": "2026-10-09T18:56:33.050646Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "earth-science",
+        "technology",
+        "astronomy"
+      ],
+      "entities": [
+        "NASA-ISRO Synthetic Aperture Radar (NISAR)",
+        "Krasheninnikov",
+        "Kamchatka Peninsula",
+        "NASA",
+        "ISRO"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-09-24T15:47:18Z"
+    },
+    {
+      "id": "science-272df72ef6c2a546",
+      "title": "NASA Selects Far-Infrared Telescope as First in New Mission Class",
+      "summary": "NASA has selected the PRIMA (PRobe far-Infrared Mission for Astrophysics) space telescope to advance to the next phase of development, marking it as the first mission in a new class of NASA astrophysics missions called Probe Explorers.",
+      "finding": "NASA has selected the PRIMA (PRobe far-Infrared Mission for Astrophysics) space telescope to advance to the next phase of development, marking it as the first mission in a new class of NASA astrophysics missions called Probe Explorers.",
+      "significance": "PRIMA will serve as a new window into the deep universe, studying the formation of planets, stars, black holes, and the origin of water on Earth by conducting deep, sensitive surveys in far-infrared light. This will help bridge the gap between existing infrared and radio observatories, providing a more comprehensive look at the cosmos.",
+      "caveat": "The PRIMA mission is subject to a confirmation review based on technical, programmatic, and cost performance before it can begin implementation. Its project cost is capped at $1.2 billion, excluding launch and other non-project costs.",
+      "url": "https://www.nasa.gov/news-release/nasa-selects-far-infrared-telescope-as-first-in-new-mission-class",
+      "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-selects-far-infrared-telescope-as-first-in-new-mission-class",
+      "source": {
+        "name": "NASA JPL"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-09-23T20:09:42Z",
+      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
+      "checkedAt": "2026-10-09T18:56:33.050646Z",
+      "verifiedAt": "2026-10-09T18:56:33.050646Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "PRIMA",
+        "Probe Explorers",
+        "Science Mission Directorate",
+        "James Webb Space Telescope"
+      ],
+      "milestoneStatus": "planned"
+    },
+    {
+      "id": "science-ee4c5e735e8fea2e",
+      "title": "Podcast: Can prosthetic limbs feel touch? (haptic feedback)",
+      "summary": "Researchers are developing interfaces with haptic feedback for applications such as upper-limb prosthetics, rehabilitation tools, and surgical robotics.",
+      "finding": "Researchers are developing interfaces with haptic feedback for applications such as upper-limb prosthetics, rehabilitation tools, and surgical robotics.",
+      "significance": "This work aims to improve the lives of individuals by enhancing the functionality and usability of prosthetic limbs and other assistive technologies.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nsf.gov/news/podcast-can-prosthetic-limbs-feel-touch-haptic-feedback",
+      "primarySourceUrl": "https://www.nsf.gov/news/podcast-can-prosthetic-limbs-feel-touch-haptic-feedback",
+      "source": {
+        "name": "NSF"
+      },
+      "sourceGroup": "NSF",
+      "sourceQuality": 2,
+      "publishedAt": "2026-09-21T20:47:33Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "technology",
+        "health",
+        "engineering"
+      ],
+      "entities": [
+        "NSF",
+        "Jeremy Brown"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-09-21T20:48:40Z"
+    },
+    {
+      "id": "science-2009c8f17073b4d4",
+      "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
+      "summary": "The National Science Foundation (NSF) is launching a new initiative, NSF ELEGANT, to help transition low-dimensional semiconductor technologies from laboratory settings to manufacturing platforms for U.S. companies.",
+      "finding": "The National Science Foundation (NSF) is launching a new initiative, NSF ELEGANT, to help transition low-dimensional semiconductor technologies from laboratory settings to manufacturing platforms for U.S. companies.",
+      "significance": "This initiative aims to position the U.S. as a leader in advanced microelectronics, crucial for developing next-generation technologies in AI, high-performance computing, and communications, thereby bolstering national security and economic competitiveness.",
+      "caveat": "The success of the NSF ELEGANT program is contingent on sustained industry participation, with progress validated by industry partners at each stage to ensure the adoption of relevant technologies.",
+      "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
+      "primarySourceUrl": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
+      "source": {
+        "name": "NSF"
+      },
+      "sourceGroup": "NSF",
+      "sourceQuality": 2,
+      "publishedAt": "2026-09-17T20:21:43Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "technology",
+        "physics",
+        "earth-science"
+      ],
+      "entities": [
+        "NSF",
+        "NSF ELEGANT",
+        "U.S. National Science Foundation",
+        "U.S. manufacturers",
+        "NSF TIP"
+      ],
+      "milestoneStatus": "planned",
+      "sourceUpdatedAt": "2026-09-18T13:35:21Z"
+    },
+    {
+      "id": "science-59cd805ddd9fcd5f",
+      "title": "NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts",
+      "summary": "The National Science Foundation (NSF) is expanding its NSF X-Labs initiative by adding three new topics: AI for Physical Systems, From Sequence to Function, and Computation at the Limit of Physics.",
+      "finding": "The National Science Foundation (NSF) is expanding its NSF X-Labs initiative by adding three new topics: AI for Physical Systems, From Sequence to Function, and Computation at the Limit of Physics.",
+      "significance": "This initiative aims to foster high-risk, high-impact research by bringing together researchers, engineers, and entrepreneurs to tackle significant scientific and technological challenges, potentially accelerating innovation and U.S. competitiveness.",
+      "caveat": "The article previews two of the topics, 'From Sequence to Function' and 'Computation at the Limit of Physics,' stating that full details and proposal submission timelines will be provided in forthcoming announcements, and proposals are not currently being accepted for these.",
+      "url": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
+      "primarySourceUrl": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
+      "source": {
+        "name": "NSF"
+      },
+      "sourceGroup": "NSF",
+      "sourceQuality": 2,
+      "publishedAt": "2026-09-16T17:13:07Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "technology",
+        "biology",
+        "physics",
+        "computer-science"
+      ],
+      "entities": [
+        "NSF X-Labs",
+        "National Science Foundation",
+        "AI for Physical Systems",
+        "From Sequence to Function",
+        "Computation at the Limit of Physics"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-10-08T13:45:03Z"
+    },
+    {
+      "id": "science-9c890060ddf72379",
+      "title": "NASA Watches Earth’s Weight, Finds Center of Mass",
+      "summary": "NASA scientists have developed a new technique using ultraprecise satellite tracking to estimate the displacement of Earth's center of mass relative to its geometric center, finding that seasonal water redistribution shifts it by fractions of an inch.",
+      "finding": "NASA scientists have developed a new technique using ultraprecise satellite tracking to estimate the displacement of Earth's center of mass relative to its geometric center, finding that seasonal water redistribution shifts it by fractions of an inch.",
+      "significance": "Earth's center of mass is a crucial reference point for satellite navigation and elevation measurements, and understanding its oscillations can lead to better reference systems for mapping and navigation.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/science-research/earth-science/nasa-watches-earths-weight-finds-center-of-mass",
+      "primarySourceUrl": "https://www.nasa.gov/science-research/earth-science/nasa-watches-earths-weight-finds-center-of-mass",
+      "source": {
+        "name": "NASA JPL"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-09-16T16:08:00Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science",
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "Jet Propulsion Laboratory",
+        "Geophysical Journal International",
+        "GRACE-FO",
+        "LAGEOS"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://academic.oup.com/gji/article/247/2/ggag314/8793649?searchresult=1",
+      "sourceUpdatedAt": "2026-09-16T16:08:00Z"
+    },
+    {
+      "id": "science-52c49ffee3fa5601",
+      "title": "Podcast: Creating thermal cloaking and new structures",
+      "summary": "Researchers are developing new structures using additive manufacturing and topology optimization, including a 3D thermal cloaking device.",
+      "finding": "Researchers are developing new structures using additive manufacturing and topology optimization, including a 3D thermal cloaking device.",
+      "significance": "These advanced technologies have the potential to transform industries and daily life.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nsf.gov/news/podcast-creating-thermal-cloaking-new-structures",
+      "primarySourceUrl": "https://www.nsf.gov/news/podcast-creating-thermal-cloaking-new-structures",
+      "source": {
+        "name": "NSF"
+      },
+      "sourceGroup": "NSF",
+      "sourceQuality": 2,
+      "publishedAt": "2026-09-14T21:28:01Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "technology",
+        "physics"
+      ],
+      "entities": [
+        "Shelly Zhang",
+        "NSF"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-09-14T21:28:01Z"
+    },
+    {
+      "id": "usgs-detects-zebra-mussel-edna-colorado-river-utah",
+      "title": "USGS detects zebra mussel environmental DNA in Utah’s Colorado River for the first time",
+      "summary": "Autonomous eDNA samplers deployed near the Colorado River by Moab found zebra mussel genetic material in June and July, the first such detection in Utah. The field result gives managers an earlier warning of a potentially damaging invasive species and time to intensify sampling and consider control measures before a population is established.",
+      "url": "https://www.usgs.gov/centers/norock/news/environmental-dna-monitoring-leads-early-detection-invasive-zebra-mussel-dna",
+      "source": {
+        "name": "U.S. Geological Survey"
+      },
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "topics": [
+        "ecology",
+        "invasive species",
+        "environmental DNA",
+        "freshwater science"
+      ],
+      "caveat": "The detection establishes zebra mussel DNA, not a confirmed living population; follow-up sampling is needed to determine whether mussels themselves are present."
+    },
+    {
+      "id": "science-d310e12924f5f441",
+      "title": "How 2 US, European Satellites Are Studying Hurricanes During El Niño",
+      "summary": "The Sentinel-6B satellite, launched in November, is now flying behind its predecessor, Sentinel-6 Michael Freilich, to provide precise sea level height measurements that will improve hurricane forecasts.",
+      "finding": "The Sentinel-6B satellite, launched in November, is now flying behind its predecessor, Sentinel-6 Michael Freilich, to provide precise sea level height measurements that will improve hurricane forecasts.",
+      "significance": "These improved forecasts can help protect infrastructure, benefit commercial industries like shipping, and potentially save lives by allowing for better disaster response and evacuation decisions.",
+      "caveat": "The article states that the data will take time to work its way into research models, implying that the full benefits are not yet realized.",
+      "url": "https://www.nasa.gov/missions/jason-cs-sentinel-6/how-2-us-european-satellites-are-studying-hurricanes-during-el-nino",
+      "primarySourceUrl": "https://www.nasa.gov/missions/jason-cs-sentinel-6/how-2-us-european-satellites-are-studying-hurricanes-during-el-nino",
+      "source": {
+        "name": "NASA JPL"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-09-09T16:00:00Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "earth-science",
+        "technology",
+        "astronomy"
+      ],
+      "entities": [
+        "Sentinel-6B",
+        "Sentinel-6 Michael Freilich",
+        "NASA",
+        "El Niño",
+        "Jet Propulsion Laboratory"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-09-09T16:00:03Z"
+    },
+    {
+      "id": "chandra-discovers-hypersoft-xray-sources",
+      "title": "Chandra finds a new class of ultraviolet-bright, hypersoft X-ray sources",
+      "summary": "Researchers mining Chandra observations of six galaxies identified 84 ‘hypersoft X-ray sources’ that emit unusually low-energy X-rays alongside intense ultraviolet radiation. Their spectral signature is unlike any known class and points to compact objects—possibly white dwarfs, neutron stars, or black holes—accreting from companions; the population could help account for missing Type Ia supernova progenitors and a poorly explained source of interstellar-gas ionization.",
+      "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-unveils-mysterious-x-ray-objects/",
+      "source": {
+        "name": "NASA Chandra"
+      },
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "topics": [
+        "space",
+        "astrophysics",
+        "X-ray astronomy",
+        "stellar evolution"
+      ],
+      "caveat": "The study has not yet identified what physical systems produce the hypersoft X-ray sources; their link to Type Ia progenitors and interstellar-gas ionization remains a proposed explanation."
+    },
+    {
+      "id": "hubble-webb-reveal-tiny-trans-neptunian-objects",
+      "title": "Hubble and Webb reveal tiny outer-solar-system objects still preserve their origins",
+      "summary": "Joint Hubble and Webb observations discovered 27 exceptionally faint trans-Neptunian objects and measured their colors, sizes, and orbits in the deepest survey of its kind. The smallest observed body is about 5 kilometres across; surprisingly, these tiny objects retain the same color signatures as larger relatives and are less numerous than some planet-formation models predict, constraining how primordial planetesimals formed beyond Neptune.",
+      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-webb-find-far-out-solar-system-objects-remember-past/",
+      "source": {
+        "name": "NASA Hubble and Webb"
+      },
+      "publishedAt": "2026-09-08T00:00:00Z",
+      "topics": [
+        "space",
+        "planetary science",
+        "Kuiper Belt",
+        "planet formation"
+      ],
+      "caveat": "The reason the smallest bodies retain their original-looking surfaces remains unresolved; the teams are still assessing whether collisions are rarer than expected or whether the objects preserve primordial compositions."
+    },
+    {
+      "id": "nasa-x59-validates-flight-models-through-25-flights",
+      "title": "NASA’s X-59 completes 25 flights with flight behavior matching its models",
+      "summary": "NASA’s quiet-supersonic X-59 research aircraft has completed 25 test flights, including a 72-minute flight to Mach 1.2 and 49,000 feet. NASA reports that its handling, stability margin, and flight loads have closely matched the preflight digital-twin predictions, without unexpected aerodynamic instability or excessive vibration—clearing the way for acoustic-validation flights that will directly measure its low-boom sonic thumps.",
+      "url": "https://www.nasa.gov/blogs/quesst/2026/09/04/nasas-x-59-aircraft-builds-momentum-through-25th-flight/",
+      "source": {
+        "name": "NASA"
+      },
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "topics": [
+        "aeronautics",
+        "supersonic flight",
+        "flight testing",
+        "engineering"
+      ],
+      "caveat": "The key low-boom claim is not yet validated: NASA’s dedicated acoustic measurement campaign is the next phase."
+    },
+    {
+      "id": "bepicolombo-separates-transfer-module-mercury-arrival",
+      "title": "BepiColombo successfully sheds its transfer stage on approach to Mercury",
+      "summary": "After almost eight years and billions of kilometres in flight, ESA and JAXA’s BepiColombo mission successfully separated its Mercury Transfer Module more than 200 million kilometres from Earth. The Mercury Planetary Orbiter and Magnetospheric Orbiter are now operating as a composite spacecraft on the next leg toward Mercury orbit insertion in November, a key milestone toward the first two-spacecraft scientific mission at the planet.",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo/Latest_updates_BepiColombo_s_arrival_at_Mercury",
       "source": {
         "name": "European Space Agency"
       },
-      "publishedAt": "2026-08-27T00:00:00Z",
+      "publishedAt": "2026-09-03T00:00:00Z",
       "topics": [
-        "Earth science",
-        "weather",
-        "satellites",
-        "spaceflight"
-      ]
-    },
-    {
-      "id": "nasa-swift-resumes-xray-ultraviolet-observations",
-      "title": "NASA’s Swift observatory resumes X-ray and ultraviolet science",
-      "summary": "NASA has restarted Swift’s X-ray and ultraviolet/optical instruments after months in low-drag mode intended to preserve the observatory for an attempted orbital boost. The boost spacecraft will no longer capture Swift, but the 21-year-old mission can again rapidly observe transient cosmic events while NASA estimates it has roughly one to two months above the altitude where operations become difficult.",
-      "url": "https://science.nasa.gov/blogs/swift/2026/08/28/nasas-swift-restarts-science-observations/",
-      "source": {
-        "name": "NASA Swift"
-      },
-      "publishedAt": "2026-08-28T00:00:00Z",
-      "topics": [
-        "space",
-        "astronomy",
-        "X-ray astronomy",
-        "space missions"
+        "spaceflight",
+        "planetary science",
+        "Mercury",
+        "BepiColombo"
       ],
-      "caveat": "Swift’s third instrument, the Burst Alert Telescope, remains offline as the team works to return it to data collection."
+      "caveat": "The two orbiters have not yet entered Mercury orbit; ESA schedules orbital insertion for November 2026 and science operations for April 2027."
     },
     {
-      "id": "roman-telescope-launches-toward-l2",
-      "title": "NASA’s Roman telescope launches toward its dark-universe survey",
-      "summary": "NASA’s Nancy Grace Roman Space Telescope launched aboard a Falcon Heavy and separated from the rocket’s second stage, beginning its roughly three-month journey to the Sun–Earth L2 point. After commissioning, Roman will conduct wide, deep visible-to-near-infrared surveys to probe dark energy and dark matter and build a census of exoplanets.",
-      "url": "https://science.nasa.gov/blogs/roman/2026/08/30/nasa-concludes-roman-space-telescope-launch-coverage/",
+      "id": "nasa-multipoint-sounding-rocket-probes-sporadic-e",
+      "title": "A multi-sensor rocket finds unexpected structure in radio-disrupting ionospheric clouds",
+      "summary": "New peer-reviewed results from NASA’s SpEED Demon sounding rocket provide the first simultaneous multi-point measurements inside a sporadic-E layer, a metal-ion cloud that can disrupt long-distance radio and GPS signals. Five detectors showed the layer was uneven and structured rather than a simple sheet, including a split into two peaks during descent—evidence that atmospheric turbulence shapes the plasma.",
+      "url": "https://science.nasa.gov/science-research/heliophysics/nasa-rocket-takes-first-multi-point-look-inside-radio-disrupting-clouds/",
       "source": {
-        "name": "NASA Roman"
+        "name": "NASA"
       },
-      "publishedAt": "2026-08-30T00:00:00Z",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "topics": [
+        "heliophysics",
+        "ionosphere",
+        "sounding rockets",
+        "radio science"
+      ],
+      "caveat": "The proposed Kelvin–Helmholtz turbulence explanation is plausible but unconfirmed because the flight did not directly measure local winds and electric fields."
+    },
+    {
+      "id": "hubble-discovers-saturn-south-pole-decagon",
+      "title": "Hubble finds a giant, evolving decagon around Saturn’s south pole",
+      "summary": "NASA’s Hubble observations have revealed a 10-sided atmospheric wave embedded in Saturn’s south-polar jet stream—the first large regular-sided jet pattern seen in the planet’s southern hemisphere. The structure reaches through multiple atmospheric layers and had faint precursors in data from 2023, giving researchers a chance to watch a giant-planet circulation pattern develop.",
+      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-tracks-new-decagon-encircling-saturns-south-pole/",
+      "source": {
+        "name": "NASA Hubble"
+      },
+      "publishedAt": "2026-09-02T00:00:00Z",
       "topics": [
         "space",
-        "astronomy",
-        "dark energy",
-        "exoplanets",
-        "science missions"
-      ]
-    },
-    {
-      "id": "noaa-lrauvs-expand-seafloor-scallop-survey",
-      "title": "NOAA’s long-range robots extend a seafloor survey where ships cannot go",
-      "summary": "NOAA Fisheries sent two long-range autonomous underwater vehicles along more than 200 nautical miles of Mid-Atlantic seafloor track lines, collecting over 68,000 images for the Atlantic sea-scallop assessment. Their camera, environmental, and navigation systems can sample inside and around offshore infrastructure where traditional survey vessels cannot safely operate; NOAA says comparable robot data have already passed technical review and entered annual abundance estimates.",
-      "url": "https://www.fisheries.noaa.gov/feature-story/meet-autonomous-underwater-robot-expanding-our-ability-survey-seafloor",
-      "source": {
-        "name": "NOAA Fisheries"
-      },
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "topics": [
-        "ocean science",
-        "robotics",
-        "seafloor surveying",
-        "fisheries science"
-      ]
+        "planetary science",
+        "Saturn",
+        "atmospheric dynamics"
+      ],
+      "caveat": "Scientists do not yet know whether the new decagon will become a long-lived stable feature like Saturn’s northern hexagon or continue evolving."
     },
     {
       "id": "noaa-documents-post-2014-gulf-stream-intensification",
@@ -199,123 +969,237 @@
       "caveat": "ESA says the images and instrument data are still being processed, so detailed material-by-material results are not yet available."
     },
     {
-      "id": "hubble-discovers-saturn-south-pole-decagon",
-      "title": "Hubble finds a giant, evolving decagon around Saturn’s south pole",
-      "summary": "NASA’s Hubble observations have revealed a 10-sided atmospheric wave embedded in Saturn’s south-polar jet stream—the first large regular-sided jet pattern seen in the planet’s southern hemisphere. The structure reaches through multiple atmospheric layers and had faint precursors in data from 2023, giving researchers a chance to watch a giant-planet circulation pattern develop.",
-      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-tracks-new-decagon-encircling-saturns-south-pole/",
+      "id": "noaa-lrauvs-expand-seafloor-scallop-survey",
+      "title": "NOAA’s long-range robots extend a seafloor survey where ships cannot go",
+      "summary": "NOAA Fisheries sent two long-range autonomous underwater vehicles along more than 200 nautical miles of Mid-Atlantic seafloor track lines, collecting over 68,000 images for the Atlantic sea-scallop assessment. Their camera, environmental, and navigation systems can sample inside and around offshore infrastructure where traditional survey vessels cannot safely operate; NOAA says comparable robot data have already passed technical review and entered annual abundance estimates.",
+      "url": "https://www.fisheries.noaa.gov/feature-story/meet-autonomous-underwater-robot-expanding-our-ability-survey-seafloor",
       "source": {
-        "name": "NASA Hubble"
+        "name": "NOAA Fisheries"
       },
-      "publishedAt": "2026-09-02T00:00:00Z",
+      "publishedAt": "2026-08-31T00:00:00Z",
+      "topics": [
+        "ocean science",
+        "robotics",
+        "seafloor surveying",
+        "fisheries science"
+      ]
+    },
+    {
+      "id": "science-3d9f59c719d9a8d0",
+      "title": "NASA’s Dark Universe-Seeking Nancy Grace Roman Space Telescope Launches",
+      "summary": "NASA's Nancy Grace Roman Space Telescope has successfully launched and is beginning its journey to its final orbit, where it will study dark matter, dark energy, and exoplanets.",
+      "finding": "NASA's Nancy Grace Roman Space Telescope has successfully launched and is beginning its journey to its final orbit, where it will study dark matter, dark energy, and exoplanets.",
+      "significance": "The telescope's large field of view and infrared vision will enable it to survey vast areas of the sky, potentially answering profound questions about cosmic history and the search for life beyond our solar system.",
+      "caveat": "The article focuses on the launch and initial deployment of the telescope's components, with scientific findings expected in the future.",
+      "url": "https://www.nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-space-telescope-launches",
+      "primarySourceUrl": "https://www.nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-space-telescope-launches",
+      "source": {
+        "name": "NASA JPL"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-08-30T13:18:06Z",
+      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-09T18:57:35.412035Z",
+      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy",
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "Nancy Grace Roman Space Telescope",
+        "SpaceX Falcon Heavy rocket",
+        "Kennedy Space Center",
+        "Goddard Space Flight Center"
+      ],
+      "milestoneStatus": "completed"
+    },
+    {
+      "id": "roman-telescope-launches-toward-l2",
+      "title": "NASA’s Roman telescope launches toward its dark-universe survey",
+      "summary": "NASA’s Nancy Grace Roman Space Telescope launched aboard a Falcon Heavy and separated from the rocket’s second stage, beginning its roughly three-month journey to the Sun–Earth L2 point. After commissioning, Roman will conduct wide, deep visible-to-near-infrared surveys to probe dark energy and dark matter and build a census of exoplanets.",
+      "url": "https://science.nasa.gov/blogs/roman/2026/08/30/nasa-concludes-roman-space-telescope-launch-coverage/",
+      "source": {
+        "name": "NASA Roman"
+      },
+      "publishedAt": "2026-08-30T00:00:00Z",
       "topics": [
         "space",
-        "planetary science",
-        "Saturn",
-        "atmospheric dynamics"
-      ],
-      "caveat": "Scientists do not yet know whether the new decagon will become a long-lived stable feature like Saturn’s northern hexagon or continue evolving."
+        "astronomy",
+        "dark energy",
+        "exoplanets",
+        "science missions"
+      ]
     },
     {
-      "id": "nasa-multipoint-sounding-rocket-probes-sporadic-e",
-      "title": "A multi-sensor rocket finds unexpected structure in radio-disrupting ionospheric clouds",
-      "summary": "New peer-reviewed results from NASA’s SpEED Demon sounding rocket provide the first simultaneous multi-point measurements inside a sporadic-E layer, a metal-ion cloud that can disrupt long-distance radio and GPS signals. Five detectors showed the layer was uneven and structured rather than a simple sheet, including a split into two peaks during descent—evidence that atmospheric turbulence shapes the plasma.",
-      "url": "https://science.nasa.gov/science-research/heliophysics/nasa-rocket-takes-first-multi-point-look-inside-radio-disrupting-clouds/",
+      "id": "nasa-swift-resumes-xray-ultraviolet-observations",
+      "title": "NASA’s Swift observatory resumes X-ray and ultraviolet science",
+      "summary": "NASA has restarted Swift’s X-ray and ultraviolet/optical instruments after months in low-drag mode intended to preserve the observatory for an attempted orbital boost. The boost spacecraft will no longer capture Swift, but the 21-year-old mission can again rapidly observe transient cosmic events while NASA estimates it has roughly one to two months above the altitude where operations become difficult.",
+      "url": "https://science.nasa.gov/blogs/swift/2026/08/28/nasas-swift-restarts-science-observations/",
       "source": {
-        "name": "NASA"
+        "name": "NASA Swift"
       },
-      "publishedAt": "2026-09-02T00:00:00Z",
+      "publishedAt": "2026-08-28T00:00:00Z",
       "topics": [
-        "heliophysics",
-        "ionosphere",
-        "sounding rockets",
-        "radio science"
+        "space",
+        "astronomy",
+        "X-ray astronomy",
+        "space missions"
       ],
-      "caveat": "The proposed Kelvin–Helmholtz turbulence explanation is plausible but unconfirmed because the flight did not directly measure local winds and electric fields."
+      "caveat": "Swift’s third instrument, the Burst Alert Telescope, remains offline as the team works to return it to data collection."
     },
     {
-      "id": "bepicolombo-separates-transfer-module-mercury-arrival",
-      "title": "BepiColombo successfully sheds its transfer stage on approach to Mercury",
-      "summary": "After almost eight years and billions of kilometres in flight, ESA and JAXA’s BepiColombo mission successfully separated its Mercury Transfer Module more than 200 million kilometres from Earth. The Mercury Planetary Orbiter and Magnetospheric Orbiter are now operating as a composite spacecraft on the next leg toward Mercury orbit insertion in November, a key milestone toward the first two-spacecraft scientific mission at the planet.",
-      "url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo/Latest_updates_BepiColombo_s_arrival_at_Mercury",
+      "id": "esa-launches-mtg-i2-weather-satellite",
+      "title": "Europe launches a high-frequency weather imager for severe-storm nowcasting",
+      "summary": "ESA launched the MTG-I2 weather satellite aboard Ariane 6, completing the first operational trio of Meteosat Third Generation satellites. Once commissioned, its Flexible Combined Imager and Lightning Imager will provide high-resolution views of developing weather across Europe and northern Africa every 2.5 minutes, strengthening severe-weather, wildfire, pollution, and climate monitoring.",
+      "url": "https://www.esa.int/Newsroom/Press_Releases/MTG-I2_completes_Europe_s_latest_weather_trio",
       "source": {
         "name": "European Space Agency"
       },
-      "publishedAt": "2026-09-03T00:00:00Z",
+      "publishedAt": "2026-08-27T00:00:00Z",
       "topics": [
-        "spaceflight",
-        "planetary science",
-        "Mercury",
-        "BepiColombo"
-      ],
-      "caveat": "The two orbiters have not yet entered Mercury orbit; ESA schedules orbital insertion for November 2026 and science operations for April 2027."
+        "Earth science",
+        "weather",
+        "satellites",
+        "spaceflight"
+      ]
     },
     {
-      "id": "nasa-x59-validates-flight-models-through-25-flights",
-      "title": "NASA’s X-59 completes 25 flights with flight behavior matching its models",
-      "summary": "NASA’s quiet-supersonic X-59 research aircraft has completed 25 test flights, including a 72-minute flight to Mach 1.2 and 49,000 feet. NASA reports that its handling, stability margin, and flight loads have closely matched the preflight digital-twin predictions, without unexpected aerodynamic instability or excessive vibration—clearing the way for acoustic-validation flights that will directly measure its low-boom sonic thumps.",
-      "url": "https://www.nasa.gov/blogs/quesst/2026/09/04/nasas-x-59-aircraft-builds-momentum-through-25th-flight/",
+      "id": "nasa-tests-lunar-landing-plume-physics",
+      "title": "NASA begins its most flight-relevant lunar landing plume tests",
+      "summary": "NASA has begun firing a simulated lander plume into lunar-regolith simulant inside a 60-foot vacuum sphere at Langley. Cameras and other instruments are measuring crater formation, ejecta geometry, and particle speeds to validate models for how rocket exhaust could endanger landers, surface equipment, and crews on the Moon—and eventually help prepare for Mars landings.",
+      "url": "https://www.nasa.gov/missions/artemis/nasa-begins-moon-mission-plume-surface-interaction-tests/",
       "source": {
         "name": "NASA"
       },
-      "publishedAt": "2026-09-04T00:00:00Z",
-      "topics": [
-        "aeronautics",
-        "supersonic flight",
-        "flight testing",
-        "engineering"
-      ],
-      "caveat": "The key low-boom claim is not yet validated: NASA’s dedicated acoustic measurement campaign is the next phase."
-    },
-    {
-      "id": "hubble-webb-reveal-tiny-trans-neptunian-objects",
-      "title": "Hubble and Webb reveal tiny outer-solar-system objects still preserve their origins",
-      "summary": "Joint Hubble and Webb observations discovered 27 exceptionally faint trans-Neptunian objects and measured their colors, sizes, and orbits in the deepest survey of its kind. The smallest observed body is about 5 kilometres across; surprisingly, these tiny objects retain the same color signatures as larger relatives and are less numerous than some planet-formation models predict, constraining how primordial planetesimals formed beyond Neptune.",
-      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-webb-find-far-out-solar-system-objects-remember-past/",
-      "source": {
-        "name": "NASA Hubble and Webb"
-      },
-      "publishedAt": "2026-09-08T00:00:00Z",
+      "publishedAt": "2026-08-26T00:00:00Z",
       "topics": [
         "space",
-        "planetary science",
-        "Kuiper Belt",
-        "planet formation"
-      ],
-      "caveat": "The reason the smallest bodies retain their original-looking surfaces remains unresolved; the teams are still assessing whether collisions are rarer than expected or whether the objects preserve primordial compositions."
+        "Moon",
+        "engineering",
+        "planetary science"
+      ]
     },
     {
-      "id": "chandra-discovers-hypersoft-xray-sources",
-      "title": "Chandra finds a new class of ultraviolet-bright, hypersoft X-ray sources",
-      "summary": "Researchers mining Chandra observations of six galaxies identified 84 ‘hypersoft X-ray sources’ that emit unusually low-energy X-rays alongside intense ultraviolet radiation. Their spectral signature is unlike any known class and points to compact objects—possibly white dwarfs, neutron stars, or black holes—accreting from companions; the population could help account for missing Type Ia supernova progenitors and a poorly explained source of interstellar-gas ionization.",
-      "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-unveils-mysterious-x-ray-objects/",
+      "id": "nasa-dsn-dss23-enters-operations",
+      "title": "NASA’s newest deep-space antenna begins operations at Goldstone",
+      "summary": "NASA’s 34-meter Deep Space Station 23 antenna has entered service after completing its test campaign, already tracking Chandra and communicating with missions including Psyche, Juno, Mars Reconnaissance Orbiter, and Voyager 1. The new multifrequency dish expands the Deep Space Network’s capacity for the growing fleet of deep-space missions and is a completed, operational infrastructure milestone.",
+      "url": "https://www.nasa.gov/technology/space-comms/deep-space-network/new-next-gen-dish-adds-muscle-to-nasas-deep-space-network/",
       "source": {
-        "name": "NASA Chandra"
+        "name": "NASA Jet Propulsion Laboratory"
       },
-      "publishedAt": "2026-09-09T00:00:00Z",
+      "publishedAt": "2026-08-25T00:00:00Z",
       "topics": [
         "space",
-        "astrophysics",
-        "X-ray astronomy",
-        "stellar evolution"
-      ],
-      "caveat": "The study has not yet identified what physical systems produce the hypersoft X-ray sources; their link to Type Ia progenitors and interstellar-gas ionization remains a proposed explanation."
+        "deep space communications",
+        "engineering",
+        "space infrastructure"
+      ]
     },
     {
-      "id": "usgs-detects-zebra-mussel-edna-colorado-river-utah",
-      "title": "USGS detects zebra mussel environmental DNA in Utah’s Colorado River for the first time",
-      "summary": "Autonomous eDNA samplers deployed near the Colorado River by Moab found zebra mussel genetic material in June and July, the first such detection in Utah. The field result gives managers an earlier warning of a potentially damaging invasive species and time to intensify sampling and consider control measures before a population is established.",
-      "url": "https://www.usgs.gov/centers/norock/news/environmental-dna-monitoring-leads-early-detection-invasive-zebra-mussel-dna",
+      "id": "roman-telescope-clears-flight-readiness-review",
+      "title": "NASA's Roman telescope clears its flight-readiness review",
+      "summary": "NASA and SpaceX certified the Nancy Grace Roman Space Telescope to proceed into final launch preparations, targeting no earlier than 7:26 a.m. EDT on August 30 aboard Falcon Heavy. Roman's wide-field surveys are designed to study dark energy, dark matter, exoplanets, and the universe's evolution.",
+      "url": "https://science.nasa.gov/blogs/roman/2026/08/21/teams-complete-flight-readiness-review-for-nasas-roman-telescope/",
       "source": {
-        "name": "U.S. Geological Survey"
+        "name": "NASA Science"
       },
-      "publishedAt": "2026-09-11T00:00:00Z",
+      "publishedAt": "2026-08-21T16:49:00Z",
       "topics": [
-        "ecology",
-        "invasive species",
-        "environmental DNA",
-        "freshwater science"
-      ],
-      "caveat": "The detection establishes zebra mussel DNA, not a confirmed living population; follow-up sampling is needed to determine whether mussels themselves are present."
+        "space",
+        "astronomy",
+        "science missions"
+      ]
+    },
+    {
+      "id": "nasa-starling-demonstrates-gps-free-autonomous-navigation",
+      "title": "NASA's Starling satellites demonstrate GPS-free autonomous navigation",
+      "summary": "The FALCON experiment used onboard cameras and a catalog of space objects to determine Starling's orbit without GPS or ground navigation. Over three days it also improved orbit estimates for more than 200 tracked objects, a step toward autonomous lunar satellite swarms and better collision avoidance.",
+      "url": "https://www.nasa.gov/blogs/smallsatellites/2026/08/17/nasas-starling-mission-opens-new-frontiers-in-space-navigation/",
+      "source": {
+        "name": "NASA"
+      },
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "topics": [
+        "space",
+        "autonomous systems",
+        "satellites"
+      ]
+    },
+    {
+      "id": "hubble-reveals-early-milky-way-merger",
+      "title": "Hubble identifies a major merger from the Milky Way’s infancy",
+      "summary": "Hubble measurements of 39 inner-Milky-Way globular clusters, combined with Gaia data, isolate a third cluster population that points to an ancient collision with a dwarf galaxy dubbed LKH. The result pushes definitive evidence of the Galaxy’s assembly history about 1.8 billion years farther back, to roughly 11.8 billion years ago.",
+      "url": "https://science.nasa.gov/missions/hubble/hubble-solves-merger-mystery-from-milky-ways-early-years/",
+      "source": {
+        "name": "NASA Hubble"
+      },
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "topics": [
+        "space",
+        "astronomy",
+        "Milky Way",
+        "galaxy evolution"
+      ]
     }
-  ]
+  ],
+  "scienceInterests": [],
+  "selection": {
+    "date": "2026-10-09",
+    "selectedIds": [
+      "science-174527e0ab0de8a5",
+      "science-f433a319fc4cd0e6",
+      "science-b89177a69ceadc8f",
+      "science-63bdbcb865b29ff9",
+      "science-74da31eddbb7c532",
+      "science-91ede4635e9f72e8"
+    ],
+    "reasons": {
+      "science-174527e0ab0de8a5": {
+        "score": 34,
+        "source": "NASA",
+        "topic": "technology",
+        "publishedAt": "2026-10-09T16:59:24Z",
+        "interestMatch": false
+      },
+      "science-f433a319fc4cd0e6": {
+        "score": 33,
+        "source": "ESA",
+        "topic": "astronomy",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "interestMatch": false
+      },
+      "science-b89177a69ceadc8f": {
+        "score": 32,
+        "source": "U-M",
+        "topic": "social-science",
+        "publishedAt": "2026-10-07T15:01:11Z",
+        "interestMatch": false
+      },
+      "science-63bdbcb865b29ff9": {
+        "score": 28,
+        "source": "NSF",
+        "topic": "technology",
+        "publishedAt": "2026-10-08T13:26:57Z",
+        "interestMatch": false
+      },
+      "science-74da31eddbb7c532": {
+        "score": 22,
+        "source": "NASA",
+        "topic": "earth-science",
+        "publishedAt": "2026-10-09T04:01:00Z",
+        "interestMatch": false
+      },
+      "science-91ede4635e9f72e8": {
+        "score": 18,
+        "source": "U-M",
+        "topic": "health",
+        "publishedAt": "2026-10-05T15:05:47Z",
+        "interestMatch": false
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { orderNewsStories, orderScienceStories } from "../story-order.mjs";
+import { orderNewsStories } from "../story-order.mjs";
 
 const utcDateKey = (date) => date.toISOString().slice(0, 10);
 
@@ -40,26 +40,4 @@ test("news keeps older days in reverse chronological order", () => {
     orderNewsStories(stories, { today: "2026-09-04", dateKey: utcDateKey }).map(({ id }) => id),
     ["newer-statewide", "older-local"],
   );
-});
-
-test("science shuffle is stable for a visit and changes with its seed", () => {
-  const stories = Array.from({ length: 8 }, (_, index) => ({
-    id: `story-${index}`,
-    publishedAt: "2026-09-04T12:00:00Z",
-  }));
-  const first = orderScienceStories(stories, 101).map(({ id }) => id);
-
-  assert.deepEqual(orderScienceStories(stories, 101).map(({ id }) => id), first);
-  assert.notDeepEqual(orderScienceStories(stories, 202).map(({ id }) => id), first);
-});
-
-test("science freshness bias prevents a much older story from jumping ahead", () => {
-  const stories = [
-    { id: "week-old", publishedAt: "2026-08-28T12:00:00Z" },
-    { id: "new", publishedAt: "2026-09-04T12:00:00Z" },
-  ];
-
-  for (const seed of [1, 2, 3, 4, 5, 999]) {
-    assert.equal(orderScienceStories(stories, seed)[0].id, "new");
-  }
 });

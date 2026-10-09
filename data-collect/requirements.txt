@@ -12,3 +12,6 @@ crawl4ai>=0.9.3,<0.10
 pypdf>=6,<7
 fonttools>=4,<5
 curl_cffi>=0.7,<1
+# Science article parsing and full-document validation.
+beautifulsoup4>=4.12,<5
+jsonschema>=4.20,<5

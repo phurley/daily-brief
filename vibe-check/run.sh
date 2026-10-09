@@ -59,6 +59,15 @@ if [ "${VIBE_SKIP_COLLECT_WAIT:-}" != "1" ]; then
     fi
 fi
 
+# Wait for the independent science edition before composing editorial copy.
+if [ "${VIBE_SKIP_SCIENCE_WAIT:-}" != "1" ]; then
+    while [ -f /tmp/dailybrief-science.lock ] && [ "$waited" -lt "${VIBE_WAIT_LIMIT:-1800}" ]; do
+        sleep 30
+        waited=$((waited + 30))
+    done
+    if [ -f /tmp/dailybrief-science.lock ]; then exit 0; fi
+fi
+
 exec >> "$LOG" 2>&1
 echo "$STAMP [start] vibe-check (waited ${waited}s for collect)"
 

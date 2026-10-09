@@ -463,3 +463,15 @@ footer { color: #dce8e4; background: #14282b; }
 .starship-status details { border-top: 1px solid var(--line); padding-top: .6rem; margin-top: .8rem; overflow-wrap: anywhere; }
 .starship-status summary { cursor: pointer; color: var(--accent-dark); }
 .starship-status details p { font-size: .85rem; color: var(--muted); }
+
+/* Science limitations remain visible; long archive is explicitly expandable. */
+.story__caveat { border-left: 2px solid currentColor; padding-left: .65rem; }
+.science-archive > summary { cursor: pointer; font-weight: 600; }
+.science-archive .story { margin-top: 1rem; }
+.story a + a { margin-left: .7rem; }
+/* Best bets and private household feedback */
+
+/* Science evidence qualifiers must never be clipped by the generic story clamp. */
+#geek-list .story > div > p { display: block; overflow: visible; -webkit-line-clamp: unset; }
+#geek-list .story details { margin-top: .6rem; }
+#geek-list .story details > summary { cursor: pointer; color: var(--muted); }
