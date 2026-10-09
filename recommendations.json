@@ -1,11 +1,120 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-10-09T20:57:54.996Z",
+  "generatedAt": "2026-10-09T21:12:40.972Z",
   "days": [
     {
       "date": "2026-10-09",
       "events": [
+        {
+          "id": "occ-7c6051895983c10befcc810a",
+          "title": "30th Annual Edgefest: Kerrytown Concert House",
+          "summary": "One of the world’s 50 top jazz/avant music festivals, according to DownBeat, this annual event includes multiple shows over 4 days. Tonight: U-M jazz professor and versatile composer-saxophonist Andrew Bishop (6 p.m.), often a sideman, gives a solo concert. The William Hooker Quartet (7 p.m.).",
+          "url": "https://annarborobserver.com/event/30th-annual-edgefest-kerrytown-concert-house-2/2026-10-09/2/",
+          "start": "2026-10-09T19:00:00-04:00",
+          "end": "2026-10-09T20:00:00-04:00",
+          "venue": "Kerrytown Concert House",
+          "city": "Ann Arbor",
+          "category": "Music",
+          "status": "scheduled",
+          "occurrenceId": "occ-7c6051895983c10befcc810a",
+          "seriesId": "series-fe57c3534ee3afc751d6622a",
+          "sourceUpdatedAt": "2026-09-27T14:28:32+00:00",
+          "canonicalUrl": "https://annarborobserver.com/event/30th-annual-edgefest-kerrytown-concert-house-2/2026-10-09/2/",
+          "venueId": "kerrytown concert house|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "30th-annual-edgefest-kerrytown-concert-h-event-2026-10-09",
+            "src-f928bcea323d0a4ba8d55815"
+          ],
+          "legacyOccurrenceKeys": [
+            "30th-annual-edgefest-kerrytown-concert-h-event-2026-10-09|2026-10-09T19:00:00-04:00",
+            "src-f928bcea323d0a4ba8d55815|2026-10-09T19:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "series-fe57c3534ee3afc751d6622a"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-f928bcea323d0a4ba8d55815",
+              "sourceId": "ann-arbor-observer",
+              "canonicalUrl": "https://annarborobserver.com/event/30th-annual-edgefest-kerrytown-concert-house-2/2026-10-09/2/",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceUpdatedAt": "2026-09-27T14:28:32+00:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-f928bcea323d0a4ba8d55815",
+              "start": "src-f928bcea323d0a4ba8d55815",
+              "end": "src-f928bcea323d0a4ba8d55815",
+              "venue": "src-f928bcea323d0a4ba8d55815",
+              "url": "src-f928bcea323d0a4ba8d55815",
+              "status": "src-f928bcea323d0a4ba8d55815"
+            },
+            "conflicts": {}
+          },
+          "score": 99,
+          "scoring": {
+            "signals": {
+              "funny": 0.07,
+              "distinctive": 0.73,
+              "eclectic": 0.71,
+              "technical_science": 0.03,
+              "artsy": 0.99,
+              "progressive": 0.85,
+              "outdoors": 0.02,
+              "theatre": 0.03,
+              "live_music": 0.99,
+              "live_comedy": 0.02,
+              "farmer_market": 0.01,
+              "sporting": 0.01,
+              "recurring": 0.72,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.01,
+              "large_venue": 0.03,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.03,
+              "market_or_shop": 0.01,
+              "punk_metal_or_rock": 0.03,
+              "dance": 0.02,
+              "sales_related": 0.27,
+              "children_activity": 0.02,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.01
+            },
+            "score": 99,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "recommendation": {
+            "occurrenceId": "occ-7c6051895983c10befcc810a",
+            "score": 111,
+            "components": {
+              "taste": 99,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 0
+            },
+            "reasons": [
+              "distinctive +18",
+              "live music +12",
+              "Available on selected day +12"
+            ],
+            "unknowns": [
+              "Distance unknown",
+              "Status unconfirmed",
+              "Price unknown"
+            ]
+          }
+        },
         {
           "id": "occ-d28105ea0e81db966db9f5b2",
           "title": "Edgefest 30: Freedom at the Edge: The Roscoe Mitchell Ensemble",
@@ -232,7 +341,7 @@
           "price": "$12 - $15",
           "registration": "https://northvillearthouse.org/oakwood/",
           "category": "Guided tour",
-          "imageUrl": "https://community.metrotimes.com/foundation/images/icons/ticket-regular-blue.svg",
+          "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
           "imageAlt": "If Stones Could Talk Oakwood Cemetery Tours",
           "status": "scheduled",
           "occurrenceId": "occ-688df648699868d427ad12bc",
@@ -240,15 +349,56 @@
           "venueId": "northville art house|northville",
           "timePrecision": "time",
           "aliases": [
-            "if-stones-could-talk-oakwood-cemetery-to-event-2026-10-09"
+            "if-stones-could-talk-oakwood-cemetery-to-event-2026-10-09",
+            "src-3294c54d4c94246ac67efd2a",
+            "src-8e60973425281748abe671db",
+            "src-a8d8e25b68b501d6bdbbede6",
+            "src-d22d75fc4e19b3478e8f377f"
           ],
           "legacyOccurrenceKeys": [
-            "if-stones-could-talk-oakwood-cemetery-to-event-2026-10-09|2026-10-09T17:00:00-04:00"
+            "if-stones-could-talk-oakwood-cemetery-to-event-2026-10-09|2026-10-09T17:00:00-04:00",
+            "src-3294c54d4c94246ac67efd2a|2026-10-09T17:00:00-04:00",
+            "src-8e60973425281748abe671db|2026-10-09T17:00:00-04:00",
+            "src-a8d8e25b68b501d6bdbbede6|2026-10-09T17:00:00-04:00",
+            "src-d22d75fc4e19b3478e8f377f|2026-10-09T17:00:00-04:00"
           ],
           "legacySeriesKeys": [
             "if stones could talk oakwood cemetery tours|northville art house"
           ],
           "sources": [
+            {
+              "sourceRecordId": "src-d22d75fc4e19b3478e8f377f",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/if-stones-could-talk-oakwood-cemetery-tours-41834767",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-a8d8e25b68b501d6bdbbede6",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/if-stones-could-talk-oakwood-cemetery-tours-41834767",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-8e60973425281748abe671db",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/if-stones-could-talk-oakwood-cemetery-tours-41834767",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-3294c54d4c94246ac67efd2a",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/if-stones-could-talk-oakwood-cemetery-tours-41834767",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled",
+              "statusEvidence": "Fri., Oct. 9, 5-8 p.m."
+            },
             {
               "sourceRecordId": "src-e978099a58ff1dde79313f01",
               "sourceId": "metro-times",
@@ -260,34 +410,35 @@
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
+              "exact-title-time-venue",
               "new-occurrence"
             ],
             "fields": {
-              "title": "src-e978099a58ff1dde79313f01",
-              "start": "src-e978099a58ff1dde79313f01",
-              "end": "src-e978099a58ff1dde79313f01",
-              "venue": "src-e978099a58ff1dde79313f01",
-              "registration": "src-e978099a58ff1dde79313f01",
-              "url": "src-e978099a58ff1dde79313f01",
-              "imageUrl": "src-e978099a58ff1dde79313f01",
-              "status": "src-e978099a58ff1dde79313f01"
+              "status": "src-3294c54d4c94246ac67efd2a",
+              "title": "src-d22d75fc4e19b3478e8f377f",
+              "start": "src-d22d75fc4e19b3478e8f377f",
+              "end": "src-d22d75fc4e19b3478e8f377f",
+              "venue": "src-d22d75fc4e19b3478e8f377f",
+              "registration": "src-d22d75fc4e19b3478e8f377f",
+              "url": "src-d22d75fc4e19b3478e8f377f",
+              "imageUrl": "src-d22d75fc4e19b3478e8f377f"
             },
             "conflicts": {}
           },
           "score": 96,
           "scoring": {
             "signals": {
-              "funny": 0.43,
+              "funny": 0.46,
               "distinctive": 0.75,
-              "eclectic": 0.76,
+              "eclectic": 0.74,
               "technical_science": 0.04,
               "artsy": 0.91,
-              "progressive": 0.52,
-              "outdoors": 0.47,
+              "progressive": 0.53,
+              "outdoors": 0.46,
               "theatre": 0.11,
               "live_music": 0.02,
               "live_comedy": 0.03,
-              "farmer_market": 0.02,
+              "farmer_market": 0.01,
               "sporting": 0.01,
               "recurring": 0.62,
               "craft_fair_shopping": 0.02,
@@ -298,8 +449,8 @@
               "market_or_shop": 0.02,
               "punk_metal_or_rock": 0.01,
               "dance": 0.02,
-              "sales_related": 0.12,
-              "children_activity": 0.09,
+              "sales_related": 0.11,
+              "children_activity": 0.08,
               "running": 0.01,
               "exercise": 0.01,
               "employment_related": 0.01
@@ -319,6 +470,148 @@
             },
             "reasons": [
               "distinctive +18",
+              "eclectic +12",
+              "Available on selected day +12"
+            ],
+            "unknowns": [
+              "Distance unknown",
+              "Status unconfirmed"
+            ]
+          }
+        },
+        {
+          "id": "occ-f39b0f4d96a87d0c47455e0d",
+          "title": "30th Annual Edgefest: Kerrytown Concert House",
+          "summary": "One of the world’s 50 top jazz/avant music festivals, according to DownBeat, this annual event includes multiple shows over 4 days. Tonight's lineup features Andrew Bishop, William Hooker Quartet, New Origins Trio, Stein/Smith/Shead Trio, and Fay Victor’s Herbie Nichols SUNG.",
+          "url": "https://annarborobserver.com/event/30th-annual-edgefest-kerrytown-concert-house-2/2026-10-09/1/",
+          "start": "2026-10-09T18:00:00-04:00",
+          "end": "2026-10-09T22:00:00-04:00",
+          "venue": "Kerrytown Concert House",
+          "city": "Ann Arbor",
+          "price": "$20 per show (students, age 18 & under, $10)",
+          "registration": "Tickets $20 per show (students, age 18 & under, $10) in advance at kerrytownconcerthouse.com & (if available) at the door. $70 day passes (Saturday, $100) and 240–390 full festival passes in advance only online & by phone. (734) 769–2999.",
+          "category": "Music",
+          "imageUrl": "https://annarborobserver.com/wp-content/uploads/2022/01/aao-header-cover.jpeg",
+          "imageAlt": "30th Annual Edgefest: Kerrytown Concert House",
+          "status": "scheduled",
+          "occurrenceId": "occ-f39b0f4d96a87d0c47455e0d",
+          "seriesId": "series-e6998de6320f78021217f588",
+          "sourceUpdatedAt": "2026-09-27T14:28:32+00:00",
+          "canonicalUrl": "https://annarborobserver.com/event/30th-annual-edgefest-kerrytown-concert-house-2/2026-10-09/1/",
+          "venueId": "kerrytown concert house|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "30th-annual-edgefest-kerrytown-concert-h-event-2026-10-09",
+            "src-77b1b75fde1b9214c35ed8b2",
+            "src-b94c8e2d0bfd177e33f12f60",
+            "src-c7049ca998e21782fad01ec1"
+          ],
+          "legacyOccurrenceKeys": [
+            "30th-annual-edgefest-kerrytown-concert-h-event-2026-10-09|2026-10-09T18:00:00-04:00",
+            "src-77b1b75fde1b9214c35ed8b2|2026-10-09T18:00:00-04:00",
+            "src-b94c8e2d0bfd177e33f12f60|2026-10-09T18:00:00-04:00",
+            "src-c7049ca998e21782fad01ec1|2026-10-09T18:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "30th annual edgefest: kerrytown concert house|kerrytown concert house",
+            "series-e6998de6320f78021217f588"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-c7049ca998e21782fad01ec1",
+              "sourceId": "ann-arbor-observer",
+              "canonicalUrl": "https://annarborobserver.com/event/30th-annual-edgefest-kerrytown-concert-house-2/2026-10-09/1/",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled",
+              "statusEvidence": "Oct. 7–10."
+            },
+            {
+              "sourceRecordId": "src-b94c8e2d0bfd177e33f12f60",
+              "sourceId": "ann-arbor-observer",
+              "canonicalUrl": "https://annarborobserver.com/event/30th-annual-edgefest-kerrytown-concert-house-2/2026-10-09/1/",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-77b1b75fde1b9214c35ed8b2",
+              "sourceId": "ann-arbor-observer",
+              "canonicalUrl": "https://annarborobserver.com/event/30th-annual-edgefest-kerrytown-concert-house-2/2026-10-09/1/",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceUpdatedAt": "2026-09-27T14:28:32+00:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "exact-title-time-venue",
+              "new-occurrence"
+            ],
+            "fields": {
+              "status": "src-c7049ca998e21782fad01ec1",
+              "title": "src-c7049ca998e21782fad01ec1",
+              "start": "src-c7049ca998e21782fad01ec1",
+              "end": "src-c7049ca998e21782fad01ec1",
+              "venue": "src-c7049ca998e21782fad01ec1",
+              "registration": "src-c7049ca998e21782fad01ec1",
+              "url": "src-c7049ca998e21782fad01ec1",
+              "imageUrl": "src-c7049ca998e21782fad01ec1"
+            },
+            "conflicts": {
+              "end": [
+                "2026-10-09T19:00:00-04:00",
+                "2026-10-09T22:00:00-04:00"
+              ]
+            }
+          },
+          "score": 96,
+          "scoring": {
+            "signals": {
+              "funny": 0.07,
+              "distinctive": 0.78,
+              "eclectic": 0.76,
+              "technical_science": 0.02,
+              "artsy": 0.99,
+              "progressive": 0.88,
+              "outdoors": 0.02,
+              "theatre": 0.03,
+              "live_music": 0.99,
+              "live_comedy": 0.02,
+              "farmer_market": 0.01,
+              "sporting": 0.01,
+              "recurring": 0.81,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.01,
+              "large_venue": 0.03,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.04,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.03,
+              "dance": 0.02,
+              "sales_related": 0.44,
+              "children_activity": 0.02,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.01
+            },
+            "score": 96,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "recommendation": {
+            "occurrenceId": "occ-f39b0f4d96a87d0c47455e0d",
+            "score": 108,
+            "components": {
+              "taste": 96,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 0
+            },
+            "reasons": [
+              "distinctive +19",
               "eclectic +12",
               "Available on selected day +12"
             ],
@@ -435,112 +728,6 @@
           }
         },
         {
-          "id": "occ-31fe4d88097b84133631714c",
-          "title": "Fay Victor's Herbie Nichols SUNG",
-          "summary": "A performance featuring Fay Victor (voice, lyrics & conceptualist), Anthony Coleman (piano), Devon Gates (bass), and Tom Rainey (drums) as part of Edgefest 30. Sponsored by Keith Martin and Michael Starsinic.",
-          "url": "https://kerrytownconcerthouse.com/event/edgefest-30-freedom-at-the-edge",
-          "start": "2026-10-10T22:00:00-04:00",
-          "venue": "Kerrytown Concert House",
-          "city": "Ann Arbor",
-          "registration": "https://kerrytownconcerthouse.my.salesforce-sites.com/ticket/#/instances/a0FUP000008OOcT2AW",
-          "category": "Music",
-          "imageUrl": "https://kerrytownconcerthouse.com/wp-content/plugins/the-events-calendar/src/resources/images/tribe-loading.gif",
-          "imageAlt": "Fay Victor's Herbie Nichols SUNG",
-          "status": "scheduled",
-          "occurrenceId": "occ-31fe4d88097b84133631714c",
-          "canonicalUrl": "https://kerrytownconcerthouse.com/event/edgefest-30-freedom-at-the-edge",
-          "venueId": "kerrytown concert house|ann arbor",
-          "timePrecision": "time",
-          "aliases": [
-            "fay-victor-s-herbie-nichols-sung-event-2026-10-10"
-          ],
-          "legacyOccurrenceKeys": [
-            "fay-victor-s-herbie-nichols-sung-event-2026-10-10|2026-10-10T22:00:00-04:00"
-          ],
-          "legacySeriesKeys": [
-            "fay victor's herbie nichols sung|kerrytown concert house"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-3982a9a5bb735b901ec39110",
-              "sourceId": "kerrytown-concert-house",
-              "canonicalUrl": "https://kerrytownconcerthouse.com/event/edgefest-30-freedom-at-the-edge",
-              "observedAt": "2026-09-20T14:28:46-04:00",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "new-occurrence"
-            ],
-            "fields": {
-              "title": "src-3982a9a5bb735b901ec39110",
-              "start": "src-3982a9a5bb735b901ec39110",
-              "venue": "src-3982a9a5bb735b901ec39110",
-              "registration": "src-3982a9a5bb735b901ec39110",
-              "url": "src-3982a9a5bb735b901ec39110",
-              "imageUrl": "src-3982a9a5bb735b901ec39110",
-              "status": "src-3982a9a5bb735b901ec39110"
-            },
-            "conflicts": {}
-          },
-          "score": 100,
-          "scoring": {
-            "signals": {
-              "funny": 0.11,
-              "distinctive": 0.79,
-              "eclectic": 0.73,
-              "technical_science": 0.04,
-              "artsy": 0.99,
-              "progressive": 0.85,
-              "outdoors": 0.02,
-              "theatre": 0.11,
-              "live_music": 0.97,
-              "live_comedy": 0.02,
-              "farmer_market": 0.01,
-              "sporting": 0.01,
-              "recurring": 0.08,
-              "craft_fair_shopping": 0.02,
-              "religious": 0.02,
-              "large_venue": 0.03,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.1,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.04,
-              "dance": 0.02,
-              "sales_related": 0.22,
-              "children_activity": 0.02,
-              "running": 0.01,
-              "exercise": 0.01,
-              "employment_related": 0.01
-            },
-            "score": 100,
-            "rulesVersion": 2
-          },
-          "localityTier": "regional",
-          "recommendation": {
-            "occurrenceId": "occ-31fe4d88097b84133631714c",
-            "score": 108,
-            "components": {
-              "taste": 100,
-              "practicality": 8,
-              "novelty": 0,
-              "quality": 0
-            },
-            "reasons": [
-              "distinctive +19",
-              "eclectic +12",
-              "Coming soon +8"
-            ],
-            "unknowns": [
-              "Distance unknown",
-              "Status unconfirmed",
-              "Price unknown"
-            ]
-          }
-        },
-        {
           "id": "occ-bb8dfae75682a43917123582",
           "title": "Drag Becomes Her",
           "summary": "Local drag stars Alex Suarez, Perry Dox, and Virgil Ciel take over the Michigan Theater with mainstage performances before and after the camp-tastic Halloween classic, plus special surprises during the movie itself.",
@@ -635,111 +822,8 @@
             "reasons": [
               "distinctive +19",
               "eclectic +12",
-              "Coming soon +8"
-            ],
-            "unknowns": [
-              "Distance unknown",
-              "Status unconfirmed",
-              "Price unknown"
-            ]
-          }
-        },
-        {
-          "id": "occ-ec13d4d470123663552d5f11",
-          "title": "Off Book the Improvised Musical",
-          "summary": "An improvised musical event where the story, songs, and dialogue are created spontaneously.",
-          "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
-          "start": "2026-10-11T18:30:00-04:00",
-          "venue": "The Ark",
-          "city": "Ann Arbor",
-          "category": "Music",
-          "imageUrl": "https://theark.org/wp-content/uploads/2025/01/OffBookMusical-scaled-1-scaled-e1736364981622.jpg",
-          "imageAlt": "Off Book the Improvised Musical",
-          "status": "scheduled",
-          "occurrenceId": "occ-ec13d4d470123663552d5f11",
-          "canonicalUrl": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
-          "venueId": "the ark|ann arbor",
-          "timePrecision": "time",
-          "aliases": [
-            "off-book-the-improvised-musical-event-2026-10-11"
-          ],
-          "legacyOccurrenceKeys": [
-            "off-book-the-improvised-musical-event-2026-10-11|2026-10-11T18:30:00-04:00"
-          ],
-          "legacySeriesKeys": [
-            "off book the improvised musical|the ark"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-e9a465f42905b857818f3d51",
-              "sourceId": "the-ark",
-              "canonicalUrl": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
-              "observedAt": "2026-10-09T06:49:14-04:00",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "new-occurrence"
-            ],
-            "fields": {
-              "title": "src-e9a465f42905b857818f3d51",
-              "start": "src-e9a465f42905b857818f3d51",
-              "venue": "src-e9a465f42905b857818f3d51",
-              "url": "src-e9a465f42905b857818f3d51",
-              "imageUrl": "src-e9a465f42905b857818f3d51",
-              "status": "src-e9a465f42905b857818f3d51"
-            },
-            "conflicts": {}
-          },
-          "score": 100,
-          "scoring": {
-            "signals": {
-              "funny": 0.95,
-              "distinctive": 0.83,
-              "eclectic": 0.73,
-              "technical_science": 0.03,
-              "artsy": 0.98,
-              "progressive": 0.57,
-              "outdoors": 0.02,
-              "theatre": 0.92,
-              "live_music": 0.46,
-              "live_comedy": 0.79,
-              "farmer_market": 0.01,
-              "sporting": 0.02,
-              "recurring": 0.52,
-              "craft_fair_shopping": 0.01,
-              "religious": 0.02,
-              "large_venue": 0.04,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.03,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.05,
-              "dance": 0.03,
-              "sales_related": 0.14,
-              "children_activity": 0.05,
-              "running": 0.01,
-              "exercise": 0.02,
-              "employment_related": 0.02
-            },
-            "score": 100,
-            "rulesVersion": 2
-          },
-          "localityTier": "regional",
-          "recommendation": {
-            "occurrenceId": "occ-ec13d4d470123663552d5f11",
-            "score": 108,
-            "components": {
-              "taste": 100,
-              "practicality": 8,
-              "novelty": 0,
-              "quality": 0
-            },
-            "reasons": [
-              "distinctive +20",
-              "eclectic +12",
-              "Coming soon +8"
+              "Coming soon +8",
+              "Adds variety after venue, category or series limits"
             ],
             "unknowns": [
               "Distance unknown",
@@ -856,6 +940,117 @@
               "Distance unknown",
               "Status unconfirmed",
               "Price unknown"
+            ]
+          }
+        },
+        {
+          "id": "occ-c546ba86579bfa0aa7e51d8a",
+          "title": "Rocky Horror Picture Show Viewing Experience",
+          "summary": "Second and Fourth Saturday of every month, 11:15 p.m.-2:30 a.m. at State Wayne Theatre. Screening and audience participation shadow cast. $10.",
+          "url": "https://community.metrotimes.com/event/rocky-horror-picture-show-viewing-experience-8505882",
+          "start": "2026-10-10T23:15:00-04:00",
+          "end": "2026-10-11T02:30:00-04:00",
+          "venue": "State Wayne Theatre",
+          "city": "Wayne",
+          "price": "$10",
+          "registration": "http://www.michiganrhps.com",
+          "category": "Screening",
+          "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
+          "imageAlt": "Rocky Horror Picture Show Viewing Experience",
+          "status": "scheduled",
+          "occurrenceId": "occ-c546ba86579bfa0aa7e51d8a",
+          "canonicalUrl": "https://community.metrotimes.com/event/rocky-horror-picture-show-viewing-experience-8505882",
+          "venueId": "state wayne theatre|wayne",
+          "timePrecision": "time",
+          "aliases": [
+            "rocky-horror-picture-show-viewing-experi-event-2026-10-10",
+            "src-54f64e4c6c1f82d4ac953a95"
+          ],
+          "legacyOccurrenceKeys": [
+            "rocky-horror-picture-show-viewing-experi-event-2026-10-10|2026-10-10T23:15:00-04:00",
+            "src-54f64e4c6c1f82d4ac953a95|2026-10-10T23:15:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "rocky horror picture show viewing experience|state wayne theatre"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-54f64e4c6c1f82d4ac953a95",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/rocky-horror-picture-show-viewing-experience-8505882",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "status": "src-54f64e4c6c1f82d4ac953a95",
+              "title": "src-54f64e4c6c1f82d4ac953a95",
+              "start": "src-54f64e4c6c1f82d4ac953a95",
+              "end": "src-54f64e4c6c1f82d4ac953a95",
+              "venue": "src-54f64e4c6c1f82d4ac953a95",
+              "registration": "src-54f64e4c6c1f82d4ac953a95",
+              "url": "src-54f64e4c6c1f82d4ac953a95",
+              "imageUrl": "src-54f64e4c6c1f82d4ac953a95"
+            },
+            "conflicts": {}
+          },
+          "score": 99,
+          "scoring": {
+            "signals": {
+              "funny": 0.9,
+              "distinctive": 0.77,
+              "eclectic": 0.63,
+              "technical_science": 0.03,
+              "artsy": 0.96,
+              "progressive": 0.71,
+              "outdoors": 0.01,
+              "theatre": 0.18,
+              "live_music": 0.05,
+              "live_comedy": 0.06,
+              "farmer_market": 0.01,
+              "sporting": 0.01,
+              "recurring": 0.99,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.02,
+              "large_venue": 0.04,
+              "substance_recovery": 0.02,
+              "popular_music_cover_band": 0.05,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.04,
+              "dance": 0.03,
+              "sales_related": 0.14,
+              "children_activity": 0.02,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.01
+            },
+            "score": 99,
+            "rulesVersion": 2
+          },
+          "localityTier": "unknown",
+          "recommendation": {
+            "occurrenceId": "occ-c546ba86579bfa0aa7e51d8a",
+            "score": 111,
+            "components": {
+              "taste": 99,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 0
+            },
+            "reasons": [
+              "distinctive +18",
+              "funny +11",
+              "Available on selected day +12"
+            ],
+            "unknowns": [
+              "Distance unknown",
+              "Status unconfirmed"
             ]
           }
         },
@@ -1173,37 +1368,40 @@
           }
         },
         {
-          "id": "occ-649c234d4aa5c8511fcd2dac",
-          "title": "Kickstand Productions Presents Rome Streetz w/ Fergie Baby & Sha Hef & GameChangers",
-          "summary": "Amadeus meets Bridgerton in this hilarious comedy of ambition, romance, and musical rivalry. When the royal maestro dies in 18th-century Vienna, two composers vie for his position. Love, pistols at dawn, and outrageous sarcasm will prove that one of them is a misunderstood genius and the other... is a maestro.",
-          "url": "https://community.metrotimes.com/event/kickstand-productions-presents-rome-streetz-w-fergie-baby-and-sha-hef-and-gamechangers-42029514",
-          "start": "2026-10-11T20:00:00-04:00",
-          "venue": "The Loving Touch",
-          "city": "Ferndale",
-          "registration": "https://ticketmaster.evyy.net/c/1202638/271177/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fkickstand-productions-presents-rome-streetz-the-loving-touch-tickets%2F14313684&utm_medium=affiliate&sharedid=metrotimes&subId1=metrotimes",
-          "category": "Live/Concert",
-          "imageUrl": "https://media2.metrotimes.com/metrotimes/imager/kickstand-productions-presents-rome-streetz-w-fergie-baby-and-sha-hef-and-gamechangers/u/r-bigsquare/42029513/252ecb43-5fe0-4347-9ee1-7efe477c1728_source.webp?cb=1789762380",
-          "imageAlt": "Image: Kickstand Productions Presents Rome Streetz w/ Fergie Baby & Sha Hef & GameChangers",
+          "id": "occ-96c6a0e023e9c4ccbdea51a9",
+          "title": "Party of the Century at The Senate Theater",
+          "summary": "Celebrate 100 years of The Senate Theater with an anachronistic evening featuring live music, dancing, a silent short film, and other performances.",
+          "url": "https://outliermedia.org/things-to-do-october-halloween-detroit-fall-autumn/",
+          "start": "2026-10-10T00:00:00-04:00",
+          "venue": "The Senate Theater",
+          "city": "Detroit",
+          "price": "$25-$150",
+          "category": "Theater",
+          "imageUrl": "https://i0.wp.com/outliermedia.org/wp-content/uploads/2026/10/BusyHalloweenDog.jpg?fit=2121%2C1414&ssl=1",
+          "imageAlt": "Party of the Century at The Senate Theater",
           "status": "scheduled",
-          "occurrenceId": "occ-649c234d4aa5c8511fcd2dac",
-          "canonicalUrl": "https://community.metrotimes.com/event/kickstand-productions-presents-rome-streetz-w-fergie-baby-and-sha-hef-and-gamechangers-42029514",
-          "venueId": "the loving touch|ferndale",
-          "timePrecision": "time",
+          "occurrenceId": "occ-96c6a0e023e9c4ccbdea51a9",
+          "canonicalUrl": "https://outliermedia.org/things-to-do-october-halloween-detroit-fall-autumn/",
+          "venueId": "the senate theater|detroit",
+          "timePrecision": "date",
           "aliases": [
-            "kickstand-productions-presents-rome-stre-event-2026-10-11"
+            "party-of-the-century-at-the-senate-theat-event-2026-10-10",
+            "src-34e6dcc732706771137ee43f"
           ],
           "legacyOccurrenceKeys": [
-            "kickstand-productions-presents-rome-stre-event-2026-10-11|2026-10-11T20:00:00-04:00"
+            "party-of-the-century-at-the-senate-theat-event-2026-10-10|2026-10-10T00:00:00-04:00",
+            "src-34e6dcc732706771137ee43f|2026-10-10T00:00:00-04:00"
           ],
           "legacySeriesKeys": [
-            "kickstand productions presents rome streetz w/ fergie baby & sha hef & gamechangers|the loving touch"
+            "party of the century at the senate theater|the senate theater"
           ],
           "sources": [
             {
-              "sourceRecordId": "src-d6b6bfa6918eb9be4569c5cc",
-              "sourceId": "metro-times",
-              "canonicalUrl": "https://community.metrotimes.com/event/kickstand-productions-presents-rome-streetz-w-fergie-baby-and-sha-hef-and-gamechangers-42029514",
-              "observedAt": "2026-10-09T06:49:14-04:00",
+              "sourceRecordId": "src-34e6dcc732706771137ee43f",
+              "sourceId": "outlier-media",
+              "canonicalUrl": "https://outliermedia.org/things-to-do-october-halloween-detroit-fall-autumn/",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceAuthority": "unknown",
               "status": "scheduled"
             }
           ],
@@ -1213,170 +1411,62 @@
               "new-occurrence"
             ],
             "fields": {
-              "title": "src-d6b6bfa6918eb9be4569c5cc",
-              "start": "src-d6b6bfa6918eb9be4569c5cc",
-              "venue": "src-d6b6bfa6918eb9be4569c5cc",
-              "registration": "src-d6b6bfa6918eb9be4569c5cc",
-              "url": "src-d6b6bfa6918eb9be4569c5cc",
-              "imageUrl": "src-d6b6bfa6918eb9be4569c5cc",
-              "status": "src-d6b6bfa6918eb9be4569c5cc"
+              "title": "src-34e6dcc732706771137ee43f",
+              "start": "src-34e6dcc732706771137ee43f",
+              "venue": "src-34e6dcc732706771137ee43f",
+              "url": "src-34e6dcc732706771137ee43f",
+              "imageUrl": "src-34e6dcc732706771137ee43f",
+              "status": "src-34e6dcc732706771137ee43f"
             },
             "conflicts": {}
           },
-          "score": 96,
+          "score": 93,
           "scoring": {
             "signals": {
-              "funny": 0.94,
-              "distinctive": 0.67,
-              "eclectic": 0.73,
-              "technical_science": 0.04,
-              "artsy": 0.96,
-              "progressive": 0.36,
+              "funny": 0.68,
+              "distinctive": 0.85,
+              "eclectic": 0.86,
+              "technical_science": 0.06,
+              "artsy": 0.97,
+              "progressive": 0.3,
               "outdoors": 0.02,
-              "theatre": 0.82,
-              "live_music": 0.39,
-              "live_comedy": 0.31,
+              "theatre": 0.39,
+              "live_music": 0.19,
+              "live_comedy": 0.05,
               "farmer_market": 0.01,
               "sporting": 0.02,
-              "recurring": 0.09,
+              "recurring": 0.05,
               "craft_fair_shopping": 0.02,
               "religious": 0.02,
-              "large_venue": 0.04,
+              "large_venue": 0.06,
               "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.1,
+              "popular_music_cover_band": 0.16,
               "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.09,
-              "dance": 0.05,
-              "sales_related": 0.65,
-              "children_activity": 0.03,
+              "punk_metal_or_rock": 0.06,
+              "dance": 0.21,
+              "sales_related": 0.26,
+              "children_activity": 0.04,
               "running": 0.01,
-              "exercise": 0.01,
-              "employment_related": 0.02
-            },
-            "score": 96,
-            "rulesVersion": 2
-          },
-          "localityTier": "unknown",
-          "recommendation": {
-            "occurrenceId": "occ-649c234d4aa5c8511fcd2dac",
-            "score": 104,
-            "components": {
-              "taste": 96,
-              "practicality": 8,
-              "novelty": 0,
-              "quality": 0
-            },
-            "reasons": [
-              "distinctive +16",
-              "eclectic +12",
-              "Coming soon +8"
-            ],
-            "unknowns": [
-              "Distance unknown",
-              "Status unconfirmed",
-              "Price unknown"
-            ]
-          }
-        },
-        {
-          "id": "occ-35c1883fb5c9745c789cb22f",
-          "title": "Off-Book Tour de Force: A Force of Tour 261014",
-          "summary": "A comedic and spoken word stage performance featuring Zach and The Jess.",
-          "url": "https://www.thezachandthejess.com/podcast-off-book.html",
-          "start": "2026-10-14T19:30:00-04:00",
-          "venue": "The Ark",
-          "city": "Ann Arbor, MI",
-          "price": "$33.50 - $44.50",
-          "registration": "Buy tickets online or in person",
-          "category": "Comedy, Spoken Word/Stage",
-          "imageUrl": "https://theark.org/wp-content/uploads/2025/05/All-chairs-seating-chart-corrected-May-2025-copy-scaled.jpg",
-          "imageAlt": "Off-Book Tour de Force: A Force of Tour 261014",
-          "status": "scheduled",
-          "occurrenceId": "occ-35c1883fb5c9745c789cb22f",
-          "canonicalUrl": "https://www.thezachandthejess.com/podcast-off-book.html",
-          "venueId": "the ark|ann arbor",
-          "timePrecision": "time",
-          "aliases": [
-            "off-book-tour-de-force-a-force-of-tour-2-event-2026-10-14"
-          ],
-          "legacyOccurrenceKeys": [
-            "off-book-tour-de-force-a-force-of-tour-2-event-2026-10-14|2026-10-14T19:30:00-04:00"
-          ],
-          "legacySeriesKeys": [
-            "off-book tour de force: a force of tour 261014|the ark"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-d1a7621ada3f9d3899b0e8f6",
-              "sourceId": "the-ark",
-              "canonicalUrl": "https://www.thezachandthejess.com/podcast-off-book.html",
-              "observedAt": "2026-10-09T06:49:14-04:00",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "new-occurrence"
-            ],
-            "fields": {
-              "imageUrl": "src-d1a7621ada3f9d3899b0e8f6",
-              "registration": "src-d1a7621ada3f9d3899b0e8f6",
-              "start": "src-d1a7621ada3f9d3899b0e8f6",
-              "title": "src-d1a7621ada3f9d3899b0e8f6",
-              "url": "src-d1a7621ada3f9d3899b0e8f6",
-              "venue": "src-d1a7621ada3f9d3899b0e8f6",
-              "status": "src-d1a7621ada3f9d3899b0e8f6"
-            },
-            "conflicts": {}
-          },
-          "score": 100,
-          "scoring": {
-            "signals": {
-              "funny": 0.97,
-              "distinctive": 0.47,
-              "eclectic": 0.75,
-              "technical_science": 0.03,
-              "artsy": 0.97,
-              "progressive": 0.43,
-              "outdoors": 0.02,
-              "theatre": 0.52,
-              "live_music": 0.03,
-              "live_comedy": 0.78,
-              "farmer_market": 0.01,
-              "sporting": 0.01,
-              "recurring": 0.16,
-              "craft_fair_shopping": 0.02,
-              "religious": 0.03,
-              "large_venue": 0.03,
-              "substance_recovery": 0.02,
-              "popular_music_cover_band": 0.02,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.02,
-              "dance": 0.02,
-              "sales_related": 0.29,
-              "children_activity": 0.03,
-              "running": 0.02,
               "exercise": 0.02,
               "employment_related": 0.02
             },
-            "score": 100,
+            "score": 93,
             "rulesVersion": 2
           },
-          "localityTier": "unknown",
+          "localityTier": "regional",
           "recommendation": {
-            "occurrenceId": "occ-35c1883fb5c9745c789cb22f",
-            "score": 104,
+            "occurrenceId": "occ-96c6a0e023e9c4ccbdea51a9",
+            "score": 105,
             "components": {
-              "taste": 100,
-              "practicality": 4,
+              "taste": 93,
+              "practicality": 12,
               "novelty": 0,
               "quality": 0
             },
             "reasons": [
-              "eclectic +12",
-              "funny +12",
-              "Coming soon +4"
+              "distinctive +20",
+              "eclectic +14",
+              "Available on selected day +12"
             ],
             "unknowns": [
               "Distance unknown",
@@ -1385,80 +1475,96 @@
           }
         },
         {
-          "id": "occ-079f568391b80b3417608fc3",
-          "title": "Code Switch: Distributing Blackness, Reprogramming Internet Art",
-          "summary": "Code Switch: Distributing Blackness, Reprogramming Internet Art is a multi-sited exhibition exploring and redefining the history of 'Black data,' centering contributions by artists of African descent to new media art and digital practice. It builds on a historic archival timeline of radical visions from Black makers and brings together contemporary artists to examine the relationship between body and machine in the context of cybercultures and technology.",
-          "url": "https://mocadetroit.org/exhibition/code-switch-distributing-blackness-reprogramming-internet-art/",
-          "start": "2026-10-15T00:00:00-04:00",
-          "venue": "Museum of Contemporary Art Detroit (MOCAD)",
-          "city": "Detroit",
-          "category": "Art",
-          "imageUrl": "https://mocadetroit.org/wp-content/uploads/2026/03/Code-Switch-1.gif",
-          "imageAlt": "Graphic designed by Pacific.",
+          "id": "occ-25d7ff707620ba57645bb988",
+          "title": "Packard Farmers Market",
+          "summary": "The Packard Farmers Market returns for the 2026 season at the historic Packard Proving Grounds, bringing together local farmers, artisans, bakers, makers, and small businesses in a one-of-a-kind setting where history and community meet. Formerly known as the Shelby Farmers Market, the newly rebranded Packard Farmers Market reflects its deep connection to the Packard Proving Grounds and its mission to support the preservation of this iconic historic site.",
+          "url": "https://community.metrotimes.com/event/packard-farmers-market-41215958",
+          "start": "2026-05-16T09:00:00-04:00",
+          "end": "2026-10-10T14:00:00-04:00",
+          "venue": "Packard Proving Grounds Historic Site",
+          "city": "Shelby charter Township",
+          "price": "Free",
+          "registration": "https://eventvesta.com/events/134625/t/tickets",
+          "category": "Food",
+          "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
+          "imageAlt": "Packard Farmers Market",
           "status": "scheduled",
-          "occurrenceId": "occ-079f568391b80b3417608fc3",
-          "canonicalUrl": "https://mocadetroit.org/exhibition/code-switch-distributing-blackness-reprogramming-internet-art/",
-          "venueId": "museum of contemporary art detroit mocad|detroit",
-          "timePrecision": "date",
+          "occurrenceId": "occ-25d7ff707620ba57645bb988",
+          "canonicalUrl": "https://community.metrotimes.com/event/packard-farmers-market-41215958",
+          "venueId": "packard proving grounds historic site|shelby charter township",
+          "timePrecision": "time",
           "aliases": [
-            "code-switch-distributing-blackness-repro-event-2026-10-15"
+            "packard-farmers-market-event-2026-05-16",
+            "src-7da8a8d5f6cc035fa1923322"
           ],
           "legacyOccurrenceKeys": [
-            "code-switch-distributing-blackness-repro-event-2026-10-15|2026-10-15T00:00:00-04:00"
+            "packard-farmers-market-event-2026-05-16|2026-05-16T09:00:00-04:00",
+            "src-7da8a8d5f6cc035fa1923322|2026-05-16T09:00:00-04:00"
           ],
           "legacySeriesKeys": [
-            "code switch: distributing blackness, reprogramming internet art|museum of contemporary art detroit (mocad)"
+            "packard farmers market|packard proving grounds historic site"
           ],
           "sources": [
             {
-              "sourceRecordId": "src-ae82c4e53292dcffd419fe6a",
-              "sourceId": "museum-of-contemporary-art-detroit-mocad",
-              "canonicalUrl": "https://mocadetroit.org/exhibition/code-switch-distributing-blackness-reprogramming-internet-art/",
-              "observedAt": "2026-10-09T06:49:14-04:00",
+              "sourceRecordId": "src-7da8a8d5f6cc035fa1923322",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/packard-farmers-market-41215958",
+              "observedAt": "2026-10-09T17:12:32-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-1a63c08f352c4dce0e32179f",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/packard-farmers-market-41215958",
+              "observedAt": "2026-10-09T09:31:47-04:00",
               "status": "scheduled"
             }
           ],
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
+              "exact-title-time-venue",
               "new-occurrence"
             ],
             "fields": {
-              "imageUrl": "src-ae82c4e53292dcffd419fe6a",
-              "start": "src-ae82c4e53292dcffd419fe6a",
-              "title": "src-ae82c4e53292dcffd419fe6a",
-              "url": "src-ae82c4e53292dcffd419fe6a",
-              "venue": "src-ae82c4e53292dcffd419fe6a",
-              "status": "src-ae82c4e53292dcffd419fe6a"
+              "status": "src-7da8a8d5f6cc035fa1923322",
+              "title": "src-7da8a8d5f6cc035fa1923322",
+              "start": "src-7da8a8d5f6cc035fa1923322",
+              "end": "src-7da8a8d5f6cc035fa1923322",
+              "venue": "src-7da8a8d5f6cc035fa1923322",
+              "registration": "src-7da8a8d5f6cc035fa1923322",
+              "url": "src-7da8a8d5f6cc035fa1923322",
+              "imageUrl": "src-7da8a8d5f6cc035fa1923322"
             },
             "conflicts": {}
           },
           "score": 100,
           "scoring": {
             "signals": {
-              "funny": 0.05,
-              "distinctive": 0.8,
-              "eclectic": 0.65,
-              "technical_science": 0.73,
-              "artsy": 0.99,
-              "progressive": 0.96,
-              "outdoors": 0.02,
-              "theatre": 0.02,
+              "funny": 0.08,
+              "distinctive": 0.82,
+              "eclectic": 0.45,
+              "technical_science": 0.12,
+              "artsy": 0.47,
+              "progressive": 0.25,
+              "outdoors": 0.71,
+              "theatre": 0.01,
               "live_music": 0.02,
-              "live_comedy": 0.02,
-              "farmer_market": 0.01,
-              "sporting": 0.01,
-              "recurring": 0.06,
-              "craft_fair_shopping": 0.02,
-              "religious": 0.02,
-              "large_venue": 0.04,
+              "live_comedy": 0.01,
+              "farmer_market": 0.84,
+              "sporting": 0.02,
+              "recurring": 0.79,
+              "craft_fair_shopping": 0.95,
+              "religious": 0.01,
+              "large_venue": 0.16,
               "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.01,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.02,
-              "dance": 0.02,
-              "sales_related": 0.11,
-              "children_activity": 0.02,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.98,
+              "punk_metal_or_rock": 0.01,
+              "dance": 0.01,
+              "sales_related": 0.29,
+              "children_activity": 0.06,
               "running": 0.01,
               "exercise": 0.01,
               "employment_related": 0.02
@@ -1466,9 +1572,9 @@
             "score": 100,
             "rulesVersion": 2
           },
-          "localityTier": "regional",
+          "localityTier": "unknown",
           "recommendation": {
-            "occurrenceId": "occ-079f568391b80b3417608fc3",
+            "occurrenceId": "occ-25d7ff707620ba57645bb988",
             "score": 104,
             "components": {
               "taste": 100,
@@ -1477,15 +1583,13 @@
               "quality": 0
             },
             "reasons": [
-              "distinctive +19",
-              "eclectic +10",
-              "Coming soon +4",
-              "Adds variety after venue, category or series limits"
+              "farmer market +22",
+              "distinctive +20",
+              "Still running +4"
             ],
             "unknowns": [
               "Distance unknown",
-              "Status unconfirmed",
-              "Price unknown"
+              "Status unconfirmed"
             ]
           }
         }
