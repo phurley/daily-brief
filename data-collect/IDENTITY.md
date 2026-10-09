@@ -1,13 +1,13 @@
 # Event occurrence identity
 
-Implemented from the October 9, 2026 brief. The collector defaults to **shadow** publication: it computes occurrence identity and writes a private audit report while retaining legacy published output. Canonical publication and constrained typo matching are independent feature flags. No network or model calls are needed to compare or republish retained source records.
+Implemented from the October 9, 2026 brief. Canonical publication was enabled October 9, 2026 for the household. The collector now publishes consolidated occurrences and keeps a private audit report. Fuzzy matching remains disabled. Canonical publication and constrained typo matching are independent feature flags. No network or model calls are needed to compare or republish retained source records.
 
 ## Operation
 
 Run from `data-collect` with the existing virtual environment:
 
 ```sh
-# Default: legacy documents plus a private identity report and shadow registry.
+# Optional comparison: legacy documents plus a private identity report and shadow registry.
 .venv/bin/python -m extract.publish --identity-mode shadow
 
 # Preview canonical output without changing the live edition or production registry.
@@ -72,7 +72,7 @@ Reports record source counts, occurrence counts, merge mappings, review candidat
 
 On kitchen.local the collector is `gui/501/com.dailybrief.collect`, scheduled
 at a 3,600-second interval by launchd. The repository template and installed
-`~/Library/LaunchAgents/com.dailybrief.collect.plist` explicitly set shadow mode
+`~/Library/LaunchAgents/com.dailybrief.collect.plist` explicitly set canonical mode
 and disable fuzzy matching. `run_collect.sh` validates and logs both settings
 before collection; the identity report is refreshed by its publication step.
 There is no separate cron entry or identity daemon to install.
@@ -94,3 +94,27 @@ so reloading does not start a paid crawl/model run. The existing calendar job
 identity-specific schedule change. Before reload, all three reported exit code
 0 on their previous run. Identity publication was separately validated against
 retained records, including reversed-order replay with an unchanged registry.
+
+## Activation and quick undo
+
+Enabled October 9, 2026 at the household owner’s request. No full crawl or model
+rerun was needed. Saved hides, favorites and overrides recognize legacy preference
+keys, including original timestamp offsets. New hides/favorites also retain old
+keys so they continue to work after rollback.
+
+The pre-activation live JSON files, registry (if present) and installed collector
+configuration are backed up in `processed/identity-before-enable-2026-10-09/`.
+To undo: set `EVENT_IDENTITY_MODE` to `legacy` in the repository collector plist,
+copy it to `~/Library/LaunchAgents/`, and reload it using the commands above.
+Then republish retained records and rebuild/push the mobile and widget edition:
+
+```sh
+# From ~/daily-brief/data-collect:
+.venv/bin/python -m extract.publish --identity-mode legacy
+cd ..
+data-collect/.venv/bin/python scripts/publish_brief.py events.json news.json recommendations.json
+```
+
+Commit and push the collector configuration change too. The publication helper
+rebuilds the shortlist, compact edition and widget together. Keep the registry
+and source archives; rollback does not delete them.

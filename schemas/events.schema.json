@@ -169,6 +169,8 @@
             "unknown"
           ]
         },
+        "legacyOccurrenceKeys": {"type": "array", "items": {"type": "string"}},
+        "legacySeriesKeys": {"type": "array", "items": {"type": "string"}},
         "aliases": {
           "type": "array",
           "items": {

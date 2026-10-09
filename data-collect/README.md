@@ -325,7 +325,7 @@ evidence verification, diagnostics, selection and installation.
 
 The hourly collector now computes persistent occurrence identity and a private merge audit.
 The checked-in and installed collector launchd definitions explicitly use
-`EVENT_IDENTITY_MODE=shadow` and `EVENT_IDENTITY_FUZZY=0`. No separate identity timer
+`EVENT_IDENTITY_MODE=canonical` and `EVENT_IDENTITY_FUZZY=0`. No separate identity timer
 is required: publication runs after extraction in `run_collect.sh`. See
 [IDENTITY.md](IDENTITY.md) for preview, validation, archive, migration and rollback
 commands. Reload the collector LaunchAgent after changing its environment.

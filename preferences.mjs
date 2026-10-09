@@ -26,11 +26,13 @@ export function normalizePreferences(value = {}, profileId = value?.profileId ||
 }
 export const occurrenceKey = e => String(e.occurrenceId || `${e.id || e.url || e.title}|${e.start || ''}`);
 export const seriesKey = e => String(e.seriesId || `${e.title || ''}|${e.venue || ''}`).toLowerCase();
+export const occurrenceKeys = e => [...new Set([occurrenceKey(e), ...(e.legacyOccurrenceKeys || [])])];
+export const seriesKeys = e => [...new Set([seriesKey(e), ...(e.legacySeriesKeys || [])])];
+export const isFavorite = (preferences, event) => seriesKeys(event).some(k => (preferences.favorites || []).includes(k));
 export function feedback(preferences, event, action) {
   const p = normalizePreferences(preferences);
-  const key = occurrenceKey(event), series = seriesKey(event);
-  if (action === 'hide') p.hiddenOccurrences = [...new Set([...p.hiddenOccurrences, key])];
-  else if (action === 'favorite') p.favorites = p.favorites.includes(series) ? p.favorites.filter(x => x !== series) : [...p.favorites, series];
+  if (action === 'hide') p.hiddenOccurrences = [...new Set([...p.hiddenOccurrences, ...occurrenceKeys(event)])];
+  else if (action === 'favorite') p.favorites = isFavorite(p, event) ? p.favorites.filter(x => !seriesKeys(event).includes(x)) : [...new Set([...p.favorites, ...seriesKeys(event)])];
   else if (action === 'more' || action === 'less') {
     const topic = String(event.category || 'uncategorized').toLowerCase();
     p.topicAffinities[topic] = bounded((p.topicAffinities[topic] || 0) + (action === 'more' ? 10 : -10), 0, -40, 40);

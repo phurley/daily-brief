@@ -393,7 +393,7 @@ def main(argv: Optional[list[str]] = None) -> int:
                    help="drop start-only events whose start is older than this (default 7; "
                         "events with an end are kept until that end passes)")
     p.add_argument("--identity-mode", choices=("legacy", "shadow", "canonical"),
-                   default=os.environ.get("EVENT_IDENTITY_MODE", "shadow"))
+                   default=os.environ.get("EVENT_IDENTITY_MODE", "canonical"))
     p.add_argument("--identity-registry", type=Path, default=None)
     p.add_argument("--identity-report", type=Path, default=None)
     p.add_argument("--identity-fuzzy", action="store_true", default=os.environ.get("EVENT_IDENTITY_FUZZY") == "1", help="opt in to constrained detail-URL typo matching")

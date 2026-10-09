@@ -10,8 +10,8 @@ import { orderNewsStories } from "./story-order.mjs?v=20261009-1";
 import { scienceView, scienceRotationSlot, scienceFreshness, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261009-rotation-1";
 
 import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
-import { selectBestBets, rankEvent, eventStatus } from './ranking.mjs?v=20261009-2';
-import { preferenceStore, feedback, seriesKey } from './preferences.mjs?v=20261009-2';
+import { selectBestBets, rankEvent, eventStatus } from './ranking.mjs?v=20261009-identity1';
+import { preferenceStore, feedback, seriesKey, isFavorite } from './preferences.mjs?v=20261009-identity1';
 let preferences;
 let rankingWeights;
 
@@ -900,7 +900,7 @@ function relativeDayWord(key) {
 
 function feedbackControls(event) {
   const controls = node('div', { className: 'event-feedback', 'aria-label': `Feedback for ${event.title}` });
-  for (const [action, label] of [['more', 'More like this'], ['less', 'Less like this'], ['hide', 'Hide this occurrence'], ['favorite', preferences.get().favorites.includes(seriesKey(event)) ? 'Unfavorite' : 'Favorite']]) {
+  for (const [action, label] of [['more', 'More like this'], ['less', 'Less like this'], ['hide', 'Hide this occurrence'], ['favorite', isFavorite(preferences.get(), event) ? 'Unfavorite' : 'Favorite']]) {
     const button = node('button', { type: 'button', text: label });
     button.addEventListener('click', async () => {
       button.disabled=true;

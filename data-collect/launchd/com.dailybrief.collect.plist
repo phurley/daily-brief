@@ -33,9 +33,9 @@
 
     <key>EnvironmentVariables</key>
     <dict>
-        <!-- Identity remains in shadow until the labeled benchmark supports rollout. -->
+        <!-- Canonical publication enabled for the household; fuzzy matching remains off. -->
         <key>EVENT_IDENTITY_MODE</key>
-        <string>shadow</string>
+        <string>canonical</string>
         <key>EVENT_IDENTITY_FUZZY</key>
         <string>0</string>
         <key>PATH</key>

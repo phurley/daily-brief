@@ -1,6 +1,6 @@
 import { computeScore, contributions, hasSignals } from './scoring.mjs?v=20261009-2';
-import { normalizePreferences, occurrenceKey, seriesKey } from './preferences.mjs?v=20261009-2';
-export { occurrenceKey, seriesKey } from './preferences.mjs?v=20261009-2';
+import { normalizePreferences, occurrenceKey, occurrenceKeys, seriesKey, isFavorite } from './preferences.mjs?v=20261009-identity1';
+export { occurrenceKey, seriesKey } from './preferences.mjs?v=20261009-identity1';
 const DAY = 86400000;
 const key = value => String(value || '').toLowerCase();
 export function localDay(value) {
@@ -26,7 +26,7 @@ export function eligibility(event, { day, now, preferences }) {
   if (!Number.isFinite(end) && startDay < localDay(now)) return 'Past occurrence; end unknown';
   const days = (Date.parse(startDay) - Date.parse(day)) / DAY;
   if (days > p.ranking.horizonDays || (p.constraints.selectedDayOnly && startDay > day)) return 'Outside selected dates';
-  if (p.hiddenOccurrences.includes(occurrenceKey(event))) return 'Hidden occurrence';
+  if (occurrenceKeys(event).some(k => p.hiddenOccurrences.includes(k))) return 'Hidden occurrence';
   const distance = Number.isFinite(event.distanceMiles) && event.distanceMiles >= 0 ? event.distanceMiles : null;
   if (p.constraints.maxDistanceMiles !== null && (distance === null || distance > p.constraints.maxDistanceMiles)) return distance === null ? 'Travel range unknown' : 'Outside travel range';
   return '';
@@ -36,8 +36,8 @@ export function rankEvent(event, { day, now, preferences, weights }) {
   const scored = hasSignals(event) && weights?.signals;
   const baseTaste = scored ? computeScore(event.scoring.signals, weights) : (Number.isFinite(event.score) ? event.score : 50);
   const affinity = (p.topicAffinities[key(event.category)] || 0) + (p.venueAffinities[key(event.venue)] || 0);
-  const favorite = p.favorites.includes(seriesKey(event)) ? 20 : 0;
-  const override = p.overrides[key(occurrenceKey(event))] || 0;
+  const favorite = isFavorite(p, event) ? 20 : 0;
+  const override = occurrenceKeys(event).map(k => p.overrides[key(k)]).find(value => value !== undefined) || 0;
   const taste = baseTaste + affinity + favorite + override;
   if (scored) reasons.push(...contributions(event.scoring.signals, weights).filter(r => r.delta > 0.025).slice(0, 2).map(r => `${r.name.replaceAll('_', ' ')} +${Math.round(r.delta * 100)}`));
   if (affinity) reasons.push(`Your topic/venue preferences ${affinity > 0 ? '+' : ''}${affinity}`);

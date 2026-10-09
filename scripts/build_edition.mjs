@@ -29,7 +29,7 @@ for (const day of dates) for (const event of selection(day)) selected.set(event.
 const candidates=source.events.events.map(event=>rankEvent(event,{day:date,now:+now,preferences,weights})).filter(row=>!row.ineligible).sort((a,b)=>b.score-a.score).slice(0,40);
 for(const {event} of candidates) selected.set(event.id,event);
 // Only existing public source documents/defaults are read. Browser preference histories never enter publication.
-const eventFields=['id','occurrenceId','seriesId','title','url','start','end','venue','city','region','category','summary','score','scoring','price','registration','distanceMiles','deadline','status','statusEvidence','sourceUpdatedAt','localityTier','sourceMentions','canonicalEntityId'];
+const eventFields=["legacyOccurrenceKeys","legacySeriesKeys","timePrecision",'id','occurrenceId','seriesId','title','url','start','end','venue','city','region','category','summary','score','scoring','price','registration','distanceMiles','deadline','status','statusEvidence','sourceUpdatedAt','localityTier','sourceMentions','canonicalEntityId'];
 const pick=(object,fields)=>Object.fromEntries(fields.filter(k=>object[k]!==undefined).map(k=>[k,object[k]]));
 const sections={
  weather:source.weather,

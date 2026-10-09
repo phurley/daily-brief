@@ -20,7 +20,7 @@ from . import dates
 VERSION = "occurrence-v1"
 STATUSES = {"scheduled", "canceled", "postponed", "rescheduled"}
 PUBLIC_FIELDS = ("occurrenceId", "canonicalUrl", "venueId", "timePrecision", "status",
-                 "aliases", "sources", "identity")
+                 "aliases", "legacyOccurrenceKeys", "legacySeriesKeys", "sources", "identity")
 _STATUS_PREFIX = re.compile(r"^\s*[\[(]?(cancelled|canceled|postponed|rescheduled)[\])]?[\s:–—-]+", re.I)
 
 
@@ -205,6 +205,17 @@ def merge(members, occurrence_id, reasons):
     out["aliases"] = sorted({str(alias) for r in members
                              for alias in [r.get("id"), *(r.get("aliases") or [])]
                              if alias and alias != occurrence_id})
+    # Preserve exact pre-migration preference keys, including the source's
+    # original timezone spelling. New feedback stores these aliases as well,
+    # so it still applies after a rollback to legacy publication.
+    out["legacyOccurrenceKeys"] = sorted({
+        f"{alias}|{r.get('start') or ''}" for r in members
+        for alias in [r.get("id"), *(r.get("aliases") or [])] if alias
+    } | {key for r in members for key in r.get("legacyOccurrenceKeys", [])})
+    out["legacySeriesKeys"] = sorted({
+        str(r.get("seriesId") or f"{r.get('title') or ''}|{r.get('venue') or ''}").lower()
+        for r in members
+    } | {key for r in members for key in r.get("legacySeriesKeys", [])})
     out["sources"] = [{k: r[k] for k in ("sourceRecordId", "sourceId", "canonicalUrl", "observedAt",
                        "sourceUpdatedAt", "sourceAuthority", "status", "statusEvidence") if r.get(k)}
                       for r in ordered]
