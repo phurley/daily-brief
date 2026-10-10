@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-10-10T15:10:32.918Z",
+  "generatedAt": "2026-10-10T20:07:07.970Z",
   "days": [
     {
       "date": "2026-10-10",
@@ -541,111 +541,6 @@
           }
         },
         {
-          "id": "occ-997a13d4b506767df49e1e36",
-          "title": "SynthFest | Solder an Oscillator",
-          "summary": "A public event where attendees can solder an oscillator as part of SynthFest.",
-          "url": "https://aadl.org/node/665878",
-          "start": "2026-10-10T12:30:00-04:00",
-          "end": "2026-10-10T15:30:00-04:00",
-          "venue": "Downtown Library: Secret Lab Annex",
-          "city": "Ann Arbor",
-          "price": "Free",
-          "registration": "Public Event",
-          "category": "Music",
-          "status": "scheduled",
-          "occurrenceId": "occ-997a13d4b506767df49e1e36",
-          "canonicalUrl": "https://aadl.org/node/665878",
-          "venueId": "downtown library secret lab annex|ann arbor",
-          "timePrecision": "time",
-          "aliases": [
-            "synthfest-solder-an-oscillator-event-2026-10-10"
-          ],
-          "legacyOccurrenceKeys": [
-            "synthfest-solder-an-oscillator-event-2026-10-10|2026-10-10T12:30:00-04:00"
-          ],
-          "legacySeriesKeys": [
-            "synthfest | solder an oscillator|downtown library: secret lab annex"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-b1427c8ff310e3aab1a06674",
-              "sourceId": "ann-arbor-district-library-aadl",
-              "canonicalUrl": "https://aadl.org/node/665878",
-              "observedAt": "2026-10-09T12:18:14-04:00",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "new-occurrence"
-            ],
-            "fields": {
-              "title": "src-b1427c8ff310e3aab1a06674",
-              "start": "src-b1427c8ff310e3aab1a06674",
-              "end": "src-b1427c8ff310e3aab1a06674",
-              "venue": "src-b1427c8ff310e3aab1a06674",
-              "registration": "src-b1427c8ff310e3aab1a06674",
-              "url": "src-b1427c8ff310e3aab1a06674",
-              "status": "src-b1427c8ff310e3aab1a06674"
-            },
-            "conflicts": {}
-          },
-          "score": 95,
-          "scoring": {
-            "signals": {
-              "funny": 0.21,
-              "distinctive": 0.71,
-              "eclectic": 0.34,
-              "technical_science": 0.95,
-              "artsy": 0.89,
-              "progressive": 0.71,
-              "outdoors": 0.02,
-              "theatre": 0.02,
-              "live_music": 0.05,
-              "live_comedy": 0.02,
-              "farmer_market": 0.01,
-              "sporting": 0.02,
-              "recurring": 0.15,
-              "craft_fair_shopping": 0.04,
-              "religious": 0.01,
-              "large_venue": 0.03,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.02,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.05,
-              "dance": 0.02,
-              "sales_related": 0.06,
-              "children_activity": 0.05,
-              "running": 0.01,
-              "exercise": 0.02,
-              "employment_related": 0.02
-            },
-            "score": 95,
-            "rulesVersion": 2
-          },
-          "localityTier": "regional",
-          "recommendation": {
-            "occurrenceId": "occ-997a13d4b506767df49e1e36",
-            "score": 107,
-            "components": {
-              "taste": 95,
-              "practicality": 12,
-              "novelty": 0,
-              "quality": 0
-            },
-            "reasons": [
-              "distinctive +17",
-              "technical science +13",
-              "Available on selected day +12"
-            ],
-            "unknowns": [
-              "Distance unknown",
-              "Status unconfirmed"
-            ]
-          }
-        },
-        {
           "id": "occ-96c6a0e023e9c4ccbdea51a9",
           "title": "Party of the Century at The Senate Theater",
           "summary": "Celebrate 100 years of The Senate Theater with an anachronistic evening featuring live music, dancing, a silent short film, and other performances.",
@@ -745,6 +640,126 @@
               "distinctive +20",
               "eclectic +14",
               "Available on selected day +12"
+            ],
+            "unknowns": [
+              "Distance unknown",
+              "Status unconfirmed"
+            ]
+          }
+        },
+        {
+          "id": "occ-77253682399c2156feaab9c1",
+          "title": "Big Fun Murder | An Improvised Murder Mystery",
+          "summary": "Immersive murder mystery improv show with 5 different eras and new victims each night at Go Comedy! Improv Theater. New costumes and themes every Friday in October.",
+          "url": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+          "start": "2026-10-09T21:30:00-04:00",
+          "end": "2026-11-06T21:30:00-05:00",
+          "venue": "Go Comedy! Improv Theater",
+          "city": "Ferndale",
+          "price": "$20",
+          "registration": "https://tinyurl.com/BFMatGo",
+          "category": "Improv",
+          "imageUrl": "https://community.metrotimes.com/binary/8e1e/MT_Redbkgd.png",
+          "imageAlt": "Metro Times logo",
+          "status": "scheduled",
+          "occurrenceId": "occ-77253682399c2156feaab9c1",
+          "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+          "venueId": "go comedy improv theater|ferndale",
+          "timePrecision": "time",
+          "aliases": [
+            "big-fun-murder-an-improvised-murder-myst-event-2026-10-09",
+            "src-005a4759b33c878fb6683cb7"
+          ],
+          "legacyOccurrenceKeys": [
+            "big-fun-murder-an-improvised-murder-myst-event-2026-10-09|2026-10-09T21:30:00-04:00",
+            "src-005a4759b33c878fb6683cb7|2026-10-09T21:30:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "big fun murder | an improvised murder mystery|go comedy! improv theater"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-005a4759b33c878fb6683cb7",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+              "observedAt": "2026-10-09T19:21:20-04:00",
+              "sourceAuthority": "unknown",
+              "status": "scheduled",
+              "statusEvidence": "Continues through Nov. 6"
+            },
+            {
+              "sourceRecordId": "src-8597f16c2dd7a37c57a6d585",
+              "sourceId": "metro-times",
+              "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+              "observedAt": "2026-10-09T09:31:47-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "exact-title-time-venue",
+              "new-occurrence"
+            ],
+            "fields": {
+              "status": "src-005a4759b33c878fb6683cb7",
+              "title": "src-005a4759b33c878fb6683cb7",
+              "start": "src-005a4759b33c878fb6683cb7",
+              "end": "src-005a4759b33c878fb6683cb7",
+              "venue": "src-005a4759b33c878fb6683cb7",
+              "registration": "src-005a4759b33c878fb6683cb7",
+              "url": "src-005a4759b33c878fb6683cb7",
+              "imageUrl": "src-005a4759b33c878fb6683cb7"
+            },
+            "conflicts": {}
+          },
+          "score": 100,
+          "scoring": {
+            "signals": {
+              "funny": 0.97,
+              "distinctive": 0.76,
+              "eclectic": 0.51,
+              "technical_science": 0.02,
+              "artsy": 0.97,
+              "progressive": 0.21,
+              "outdoors": 0.02,
+              "theatre": 0.9,
+              "live_music": 0.02,
+              "live_comedy": 0.98,
+              "farmer_market": 0.01,
+              "sporting": 0.02,
+              "recurring": 0.91,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.01,
+              "large_venue": 0.02,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.01,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.02,
+              "sales_related": 0.7,
+              "children_activity": 0.03,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.01
+            },
+            "score": 100,
+            "rulesVersion": 2
+          },
+          "localityTier": "unknown",
+          "recommendation": {
+            "occurrenceId": "occ-77253682399c2156feaab9c1",
+            "score": 104,
+            "components": {
+              "taste": 100,
+              "practicality": 4,
+              "novelty": 0,
+              "quality": 0
+            },
+            "reasons": [
+              "distinctive +18",
+              "live comedy +12",
+              "Still running +4"
             ],
             "unknowns": [
               "Distance unknown",
