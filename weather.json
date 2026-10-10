@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-10T20:07:01Z",
+  "generatedAt": "2026-10-10T23:36:32Z",
   "location": {
     "name": "Canton",
     "region": "Michigan",
@@ -9,19 +9,19 @@
     "timeZone": "America/Detroit"
   },
   "current": {
-    "observedAt": "2026-10-10T16:00:00-04:00",
-    "temperatureF": 72.5,
-    "feelsLikeF": 68.0,
+    "observedAt": "2026-10-10T19:30:00-04:00",
+    "temperatureF": 64.0,
+    "feelsLikeF": 62.1,
     "conditionCode": 3,
     "conditionText": "Overcast",
     "icon": "☁",
     "precipitationIn": 0.0,
-    "humidityPercent": 45,
+    "humidityPercent": 60,
     "wind": {
-      "speedMph": 10.8,
-      "directionDegrees": 144,
-      "direction": "SE",
-      "gustMph": 20.1
+      "speedMph": 4.5,
+      "directionDegrees": 99,
+      "direction": "E",
+      "gustMph": 11.9
     }
   },
   "daily": [
@@ -39,82 +39,82 @@
     },
     {
       "date": "2026-10-11",
-      "highF": 63.7,
-      "lowF": 58.0,
-      "conditionCode": 61,
-      "conditionText": "Light rain",
+      "highF": 65.0,
+      "lowF": 58.4,
+      "conditionCode": 53,
+      "conditionText": "Drizzle",
       "icon": "🌦",
-      "precipitationChancePercent": 24,
+      "precipitationChancePercent": 30,
       "sunrise": "2026-10-11T07:42:00-04:00",
       "sunset": "2026-10-11T18:58:00-04:00",
-      "narrative": "Light rain with a high near 64°F and a low around 58°F; 24% chance of precipitation."
+      "narrative": "Drizzle with a high near 65°F and a low around 58°F; 30% chance of precipitation."
     },
     {
       "date": "2026-10-12",
       "highF": 80.7,
-      "lowF": 57.7,
+      "lowF": 58.3,
       "conditionCode": 51,
       "conditionText": "Light drizzle",
       "icon": "🌦",
-      "precipitationChancePercent": 16,
+      "precipitationChancePercent": 15,
       "sunrise": "2026-10-12T07:43:00-04:00",
       "sunset": "2026-10-12T18:56:00-04:00",
-      "narrative": "Light drizzle with a high near 81°F and a low around 58°F; 16% chance of precipitation."
+      "narrative": "Light drizzle with a high near 81°F and a low around 58°F; 15% chance of precipitation."
     },
     {
       "date": "2026-10-13",
-      "highF": 83.9,
-      "lowF": 63.4,
-      "conditionCode": 53,
-      "conditionText": "Drizzle",
+      "highF": 84.5,
+      "lowF": 63.9,
+      "conditionCode": 51,
+      "conditionText": "Light drizzle",
       "icon": "🌦",
-      "precipitationChancePercent": 42,
+      "precipitationChancePercent": 25,
       "sunrise": "2026-10-13T07:44:00-04:00",
       "sunset": "2026-10-13T18:55:00-04:00",
-      "narrative": "Drizzle with a high near 84°F and a low around 63°F; 42% chance of precipitation."
+      "narrative": "Light drizzle with a high near 84°F and a low around 64°F; 25% chance of precipitation."
     },
     {
       "date": "2026-10-14",
       "highF": 66.1,
-      "lowF": 54.2,
+      "lowF": 53.3,
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
-      "precipitationChancePercent": 15,
+      "precipitationChancePercent": 13,
       "sunrise": "2026-10-14T07:45:00-04:00",
       "sunset": "2026-10-14T18:53:00-04:00",
-      "narrative": "Overcast with a high near 66°F and a low around 54°F; 15% chance of precipitation."
+      "narrative": "Overcast with a high near 66°F and a low around 53°F; 13% chance of precipitation."
     },
     {
       "date": "2026-10-15",
-      "highF": 61.8,
-      "lowF": 50.3,
+      "highF": 62.0,
+      "lowF": 48.8,
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
-      "precipitationChancePercent": 27,
+      "precipitationChancePercent": 41,
       "sunrise": "2026-10-15T07:46:00-04:00",
       "sunset": "2026-10-15T18:51:00-04:00",
-      "narrative": "Overcast with a high near 62°F and a low around 50°F; 27% chance of precipitation."
+      "narrative": "Overcast with a high near 62°F and a low around 49°F; 41% chance of precipitation."
     },
     {
       "date": "2026-10-16",
-      "highF": 66.7,
-      "lowF": 49.7,
-      "conditionCode": 51,
-      "conditionText": "Light drizzle",
-      "icon": "🌦",
-      "precipitationChancePercent": 26,
+      "highF": 65.0,
+      "lowF": 47.4,
+      "conditionCode": 81,
+      "conditionText": "Rain showers",
+      "icon": "🌧",
+      "precipitationChancePercent": 41,
       "sunrise": "2026-10-16T07:47:00-04:00",
       "sunset": "2026-10-16T18:50:00-04:00",
-      "narrative": "Light drizzle with a high near 67°F and a low around 50°F; 26% chance of precipitation."
+      "narrative": "Rain showers with a high near 65°F and a low around 47°F; 41% chance of precipitation."
     }
   ],
   "sources": [
     {
       "name": "Open-Meteo",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=42.3086&longitude=-83.4824&current=temperature_2m,apparent_temperature,precipitation,weather_code,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDetroit&forecast_days=7",
-      "retrievedAt": "2026-10-10T20:07:01Z"
+      "retrievedAt": "2026-10-10T23:36:32Z"
     }
   ]
 }
