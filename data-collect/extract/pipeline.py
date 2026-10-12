@@ -10,7 +10,8 @@ under ``processed/`` make the run incremental (stage 9's idempotent store):
 * ``extraction_index.jsonl`` — a fingerprint for every candidate that has been
   through the Jev gate (and, when accepted, extraction), keyed by
   ``(source_slug, EXTRACTOR_VERSION, chunk_id/item_id)``. A candidate is
-  reprocessed only when its content changes or the extractor is bumped.
+  reprocessed when its content changes, the extractor is bumped, or a bounded
+  retry is due. Only validated output earns an ``extracted`` outcome.
 * ``extracted_records.jsonl`` — the cumulative record store. New records are
   merged by id (newest wins) and the store is pruned by age;
   ``extract.publish`` reads it exactly as before.
@@ -18,8 +19,8 @@ under ``processed/`` make the run incremental (stage 9's idempotent store):
 Selection is bounded twice over: candidates whose newest known date is more
 than ``--stale-days`` in the past are never triaged at all (a daily brief is
 forward-looking), and ``--max-items`` caps Jev calls per run. Because processed
-candidates are never re-paid for, the steady-state hourly cost is just the new
-candidates that the crawler brought in.
+candidates are not re-paid for after success, and retries have separate limits.
+Recent legacy failures can be replayed from archived source candidates.
 
 Record ids/addedAt/localityIndex are assigned here, not by the model.
 """
@@ -27,6 +28,7 @@ Record ids/addedAt/localityIndex are assigned here, not by the model.
 from __future__ import annotations
 
 import argparse
+import copy
 import concurrent.futures as futures
 import json
 import re
@@ -35,7 +37,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-from . import dates, enrich, identity, jev, llm, prompts, router, scoring, urls
+from . import dates, enrich, identity, jev, llm, prompts, publish, retry, router, scoring, urls
 from .funnel import slugify
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
@@ -159,27 +161,21 @@ def _fingerprint(rec: dict[str, Any]) -> str:
 def _store_fingerprint(record: dict[str, Any]) -> Optional[str]:
     """Fingerprint of the candidate a stored record came from."""
     origin = record.get("origin") or {}
+    if origin.get("fingerprint"):
+        return origin["fingerprint"]
     slug, cid = origin.get("source_slug"), origin.get("chunk_id")
     return f"{slug}:{EXTRACTOR_VERSION}:{cid}" if slug and cid else None
 
 
 def load_index(path: Path) -> set[str]:
-    done: set[str] = set()
-    if not path.is_file():
-        return done
-    for line in path.read_text(encoding="utf-8").splitlines():
-        if not line.strip():
-            continue
-        try:
-            done.add(json.loads(line)["fp"])
-        except (json.JSONDecodeError, KeyError, TypeError):
-            continue
-    return done
+    return {fp for fp, state in retry.load_states(path).items()
+            if state.get("outcome") in retry.TERMINAL}
 
 
 def append_index(path: Path, entries: list[dict[str, Any]]) -> None:
     if not entries:
         return
+    path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("a", encoding="utf-8") as fh:
         for entry in entries:
             fh.write(json.dumps(entry, ensure_ascii=False) + "\n")
@@ -250,6 +246,74 @@ def candidate_days(rec: dict[str, Any], ref: datetime) -> Optional[float]:
     return max(days) if days else None
 
 
+def valid_record(record: dict[str, Any]) -> bool:
+    """Use the publisher's contract, without its presentation age filter."""
+    if record.get("kind") == "event":
+        event = publish.to_event(record)
+        return bool(event and not publish._event_date_errors(event)
+                    and publish._validator("events.schema.json", "event").is_valid(event))
+    if record.get("kind") == "news":
+        story = publish.to_story(record)
+        return bool(story and publish._validator("news.schema.json", "story").is_valid(story))
+    return False
+
+
+def previous_outputs(store: list[dict], candidates: list[dict]) -> dict[str, list[dict]]:
+    """Join legacy provenance conservatively; new records carry exact fingerprints."""
+    exact, legacy = {}, {}
+    for record in store:
+        origin = record.get("origin") or {}
+        if origin.get("fingerprint"):
+            exact.setdefault(origin["fingerprint"], []).append(record)
+        else:
+            legacy.setdefault((origin.get("source_slug"), origin.get("chunk_id")), []).append(record)
+    return {_fingerprint(c): exact.get(_fingerprint(c), []) + legacy.get(
+        (c.get("source_slug"), c.get("chunk_id") or c.get("item_id")), []) for c in candidates}
+
+
+def select_work(candidates, states, archived, store, ref, *, max_items, retry_limit,
+                max_attempts, replay_days, stale_days, reextract_sources=()):
+    """Reserve a bounded share for due retries/recent old failures; keep fresh work moving."""
+    all_candidates = {}
+    for row in archived.values():
+        c = row.get("candidate")
+        if c and row.get("fp") in states and row.get("fp") == _fingerprint(c):
+            # age_days is relative to an old crawl. Absolute dates below remain
+            # usable; undated archived candidates are bounded by index age.
+            c = dict(c)
+            c.pop("age_days", None)
+            all_candidates[row["fp"]] = c
+    all_candidates.update({_fingerprint(c): c for c in candidates})
+    previous = previous_outputs(store, list(all_candidates.values()))
+    fresh, pending = [], []
+    for fp, c in all_candidates.items():
+        if not c.get("in_window", True) or not c.get("is_canonical", True):
+            continue
+        if (c.get("signals") or {}).get("locality", {}).get("out_of_area"):
+            continue
+        days = candidate_days(c, ref)
+        # Feed start/publish dates survive archive replay even without date_spans.
+        absolute = retry.timestamp(c.get("start") or c.get("publishedAt"))
+        if absolute is not None:
+            days = max(days if days is not None else -float("inf"), (absolute - ref).total_seconds() / 86400)
+        if days is not None and days < -stale_days:
+            continue
+        state = states.get(fp, {})
+        if c.get("source_slug") in reextract_sources or not state:
+            fresh.append(c)
+        elif retry.due(state, ref, max_attempts):
+            pending.append(c)
+        elif retry.legacy_replayable(state, ref, replay_days):
+            outputs = previous[fp]
+            event_hint = c.get("candidate_hint") == "event" or c.get("feed_kind") in {"ics", "jsonld"}
+            if (outputs and any(r.get("kind") == "event" and not valid_record(r) for r in outputs)
+                    or not outputs and event_hint):
+                pending.append(c)
+    repairs = select(pending, min(retry_limit, max_items), ref)
+    selected = repairs + select(fresh, max_items - len(repairs), ref)
+    return selected, previous, {"fresh": len(fresh), "retry_due": len(pending), "retry_selected": len(repairs)}
+
+
 def priority(rec: dict[str, Any], ref: datetime) -> tuple:
     """Nearest-to-today first: the brief cares about now and the near future.
     Undated candidates sort last; feeds beat chunks on ties (mechanical)."""
@@ -317,6 +381,7 @@ def finalize(record: dict[str, Any], origin: dict[str, Any]) -> Optional[dict[st
         "chunk_id": origin.get("chunk_id") or origin.get("item_id"),
         "source_slug": origin.get("source_slug"),
         "url": origin.get("url"),
+        "fingerprint": _fingerprint(origin),
     }
     if kind == "event":
         # Structured feed fields are source evidence, not model-generated IDs.
@@ -359,20 +424,23 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         model: Optional[str], enrich_events: bool = True,
         enrich_limit: int = 200,
         enrich_hints: Optional[dict[str, str]] = None,
-        source_specs: Optional[dict[str, dict[str, Any]]] = None) -> tuple[list[dict[str, Any]], dict[str, int],
+        source_specs: Optional[dict[str, dict[str, Any]]] = None,
+        previous: Optional[dict[str, list[dict]]] = None) -> tuple[list[dict[str, Any]], dict[str, int],
                                           list[tuple[dict[str, Any], str]]]:
     """Triage + extract ``items``; return (records, stats, processed).
 
-    ``processed`` is a list of ``(candidate, outcome)`` for the candidates that
-    were fully handled this run and may be fingerprinted: ``"rejected"`` by the
-    Jev gate, or ``"extracted"`` (accepted, within the limit). Accepted
+    ``processed`` contains terminal ``rejected``/validated ``extracted`` or
+    ``retry:<reason>`` outcomes. Accepted
     candidates beyond ``--extract-limit`` are *not* included — they stay
     un-fingerprinted and are retried on a later run.
     """
     jev_client = jev.make_client()
 
-    def triage_one(rec: dict[str, Any]) -> tuple[dict[str, Any], jev.Triage]:
-        return rec, jev.triage_record(rec, jev_client)
+    def triage_one(rec: dict[str, Any]):
+        try:
+            return rec, jev.triage_record(rec, jev_client)
+        except (jev.JevError, TimeoutError, OSError):
+            return rec, None
 
     triaged: list[tuple[dict[str, Any], jev.Triage]] = []
     with futures.ThreadPoolExecutor(max_workers=workers) as pool:
@@ -383,17 +451,18 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
     accepted: list[tuple[dict[str, Any], jev.Triage]] = []
     deferred = 0
     for rec, tri in triaged:
-        if not tri.accepted:
+        if tri is None:
+            processed.append((rec, "retry:triage_failure"))
+        elif not tri.accepted:
             processed.append((rec, "rejected"))
         elif len(accepted) < extract_limit:
             accepted.append((rec, tri))
-            processed.append((rec, "extracted"))
         else:
             deferred += 1  # leave un-fingerprinted; retried next run
 
     chat = llm.make_chat_client(model) if accepted else None
     enrich_lock = threading.Lock()
-    enrich_state = {"used": 0, "ok": 0, "mechanical": 0}
+    enrich_state = {"used": 0, "ok": 0, "mechanical": 0, "repair": 0, "generation": 0}
     hints = enrich_hints or {}
     learned = enrich.learned_strategies()
 
@@ -402,12 +471,27 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         route = router.route(tri, content_mode=(source_specs or {}).get(
             rec.get("source_slug") or "", {}).get("content_mode", "auto"))
         records: list[dict[str, Any]] = []
+        reason = None
+        repair_records = [copy.deepcopy(r) for r in (previous or {}).get(_fingerprint(rec), [])
+                          if r.get("kind") == "event" and not valid_record(r)]
+        if any(not all(r.get(k) for k in ("title", "summary", "url")) for r in repair_records):
+            repair_records = []  # Touch-up cannot supply these; re-extract the source text.
+        if repair_records:
+            # These are already extracted events. Repair their own detail pages,
+            # preserving good fields and previously collected sibling records.
+            route = router.Route("extract", "event", "event_array", len(repair_records), "repair")
         base = structured_event(rec, (source_specs or {}).get(rec.get("source_slug"))) if route.schema == "event" else None
-        if base:
+        if repair_records:
+            records = repair_records
+            with enrich_lock:
+                enrich_state["repair"] += 1
+        elif base:
             records = [base]
             with enrich_lock:
                 enrich_state["mechanical"] += 1
         elif chat is not None:
+            with enrich_lock:
+                enrich_state["generation"] += 1
             try:
                 data = chat.complete_json(
                     prompts.build_messages(route.mode, rec, route.record_cap),
@@ -415,16 +499,34 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                     schema_name=prompts.schema_name(route.mode),
                 )
                 records = prompts.records_from_response(route.mode, data)[: route.record_cap]
-            except llm.LLMError:
+            except (llm.LLMError, ValueError, TypeError, KeyError):
                 records = []
+                reason = "generation_failure"
+        usable = [r for r in records if all(r.get(k) is None or isinstance(r[k], str)
+                  for k in ("title", "summary", "url", "start", "end", "venue", "city", "category", "publishedAt"))]
+        if len(usable) != len(records):
+            reason = "invalid_output"
+        records = usable
+        for r in records:
+            # Select a matching event detail link BEFORE enrichment. Listing-wide
+            # ticket links can belong to another event in the same chunk.
+            page_url = rec.get("url")
+            if not r.get("url") or r.get("url") == page_url:
+                detail = urls.title_link(rec.get("text"), r.get("title"), page_url=page_url)
+                if detail:
+                    r["url"] = detail
+            apply_source_defaults(r, (source_specs or {}).get(rec.get("source_slug")))
+            if route.schema == "event":
+                for key in ("start", "end"):
+                    if r.get(key) and not publish._valid_event_datetime(publish._normalize_midnight(r[key])):
+                        r.pop(key, None)
         if route.schema == "event":
             if enrich_events and chat is not None:
                 # Richer sources first: ticketing / FB-event / ical links found
                 # in the candidate's own text often carry the date/venue the
                 # article page lacks.
-                links = enrich.detail_links(rec)
                 for r in records:
-                    if not any(not r.get(f) for f in ("start", "venue", "city")):
+                    if not any(not r.get(f) for f in ("start", "venue", "city", "category")):
                         continue
                     with enrich_lock:
                         allowed = enrich_state["used"] < enrich_limit
@@ -434,10 +536,10 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                         break
                     before = sum(1 for f in ("start", "venue", "city") if r.get(f))
                     slug = rec.get("source_slug") or ""
+                    strategy = hints.get(slug) or ("auto" if repair_records else learned.get(slug)) or "auto"
                     enrich.enrich_event(
-                        r, chat, detail_links=links,
-                        strategy=hints.get(slug) or learned.get(slug) or "auto",
-                        source_slug=slug)
+                        r, chat, detail_links=enrich.detail_links(r),
+                        strategy=strategy, source_slug=slug)
                     if sum(1 for f in ("start", "venue", "city") if r.get(f)) > before:
                         with enrich_lock:
                             enrich_state["ok"] += 1
@@ -454,6 +556,8 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         is_event = route.schema == "event"
         for r in records:
             r.setdefault("kind", route.schema)
+            if is_event and r.get("timePrecision") == "unknown" and publish._valid_event_datetime(r.get("start")):
+                r.pop("timePrecision")  # Recompute now that repair supplied a real time.
             r["contentFlags"] = content_flags
             try:
                 _, answers = scoring.score_record(r, jev_client, kind=route.schema)
@@ -470,7 +574,7 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                 detail = urls.title_link(rec.get("text"), r.get("title"), page_url=page_url)
                 if detail:
                     r["url"] = detail
-        return {"origin": rec, "triage": tri, "route": route, "records": records}
+        return {"origin": rec, "triage": tri, "route": route, "records": records, "reason": reason}
 
     results: list[dict[str, Any]] = []
     with futures.ThreadPoolExecutor(max_workers=workers) as pool:
@@ -479,6 +583,7 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
 
     finalized: list[dict[str, Any]] = []
     for out in results:
+        complete = bool(out["records"]) and out["reason"] is None
         for rec in out["records"]:
             clean = finalize(rec, out["origin"])
             if clean:
@@ -493,13 +598,22 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                     clean = identity.prepare(clean)
                     clean["id"] = clean["sourceRecordId"]
                 finalized.append(clean)
+                complete = valid_record(clean) and complete
+            else:
+                complete = False
+        outcome = "extracted" if complete else "retry:" + (out["reason"] or (
+            "incomplete" if out["records"] else "empty_output"))
+        processed.append((out["origin"], outcome))
     stats = {
         "selected": len(items),
         "mechanical_feeds": enrich_state["mechanical"],
-        "generation_calls": len(accepted) - enrich_state["mechanical"],
+        "generation_calls": enrich_state["generation"],
+        "repair_candidates": enrich_state["repair"],
         "accepted": len(accepted),
         "deferred": deferred,
-        "rejected": len(processed) - len(accepted),
+        "rejected": sum(outcome == "rejected" for _, outcome in processed),
+        "retryable": sum(outcome.startswith("retry:") for _, outcome in processed),
+        "completed": sum(outcome == "extracted" for _, outcome in processed),
         "extracted_records": len(finalized),
         "enriched": enrich_state["ok"],
         "modes": {m: sum(1 for _, t in accepted if router.route(t).mode == m)
@@ -534,42 +648,54 @@ def main(argv: Optional[list[str]] = None) -> int:
                    help="skip the fallback fetch for events missing fields")
     p.add_argument("--enrich-limit", type=int, default=200,
                    help="max event records to enrich with a fetch")
+    p.add_argument("--retry-limit", type=int, default=50,
+                   help="reserve at most this many candidate slots for retries/replay (default 50)")
+    p.add_argument("--max-attempts", type=int, default=3,
+                   help="attempts before retaining a failed candidate as exhausted (default 3)")
+    p.add_argument("--retry-backoff-hours", type=float, default=1,
+                   help="first retry delay; subsequent delay is 4x, capped at 24h")
+    p.add_argument("--replay-days", type=float, default=14,
+                   help="look back this many days for old extracted-but-incomplete events; 0 disables")
+    p.add_argument("--dry-run", action="store_true", help="show selection without model calls or writes")
     opts = p.parse_args(argv)
+    if (min(opts.max_items, opts.extract_limit, opts.retry_limit, opts.enrich_limit) < 0
+            or opts.max_attempts < 1 or opts.retry_backoff_hours <= 0 or opts.replay_days < 0):
+        p.error("limits must be nonnegative; attempts and backoff must be positive")
 
     ref = dates.parse_reference(opts.reference_date)
     candidates = load_candidates(opts.processed)
-    done = load_index(opts.index)
+    states = retry.load_states(opts.index)
     store = load_store(opts.out)
-
-    if not done and store:
+    candidate_archive = opts.out.with_name("source_candidate_archive.jsonl")
+    archived_candidates = retry.load_states(candidate_archive)
+    if not states and store:
         # Bootstrap the index from a pre-incremental store so the candidates
         # behind those records are never paid for twice.
-        fps = sorted({fp for fp in (_store_fingerprint(r) for r in store) if fp})
-        append_index(opts.index, [{"fp": fp, "ts": "", "outcome": "bootstrapped"} for fp in fps])
-        done = set(fps)
+        outputs = previous_outputs(store, candidates)
+        states = {fp: {"fp": fp, "outcome": "bootstrapped"} for fp, records in outputs.items()
+                  if records and all(valid_record(r) for r in records)}
+        if not opts.dry_run:
+            append_index(opts.index, list(states.values()))
 
-    fresh: list[dict[str, Any]] = []
-    skipped_done = skipped_stale = 0
-    for rec in candidates:
-        if _fingerprint(rec) in done and rec.get("source_slug") not in opts.reextract_source:
-            skipped_done += 1
-            continue
-        days = candidate_days(rec, ref)
-        if days is not None and days < -opts.stale_days:
-            skipped_stale += 1
-            continue
-        fresh.append(rec)
-    selected = select(fresh, opts.max_items, ref)
-    print(f"candidates={len(candidates)} done={skipped_done} stale={skipped_stale} "
-          f"fresh={len(fresh)} selected={len(selected)} store={len(store)}")
+    selected, previous, selection = select_work(
+        candidates, states, archived_candidates, store, ref, max_items=opts.max_items,
+        retry_limit=min(opts.retry_limit, opts.extract_limit), max_attempts=opts.max_attempts,
+        replay_days=opts.replay_days, stale_days=opts.stale_days,
+        reextract_sources=opts.reextract_source)
+    print(f"candidates={len(candidates)} fresh={selection['fresh']} "
+          f"retry_due={selection['retry_due']} retry_selected={selection['retry_selected']} "
+          f"selected={len(selected)} store={len(store)}", flush=True)
+    if opts.dry_run:
+        print("(dry run, no calls or writes)")
+        return 0
     if not selected:
         print("nothing to do")
         return 0
 
     # Preserve original candidate text and feed metadata for bounded replay,
     # independently of mutable crawl/processed files and extracted snapshots.
-    candidate_archive = opts.out.with_name("source_candidate_archive.jsonl")
-    archived_candidates = load_index(candidate_archive)
+    opts.out.parent.mkdir(parents=True, exist_ok=True)
+    opts.index.parent.mkdir(parents=True, exist_ok=True)
     append_index(candidate_archive, [
         {"fp": _fingerprint(r), "candidate": r} for r in selected
         if _fingerprint(r) not in archived_candidates
@@ -580,7 +706,7 @@ def main(argv: Optional[list[str]] = None) -> int:
                                     model=opts.model, enrich_events=opts.enrich_events,
                                     enrich_limit=opts.enrich_limit,
                                     enrich_hints=load_enrich_hints(opts.source_file),
-                                    source_specs=load_source_specs(opts.source_file))
+                                    source_specs=load_source_specs(opts.source_file), previous=previous)
 
     # Preserve event source snapshots independently of presentation IDs. Never
     # overwrite separate sessions or source evidence sharing a legacy title ID.
@@ -606,9 +732,15 @@ def main(argv: Optional[list[str]] = None) -> int:
         encoding="utf-8",
     )
     temporary.replace(opts.out)
-    stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    append_index(opts.index, [{"fp": _fingerprint(r), "ts": stamp, "outcome": outcome}
-                              for r, outcome in processed])
+    stamp = datetime.now(timezone.utc)
+    outputs = previous_outputs(records, [r for r, _ in processed])
+    entries = [retry.entry(_fingerprint(r), outcome, states.get(_fingerprint(r), {}), stamp,
+                           max_attempts=opts.max_attempts, backoff_hours=opts.retry_backoff_hours,
+                           record_ids=[v["id"] for v in outputs[_fingerprint(r)] if valid_record(v)])
+               for r, outcome in processed]
+    append_index(opts.index, entries)
+    stats["exhausted"] = sum(e["outcome"] == "exhausted" for e in entries)
+    stats.update(selection)
     print(json.dumps(stats, indent=2))
     print(f"store: {len(store)} + {len(records)} new -> {len(kept)} records -> {opts.out}")
     return 0

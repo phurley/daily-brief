@@ -90,7 +90,7 @@ def _is_dead_end(url: str) -> bool:
 
 def detail_links(record: dict[str, Any]) -> list[str]:
     """Ticketing / FB-event / ical links found in a candidate's own text."""
-    parts = [record.get("text"), record.get("summary"), record.get("url")]
+    parts = [record.get("text"), record.get("summary"), record.get("url"), record.get("registration")]
     blob = "\n".join(str(p) for p in parts if p)
     found = _DETAIL_HOST_RE.findall(blob) + _ICAL_URL_RE.findall(blob)
     out: list[str] = []
@@ -104,7 +104,11 @@ def _is_ical_url(url: str) -> bool:
     return bool(_ICAL_URL_RE.fullmatch(url))
 
 
-def _ical_times(url: str) -> tuple[Optional[str], Optional[str]]:
+def _event_name(value: Any) -> str:
+    return " ".join(re.findall(r"\w+", html.unescape(str(value)).casefold()))
+
+
+def _ical_times(url: str, title: Optional[str] = None) -> tuple[Optional[str], Optional[str]]:
     """Fetch a small ical feed and parse DTSTART/DTEND deterministically."""
     try:
         request = urllib.request.Request(url, headers=_HEADERS)
@@ -112,6 +116,17 @@ def _ical_times(url: str) -> tuple[Optional[str], Optional[str]]:
             raw = response.read(200_000).decode("utf-8", "replace")
     except Exception:
         return None, None
+
+    if title:
+        raw = re.sub(r"\r?\n[ \t]", "", raw)
+        matching = []
+        for block in re.findall(r"BEGIN:VEVENT(.*?)END:VEVENT", raw, re.S):
+            summary = re.search(r"^SUMMARY[^:]*:(.*)$", block, re.M)
+            if summary and _event_name(summary.group(1).replace("\\", "")) == _event_name(title):
+                matching.append(block)
+        if len(matching) != 1:
+            return None, None  # Multiple sessions or another event are ambiguous.
+        raw = matching[0]
 
     def parse(value: Optional[str]) -> Optional[str]:
         if not value:
@@ -213,7 +228,7 @@ def _jsonld_venue_city(location: Any) -> tuple[str, str]:
     return _venue_city_from_place(location)
 
 
-def _jsonld_event_fields(raw_html: str) -> dict[str, Any]:
+def _jsonld_event_fields(raw_html: str, title: Optional[str] = None) -> dict[str, Any]:
     """Deterministic event fields from JSON-LD ``Event`` blocks in a page.
 
     Detail pages that carry schema.org Event markup (ticketing sites, venue
@@ -239,6 +254,9 @@ def _jsonld_event_fields(raw_html: str) -> dict[str, Any]:
             types = types if isinstance(types, list) else [types]
             if "Event" not in {str(t) for t in types}:
                 continue
+            if title:
+                if _event_name(obj.get("name") or "") != _event_name(title):
+                    continue  # Do not repair an event using a different listing's dates.
             start = obj.get("startDate")
             if not start:
                 continue
@@ -341,13 +359,12 @@ def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
     if not missing():
         return record
     filled_by: Optional[str] = None
-    fetched = False
 
     def page_steps(raw: str) -> bool:
         """Run the fetch-page steps on one page; True when the record is complete."""
         nonlocal filled_by
         if "jsonld" in steps:
-            fields = _jsonld_event_fields(raw)
+            fields = _jsonld_event_fields(raw, record.get("title"))
             if fields.get("start"):
                 for key in ("start", "end", "venue", "city", "url", "imageUrl"):
                     if fields.get(key) and not record.get(key):
@@ -357,7 +374,7 @@ def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
                     return True
         if "page_ical" in steps and "start" in missing():
             for ical_url in _ICAL_URL_RE.findall(raw)[:2]:
-                start, end = _ical_times(ical_url)
+                start, end = _ical_times(ical_url, record.get("title"))
                 if start:
                     record["start"] = start
                     if end and not record.get("end"):
@@ -384,7 +401,8 @@ def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
             for field in _FIELDS:
                 value = data.get(field)
                 if isinstance(value, str) and value.strip().lower() not in ("", "null", "none", "n/a"):
-                    record.setdefault(field, value.strip())
+                    if not record.get(field):
+                        record[field] = value.strip()
             if any(record.get(f) and not before[f] for f in _FIELDS):
                 filled_by = filled_by or "llm"
             if not missing():
@@ -394,7 +412,7 @@ def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
     # ical feeds among the candidate's own links (deterministic, no fetch).
     if "links_ical" in steps and "start" in missing():
         for url in [u for u in links if _is_ical_url(u)]:
-            start, end = _ical_times(url)
+            start, end = _ical_times(url, record.get("title"))
             if start:
                 record["start"] = start
                 if end and not record.get("end"):
@@ -411,7 +429,6 @@ def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
             raw = fetch_html(url)
             if not raw:
                 continue
-            fetched = True
             if page_steps(raw):
                 break
 
@@ -427,6 +444,6 @@ def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
     if source_slug:
         if filled_by:
             _learn_strategy(source_slug, filled_by)
-        elif fetched:
-            _learn_strategy(source_slug, "none")
+        # A single unsuccessful page must not disable every future repair for
+        # the source. Explicit source.json strategy="none" still opts out.
     return record

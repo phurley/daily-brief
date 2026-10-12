@@ -264,13 +264,53 @@ COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
 - Env knobs: `COLLECT_MAX_ITEMS` (2000), `COLLECT_EXTRACT_LIMIT` (800),
   `COLLECT_CONCURRENCY` (8), `COLLECT_OUT_DIR` (repo root), `COLLECT_NO_PUSH`.
 - Incremental funnel: every triaged/extracted candidate is fingerprinted in
-  `processed/extraction_index.jsonl` and never paid for again; records
+  `processed/extraction_index.jsonl`; successful candidates are not paid for again,
+  while failed or incomplete attempts enter the bounded retry queue below. Records
   accumulate in `processed/extracted_records.jsonl`. `COLLECT_MAX_ITEMS` is a
   per-run cap, not a steady-state cost — candidates dated more than 2 days
   in the past are skipped entirely and the rest are sorted nearest-to-today
   first.
 - Extraction model: `OPENROUTER_EXTRACT_MODEL` (default `qwen/qwen3-32b`); the
   previously benchmarked `qwen/qwen-2.5-72b-instruct` was retired by OpenRouter.
+
+### Extraction retries and repair
+
+`extract.pipeline` marks a candidate `extracted` only after its output passes
+the publisher's record validation. A failed triage/model call, empty response,
+or incomplete batch records a `retry` outcome instead. Valid records from a
+partial batch are retained. The index is append-only and its latest entry per
+fingerprint controls scheduling.
+
+Retries wait one hour after the first attempt and four hours after the second;
+three unsuccessful attempts end in `exhausted`. The original candidate and
+incomplete records remain available for inspection. There is no sleep inside a
+collection run: a later hourly run handles due work. The retry allowance is 50
+candidates per run, inside the existing overall selection/extraction limits.
+
+Incomplete event retries revisit the event's own detail page, trying matching
+JSON-LD/calendar information before model touch-up. Existing valid fields and
+sibling records are preserved. A failed page no longer teaches the whole source
+to stop enrichment; an explicit `enrich_strategy: "none"` still opts out.
+
+Recent legacy `extracted` entries are checked against their stored output. Event
+candidates with missing/incomplete output are eligible for bounded replay from
+the current corpus or `source_candidate_archive.jsonl`, using a 14-day index
+lookback and the normal candidate-date/locality filters. This does not reset the
+extractor version or replay successful candidates wholesale. A missing stored
+output is a replay candidate, not proof of a missed unique event.
+
+Controls: `--retry-limit 50` (`0` disables retries/replay), `--max-attempts 3`,
+`--retry-backoff-hours 1`, and `--replay-days 14` (`0` disables legacy replay).
+`--dry-run` previews selection with no API calls or writes. The normal hourly
+entry point uses these defaults without a new timer. The run summary reports
+retry selection, validated completions, repair candidates, and exhausted work;
+index entries include attempt counts, reasons, next retry times, and valid output
+IDs. `--reextract-source SLUG` remains an explicit bounded manual override.
+
+For isolated replay, use a separate `--processed` input, `--out` store, and
+`--index`; place the copied candidate archive beside the output store. Keep
+`--max-items`, `--extract-limit`, and `--enrich-limit` small. Run the offline
+regressions with `python3 -m unittest extract.test_retry extract.test_publish`.
 
 ## Output layout
 
