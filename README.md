@@ -28,6 +28,20 @@ rendered in the browser from schema-backed JSON.
   collection (step 4 of `data-collect/run_collect.sh`) and also has an hourly
   launchd timer. See `vibe-check/README.md`.
 
+## Visual themes
+
+The Theme selector in the top navigation offers Original, Newspaper, Infographic,
+Star Trek, Redwood, and Michigan. Each edition uses the same live content and
+calendar. Original retains its seasonal, weather-aware appearance; the other
+editions have fixed palettes, typography, and decorative treatments.
+
+The selection is saved under `daily-brief:theme:v1` in browser local storage,
+restored before first paint, and synchronized across tabs. If storage is blocked,
+switching still works for the current visit. `themes.js` owns the preference and
+`themes.css` owns the five optional designs. Both are included in the offline shell.
+Run `npm run test:themes` against a local server to check responsive layouts,
+persistence, cross-tab changes, storage denial, and calendar access.
+
 ## Family calendar
 
 The family calendar starts expanded and loads automatically on every page visit.

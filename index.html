@@ -7,7 +7,9 @@
     <meta name="description" content="A living daily brief for southeast Michigan.">
     <title>Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script src="themes.js?v=20261012-1"></script>
     <link rel="stylesheet" href="theme.css?v=20261009-layout-1">
+    <link rel="stylesheet" href="themes.css?v=20261012-1">
     <script type="module" src="app.js?v=20261009-layout-1"></script>
   </head>
   <body>
@@ -15,7 +17,18 @@
 
     <nav class="section-nav" aria-label="Brief sections">
       <a href="#weather-section">Weather</a><a href="#events-section">Events</a><a href="#news-section">News</a><a href="#geek-section">Science</a>
+      <label class="theme-picker" for="theme-select"><span>Theme</span>
+        <select id="theme-select" aria-describedby="theme-status">
+          <option value="original">Original</option>
+          <option value="newspaper">Newspaper</option>
+          <option value="infographic">Infographic</option>
+          <option value="star-trek">Star Trek</option>
+          <option value="redwood">Redwood</option>
+          <option value="michigan">Michigan</option>
+        </select>
+      </label>
     </nav>
+    <p id="theme-status" class="visually-hidden" role="status" aria-live="polite"></p>
     <header class="sky" aria-labelledby="page-title">
       <div class="sky__texture" aria-hidden="true"></div>
       <div class="celestial" aria-hidden="true">
@@ -28,6 +41,7 @@
         <div class="weather-scene__wind"><i></i><i></i><i></i><i></i></div>
       </div>
       <div class="shell sky__content">
+        <p class="theme-signature" hidden><span id="theme-kicker"></span><span id="theme-caption"></span></p>
         <p id="masthead-eyebrow" class="eyebrow">Your southeast Michigan daily brief</p>
         <p id="weather-atmosphere-note" class="weather-atmosphere-note" hidden></p>
         <h1 id="page-title">A good day,<br>well considered.</h1>
