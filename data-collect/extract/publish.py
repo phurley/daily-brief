@@ -165,13 +165,18 @@ def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None,
     event["id"] = _valid_id(record.get("id"))
     for key in ("title", "summary", "url", "start", "end", "venue", "city", "region",
                 "price", "ageRestriction", "registration", "category",
-                "imageUrl", "imageAlt", "deadline", "status", "occurrenceId", "seriesId", "sourceUpdatedAt", "localityTier"):
+                "imageUrl", "imageAlt", "deadline", "status", "occurrenceId", "seriesId", "sourceUpdatedAt", "localityTier",
+                "priceMin", "priceMax", "priceCurrency", "availability", "lastCheckedAt"):
         value = _clean(record.get(key))
         if value:
             event[key] = value
     for key in identity.PUBLIC_FIELDS:
         if key in record:
             event[key] = record[key]
+    for key in ("priceMin", "priceMax"):
+        value = record.get(key)
+        if isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value) and value >= 0:
+            event[key] = value
     for key in ("start", "end"):
         if key in event:
             event[key] = _normalize_midnight(event[key])
@@ -456,6 +461,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--records", type=Path, default=DEFAULT_RECORDS)
     p.add_argument("--out", type=Path, default=ROOT, help="directory to write into (default: repo root)")
+    p.add_argument('--events-only',action='store_true',help='write the calendar without replacing news.json')
     p.add_argument("--edition-date", default=None, help="YYYY-MM-DD (default: today Eastern)")
     p.add_argument("--max-event-age-days", type=int, default=7,
                    help="drop start-only events whose start is older than this (default 7; "
@@ -489,8 +495,9 @@ def main(argv: Optional[list[str]] = None) -> int:
           f"content-dropped: {stats['content_dropped']}")
     print(f"events.json: {stats['events_out']}/{stats['events_in']} kept "
           f"(stale {stats['events_stale']}, quarantined {stats['events_quarantined']})  valid={ev_ok}")
-    print(f"news.json:   {stats['stories_out']}/{stats['stories_in']} kept  valid={nw_ok}")
-    if not (ev_ok and nw_ok):
+    if not opts.events_only:
+        print(f"news.json:   {stats['stories_out']}/{stats['stories_in']} kept  valid={nw_ok}")
+    if not ev_ok or (not opts.events_only and not nw_ok):
         print("REFUSING to write: document failed validation")
         return 1
     if "identity" in stats:
@@ -515,8 +522,9 @@ def main(argv: Optional[list[str]] = None) -> int:
     print(f"quarantine: {stats['events_quarantined']} records -> {quarantine_path}")
     opts.out.mkdir(parents=True, exist_ok=True)
     identity.atomic_json(opts.out / "events.json", events_doc)
-    identity.atomic_json(opts.out / "news.json", news_doc)
-    print(f"wrote {opts.out/'events.json'} and {opts.out/'news.json'}")
+    if not opts.events_only:
+        identity.atomic_json(opts.out / "news.json", news_doc)
+    print(f"wrote {opts.out/'events.json'}" + ('' if opts.events_only else f" and {opts.out/'news.json'}"))
     return 0
 
 

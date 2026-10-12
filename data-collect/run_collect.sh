@@ -24,6 +24,8 @@
 #                                          and never re-paid, so this is a cap, not
 #                                          a steady-state cost)
 #   COLLECT_EXTRACT_LIMIT[800]          funnel --extract-limit (generation calls)
+#   COLLECT_SCORE_LIMIT  [800]          optional event taste scoring calls
+#   COLLECT_DETAIL_LIMIT [40]           organizer detail pages rechecked per run
 #   COLLECT_CONCURRENCY  [8]            crawler --concurrency
 #   EVENT_IDENTITY_MODE [canonical]       legacy, shadow, or canonical publication
 #   EVENT_IDENTITY_FUZZY[0]            1 enables constrained detail-URL typo matching
@@ -95,11 +97,13 @@ echo "--- step 2/4: extraction funnel ---"
 "$PY" -m extract.pipeline \
     --max-items "${COLLECT_MAX_ITEMS:-2000}" \
     --extract-limit "${COLLECT_EXTRACT_LIMIT:-800}" \
+    --score-limit "${COLLECT_SCORE_LIMIT:-800}" \
     || { echo "pipeline failed"; exit 1; }
 
 OUT_DIR="${COLLECT_OUT_DIR:-$ROOT}"
 RECORDS="$DIR/processed/extracted_records.jsonl"
 if [ ! -s "$RECORDS" ]; then
+    "$PY" calendar_health.py --events "$OUT_DIR/events.json" || { echo "calendar health report failed"; exit 1; }
     echo "no extracted records this run; keeping existing events.json/news.json"
     if [ "$OUT_DIR" != "$ROOT" ]; then exit 0; fi
     if [ "${COLLECT_NO_PUSH:-}" != "1" ]; then
@@ -113,7 +117,9 @@ if [ ! -s "$RECORDS" ]; then
 fi
 
 "$PY" -m extract.repair_schedules --apply || { echo "schedule repair failed"; exit 1; }
+"$PY" refresh_event_changes.py --apply --recommendations "$OUT_DIR/recommendations.json" --limit "${COLLECT_DETAIL_LIMIT:-40}" || { echo "detail refresh failed"; exit 1; }
 "$PY" -m extract.publish --out "$OUT_DIR" || { echo "publish failed"; exit 1; }
+"$PY" calendar_health.py --events "$OUT_DIR/events.json" || { echo "calendar health report failed"; exit 1; }
 
 # Shared shortlist also runs for custom output/no-push replay.
 NODE="$(command -v node || true)"

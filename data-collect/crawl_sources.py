@@ -274,6 +274,7 @@ class Source:
     crawl_urls: tuple[str, ...] = ()  # extra seeds for the browser/http engine
     feed_urls: tuple[str, ...] = ()  # rss/atom/ics/json fetched over plain HTTP
     max_pages: Optional[int] = None  # per-source override of --max-pages
+    verified_calendar: Optional[dict] = None
 
     @property
     def period_seconds(self) -> int:
@@ -293,6 +294,7 @@ class Source:
             "crawl_urls": list(self.crawl_urls),
             "feed_urls": list(self.feed_urls),
             "max_pages": self.max_pages,
+            "verified_calendar": self.verified_calendar,
         }
 
 
@@ -345,6 +347,7 @@ def load_sources(path: Path) -> list[Source]:
                 crawl_urls=_as_url_list(item.get("crawl_urls")),
                 feed_urls=_as_url_list(item.get("feed_urls")),
                 max_pages=item.get("max_pages"),
+                verified_calendar=item.get("verified_calendar"),
             )
         )
     return sources
@@ -522,6 +525,7 @@ class CrawlOutcome:
     seed_final_url: Optional[str] = None
     seed_title: Optional[str] = None
     error: Optional[str] = None
+    calendar_coverage: Optional[dict] = None
 
     @property
     def pages_failed(self) -> int:
@@ -580,6 +584,8 @@ class Crawl4AIBackend:
         self._api_semaphore: Any = None
         self._http_lock: Any = None
         self._browser_lock: Any = None
+        self.calendar_date = None
+        self.calendar_horizon_days = 90
 
     async def __aenter__(self) -> "Crawl4AIBackend":
         # One shared API limiter for the whole run, so the plan's concurrency
@@ -793,6 +799,18 @@ class Crawl4AIBackend:
         return list(await asyncio.gather(*(one(u) for u in urls)))
 
     async def fetch(self, source: "Source") -> CrawlOutcome:
+        if source.verified_calendar:
+            from verified_calendars import collect
+            result = await asyncio.to_thread(collect, source.to_meta(), reference_day=self.calendar_date,
+                                            horizon_days=self.calendar_horizon_days, timeout=self.timeout_s)
+            page = PageResult(url=source.events_url or source.url, final_url=source.events_url or source.url,
+                              status_code=200 if result.coverage["status"] != "failed" else None,
+                              title=source.name, markdown=result.markdown(), html=None, depth=0,
+                              success=result.coverage["status"] != "failed", error=None, kind="jsonld")
+            return CrawlOutcome(success=page.success, pages=[page], seeds=[page.url],
+                                seed_status_code=page.status_code, seed_final_url=page.url, seed_title=source.name,
+                                error="; ".join(result.coverage["errors"] or [i['reason'] for i in result.coverage['unresolved']]) if not page.success else None,
+                                calendar_coverage=result.coverage)
         seeds = _browser_seeds_for(source)
         html_seeds = [s for s in seeds if _extension(s) not in ASSET_EXTENSIONS]
         asset_seeds = [s for s in seeds if _extension(s) in ASSET_EXTENSIONS]
@@ -2136,6 +2154,7 @@ def write_result(
             "auto_feeds": outcome.auto_feeds,
             "feeds": outcome.feeds,
             "jsonld_blocks": sum(1 for p in outcome.pages if p.kind == "jsonld"),
+            "calendar_coverage": outcome.calendar_coverage,
             "pages": page_meta,
         },
         "content": {
@@ -2186,6 +2205,10 @@ async def crawl_job(
         started = utc_now()
         start_perf = time.perf_counter()
         outcome = await backend.fetch(source)
+        if outcome.calendar_coverage is not None:
+            attempt_dir = output_dir / slugify(source.name)
+            attempt_dir.mkdir(parents=True, exist_ok=True)
+            write_atomic(attempt_dir / "calendar_attempt.json", json.dumps(outcome.calendar_coverage, indent=2) + "\n")
         duration_ms = int((time.perf_counter() - start_perf) * 1000)
 
         record = RunRecord(
@@ -2420,6 +2443,9 @@ def build_parser() -> argparse.ArgumentParser:
         "--force", action="store_true",
         help="crawl every source regardless of its frequency",
     )
+    parser.add_argument("--calendar-date", help="target YYYY-MM-DD; refresh verified calendars regardless of schedule")
+    parser.add_argument("--calendar-horizon-days", type=int, default=90, help="verified calendar date window (1–90, default 90)")
+    parser.add_argument("--verified-calendars-only", action="store_true", help="collect configured verified calendars only")
     parser.add_argument(
         "--status", action="store_true",
         help="print the last run for every source and exit",
@@ -2526,6 +2552,12 @@ def main(argv: Optional[list[str]] = None) -> int:
         return 2
 
     sources = load_sources(args.sources)
+    if not 1 <= args.calendar_horizon_days <= 90:
+        raise SystemExit("--calendar-horizon-days must be between 1 and 90")
+    if args.calendar_date:
+        datetime.strptime(args.calendar_date, "%Y-%m-%d")
+    if args.verified_calendars_only or args.calendar_date:
+        sources = [s for s in sources if s.verified_calendar]
     conn = open_db(args.db)
     now = utc_now()
 
@@ -2550,7 +2582,7 @@ def main(argv: Optional[list[str]] = None) -> int:
 
         jobs, skipped = select_jobs(
             sources,
-            force=args.force,
+            force=args.force or bool(args.calendar_date),
             successes=successes,
             now=now,
             limit=args.limit,
@@ -2599,6 +2631,8 @@ def main(argv: Optional[list[str]] = None) -> int:
             api_render=not args.no_api_render,
             api_concurrency=args.api_concurrency,
         )
+        backend.calendar_date = args.calendar_date
+        backend.calendar_horizon_days = args.calendar_horizon_days
         print(
             f"Crawling {len(jobs)} source(s) with {backend.name} "
             f"(depth {args.max_depth}, max {args.max_pages} pages/seed, "

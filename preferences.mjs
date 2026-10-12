@@ -4,7 +4,7 @@ export const DEFAULT_PREFERENCES = {
   schemaVersion: '1.0.0', profileId: 'household', updatedAt: null,
   topicAffinities: {}, venueAffinities: {}, newsTopicAffinities: {},
   favorites: [], hiddenOccurrences: [], overrides: {},
-  constraints: { maxDistanceMiles: null, selectedDayOnly: false },
+  constraints: { maxDistanceMiles: null, maxPrice: null, excludeUnknownPrice: false, selectedDayOnly: false },
   ranking: { version: 1, limit: 7, maxPerVenue: 2, maxPerCategory: 3, maxPerSeries: 1, minScore: 35, horizonDays: 30 },
 };
 const object = value => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
@@ -20,7 +20,7 @@ export function normalizePreferences(value = {}, profileId = value?.profileId ||
     favorites: [...new Set((Array.isArray(v.favorites) ? v.favorites : []).filter(x => typeof x === 'string'))],
     hiddenOccurrences: [...new Set((Array.isArray(v.hiddenOccurrences) ? v.hiddenOccurrences : []).filter(x => typeof x === 'string'))],
     overrides: affinities(v.overrides),
-    constraints: { maxDistanceMiles: Number.isFinite(c.maxDistanceMiles) && c.maxDistanceMiles >= 0 ? c.maxDistanceMiles : null, selectedDayOnly: c.selectedDayOnly === true },
+    constraints: { maxDistanceMiles: Number.isFinite(c.maxDistanceMiles) && c.maxDistanceMiles >= 0 ? c.maxDistanceMiles : null, maxPrice: Number.isFinite(c.maxPrice) && c.maxPrice >= 0 ? c.maxPrice : null, excludeUnknownPrice: c.excludeUnknownPrice === true, selectedDayOnly: c.selectedDayOnly === true },
     ranking: { version: 1, limit: Math.round(bounded(r.limit, 7, 1, 20)), maxPerVenue: Math.round(bounded(r.maxPerVenue, 2, 1, 20)), maxPerCategory: Math.round(bounded(r.maxPerCategory, 3, 1, 20)), maxPerSeries: Math.round(bounded(r.maxPerSeries, 1, 1, 20)), minScore: bounded(r.minScore, 35, 0, 100), horizonDays: Math.round(bounded(r.horizonDays, 30, 0, 90)) },
   };
 }

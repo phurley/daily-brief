@@ -37,7 +37,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-from . import dates, enrich, identity, jev, llm, prompts, publish, retry, router, scoring, schedules, urls
+from . import dates, enrich, evidence, identity, jev, llm, prompts, publish, retry, router, scoring, schedules, urls
 from .funnel import slugify
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
@@ -83,6 +83,7 @@ def load_source_specs(source_file: Path) -> dict[str, dict[str, Any]]:
             "default_venue": source.get("default_venue"),
             "default_city": source.get("default_city"),
             "identity_authority": source.get("identity_authority") or ("organizer" if source.get("type") == "Venue" else "unknown"),
+            "verified_calendar": bool(source.get("verified_calendar")),
         }
         if source.get("type") == "Venue":
             location = str(source.get("location") or "")
@@ -153,7 +154,7 @@ def _fingerprint(rec: dict[str, Any]) -> str:
     base = f"{rec.get('source_slug')}:{EXTRACTOR_VERSION}:{cid}"
     if rec.get("_kind") == "feed":
         content = {k: rec.get(k) for k in ("title", "summary", "content", "url", "start", "end",
-                                          "venue", "status", "recurrenceId", "sourceUpdatedAt", "schedule",
+                                          "venue", "status", "statusEvidence", "price", "availability", "registration", "recurrenceId", "sourceUpdatedAt", "schedule",
                                           "recurrenceRule", "recurrenceTimezone", "recurrenceDates", "excludedDates")}
         return base + ":" + identity.digest(content)
     return base
@@ -245,6 +246,9 @@ def candidate_days(rec: dict[str, Any], ref: datetime) -> Optional[float]:
                 return (upcoming[1] - ref).total_seconds() / 86400
         except (ValueError, TypeError, KeyError, OverflowError):
             return None  # Retain malformed schedules for repair, not stale-drop.
+    absolute = retry.timestamp(rec.get('start') or rec.get('publishedAt'))
+    if absolute is not None:
+        return (absolute - ref).total_seconds() / 86400
     days: list[float] = []
     age = rec.get("age_days")
     if isinstance(age, (int, float)):
@@ -296,7 +300,7 @@ def previous_outputs(store: list[dict], candidates: list[dict]) -> dict[str, lis
 
 
 def select_work(candidates, states, archived, store, ref, *, max_items, retry_limit,
-                max_attempts, replay_days, stale_days, reextract_sources=()):
+                max_attempts, replay_days, stale_days, reextract_sources=(), source_specs=None):
     """Reserve a bounded share for due retries/recent old failures; keep fresh work moving."""
     all_candidates = {}
     for row in archived.values():
@@ -333,9 +337,13 @@ def select_work(candidates, states, archived, store, ref, *, max_items, retry_li
             if (outputs and any(r.get("kind") == "event" and not valid_record(r) for r in outputs)
                     or not outputs and event_hint):
                 pending.append(c)
+    mechanical = [c for c in fresh if complete_verified(c, (source_specs or {}).get(c.get('source_slug'), {}))]
+    mechanical.sort(key=lambda c: priority(c,ref))
+    direct = {id(c) for c in mechanical}
+    fresh = [c for c in fresh if id(c) not in direct]
     repairs = select(pending, min(retry_limit, max_items), ref)
-    selected = repairs + select(fresh, max_items - len(repairs), ref)
-    return selected, previous, {"fresh": len(fresh), "retry_due": len(pending), "retry_selected": len(repairs)}
+    selected = mechanical + repairs + select(fresh, max_items - len(repairs), ref)
+    return selected, previous, {"fresh": len(fresh) + len(mechanical), "retry_due": len(pending), "retry_selected": len(repairs)}
 
 
 def priority(rec: dict[str, Any], ref: datetime) -> tuple:
@@ -351,7 +359,16 @@ def priority(rec: dict[str, Any], ref: datetime) -> tuple:
 
 
 def select(items: list[dict[str, Any]], limit: int, ref: datetime) -> list[dict[str, Any]]:
-    return sorted(items, key=lambda r: priority(r, ref))[:limit]
+    # Reserve planning capacity rather than letting near-term volume starve
+    # later dates. Empty buckets give their capacity back to the other work.
+    ordered = sorted(items, key=lambda r: priority(r, ref))
+    picked = []
+    for low, high, share in ((8, 31, .2), (31, 91, .1)):
+        candidates = [r for r in ordered if (d := candidate_days(r, ref)) is not None and low <= d < high]
+        picked.extend(candidates[:int(limit * share)])
+    chosen = {id(r) for r in picked}
+    picked.extend(r for r in ordered if id(r) not in chosen)
+    return picked[:limit]
 
 
 # --------------------------------------------------------------------------- #
@@ -412,17 +429,20 @@ def finalize(record: dict[str, Any], origin: dict[str, Any]) -> Optional[dict[st
         if origin.get("feed_kind") in ("ics", "jsonld"):
             for key in ("sourceEventId", "recurrenceId", "recurrenceRule", "sourceUpdatedAt",
                         "recurrenceTimezone", "recurrenceDates", "excludedDates", "schedule",
-                        "start", "end", "venue", "timePrecision", "status", "statusEvidence", "previousStart"):
-                if origin.get(key):
+                        "start", "end", "venue", "timePrecision", "status", "statusEvidence", "statusEvidenceKind", "previousStart",
+                        "price", "priceMin", "priceMax", "priceCurrency", "availability", "registration", "ageRestriction", "lastCheckedAt"):
+                if origin.get(key) not in (None, ""):
                     record[key] = origin[key]
-        evidence = record.get("statusEvidence")
+        status_evidence = record.get("statusEvidence")
         source_text = jev.record_text(origin)
-        if evidence and evidence not in source_text and evidence != origin.get("statusEvidence"):
+        if status_evidence and status_evidence not in source_text and status_evidence != origin.get("statusEvidence"):
             record.pop("statusEvidence", None)
             record.pop("status", None)
         record["observedAt"] = record["addedAt"]
         record["sourceId"] = origin.get("source_slug") or ""
-        schedules.attach(record, origin)
+        if not origin.get("verifiedCalendar") or origin.get("schedule") or origin.get("recurrenceRule"):
+            schedules.attach(record, origin)
+        evidence.apply(record, origin.get("summary", "") if origin.get("feed_kind") else schedules.source_section(record, origin))
         record = identity.prepare(record)
         record["aliases"] = [record["id"]]
         record["id"] = record["sourceRecordId"]
@@ -443,8 +463,36 @@ def structured_event(candidate, spec=None):
     result = {k: candidate[k] for k in ("title", "summary", "start", "end", "venue", "url",
               "status", "statusEvidence", "timePrecision", "sourceEventId", "recurrenceId",
               "recurrenceRule", "recurrenceTimezone", "recurrenceDates", "excludedDates", "schedule",
-              "sourceUpdatedAt", "previousStart") if candidate.get(k)}
+              "sourceUpdatedAt", "previousStart", "price", "priceMin", "priceMax", "priceCurrency",
+              "availability", "registration", "ageRestriction", "image", "lastCheckedAt", "statusEvidenceKind",
+              "replacementStart") if candidate.get(k) not in (None, "")}
     return dict(result, kind="event", city=city, category=candidate.get("category") or "Event")
+
+
+def refresh_observations(store, candidates):
+    """Successful unchanged calendar checks update freshness without model work."""
+    checked = {_fingerprint(c): c['lastCheckedAt'] for c in candidates
+               if c.get('verifiedCalendar') and c.get('lastCheckedAt')}
+    changed = False
+    for record in store:
+        value = checked.get(_store_fingerprint(record))
+        if value and value != record.get('lastCheckedAt'):
+            record['lastCheckedAt'] = value
+            changed = True
+    return changed
+
+
+def save_store(path, records):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    temporary = path.with_suffix('.jsonl.tmp')
+    temporary.write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records),encoding='utf-8')
+    temporary.replace(path)
+
+
+def complete_verified(candidate, spec):
+    base = structured_event(candidate, spec)
+    return bool(spec.get('verified_calendar') and candidate.get('verifiedCalendar') and base
+                and valid_record(dict(base, id='verified-calendar')))
 
 
 def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
@@ -452,7 +500,8 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         enrich_limit: int = 200,
         enrich_hints: Optional[dict[str, str]] = None,
         source_specs: Optional[dict[str, dict[str, Any]]] = None,
-        previous: Optional[dict[str, list[dict]]] = None) -> tuple[list[dict[str, Any]], dict[str, int],
+        previous: Optional[dict[str, list[dict]]] = None, mechanical_only: bool = False,
+        score_limit: int = 800) -> tuple[list[dict[str, Any]], dict[str, int],
                                           list[tuple[dict[str, Any], str]]]:
     """Triage + extract ``items``; return (records, stats, processed).
 
@@ -461,9 +510,16 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
     candidates beyond ``--extract-limit`` are *not* included — they stay
     un-fingerprinted and are retried on a later run.
     """
-    jev_client = jev.make_client()
+    jev_client = None if mechanical_only else jev.make_client()
 
     def triage_one(rec: dict[str, Any]):
+        spec = (source_specs or {}).get(rec.get("source_slug"), {})
+        if complete_verified(rec, spec):
+            # A complete local calendar occurrence is content regardless of
+            # taste. Optional scoring later cannot veto its collection.
+            return rec, jev.Triage(str(rec.get("item_id")), True, "1", "event", True, 3, "event", 1.0)
+        if mechanical_only:
+            return rec, None
         try:
             return rec, jev.triage_record(rec, jev_client)
         except (jev.JevError, TimeoutError, OSError):
@@ -476,20 +532,23 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
 
     processed: list[tuple[dict[str, Any], str]] = []
     accepted: list[tuple[dict[str, Any], jev.Triage]] = []
-    deferred = 0
+    deferred, generation_slots = 0, 0
     for rec, tri in triaged:
         if tri is None:
             processed.append((rec, "retry:triage_failure"))
         elif not tri.accepted:
             processed.append((rec, "rejected"))
-        elif len(accepted) < extract_limit:
+        elif structured_event(rec, (source_specs or {}).get(rec.get("source_slug"))) or generation_slots < extract_limit:
             accepted.append((rec, tri))
+            if not structured_event(rec, (source_specs or {}).get(rec.get("source_slug"))):
+                generation_slots += 1
         else:
             deferred += 1  # leave un-fingerprinted; retried next run
 
-    chat = llm.make_chat_client(model) if accepted else None
+    needs_generation = any(not structured_event(rec, (source_specs or {}).get(rec.get("source_slug"))) for rec, _ in accepted)
+    chat = llm.make_chat_client(model) if accepted and needs_generation and not mechanical_only else None
     enrich_lock = threading.Lock()
-    enrich_state = {"used": 0, "ok": 0, "mechanical": 0, "repair": 0, "generation": 0}
+    enrich_state = {"used": 0, "ok": 0, "mechanical": 0, "repair": 0, "generation": 0, "scored": 0}
     hints = enrich_hints or {}
     learned = enrich.learned_strategies()
 
@@ -594,6 +653,12 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                 r.pop("timePrecision")  # Recompute now that repair supplied a real time.
             r["contentFlags"] = content_flags
             try:
+                if jev_client is None:
+                    raise ValueError("mechanical-only collection")
+                with enrich_lock:
+                    if enrich_state['scored'] >= score_limit:
+                        raise ValueError('Optional scoring budget exhausted')
+                    enrich_state['scored'] += 1
                 _, answers = scoring.score_record(r, jev_client, kind=route.schema)
             except Exception:  # noqa: BLE001 - scoring is best-effort
                 answers = tri.raw
@@ -642,6 +707,7 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         "selected": len(items),
         "mechanical_feeds": enrich_state["mechanical"],
         "generation_calls": enrich_state["generation"],
+        "scoring_calls": enrich_state["scored"],
         "repair_candidates": enrich_state["repair"],
         "accepted": len(accepted),
         "deferred": deferred,
@@ -669,6 +735,8 @@ def main(argv: Optional[list[str]] = None) -> int:
                    help="Jev-triage cap per run (default 2000)")
     p.add_argument("--extract-limit", type=int, default=800,
                    help="generation-call cap per run (default 800)")
+    p.add_argument("--mechanical-only", action="store_true", help="verified complete calendar events only; no model calls")
+    p.add_argument("--score-limit", type=int, default=800, help="optional taste scoring calls; zero retains events without scoring")
     p.add_argument("--stale-days", type=float, default=STALE_DAYS,
                    help="never triage candidates dated older than this (default 2)")
     p.add_argument("--record-max-age-days", type=float, default=RECORD_MAX_AGE_DAYS,
@@ -692,16 +760,23 @@ def main(argv: Optional[list[str]] = None) -> int:
                    help="look back this many days for old extracted-but-incomplete events; 0 disables")
     p.add_argument("--dry-run", action="store_true", help="show selection without model calls or writes")
     opts = p.parse_args(argv)
-    if (min(opts.max_items, opts.extract_limit, opts.retry_limit, opts.enrich_limit) < 0
+    if (min(opts.max_items, opts.extract_limit, opts.retry_limit, opts.enrich_limit, opts.score_limit) < 0
             or opts.max_attempts < 1 or opts.retry_backoff_hours <= 0 or opts.replay_days < 0):
         p.error("limits must be nonnegative; attempts and backoff must be positive")
 
     ref = dates.parse_reference(opts.reference_date)
     candidates = load_candidates(opts.processed)
+    if opts.mechanical_only:
+        specs = load_source_specs(opts.source_file)
+        candidates = [c for c in candidates if c.get("verifiedCalendar")
+                      and specs.get(c.get("source_slug"), {}).get("verified_calendar")]
     states = retry.load_states(opts.index)
     store = load_store(opts.out)
     candidate_archive = opts.out.with_name("source_candidate_archive.jsonl")
     archived_candidates = retry.load_states(candidate_archive)
+    if opts.mechanical_only:
+        archived_candidates = {fp: row for fp, row in archived_candidates.items()
+                               if row.get("candidate", {}).get("verifiedCalendar")}
     if not states and store:
         # Bootstrap the index from a pre-incremental store so the candidates
         # behind those records are never paid for twice.
@@ -715,7 +790,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         candidates, states, archived_candidates, store, ref, max_items=opts.max_items,
         retry_limit=min(opts.retry_limit, opts.extract_limit), max_attempts=opts.max_attempts,
         replay_days=opts.replay_days, stale_days=opts.stale_days,
-        reextract_sources=opts.reextract_source)
+        reextract_sources=opts.reextract_source, source_specs=load_source_specs(opts.source_file))
     print(f"candidates={len(candidates)} fresh={selection['fresh']} "
           f"retry_due={selection['retry_due']} retry_selected={selection['retry_selected']} "
           f"selected={len(selected)} store={len(store)}", flush=True)
@@ -723,6 +798,8 @@ def main(argv: Optional[list[str]] = None) -> int:
         print("(dry run, no calls or writes)")
         return 0
     if not selected:
+        if refresh_observations(store,candidates):
+            save_store(opts.out,store)
         print("nothing to do")
         return 0
 
@@ -740,13 +817,15 @@ def main(argv: Optional[list[str]] = None) -> int:
                                     model=opts.model, enrich_events=opts.enrich_events,
                                     enrich_limit=opts.enrich_limit,
                                     enrich_hints=load_enrich_hints(opts.source_file),
-                                    source_specs=load_source_specs(opts.source_file), previous=previous)
+                                    source_specs=load_source_specs(opts.source_file), previous=previous,
+                                    mechanical_only=opts.mechanical_only, score_limit=opts.score_limit)
 
     # Preserve event source snapshots independently of presentation IDs. Never
     # overwrite separate sessions or source evidence sharing a legacy title ID.
     def store_key(r):
         return identity.prepare(r)["sourceRecordId"] if r.get("kind") == "event" else r.get("id")
     by_id = {store_key(r): r for r in store if r.get("id")}
+    refresh_observations(store,candidates)
     for record in records:
         by_id[store_key(record)] = record
     archive = opts.out.with_name("event_source_archive.jsonl")
@@ -760,12 +839,7 @@ def main(argv: Optional[list[str]] = None) -> int:
                     archived.add(snapshot["sourceRecordId"])
     kept = _prune_store(list(by_id.values()), ref, opts.record_max_age_days)
     kept.sort(key=lambda r: (r.get("kind") or "", r.get("id") or ""))
-    temporary = opts.out.with_suffix(".jsonl.tmp")
-    temporary.write_text(
-        "\n".join(json.dumps(r, ensure_ascii=False) for r in kept) + "\n",
-        encoding="utf-8",
-    )
-    temporary.replace(opts.out)
+    save_store(opts.out,kept)
     stamp = datetime.now(timezone.utc)
     outputs = previous_outputs(records, [r for r, _ in processed])
     entries = [retry.entry(_fingerprint(r), outcome, states.get(_fingerprint(r), {}), stamp,

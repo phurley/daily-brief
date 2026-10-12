@@ -707,6 +707,10 @@ def process_source(
         )
         # ICS and JSON-LD Event items are structured events with authoritative
         # dates; RSS items are news with only a publish timestamp.
+        if it.get('verifiedCalendar') and source.get('verified_calendar'):
+            # An artist's biography may mention another state. Geography for
+            # a verified calendar occurrence comes from its advertised venue.
+            signals['locality'] = locality.detect(' '.join(str(it.get(k) or '') for k in ('venue','city')))
         is_ics = it.get("feed_kind") in ("ics", "jsonld")
         if is_ics:
             hint = "event"

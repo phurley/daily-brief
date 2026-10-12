@@ -169,8 +169,18 @@
             "unknown"
           ]
         },
-        "legacyOccurrenceKeys": {"type": "array", "items": {"type": "string"}},
-        "legacySeriesKeys": {"type": "array", "items": {"type": "string"}},
+        "legacyOccurrenceKeys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "legacySeriesKeys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "aliases": {
           "type": "array",
           "items": {
@@ -185,6 +195,28 @@
         },
         "identity": {
           "type": "object"
+        },
+        "priceMin": {
+          "type": "number",
+          "minimum": 0
+        },
+        "priceMax": {
+          "type": "number",
+          "minimum": 0
+        },
+        "priceCurrency": {
+          "type": "string"
+        },
+        "availability": {
+          "type": "string"
+        },
+        "lastCheckedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "statusEvidence": {
+          "type": "string",
+          "minLength": 1
         }
       }
     },

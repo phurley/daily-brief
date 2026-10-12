@@ -36,6 +36,7 @@ from urllib.parse import parse_qsl, urlsplit, urlunsplit
 
 from . import dates as _dates
 from . import schedules
+from . import evidence
 from zoneinfo import ZoneInfo
 
 RSS_HEADING = "# Feed:"
@@ -433,19 +434,12 @@ def parse_jsonld_markdown(body: str, fallback_url: str = "") -> list[dict[str, A
             data = json.loads(block)
         except json.JSONDecodeError:
             continue
-        objs: list[Any] = list(data) if isinstance(data, list) else [data]
-        graph: list[Any] = []
-        for obj in objs:
-            if isinstance(obj, dict) and isinstance(obj.get("@graph"), list):
-                graph.extend(obj["@graph"])
-            else:
-                graph.append(obj)
-        for obj in graph:
+        for obj in evidence.event_objects(data):
             if not isinstance(obj, dict):
                 continue
             types = obj.get("@type")
             types = types if isinstance(types, list) else [types]
-            if "Event" not in {str(t) for t in types}:
+            if not evidence.EVENT_TYPES.intersection(str(t) for t in types):
                 continue
             title = html.unescape(str(obj.get("name") or "")).strip()
             if not title:
@@ -459,9 +453,8 @@ def parse_jsonld_markdown(body: str, fallback_url: str = "") -> list[dict[str, A
                 "feed_url": feed_url,
                 "title": title,
                 "url": str(obj.get("url") or "").strip() or None,
-                "sourceEventId": str(obj.get("@id") or obj.get("identifier") or ""),
                 "status": {"EventCancelled": "canceled", "EventPostponed": "postponed", "EventRescheduled": "rescheduled", "EventScheduled": "scheduled"}.get(str(obj.get("eventStatus") or "").rsplit("/", 1)[-1]),
-                "statusEvidence": str(obj.get("eventStatus") or ""),
+                "statusEvidence": str(obj.get("statusEvidence") or obj.get("eventStatus") or ""),
                 "previousStart": _iso_or_none(obj.get("previousStartDate")),
                 "sourceUpdatedAt": _iso_or_none(obj.get("dateModified")),
                 "timePrecision": "time" if "T" in str(obj.get("startDate")) else "date",
@@ -472,6 +465,18 @@ def parse_jsonld_markdown(body: str, fallback_url: str = "") -> list[dict[str, A
                          if isinstance(obj.get("location"), dict) and isinstance(obj["location"].get("address"), dict) else None),
                 "venue": _jsonld_venue(obj.get("location")),
                 "summary": re.sub(r"\s+", " ", summary).strip(),
+                "category": obj.get("eventCategory") or (str(types[0]).replace("Event", "") or "Event"),
+                "registration": obj.get("registration") or "",
+                "ageRestriction": obj.get("typicalAgeRange") or "",
+                "sourceEventId": str(obj.get("identifier") or obj.get("@id") or ""),
+                "lastCheckedAt": obj.get("lastCheckedAt"),
+                "verifiedCalendar": bool(obj.get("verifiedCalendar")),
+                "statusEvidenceKind": obj.get("statusEvidenceKind") or "structured",
+                "replacementStart": obj.get("replacementStart"),
+                "image": (obj.get("image", {}).get("url") if isinstance(obj.get("image"), dict)
+                          else obj.get("image", [None])[0] if isinstance(obj.get("image"), list) else obj.get("image")),
+                **evidence.offer_fields(obj.get("offers")),
+                **evidence.price_fields(obj.get("priceText")),
             })
     return out
 

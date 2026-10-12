@@ -90,6 +90,13 @@
         },
         "selectedDayOnly": {
           "type": "boolean"
+        },
+        "maxPrice": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "excludeUnknownPrice": {
+          "type": "boolean"
         }
       }
     },

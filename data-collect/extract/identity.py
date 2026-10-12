@@ -19,7 +19,7 @@ from . import dates
 
 VERSION = "occurrence-v1"
 STATUSES = {"scheduled", "canceled", "postponed", "rescheduled"}
-PUBLIC_FIELDS = ("occurrenceId", "canonicalUrl", "venueId", "timePrecision", "status",
+PUBLIC_FIELDS = ("occurrenceId", "canonicalUrl", "venueId", "timePrecision", "status", "statusEvidence", "lastCheckedAt",
                  "aliases", "legacyOccurrenceKeys", "legacySeriesKeys", "sources", "identity")
 _STATUS_PREFIX = re.compile(r"^\s*[\[(]?(cancelled|canceled|postponed|rescheduled)[\])]?[\s:–—-]+", re.I)
 
@@ -122,13 +122,16 @@ def prepare(record):
     if prefix:
         r["status"] = prefix[1].lower().replace("cancelled", "canceled")
         r["statusEvidence"] = prefix[0].strip()
+        r['statusEvidenceKind'] = 'announcement'
+    if r.get('statusEvidence') and not r.get('statusEvidenceKind') and not str(r['statusEvidence']).startswith(('http://','https://')):
+        r['statusEvidenceKind'] = 'announcement'
     if r.get("status") not in STATUSES or not r.get("statusEvidence"):
         r["status"] = "scheduled"
         r.pop("statusEvidence", None)
     # Snapshot identity deliberately includes source text/fields, not just title/day.
     # Observation time and scoring are excluded so unchanged content is replay-safe.
     payload = {k: v for k, v in r.items() if k not in {
-        "sourceRecordId", "id", "aliases", "addedAt", "observedAt", "score", "scoring",
+        "sourceRecordId", "id", "aliases", "addedAt", "observedAt", "lastCheckedAt", "score", "scoring",
         "occurrenceId", "identity", "sources", "contentFlags"}}
     r["sourceRecordId"] = r.get("sourceRecordId") or "src-" + digest(payload)
     return r
@@ -199,7 +202,12 @@ def merge(members, occurrence_id, reasons):
     if explicit:
         # Richness never determines status. Prefer explicit cancellation on a
         # timestamp/authority tie, while a newer explicit reinstatement can win.
-        winner = max(explicit, key=lambda r: (_rank(r)[:2], r["status"] in {"canceled", "postponed"}, r["sourceRecordId"]))
+        # A generic EventScheduled flag is often left unchanged after an
+        # organizer publishes a cancellation. Only an explicit reinstatement
+        # announcement can reverse an announcement at the same authority.
+        winner = max(explicit, key=lambda r: (_rank(r)[0],
+                    r.get("statusEvidenceKind") == "announcement",
+                    _rank(r)[1], r["status"] in {"canceled", "postponed"}, r["sourceRecordId"]))
         out["status"] = winner["status"]
         out["statusEvidence"] = winner["statusEvidence"]
         provenance["status"] = winner["sourceRecordId"]

@@ -3,6 +3,10 @@
 Scheduled crawler that turns `source.json` into a local corpus of source
 content, with a SQLite log of every attempt.
 
+See [verified calendar collection](VERIFIED-CALENDARS.md) for the direct calendar
+adapters, 90-day coverage, targeted date refresh, prices, status changes, and
+private end-to-end audit.
+
 ## Setup
 
 ```sh

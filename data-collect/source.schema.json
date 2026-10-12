@@ -16,7 +16,9 @@
       }
     }
   },
-  "required": ["sources"],
+  "required": [
+    "sources"
+  ],
   "additionalProperties": false,
   "$defs": {
     "source": {
@@ -47,7 +49,13 @@
           "description": "Geographic tier of the source. Legend: 0 = Canton Township; 1 = Surrounding cities (Plymouth, Livonia, Westland, Wayne, Belleville, Northville); 2 = Ypsilanti & Ann Arbor; 3 = Detroit & Metro Detroit; 4 = Statewide Michigan.",
           "minimum": 0,
           "maximum": 4,
-          "examples": [0, 1, 2, 3, 4]
+          "examples": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
         },
         "location": {
           "type": "string",
@@ -71,7 +79,14 @@
           "type": "string",
           "title": "Frequency",
           "description": "How often the source is expected to be polled or is known to publish. \"4hours\" denotes four-times-daily polling; \"2weeks\" is once every 14 days.",
-          "enum": ["hourly", "4hours", "daily", "weekly", "2weeks", "monthly"]
+          "enum": [
+            "hourly",
+            "4hours",
+            "daily",
+            "weekly",
+            "2weeks",
+            "monthly"
+          ]
         },
         "url": {
           "type": "string",
@@ -82,7 +97,10 @@
           "minLength": 1
         },
         "events_url": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Events URL",
           "description": "Direct calendar/events URL when one exists; null when the source has no dedicated events page.",
           "format": "uri",
@@ -98,7 +116,12 @@
           "type": "string",
           "title": "Collection Engine",
           "description": "Collection strategy. 'auto' (default) fetches feeds and crawls over plain HTTP (with curl_cffi TLS impersonation) first, escalating to a headless browser only when the result looks blocked or JS-shell-like, and to a commercial scraping API only as a last resort. 'http' forces the plain-HTTP crawler. 'browser' forces the headless-browser crawler. 'api' fetches seeds through the configured scraping API. All engines produce the same content.md/meta.json output.",
-          "enum": ["auto", "browser", "http", "api"],
+          "enum": [
+            "auto",
+            "browser",
+            "http",
+            "api"
+          ],
           "default": "auto"
         },
         "crawl_urls": {
@@ -133,14 +156,25 @@
           "type": "string",
           "title": "Best Enrich Strategy",
           "description": "Hint for the best event-enrichment strategy for this source. 'auto' (default) learns per source: the first strategy that fills missing fields is cached under processed/enrich_strategies.json and tried first thereafter (JSON-LD Event markup, an ical feed, the URL-embedded date, or the touch-up model), with the full chain as fallback so page-shape changes self-heal. Set 'jsonld', 'ical', 'llm', or 'url_date' to try that strategy first; 'none' disables detail fetches for sources whose pages are dead ends (forms, third-party landing pages).",
-          "enum": ["auto", "jsonld", "ical", "llm", "url_date", "none"],
+          "enum": [
+            "auto",
+            "jsonld",
+            "ical",
+            "llm",
+            "url_date",
+            "none"
+          ],
           "default": "auto"
         },
         "content_mode": {
           "type": "string",
           "title": "Content Mode",
           "description": "Force the extraction route for this source's candidates. 'auto' (default) lets the Jev gate + router decide per candidate. 'news' always extracts as news stories — for article-heavy sources (magazines, newspapers) whose event coverage is journalism, not listings. 'event' always extracts as events — for pure calendar feeds.",
-          "enum": ["auto", "news", "event"],
+          "enum": [
+            "auto",
+            "news",
+            "event"
+          ],
           "default": "auto"
         },
         "default_venue": {
@@ -152,6 +186,69 @@
           "type": "string",
           "title": "Default Event City",
           "description": "Fallback city for events extracted from this source (auto-derived from the source location for Venue-type sources)."
+        },
+        "identity_authority": {
+          "type": "string",
+          "enum": ["organizer", "ticket", "unknown"],
+          "description": "Authority of event facts when reconciling source snapshots."
+        },
+        "verified_calendar": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "adapter"
+          ],
+          "properties": {
+            "adapter": {
+              "type": "string",
+              "enum": [
+                "umich",
+                "crowdwork",
+                "squarespace",
+                "tribe",
+                "ovationtix",
+                "etix",
+                "season",
+                "semja",
+                "nature",
+                "atg",
+                "dso",
+                "kempf",
+                "five15"
+              ]
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "venue": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "seasonYear": {
+              "type": "integer",
+              "minimum": 2020
+            },
+            "maxRequests": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 200
+            },
+            "category": {
+              "type": "string"
+            },
+            "timezone": {
+              "type": "string"
+            },
+            "theatre": {
+              "type": "string"
+            },
+            "clientId": {
+              "type": "string"
+            }
+          }
         }
       }
     }

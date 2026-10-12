@@ -15,6 +15,13 @@ export function eventStatus(event) {
   if (['completed', 'postponed', 'confirmed', 'scheduled', 'rescheduled'].includes(status)) return status;
   return 'unknown';
 }
+export function admissionPrice(event) {
+  if (event.priceCurrency === 'USD' && Number.isFinite(event.priceMin) && event.priceMin >= 0) return event.priceMin;
+  if (/^free(?: admission)?$/i.test(String(event.price || '').trim())) return 0;
+  // Old records may contain a verified plain USD price but lack numeric fields.
+  const match = /^\$([\d,]+(?:\.\d{1,2})?)(?:\s*[–-]\s*\$?[\d,.]+)?(?:\s+(?:including fees|cover|per person))?$/i.exec(String(event.price || '').trim());
+  return match ? Number(match[1].replaceAll(',', '')) : null;
+}
 export function eligibility(event, { day, now, preferences }) {
   const p = normalizePreferences(preferences);
   const status = eventStatus(event), start = Date.parse(event.start), end = Date.parse(event.end);
@@ -29,6 +36,10 @@ export function eligibility(event, { day, now, preferences }) {
   if (occurrenceKeys(event).some(k => p.hiddenOccurrences.includes(k))) return 'Hidden occurrence';
   const distance = Number.isFinite(event.distanceMiles) && event.distanceMiles >= 0 ? event.distanceMiles : null;
   if (p.constraints.maxDistanceMiles !== null && (distance === null || distance > p.constraints.maxDistanceMiles)) return distance === null ? 'Travel range unknown' : 'Outside travel range';
+  const price = admissionPrice(event);
+  if (price === null && p.constraints.excludeUnknownPrice) return 'Admission price unknown';
+  if (price !== null && p.constraints.maxPrice !== null && price > p.constraints.maxPrice) return 'Outside admission budget';
+  if (/\b(?:SoldOut|OutOfStock)\b/i.test(event.availability || '') && !/\b(?:InStock|LimitedAvailability)\b/i.test(event.availability || '')) return 'Sold out';
   return '';
 }
 export function rankEvent(event, { day, now, preferences, weights }) {
@@ -57,9 +68,10 @@ export function rankEvent(event, { day, now, preferences, weights }) {
   if (deadline >= now && deadline - now <= 2 * DAY) { practicality += 10; reasons.push('Booking deadline within two days +10'); }
   let quality = 0;
   if (['scheduled', 'confirmed'].includes(eventStatus(event))) quality += 2; else unknowns.push('Status unconfirmed');
-  const updated = Date.parse(event.sourceUpdatedAt);
+  const updated = Date.parse(event.lastCheckedAt || event.sourceUpdatedAt);
   if (updated <= now && now - updated <= 3 * DAY) quality += 2;
-  if (!event.price) unknowns.push('Price unknown');
+  if (admissionPrice(event) === null) unknowns.push('Price unknown');
+  if (p.constraints.maxPrice !== null && admissionPrice(event) !== null) reasons.push(`Admission from $${admissionPrice(event)} within your $${p.constraints.maxPrice} budget`);
   if (!event.venue) unknowns.push('Venue unknown');
   if (quality) reasons.push(`Confirmed/recent source information +${quality}`);
   // No click-based inference or automatic exposure penalty. Explicit hides are eligibility rules.

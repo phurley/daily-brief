@@ -998,9 +998,11 @@ function renderPreferenceControls() {
   const p = preferences.get();
   const count = node('input', { type: 'number', min: 1, max: 20, value: p.ranking.limit, required: '' });
   const distance = node('input', { type: 'number', min: 0, step: 'any', value: p.constraints.maxDistanceMiles ?? '', placeholder: 'No limit' });
+  const budget = node('input', { type: 'number', min: 0, step: 'any', value: p.constraints.maxPrice ?? '', placeholder: 'No limit' });
+  const knownPrice = node('input', { type: 'checkbox' }); knownPrice.checked = p.constraints.excludeUnknownPrice;
   const exact = node('input', { type: 'checkbox' }); exact.checked = p.constraints.selectedDayOnly;
-  form.append(node('label', {}, ['Best bets per lane: ', count].map(x => typeof x === 'string' ? document.createTextNode(x) : x)), node('label', {}, [document.createTextNode('Maximum miles (unknown distances excluded when set): '), distance]), node('label', {}, [exact, document.createTextNode('Selected day only')]), node('button', { type: 'submit', text: 'Save preferences' }));
-  form.addEventListener('submit', e => { e.preventDefault(); const next = preferences.get(); next.ranking.limit = Number(count.value); next.constraints.maxDistanceMiles = distance.value === '' ? null : Number(distance.value); next.constraints.selectedDayOnly = exact.checked; const saved = preferences.set(next); feedbackNotice = saved ? 'Preferences saved on this browser.' : 'Applied for this session; browser storage is unavailable.'; renderEvents(); });
+  form.append(node('label', {}, ['Best bets per lane: ', count].map(x => typeof x === 'string' ? document.createTextNode(x) : x)), node('label', {}, [document.createTextNode('Maximum miles (unknown distances excluded when set): '), distance]), node('label', {}, [document.createTextNode('Admission budget per person ($, lowest listed ticket): '), budget]), node('label', {}, [knownPrice, document.createTextNode('Require a known admission price')]), node('label', {}, [exact, document.createTextNode('Selected day only')]), node('button', { type: 'submit', text: 'Save preferences' }));
+  form.addEventListener('submit', e => { e.preventDefault(); const next = preferences.get(); next.ranking.limit = Number(count.value); next.constraints.maxDistanceMiles = distance.value === '' ? null : Number(distance.value); next.constraints.maxPrice = budget.value === '' ? null : Number(budget.value); next.constraints.excludeUnknownPrice = knownPrice.checked; next.constraints.selectedDayOnly = exact.checked; const saved = preferences.set(next); feedbackNotice = saved ? 'Preferences saved on this browser.' : 'Applied for this session; browser storage is unavailable.'; renderEvents(); });
   settings.append(form, node('p', { text: `${p.hiddenOccurrences.length} hidden occurrences · ${p.favorites.length} favorites · Category adjustments: ${Object.entries(p.topicAffinities).map(([name, value]) => `${name} ${value > 0 ? '+' : ''}${value}`).join(', ') || 'none'}` }), button('Reset preferences and feedback', () => { const saved = preferences.reset(); feedbackNotice = saved ? 'Preferences reset. Undo is available.' : 'Reset for this session; browser storage is unavailable.'; renderEvents(); }));
   panel.replaceChildren(toggle, button('Open full calendar', openEventCalendar), undo, settings, node('p', { id: 'recommendation-status', role: 'status', tabindex: '-1', text: [feedbackNotice,candidateNotice].filter(Boolean).join(' ') }));
 }
@@ -1123,6 +1125,8 @@ function eventPreviewFacts(event) {
     ["Where", [event.venue, event.city, event.region].filter(Boolean).join(" · ")],
     ["Price", event.price],
     ["Registration", event.registration],
+    ["Availability", event.availability],
+    ["Age restriction", event.ageRestriction],
     ["Distance", event.distanceMiles != null ? `${event.distanceMiles} miles` : ""],
   ].filter(([, value]) => value);
 }
