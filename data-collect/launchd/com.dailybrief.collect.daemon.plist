@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.dailybrief.collect</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/phurley/daily-brief/data-collect/run_collect.sh</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/Users/phurley/daily-brief/data-collect</string>
+	<key>StartInterval</key>
+	<integer>3600</integer>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>EVENT_IDENTITY_MODE</key>
+		<string>canonical</string>
+		<key>EVENT_IDENTITY_FUZZY</key>
+		<string>0</string>
+		<key>PATH</key>
+		<string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+	</dict>
+	<key>StandardOutPath</key>
+	<string>/Users/phurley/daily-brief/data-collect/launchd.log</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/phurley/daily-brief/data-collect/launchd.log</string>
+	<key>UserName</key>
+	<string>phurley</string>
+</dict>
+</plist>

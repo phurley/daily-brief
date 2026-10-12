@@ -216,6 +216,33 @@ launchctl bootout gui/$(id -u)/com.dailybrief.collect        # stop hourly runs
 If cron gets `Operation not permitted`, grant `/usr/sbin/cron` Full Disk Access
 (System Settings → Privacy & Security → Full Disk Access).
 
+#### Always-on kitchen collector
+
+`kitchen.local` uses the system LaunchDaemon template
+[`launchd/com.dailybrief.collect.daemon.plist`](launchd/com.dailybrief.collect.daemon.plist),
+running as `phurley`, so collection does not depend on that user's GUI login.
+It runs at load and hourly. Install it as
+`/Library/LaunchDaemons/com.dailybrief.collect.plist` (root:wheel, mode 644),
+then bootstrap it with `sudo launchctl bootstrap system <installed path>`.
+Before switching, boot out the old GUI job if loaded and move its installed
+LaunchAgent out of `~/Library/LaunchAgents/` to prevent duplicate timers.
+Check it with `sudo launchctl print system/com.dailybrief.collect`.
+Edit `UserName` and checkout paths when installing on another machine.
+
+#### Invalid event dates
+
+Publication explicitly validates event timestamps without relying on optional
+`jsonschema` format packages. Events with invalid `start` or supplied `end`
+timestamps are excluded from public output and saved with their record, source
+references, rejected values, and reasons in
+`processed/event_quarantine.json`. This private report is replaced each publish;
+the extraction store and source archives remain intact for repair and replay.
+The run log reports the quarantine count. `--quarantine PATH` overrides the
+report location; `--dry-run` reports counts without writing it.
+Valid records continue through the normal publication and age filters.
+Unambiguous end-of-day `24:00:00` timestamps normalize to midnight the following
+day. Month-only dates remain incomplete and are quarantined without guessing a day.
+
 ### What it commits and pushes
 
 Step 3 captures `events.json`, `news.json`, and the derived recommendations, then

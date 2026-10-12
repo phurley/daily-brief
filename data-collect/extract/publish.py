@@ -37,6 +37,41 @@ STORY_REQUIRED = ("id", "title", "summary", "url", "publishedAt", "addedAt",
 _NULLISH = {"", "null", "none", "n/a", "unknown", "not specified", "tbd"}
 
 
+def _valid_event_datetime(value: Any) -> bool:
+    """Require a real, absolute timestamp without optional format dependencies."""
+    if not isinstance(value, str) or not re.fullmatch(
+        r"\d{4}-\d{2}-\d{2}[Tt]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:[Zz]|[+-]\d{2}:\d{2})",
+        value,
+    ):
+        return False
+    try:
+        datetime.fromisoformat(value.upper().replace("Z", "+00:00"))
+        if value[-6:-5] in ("+", "-"):
+            return int(value[-5:-3]) < 24 and int(value[-2:]) < 60
+        return True
+    except ValueError:
+        return False
+
+
+def _event_date_errors(event: dict[str, Any]) -> list[dict[str, Any]]:
+    return [{"field": key, "value": event.get(key),
+             "reason": "Expected a valid date and time with timezone offset"}
+            for key in ("start", "end")
+            if (key == "start" or key in event) and not _valid_event_datetime(event.get(key))]
+
+
+def _format_checker(name: str):
+    import jsonschema
+
+    checker = jsonschema.FormatChecker()
+    if name == "events.schema.json":
+        # jsonschema silently ignores date-time when its optional dependency
+        # is absent. Always install our event timestamp check, including for
+        # final document validation.
+        checker.checks("date-time")(_valid_event_datetime)
+    return checker
+
+
 def _clean(value: Any) -> Any:
     if isinstance(value, str):
         return None if value.strip().lower() in _NULLISH else value.strip()
@@ -107,6 +142,21 @@ def _parse_dt(value: Any) -> Optional[datetime]:
     return dt if dt.tzinfo else dt.replace(tzinfo=dates.EASTERN)
 
 
+def _normalize_midnight(value: Any) -> Any:
+    """ISO end-of-day 24:00 is midnight the next day, not an unknown time."""
+    if isinstance(value, str) and re.fullmatch(
+        r"\d{4}-\d{2}-\d{2}[Tt]24:00:00(?:\.0+)?(?:[Zz]|[+-]\d{2}:\d{2})", value
+    ):
+        midnight = value[:11] + "00" + value[13:]
+        if _valid_event_datetime(midnight):
+            try:
+                return (datetime.fromisoformat(midnight.upper().replace("Z", "+00:00"))
+                        + timedelta(days=1)).isoformat()
+            except OverflowError:
+                pass
+    return value
+
+
 def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None,
              edition: Optional[datetime] = None) -> Optional[dict[str, Any]]:
     if record.get("kind") != "event":
@@ -122,6 +172,9 @@ def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None,
     for key in identity.PUBLIC_FIELDS:
         if key in record:
             event[key] = record[key]
+    for key in ("start", "end"):
+        if key in event:
+            event[key] = _normalize_midnight(event[key])
     if isinstance(record.get("score"), (int, float)):
         event["score"] = max(0, min(100, int(record["score"])))
     scoring = _scoring(record)
@@ -318,14 +371,14 @@ def _validator(name: str, def_name: str):
     # Carry $defs so internal $refs (e.g. #/$defs/photo) still resolve.
     sub = dict(schema["$defs"][def_name])
     sub["$defs"] = schema["$defs"]
-    return jsonschema.Draft202012Validator(sub, format_checker=jsonschema.FormatChecker())
+    return jsonschema.Draft202012Validator(sub, format_checker=_format_checker(name))
 
 
 def _doc_validator(name: str):
     import jsonschema
 
     schema = json.loads((SCHEMAS / name).read_text(encoding="utf-8"))
-    return jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker())
+    return jsonschema.Draft202012Validator(schema, format_checker=_format_checker(name))
 
 
 def build(records: list[dict[str, Any]], edition_date: str,
@@ -338,6 +391,7 @@ def build(records: list[dict[str, Any]], edition_date: str,
 
     events, stories = [], []
     stats = {"events_in": 0, "events_out": 0, "events_stale": 0,
+             "events_quarantined": 0, "eventQuarantine": [],
              "stories_in": 0, "stories_out": 0, "content_dropped": 0}
 
     if identity_mode not in {"legacy", "shadow", "canonical"}:
@@ -356,6 +410,16 @@ def build(records: list[dict[str, Any]], edition_date: str,
             continue
         if record.get("kind") == "event":
             stats["events_in"] += 1
+            # Check normalized timestamps before age filtering. A malformed end
+            # must not silently turn a record into a start-only/stale event.
+            candidate = to_event(record)
+            if candidate is None:
+                continue  # Already excluded by the existing required-field checks.
+            errors = _event_date_errors(candidate)
+            if errors:
+                stats["events_quarantined"] += 1
+                stats["eventQuarantine"].append({"record": record, "errors": errors})
+                continue
             event = to_event(record, cutoff, edition_dt)
             if event is not None and event_validator.is_valid(event):
                 events.append(event)
@@ -396,6 +460,8 @@ def main(argv: Optional[list[str]] = None) -> int:
                    default=os.environ.get("EVENT_IDENTITY_MODE", "canonical"))
     p.add_argument("--identity-registry", type=Path, default=None)
     p.add_argument("--identity-report", type=Path, default=None)
+    p.add_argument("--quarantine", type=Path, default=None,
+                   help="private invalid-date report (default: beside records)")
     p.add_argument("--identity-fuzzy", action="store_true", default=os.environ.get("EVENT_IDENTITY_FUZZY") == "1", help="opt in to constrained detail-URL typo matching")
     p.add_argument("--dry-run", action="store_true")
     opts = p.parse_args(argv)
@@ -417,7 +483,8 @@ def main(argv: Optional[list[str]] = None) -> int:
     nw_ok = _doc_validator("news.schema.json").is_valid(news_doc)
     print(f"records in: {len(records)}  deduped: {len(_dedupe(records))}  "
           f"content-dropped: {stats['content_dropped']}")
-    print(f"events.json: {stats['events_out']}/{stats['events_in']} kept (stale {stats['events_stale']})  valid={ev_ok}")
+    print(f"events.json: {stats['events_out']}/{stats['events_in']} kept "
+          f"(stale {stats['events_stale']}, quarantined {stats['events_quarantined']})  valid={ev_ok}")
     print(f"news.json:   {stats['stories_out']}/{stats['stories_in']} kept  valid={nw_ok}")
     if not (ev_ok and nw_ok):
         print("REFUSING to write: document failed validation")
@@ -436,6 +503,12 @@ def main(argv: Optional[list[str]] = None) -> int:
     if opts.dry_run:
         print("(dry run, not written)")
         return 0
+    quarantine_path = opts.quarantine or opts.records.with_name("event_quarantine.json")
+    identity.atomic_json(quarantine_path, {"generatedAt": generated,
+                         "recordsPath": str(opts.records.resolve()),
+                         "count": stats["events_quarantined"],
+                         "records": stats["eventQuarantine"]})
+    print(f"quarantine: {stats['events_quarantined']} records -> {quarantine_path}")
     opts.out.mkdir(parents=True, exist_ok=True)
     identity.atomic_json(opts.out / "events.json", events_doc)
     identity.atomic_json(opts.out / "news.json", news_doc)

@@ -7,8 +7,107 @@ Run: ``python3 -m unittest extract.test_publish``
 from __future__ import annotations
 
 import unittest
+import copy
+import json
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
 from . import publish
+
+
+class PublishDateValidationTest(unittest.TestCase):
+    def event(self, **changes):
+        return dict(dict(kind="event", id="valid-event", title="A valid event",
+                         summary="An evening performance", url="https://example.com/event",
+                         start="2026-10-10T17:00:00-04:00", venue="The venue",
+                         city="Canton", category="Music"), **changes)
+
+    def test_dates_without_optional_jsonschema_checker(self):
+        import jsonschema
+        with patch.dict(jsonschema.FormatChecker.checkers, clear=True):
+            validator = publish._validator("events.schema.json", "event")
+            for start in ("2026-10-10T17:00:00-04:00", "2026-10-10T21:00:00Z",
+                          "2026-10-10T21:00:00.123+00:00"):
+                self.assertTrue(validator.is_valid(publish.to_event(self.event(start=start))))
+            for start in ("T17:00:00-04:00", "T10:00:00-04:00", "2026-02-30T17:00:00-04:00",
+                          "2026-10-10", "2026-10-10T17:00:00", "2026-10-10T25:00:00Z",
+                          "2026-10-10T17:00:00+04:99"):
+                with self.subTest(start=start):
+                    event = publish.to_event(self.event(start=start))
+                    self.assertFalse(validator.is_valid(event))
+                    doc = dict(schemaVersion="2.0.0", generatedAt="2026-10-10T12:00:00Z",
+                               editionDate="2026-10-10", events=[event])
+                    self.assertFalse(publish._doc_validator("events.schema.json").is_valid(doc))
+
+    def test_three_production_failures_quarantined_valid_record_unchanged(self):
+        valid = self.event()
+        bad = [self.event(id=str(i), title=title, start=start, end=end,
+                         origin={"source_slug": "source", "text": "Original source evidence"})
+               for i, (title, start, end) in enumerate([
+                   ("Immigration Office Hours", "T17:00:00-04:00", "T20:00:00-04:00"),
+                   ("Free Laundry Service", "T10:00:00-04:00", "T16:00:00-04:00"),
+                   ("Free Showers", "T10:00:00-04:00", "T18:00:00-04:00")])]
+        records = [valid, *bad]
+        before = copy.deepcopy(records)
+        for mode in ("legacy", "canonical"):
+            with self.subTest(mode=mode):
+                expected = publish.build([valid], "2026-10-10", "2026-10-10T12:00:00Z", identity_mode=mode)[0]
+                events, _, stats = publish.build(records, "2026-10-10", "2026-10-10T12:00:00Z", identity_mode=mode)
+                self.assertEqual(events, expected)
+                self.assertEqual(stats["events_quarantined"], 3)
+                self.assertEqual(stats["events_stale"], 0)
+                self.assertEqual({q["record"]["title"] for q in stats["eventQuarantine"]},
+                                 {r["title"] for r in bad})
+                self.assertTrue(all({e["field"] for e in q["errors"]} == {"start", "end"}
+                                    for q in stats["eventQuarantine"]))
+        self.assertEqual(records, before)
+
+    def test_bad_end_is_quarantined_not_treated_as_stale(self):
+        events, _, stats = publish.build([self.event(start="2026-09-01T17:00:00-04:00", end="T20:00:00-04:00")],
+                                         "2026-10-10", "2026-10-10T12:00:00Z")
+        self.assertEqual(events["events"], [])
+        self.assertEqual(stats["events_quarantined"], 1)
+        self.assertEqual(stats["events_stale"], 0)
+
+    def test_end_of_day_midnight_preserved_and_month_only_quarantined(self):
+        midnight = self.event(end="2026-10-10T24:00:00-04:00")
+        month_only = self.event(id="month-only", title="Unknown day", start="2026-08", end="2026-08")
+        events, _, stats = publish.build([midnight, month_only], "2026-10-10", "2026-10-10T12:00:00Z")
+        self.assertEqual(len(events["events"]), 1)
+        self.assertEqual(events["events"][0]["end"], "2026-10-11T00:00:00-04:00")
+        self.assertEqual(stats["events_quarantined"], 1)
+        self.assertEqual(midnight["end"], "2026-10-10T24:00:00-04:00")
+
+    def test_already_incomplete_records_do_not_inflate_quarantine(self):
+        _, _, stats = publish.build([self.event(start=None)], "2026-10-10", "2026-10-10T12:00:00Z")
+        self.assertEqual(stats["events_quarantined"], 0)
+
+    def test_private_quarantine_and_dry_run(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            records = root / "private" / "records.jsonl"
+            records.parent.mkdir()
+            bad = self.event(start="T17:00:00-04:00", origin={"text": "Source evidence"})
+            news = dict(kind="news", id="news", title="News", summary="Local news",
+                        url="https://example.com/news", source={"name": "Local paper"},
+                        publishedAt="2026-10-10T12:00:00Z", localityIndex=0)
+            records.write_text(json.dumps(bad) + "\n" + json.dumps(news) + "\n")
+            original = records.read_bytes()
+            out = root / "public"
+            args = ["--records", str(records), "--out", str(out),
+                    "--edition-date", "2026-10-10", "--identity-mode", "legacy"]
+            self.assertEqual(publish.main([*args, "--dry-run"]), 0)
+            self.assertFalse(out.exists())
+            quarantine = records.with_name("event_quarantine.json")
+            self.assertFalse(quarantine.exists())
+            self.assertEqual(publish.main(args), 0)
+            report = json.loads(quarantine.read_text())
+            self.assertEqual(report["count"], 1)
+            self.assertEqual(report["records"][0]["record"], bad)
+            self.assertEqual(records.read_bytes(), original)
+            self.assertEqual(json.loads((out / "events.json").read_text())["events"], [])
+            self.assertFalse((out / "event_quarantine.json").exists())
 
 
 class PublishScoringTest(unittest.TestCase):
