@@ -7,7 +7,8 @@
     "test:themes": "node scripts/theme-browser-check.cjs",
     "build:shell": "node scripts/build_shell.mjs",
     "test:integration": "node scripts/integration-browser-check.cjs",
-    "test:tuning": "node scripts/weight-tuning-browser-check.cjs"
+    "test:tuning": "node scripts/weight-tuning-browser-check.cjs",
+    "test:photos": "node scripts/photos-browser-check.cjs"
   },
   "devDependencies": {
     "playwright": "1.64.0"

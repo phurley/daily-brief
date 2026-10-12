@@ -31,7 +31,7 @@ enum BriefData {
     static func loadPhoto() async throws -> BriefPhoto? {
         let (data, _) = try await URLSession.shared.data(from: photosURL)
         let document = try JSONDecoder().decode(PhotosDocument.self, from: data)
-        return document.days.first(where: { $0.date == today })?.photos.randomElement()
+        return document.days.first(where: { $0.date == today })?.photos.filter { $0.isLandscape }.randomElement()
     }
 }
 
@@ -99,7 +99,13 @@ struct BriefEvent: Codable, Identifiable {
 
 struct BriefPhoto: Decodable {
     let imageUrl: URL
+    let width: Int?
+    let height: Int?
     let takenDate: String
     let location: String?
     let description: String?
+    var isLandscape: Bool {
+        guard let width, let height else { return false }
+        return height > 0 && width > height
+    }
 }

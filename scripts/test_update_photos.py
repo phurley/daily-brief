@@ -13,11 +13,15 @@ spec.loader.exec_module(photos)
 
 def fixture(key='one', original='2015-10-13T01:00:00Z', capture='2015-10-12T18:00:00'):
     image = {'ImageKey': key, 'DateTimeOriginal': original,
+             'OriginalWidth': 2400, 'OriginalHeight': 1600,
              'DateTimeUploaded': '2020-10-12T00:00:00Z',
-             'Uris': {'ImageMetadata': f'/metadata/{key}', 'ImageSizes': f'/sizes/{key}'}}
+             'Uris': {'ImageMetadata': f'/metadata/{key}', 'ImageSizes': f'/sizes/{key}',
+                      'ImageSizeDetails': f'/details/{key}'}}
     expansions = {f'/metadata/{key}': {'ImageMetadata': {'DateTimeCreated': capture,
                   'CreatorContactInfo': {'CiAdrExtadr': 'private contact'}, 'Latitude': 42}},
-                  f'/sizes/{key}': {'ImageSizes': {'X2LargeImageUrl': f'https://photos.smugmug.com/{key}.jpg'}}}
+                  f'/sizes/{key}': {'ImageSizes': {'X2LargeImageUrl': f'https://photos.smugmug.com/{key}.jpg'}},
+                  f'/details/{key}': {'ImageSizeDetails': {'ImageSizeX2Large': {
+                      'Url': f'https://photos.smugmug.com/{key}.jpg', 'Width': 1280, 'Height': 853}}}}
     return image, expansions
 
 
@@ -45,6 +49,22 @@ class PhotosTests(unittest.TestCase):
         image, expansions = fixture(original=None, capture='')
         self.assertIsNone(photos.capture_date(image, {} )[0])
 
+    def test_uses_served_dimensions_after_source_rotation_and_keeps_portraits(self):
+        image, expansions = fixture()
+        expansions['/details/one']['ImageSizeDetails']['ImageSizeX2Large'].update(Width=853, Height=1280)
+        result = photos.photo_candidate(image, expansions, date(2026, 10, 12), 'https://photos.hurleyhome.com')
+        self.assertEqual((result['width'], result['height']), (853, 1280))
+
+    def test_falls_back_to_original_dimensions_and_rejects_unknown_dimensions(self):
+        image, expansions = fixture()
+        expansions.pop('/details/one')
+        result = photos.photo_candidate(image, expansions, date(2026, 10, 12), 'https://photos.hurleyhome.com')
+        self.assertEqual((result['width'], result['height']), (2400, 1600))
+        for width in [None, 0, -1, True, '2400']:
+            image['OriginalWidth'] = width
+            with self.assertRaises(ValueError):
+                photos.photo_candidate(image, expansions, date(2026, 10, 12), 'https://photos.hurleyhome.com')
+
     def test_all_pages_and_more_than_five_candidates(self):
         client = object.__new__(photos.SmugMug)
         client.site = 'https://photos.hurleyhome.com'
@@ -65,7 +85,7 @@ class PhotosTests(unittest.TestCase):
         found = client.year_candidates(date(2026, 10, 12), 2015)
         self.assertEqual(len(found), 12)
         self.assertEqual(len(calls), 2)
-        self.assertEqual(calls[1][1]['_expand'], 'ImageMetadata,ImageSizes')
+        self.assertEqual(calls[1][1]['_expand'], 'ImageMetadata,ImageSizes,ImageSizeDetails')
         self.assertEqual(calls[0][1]['DateTakenStart'], '2015-10-11T00:00:00Z')
 
     def test_incomplete_pagination_and_search_cap_fail(self):

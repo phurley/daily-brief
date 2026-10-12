@@ -13,7 +13,7 @@ import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
 import { contributions } from './scoring.mjs?v=20261009-2';
 import { restoreWeights, tasteScore, compareTaste } from './weight-tuning.mjs';
 import { calendarTuner } from './calendar-tuning.js';
-import { shufflePhotos } from './photo-selection.mjs';
+import { shufflePhotos, isLandscapePhoto, photoDotWindow, photoDateLabel } from './photo-selection.mjs?v=20261012-photos-2';
 import { selectEventLanes, eventStatus } from './ranking.mjs?v=20261009-layout-1';
 import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
@@ -54,6 +54,7 @@ const state = {
   photoTimer: null,
   photoPoolKey: '',
   photoOrder: [],
+  photoResizeObserver: null,
   eventExpiryTimer: null,
   calendarMonth: "",
   calendarSelected: "",
@@ -1450,11 +1451,55 @@ function stopPhotoShow() {
   state.photoTimer = null;
 }
 
+function renderPhotoDots() {
+  const section = $("#photo-section");
+  const controls = $("#photo-controls");
+  const position = $("#photo-position");
+  if (section.hidden || controls.hidden) return;
+  const frame = section.getBoundingClientRect();
+  const bar = controls.getBoundingClientRect();
+  const date = section.querySelector('.is-active .memory__date').getBoundingClientRect();
+  const style = getComputedStyle(controls);
+  const gap = parseFloat(style.columnGap) || 0;
+  const inset = bar.left - frame.left;
+  const sameRow = date.top < bar.bottom && date.bottom > bar.top;
+  const right = sameRow ? date.left - gap * 2 : frame.right - inset;
+  const arrowWidth = $("#photo-previous").getBoundingClientRect().width;
+  const dotWidth = arrowWidth * .625; // CSS: 1.25rem dots, 2rem arrows.
+  const dotGap = parseFloat(getComputedStyle(position).columnGap) || 0;
+  const chrome = arrowWidth * 2 + gap * 2 + parseFloat(style.paddingLeft)
+    + parseFloat(style.paddingRight) + parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
+  const capacity = Math.max(1, Math.min(9, Math.floor((right - bar.left - chrome + dotGap) / (dotWidth + dotGap))));
+  const indices = photoDotWindow(state.photoOrder.length, state.photoIndex, capacity);
+  const oldFocus = document.activeElement;
+  const existing = new Map([...position.children].map(dot => [Number(dot.dataset.photoIndex), dot]));
+  const dots = indices.map(index => {
+    let dot = existing.get(index);
+    if (!dot) {
+      dot = node("button", {
+        className: "memory__dot", type: "button", dataset: { photoIndex: String(index) },
+        "aria-label": `Show photo ${index + 1} of ${state.photoOrder.length}: ${state.photoOrder[index].description}`,
+      });
+      dot.addEventListener("click", () => showPhoto(index));
+    }
+    const active = index === state.photoIndex;
+    dot.classList.toggle("is-active", active);
+    dot.setAttribute("aria-current", active ? "true" : "false");
+    return dot;
+  });
+  if (indices.join(',') !== [...existing.keys()].join(',')) {
+    position.replaceChildren(...dots);
+    if (oldFocus?.classList.contains('memory__dot')) {
+      (dots.includes(oldFocus) ? oldFocus : dots.find(dot => dot.classList.contains('is-active')))?.focus({ preventScroll: true });
+    }
+  }
+  position.setAttribute('aria-label', `Photo ${state.photoIndex + 1} of ${state.photoOrder.length}`);
+}
+
 function showPhoto(index, { restart = true } = {}) {
   const slides = [...document.querySelectorAll(".memory__slide")];
-  const dots = [...document.querySelectorAll(".memory__dot")];
   if (!slides.length) return;
-  state.photoIndex = (index + slides.length) % slides.length;
+  state.photoIndex = ((index % slides.length) + slides.length) % slides.length;
   slides.forEach((slide, position) => {
     const active = position === state.photoIndex;
     const image = slide.querySelector('img');
@@ -1462,27 +1507,24 @@ function showPhoto(index, { restart = true } = {}) {
     slide.classList.toggle("is-active", active);
     slide.setAttribute("aria-hidden", String(!active));
   });
-  dots.forEach((dot, position) => {
-    const active = position === state.photoIndex;
-    dot.classList.toggle("is-active", active);
-    dot.setAttribute("aria-current", active ? "true" : "false");
-  });
-  const count = document.querySelector('.memory__count');
-  if (count) count.textContent = `${state.photoIndex + 1} / ${slides.length}`;
+  renderPhotoDots();
   if (restart) startPhotoShow();
 }
 
 function startPhotoShow() {
   stopPhotoShow();
+  const section = $("#photo-section");
   const slideCount = document.querySelectorAll(".memory__slide").length;
-  if (slideCount < 2 || document.hidden || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (slideCount < 2 || document.hidden || section.matches(':hover') || section.contains(document.activeElement)
+    || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   state.photoTimer = window.setInterval(() => showPhoto(state.photoIndex + 1, { restart: false }), 11000);
 }
 
 function renderPhoto() {
   stopPhotoShow();
+  state.photoResizeObserver?.disconnect();
   const day = state.data.photos?.days?.find((item) => item.date === state.selectedDate);
-  const candidates = (day?.photos || []).filter((photo) => safeImageUrl(photo.imageUrl));
+  const candidates = (day?.photos || []).filter((photo) => safeImageUrl(photo.imageUrl) && isLandscapePhoto(photo));
   const poolKey = `${state.selectedDate}:${JSON.stringify(candidates)}`;
   if (poolKey !== state.photoPoolKey) {
     state.photoPoolKey = poolKey;
@@ -1499,15 +1541,14 @@ function renderPhoto() {
   const slides = photos.map((photo, index) => {
     const image = node("img", {
       dataset: { src: safeImageUrl(photo.imageUrl) },
+      width: photo.width, height: photo.height,
       alt: photo.description,
       loading: index === 0 ? "eager" : "lazy",
       decoding: "async",
     });
     const overlay = node("figcaption", { className: "memory__overlay" }, [
-      node("p", { className: "memory__meta" }, [
-        photo.location ? node("span", { text: `⌖ ${photo.location}` }) : null,
-        node("time", { text: displayDate(photo.takenDate, { year: true }), datetime: photo.takenDate }),
-      ]),
+      photo.location ? node("p", { className: "memory__meta", text: `⌖ ${photo.location}` }) : null,
+      node("time", { className: "memory__date", text: photoDateLabel(photo.takenDate), datetime: photo.takenDate }),
     ]);
     return node("figure", {
       className: 'memory__slide',
@@ -1519,26 +1560,18 @@ function renderPhoto() {
   const controls = $("#photo-controls");
   controls.hidden = photos.length < 2;
   if (photos.length > 1) {
-    const dots = photos.length > 8 ? [node('span', { className: 'memory__count' })] : photos.map((photo, index) => {
-      const dot = node("button", {
-        className: `memory__dot${index === 0 ? " is-active" : ""}`,
-        type: "button",
-        "aria-label": `Show photo ${index + 1}: ${photo.description}`,
-        "aria-current": index === 0 ? "true" : "false",
-      });
-      dot.addEventListener("click", () => showPhoto(index));
-      return dot;
-    });
-    replaceChildren("#photo-position", dots);
     $("#photo-previous").onclick = () => showPhoto(state.photoIndex - 1);
     $("#photo-next").onclick = () => showPhoto(state.photoIndex + 1);
     section.onmouseenter = stopPhotoShow;
     section.onmouseleave = startPhotoShow;
     section.onfocusin = stopPhotoShow;
-    section.onfocusout = startPhotoShow;
-    startPhotoShow();
+    section.onfocusout = () => requestAnimationFrame(startPhotoShow);
+    state.photoResizeObserver = new ResizeObserver(renderPhotoDots);
+    state.photoResizeObserver.observe(section);
+    state.photoResizeObserver.observe(controls);
   }
   showPhoto(state.photoIndex, { restart: false });
+  startPhotoShow();
 }
 
 function renderErrors() {

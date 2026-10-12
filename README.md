@@ -114,12 +114,17 @@ python3 scripts/update_photos.py --force            # bypass the 24-hour query c
 ```
 
 `photos.json` retains all candidates with stable SmugMug image IDs and capture
-date provenance for a future rating system. The browser shuffles them on each
-visit or date change and rotates through the full pool without repeats until
-the cycle completes. Ordinary background rendering preserves the current order
-and photo. Images download only when shown; large pools use a compact count
-instead of hundreds of dots. Motion pauses on hover/focus, in background tabs,
-and for reduced motion. Captions show the original date and explicit location
+date provenance and served-image dimensions for a future rating system. The
+browser and widget choose only landscape photos (width greater than height);
+portraits, squares and unknown orientations are excluded from display. SmugMug
+applies its stored rotations before reporting display-size dimensions. Dimensions
+cannot detect subjects in old photos saved sideways without rotation metadata. The
+browser shuffles eligible photos on each visit or date change and rotates
+through that pool without repeats until the cycle completes. Ordinary background
+rendering preserves the current order and photo. Images download only when shown. A sliding window of at most nine
+dots adapts to the frame width; arrows still reach every eligible photo. Motion
+pauses on hover/focus, in background tabs, and for reduced motion. Captions show a
+small original date at bottom right (e.g. 20 Sept 2001) and explicit location
 metadata when available; descriptions remain image alt text.
 
 The existing 03:30 calendar job on `kitchen.local` also refreshes the photo

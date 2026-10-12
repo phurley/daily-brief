@@ -41,6 +41,8 @@ jobs:
           trap 'kill $!' EXIT
           npm run test:mobile
           BRIEF_BROWSER=webkit npm run test:mobile
+          npm run test:photos
+          BRIEF_BROWSER=webkit npm run test:photos
           npm run test:themes
           BRIEF_BROWSER=webkit npm run test:themes
           npm run test:tuning

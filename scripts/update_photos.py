@@ -23,7 +23,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 DETROIT = ZoneInfo('America/Detroit')
-CACHE_VERSION = 1
+CACHE_VERSION = 2
 
 
 def atomic_json(path, data):
@@ -80,12 +80,23 @@ def photo_candidate(image, expansions, target, site):
     image_key = image.get('ImageKey')
     if not image_key or not image_url or urlsplit(image_url).scheme != 'https':
         raise ValueError('A matching photo lacks an image ID or public display-size URL')
+    # Display-size dimensions include rotations already applied by SmugMug.
+    # Retain portraits in the candidate feed; the presentation picks landscapes.
+    details = expanded('ImageSizeDetails')
+    display = next((value for value in details.values()
+                    if isinstance(value, dict) and value.get('Url') == image_url), {})
+    width = display.get('Width', image.get('OriginalWidth'))
+    height = display.get('Height', image.get('OriginalHeight'))
+    if not all(isinstance(value, int) and not isinstance(value, bool) and value > 0
+               for value in [width, height]):
+        raise ValueError('A matching photo lacks valid image dimensions')
     # Only explicit image location metadata is published. Creator contact info,
     # GPS coordinates, filenames, album-name guesses and API keys stay out.
     location = ', '.join(dict.fromkeys(plain(metadata.get(k)) for k in ['City', 'State', 'Country'] if plain(metadata.get(k))))
     description = plain(image.get('Title') or image.get('Caption') or metadata.get('Caption'))
     return {'id': f'smugmug-{image_key}', 'imageKey': image_key,
             'imageUrl': image_url, 'takenDate': taken.isoformat(),
+            'width': width, 'height': height,
             'takenDateSource': source, 'location': location,
             'description': description or f'Photograph taken on {taken.strftime("%B %-d, %Y")}.',
             'sourceUrl': image.get('WebUri') or f'{site}/i-{image_key}'}
@@ -154,7 +165,7 @@ class SmugMug:
                   'SortDirection': 'Ascending', 'count': 100,
                   'DateTakenStart': (anniversary - timedelta(days=1)).isoformat() + 'T00:00:00Z',
                   'DateTakenEnd': (anniversary + timedelta(days=2)).isoformat() + 'T00:00:00Z',
-                  '_expand': 'ImageMetadata,ImageSizes'}
+                  '_expand': 'ImageMetadata,ImageSizes,ImageSizeDetails'}
         uri = '/api/v2/image!search'
         seen = set()
         photos = []

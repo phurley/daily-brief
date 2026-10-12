@@ -81,6 +81,8 @@
       ],
       "properties": {
         "id": { "type": "string", "minLength": 1, "description": "Stable source identity for future ratings." },
+        "width": { "type": "integer", "minimum": 1, "description": "Served image width in pixels after the source's stored rotation." },
+        "height": { "type": "integer", "minimum": 1, "description": "Served image height in pixels after the source's stored rotation." },
         "imageKey": { "type": "string", "minLength": 1 },
         "sourceUrl": { "type": "string", "format": "uri" },
         "takenDateSource": { "type": "string", "enum": ["ImageMetadata.DateTimeCreated", "ImageMetadata.DateCreated", "Image.DateTimeOriginal"] },
