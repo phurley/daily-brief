@@ -219,8 +219,9 @@ and recovery. No paid launch-provider dependency is required.
 
 `data-collect/run_science.sh` independently refreshes science and source health
 daily at 6 AM Detroit time. JavaScript rotates the six selected stories every four
-hours and derives the intro from the displayed lead. Cards share publication dates,
-evidence labels and visible caveats. See [the science runbook](data-collect/SCIENCE.md)
+hours and derives the intro from the displayed lead. Cards show findings, publication
+dates, evidence labels and source links; significance and limitations are omitted
+from the display. See [the science runbook](data-collect/SCIENCE.md)
 for source intervals, verification, diagnostics and the recurring-job inventory.
 
 

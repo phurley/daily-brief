@@ -37,9 +37,9 @@ test('mission history groups milestones without merging distinct telescope findi
  assert.deepEqual(result.previously[milestone.id].map(s=>s.id),['old']);
  assert.ok(result.selectedIds.includes('finding'));assert.ok(!result.selectedIds.includes('old'));
 });
-test('deterministic editorial explicitly preserves date and caveat',()=>{
+test('deterministic editorial preserves date and omits the caveat',()=>{
  const copy=scienceEditorial(scienceContext({stories},null,'2026-10-09'));
- assert.match(copy.summary,/2026-10-08/);assert.match(copy.summary,/Not peer reviewed/);
+ assert.match(copy.summary,/2026-10-08/);assert.doesNotMatch(copy.summary,/Not peer reviewed/);
  assert.doesNotMatch(copy.summary,/new today/i);
 });
 

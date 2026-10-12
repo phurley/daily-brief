@@ -130,11 +130,13 @@ are read from positive `topicAffinities` and `newsTopicAffinities` in the shared
 the selected topic list is published so browser and editorial scoring agree.
 No household interests are assumed when the file is empty.
 
-Cards show publication dates, evidence labels, significance, caveats and primary
-links. Unverified legacy records keep their IDs and caveats in the archive and
-cannot become leads just because an edition was regenerated. Deterministic,
-dated science section copy preserves the lead's complete caveat; the wider
-editorial model receives the exact selected IDs/dates/caveats/freshness and is
+Cards show findings, publication dates, evidence labels and source links. The
+reader-facing cards and intro omit significance and limitations. These fields
+remain in the collected data and editorial context. Unverified legacy records
+keep their IDs and caveats in the archive and cannot become leads just because
+an edition was regenerated. Deterministic, dated science section copy identifies
+the displayed lead; the wider editorial model receives the exact selected
+IDs/dates/caveats/freshness and is
 instructed not to equate collection with discovery. The frontend derives the
 science section intro itself to avoid mismatches during asynchronous refreshes.
 

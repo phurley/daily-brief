@@ -459,8 +459,7 @@ footer { color: #dce8e4; background: #14282b; }
 }
 
 /* Canonical Starship evidence is independent of the worldwide launch strip. */
-/* Science limitations remain visible; long archive is explicitly expandable. */
-.story__caveat { border-left: 2px solid currentColor; padding-left: .65rem; }
+/* The science archive is explicitly expandable. */
 .science-archive > summary { cursor: pointer; font-weight: 600; }
 .science-archive .story { margin-top: 1rem; }
 .story a + a { margin-left: .7rem; }

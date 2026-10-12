@@ -93,11 +93,11 @@ export function scienceContext(doc, health, date, now = Date.now()) {
       primarySourceUrl: s.primarySourceUrl || s.url, localConnection: s.localConnection })) };
 }
 
-// Use dated, deterministic science copy: model wording cannot turn old findings
-// into "new today" or silently remove a material limitation.
+// Use dated, deterministic science copy so old findings do not become "new today".
+// The reader-facing intro omits significance and caveats, as do the story cards.
 export function scienceEditorial(context) {
   const first = context.stories[0];
   return { heading: "Science & technology", summary: first
-    ? `Published ${scienceDate(first.publishedAt)}: ${first.title}. ${first.caveat}${context.stale ? " Collection is overdue or incomplete." : ""}`
+    ? `Published ${scienceDate(first.publishedAt)}: ${first.title}.${context.stale ? " Collection is overdue or incomplete." : ""}`
     : `No verified recent science stories are available.${context.stale ? " Collection is overdue or incomplete." : " Older coverage is in the archive."}` };
 }

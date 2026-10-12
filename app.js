@@ -1298,8 +1298,6 @@ function renderStories(kind, {append = false} = {}) {
     const source = [story.source?.name, story.source?.publication].filter(Boolean).join(" · ");
     return node("article", { className: "story", dataset: {storyId: story.id} }, [
       node("div", {}, [title, kind === "geeknews" && digest.archive.some(item => item.id === story.id) ? node("p", {className:"story__source",text:"Archive / background"}) : null, node("p", { text: story.finding || story.summary }),
-        kind === "geeknews" && story.significance ? node("details", {}, [node("summary", { text: "Why it matters" }), node("p", { text: story.significance })]) : null,
-        kind === "geeknews" ? node("p", { className: "story__caveat", text: `Limitations: ${story.caveat || "Evidence limitations not verified."}` }) : null,
         kind === "geeknews" ? node("p", { className: "story__source", text: `Published ${scienceDate(story.publishedAt)} · ${story.evidenceType || "unknown"}${story.verifiedAt ? "" : " · archived, not reverified"}` }) : null,
         kind === "geeknews" ? safeLink(`Read the primary source: ${story.source?.name || story.title}`, story.primarySourceUrl || story.url) : null,
         kind === "geeknews" && story.paperUrl ? safeLink("Read the linked research paper", story.paperUrl) : null,
