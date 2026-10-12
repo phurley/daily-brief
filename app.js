@@ -11,7 +11,7 @@ import { scienceView, scienceRotationSlot, scienceFreshness, scienceDate, scienc
 
 import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
 import { contributions } from './scoring.mjs?v=20261009-2';
-import { selectEventLanes, rankEvent, eventStatus } from './ranking.mjs?v=20261009-layout-1';
+import { selectEventLanes, eventStatus } from './ranking.mjs?v=20261009-layout-1';
 import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
 let rankingWeights;
@@ -965,16 +965,6 @@ function feedbackControls(event) {
   return controls;
 }
 
-function recommendationDetails(event, ranking) {
-  const details = node('div', { className: 'recommendation-details' });
-  const row = ranking || rankEvent(event, { day: state.selectedDate, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
-  details.append(node('p', { text: row.ineligible ? `Not in best bets: ${row.ineligible}` : row.reasons.join(' · ') || 'Neutral fit; no recorded preferences.' }));
-  details.append(node('p', { text: `Taste ${row.components.taste} · Practicality ${row.components.practicality} · Novelty ${row.components.novelty} · Data quality ${row.components.quality}. Ranking points, not a probability.` }));
-  if (row.unknowns.length) details.append(node('p', { text: row.unknowns.join(' · ') }));
-  details.append(feedbackControls(event));
-  return details;
-}
-
 function renderPreferenceControls() {
   let panel = $('#recommendation-controls');
   if (!panel) {
@@ -1067,7 +1057,7 @@ function openEventDetails(event,opener) {
   const facts=node('dl',{className:'event-preview__facts'});
   for(const [term,value] of eventPreviewFacts(event)) facts.append(node('div',{},[node('dt',{text:term}),node('dd',{text:value})]));
   $('#event-details-content').replaceChildren(node('p',{text:event.summary}),facts,
-    eventScoringCriteria(event),recommendationDetails(event),node('p',{id:'event-details-status',role:'status'}),safeLink('Visit website ↗',event.url));
+    feedbackControls(event),node('p',{id:'event-details-status',role:'status'}),safeLink('Visit website ↗',event.url));
   dialog.onclose=()=>{if(opener.isConnected) opener.focus({preventScroll:true});else $('[data-calendar-open]').focus();};
   dialog.showModal();$('#event-details-close').focus();
 }
