@@ -70,6 +70,22 @@ const engines=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
   await p.waitForFunction(title=>[...document.querySelectorAll('#events-list, #ongoing-list, #claims-list')].some(lane=>lane.textContent.includes(title)),candidate.title);
   await personalized.route('**/events.json',r=>r.abort());await p.reload();await p.waitForFunction(()=>document.querySelector('#recommendation-status')?.textContent.includes('Full candidates unavailable'));
   await personalized.close();console.log('Saved favorite survives reload and edition changes; unavailable full candidates are explained');
+
+  const editing=await context({serviceWorkers:'block',viewport:{width:390,height:844}});p=await page(editing);
+  await p.goto(url);await p.waitForFunction(()=>localStorage.getItem('daily-brief-edition:v1'));
+  await p.locator('#recommendation-controls summary').click();
+  await p.getByLabel('Admission budget per person ($, lowest listed ticket):').fill('25');
+  await p.getByLabel('Require a known admission price').check();
+  await p.locator('#refresh-brief').click();await p.waitForFunction(()=>!document.querySelector('#refresh-brief').disabled);
+  assert.ok(await p.getByLabel('Admission budget per person ($, lowest listed ticket):').isVisible(),'refresh keeps preference editing open');
+  assert.equal(await p.getByLabel('Admission budget per person ($, lowest listed ticket):').inputValue(),'25','refresh preserves an unsaved budget');
+  assert.ok(await p.getByLabel('Require a known admission price').isChecked());
+  await p.getByRole('button',{name:'Save preferences',exact:true}).click();
+  assert.ok(await p.getByLabel('Admission budget per person ($, lowest listed ticket):').isVisible(),'saving keeps preferences open');
+  await p.reload();await p.waitForFunction(()=>Boolean(document.querySelector('#recommendation-controls')));
+  const saved=await p.evaluate(()=>JSON.parse(localStorage.getItem('daily-brief:preferences:v1:household')).current.constraints);
+  assert.equal(saved.maxPrice,25);assert.equal(saved.excludeUnknownPrice,true);
+  await editing.close();console.log('Admission controls preserve drafts during refresh and save across reloads');
   assert.deepEqual(errors,[]);
  } finally {await browser?.close();await new Promise(resolve=>server ? server.close(resolve) : resolve());await fs.rm(temp,{recursive:true,force:true});}
 })().catch(error=>{console.error(error);process.exit(1)});

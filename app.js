@@ -983,6 +983,13 @@ function feedbackControls(event) {
 
 function renderPreferenceControls() {
   let panel = $('#recommendation-controls');
+  const profile = JSON.stringify(preferences.get());
+  if (panel?.dataset.preferenceProfile === profile) {
+    panel.querySelector('button').setAttribute('aria-pressed', String(showAllEvents));
+    $('#recommendation-status').textContent = [feedbackNotice, candidateNotice].filter(Boolean).join(' ');
+    return;
+  }
+  const settingsOpen = Boolean(panel?.querySelector('details')?.open);
   if (!panel) {
     panel = node('div', { id: 'recommendation-controls', className: 'recommendation-controls' });
     $('#today-lane').before(panel);
@@ -993,6 +1000,7 @@ function renderPreferenceControls() {
   const undo = button('Undo feedback', () => { const saved = preferences.undo(); feedbackNotice = saved ? 'Last preference change undone.' : 'Undone for this session; browser storage is unavailable.'; renderEvents(); });
   undo.disabled = !preferences.canUndo();
   const settings = node('details');
+  settings.open = settingsOpen;
   settings.append(node('summary', { text: 'Recommendation preferences' }), node('p', { text: 'Household profile on this browser. More/less adjusts this event category; favorites apply to its series. Feedback stays on this device.' }));
   const form = node('form', { className: 'recommendation-settings' });
   const p = preferences.get();
@@ -1005,6 +1013,7 @@ function renderPreferenceControls() {
   form.addEventListener('submit', e => { e.preventDefault(); const next = preferences.get(); next.ranking.limit = Number(count.value); next.constraints.maxDistanceMiles = distance.value === '' ? null : Number(distance.value); next.constraints.maxPrice = budget.value === '' ? null : Number(budget.value); next.constraints.excludeUnknownPrice = knownPrice.checked; next.constraints.selectedDayOnly = exact.checked; const saved = preferences.set(next); feedbackNotice = saved ? 'Preferences saved on this browser.' : 'Applied for this session; browser storage is unavailable.'; renderEvents(); });
   settings.append(form, node('p', { text: `${p.hiddenOccurrences.length} hidden occurrences · ${p.favorites.length} favorites · Category adjustments: ${Object.entries(p.topicAffinities).map(([name, value]) => `${name} ${value > 0 ? '+' : ''}${value}`).join(', ') || 'none'}` }), button('Reset preferences and feedback', () => { const saved = preferences.reset(); feedbackNotice = saved ? 'Preferences reset. Undo is available.' : 'Reset for this session; browser storage is unavailable.'; renderEvents(); }));
   panel.replaceChildren(toggle, button('Open full calendar', openEventCalendar), undo, settings, node('p', { id: 'recommendation-status', role: 'status', tabindex: '-1', text: [feedbackNotice,candidateNotice].filter(Boolean).join(' ') }));
+  panel.dataset.preferenceProfile = profile;
 }
 
 function eventCard(event) {
