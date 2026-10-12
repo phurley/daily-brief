@@ -135,6 +135,20 @@ class RetryTests(unittest.TestCase):
         self.assertEqual(record["start"], event()["start"])
         self.assertEqual(record["venue"], "Venue")
 
+    def test_conflicting_source_date_remains_retryable_without_promoting_record(self):
+        chat, _ = self.clients()
+        c = candidate()
+        old = pipeline.finalize(event(venue=None), c)
+        raw = '<script type="application/ld+json">'+json.dumps({"@type":"Event", "name":"Concert",
+              "startDate":"2026-10-22", "location":{"name":"Venue"}})+'</script>'
+        with patch.object(enrich, "fetch_html", return_value=raw):
+            records, _, outcomes = self.run_items([c], enrich_events=True,
+                                                  previous={pipeline._fingerprint(c):[old]})
+        self.assertEqual(records, [])
+        self.assertEqual(outcomes[0][1], "retry:source_date_conflict")
+        self.assertIsNone(old["venue"])
+        chat.complete_json.assert_not_called()
+
     def test_unrelated_structured_event_is_not_used(self):
         raw = '<script type="application/ld+json">'+json.dumps({"@type":"Event", "name":"Other", "startDate":event()["start"]})+'</script>'
         self.assertEqual(enrich._jsonld_event_fields(raw, "Concert"), {})

@@ -291,6 +291,9 @@ Incomplete event retries revisit the event's own detail page, trying matching
 JSON-LD/calendar information before model touch-up. Existing valid fields and
 sibling records are preserved. A failed page no longer teaches the whole source
 to stop enrichment; an explicit `enrich_strategy: "none"` still opts out.
+If matching structured source data contradicts an existing event date, the
+attempt stays retryable with `source_date_conflict`; it is not promoted to a
+complete record by filling other fields.
 
 Recent legacy `extracted` entries are checked against their stored output. Event
 candidates with missing/incomplete output are eligible for bounded replay from

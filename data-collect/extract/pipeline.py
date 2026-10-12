@@ -543,6 +543,11 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                     if sum(1 for f in ("start", "venue", "city") if r.get(f)) > before:
                         with enrich_lock:
                             enrich_state["ok"] += 1
+        if any(r.get("_repair_conflict") for r in records):
+            reason = "source_date_conflict"
+            # Keep the original incomplete snapshot, but do not promote an
+            # attempted repair that contradicts its own matched source page.
+            records = [r for r in records if not r.get("_repair_conflict")]
         # Score each record from its OWN fields, not the whole chunk, so a single
         # sporting event inside a mixed listing registers its own ``sporting``
         # signal. Triage still supplies the content flags; ``tri.raw`` is the

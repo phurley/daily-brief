@@ -108,6 +108,14 @@ def _event_name(value: Any) -> str:
     return " ".join(re.findall(r"\w+", html.unescape(str(value)).casefold()))
 
 
+def _event_day(value):
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        return (dt if dt.tzinfo else dt.replace(tzinfo=dates.EASTERN)).astimezone(dates.EASTERN).date()
+    except ValueError:
+        return None
+
+
 def _ical_times(url: str, title: Optional[str] = None) -> tuple[Optional[str], Optional[str]]:
     """Fetch a small ical feed and parse DTSTART/DTEND deterministically."""
     try:
@@ -361,11 +369,15 @@ def enrich_event(record: dict[str, Any], chat: llm.ChatClient,
     filled_by: Optional[str] = None
 
     def page_steps(raw: str) -> bool:
-        """Run the fetch-page steps on one page; True when the record is complete."""
+        """Stop on a complete record or contradictory source dates."""
         nonlocal filled_by
         if "jsonld" in steps:
             fields = _jsonld_event_fields(raw, record.get("title"))
             if fields.get("start"):
+                existing_day, source_day = _event_day(record.get("start")), _event_day(fields["start"])
+                if existing_day and source_day and existing_day != source_day:
+                    record["_repair_conflict"] = "source_date_conflict"
+                    return True
                 for key in ("start", "end", "venue", "city", "url", "imageUrl"):
                     if fields.get(key) and not record.get(key):
                         record[key] = fields[key]
