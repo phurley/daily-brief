@@ -1758,7 +1758,7 @@ async function init() {
   const saved=readSavedEdition();
   if(saved) {manifest=saved.manifest;Object.assign(state.data,saved.data);configureRanking(saved.data.rankingConfig);savedMode=true;render();updateFreshness();}
   else {for(const name of Object.keys(sectionSelectors)) sectionStates[name]='loading';render();updateFreshness();}
-  refreshData({initial:true});loadJoke();loadRocketLaunches();
+  refreshData({initial:true});loadFamilyCalendar();loadJoke();loadRocketLaunches();
   if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).catch(()=>{state.errors.push('Offline shell unavailable in this browser.');renderErrors();});
   const photosObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)) {
     photosObserver.disconnect();loadDocument(DOCUMENTS.find(([name])=>name==='photos')).then(result=>{if(result.data){state.data.photos=result.data;renderPhoto();}});

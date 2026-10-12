@@ -30,6 +30,9 @@ rendered in the browser from schema-backed JSON.
 
 ## Family calendar
 
+The family calendar starts expanded and loads automatically on every page visit.
+You can collapse it while browsing; reloading opens it again.
+
 `scripts/update_calendar.py` builds `calendar.json` from the unauthenticated
 ICAL feeds Google and iCloud publish. Those URLs need no OAuth: Google exposes
 a "Secret address in iCal format" per calendar, and iCloud exposes a
