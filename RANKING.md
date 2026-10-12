@@ -75,6 +75,13 @@ existing stories retain unknown metadata and need no bulk re-extraction.
 Source type describes attribution, not fact-checking. Science uses its separate
 `science.mjs` selector and verification pipeline; see `data-collect/SCIENCE.md`.
 
+News publication rechecks each story's URL, title, summary and named locations,
+including previously extracted records. An explicit out-of-state URL excludes
+the story; a state-qualified name such as Chelsea, NY cannot count as Chelsea,
+Michigan. Item evidence determines locality; a source's default rating is used
+only when the item supplies no geographic evidence. Separately identified
+Michigan places can still make reporting about other states locally relevant.
+
 Checks (offline; no paid extraction or editorial calls):
 
 ```sh

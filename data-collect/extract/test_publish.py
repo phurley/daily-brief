@@ -16,6 +16,68 @@ from unittest.mock import patch
 from . import publish
 
 
+class PublishLocalityTest(unittest.TestCase):
+    def story(self, **changes):
+        return dict(dict(kind="news", id="chelsea-story", title="News in Chelsea",
+                         summary="A neighborhood update in Chelsea.",
+                         url="https://patch.com/new-york/chelsea-ny/news",
+                         publishedAt="2026-10-12T10:29:00-04:00",
+                         addedAt="2026-10-12T15:29:41-04:00", localityIndex=0,
+                         locations=["Chelsea, NY"], topics=["community"],
+                         source={"name": "Reporter", "publication": "Canton Patch"}), **changes)
+
+    def test_existing_out_of_state_record_cannot_publish_from_canton_feed(self):
+        record = self.story()
+        original = copy.deepcopy(record)
+        self.assertIsNone(publish.to_story(record))
+        self.assertEqual(record, original)
+        # Extracted locations remain decisive when a URL has no state scope.
+        self.assertIsNone(publish.to_story(self.story(url="https://news.example/chelsea")))
+
+    def test_item_evidence_corrects_feed_rating_and_preserves_michigan_story(self):
+        record = self.story(url="https://news.example/chelsea", locations=["Chelsea, MI"])
+        published = publish.to_story(record)
+        self.assertEqual(published["localityIndex"], 2)
+        self.assertEqual(published["source"], record["source"])
+        self.assertEqual(published["url"], record["url"])
+        self.assertEqual(record["localityIndex"], 0)
+        detroit = self.story(title="Detroit delegation visits Canton", summary="A visit to Canton, Ohio.",
+                             locations=["Detroit, MI", "Canton, Ohio"], url="https://news.example/visit")
+        self.assertEqual(publish.to_story(detroit)["localityIndex"], 3)
+        road = self.story(title="Incident on Plymouth Road in Detroit", summary="An incident on Plymouth Road.",
+                          locations=["Detroit"], url="https://news.example/incident")
+        self.assertEqual(publish.to_story(road)["localityIndex"], 3)
+        visitor = self.story(title="Utah resident involved in Brighton incident", summary="An incident in Brighton.",
+                             locations=["Brighton Township"], url="https://news.example/brighton", localityIndex=3)
+        self.assertEqual(publish.to_story(visitor)["localityIndex"], 3)
+        statewide = self.story(title="Michigan artist wins Nashville award",
+                               summary="Millington, Michigan artist wins in Nashville, Tennessee.",
+                               locations=["Millington, Michigan", "Nashville, Tennessee"],
+                               url="https://news.example/award")
+        self.assertEqual(publish.to_story(statewide)["localityIndex"], 4)
+
+    def test_unknown_uses_prior_without_treating_source_name_as_location(self):
+        record = self.story(title="Neighborhood update", summary="A new community program.",
+                            url="https://news.example/story", locations=[], localityIndex=4)
+        self.assertEqual(publish.to_story(record)["localityIndex"], 4)
+        self.assertIsNone(publish.to_story({**record, "localityIndex": None}))
+
+    def test_publication_rechecks_stored_news_in_legacy_and_canonical_modes(self):
+        local = self.story(id="local-story", title="Chelsea Michigan news",
+                           summary="An update in Chelsea, Michigan.", locations=["Chelsea, MI"],
+                           url="https://news.example/local")
+        records = [self.story(), local]
+        before = copy.deepcopy(records)
+        for mode in ("legacy", "canonical"):
+            with self.subTest(mode=mode):
+                _, news, _ = publish.build(records, "2026-10-12", "2026-10-12T20:00:00Z",
+                                          identity_mode=mode)
+                self.assertEqual([s["id"] for s in news["stories"]], ["local-story"])
+                self.assertEqual(news["stories"][0]["localityIndex"], 2)
+                self.assertTrue(publish._doc_validator("news.schema.json").is_valid(news))
+        self.assertEqual(records, before)
+
+
 class PublishDateValidationTest(unittest.TestCase):
     def event(self, **changes):
         return dict(dict(kind="event", id="valid-event", title="A valid event",

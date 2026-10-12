@@ -15,14 +15,16 @@ Output (``detect``)::
 Tier follows the brief's ``localityIndex``: 0 Canton/Plymouth; 1 immediately
 surrounding; 2 Ypsilanti/Ann Arbor; 3 Detroit/metro; 4 statewide. Bias is
 *when in doubt, keep more*: an item is only marked out of area on a strong
-signal (URL state slug, ``City, ST`` pattern, or a non-Michigan state name) and
-only when no in-coverage place is mentioned.
+signal. An explicit out-of-state URL takes precedence over place-name matches;
+state-qualified homonyms such as ``Chelsea, NY`` are not Michigan evidence.
+Other state mentions can coexist with a separately identified local place.
 """
 
 from __future__ import annotations
 
 import re
 from typing import Optional
+from urllib.parse import unquote, urlsplit
 
 # Coverage gazetteer: place name (lowercase) -> localityIndex tier.
 _COVERAGE: dict[str, int] = {}
@@ -42,6 +44,7 @@ for _tier, _names in {
         "downriver", "grosse pointe", "st. clair shores", "pontiac",
         "auburn hills", "rochester", "novi", "farmington", "madison heights",
         "clawson", "berkley", "hazel park", "hamtramck", "highland park",
+        "wayne county",
     ],
     4: ["michigan"],
 }.items():
@@ -74,7 +77,13 @@ _STATE_ABBREVS = {
 }
 
 _CITY_STATE_RE = re.compile(
-    r"\b([A-Z][\w'.\-]+(?:\s+[A-Z][\w'.\-]+){0,2}),\s*([A-Z]{2})\b"
+    r"\b([A-Z][\w'.\-]+(?:[ \t]+[A-Z][\w'.\-]+){0,2}),[ \t]*([A-Z]{2})\b"
+)
+_CITY_STATE_NAME_RE = re.compile(
+    r"\b([A-Z][\w'.\-]+(?:[ \t]+[A-Z][\w'.\-]+){0,2}),[ \t]*("
+    + "|".join(re.escape(name) for name in sorted(_OTHER_STATES | {"michigan"}, key=len, reverse=True))
+    + r")\b",
+    re.IGNORECASE,
 )
 
 
@@ -86,11 +95,20 @@ def _compile(words: set[str]) -> dict[str, re.Pattern[str]]:
 
 
 _COVERAGE_RE = _compile(set(_COVERAGE))
-_OTHER_STATE_RE = _compile(_OTHER_STATES)
+_COVERAGE_RE["wayne"] = re.compile(_COVERAGE_RE["wayne"].pattern + r"(?![ \t-]+county\b)", re.IGNORECASE)
+_OTHER_STATE_RE = {
+    name: re.compile(pattern.pattern + r"(?![ \t]+(?:township|university|road|street|avenue)\b)", re.IGNORECASE)
+    for name, pattern in _compile(_OTHER_STATES).items()
+}
 
 
 def _url_state_slug(url: str) -> Optional[str]:
-    for segment in re.split(r"[/?#]", url.lower()):
+    try:
+        path = urlsplit(url).path
+    except ValueError:
+        return None
+    # Query/fragment links and the hostname are not the article's geography.
+    for segment in unquote(path).lower().split("/"):
         if segment in _STATE_SLUGS:
             return segment
     return None
@@ -107,29 +125,64 @@ def detect(
     # Source location is a *prior*, not evidence: including it in the haystack
     # would make every item from a Canton-based source look local and mask
     # out-of-area content (the Patch/Sun Times failure mode).
-    haystack = f"{text or ''}\n{url or ''}"
-
-    places: list[str] = []
-    local_tier: Optional[int] = None
-    for name, pattern in _COVERAGE_RE.items():
-        if pattern.search(haystack):
-            places.append(name)
-            tier = _COVERAGE[name]
-            if local_tier is None or tier < local_tier:
-                local_tier = tier
-
-    # Strong out-of-area signal: an aggregator URL path like patch.com/illinois/.
-    # Body state names / "City, ST" are weaker, and a generic "Michigan" mention
-    # makes those ambiguous, so we keep ("when in doubt, keep more").
+    # A geographic URL scope is stronger than an unqualified Michigan name.
+    # Patch's /new-york/chelsea-ny/ must not become local because of "Chelsea".
     state_slug = _url_state_slug(url)
-    city_state_hits = [
-        abbr for _city, abbr in _CITY_STATE_RE.findall(text or "")
-        if abbr in _STATE_ABBREVS and abbr != "MI"
-    ]
+    if state_slug:
+        return {
+            "places": [],
+            "tier": None,
+            "out_of_area": True,
+            "confidence": 0.9,
+            "reason": f"url state: {state_slug}",
+        }
+
+    qualified = [
+        (city, state) for city, state in _CITY_STATE_RE.findall(text or "")
+        if state in _STATE_ABBREVS
+    ] + _CITY_STATE_NAME_RE.findall(text or "")
+    foreign_places, michigan_places = set(), set()
+    qualified_out = []
+    qualified_michigan = False
+    for city, state in qualified:
+        local = state.lower() in {"mi", "michigan"}
+        names = {name for name, pattern in _COVERAGE_RE.items()
+                 if name != "michigan" and pattern.search(city)}
+        (michigan_places if local else foreign_places).update(names)
+        qualified_michigan |= local
+        # Comma-separated state lists are not City, State pairs. Full names
+        # disambiguate covered municipalities; abbreviations identify any city.
+        if not local and (state in _STATE_ABBREVS or names):
+            qualified_out.append(state)
+
     state_name_hits = [
         name for name, pattern in _OTHER_STATE_RE.items() if pattern.search(text or "")
     ]
-    medium_out = bool(city_state_hits or state_name_hits)
+    places: list[str] = []
+    local_tier: Optional[int] = None
+    try:
+        url_path = unquote(urlsplit(url).path)
+    except ValueError:
+        url_path = ""
+    for haystack in (text or "", url_path):
+        for name, pattern in _COVERAGE_RE.items():
+            # Disambiguation applies to repeated title/summary mentions too.
+            if name in foreign_places and name not in michigan_places:
+                continue
+            if pattern.search(haystack):
+                places.append(name)
+                tier = _COVERAGE[name]
+                if local_tier is None or tier < local_tier:
+                    local_tier = tier
+        # A local source URL is a fallback; it cannot outrank the item's places.
+        if local_tier is not None or qualified_out or state_name_hits or qualified_michigan:
+            break
+    if local_tier is None and qualified_michigan:
+        local_tier = 4  # Explicit Michigan place outside the metro gazetteer.
+
+    # General state mentions may describe a visitor or a comparison. Keep those
+    # when there is separate Michigan evidence; qualified locations are stronger.
+    medium_out = bool(qualified_out or state_name_hits)
     specific_local = local_tier is not None and local_tier <= 3
 
     if specific_local:
@@ -140,16 +193,8 @@ def detect(
             "confidence": 0.8,
             "reason": f"local place: {places[0]}",
         }
-    if state_slug:
-        return {
-            "places": sorted(set(places)),
-            "tier": None,
-            "out_of_area": True,
-            "confidence": 0.9,
-            "reason": f"url state: {state_slug}",
-        }
     if medium_out:
-        if local_tier == 4:  # also mentions Michigan -> ambiguous, keep
+        if local_tier == 4 and (not qualified_out or qualified_michigan):
             return {
                 "places": sorted(set(places)),
                 "tier": 4,
@@ -158,7 +203,7 @@ def detect(
                 "reason": "ambiguous state mention",
             }
         reason = (
-            f"city,state: {city_state_hits[0]}" if city_state_hits
+            f"city,state: {qualified_out[0]}" if qualified_out
             else f"state: {state_name_hits[0]}"
         )
         return {

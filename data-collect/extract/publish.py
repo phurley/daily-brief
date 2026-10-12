@@ -22,7 +22,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional
 
-from . import dates, identity, jev, schedules, scoring as event_scoring
+from . import dates, identity, jev, locality, schedules, scoring as event_scoring
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent.parent
@@ -238,8 +238,6 @@ def to_story(record: dict[str, Any]) -> Optional[dict[str, Any]]:
         if value:
             story[key] = value
     story["addedAt"] = _clean(record.get("addedAt")) or datetime.now(dates.EASTERN).isoformat(timespec="seconds")
-    if isinstance(record.get("localityIndex"), int):
-        story["localityIndex"] = record["localityIndex"]
     if isinstance(record.get("urgentLocal"), bool):
         story["urgentLocal"] = record["urgentLocal"]
     if record.get("evidenceQuality") in ("primary", "reported", "opinion", "unknown"):
@@ -247,6 +245,27 @@ def to_story(record: dict[str, Any]) -> Optional[dict[str, Any]]:
     if isinstance(record.get("entities"), list):
         story["entities"] = [e for e in record["entities"] if isinstance(e, str) and e.strip()]
     story["locations"] = _clean(record.get("locations") or [])
+    # Recheck every stored story, including records extracted before the locality
+    # rules changed. Feed/source location is only a fallback, never a local fact.
+    prior = record.get("localityIndex")
+    prior = prior if type(prior) is int and 0 <= prior <= 4 else None
+    text = "\n".join([story.get("title") or "", story.get("summary") or ""])
+    # Named locations outrank incidental place words in prose (Plymouth Road
+    # in Detroit, or a Utah resident involved in a Michigan incident).
+    locations = "\n".join(str(value) for value in story["locations"])
+    geography = locality.detect(
+        locations or text,
+        story.get("url") or "",
+        source_tier=prior,
+    )
+    if locations and geography["out_of_area"]:
+        # Preserve cross-state reporting when the item separately identifies a
+        # Michigan connection. An out-of-state URL still excludes it.
+        geography = locality.detect(text + "\n" + locations, story.get("url") or "",
+                                    source_tier=prior)
+    if geography["out_of_area"] or geography["tier"] is None:
+        return None
+    story["localityIndex"] = geography["tier"]
     topics = _clean(record.get("topics") or [])
     story["topics"] = topics or ["local"]
     source = record.get("source") if isinstance(record.get("source"), dict) else {}
