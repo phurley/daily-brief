@@ -1,0 +1,19 @@
+.calendar-tuning-host { flex-shrink: 0; max-height: 50svh; overflow-y: auto; padding: 0 1.25rem 1rem; border-bottom: 1px solid var(--border, #78908b); }
+.calendar-tuning__toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+.calendar-tuning-host button, .calendar-tuning-host select, .calendar-tuning__weight input[type=number] { font: inherit; color: inherit; background: var(--panel-bg, transparent); border: 1px solid currentColor; border-radius: .5rem; padding: .4rem .65rem; }
+.calendar-tuning-host select option { color: #142120; background: #fff; }
+.calendar-tuning-host button:disabled, .calendar-tuning__moves button:disabled { opacity: .4; }
+.calendar-tuning__status, .calendar-tuning > p { font-size: .88rem; margin: .65rem 0; }
+.calendar-tuning summary { cursor: pointer; font-weight: 700; }
+.calendar-tuning__weights { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: .65rem 1.5rem; max-height: 240px; overflow-y: auto; padding: .5rem; }
+.calendar-tuning__weight { display: grid; grid-template-columns: 1fr 5.5rem; gap: .2rem .75rem; align-items: center; }
+.calendar-tuning__weight > span { grid-column: 1 / -1; text-transform: capitalize; }
+.calendar-tuning__weight input[type=range] { width: 100%; accent-color: var(--accent, #d79766); }
+.calendar-tuning__weight input[type=number] { width: 100%; min-width: 0; box-sizing: border-box; }
+.calendar-tuning__event { display: flex; gap: .4rem; align-items: stretch; }
+.calendar-tuning__event > .agenda-item { flex: 1; min-width: 0; }
+.calendar-tuning__event [draggable=true] { cursor: grab; }
+.calendar-tuning__moves { display: flex; flex-direction: column; justify-content: center; gap: .25rem; }
+.calendar-tuning__moves button { min-width: 44px; min-height: 44px; border: 1px solid currentColor; border-radius: .4rem; background: transparent; color: inherit; font: inherit; }
+.calendar-tuning__event.is-drop-target { outline: 2px solid currentColor; border-radius: .7rem; }
+@media (max-width: 600px) { .calendar-tuning__weights { grid-template-columns: 1fr; max-height: 180px; } }

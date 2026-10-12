@@ -11,6 +11,7 @@ import {
   hasSignals,
 } from "./scoring.mjs?v=20261009-2";
 
+import { restoreWeights } from './weight-tuning.mjs';
 import { selectBestBets } from './ranking.mjs?v=20261009-2';
 const TIME_ZONE = "America/Detroit";
 const DEFAULT_BASE = 0.5;
@@ -360,6 +361,10 @@ async function init() {
     signals,
   };
   state.defaults = structuredClone(state.weights);
+  state.weights = state.defaults;
+  try { state.weights = restoreWeights(state.defaults, window.localStorage); } catch {}
+  const restored = state.weights !== state.defaults;
+  state.weights = structuredClone(state.weights);
   state.order = Object.keys(signals);
 
   state.preferences = await fetchJson('brief-preferences.json').catch(() => ({}));
@@ -369,7 +374,7 @@ async function init() {
   state.sort = $("#sort-select").value;
   renderWeightPanel();
   renderEvents();
-  $("#status").textContent = `${state.events.length} events loaded · weights from scoring-weights.json`;
+  $("#status").textContent = `${state.events.length} events loaded · ${restored ? 'saved browser weights' : 'default weights'}`;
 }
 
 init();

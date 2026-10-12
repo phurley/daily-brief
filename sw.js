@@ -1,8 +1,8 @@
 // Generated at deployment from the content of every shell asset. A waiting worker activates on the next launch;
 // never swap code beneath an already-open edition.
-const SHELL='daily-brief-shell-a144f03f06efbb32655e9db439879ad9fe048e395700002e2622903a16da865e';
+const SHELL='daily-brief-shell-e79bcf1d6768eeb7504850ce6ca679631c3569fe60610912fc72ca2c473c0f71';
 const DATA='daily-brief-sections-v1';
-const SHELL_FILES=["almanac-calc.mjs","app.js","assets/moon-waxing-gibbous.png","assets/redwood-canopy.svg","aurora.mjs","brief-selection.mjs","edition-client.mjs","event-status.mjs","event-time.mjs","favicon.svg","index.html","news-ranking.mjs","on-this-date.mjs","preferences.mjs","ranking.mjs","science.mjs","scoring-debug.css","scoring-debug.js","scoring.html","scoring.mjs","sky-events.mjs","starship.mjs","story-order.mjs","theme.css","themes.css","themes.js","weather-appearance.mjs"];
+const SHELL_FILES=["almanac-calc.mjs","app.js","assets/moon-waxing-gibbous.png","assets/redwood-canopy.svg","aurora.mjs","brief-selection.mjs","calendar-tuning.css","calendar-tuning.js","edition-client.mjs","event-status.mjs","event-time.mjs","favicon.svg","index.html","news-ranking.mjs","on-this-date.mjs","preferences.mjs","ranking.mjs","science.mjs","scoring-debug.css","scoring-debug.js","scoring.html","scoring.mjs","sky-events.mjs","starship.mjs","story-order.mjs","theme.css","themes.css","themes.js","weather-appearance.mjs","weight-tuning.mjs"];
 self.addEventListener('install',event=>event.waitUntil(caches.open(SHELL).then(cache=>cache.addAll(SHELL_FILES.map(path=>new Request(path,{cache:'reload'}))))));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
  for(const key of await caches.keys()) if(key.startsWith('daily-brief-') && key!==SHELL && key!==DATA) await caches.delete(key);

@@ -38,5 +38,7 @@ jobs:
           BRIEF_BROWSER=webkit npm run test:mobile
           npm run test:themes
           BRIEF_BROWSER=webkit npm run test:themes
+          npm run test:tuning
+          BRIEF_BROWSER=webkit npm run test:tuning
           npm run test:integration
           BRIEF_BROWSER=webkit npm run test:integration

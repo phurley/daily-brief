@@ -196,3 +196,22 @@ remains available. News has a separate freshness/locality/topic rubric. Widgets
 and editorial context share the public event selector. See [ranking and recurring
 operations](RANKING.md) for preferences, tests, saved-edition comparison, rollout
 limits and the hourly publication path.
+
+### Tune the calendar ranking
+
+Open the event calendar and expand **Adjust event ranking**. Signed sliders and
+number fields immediately update taste scores, their explanations, the agenda,
+and the brief's best bets. Changes save automatically on this browser using the
+same weight profile as the score-debug page. **Start time** restores a chronological
+agenda; **Taste rating** sorts by score, with unrounded scores breaking ties.
+
+Drag an event onto another event to request that position, or use its up/down
+buttons on touch screens and keyboards. A bounded, regularized weight fit attempts
+the requested day order and displays the actual resulting ranking, reporting
+matched event pairs and ties. Identical signals or conflicting preferences can
+prevent an exact fit. The fit may change a signal from a bonus to a penalty.
+**Undo weight change** restores the previous weights; **Reset to defaults** restores
+the published profile. Events without scoring signals retain their published
+rating and prevent fitting that day. Browser storage failures leave tuning usable
+for the current visit and display a notice. These weights are local to this browser
+and origin; they do not change the collector's published weights.

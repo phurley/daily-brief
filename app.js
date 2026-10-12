@@ -11,10 +11,14 @@ import { scienceView, scienceRotationSlot, scienceFreshness, scienceDate, scienc
 
 import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
 import { contributions } from './scoring.mjs?v=20261009-2';
+import { restoreWeights, tasteScore, compareTaste } from './weight-tuning.mjs';
+import { calendarTuner } from './calendar-tuning.js';
 import { selectEventLanes, eventStatus } from './ranking.mjs?v=20261009-layout-1';
 import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
 let rankingWeights;
+let defaultRankingWeights;
+let tuner;
 
 let feedbackNotice = '';
 let candidateNotice = '';
@@ -194,11 +198,9 @@ async function loadDocument([name, dataPath, schemaPath, required]) {
 function configureRanking(config) {
   let storage;try{storage=window.localStorage}catch{}
   preferences=preferenceStore(storage, config?.preferences || {});
-  rankingWeights=config?.weights || null;
-  try {
-    const weights=JSON.parse(storage?.getItem('daily-brief:weights:v2') || 'null');
-    if(weights?.rulesVersion===2 && weights.signals && Number.isFinite(weights.base) && Number.isFinite(weights.scale)) rankingWeights=weights;
-  }catch{}
+  defaultRankingWeights=config?.weights || null;
+  rankingWeights=restoreWeights(defaultRankingWeights, storage);
+  tuner?.render();
 }
 function updateFreshness() {
   const label = manifest ? `Edition ${manifest.editionDate} · published ${new Date(manifest.generatedAt).toLocaleString('en-US', {timeZone:TIME_ZONE, month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}` : 'Full-document compatibility view';
@@ -663,6 +665,7 @@ function eventsOnDay(key, events = uniqueEvents(), comparator = compareEventsFor
 }
 
 function agendaEntry(event, key, { withDate = false } = {}) {
+  event = { ...event, score: tasteScore(event, rankingWeights) };
   const when = withDate ? shortDateLabel(key) : eventDateLabel(event);
   const selected = event.id === state.calendarEventId;
   const meta = node("span", { className: "agenda-item__meta" }, [
@@ -691,9 +694,8 @@ function renderEventCalendarAgenda(events) {
   const selected = state.calendarSelected;
   $("#calendar-agenda-title").textContent = displayDate(selected, { year: true });
 
-  // The calendar is the complete view: every event active that day, sorted by
-  // start time; preference ranking only affects best bets.
-  const dayEvents = eventsOnDay(selected, events, compareEventsForDisplay);
+  const dayEvents = eventsOnDay(selected, events, tuner?.byRating()
+    ? (a, b) => compareTaste(a, b, rankingWeights) : compareEventsForDisplay);
   state.calendarEntries = dayEvents.map((event) => ({ event, key: selected }));
   if (!state.calendarEntries.some((entry) => entry.event.id === state.calendarEventId)) {
     state.calendarEventId = state.calendarEntries[0]?.event.id || "";
@@ -701,7 +703,10 @@ function renderEventCalendarAgenda(events) {
 
   list.append(node("h4", { className: "calendar-agenda__heading", text: dayEvents.length ? `On this day · ${dayEvents.length}` : "Nothing scheduled" }));
   if (dayEvents.length) {
-    for (const event of dayEvents) list.append(agendaEntry(event, selected));
+    for (const event of dayEvents) {
+      const button = agendaEntry(event, selected);
+      list.append(tuner ? tuner.decorate(button, event, dayEvents) : button);
+    }
   } else {
     list.append(node("p", { className: "calendar-agenda__empty", text: "Pick another day — days with events are dotted on the grid." }));
   }
@@ -719,7 +724,7 @@ function renderEventCalendarDetail() {
     return;
   }
   detail.hidden = false;
-  const { event } = entry;
+  const event = { ...entry.event, score: tasteScore(entry.event, rankingWeights) };
   detail.classList.toggle("event--recurring", isRecurringEvent(event));
   const index = state.calendarEntries.indexOf(entry);
   const title = node("h3", { className: "calendar-detail__title" });
@@ -822,6 +827,16 @@ function setCalendarOpenState(open) {
 let calendarOpener = null;
 async function openEventCalendar(openEvent) {
   calendarOpener = openEvent?.currentTarget || document.activeElement;
+  if (!tuner) {
+    const host = node('div', { className: 'calendar-tuning-host' });
+    $('#calendar-load-status').after(host);
+    let storage; try { storage = window.localStorage; } catch {}
+    const refresh = () => { renderEventCalendarAgenda(fullEvents || uniqueEvents()); renderEventCalendarDetail(); renderEvents(); };
+    tuner = calendarTuner({ host, storage, getWeights: () => rankingWeights,
+      getDefaults: () => defaultRankingWeights, setWeights: weights => { rankingWeights = weights; },
+      getEvents: () => state.calendarEntries.map(entry => entry.event), refresh });
+    host.addEventListener('weights-storage-change', () => { rankingWeights = restoreWeights(defaultRankingWeights, storage); });
+  }
   const dialog = $("#calendar-dialog");
   state.calendarSelected = state.selectedDate;
   state.calendarMonth = state.selectedDate.slice(0, 7);
@@ -867,6 +882,7 @@ function bindEventCalendar() {
   $("#calendar-detail-previous").addEventListener("click", () => stepCalendarEvent(-1));
   $("#calendar-detail-next").addEventListener("click", () => stepCalendarEvent(1));
   $("#calendar-dialog").addEventListener("keydown", (keyEvent) => {
+    if (keyEvent.target.closest("input, select, textarea")) return;
     if (keyEvent.key === "ArrowRight") {
       keyEvent.preventDefault();
       stepCalendarEvent(1);
@@ -1101,7 +1117,7 @@ function eventScoringCriteria(event) {
 
 function eventPreviewFacts(event) {
   return [
-    ["Rating", event.score != null ? `${event.score} / 100` : ""],
+    ["Rating", tasteScore(event, rankingWeights) != null ? `${tasteScore(event, rankingWeights)} / 100` : ""],
     ["When", `${eventDateLabel(event)} · ${displayTime(event.start)}${event.end ? ` – ${displayTime(event.end)}` : " (end time not supplied)"}`],
     ["Booking deadline", event.deadline],
     ["Where", [event.venue, event.city, event.region].filter(Boolean).join(" · ")],
