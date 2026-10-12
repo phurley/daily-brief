@@ -1,6 +1,5 @@
 #!/bin/sh
-# Nightly family-calendar refresh: fetch the Google/iCloud ICS feeds into
-# calendar.json, then commit and push it when it changed.
+# Nightly family-calendar and public photo refresh, then publish changed output.
 #
 # Runs from launchd once a night (com.dailybrief.calendar). Feed definitions
 # live in the git-ignored calendars.json (or CALENDARS_JSON in the env).
@@ -12,6 +11,7 @@
 # Env knobs:
 #   CALENDAR_PYTHON  [/opt/homebrew/bin/python3]  interpreter to run the collector
 #   CALENDAR_NO_PUSH [unset]                      set to 1 to skip commit/push
+#   PHOTOS_ENABLED   [1]                          set to 0 to skip photo collection
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$DIR/.." && pwd)"
@@ -39,7 +39,25 @@ echo "$STAMP [start] calendar refresh"
 
 cd "$ROOT" || exit 1
 
-if ! "$PY" scripts/update_calendar.py; then
+set --
+collection_rc=0
+if "$PY" scripts/update_calendar.py; then
+    set -- calendar.json
+else
+    echo "Calendar refresh failed; keeping its last successful output."
+    collection_rc=1
+fi
+
+if [ "${PHOTOS_ENABLED:-1}" = "1" ]; then
+    if "$PY" scripts/update_photos.py; then
+        set -- "$@" photos.json
+    else
+        echo "Photo refresh failed; keeping its last successful candidates."
+        collection_rc=1
+    fi
+fi
+
+if [ "$#" -eq 0 ]; then
     echo "$(date '+%Y-%m-%d %H:%M:%S') [done] collection failed"
     exit 1
 fi
@@ -47,5 +65,8 @@ fi
 if [ "${CALENDAR_NO_PUSH:-}" = "1" ]; then
     "$PY" scripts/publish_brief.py --no-push
 else
-    "$PY" scripts/publish_brief.py calendar.json
+    "$PY" scripts/publish_brief.py "$@"
 fi
+publish_rc=$?
+if [ "$publish_rc" -ne 0 ]; then exit "$publish_rc"; fi
+exit "$collection_rc"

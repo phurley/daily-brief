@@ -99,10 +99,35 @@ Feeds cannot be filtered server-side by date range, so the whole calendar is
 fetched and only a rolling window (`historyDays` back, `horizonDays` forward)
 is kept. Both are configurable at the top of `calendars.json`.
 
-The `photos.json` document may contain zero to five photographs for a date.
-Multiple photographs become a slow, accessible crossfade carousel with only
-location and original date overlaid inside the image. Descriptions remain as
-image alt text for accessibility.
+`scripts/update_photos.py` queries the public `photos.hurleyhome.com` SmugMug
+API for every still photo captured on the same month and day in a previous
+year. It discovers the earliest archive year, follows every result page, and
+checks the original camera date after searching a wider timezone-safe window.
+Upload dates and filenames never substitute for capture dates. Only public
+visitor access is used; no login or stored API secret is needed.
+
+```sh
+python3 scripts/update_photos.py                    # yesterday, today, tomorrow
+python3 scripts/update_photos.py --date 2026-10-12    # every candidate for one day
+python3 scripts/update_photos.py --date 2026-10-12 --out /tmp/october-12-photos.json
+python3 scripts/update_photos.py --force            # bypass the 24-hour query cache
+```
+
+`photos.json` retains all candidates with stable SmugMug image IDs and capture
+date provenance for a future rating system. The browser shuffles them on each
+visit or date change and rotates through the full pool without repeats until
+the cycle completes. Ordinary background rendering preserves the current order
+and photo. Images download only when shown; large pools use a compact count
+instead of hundreds of dots. Motion pauses on hover/focus, in background tabs,
+and for reduced motion. Captions show the original date and explicit location
+metadata when available; descriptions remain image alt text.
+
+The existing 03:30 calendar job on `kitchen.local` also refreshes the photo
+candidates; no additional timer is needed. Successful queries cache under the
+git-ignored `data-collect/photo-cache/`. A failed or incomplete query preserves
+the previous feed and is logged. `PHOTOS_ENABLED=0` skips that collection step.
+The obsolete static Tomorrow and Allison pages have been removed; the main
+brief's date controls provide yesterday, today and tomorrow.
 `brief-preferences.json` supplies public ranking defaults under
 `schemas/preferences.schema.json`; personal feedback stays in browser storage.
 

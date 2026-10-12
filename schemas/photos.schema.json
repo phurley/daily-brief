@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://phurley.github.io/daily-brief/schemas/photos.schema.json",
   "title": "Daily Brief Photos",
-  "description": "A rolling daily selection of public family photographs for the current collection window, chosen from the same month and day in prior years.",
+  "description": "All discovered public still-photo candidates with the same original capture month and day in prior years. Presentation order is randomized by the client.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -36,7 +36,7 @@
       "type": "array",
       "minItems": 1,
       "maxItems": 62,
-      "description": "One entry for every calendar date from collectionStart through collectionEnd, sorted ascending with no gaps or duplicate dates.",
+      "description": "Available edition dates, sorted ascending with no duplicate dates. collectionStart and collectionEnd describe the bounds.",
       "items": {
         "$ref": "#/$defs/day"
       }
@@ -51,6 +51,11 @@
         "photos"
       ],
       "properties": {
+        "checkedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last complete successful SmugMug API query for this date."
+        },
         "date": {
           "type": "string",
           "format": "date"
@@ -58,8 +63,7 @@
         "photos": {
           "type": "array",
           "minItems": 0,
-          "maxItems": 5,
-          "description": "Zero to five best photographs whose original takenDate has the same month and day as date. Array order is best first.",
+          "description": "Every candidate with a verified original takenDate matching this month and day in a prior year. No ratings or quality ordering are applied.",
           "items": {
             "$ref": "#/$defs/photo"
           }
@@ -76,6 +80,10 @@
         "description"
       ],
       "properties": {
+        "id": { "type": "string", "minLength": 1, "description": "Stable source identity for future ratings." },
+        "imageKey": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "takenDateSource": { "type": "string", "enum": ["ImageMetadata.DateTimeCreated", "ImageMetadata.DateCreated", "Image.DateTimeOriginal"] },
         "imageUrl": {
           "type": "string",
           "format": "uri",
@@ -87,7 +95,7 @@
         },
         "location": {
           "type": "string",
-          "minLength": 1
+          "description": "Explicit image location metadata; empty when unknown."
         },
         "description": {
           "type": "string",

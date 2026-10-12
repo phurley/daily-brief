@@ -31,7 +31,7 @@ enum BriefData {
     static func loadPhoto() async throws -> BriefPhoto? {
         let (data, _) = try await URLSession.shared.data(from: photosURL)
         let document = try JSONDecoder().decode(PhotosDocument.self, from: data)
-        return document.days.first(where: { $0.date == today })?.photos.first
+        return document.days.first(where: { $0.date == today })?.photos.randomElement()
     }
 }
 

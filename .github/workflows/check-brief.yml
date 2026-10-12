@@ -33,6 +33,7 @@ jobs:
           python3 scripts/test_calendar_retry.py
           python3 scripts/test_starship_job_lock.py
           python3 scripts/test_publish_brief.py
+          python3 scripts/test_update_photos.py
       - run: npx playwright install --with-deps chromium webkit
       - name: Browser checks
         run: |

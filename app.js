@@ -13,6 +13,7 @@ import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
 import { contributions } from './scoring.mjs?v=20261009-2';
 import { restoreWeights, tasteScore, compareTaste } from './weight-tuning.mjs';
 import { calendarTuner } from './calendar-tuning.js';
+import { shufflePhotos } from './photo-selection.mjs';
 import { selectEventLanes, eventStatus } from './ranking.mjs?v=20261009-layout-1';
 import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
@@ -51,6 +52,8 @@ const state = {
   today: dateKey(new Date()),
   photoIndex: 0,
   photoTimer: null,
+  photoPoolKey: '',
+  photoOrder: [],
   eventExpiryTimer: null,
   calendarMonth: "",
   calendarSelected: "",
@@ -175,6 +178,8 @@ let manifest = null;
 let savedMode = false;
 let fullEvents = null;
 let archiveRequest = null;
+let photoRequest = null;
+let photosRequested = false;
 let showAllEvents = false;
 const fullStories = {};
 const storyLimits = {news:10,geeknews:10};
@@ -194,6 +199,14 @@ async function loadDocument([name, dataPath, schemaPath, required]) {
     if (!['photos','calendar'].includes(name)) validateSection(name,data);
     return {name, data, required};
   } catch (error) { return {name, error:error.message, required}; }
+}
+async function loadPhotos() {
+  if (photoRequest) return photoRequest;
+  photosRequested = true;
+  photoRequest = loadDocument(DOCUMENTS.find(([name]) => name === 'photos')).then(result => {
+    if (result.data) { state.data.photos = result.data; renderPhoto(); }
+  }).finally(() => { photoRequest = null; });
+  return photoRequest;
 }
 function configureRanking(config) {
   let storage;try{storage=window.localStorage}catch{}
@@ -287,6 +300,7 @@ async function refreshData({ initial = false } = {}) {
     if (initial || state.today!==previousToday) render();
     updateFreshness();renderErrors();renderStarship();
     $('#refresh-brief').disabled=false;
+    if (photosRequested && !initial) void loadPhotos();
   }
 }
 async function ensureFullEvents() {
@@ -1443,6 +1457,8 @@ function showPhoto(index, { restart = true } = {}) {
   state.photoIndex = (index + slides.length) % slides.length;
   slides.forEach((slide, position) => {
     const active = position === state.photoIndex;
+    const image = slide.querySelector('img');
+    if (active && !image.getAttribute('src')) image.src = image.dataset.src;
     slide.classList.toggle("is-active", active);
     slide.setAttribute("aria-hidden", String(!active));
   });
@@ -1451,6 +1467,8 @@ function showPhoto(index, { restart = true } = {}) {
     dot.classList.toggle("is-active", active);
     dot.setAttribute("aria-current", active ? "true" : "false");
   });
+  const count = document.querySelector('.memory__count');
+  if (count) count.textContent = `${state.photoIndex + 1} / ${slides.length}`;
   if (restart) startPhotoShow();
 }
 
@@ -1463,9 +1481,15 @@ function startPhotoShow() {
 
 function renderPhoto() {
   stopPhotoShow();
-  state.photoIndex = 0;
   const day = state.data.photos?.days?.find((item) => item.date === state.selectedDate);
-  const photos = (day?.photos || []).filter((photo) => safeImageUrl(photo.imageUrl));
+  const candidates = (day?.photos || []).filter((photo) => safeImageUrl(photo.imageUrl));
+  const poolKey = `${state.selectedDate}:${JSON.stringify(candidates)}`;
+  if (poolKey !== state.photoPoolKey) {
+    state.photoPoolKey = poolKey;
+    state.photoOrder = shufflePhotos(candidates);
+    state.photoIndex = 0;
+  }
+  const photos = state.photoOrder;
   const section = $("#photo-section");
   section.hidden = photos.length === 0;
   replaceChildren("#photo-slides", []);
@@ -1474,20 +1498,20 @@ function renderPhoto() {
 
   const slides = photos.map((photo, index) => {
     const image = node("img", {
-      src: safeImageUrl(photo.imageUrl),
+      dataset: { src: safeImageUrl(photo.imageUrl) },
       alt: photo.description,
       loading: index === 0 ? "eager" : "lazy",
       decoding: "async",
     });
     const overlay = node("figcaption", { className: "memory__overlay" }, [
       node("p", { className: "memory__meta" }, [
-        node("span", { text: `⌖ ${photo.location}` }),
+        photo.location ? node("span", { text: `⌖ ${photo.location}` }) : null,
         node("time", { text: displayDate(photo.takenDate, { year: true }), datetime: photo.takenDate }),
       ]),
     ]);
     return node("figure", {
-      className: `memory__slide${index === 0 ? " is-active" : ""}`,
-      "aria-hidden": String(index !== 0),
+      className: 'memory__slide',
+      "aria-hidden": 'true',
     }, [image, overlay]);
   });
   replaceChildren("#photo-slides", slides);
@@ -1495,7 +1519,7 @@ function renderPhoto() {
   const controls = $("#photo-controls");
   controls.hidden = photos.length < 2;
   if (photos.length > 1) {
-    const dots = photos.map((photo, index) => {
+    const dots = photos.length > 8 ? [node('span', { className: 'memory__count' })] : photos.map((photo, index) => {
       const dot = node("button", {
         className: `memory__dot${index === 0 ? " is-active" : ""}`,
         type: "button",
@@ -1514,6 +1538,7 @@ function renderPhoto() {
     section.onfocusout = startPhotoShow;
     startPhotoShow();
   }
+  showPhoto(state.photoIndex, { restart: false });
 }
 
 function renderErrors() {
@@ -1819,9 +1844,9 @@ async function init() {
   refreshData({initial:true});loadFamilyCalendar();loadJoke();loadRocketLaunches();
   if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).catch(()=>{state.errors.push('Offline shell unavailable in this browser.');renderErrors();});
   const photosObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)) {
-    photosObserver.disconnect();loadDocument(DOCUMENTS.find(([name])=>name==='photos')).then(result=>{if(result.data){state.data.photos=result.data;renderPhoto();}});
+    photosObserver.disconnect();void loadPhotos();
   }},{rootMargin:'200px'});
-  photosObserver.observe($('#geek-section'));
+  photosObserver.observe($('#events-all'));
   window.setInterval(refreshData, REFRESH_MS);
   window.setInterval(()=>{if(!document.hidden) loadRocketLaunches();}, REFRESH_MS);
   window.setInterval(() => {
