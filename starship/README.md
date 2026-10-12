@@ -8,7 +8,8 @@ neither consumer reads it. Its September 14 estimate was imported once as
 
 ## Collection and rollout
 
-On kitchen.local, `com.dailybrief.starship` runs `starship/run.sh` at **07:25 daily (America/Detroit)**, using the existing `data-collect/.venv` and `/opt/homebrew/bin/node`.
+On kitchen.local, `com.dailybrief.starship` runs `starship/run.sh` at **07:25 daily (America/Detroit)** and at load, using the existing `data-collect/.venv` and `/opt/homebrew/bin/node`.
+It is a system LaunchDaemon running as `phurley`, so no desktop login is needed.
 This runs independently of the general crawler and before the morning standalone
 editorial timer at 07:40. The collector's own editorial chain may run at another
 time; it reads the latest atomic Starship record with the same freshness gate.
@@ -42,16 +43,22 @@ outage does not hide the others. Schema or adapter-process failures exit nonzero
 and preserve the previously published document. Operational logs are at
 `starship/collector.log`; source HTTP success is not mission verification.
 
-Install/reload after changing the plist (script changes need no reload):
+Install the daily system jobs as `phurley` from the deployed checkout:
 
 ```sh
-cp scripts/launchd/com.dailybrief.starship.plist ~/Library/LaunchAgents/
-launchctl bootout gui/$(id -u)/com.dailybrief.starship 2>/dev/null || true
-launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.dailybrief.starship.plist
-launchctl print gui/$(id -u)/com.dailybrief.starship
-# Run the installed job immediately:
-launchctl kickstart gui/$(id -u)/com.dailybrief.starship
+sudo -v
+scripts/install_background_jobs.sh
+sudo launchctl print system/com.dailybrief.starship
+# An intentional manual refresh:
+sudo launchctl kickstart system/com.dailybrief.starship
 ```
+
+The installer also installs science and calendar, archives their old daily
+LaunchAgents, and starts newly loaded daemons immediately. Repeating it with
+unchanged plists leaves running jobs alone. For a changed Starship plist, wait
+until the job is idle, run `sudo launchctl bootout system/com.dailybrief.starship`,
+then rerun the installer. Script changes need no reload. The tracked system
+template is `scripts/launchd/com.dailybrief.starship.daemon.plist`.
 
 ## Evidence and adapters
 
@@ -148,7 +155,7 @@ and path-scoped commits. The collector releases that lock before chaining
 vibe-check. Per-job `shlock` PID locks still serialize collection. GitHub jobs
 operate in separate checkouts; the shared publisher rebuilds against the latest remote after a racing push.
 A failed push is retained locally and retried by the next Starship publication.
-Check `launchctl print gui/$(id -u)/com.dailybrief.starship`, the log and the
+Check `sudo launchctl print system/com.dailybrief.starship`, the log and the
 record's `lastAttemptAt`/source health after installing or changing a schedule.
 
 

@@ -147,26 +147,38 @@ article evidence; fuzzy discovery grouping remains a future extension.
 
 ## Recurring jobs on kitchen
 
-There is no user crontab. These launchd jobs are the active equivalent:
+There is no user crontab. The collector, science, calendar and Starship jobs run
+as `phurley` in launchd's system domain, independent of desktop login. The
+standalone vibe and edition timers remain LaunchAgents; the system publishers
+also rebuild editions, and the collector/science wrappers chain vibe refreshes.
 
 | Job | Cadence | Tracked configuration |
 | --- | --- | --- |
-| `com.dailybrief.science` | daily at 06:00 local (Detroit) | `scripts/launchd/com.dailybrief.science.plist` |
-| `com.dailybrief.collect` | every 3600 seconds | `data-collect/launchd/com.dailybrief.collect.plist` |
-| `com.dailybrief.starship` | daily at 07:25 America/Detroit | `scripts/launchd/com.dailybrief.starship.plist` |
+| `com.dailybrief.science` | daily at 06:00 local (Detroit), also at load | `scripts/launchd/com.dailybrief.science.daemon.plist` |
+| `com.dailybrief.collect` | every 3600 seconds, also at load | `data-collect/launchd/com.dailybrief.collect.daemon.plist` |
+| `com.dailybrief.starship` | daily at 07:25 America/Detroit, also at load | `scripts/launchd/com.dailybrief.starship.daemon.plist` |
 | `com.dailybrief.vibe` | hourly at :40 | `vibe-check/launchd/com.dailybrief.vibe.plist` |
-| `com.dailybrief.calendar` | daily at 03:30 local | `scripts/launchd/com.dailybrief.calendar.plist` |
+| `com.dailybrief.calendar` | daily at 03:30 local, also at load | `scripts/launchd/com.dailybrief.calendar.daemon.plist` |
 | `com.dailybrief.edition` | daily at 00:05 local | `scripts/launchd/com.dailybrief.edition.plist` |
 
-Install/reload the science timer (not a second cron entry):
+Install the three daily system timers from the deployed checkout as `phurley`:
 
 ```sh
-cp ../scripts/launchd/com.dailybrief.science.plist ~/Library/LaunchAgents/
-launchctl bootout gui/$(id -u)/com.dailybrief.science 2>/dev/null || true
-launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.dailybrief.science.plist
-launchctl kickstart gui/$(id -u)/com.dailybrief.science
-launchctl print gui/$(id -u)/com.dailybrief.science
+cd /Users/phurley/daily-brief
+sudo -v
+scripts/install_background_jobs.sh
+sudo launchctl print system/com.dailybrief.science
+# An intentional manual refresh:
+sudo launchctl kickstart system/com.dailybrief.science
 ```
+
+The installer validates all templates, installs root-owned mode-644 plists in
+`/Library/LaunchDaemons/`, and archives the old daily LaunchAgents. New jobs run
+immediately; repeating installation with unchanged plists does not restart them.
+To change a loaded daemon's configuration, wait for its run to finish, use
+`sudo launchctl bootout system/com.dailybrief.science`, then rerun the installer.
+Script updates take effect on the next run without reloading. Inspect
+`data-collect/science.log` and `data-collect/science-launchd.log` for failures.
 
 The existing collector, calendar, launch and vibe wrappers share
 `/tmp/dailybrief-publish.lock` with science (through their Git lock helper).

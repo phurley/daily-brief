@@ -44,7 +44,7 @@ import json
 import os
 import re
 import sys
-import time
+import time as clock_time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -842,13 +842,13 @@ def _llm_request(messages: list[dict], schema: dict, model: str, api_key: str) -
                 payload.pop("response_format")
                 continue
             if exc.code in LLM_RETRYABLE and attempt < 3:
-                time.sleep(1.0 * (2 ** attempt))
+                clock_time.sleep(1.0 * (2 ** attempt))
                 continue
             raise RuntimeError(last) from exc
         except (urllib.error.URLError, TimeoutError, OSError, ValueError, json.JSONDecodeError) as exc:
             last = f"{type(exc).__name__}: {exc}"
             if attempt < 3:
-                time.sleep(1.0 * (2 ** attempt))
+                clock_time.sleep(1.0 * (2 ** attempt))
                 continue
             raise RuntimeError(last) from exc
     raise RuntimeError(last)

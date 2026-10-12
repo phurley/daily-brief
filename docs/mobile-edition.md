@@ -99,16 +99,25 @@ Starship section supplies the current target without enlarging the launch line.
 
 ## Recurring publishers (kitchen.local and GitHub)
 
-There is no user crontab on kitchen.local; these are launchd agents:
+There is no user crontab on kitchen.local. System LaunchDaemons run as `phurley`
+without requiring that account's desktop login; GUI LaunchAgents require it.
 
-| Agent | Schedule in kitchen.local time | Entry point |
-| --- | --- | --- |
-| `com.dailybrief.collect` | Every 3600 seconds; missed work coalesces on wake | `data-collect/run_collect.sh` |
-| `com.dailybrief.vibe` | Hourly at :40, also chained from collection | `vibe-check/run.sh` |
-| `com.dailybrief.calendar` | Daily 03:30 | `scripts/run_calendar.sh` |
-| `com.dailybrief.science` | Daily at 06:00 Detroit time; browser order rotates every four hours | `data-collect/run_science.sh` |
-| `com.dailybrief.starship` | Daily at 07:25 America/Detroit | `starship/run.sh` |
-| `com.dailybrief.edition` | Daily 00:05; date rollover without AI/network collection | `scripts/run_edition.sh` |
+| Job | Domain | Schedule in kitchen.local time | Entry point |
+| --- | --- | --- | --- |
+| `com.dailybrief.collect` | system | Every 3600 seconds and at load; missed work coalesces on wake | `data-collect/run_collect.sh` |
+| `com.dailybrief.vibe` | GUI | Hourly at :40, also chained from collection/science | `vibe-check/run.sh` |
+| `com.dailybrief.calendar` | system | Daily 03:30 and at load | `scripts/run_calendar.sh` |
+| `com.dailybrief.science` | system | Daily at 06:00 and at load; browser order rotates every four hours | `data-collect/run_science.sh` |
+| `com.dailybrief.starship` | system | Daily at 07:25 and at load | `starship/run.sh` |
+| `com.dailybrief.edition` | GUI | Daily 00:05; date rollover without AI/network collection | `scripts/run_edition.sh` |
+
+Install calendar/science/Starship with `sudo -v` followed by
+`scripts/install_background_jobs.sh` in `/Users/phurley/daily-brief`. It archives
+the old daily LaunchAgents and starts each new daemon for a catch-up refresh.
+Check them with `sudo launchctl print system/com.dailybrief.<job>`.
+The hourly collector's separate system installation is documented in
+`data-collect/README.md`. Every system publisher rebuilds the compact edition;
+the standalone GUI edition timer and GitHub rollover provide additional triggers.
 
 All publishing entry points call `scripts/publish_brief.py` under the shared
 publication lock. The writer captures only its named source output, creates a
@@ -131,7 +140,7 @@ Detroit midnight under EDT and EST, including when the Mac sleeps. GitHub
 publishers share concurrency group `publish-brief`. Source collection schedules
 remain unchanged. A missing calendar secret still skips calendar collection.
 
-Install/update launch agents from their checked-in plists. Existing agents use
+Install/update the remaining GUI LaunchAgents from their checked-in plists. Jobs use
 scripts by absolute path, so script updates take effect at the next run. For the
 new agent:
 

@@ -64,10 +64,17 @@ In CI the same JSON is supplied through the `CALENDARS_JSON` repository secret,
 which `.github/workflows/update-calendar.yml` uses to refresh `calendar.json`
 once a day and commit it when it changes.
 
-On this Mac the same refresh runs nightly via launchd:
+On kitchen.local the same refresh runs at 03:30 Detroit time as a system
+LaunchDaemon running as `phurley`, including without a desktop login.
 `scripts/run_calendar.sh` collects the feeds, then commits and pushes
-`calendar.json` when it changed. Install it with
-`scripts/launchd/com.dailybrief.calendar.plist` (03:30 local).
+`calendar.json` when it changed. From the deployed checkout, run `sudo -v` then
+`scripts/install_background_jobs.sh` to install the calendar, science (06:00)
+and Starship (07:25) daemons. The installer archives their old LaunchAgents
+under `~/Library/LaunchAgents/DisabledDailyBrief/` to prevent duplicate timers.
+Each daemon also runs on installation and boot. Check calendar status with
+`sudo launchctl print system/com.dailybrief.calendar`; its collector log is
+`data-collect/cron.log`. These jobs still need the Mac awake and online;
+FileVault must be unlocked after a restart before the system can finish booting.
 
 The collector:
 

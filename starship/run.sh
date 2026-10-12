@@ -16,4 +16,4 @@ fi
 /usr/bin/caffeinate -i "$NODE" starship/collect.mjs
 if [ "${STARSHIP_NO_PUSH:-0}" = 1 ]; then exit 0; fi
 # Source history and compact web/widget edition share one scoped publication.
-exec /usr/bin/python3 scripts/publish_brief.py starship.json starship/history
+/usr/bin/python3 scripts/publish_brief.py starship.json starship/history

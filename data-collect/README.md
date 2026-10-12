@@ -233,6 +233,12 @@ LaunchAgent out of `~/Library/LaunchAgents/` to prevent duplicate timers.
 Check it with `sudo launchctl print system/com.dailybrief.collect`.
 Edit `UserName` and checkout paths when installing on another machine.
 
+Calendar, science and Starship also use system LaunchDaemons on kitchen.local.
+From `/Users/phurley/daily-brief`, run `sudo -v` then
+`scripts/install_background_jobs.sh` to install their daily timers and archive
+the old LaunchAgents. They run as `phurley` at load and at 03:30, 06:00 and 07:25
+Detroit time respectively, without requiring a desktop login.
+
 #### Recurring event schedules
 
 Recurring sessions are stored with a private `schedule`, separately from a
