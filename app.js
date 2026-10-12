@@ -10,6 +10,7 @@ import { orderNewsStories } from "./story-order.mjs?v=20261009-1";
 import { scienceView, scienceRotationSlot, scienceFreshness, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261009-rotation-1";
 
 import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
+import { contributions } from './scoring.mjs?v=20261009-2';
 import { selectEventLanes, rankEvent, eventStatus } from './ranking.mjs?v=20261009-layout-1';
 import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
@@ -674,7 +675,7 @@ function agendaEntry(event, key, { withDate = false } = {}) {
     }) : null,
   ]);
   return node("button", {
-    className: `agenda-item${selected ? " is-selected" : ""}`,
+    className: `agenda-item${isRecurringEvent(event) ? " event--recurring" : ""}${selected ? " is-selected" : ""}`,
     type: "button",
     dataset: { eventId: event.id, date: key },
     "aria-pressed": String(selected),
@@ -719,6 +720,7 @@ function renderEventCalendarDetail() {
   }
   detail.hidden = false;
   const { event } = entry;
+  detail.classList.toggle("event--recurring", isRecurringEvent(event));
   const index = state.calendarEntries.indexOf(entry);
   const title = node("h3", { className: "calendar-detail__title" });
   title.append(safeLink(eventDisplayTitle(event), event.url));
@@ -733,6 +735,7 @@ function renderEventCalendarDetail() {
     title,
     node("p", { className: "calendar-detail__summary", text: event.summary }),
     facts,
+    eventScoringCriteria(event),
     link,
     node("p", { className: "calendar-detail__position", text: `Event ${index + 1} of ${state.calendarEntries.length} in view` }),
   );
@@ -999,7 +1002,7 @@ function renderPreferenceControls() {
 function eventCard(event) {
   const title = node("h3");
   title.append(safeLink(eventDisplayTitle(event), event.url));
-  return node("article", { className: "card", dataset:{eventId:event.id} }, [
+  return node("article", { className: `card${isRecurringEvent(event) ? " event--recurring" : ""}`, dataset:{eventId:event.id} }, [
     node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
     title,
     node("p", { text: event.summary }),
@@ -1012,7 +1015,7 @@ function claimCard(event) {
   const title = node("strong");
   title.append(safeLink(eventDisplayTitle(event), event.url));
   return node("article", {
-    className: "claim",
+    className: `claim${isRecurringEvent(event) ? " event--recurring" : ""}`,
     dataset: { eventId: event.id },
     "aria-haspopup": "dialog",
     "aria-expanded": "false",
@@ -1063,11 +1066,47 @@ function openEventDetails(event,opener) {
   $('#event-details-title').textContent=event.title;
   const facts=node('dl',{className:'event-preview__facts'});
   for(const [term,value] of eventPreviewFacts(event)) facts.append(node('div',{},[node('dt',{text:term}),node('dd',{text:value})]));
-  const signals=Object.entries(event.scoring?.signals || {}).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([name,value])=>`${name.replaceAll('_',' ')}: ${Math.round(value*100)}%`).join(' · ');
   $('#event-details-content').replaceChildren(node('p',{text:event.summary}),facts,
-    node('p',{text:signals ? `Score signals (estimated topic matches): ${signals}. The rating combines these signals with distance and preferences.` : 'Score explanation is not available for this event.'}),recommendationDetails(event),node('p',{id:'event-details-status',role:'status'}),safeLink('Visit website ↗',event.url));
+    eventScoringCriteria(event),recommendationDetails(event),node('p',{id:'event-details-status',role:'status'}),safeLink('Visit website ↗',event.url));
   dialog.onclose=()=>{if(opener.isConnected) opener.focus({preventScroll:true});else $('[data-calendar-open]').focus();};
   dialog.showModal();$('#event-details-close').focus();
+}
+
+// Recurrence is an estimated signal in the event feed, not a ranking penalty.
+function isRecurringEvent(event) {
+  return Number(event.scoring?.signals?.recurring) >= 0.5;
+}
+
+function eventScoringCriteria(event) {
+  const section = node('section', { className: 'event-scoring', 'aria-label': 'All scoring criteria' });
+  section.append(node('h4', { text: 'All scoring criteria' }));
+  const signals = event.scoring?.signals || {};
+  const names = [...new Set([...Object.keys(rankingWeights?.signals || {}), ...Object.keys(signals)])].sort();
+  if (!names.length) {
+    section.append(node('p', { text: 'Score explanation is not available for this event.' }));
+    return section;
+  }
+  const scale = rankingWeights?.scale ?? 100;
+  const rows = new Map(contributions(signals, rankingWeights).map(row => [row.name, row]));
+  section.append(node('p', { text: rankingWeights
+    ? `Estimated matches and their contributions to the taste rating. Base: ${(rankingWeights.base ?? 0.5) * scale} points; the total is limited to 0–${scale}. Missing signals contribute 0 points.`
+    : 'Estimated matches for every scoring criterion. Scoring weights are unavailable.' }));
+  const list = node('dl', { className: 'event-scoring__criteria' });
+  for (const name of names) {
+    const value = signals[name];
+    const row = rows.get(name);
+    const points = row ? Math.round(row.delta * scale * 10) / 10 : null;
+    const match = Number.isFinite(value) ? `${Math.round(value * 100)}%` : 'Unknown';
+    const contribution = points === null ? 'weight unavailable' : `${points > 0 ? '+' : ''}${points} pts`;
+    const adjusted = row && Number.isFinite(value) && Math.abs(row.appliedProbability - value) > 0.00001
+      ? `; ${Math.round(row.appliedProbability * 100)}% applied after market overlap adjustment` : '';
+    list.append(node('div', { dataset: { criterion: name } }, [
+      node('dt', { text: name.replaceAll('_', ' ') }),
+      node('dd', { text: `${match} · ${contribution}${adjusted}` }),
+    ]));
+  }
+  section.append(list);
+  return section;
 }
 
 function eventPreviewFacts(event) {

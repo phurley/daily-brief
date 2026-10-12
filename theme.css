@@ -557,3 +557,17 @@ section[aria-busy="true"] { min-height: 10rem; }
 
 .starship-outlook { margin: -.25rem 0 .75rem; padding: .5rem .75rem; border: 1px solid var(--line); border-radius: .6rem; font-size: .8rem; overflow-wrap: anywhere; }
 .starship-outlook summary { cursor: pointer; color: var(--accent-dark); }
+
+/* Keep recurring events subtly distinct across the calendar and event lists. */
+.card.event--recurring { background: color-mix(in srgb, #000 5%, var(--card)); }
+.claim.event--recurring { background: color-mix(in srgb, #000 5%, color-mix(in srgb, var(--sun) 7%, transparent)); }
+.agenda-item.event--recurring { background: color-mix(in srgb, #000 5%, color-mix(in srgb, var(--paper) 55%, transparent)); }
+.agenda-item.event--recurring.is-selected { background: color-mix(in srgb, #000 5%, color-mix(in srgb, var(--sun) 14%, transparent)); }
+.calendar-detail.event--recurring { background: color-mix(in srgb, #000 5%, var(--panel)); }
+.event-scoring { margin-top: .9rem; padding-top: .65rem; border-top: 1px solid var(--line); }
+.event-scoring h4 { margin: 0; font-size: .95rem; }
+.event-scoring > p { color: var(--muted); font-size: .75rem; line-height: 1.45; }
+.event-scoring__criteria { margin: 0; font-size: .78rem; }
+.event-scoring__criteria > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .5rem; padding: .35rem 0; border-bottom: 1px solid var(--line); }
+.event-scoring__criteria dt { text-transform: capitalize; }
+.event-scoring__criteria dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
