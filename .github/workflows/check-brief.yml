@@ -28,7 +28,11 @@ jobs:
       - run: npm ci
       - run: npm run build:shell
       - run: npm test
-      - run: python3 scripts/test_publish_brief.py
+      - name: Collector and publisher regression checks
+        run: |
+          python3 scripts/test_calendar_retry.py
+          python3 scripts/test_starship_job_lock.py
+          python3 scripts/test_publish_brief.py
       - run: npx playwright install --with-deps chromium webkit
       - name: Browser checks
         run: |
