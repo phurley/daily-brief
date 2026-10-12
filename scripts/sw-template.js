@@ -3,7 +3,12 @@
 const SHELL='daily-brief-shell-__SHELL_HASH__';
 const DATA='daily-brief-sections-v1';
 const SHELL_FILES=__SHELL_FILES__;
-self.addEventListener('install',event=>event.waitUntil(caches.open(SHELL).then(cache=>cache.addAll(SHELL_FILES.map(path=>new Request(path,{cache:'reload'}))))));
+// Use per-shell download URLs to avoid reusing assets from earlier builds.
+// Normal page requests match these entries by path.
+self.addEventListener('install',event=>event.waitUntil(caches.open(SHELL).then(cache=>cache.addAll(SHELL_FILES.map(path=>{
+ const url=new URL(path,self.registration.scope);url.searchParams.set('shell',SHELL);
+ return new Request(url,{cache:'reload'});
+})))));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
  for(const key of await caches.keys()) if(key.startsWith('daily-brief-') && key!==SHELL && key!==DATA) await caches.delete(key);
  await self.clients.claim();
@@ -15,7 +20,7 @@ self.addEventListener('fetch',event=>{
  // Manifest remains network-only: a cache hit is never called a successful check.
  if(relative==='brief-manifest.json' || relative==='widget-events.json') return;
  if(event.request.mode==='navigate' && (relative==='' || relative==='index.html')) {
-  event.respondWith(caches.open(SHELL).then(cache=>cache.match(new URL('index.html',base).href)));return;
+  event.respondWith(caches.open(SHELL).then(cache=>cache.match(new URL('index.html',base).href,{ignoreSearch:true})));return;
  }
  if(SHELL_FILES.some(path=>path.split('?')[0]===relative)) {
   event.respondWith(caches.open(SHELL).then(async cache=>(await cache.match(event.request,{ignoreSearch:true})) || fetch(event.request)));return;
