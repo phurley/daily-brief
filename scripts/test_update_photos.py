@@ -49,6 +49,23 @@ class PhotosTests(unittest.TestCase):
         image, expansions = fixture(original=None, capture='')
         self.assertIsNone(photos.capture_date(image, {} )[0])
 
+    def test_gallery_photo_link_preserves_the_gallery_path_and_image_identity(self):
+        url = 'https://photos.smugmug.com/Misc/Field-Trip/i-one/0/hash/X2/photo-X2.jpg'
+        self.assertEqual(photos.gallery_photo_url('one', url, 'https://photos.hurleyhome.com'),
+                         'https://photos.hurleyhome.com/Misc/Field-Trip/i-one')
+        self.assertIsNone(photos.gallery_photo_url('wrong-key', url, 'https://photos.hurleyhome.com'))
+        self.assertIsNone(photos.gallery_photo_url('one', 'https://photos.smugmug.com/i-one/0/photo.jpg',
+                                                   'https://photos.hurleyhome.com'))
+        image, expansions = fixture()
+        image['WebUri'] = 'https://photos.hurleyhome.com/Canonical-Gallery/i-one'
+        result = photos.photo_candidate(image, expansions, date(2026, 10, 12), 'https://photos.hurleyhome.com')
+        self.assertEqual(result['sourceUrl'], image['WebUri'])
+
+    def test_unknown_gallery_does_not_publish_a_broken_root_photo_link(self):
+        image, expansions = fixture()
+        result = photos.photo_candidate(image, expansions, date(2026, 10, 12), 'https://photos.hurleyhome.com')
+        self.assertNotIn('sourceUrl', result)
+
     def test_uses_served_dimensions_after_source_rotation_and_keeps_portraits(self):
         image, expansions = fixture()
         expansions['/details/one']['ImageSizeDetails']['ImageSizeX2Large'].update(Width=853, Height=1280)

@@ -23,7 +23,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 DETROIT = ZoneInfo('America/Detroit')
-CACHE_VERSION = 2
+CACHE_VERSION = 3
 
 
 def atomic_json(path, data):
@@ -62,6 +62,17 @@ def capture_date(image, metadata):
     return None, None
 
 
+def gallery_photo_url(image_key, image_url, site):
+    # SmugMug's custom domains require the gallery path before /i-<key>.
+    # Display-size URLs retain that path; a bare site/i-<key> returns 404.
+    marker = f'/i-{image_key}/'
+    path = urlsplit(image_url).path
+    gallery_path, found, _ = path.partition(marker)
+    if not found or not gallery_path:
+        return None
+    return site.rstrip('/') + gallery_path + marker.rstrip('/')
+
+
 def photo_candidate(image, expansions, target, site):
     if image.get('IsVideo') or image.get('Hidden') or image.get('Processing'):
         return None
@@ -94,12 +105,15 @@ def photo_candidate(image, expansions, target, site):
     # GPS coordinates, filenames, album-name guesses and API keys stay out.
     location = ', '.join(dict.fromkeys(plain(metadata.get(k)) for k in ['City', 'State', 'Country'] if plain(metadata.get(k))))
     description = plain(image.get('Title') or image.get('Caption') or metadata.get('Caption'))
-    return {'id': f'smugmug-{image_key}', 'imageKey': image_key,
+    candidate = {'id': f'smugmug-{image_key}', 'imageKey': image_key,
             'imageUrl': image_url, 'takenDate': taken.isoformat(),
             'width': width, 'height': height,
             'takenDateSource': source, 'location': location,
-            'description': description or f'Photograph taken on {taken.strftime("%B %-d, %Y")}.',
-            'sourceUrl': image.get('WebUri') or f'{site}/i-{image_key}'}
+            'description': description or f'Photograph taken on {taken.strftime("%B %-d, %Y")}.'}
+    source_url = image.get('WebUri') or gallery_photo_url(image_key, image_url, site)
+    if source_url and urlsplit(source_url).scheme == 'https':
+        candidate['sourceUrl'] = source_url
+    return candidate
 
 
 class SmugMug:

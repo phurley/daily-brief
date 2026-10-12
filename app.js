@@ -1501,6 +1501,8 @@ function showPhoto(index, { restart = true } = {}) {
   slides.forEach((slide, position) => {
     const active = position === state.photoIndex;
     const image = slide.querySelector('img');
+    const link = slide.querySelector('.memory__photo-link');
+    if (link) link.tabIndex = active ? 0 : -1;
     if (active && !image.getAttribute('src')) image.src = image.dataset.src;
     slide.classList.toggle("is-active", active);
     slide.setAttribute("aria-hidden", String(!active));
@@ -1544,6 +1546,22 @@ function renderPhoto() {
       loading: index === 0 ? "eager" : "lazy",
       decoding: "async",
     });
+    const sourceUrl = safeImageUrl(photo.sourceUrl);
+    const photoLink = sourceUrl ? node("a", {
+      className: "memory__photo-link", href: sourceUrl, target: "_blank", rel: "noopener noreferrer",
+      tabindex: "-1", title: "Double-click to open on SmugMug",
+      "aria-label": `Open photo on SmugMug: ${photo.description}`,
+    }, [image]) : image;
+    if (sourceUrl) {
+      // Keep ordinary clicks in the slideshow; Enter still follows the link.
+      photoLink.addEventListener("click", (event) => {
+        if (event.detail > 0) event.preventDefault();
+      });
+      photoLink.addEventListener("dblclick", (event) => {
+        event.preventDefault();
+        window.open(sourceUrl, "_blank", "noopener,noreferrer");
+      });
+    }
     const overlay = node("figcaption", { className: "memory__overlay" }, [
       photo.location ? node("p", { className: "memory__meta", text: `⌖ ${photo.location}` }) : null,
       node("time", { className: "memory__date", text: photoDateLabel(photo.takenDate), datetime: photo.takenDate }),
@@ -1551,7 +1569,7 @@ function renderPhoto() {
     return node("figure", {
       className: 'memory__slide',
       "aria-hidden": 'true',
-    }, [image, overlay]);
+    }, [photoLink, overlay]);
   });
   replaceChildren("#photo-slides", slides);
 

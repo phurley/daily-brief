@@ -125,7 +125,8 @@ rendering preserves the current order and photo. Images download only when shown
 dots adapts to the frame width; arrows still reach every eligible photo. Motion
 pauses on hover/focus, in background tabs, and for reduced motion. Captions show a
 small original date at bottom right (e.g. 20 Sept 2001) and explicit location
-metadata when available; descriptions remain image alt text.
+metadata when available; descriptions remain image alt text. Double-click a photo
+to open its SmugMug page in a new tab; keyboard users can focus it and press Enter.
 
 The existing 03:30 calendar job on `kitchen.local` also refreshes the photo
 candidates; no additional timer is needed. Successful queries cache under the
