@@ -116,7 +116,7 @@ class IdentityTests(unittest.TestCase):
         body='# Calendar feed (ICS): https://venue.test/calendar.ics\n\n- 2026-10-23 17:00Z: Example screening @ Library\n  uid: abc\n  recurrence_id: 20261023T170000Z\n  status: CANCELLED\n  last_modified: 20261009T120000Z\n'
         parsed=feeds.parse_ics_markdown(body)[0]
         self.assertEqual(parsed['sourceEventId'], 'abc')
-        self.assertEqual(parsed['recurrenceId'], '20261023T170000Z')
+        self.assertEqual(parsed['recurrenceId'], '2026-10-23T17:00:00+00:00')
         out=pipeline.finalize(event(), dict(parsed, source_slug='library'))
         self.assertEqual(out['sourceEventId'], 'abc')
         self.assertEqual(out['status'], 'canceled')

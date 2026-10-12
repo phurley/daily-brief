@@ -64,7 +64,13 @@ def is_detail(record):
 
 def instant(value):
     try:
-        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        raw = str(value)
+        if re.fullmatch(r"\d{8}T\d{6}Z?", raw):
+            dt = datetime.strptime(raw.rstrip("Z"), "%Y%m%dT%H%M%S")
+            if raw.endswith("Z"):
+                dt = dt.replace(tzinfo=timezone.utc)
+        else:
+            dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=dates.EASTERN)
         return dt.astimezone(timezone.utc).isoformat()
@@ -93,6 +99,8 @@ def native(record):
     if not record.get("sourceEventId") or not record.get("sourceId"):
         return None
     instance = record.get("recurrenceId")
+    if instance:
+        instance = instant(instance) or instance
     if not instance and record.get("recurrenceRule"):
         instance = instant(record.get("start"))
     return (record["sourceId"], record["sourceEventId"], instance or "single")
@@ -131,7 +139,7 @@ def compare(a, b, fuzzy=False):
     na, nb = native(a), native(b)
     same_native = na is not None and na == nb
     same_url = bool(a.get("canonicalUrl") and a.get("canonicalUrl") == b.get("canonicalUrl"))
-    if a.get("recurrenceId") and b.get("recurrenceId") and a["recurrenceId"] != b["recurrenceId"]:
+    if a.get("recurrenceId") and b.get("recurrenceId") and (instant(a["recurrenceId"]) or a["recurrenceId"]) != (instant(b["recurrenceId"]) or b["recurrenceId"]):
         return "distinct", "different-recurrence"
     if (na and nb and a.get("sourceId") == b.get("sourceId") and na != nb):
         return "distinct", "different-native-id"

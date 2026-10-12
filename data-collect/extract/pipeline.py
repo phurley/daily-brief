@@ -33,11 +33,11 @@ import concurrent.futures as futures
 import json
 import re
 import threading
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-from . import dates, enrich, identity, jev, llm, prompts, publish, retry, router, scoring, urls
+from . import dates, enrich, identity, jev, llm, prompts, publish, retry, router, scoring, schedules, urls
 from .funnel import slugify
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
@@ -153,7 +153,8 @@ def _fingerprint(rec: dict[str, Any]) -> str:
     base = f"{rec.get('source_slug')}:{EXTRACTOR_VERSION}:{cid}"
     if rec.get("_kind") == "feed":
         content = {k: rec.get(k) for k in ("title", "summary", "content", "url", "start", "end",
-                                          "venue", "status", "recurrenceId", "sourceUpdatedAt")}
+                                          "venue", "status", "recurrenceId", "sourceUpdatedAt", "schedule",
+                                          "recurrenceRule", "recurrenceTimezone", "recurrenceDates", "excludedDates")}
         return base + ":" + identity.digest(content)
     return base
 
@@ -196,6 +197,15 @@ def load_store(path: Path) -> list[dict[str, Any]]:
 
 def _record_age_days(record: dict[str, Any], ref: datetime) -> Optional[float]:
     iso = record.get("start") or record.get("publishedAt") or record.get("addedAt")
+    if schedules.is_series(record):
+        schedule = record.get("schedule") or {}
+        try:
+            upcoming = next(schedules.slots(record, ref.date(), ref.date() + timedelta(days=schedules.HORIZON_DAYS)), None)
+            if upcoming:
+                return (upcoming[1] - ref).total_seconds() / 86400
+        except (ValueError, TypeError, KeyError, OverflowError):
+            pass
+        iso = schedule.get("endDate") or record.get("observedAt") or record.get("addedAt") or iso
     if not iso:
         return None
     try:
@@ -228,6 +238,13 @@ def candidate_days(rec: dict[str, Any], ref: datetime) -> Optional[float]:
     dates scanned from the text sit in ``signals.date_spans``. ``None`` means
     undated (kept: the Jev gate decides those).
     """
+    if schedules.is_series(rec):
+        try:
+            upcoming = next(schedules.slots(rec, ref.date(), ref.date() + timedelta(days=90)), None)
+            if upcoming:
+                return (upcoming[1] - ref).total_seconds() / 86400
+        except (ValueError, TypeError, KeyError, OverflowError):
+            return None  # Retain malformed schedules for repair, not stale-drop.
     days: list[float] = []
     age = rec.get("age_days")
     if isinstance(age, (int, float)):
@@ -249,9 +266,16 @@ def candidate_days(rec: dict[str, Any], ref: datetime) -> Optional[float]:
 def valid_record(record: dict[str, Any]) -> bool:
     """Use the publisher's contract, without its presentation age filter."""
     if record.get("kind") == "event":
-        event = publish.to_event(record)
-        return bool(event and not publish._event_date_errors(event)
-                    and publish._validator("events.schema.json", "event").is_valid(event))
+        if not schedules.validate(record):
+            return False
+        series = schedules.is_series(record)
+        event = publish.to_event(record, require_start=not series)
+        validator = publish._validator("events.schema.json", "event")
+        if series and event and "start" not in event:
+            metadata_schema = dict(validator.schema, required=[k for k in validator.schema["required"] if k != "start"])
+            validator = validator.evolve(schema=metadata_schema)
+        date_errors = publish._event_date_errors(event) if event and "start" in event else []
+        return bool(event and not date_errors and validator.is_valid(event))
     if record.get("kind") == "news":
         story = publish.to_story(record)
         return bool(story and publish._validator("news.schema.json", "story").is_valid(story))
@@ -387,6 +411,7 @@ def finalize(record: dict[str, Any], origin: dict[str, Any]) -> Optional[dict[st
         # Structured feed fields are source evidence, not model-generated IDs.
         if origin.get("feed_kind") in ("ics", "jsonld"):
             for key in ("sourceEventId", "recurrenceId", "recurrenceRule", "sourceUpdatedAt",
+                        "recurrenceTimezone", "recurrenceDates", "excludedDates", "schedule",
                         "start", "end", "venue", "timePrecision", "status", "statusEvidence", "previousStart"):
                 if origin.get(key):
                     record[key] = origin[key]
@@ -397,6 +422,7 @@ def finalize(record: dict[str, Any], origin: dict[str, Any]) -> Optional[dict[st
             record.pop("status", None)
         record["observedAt"] = record["addedAt"]
         record["sourceId"] = origin.get("source_slug") or ""
+        schedules.attach(record, origin)
         record = identity.prepare(record)
         record["aliases"] = [record["id"]]
         record["id"] = record["sourceRecordId"]
@@ -412,11 +438,12 @@ def structured_event(candidate, spec=None):
     if candidate.get("feed_kind") not in ("ics", "jsonld"):
         return None
     city = candidate.get("city") or (spec or {}).get("default_city")
-    if not city or not all(candidate.get(k) for k in ("title", "summary", "start", "venue", "url")):
+    if not city or not all(candidate.get(k) for k in ("title", "summary", "venue", "url")) or not (candidate.get("start") or candidate.get("schedule")):
         return None
     result = {k: candidate[k] for k in ("title", "summary", "start", "end", "venue", "url",
               "status", "statusEvidence", "timePrecision", "sourceEventId", "recurrenceId",
-              "recurrenceRule", "sourceUpdatedAt", "previousStart") if candidate.get(k)}
+              "recurrenceRule", "recurrenceTimezone", "recurrenceDates", "excludedDates", "schedule",
+              "sourceUpdatedAt", "previousStart") if candidate.get(k)}
     return dict(result, kind="event", city=city, category=candidate.get("category") or "Event")
 
 
@@ -474,6 +501,8 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
         reason = None
         repair_records = [copy.deepcopy(r) for r in (previous or {}).get(_fingerprint(rec), [])
                           if r.get("kind") == "event" and not valid_record(r)]
+        if any(schedules.is_series(r) and not schedules.validate(r) for r in repair_records):
+            repair_records = []  # An unresolved schedule needs source extraction, not metadata enrichment.
         if any(not all(r.get(k) for k in ("title", "summary", "url")) for r in repair_records):
             repair_records = []  # Touch-up cannot supply these; re-extract the source text.
         if repair_records:
@@ -526,7 +555,7 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
                 # in the candidate's own text often carry the date/venue the
                 # article page lacks.
                 for r in records:
-                    if not any(not r.get(f) for f in ("start", "venue", "city", "category")):
+                    if not any(not r.get(f) for f in ("venue", "city", "category")) and (r.get("start") or schedules.is_series(r)):
                         continue
                     with enrich_lock:
                         allowed = enrich_state["used"] < enrich_limit

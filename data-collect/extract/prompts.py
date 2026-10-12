@@ -21,10 +21,35 @@ _SYSTEM = (
     "You extract structured records from crawled local content for a daily brief. "
     "Use only information present in the text. Never invent dates, venues, or "
     "sources. Prefer the most specific value available. If a field is unknown, "
-    "omit it or use null. Respond with JSON only."
+    "omit it or use null. Group repeated performances into one event with a schedule; "
+    "keep different weekday showtimes, exceptions, and additional dates. Respond with JSON only."
 )
 
+_SCHEDULE = {
+    "type": ["object", "null"], "additionalProperties": False,
+    "description": "Recurring sessions or explicit show dates. A series closing date is NOT a session end. Use continuous only for an uninterrupted event. Include an exact source quote as evidence; unknown when recurrence cannot be resolved. Never invent a performance end time.",
+    "properties": {
+        "kind": {"type": "string", "enum": ["weekly", "dates", "continuous", "unknown"]},
+        "timezone": {"type": "string", "description": "IANA timezone, normally America/Detroit."},
+        "startDate": {"type": ["string", "null"], "description": "Series opening YYYY-MM-DD, or null."},
+        "endDate": {"type": ["string", "null"], "description": "Inclusive series closing YYYY-MM-DD, or null."},
+        "rules": {"type": "array", "items": {"type": "object", "additionalProperties": False,
+            "properties": {
+                "daysOfWeek": {"type": "array", "items": {"type": "string", "enum": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"]}},
+                "startTime": {"type": ["string", "null"], "description": "Local HH:MM:SS; null if unknown."},
+                "endTime": {"type": ["string", "null"], "description": "Verified session end HH:MM:SS, or null."},
+                "startDate": {"type": ["string", "null"]}, "endDate": {"type": ["string", "null"]}},
+            "required": ["daysOfWeek", "startTime", "endTime", "startDate", "endDate"]}},
+        "dates": {"type": "array", "description": "For kind=dates, every explicit occurrence. For weekly, additional performances outside the weekly rules.",
+            "items": {"type": "object", "additionalProperties": False,
+                "properties": {"start": {"type": "string"}, "end": {"type": ["string", "null"]}}, "required": ["start", "end"]}},
+        "excludedDates": {"type": "array", "items": {"type": "string"}, "description": "Explicit skipped YYYY-MM-DD dates or ISO datetimes."},
+        "evidence": {"type": "string", "description": "Exact quote from this event's source supporting the schedule."}},
+    "required": ["kind", "timezone", "startDate", "endDate", "rules", "dates", "excludedDates", "evidence"],
+}
+
 _EVENT_FIELDS = {
+    "schedule": _SCHEDULE,
     "status": {"type": ["string", "null"], "enum": ["scheduled", "canceled", "postponed", "rescheduled", None],
                "description": "Only explicit source status. Null when unstated; absence never means cancellation."},
     "statusEvidence": {"type": ["string", "null"], "description": "Exact source quote supporting status, or null."},
@@ -41,7 +66,7 @@ _EVENT_FIELDS = {
     },
     "end": {
         "type": ["string", "null"],
-        "description": "Absolute end datetime ISO-8601 with offset, or null. Never invent one.",
+        "description": "Absolute end of a single occurrence, ISO-8601 with offset, or null. A recurring series closing date belongs in schedule.endDate. Never invent an end time.",
     },
     "venue": {"type": ["string", "null"], "description": "Venue or place name."},
     "city": {"type": ["string", "null"], "description": "City name."},

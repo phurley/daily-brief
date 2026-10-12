@@ -1643,7 +1643,16 @@ def _parse_ics(text: str, url: str) -> str:
             current = None
         elif current is not None and ":" in line:
             key, value = line.split(":", 1)
-            current[key.split(";", 1)[0].upper()] = value
+            parts = key.split(";")
+            name = parts[0].upper()
+            if name in ("EXDATE", "RDATE"):
+                current[name] = current.get(name, "") + ("|" if current.get(name) else "") + key + ":" + value
+            else:
+                current[name] = value
+            if name in ("DTSTART", "DTEND", "RECURRENCE-ID"):
+                for part in parts[1:]:
+                    if part.upper().startswith("TZID="):
+                        current[name + "_TZID"] = part[5:].strip('"')
 
     out = [f"# Calendar feed (ICS): {url}", ""]
     for event in events:
@@ -1666,7 +1675,10 @@ def _parse_ics(text: str, url: str) -> str:
         if uid:
             out.append(f"  uid: {uid}")
         for key, label in (("RECURRENCE-ID", "recurrence_id"), ("RRULE", "recurrence_rule"),
-                           ("STATUS", "status"), ("LAST-MODIFIED", "last_modified")):
+                           ("STATUS", "status"), ("LAST-MODIFIED", "last_modified"),
+                           ("DTSTART_TZID", "start_timezone"), ("DTEND_TZID", "end_timezone"),
+                           ("RECURRENCE-ID_TZID", "recurrence_id_timezone"),
+                           ("EXDATE", "excluded_dates"), ("RDATE", "recurrence_dates")):
             if event.get(key):
                 out.append(f"  {label}: {event[key]}")
         url_value = (event.get("URL") or "").strip()

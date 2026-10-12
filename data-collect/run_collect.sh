@@ -112,6 +112,7 @@ if [ ! -s "$RECORDS" ]; then
     exit 0
 fi
 
+"$PY" -m extract.repair_schedules --apply || { echo "schedule repair failed"; exit 1; }
 "$PY" -m extract.publish --out "$OUT_DIR" || { echo "publish failed"; exit 1; }
 
 # Shared shortlist also runs for custom output/no-push replay.

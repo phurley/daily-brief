@@ -35,6 +35,8 @@ from typing import Any, Optional
 from urllib.parse import parse_qsl, urlsplit, urlunsplit
 
 from . import dates as _dates
+from . import schedules
+from zoneinfo import ZoneInfo
 
 RSS_HEADING = "# Feed:"
 ICS_HEADING = "# Calendar feed (ICS):"
@@ -314,6 +316,7 @@ def parse_ics_markdown(body: str, fallback_url: str = "") -> list[dict[str, Any]
                 "timePrecision": "time" if " " in start_raw else "date",
                 "start": normalize_ics_datetime(start_raw),
                 "end": normalize_ics_datetime(end_raw),
+                "_start_raw": start_raw, "_end_raw": end_raw,
                 "venue": location.strip(),
                 "summary": description.strip(),
             }
@@ -333,12 +336,33 @@ def parse_ics_markdown(body: str, fallback_url: str = "") -> list[dict[str, Any]
                 last["recurrenceId"] = value
             elif key == "recurrence_rule" and value:
                 last["recurrenceRule"] = value
+            elif key in ("start_timezone", "end_timezone", "recurrence_id_timezone", "excluded_dates", "recurrence_dates"):
+                last["_" + key] = value
             elif key == "last_modified" and value:
                 last["sourceUpdatedAt"] = normalize_date(value)
             elif key == "status" and value in ("CANCELLED", "CONFIRMED"):
                 last["status"] = "canceled" if value == "CANCELLED" else "scheduled"
                 last["statusEvidence"] = "STATUS:" + value
     for item in out:
+        tz = item.pop("_start_timezone", "America/Detroit")
+        item["recurrenceTimezone"] = tz
+        for field in ("start", "end"):
+            raw = item.pop("_" + field + "_raw")
+            zone = item.pop("_end_timezone", tz) if field == "end" else tz
+            if raw and not raw.endswith("Z") and item.get(field):
+                item[field] = datetime.fromisoformat(item[field]).replace(tzinfo=ZoneInfo(zone)).isoformat()
+        if item.get("recurrenceId"):
+            item["recurrenceId"] = schedules.ics_datetime(item["recurrenceId"], item.pop("_recurrence_id_timezone", tz))
+        for raw_key, field in (("_excluded_dates", "excludedDates"), ("_recurrence_dates", "recurrenceDates")):
+            raw = item.pop(raw_key, "")
+            values = []
+            for clause in raw.split("|") if raw else []:
+                key, _, value = clause.partition(":")
+                tz_match = re.search(r"TZID=([^;]+)", key, re.I)
+                values.extend(schedules.ics_datetime(v, tz_match[1].strip('"') if tz_match else tz)
+                              for v in value.split(","))
+            if values:
+                item[field] = [v for v in values if v]
         # The Events Calendar UIDs are ``post_id-start-end@host``; WordPress
         # resolves ``/?p=post_id`` to the event's pretty URL, so a site-wide
         # ical without per-VEVENT URLs still yields usable event page links.
@@ -443,6 +467,9 @@ def parse_jsonld_markdown(body: str, fallback_url: str = "") -> list[dict[str, A
                 "timePrecision": "time" if "T" in str(obj.get("startDate")) else "date",
                 "start": start,
                 "end": _iso_or_none(obj.get("endDate")),
+                "schedule": schedules.jsonld_schedule(obj),
+                "city": (obj.get("location", {}).get("address", {}).get("addressLocality")
+                         if isinstance(obj.get("location"), dict) and isinstance(obj["location"].get("address"), dict) else None),
                 "venue": _jsonld_venue(obj.get("location")),
                 "summary": re.sub(r"\s+", " ", summary).strip(),
             })

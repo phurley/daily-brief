@@ -54,7 +54,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterator, Optional
 
-from . import dates, dedupe, feeds, locality, urls
+from . import dates, dedupe, feeds, locality, schedules, urls
 
 UTC = timezone.utc
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
@@ -749,7 +749,20 @@ def process_source(
             except ValueError:
                 pass
         if do_filter:
-            if is_ics and entries:
+            if is_ics and schedules.is_series(it):
+                # The first DTSTART can be years old while the series still has
+                # future sessions. Keep malformed rules for the repair queue.
+                try:
+                    upcoming = next(schedules.slots(it, ref.date(), ref.date() + timedelta(days=schedules.HORIZON_DAYS)), None)
+                    keep, reason = True, "recurring_schedule"
+                    if upcoming:
+                        it["age_days"] = dates.age_days(upcoming[1], ref)
+                        it["recency"] = dates.recency(upcoming[1], ref)
+                        signals.update(has_date=True, has_future_date=True, normalized_dates=[upcoming[1].isoformat()],
+                                       nearest_days_from_ref=it["age_days"], date_recency=it["recency"])
+                except (ValueError, TypeError, KeyError, OverflowError):
+                    keep, reason = True, "schedule_requires_repair"
+            elif is_ics and entries:
                 # Forward-looking policy: drop events that are over (end date
                 # before today) or whose start-only date is past the grace
                 # window. An end in the future keeps long-running events

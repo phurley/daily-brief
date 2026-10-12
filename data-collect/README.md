@@ -229,6 +229,26 @@ LaunchAgent out of `~/Library/LaunchAgents/` to prevent duplicate timers.
 Check it with `sudo launchctl print system/com.dailybrief.collect`.
 Edit `UserName` and checkout paths when installing on another machine.
 
+#### Recurring event schedules
+
+Recurring sessions are stored with a private `schedule`, separately from a
+single session's `start`/`end`. Weekday/time rules, explicit dates, exclusions,
+and additional performances are supported. ICS rules retain their timezone,
+EXDATE/RDATE, and recurrence exceptions; JSON-LD `eventSchedule` is parsed too.
+Publication expands schedules from seven days before the edition through
+90 days ahead, before occurrence reconciliation. Each performance has its own
+occurrence ID and a shared series ID. Local times remain fixed across daylight
+saving changes. Unknown session closing times remain omitted. Genuine continuous
+events retain their original range. Unresolved schedules go to the private
+event quarantine rather than appearing available on every day.
+
+The hourly collector runs `python -m extract.repair_schedules --apply` before
+publication. This idempotent migration recovers legacy spans from archived or
+current matching source candidates without model calls or resetting extraction
+fingerprints. Changed stores are backed up beside `extracted_records.jsonl`,
+and corrected snapshots are appended to `event_source_archive.jsonl`. Preview
+with `python -m extract.repair_schedules --report /tmp/schedule-preview.json`.
+
 #### Invalid event dates
 
 Publication explicitly validates event timestamps without relying on optional

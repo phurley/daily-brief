@@ -22,7 +22,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional
 
-from . import dates, identity, jev, scoring as event_scoring
+from . import dates, identity, jev, schedules, scoring as event_scoring
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent.parent
@@ -158,7 +158,7 @@ def _normalize_midnight(value: Any) -> Any:
 
 
 def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None,
-             edition: Optional[datetime] = None) -> Optional[dict[str, Any]]:
+             edition: Optional[datetime] = None, *, require_start: bool = True) -> Optional[dict[str, Any]]:
     if record.get("kind") != "event":
         return None
     event: dict[str, Any] = {}
@@ -205,7 +205,7 @@ def to_event(record: dict[str, Any], cutoff: Optional[datetime] = None,
             dt = _parse_dt(event.get(key))
             if dt:
                 event[key] = dt.astimezone(dates.EASTERN).isoformat()
-    if any(not event.get(k) for k in EVENT_REQUIRED):
+    if any(not event.get(k) for k in EVENT_REQUIRED if require_start or k != "start"):
         return None
     if cutoff is not None:
         # Forward-looking: an event is stale only when it is over. With an
@@ -396,6 +396,10 @@ def build(records: list[dict[str, Any]], edition_date: str,
 
     if identity_mode not in {"legacy", "shadow", "canonical"}:
         raise ValueError("unknown identity mode")
+    records, schedule_errors = schedules.expand(records, cutoff.date(),
+                                                edition_dt.date() + timedelta(days=schedules.HORIZON_DAYS))
+    stats["events_quarantined"] += len(schedule_errors)
+    stats["eventQuarantine"].extend(schedule_errors)
     selected = _dedupe(records) if identity_mode != "canonical" else []
     if identity_mode != "legacy":
         canonical, updated_registry, report = identity.resolve(
