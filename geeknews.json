@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-13T16:40:22.630273Z",
+  "generatedAt": "2026-10-13T16:42:20.049697Z",
   "editionDate": "2026-10-13",
   "starshipEstimatedLaunch": {
     "status": "targeted",
@@ -589,7 +589,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-08T13:26:57Z",
       "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-10-09T18:56:33.050646Z",
+      "checkedAt": "2026-10-13T16:42:20.049697Z",
       "verifiedAt": "2026-10-09T18:56:33.050646Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -789,7 +789,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-06T21:02:14Z",
       "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-10-09T18:56:33.050646Z",
+      "checkedAt": "2026-10-13T16:42:20.049697Z",
       "verifiedAt": "2026-10-09T18:56:33.050646Z",
       "evidenceType": "unknown",
       "topics": [
@@ -840,9 +840,9 @@
     {
       "id": "science-189a59772523fe89",
       "title": "Webb captures commotion from nebula’s stellar jets",
-      "summary": "The James Webb Space Telescope has revealed previously hidden stars in the NGC 7129 stellar nursery, using infrared light to penetrate dust clouds. It observed a central star, LkH(alpha) 234, and its surrounding outflows and younger stars, showing different stages of stellar evolution and their impact on the environment.",
-      "finding": "The James Webb Space Telescope has revealed previously hidden stars in the NGC 7129 stellar nursery, using infrared light to penetrate dust clouds. It observed a central star, LkH(alpha) 234, and its surrounding outflows and younger stars, showing different stages of stellar evolution and their impact on the environment.",
-      "significance": "This observation provides insight into how stars form and evolve, and how they shape their surrounding molecular clouds, potentially influencing future star formation and the eventual erosion of these clouds over millions of years.",
+      "summary": "The James Webb Space Telescope has revealed numerous stars previously obscured by dust clouds in the stellar nursery NGC 7129, located 3300 light-years from Earth. The observations show stars in various developmental stages, including pre-main-sequence stars and protostars, and how their outflows and light interact with and shape their surrounding molecular clouds.",
+      "finding": "The James Webb Space Telescope has revealed numerous stars previously obscured by dust clouds in the stellar nursery NGC 7129, located 3300 light-years from Earth. The observations show stars in various developmental stages, including pre-main-sequence stars and protostars, and how their outflows and light interact with and shape their surrounding molecular clouds.",
+      "significance": "This observation provides an opportunity to explore how stars influence their environment, specifically how they carve out cavities in dense molecular clouds and create conditions that can lead to the formation of even more stars. It also offers insight into the gradual erosion of molecular clouds over millions of years.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Webb_captures_commotion_from_nebula_s_stellar_jets",
       "primarySourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Webb_captures_commotion_from_nebula_s_stellar_jets",
@@ -853,8 +853,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-06T13:00:00Z",
       "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-09T18:57:35.412035Z",
-      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-13T16:42:20.049697Z",
+      "verifiedAt": "2026-10-13T16:42:20.049697Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "astronomy",
@@ -1439,10 +1439,10 @@
     {
       "id": "science-d310e12924f5f441",
       "title": "How 2 US, European Satellites Are Studying Hurricanes During El Niño",
-      "summary": "The Sentinel-6B satellite, launched in November, is now flying behind its predecessor, Sentinel-6 Michael Freilich, to provide precise sea level height measurements that will improve hurricane forecasts.",
-      "finding": "The Sentinel-6B satellite, launched in November, is now flying behind its predecessor, Sentinel-6 Michael Freilich, to provide precise sea level height measurements that will improve hurricane forecasts.",
-      "significance": "These improved forecasts can help protect infrastructure, benefit commercial industries like shipping, and potentially save lives by allowing for better disaster response and evacuation decisions.",
-      "caveat": "The article states that the data will take time to work its way into research models, implying that the full benefits are not yet realized.",
+      "summary": "The Sentinel-6B satellite, launched in November, is providing precise sea level height measurements during an anticipated historic El Niño, with its data expected to improve hurricane forecasts.",
+      "finding": "The Sentinel-6B satellite, launched in November, is providing precise sea level height measurements during an anticipated historic El Niño, with its data expected to improve hurricane forecasts.",
+      "significance": "More accurate hurricane predictions, especially regarding rapid intensification, can save lives and enable better-informed decisions for disaster response, resource mobilization, and evacuation orders.",
+      "caveat": "The data collected by Sentinel-6B will take some time to be incorporated into the research models used by meteorologists and climate scientists.",
       "url": "https://www.nasa.gov/missions/jason-cs-sentinel-6/how-2-us-european-satellites-are-studying-hurricanes-during-el-nino",
       "primarySourceUrl": "https://www.nasa.gov/missions/jason-cs-sentinel-6/how-2-us-european-satellites-are-studying-hurricanes-during-el-nino",
       "source": {
@@ -1452,22 +1452,21 @@
       "sourceQuality": 2,
       "publishedAt": "2026-09-09T16:00:00Z",
       "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-09T18:57:35.412035Z",
-      "verifiedAt": "2026-10-09T18:57:35.412035Z",
+      "checkedAt": "2026-10-13T16:42:20.049697Z",
+      "verifiedAt": "2026-10-13T16:42:20.049697Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "earth-science",
-        "technology",
-        "astronomy"
+        "technology"
       ],
       "entities": [
         "Sentinel-6B",
-        "Sentinel-6 Michael Freilich",
-        "NASA",
         "El Niño",
-        "Jet Propulsion Laboratory"
+        "NASA",
+        "Jet Propulsion Laboratory",
+        "NOAA"
       ],
-      "milestoneStatus": "unknown",
+      "milestoneStatus": "completed",
       "sourceUpdatedAt": "2026-09-09T16:00:03Z"
     },
     {

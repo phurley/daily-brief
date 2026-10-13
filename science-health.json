@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-13T16:40:22.630273Z",
+  "generatedAt": "2026-10-13T16:42:20.049697Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-10T10:16:39.118957Z",
-  "documentGeneratedAt": "2026-10-13T16:40:22.630273Z",
+  "documentGeneratedAt": "2026-10-13T16:42:20.049697Z",
   "newestVerifiedStoryAt": "2026-10-13T04:05:00Z",
   "sources": {
     "nasa": {
@@ -22,66 +22,99 @@
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-13T10:00:01.886016Z",
+      "lastAttemptAt": "2026-10-13T16:42:20.049697Z",
       "lastSuccessAt": "2026-10-13T10:00:01.886016Z",
       "lastNewStoryAt": "2026-10-10T10:16:39.118957Z",
-      "errors": [
-        "https://www.nasa.gov/missions/jason-cs-sentinel-6/how-2-us-european-satellites-are-studying-hurricanes-during-el-nino/: ValueError: finding quote not present in article"
-      ],
-      "candidateCount": 10,
-      "acceptedCount": 2,
+      "errors": [],
+      "candidateCount": 1,
+      "acceptedCount": 1,
       "deferredCount": 0,
-      "rejectedCount": 3,
-      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z"
+      "rejectedCount": 0,
+      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z",
+      "failedUrls": [],
+      "feedFailed": false,
+      "retryCount": 0,
+      "nextRetryAt": null
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-13T10:00:01.886016Z",
+      "lastAttemptAt": "2026-10-13T16:42:20.049697Z",
       "lastSuccessAt": "2026-10-13T10:00:01.886016Z",
       "lastNewStoryAt": "2026-10-10T10:16:39.118957Z",
       "errors": [
-        "https://www.esa.int/ESA_Multimedia/Images/2026/10/Webb_captures_commotion_from_nebula_s_stellar_jets: ValueError: finding quote not present in article",
         "https://www.esa.int/Science_Exploration/Space_Science/Smile/Science_begins_for_Smile: ValueError: evidence classification requires an article quote"
       ],
-      "candidateCount": 15,
-      "acceptedCount": 2,
-      "deferredCount": 7,
-      "rejectedCount": 3,
-      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z"
+      "candidateCount": 2,
+      "acceptedCount": 1,
+      "deferredCount": 0,
+      "rejectedCount": 0,
+      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z",
+      "failedUrls": [
+        "https://www.esa.int/Science_Exploration/Space_Science/Smile/Science_begins_for_Smile"
+      ],
+      "feedFailed": false,
+      "retryCount": 1,
+      "nextRetryAt": "2026-10-13T17:42:20.049697Z"
     },
     "nsf": {
       "name": "NSF",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-13T10:00:01.886016Z",
-      "lastSuccessAt": "2026-10-10T10:16:39.118957Z",
+      "lastAttemptAt": "2026-10-13T16:42:20.049697Z",
+      "lastSuccessAt": "2026-10-13T16:42:20.049697Z",
       "lastNewStoryAt": "2026-10-10T10:16:39.118957Z",
       "errors": [
-        "HTTPError: HTTP Error 403: "
+        "https://www.nsf.gov/news/podcast-can-prosthetic-limbs-feel-touch-haptic-feedback: retry deferred by article budget",
+        "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor: retry deferred by article budget",
+        "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative: retry deferred by article budget",
+        "https://www.nsf.gov/news/podcast-creating-thermal-cloaking-new-structures: retry deferred by article budget",
+        "https://www.nsf.gov/news/nsf-launches-20m-pilot-accelerate-commercialization: retry deferred by article budget",
+        "https://www.nsf.gov/news/nsf-leadership-new-golden-age-science: retry deferred by article budget",
+        "https://www.nsf.gov/news/podcast-ai-wearable-devices: retry deferred by article budget",
+        "https://www.nsf.gov/news/podcast-lasers-materials-future: retry deferred by article budget"
       ],
-      "candidateCount": 0,
+      "candidateCount": 15,
       "acceptedCount": 0,
-      "deferredCount": 0,
-      "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z"
+      "deferredCount": 8,
+      "rejectedCount": 3,
+      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z",
+      "failedUrls": [
+        "https://www.nsf.gov/news/podcast-can-prosthetic-limbs-feel-touch-haptic-feedback",
+        "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
+        "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
+        "https://www.nsf.gov/news/podcast-creating-thermal-cloaking-new-structures",
+        "https://www.nsf.gov/news/nsf-launches-20m-pilot-accelerate-commercialization",
+        "https://www.nsf.gov/news/nsf-leadership-new-golden-age-science",
+        "https://www.nsf.gov/news/podcast-ai-wearable-devices",
+        "https://www.nsf.gov/news/podcast-lasers-materials-future"
+      ],
+      "feedFailed": false,
+      "retryCount": 1,
+      "nextRetryAt": "2026-10-13T17:42:20.049697Z"
     },
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-13T10:00:01.886016Z",
+      "lastAttemptAt": "2026-10-13T16:42:20.049697Z",
       "lastSuccessAt": "2026-10-13T10:00:01.886016Z",
       "lastNewStoryAt": "2026-10-13T10:00:01.886016Z",
       "errors": [
         "https://news.umich.edu/as-voters-weigh-incumbents-u-m-research-complicates-case-for-congressional-term-limits/: ValueError: caveatQuote not present in article"
       ],
-      "candidateCount": 20,
-      "acceptedCount": 2,
-      "deferredCount": 13,
-      "rejectedCount": 1,
-      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z"
+      "candidateCount": 1,
+      "acceptedCount": 0,
+      "deferredCount": 0,
+      "rejectedCount": 0,
+      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z",
+      "failedUrls": [
+        "https://news.umich.edu/as-voters-weigh-incumbents-u-m-research-complicates-case-for-congressional-term-limits/"
+      ],
+      "feedFailed": false,
+      "retryCount": 1,
+      "nextRetryAt": "2026-10-13T17:42:20.049697Z"
     }
   },
-  "error": "Incomplete source checks: jpl, esa, nsf, umich",
+  "error": "Incomplete source checks: esa, nsf, umich",
   "metrics": {
     "verifiedStories": 47,
     "sourceCounts": {
@@ -92,7 +125,7 @@
       "University of Michigan News": 8
     },
     "topicCounts": {
-      "astronomy": 24,
+      "astronomy": 23,
       "biology": 4,
       "climate": 1,
       "computer-science": 1,
@@ -111,7 +144,7 @@
       "social-science": 5,
       "technology": 26
     },
-    "newestStoryAgeHours": 12.59,
+    "newestStoryAgeHours": 12.62,
     "maxPublicationLagHours": 1114.28
   }
 }
