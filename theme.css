@@ -256,6 +256,7 @@ h1 { max-width: 18ch; margin: .35rem 0 0; font-size: clamp(2.9rem, 5.7vw, 4.65re
 .card:hover { transform: translateY(-.16rem); box-shadow: var(--shadow); }
 .card h3 { margin: .35rem 0 0; font-size: 1.18rem; }
 .card > p:not(.card__footer) { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 5; font-size: .85rem; }
+.card--featured > p:not(.card__footer) { display: block; overflow: visible; -webkit-line-clamp: unset; }
 .card__footer { margin-top: auto; padding-top: .8rem; color: var(--muted); font-size: .75rem; }
 .event-lane { margin-top: .9rem; padding-top: .85rem; border-top: 1px solid var(--line); }
 .event-lane--first { margin-top: 0; padding-top: 0; border-top: 0; }

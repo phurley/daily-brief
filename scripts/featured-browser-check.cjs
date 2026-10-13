@@ -22,6 +22,7 @@ const engines=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
   await context.route('**/'+manifest.sections.events.url,r=>r.fulfill({body,contentType:'application/json'}));
   const p=await context.newPage();await p.clock.install({time:new Date(now)});await p.goto(url);
   await p.waitForFunction(()=>document.querySelector('#events-list').textContent.includes('Verified performance first'));
+  assert.ok(await p.locator('#events-list .card > p:not(.card__footer)').first().evaluate(el=>el.scrollHeight<=el.clientHeight+1), 'Short reviewed copy is fully visible');
   assert.match(await p.locator('#page-title .desktop-title').textContent(),/Verified performance first/);
   await p.clock.fastForward(2000);
   await p.waitForFunction(()=>!document.querySelector('#events-list').textContent.includes('Verified performance first'));

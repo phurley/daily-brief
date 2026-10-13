@@ -11,7 +11,9 @@ export function currentFeaturedEvents(raw = [], reviewed = []) {
   const current = new Map(raw.map(event => [event.id, event]));
   return reviewed.filter(event => {
     const source = current.get(event.id);
-    return source && JSON.stringify(reviewInput(source)) === JSON.stringify(event.editorial?.inputFacts);
+    return source && !['cancelled', 'postponed', 'completed'].includes(eventStatus(source))
+      && !/SoldOut|OutOfStock/i.test(source.availability || '')
+      && JSON.stringify(reviewInput(source)) === JSON.stringify(event.editorial?.inputFacts);
   });
 }
 
@@ -33,12 +35,13 @@ export function selectFeaturedLanes(events, options = {}) {
   const lanes = { today: [], ongoing: [], future: [] };
   const requested = options.preferences?.ranking?.limit;
   const limit = Number.isFinite(requested) ? Math.max(1, Math.min(3, Math.trunc(requested))) : 3;
+  const minimum = options.preferences?.ranking?.minScore ?? 35;
   const used = new Set(), venues = new Map();
   const pool = reconcileRecommendationEvents(verifiedEvents(events, now));
   // Reviews carry their own concise copy; reconciliation must never replace it
   // with an unreviewed archive description.
   const ranked = pool.map(event => rankEvent(event, { ...options, day, now }))
-    .filter(row => !row.ineligible)
+    .filter(row => !row.ineligible && row.score >= minimum)
     .sort((a, b) => b.score - a.score || Date.parse(a.event.start) - Date.parse(b.event.start) || a.event.id.localeCompare(b.event.id));
   for (const row of ranked) {
     const e = row.event, start = localDay(e.start), end = localDay(e.end || e.start);

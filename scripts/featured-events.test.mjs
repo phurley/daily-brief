@@ -21,7 +21,8 @@ test('unreviewed, expired, incomplete and elapsed unknown-end events never featu
 test('changed organizer facts or cancellation invalidate review immediately',()=>{
   const e=event('one');
   assert.equal(currentFeaturedEvents([e],[e]).length,1);
-  for(const extra of [{start:'2026-10-13T18:00:00-04:00'},{price:'$50'},{status:'cancelled'}])
+  for(const extra of [{start:'2026-10-13T18:00:00-04:00'},{price:'$50'},{status:'cancelled'},
+    {title:'CANCELED BY ARTIST: Live stories one'},{availability:'SoldOut'}])
     assert.deepEqual(currentFeaturedEvents([{...e,...extra}],[e]),[]);
 });
 test('featured lanes cap at three distinct experiences and widgets/headline use same lead',()=>{
@@ -43,4 +44,5 @@ test('reader count preferences can reduce the selection and cannot exceed the ve
   const options={now,day:'2026-10-13'};
   assert.equal(selectFeaturedLanes(events,{...options,preferences:{ranking:{limit:1}}}).today.length,1);
   assert.equal(selectFeaturedLanes(events,{...options,preferences:{ranking:{limit:20}}}).today.length,3);
+  assert.deepEqual(selectFeaturedLanes([event('weak',{score:0})],options).today,[], 'Weak matches cannot fill a featured slot');
 });

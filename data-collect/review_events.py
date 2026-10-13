@@ -151,6 +151,9 @@ def validate_review(candidate, result, page, now):
         if isinstance(location, dict) and location.get('name'):
             result['venue'] = location['name']
             quotes['venue'] = location['name']
+            address = location.get('address')
+            if isinstance(address, dict) and address.get('addressLocality'):
+                result['city'] = address['addressLocality']
         offers = obj.get('offers')
         offer_rows = offers if isinstance(offers, list) else [offers] if isinstance(offers, dict) else []
         offer_price = evidence.offer_fields(offers)

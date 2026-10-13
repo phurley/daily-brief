@@ -46,6 +46,13 @@ class FeaturedReviewTest(unittest.TestCase):
             with self.subTest(update=update), self.assertRaises(ValueError):
                 self.valid({**self.result, **update})
 
+    def test_matching_structured_organizer_location_overrides_model_location(self):
+        self.page['events'] = [{'name': 'String of Stories', 'startDate': self.result['start'],
+            'endDate': self.result['end'], 'location': {'name': '202 S. Thayer',
+            'address': {'addressLocality': 'Ann Arbor'}}}]
+        event = self.valid({**self.result, 'venue': 'A different room', 'city': 'Chicago'})
+        self.assertEqual((event['venue'], event['city']), ('202 S. Thayer', 'Ann Arbor'))
+
     def test_unknown_end_is_removed_and_elapsed_unknown_end_is_rejected(self):
         result = {**self.result, 'end': None, 'quotes': {**self.result['quotes'], 'end': ''}}
         self.assertNotIn('end', self.valid(result))

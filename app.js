@@ -1030,7 +1030,7 @@ function renderPreferenceControls() {
 function eventCard(event) {
   const title = node("h3");
   title.append(safeLink(eventDisplayTitle(event), event.url));
-  return node("article", { className: `card${isRecurringEvent(event) ? " event--recurring" : ""}`, dataset:{eventId:event.id} }, [
+  return node("article", { className: `card${event.editorial ? " card--featured" : ""}${isRecurringEvent(event) ? " event--recurring" : ""}`, dataset:{eventId:event.id} }, [
     node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
     title,
     node("p", { text: event.summary }),
