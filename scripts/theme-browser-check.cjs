@@ -26,7 +26,10 @@ const themes = ['original', 'newspaper', 'infographic', 'star-trek', 'redwood', 
       colors.add(await page.locator('html').evaluate(el => getComputedStyle(el).getPropertyValue('--paper').trim()));
       for (const width of [1440, 768, 390, 320]) {
         await page.setViewportSize({ width, height: 1000 });
-        const dimensions = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, width: innerWidth }));
+        const dimensions = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, width: innerWidth,
+          overflowing: [...document.querySelectorAll('body *')].filter(el=>el.getBoundingClientRect().right>innerWidth+1 && getComputedStyle(el).position!=='absolute')
+            .slice(0,8).map(el=>({tag:el.tagName,id:el.id,class:el.className,right:el.getBoundingClientRect().right})) }));
+        if(dimensions.scroll>dimensions.width+1) console.error(dimensions);
         assert.ok(dimensions.scroll <= dimensions.width + 1, `${theme} overflows at ${width}px`);
         const box = await page.locator('#theme-select').boundingBox();
         assert.ok(box.x >= 0 && box.x + box.width <= width && box.height >= 44, `${theme} picker fits and is touch accessible`);

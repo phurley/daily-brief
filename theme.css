@@ -432,9 +432,9 @@ footer { color: #dce8e4; background: #14282b; }
   .rocket-launches__source { margin-left: .35rem; }
   .memory { min-height: 29rem; border-radius: .9rem; }
   .memory__slide img { object-position: center; }
-  .joke { grid-template-columns: auto 1fr; }
+  .joke { grid-template-columns: minmax(0, 1fr); }
   .joke blockquote { grid-column: 1 / -1; white-space: normal; }
-  .joke button { justify-self: end; grid-column: 2; grid-row: 1; }
+  .joke button { justify-self: start; grid-column: 1; grid-row: auto; max-width: 100%; white-space: normal; }
   .footer__inner { display: block; }
   .footer__inner p + p { margin-top: .35rem; }
 }
