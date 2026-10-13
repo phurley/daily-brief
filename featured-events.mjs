@@ -31,6 +31,8 @@ export function verifiedEvents(events = [], now = Date.now()) {
 export function selectFeaturedLanes(events, options = {}) {
   const now = options.now ?? Date.now(), day = options.day || localDay(now);
   const lanes = { today: [], ongoing: [], future: [] };
+  const requested = options.preferences?.ranking?.limit;
+  const limit = Number.isFinite(requested) ? Math.max(1, Math.min(3, Math.trunc(requested))) : 3;
   const used = new Set(), venues = new Map();
   const pool = reconcileRecommendationEvents(verifiedEvents(events, now));
   // Reviews carry their own concise copy; reconciliation must never replace it
@@ -43,7 +45,7 @@ export function selectFeaturedLanes(events, options = {}) {
     const lane = start > day ? 'future' : end > day ? 'ongoing' : 'today';
     const experience = e.experienceId || e.seriesId || `${e.title.toLowerCase()}|${e.venue.toLowerCase()}|${e.city.toLowerCase()}`;
     const venue = `${lane}|${e.venue.toLowerCase()}|${e.city.toLowerCase()}`;
-    if (lanes[lane].length >= 3 || used.has(experience) || (venues.get(venue) || 0) >= 2) continue;
+    if (lanes[lane].length >= limit || used.has(experience) || (venues.get(venue) || 0) >= 2) continue;
     used.add(experience); venues.set(venue, (venues.get(venue) || 0) + 1);
     lanes[lane].push(row);
   }

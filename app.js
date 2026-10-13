@@ -1015,7 +1015,7 @@ function renderPreferenceControls() {
   settings.append(node('summary', { text: 'Recommendation preferences' }), node('p', { text: 'Household profile on this browser. More/less adjusts this event category; favorites apply to its series. Feedback stays on this device.' }));
   const form = node('form', { className: 'recommendation-settings' });
   const p = preferences.get();
-  const count = node('input', { type: 'number', min: 1, max: 20, value: p.ranking.limit, required: '' });
+  const count = node('input', { type: 'number', min: 1, max: 3, value: Math.min(3, p.ranking.limit), required: '' });
   const distance = node('input', { type: 'number', min: 0, step: 'any', value: p.constraints.maxDistanceMiles ?? '', placeholder: 'No limit' });
   const budget = node('input', { type: 'number', min: 0, step: 'any', value: p.constraints.maxPrice ?? '', placeholder: 'No limit' });
   const knownPrice = node('input', { type: 'checkbox' }); knownPrice.checked = p.constraints.excludeUnknownPrice;

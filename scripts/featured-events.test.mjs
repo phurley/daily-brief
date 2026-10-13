@@ -38,3 +38,9 @@ test('expiry advances the lead and unknown-end events expire at start',()=>{
   assert.equal(featuredMasthead([first,next],{now,day:'2026-10-12'}).leadId,'first');
   assert.equal(featuredMasthead([first,next],{now:Date.parse('2026-10-12T17:00:00Z'),day:'2026-10-12'}).leadId,'next');
 });
+test('reader count preferences can reduce the selection and cannot exceed the verified cap',()=>{
+  const events=Array.from({length:6},(_,i)=>event(String(i),{venue:`Room ${i}`,score:100-i}));
+  const options={now,day:'2026-10-13'};
+  assert.equal(selectFeaturedLanes(events,{...options,preferences:{ranking:{limit:1}}}).today.length,1);
+  assert.equal(selectFeaturedLanes(events,{...options,preferences:{ranking:{limit:20}}}).today.length,3);
+});
