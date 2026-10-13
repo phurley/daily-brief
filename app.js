@@ -7,7 +7,7 @@ import { weatherAppearance } from "./weather-appearance.mjs?v=20260830-1";
 import { eventDateLabel } from "./event-time.mjs?v=20260908-1";
 import { orderNewsStories } from "./story-order.mjs?v=20261009-1";
 
-import { scienceView, scienceRotationSlot, scienceFreshness, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261009-rotation-1";
+import { scienceView, scienceRotationSlot, scienceStatusText, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261013-partial-1";
 
 import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
 import { contributions } from './scoring.mjs?v=20261009-2';
@@ -1316,10 +1316,8 @@ function renderStories(kind, {append = false} = {}) {
     ? `Latest available digest: ${displayDate(data.editionDate)}.`
     : "";
   const fallback = kind === "news" ? "What is moving around Michigan." : "Interesting machinery, ideas, and horizons.";
-  const freshness = scienceFreshness(data, state.data.scienceHealth);
   const scienceNote = kind === "geeknews" ? scienceEditorial(scienceContext(scienceDoc, state.data.scienceHealth, state.selectedDate, scienceNow)).summary : "";
-  const checkLabel = freshness.lastChecked ? new Date(freshness.lastChecked).toLocaleString("en-US", { timeZone: TIME_ZONE }) : "not verified";
-  const scienceStatus = `Last checked: ${checkLabel}. Newest verified story: ${scienceDate(freshness.newestStory)}.${freshness.stale ? " Science collection is overdue or incomplete; showing the last valid edition." : ""}`;
+  const scienceStatus = kind === "geeknews" ? scienceStatusText(scienceDoc, state.data.scienceHealth, scienceNow) : "";
   $(noteSelector).textContent = kind === "geeknews" ? [scienceNote, scienceStatus, carryForward].filter(Boolean).join(" ")
     : [message(section, "summary", fallback), carryForward].filter(Boolean).join(" ");
   if (kind === "news") $("#news-title").textContent = message(section, "section-heading", "The local signal");

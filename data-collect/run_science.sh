@@ -15,9 +15,17 @@ exec >> "$DIR/science.log" 2>&1
 echo "$(date '+%Y-%m-%d %H:%M:%S') [start] science"
 cd "$DIR" || exit 1
 before="$(cksum "$ROOT/geeknews.json")"
+health_before="$(cksum "$ROOT/science-health.json" 2>/dev/null || true)"
 "$DIR/.venv/bin/python" -u -m science.pipeline "$@"
 rc=$?
-# A failed refresh still publishes its health report and preserves the edition.
+for argument do
+    if [ "$argument" = --retry-failed ] && [ "$rc" = 0 ] && [ "$before" = "$(cksum "$ROOT/geeknews.json")" ] && [ "$health_before" = "$(cksum "$ROOT/science-health.json" 2>/dev/null || true)" ]; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S') [done] science retry not due"
+        exit 0
+    fi
+done
+# Partial runs publish validated stories and source errors together. A fatal
+# selection/validation failure still publishes health and holds the edition.
 if [ "${SCIENCE_NO_PUSH:-}" != 1 ]; then
     "$ROOT/scripts/push_generated.sh" "Refresh science digest and source health" geeknews.json science-health.json || exit 1
 fi

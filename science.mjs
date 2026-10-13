@@ -80,8 +80,17 @@ export function scienceFreshness(doc = {}, health, now = Date.now()) {
   const overdue = sources.filter(s => !time(s.lastSuccessAt) || now - time(s.lastSuccessAt) > (s.staleAfterHours || 36) * 3600000);
   const stale = !health || health.status !== "ok" || now - time(health.generatedAt) > 36 * 3600000 || overdue.length > 0;
   const newest = (doc.stories || []).filter(s => s.verifiedAt).sort((a,b) => time(b.publishedAt)-time(a.publishedAt))[0]?.publishedAt;
-  return { stale, lastChecked: health?.lastSuccessfulCheckAt || null, newestStory: newest || null,
+  return { stale, partial: health?.status === "partial", lastChecked: health?.lastSuccessfulCheckAt || null,
+    lastPublished: health?.documentGeneratedAt || doc.generatedAt || null, newestStory: newest || null,
     overdueSources: overdue.map(s => s.name), status: health?.status || "unknown" };
+}
+
+export function scienceStatusText(doc, health, now = Date.now()) {
+  const freshness = scienceFreshness(doc, health, now);
+  const updated = freshness.lastPublished ? new Date(freshness.lastPublished).toLocaleString("en-US", { timeZone: "America/Detroit" }) : "not available";
+  const notice = freshness.partial ? "Some sources could not be updated; showing verified coverage."
+    : freshness.stale ? "Science coverage is overdue or unavailable; showing the last valid digest." : "";
+  return `Digest updated: ${updated}. Newest verified story: ${scienceDate(freshness.newestStory)}.${notice ? " " + notice : ""}`;
 }
 
 export function scienceContext(doc, health, date, now = Date.now()) {
@@ -98,6 +107,6 @@ export function scienceContext(doc, health, date, now = Date.now()) {
 export function scienceEditorial(context) {
   const first = context.stories[0];
   return { heading: "Science & technology", summary: first
-    ? `Published ${scienceDate(first.publishedAt)}: ${first.title}.${context.stale ? " Collection is overdue or incomplete." : ""}`
+    ? `Published ${scienceDate(first.publishedAt)}: ${first.title}.${context.stale && !context.partial ? " Collection is overdue or incomplete." : ""}`
     : `No verified recent science stories are available.${context.stale ? " Collection is overdue or incomplete." : " Older coverage is in the archive."}` };
 }

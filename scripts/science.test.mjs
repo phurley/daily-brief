@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {selectScienceDigest,scienceView,scienceRotationSlot,scienceContext,scienceEditorial,scienceFreshness} from '../science.mjs';
+import {selectScienceDigest,scienceView,scienceRotationSlot,scienceContext,scienceEditorial,scienceFreshness,scienceStatusText} from '../science.mjs';
 const stories = Array.from({length:12},(_,i)=>({id:`s-${i}`,title:`Finding ${i}`,summary:'Measured effect',publishedAt:'2026-10-08T12:00:00Z',verifiedAt:'2026-10-09T12:00:00Z',source:{name:i<8?'NASA':`Other ${i}`},topics:[i<8?'astronomy':'biology'],evidenceType:'preprint',caveat:'Not peer reviewed.'}));
 test('cards and editorial share exact IDs, dates and untruncated caveats independent of input order',()=>{
  const d={stories};const a=selectScienceDigest(d,'2026-10-09');
@@ -28,6 +28,18 @@ test('quiet healthy feeds and overdue feeds are distinguished',()=>{
  assert.equal(scienceFreshness({stories},health,now).stale,false);
  assert.equal(scienceFreshness({stories},health,now+49*3600000).stale,true);
  assert.equal(scienceFreshness({stories},{...health,status:'error'},now).stale,true);
+});
+test('partial publication shows current verified coverage without claiming a full successful check',()=>{
+ const stamp='2026-10-09T18:00:00Z',previous='2026-10-08T10:00:00Z',now=Date.parse(stamp);
+ const health={status:'partial',generatedAt:stamp,documentGeneratedAt:stamp,lastSuccessfulCheckAt:previous,
+   sources:{nsf:{name:'NSF',lastSuccessAt:previous,staleAfterHours:36,errors:['HTTP 403']}}};
+ const freshness=scienceFreshness({stories},health,now);
+ assert.equal(freshness.partial,true);assert.equal(freshness.stale,true);
+ assert.equal(freshness.lastChecked,previous);assert.equal(freshness.lastPublished,stamp);
+ const status=scienceStatusText({stories},health,now);
+ assert.match(status,/Some sources could not be updated; showing verified coverage/);
+ assert.doesNotMatch(status,/last valid (edition|digest)/);
+ assert.match(scienceStatusText({stories},{...health,status:'error'},now),/last valid digest/);
 });
 test('mission history groups milestones without merging distinct telescope findings',()=>{
  const milestone={...stories[0],evidenceType:'mission-milestone',storyClusterId:'test-mission'};

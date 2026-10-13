@@ -5,6 +5,10 @@ the local-event gate. U-M research is collected independently from its existing
 local-news route; accepted findings keep their Ann Arbor connection. Launch-date
 forecasting remains outside this pipeline; the legacy launch object is preserved.
 
+Failed science sources/articles also use the existing hourly collector's wakeup.
+That retry runs before local collection, uses the science job lock, and never
+checks healthy sources again just because an hour has passed. No new timer is needed.
+
 ## Run and inspect
 
 From `~/daily-brief/data-collect` on `kitchen.local`:
@@ -16,6 +20,8 @@ SCIENCE_NO_PUSH=1 SCIENCE_VIBE_ENABLED=0 ./run_science.sh --force
 /opt/homebrew/bin/node ../vibe-check/generate.mjs --context-only
 cat ../science-health.json
 tail -80 science.log
+.venv/bin/python -m science.pipeline --cached-only   # recover already-verified work without network/model calls
+./run_science.sh --retry-failed                     # due failed work only; publication enabled
 ```
 
 `run_science.sh` holds `/tmp/dailybrief-science.lock`, keeps the machine awake,
@@ -86,10 +92,16 @@ publication dates and first-seen timestamps survive updates; `checkedAt` changes
 only when the article is checked again. `verifiedAt` dates the last extracted
 content; `sourceUpdatedAt` is only supplied metadata, never inferred from fetch.
 
-A fetch with no new stories is healthy. A failed source, article verification,
-extraction, selection, or full-document validation holds the previous edition
-byte-for-byte. Valid work is cached so the next attempt can retry cheaply.
-The health report is replaced independently and lists specific errors. Publication
+A fetch with no new stories is healthy. Individual fetch, verification and
+extraction failures isolate that candidate or source. Independently validated
+stories still publish with `status: partial`; failed rechecks retain earlier valid
+stories with their original publication, verification and check timestamps. A
+successful relevance rejection removes the story and remains excluded on replay.
+If no verified coverage is available, or selection/full-document validation fails,
+the previous edition is held byte-for-byte and health reports `error`.
+The health report lists each failure; `lastSuccessfulCheckAt` advances only after
+all source checks succeed. `documentGeneratedAt` separately records publication.
+Publication
 uses a validated temporary file, fsync and atomic rename. Separate files are
 not a cross-file transaction: a crash between edition and health writes may
 briefly leave conservative stale health until the next run.
@@ -100,6 +112,16 @@ Private stage diagnostics live in ignored `processed/science/`:
 - `extractions/<hash>.json`: article text, links and model evidence for review.
 - `state.json`: records, fingerprints and source attempts (safe to rebuild).
 
+`--retry-failed` retries only pending errors after one, two, four, then six hours
+between repeated attempts. Article retries reuse the successful cached feed and
+fetch only failed URLs; successful articles and healthy sources are untouched.
+Failed feeds are fetched again. Article budgets still apply and deferred failures
+remain pending. `--force --retry-failed` bypasses backoff for an explicit retry.
+An invocation with nothing due leaves state, health and publication unchanged.
+The collector skips retries for no-push/custom-output runs; set
+`SCIENCE_RETRY_ENABLED=0` to disable its retry hook. The normal 06:00 full check
+retains daily/DST gating and checks new articles across all sources.
+
 Public `science-health.json` records per-source `lastAttemptAt`, `lastSuccessAt`,
 `lastNewStoryAt`, candidate/accepted/rejected/deferred counts and errors. It
 separates `documentGeneratedAt` from `newestVerifiedStoryAt`. Counts reflect each
@@ -107,6 +129,9 @@ source's last due run, not the entire catalog. It also reports topic/source
 counts, newest story age, and maximum publication lag. The browser computes age
 at render time, including a 36-hour scheduler heartbeat timeout. Quiet feeds
 are not stale solely because they have no new article.
+
+Partial coverage displays the digest publication time and acknowledges incomplete
+sources; it does not describe the newly published stories as a held old edition.
 
 ## Selection, caveats and continuing stories
 

@@ -31,6 +31,9 @@ class PipelineTest(unittest.TestCase):
                    fetcher=kw.pop('fetcher',self.fetch), extractor=kw.pop('extractor',self.extract),
                    selector=kw.pop('selector', lambda d: {'date':d['editionDate'],'selectedIds':[s['id'] for s in d['stories']],'reasons':{}}), **kw)
     def doc(self): return json.loads((self.out/'geeknews.json').read_text())
+    def add_feed_story(self, path):
+        item = f'<item><title>Another lab study</title><link>https://science.example/{path}</link><pubDate>Thu, 08 Oct 2026 12:00:00 +0000</pubDate></item>'
+        self.feed = self.feed.replace(b'</channel>', item.encode() + b'</channel>')
     def test_ingest_replay_missing_date_and_quiet_success(self):
         health = self.run_pipeline()
         self.assertEqual(health['status'],'ok')
@@ -47,16 +50,148 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(health['status'],'ok')
         self.assertEqual(health['sources']['fixture']['candidateCount'],0)
         self.assertEqual(health['sources']['fixture']['lastNewStoryAt'],'2026-10-09T18:00:00Z')
-    def test_source_and_partial_failure_preserve_exact_document(self):
-        self.run_pipeline(); before=(self.out/'geeknews.json').read_bytes()
+    def test_source_failure_publishes_new_verified_work_and_preserves_old_dates(self):
+        first = self.run_pipeline(); original = self.doc()['stories'][0]
+        self.add_feed_story('second')
         self.config['sources'].append({**SOURCE,'id':'broken','url':'https://bad.example/feed'})
         def fetch(url):
             if 'bad.example' in url: raise OSError('source offline')
             return self.fetch(url)
-        health=self.run_pipeline(fetcher=fetch)
-        self.assertEqual(health['status'],'error')
-        self.assertEqual((self.out/'geeknews.json').read_bytes(),before)
+        health=self.run_pipeline(fetcher=fetch, now=NOW+timedelta(hours=1))
+        self.assertEqual(health['status'],'partial')
+        self.assertEqual(len(self.doc()['stories']),2)
+        self.assertEqual(next(s for s in self.doc()['stories'] if s['id']==original['id']),original)
+        self.assertEqual(health['lastSuccessfulCheckAt'],first['lastSuccessfulCheckAt'])
+        self.assertEqual(health['documentGeneratedAt'],'2026-10-09T19:00:00Z')
         self.assertIn('source offline',health['sources']['broken']['errors'][0])
+
+    def test_bad_article_is_isolated_from_good_article_in_same_feed(self):
+        self.add_feed_story('second')
+        def extract(entry, article):
+            return {**RESULT,'supportingQuote':'Invented evidence.'} if '/study' in entry['url'] else self.extract(entry,article)
+        health=self.run_pipeline(extractor=extract)
+        self.assertEqual(health['status'],'partial')
+        self.assertEqual([s['url'] for s in self.doc()['stories']],['https://science.example/second'])
+        state=json.loads((self.state/'state.json').read_text())
+        self.assertNotIn('https://science.example/study',state['records'])
+        self.assertNotIn('https://science.example/study',state['fingerprints'])
+        self.assertEqual(health['sources']['fixture']['failedUrls'],['https://science.example/study?utm_source=rss'])
+
+    def test_all_sources_failing_preserves_verified_document_byte_for_byte(self):
+        first=self.run_pipeline(); before=(self.out/'geeknews.json').read_bytes()
+        health=self.run_pipeline(now=NOW+timedelta(hours=1),fetcher=lambda url: (_ for _ in ()).throw(OSError('offline')))
+        self.assertEqual(health['status'],'partial')
+        self.assertEqual((self.out/'geeknews.json').read_bytes(),before)
+        self.assertEqual(health['lastSuccessfulCheckAt'],first['lastSuccessfulCheckAt'])
+
+    def test_failed_reextraction_does_not_redate_prior_verified_story(self):
+        self.run_pipeline(); original=self.doc()['stories'][0]
+        def fetch(url):
+            return self.fetch(url).replace(b'</article>',b'<p>Article changed.</p></article>')
+        health=self.run_pipeline(now=NOW+timedelta(days=2),fetcher=fetch,
+                                 extractor=lambda *a:{**RESULT,'supportingQuote':'Invented evidence.'})
+        self.assertEqual(health['status'],'partial')
+        self.assertEqual(self.doc()['stories'][0],original)
+
+    def test_failed_feed_retry_skips_healthy_source_and_respects_backoff(self):
+        self.config['sources']=[{**SOURCE,'intervalHours':24}, {**SOURCE,'id':'broken','intervalHours':24,'url':'https://bad.example/feed'}]
+        def fetch(url):
+            if 'bad.example' in url: raise OSError('offline')
+            return self.fetch(url)
+        first=self.run_pipeline(fetcher=fetch)
+        healthy=copy.deepcopy(first['sources']['fixture'])
+        before=(self.out/'science-health.json').read_bytes()
+        with patch.object(self,'fetch',wraps=self.fetch) as fetched:
+            self.assertIsNone(self.run_pipeline(retry_failed=True,force=False,now=NOW+timedelta(minutes=30)))
+            fetched.assert_not_called()
+        self.assertEqual((self.out/'science-health.json').read_bytes(),before)
+        calls=[]
+        def recovered(url):
+            calls.append(url)
+            return b'<rss><channel/></rss>'
+        health=self.run_pipeline(retry_failed=True,force=False,now=NOW+timedelta(hours=1),fetcher=recovered)
+        self.assertEqual(calls,['https://bad.example/feed'])
+        self.assertEqual(health['status'],'ok')
+        self.assertEqual(health['sources']['fixture'],healthy)
+        self.assertEqual(health['sources']['broken']['retryCount'],0)
+
+    def test_article_retry_uses_cached_feed_and_only_failed_url(self):
+        self.config['sources']=[{**SOURCE,'intervalHours':24}]
+        self.add_feed_story('second')
+        def extract(entry, article):
+            return {**RESULT,'supportingQuote':'Invented evidence.'} if '/study' in entry['url'] else self.extract(entry,article)
+        first=self.run_pipeline(extractor=extract)
+        good=self.doc()['stories'][0]
+        calls=[]
+        def fetch(url):
+            calls.append(url)
+            if url.endswith('/feed'): self.fail('Successful feed must not be refetched during article retry')
+            return self.fetch(url)
+        health=self.run_pipeline(retry_failed=True,force=False,now=NOW+timedelta(hours=1),fetcher=fetch)
+        self.assertEqual(calls,['https://science.example/study'])
+        self.assertEqual(health['status'],'ok')
+        self.assertEqual(health['sources']['fixture']['lastSuccessAt'],first['sources']['fixture']['lastSuccessAt'])
+        self.assertEqual(next(s for s in self.doc()['stories'] if s['id']==good['id']),good)
+        self.assertEqual(len(self.doc()['stories']),2)
+
+    def test_repeated_failure_backs_off(self):
+        self.run_pipeline()
+        self.config['sources']=[{**SOURCE,'intervalHours':24}]
+        def offline(url): raise OSError('offline')
+        self.run_pipeline(fetcher=offline)
+        health=self.run_pipeline(retry_failed=True,force=False,fetcher=offline,now=NOW+timedelta(hours=1))
+        self.assertEqual(health['sources']['fixture']['retryCount'],2)
+        self.assertEqual(health['sources']['fixture']['nextRetryAt'],'2026-10-09T21:00:00Z')
+        self.assertIsNone(self.run_pipeline(retry_failed=True,force=False,fetcher=offline,now=NOW+timedelta(hours=2)))
+
+    def test_retry_article_budget_preserves_unattempted_failures(self):
+        self.add_feed_story('second')
+        self.run_pipeline(extractor=lambda *a:{**RESULT,'supportingQuote':'Invented evidence.'})
+        self.config['maxArticlesPerSource']=1
+        health=self.run_pipeline(retry_failed=True,force=False,now=NOW+timedelta(hours=1))
+        self.assertEqual(health['status'],'partial')
+        self.assertEqual(len(self.doc()['stories']),1)
+        self.assertEqual(len(health['sources']['fixture']['failedUrls']),1)
+        self.assertIn('retry deferred',health['sources']['fixture']['errors'][0])
+
+    def test_cached_only_recovers_verified_work_without_network_or_redating(self):
+        self.run_pipeline(); original=self.doc()['stories'][0]
+        state=json.loads((self.state/'state.json').read_text())
+        new={**original,'id':'cached-second','url':'https://science.example/second'}
+        state['records'][new['url']]=new
+        state['sources']['fixture']['errors']=['https://science.example/bad: ValueError: unsupported evidence']
+        atomic_json(self.state/'state.json',state)
+        def forbidden(*args): self.fail('Cache recovery must not fetch or extract')
+        health=self.run_pipeline(cached_only=True,now=NOW+timedelta(hours=2),fetcher=forbidden,extractor=forbidden)
+        self.assertEqual(health['status'],'partial')
+        self.assertEqual(len(self.doc()['stories']),2)
+        self.assertEqual(next(s for s in self.doc()['stories'] if s['id']==original['id']),original)
+        self.assertEqual(health['sources']['fixture']['lastAttemptAt'],state['sources']['fixture']['lastAttemptAt'])
+        self.assertEqual(health['lastSuccessfulCheckAt'],'2026-10-09T18:00:00Z')
+
+    def test_early_retry_does_not_suppress_next_daily_full_check(self):
+        self.config['sources']=[{**SOURCE,'intervalHours':24}]
+        self.run_pipeline()
+        def offline(url): raise OSError('offline')
+        self.run_pipeline(fetcher=offline)
+        # 05:00 EDT on the next date: retry failure backs off beyond 06:00.
+        retry=self.run_pipeline(retry_failed=True,force=True,now=NOW+timedelta(hours=15),fetcher=offline)
+        self.assertEqual(retry['sources']['fixture']['lastFullAttemptAt'],'2026-10-09T18:00:00Z')
+        with patch.object(self,'fetch',wraps=self.fetch) as fetched:
+            health=self.run_pipeline(force=False,now=NOW+timedelta(hours=16))
+            self.assertIn(unittest.mock.call(SOURCE['url']),fetched.call_args_list)
+        self.assertEqual(health['status'],'ok')
+        self.assertEqual(health['sources']['fixture']['lastFullAttemptAt'],'2026-10-10T10:00:00Z')
+
+    def test_successful_irrelevance_rejection_is_not_restored_from_old_edition(self):
+        self.run_pipeline()
+        self.feed=self.feed.replace(b'Lab study measures an effect',b'Updated article')
+        def fetch(url): return self.fetch(url).replace(b'</article>',b'<p>Updated article.</p></article>')
+        health=self.run_pipeline(fetcher=fetch,extractor=lambda *a:{**RESULT,'relevant':False})
+        self.assertEqual(health['status'],'ok')
+        self.assertEqual(self.doc()['stories'],[])
+        self.run_pipeline(cached_only=True)
+        self.assertEqual(self.doc()['stories'],[])
     def test_invalid_extraction_does_not_publish_or_poison_cache(self):
         result={**RESULT,'paperUrl':'https://invented.example/paper'}
         health=self.run_pipeline(extractor=lambda *a:result)

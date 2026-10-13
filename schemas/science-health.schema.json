@@ -19,6 +19,7 @@
     "status": {
       "enum": [
         "ok",
+        "partial",
         "error"
       ]
     },
@@ -72,6 +73,13 @@
               "type": "string"
             }
           },
+          "failedUrls": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "feedFailed": {"type": "boolean"},
+          "retryCount": {"type": "integer", "minimum": 0},
+          "nextRetryAt": {"type": ["string", "null"], "format": "date-time"},
           "lastAttemptAt": {
             "type": [
               "string",
@@ -79,6 +87,7 @@
             ],
             "format": "date-time"
           },
+          "lastFullAttemptAt": {"type": ["string", "null"], "format": "date-time"},
           "lastSuccessAt": {
             "type": [
               "string",

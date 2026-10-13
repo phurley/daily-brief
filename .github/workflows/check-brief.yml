@@ -10,6 +10,10 @@ on:
       - 'scripts/**'
       - 'data-collect/review_events.py'
       - 'data-collect/test_review_events.py'
+      - 'data-collect/science/**'
+      - 'data-collect/run_science.sh'
+      - 'data-collect/run_collect.sh'
+      - 'schemas/science-health.schema.json'
       - 'preferences.mjs'
       - 'DailyBriefWidgets/**'
       - 'DailyBriefTests/**'
@@ -35,12 +39,18 @@ jobs:
           python3 -m pip install beautifulsoup4 python-dateutil
           cd data-collect
           python3 -m unittest test_review_events
+      - name: Science partial publication and retry checks
+        run: |
+          python3 -m pip install 'curl_cffi>=0.7,<1' 'jsonschema>=4.20,<5'
+          cd data-collect
+          SCIENCE_NODE=$(command -v node) python3 -m unittest science.test_pipeline
       - name: Collector and publisher regression checks
         run: |
           python3 scripts/test_calendar_retry.py
           python3 scripts/test_starship_job_lock.py
           python3 scripts/test_publish_brief.py
           python3 scripts/test_update_photos.py
+          python3 scripts/test_science_retry_schedule.py
       - run: npx playwright install --with-deps chromium webkit
       - name: Browser checks
         run: |

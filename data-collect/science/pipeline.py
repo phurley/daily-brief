@@ -15,7 +15,7 @@ import re
 import subprocess
 import tempfile
 import unicodedata
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode, urljoin
 from zoneinfo import ZoneInfo
@@ -265,7 +265,8 @@ def validate_document(doc):
         raise ValueError("selection references missing stories")
 
 
-def run(config, out, state_dir, *, now=None, force=False, fetcher=fetch, extractor=extract, selector=None):
+def run(config, out, state_dir, *, now=None, force=False, retry_failed=False, cached_only=False,
+        fetcher=fetch, extractor=extract, selector=None):
     now = now or datetime.now(UTC)
     stamp = iso(now)
     health_path = out / "science-health.json"
@@ -275,34 +276,63 @@ def run(config, out, state_dir, *, now=None, force=False, fetcher=fetch, extract
               "documentGeneratedAt": None, "newestVerifiedStoryAt": None, "sources": {}}
     old_doc = read_json(out / "geeknews.json", {"schemaVersion": "1.0.0", "stories": []})
     state = read_json(state_dir / "state.json", {"sources": {}, "records": {}, "fingerprints": {}})
-    records = copy.deepcopy(state["records"])
+    # Keep prior verified coverage when a source or re-extraction fails. A
+    # successful relevance rejection is a tombstone, not a fetch failure.
+    records = {canonical(s["url"]): copy.deepcopy(s) for s in old_doc["stories"]
+               if s.get("verifiedAt") and not state["fingerprints"].get(canonical(s["url"]), {}).get("excluded")}
+    records.update(copy.deepcopy(state["records"]))
     fingerprints = copy.deepcopy(state["fingerprints"])
     failures = []
     any_due = False
+    fetched_sources = 0
     for source in config["sources"]:
         key = source["id"]
         h = copy.deepcopy(state["sources"].get(key, {}))
         h.update(name=source["name"], staleAfterHours=source["staleAfterHours"])
         for field in ("lastAttemptAt", "lastSuccessAt", "lastNewStoryAt"):
             h.setdefault(field, None)
+        h.setdefault("lastFullAttemptAt", h["lastAttemptAt"])
+        previous_errors = h.get("errors", [])
+        # Migrate existing failure reports without throwing away cached work.
+        failed_urls = h.get("failedUrls", [e.split(": ", 1)[0] for e in previous_errors
+                                           if e.startswith(("http://", "https://"))])
+        feed_failed = h.get("feedFailed", bool(previous_errors and not failed_urls))
         health["sources"][key] = h
         last = parse_date(h.get("lastAttemptAt"))
+        full_last = parse_date(h.get("lastFullAttemptAt"))
         # A daily source is due on each Detroit date, even after a late prior
         # run or the 23-hour spring DST day. Shorter intervals retain duration gates.
         daily = source["intervalHours"] == 24
-        already_checked = last and (last.astimezone(ZoneInfo("America/Detroit")).date() == now.astimezone(ZoneInfo("America/Detroit")).date()
-                                    if daily else (now-last).total_seconds() < source["intervalHours"] * 3600)
-        if not force and already_checked:
-            if h.get("errors"): failures.append(f"{key}: previous attempt failed")
+        already_checked = full_last and (full_last.astimezone(ZoneInfo("America/Detroit")).date() == now.astimezone(ZoneInfo("America/Detroit")).date()
+                                         if daily else (now-full_last).total_seconds() < source["intervalHours"] * 3600)
+        retry_at = parse_date(h.get("nextRetryAt")) or (last + timedelta(hours=1) if last else now)
+        if cached_only or (retry_failed and not previous_errors) or (not force and (
+                (previous_errors and retry_at > now and (retry_failed or already_checked))
+                or (not previous_errors and already_checked))):
+            if previous_errors: failures.append(key)
             continue
+        retrying = bool(previous_errors) and (retry_failed or (already_checked and not force))
         print(f"[{stamp}] fetching {key}", flush=True)
         any_due = True
-        h.update(lastAttemptAt=stamp, errors=[], candidateCount=0, acceptedCount=0, deferredCount=0, rejectedCount=0)
+        retry_count = h.get("retryCount", 0)
+        h.update(lastAttemptAt=stamp, errors=[], failedUrls=[], feedFailed=False,
+                 candidateCount=0, acceptedCount=0, deferredCount=0, rejectedCount=0)
+        if not retrying:
+            h["lastFullAttemptAt"] = stamp
         try:
-            raw = fetcher(source["url"])
-            atomic_json(state_dir / "feeds" / f"{key}.json", {"fetchedAt": stamp, "url": source["url"], "xml": raw.decode("utf-8", "replace")})
+            feed_path = state_dir / "feeds" / f"{key}.json"
+            cached_feed = read_json(feed_path, {}) if retrying and not feed_failed else {}
+            if cached_feed:
+                raw = cached_feed["xml"].encode("utf-8")
+            else:
+                raw = fetcher(source["url"])
             entries = parse_feed(raw)
-            h["lastSuccessAt"] = stamp  # fetch/parse success, not editorial success
+            if not cached_feed:
+                atomic_json(feed_path, {"fetchedAt": stamp, "url": source["url"], "xml": raw.decode("utf-8", "replace")})
+                h["lastSuccessAt"] = stamp  # actual fetch/parse success only
+                fetched_sources += 1
+            if retrying and not feed_failed:
+                entries = [e for e in entries if e["url"] in failed_urls]
             h["candidateCount"] = len(entries)
             entries.sort(key=lambda e: parse_date(e["publishedAt"]) or datetime.min.replace(tzinfo=UTC), reverse=True)
             attempts = 0
@@ -323,6 +353,9 @@ def run(config, out, state_dir, *, now=None, force=False, fetcher=fetch, extract
                         continue
                     if attempts >= config.get("maxArticlesPerSource", 4):
                         h["deferredCount"] += 1
+                        if retrying:
+                            h["failedUrls"].append(entry["url"])
+                            h["errors"].append(f"{entry['url']}: retry deferred by article budget")
                         continue
                     attempts += 1
                     print(f"[{key}] verifying {url}", flush=True)
@@ -332,6 +365,7 @@ def run(config, out, state_dir, *, now=None, force=False, fetcher=fetch, extract
                     existing = records.get(url) or next((s for s in old_doc["stories"] if canonical(s["url"]) == url), None)
                     if cached.get("body") == body_fp:
                         if url in records: records[url]["checkedAt"] = stamp
+                        excluded = cached.get("excluded", False)
                     else:
                         result = extractor(entry, article)
                         atomic_json(state_dir / "extractions" / f"{hashlib.sha256(url.encode()).hexdigest()[:16]}.json",
@@ -344,18 +378,30 @@ def run(config, out, state_dir, *, now=None, force=False, fetcher=fetch, extract
                         else:
                             h["rejectedCount"] += 1
                             records.pop(url, None)
-                    fingerprints[url] = {"feed": fp, "body": body_fp, "checkedAt": stamp}
+                        excluded = story is None
+                    fingerprints[url] = {"feed": fp, "body": body_fp, "checkedAt": stamp, "excluded": excluded}
                 except Exception as exc:
+                    h["failedUrls"].append(entry.get("url", ""))
                     h["errors"].append(f"{entry.get('url', '')}: {type(exc).__name__}: {str(exc)[:240]}")
         except Exception as exc:
+            h["feedFailed"] = True
             h["errors"].append(f"{type(exc).__name__}: {str(exc)[:240]}")
-        if h["errors"]: failures.append(key)
-    # Cache valid extraction work even when publication is held; a retry need not
-    # pay for the successful portion again. Invalid records never reach the cache.
+        if h["errors"]:
+            failures.append(key)
+            h["retryCount"] = retry_count + 1
+            delay = min(2 ** min(retry_count, 10), 6)
+            h["nextRetryAt"] = iso(now + timedelta(hours=delay))
+        else:
+            h.update(retryCount=0, nextRetryAt=None)
+    if retry_failed and not any_due:
+        return None  # No retry is due; leave health, state and publication alone.
+    # Only validated records enter the cache. Failed candidates remain pending
+    # and never advance a story's verification timestamp or fingerprint.
     atomic_json(state_dir / "state.json", {"sources": health["sources"], "records": records, "fingerprints": fingerprints})
     try:
-        if failures: raise ValueError("incomplete refresh: " + ", ".join(failures))
         stories = list(records.values())
+        if failures and not any(s.get("verifiedAt") for s in stories):
+            raise ValueError("no verified coverage available; failed sources: " + ", ".join(failures))
         # Retain original IDs and explicitly unverified legacy material in archive.
         urls = set(records)
         stories += [s for s in old_doc["stories"] if canonical(s["url"]) not in urls and not s.get("verifiedAt")]
@@ -379,12 +425,15 @@ def run(config, out, state_dir, *, now=None, force=False, fetcher=fetch, extract
             doc["selection"] = json.loads(result.stdout)
         validate_document(doc)
         # No due fetch and no new daily selection: don't pretend a new edition ran.
-        if any_due or doc.get("selection") != old_doc.get("selection"):
+        if fetched_sources or stories != old_doc["stories"] or doc.get("selection") != old_doc.get("selection"):
             atomic_json(out / "geeknews.json", doc)
         else:
             doc = old_doc
         health["documentGeneratedAt"] = doc["generatedAt"]
-        if any_due:
+        if failures:
+            health["status"] = "partial"
+            health["error"] = "Incomplete source checks: " + ", ".join(failures)
+        elif any_due:
             health["lastSuccessfulCheckAt"] = stamp
     except Exception as exc:
         health["status"] = "error"
@@ -407,6 +456,9 @@ def run(config, out, state_dir, *, now=None, force=False, fetcher=fetch, extract
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--force", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--retry-failed", action="store_true", help="Retry only failed sources/articles whose backoff has elapsed")
+    mode.add_argument("--cached-only", action="store_true", help="Publish verified cached work without fetching or extracting")
     parser.add_argument("--out", type=Path, default=ROOT)
     parser.add_argument("--state-dir", type=Path, default=ROOT / "data-collect/processed/science")
     args = parser.parse_args()
@@ -414,9 +466,13 @@ def main():
     preferences = read_json(ROOT / "brief-preferences.json", {})
     affinities = {**preferences.get("topicAffinities", {}), **preferences.get("newsTopicAffinities", {})}
     config["interests"] = sorted(k for k, v in affinities.items() if isinstance(v, (int, float)) and v > 0) or config.get("interests", [])
-    health = run(config, args.out, args.state_dir, force=args.force)
+    health = run(config, args.out, args.state_dir, force=args.force,
+                 retry_failed=args.retry_failed, cached_only=args.cached_only)
+    if health is None:
+        print(json.dumps({"status": "skipped", "reason": "No failed science retry is due"}))
+        return 0
     print(json.dumps({"status": health["status"], "error": health.get("error"), "metrics": health["metrics"]}))
-    return 0 if health["status"] == "ok" else 1
+    return 0 if health["status"] in ("ok", "partial") else 1
 
 
 if __name__ == "__main__":

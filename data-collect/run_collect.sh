@@ -82,6 +82,13 @@ case "$EVENT_IDENTITY_FUZZY" in 0|1) ;; *) echo "invalid EVENT_IDENTITY_FUZZY"; 
 export EVENT_IDENTITY_MODE EVENT_IDENTITY_FUZZY
 echo "event identity: mode=$EVENT_IDENTITY_MODE fuzzy=$EVENT_IDENTITY_FUZZY"
 
+# Reuse the hourly wakeup for failed science work only. Healthy sources keep
+# their daily schedule; run before the local crawler so its failures cannot
+# prevent science recovery. The science wrapper owns its own lock and backoff.
+if [ "${SCIENCE_RETRY_ENABLED:-1}" = 1 ] && [ "${COLLECT_NO_PUSH:-}" != 1 ] && [ "${COLLECT_OUT_DIR:-$ROOT}" = "$ROOT" ]; then
+    SCIENCE_VIBE_ENABLED=0 "$DIR/run_science.sh" --retry-failed || echo "science retry failed; continuing local collection"
+fi
+
 # --- step 1: crawl only the sources that are due --------------------------- #
 echo "--- step 1/4: crawl (due sources only) ---"
 "$PY" crawl_sources.py --concurrency "${COLLECT_CONCURRENCY:-8}" "$@"
