@@ -11,7 +11,7 @@ import {
   hasSignals,
 } from "./scoring.mjs?v=20261009-2";
 
-import { restoreWeights } from './weight-tuning.mjs';
+import { compareTaste, fitOrder, restoreWeights, saveWeights } from './weight-tuning.mjs';
 import { selectBestBets } from './ranking.mjs?v=20261009-2';
 const TIME_ZONE = "America/Detroit";
 const DEFAULT_BASE = 0.5;
@@ -29,6 +29,10 @@ const state = {
   day: "",
   sort: "rating",
   hasWeightsFile: true,
+  requestedOrder: null,
+  lastMovedId: null,
+  suggestion: null,
+  undoWeights: null,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -93,12 +97,103 @@ function evaluate(event) {
 
 function sortEvaluated(items) {
   const byStart = (a, b) => (a.event.start || "").localeCompare(b.event.start || "");
+  if (state.sort === "requested" && state.requestedOrder) {
+    const ranks = new Map(state.requestedOrder.map((id, index) => [id, index]));
+    return [...items].sort((a, b) => ranks.get(a.event.id) - ranks.get(b.event.id));
+  }
   if (state.sort === "start") return [...items].sort(byStart);
-  const key = state.sort === "published" ? "published" : "recomputed";
-  return [...items].sort((a, b) =>
-    Number(isMultiDay(a.event)) - Number(isMultiDay(b.event))
-    || (b[key] ?? -1) - (a[key] ?? -1)
-    || byStart(a, b));
+  if (state.sort === "published") return [...items].sort((a, b) => (b.published ?? -1) - (a.published ?? -1) || byStart(a, b));
+  return [...items].sort((a, b) => compareTaste(a.event, b.event, state.weights));
+}
+
+function visibleItems() {
+  return sortEvaluated(state.events.filter(event => isActiveOn(event, state.day)).map(evaluate));
+}
+
+function clearRanking() {
+  state.requestedOrder = null;
+  state.lastMovedId = null;
+  state.suggestion = null;
+  if (state.sort === "requested") state.sort = "rating";
+  $("#sort-select").value = state.sort;
+  $("#ranking-status").textContent = "";
+}
+
+function invalidateSuggestion() {
+  state.suggestion = null;
+  state.undoWeights = null;
+  $("#ranking-status").textContent = state.requestedOrder ? "Weights changed. Suggest again for your requested order." : "";
+}
+
+function renderRankingControls(evaluated) {
+  const noSignals = evaluated.filter(item => !item.has).length;
+  $("#sort-select option[value=requested]").disabled = !state.requestedOrder;
+  $("#suggest-button").disabled = !state.requestedOrder || evaluated.length < 2 || noSignals > 0;
+  $("#clear-ranking-button").disabled = !state.requestedOrder;
+  $("#undo-suggestion-button").disabled = !state.undoWeights;
+  if (noSignals) $("#ranking-status").textContent = `Cannot suggest weights for this day: ${noSignals} event${noSignals === 1 ? " has" : "s have"} no scoring signals. Choose another day or adjust weights manually.`;
+  $("#weight-suggestion").hidden = !state.suggestion;
+}
+
+function moveEvent(id, offset) {
+  const items = visibleItems();
+  const from = items.findIndex(item => item.event.id === id);
+  const to = from + offset;
+  if (from < 0 || to < 0 || to >= items.length) return;
+  const order = items.map(item => item.event.id);
+  order.splice(to, 0, order.splice(from, 1)[0]);
+  state.requestedOrder = order;
+  state.lastMovedId = id;
+  state.suggestion = null;
+  state.sort = "requested";
+  $("#sort-select").value = state.sort;
+  $("#ranking-status").textContent = `${items[from].event.title} moved to #${to + 1}. Scores still use the current weights. Suggest weights when your order is ready.`;
+  renderEvents();
+  const card = [...$("#event-list").children].find(node => node.dataset.id === String(id));
+  const button = card?.querySelector(`[data-move-offset="${offset}"]:not(:disabled)`) || card?.querySelector(".score-event__moves button:not(:disabled)");
+  button?.focus({ preventScroll: true });
+}
+
+const signedWeight = spec => spec.weight * (spec.polarity === "negative" ? -1 : 1);
+const weightLabel = value => `${value >= 0 ? "+" : "−"}${Math.abs(value).toFixed(6).replace(/0+$/, "").replace(/\.$/, "")}`;
+
+function suggestWeights() {
+  if (!state.requestedOrder) return;
+  const events = visibleItems().map(item => item.event);
+  const byId = new Map(events.map(event => [event.id, event]));
+  const desired = state.requestedOrder.map(id => byId.get(id));
+  const result = fitOrder(desired, state.weights, { movedId: state.lastMovedId });
+  if (result.unsupported) {
+    $("#ranking-status").textContent = "At least two events with scoring signals are needed to suggest weights.";
+    return;
+  }
+  state.suggestion = result;
+  const changes = state.order.map(name => ({ name, before: signedWeight(state.weights.signals[name]), after: signedWeight(result.config.signals[name]) }))
+    .filter(row => Math.abs(row.after - row.before) > 1e-7)
+    .sort((a, b) => Math.abs(b.after - b.before) - Math.abs(a.after - a.before));
+  $("#suggestion-changes").replaceChildren(...changes.map(row => el("tr", {}, [
+    el("th", { scope: "row", text: prettySignal(row.name) }),
+    el("td", { text: weightLabel(row.before) }),
+    el("td", { text: weightLabel(row.after) }),
+  ])));
+  const fit = result.matched === result.total ? "Requested order matched." : "Best attempt; the full requested order could not be matched.";
+  $("#suggestion-summary").textContent = `${fit} ${result.matched} of ${result.total} requested event pairs matched; ${result.ties} tied. ${changes.length} weight${changes.length === 1 ? "" : "s"} changed.`;
+  $("#apply-suggestion-button").disabled = changes.length === 0;
+  $("#ranking-status").textContent = "Suggestion ready. Review the changes below; current weights are unchanged.";
+  renderRankingControls(visibleItems());
+}
+
+function applySuggestion() {
+  if (!state.suggestion) return;
+  const { config, matched, total, ties } = state.suggestion;
+  state.undoWeights = structuredClone(state.weights);
+  state.weights = config;
+  clearRanking();
+  state.sort = "rating";
+  $("#sort-select").value = state.sort;
+  renderWeightPanel();
+  renderEvents();
+  $("#ranking-status").textContent = `Suggestion applied to the preview: ${matched} of ${total} requested pairs matched; ${ties} tied. Showing the fitted rating order. Save or copy weights to keep them.`;
 }
 
 // ---------------------------------------------------------------------------
@@ -169,7 +264,7 @@ function topContributors(item) {
     .join(" · ");
 }
 
-function eventCard(item, index) {
+function eventCard(item, index, items) {
   const title = el("h3");
   try {
     const url = new URL(item.event.url);
@@ -188,6 +283,14 @@ function eventCard(item, index) {
     el("div", { className: "score-event__title" }, [title, meta]),
     scoreBlock(item),
   ]);
+  const moves = el("div", { className: "score-event__moves", "aria-label": `Change rank for ${item.event.title}` });
+  for (const [offset, symbol, direction] of [[-1, "↑", "up"], [1, "↓", "down"]]) {
+    const button = el("button", { type: "button", text: symbol, "aria-label": `Move ${item.event.title} ${direction}`, dataset: { moveOffset: offset } });
+    button.disabled = !items[index + offset];
+    button.addEventListener("click", () => moveEvent(item.event.id, offset));
+    moves.append(button);
+  }
+  head.append(moves);
 
   const details = el("details", { className: "score-event__breakdown" });
   details.open = state.expanded.has(item.event.id);
@@ -215,14 +318,14 @@ function renderBestBets() {
 function renderEvents() {
   renderBestBets();
   const scrollTop = document.scrollingElement.scrollTop;
-  const active = state.events.filter((event) => isActiveOn(event, state.day));
-  const evaluated = sortEvaluated(active.map(evaluate));
+  const evaluated = visibleItems();
+  renderRankingControls(evaluated);
   renderSummary(evaluated);
   const list = $("#event-list");
   if (!evaluated.length) {
     list.replaceChildren(el("p", { className: "empty-state", text: "No events active on this day." }));
   } else {
-    list.replaceChildren(...evaluated.map((item, index) => eventCard(item, index)));
+    list.replaceChildren(...evaluated.map((item, index) => eventCard(item, index, evaluated)));
   }
   document.scrollingElement.scrollTop = scrollTop;
 }
@@ -240,6 +343,7 @@ function weightRow(name) {
   const update = () => {
     spec.polarity = polarity.value;
     spec.weight = Number(weight.value);
+    invalidateSuggestion();
     scheduleRender();
   };
   polarity.addEventListener("change", update);
@@ -290,14 +394,33 @@ function copyWeights() {
 function resetWeights() {
   state.weights = structuredClone(state.defaults);
   state.order = Object.keys(state.weights.signals);
+  state.undoWeights = null;
+  clearRanking();
   renderWeightPanel();
   renderEvents();
   $("#status").textContent = "Weights reset to the exported defaults";
 }
 
 function bindControls() {
+  $("#suggest-button").addEventListener("click", suggestWeights);
+  $("#apply-suggestion-button").addEventListener("click", applySuggestion);
+  $("#discard-suggestion-button").addEventListener("click", () => {
+    state.suggestion = null;
+    $("#ranking-status").textContent = "Suggestion discarded. Your requested order is still available to edit.";
+    renderRankingControls(visibleItems());
+  });
+  $("#clear-ranking-button").addEventListener("click", () => { clearRanking(); renderEvents(); });
+  $("#undo-suggestion-button").addEventListener("click", () => {
+    if (!state.undoWeights) return;
+    state.weights = state.undoWeights;
+    state.undoWeights = null;
+    clearRanking();
+    renderWeightPanel();
+    renderEvents();
+    $("#ranking-status").textContent = "Previous preview weights restored. Save again if you want to replace saved browser weights.";
+  });
   $('#save-button').addEventListener('click', () => {
-    try { localStorage.setItem('daily-brief:weights:v2', JSON.stringify(state.weights)); $('#status').textContent = 'Saved on this browser. Reload the brief to apply.'; }
+    try { $('#status').textContent = saveWeights(state.weights, localStorage) ? 'Saved on this browser. Reload the brief to apply.' : 'Browser storage unavailable; weights were not saved.'; }
     catch { $('#status').textContent = 'Browser storage unavailable; weights were not saved.'; }
   });
   $('#clear-saved-button').addEventListener('click', () => {
@@ -309,28 +432,39 @@ function bindControls() {
       const doc = JSON.parse(await e.target.files[0].text());
       if (!Array.isArray(doc.events) || !doc.editionDate || !Number.isFinite(Date.parse(doc.generatedAt))) throw new Error('Choose a saved events.json document');
       state.events = doc.events; state.day = doc.editionDate; state.referenceTime = Date.parse(doc.generatedAt);
+      const discovered = discoverSignals(state.events);
+      state.defaults = { ...state.defaults, signals: mergeSignals(state.defaults, discovered).signals };
+      const merged = mergeSignals(state.weights, discovered);
+      state.weights = { ...state.weights, signals: merged.signals };
+      state.order = Object.keys(state.weights.signals);
+      state.added = state.order.filter(name => state.weights.signals[name].isNew);
+      state.undoWeights = null; clearRanking(); renderWeightPanel();
       $('#day-input').value = state.day; renderEvents(); $('#status').textContent = 'Saved edition loaded locally; no upload.';
     } catch (error) { $('#status').textContent = error.message; }
   });
   $("#day-input").addEventListener("change", (changeEvent) => {
     if (changeEvent.target.value) {
       state.day = changeEvent.target.value;
+      clearRanking();
       renderEvents();
     }
   });
   $("#today-button").addEventListener("click", () => {
     state.day = todayKey();
+    clearRanking();
     $("#day-input").value = state.day;
     renderEvents();
   });
   $("#sort-select").addEventListener("change", (changeEvent) => {
     state.sort = changeEvent.target.value;
+    if (state.sort !== "requested") clearRanking();
     renderEvents();
   });
   $("#base-input").addEventListener("input", (inputEvent) => {
     const value = Number(inputEvent.target.value);
     if (Number.isFinite(value)) {
       state.weights.base = value;
+      invalidateSuggestion();
       scheduleRender();
     }
   });

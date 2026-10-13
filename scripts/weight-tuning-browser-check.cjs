@@ -77,5 +77,6 @@ const key = 'daily-brief:weights:v2';
     assert.match(await denied.page.locator('.calendar-tuning__status').textContent(),/storage unavailable/);
     await denied.context.close();assert.deepEqual(errors,[]);
     console.log('Live sort, slider keyboard input, save/reload, fitting, drag, undo, reset, cross-tab sync, mobile layout, and denied storage passed');
+    await require('./scoring-debug-browser-check.cjs')(browser, url);
   } finally {await browser.close();}
 })().catch(error=>{console.error(error);process.exit(1)});

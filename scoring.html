@@ -8,8 +8,8 @@
     <title>Scoring debug — Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="theme.css?v=20260920-7">
-    <link rel="stylesheet" href="scoring-debug.css?v=20261009-2">
-    <script type="module" src="scoring-debug.js?v=20261009-2"></script>
+    <link rel="stylesheet" href="scoring-debug.css?v=20261012-1">
+    <script type="module" src="scoring-debug.js?v=20261012-1"></script>
   </head>
   <body class="scoring-body">
     <header class="scoring-header">
@@ -18,7 +18,8 @@
         <h1>Event scoring debug</h1>
         <p class="scoring-lede">
           Every event active on the chosen day, with its full Jev breakdown. Change the
-          weights and the ranking recomputes live. Weights are exported from
+          weights and the ranking recomputes live, or move events up and down to
+          suggest weights for your preferred order. Weights are exported from
           <code>data-collect/extract/scoring.py</code> via <code>scripts/export_scoring_weights.py</code>;
           new signals found in the data appear automatically at weight&nbsp;0.
         </p>
@@ -36,6 +37,7 @@
           <option value="rating">Rating (recomputed)</option>
           <option value="published">Published score</option>
           <option value="start">Start time</option>
+          <option value="requested" disabled>Your requested order</option>
         </select>
       </label>
       <label>Base <input type="number" id="base-input" step="0.01" min="0" max="1"></label>
@@ -57,6 +59,31 @@
       </aside>
 
       <main class="scoring-main">
+        <section class="ranking-panel" aria-labelledby="ranking-title">
+          <h2 id="ranking-title">Tune by ranking</h2>
+          <p>Use ↑ / ↓ on events to build your preferred order, then suggest weights.
+            Review and apply the suggestion to update the preview. Save or copy the weights when ready.</p>
+          <div class="ranking-actions">
+            <button id="suggest-button" type="button" disabled>Suggest weights</button>
+            <button id="clear-ranking-button" type="button" disabled>Clear requested order</button>
+            <button id="undo-suggestion-button" type="button" disabled>Undo applied suggestion</button>
+          </div>
+          <p id="ranking-status" class="ranking-status" role="status" aria-live="polite"></p>
+          <div id="weight-suggestion" hidden>
+            <h3>Suggested changes</h3>
+            <p id="suggestion-summary"></p>
+            <div class="suggestion-table-wrap"><table class="suggestion-table">
+              <thead><tr><th>Signal</th><th>Current</th><th>Suggested</th></tr></thead>
+              <tbody id="suggestion-changes"></tbody>
+            </table></div>
+            <p class="ranking-status">Positive values add to the score; negative values are penalties.
+              The base stays fixed. Signals can change direction. Some orders cannot be reproduced by these signals.</p>
+            <div class="ranking-actions">
+              <button id="apply-suggestion-button" type="button">Apply suggestion to preview</button>
+              <button id="discard-suggestion-button" type="button">Discard suggestion</button>
+            </div>
+          </div>
+        </section>
         <details><summary>Best bets: defaults versus preview</summary><div id="shortlist-comparison"></div></details>
         <div id="summary" class="scoring-summary" role="status" aria-live="polite"></div>
         <div id="event-list" class="scoring-events"></div>

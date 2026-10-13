@@ -182,9 +182,21 @@ run `npm run build:shell`.
 ## Scoring debug page
 
 `scoring.html` is a standalone tuning view for the event-fit score. Pick a day
-to see every active event with its full Jev breakdown, then drag the weights
+to see every active event with its full Jev breakdown, then edit the weights
 and watch the ranking recompute live. The page also flags events whose
 published `score` differs from the recomputed rating.
+
+Use each event's ↑ / ↓ buttons to build a requested order, then click
+**Suggest weights** to fit that order using the calendar's weight fitter.
+Review the signed weight changes and matched-pair/tie counts, then **Apply
+suggestion to preview** to see the actual fitted ranking and best bets.
+Suggestions can change a signal from a bonus to a penalty; identical signals
+or conflicting preferences can prevent an exact fit. Rating order uses the
+unrounded score to break equal displayed ratings, including multi-day events.
+**Undo applied suggestion** restores the previous preview. Save the applied
+weights on this browser or copy their JSON when ready; suggesting and applying
+alone do not save them. Changing the day, edition, or sort clears the requested
+order. Days containing events without signals cannot be fitted.
 
 The weights live in `data-collect/extract/scoring.py`. Export them for the page
 after any change:

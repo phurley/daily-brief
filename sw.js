@@ -1,6 +1,6 @@
 // Generated at deployment from the content of every shell asset. A waiting worker activates on the next launch;
 // never swap code beneath an already-open edition.
-const SHELL='daily-brief-shell-2ecd4da87e5a5290ead6d7d6f1c1a8ef07dc357ded5e8306c99be8d83ecfea50';
+const SHELL='daily-brief-shell-2c2abb73b2eba49b693fa8d87ded2db97a8528d9ed1f96120ad58c995555970f';
 const DATA='daily-brief-sections-v1';
 const SHELL_FILES=["almanac-calc.mjs","app.js","assets/moon-waxing-gibbous.png","assets/redwood-canopy.svg","aurora.mjs","brief-selection.mjs","calendar-tuning.css","calendar-tuning.js","edition-client.mjs","event-status.mjs","event-time.mjs","favicon.svg","index.html","news-ranking.mjs","on-this-date.mjs","photo-selection.mjs","preferences.mjs","ranking.mjs","science.mjs","scoring-debug.css","scoring-debug.js","scoring.html","scoring.mjs","sky-events.mjs","starship.mjs","story-order.mjs","theme.css","themes.css","themes.js","weather-appearance.mjs","weight-tuning.mjs"];
 // Use per-shell download URLs to avoid reusing assets from earlier builds.
