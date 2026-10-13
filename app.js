@@ -16,6 +16,7 @@ import { calendarTuner } from './calendar-tuning.js';
 import { shufflePhotos, isLandscapePhoto, photoDotWindow, photoDateLabel } from './photo-selection.mjs?v=20261012-photos-2';
 import { eventStatus } from './ranking.mjs?v=20261009-layout-1';
 import { selectFeaturedLanes, featuredMasthead } from './featured-events.mjs?v=20261012-verified-1';
+import { connectShellUpdates, saveShellReloadState, readShellReloadState, restoreShellReloadState } from './shell-updates.mjs';
 import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
 let rankingWeights;
@@ -174,6 +175,8 @@ function validateTopLevel(data, schema, name) {
 }
 
 const schemaCache = new Map();
+const shellUpdates = connectShellUpdates(saveShellReloadState);
+let shellReloadState = readShellReloadState();
 let refreshing = false;
 let lastCheck = 0;
 let manifest = null;
@@ -232,6 +235,7 @@ function updateFreshness() {
 async function refreshData({ initial = false } = {}) {
   if (refreshing || document.hidden) return;
   refreshing = true;
+  if (!initial) void shellUpdates.check();
   const previousToday = state.today;
   state.today = dateKey(new Date());
   if (state.today !== previousToday && state.selectedDate === previousToday) {
@@ -303,6 +307,10 @@ async function refreshData({ initial = false } = {}) {
     updateFreshness();renderErrors();renderStarship();
     $('#refresh-brief').disabled=false;
     if (photosRequested && !initial) void loadPhotos();
+    if (shellReloadState) {
+      restoreShellReloadState(shellReloadState);
+      shellReloadState = null;
+    }
   }
 }
 async function ensureFullEvents() {
@@ -1015,11 +1023,11 @@ function renderPreferenceControls() {
   settings.append(node('summary', { text: 'Recommendation preferences' }), node('p', { text: 'Household profile on this browser. More/less adjusts this event category; favorites apply to its series. Feedback stays on this device.' }));
   const form = node('form', { className: 'recommendation-settings' });
   const p = preferences.get();
-  const count = node('input', { type: 'number', min: 1, max: 3, value: Math.min(3, p.ranking.limit), required: '' });
-  const distance = node('input', { type: 'number', min: 0, step: 'any', value: p.constraints.maxDistanceMiles ?? '', placeholder: 'No limit' });
-  const budget = node('input', { type: 'number', min: 0, step: 'any', value: p.constraints.maxPrice ?? '', placeholder: 'No limit' });
-  const knownPrice = node('input', { type: 'checkbox' }); knownPrice.checked = p.constraints.excludeUnknownPrice;
-  const exact = node('input', { type: 'checkbox' }); exact.checked = p.constraints.selectedDayOnly;
+  const count = node('input', { name: 'limit', type: 'number', min: 1, max: 3, value: Math.min(3, p.ranking.limit), required: '' });
+  const distance = node('input', { name: 'maxDistanceMiles', type: 'number', min: 0, step: 'any', value: p.constraints.maxDistanceMiles ?? '', placeholder: 'No limit' });
+  const budget = node('input', { name: 'maxPrice', type: 'number', min: 0, step: 'any', value: p.constraints.maxPrice ?? '', placeholder: 'No limit' });
+  const knownPrice = node('input', { name: 'excludeUnknownPrice', type: 'checkbox' }); knownPrice.checked = p.constraints.excludeUnknownPrice;
+  const exact = node('input', { name: 'selectedDayOnly', type: 'checkbox' }); exact.checked = p.constraints.selectedDayOnly;
   form.append(node('label', {}, ['Best bets per lane: ', count].map(x => typeof x === 'string' ? document.createTextNode(x) : x)), node('label', {}, [document.createTextNode('Maximum miles (unknown distances excluded when set): '), distance]), node('label', {}, [document.createTextNode('Admission budget per person ($, lowest listed ticket): '), budget]), node('label', {}, [knownPrice, document.createTextNode('Require a known admission price')]), node('label', {}, [exact, document.createTextNode('Selected day only')]), node('button', { type: 'submit', text: 'Save preferences' }));
   form.addEventListener('submit', e => { e.preventDefault(); const next = preferences.get(); next.ranking.limit = Number(count.value); next.constraints.maxDistanceMiles = distance.value === '' ? null : Number(distance.value); next.constraints.maxPrice = budget.value === '' ? null : Number(budget.value); next.constraints.excludeUnknownPrice = knownPrice.checked; next.constraints.selectedDayOnly = exact.checked; const saved = preferences.set(next); feedbackNotice = saved ? 'Preferences saved on this browser.' : 'Applied for this session; browser storage is unavailable.'; renderEvents(); });
   settings.append(form, node('p', { text: `${p.hiddenOccurrences.length} hidden occurrences · ${p.favorites.length} favorites · Category adjustments: ${Object.entries(p.topicAffinities).map(([name, value]) => `${name} ${value > 0 ? '+' : ''}${value}`).join(', ') || 'none'}` }), button('Reset preferences and feedback', () => { const saved = preferences.reset(); feedbackNotice = saved ? 'Preferences reset. Undo is available.' : 'Reset for this session; browser storage is unavailable.'; renderEvents(); }));
@@ -1891,7 +1899,6 @@ async function init() {
   if(saved) {manifest=saved.manifest;Object.assign(state.data,saved.data);configureRanking(saved.data.rankingConfig);savedMode=true;render();updateFreshness();}
   else {for(const name of Object.keys(sectionSelectors)) sectionStates[name]='loading';render();updateFreshness();}
   refreshData({initial:true});loadFamilyCalendar();loadJoke();loadRocketLaunches();
-  if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).catch(()=>{state.errors.push('Offline shell unavailable in this browser.');renderErrors();});
   const photosObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)) {
     photosObserver.disconnect();void loadPhotos();
   }},{rootMargin:'200px'});

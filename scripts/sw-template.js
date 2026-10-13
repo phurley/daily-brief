@@ -1,17 +1,44 @@
-// Generated at deployment from the content of every shell asset. A waiting worker activates on the next launch;
-// never swap code beneath an already-open edition.
+// Generated at deployment from every shell asset. Complete the new cache before
+// activation, then reload open reports together so code and data stay coherent.
 const SHELL='daily-brief-shell-__SHELL_HASH__';
 const DATA='daily-brief-sections-v1';
 const SHELL_FILES=__SHELL_FILES__;
+const UPDATE_MARKER=new URL('__shell_update__',self.registration.scope).href;
 // Use per-shell download URLs to avoid reusing assets from earlier builds.
 // Normal page requests match these entries by path.
-self.addEventListener('install',event=>event.waitUntil(caches.open(SHELL).then(cache=>cache.addAll(SHELL_FILES.map(path=>{
+self.addEventListener('install',event=>event.waitUntil((async()=>{
+ const cache=await caches.open(SHELL);
+ await cache.addAll(SHELL_FILES.map(path=>{
  const url=new URL(path,self.registration.scope);url.searchParams.set('shell',SHELL);
  return new Request(url,{cache:'reload'});
-})))));
+ }));
+ // Persist this across worker restarts, including eviction of the old cache.
+ if(self.registration.active) await cache.put(UPDATE_MARKER,new Response('1'));
+ await self.skipWaiting();
+})()));
+
+async function reloadReport(client) {
+ const url=new URL(client.url),base=new URL(self.registration.scope);
+ if(url.origin!==base.origin || !['', 'index.html'].includes(url.pathname.slice(base.pathname.length))) return;
+ // Current pages save open preference edits. Older pages cannot acknowledge,
+ // so the bounded fallback also upgrades a browser pinned to a legacy shell.
+ const channel=new MessageChannel();
+ await new Promise(resolve=>{
+  const timer=setTimeout(resolve,1000);
+  channel.port1.onmessage=()=>{clearTimeout(timer);resolve();};
+  client.postMessage({type:'BRIEF_SHELL_RELOAD'},[channel.port2]);
+ });
+ channel.port1.close();
+ const current=await self.clients.get(client.id);
+ // Do not await navigation inside activation: its fetch waits for activation.
+ if(current?.url===client.url) void current.navigate(client.url).catch(()=>{});
+}
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
- for(const key of await caches.keys()) if(key.startsWith('daily-brief-') && key!==SHELL && key!==DATA) await caches.delete(key);
+ const keys=await caches.keys();
+ const upgrading=Boolean(await (await caches.open(SHELL)).match(UPDATE_MARKER));
  await self.clients.claim();
+ if(upgrading) await Promise.allSettled((await self.clients.matchAll({type:'window'})).map(reloadReport));
+ for(const key of keys) if(key.startsWith('daily-brief-') && key!==SHELL && key!==DATA) await caches.delete(key);
 })()));
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url);const base=new URL(self.registration.scope);

@@ -87,8 +87,12 @@ full-document loader remains as a progressive compatibility path.
 32 immutable section responses; manifest checks remain network-only. It never
 caches family calendar, preferences, or third-party API responses. The deploy workflow generates the shell
 cache name from all shell assets and the worker template; bump the data/cache contract version for incompatible
-payloads. The new worker waits for old pages to close, avoiding a code swap beneath
-an open edition. Activation removes only obsolete Daily Brief caches. Browser
+payloads. A new worker activates only after every shell asset downloads, then
+reloads open reports onto that complete shell. Reports save their selected date,
+open panels and unsaved preference edits across this reload; stored preferences,
+weights and theme stay intact. Legacy pages also upgrade without closing tabs.
+Refresh checks both report data and app updates. An incomplete shell download
+keeps the working version. Activation removes only obsolete Daily Brief caches. Browser
 cache eviction may remove offline capability; opening online rebuilds it. A saved
 edition keeps its original date even across midnight and failed refreshes.
 
@@ -209,9 +213,11 @@ Saved event preferences or custom weights automatically load the full candidate
 archive and rerank on initial load, reload, and edition changes. If unavailable,
 the page explicitly identifies the compact selection as the fallback.
 
-`npm run test:integration` covers automatic service-worker upgrades with offline
-reopening, failed edition replacement/retry, and a favorite outside the public
-shortlist surviving reload. `python3 scripts/test_publish_brief.py` includes a
+`npm run test:caching` covers legacy and current service-worker upgrades with
+multiple tabs open, unsaved preference edits, failed shell downloads/retry, and
+offline reopening with production-style HTTP caching. `npm run test:integration`
+covers failed edition replacement/retry and saved favorites without bypassing
+editorial verification. `python3 scripts/test_publish_brief.py` includes a
 competing publisher and exhausted retries in isolated repositories. The deploy
 workflow also runs after successful weather/calendar/edition workflows because
 commits made with `GITHUB_TOKEN` do not trigger a new push workflow.

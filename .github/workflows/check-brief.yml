@@ -68,3 +68,5 @@ jobs:
           BRIEF_BROWSER=webkit npm run test:tuning
           npm run test:integration
           BRIEF_BROWSER=webkit npm run test:integration
+          npm run test:caching
+          BRIEF_BROWSER=webkit npm run test:caching
