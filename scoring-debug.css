@@ -64,7 +64,7 @@
 .score-event__title h3 { margin: 0; font-size: 1.02rem; line-height: 1.25; }
 .score-event__title a { color: var(--accent-dark); text-decoration: none; }
 .score-event__title a:hover { text-decoration: underline; }
-.score-event__meta { margin: .25rem 0 0; color: var(--muted); font-size: .7rem; }
+.score-event__meta { margin: .25rem 0 0; color: var(--muted); font-size: .7rem; overflow-wrap: anywhere; }
 .score-event__scores { display: grid; gap: .1rem; justify-items: end; white-space: nowrap; }
 .score-big { color: var(--accent-dark); font-family: var(--serif); font-size: 1.7rem; line-height: 1; }
 .score-published { color: var(--muted); font-size: .62rem; }

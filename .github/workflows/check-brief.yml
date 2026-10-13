@@ -52,6 +52,10 @@ jobs:
           python3 scripts/test_update_photos.py
           python3 scripts/test_science_retry_schedule.py
       - run: npx playwright install --with-deps chromium webkit
+      - name: Cached report upgrade checks
+        run: |
+          npm run test:caching
+          BRIEF_BROWSER=webkit npm run test:caching
       - name: Browser checks
         run: |
           python3 -m http.server 4173 > /tmp/brief-preview.log 2>&1 &
@@ -68,5 +72,3 @@ jobs:
           BRIEF_BROWSER=webkit npm run test:tuning
           npm run test:integration
           BRIEF_BROWSER=webkit npm run test:integration
-          npm run test:caching
-          BRIEF_BROWSER=webkit npm run test:caching

@@ -177,6 +177,10 @@ module.exports = async function checkScoringDebug(browser, url) {
         await realPage.setViewportSize({ width, height: 900 });
         assert.ok(await realPage.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `real scoring data fits ${width}`);
       }
+      // Wider font metrics expose unbroken venue URLs even on macOS, whose
+      // default system font can fit a URL that overflows the Linux CI browser.
+      await realPage.evaluate(() => document.documentElement.style.setProperty('--sans', 'Verdana, sans-serif'));
+      assert.ok(await realPage.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'real scoring data fits 320 with wider fonts');
     } finally { await live.close(); }
     assert.deepEqual(errors, []);
     console.log('Scoring debug: requested ordering, keyboard moves, suggestion review/apply/undo, save/reload, invalidation, imports, ties, missing signals, mobile layout, and denied storage passed');
