@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-13T10:00:01.886016Z",
-  "status": "error",
+  "generatedAt": "2026-10-13T16:40:22.630273Z",
+  "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-10T10:16:39.118957Z",
-  "documentGeneratedAt": "2026-10-10T10:16:39.118957Z",
-  "newestVerifiedStoryAt": "2026-10-10T04:05:00Z",
+  "documentGeneratedAt": "2026-10-13T16:40:22.630273Z",
+  "newestVerifiedStoryAt": "2026-10-13T04:05:00Z",
   "sources": {
     "nasa": {
       "name": "NASA",
@@ -16,7 +16,8 @@
       "candidateCount": 10,
       "acceptedCount": 3,
       "deferredCount": 2,
-      "rejectedCount": 1
+      "rejectedCount": 1,
+      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z"
     },
     "jpl": {
       "name": "NASA JPL",
@@ -30,7 +31,8 @@
       "candidateCount": 10,
       "acceptedCount": 2,
       "deferredCount": 0,
-      "rejectedCount": 3
+      "rejectedCount": 3,
+      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z"
     },
     "esa": {
       "name": "ESA",
@@ -45,7 +47,8 @@
       "candidateCount": 15,
       "acceptedCount": 2,
       "deferredCount": 7,
-      "rejectedCount": 3
+      "rejectedCount": 3,
+      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z"
     },
     "nsf": {
       "name": "NSF",
@@ -59,7 +62,8 @@
       "candidateCount": 0,
       "acceptedCount": 0,
       "deferredCount": 0,
-      "rejectedCount": 0
+      "rejectedCount": 0,
+      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z"
     },
     "umich": {
       "name": "University of Michigan News",
@@ -73,37 +77,41 @@
       "candidateCount": 20,
       "acceptedCount": 2,
       "deferredCount": 13,
-      "rejectedCount": 1
+      "rejectedCount": 1,
+      "lastFullAttemptAt": "2026-10-13T10:00:01.886016Z"
     }
   },
-  "error": "ValueError: incomplete refresh: jpl, esa, nsf, umich",
+  "error": "Incomplete source checks: jpl, esa, nsf, umich",
   "metrics": {
-    "verifiedStories": 38,
+    "verifiedStories": 47,
     "sourceCounts": {
       "ESA": 8,
-      "NASA": 8,
+      "NASA": 14,
       "NASA JPL": 8,
       "NSF": 9,
-      "University of Michigan News": 5
+      "University of Michigan News": 8
     },
     "topicCounts": {
-      "astronomy": 22,
-      "biology": 2,
+      "astronomy": 24,
+      "biology": 4,
+      "climate": 1,
       "computer-science": 1,
-      "earth-science": 10,
+      "earth-science": 12,
       "economics": 1,
+      "education": 1,
       "engineering": 2,
-      "geology": 1,
-      "health": 3,
-      "law": 3,
+      "geology": 2,
+      "health": 4,
+      "law": 2,
+      "law & politics": 1,
       "materials-research": 1,
-      "physics": 15,
+      "physics": 14,
       "planetary-science": 1,
-      "politics": 1,
+      "politics": 2,
       "social-science": 5,
-      "technology": 25
+      "technology": 26
     },
-    "newestStoryAgeHours": 77.92,
+    "newestStoryAgeHours": 12.59,
     "maxPublicationLagHours": 1114.28
   }
 }
