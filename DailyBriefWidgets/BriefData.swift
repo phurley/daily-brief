@@ -65,15 +65,21 @@ struct BriefEvent: Codable, Identifiable {
     let timePrecision: String?
     let reviewExpiresAt: String?
 
-    func hasEnded(at date: Date) -> Bool {
+    static func parseTimestamp(_ value: String) -> Date? {
         let formatter = ISO8601DateFormatter()
-        if let reviewExpiresAt, let expiry = formatter.date(from: reviewExpiresAt), expiry <= date { return true }
-        guard let closing = formatter.date(from: end ?? start) else { return true }
+        if let date = formatter.date(from: value) { return date }
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter.date(from: value)
+    }
+
+    func hasEnded(at date: Date) -> Bool {
+        if let reviewExpiresAt, let expiry = Self.parseTimestamp(reviewExpiresAt), expiry <= date { return true }
+        guard let closing = Self.parseTimestamp(end ?? start) else { return true }
         return closing <= date
     }
     var time: String { timeLabel(relativeTo: .now) }
     func timeLabel(relativeTo reference: Date) -> String {
-        guard let date = ISO8601DateFormatter().date(from: start) else { return "Time unavailable" }
+        guard let date = Self.parseTimestamp(start) else { return "Time unavailable" }
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(identifier: "America/Detroit")
         if ["date", "unknown"].contains(timePrecision ?? "") {
