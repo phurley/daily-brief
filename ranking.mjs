@@ -1,6 +1,7 @@
 import { computeScore, contributions, hasSignals } from './scoring.mjs?v=20261009-2';
 import { normalizePreferences, occurrenceKey, occurrenceKeys, seriesKey, isFavorite } from './preferences.mjs?v=20261009-identity1';
 export { occurrenceKey, seriesKey } from './preferences.mjs?v=20261009-identity1';
+import { reconcileRecommendationEvents, recommendationVenueKey } from './event-experiences.mjs?v=20261012-1';
 const DAY = 86400000;
 const key = value => String(value || '').toLowerCase();
 export function localDay(value) {
@@ -17,7 +18,7 @@ export function eventStatus(event) {
 }
 export function admissionPrice(event) {
   if (event.priceCurrency === 'USD' && Number.isFinite(event.priceMin) && event.priceMin >= 0) return event.priceMin;
-  if (/^free(?: admission)?$/i.test(String(event.price || '').trim())) return 0;
+  if (/^free(?: admission)?(?:\s*[-–—]\s*no tickets required)?$/i.test(String(event.price || '').trim())) return 0;
   // Old records may contain a verified plain USD price but lack numeric fields.
   const match = /^\$([\d,]+(?:\.\d{1,2})?)(?:\s*[–-]\s*\$?[\d,.]+)?(?:\s+(?:including fees|cover|per person))?$/i.exec(String(event.price || '').trim());
   return match ? Number(match[1].replaceAll(',', '')) : null;
@@ -80,18 +81,22 @@ export function rankEvent(event, { day, now, preferences, weights }) {
 }
 export function selectBestBets(events, { day, now = Date.now(), preferences = {}, weights } = {}) {
   day ||= localDay(now);
+  return selectReconciledBets(reconcileRecommendationEvents(events), { day, now, preferences, weights });
+}
+function selectReconciledBets(events, { day, now = Date.now(), preferences = {}, weights, excludedExperiences = new Set() }) {
   const p = normalizePreferences(preferences), limits = p.ranking;
   const compare = (a, b) => b.score - a.score || Date.parse(a.event.start) - Date.parse(b.event.start) || a.occurrenceId.localeCompare(b.occurrenceId) || String(a.event.id).localeCompare(String(b.event.id));
   const ranked = events.map(event => rankEvent(event, { day, now, preferences: p, weights })).filter(r => !r.ineligible && r.score >= limits.minScore).sort(compare);
   let diversityLimited = false;
-  const selected = [], seen = new Set(), venues = new Map(), categories = new Map(), series = new Map();
+  const selected = [], seen = new Set(), experiences = new Set(excludedExperiences), venues = new Map(), categories = new Map(), series = new Map();
   const take = (row, nearTerm = false) => {
-    const e = row.event, v = key(e.venue) || occurrenceKey(e), c = key(e.category) || occurrenceKey(e), s = seriesKey(e);
+    const e = row.event, v = recommendationVenueKey(e) || occurrenceKey(e), c = key(e.category) || occurrenceKey(e), s = seriesKey(e);
     if (seen.has(row.occurrenceId)) return false;
+    if (experiences.has(e.experienceId)) return false;
     if ((venues.get(v) || 0) >= limits.maxPerVenue || (categories.get(c) || 0) >= limits.maxPerCategory || (series.get(s) || 0) >= limits.maxPerSeries) { diversityLimited = true; return false; }
     if (diversityLimited) row = { ...row, reasons: [...row.reasons, 'Adds variety after venue, category or series limits'] };
     if (nearTerm && ranked[0] !== row) row = { ...row, reasons: [...row.reasons, 'Reserved a place for the selected day'] };
-    selected.push(row); seen.add(row.occurrenceId);
+    selected.push(row); seen.add(row.occurrenceId); experiences.add(e.experienceId);
     for (const [map, k] of [[venues, v], [categories, c], [series, s]]) map.set(k, (map.get(k) || 0) + 1);
     return true;
   };
@@ -105,11 +110,15 @@ export function selectBestBets(events, { day, now = Date.now(), preferences = {}
 export function selectEventLanes(events, options = {}) {
   const day = options.day || localDay(options.now ?? Date.now());
   const lanes = { today: [], ongoing: [], future: [] };
-  for (const event of events) {
+  for (const event of reconcileRecommendationEvents(events)) {
     const start = localDay(event.start), end = localDay(event.end || event.start);
     const lane = start > day ? 'future' : end > day ? 'ongoing' : 'today';
     lanes[lane].push(event);
   }
-  return Object.fromEntries(Object.entries(lanes).map(([lane, candidates]) =>
-    [lane, selectBestBets(candidates, { ...options, day })]));
+  const excludedExperiences = new Set();
+  return Object.fromEntries(Object.entries(lanes).map(([lane, candidates]) => {
+    const selected = selectReconciledBets(candidates, { ...options, day, excludedExperiences });
+    for (const row of selected) excludedExperiences.add(row.event.experienceId);
+    return [lane, selected];
+  }));
 }

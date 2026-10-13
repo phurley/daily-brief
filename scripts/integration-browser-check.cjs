@@ -44,11 +44,11 @@ const engines=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
   await p.waitForFunction(()=>localStorage.getItem('daily-brief-edition:v1'));await c.setOffline(true);await p.reload();await p.waitForFunction(()=>globalThis.__briefUpgrade===2);await c.close();console.log('Generated shell upgrade and offline reopening passed');
 
   const replacement=await context({serviceWorkers:'block'});p=await page(replacement);await p.goto(url);await p.waitForFunction(()=>localStorage.getItem('daily-brief-edition:v1'));
-  const before=await p.locator('#events-list > article').allTextContents();assert.ok(before.length>0);
+  const before=await p.locator('#events-list > article, #claims-list > article').allTextContents();assert.ok(before.length>0);
   const next=structuredClone(manifest);next.editionId='a'.repeat(64);next.sections.events.sha256='b'.repeat(64);next.sections.events.url='editions/events-'+next.sections.events.sha256+'.json';
   await replacement.route('**/brief-manifest.json',r=>r.fulfill({json:next}));await replacement.route('**/'+next.sections.events.url,r=>r.abort());
   await p.locator('#refresh-brief').click();await p.waitForFunction(()=>document.querySelector('#data-errors').textContent.includes('keeping the previous complete edition'));
-  assert.deepEqual(await p.locator('#events-list > article').allTextContents(),before);
+  assert.deepEqual(await p.locator('#events-list > article, #claims-list > article').allTextContents(),before);
   assert.equal(await p.evaluate(()=>JSON.parse(localStorage.getItem('daily-brief-edition:v1')).manifest.editionId),manifest.editionId);
   next.sections.events=manifest.sections.events;await p.locator('#refresh-brief').click();await p.waitForFunction(()=>JSON.parse(localStorage.getItem('daily-brief-edition:v1')).manifest.editionId==='a'.repeat(64));await replacement.close();console.log('Failed replacement retains complete edition and recovers on retry');
 
@@ -62,14 +62,18 @@ const engines=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
   const current={...defaults,profileId:'household',schemaVersion:'1.0.0',favorites:[seriesKey(candidate)]};
   const personalized=await context({serviceWorkers:'block'});p=await page(personalized);
   await p.addInitScript(current=>localStorage.setItem('daily-brief:preferences:v1:household',JSON.stringify({current,history:[]})),current);
-  await p.goto(url);await p.waitForFunction(title=>[...document.querySelectorAll('#events-list, #ongoing-list, #claims-list')].some(lane=>lane.textContent.includes(title)),candidate.title);
-  await p.reload();await p.waitForFunction(title=>[...document.querySelectorAll('#events-list, #ongoing-list, #claims-list')].some(lane=>lane.textContent.includes(title)),candidate.title);
+  await p.goto(url);await p.waitForFunction(()=>document.querySelector('#recommendation-status') && !document.querySelector('#recommendation-status').textContent.includes('Loading all candidates'));
+  assert.ok(!(await p.locator('#events-list, #ongoing-list, #claims-list').allTextContents()).some(text=>text.includes(candidate.title)), 'An unreviewed favorite cannot bypass verification');
+  await p.reload();await p.waitForFunction(()=>document.querySelector('#recommendation-status') && !document.querySelector('#recommendation-status').textContent.includes('Loading all candidates'));
+  assert.ok(!(await p.locator('#events-list, #ongoing-list, #claims-list').allTextContents()).some(text=>text.includes(candidate.title)), 'An unreviewed favorite cannot bypass verification');
   const later=structuredClone(manifest);later.editionId='c'.repeat(64);
   await personalized.route('**/brief-manifest.json',r=>r.fulfill({json:later}));
   await p.locator('#refresh-brief').click();await p.waitForFunction(()=>JSON.parse(localStorage.getItem('daily-brief-edition:v1')).manifest.editionId==='c'.repeat(64));
-  await p.waitForFunction(title=>[...document.querySelectorAll('#events-list, #ongoing-list, #claims-list')].some(lane=>lane.textContent.includes(title)),candidate.title);
+  await p.waitForFunction(()=>document.querySelector('#recommendation-status') && !document.querySelector('#recommendation-status').textContent.includes('Loading all candidates'));
+  assert.ok(!(await p.locator('#events-list, #ongoing-list, #claims-list').allTextContents()).some(text=>text.includes(candidate.title)), 'An unreviewed favorite cannot bypass verification');
   await personalized.route('**/events.json',r=>r.abort());await p.reload();await p.waitForFunction(()=>document.querySelector('#recommendation-status')?.textContent.includes('Full candidates unavailable'));
-  await personalized.close();console.log('Saved favorite survives reload and edition changes; unavailable full candidates are explained');
+  assert.ok((await p.evaluate(()=>JSON.parse(localStorage.getItem('daily-brief:preferences:v1:household')).current.favorites)).includes(seriesKey(candidate)));
+  await personalized.close();console.log('Saved favorite persists without bypassing verification; unavailable full candidates are explained');
 
   const editing=await context({serviceWorkers:'block',viewport:{width:390,height:844}});p=await page(editing);
   await p.goto(url);await p.waitForFunction(()=>localStorage.getItem('daily-brief-edition:v1'));

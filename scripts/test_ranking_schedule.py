@@ -22,7 +22,7 @@ class RankingScheduleTest(unittest.TestCase):
             (collect / 'processed').mkdir()
             (collect / 'processed/extracted_records.jsonl').write_text('{}\n')
             (root / 'scripts').mkdir()
-            for name in ('preferences.mjs', 'ranking.mjs', 'scoring.mjs', 'scoring-weights.json', 'brief-preferences.json'):
+            for name in ('preferences.mjs', 'ranking.mjs', 'event-experiences.mjs', 'featured-events.mjs', 'scoring.mjs', 'scoring-weights.json', 'brief-preferences.json'):
                 shutil.copyfile(ROOT / name, root / name)
             shutil.copyfile(ROOT / 'scripts/select-best-bets.mjs', root / 'scripts/select-best-bets.mjs')
             # The fixture replaces paid collection/extraction, not selection.
@@ -38,7 +38,7 @@ class RankingScheduleTest(unittest.TestCase):
             env = {**os.environ, 'DAILYBRIEF_CAFFEINATED': '1', 'COLLECT_NO_PUSH': '1', 'VIBE_ENABLED': '0', 'COLLECT_OUT_DIR': str(root)}
             subprocess.run(['/bin/sh', str(runner)], env=env, check=True, timeout=20)
             feed = json.loads((root / 'recommendations.json').read_text())
-            self.assertEqual(feed['days'][0]['events'][0]['id'], 'fixture')
+            self.assertEqual(feed['days'][0]['events'], [], 'Unreviewed archive cannot bypass the featured gate')
             self.assertFalse((root / 'collect.lock').exists())
             self.assertIn('push skipped', (collect / 'cron.log').read_text())
 

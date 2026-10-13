@@ -107,7 +107,8 @@ if [ ! -s "$RECORDS" ]; then
     echo "no extracted records this run; keeping existing events.json/news.json"
     if [ "$OUT_DIR" != "$ROOT" ]; then exit 0; fi
     if [ "${COLLECT_NO_PUSH:-}" != "1" ]; then
-        "$PY" "$ROOT/scripts/publish_brief.py" events.json news.json recommendations.json || exit 1
+        "$PY" review_events.py --root "$OUT_DIR" --limit "${COLLECT_EDITORIAL_LIMIT:-32}" || exit 1
+        "$PY" "$ROOT/scripts/publish_brief.py" events.json news.json event-editorial.json || exit 1
         run_vibe
     else
         "$PY" "$ROOT/scripts/publish_brief.py" --no-push || exit 1
@@ -124,6 +125,7 @@ fi
 # Shared shortlist also runs for custom output/no-push replay.
 NODE="$(command -v node || true)"
 [ -n "$NODE" ] || NODE=/opt/homebrew/bin/node
+"$PY" review_events.py --root "$OUT_DIR" --limit "${COLLECT_EDITORIAL_LIMIT:-32}" || { echo "featured review failed"; exit 1; }
 "$NODE" "$ROOT/scripts/select-best-bets.mjs" --events "$OUT_DIR/events.json" --out "$OUT_DIR/recommendations.json" || { echo "shortlist failed"; exit 1; }
 
 # --- step 3: publish source and matching compact edition -------------------- #
@@ -135,7 +137,7 @@ if [ "${COLLECT_NO_PUSH:-}" = "1" ]; then
     echo "push skipped (COLLECT_NO_PUSH=1)"
     "$PY" "$ROOT/scripts/publish_brief.py" --no-push || exit 1
 else
-    "$PY" "$ROOT/scripts/publish_brief.py" events.json news.json recommendations.json || exit 1
+    "$PY" "$ROOT/scripts/publish_brief.py" events.json news.json event-editorial.json || exit 1
     run_vibe
 fi
 echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=0"

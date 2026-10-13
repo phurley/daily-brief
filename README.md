@@ -240,6 +240,32 @@ for source intervals, verification, diagnostics and the recurring-job inventory.
 
 ## Household recommendations
 
+Featured recommendations pass a separate organizer review before publication.
+`data-collect/review_events.py` checks a varied shortlist (32 candidates by
+default), verifies occurrence dates, times, venues, admission and required
+registration against literal organizer evidence, and produces 30–50 word copy
+in `event-editorial.json`. Code resolves source-fragment IDs, checks dates and
+prices, and prefers matching structured organizer facts. Unresolved listings
+remain in the full calendar. Featured lanes contain at most three distinct
+experiences; the page, masthead, editorial context and widget share the selector.
+
+The hourly collection and midnight edition job run this stage automatically.
+Successful reviews last 24 hours and are reused; failed candidates retry after
+three hours. Changed source facts invalidate a review immediately. Browser picks
+and headlines reevaluate at least once a minute; widgets expire at the sourced
+end, or at the start when no end is known, and at the review's expiry.
+
+```sh
+data-collect/.venv/bin/python data-collect/review_events.py
+python3 scripts/publish_brief.py event-editorial.json
+```
+
+`OPENROUTER_EDITORIAL_MODEL` overrides the existing OpenRouter generation
+client's editorial model. `COLLECT_EDITORIAL_LIMIT` controls the hourly shortlist.
+The edition build is offline and never promotes an unreviewed archive listing.
+Tests cover fabricated evidence, changed/cancelled occurrences, registration,
+expiry, duplicate experiences, publication races and shared page/widget order.
+
 The brief selects up to seven varied picks per Today, Ongoing and Future lane.
 A small bottom-right info icon opens explanations and browser-local feedback,
 favorites and hide; preferences retain undo and reset. The complete calendar

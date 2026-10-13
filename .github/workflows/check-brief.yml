@@ -8,6 +8,8 @@ on:
       - '*.css'
       - '*.html'
       - 'scripts/**'
+      - 'data-collect/review_events.py'
+      - 'data-collect/test_review_events.py'
       - 'preferences.mjs'
       - 'DailyBriefWidgets/**'
       - 'DailyBriefTests/**'
@@ -28,6 +30,11 @@ jobs:
       - run: npm ci
       - run: npm run build:shell
       - run: npm test
+      - name: Featured editorial evidence regression checks
+        run: |
+          python3 -m pip install beautifulsoup4 python-dateutil
+          cd data-collect
+          python3 -m unittest test_review_events
       - name: Collector and publisher regression checks
         run: |
           python3 scripts/test_calendar_retry.py
@@ -41,6 +48,8 @@ jobs:
           trap 'kill $!' EXIT
           npm run test:mobile
           BRIEF_BROWSER=webkit npm run test:mobile
+          node scripts/featured-browser-check.cjs
+          BRIEF_BROWSER=webkit node scripts/featured-browser-check.cjs
           npm run test:photos
           BRIEF_BROWSER=webkit npm run test:photos
           npm run test:themes

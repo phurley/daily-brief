@@ -15,7 +15,7 @@ import shutil
 import subprocess
 
 ROOT = Path(__file__).resolve().parent.parent
-ALLOWED = {'events.json', 'news.json', 'weather.json', 'calendar.json', 'vibe.json', 'geeknews.json', 'photos.json', 'starship.json', 'starship/history', 'science-health.json', 'recommendations.json'}
+ALLOWED = {'events.json', 'event-editorial.json', 'news.json', 'weather.json', 'calendar.json', 'vibe.json', 'geeknews.json', 'photos.json', 'starship.json', 'starship/history', 'science-health.json', 'recommendations.json'}
 DERIVED = ['brief-manifest.json', 'widget-events.json', 'recommendations.json', 'editions']
 
 

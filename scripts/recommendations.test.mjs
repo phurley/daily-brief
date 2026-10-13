@@ -5,6 +5,8 @@ import { execFileSync } from 'node:child_process';
 import os from 'node:os';
 import path from 'node:path';
 import { selectBestBets } from '../ranking.mjs';
+import {reconcileRecommendationEvents} from '../event-experiences.mjs';
+import {currentFeaturedEvents,featuredBestBets} from '../featured-events.mjs';
 const read = file => JSON.parse(fs.readFileSync(new URL(`../${file}`, import.meta.url)));
 test('exported widget feed has exactly the shared selector order for its reference time', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'brief-selection-'));
@@ -13,9 +15,11 @@ test('exported widget feed has exactly the shared selector order for its referen
     execFileSync(process.execPath, [new URL('./select-best-bets.mjs', import.meta.url).pathname, '--out', out]);
     const feed = JSON.parse(fs.readFileSync(out));
     for (const day of feed.days) {
-      const selection = selectBestBets(read('events.json').events, { day: day.date, now: Date.parse(feed.generatedAt), weights: read('scoring-weights.json'), preferences: read('brief-preferences.json') });
+      const editorial=fs.existsSync(new URL('../event-editorial.json',import.meta.url))?read('event-editorial.json'):{events:[]};
+      const pool=currentFeaturedEvents(reconcileRecommendationEvents(read('events.json').events),editorial.events);
+      const selection = featuredBestBets(pool, { day: day.date, now: Date.parse(feed.generatedAt), weights: read('scoring-weights.json'), preferences: read('brief-preferences.json') });
       assert.deepEqual(day.events.map(e => e.recommendation.occurrenceId), selection.map(r => r.occurrenceId));
-      assert.ok(day.events.length <= 7);
+      assert.ok(day.events.length <= 3);
     }
   } finally { fs.rmSync(dir, { recursive: true, force: true }); }
 });

@@ -8,6 +8,7 @@ import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {bestBets,detroitDate,eventDay,validateManifest} from '../brief-selection.mjs';
 import {selectBestBets} from '../ranking.mjs';
+import {featuredBestBets} from '../featured-events.mjs';
 import {readSavedEdition,saveEdition,fetchJSON,SAVED_KEY} from '../edition-client.mjs';
 const root=resolve(import.meta.dirname,'..');
 const event=(id,start,score,end)=>({id,title:id,url:'https://example.com',start,end,score,summary:'test'});
@@ -35,9 +36,10 @@ test('edition publication is deterministic, dated, bounded, coherent and exclude
   }
   assert.ok(compressed<250000);
   const widget=JSON.parse(await readFile(resolve(temp,'widget-events.json'),'utf8'));
-  const events=JSON.parse(await readFile(resolve(temp,manifest.sections.events.url),'utf8')).events;
+  const events=JSON.parse(await readFile(resolve(temp,manifest.sections.events.url),'utf8')).featuredEvents;
   const config=JSON.parse(await readFile(resolve(temp,manifest.sections.rankingConfig.url),'utf8'));
-  assert.deepEqual(widget.events.map(e=>e.id),selectBestBets(events,{day:manifest.editionDate,now:Date.parse('2026-10-09T18:00:00Z'),preferences:config.preferences,weights:config.weights}).map(row=>row.event.id));
+  assert.deepEqual(widget.events.map(e=>e.id),featuredBestBets(events,{day:manifest.editionDate,now:Date.parse('2026-10-09T18:00:00Z'),preferences:config.preferences,weights:config.weights}).map(row=>row.event.id));
+  assert.deepEqual(widget.events,[],'unreviewed archive events cannot become widget picks');
   assert.throws(()=>validateManifest({...manifest,schemaVersion:2}));
   build('2026-10-10T04:01:00Z');
   assert.equal(JSON.parse(await readFile(resolve(temp,'widget-events.json'),'utf8')).editionDate,'2026-10-10');

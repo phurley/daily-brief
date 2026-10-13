@@ -28,7 +28,9 @@ import { fileURLToPath } from "node:url";
 import { scienceContext, scienceEditorial } from "../science.mjs";
 import { computeAlmanacDay } from "../almanac-calc.mjs";
 import { orderRankedNews } from '../news-ranking.mjs';
-import { selectBestBets, localDay } from '../ranking.mjs';
+import { localDay } from '../ranking.mjs';
+import { currentFeaturedEvents, featuredBestBets } from '../featured-events.mjs';
+import { reconcileRecommendationEvents } from '../event-experiences.mjs';
 import { getOnThisDate } from "../on-this-date.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -206,7 +208,8 @@ function buildContext(dateKey) {
 
   const preferences = readJson(path.join(ROOT, 'brief-preferences.json'), {});
   const weights = readRequiredJson(path.join(ROOT, 'scoring-weights.json'));
-  const bestBets = selectBestBets(events.events || [], { day: dateKey, now: Date.now(), preferences, weights });
+  const approved = currentFeaturedEvents(reconcileRecommendationEvents(events.events || []), readJson(path.join(ROOT, 'event-editorial.json'), {events:[]}).events);
+  const bestBets = featuredBestBets(approved, { day: dateKey, now: Date.now(), preferences, weights });
   const eventFor = (upcoming) => bestBets
     .filter(({ event }) => isEventRecommended(event))
     .filter(({ event }) => upcoming ? localDay(event.start) > dateKey : localDay(event.start) <= dateKey)

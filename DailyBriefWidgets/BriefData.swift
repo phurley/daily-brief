@@ -63,9 +63,12 @@ struct BriefEvent: Codable, Identifiable {
     let price: String?
     let registration: String?
     let timePrecision: String?
+    let reviewExpiresAt: String?
 
     func hasEnded(at date: Date) -> Bool {
-        guard let end, let closing = ISO8601DateFormatter().date(from: end) else { return false }
+        let formatter = ISO8601DateFormatter()
+        if let reviewExpiresAt, let expiry = formatter.date(from: reviewExpiresAt), expiry <= date { return true }
+        guard let closing = formatter.date(from: end ?? start) else { return true }
         return closing <= date
     }
     var time: String { timeLabel(relativeTo: .now) }

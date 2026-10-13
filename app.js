@@ -14,7 +14,8 @@ import { contributions } from './scoring.mjs?v=20261009-2';
 import { restoreWeights, tasteScore, compareTaste } from './weight-tuning.mjs';
 import { calendarTuner } from './calendar-tuning.js';
 import { shufflePhotos, isLandscapePhoto, photoDotWindow, photoDateLabel } from './photo-selection.mjs?v=20261012-photos-2';
-import { selectEventLanes, eventStatus } from './ranking.mjs?v=20261009-layout-1';
+import { eventStatus } from './ranking.mjs?v=20261009-layout-1';
+import { selectFeaturedLanes, featuredMasthead } from './featured-events.mjs?v=20261012-verified-1';
 import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
 let rankingWeights;
@@ -350,12 +351,9 @@ function renderMasthead() {
   const relative = state.selectedDate === state.today ? "Today" : state.selectedDate < state.today ? "Yesterday" : "Tomorrow";
   const forecast = state.data.weather?.daily?.find((day) => day.date === state.selectedDate);
   $("#masthead-eyebrow").textContent = message("masthead", "eyebrow", `${relative} · Canton, Michigan`);
-  $('#page-title').replaceChildren(node('span',{className:'desktop-title',text:message('masthead','headline',relative==='Today'?'A good day, well considered.':`${relative}, in view.`)}),node('span',{className:'mobile-title',text:`${relative}’s daily brief`}));
-  $("#masthead-summary").textContent = message(
-    "masthead",
-    "summary",
-    forecast ? `${forecast.conditionText}, ${Math.round(forecast.lowF)}°–${Math.round(forecast.highF)}°. Here is what else the day has in store.` : "The available signals for this date, gathered in one calm place.",
-  );
+  const lead = featuredMasthead(state.data.events?.featuredEvents || [], {day:state.selectedDate, now:Date.now(), preferences:preferences.get(), weights:rankingWeights});
+  $('#page-title').replaceChildren(node('span',{className:'desktop-title',text:lead.headline}),node('span',{className:'mobile-title',text:`${relative}’s daily brief`}));
+  $("#masthead-summary").textContent = [forecast ? `${forecast.conditionText}, ${Math.round(forecast.lowF)}°–${Math.round(forecast.highF)}°.` : '', lead.summary].filter(Boolean).join(' ');
   const date = $("#edition-date");
   date.textContent = displayDate(state.selectedDate, { year: true });
   date.dateTime = state.selectedDate;
@@ -957,15 +955,13 @@ function eventIsActiveOn(event, key) {
 function scheduleEventExpiry(events) {
   window.clearTimeout(state.eventExpiryTimer);
   state.eventExpiryTimer = null;
-  if (state.selectedDate !== state.today) return;
+  if (!events.length) return;
   const now = Date.now();
   const nextClosingTime = events
-    .filter((event) => eventStartDate(event) <= state.today && eventEndDate(event) >= state.today && event.end)
-    .map((event) => Date.parse(event.end))
+    .flatMap((event) => [eventStartDate(event) <= state.today ? Date.parse(event.end || event.start) : NaN, Date.parse(event.editorial?.expiresAt)])
     .filter((time) => !Number.isNaN(time) && time > now)
     .sort((a, b) => a - b)[0];
-  if (!nextClosingTime) return;
-  const delay = Math.min(nextClosingTime - now + 250, 2147483647);
+  const delay = Math.min(nextClosingTime ? nextClosingTime - now + 250 : 60000, 60000);
   state.eventExpiryTimer = window.setTimeout(() => renderEvents(), delay);
 }
 
@@ -1038,7 +1034,8 @@ function eventCard(event) {
     node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
     title,
     node("p", { text: event.summary }),
-    node("p", { className: "card__footer", text: [event.venue, event.city, event.price || 'Price unknown', event.distanceMiles != null ? `${event.distanceMiles} mi` : 'Distance unknown', eventStatus(event) === 'cancelled' ? 'CANCELED' : ''].filter(Boolean).join(" · ") }),
+    node("p", { className: "card__footer", text: [event.venue, event.city, event.price || 'Price unknown', event.registration, eventStatus(event) === 'cancelled' ? 'CANCELED' : ''].filter(Boolean).join(" · ") }),
+    event.editorial && event.bookingUrl ? safeLink(event.registration ? 'Register / book ↗' : 'Tickets ↗', event.bookingUrl) : null,
     detailButton(event),
   ]);
 }
@@ -1054,6 +1051,9 @@ function claimCard(event) {
   }, [
     node("time", { text: eventDateLabel(event), datetime: eventStartDate(event) }),
     title,
+    event.editorial ? node('p',{text:event.summary}) : null,
+    event.editorial ? node('p',{className:'card__footer',text:[event.venue,event.city,event.price,event.registration].filter(Boolean).join(' · ')}) : null,
+    event.editorial && event.bookingUrl ? safeLink(event.registration ? 'Register / book ↗' : 'Tickets ↗',event.bookingUrl) : null,
     detailButton(event),
   ]);
 }
@@ -1065,23 +1065,25 @@ function renderEvents() {
   const allEvents = fullEvents || uniqueEvents();
   const selected = state.selectedDate;
   renderPreferenceControls();
-  const lanes = selectEventLanes(allEvents, { day: selected, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
+  const featured = state.data.events?.featuredEvents || [];
+  const lanes = selectFeaturedLanes(featured, { day: selected, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
   for (const [lane, selector, renderCard] of [['today','#events-list',eventCard],['ongoing','#ongoing-list',claimCard],['future','#claims-list',claimCard]]) {
-    replaceChildren(selector, lanes[lane].length ? lanes[lane].map(({event}) => renderCard(event)) : [node('p', { text: 'No matching events in this lane.' })]);
+    replaceChildren(selector, lanes[lane].length ? lanes[lane].map(({event}) => renderCard(event)) : [node('p', { text: selected < state.today ? 'Past activities have finished.' : 'No further verified picks for this date.' })]);
   }
   $('#today-lane-title').textContent = selected === state.today ? 'Today' : displayDate(selected);
   $('#ongoing-lane-title').textContent = 'Ongoing';
   $('#plan-ahead-title').textContent = 'Future';
-  $('#ongoing-lane').hidden = false;
-  $('#plan-ahead').hidden = false;
+  $('#ongoing-lane').hidden = !lanes.ongoing.length;
+  $('#plan-ahead').hidden = !lanes.future.length;
   $('#events-title').textContent = 'Nearby & notable';
-  $('#events-note').textContent = 'Ranked picks for today, ongoing events, and the weeks ahead.';
+  $('#events-note').textContent = 'A few good reasons to leave the house.';
   if(showAllEvents && fullEvents) {
     const all=eventsOnDay(selected,fullEvents,compareEventsByRating);
     replaceChildren('#events-all-list',all.length ? all.map(event=>eventCard(event)) : [emptyState()]);
     $('#events-all-summary').textContent=`See all · ${all.length} events on this date`;
   }
-  scheduleEventExpiry(allEvents);
+  scheduleEventExpiry(featured);
+  renderMasthead();
   void restorePersonalizedEvents();
   refreshShelfControls();
 }

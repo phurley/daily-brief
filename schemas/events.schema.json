@@ -29,6 +29,19 @@
       "items": {
         "$ref": "#/$defs/event"
       }
+    },
+    "featuredEvents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "editorialGeneratedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
     }
   },
   "$defs": {
@@ -217,6 +230,19 @@
         "statusEvidence": {
           "type": "string",
           "minLength": 1
+        },
+        "experienceId": {
+          "type": "string"
+        },
+        "bookingUrl": {
+          "type": "string"
+        },
+        "reviewExpiresAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "editorial": {
+          "type": "object"
         }
       }
     },
