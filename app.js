@@ -1771,7 +1771,8 @@ async function loadMoreEvents(lane) {
 }
 function hasMoreStories(kind) {
   if (!kind || !state.data[kind]) return false;
-  return !fullStories[kind] || storyPools[kind].some(story => !displayedStories[kind].some(shown => shown.id === story.id));
+  const shown=new Set(displayedStories[kind].map(story=>story.id));
+  return !fullStories[kind] || storyPools[kind].some(story=>!shown.has(story.id));
 }
 async function loadMoreStories(kind) {
   if (!hasMoreStories(kind) || storyRequests[kind]) return;
