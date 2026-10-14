@@ -27,7 +27,7 @@ import { fileURLToPath } from "node:url";
 
 import { scienceContext, scienceEditorial } from "../science.mjs";
 import { computeAlmanacDay } from "../almanac-calc.mjs";
-import { orderRankedNews } from '../news-ranking.mjs';
+import { editedStoryDocument, selectEditedStories } from '../story-editorial.mjs';
 import { localDay } from '../ranking.mjs';
 import { currentFeaturedEvents, featuredBestBets } from '../featured-events.mjs';
 import { reconcileRecommendationEvents } from '../event-experiences.mjs';
@@ -166,8 +166,8 @@ function buildContext(dateKey) {
   const weather = readRequiredJson(path.join(ROOT, "weather.json"));
   const calendar = readRequiredJson(path.join(ROOT, "calendar.json"));
   const events = readRequiredJson(path.join(ROOT, "events.json"));
-  const news = readRequiredJson(path.join(ROOT, "news.json"));
-  const geeknews = readJson(path.join(ROOT, "geeknews.json"), { stories: [] });
+  const news = editedStoryDocument(readRequiredJson(path.join(ROOT, "news.json")), readRequiredJson(path.join(ROOT, 'news-editorial.json')), 'news');
+  const geeknews = editedStoryDocument(readRequiredJson(path.join(ROOT, "geeknews.json")), readRequiredJson(path.join(ROOT, 'science-editorial.json')), 'science');
 
   const weatherLocation = weather?.location;
   const location = weatherLocation
@@ -220,7 +220,7 @@ function buildContext(dateKey) {
       summary: truncate(event.summary), reasons,
     }));
 
-  const stories = orderRankedNews(news.stories || [], { now: Date.now(), preferences }).slice(0, 6).map((story) => ({
+  const stories = (selectEditedStories(news, 'news', dateKey) || []).map((story) => ({
     title: story.title,
     source: story.source?.name,
     summary: truncate(story.summary),

@@ -20,6 +20,24 @@
     "schemaVersion": {
       "const": "1.0.0"
     },
+    "editorial": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "newsFocus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scienceInterests": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "profileId": {
       "type": "string",
       "minLength": 1

@@ -22,7 +22,7 @@ test('best bets use Detroit dates, canonical IDs, scores, and known expiry',()=>
 test('edition publication is deterministic, dated, bounded, coherent and excludes private data',async()=>{
  const temp=await mkdtemp(resolve(tmpdir(),'brief-edition-'));
  try{
-  for(const name of ['weather','events','news','geeknews','vibe','starship','science-health','brief-preferences','scoring-weights']) await cp(resolve(root,name+'.json'),resolve(temp,name+'.json'));
+  for(const name of ['weather','events','news','geeknews','vibe','starship','science-health','brief-preferences','scoring-weights','news-editorial','science-editorial']) await cp(resolve(root,name+'.json'),resolve(temp,name+'.json'));
   await writeFile(resolve(temp,'private-preference-history.json'),'SECRET');await writeFile(resolve(temp,'calendar.json'),'PRIVATE CALENDAR');
   const build=now=>execFileSync(process.execPath,[resolve(root,'scripts/build_edition.mjs'),temp],{env:{...process.env,BRIEF_NOW:now}});
   build('2026-10-09T18:00:00Z');

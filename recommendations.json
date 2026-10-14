@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-10-14T13:47:17.766Z",
+  "generatedAt": "2026-10-14T18:14:17.672Z",
   "days": [
     {
       "date": "2026-10-14",
@@ -333,145 +333,156 @@
           }
         },
         {
-          "id": "occ-f04bbf4cad1459d3a7212516",
-          "title": "Tiffany Ng & Bjorn Brolin-Olson, carillon",
-          "summary": "Experience a live carillon performance by University Carillonist Tiffany Ng and student Bjorn Brolin-Olson. This unique musical event features a 60-bell instrument, with the lowest bell weighing six tons. Visitors can observe the largest bells and the carillonist during the recital.",
-          "url": "https://events.umich.edu/event/151964",
-          "start": "2026-10-14T13:20:00-04:00",
-          "venue": "Lurie Ann & Robert H. Tower",
+          "id": "occ-fc1f6cbe354d56168beff12f",
+          "title": "Happy Hour: James Margolis",
+          "summary": "Enjoy a free happy hour concert featuring James Margolis, a guitarist, songwriter, and singer. He draws inspiration from blues, jazz, folk, outlaw country, and soul music, performing original songs and covers from these genres.",
+          "url": "https://www.nstarlounge.com/events/hhjamesmargolis",
+          "start": "2026-10-14T17:30:00-04:00",
+          "venue": "North Star Lounge",
           "city": "Ann Arbor",
           "price": "Free",
-          "category": "Performance",
-          "imageUrl": "https://events.umich.edu/media/attachments/2026/09/event_151964_original-1.jpg",
-          "imageAlt": "Tiffany Ng & Bjorn Brolin-Olson, carillon",
+          "category": "Music",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/62fd75cb471e0713728b1b71/1787853510981-0VULM53A3RAIU2GNPP9A/Screenshot+2026-08-27+at+1.58.15%E2%80%AFPM.png",
+          "imageAlt": "Happy Hour: James Margolis",
           "status": "confirmed",
-          "occurrenceId": "occ-f04bbf4cad1459d3a7212516",
-          "seriesId": "series-e2198f7333f7bdc8ef30e146",
-          "sourceUpdatedAt": "2026-09-22T12:17:44-04:00",
-          "lastCheckedAt": "2026-10-13T13:00:52.908118-04:00",
-          "canonicalUrl": "https://events.umich.edu/event/151964",
-          "venueId": "lurie ann robert h tower|ann arbor",
+          "occurrenceId": "occ-fc1f6cbe354d56168beff12f",
+          "seriesId": "series-e673d492bba313c02ca16171",
+          "sourceUpdatedAt": "2026-08-27T13:58:56-04:00",
+          "priceCurrency": "USD",
+          "lastCheckedAt": "2026-10-13T23:52:50.803581-04:00",
+          "canonicalUrl": "https://www.nstarlounge.com/events/hhjamesmargolis",
+          "venueId": "north star lounge|ann arbor",
           "timePrecision": "time",
           "aliases": [
-            "src-bf22afd1becc4d958a8c5e32",
-            "tiffany-ng-bjorn-brolin-olson-carillon-event-2026-10-14"
+            "happy-hour-james-margolis-event-2026-10-14",
+            "src-4ae1c145a0626873d9aa2a72"
           ],
           "legacyOccurrenceKeys": [
-            "src-bf22afd1becc4d958a8c5e32|2026-10-14T13:20:00-04:00",
-            "tiffany-ng-bjorn-brolin-olson-carillon-event-2026-10-14|2026-10-14T13:20:00-04:00"
+            "happy-hour-james-margolis-event-2026-10-14|2026-10-14T17:30:00-04:00",
+            "happy-hour-james-margolis-event-2026-10-14|2026-10-14T21:30:00+00:00",
+            "occ-89ef0b298c984bdf3817954f",
+            "src-36d6a36bad124803e89267c5|2026-10-14T21:30:00+00:00",
+            "src-4ae1c145a0626873d9aa2a72|2026-10-14T17:30:00-04:00"
           ],
           "legacySeriesKeys": [
-            "series-0da3a6618af25f4aa4b53b2d",
-            "series-7ab70cd381990cddccadacae",
-            "series-e2198f7333f7bdc8ef30e146",
-            "series-f210b0cb5b19e608318e4630"
+            "happy hour: james margolis|north star lounge",
+            "series-e673d492bba313c02ca16171",
+            "series-f9c0ebdc3050c74e12db7c87"
           ],
           "sources": [
             {
-              "sourceRecordId": "src-bf22afd1becc4d958a8c5e32",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/151964",
+              "sourceRecordId": "src-4ae1c145a0626873d9aa2a72",
+              "sourceId": "north-star-lounge",
+              "canonicalUrl": "https://www.nstarlounge.com/events/hhjamesmargolis",
               "observedAt": "2026-10-12T15:41:41-04:00",
-              "sourceUpdatedAt": "2026-09-22T12:17:44-04:00",
+              "sourceUpdatedAt": "2026-08-27T13:58:56-04:00",
               "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-f53b34dec0aa776f9229094a",
+              "sourceId": "north-star-lounge",
+              "canonicalUrl": "https://www.nstarlounge.com/events/hhjamesmargolis",
+              "observedAt": "2026-09-29T11:53:33-04:00",
               "status": "scheduled"
             }
           ],
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
+              "exact-title-time-venue",
               "new-occurrence"
             ],
             "fields": {
-              "title": "src-bf22afd1becc4d958a8c5e32",
-              "start": "src-bf22afd1becc4d958a8c5e32",
-              "end": "src-bf22afd1becc4d958a8c5e32",
-              "venue": "src-bf22afd1becc4d958a8c5e32",
-              "url": "src-bf22afd1becc4d958a8c5e32",
-              "imageUrl": "src-bf22afd1becc4d958a8c5e32",
-              "status": "src-bf22afd1becc4d958a8c5e32"
+              "title": "src-4ae1c145a0626873d9aa2a72",
+              "start": "src-4ae1c145a0626873d9aa2a72",
+              "end": "src-4ae1c145a0626873d9aa2a72",
+              "venue": "src-4ae1c145a0626873d9aa2a72",
+              "url": "src-4ae1c145a0626873d9aa2a72",
+              "imageUrl": "src-4ae1c145a0626873d9aa2a72",
+              "status": "src-4ae1c145a0626873d9aa2a72",
+              "registration": "src-f53b34dec0aa776f9229094a"
             },
             "conflicts": {}
           },
-          "score": 90,
+          "priceMin": 0,
+          "priceMax": 0,
+          "score": 84,
           "scoring": {
             "signals": {
-              "funny": 0.09,
-              "distinctive": 0.77,
-              "eclectic": 0.1,
-              "technical_science": 0.26,
+              "funny": 0.16,
+              "distinctive": 0.3,
+              "eclectic": 0.92,
+              "technical_science": 0.02,
               "artsy": 0.98,
-              "progressive": 0.12,
+              "progressive": 0.15,
               "outdoors": 0.02,
               "theatre": 0.03,
-              "live_music": 0.9,
-              "live_comedy": 0.01,
+              "live_music": 0.98,
+              "live_comedy": 0.02,
               "farmer_market": 0.01,
               "sporting": 0.01,
-              "recurring": 0.96,
+              "recurring": 0.28,
               "craft_fair_shopping": 0.01,
-              "religious": 0.03,
-              "large_venue": 0.04,
+              "religious": 0.02,
+              "large_venue": 0.02,
               "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.03,
+              "popular_music_cover_band": 0.11,
               "market_or_shop": 0.01,
-              "punk_metal_or_rock": 0.02,
+              "punk_metal_or_rock": 0.03,
               "dance": 0.02,
-              "sales_related": 0.05,
-              "children_activity": 0.04,
+              "sales_related": 0.3,
+              "children_activity": 0.02,
               "running": 0.01,
-              "exercise": 0.02,
+              "exercise": 0.01,
               "employment_related": 0.01
             },
-            "score": 90,
+            "score": 84,
             "rulesVersion": 2
           },
           "localityTier": "regional",
-          "experienceId": "experience:[\"ann arbor\",\"lurie ann robert h tower\",\"tiffany ng bjorn brolin olson carillon\"]",
-          "end": "2026-10-14T13:50:00-04:00",
+          "experienceId": "experience:[\"ann arbor\",\"north star lounge\",\"happy hour james margolis\"]",
+          "end": "2026-10-14T18:30:00-04:00",
           "bookingUrl": "",
           "statusEvidence": "Organizer detail reviewed",
-          "priceMin": 0,
-          "priceMax": 0,
-          "priceCurrency": "USD",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-10-13T13:00:52.908118-04:00",
-            "expiresAt": "2026-10-14T13:00:52.908118-04:00",
-            "sourceUrl": "https://events.umich.edu/event/151964",
-            "sourceHash": "e9287bc2fd0fa8a2ce5fee68c9ef6d033eb66803652f3a8f860b2ad66f9a1e96",
+            "reviewedAt": "2026-10-13T23:52:50.803581-04:00",
+            "expiresAt": "2026-10-14T23:52:50.803581-04:00",
+            "sourceUrl": "https://www.nstarlounge.com/events/hhjamesmargolis",
+            "sourceHash": "19725d3f62f66291fae7ff1800fa898c508cf68f54505a9313cd176323e01be9",
             "inputFacts": {
-              "id": "occ-f04bbf4cad1459d3a7212516",
-              "url": "https://events.umich.edu/event/151964",
-              "start": "2026-10-14T13:20:00-04:00",
-              "end": "2026-10-14T13:50:00-04:00",
-              "venue": "Lurie Ann & Robert H. Tower",
+              "id": "occ-fc1f6cbe354d56168beff12f",
+              "url": "https://www.nstarlounge.com/events/hhjamesmargolis",
+              "start": "2026-10-14T17:30:00-04:00",
+              "end": "2026-10-14T18:30:00-04:00",
+              "venue": "North Star Lounge",
               "city": "Ann Arbor",
-              "price": "Free - no tickets required",
+              "price": "Free",
               "status": "scheduled"
             },
             "evidence": {
-              "date": "Wed, Oct 14",
-              "time": "1:20pm",
-              "venue": "Lurie Ann & Robert H. Tower",
-              "admission": "Free - no tickets required",
-              "description": "University Carillonist Tiffany Ng & student Bjorn Brolin-Olson perform on the Ann & Robert H.",
-              "end": "1:50pm"
+              "date": "Wednesday, October 14, 2026",
+              "time": "5:30 PM",
+              "venue": "North Star Lounge",
+              "admission": "Join us for a free happy hour concert!",
+              "description": "A powerhouse guitarist, songwriter, and singer from the Philadelphia area.",
+              "end": "6:30 PM"
             }
           },
-          "reviewExpiresAt": "2026-10-14T13:00:52.908118-04:00",
+          "reviewExpiresAt": "2026-10-14T23:52:50.803581-04:00",
           "recommendation": {
-            "occurrenceId": "occ-f04bbf4cad1459d3a7212516",
-            "score": 106,
+            "occurrenceId": "occ-fc1f6cbe354d56168beff12f",
+            "score": 100,
             "components": {
-              "taste": 90,
+              "taste": 84,
               "practicality": 12,
               "novelty": 0,
               "quality": 4
             },
             "reasons": [
-              "distinctive +18",
-              "live music +11",
+              "eclectic +15",
+              "live music +12",
               "Available on selected day +12",
               "Confirmed/recent source information +4"
             ],
@@ -769,161 +780,6 @@
             "reasons": [
               "distinctive +19",
               "funny +12",
-              "Available on selected day +12",
-              "Confirmed/recent source information +4"
-            ],
-            "unknowns": [
-              "Distance unknown"
-            ]
-          }
-        },
-        {
-          "id": "occ-b9f3163b7b132e08a263f44f",
-          "title": "COMEDY l The Thursday Show w/ The Planet Ant Farm Team",
-          "summary": "Experience Planet Ant's weekly live variety night, featuring original sketch comedy, improv, character bits, and guest performers. Each show is created fresh and performed live, with a rotating monthly theme, blending scripted and unscripted comedy into a fast-moving, collaborative experience.",
-          "url": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
-          "start": "2026-10-15T20:00:00-04:00",
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "city": "Hamtramck",
-          "price": "$11.84",
-          "category": "Comedy",
-          "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/16271/610268392_18554571001059777_654537386631628407_n.jpg",
-          "imageAlt": "COMEDY l The Thursday Show w/ The Planet Ant Farm Team",
-          "status": "confirmed",
-          "occurrenceId": "occ-b9f3163b7b132e08a263f44f",
-          "seriesId": "series-d88b304d5e907e7688084eaf",
-          "sourceUpdatedAt": "2026-07-10T14:39:49.415000+00:00",
-          "priceMin": 11.84,
-          "priceMax": 11.84,
-          "priceCurrency": "USD",
-          "lastCheckedAt": "2026-10-13T10:41:03.470510-04:00",
-          "canonicalUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
-          "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
-          "timePrecision": "time",
-          "statusEvidence": "Organizer detail reviewed",
-          "aliases": [
-            "comedy-l-the-thursday-show-w-the-planet-event-2026-10-15",
-            "src-99c2d19ce2bc6834b764b3db"
-          ],
-          "legacyOccurrenceKeys": [
-            "comedy-l-the-thursday-show-w-the-planet-event-2026-10-15|2026-10-15T20:00:00-04:00",
-            "src-99c2d19ce2bc6834b764b3db|2026-10-15T20:00:00-04:00"
-          ],
-          "legacySeriesKeys": [
-            "series-1372a8667c2f970960359cc9",
-            "series-1f40ab89ee840b7a0407497a",
-            "series-3d5f6009c5bd4f7d4f4d01aa",
-            "series-48eeab446929834b9b71fb74",
-            "series-6eac7699a446b12ef7ffdbbf",
-            "series-72b4ffb375cfb11d698bb8c4",
-            "series-76509c94f5243797c4315b39",
-            "series-9249773f7c1ad36956f6879b",
-            "series-c6bfdadb06f85acffe35260e",
-            "series-d88b304d5e907e7688084eaf"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-99c2d19ce2bc6834b764b3db",
-              "sourceId": "planet-ant-theatre",
-              "canonicalUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
-              "observedAt": "2026-10-12T15:41:41-04:00",
-              "sourceUpdatedAt": "2026-07-10T14:39:49.415000+00:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled",
-              "statusEvidence": "https://schema.org/EventScheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "new-occurrence"
-            ],
-            "fields": {
-              "title": "src-99c2d19ce2bc6834b764b3db",
-              "start": "src-99c2d19ce2bc6834b764b3db",
-              "venue": "src-99c2d19ce2bc6834b764b3db",
-              "url": "src-99c2d19ce2bc6834b764b3db",
-              "status": "src-99c2d19ce2bc6834b764b3db",
-              "imageUrl": "src-99c2d19ce2bc6834b764b3db"
-            },
-            "conflicts": {}
-          },
-          "score": 100,
-          "scoring": {
-            "signals": {
-              "funny": 0.99,
-              "distinctive": 0.49,
-              "eclectic": 0.62,
-              "technical_science": 0.04,
-              "artsy": 0.98,
-              "progressive": 0.31,
-              "outdoors": 0.02,
-              "theatre": 0.26,
-              "live_music": 0.02,
-              "live_comedy": 0.98,
-              "farmer_market": 0.01,
-              "sporting": 0.01,
-              "recurring": 0.99,
-              "craft_fair_shopping": 0.01,
-              "religious": 0.01,
-              "large_venue": 0.02,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.02,
-              "market_or_shop": 0.01,
-              "punk_metal_or_rock": 0.02,
-              "dance": 0.01,
-              "sales_related": 0.32,
-              "children_activity": 0.03,
-              "running": 0.01,
-              "exercise": 0.01,
-              "employment_related": 0.01
-            },
-            "score": 100,
-            "rulesVersion": 2
-          },
-          "localityTier": "unknown",
-          "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"comedy l the thursday show w the planet ant farm team\"]",
-          "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-          "bookingUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
-          "editorial": {
-            "state": "verified",
-            "reviewedAt": "2026-10-13T10:41:03.470510-04:00",
-            "expiresAt": "2026-10-14T10:41:03.470510-04:00",
-            "sourceUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
-            "sourceHash": "78a2d14c3ac903c6816697e99c4d8bc4e990606ef84678ab3e65fecf7db878a2",
-            "inputFacts": {
-              "id": "occ-b9f3163b7b132e08a263f44f",
-              "url": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
-              "start": "2026-10-15T20:00:00-04:00",
-              "end": null,
-              "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-              "city": "Hamtramck",
-              "price": "$11.84–$22.35 including fees",
-              "status": "scheduled"
-            },
-            "evidence": {
-              "date": "Oct 15",
-              "time": "8:00 PM",
-              "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-              "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20:00:00\", \"price\": 11.84, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-              "description": "The Thursday Show is Planet Ant’s weekly live variety night, featuring original sketch comedy, improv, character bits, and guest performers.",
-              "registration": "Online sales end 1 (one) hour before the start of a performance.",
-              "end": "Closes Thursday, Oct 15 @  7:00 PM"
-            }
-          },
-          "reviewExpiresAt": "2026-10-14T10:41:03.470510-04:00",
-          "recommendation": {
-            "occurrenceId": "occ-b9f3163b7b132e08a263f44f",
-            "score": 116,
-            "components": {
-              "taste": 100,
-              "practicality": 12,
-              "novelty": 0,
-              "quality": 4
-            },
-            "reasons": [
-              "funny +12",
-              "distinctive +12",
               "Available on selected day +12",
               "Confirmed/recent source information +4"
             ],

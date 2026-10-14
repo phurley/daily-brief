@@ -6,10 +6,9 @@ import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {BRIEF_VERSION,SECTION_VERSIONS,detroitDate,eventDay,bestBets,rankEvents,validateSection} from '../brief-selection.mjs';
 import {selectBestBets,selectEventLanes,rankEvent} from '../ranking.mjs';
-import {orderRankedNews} from '../news-ranking.mjs';
-import {selectScienceDigest} from '../science.mjs';
 import {reconcileRecommendationEvents} from '../event-experiences.mjs';
 import {currentFeaturedEvents,featuredBestBets} from '../featured-events.mjs';
+import {editedStoryDocument} from '../story-editorial.mjs';
 const root=resolve(process.argv[2] || dirname(fileURLToPath(import.meta.url))+'/..');
 const now=new Date(process.env.BRIEF_NOW || Date.now());
 const date=detroitDate(now);
@@ -42,8 +41,8 @@ const pick=(object,fields)=>Object.fromEntries(fields.filter(k=>object[k]!==unde
 const sections={
  weather:source.weather,
  events:{...source.events,events:[...selected.values()].map(e=>pick(e,eventFields)),featuredEvents:approved.map(e=>pick(e,eventFields)),editorialGeneratedAt:editorial.generatedAt || null},
- news:{...source.news,stories:orderRankedNews(source.news.stories,{now:+now,preferences}).slice(0,10)},
- geeknews:{...source.geeknews,stories:selectScienceDigest(source.geeknews,date).stories},
+ news:editedStoryDocument(source.news,await read('news-editorial.json'),'news'),
+ geeknews:editedStoryDocument(source.geeknews,await read('science-editorial.json'),'science'),
  starship:source.starship,
  scienceHealth:source.scienceHealth,
  rankingConfig:{schemaVersion:'1.0.0',generatedAt:source.events.generatedAt,preferences,weights},

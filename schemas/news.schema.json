@@ -10,9 +10,59 @@
     "schemaVersion": { "const": "1.1.0" },
     "generatedAt": { "type": "string", "format": "date-time" },
     "editionDate": { "type": "string", "format": "date" },
+    "editorial": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "generatedAt",
+        "days"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "days": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "date",
+              "selectedIds"
+            ],
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date"
+              },
+              "selectedIds": {
+                "type": "array",
+                "uniqueItems": true,
+                "maxItems": 5,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "corrections": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
     "stories": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 0,
       "items": { "$ref": "#/$defs/story" }
     }
   },
@@ -22,6 +72,62 @@
       "additionalProperties": false,
       "required": ["id", "title", "summary", "url", "source", "publishedAt", "addedAt", "localityIndex", "locations", "topics"],
       "properties": {
+        "editorial": {
+          "type": "object",
+          "required": [
+            "grounded",
+            "state",
+            "reviewedAt",
+            "expiresAt",
+            "inputFacts",
+            "publicationEvidence",
+            "reason",
+            "relevance",
+            "novelty",
+            "storyKey"
+          ],
+          "properties": {
+            "grounded": {
+              "const": true
+            },
+            "state": {
+              "const": "verified"
+            },
+            "reviewedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "expiresAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "inputFacts": {
+              "type": "object"
+            },
+            "publicationEvidence": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "relevance": {
+              "type": "integer",
+              "minimum": 3,
+              "maximum": 5
+            },
+            "novelty": {
+              "type": "integer",
+              "minimum": 3,
+              "maximum": 5
+            },
+            "storyKey": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            }
+          }
+        },
         "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
         "title": { "type": "string", "minLength": 1 },
         "summary": { "type": "string", "minLength": 1 },

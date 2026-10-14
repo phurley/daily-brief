@@ -10,6 +10,10 @@ on:
       - 'scripts/**'
       - 'data-collect/review_events.py'
       - 'data-collect/test_review_events.py'
+      - 'data-collect/review_stories.py'
+      - 'data-collect/test_review_stories.py'
+      - 'schemas/story-editorial.schema.json'
+      - 'brief-preferences.json'
       - 'data-collect/science/**'
       - 'data-collect/run_science.sh'
       - 'data-collect/run_collect.sh'
@@ -43,7 +47,7 @@ jobs:
         run: |
           python3 -m pip install 'curl_cffi>=0.7,<1' 'jsonschema>=4.20,<5'
           cd data-collect
-          SCIENCE_NODE=$(command -v node) python3 -m unittest science.test_pipeline
+          SCIENCE_NODE=$(command -v node) python3 -m unittest science.test_pipeline test_review_stories
       - name: Collector and publisher regression checks
         run: |
           python3 scripts/test_calendar_retry.py

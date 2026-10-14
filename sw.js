@@ -1,8 +1,8 @@
 // Generated at deployment from every shell asset. Complete the new cache before
 // activation, then reload open reports together so code and data stay coherent.
-const SHELL='daily-brief-shell-9c8ea54e876348d48a79ddd17a421232be046adc248ccfa788eb08073db718bf';
+const SHELL='daily-brief-shell-bf1ab5271dc8229d2982ed0614407ba541e09b9cc6899257f952a00e1b369720';
 const DATA='daily-brief-sections-v1';
-const SHELL_FILES=["almanac-calc.mjs","app.js","assets/moon-waxing-gibbous.png","assets/redwood-canopy.svg","aurora.mjs","brief-selection.mjs","calendar-tuning.css","calendar-tuning.js","edition-client.mjs","event-experiences.mjs","event-status.mjs","event-time.mjs","favicon.svg","featured-events.mjs","index.html","news-ranking.mjs","on-this-date.mjs","photo-selection.mjs","preferences.mjs","ranking.mjs","report-pagination.mjs","science.mjs","scoring-debug.css","scoring-debug.js","scoring.html","scoring.mjs","shell-updates.mjs","sky-events.mjs","starship.mjs","story-order.mjs","theme.css","themes.css","themes.js","weather-appearance.mjs","weight-tuning.mjs"];
+const SHELL_FILES=["almanac-calc.mjs","app.js","assets/moon-waxing-gibbous.png","assets/redwood-canopy.svg","aurora.mjs","brief-selection.mjs","calendar-tuning.css","calendar-tuning.js","edition-client.mjs","event-experiences.mjs","event-status.mjs","event-time.mjs","favicon.svg","featured-events.mjs","index.html","news-ranking.mjs","on-this-date.mjs","photo-selection.mjs","preferences.mjs","ranking.mjs","report-pagination.mjs","science.mjs","scoring-debug.css","scoring-debug.js","scoring.html","scoring.mjs","shell-updates.mjs","sky-events.mjs","starship.mjs","story-editorial.mjs","story-order.mjs","theme.css","themes.css","themes.js","weather-appearance.mjs","weight-tuning.mjs"];
 const UPDATE_MARKER=new URL('__shell_update__',self.registration.scope).href;
 // Use per-shell download URLs to avoid reusing assets from earlier builds.
 // Normal page requests match these entries by path.

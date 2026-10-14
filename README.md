@@ -292,3 +292,11 @@ the published profile. Events without scoring signals retain their published
 rating and prevent fitting that day. Browser storage failures leave tuning usable
 for the current visit and display a notice. These weights are local to this browser
 and origin; they do not change the collector's published weights.
+
+## News and science editor
+
+Featured news and science now pass a bounded article review for household relevance,
+substantive novelty and source-supported publication dates. Daily selections remain
+stable, with up to five local stories and three science stories; fewer qualified
+candidates produce fewer picks. Full archives remain browsable. See
+[editorial selection and operations](docs/story-editor.md).

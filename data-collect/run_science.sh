@@ -26,8 +26,9 @@ for argument do
 done
 # Partial runs publish validated stories and source errors together. A fatal
 # selection/validation failure still publishes health and holds the edition.
+"$DIR/.venv/bin/python" "$DIR/review_stories.py" --root "$ROOT" --section science --limit "${SCIENCE_EDITORIAL_LIMIT:-18}" || exit 1
 if [ "${SCIENCE_NO_PUSH:-}" != 1 ]; then
-    "$ROOT/scripts/push_generated.sh" "Refresh science digest and source health" geeknews.json science-health.json || exit 1
+    "$ROOT/scripts/push_generated.sh" "Refresh science digest and source health" geeknews.json science-health.json science-editorial.json || exit 1
 fi
 if [ "$rc" = 0 ] && [ "$before" != "$(cksum "$ROOT/geeknews.json")" ] && [ "${SCIENCE_VIBE_ENABLED:-1}" = 1 ]; then
     VIBE_SKIP_SCIENCE_WAIT=1 VIBE_MIN_INTERVAL=0 VIBE_NO_PUSH="${SCIENCE_NO_PUSH:-0}" "$ROOT/vibe-check/run.sh" || echo "science editorial refresh failed"

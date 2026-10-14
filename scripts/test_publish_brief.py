@@ -23,7 +23,7 @@ class PublicationTest(unittest.TestCase):
             command('git', 'config', 'user.name', 'Test')
             command('git', 'config', 'user.email', 'test@example.com')
             (repo / 'scripts').mkdir()
-            for name in ['scripts/build_edition.mjs', 'scripts/publish_brief.py', 'brief-selection.mjs', 'story-order.mjs', 'ranking.mjs', 'event-experiences.mjs', 'featured-events.mjs', 'preferences.mjs', 'scoring.mjs', 'news-ranking.mjs', 'science.mjs', 'starship.json', 'science-health.json', 'brief-preferences.json', 'scoring-weights.json', 'weather.json', 'events.json', 'news.json', 'geeknews.json', 'vibe.json']:
+            for name in ['scripts/build_edition.mjs', 'scripts/publish_brief.py', 'brief-selection.mjs', 'story-order.mjs', 'ranking.mjs', 'event-experiences.mjs', 'featured-events.mjs', 'preferences.mjs', 'scoring.mjs', 'news-ranking.mjs', 'science.mjs', 'story-editorial.mjs', 'news-editorial.json', 'science-editorial.json', 'starship.json', 'science-health.json', 'brief-preferences.json', 'scoring-weights.json', 'weather.json', 'events.json', 'news.json', 'geeknews.json', 'vibe.json']:
                 shutil.copy(ROOT / name, repo / name)
             publisher=repo / 'scripts/publish_brief.py'
             publisher.write_text(publisher.read_text().replace('/tmp/dailybrief-publish.lock', str(temp / 'publish.lock')))
@@ -72,7 +72,7 @@ class PublicationRaceTest(unittest.TestCase):
         self.command('config', 'user.name', 'Test')
         self.command('config', 'user.email', 'test@example.com')
         (self.repo/'scripts').mkdir()
-        for name in ['scripts/publish_brief.py','scripts/build_edition.mjs','brief-selection.mjs','ranking.mjs','event-experiences.mjs','featured-events.mjs','preferences.mjs','scoring.mjs','news-ranking.mjs','science.mjs']:
+        for name in ['scripts/publish_brief.py','scripts/build_edition.mjs','brief-selection.mjs','ranking.mjs','event-experiences.mjs','featured-events.mjs','preferences.mjs','scoring.mjs','news-ranking.mjs','science.mjs','story-editorial.mjs','news-editorial.json','science-editorial.json']:
             shutil.copyfile(ROOT/name,self.repo/name)
         publisher = self.repo/'scripts/publish_brief.py'
         publisher.write_text(publisher.read_text().replace('/tmp/dailybrief-publish.lock',str(self.root/'publish.lock')))

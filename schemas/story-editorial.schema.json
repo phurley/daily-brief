@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source-reviewed story selection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "section",
+    "generatedAt",
+    "stories",
+    "days"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "section": {
+      "enum": [
+        "news",
+        "science"
+      ]
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "stories": {
+      "type": "array",
+      "maxItems": 80,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "url",
+          "publishedAt",
+          "summary",
+          "editorial"
+        ],
+        "properties": {
+          "editorial": {
+            "type": "object",
+            "required": [
+              "state",
+              "reviewedAt",
+              "expiresAt",
+              "inputFacts",
+              "publicationEvidence",
+              "reason",
+              "relevance",
+              "novelty",
+              "storyKey",
+              "grounded"
+            ],
+            "properties": {
+              "state": {
+                "const": "verified"
+              },
+              "reviewedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "expiresAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "inputFacts": {
+                "type": "object"
+              },
+              "publicationEvidence": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "relevance": {
+                "type": "integer",
+                "minimum": 3,
+                "maximum": 5
+              },
+              "novelty": {
+                "type": "integer",
+                "minimum": 3,
+                "maximum": 5
+              },
+              "storyKey": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "grounded": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "days": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "date",
+          "selectedIds"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "selectedIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "maxItems": 5,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "inputFacts",
+          "publishedAt",
+          "publicationEvidence",
+          "datePrecision"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "inputFacts": {
+            "type": "object"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "publicationEvidence": {
+            "type": "string"
+          },
+          "datePrecision": {
+            "enum": [
+              "time",
+              "date"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

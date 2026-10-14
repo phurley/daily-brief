@@ -154,3 +154,7 @@ when the brief loads or its edition changes. The compact public pool remains the
 fast initial view; it is not the final personalized pool. When the full archive
 cannot be loaded, the page explains that preferences are applied only to the
 compact selection and retries on refresh. Browser feedback remains local.
+
+News/science ranking now produces candidates for the [source editor](docs/story-editor.md).
+Only accepted dated picks lead the report; formula rankings remain useful for browsing
+additional archive coverage. The current public policy includes explicit science interests.

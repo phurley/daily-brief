@@ -1,11 +1,20 @@
 // One daily selection; deterministic browser ordering changes every four hours.
+import { selectEditedStories } from './story-editorial.mjs';
 const DAY = 86400000;
 const time = (value) => Number.isFinite(Date.parse(value)) ? Date.parse(value) : 0;
 export const scienceDate = (value) => time(value) ? new Intl.DateTimeFormat("en-CA", {
   timeZone: "America/Detroit", year: "numeric", month: "2-digit", day: "2-digit",
 }).format(new Date(value)) : "Unknown date";
 
-export function selectScienceDigest(doc = {}, date, { limit = 6, reset = false } = {}) {
+export function selectScienceDigest(doc = {}, date, { limit = 6, reset = false, now = Date.now() } = {}) {
+  const edited = selectEditedStories(doc, 'science', date, now);
+  if (edited !== null) {
+    const selectedIds = edited.map(story => story.id);
+    const ids = new Set(selectedIds);
+    return { stories: edited, selectedIds, date, previously: {},
+      reasons: Object.fromEntries(edited.map(story => [story.id, story.editorial])),
+      archive: (doc.stories || []).filter(story => !ids.has(story.id)) };
+  }
   const ageDays = s => (Date.parse(`${date}T00:00:00Z`) - Date.parse(`${scienceDate(s.publishedAt)}T00:00:00Z`)) / DAY;
   const all = [...(doc.stories || [])].filter(s => time(s.publishedAt) && scienceDate(s.publishedAt) <= date)
     .sort((a, b) => time(b.publishedAt) - time(a.publishedAt) || a.id.localeCompare(b.id));
@@ -68,7 +77,8 @@ export function scienceRotationSlot(now = Date.now()) {
 }
 
 export function scienceView(doc, date, now = Date.now()) {
-  const digest = selectScienceDigest(doc, date);
+  const digest = selectScienceDigest(doc, date, { now });
+  if (doc.editorial?.version === 1) return digest;
   const slot = date === scienceDate(new Date(now).toISOString()) ? scienceRotationSlot(now) : 0;
   const offset = digest.stories.length ? slot % digest.stories.length : 0;
   const stories = [...digest.stories.slice(offset), ...digest.stories.slice(0, offset)];
@@ -107,6 +117,6 @@ export function scienceContext(doc, health, date, now = Date.now()) {
 export function scienceEditorial(context) {
   const first = context.stories[0];
   return { heading: "Science & technology", summary: first
-    ? `Published ${scienceDate(first.publishedAt)}: ${first.title}.${context.stale && !context.partial ? " Collection is overdue or incomplete." : ""}`
+    ? `Published ${scienceDate(first.publishedAt)}: ${first.title}${/[.!?]$/.test(first.title) ? '' : '.'}${context.stale && !context.partial ? " Collection is overdue or incomplete." : ""}`
     : `No verified recent science stories are available.${context.stale ? " Collection is overdue or incomplete." : " Older coverage is in the archive."}` };
 }

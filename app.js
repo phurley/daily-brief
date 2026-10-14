@@ -10,6 +10,7 @@ import { orderNewsStories } from "./story-order.mjs?v=20261009-1";
 import { scienceView, scienceRotationSlot, scienceStatusText, scienceDate, scienceContext, scienceEditorial } from "./science.mjs?v=20261013-partial-1";
 
 import { orderRankedNews } from './news-ranking.mjs?v=20261009-2';
+import { applyStoryDates, editedStoryDocument, selectEditedStories } from './story-editorial.mjs';
 import { contributions } from './scoring.mjs?v=20261009-2';
 import { restoreWeights, tasteScore, compareTaste } from './weight-tuning.mjs';
 import { calendarTuner } from './calendar-tuning.js';
@@ -189,6 +190,7 @@ let photosRequested = false;
 let showAllEvents = false;
 const fullStories = {};
 const storyLimits = {news:10,geeknews:10};
+const storyBrowsing = {news:false,geeknews:false};
 const storyRequests = {};
 const displayedStories = {news:[],geeknews:[]};
 const storyPools = {news:[],geeknews:[]};
@@ -206,6 +208,7 @@ const sectionSelectors = {weather: '#weather-section', events:'#events-section',
 
 function resetReportPagination() {
   storyLimits.news=10;storyLimits.geeknews=10;
+  storyBrowsing.news=false;storyBrowsing.geeknews=false;
   for (const kind of Object.keys(storyTracks)) { displayedStories[kind]=[];storyPools[kind]=[]; }
   for (const lane of Object.keys(eventTracks)) { eventExtras[lane]=0;displayedEvents[lane]=[]; }
   eventPools={today:[],ongoing:[],future:[]};eventPoolInputs=null;eventBrowsing=false;
@@ -218,7 +221,9 @@ async function fetchJson(path) { return fetchJSON(path); }
 async function loadDocument([name, dataPath, schemaPath, required]) {
   try {
     if (!schemaCache.has(schemaPath)) schemaCache.set(schemaPath, fetchJSON(schemaPath, {cache:'force-cache'}).catch(error => {schemaCache.delete(schemaPath); throw error;}));
-    const [data, schema] = await Promise.all([fetchJSON(dataPath), schemaCache.get(schemaPath)]);
+    const [input, schema] = await Promise.all([fetchJSON(dataPath), schemaCache.get(schemaPath)]);
+    const section = name === 'news' ? 'news' : name === 'geeknews' ? 'science' : null;
+    const data = section ? editedStoryDocument(input, await fetchJSON(`${section}-editorial.json`), section) : input;
     validateTopLevel(data, schema, dataPath);
     if (!['photos','calendar'].includes(name)) validateSection(name,data);
     return {name, data, required};
@@ -1332,25 +1337,31 @@ function renderStories(kind, {append = false} = {}) {
   const selector = kind === "news" ? "#news-list" : "#geek-list";
   const noteSelector = kind === "news" ? "#news-note" : "#geek-note";
   const section = kind === "news" ? "news" : "science-technology";
-  const availableStories = storiesOnDate(fullStories[kind] || data,state.selectedDate);
+  const rawStories = (fullStories[kind] || data)?.stories || [];
+  const availableStories = storiesOnDate({stories:applyStoryDates(rawStories, data?.editorial?.corrections)},state.selectedDate);
   const scienceNow = Date.now();
-  const scienceDoc = { ...data, stories: availableStories };
+  const compactIds = new Set((data?.stories || []).map(story => story.id));
+  const scienceDoc = { ...data, stories: [...(data?.stories || []), ...availableStories.filter(story => !compactIds.has(story.id))] };
   const digest = kind === "geeknews" ? scienceView(scienceDoc, state.selectedDate, scienceNow) : null;
   if (digest) lastScienceSlot = `${scienceDate(new Date(scienceNow).toISOString())}:${scienceRotationSlot(scienceNow)}`;
-  const pool = kind === 'news'
+  const edited = selectEditedStories(data, kind === 'news' ? 'news' : 'science', state.selectedDate, scienceNow);
+  const rankedPool = kind === 'news'
     ? orderRankedNews(availableStories, { now: Date.now(), preferences: preferences.get() })
     : [...digest.stories, ...digest.archive];
+  const featuredIds = new Set((edited || []).map(story => story.id));
+  const pool = edited === null ? rankedPool : [...edited, ...rankedPool.filter(story => !featuredIds.has(story.id))];
   storyPools[kind] = pool;
   const prior = append ? displayedStories[kind] : [];
-  const stories = appendReportPage(prior,pool,storyLimits[kind]);
+  const count = edited !== null && !storyBrowsing[kind] ? edited.length : storyLimits[kind];
+  const stories = appendReportPage(prior,pool,count);
   displayedStories[kind] = stories;
   const renderStory = (story) => {
     const title = node("h3");
     title.append(safeLink(story.title, story.url));
     const source = [story.source?.name, story.source?.publication].filter(Boolean).join(" · ");
     return node("article", { className: "story", dataset: {storyId: story.id} }, [
-      node("div", {}, [title, kind === "geeknews" && digest.archive.some(item => item.id === story.id) ? node("p", {className:"story__source",text:"Archive / background"}) : null, node("p", { text: story.finding || story.summary }),
-        kind === "geeknews" ? node("p", { className: "story__source", text: `Published ${scienceDate(story.publishedAt)} · ${story.evidenceType || "unknown"}${story.verifiedAt ? "" : " · archived, not reverified"}` }) : null,
+      node("div", {}, [title, (edited !== null ? !featuredIds.has(story.id) : kind === "geeknews" && digest.archive.some(item => item.id === story.id)) ? node("p", {className:"story__source",text:"More coverage · archive"}) : null, node("p", { text: story.finding || story.summary }),
+        (kind === 'geeknews' || story.editorial?.grounded || story.publicationVerified) ? node("p", { className: "story__source", text: `Published ${scienceDate(story.publishedAt)}${kind === 'geeknews' ? ` · ${story.evidenceType || "unknown"}` : ''}` }) : null,
         kind === "geeknews" ? safeLink(`Read the primary source: ${story.source?.name || story.title}`, story.primarySourceUrl || story.url) : null,
         kind === "geeknews" && story.paperUrl ? safeLink("Read the linked research paper", story.paperUrl) : null,
         kind === "geeknews" && digest.previously[story.id]?.length ? node("details", {}, [node("summary", { text: "Previously" }), ...digest.previously[story.id].map(previous => node("p", {}, [safeLink(`${scienceDate(previous.publishedAt)}: ${previous.title}`, previous.url)]))]) : null,
@@ -1369,7 +1380,11 @@ function renderStories(kind, {append = false} = {}) {
   const scienceStatus = kind === "geeknews" ? scienceStatusText(scienceDoc, state.data.scienceHealth, scienceNow) : "";
   $(noteSelector).textContent = kind === "geeknews" ? [scienceNote, scienceStatus, carryForward].filter(Boolean).join(" ")
     : [message(section, "summary", fallback), carryForward].filter(Boolean).join(" ");
-  if (kind === "news") $("#news-title").textContent = message(section, "section-heading", "The local signal");
+  if (kind === "news" && edited !== null) {
+    $("#news-title").textContent = 'The local signal';
+    $(noteSelector).textContent = edited.length ? 'Local decisions, useful changes, and stories worth your time.' : 'No featured local stories for this date.';
+  }
+  else if (kind === "news") $("#news-title").textContent = message(section, "section-heading", "The local signal");
   else $("#geek-title").textContent = "Science & technology";
   refreshShelfControls();
 }
@@ -1775,6 +1790,7 @@ function hasMoreStories(kind) {
   return !fullStories[kind] || storyPools[kind].some(story=>!shown.has(story.id));
 }
 async function loadMoreStories(kind) {
+  storyBrowsing[kind] = true;
   if (!hasMoreStories(kind) || storyRequests[kind]) return;
   reportErrors.delete(kind);
   const token = {}; storyRequests[kind] = token;
