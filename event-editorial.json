@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-13T23:52:50.803581-04:00",
+  "generatedAt": "2026-10-14T15:55:30.326239-04:00",
   "events": [
     {
       "id": "occ-b2f2304398a1c54ba1a44e55",
@@ -129,9 +129,157 @@
       "reviewExpiresAt": "2026-10-14T23:52:50.803581-04:00"
     },
     {
+      "id": "occ-75d2326e2712c93f82860713",
+      "title": "Big Fun Murder | An Improvised Murder Mystery",
+      "summary": "Experience an improvised murder mystery where a ghost attempts to solve their own demise. Help them piece together memories and identify the culprit as they relive their final day in this unique comedic performance.",
+      "url": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
+      "start": "2026-10-16T21:30:00-04:00",
+      "venue": "Go Comedy Improv Theater",
+      "city": "Ferndale",
+      "price": "$22.14",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/17500/Big_Fun_Murder.png",
+      "imageAlt": "Big Fun Murder | An Improvised Murder Mystery",
+      "status": "confirmed",
+      "occurrenceId": "occ-75d2326e2712c93f82860713",
+      "seriesId": "series-50ad61b888e882867b371969",
+      "sourceUpdatedAt": "2026-09-08T18:29:49.611000+00:00",
+      "priceMin": 22.14,
+      "priceMax": 22.14,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-10-14T15:55:30.326239-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
+      "venueId": "go comedy improv theater|ferndale",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "big-fun-murder-an-improvised-murder-myst-event-2026-10-16",
+        "src-1fd659dd54b2d4ab662f2231",
+        "src-8af4bd3e9df50f3f3f703a80"
+      ],
+      "legacyOccurrenceKeys": [
+        "big-fun-murder-an-improvised-murder-myst-event-2026-10-16|2026-10-16T21:30:00-04:00",
+        "src-1fd659dd54b2d4ab662f2231|2026-10-16T21:30:00-04:00",
+        "src-8af4bd3e9df50f3f3f703a80|2026-10-16T21:30:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "big fun murder | an improvised murder mystery|go comedy! improv theater",
+        "series-49798fcaef12941e30d2017e",
+        "series-50ad61b888e882867b371969",
+        "series-c478b559e90684e460a48466",
+        "series-dcc3f11a86d1ad3f86d2983b"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-1fd659dd54b2d4ab662f2231",
+          "sourceId": "go-comedy-improv-theater",
+          "canonicalUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-09-08T18:29:49.611000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        },
+        {
+          "sourceRecordId": "src-8af4bd3e9df50f3f3f703a80",
+          "sourceId": "metro-times",
+          "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
+          "observedAt": "2026-10-13T10:40:19-04:00",
+          "sourceAuthority": "unknown",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "exact-title-time-venue",
+          "native-occurrence"
+        ],
+        "fields": {
+          "title": "src-1fd659dd54b2d4ab662f2231",
+          "start": "src-1fd659dd54b2d4ab662f2231",
+          "venue": "src-1fd659dd54b2d4ab662f2231",
+          "url": "src-1fd659dd54b2d4ab662f2231",
+          "status": "src-1fd659dd54b2d4ab662f2231",
+          "imageUrl": "src-1fd659dd54b2d4ab662f2231",
+          "registration": "src-8af4bd3e9df50f3f3f703a80"
+        },
+        "conflicts": {
+          "venue": [
+            "Go Comedy Improv Theater",
+            "Go Comedy! Improv Theater"
+          ]
+        }
+      },
+      "score": 100,
+      "scoring": {
+        "signals": {
+          "funny": 0.98,
+          "distinctive": 0.78,
+          "eclectic": 0.54,
+          "technical_science": 0.02,
+          "artsy": 0.96,
+          "progressive": 0.19,
+          "outdoors": 0.02,
+          "theatre": 0.79,
+          "live_music": 0.02,
+          "live_comedy": 0.97,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.92,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.49,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 100,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"ferndale\",\"go comedy improv theater\",\"big fun murder an improvised murder mystery\"]",
+      "registration": "Get Tickets!",
+      "bookingUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-14T15:55:30.326239-04:00",
+        "expiresAt": "2026-10-15T15:55:30.326239-04:00",
+        "sourceUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
+        "sourceHash": "605a05255f5904f54c9e56f1efadffc0b3646f615fe3d8f0baffa2fdf9322bff",
+        "inputFacts": {
+          "id": "occ-75d2326e2712c93f82860713",
+          "url": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
+          "start": "2026-10-16T21:30:00-04:00",
+          "end": null,
+          "venue": "Go Comedy Improv Theater",
+          "city": "Ferndale",
+          "price": "$22.14",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Oct 16",
+          "time": "9:30 PM",
+          "venue": "Go Comedy Improv Theater",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21:30:00\", \"price\": 22.14, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "A ghost has one final chance to solve their own murder in this completely improvised mystery.",
+          "registration": "Get Tickets!"
+        }
+      },
+      "reviewExpiresAt": "2026-10-15T15:55:30.326239-04:00"
+    },
+    {
       "id": "occ-b9f3163b7b132e08a263f44f",
       "title": "COMEDY l The Thursday Show w/ The Planet Ant Farm Team",
-      "summary": "Experience Planet Ant's weekly live variety night, featuring original sketch comedy, improv, character bits, and guest performers. Each show is created fresh and performed live, with a rotating monthly theme, blending scripted and unscripted comedy into a fast-moving, collaborative experience.",
+      "summary": "Experience Planet Ant’s weekly live variety night, featuring original sketch comedy, improv, character bits, and guest performers. Each show is created fresh and performed live, with a rotating monthly theme, blending scripted and unscripted comedy into a fast-moving, collaborative experience.",
       "url": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
       "start": "2026-10-15T20:00:00-04:00",
       "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
@@ -147,18 +295,19 @@
       "priceMin": 11.84,
       "priceMax": 11.84,
       "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-13T10:41:03.470510-04:00",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-10-14T15:55:30.326239-04:00",
       "canonicalUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
       "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
       "timePrecision": "time",
       "statusEvidence": "Organizer detail reviewed",
       "aliases": [
         "comedy-l-the-thursday-show-w-the-planet-event-2026-10-15",
-        "src-99c2d19ce2bc6834b764b3db"
+        "src-2e7a82a225241790e6f193af"
       ],
       "legacyOccurrenceKeys": [
         "comedy-l-the-thursday-show-w-the-planet-event-2026-10-15|2026-10-15T20:00:00-04:00",
-        "src-99c2d19ce2bc6834b764b3db|2026-10-15T20:00:00-04:00"
+        "src-2e7a82a225241790e6f193af|2026-10-15T20:00:00-04:00"
       ],
       "legacySeriesKeys": [
         "series-1372a8667c2f970960359cc9",
@@ -174,7 +323,7 @@
       ],
       "sources": [
         {
-          "sourceRecordId": "src-99c2d19ce2bc6834b764b3db",
+          "sourceRecordId": "src-2e7a82a225241790e6f193af",
           "sourceId": "planet-ant-theatre",
           "canonicalUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
           "observedAt": "2026-10-12T15:41:41-04:00",
@@ -187,15 +336,15 @@
       "identity": {
         "ruleVersion": "occurrence-v1",
         "reasons": [
-          "new-occurrence"
+          "native-occurrence"
         ],
         "fields": {
-          "title": "src-99c2d19ce2bc6834b764b3db",
-          "start": "src-99c2d19ce2bc6834b764b3db",
-          "venue": "src-99c2d19ce2bc6834b764b3db",
-          "url": "src-99c2d19ce2bc6834b764b3db",
-          "status": "src-99c2d19ce2bc6834b764b3db",
-          "imageUrl": "src-99c2d19ce2bc6834b764b3db"
+          "title": "src-2e7a82a225241790e6f193af",
+          "start": "src-2e7a82a225241790e6f193af",
+          "venue": "src-2e7a82a225241790e6f193af",
+          "url": "src-2e7a82a225241790e6f193af",
+          "status": "src-2e7a82a225241790e6f193af",
+          "imageUrl": "src-2e7a82a225241790e6f193af"
         },
         "conflicts": {}
       },
@@ -235,13 +384,13 @@
       "localityTier": "unknown",
       "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"comedy l the thursday show w the planet ant farm team\"]",
       "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-      "bookingUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
+      "bookingUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20:00:00",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-13T10:41:03.470510-04:00",
-        "expiresAt": "2026-10-14T10:41:03.470510-04:00",
+        "reviewedAt": "2026-10-14T15:55:30.326239-04:00",
+        "expiresAt": "2026-10-15T15:55:30.326239-04:00",
         "sourceUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
-        "sourceHash": "78a2d14c3ac903c6816697e99c4d8bc4e990606ef84678ab3e65fecf7db878a2",
+        "sourceHash": "be2c163b8e163115b937e467c351c8614033c30c6d23b9f2ec89d0e142a4f2cb",
         "inputFacts": {
           "id": "occ-b9f3163b7b132e08a263f44f",
           "url": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20%3A00%3A00.000-04%3A00",
@@ -249,7 +398,7 @@
           "end": null,
           "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
           "city": "Hamtramck",
-          "price": "$11.84–$22.35 including fees",
+          "price": "$11.84",
           "status": "scheduled"
         },
         "evidence": {
@@ -258,11 +407,656 @@
           "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
           "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-15T20:00:00\", \"price\": 11.84, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
           "description": "The Thursday Show is Planet Ant’s weekly live variety night, featuring original sketch comedy, improv, character bits, and guest performers.",
-          "registration": "Online sales end 1 (one) hour before the start of a performance.",
-          "end": "Closes Thursday, Oct 15 @  7:00 PM"
+          "registration": "Online sales end 1 (one) hour before the start of a performance."
         }
       },
-      "reviewExpiresAt": "2026-10-14T10:41:03.470510-04:00"
+      "reviewExpiresAt": "2026-10-15T15:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-84be0ae0deeb0a8a0ce36535",
+      "title": "We Wear Pink | All Women and Non-Binary Improv Comedy Show",
+      "summary": "Experience an evening of empowering improv comedy showcasing women and non-binary performers. This show fosters community and enrichment through performance, bringing together talented individuals for a night of laughter and connection.",
+      "url": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
+      "start": "2026-10-14T19:30:00-04:00",
+      "venue": "Go Comedy Improv Theater",
+      "city": "Ferndale",
+      "price": "$16.94",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/16626/we_wear.png",
+      "imageAlt": "We Wear Pink | All Women and Non-Binary Improv Comedy Show",
+      "status": "confirmed",
+      "occurrenceId": "occ-84be0ae0deeb0a8a0ce36535",
+      "seriesId": "series-1a9c61560102f26676d08ac6",
+      "sourceUpdatedAt": "2026-07-23T02:55:23.172000+00:00",
+      "priceMin": 16.94,
+      "priceMax": 16.94,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-10-14T15:55:30.326239-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
+      "venueId": "go comedy improv theater|ferndale",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "src-9cd19e65385d6622b2fa560b",
+        "we-wear-pink-all-women-and-non-binary-im-event-2026-10-14"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-9cd19e65385d6622b2fa560b|2026-10-14T19:30:00-04:00",
+        "we-wear-pink-all-women-and-non-binary-im-event-2026-10-14|2026-10-14T19:30:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-10b9e047f51f0994e8912636",
+        "series-1a9c61560102f26676d08ac6"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-9cd19e65385d6622b2fa560b",
+          "sourceId": "go-comedy-improv-theater",
+          "canonicalUrl": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-07-23T02:55:23.172000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "title": "src-9cd19e65385d6622b2fa560b",
+          "start": "src-9cd19e65385d6622b2fa560b",
+          "venue": "src-9cd19e65385d6622b2fa560b",
+          "url": "src-9cd19e65385d6622b2fa560b",
+          "status": "src-9cd19e65385d6622b2fa560b",
+          "imageUrl": "src-9cd19e65385d6622b2fa560b"
+        },
+        "conflicts": {}
+      },
+      "score": 95,
+      "scoring": {
+        "signals": {
+          "funny": 0.99,
+          "distinctive": 0.37,
+          "eclectic": 0.1,
+          "technical_science": 0.02,
+          "artsy": 0.97,
+          "progressive": 0.85,
+          "outdoors": 0.01,
+          "theatre": 0.28,
+          "live_music": 0.02,
+          "live_comedy": 0.98,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.38,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.2,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        },
+        "score": 95,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"ferndale\",\"go comedy improv theater\",\"we wear pink all women and non binary improv comedy show\"]",
+      "registration": "Get Tickets!",
+      "bookingUrl": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-14T15:55:30.326239-04:00",
+        "expiresAt": "2026-10-15T15:55:30.326239-04:00",
+        "sourceUrl": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
+        "sourceHash": "82ea5ea76b95d040bd318acc77dfcc353b6e8423a9b440b117dce36b488686f4",
+        "inputFacts": {
+          "id": "occ-84be0ae0deeb0a8a0ce36535",
+          "url": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
+          "start": "2026-10-14T19:30:00-04:00",
+          "end": null,
+          "venue": "Go Comedy Improv Theater",
+          "city": "Ferndale",
+          "price": "$16.94",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Oct 14",
+          "time": "7:30 PM",
+          "venue": "Go Comedy Improv Theater",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19:30:00\", \"price\": 16.94, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "We Wear Pink's mission is to bring women and non-binary performers together for empowerment, bonding, performance, and enrichment of the improv community.",
+          "registration": "Get Tickets!"
+        }
+      },
+      "reviewExpiresAt": "2026-10-15T15:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-da3d0abd30f59190dc79fac7",
+      "title": "THEATRE l I'd Love to Have You for Dinner",
+      "summary": "Experience a psychological thriller where an ancient vampire and a vampire hunter meet for a home-cooked meal. This two-act horror play explores themes of legacy, cannibalism, and the complex moral nature of predation, promising a suspenseful and thought-provoking evening.",
+      "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+      "start": "2026-10-16T20:00:00-04:00",
+      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+      "city": "Hamtramck",
+      "price": "$27.6",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18028/HORIZ.png",
+      "imageAlt": "THEATRE l I'd Love to Have You for Dinner",
+      "status": "confirmed",
+      "occurrenceId": "occ-da3d0abd30f59190dc79fac7",
+      "seriesId": "series-53aa471eb4e114f156680d5b",
+      "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
+      "priceMin": 27.6,
+      "priceMax": 27.6,
+      "priceCurrency": "USD",
+      "lastCheckedAt": "2026-10-14T15:55:30.326239-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "src-ff9992c56e94aecca67e76f5",
+        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-16"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-ff9992c56e94aecca67e76f5|2026-10-16T20:00:00-04:00",
+        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-16|2026-10-16T20:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-09c693fc8a94c835a5193f83",
+        "series-0c777bef0ca671d00f3958ef",
+        "series-4168b3b9cddf5675fb83e57e",
+        "series-53aa471eb4e114f156680d5b",
+        "series-6633ccd340406607b63a73f5",
+        "series-7f4ddc059623f3dd85aedae9",
+        "series-c07610dc0906eb589a504b40",
+        "series-ebfa5b312fbd6c351df7470f"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-ff9992c56e94aecca67e76f5",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-ff9992c56e94aecca67e76f5",
+          "start": "src-ff9992c56e94aecca67e76f5",
+          "venue": "src-ff9992c56e94aecca67e76f5",
+          "url": "src-ff9992c56e94aecca67e76f5",
+          "status": "src-ff9992c56e94aecca67e76f5",
+          "imageUrl": "src-ff9992c56e94aecca67e76f5"
+        },
+        "conflicts": {}
+      },
+      "score": 99,
+      "scoring": {
+        "signals": {
+          "funny": 0.16,
+          "distinctive": 0.85,
+          "eclectic": 0.88,
+          "technical_science": 0.04,
+          "artsy": 0.97,
+          "progressive": 0.45,
+          "outdoors": 0.01,
+          "theatre": 0.98,
+          "live_music": 0.02,
+          "live_comedy": 0.06,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.09,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.46,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 99,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"theatre l i d love to have you for dinner\"]",
+      "registration": "Get Tickets",
+      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-14T15:55:30.326239-04:00",
+        "expiresAt": "2026-10-15T15:55:30.326239-04:00",
+        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+        "sourceHash": "e6b483f59f0af88950d5a575933b9419090f5d7d06febb08a817f37a8d5999b1",
+        "inputFacts": {
+          "id": "occ-da3d0abd30f59190dc79fac7",
+          "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+          "start": "2026-10-16T20:00:00-04:00",
+          "end": null,
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "city": "Hamtramck",
+          "price": "$27.6–$32.85 including fees",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Oct 16",
+          "time": "8:00 PM",
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20:00:00\", \"price\": 27.6, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "This two act, four-course horror/thriller highlights legacy, cannibalism, the inevitability of personal failure, and the complex moral nature of predation in all its incarnations.",
+          "registration": "Get Tickets"
+        }
+      },
+      "reviewExpiresAt": "2026-10-15T15:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-298d851c551f521aa4c9c1ba",
+      "title": "Creative Reuse at the Lab Swap Shop",
+      "summary": "Explore creative reuse by transforming surplus lab supplies into art. This workshop focuses on flask vase painting, demonstrating how items can be repurposed. Attendees can also get free lab supplies for their own projects.",
+      "url": "https://events.umich.edu/event/150567",
+      "start": "2026-10-15T13:00:00-04:00",
+      "venue": "1100 North University Building",
+      "city": "Ann Arbor",
+      "category": "Social / Informal Gathering",
+      "imageUrl": "https://events.umich.edu/media/attachments/2026/08/event_150567_original-1.jpg",
+      "imageAlt": "Creative Reuse at the Lab Swap Shop",
+      "status": "confirmed",
+      "occurrenceId": "occ-298d851c551f521aa4c9c1ba",
+      "seriesId": "series-c219d146f0c8859e290484b9",
+      "sourceUpdatedAt": "2026-08-19T15:34:35-04:00",
+      "lastCheckedAt": "2026-10-13T23:52:50.803581-04:00",
+      "canonicalUrl": "https://events.umich.edu/event/150567",
+      "venueId": "1100 north university building|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "creative-reuse-at-the-lab-swap-shop-event-2026-10-15",
+        "src-7e00ae849177314402d1f1b0"
+      ],
+      "legacyOccurrenceKeys": [
+        "creative-reuse-at-the-lab-swap-shop-event-2026-10-15|2026-10-15T13:00:00-04:00",
+        "src-7e00ae849177314402d1f1b0|2026-10-15T13:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-54437ef59d5c48fd395952c2",
+        "series-c15146e3b0feba126d44fc5e",
+        "series-c219d146f0c8859e290484b9"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-7e00ae849177314402d1f1b0",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/150567",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-08-19T15:34:35-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-7e00ae849177314402d1f1b0",
+          "start": "src-7e00ae849177314402d1f1b0",
+          "end": "src-7e00ae849177314402d1f1b0",
+          "venue": "src-7e00ae849177314402d1f1b0",
+          "url": "src-7e00ae849177314402d1f1b0",
+          "imageUrl": "src-7e00ae849177314402d1f1b0",
+          "status": "src-7e00ae849177314402d1f1b0"
+        },
+        "conflicts": {}
+      },
+      "score": 100,
+      "scoring": {
+        "signals": {
+          "funny": 0.72,
+          "distinctive": 0.82,
+          "eclectic": 0.78,
+          "technical_science": 0.89,
+          "artsy": 0.98,
+          "progressive": 0.85,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.73,
+          "craft_fair_shopping": 0.21,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.13,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.1,
+          "children_activity": 0.07,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        },
+        "score": 100,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"1100 north university building\",\"creative reuse at the lab swap shop\"]",
+      "price": "Free",
+      "end": "2026-10-15T15:00:00-04:00",
+      "bookingUrl": "",
+      "statusEvidence": "Organizer detail reviewed",
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "priceCurrency": "USD",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-13T23:52:50.803581-04:00",
+        "expiresAt": "2026-10-14T23:52:50.803581-04:00",
+        "sourceUrl": "https://events.umich.edu/event/150567",
+        "sourceHash": "b434830bc01985654baecd3aba50b5c684a8ceee0503dfb7158f0bca832dabac",
+        "inputFacts": {
+          "id": "occ-298d851c551f521aa4c9c1ba",
+          "url": "https://events.umich.edu/event/150567",
+          "start": "2026-10-15T13:00:00-04:00",
+          "end": "2026-10-15T15:00:00-04:00",
+          "venue": "1100 North University Building",
+          "city": "Ann Arbor",
+          "price": null,
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Thu, Oct 15",
+          "time": "1:00pm\n                                    - 3:00pm",
+          "venue": "1100 North University Building \n                                    - 5004",
+          "admission": "Free",
+          "description": "--- 10/15: Flask Vase Painting",
+          "end": "1:00pm\n                                    - 3:00pm"
+        }
+      },
+      "reviewExpiresAt": "2026-10-14T23:52:50.803581-04:00"
+    },
+    {
+      "id": "occ-09088e880f29c6c18da47743",
+      "title": "From Frightful to Delightful: East Asian Monsters in the Stacks",
+      "summary": "Explore East Asian folklore, literature, art, and popular culture through an exhibit of demons, shape-shifters, and mythical beasts. Discover how these monstrous creatures have fascinated audiences across cultures and generations, offering a playful encounter with whimsical and eerie beings.",
+      "url": "https://events.umich.edu/event/151411",
+      "start": "2026-10-15T16:00:00-04:00",
+      "venue": "Hatcher Graduate Library",
+      "city": "Ann Arbor",
+      "category": "Reception / Open House",
+      "imageUrl": "https://events.umich.edu/media/attachments/2026/09/event_151411_original-1.jpg",
+      "imageAlt": "From Frightful to Delightful: East Asian Monsters in the Stacks",
+      "status": "confirmed",
+      "occurrenceId": "occ-09088e880f29c6c18da47743",
+      "seriesId": "series-363dd59eb27779cc83abd57e",
+      "sourceUpdatedAt": "2026-09-02T14:53:59-04:00",
+      "lastCheckedAt": "2026-10-14T15:55:30.326239-04:00",
+      "canonicalUrl": "https://events.umich.edu/event/151411",
+      "venueId": "hatcher graduate library|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "from-frightful-to-delightful-east-asian-event-2026-10-15",
+        "src-252c89682f66de0ffaebe14a"
+      ],
+      "legacyOccurrenceKeys": [
+        "from-frightful-to-delightful-east-asian-event-2026-10-15|2026-10-15T16:00:00-04:00",
+        "src-252c89682f66de0ffaebe14a|2026-10-15T16:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-363dd59eb27779cc83abd57e"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-252c89682f66de0ffaebe14a",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/151411",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-09-02T14:53:59-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-252c89682f66de0ffaebe14a",
+          "start": "src-252c89682f66de0ffaebe14a",
+          "end": "src-252c89682f66de0ffaebe14a",
+          "venue": "src-252c89682f66de0ffaebe14a",
+          "url": "src-252c89682f66de0ffaebe14a",
+          "imageUrl": "src-252c89682f66de0ffaebe14a",
+          "status": "src-252c89682f66de0ffaebe14a"
+        },
+        "conflicts": {}
+      },
+      "score": 95,
+      "scoring": {
+        "signals": {
+          "funny": 0.84,
+          "distinctive": 0.75,
+          "eclectic": 0.77,
+          "technical_science": 0.03,
+          "artsy": 0.9,
+          "progressive": 0.27,
+          "outdoors": 0.02,
+          "theatre": 0.03,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.94,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.02,
+          "sales_related": 0.05,
+          "children_activity": 0.09,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 95,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"hatcher graduate library\",\"from frightful to delightful east asian monsters in the stacks\"]",
+      "price": "Free",
+      "end": "2026-10-15T18:00:00-04:00",
+      "bookingUrl": "https://events.umich.edu/event/151411",
+      "statusEvidence": "Organizer detail reviewed",
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "priceCurrency": "USD",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-14T15:55:30.326239-04:00",
+        "expiresAt": "2026-10-15T15:55:30.326239-04:00",
+        "sourceUrl": "https://events.umich.edu/event/151411",
+        "sourceHash": "b4eb2b109a803c73690b87d8181448b5ac0c4f1b35d520e7e660767d264c49ea",
+        "inputFacts": {
+          "id": "occ-09088e880f29c6c18da47743",
+          "url": "https://events.umich.edu/event/151411",
+          "start": "2026-10-15T16:00:00-04:00",
+          "end": "2026-10-15T18:00:00-04:00",
+          "venue": "Hatcher Graduate Library",
+          "city": "Ann Arbor",
+          "price": null,
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Thu, Oct 15",
+          "time": "4:00pm",
+          "venue": "Hatcher Graduate Library",
+          "admission": "Free",
+          "description": "This event offers a playful exploration of East Asian folklore, literature, art, and popular culture.",
+          "end": "6:00pm"
+        }
+      },
+      "reviewExpiresAt": "2026-10-15T15:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-a17c9d4188494a7c4c157269",
+      "title": "THEATRE l My Daddy is Haunted!",
+      "summary": "Experience Planet Ant's original horror comedy, \"My Daddy is Haunted!\" This one-act play blends humor and fright as the Maplesquatch family's vacation to an ancient castle turns terrifying. Discover if their father is truly haunted in this unique theatrical production.",
+      "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+      "start": "2026-10-16T20:00:00-04:00",
+      "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+      "city": "Hamtramck",
+      "price": "$32.85",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/17881/web-resmydaddyishauntedsocials_socials.jpg",
+      "imageAlt": "THEATRE l My Daddy is Haunted!",
+      "status": "confirmed",
+      "occurrenceId": "occ-a17c9d4188494a7c4c157269",
+      "seriesId": "series-dbf2ca983f5f3ac243c9cb7e",
+      "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
+      "priceMax": 32.85,
+      "priceCurrency": "USD",
+      "lastCheckedAt": "2026-10-14T15:55:30.326239-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+      "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "src-9b301df0872b1ca9fd585d3f",
+        "theatre-l-my-daddy-is-haunted-event-2026-10-16"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-9b301df0872b1ca9fd585d3f|2026-10-16T20:00:00-04:00",
+        "theatre-l-my-daddy-is-haunted-event-2026-10-16|2026-10-16T20:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-14836ed386fe113a8cf114f3",
+        "series-47907b221b1d6d8dd9ec7688",
+        "series-90c9028d779d072843d2fa1d",
+        "series-bd8e2be8f2b668113b480292",
+        "series-c0c9032e291b7fc942f6c4bc",
+        "series-dbf2ca983f5f3ac243c9cb7e"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-9b301df0872b1ca9fd585d3f",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-9b301df0872b1ca9fd585d3f",
+          "start": "src-9b301df0872b1ca9fd585d3f",
+          "venue": "src-9b301df0872b1ca9fd585d3f",
+          "url": "src-9b301df0872b1ca9fd585d3f",
+          "status": "src-9b301df0872b1ca9fd585d3f",
+          "imageUrl": "src-9b301df0872b1ca9fd585d3f"
+        },
+        "conflicts": {}
+      },
+      "priceMin": 32.85,
+      "score": 94,
+      "scoring": {
+        "signals": {
+          "funny": 0.95,
+          "distinctive": 0.72,
+          "eclectic": 0.89,
+          "technical_science": 0.05,
+          "artsy": 0.98,
+          "progressive": 0.15,
+          "outdoors": 0.02,
+          "theatre": 0.99,
+          "live_music": 0.02,
+          "live_comedy": 0.12,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.19,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.69,
+          "children_activity": 0.12,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 94,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"theatre l my daddy is haunted\"]",
+      "registration": "Get Tickets",
+      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20:00:00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-14T15:55:30.326239-04:00",
+        "expiresAt": "2026-10-15T15:55:30.326239-04:00",
+        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+        "sourceHash": "10f93b8dcc2eb6fac75b69c2b1df55b1c72eaae92d6381e6387b76fb78701c75",
+        "inputFacts": {
+          "id": "occ-a17c9d4188494a7c4c157269",
+          "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+          "start": "2026-10-16T20:00:00-04:00",
+          "end": null,
+          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+          "city": "Hamtramck",
+          "price": "$0–$38.1 including fees",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Oct 16",
+          "time": "8:00 PM",
+          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20:00:00\", \"price\": 32.85, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "My Daddy is Haunted!",
+          "registration": "Get Tickets"
+        }
+      },
+      "reviewExpiresAt": "2026-10-15T15:55:30.326239-04:00"
     },
     {
       "id": "occ-518f58c6834874734b3ccdff",
@@ -423,671 +1217,6 @@
         }
       },
       "reviewExpiresAt": "2026-10-14T18:18:16.871158-04:00"
-    },
-    {
-      "id": "occ-84be0ae0deeb0a8a0ce36535",
-      "title": "We Wear Pink | All Women and Non-Binary Improv Comedy Show",
-      "summary": "Experience an evening of improv comedy showcasing women and non-binary performers. This event aims to foster empowerment, bonding, and performance within the improv community, offering a unique and engaging live comedy experience.",
-      "url": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
-      "start": "2026-10-14T19:30:00-04:00",
-      "venue": "Go Comedy Improv Theater",
-      "city": "Ferndale",
-      "price": "$16.94",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/16626/we_wear.png",
-      "imageAlt": "We Wear Pink | All Women and Non-Binary Improv Comedy Show",
-      "status": "confirmed",
-      "occurrenceId": "occ-84be0ae0deeb0a8a0ce36535",
-      "seriesId": "series-1a9c61560102f26676d08ac6",
-      "sourceUpdatedAt": "2026-07-23T02:55:23.172000+00:00",
-      "priceMin": 16.94,
-      "priceMax": 16.94,
-      "priceCurrency": "USD",
-      "availability": "InStock",
-      "lastCheckedAt": "2026-10-13T16:02:10.920563-04:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
-      "venueId": "go comedy improv theater|ferndale",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "src-9cd19e65385d6622b2fa560b",
-        "we-wear-pink-all-women-and-non-binary-im-event-2026-10-14"
-      ],
-      "legacyOccurrenceKeys": [
-        "src-9cd19e65385d6622b2fa560b|2026-10-14T19:30:00-04:00",
-        "we-wear-pink-all-women-and-non-binary-im-event-2026-10-14|2026-10-14T19:30:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-10b9e047f51f0994e8912636",
-        "series-1a9c61560102f26676d08ac6"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-9cd19e65385d6622b2fa560b",
-          "sourceId": "go-comedy-improv-theater",
-          "canonicalUrl": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-07-23T02:55:23.172000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "native-occurrence"
-        ],
-        "fields": {
-          "title": "src-9cd19e65385d6622b2fa560b",
-          "start": "src-9cd19e65385d6622b2fa560b",
-          "venue": "src-9cd19e65385d6622b2fa560b",
-          "url": "src-9cd19e65385d6622b2fa560b",
-          "status": "src-9cd19e65385d6622b2fa560b",
-          "imageUrl": "src-9cd19e65385d6622b2fa560b"
-        },
-        "conflicts": {}
-      },
-      "score": 95,
-      "scoring": {
-        "signals": {
-          "funny": 0.99,
-          "distinctive": 0.37,
-          "eclectic": 0.1,
-          "technical_science": 0.02,
-          "artsy": 0.97,
-          "progressive": 0.85,
-          "outdoors": 0.01,
-          "theatre": 0.28,
-          "live_music": 0.02,
-          "live_comedy": 0.98,
-          "farmer_market": 0.01,
-          "sporting": 0.02,
-          "recurring": 0.38,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.03,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.2,
-          "children_activity": 0.02,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        },
-        "score": 95,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"ferndale\",\"go comedy improv theater\",\"we wear pink all women and non binary improv comedy show\"]",
-      "registration": "Get Tickets!",
-      "bookingUrl": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-13T16:02:10.920563-04:00",
-        "expiresAt": "2026-10-14T16:02:10.920563-04:00",
-        "sourceUrl": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
-        "sourceHash": "d828f1501b80ca846dbd9637c37f5e905e0515e626c06fd3948204fd24d466e9",
-        "inputFacts": {
-          "id": "occ-84be0ae0deeb0a8a0ce36535",
-          "url": "https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19%3A30%3A00.000-04%3A00",
-          "start": "2026-10-14T19:30:00-04:00",
-          "end": null,
-          "venue": "Go Comedy Improv Theater",
-          "city": "Ferndale",
-          "price": "$16.94",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Oct 14",
-          "time": "7:30 PM",
-          "venue": "Go Comedy Improv Theater",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/we-wear-pink?date=2026-10-14T19:30:00\", \"price\": 16.94, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "An evening showcasing women in improv. We Wear Pink's mission is to bring women and non-binary performers together for empowerment, bonding, performance, and enrichment of the improv community.",
-          "registration": "Get Tickets!"
-        }
-      },
-      "reviewExpiresAt": "2026-10-14T16:02:10.920563-04:00"
-    },
-    {
-      "id": "occ-298d851c551f521aa4c9c1ba",
-      "title": "Creative Reuse at the Lab Swap Shop",
-      "summary": "Explore creative reuse by transforming surplus lab supplies into art. This workshop focuses on flask vase painting, demonstrating how items can be repurposed. Attendees can also get free lab supplies for their own projects.",
-      "url": "https://events.umich.edu/event/150567",
-      "start": "2026-10-15T13:00:00-04:00",
-      "venue": "1100 North University Building",
-      "city": "Ann Arbor",
-      "category": "Social / Informal Gathering",
-      "imageUrl": "https://events.umich.edu/media/attachments/2026/08/event_150567_original-1.jpg",
-      "imageAlt": "Creative Reuse at the Lab Swap Shop",
-      "status": "confirmed",
-      "occurrenceId": "occ-298d851c551f521aa4c9c1ba",
-      "seriesId": "series-c219d146f0c8859e290484b9",
-      "sourceUpdatedAt": "2026-08-19T15:34:35-04:00",
-      "lastCheckedAt": "2026-10-13T23:52:50.803581-04:00",
-      "canonicalUrl": "https://events.umich.edu/event/150567",
-      "venueId": "1100 north university building|ann arbor",
-      "timePrecision": "time",
-      "aliases": [
-        "creative-reuse-at-the-lab-swap-shop-event-2026-10-15",
-        "src-7e00ae849177314402d1f1b0"
-      ],
-      "legacyOccurrenceKeys": [
-        "creative-reuse-at-the-lab-swap-shop-event-2026-10-15|2026-10-15T13:00:00-04:00",
-        "src-7e00ae849177314402d1f1b0|2026-10-15T13:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-54437ef59d5c48fd395952c2",
-        "series-c15146e3b0feba126d44fc5e",
-        "series-c219d146f0c8859e290484b9"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-7e00ae849177314402d1f1b0",
-          "sourceId": "happening-at-michigan",
-          "canonicalUrl": "https://events.umich.edu/event/150567",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-08-19T15:34:35-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-7e00ae849177314402d1f1b0",
-          "start": "src-7e00ae849177314402d1f1b0",
-          "end": "src-7e00ae849177314402d1f1b0",
-          "venue": "src-7e00ae849177314402d1f1b0",
-          "url": "src-7e00ae849177314402d1f1b0",
-          "imageUrl": "src-7e00ae849177314402d1f1b0",
-          "status": "src-7e00ae849177314402d1f1b0"
-        },
-        "conflicts": {}
-      },
-      "score": 100,
-      "scoring": {
-        "signals": {
-          "funny": 0.72,
-          "distinctive": 0.82,
-          "eclectic": 0.78,
-          "technical_science": 0.89,
-          "artsy": 0.98,
-          "progressive": 0.85,
-          "outdoors": 0.02,
-          "theatre": 0.02,
-          "live_music": 0.01,
-          "live_comedy": 0.02,
-          "farmer_market": 0.02,
-          "sporting": 0.01,
-          "recurring": 0.73,
-          "craft_fair_shopping": 0.21,
-          "religious": 0.02,
-          "large_venue": 0.03,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.13,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.1,
-          "children_activity": 0.07,
-          "running": 0.01,
-          "exercise": 0.02,
-          "employment_related": 0.02
-        },
-        "score": 100,
-        "rulesVersion": 2
-      },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"1100 north university building\",\"creative reuse at the lab swap shop\"]",
-      "price": "Free",
-      "end": "2026-10-15T15:00:00-04:00",
-      "bookingUrl": "",
-      "statusEvidence": "Organizer detail reviewed",
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "priceCurrency": "USD",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-13T23:52:50.803581-04:00",
-        "expiresAt": "2026-10-14T23:52:50.803581-04:00",
-        "sourceUrl": "https://events.umich.edu/event/150567",
-        "sourceHash": "b434830bc01985654baecd3aba50b5c684a8ceee0503dfb7158f0bca832dabac",
-        "inputFacts": {
-          "id": "occ-298d851c551f521aa4c9c1ba",
-          "url": "https://events.umich.edu/event/150567",
-          "start": "2026-10-15T13:00:00-04:00",
-          "end": "2026-10-15T15:00:00-04:00",
-          "venue": "1100 North University Building",
-          "city": "Ann Arbor",
-          "price": null,
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Thu, Oct 15",
-          "time": "1:00pm\n                                    - 3:00pm",
-          "venue": "1100 North University Building \n                                    - 5004",
-          "admission": "Free",
-          "description": "--- 10/15: Flask Vase Painting",
-          "end": "1:00pm\n                                    - 3:00pm"
-        }
-      },
-      "reviewExpiresAt": "2026-10-14T23:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-75d2326e2712c93f82860713",
-      "title": "Big Fun Murder | An Improvised Murder Mystery",
-      "summary": "A ghost gets one last chance to solve their own murder in this improvised mystery. Help them piece together what happened and identify the culprit as they relive their final day. This fan-favorite show promises a unique comedic experience.",
-      "url": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
-      "start": "2026-10-16T21:30:00-04:00",
-      "venue": "Go Comedy Improv Theater",
-      "city": "Ferndale",
-      "price": "$22.14",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/17500/Big_Fun_Murder.png",
-      "imageAlt": "Big Fun Murder | An Improvised Murder Mystery",
-      "status": "confirmed",
-      "occurrenceId": "occ-75d2326e2712c93f82860713",
-      "seriesId": "series-50ad61b888e882867b371969",
-      "sourceUpdatedAt": "2026-09-08T18:29:49.611000+00:00",
-      "priceMin": 22.14,
-      "priceMax": 22.14,
-      "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-13T10:41:03.470510-04:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
-      "venueId": "go comedy improv theater|ferndale",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "big-fun-murder-an-improvised-murder-myst-event-2026-10-16",
-        "src-1e0bddb860967490ae7b1e66",
-        "src-8af4bd3e9df50f3f3f703a80"
-      ],
-      "legacyOccurrenceKeys": [
-        "big-fun-murder-an-improvised-murder-myst-event-2026-10-16|2026-10-16T21:30:00-04:00",
-        "src-1e0bddb860967490ae7b1e66|2026-10-16T21:30:00-04:00",
-        "src-8af4bd3e9df50f3f3f703a80|2026-10-16T21:30:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "big fun murder | an improvised murder mystery|go comedy! improv theater",
-        "series-49798fcaef12941e30d2017e",
-        "series-50ad61b888e882867b371969",
-        "series-c478b559e90684e460a48466",
-        "series-dcc3f11a86d1ad3f86d2983b"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-1e0bddb860967490ae7b1e66",
-          "sourceId": "go-comedy-improv-theater",
-          "canonicalUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-09-08T18:29:49.611000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        },
-        {
-          "sourceRecordId": "src-8af4bd3e9df50f3f3f703a80",
-          "sourceId": "metro-times",
-          "canonicalUrl": "https://community.metrotimes.com/event/big-fun-murder-an-improvised-murder-mystery-42073855",
-          "observedAt": "2026-10-13T10:40:19-04:00",
-          "sourceAuthority": "unknown",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "exact-title-time-venue",
-          "native-occurrence"
-        ],
-        "fields": {
-          "title": "src-1e0bddb860967490ae7b1e66",
-          "start": "src-1e0bddb860967490ae7b1e66",
-          "venue": "src-1e0bddb860967490ae7b1e66",
-          "url": "src-1e0bddb860967490ae7b1e66",
-          "status": "src-1e0bddb860967490ae7b1e66",
-          "imageUrl": "src-1e0bddb860967490ae7b1e66",
-          "registration": "src-8af4bd3e9df50f3f3f703a80"
-        },
-        "conflicts": {
-          "venue": [
-            "Go Comedy Improv Theater",
-            "Go Comedy! Improv Theater"
-          ]
-        }
-      },
-      "score": 100,
-      "scoring": {
-        "signals": {
-          "funny": 0.98,
-          "distinctive": 0.78,
-          "eclectic": 0.54,
-          "technical_science": 0.02,
-          "artsy": 0.96,
-          "progressive": 0.19,
-          "outdoors": 0.02,
-          "theatre": 0.79,
-          "live_music": 0.02,
-          "live_comedy": 0.97,
-          "farmer_market": 0.01,
-          "sporting": 0.02,
-          "recurring": 0.92,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.01,
-          "sales_related": 0.49,
-          "children_activity": 0.03,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        },
-        "score": 100,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"ferndale\",\"go comedy improv theater\",\"big fun murder an improvised murder mystery\"]",
-      "registration": "Get Tickets!",
-      "bookingUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21:30:00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-13T10:41:03.470510-04:00",
-        "expiresAt": "2026-10-14T10:41:03.470510-04:00",
-        "sourceUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
-        "sourceHash": "fecbc62e85acb01d6a071c77a7cebf43857dbb600ef3b77b541e1270aec656ab",
-        "inputFacts": {
-          "id": "occ-75d2326e2712c93f82860713",
-          "url": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
-          "start": "2026-10-16T21:30:00-04:00",
-          "end": null,
-          "venue": "Go Comedy Improv Theater",
-          "city": "Ferndale",
-          "price": "$22.14 including fees",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Oct 16",
-          "time": "9:30 PM",
-          "venue": "Go Comedy Improv Theater",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21:30:00\", \"price\": 22.14, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "A ghost has one final chance to solve their own murder in this completely improvised mystery.",
-          "registration": "Get Tickets!"
-        }
-      },
-      "reviewExpiresAt": "2026-10-14T10:41:03.470510-04:00"
-    },
-    {
-      "id": "occ-f04bbf4cad1459d3a7212516",
-      "title": "Tiffany Ng & Bjorn Brolin-Olson, carillon",
-      "summary": "Experience a live carillon performance by University Carillonist Tiffany Ng and student Bjorn Brolin-Olson. This unique musical event features a 60-bell instrument, with the lowest bell weighing six tons. Visitors can observe the largest bells and the carillonist during the recital.",
-      "url": "https://events.umich.edu/event/151964",
-      "start": "2026-10-14T13:20:00-04:00",
-      "venue": "Lurie Ann & Robert H. Tower",
-      "city": "Ann Arbor",
-      "price": "Free",
-      "category": "Performance",
-      "imageUrl": "https://events.umich.edu/media/attachments/2026/09/event_151964_original-1.jpg",
-      "imageAlt": "Tiffany Ng & Bjorn Brolin-Olson, carillon",
-      "status": "confirmed",
-      "occurrenceId": "occ-f04bbf4cad1459d3a7212516",
-      "seriesId": "series-e2198f7333f7bdc8ef30e146",
-      "sourceUpdatedAt": "2026-09-22T12:17:44-04:00",
-      "lastCheckedAt": "2026-10-13T13:00:52.908118-04:00",
-      "canonicalUrl": "https://events.umich.edu/event/151964",
-      "venueId": "lurie ann robert h tower|ann arbor",
-      "timePrecision": "time",
-      "aliases": [
-        "src-bf22afd1becc4d958a8c5e32",
-        "tiffany-ng-bjorn-brolin-olson-carillon-event-2026-10-14"
-      ],
-      "legacyOccurrenceKeys": [
-        "src-bf22afd1becc4d958a8c5e32|2026-10-14T13:20:00-04:00",
-        "tiffany-ng-bjorn-brolin-olson-carillon-event-2026-10-14|2026-10-14T13:20:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-0da3a6618af25f4aa4b53b2d",
-        "series-7ab70cd381990cddccadacae",
-        "series-e2198f7333f7bdc8ef30e146",
-        "series-f210b0cb5b19e608318e4630"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-bf22afd1becc4d958a8c5e32",
-          "sourceId": "happening-at-michigan",
-          "canonicalUrl": "https://events.umich.edu/event/151964",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-09-22T12:17:44-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-bf22afd1becc4d958a8c5e32",
-          "start": "src-bf22afd1becc4d958a8c5e32",
-          "end": "src-bf22afd1becc4d958a8c5e32",
-          "venue": "src-bf22afd1becc4d958a8c5e32",
-          "url": "src-bf22afd1becc4d958a8c5e32",
-          "imageUrl": "src-bf22afd1becc4d958a8c5e32",
-          "status": "src-bf22afd1becc4d958a8c5e32"
-        },
-        "conflicts": {}
-      },
-      "score": 90,
-      "scoring": {
-        "signals": {
-          "funny": 0.09,
-          "distinctive": 0.77,
-          "eclectic": 0.1,
-          "technical_science": 0.26,
-          "artsy": 0.98,
-          "progressive": 0.12,
-          "outdoors": 0.02,
-          "theatre": 0.03,
-          "live_music": 0.9,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.96,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.03,
-          "large_venue": 0.04,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.03,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.05,
-          "children_activity": 0.04,
-          "running": 0.01,
-          "exercise": 0.02,
-          "employment_related": 0.01
-        },
-        "score": 90,
-        "rulesVersion": 2
-      },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"lurie ann robert h tower\",\"tiffany ng bjorn brolin olson carillon\"]",
-      "end": "2026-10-14T13:50:00-04:00",
-      "bookingUrl": "",
-      "statusEvidence": "Organizer detail reviewed",
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "priceCurrency": "USD",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-13T13:00:52.908118-04:00",
-        "expiresAt": "2026-10-14T13:00:52.908118-04:00",
-        "sourceUrl": "https://events.umich.edu/event/151964",
-        "sourceHash": "e9287bc2fd0fa8a2ce5fee68c9ef6d033eb66803652f3a8f860b2ad66f9a1e96",
-        "inputFacts": {
-          "id": "occ-f04bbf4cad1459d3a7212516",
-          "url": "https://events.umich.edu/event/151964",
-          "start": "2026-10-14T13:20:00-04:00",
-          "end": "2026-10-14T13:50:00-04:00",
-          "venue": "Lurie Ann & Robert H. Tower",
-          "city": "Ann Arbor",
-          "price": "Free - no tickets required",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Wed, Oct 14",
-          "time": "1:20pm",
-          "venue": "Lurie Ann & Robert H. Tower",
-          "admission": "Free - no tickets required",
-          "description": "University Carillonist Tiffany Ng & student Bjorn Brolin-Olson perform on the Ann & Robert H.",
-          "end": "1:50pm"
-        }
-      },
-      "reviewExpiresAt": "2026-10-14T13:00:52.908118-04:00"
-    },
-    {
-      "id": "occ-da3d0abd30f59190dc79fac7",
-      "title": "THEATRE l I'd Love to Have You for Dinner",
-      "summary": "Experience a psychological thriller where two lovebirds, an ancient vampire and a vampire hunter, meet for a home-cooked meal. This two-act horror/thriller explores themes of legacy, cannibalism, and the complex moral nature of predation.",
-      "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
-      "start": "2026-10-16T20:00:00-04:00",
-      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-      "city": "Hamtramck",
-      "price": "$27.6",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18028/HORIZ.png",
-      "imageAlt": "THEATRE l I'd Love to Have You for Dinner",
-      "status": "confirmed",
-      "occurrenceId": "occ-da3d0abd30f59190dc79fac7",
-      "seriesId": "series-53aa471eb4e114f156680d5b",
-      "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
-      "priceMin": 27.6,
-      "priceMax": 27.6,
-      "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-13T10:41:03.470510-04:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
-      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "src-ff9992c56e94aecca67e76f5",
-        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-16"
-      ],
-      "legacyOccurrenceKeys": [
-        "src-ff9992c56e94aecca67e76f5|2026-10-16T20:00:00-04:00",
-        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-16|2026-10-16T20:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-09c693fc8a94c835a5193f83",
-        "series-0c777bef0ca671d00f3958ef",
-        "series-4168b3b9cddf5675fb83e57e",
-        "series-53aa471eb4e114f156680d5b",
-        "series-6633ccd340406607b63a73f5",
-        "series-7f4ddc059623f3dd85aedae9",
-        "series-c07610dc0906eb589a504b40",
-        "series-ebfa5b312fbd6c351df7470f"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-ff9992c56e94aecca67e76f5",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-ff9992c56e94aecca67e76f5",
-          "start": "src-ff9992c56e94aecca67e76f5",
-          "venue": "src-ff9992c56e94aecca67e76f5",
-          "url": "src-ff9992c56e94aecca67e76f5",
-          "status": "src-ff9992c56e94aecca67e76f5",
-          "imageUrl": "src-ff9992c56e94aecca67e76f5"
-        },
-        "conflicts": {}
-      },
-      "score": 99,
-      "scoring": {
-        "signals": {
-          "funny": 0.16,
-          "distinctive": 0.85,
-          "eclectic": 0.88,
-          "technical_science": 0.04,
-          "artsy": 0.97,
-          "progressive": 0.45,
-          "outdoors": 0.01,
-          "theatre": 0.98,
-          "live_music": 0.02,
-          "live_comedy": 0.06,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.09,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.46,
-          "children_activity": 0.02,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        },
-        "score": 99,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"theatre l i d love to have you for dinner\"]",
-      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-13T10:41:03.470510-04:00",
-        "expiresAt": "2026-10-14T10:41:03.470510-04:00",
-        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
-        "sourceHash": "f073136a58a138a61df876d7ed4e2eba923119fe943985371543122d3fa2237f",
-        "inputFacts": {
-          "id": "occ-da3d0abd30f59190dc79fac7",
-          "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
-          "start": "2026-10-16T20:00:00-04:00",
-          "end": null,
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "city": "Hamtramck",
-          "price": "$27.6–$32.85 including fees",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Oct 16",
-          "time": "8:00 PM",
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20:00:00\", \"price\": 27.6, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "This two act, four-course horror/thriller highlights legacy, cannibalism, the inevitability of personal failure, and the complex moral nature of predation in all its incarnations.",
-          "registration": "Online sales end 1 (one) hour before the start of a performance."
-        }
-      },
-      "reviewExpiresAt": "2026-10-14T10:41:03.470510-04:00"
     },
     {
       "id": "occ-3798da47c0682c894df592e4",
@@ -1795,225 +1924,21 @@
   ],
   "rejections": [
     {
-      "id": "occ-d25aacfa4109bae55385a4f3",
-      "title": "Neighbour Andy, Wisdom Drive, BEERS Band",
-      "url": "https://blindpigmusic.com/tm-event/neighbour-andy/",
-      "reason": "ValueError: Not an actionable upcoming occurrence",
-      "inputFacts": {
-        "id": "occ-d25aacfa4109bae55385a4f3",
-        "url": "https://blindpigmusic.com/tm-event/neighbour-andy/",
-        "start": "2026-10-13T19:30:00-04:00",
-        "end": null,
-        "venue": "The Blind Pig",
-        "city": "Ann Arbor",
-        "price": "$25.00",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-f1cae3775f7b0d4be56f76e1",
-      "title": "Black, White, and Red: Black Women in Silent Film",
-      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-      "reason": "ParserError: Unknown string format: The museum is open from 9 Am - 5 Pm today.",
-      "inputFacts": {
-        "id": "occ-f1cae3775f7b0d4be56f76e1",
-        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-        "start": "2026-07-30T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-6660a2023c102b53841d67c8",
-      "title": "Comics Beyond Sight",
-      "url": "https://events.umich.edu/event/150276",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-6660a2023c102b53841d67c8",
-        "url": "https://events.umich.edu/event/150276",
-        "start": "2026-10-14T08:00:00-04:00",
-        "end": "2026-10-14T23:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-1c07aeceb2361a99ab27925a",
-      "title": "Dirty Dancing: The Musical",
-      "url": "https://us.atgtickets.com/events/dirty-dancing-the-musical/fisher-theatre/",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-1c07aeceb2361a99ab27925a",
-        "url": "https://us.atgtickets.com/events/dirty-dancing-the-musical/fisher-theatre/",
-        "start": "2026-10-13T19:30:00-04:00",
-        "end": null,
-        "venue": "Fisher Theatre",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-1a278ad181a72f237eceb040",
+      "id": "occ-905a0ace1ddf8fc2a0e37d43",
       "title": "Off Book – Tour de Force (A Force of Tour)",
-      "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
+      "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour-261014/",
       "reason": "ValueError: Not an actionable upcoming occurrence",
       "inputFacts": {
-        "id": "occ-1a278ad181a72f237eceb040",
-        "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
-        "start": "2026-10-15T20:00:00-04:00",
-        "end": "2026-10-15T23:00:00-04:00",
+        "id": "occ-905a0ace1ddf8fc2a0e37d43",
+        "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour-261014/",
+        "start": "2026-10-14T20:00:00-04:00",
+        "end": "2026-10-14T23:00:00-04:00",
         "venue": "The Ark",
         "city": "Ann Arbor",
         "price": "$33.50 - $44.50",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-7bec2c2b6c0c4864e668fb4e",
-      "title": "Bill Smith: The Jeweler",
-      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-      "reason": "ParserError: Unknown string format: The museum is open from 9 Am - 5 Pm today.",
-      "inputFacts": {
-        "id": "occ-7bec2c2b6c0c4864e668fb4e",
-        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-        "start": "2026-07-09T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit, MI",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-b341236634697603243f7c3a",
-      "title": "Earthwork Music Collective ft. Joe Reilly, Nicholas james Thomasma, Sari Brown",
-      "url": "https://www.nstarlounge.com/events/earthwork10-14",
-      "reason": "ValueError: Admission price unknown",
-      "inputFacts": {
-        "id": "occ-b341236634697603243f7c3a",
-        "url": "https://www.nstarlounge.com/events/earthwork10-14",
-        "start": "2026-10-14T19:00:00-04:00",
-        "end": "2026-10-14T22:00:00-04:00",
-        "venue": "North Star Lounge",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-f4d1543724ca5b1d34cc4620",
-      "title": "Cook Scholars Free Sips",
-      "url": "https://events.umich.edu/event/153052",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-f4d1543724ca5b1d34cc4620",
-        "url": "https://events.umich.edu/event/153052",
-        "start": "2026-10-13T00:00:00-04:00",
-        "end": "2026-10-13T23:59:00-04:00",
-        "venue": "Michigan League",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-e8f9e4784645e34676c5c428",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-e8f9e4784645e34676c5c428",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2027-01-03T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts (DIA)",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-7006e6ceacf6bca9c7351695",
-      "title": "Comics Beyond Sight",
-      "url": "https://events.umich.edu/event/150276",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-7006e6ceacf6bca9c7351695",
-        "url": "https://events.umich.edu/event/150276",
-        "start": "2026-10-15T08:00:00-04:00",
-        "end": "2026-10-15T23:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-e8414b8d9b885d76505aa2c4",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-e8414b8d9b885d76505aa2c4",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2026-12-11T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-c4c862ed74ca166ee4b95e0a",
-      "title": "Who Votes? The Electoral College",
-      "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-      "reason": "ParserError: Unknown string format: The museum is open from 9 Am - 5 Pm today.",
-      "inputFacts": {
-        "id": "occ-c4c862ed74ca166ee4b95e0a",
-        "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-        "start": "2026-08-06T00:00:00-04:00",
-        "end": "2027-03-21T00:00:00-04:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit, MI",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-2421be3daf3fa516023b886d",
-      "title": "Grand Vision",
-      "url": "https://events.umich.edu/event/149620",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-2421be3daf3fa516023b886d",
-        "url": "https://events.umich.edu/event/149620",
-        "start": "2026-10-14T09:00:00-04:00",
-        "end": "2026-10-14T17:00:00-04:00",
-        "venue": "202 S. Thayer",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
     },
     {
       "id": "occ-5c2968f3730c21e482813737",
@@ -2030,7 +1955,194 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-f1cae3775f7b0d4be56f76e1",
+      "title": "Black, White, and Red: Black Women in Silent Film",
+      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
+      "reason": "ParserError: Unknown string format: The museum is open from 9 Am - 5 Pm today.",
+      "inputFacts": {
+        "id": "occ-f1cae3775f7b0d4be56f76e1",
+        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
+        "start": "2026-07-30T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-6660a2023c102b53841d67c8",
+      "title": "Comics Beyond Sight",
+      "url": "https://events.umich.edu/event/150276",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-6660a2023c102b53841d67c8",
+        "url": "https://events.umich.edu/event/150276",
+        "start": "2026-10-14T08:00:00-04:00",
+        "end": "2026-10-14T23:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-7bec2c2b6c0c4864e668fb4e",
+      "title": "Bill Smith: The Jeweler",
+      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+      "reason": "ParserError: Unknown string format: The museum is open from 9 Am - 5 Pm today.",
+      "inputFacts": {
+        "id": "occ-7bec2c2b6c0c4864e668fb4e",
+        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+        "start": "2026-07-09T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit, MI",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-1a278ad181a72f237eceb040",
+      "title": "Off Book – Tour de Force (A Force of Tour)",
+      "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
+      "reason": "ValueError: Not an actionable upcoming occurrence",
+      "inputFacts": {
+        "id": "occ-1a278ad181a72f237eceb040",
+        "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour/",
+        "start": "2026-10-15T20:00:00-04:00",
+        "end": "2026-10-15T23:00:00-04:00",
+        "venue": "The Ark",
+        "city": "Ann Arbor",
+        "price": "$33.50 - $44.50",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-b341236634697603243f7c3a",
+      "title": "Earthwork Music Collective ft. Joe Reilly, Nicholas james Thomasma, Sari Brown",
+      "url": "https://www.nstarlounge.com/events/earthwork10-14",
+      "reason": "ValueError: Admission price unknown",
+      "inputFacts": {
+        "id": "occ-b341236634697603243f7c3a",
+        "url": "https://www.nstarlounge.com/events/earthwork10-14",
+        "start": "2026-10-14T19:00:00-04:00",
+        "end": "2026-10-14T22:00:00-04:00",
+        "venue": "North Star Lounge",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-e8f9e4784645e34676c5c428",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+      "reason": "ValueError: Occurrence outside actionable window",
+      "inputFacts": {
+        "id": "occ-e8f9e4784645e34676c5c428",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2027-01-03T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts (DIA)",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-e8414b8d9b885d76505aa2c4",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+      "reason": "ValueError: Occurrence outside actionable window",
+      "inputFacts": {
+        "id": "occ-e8414b8d9b885d76505aa2c4",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2026-12-11T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-7006e6ceacf6bca9c7351695",
+      "title": "Comics Beyond Sight",
+      "url": "https://events.umich.edu/event/150276",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-7006e6ceacf6bca9c7351695",
+        "url": "https://events.umich.edu/event/150276",
+        "start": "2026-10-15T08:00:00-04:00",
+        "end": "2026-10-15T23:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-2421be3daf3fa516023b886d",
+      "title": "Grand Vision",
+      "url": "https://events.umich.edu/event/149620",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-2421be3daf3fa516023b886d",
+        "url": "https://events.umich.edu/event/149620",
+        "start": "2026-10-14T09:00:00-04:00",
+        "end": "2026-10-14T17:00:00-04:00",
+        "venue": "202 S. Thayer",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-71c7ed8ed7a84e7e242a8e6b",
+      "title": "Comics Beyond Sight",
+      "url": "https://events.umich.edu/event/150276",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-71c7ed8ed7a84e7e242a8e6b",
+        "url": "https://events.umich.edu/event/150276",
+        "start": "2026-10-16T08:00:00-04:00",
+        "end": "2026-10-16T23:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-c4c862ed74ca166ee4b95e0a",
+      "title": "Who Votes? The Electoral College",
+      "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
+      "reason": "ParserError: Unknown string format: The museum is open from 9 Am - 5 Pm today.",
+      "inputFacts": {
+        "id": "occ-c4c862ed74ca166ee4b95e0a",
+        "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
+        "start": "2026-08-06T00:00:00-04:00",
+        "end": "2027-03-21T00:00:00-04:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit, MI",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
     },
     {
       "id": "occ-e550ad89b0a60365234c6d5d",
@@ -2047,7 +2159,24 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-682aeea2626ad64e183ae6f6",
+      "title": "Off Book – Tour de Force (A Force of Tour)",
+      "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour-261014/",
+      "reason": "ValueError: Not an actionable upcoming occurrence",
+      "inputFacts": {
+        "id": "occ-682aeea2626ad64e183ae6f6",
+        "url": "https://theark.org/event/off-book-tour-de-force-a-force-of-tour-261014/",
+        "start": "2026-10-16T20:00:00-04:00",
+        "end": null,
+        "venue": "The Ark 316 S. Main, Ann Arbor, MI, United States",
+        "city": "Ann Arbor",
+        "price": "$33.50 - $44.50",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
     },
     {
       "id": "occ-aa44aa6c15bcfded32cf651a",
@@ -2064,13 +2193,47 @@
         "price": "$5",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-ac6d12226608cd9543a2d42f",
+      "title": "RC Players - Evening of Scenes",
+      "url": "https://events.umich.edu/event/153119",
+      "reason": "ValueError: Structured organizer end conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-ac6d12226608cd9543a2d42f",
+        "url": "https://events.umich.edu/event/153119",
+        "start": "2026-10-16T20:00:00-04:00",
+        "end": "2026-10-16T22:00:00-04:00",
+        "venue": "East Quadrangle",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-a6c5b0783dd6228ff86341a9",
+      "title": "Grand Vision",
+      "url": "https://events.umich.edu/event/149620",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-a6c5b0783dd6228ff86341a9",
+        "url": "https://events.umich.edu/event/149620",
+        "start": "2026-10-15T09:00:00-04:00",
+        "end": "2026-10-15T17:00:00-04:00",
+        "venue": "202 S. Thayer",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
     },
     {
       "id": "occ-8532ba227a89e6098733abec",
       "title": "Faster and More Fun: American Home Cooking in the 1920s",
       "url": "https://events.umich.edu/event/150658",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
       "inputFacts": {
         "id": "occ-8532ba227a89e6098733abec",
         "url": "https://events.umich.edu/event/150658",
@@ -2081,7 +2244,24 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-ffb2dbb2bdc07ff01e56ab90",
+      "title": "Fashion/Forward",
+      "url": "https://events.umich.edu/event/149758",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-ffb2dbb2bdc07ff01e56ab90",
+        "url": "https://events.umich.edu/event/149758",
+        "start": "2026-10-15T09:00:00-04:00",
+        "end": "2026-10-15T17:00:00-04:00",
+        "venue": "202 S. Thayer",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
     },
     {
       "id": "occ-df3dd5359b5a072e6b15634e",
@@ -2098,7 +2278,24 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
+    },
+    {
+      "id": "occ-cdb85540c42df50ab4f50524",
+      "title": "Faster and More Fun: American Home Cooking in the 1920s",
+      "url": "https://events.umich.edu/event/150658",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-cdb85540c42df50ab4f50524",
+        "url": "https://events.umich.edu/event/150658",
+        "start": "2026-10-15T09:00:00-04:00",
+        "end": "2026-10-15T20:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
     },
     {
       "id": "occ-e0f644932b516dcb59a04574",
@@ -2115,58 +2312,24 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
     },
     {
-      "id": "occ-330c163b38f186ffa89c9451",
-      "title": "Black Birth Joy",
-      "url": "https://events.umich.edu/event/153178",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "id": "occ-9f0181a7f08d24ad588fd9a9",
+      "title": "LGBTQ Night: Drag Bingo",
+      "url": "https://www.nstarlounge.com/events/dragbingooct",
+      "reason": "ValueError: Free admission not evidenced",
       "inputFacts": {
-        "id": "occ-330c163b38f186ffa89c9451",
-        "url": "https://events.umich.edu/event/153178",
-        "start": "2026-10-14T09:00:00-04:00",
-        "end": "2026-10-14T17:00:00-04:00",
-        "venue": "Lane Hall",
+        "id": "occ-9f0181a7f08d24ad588fd9a9",
+        "url": "https://www.nstarlounge.com/events/dragbingooct",
+        "start": "2026-10-15T19:00:00-04:00",
+        "end": "2026-10-15T21:00:00-04:00",
+        "venue": "North Star Lounge",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-6e72bc896b9eb7cf236ddc25",
-      "title": "WCEE Exhibition. The Art of Memory, Paintings by Felix Lembersky",
-      "url": "https://events.umich.edu/event/149975",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-6e72bc896b9eb7cf236ddc25",
-        "url": "https://events.umich.edu/event/149975",
-        "start": "2026-10-14T08:00:00-04:00",
-        "end": "2026-10-14T17:00:00-04:00",
-        "venue": "Weiser Hall",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
-    },
-    {
-      "id": "occ-3187c5c86f633129e5b19dee",
-      "title": "CCPS Photo Exhibition. This is the Place",
-      "url": "https://events.umich.edu/event/149978",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-3187c5c86f633129e5b19dee",
-        "url": "https://events.umich.edu/event/149978",
-        "start": "2026-10-14T08:00:00-04:00",
-        "end": "2026-10-14T17:00:00-04:00",
-        "venue": "Weiser Hall",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-14T02:52:50.803581-04:00"
+      "retryAt": "2026-10-14T18:55:30.326239-04:00"
     }
   ]
 }
