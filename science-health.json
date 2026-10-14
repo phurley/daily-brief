@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-14T10:00:06.638546Z",
+  "generatedAt": "2026-10-14T21:23:25.341357Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-10T10:16:39.118957Z",
   "documentGeneratedAt": "2026-10-14T10:00:06.638546Z",
@@ -43,25 +43,25 @@
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-14T10:00:06.638546Z",
+      "lastAttemptAt": "2026-10-14T21:23:25.341357Z",
       "lastSuccessAt": "2026-10-14T10:00:06.638546Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
         "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought: ValueError: finding quote not present in article",
         "https://www.esa.int/Science_Exploration/Space_Science/Smile/Science_begins_for_Smile: ValueError: evidence classification requires an article quote"
       ],
-      "candidateCount": 15,
-      "acceptedCount": 2,
-      "deferredCount": 7,
-      "rejectedCount": 3,
+      "candidateCount": 2,
+      "acceptedCount": 0,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-14T10:00:06.638546Z",
       "failedUrls": [
         "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought",
         "https://www.esa.int/Science_Exploration/Space_Science/Smile/Science_begins_for_Smile"
       ],
       "feedFailed": false,
-      "retryCount": 5,
-      "nextRetryAt": "2026-10-14T16:00:06.638546Z"
+      "retryCount": 6,
+      "nextRetryAt": "2026-10-15T03:23:25.341357Z"
     },
     "nsf": {
       "name": "NSF",
@@ -128,7 +128,7 @@
       "social-science": 7,
       "technology": 31
     },
-    "newestStoryAgeHours": 5.92,
+    "newestStoryAgeHours": 17.31,
     "maxPublicationLagHours": 1114.28
   }
 }
