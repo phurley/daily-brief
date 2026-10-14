@@ -8,9 +8,9 @@
     <title>Daily Brief</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <script src="themes.js?v=20261012-1"></script>
-    <link rel="stylesheet" href="theme.css?v=20261012-verified-2">
+    <link rel="stylesheet" href="theme.css?v=20261014-scroll-1">
     <link rel="stylesheet" href="themes.css?v=20261012-1">
-    <script type="module" src="app.js?v=20261012-verified-2"></script>
+    <script type="module" src="app.js?v=20261014-scroll-1"></script>
     <link rel="stylesheet" href="calendar-tuning.css">
   </head>
   <body>
@@ -94,27 +94,30 @@
           <h3 id="today-lane-title">Today only</h3>
           <div class="shelf" data-shelf>
             <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous events today" data-shelf-previous>←</button>
-            <div id="events-list" class="card-grid shelf__track"></div>
+            <div id="events-list" class="card-grid shelf__track" aria-label="Events on this date"></div>
             <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More events today" data-shelf-next>→</button>
           </div>
+          <p class="story-load-status" data-event-status="today" role="status"></p>
         </div>
 
         <div id="ongoing-lane" class="event-lane" hidden>
           <h3 id="ongoing-lane-title">Still running</h3>
           <div class="shelf" data-shelf>
             <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous ongoing events" data-shelf-previous>←</button>
-            <div id="ongoing-list" class="claim-grid shelf__track"></div>
+            <div id="ongoing-list" class="claim-grid shelf__track" aria-label="Ongoing events"></div>
             <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More ongoing events" data-shelf-next>→</button>
           </div>
+          <p class="story-load-status" data-event-status="ongoing" role="status"></p>
         </div>
 
         <div id="plan-ahead" class="event-lane" hidden>
           <h3 id="plan-ahead-title">Looking ahead</h3>
           <div class="shelf" data-shelf>
             <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous upcoming events" data-shelf-previous>←</button>
-            <div id="claims-list" class="claim-grid shelf__track"></div>
+            <div id="claims-list" class="claim-grid shelf__track" aria-label="Upcoming events"></div>
             <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More upcoming events" data-shelf-next>→</button>
           </div>
+          <p class="story-load-status" data-event-status="future" role="status"></p>
         </div>
         <details id="events-all"><summary id="events-all-summary">See all events on this date</summary><div id="events-all-list" class="events-all-list"></div></details>
       </section>
@@ -136,7 +139,7 @@
         </header>
         <div class="shelf" data-shelf>
           <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous local stories" data-shelf-previous>←</button>
-          <div id="news-list" class="story-list shelf__track"></div>
+          <div id="news-list" class="story-list shelf__track" aria-label="Local news stories"></div>
           <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More local stories" data-shelf-next>→</button>
         </div><p class="story-load-status" data-story-status="news" role="status"></p>
       </section>
@@ -149,7 +152,7 @@
         <aside id="rocket-launches" class="rocket-launches" aria-live="polite" hidden></aside>
         <div class="shelf" data-shelf>
           <button class="shelf__arrow shelf__arrow--previous" type="button" aria-label="Previous science stories" data-shelf-previous>←</button>
-          <div id="geek-list" class="story-list shelf__track"></div>
+          <div id="geek-list" class="story-list shelf__track" aria-label="Science stories"></div>
           <button class="shelf__arrow shelf__arrow--next" type="button" aria-label="More science stories" data-shelf-next>→</button>
         </div><p class="story-load-status" data-story-status="geeknews" role="status"></p>
       </section>

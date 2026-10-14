@@ -557,6 +557,8 @@ section[aria-busy="true"] { min-height: 10rem; }
 .event-details-button:hover { color: var(--accent); }
 .story-load-status { margin: .3rem 0 0; color: var(--muted); font-size: .75rem; }
 .story-load-status:empty { display: none; }
+.story-load-status button { margin-left: .4rem; padding: .35rem .6rem; color: var(--ink); border: 1px solid var(--line); border-radius: .4rem; background: var(--panel); font: inherit; cursor: pointer; }
+.card--archive > p:not(.card__footer), .claim--archive > p:not(.card__footer) { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 6; }
 
 #recommendation-status:empty { display: none; }
 

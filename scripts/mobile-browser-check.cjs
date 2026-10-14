@@ -51,18 +51,26 @@ const assert=require('node:assert/strict');
  assert.ok(await page.locator('#geek-section').evaluate(e=>e.getBoundingClientRect().top>=44 && e.getBoundingClientRect().top<200),'one action science navigation');
  await page.locator('#events-all-summary').click();await page.waitForFunction(()=>document.querySelector('#events-all-list .card'));
 
- // Each shelf extends only after scrolling; appended pages preserve earlier cards.
- for (const [kind,selector] of [['news','#news-list'],['geeknews','#geek-list']]) {
-  const ids=await page.locator(`${selector} > .story`).evaluateAll(cards=>cards.map(card=>card.dataset.storyId));
+ // Event, news and science shelves extend repeatedly, not just on the first page.
+ for (const [kind,selector] of [['events','#events-list'],['news','#news-list'],['geeknews','#geek-list']]) {
+  let ids=await page.locator(`${selector} > article`).evaluateAll(cards=>cards.map(card=>card.dataset.eventId || card.dataset.storyId));
   assert.ok(ids.length>0);
-  await page.locator(selector).evaluate(track=>{track.scrollLeft=track.scrollWidth;});
-  await page.waitForFunction(([selector,count])=>document.querySelectorAll(`${selector} > .story`).length>count,[selector,ids.length]);
-  const after=await page.locator(`${selector} > .story`).evaluateAll(cards=>cards.map(card=>card.dataset.storyId));
-  assert.deepEqual(after.slice(0,ids.length),ids,'existing cards stay in order');
-  assert.equal(new Set(after).size,after.length,'no duplicate stories');
+  for (let batch=0;batch<2;batch++) {
+   await page.locator(selector).press('End');
+   await page.waitForFunction(([selector,count])=>document.querySelectorAll(`${selector} > article`).length>count,[selector,ids.length]);
+   const after=await page.locator(`${selector} > article`).evaluateAll(cards=>cards.map(card=>card.dataset.eventId || card.dataset.storyId));
+   assert.deepEqual(after.slice(0,ids.length),ids,'existing cards stay in order');
+   assert.equal(new Set(after).size,after.length,'no duplicate entries');
+   ids=after;
+  }
   assert.ok(await page.locator(selector).evaluate(track=>track.scrollLeft>0),'scroll position retained');
   assert.equal(requests.filter(url=>new URL(url).pathname===`/${kind}.json`).length,1,'one archive request per shelf');
  }
+ assert.ok(await page.locator('#events-list [data-event-source="calendar"]').count()>0,'additional listings are distinct from featured picks');
+ await page.locator('#next-day').click();
+ assert.ok(await page.locator('#events-list > article').count()<=3,'date changes reset event browsing');
+ assert.ok(await page.locator('#news-list > article').count()<=10,'date changes reset news browsing');
+ await page.locator('#today-button').click();
  console.log('Lanes, details icon, compact launch line and scroll pagination passed');
  await page.evaluate(()=>navigator.serviceWorker.ready);await page.reload();
  await page.waitForFunction(()=>document.querySelector('#events-section .event-details-button'));
@@ -70,6 +78,27 @@ const assert=require('node:assert/strict');
  await page.waitForFunction(()=>document.querySelector('#live-status').textContent.includes('Saved brief'));
  assert.ok(await page.locator('#events-section .event-details-button').count()>0);console.log('Offline reopen passed');
  await context.setOffline(false);
+ // A failed archive load remains retryable without losing the initial stories.
+ for (const failure of ['http','hash']) {
+ const retry=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844},reducedMotion:'reduce'});
+ await retry.route(/icanhazdadjoke|rocketlaunch/,r=>r.abort());
+ let archiveAttempts=0;
+ await retry.route('**/news.json',async r=>{
+  if (++archiveAttempts!==1) return r.continue();
+  if (failure==='http') return r.fulfill({status:503,body:'temporarily unavailable'});
+  const response=await r.fetch();await r.fulfill({response,body:(await response.text())+'\n'});
+ });
+ const rp=await retry.newPage();rp.on('pageerror',e=>errors.push(e.message));await rp.clock.setFixedTime(fixtureTime);await rp.goto(testURL);
+ await rp.waitForFunction(()=>document.querySelectorAll('#news-list > article').length===10);
+ const initial=await rp.locator('#news-list > article').evaluateAll(cards=>cards.map(card=>card.dataset.storyId));
+ await rp.locator('#news-list').press('End');
+ await rp.getByRole('button',{name:'Refresh and retry',exact:true}).waitFor();
+ assert.deepEqual(await rp.locator('#news-list > article').evaluateAll(cards=>cards.map(card=>card.dataset.storyId)),initial);
+ await rp.getByRole('button',{name:'Refresh and retry',exact:true}).click();
+ await rp.waitForFunction(()=>document.querySelectorAll('#news-list > article').length>10);
+ assert.equal(archiveAttempts,2,'retry fetches the archive again');await retry.close();
+ console.log(`${failure} archive failure preserves the current page and recovers with retry`);
+ }
  // A missing section cache must still recover from the saved complete edition.
  await page.evaluate(async()=>{for(const key of await caches.keys()) if(key.includes('sections')) await caches.delete(key)});
  await context.setOffline(true);await page.reload();

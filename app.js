@@ -17,6 +17,7 @@ import { shufflePhotos, isLandscapePhoto, photoDotWindow, photoDateLabel } from 
 import { eventStatus } from './ranking.mjs?v=20261009-layout-1';
 import { selectFeaturedLanes, featuredMasthead } from './featured-events.mjs?v=20261012-verified-1';
 import { connectShellUpdates, saveShellReloadState, readShellReloadState, restoreShellReloadState } from './shell-updates.mjs';
+import { REPORT_PAGE_SIZE, appendReportPage, eventBrowseLanes, eventPageKey, eventHasTimeRemaining, storiesOnDate } from './report-pagination.mjs';
 import { preferenceStore, feedback, seriesKey, isFavorite, hasEventPersonalization } from './preferences.mjs?v=20261009-identity1';
 let preferences;
 let rankingWeights;
@@ -192,8 +193,26 @@ const storyRequests = {};
 const displayedStories = {news:[],geeknews:[]};
 const storyPools = {news:[],geeknews:[]};
 const storyTracks = {news:'#news-list',geeknews:'#geek-list'};
+const eventTracks = {today:'#events-list',ongoing:'#ongoing-list',future:'#claims-list'};
+const eventExtras = {today:0,ongoing:0,future:0};
+const displayedEvents = {today:[],ongoing:[],future:[]};
+const eventRequests = {};
+const reportErrors = new Set();
+let eventPools = {today:[],ongoing:[],future:[]};
+let eventPoolInputs = null;
+let eventBrowsing = false;
 const sectionStates = {};
 const sectionSelectors = {weather: '#weather-section', events:'#events-section', news:'#news-section', geeknews:'#geek-section'};
+
+function resetReportPagination() {
+  storyLimits.news=10;storyLimits.geeknews=10;
+  for (const kind of Object.keys(storyTracks)) { displayedStories[kind]=[];storyPools[kind]=[]; }
+  for (const lane of Object.keys(eventTracks)) { eventExtras[lane]=0;displayedEvents[lane]=[]; }
+  eventPools={today:[],ongoing:[],future:[]};eventPoolInputs=null;eventBrowsing=false;
+  reportErrors.clear();
+  for (const selector of [...Object.values(storyTracks),...Object.values(eventTracks)]) $(selector).scrollTo({left:0,behavior:'instant'});
+  document.querySelectorAll('[data-event-status], [data-story-status]').forEach(status=>status.replaceChildren());
+}
 
 async function fetchJson(path) { return fetchJSON(path); }
 async function loadDocument([name, dataPath, schemaPath, required]) {
@@ -240,6 +259,7 @@ async function refreshData({ initial = false } = {}) {
   state.today = dateKey(new Date());
   if (state.today !== previousToday && state.selectedDate === previousToday) {
     state.selectedDate = state.today;
+    resetReportPagination();
     const url = new URL(window.location); url.searchParams.delete('date');
     window.history.replaceState({date:state.today}, '', url);
     loadJoke();
@@ -252,6 +272,7 @@ async function refreshData({ initial = false } = {}) {
     const staged = {};
     if (!complete && manifest?.editionId !== next.editionId) {
       manifest = next; fullEvents = null; archiveRequest = null;
+      resetReportPagination();
       for(const name of Object.keys(fullStories)) delete fullStories[name];
       for(const name of Object.keys(next.sections)) {delete state.data[name];sectionStates[name]='loading';}
       render();updateFreshness();
@@ -280,7 +301,7 @@ async function refreshData({ initial = false } = {}) {
       if (replacing) {
         manifest = next; fullEvents = null; archiveRequest = null;
         for(const name of Object.keys(fullStories)) delete fullStories[name];
-        storyLimits.news=10;storyLimits.geeknews=10;
+        resetReportPagination();
         Object.assign(state.data,staged);
         configureRanking(staged.rankingConfig);
         for(const name of Object.keys(next.sections)) sectionStates[name]='ready';
@@ -317,13 +338,14 @@ async function ensureFullEvents() {
   if(fullEvents) return fullEvents;
   if(archiveRequest) return archiveRequest;
   const editionId=manifest?.editionId;
-  archiveRequest=(async()=>{
+  const request=(async()=>{
     const descriptor=manifest?.archives?.events;
     const data=validateSection('events',await fetchJSON('events.json', {sha256:descriptor?.sha256, timeout:12000}));
     if(manifest?.editionId!==editionId) throw new Error('Edition changed; reopen the calendar to retry.');
     fullEvents=data.events;return fullEvents;
   })();
-  try{return await archiveRequest}finally{archiveRequest=null}
+  archiveRequest=request;
+  try{return await request}finally{if(archiveRequest===request) archiveRequest=null}
 }
 async function restorePersonalizedEvents() {
   if (!manifest?.archives?.events || !state.data.events || !state.data.rankingConfig || fullEvents) return;
@@ -1035,10 +1057,11 @@ function renderPreferenceControls() {
   panel.dataset.preferenceProfile = profile;
 }
 
-function eventCard(event) {
+function eventCard(event, {archive = false} = {}) {
   const title = node("h3");
   title.append(safeLink(eventDisplayTitle(event), event.url));
-  return node("article", { className: `card${event.editorial ? " card--featured" : ""}${isRecurringEvent(event) ? " event--recurring" : ""}`, dataset:{eventId:event.id} }, [
+  return node("article", { className: `card${archive ? " card--archive" : event.editorial ? " card--featured" : ""}${isRecurringEvent(event) ? " event--recurring" : ""}`, dataset:{eventId:event.id, eventSource:archive?'calendar':'featured'} }, [
+    archive ? node('span',{className:'card-meta',text:'From the event calendar'}) : null,
     node("span", { className: "card-meta", text: [eventDateLabel(event), event.category].filter(Boolean).join(" · ") }),
     title,
     node("p", { text: event.summary }),
@@ -1048,19 +1071,20 @@ function eventCard(event) {
   ]);
 }
 
-function claimCard(event) {
+function claimCard(event, {archive = false} = {}) {
   const title = node("strong");
   title.append(safeLink(eventDisplayTitle(event), event.url));
   return node("article", {
-    className: `claim${isRecurringEvent(event) ? " event--recurring" : ""}`,
-    dataset: { eventId: event.id },
+    className: `claim${archive ? " claim--archive" : ""}${isRecurringEvent(event) ? " event--recurring" : ""}`,
+    dataset: { eventId: event.id, eventSource:archive?'calendar':'featured' },
     "aria-haspopup": "dialog",
     "aria-expanded": "false",
   }, [
+    archive ? node('span',{className:'card-meta',text:'From the event calendar'}) : null,
     node("time", { text: eventDateLabel(event), datetime: eventStartDate(event) }),
     title,
-    event.editorial ? node('p',{text:event.summary}) : null,
-    event.editorial ? node('p',{className:'card__footer',text:[event.venue,event.city,event.price,event.registration].filter(Boolean).join(' · ')}) : null,
+    event.editorial || archive ? node('p',{text:event.summary}) : null,
+    event.editorial || archive ? node('p',{className:'card__footer',text:[event.venue,event.city,event.price || 'Price unknown',event.registration].filter(Boolean).join(' · ')}) : null,
     event.editorial && event.bookingUrl ? safeLink(event.registration ? 'Register / book ↗' : 'Tickets ↗',event.bookingUrl) : null,
     detailButton(event),
   ]);
@@ -1068,21 +1092,41 @@ function claimCard(event) {
 
 // Three lanes: single-day (and multi-day that ends on the selected date) first,
 // then multi-day windows still running past it, then everything starting later.
-function renderEvents() {
+function refreshEventPools() {
+  if (!fullEvents) return;
+  const settings=JSON.stringify([state.selectedDate,preferences.get(),rankingWeights]);
+  if (eventPoolInputs?.events===fullEvents && eventPoolInputs.settings===settings) return;
+  eventPools=eventBrowseLanes(fullEvents,{day:state.selectedDate,now:Date.now(),preferences:preferences.get(),weights:rankingWeights});
+  eventPoolInputs={events:fullEvents,settings};
+}
+
+function renderEvents({appendLane} = {}) {
   hideEventPreview();
   const allEvents = fullEvents || uniqueEvents();
   const selected = state.selectedDate;
   renderPreferenceControls();
   const featured = state.data.events?.featuredEvents || [];
   const lanes = selectFeaturedLanes(featured, { day: selected, now: Date.now(), preferences: preferences.get(), weights: rankingWeights });
+  if (eventBrowsing) refreshEventPools();
   for (const [lane, selector, renderCard] of [['today','#events-list',eventCard],['ongoing','#ongoing-list',claimCard],['future','#claims-list',claimCard]]) {
-    replaceChildren(selector, lanes[lane].length ? lanes[lane].map(({event}) => renderCard(event)) : [node('p', { text: selected < state.today ? 'Past activities have finished.' : 'No further verified picks for this date.' })]);
+    const picks=lanes[lane].map(({event})=>event), pickKeys=new Set(picks.map(eventPageKey));
+    const pool=eventPools[lane].filter(event=>eventHasTimeRemaining(event,selected,Date.now()));
+    const available=new Map([...pool,...picks].map(event=>[eventPageKey(event),event]));
+    const previous=displayedEvents[lane];
+    const retained=previous.filter(event=>available.has(eventPageKey(event))).map(event=>available.get(eventPageKey(event)));
+    const items=appendReportPage(appendLane===lane ? retained : [...picks,...retained],pool,picks.length+eventExtras[lane],eventPageKey);
+    displayedEvents[lane]=items;
+    const card=event=>renderCard(event,{archive:!pickKeys.has(eventPageKey(event))});
+    const track=$(selector),left=track.scrollLeft;
+    if (appendLane===lane && previous.length && previous.every((event,index)=>eventPageKey(event)===eventPageKey(items[index] || {}))) track.append(...items.slice(previous.length).map(card));
+    else replaceChildren(selector,items.length ? items.map(card) : [node('p', { text: eventBrowsing && !pool.length ? 'No matching calendar listings for this date.' : selected < state.today ? 'Past activities have finished. Browse the calendar for more.' : 'No further featured picks. Use the arrow to browse the event calendar.' })]);
+    track.scrollTo({left,behavior:'instant'});
   }
   $('#today-lane-title').textContent = selected === state.today ? 'Today' : displayDate(selected);
   $('#ongoing-lane-title').textContent = 'Ongoing';
   $('#plan-ahead-title').textContent = 'Future';
-  $('#ongoing-lane').hidden = !lanes.ongoing.length;
-  $('#plan-ahead').hidden = !lanes.future.length;
+  $('#ongoing-lane').hidden = !displayedEvents.ongoing.length && !(eventBrowsing && eventPools.ongoing.length);
+  $('#plan-ahead').hidden = !displayedEvents.future.length && !(eventBrowsing && eventPools.future.length);
   $('#events-title').textContent = 'Nearby & notable';
   $('#events-note').textContent = 'A few good reasons to leave the house.';
   if(showAllEvents && fullEvents) {
@@ -1090,7 +1134,7 @@ function renderEvents() {
     replaceChildren('#events-all-list',all.length ? all.map(event=>eventCard(event)) : [emptyState()]);
     $('#events-all-summary').textContent=`See all · ${all.length} events on this date`;
   }
-  scheduleEventExpiry(featured);
+  scheduleEventExpiry([...featured,...Object.values(displayedEvents).flat()]);
   renderMasthead();
   void restorePersonalizedEvents();
   refreshShelfControls();
@@ -1288,8 +1332,7 @@ function renderStories(kind, {append = false} = {}) {
   const selector = kind === "news" ? "#news-list" : "#geek-list";
   const noteSelector = kind === "news" ? "#news-note" : "#geek-note";
   const section = kind === "news" ? "news" : "science-technology";
-  const editionAvailable = data?.editionDate && data.editionDate <= state.selectedDate;
-  const availableStories = editionAvailable ? (fullStories[kind]?.stories || data.stories || []) : [];
+  const availableStories = storiesOnDate(fullStories[kind] || data,state.selectedDate);
   const scienceNow = Date.now();
   const scienceDoc = { ...data, stories: availableStories };
   const digest = kind === "geeknews" ? scienceView(scienceDoc, state.selectedDate, scienceNow) : null;
@@ -1299,8 +1342,7 @@ function renderStories(kind, {append = false} = {}) {
     : [...digest.stories, ...digest.archive];
   storyPools[kind] = pool;
   const prior = append ? displayedStories[kind] : [];
-  const seen = new Set(prior.map(story => story.id));
-  const stories = [...prior, ...pool.filter(story => !seen.has(story.id)).slice(0, Math.max(0, storyLimits[kind] - prior.length))];
+  const stories = appendReportPage(prior,pool,storyLimits[kind]);
   displayedStories[kind] = stories;
   const renderStory = (story) => {
     const title = node("h3");
@@ -1319,8 +1361,7 @@ function renderStories(kind, {append = false} = {}) {
   const track = $(selector);
   if (append && prior.length) track.append(...stories.slice(prior.length).map(renderStory));
   else replaceChildren(selector, stories.length ? stories.map(renderStory) : [emptyState()]);
-  $(`[data-story-status="${kind}"]`).textContent = '';
-  const carryForward = data?.editionDate && data.editionDate !== state.selectedDate && editionAvailable
+  const carryForward = data?.editionDate && data.editionDate < state.selectedDate
     ? `Latest available digest: ${displayDate(data.editionDate)}.`
     : "";
   const fallback = kind === "news" ? "What is moving around Michigan." : "Interesting machinery, ideas, and horizons.";
@@ -1687,12 +1728,54 @@ function updateNavigation() {
 function storyKind(track) {
   return Object.keys(storyTracks).find(kind => storyTracks[kind] === `#${track.id}`);
 }
+function eventLane(track) {
+  return Object.keys(eventTracks).find(lane => eventTracks[lane] === `#${track.id}`);
+}
+function hasMoreEvents(lane) {
+  if (!lane || !state.data.events) return false;
+  if (!eventBrowsing || !fullEvents) return Boolean(manifest?.archives?.events || state.data.events.events?.length);
+  const shown=new Set(displayedEvents[lane].map(eventPageKey));
+  return eventPools[lane].some(event=>!shown.has(eventPageKey(event)) && eventHasTimeRemaining(event,state.selectedDate,Date.now()));
+}
+function reportLoadError(status, label, retry) {
+  const retryButton=node('button',{type:'button',text:'Refresh and retry'});
+  retryButton.addEventListener('click',async()=>{
+    retryButton.disabled=true;
+    await refreshData();
+    await retry();
+  });
+  status.replaceChildren(document.createTextNode(`Could not load more ${label}. `),retryButton);
+}
+async function loadMoreEvents(lane) {
+  if (!hasMoreEvents(lane) || eventRequests[lane]) return;
+  reportErrors.delete(lane);
+  const token={};eventRequests[lane]=token;
+  const status=$(`[data-event-status="${lane}"]`),track=$(eventTracks[lane]);
+  const editionId=manifest?.editionId, selectedDate=state.selectedDate;
+  status.textContent='Loading more events…';track.setAttribute('aria-busy','true');
+  try {
+    await ensureFullEvents();
+    if (state.selectedDate!==selectedDate || manifest?.editionId!==editionId) return;
+    eventBrowsing=true;refreshEventPools();
+    eventExtras[lane]+=REPORT_PAGE_SIZE;
+    renderEvents({appendLane:lane});
+    status.textContent=hasMoreEvents(lane) ? 'More calendar events loaded. Keep scrolling for more.' : 'All matching calendar events loaded.';
+  } catch(error) {
+    if (state.selectedDate===selectedDate && manifest?.editionId===editionId) {
+      reportErrors.add(lane);reportLoadError(status,'events',()=>loadMoreEvents(lane));
+    }
+  } finally {
+    if (eventRequests[lane]===token) delete eventRequests[lane];
+    track.setAttribute('aria-busy','false');refreshShelfControls();
+  }
+}
 function hasMoreStories(kind) {
-  if (!kind || !state.data[kind]?.editionDate || state.data[kind].editionDate > state.selectedDate) return false;
+  if (!kind || !state.data[kind]) return false;
   return !fullStories[kind] || storyPools[kind].some(story => !displayedStories[kind].some(shown => shown.id === story.id));
 }
 async function loadMoreStories(kind) {
   if (!hasMoreStories(kind) || storyRequests[kind]) return;
+  reportErrors.delete(kind);
   const token = {}; storyRequests[kind] = token;
   const status = $(`[data-story-status="${kind}"]`);
   const track = $(storyTracks[kind]);
@@ -1706,11 +1789,13 @@ async function loadMoreStories(kind) {
       fullStories[kind] = data;
     }
     if (state.selectedDate !== selectedDate || manifest?.editionId !== editionId) return;
-    storyLimits[kind] = displayedStories[kind].length + 20;
+    storyLimits[kind] = displayedStories[kind].length + REPORT_PAGE_SIZE;
     renderStories(kind, {append:true});
     status.textContent = hasMoreStories(kind) ? 'More stories loaded.' : 'All available stories loaded.';
   } catch(error) {
-    status.textContent = `Could not load more stories. Scroll again to retry. ${error.message}`;
+    if (state.selectedDate===selectedDate && manifest?.editionId===editionId) {
+      reportErrors.add(kind);reportLoadError(status,'stories',()=>loadMoreStories(kind));
+    }
   } finally {
     if (storyRequests[kind] === token) delete storyRequests[kind];
     track.setAttribute('aria-busy','false');
@@ -1724,7 +1809,7 @@ function updateShelfControl(shelf) {
   const next = shelf.querySelector('[data-shelf-next]');
   if (!track || !previous || !next) return;
   const overflow = track.scrollWidth > track.clientWidth + 2;
-  const more = hasMoreStories(storyKind(track));
+  const more = hasMoreStories(storyKind(track)) || hasMoreEvents(eventLane(track));
   previous.hidden = !overflow;
   next.hidden = !overflow && !more;
   previous.disabled = track.scrollLeft <= 2;
@@ -1746,22 +1831,33 @@ function bindShelfControls() {
     const move = (direction) => track.scrollBy({ left: direction * track.clientWidth * .88, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
     previous.addEventListener("click", () => move(-1));
     const kind = storyKind(track);
-    const extend = () => kind && atShelfEnd(track) && loadMoreStories(kind);
+    const lane = eventLane(track);
+    const extend = (automatic=false) => !(automatic && reportErrors.has(kind || lane)) && atShelfEnd(track) && (kind ? loadMoreStories(kind) : lane ? loadMoreEvents(lane) : null);
     next.addEventListener('click', async () => { await extend(); move(1); });
     let lastLeft = track.scrollLeft;
     track.addEventListener('scroll', () => {
       const forward = track.scrollLeft > lastLeft;
       lastLeft = track.scrollLeft;
       updateShelfControl(shelf);
-      if (forward) extend();
+      if (forward) extend(true);
     }, {passive:true});
-    if (kind) {
+    if (kind || lane) {
       track.tabIndex = 0;
       track.addEventListener('wheel', event => { if (event.deltaX > 0 || event.shiftKey && event.deltaY > 0) extend(); }, {passive:true});
       let touchX = null;
       track.addEventListener('touchstart', event => { touchX = event.touches[0]?.clientX; }, {passive:true});
       track.addEventListener('touchmove', event => { if (touchX != null && touchX - event.touches[0]?.clientX > 20) extend(); }, {passive:true});
-      track.addEventListener('keydown', event => { if (event.key === 'ArrowRight' || event.key === 'End') extend(); });
+      track.addEventListener('keydown', async event => {
+        if (event.target!==track) return;
+        if (event.key==='ArrowRight' || event.key==='ArrowLeft') {
+          event.preventDefault();
+          if (event.key==='ArrowRight') await extend();
+          move(event.key==='ArrowRight' ? 1 : -1);
+        } else if (event.key==='End' || event.key==='Home') {
+          event.preventDefault();track.scrollTo({left:event.key==='End' ? track.scrollWidth : 0,behavior:'instant'});
+          if (event.key==='End') await extend();
+        }
+      });
     }
     updateShelfControl(shelf);
   });
@@ -1786,7 +1882,9 @@ function render() {
 
 function selectDate(key, { history = true } = {}) {
   const requestedDate = key;
-  state.selectedDate = clampDate(requestedDate);
+  const selected=clampDate(requestedDate);
+  if (state.selectedDate!==selected) resetReportPagination();
+  state.selectedDate = selected;
   if (history) {
     const url = new URL(window.location);
     if (state.selectedDate === state.today) url.searchParams.delete("date");

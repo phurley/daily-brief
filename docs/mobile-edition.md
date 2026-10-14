@@ -56,11 +56,21 @@ past it appear in Ongoing. The small info icon at each card's bottom right opens
 the details dialog, including ranking reasons and feedback. Titles open websites.
 See all opens a vertical list.
 
-Local and science shelves append up to 20 more cards when the reader scrolls to
+Event, local news and science shelves append up to 20 more cards when the reader scrolls to
 the end, swipes beyond it, presses Right/End, or uses the shelf arrow. Archive
 requests are deduplicated and retain card order and scroll position. Errors
 appear beneath the shelf; another scroll or arrow action retries. Older science
 cards are labelled Archive / background and retain evidence qualifiers.
+
+Event shelves keep their verified picks first. Further browsing loads the full
+event JSON once, shares it across the date lanes and appends entries marked
+“From the event calendar.” Browsing has no recommendation score floor, diversity
+quota or 30-day cutoff; explicit reader constraints and unavailable occurrences
+still apply. Ongoing listings become browsable when the full calendar is loaded
+through a shelf. Date changes start a fresh page. Source failures offer Refresh
+and retry, including when a newer publication has replaced an archive hash.
+Stories use their publication dates, so yesterday can browse older coverage even
+when the source document was collected today. Future-dated stories are excluded.
 
 Starship is a short best-guess date on the worldwide launch line. It preserves
 the source's date precision and shows date pending when no current usable target
