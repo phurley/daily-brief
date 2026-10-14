@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-13T18:17:59-04:00",
+  "generatedAt": "2026-10-13T23:52:38-04:00",
   "editionDate": "2026-10-13",
   "stories": [
     {
@@ -11993,10 +11993,10 @@
     {
       "id": "ann-arbor-launches-community-owned-solar-news-2026-09-22",
       "title": "Ann Arbor launches community-owned solar utility with battery backup",
-      "summary": "Ann Arbor has launched a community-owned solar utility (SEU) that finances, installs, and maintains solar and battery systems for residents and businesses. Customers pay a monthly fee based on their system size, with potential annual savings of $100 to $300 on energy bills. The SEU, authorized by voters in November 2024, provides 100% local renewable energy as an optional supplement to traditional utilities.",
+      "summary": "Ann Arbor has launched a community-owned solar utility (SEU) that finances, installs, and maintains solar and battery systems for residents and businesses. Customers pay a monthly fee based on their system size, with potential annual savings of $100-$300 on utility bills. The program, authorized by voters in November 2024, provides 100% local renewable energy as an optional supplement to traditional grid electricity.",
       "url": "https://www.clickondetroit.com/news/local/2026/09/22/ann-arbor-launches-community-owned-solar-utility-with-battery-backup/",
       "publishedAt": "2026-09-22T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -12010,10 +12010,7 @@
       "topics": [
         "solar energy",
         "renewable energy",
-        "community utility",
-        "energy savings",
-        "local government",
-        "sustainable energy"
+        "community utility"
       ],
       "source": {
         "name": "All About Ann Arbor (WDIV ClickOnDetroit)"
@@ -12021,18 +12018,18 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.57,
-          "eclectic": 0.14,
-          "technical_science": 0.89,
+          "distinctive": 0.54,
+          "eclectic": 0.13,
+          "technical_science": 0.9,
           "artsy": 0.03,
           "progressive": 0.93,
           "outdoors": 0.02,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
-          "farmer_market": 0.01,
+          "farmer_market": 0.02,
           "sporting": 0.01,
-          "recurring": 0.09,
+          "recurring": 0.11,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
           "large_venue": 0.03,
@@ -12041,7 +12038,7 @@
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.14,
+          "sales_related": 0.16,
           "children_activity": 0.01,
           "running": 0.01,
           "exercise": 0.01,
@@ -12113,15 +12110,21 @@
     {
       "id": "ann-arbor-municipal-workers-union-clashe-news-2026-10-12",
       "title": "Ann Arbor municipal workers’ union clashes with city over contract provisions",
-      "summary": "The Ann Arbor municipal workers’ union is in conflict with the city over provisions in their contract. The dispute centers on specific terms and conditions outlined in the agreement, leading to tensions between the union and city officials.",
+      "summary": "The Ann Arbor municipal workers' union (AFSCME Local 369) and the city have been in mediation since July 2025 over a new labor contract, with no resolution timeline. Nearly 300 workers have operated without a contract since December 2025, seeking wage increases, shift premiums, and other benefits. The city cites fiscal concerns, while union leaders argue their demands are feasible given recent budget allocations to other departments.",
       "url": "https://www.michigandaily.com/news/ann-arbor/ann-arbor-municipal-workers-union-clashes-with-city-over-contract-provisions/",
       "publishedAt": "2026-10-12T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Ann Arbor municipal workers’ union",
-        "city"
+        "AFSCME Local 369",
+        "David Kastner",
+        "Christopher Taylor",
+        "Milton Dohoney Jr.",
+        "Paul Seyfarth",
+        "Yousef Rabhi",
+        "Ann Arbor Police Department",
+        "American Federation of State, County & Municipal Employees"
       ],
       "locations": [
         "Ann Arbor, MI"
@@ -12129,31 +12132,34 @@
       "localityIndex": 2,
       "topics": [
         "labor",
-        "contract disputes",
-        "local government"
+        "contract negotiations",
+        "municipal workers",
+        "union disputes",
+        "inflation",
+        "city budget"
       ],
       "source": {
         "name": "Emma Lombard",
-        "publication": "The Michigan Daily"
+        "publication": "The Michigan Daily (University of Michigan)"
       },
       "scoring": {
         "signals": {
-          "funny": 0.03,
-          "distinctive": 0.12,
-          "eclectic": 0.07,
+          "funny": 0.02,
+          "distinctive": 0.13,
+          "eclectic": 0.08,
           "technical_science": 0.03,
           "artsy": 0.02,
-          "progressive": 0.26,
-          "outdoors": 0.02,
+          "progressive": 0.29,
+          "outdoors": 0.01,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
-          "farmer_market": 0.02,
+          "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.16,
+          "recurring": 0.18,
           "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.04,
+          "religious": 0.01,
+          "large_venue": 0.03,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
@@ -12167,8 +12173,8 @@
         }
       },
       "photo": {
-        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/10/dan.NEW_.Dunbar.10.11.26.34.jpg?resize=1200%2C900&ssl=1",
-        "alt": "Ann Arbor municipal workers’ union clashes with city over contract provisions"
+        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2025/03/online.sam_.STK_.CityHall.1.25.24.0035.webp?fit=780%2C519&ssl=1",
+        "alt": "Outside of Larcom City Hall. Alum Samson Adler/DAILY."
       }
     },
     {
@@ -18433,6 +18439,75 @@
       "photo": {
         "url": "https://snworksceo.imgix.net/emu/9f908b61-54f1-4402-a8b1-7c21d49df1f5.sized-1000x1000.jpg?w=300&dpr=2",
         "alt": "EMU Theatre Metamorphoses"
+      }
+    },
+    {
+      "id": "black-wall-street-exhibition-bridges-art-news-2026-10-13",
+      "title": "Black Wall Street exhibition bridges art and the Black experience",
+      "summary": "The University of Michigan Museum of Art (UMMA) presents 'Black Wall Street Journey: Re and De Imagining Black Progress,' an exhibition combining art, data, and the Black experience. The exhibit features paintings, sculptures, and interactive data displays inspired by the Panel Study of Income Dynamics and the Anti-Black Index. Artists and collaborators discussed how the project challenges traditional narratives about Black progress through social sculpture and well-being indicators.",
+      "url": "https://www.michigandaily.com/news/campus-life/umma-presents-black-wall-street-exhibition-bridging-data-art-and-the-black-experience/",
+      "publishedAt": "2026-10-13T00:00:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Rick Lowe",
+        "Abigail Winograd",
+        "Kathleen Cagney",
+        "Noura Insolera",
+        "The University of Michigan Museum of Art (UMMA)",
+        "Institute of Social Research",
+        "Panel Study of Income Dynamics",
+        "Anti-Black Index"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "art",
+        "black experience",
+        "data",
+        "exhibition",
+        "social research"
+      ],
+      "source": {
+        "name": "Mya Weiss and Zooey Raux",
+        "publication": "The Michigan Daily"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.05,
+          "distinctive": 0.79,
+          "eclectic": 0.91,
+          "technical_science": 0.27,
+          "artsy": 0.98,
+          "progressive": 0.94,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.08,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.1,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.michigandaily.com/wp-content/uploads/2026/10/lum.NEW_.UMMABlackWallStreetJourney.09.27.26.0054.jpg",
+        "alt": "Artwork in the Black Wall Street Journey exhibit in the UMMA."
       }
     },
     {
@@ -25328,24 +25403,27 @@
     {
       "id": "city-council-opposes-proposal-e-directs-news-2026-10-07",
       "title": "City Council opposes Proposal E, directs city attorney to challenge in court",
-      "summary": "Ann Arbor City Council voted 10-1 to direct the city attorney to challenge the legality of Proposal E, a ballot initiative to replace DTE Energy’s utility with a city-run power grid. The council cited concerns over financial costs and conflicts with the City Charter. The proposal, added to the November ballot by grassroots group Ann Arbor for Public Power, would require a public utility board by 2028 if approved.",
+      "summary": "Ann Arbor City Council voted 10-1 to oppose Proposal E, a November ballot initiative to replace DTE Energy’s utility with a city-run power grid, and directed the city attorney to challenge its legality. The council cited financial risks, charter conflicts, and potential impacts on existing energy goals, while critics argued the move undermines democratic process. Only Councilmember Cynthia Harrison opposed the resolution, emphasizing respect for citizen-led initiatives.",
       "url": "https://www.michigandaily.com/news/ann-arbor/city-council-opposes-proposal-e-directs-city-attorney-to-challenge-in-court/",
       "publishedAt": "2026-10-07T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Ann Arbor City Council",
+        "Proposal E",
         "Christopher Taylor",
         "Atleen Kaur",
         "Ann Arbor for Public Power",
+        "DTE Energy",
         "Dave Zeglen",
         "Brian Geiringer",
         "Cynthia Harrison",
         "Jeff Irwin",
         "Rashida Tlaib",
         "Yousef Rabhi",
-        "DTE Energy"
+        "A2P2",
+        "A2Zero"
       ],
       "locations": [
         "Ann Arbor, MI"
@@ -25356,8 +25434,8 @@
         "proposal e",
         "dte energy",
         "public power",
-        "legal challenge",
-        "ann arbor"
+        "climate action",
+        "legal challenge"
       ],
       "source": {
         "name": "Niko Wilson",
@@ -25366,11 +25444,11 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.34,
-          "eclectic": 0.09,
-          "technical_science": 0.2,
+          "distinctive": 0.39,
+          "eclectic": 0.14,
+          "technical_science": 0.27,
           "artsy": 0.02,
-          "progressive": 0.41,
+          "progressive": 0.37,
           "outdoors": 0.01,
           "theatre": 0.01,
           "live_music": 0.01,
@@ -25390,12 +25468,12 @@
           "children_activity": 0.01,
           "running": 0.01,
           "exercise": 0.01,
-          "employment_related": 0.02
+          "employment_related": 0.01
         }
       },
       "photo": {
         "url": "https://www.michigandaily.com/wp-content/uploads/2026/10/syn.CityCounciil.10.05.2026.003-scaled.jpg",
-        "alt": "Mayor Christopher Taylor speaks at the City Council meeting at Larcom City Hall Monday evening. Soyeon Kim/DAILY."
+        "alt": "Mayor Christopher Taylor speaks at the City Council meeting at Larcom City Hall Monday evening. _Soyeon Kim/DAILY._"
       }
     },
     {
@@ -25817,10 +25895,10 @@
     {
       "id": "clarkston-twins-beat-hodgkin-s-lymphoma-news-2026-09-22",
       "title": "Clarkston twins beat Hodgkin’s lymphoma, head off to college",
-      "summary": "Clarkston twins Emma and Sofia overcame Hodgkin’s lymphoma after completing eight chemotherapy treatments over four months. Both sisters are now cancer-free and preparing for college. During treatment, Emma focused on schoolwork, theater, and jewelry making, while Sofia pursued music.",
+      "summary": "Clarkston twins Emma and Sofia overcame Hodgkin’s lymphoma after completing eight chemotherapy treatments over four months. Both sisters coped with treatment by pursuing their passions—Emma with theater and jewelry making, Sofia with music—and are now cancer-free as they prepare for college.",
       "url": "https://www.clickondetroit.com/news/local/2026/09/22/clarkston-twins-beat-hodgkins-lymphoma-head-off-to-college/",
       "publishedAt": "2026-09-22T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -25837,35 +25915,34 @@
         "health",
         "cancer",
         "college",
-        "siblings",
-        "treatment"
+        "siblings"
       ],
       "source": {
         "name": "All About Ann Arbor (WDIV ClickOnDetroit)"
       },
       "scoring": {
         "signals": {
-          "funny": 0.04,
-          "distinctive": 0.53,
-          "eclectic": 0.23,
-          "technical_science": 0.36,
-          "artsy": 0.13,
-          "progressive": 0.2,
+          "funny": 0.05,
+          "distinctive": 0.52,
+          "eclectic": 0.22,
+          "technical_science": 0.33,
+          "artsy": 0.19,
+          "progressive": 0.21,
           "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.01,
-          "farmer_market": 0.02,
-          "sporting": 0.02,
-          "recurring": 0.04,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.03,
           "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.04,
+          "large_venue": 0.03,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.02,
-          "dance": 0.01,
+          "dance": 0.02,
           "sales_related": 0.02,
           "children_activity": 0.04,
           "running": 0.01,
@@ -25875,7 +25952,7 @@
       },
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/7c993215-d07f-4c36-b383-cc6151c657fa/image.jpg?api_key=clickondetroit_06f87fefb2123598",
-        "alt": "Clarkston twins Emma and Sofia after cancer treatment"
+        "alt": "Image of cancer survivor twins"
       }
     },
     {
@@ -29028,6 +29105,72 @@
       }
     },
     {
+      "id": "craig-lake-fire-in-michigan-s-u-p-sparke-news-2026-10-13",
+      "title": "Craig Lake Fire in Michigan's U.P. sparked by lightning, DNR confirms",
+      "summary": "The Craig Lake Fire in Baraga County, Michigan, caused by a lightning strike, has burned 600 acres and is 20% contained, while the Ridge Fire in Marquette County has scorched 450 acres. Recent rainfall and cooler temperatures have slowed the fires, but they remain active with challenging conditions for crews. The DNR confirmed the lightning origin and advises residents to prepare for potential evacuations using the 'Ready, Set, Go!' system.",
+      "url": "https://www.mlive.com/news/2026/10/craig-lake-fire-in-michigans-up-sparked-by-lightning-dnr-confirms.html",
+      "publishedAt": "2026-10-13T21:28:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Michigan Department of Natural Resources",
+        "Melissa Frick"
+      ],
+      "locations": [
+        "Baraga County, Michigan",
+        "Marquette County, Michigan",
+        "Michigan's Upper Peninsula"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "wildfires",
+        "lightning",
+        "dnr",
+        "containment",
+        "weather",
+        "emergency management"
+      ],
+      "source": {
+        "name": "Melissa Frick",
+        "publication": "MLive / The Ann Arbor News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.01,
+          "distinctive": 0.18,
+          "eclectic": 0.08,
+          "technical_science": 0.5,
+          "artsy": 0.02,
+          "progressive": 0.04,
+          "outdoors": 0.21,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.06,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.01,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/XOGRUWXJMFDGBKNZU2MK6BML6Y.jpg?auth=62953247d5d5e07281a3476917390b19c0f879b4a0f5741b9263b65cc10b4b0f&width=1280&smart=true&quality=90",
+        "alt": "U.P. wildfires"
+      }
+    },
+    {
       "id": "crash-with-state-police-car-in-lapeer-co-news-2026-09-29",
       "title": "Crash with state police car in Lapeer County injures woman",
       "summary": "A 67-year-old woman sustained serious injuries when the vehicle she was riding in crashed with a Michigan State Police patrol car on Vandyke Road near Burnside Road in Lapeer County. The crash occurred September 28 at 4:20 p.m. The woman was hospitalized while the trooper and four other passengers were uninjured. Road closures lasted several hours for medical care and investigation.",
@@ -31556,10 +31699,10 @@
     {
       "id": "deadly-lake-st-clair-boat-crash-what-we-news-2026-10-13",
       "title": "Deadly Lake St. Clair boat crash: What we've learned about investigation so far",
-      "summary": "On Oct. 13, the sheriff’s office stated they brought a person in for questioning regarding the crash, who was later released pending further investigation. Deputies are not classifying the crash as a hit-and-run, with cooperation from all parties and ongoing analysis of navigation data and video evidence.",
+      "summary": "On Oct. 13, the sheriff’s office told Local 4 they brought a person in for questioning in connection with the crash and that the person has since been released pending further investigation. Deputies are not calling the crash a hit-and-run, but the investigation is ongoing. The sheriff’s office also said all parties are cooperating, and investigators are analyzing navigation data and looking for video.",
       "url": "https://www.clickondetroit.com/news/local/2026/10/13/deadly-lake-st-clair-boat-crash-what-weve-learned-about-investigation-so-far/",
       "publishedAt": "2026-10-13T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -31568,24 +31711,25 @@
         "Samantha Sayles"
       ],
       "locations": [
-        "Lake St. Clair, MI"
+        "Ann Arbor & Ypsilanti, MI",
+        "Lake St. Clair"
       ],
-      "localityIndex": 4,
+      "localityIndex": 2,
       "topics": [
         "boat crash",
         "investigation",
-        "law enforcement",
-        "local news"
+        "law enforcement"
       ],
       "source": {
-        "name": "All About Ann Arbor (WDIV ClickOnDetroit)"
+        "name": "Samantha Sayles",
+        "publication": "All About Ann Arbor (WDIV ClickOnDetroit)"
       },
       "scoring": {
         "signals": {
           "funny": 0.01,
-          "distinctive": 0.54,
+          "distinctive": 0.56,
           "eclectic": 0.08,
-          "technical_science": 0.16,
+          "technical_science": 0.14,
           "artsy": 0.02,
           "progressive": 0.04,
           "outdoors": 0.05,
@@ -31594,7 +31738,7 @@
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.02,
-          "recurring": 0.03,
+          "recurring": 0.04,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
           "large_venue": 0.02,
@@ -31612,7 +31756,7 @@
       },
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/HFE4CG7KEFGYZCHMG3WHEEPPQQ.png?api_key=clickondetroit_06f87fefb2123598",
-        "alt": "Boat crash investigation"
+        "alt": "Deadly Lake St. Clair boat crash: What we've learned about investigation so far"
       }
     },
     {
@@ -32502,15 +32646,15 @@
     {
       "id": "deepfake-resilience-hub-combats-rise-of-news-2026-09-23",
       "title": "Deepfake Resilience Hub combats rise of AI-generated misinformation",
-      "summary": "The University of Michigan has launched a new Deepfake Resilience Hub to address the growing threat of AI-generated misinformation. The initiative aims to develop tools and strategies to detect and counter synthetic media. C. Cybele Raver, featured in a related press conference, is highlighted in an accompanying article.",
+      "summary": "The University of Michigan has launched a new Deepfake Resilience Hub to address the growing threat of AI-generated misinformation. The initiative aims to develop tools and strategies to detect and counter deepfake content, which has become increasingly prevalent in recent months.",
       "url": "https://www.michigandaily.com/news/administration/new-michigan-deepfake-resilience-hub-aims-to-combat-rise-of-ai-generated-misinformation/",
       "publishedAt": "2026-09-23T00:00:00-04:00",
-      "addedAt": "2026-10-13T16:01:28-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Deepfake Resilience Hub",
-        "C. Cybele Raver"
+        "University of Michigan"
       ],
       "locations": [
         "Ann Arbor, MI"
@@ -32519,8 +32663,8 @@
       "topics": [
         "ai",
         "misinformation",
-        "university",
-        "technology",
+        "deepfake",
+        "university of michigan",
         "administration"
       ],
       "source": {
@@ -32530,31 +32674,31 @@
       "scoring": {
         "signals": {
           "funny": 0.03,
-          "distinctive": 0.35,
-          "eclectic": 0.18,
+          "distinctive": 0.31,
+          "eclectic": 0.16,
           "technical_science": 0.96,
-          "artsy": 0.05,
-          "progressive": 0.84,
-          "outdoors": 0.02,
+          "artsy": 0.04,
+          "progressive": 0.85,
+          "outdoors": 0.01,
           "theatre": 0.02,
           "live_music": 0.01,
-          "live_comedy": 0.02,
+          "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
           "recurring": 0.09,
           "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.08,
+          "religious": 0.01,
+          "large_venue": 0.06,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.07,
-          "children_activity": 0.02,
+          "sales_related": 0.06,
+          "children_activity": 0.01,
           "running": 0.01,
           "exercise": 0.01,
-          "employment_related": 0.03
+          "employment_related": 0.02
         }
       },
       "photo": {
@@ -49605,6 +49749,66 @@
       }
     },
     {
+      "id": "exploring-the-mason-hall-third-floor-men-news-2026-10-13",
+      "title": "Exploring the Mason Hall third floor men’s restroom",
+      "summary": "A statement about exploring the Mason Hall third floor men’s restroom.",
+      "url": "https://www.michigandaily.com/statement/exploring-the-mason-hall-third-floor-mens-restroom/",
+      "publishedAt": "2026-10-13T00:00:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "unknown",
+      "entities": [
+        "The Michigan Daily"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "university",
+        "facilities",
+        "statement"
+      ],
+      "source": {
+        "name": "The Michigan Daily (University of Michigan)",
+        "publication": "The Michigan Daily"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.32,
+          "distinctive": 0.19,
+          "eclectic": 0.11,
+          "technical_science": 0.07,
+          "artsy": 0.11,
+          "progressive": 0.13,
+          "outdoors": 0.02,
+          "theatre": 0.05,
+          "live_music": 0.02,
+          "live_comedy": 0.08,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.11,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/10/DSC_4438-scaled.jpg?resize=1200%2C900&ssl=1",
+        "alt": "Exploring the Mason Hall third floor men’s restroom"
+      }
+    },
+    {
       "id": "fact-check-abdul-el-sayed-and-mike-roger-news-2026-10-08",
       "title": "Fact check: Abdul El-Sayed and Mike Rogers debate Trump, tariffs, war, more",
       "summary": "Democrat Abdul El-Sayed and Republican Mike Rogers engaged in a heated debate in Grand Rapids covering Trump's policies, tariffs, the Iran war, and personal credentials. The candidates are vying to replace retiring Sen. Gary Peters in a race that could determine Senate control during Trump's final two years in office. Fact checks addressed claims about tariff impacts, medical credentials, Iran war stances, and financial disclosures.",
@@ -53988,6 +54192,74 @@
       }
     },
     {
+      "id": "five-seats-at-stake-in-detroit-school-bo-news-2026-10-13",
+      "title": "Five seats at stake in Detroit school board election",
+      "summary": "Five of seven seats on the Detroit Public Schools Community District Board are up for election with 31 candidates vying for four full four-year terms and three for a partial term. Board Vice President Bishop Corletta Vaughn, who is not seeking re-election, emphasized the need for community partnerships to address student needs beyond the classroom. Parents and advocates stress the importance of the election in shaping the district's future.",
+      "url": "https://www.clickondetroit.com/news/local/2026/10/13/five-seats-at-stake-in-detroit-school-board-election/",
+      "publishedAt": "2026-10-13T20:23:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Bishop Corletta Vaughn",
+        "Brandi McGill",
+        "Shaneka Byer",
+        "Sheila Cockrel",
+        "CitizenDetroit",
+        "Detroit Public Schools Community District"
+      ],
+      "locations": [
+        "Detroit, MI"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "politics",
+        "education",
+        "local-elections",
+        "school-board",
+        "community",
+        "public-schools"
+      ],
+      "source": {
+        "name": "Will Jones, Darrius Smith",
+        "publication": "All About Ann Arbor (WDIV ClickOnDetroit)"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.13,
+          "eclectic": 0.09,
+          "technical_science": 0.03,
+          "artsy": 0.02,
+          "progressive": 0.27,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.54,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/aa10ea0e-d94a-46f3-ba3b-b063f7bfecd9/image.jpg?api_key=clickondetroit_06f87fefb2123598",
+        "alt": "Five seats at stake in Detroit school board election"
+      }
+    },
+    {
       "id": "fix-dangerous-streets-now-ann-arbor-cycl-news-2026-09-22",
       "title": "‘Fix dangerous streets now,’ Ann Arbor cyclists demand in ride and rally at city hall",
       "summary": "Pedestrian and bicycle safety advocates in Ann Arbor demanded immediate improvements to dangerous streets during a ride and rally at city hall on Sept. 22. They urged the City Council to address safety concerns and implement changes to protect cyclists and pedestrians.",
@@ -55903,28 +56175,30 @@
     {
       "id": "former-university-of-michigan-swimmer-wi-news-2026-10-12",
       "title": "Former University of Michigan swimmer with Stage 4 breast cancer finds hope through cancer research",
-      "summary": "Teams of swimmers, young and old, raised money for cancer research at the University of Michigan as part of the second annual Michigan Pool Swim organized by Swim Across America. The event supports the University of Michigan’s Rogel Cancer Center, with Swim Across America having raised over $150 million for cancer research since 1987. Lucas Caswell, a Swim Across America college ambassador, highlighted the event's importance in engaging the community to sustain the organization's presence in Michigan.",
+      "summary": "Teams of swimmers participated in the second annual Michigan Pool Swim at the University of Michigan to raise funds for the Rogel Cancer Center. Swim Across America, the organizing nonprofit, has raised over $150 million for cancer research since 1987. Lucas Caswell, a University of Michigan alumnus and Swim Across America ambassador, highlighted the event's role in keeping the Michigan chapter viable after a $100,000 fundraising challenge two years ago.",
       "url": "https://www.clickondetroit.com/news/local/2026/10/12/swim-across-america-raises-thousands-for-u-of-m-cancer-center/",
       "publishedAt": "2026-10-12T05:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Lucas Caswell",
-        "Swim Across America",
         "University of Michigan",
-        "Rogel Cancer Center"
+        "Swim Across America",
+        "Washington University in St. Louis",
+        "Jay Scott Smith"
       ],
       "locations": [
-        "Ann Arbor & Ypsilanti, MI"
+        "Ann Arbor, MI"
       ],
       "localityIndex": 2,
       "topics": [
-        "cancer-research",
+        "cancer research",
         "fundraising",
-        "university",
-        "swimming",
-        "non-profit"
+        "university of michigan",
+        "nonprofit",
+        "community events",
+        "health"
       ],
       "source": {
         "name": "Jay Scott Smith",
@@ -55934,27 +56208,27 @@
         "signals": {
           "funny": 0.04,
           "distinctive": 0.26,
-          "eclectic": 0.18,
-          "technical_science": 0.47,
+          "eclectic": 0.16,
+          "technical_science": 0.35,
           "artsy": 0.06,
-          "progressive": 0.46,
+          "progressive": 0.45,
           "outdoors": 0.04,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
-          "sporting": 0.31,
-          "recurring": 0.77,
-          "craft_fair_shopping": 0.02,
+          "sporting": 0.28,
+          "recurring": 0.78,
+          "craft_fair_shopping": 0.01,
           "religious": 0.02,
-          "large_venue": 0.13,
+          "large_venue": 0.14,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
           "sales_related": 0.07,
-          "children_activity": 0.04,
+          "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.08,
           "employment_related": 0.02
@@ -55962,7 +56236,7 @@
       },
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/0de3ed4b-fa11-4f92-b373-55b5b38ae2ae/image.jpg?api_key=clickondetroit_06f87fefb2123598",
-        "alt": "Former University of Michigan swimmer with Stage 4 breast cancer finds hope through cancer research"
+        "alt": "Swimmers participating in the Michigan Pool Swim event at the University of Michigan."
       }
     },
     {
@@ -58735,31 +59009,24 @@
     {
       "id": "geo-umich-remain-deadlocked-on-pay-raise-news-2026-10-12",
       "title": "GEO, UMich remain deadlocked on pay raises, international student protections",
-      "summary": "GEO and the University of Michigan remain in a contract negotiation stalemate over pay raises and international student protections. The University's recent proposal includes 2.5% annual raises and maintains existing benefits, falling short of GEO's demands for higher salary increases and mandatory immigration protections. Over 50 contract terms remain unresolved as negotiations continue for the 2026-2029 agreement.",
+      "summary": "The Graduate Employee Organization (GEO) and the University of Michigan remain at an impasse in contract negotiations over salary increases and protections for international students. No resolution has been reached as of October 2026.",
       "url": "https://www.michigandaily.com/news/administration/geo-and-u-m-continue-contract-negotiation-stalemate-over-salary-increases-international-student-protections/",
       "publishedAt": "2026-10-12T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "GEO",
-        "University of Michigan",
-        "Daniel Weaver",
-        "Hiab Teshome",
-        "U.S. Immigration and Customs Enforcement",
-        "Philippe Kame"
+        "University of Michigan"
       ],
       "locations": [
         "Ann Arbor, MI"
       ],
       "localityIndex": 2,
       "topics": [
+        "education",
         "labor negotiations",
-        "graduate workers",
-        "pay raises",
-        "international students",
-        "contract disputes",
-        "university policies"
+        "international students"
       ],
       "source": {
         "name": "Claire Blanton",
@@ -58768,21 +59035,21 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.14,
+          "distinctive": 0.15,
           "eclectic": 0.14,
           "technical_science": 0.09,
           "artsy": 0.02,
-          "progressive": 0.45,
+          "progressive": 0.41,
           "outdoors": 0.01,
           "theatre": 0.02,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.33,
+          "recurring": 0.28,
           "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.03,
+          "religious": 0.01,
+          "large_venue": 0.04,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
@@ -58792,12 +59059,12 @@
           "children_activity": 0.01,
           "running": 0.01,
           "exercise": 0.01,
-          "employment_related": 0.02
+          "employment_related": 0.03
         }
       },
       "photo": {
-        "url": "https://www.michigandaily.com/wp-content/uploads/2026/02/online.lum_.NEW_.GEOprotest.2.13.26.0232.jpg",
-        "alt": "GEO members and graduate students protest in front of the Michigan League"
+        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/10/Untitled-2-scaled.jpg?resize=800%2C600&ssl=1",
+        "alt": "Jordan Acker and Mike Schostak"
       }
     },
     {
@@ -60214,17 +60481,16 @@
     {
       "id": "gov-whitmer-declared-a-state-of-energy-e-news-2026-10-13",
       "title": "Gov. Whitmer declared a ‘State of Energy Emergency’ in Michigan -- here’s what that means",
-      "summary": "Michigan Gov. Gretchen Whitmer declared a statewide energy emergency to alleviate financial strain on farmers and loggers due to high diesel prices. An executive order temporarily allows farm and logging vehicles to use dyed diesel on public roads without penalty, effective until December 31, 2026. The move follows a similar federal action by President Donald Trump to lower diesel costs for truckers and farmers.",
+      "summary": "Michigan Gov. Gretchen Whitmer declared a statewide energy emergency to alleviate financial strain on farmers and loggers due to high diesel prices. An executive order temporarily allows farm and wood harvester vehicles to use dyed diesel on public roads without penalty, effective until December 31, 2026. The move follows a similar federal action by President Donald Trump to lower diesel costs.",
       "url": "https://www.clickondetroit.com/news/local/2026/10/13/gov-whitmer-declared-a-state-of-energy-emergency-heres-what-that-means/",
       "publishedAt": "2026-10-13T09:33:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": true,
-      "evidenceQuality": "reported",
+      "evidenceQuality": "primary",
       "entities": [
         "Gretchen Whitmer",
-        "Michigan",
         "Donald Trump",
-        "Trump administration",
+        "White House",
         "Michigan Motor Fuel Tax Act"
       ],
       "locations": [
@@ -60232,12 +60498,11 @@
       ],
       "localityIndex": 4,
       "topics": [
-        "energy policy",
-        "diesel prices",
-        "farmers",
-        "loggers",
-        "state emergency",
-        "tax exemptions"
+        "energy",
+        "diesel",
+        "agriculture",
+        "state policy",
+        "emergency declaration"
       ],
       "source": {
         "name": "Jenny Sherman",
@@ -60246,11 +60511,11 @@
       "scoring": {
         "signals": {
           "funny": 0.03,
-          "distinctive": 0.33,
-          "eclectic": 0.14,
-          "technical_science": 0.15,
+          "distinctive": 0.34,
+          "eclectic": 0.17,
+          "technical_science": 0.16,
           "artsy": 0.02,
-          "progressive": 0.23,
+          "progressive": 0.22,
           "outdoors": 0.03,
           "theatre": 0.01,
           "live_music": 0.01,
@@ -60275,7 +60540,7 @@
       },
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/36SFMKZQJNA7RH6M5XJQXFILGI?api_key=clickondetroit_06f87fefb2123598",
-        "alt": "Farmer harvesting corn in Missouri"
+        "alt": "Farmer Jason Kurtz harvesting corn near Forest City, Mo."
       }
     },
     {
@@ -69292,6 +69557,74 @@
       }
     },
     {
+      "id": "inkster-plans-to-expand-flock-safety-sur-news-2026-10-13",
+      "title": "Inkster plans to expand Flock Safety surveillance system, other cities are pausing or canceling contracts",
+      "summary": "Inkster is expanding its partnership with Flock Safety, increasing surveillance technology including license plate readers, security cameras, and gunshot detection devices. Mayor Byron Nolen stated the technology aims to prevent crime and improve safety, but concerns about data privacy and unauthorized access persist. Other Metro Detroit communities are pausing or canceling Flock contracts amid scrutiny over data handling.",
+      "url": "https://www.clickondetroit.com/news/local/2026/10/13/inkster-plans-to-expand-flock-safety-surveillance-system-while-other-cities-are-pausing-or-canceling-contracts/",
+      "publishedAt": "2026-10-13T18:16:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Inkster",
+        "Byron Nolen",
+        "Tamika Jenkins",
+        "Diddier",
+        "Winston Williams",
+        "Flock Safety"
+      ],
+      "locations": [
+        "Inkster, MI"
+      ],
+      "localityIndex": 1,
+      "topics": [
+        "surveillance",
+        "public safety",
+        "privacy",
+        "data security",
+        "technology",
+        "crime prevention"
+      ],
+      "source": {
+        "name": "Khalil Maycock, Marty Herak",
+        "publication": "All About Ann Arbor (WDIV ClickOnDetroit)"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.25,
+          "eclectic": 0.19,
+          "technical_science": 0.89,
+          "artsy": 0.02,
+          "progressive": 0.29,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.07,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.05,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/178c3be2-cdd3-45ee-9add-9302d5c84f26/image.jpg?api_key=clickondetroit_06f87fefb2123598",
+        "alt": "Inkster's Flock Safety surveillance system expansion"
+      }
+    },
+    {
       "id": "inside-elections-changes-rating-for-mich-news-2026-10-02",
       "title": "Inside Elections changes rating for Michigan's 4th Congressional District race",
       "summary": "Inside Elections, a nonpartisan election analysis service, changed its rating for Michigan's 4th Congressional District race from 'solidly Republican' to 'tilt Republican,' benefiting Democratic candidate Sean McCann.",
@@ -70555,26 +70888,24 @@
     {
       "id": "is-local-produce-safer-after-cyclospora-news-2026-10-12",
       "title": "Is local produce safer? After Cyclospora outbreak, Ann Arbor business owners say yes",
-      "summary": "Ann Arbor residents and Midwesterners reconsidered produce sourcing during a summer Cyclospora parasite outbreak. Starting in June, the Michigan Department of Health and Human Services reported a surge in infections, with experts suggesting local farmers could mitigate such risks.",
+      "summary": "Ann Arbor residents reevaluated produce sources during a summer Cyclospora outbreak, with experts suggesting local farmers could mitigate such risks. The Michigan Department of Health and Human Services reported a surge in infections starting in June.",
       "url": "https://www.michigandaily.com/news/business/is-local-produce-safer-after-cyclospora-outbreak-ann-arbor-business-owners-say-yes/",
       "publishedAt": "2026-10-12T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Cyclospora",
-        "Michigan Department of Health and Human Services",
-        "Ann Arbor business owners"
+        "Reese Kizy",
+        "Michigan Department of Health and Human Services"
       ],
       "locations": [
-        "Ann Arbor, MI",
-        "Midwest"
+        "Ann Arbor, MI"
       ],
       "localityIndex": 2,
       "topics": [
         "health",
-        "food safety",
-        "local business"
+        "agriculture",
+        "business"
       ],
       "source": {
         "name": "Reese Kizy",
@@ -70583,27 +70914,27 @@
       "scoring": {
         "signals": {
           "funny": 0.03,
-          "distinctive": 0.34,
-          "eclectic": 0.13,
-          "technical_science": 0.56,
+          "distinctive": 0.35,
+          "eclectic": 0.2,
+          "technical_science": 0.53,
           "artsy": 0.03,
-          "progressive": 0.36,
+          "progressive": 0.32,
           "outdoors": 0.07,
-          "theatre": 0.02,
+          "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
-          "farmer_market": 0.51,
+          "farmer_market": 0.47,
           "sporting": 0.01,
-          "recurring": 0.07,
+          "recurring": 0.08,
           "craft_fair_shopping": 0.06,
-          "religious": 0.02,
-          "large_venue": 0.04,
+          "religious": 0.01,
+          "large_venue": 0.03,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.06,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.1,
+          "sales_related": 0.08,
           "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
@@ -77627,18 +77958,18 @@
     },
     {
       "id": "lawsuit-filed-against-university-of-mich-news-2026-09-18",
-      "title": "Lawsuit filed against University of Michigan over public records denial",
-      "summary": "A former University of Michigan football department employee and her attorney filed a lawsuit accusing the university of improperly denying public records requests related to an investigation into Sherrone Moore's termination. The lawsuit alleges violations of Michigan's FOIA law and claims the university failed to obtain records from an outside law firm. The university declined to comment when contacted by the news outlet.",
+      "title": "Lawsuit filed against University of Michigan over Sherrone Moore investigation records",
+      "summary": "A former University of Michigan football department employee filed a lawsuit accusing the university of improperly denying public records requests related to Sherrone Moore's termination. The case alleges violations of Michigan's FOIA law and includes claims of sex discrimination and HIPAA violations. The university declined to comment when contacted by the media.",
       "url": "https://www.clickondetroit.com/all-about-ann-arbor/2026/09/18/case-against-university-of-michigan-over-sherrone-moore-investigation-records-dismissed/",
       "publishedAt": "2026-09-18T00:00:00-04:00",
-      "addedAt": "2026-10-09T23:17:33-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Paige Shiver",
+        "University of Michigan",
         "Sherrone Moore",
         "Warde Manuel",
-        "University of Michigan",
         "Jenner & Block"
       ],
       "locations": [
@@ -77647,11 +77978,11 @@
       "localityIndex": 2,
       "topics": [
         "lawsuit",
-        "public records",
         "university",
         "foia",
         "privacy",
-        "discrimination"
+        "discrimination",
+        "legal"
       ],
       "source": {
         "name": "All About Ann Arbor (WDIV ClickOnDetroit)"
@@ -77659,22 +77990,22 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.32,
-          "eclectic": 0.15,
+          "distinctive": 0.34,
+          "eclectic": 0.25,
           "technical_science": 0.03,
           "artsy": 0.02,
-          "progressive": 0.34,
+          "progressive": 0.3,
           "outdoors": 0.01,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.02,
-          "recurring": 0.05,
+          "recurring": 0.04,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
           "large_venue": 0.04,
-          "substance_recovery": 0.02,
+          "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
@@ -77688,7 +78019,7 @@
       },
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/EDOVSZT7KZE5HCROQ424HBK76I.png?api_key=clickondetroit_06f87fefb2123598",
-        "alt": "Lawsuit filed against University of Michigan over public records denial"
+        "alt": "University of Michigan logo or related image"
       }
     },
     {
@@ -78564,6 +78895,71 @@
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/09c1aea/2147483647/strip/true/crop/1920x1080+0+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc1%2F5a%2F3a28ad974cfea2c1e36682a3098e%2Fstateside-full-show-pod.png",
         "alt": "Stateside podcast cover image"
+      }
+    },
+    {
+      "id": "limestone-resurfacing-to-close-section-o-news-2026-10-13",
+      "title": "Limestone resurfacing to close section of South Street in Genesee Township",
+      "summary": "A partial closure of South Street in Genesee Township is scheduled for Oct. 14 as the Genesee County Road Commission performs limestone resurfacing work. The closure will run from 8:30 a.m. to 3:30 p.m., requiring drivers to use alternate routes. Contact Kevin Kelly at 810-767-4920, ext. 328 for questions about the work.",
+      "url": "https://www.mlive.com/news/flint/2026/10/limestone-resurfacing-to-close-section-of-south-street-in-genesee-township.html",
+      "publishedAt": "2026-10-13T17:52:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": true,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Genesee County Road Commission",
+        "Advance Local Express Desk",
+        "Kevin Kelly"
+      ],
+      "locations": [
+        "Genesee Township, MI",
+        "Genesee County, MI"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "road work",
+        "construction",
+        "public notice",
+        "infrastructure",
+        "closures"
+      ],
+      "source": {
+        "name": "Advance Local Express Desk",
+        "publication": "MLive / The Ann Arbor News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.01,
+          "distinctive": 0.06,
+          "eclectic": 0.04,
+          "technical_science": 0.8,
+          "artsy": 0.02,
+          "progressive": 0.03,
+          "outdoors": 0.03,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.11,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/TDFFTSRSENCG3NO5GGSMN7ZIOE.JPG?auth=ad2854352bc9de49f2a923124cf232141bad305643c24d0b379dab8143744e1b&width=1280&smart=true&quality=90",
+        "alt": "A road closed sign can be seen in this MLive file photo"
       }
     },
     {
@@ -80869,10 +81265,10 @@
     {
       "id": "lsa-announces-pilot-program-making-first-news-2026-08-19",
       "title": "LSA announces pilot program making first-semester grades pass/fail, beginning 2027",
-      "summary": "The University of Michigan’s College of Literature, Science and the Arts announced a pilot program starting fall 2027 that will designate first-semester grades for first-year LSA students as Pass/No Credit on transcripts. Students will still receive assignment grades and feedback, but letter grades will not impact GPAs. The program aims to help students acclimate to college demands and explore academic interests without grade-related pressure.",
+      "summary": "The University of Michigan’s College of Literature, Science and the Arts announced a pilot program starting fall 2027 that will designate first-semester grades for first-year LSA students as Pass/No Credit on transcripts. Students will still receive assignment grades and feedback, but letter grades will not impact GPAs. The program aims to help students acclimate to college demands and explore subjects without GPA pressure. Grades will be retained internally for academic and professional purposes.",
       "url": "https://www.michigandaily.com/news/news-briefs/lsa-announces-pilot-program-making-first-semester-grades-pass-fail-beginning-2027/",
       "publishedAt": "2026-08-19T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -80886,8 +81282,11 @@
       "localityIndex": 2,
       "topics": [
         "education",
-        "university policy",
-        "academic reform"
+        "university",
+        "policy",
+        "students",
+        "academics",
+        "pilot-program"
       ],
       "source": {
         "name": "Caleb Obico",
@@ -80896,27 +81295,27 @@
       "scoring": {
         "signals": {
           "funny": 0.03,
-          "distinctive": 0.52,
+          "distinctive": 0.51,
           "eclectic": 0.07,
           "technical_science": 0.09,
           "artsy": 0.03,
-          "progressive": 0.89,
+          "progressive": 0.88,
           "outdoors": 0.01,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.1,
+          "recurring": 0.11,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
-          "large_venue": 0.03,
+          "large_venue": 0.02,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.03,
+          "sales_related": 0.02,
           "children_activity": 0.01,
           "running": 0.01,
           "exercise": 0.01,
@@ -82071,6 +82470,68 @@
       }
     },
     {
+      "id": "man-dies-after-being-shot-at-his-hazel-p-news-2026-08-04",
+      "title": "Man dies after being shot at his Hazel Park home",
+      "summary": "A man was shot and killed at his Hazel Park home on August 3, 2026. Hazel Park police responded to reports of gunshots and found Ryan Leslie Adams with gunshot wounds; he was pronounced dead at a local hospital. No details on a suspect have been released.",
+      "url": "https://www.clickondetroit.com/news/local/2026/08/04/man-dies-after-being-shot-at-his-hazel-park-home/",
+      "publishedAt": "2026-08-04T11:49:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Ryan Leslie Adams",
+        "Hazel Park police"
+      ],
+      "locations": [
+        "Hazel Park, MI"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "hazel park",
+        "oakland county",
+        "shooting",
+        "murder"
+      ],
+      "source": {
+        "name": "Samantha Sayles",
+        "publication": "All About Ann Arbor (WDIV ClickOnDetroit)"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.01,
+          "distinctive": 0.23,
+          "eclectic": 0.05,
+          "technical_science": 0.02,
+          "artsy": 0.01,
+          "progressive": 0.03,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.03,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.01,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/R74EAT3S6BGIZL243U2NFNJWWM.jpg?api_key=clickondetroit_06f87fefb2123598",
+        "alt": "Man dies after being shot at his Hazel Park home"
+      }
+    },
+    {
       "id": "man-found-dead-in-genesee-township-drive-news-2026-09-22",
       "title": "Man found dead in Genesee Township driveway after shooting",
       "summary": "A 60-year-old man was found dead on Sunday morning in a driveway in Genesee Township after a shooting. Police were dispatched to the 3000 block of Drexel Avenue at 5:15 a.m. on Sept. 20 and are actively investigating. The incident appears to be isolated, with suspects identified, and the Michigan State Police Crime Lab is assisting.",
@@ -82484,6 +82945,69 @@
       "photo": {
         "url": "https://www.mlive.com/resizer/v2/DUM7L3QMXJAWPAILCDW4KZWDYI.jpg?auth=f849d07cb46dd35feceb0dccb46c47f03e92c22973b0a8600407cf9dbe67ddbe&width=1280&smart=true&quality=90",
         "alt": "Washtenaw County Trial Court in downtown Ann Arbor.MLive file photo"
+      }
+    },
+    {
+      "id": "man-shoots-mother-in-sparta-turns-gun-on-news-2026-10-13",
+      "title": "Man shoots mother in Sparta, turns gun on himself",
+      "summary": "A 20-year-old man is believed to have taken his own life in Sparta after shooting and injuring his mother. The incident occurred after an argument in a vehicle on Oct. 13, 2026, when the man allegedly fired shots at his mother's parked vehicle before turning the gun on himself. Police are investigating using surveillance footage.",
+      "url": "https://www.mlive.com/news/grand-rapids/2026/10/man-shoots-mother-in-sparta-turns-gun-on-himself.html",
+      "publishedAt": "2026-10-13T18:57:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Joryan Blackwell",
+        "Kent County sheriff's deputies"
+      ],
+      "locations": [
+        "Sparta, MI"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "crime",
+        "shooting",
+        "suicide",
+        "family violence",
+        "police investigation"
+      ],
+      "source": {
+        "name": "John Tunison",
+        "publication": "MLive / The Ann Arbor News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.01,
+          "distinctive": 0.43,
+          "eclectic": 0.13,
+          "technical_science": 0.03,
+          "artsy": 0.01,
+          "progressive": 0.03,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.02,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.01,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/PGCEWAR4YBG23OKEQ6U757SYRM.jpg?auth=4e262d5c8c272759c3a50a6dae60c2aa507d9b6edd5178a0e059471752a7bc43&width=1280&smart=true&quality=90",
+        "alt": "Man shoots mother in Sparta, turns gun on himself"
       }
     },
     {
@@ -86047,10 +86571,10 @@
     {
       "id": "men-charged-with-murder-in-hazel-park-sh-news-2026-10-13",
       "title": "Men charged with murder in Hazel Park shooting linked to Detroit stabbing",
-      "summary": "Three Detroit men face first-degree murder charges in the August 3 shooting death of Hazel Park resident Ryan Leslie Adams, which investigators believe was retaliation for a fatal Detroit stabbing earlier that day. Terryon Anthony Brown, Dashawn Deonte Clayborn-Marshall, and Quintaz Eric Dyer were denied bond and face charges including home invasion and armed robbery. A preliminary examination conference is scheduled for October 27.",
+      "summary": "Three Detroit men face first-degree murder charges in the August shooting death of 43-year-old Ryan Leslie Adams in Hazel Park, which investigators believe was retaliation for a fatal Detroit stabbing earlier that day. Terryon Anthony Brown (20), Dashawn Deonte Clayborn-Marshall (23), and Quintaz Eric Dyer (21) were denied bond and face charges including home invasion and armed robbery. A preliminary examination conference is scheduled for October 27.",
       "url": "https://www.clickondetroit.com/news/local/2026/10/13/men-charged-with-murder-in-hazel-park-shooting-linked-to-detroit-stabbing/",
       "publishedAt": "2026-10-13T17:25:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -86058,13 +86582,11 @@
         "Dashawn Deonte Clayborn-Marshall",
         "Quintaz Eric Dyer",
         "Ryan Leslie Adams",
-        "Hazel Park Police Department",
-        "Brandon Carr",
-        "All About Ann Arbor (WDIV ClickOnDetroit)"
+        "Hazel Park Police Department"
       ],
       "locations": [
-        "Hazel Park, MI",
-        "Detroit, MI"
+        "Hazel Park, Mich.",
+        "Detroit"
       ],
       "localityIndex": 3,
       "topics": [
@@ -86081,10 +86603,10 @@
       "scoring": {
         "signals": {
           "funny": 0.01,
-          "distinctive": 0.29,
+          "distinctive": 0.25,
           "eclectic": 0.06,
           "technical_science": 0.02,
-          "artsy": 0.02,
+          "artsy": 0.01,
           "progressive": 0.03,
           "outdoors": 0.01,
           "theatre": 0.01,
@@ -92205,32 +92727,35 @@
     {
       "id": "michigan-family-sues-over-volleyball-mat-news-2026-10-13",
       "title": "Michigan family sues over volleyball matches against Ann Arbor team with trans athlete",
-      "summary": "A Michigan father has filed a federal lawsuit against Monroe Public Schools, the Michigan High School Athletic Association, and other officials, alleging Title IX violations after his daughter's volleyball team unknowingly competed against a transgender athlete in 2025. The lawsuit claims school leaders failed to notify families in advance and allowed the transgender player to participate without alternative facilities. The case centers on whether allowing transgender athletes in 'intimate female spaces' violates the intent of Title IX.",
+      "summary": "A Michigan father and his daughter have filed a federal lawsuit against Monroe Public Schools, the Michigan High School Athletic Association, and other officials, alleging violations of Title IX after the school allowed a transgender athlete from Ann Arbor's Skyline High School to compete in girls' volleyball matches without proper notification. The lawsuit claims the school failed to inform families and provide alternative facilities, arguing this breaches Title IX's intent to ensure fair competition for female athletes. Monroe and MHSAA officials have stated their commitment to legal compliance and will address the matter through legal channels.",
       "url": "https://www.mlive.com/news/ann-arbor/2026/10/michigan-family-sues-over-volleyball-matches-against-ann-arbor-team-with-trans-athlete.html",
       "publishedAt": "2026-10-13T17:16:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Sean Lechner",
         "Briley Lechner",
         "Chet Hesson",
-        "Andrew Shaw",
-        "Michigan High School Athletic Association",
         "Monroe Public Schools",
-        "Ann Arbor Public Schools"
+        "Ann Arbor Public Schools",
+        "Michigan High School Athletic Association",
+        "Andrew Shaw",
+        "Geoff Kimmerly",
+        "Andrew Cluley"
       ],
       "locations": [
-        "Monroe, MI",
-        "Ann Arbor, MI"
+        "Ann Arbor, MI",
+        "Monroe, MI"
       ],
       "localityIndex": 2,
       "topics": [
-        "title ix",
-        "transgender athlete",
+        "education",
         "lawsuit",
-        "school policy",
-        "sports rights"
+        "title-ix",
+        "transgender-athlete",
+        "sports",
+        "michigan"
       ],
       "source": {
         "name": "Jackie Smith",
@@ -92239,21 +92764,21 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.49,
-          "eclectic": 0.23,
+          "distinctive": 0.41,
+          "eclectic": 0.22,
           "technical_science": 0.03,
           "artsy": 0.02,
-          "progressive": 0.25,
+          "progressive": 0.3,
           "outdoors": 0.02,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
-          "sporting": 0.27,
-          "recurring": 0.09,
+          "sporting": 0.17,
+          "recurring": 0.1,
           "craft_fair_shopping": 0.01,
           "religious": 0.02,
-          "large_venue": 0.1,
+          "large_venue": 0.08,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
@@ -92268,7 +92793,7 @@
       },
       "photo": {
         "url": "https://www.mlive.com/resizer/v2/Y5MKP3AUWNCYRMN67S72GVUS6I.JPG?auth=3386ee013c39de7539d1d23bfedd1e3044107ae91068849000cf54bb6db7223a&width=1280&smart=true&quality=90",
-        "alt": "A sign is held during a press conference announcing the filing of a formal Title IX complaint against Ann Arbor Public Schools and Monroe Public Schools."
+        "alt": "Michigan GOP politicians host press conference after parent files complaint regarding trans athlete"
       }
     },
     {
@@ -102195,6 +102720,78 @@
       }
     },
     {
+      "id": "michigan-under-pressure-to-end-orphan-ta-news-2026-10-01",
+      "title": "Michigan under pressure to end ‘orphan tax’ on benefits for foster youth",
+      "summary": "As of Oct. 1, Michigan will conserve 50% of federal benefits for foster youth aged 14-17, but advocates argue all funds should be reserved for them. The federal government encourages states to end the practice, called an 'orphan tax,' and Michigan's new bipartisan law marks partial progress. Justin Kasieta, a former foster youth, highlights the need for full reform, noting the law still diverts most funds for younger children and older teens.",
+      "url": "https://bridgemi.com/michigan-government/michigan-under-pressure-to-end-orphan-tax-on-benefits-for-foster-youth/",
+      "publishedAt": "2026-10-01T00:00:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Justin Kasieta",
+        "Kathy Schmaltz",
+        "Jeff Irwin",
+        "Gretchen Whitmer",
+        "Erin Stover",
+        "Alex Adams",
+        "Bridge Michigan",
+        "Michigan Department of Health and Human Services",
+        "Administration of Children and Families",
+        "Children’s Advocacy Institute at the University of San Diego"
+      ],
+      "locations": [
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "foster care",
+        "federal benefits",
+        "orphan tax",
+        "legislation",
+        "child welfare",
+        "Michigan Government"
+      ],
+      "source": {
+        "name": "Matt Mencarini",
+        "publication": "Bridge Michigan"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.23,
+          "eclectic": 0.1,
+          "technical_science": 0.02,
+          "artsy": 0.02,
+          "progressive": 0.78,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.09,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.03,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://i0.wp.com/bridgemi.com/wp-content/uploads/2026/10/ss_shutterstock-scaled.jpg?fit=1024%2C683&amp;ssl=1",
+        "alt": "Justin Kasieta is a former foster youth who now works as an advocate. He wants Michigan to end the practice he and others call an ‘orphan tax.’ (Courtesy of Justin Kasieta)"
+      }
+    },
+    {
       "id": "michigan-under-pressure-to-end-orphan-ta-news-2026-10-13",
       "title": "Michigan under pressure to end ‘orphan tax’ on benefits for foster youth",
       "summary": "A new Michigan law requires the state to conserve 50% of federal benefits for foster youth aged 14-17, but advocates argue all funds should be reserved for them. The federal government encourages states to end the practice, called an 'orphan tax,' and Michigan's approach could affect eligibility for federal grants. Former foster youth like Justin Kasieta, who lost $18,000 in benefits during his time in care, continue to push for full reform.",
@@ -106442,38 +107039,35 @@
     {
       "id": "more-than-just-another-building-new-gath-news-2026-10-13",
       "title": "‘More than just another building’: New gathering space opens in Dunbar Tower affordable housing development",
-      "summary": "City leaders and residents celebrated the grand opening of Porter’s Place, a community gathering space in Ann Arbor’s Dunbar Tower affordable housing development. The facility, named after Lucille Hall Porter, offers intergenerational programming, arts, and wellness events. The project addresses historical housing discrimination through 63 affordable apartments for unhoused residents and low-income artists.",
+      "summary": "City leaders and residents of Ann Arbor’s historically Black neighborhoods gathered to celebrate the grand opening of Porter’s Place, a community gathering space in Dunbar Tower. The affordable housing project, a collaboration between the Ann Arbor Housing Commission and Avalon Housing, includes 63 apartments for unhoused residents and low-income artists, addressing historical housing discrimination through intergenerational programming and partnerships. The event highlighted the tower’s role in combating decades of gentrification and redlining in the city.",
       "url": "https://www.michigandaily.com/news/ann-arbor/more-than-just-another-building-new-gathering-space-opens-in-dunbar-tower-affordable-housing-development/",
       "publishedAt": "2026-10-13T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Kayla Anderson",
-        "Rev. Christina Dennis",
-        "Jennifer Hall",
-        "Daliesha Sanduno",
-        "Lucille Hall Porter",
         "Ann Arbor Housing Commission",
         "Avalon Housing",
         "Mount Zion African Methodist Episcopal Church",
+        "Lucille Hall Porter",
         "Paul Laurence Dunbar",
-        "Kerrytown",
-        "Water Hill",
-        "Ann Arbor African American Downtown Festival"
-      ],
-      "locations": [
-        "Ann Arbor, MI",
+        "Ann Arbor African American Downtown Festival",
         "Kerrytown",
         "Water Hill"
       ],
+      "locations": [
+        "Ann Arbor, MI",
+        "Kerrytown, Ann Arbor, MI",
+        "Water Hill, Ann Arbor, MI"
+      ],
       "localityIndex": 2,
       "topics": [
-        "affordable-housing",
-        "community-development",
-        "racial-justice",
-        "urban-renewal",
-        "public-housing"
+        "affordable housing",
+        "community development",
+        "racial discrimination",
+        "housing policy",
+        "urban development"
       ],
       "source": {
         "name": "Kayla Anderson",
@@ -106481,37 +107075,37 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.06,
-          "distinctive": 0.57,
-          "eclectic": 0.62,
+          "funny": 0.04,
+          "distinctive": 0.62,
+          "eclectic": 0.28,
           "technical_science": 0.04,
-          "artsy": 0.59,
-          "progressive": 0.92,
+          "artsy": 0.31,
+          "progressive": 0.93,
           "outdoors": 0.03,
           "theatre": 0.02,
-          "live_music": 0.04,
+          "live_music": 0.03,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
           "sporting": 0.01,
-          "recurring": 0.08,
-          "craft_fair_shopping": 0.03,
+          "recurring": 0.05,
+          "craft_fair_shopping": 0.02,
           "religious": 0.03,
           "large_venue": 0.04,
           "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.03,
+          "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
-          "dance": 0.03,
+          "dance": 0.02,
           "sales_related": 0.05,
-          "children_activity": 0.07,
+          "children_activity": 0.04,
           "running": 0.01,
-          "exercise": 0.03,
+          "exercise": 0.01,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://www.michigandaily.com/wp-content/uploads/2026/10/dan.NEW_.Dunbar.10.11.26.34.jpg",
-        "alt": "A speaker addresses attendees from the front of the room. Dan Kim/DAILY."
+        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/10/dan.NEW_.Dunbar.10.11.26.34.jpg?fit=780%2C519&ssl=1",
+        "alt": "A speaker addresses attendees from the front of the room."
       }
     },
     {
@@ -107910,6 +108504,72 @@
       "photo": {
         "url": "https://www.mlive.com/resizer/v2/JG7N2OYJP5A6XGEZ6LAKFX4B4I.jpg?auth=7bc8d9c59717471059860f615c7f06ab47822d2340f26a0cd7312511f277d56b&width=1280&smart=true&quality=90",
         "alt": "Muskegon Heights City Councilman Ronald Jenkins, center, speaks during a discussion on the open city manager position. Left is Mayor Pro Tem Kellie Kitchen, and right is Mayor Bonnie McGlothin. Photo by Ehren Wynder"
+      }
+    },
+    {
+      "id": "muskegon-seeks-community-feedback-for-th-news-2026-10-13",
+      "title": "Muskegon seeks community feedback for Third Street Wharf waterfront property",
+      "summary": "Muskegon residents will have an opportunity to view designs and provide feedback for the future Third Street Wharf waterfront park. The city is developing a 3.12-acre park on vacant property adjacent to the Shoreline Inn, with a public engagement event scheduled for October 20. The project includes collaboration with adjacent green space owned by Mart Dock/West Michigan Dock and Market Corporation.",
+      "url": "https://www.mlive.com/news/muskegon/2026/10/muskegon-seeks-community-feedback-for-third-street-wharf-waterfront-property.html",
+      "publishedAt": "2026-10-13T21:28:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Muskegon City Commission",
+        "Shoreline Inn",
+        "Mart Dock/West Michigan Dock and Market Corporation",
+        "Progressive Companies",
+        "Jonathan Seyferth",
+        "Willie German Jr."
+      ],
+      "locations": [
+        "Muskegon, MI"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "community feedback",
+        "waterfront development",
+        "public park",
+        "city planning"
+      ],
+      "source": {
+        "name": "Ehren Wynder",
+        "publication": "MLive.com"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.15,
+          "eclectic": 0.07,
+          "technical_science": 0.13,
+          "artsy": 0.33,
+          "progressive": 0.28,
+          "outdoors": 0.24,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.06,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/GQH7HNZVKNCI5NQB2LICZ66LTQ.JPG?auth=2f72be8911ab379b98c8c17ee68a478bf3b16deba5b49511bb8a814f2fe405f7&width=1280&smart=true&quality=90",
+        "alt": "Third Street Wharf"
       }
     },
     {
@@ -111469,6 +112129,68 @@
       "photo": {
         "url": "https://www.mlive.com/resizer/v2/ZXSATKSQIFAP7CTISPBQULG4SU.jpg?auth=3ef87644b9eea55021181336cb8592605ea9cd2af500653ceb5f6f2fea19eb04&width=1280&smart=true&quality=90",
         "alt": "A new Swedish, swim-up sauna has opened at Mount Bohemia's big spa complex near the tip of the Keweenaw Peninsula. Photo provided by Mount Bohemia"
+      }
+    },
+    {
+      "id": "northbound-u-s-131-closed-after-four-veh-news-2026-10-13",
+      "title": "Northbound U.S. 131 closed after four-vehicle crash in Kent County",
+      "summary": "Northbound U.S. 131 was closed due to a four-vehicle crash in Kent County on Tuesday, Oct. 13. The incident caused temporary road closures in the area.",
+      "url": "https://www.mlive.com/news/grand-rapids/2026/10/northbound-us-131-closed-after-four-vehicle-crash-in-kent-county.html",
+      "publishedAt": "2026-10-13T00:00:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": true,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Melissa Frick",
+        "Northbound U.S. 131"
+      ],
+      "locations": [
+        "Kent County",
+        "Wyoming, MI"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "traffic",
+        "accident",
+        "road closure"
+      ],
+      "source": {
+        "name": "Melissa Frick",
+        "publication": "MLive / The Ann Arbor News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.01,
+          "distinctive": 0.14,
+          "eclectic": 0.04,
+          "technical_science": 0.05,
+          "artsy": 0.01,
+          "progressive": 0.02,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.03,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/J5MAFXNO2RHDTBF2GQT5V4UGJQ.jpg?auth=d3465933c801b71cb98f490c820c996a56a00815ab9a48692b6e9e174804aee0&smart=true&height=1200",
+        "alt": "Northbound U.S. 131 closed after four-vehicle crash in Kent County"
       }
     },
     {
@@ -115196,12 +115918,12 @@
       }
     },
     {
-      "id": "paige-shiver-interview-16-takeaways-from-news-2026-04-24",
-      "title": "Paige Shiver interview: 16 takeaways from Sherrone Moore’s former assistant",
-      "summary": "Paige Shiver alleges that Sherrone Moore, her former supervisor, exerted complete control over her emotions and career through years of harassment and manipulation, using emotional tactics to prevent her from leaving. She described how Moore would fabricate stories to keep her tied to Michigan, claiming he was miserable without her.",
+      "id": "paige-shiver-accuses-sherrone-moore-of-h-news-2026-04-24",
+      "title": "Paige Shiver Accuses Sherrone Moore of Harassment and Manipulation",
+      "summary": "Paige Shiver alleged during an interview that former Michigan assistant coach Sherrone Moore exerted 'complete control' over her emotions and career through years of harassment and manipulation. Shiver claimed Moore used emotional manipulation to prevent her from leaving, fabricating reasons to keep her tied to Michigan.",
       "url": "https://www.clickondetroit.com/news/local/2026/04/24/paige-shiver-interview-16-takeaways-from-sherrone-moores-former-assistant/",
       "publishedAt": "2026-04-24T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -115223,27 +115945,27 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.49,
-          "eclectic": 0.16,
-          "technical_science": 0.03,
-          "artsy": 0.03,
-          "progressive": 0.33,
+          "distinctive": 0.53,
+          "eclectic": 0.14,
+          "technical_science": 0.02,
+          "artsy": 0.02,
+          "progressive": 0.43,
           "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.01,
           "live_comedy": 0.02,
-          "farmer_market": 0.02,
-          "sporting": 0.03,
-          "recurring": 0.09,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.04,
           "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.06,
+          "religious": 0.02,
+          "large_venue": 0.04,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
+          "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.02,
-          "dance": 0.01,
-          "sales_related": 0.03,
+          "dance": 0.03,
+          "sales_related": 0.02,
           "children_activity": 0.01,
           "running": 0.02,
           "exercise": 0.01,
@@ -115252,7 +115974,67 @@
       },
       "photo": {
         "url": "https://bc.gmg.io/image/upload/q_auto",
-        "alt": "Paige Shiver interview: 16 takeaways from Sherrone Moore’s former assistant"
+        "alt": "Paige Shiver Accuses Sherrone Moore of Harassment and Manipulation"
+      }
+    },
+    {
+      "id": "paige-shiver-interview-16-takeaways-from-news-2026-04-24",
+      "title": "Paige Shiver interview: 16 takeaways from Sherrone Moore’s former assistant",
+      "summary": "Paige Shiver described a threatening encounter in an interview, stating she feared for her life when a 6'4\" individual approached her aggressively with a hood up, accused her of ruining his life, and used butter knives. The incident involved the man ignoring her demands to leave and grabbing at her.",
+      "url": "https://www.clickondetroit.com/news/local/2026/04/24/paige-shiver-interview-16-takeaways-from-sherrone-moores-former-assistant/",
+      "publishedAt": "2026-04-24T00:00:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Paige Shiver",
+        "Sherrone Moore"
+      ],
+      "locations": [
+        "Ann Arbor & Ypsilanti, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "interview",
+        "threatening incident",
+        "personal safety"
+      ],
+      "source": {
+        "name": "All About Ann Arbor (WDIV ClickOnDetroit)"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.01,
+          "distinctive": 0.75,
+          "eclectic": 0.14,
+          "technical_science": 0.02,
+          "artsy": 0.02,
+          "progressive": 0.09,
+          "outdoors": 0.03,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.06,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.04,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.02,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://bc.gmg.io/image/upload/q_auto",
+        "alt": "Interview still or related image"
       }
     },
     {
@@ -119534,11 +120316,11 @@
     },
     {
       "id": "pure-evil-convicted-cancer-doctor-farid-news-2026-10-13",
-      "title": "‘Pure evil:’ Convicted cancer doctor Farid Fata seeks early release again, outraging victims",
-      "summary": "Over a decade after disgraced Michigan oncologist Farid Fata was sentenced to 45 years in federal prison for unnecessary cancer treatments, he’s once again asking for compassionate release. His victims oppose the move, and federal prosecutors have rejected his latest request as of Sept. 29, 2026. Fata’s original 2013 arrest, 2014 guilty plea, and 2016 restitution plan for victims remain central to the case.",
-      "url": "https://www.clickondetroit.com/news/local/2026/10/13/pure-evil-convicted-cancer-doctor-fata-seeks-early-release-again-outraging-victims/",
+      "title": "‘Pure evil’: Convicted cancer doctor Farid Fata seeks early release again, outraging victims",
+      "summary": "Convicted cancer doctor Farid Fata, who was sentenced to 45 years in prison in 2015 for health care fraud, has again requested compassionate release. His previous request was denied in March 2025, and federal prosecutors oppose the latest bid. Victims remain outraged as Fata's projected release date remains December 11, 2050.",
+      "url": "https://www.clickondetroit.com/news/local/2026/10/13/pure-evil-convicted-cancer-doctor-farid-fata-seeks-early-release-again-outraging-victims/",
       "publishedAt": "2026-10-13T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -119550,31 +120332,30 @@
       ],
       "localityIndex": 2,
       "topics": [
-        "healthcare fraud",
+        "health care fraud",
         "compassionate release",
-        "criminal justice",
-        "victims rights",
-        "michigan"
+        "victims",
+        "prison sentencing",
+        "legal challenges"
       ],
       "source": {
-        "name": "Local 4",
-        "publication": "All About Ann Arbor (WDIV ClickOnDetroit)"
+        "name": "All About Ann Arbor (WDIV ClickOnDetroit)"
       },
       "scoring": {
         "signals": {
           "funny": 0.01,
-          "distinctive": 0.63,
-          "eclectic": 0.2,
-          "technical_science": 0.22,
+          "distinctive": 0.57,
+          "eclectic": 0.14,
+          "technical_science": 0.15,
           "artsy": 0.02,
-          "progressive": 0.09,
+          "progressive": 0.08,
           "outdoors": 0.01,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.08,
+          "recurring": 0.09,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
           "large_venue": 0.03,
@@ -119583,7 +120364,7 @@
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.02,
+          "sales_related": 0.01,
           "children_activity": 0.01,
           "running": 0.01,
           "exercise": 0.01,
@@ -119591,8 +120372,8 @@
         }
       },
       "photo": {
-        "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/PGBAI35XQ5GCZKNYKZHLCQDHJE.jpeg?api_key=clickondetroit_06f87fefb2123598",
-        "alt": "Convicted cancer doctor Farid Fata"
+        "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/4902d559-c605-4425-939e-fa91580d93cf/image.jpg?api_key=clickondetroit_06f87fefb2123598",
+        "alt": "‘Pure evil’: Convicted cancer doctor Farid Fata seeks early release again, outraging victims"
       }
     },
     {
@@ -125253,58 +126034,46 @@
     {
       "id": "sacua-discusses-statement-of-student-rig-news-2026-10-13",
       "title": "SACUA discusses Statement of Student Rights and Responsibilities amendments, faculty housing",
-      "summary": "The University of Michigan’s Senate Advisory Committee on University Affairs (SACUA) met to discuss amending the Statement of Student Rights and Responsibilities and addressing faculty housing challenges. SACUA Chair Kentaro Toyama highlighted enrollment demographic shifts linked to Early Decision applications and presented housing programs from comparable universities. The committee approved an agenda for an upcoming Senate Assembly meeting on Oct. 26 and discussed the impact of Ann Arbor’s housing affordability crisis on junior faculty.",
+      "summary": "The University of Michigan’s Senate Advisory Committee on University Affairs met to discuss amending the Statement of Student Rights and Responsibilities and develop recommendations for faculty housing. The meeting included updates from SACUA Chair and addressed concerns related to student rights and responsibilities.",
       "url": "https://www.michigandaily.com/news/academics/sacua-discusses-statement-of-student-rights-and-responsibilities-amendments-faculty-housing/",
       "publishedAt": "2026-10-13T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Kentaro Toyama",
-        "Melanie Tanielian",
-        "Adele C. Brumfield",
-        "Martino Harmon",
-        "Domenico Grasso",
-        "Senate Advisory Committee on University Affairs (SACUA)",
-        "Central Student Government (CSG)",
-        "Faculty Senate",
-        "Student Relations Advisory Committee",
-        "Cornell University",
-        "Stanford University"
+        "University of Michigan’s Senate Advisory Committee on University Affairs",
+        "Aliana Ritter"
       ],
       "locations": [
         "Ann Arbor, MI"
       ],
       "localityIndex": 2,
       "topics": [
-        "university affairs",
+        "academics",
         "student rights",
-        "housing crisis",
-        "enrollment",
-        "faculty housing",
-        "policy amendments"
+        "faculty housing"
       ],
       "source": {
         "name": "Aliana Ritter",
-        "publication": "The Michigan Daily (University of Michigan)"
+        "publication": "The Michigan Daily"
       },
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.16,
-          "eclectic": 0.17,
-          "technical_science": 0.06,
-          "artsy": 0.02,
-          "progressive": 0.4,
+          "distinctive": 0.12,
+          "eclectic": 0.15,
+          "technical_science": 0.04,
+          "artsy": 0.03,
+          "progressive": 0.3,
           "outdoors": 0.01,
-          "theatre": 0.01,
+          "theatre": 0.02,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.77,
+          "recurring": 0.74,
           "craft_fair_shopping": 0.01,
-          "religious": 0.01,
+          "religious": 0.02,
           "large_venue": 0.03,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
@@ -125319,8 +126088,8 @@
         }
       },
       "photo": {
-        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/10/0W0A0024-1.jpg?fit=780%2C520&ssl=1",
-        "alt": "SACUA members sit around a conference table."
+        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/10/online.map_.NEW_.SACUA_.10.05.26.012.jpg?resize=800%2C600&ssl=1",
+        "alt": "SACUA members sit around a table."
       }
     },
     {
@@ -136087,13 +136856,14 @@
     {
       "id": "stroke-incidence-in-younger-adults-is-cl-news-2026-10-12",
       "title": "Stroke incidence in younger adults is climbing, UMich researchers find",
-      "summary": "University of Michigan researchers have found a rising trend in stroke incidence among younger adults. The study highlights growing concerns about this demographic's health risks.",
+      "summary": "University of Michigan researchers have found that stroke incidence in younger adults is increasing, raising concerns about emerging health trends. The study highlights a growing need for targeted prevention strategies among younger populations.",
       "url": "https://www.michigandaily.com/news/research/stroke-incidence-in-younger-adults-is-climbing-umich-researchers-find/",
       "publishedAt": "2026-10-12T00:00:00-04:00",
-      "addedAt": "2026-10-13T16:01:28-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "primary",
       "entities": [
+        "Francis Toma",
         "UMich researchers"
       ],
       "locations": [
@@ -136114,11 +136884,11 @@
         "signals": {
           "funny": 0.02,
           "distinctive": 0.15,
-          "eclectic": 0.07,
-          "technical_science": 0.86,
+          "eclectic": 0.06,
+          "technical_science": 0.87,
           "artsy": 0.02,
-          "progressive": 0.33,
-          "outdoors": 0.02,
+          "progressive": 0.43,
+          "outdoors": 0.01,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
@@ -136127,7 +136897,7 @@
           "recurring": 0.07,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
-          "large_venue": 0.04,
+          "large_venue": 0.03,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
@@ -136136,7 +136906,7 @@
           "sales_related": 0.02,
           "children_activity": 0.01,
           "running": 0.01,
-          "exercise": 0.02,
+          "exercise": 0.01,
           "employment_related": 0.01
         }
       },
@@ -143161,6 +143931,71 @@
       }
     },
     {
+      "id": "these-3-upcoming-ann-arbor-school-meetin-news-2026-10-13",
+      "title": "These 3 upcoming Ann Arbor school meetings could help shape the district’s future",
+      "summary": "Ann Arbor Public Schools is hosting three upcoming meetings and forums in October 2026 to gather community input on its next strategic plan and prepare for the November school board election. Community forums on October 14 and 15 will allow residents to share insights, while a pre-transition meeting on October 21 will provide institutional knowledge to potential new board members. The strategic plan process includes surveys, focus groups, and community sessions to shape priorities for student success.",
+      "url": "https://www.mlive.com/news/ann-arbor/2026/10/these-3-upcoming-ann-arbor-school-meetings-could-help-shape-the-districts-future.html",
+      "publishedAt": "2026-10-13T19:09:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "primary",
+      "entities": [
+        "Jazz Parks",
+        "Glynda Wilks",
+        "Torchio Feaster",
+        "Rima Mohammad"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "education",
+        "school board",
+        "community meetings",
+        "strategic planning",
+        "local governance"
+      ],
+      "source": {
+        "name": "Jackie Smith",
+        "publication": "MLive / The Ann Arbor News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.11,
+          "eclectic": 0.08,
+          "technical_science": 0.03,
+          "artsy": 0.03,
+          "progressive": 0.23,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.13,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/RKNJN7BAAZB4JNMDTWHWNZOOJA.JPG?auth=c303f369d35bdf208950df9127a35456e754ba686786bbbef928b7def46286ce&width=1280&smart=true&quality=90",
+        "alt": "Ann Arbor Public Schools teachers protest outside AAPS Board of Education meeting"
+      }
+    },
+    {
       "id": "third-grade-student-fires-gun-in-hallway-news-2026-09-22",
       "title": "Third-grade student fires gun in hallway of Michigan school",
       "summary": "A third-grade student brought a gun to Ann J. Kellogg Elementary School and discharged it in a hallway, according to police. No students were injured, and staff secured the weapon before officers arrived. The parent's residence was searched, and authorities plan to submit charges for review.",
@@ -146680,27 +147515,26 @@
     {
       "id": "u-m-student-caregivers-navigate-gaps-in-news-2026-10-13",
       "title": "U-M student caregivers navigate gaps in childcare services",
-      "summary": "University of Michigan student caregivers face challenges with childcare services due to long waitlists and limited resources. While the university's childcare centers prioritize faculty and staff children, students often struggle to access care. Recent initiatives, including a partnership with Bright Horizons for backup care and studies on nontraditional caregiving needs, aim to address these gaps. Support organizations like the Center of the Education of Women+ help connect students with available resources.",
+      "summary": "University of Michigan student caregivers face challenges with lengthy waitlists at campus childcare centers and limited support for adult caregiving needs. The University expanded backup care services through a partnership with Bright Horizons, but a 2024 study revealed most resources remain focused on student parents rather than those caring for adults. CEW+ and affiliated organizations provide advocacy and support for caregivers balancing academic and care responsibilities.",
       "url": "https://www.michigandaily.com/news/administration/u-m-student-caregivers-navigate-gaps-in-childcare-services/",
       "publishedAt": "2026-10-13T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "University of Michigan",
         "Christine Snyder",
         "Grace Christiansen",
         "Nyimasata Danjo",
+        "University of Michigan",
         "Center of the Education of Women+",
         "Michigan Caregivers and Student Parents",
-        "Bright Horizons",
         "University Human Resources",
-        "Division of Student Life Research",
-        "Institute for Social Research"
+        "Student Life Research",
+        "Institute for Social Research",
+        "Bright Horizons"
       ],
       "locations": [
-        "Ann Arbor, MI",
-        "University of Michigan"
+        "Ann Arbor, MI"
       ],
       "localityIndex": 2,
       "topics": [
@@ -146708,45 +147542,46 @@
         "student caregivers",
         "university resources",
         "support services",
-        "caregiving gaps"
+        "study",
+        "collaboration"
       ],
       "source": {
         "name": "Kylie Harmala",
-        "publication": "The Michigan Daily"
+        "publication": "The Michigan Daily (University of Michigan)"
       },
       "scoring": {
         "signals": {
           "funny": 0.03,
-          "distinctive": 0.14,
-          "eclectic": 0.11,
-          "technical_science": 0.06,
+          "distinctive": 0.15,
+          "eclectic": 0.14,
+          "technical_science": 0.05,
           "artsy": 0.03,
-          "progressive": 0.74,
+          "progressive": 0.64,
           "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.01,
           "live_comedy": 0.01,
-          "farmer_market": 0.01,
+          "farmer_market": 0.02,
           "sporting": 0.01,
-          "recurring": 0.17,
+          "recurring": 0.18,
           "craft_fair_shopping": 0.01,
           "religious": 0.02,
-          "large_venue": 0.04,
+          "large_venue": 0.05,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.02,
+          "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.03,
-          "children_activity": 0.07,
+          "sales_related": 0.04,
+          "children_activity": 0.05,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.03
         }
       },
       "photo": {
-        "url": "https://www.michigandaily.com/wp-content/uploads/2026/02/online.MGR_.STK_.north-campus-childrens-center.02.09.26.006.jpg",
-        "alt": "The inside of a North Campus Children’s Center classroom."
+        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/10/DBG.Stock_.Campus-Buildings.10.13.26.2.jpg?fit=780%2C520&ssl=1",
+        "alt": "The front entrance of CEW+."
       }
     },
     {
@@ -148069,18 +148904,24 @@
     {
       "id": "umich-drops-out-of-top-20-in-2027-u-s-ne-news-2026-09-30",
       "title": "UMich drops out of top 20 in 2027 U.S. News & World Report rankings",
-      "summary": "The University of Michigan’s Ann Arbor campus fell out of the U.S. News & World Report’s top 20 best national universities ranking in 2027, dropping from No. 20 to No. 25. The ranking methodology emphasizes student outcomes like graduation rates and post-graduate success. University officials stated rankings do not define their mission, while faculty and students expressed concerns about administrative decisions and the impact on prospective students.",
+      "summary": "The University of Michigan has fallen out of the top 20 in the 2027 U.S. News & World Report rankings. This marks a significant drop from its previous standing, raising questions about changes in academic evaluation criteria. The article references the Leinweber Computer Science and Information Building in its related coverage.",
       "url": "https://www.michigandaily.com/news/academics/umich-drops-out-of-top-20-in-2027-u-s-news-world-report-rankings/",
       "publishedAt": "2026-09-30T00:00:00-04:00",
-      "addedAt": "2026-10-02T23:22:24-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "University of Michigan",
+        "U.S. News & World Report"
+      ],
       "locations": [
         "Ann Arbor, MI"
       ],
       "localityIndex": 2,
       "topics": [
-        "education",
+        "academics",
         "rankings",
-        "university"
+        "university of michigan"
       ],
       "source": {
         "name": "Sarah Palushi",
@@ -148088,10 +148929,10 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.04,
-          "distinctive": 0.26,
+          "funny": 0.05,
+          "distinctive": 0.32,
           "eclectic": 0.09,
-          "technical_science": 0.11,
+          "technical_science": 0.35,
           "artsy": 0.03,
           "progressive": 0.09,
           "outdoors": 0.01,
@@ -148099,13 +148940,13 @@
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.73,
+          "sporting": 0.02,
+          "recurring": 0.62,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
-          "large_venue": 0.03,
+          "large_venue": 0.04,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
+          "popular_music_cover_band": 0.02,
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
@@ -148117,8 +148958,8 @@
         }
       },
       "photo": {
-        "url": "https://www.michigandaily.com/wp-content/uploads/2026/09/umich_drops_out_of_top_20_articles_1024.png",
-        "alt": "An illustration of a graduate falling off a ladder labeled 'Top 20'"
+        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/09/edited.lum_.STKLeinwebercomputersienceandinformationbuilding.11.23.2025.99.jpg?resize=800%2C600&ssl=1",
+        "alt": "The front entrance of the Leinweber Computer Science and Information Building."
       }
     },
     {
@@ -148409,26 +149250,27 @@
     {
       "id": "umma-presents-black-wall-street-exhibiti-news-2026-10-13",
       "title": "UMMA presents Black Wall Street exhibition, bridging data, art and the Black experience",
-      "summary": "'Black Wall Street Journey: Re and De Imagining Black Progress,' a new exhibit at The University of Michigan Museum of Art, asks who — and what — gets to tell the story of the Black economy. The project includes an exhibition on the second floor of the museum, where paintings and sculptures are displayed alongside [...]",
+      "summary": "The University of Michigan Museum of Art (UMMA) is presenting an exhibition exploring the history and legacy of Black Wall Street, connecting data, art, and the Black experience. The exhibition highlights the 1921 Tulsa massacre and its impact, aiming to foster dialogue about resilience and community through interdisciplinary works. It features collaborations with local artists and scholars to contextualize historical events with contemporary perspectives.",
       "url": "https://www.michigandaily.com/news/campus-life/umma-presents-black-wall-street-exhibition-bridging-data-art-and-the-black-experience/",
       "publishedAt": "2026-10-13T00:00:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Mya Weiss",
         "Zooey Raux",
-        "University of Michigan Museum of Art",
-        "University of Michigan"
+        "UMMA"
       ],
       "locations": [
-        "Ann Arbor, MI"
+        "Ann Arbor"
       ],
       "localityIndex": 2,
       "topics": [
         "art",
         "black experience",
-        "exhibition"
+        "data",
+        "exhibition",
+        "history"
       ],
       "source": {
         "name": "Mya Weiss and Zooey Raux",
@@ -148436,29 +149278,29 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.06,
-          "distinctive": 0.71,
-          "eclectic": 0.83,
-          "technical_science": 0.11,
+          "funny": 0.03,
+          "distinctive": 0.62,
+          "eclectic": 0.86,
+          "technical_science": 0.15,
           "artsy": 0.98,
           "progressive": 0.89,
           "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.02,
-          "live_comedy": 0.02,
+          "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.08,
-          "craft_fair_shopping": 0.03,
+          "recurring": 0.07,
+          "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.04,
+          "large_venue": 0.05,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
+          "popular_music_cover_band": 0.01,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.02,
-          "sales_related": 0.1,
-          "children_activity": 0.04,
+          "sales_related": 0.11,
+          "children_activity": 0.03,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
@@ -148466,7 +149308,7 @@
       },
       "photo": {
         "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/10/lum.NEW_.UMMABlackWallStreetJourney.09.27.26.0054.jpg?resize=1200%2C900&ssl=1",
-        "alt": "Exhibition at UMMA"
+        "alt": "UMMA presents Black Wall Street exhibition, bridging data, art and the Black experience"
       }
     },
     {
@@ -148880,6 +149722,135 @@
       }
     },
     {
+      "id": "university-of-michigan-regents-expected-news-2026-10-01",
+      "title": "University of Michigan Regents expected to approve designs for $29M gymnastics center",
+      "summary": "The University of Michigan Board of Regents already committed $29 million last May to build its new Men’s Gymnastics Training Center. The regents are now expected to approve the designs for the facility.",
+      "url": "https://www.mlive.com/news/ann-arbor/2026/10/university-of-michigan-regents-expected-to-approve-designs-for-29m-gymnastics-center.html",
+      "publishedAt": "2026-10-01T00:00:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "University of Michigan Board of Regents",
+        "Drew Saunders"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "university",
+        "gymnastics",
+        "construction",
+        "funding"
+      ],
+      "source": {
+        "name": "Drew Saunders",
+        "publication": "MLive / The Ann Arbor News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.17,
+          "eclectic": 0.09,
+          "technical_science": 0.44,
+          "artsy": 0.11,
+          "progressive": 0.13,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.03,
+          "recurring": 0.11,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.14,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/KMBNJDMN5JFQPHQJV4USPKWO74.JPG?auth=a8429b3b6b9aca05ffeed6f9c5a9def93128de3a74689accc2525c08e18d0585&smart=true&height=1200",
+        "alt": "University of Michigan Regents expected to approve designs for $29M gymnastics center"
+      }
+    },
+    {
+      "id": "university-of-michigan-regents-expected-news-2026-10-13",
+      "title": "University of Michigan Regents expected to approve designs for $29M gymnastics center",
+      "summary": "The University of Michigan Board of Regents is expected to approve the schematic design for a new $29 million Men’s Gymnastics Training Center on Oct. 15, replacing the aging Coliseum Building. The facility will include dedicated practice areas, locker rooms, and recovery spaces, with construction managed by Integrated Architecture. The Coliseum, currently housing the program, is slated for demolition to make way for future development.",
+      "url": "https://www.mlive.com/news/ann-arbor/2026/10/university-of-michigan-regents-expected-to-approve-designs-for-29m-gymnastics-center.html",
+      "publishedAt": "2026-10-13T17:33:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "University of Michigan Board of Regents",
+        "Warde Manuel",
+        "Integrated Architecture",
+        "MGoBlue"
+      ],
+      "locations": [
+        "Ann Arbor, MI",
+        "Coliseum Building",
+        "Bahna Wrestling Center"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "university",
+        "construction",
+        "sports",
+        "athletics",
+        "architecture"
+      ],
+      "source": {
+        "name": "Drew Saunders",
+        "publication": "MLive / The Ann Arbor News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.2,
+          "eclectic": 0.12,
+          "technical_science": 0.7,
+          "artsy": 0.22,
+          "progressive": 0.15,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.03,
+          "recurring": 0.08,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.21,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.05,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/KMBNJDMN5JFQPHQJV4USPKWO74.JPG?auth=a8429b3b6b9aca05ffeed6f9c5a9def93128de3a74689accc2525c08e18d0585&width=1280&smart=true&quality=90",
+        "alt": "University of Michigan campus"
+      }
+    },
+    {
       "id": "university-of-michigan-reverses-first-ye-news-2026-10-01",
       "title": "University of Michigan Reverses First-Year Grade Policy",
       "summary": "Etai Smotrich-Barr from the Michigan Public newsroom spoke to University of Michigan students about the recent reversal of policy on grades for first-year undergraduates.",
@@ -149050,33 +150021,34 @@
     {
       "id": "university-of-michigan-to-host-elevate-h-news-2026-10-08",
       "title": "University of Michigan to host Elevate HER Summit celebrating women in sports",
-      "summary": "The University of Michigan is bringing together some of the biggest names in women’s sports for an event focused on leadership, mentorship and creating opportunities for the next generation. The Women in Sports: Elevate HER Summit will take place Thursday, Oct. 15, at Crisler Center in Ann Arbor. The summit will feature accomplished athletes, coaches and sports industry leaders sharing their experiences and advice with students, alumni and community members.",
+      "summary": "The University of Michigan is hosting the Women in Sports: Elevate HER Summit on October 15 at Crisler Center in Ann Arbor. The event will feature prominent women in sports, including legendary softball coach Carol Hutchins and former athlete Debbie Williams-Hoak, alongside panels and discussions focused on leadership, mentorship, and career pathways in sports. The summit aims to connect women across the sports industry through networking and professional development opportunities.",
       "url": "https://www.clickondetroit.com/news/local/2026/10/08/university-of-michigan-to-host-elevate-her-summit-celebrating-women-in-sports/",
       "publishedAt": "2026-10-08T12:57:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "University of Michigan",
         "Carol Hutchins",
         "Debbie Williams-Hoak",
         "Kate Johnson",
         "Li Li Leung",
         "Estee Portnoy",
         "Casey E. Taylor",
-        "Andrea Joyce"
+        "Andrea Joyce",
+        "University of Michigan",
+        "All About Ann Arbor (WDIV ClickOnDetroit)"
       ],
       "locations": [
         "Ann Arbor & Ypsilanti, MI"
       ],
       "localityIndex": 2,
       "topics": [
+        "university of michigan",
         "women in sports",
         "leadership",
         "mentorship",
-        "professional development",
-        "university of michigan",
-        "athletics"
+        "summit",
+        "ann arbor"
       ],
       "source": {
         "name": "Angel Delich",
@@ -149085,31 +150057,31 @@
       "scoring": {
         "signals": {
           "funny": 0.04,
-          "distinctive": 0.29,
-          "eclectic": 0.15,
-          "technical_science": 0.04,
-          "artsy": 0.06,
-          "progressive": 0.69,
+          "distinctive": 0.28,
+          "eclectic": 0.13,
+          "technical_science": 0.03,
+          "artsy": 0.07,
+          "progressive": 0.68,
           "outdoors": 0.02,
           "theatre": 0.02,
-          "live_music": 0.01,
+          "live_music": 0.02,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.04,
           "recurring": 0.11,
           "craft_fair_shopping": 0.01,
           "religious": 0.02,
-          "large_venue": 0.86,
+          "large_venue": 0.85,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.11,
+          "sales_related": 0.15,
           "children_activity": 0.02,
           "running": 0.02,
           "exercise": 0.02,
-          "employment_related": 0.21
+          "employment_related": 0.33
         }
       },
       "photo": {
@@ -154208,18 +155180,20 @@
     {
       "id": "wayne-county-woman-reported-missing-afte-news-2026-10-13",
       "title": "Wayne County woman reported missing after car found abandoned, crashed near Huron River",
-      "summary": "Kimberly McGrath, 43, of Southgate was reported missing after her car was found crashed in a Huron Township backyard on Oct. 10. She last contacted her family on Oct. 9, and police have not located her despite searches using drones, a K9 team, and checking the Huron River. Authorities fear she may be injured and ask residents to check outbuildings and sheltered areas.",
+      "summary": "Kimberly McGrath, 43, of Southgate was reported missing after her car was found crashed in a Huron Township backyard on Oct. 10. She last contacted family on Oct. 9; searches with drones and a K9 team found no trace of her. Police fear she may be injured and urge residents to check outbuildings and sheltered areas.",
       "url": "https://www.clickondetroit.com/news/local/2026/10/13/wayne-county-woman-reported-missing-after-car-found-abandoned-crashed-near-huron-river/",
       "publishedAt": "2026-10-13T15:52:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": true,
       "evidenceQuality": "reported",
       "entities": [
         "Kimberly McGrath",
-        "Huron Township Police Department"
+        "Huron Township Police Department",
+        "Samantha Sayles",
+        "All About Ann Arbor (WDIV ClickOnDetroit)"
       ],
       "locations": [
-        "Wayne County, Mich.",
+        "Wayne County",
         "Huron Township",
         "Southgate",
         "Huron River"
@@ -154238,8 +155212,8 @@
       "scoring": {
         "signals": {
           "funny": 0.01,
-          "distinctive": 0.44,
-          "eclectic": 0.12,
+          "distinctive": 0.48,
+          "eclectic": 0.11,
           "technical_science": 0.07,
           "artsy": 0.02,
           "progressive": 0.04,
@@ -154258,7 +155232,7 @@
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.01,
+          "sales_related": 0.02,
           "children_activity": 0.01,
           "running": 0.01,
           "exercise": 0.01,
@@ -156609,34 +157583,32 @@
     {
       "id": "what-we-know-about-the-deadly-boat-crash-news-2026-10-08",
       "title": "What we know about the deadly boat crash near MacRay Harbor in Lake St. Clair that killed 3",
-      "summary": "A boat crash in Lake St. Clair on October 7, 2026, near MacRay Harbor left three people dead and one injured. The Macomb County Sheriff’s Office reported the incident involved two boats, a Formula Thunderbird and a Sea Ray Sundancer, which collided and capsized. The deceased were identified as Craig Miller, Heidi Baldwin, and Gerald Grzadzinski, the boat owner. A fourth passenger survived with non-life-threatening injuries and provided initial details to investigators.",
+      "summary": "A boat crash in Lake St. Clair on October 7, 2026, near MacRay Harbor in Harrison Township left three people dead. The Macomb County Sheriff’s Office reported the incident involved two boats, with three fatalities recovered from a capsized Formula Thunderbird. A survivor, identified as the boat owner’s wife, was hospitalized with non-life threatening injuries. The investigation is ongoing.",
       "url": "https://www.clickondetroit.com/news/local/2026/10/08/what-we-know-about-the-deadly-boat-crash-near-macray-harbor-in-lake-st-clair-that-killed-3/",
       "publishedAt": "2026-10-08T15:47:00-04:00",
-      "addedAt": "2026-10-13T18:17:27-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Macomb County Sheriff’s Office",
         "Craig Miller",
         "Heidi Baldwin",
         "Gerald Grzadzinski",
-        "Jay Scott Smith",
-        "Jacob Nagel",
-        "Kerry Reedy"
+        "Kerry Reedy",
+        "Macomb County Sheriff’s Office"
       ],
       "locations": [
         "Harrison Township",
-        "Macomb County",
-        "Lake St. Clair"
+        "Lake St. Clair",
+        "Macomb County"
       ],
       "localityIndex": 3,
       "topics": [
         "boat crash",
         "deaths",
         "investigation",
-        "lake st. clair",
         "macomb county",
-        "michigan"
+        "lake st clair",
+        "safety"
       ],
       "source": {
         "name": "Jay Scott Smith, Jacob Nagel",
@@ -156645,18 +157617,18 @@
       "scoring": {
         "signals": {
           "funny": 0.01,
-          "distinctive": 0.47,
+          "distinctive": 0.44,
           "eclectic": 0.06,
-          "technical_science": 0.13,
+          "technical_science": 0.14,
           "artsy": 0.02,
           "progressive": 0.03,
-          "outdoors": 0.08,
+          "outdoors": 0.06,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.03,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
           "large_venue": 0.02,
@@ -158149,6 +159121,73 @@
       "photo": {
         "url": "https://www.mlive.com/resizer/v2/NELHXLJUBVE5TPGRJWZNFKMNX4.jpg?auth=05b46e82ebbf5413509995c56c18f008e47bab019c5d652978d1c702a621e0c2&width=1280&smart=true&quality=90",
         "alt": "Phoebe Bridgers performs in concert during a taping of the \"Austin City Limits\" TV show at ACL Live on Thursday, Oct. 7, 2021, in Austin, Texas."
+      }
+    },
+    {
+      "id": "white-lake-township-residents-say-apartm-news-2026-10-13",
+      "title": "White Lake Township residents say apartment complex is covered in mold, property says it’s fixed",
+      "summary": "Residents of Four Corners Lakeview apartments in White Lake Township report mold issues impacting their health, with some tenants showing medical evidence. The property management claims environmental experts investigated and remediated affected areas, though tenants remain concerned. Some residents are being released from their leases without penalties.",
+      "url": "https://www.clickondetroit.com/news/local/2026/10/13/disgusting-white-lake-township-residents-say-apartment-complex-is-covered-in-mold-property-says-its-fixed/",
+      "publishedAt": "2026-10-13T18:12:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Jim Black",
+        "Julie",
+        "Sherry Gordon",
+        "Kyla Russell",
+        "Jacob Nagel",
+        "apartment management company",
+        "environmental specialists"
+      ],
+      "locations": [
+        "White Lake Township, Mich."
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "oakland county apartment issues",
+        "environmental testing mold",
+        "tenant lease release mold",
+        "mold and respiratory problems"
+      ],
+      "source": {
+        "name": "Kyla Russell and Jacob Nagel",
+        "publication": "All About Ann Arbor (WDIV ClickOnDetroit)"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.21,
+          "eclectic": 0.14,
+          "technical_science": 0.57,
+          "artsy": 0.02,
+          "progressive": 0.16,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.07,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/d3dcb63e-64f9-4fa8-a379-905268e1bd3e/image.jpg?api_key=clickondetroit_06f87fefb2123598",
+        "alt": "Jim Black's at home mold tests after several days."
       }
     },
     {
@@ -160363,6 +161402,73 @@
       "photo": {
         "url": "https://www.mlive.com/resizer/v2/LW4ECHNGRJHEFG3MW6XVS66ZEE.jpg?auth=0b19e140102ffa227aaed6cc7a05cf1b0de189d8aa1196fd18868cab687595d5&width=1280&smart=true&quality=90",
         "alt": "Police in Kalamazoo"
+      }
+    },
+    {
+      "id": "woman-arrested-after-gas-station-robbery-news-2026-10-13",
+      "title": "Woman arrested after gas station robbery in Plymouth Township",
+      "summary": "A 35-year-old Wayne woman was arrested after an armed robbery at a Plymouth Township gas station on Oct. 11. The suspect, Diamond Dominique-Marie, allegedly stole a victim's wallet and phone at gunpoint before fleeing in a black Jeep SUV. Police recovered the stolen items, a firearm, and evidence linking her to other crimes in Metro Detroit. She was arraigned on charges including armed robbery and felony firearm.",
+      "url": "https://www.mlive.com/news/detroit/2026/10/woman-arrested-after-gas-station-robbery-in-plymouth-township.html",
+      "publishedAt": "2026-10-13T19:00:00-04:00",
+      "addedAt": "2026-10-13T23:46:59-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Diamond Dominique-Marie",
+        "Plymouth Township Police",
+        "Dearborn Police Department",
+        "Melissa Frick"
+      ],
+      "locations": [
+        "Plymouth Township, MI",
+        "Wayne County, MI",
+        "Dearborn, MI"
+      ],
+      "localityIndex": 0,
+      "topics": [
+        "armed robbery",
+        "arrest",
+        "police investigation",
+        "metro detroit crime",
+        "firearm charges"
+      ],
+      "source": {
+        "name": "Melissa Frick | mfrick@mlive.com",
+        "publication": "MLive / The Ann Arbor News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.01,
+          "distinctive": 0.14,
+          "eclectic": 0.06,
+          "technical_science": 0.02,
+          "artsy": 0.01,
+          "progressive": 0.03,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.04,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/RK5K6WTS3JFBNDHUDGIWWDS3SA.png?auth=8548f4ca9053756369d9f2dfb6aed07d1671ea0622deec4c7d8713e6f166a7f6&width=1280&smart=true&quality=90",
+        "alt": "Armed robbery suspect and recovered firearm"
       }
     },
     {
