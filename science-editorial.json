@@ -1,8 +1,67 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-10-14T17:23:34.432325-04:00",
+  "generatedAt": "2026-10-15T06:21:06.260137-04:00",
   "stories": [
+    {
+      "id": "science-7f03a5df97184a3b",
+      "title": "Fires Arrive in the Amazon Rainforest",
+      "summary": "A drought linked to El Niño has led to a severe fire season in the Amazon rainforest, with satellites detecting increased fire activity and smoke emissions since September 2026. This has caused extremely poor air quality in cities like Manaus, disrupting daily life and leading to school closures.",
+      "finding": "A drought linked to El Niño has led to a severe fire season in the Amazon rainforest, with satellites detecting increased fire activity and smoke emissions since September 2026. This has caused extremely poor air quality in cities like Manaus, disrupting daily life and leading to school closures.",
+      "significance": "The fires are causing significant ecological damage, as rainforest species are not adapted to fire, and are leading to extremely poor air quality in populated areas like Manaus, disrupting daily life and posing health risks. This pattern of fires during El Niño events is recurring, indicating a predictable and worsening environmental crisis.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
+      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-15T00:01:00-04:00",
+      "firstSeenAt": "2026-10-15T10:00:00.772183Z",
+      "checkedAt": "2026-10-15T10:00:00.772183Z",
+      "verifiedAt": "2026-10-15T10:00:00.772183Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "earth-science",
+        "wildfires",
+        "climate"
+      ],
+      "entities": [
+        "Amazon rainforest",
+        "El Niño",
+        "NASA",
+        "Manaus",
+        "MODIS"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-10-15T04:01:00Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-15T06:21:06.260137-04:00",
+        "expiresAt": "2026-10-18T06:21:06.260137-04:00",
+        "inputFacts": {
+          "id": "science-7f03a5df97184a3b",
+          "title": "Fires Arrive in the Amazon Rainforest",
+          "url": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
+          "publishedAt": "2026-10-15T04:01:00Z",
+          "summary": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
+          "finding": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
+          "sourceUpdatedAt": "2026-10-15T04:01:00Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-10-15T00:01:00-04:00",
+        "datePrecision": "time",
+        "sourceHash": "4b96f6c0f25861d818ff4f5952f94c5ac76be287df27bb0a52d216ac5d29ce43",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "New findings on the impact of El Niño on the Amazon rainforest, with significant environmental and societal consequences.",
+        "storyKey": "amazon-rainforest-fires-el-nino-2026",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims in the summary, detailing the link between El Niño and the severe fire season, increased fire activity and smoke emissions since September 2026, and the resulting poor air quality and disruptions in Manaus. This is a new finding/development."
+      }
+    },
     {
       "id": "science-3f01fb21be9ace53",
       "title": "Can you trust a robot in charge?",
@@ -63,6 +122,126 @@
       }
     },
     {
+      "id": "science-21579838c4cb1b39",
+      "title": "Treating life-threatening blood clots in minutes with swirling sound waves",
+      "summary": "A U-M-led team is developing a minimally invasive device using 'vortex ultrasound' to break up life-threatening pulmonary embolisms. Preliminary lab tests with cow's blood showed the swirling sound waves could restore flow through a three-inch clot in eight minutes, potentially offering a faster, safer alternative to current treatments.",
+      "finding": "A U-M-led team is developing a minimally invasive device using 'vortex ultrasound' to break up life-threatening pulmonary embolisms. Preliminary lab tests with cow's blood showed the swirling sound waves could restore flow through a three-inch clot in eight minutes, potentially offering a faster, safer alternative to current treatments.",
+      "significance": "This technology could offer a faster and safer alternative to current treatments for pulmonary embolism, which include clot-busting drugs that carry a high risk of internal bleeding and mechanical removal methods that can damage blood vessels or require open-chest surgery.",
+      "caveat": "The research is in its early stages, with initial tests conducted in a laboratory setting using cow blood. Further development and testing in pigs are planned to refine the device and evaluate its safety before human clinical use.",
+      "url": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
+      "primarySourceUrl": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
+      "source": {
+        "name": "University of Michigan News"
+      },
+      "sourceGroup": "U-M",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-13T12:25:49-04:00",
+      "firstSeenAt": "2026-10-14T10:00:06.638546Z",
+      "checkedAt": "2026-10-14T10:00:06.638546Z",
+      "verifiedAt": "2026-10-14T10:00:06.638546Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "health",
+        "technology",
+        "biology"
+      ],
+      "entities": [
+        "National Institutes of Health",
+        "University of Michigan",
+        "pulmonary embolism",
+        "vortex ultrasound"
+      ],
+      "milestoneStatus": "planned",
+      "sourceUpdatedAt": "2026-10-13T19:23:00Z",
+      "localConnection": "University of Michigan research in Ann Arbor.",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-15T06:21:06.260137-04:00",
+        "expiresAt": "2026-10-18T06:21:06.260137-04:00",
+        "inputFacts": {
+          "id": "science-21579838c4cb1b39",
+          "title": "Treating life-threatening blood clots in minutes with swirling sound waves",
+          "url": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
+          "publishedAt": "2026-10-13T16:25:49Z",
+          "summary": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch clot in eight minutes.",
+          "finding": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch clot in eight minutes.",
+          "sourceUpdatedAt": "2026-10-13T19:23:00Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-10-13T12:25:49-04:00",
+        "datePrecision": "time",
+        "sourceHash": "120c7822f7b625dee3b66d6f4003d8c5096aa16b78f8da4f161e5e2754735524",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "Substantive new medical technology development with potential significant health impact, led by a local university.",
+        "storyKey": "vortex-ultrasound-blood-clot-treatment",
+        "localConnection": "University of Michigan is leading the research.",
+        "grounded": true,
+        "groundingReason": "The summary accurately reflects the article's content regarding the U-M-led team's development of a 'vortex ultrasound' device for pulmonary embolisms, including the preliminary lab test results with cow's blood and the potential benefits over current treatments. This represents a new technical advance in medical device development."
+      }
+    },
+    {
+      "id": "science-d7bc2296036a996c",
+      "title": "How nature lovers can aid ecology with an assist from AI",
+      "summary": "University of Michigan-led research demonstrates AI tools like Claude and ChatGPT can efficiently extract ecological data from public observations on platforms like eBird and iNaturalist. This method helped identify non-native plants on the West Coast and various bird interactions in Michigan, offering a new way to study species interactions across broad scales.",
+      "finding": "University of Michigan-led research demonstrates AI tools like Claude and ChatGPT can efficiently extract ecological data from public observations on platforms like eBird and iNaturalist. This method helped identify non-native plants on the West Coast and various bird interactions in Michigan, offering a new way to study species interactions across broad scales.",
+      "significance": "This approach allows ecologists to efficiently access and analyze a vast, previously underutilized source of observational data, enabling them to study species interactions and ecosystem health across broad spatial and temporal scales, which is crucial for understanding responses to global change.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
+      "primarySourceUrl": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
+      "source": {
+        "name": "University of Michigan News"
+      },
+      "sourceGroup": "U-M",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-12T09:00:00-04:00",
+      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
+      "checkedAt": "2026-10-15T10:00:00.772183Z",
+      "verifiedAt": "2026-10-15T10:00:00.772183Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "ecology",
+        "technology",
+        "environment"
+      ],
+      "entities": [
+        "University of Michigan",
+        "Claude",
+        "ChatGPT",
+        "eBird",
+        "iNaturalist"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2602244123",
+      "sourceUpdatedAt": "2026-10-12T15:21:32Z",
+      "localConnection": "University of Michigan research in Ann Arbor.",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-15T06:21:06.260137-04:00",
+        "expiresAt": "2026-10-18T06:21:06.260137-04:00",
+        "inputFacts": {
+          "id": "science-d7bc2296036a996c",
+          "title": "How nature lovers can aid ecology with an assist from AI",
+          "url": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
+          "publishedAt": "2026-10-12T13:00:00Z",
+          "summary": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
+          "finding": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
+          "sourceUpdatedAt": "2026-10-12T15:21:32Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-10-12T09:00:00-04:00",
+        "datePrecision": "time",
+        "sourceHash": "a318b26271dee3e4ee2f5a0210e60709ec1550e4057326b4a8c014f64a0f3905",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "New method for ecological research using AI to leverage citizen science data, with local Michigan relevance.",
+        "storyKey": "ai-citizen-science-ecology",
+        "localConnection": "University of Michigan-led study, with a case study on Michigan bird interactions.",
+        "grounded": true,
+        "groundingReason": "The article details a new research method led by the University of Michigan demonstrating how AI tools can efficiently extract ecological data from public observation platforms. This is a technical advance with specific evidenced results, including identifying non-native plants and various bird interactions, and a significant time-saving over manual methods."
+      }
+    },
+    {
       "id": "science-f49806e648203e32",
       "title": "NASA’s SpaceX CRS-35 Mission to Launch Health Research",
       "summary": "NASA's upcoming SpaceX mission will send experiments to the ISS, including 3D human brain models to study cellular changes in microgravity, a crop disease study to understand fungal impact, and a compact microplate reader to assess astronaut health. It also continues research on antibiotic-resistant bacteria in space.",
@@ -119,70 +298,39 @@
         "grounded": true,
         "groundingReason": "The article details specific new experiments and ongoing research being sent to the ISS, including 3D human brain models, a crop disease study, and a compact microplate reader, which represent new findings and technical advances in space science."
       }
-    },
-    {
-      "id": "science-d7bc2296036a996c",
-      "title": "How nature lovers can aid ecology with an assist from AI",
-      "summary": "University of Michigan researchers demonstrated that AI, specifically large language models like Claude and ChatGPT, can efficiently extract and categorize ecological interaction data from millions of citizen science comments, enabling broad-scale ecosystem monitoring. This method was shown to identify non-native plant species and various bird interactions.",
-      "finding": "University of Michigan researchers demonstrated that AI, specifically large language models like Claude and ChatGPT, can efficiently extract and categorize ecological interaction data from millions of citizen science comments, enabling broad-scale ecosystem monitoring. This method was shown to identify non-native plant species and various bird interactions.",
-      "significance": "This approach allows ecologists to analyze species interactions across broad spatial and temporal scales, utilizing a vast, previously underutilized source of observational data from nature enthusiasts. This can help in understanding how biological communities respond to global change and identify trends in ecosystem health, such as the presence of non-native species.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
-      "primarySourceUrl": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-12T09:00:00-04:00",
-      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
-      "checkedAt": "2026-10-12T21:09:35.027780Z",
-      "verifiedAt": "2026-10-12T21:09:35.027780Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "technology",
-        "biology",
-        "earth-science"
-      ],
-      "entities": [
-        "University of Michigan",
-        "Claude",
-        "ChatGPT",
-        "eBird",
-        "iNaturalist"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2602244123",
-      "sourceUpdatedAt": "2026-10-12T15:21:32Z",
-      "localConnection": "University of Michigan research in Ann Arbor.",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-14T14:00:41.483619-04:00",
-        "expiresAt": "2026-10-17T14:00:41.483619-04:00",
-        "inputFacts": {
-          "id": "science-d7bc2296036a996c",
-          "title": "How nature lovers can aid ecology with an assist from AI",
-          "url": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
-          "publishedAt": "2026-10-12T13:00:00Z",
-          "summary": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively identify, extract, and categorize data from comments on citizen science platforms such as eBird and iNaturalist, enabling researchers to build robust datasets on species interactions.",
-          "finding": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively identify, extract, and categorize data from comments on citizen science platforms such as eBird and iNaturalist, enabling researchers to build robust datasets on species interactions.",
-          "sourceUpdatedAt": "2026-10-12T15:21:32Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-12T09:00:00-04:00",
-        "datePrecision": "time",
-        "sourceHash": "a318b26271dee3e4ee2f5a0210e60709ec1550e4057326b4a8c014f64a0f3905",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "New research from a local university (University of Michigan) demonstrating a novel application of AI to environmental monitoring, which has broad implications for understanding ecosystem health and changes.",
-        "storyKey": "umich-ai-citizen-science-ecology",
-        "localConnection": "E4",
-        "grounded": true,
-        "groundingReason": "The article details a new method developed by University of Michigan researchers demonstrating that AI, specifically large language models, can efficiently extract and categorize ecological interaction data from citizen science comments. This represents a novel technical advance in ecosystem monitoring, enabling broad-scale analysis of species interactions and identifying non-native plant species and various bird interactions, which is a new finding."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-7f03a5df97184a3b",
+      "inputFacts": {
+        "id": "science-7f03a5df97184a3b",
+        "title": "Fires Arrive in the Amazon Rainforest",
+        "url": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
+        "publishedAt": "2026-10-15T04:01:00Z",
+        "summary": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
+        "finding": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
+        "sourceUpdatedAt": "2026-10-15T04:01:00Z"
+      },
+      "publishedAt": "2026-10-15T00:01:00-04:00",
+      "publicationEvidence": "2026-10-15T00:01:00-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-56e6d03cc572f45c",
+      "inputFacts": {
+        "id": "science-56e6d03cc572f45c",
+        "title": "Mollusk microbiome? It’s all in the family",
+        "url": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
+        "publishedAt": "2026-10-14T14:59:06Z",
+        "summary": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, compared to different species living in the same location.",
+        "finding": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, compared to different species living in the same location.",
+        "sourceUpdatedAt": "2026-10-14T14:59:14Z"
+      },
+      "publishedAt": "2026-10-14T10:59:06-04:00",
+      "publicationEvidence": "2026-10-14T10:59:06-04:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-cc77e498becd23e7",
       "inputFacts": {
@@ -214,18 +362,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-f49806e648203e32",
+      "id": "science-21579838c4cb1b39",
       "inputFacts": {
-        "id": "science-f49806e648203e32",
-        "title": "NASA’s SpaceX CRS-35 Mission to Launch Health Research",
-        "url": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research",
-        "publishedAt": "2026-10-12T17:45:27Z",
-        "summary": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
-        "finding": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
-        "sourceUpdatedAt": "2026-10-12T17:52:13Z"
+        "id": "science-21579838c4cb1b39",
+        "title": "Treating life-threatening blood clots in minutes with swirling sound waves",
+        "url": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
+        "publishedAt": "2026-10-13T16:25:49Z",
+        "summary": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch clot in eight minutes.",
+        "finding": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch clot in eight minutes.",
+        "sourceUpdatedAt": "2026-10-13T19:23:00Z"
       },
-      "publishedAt": "2026-10-12T13:45:27-04:00",
-      "publicationEvidence": "2026-10-12T13:45:27-04:00",
+      "publishedAt": "2026-10-13T12:25:49-04:00",
+      "publicationEvidence": "2026-10-13T12:25:49-04:00",
       "datePrecision": "time"
     },
     {
@@ -235,8 +383,8 @@
         "title": "How nature lovers can aid ecology with an assist from AI",
         "url": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
         "publishedAt": "2026-10-12T13:00:00Z",
-        "summary": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively identify, extract, and categorize data from comments on citizen science platforms such as eBird and iNaturalist, enabling researchers to build robust datasets on species interactions.",
-        "finding": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively identify, extract, and categorize data from comments on citizen science platforms such as eBird and iNaturalist, enabling researchers to build robust datasets on species interactions.",
+        "summary": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
+        "finding": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
         "sourceUpdatedAt": "2026-10-12T15:21:32Z"
       },
       "publishedAt": "2026-10-12T09:00:00-04:00",
@@ -274,6 +422,21 @@
       "datePrecision": "date"
     },
     {
+      "id": "science-f49806e648203e32",
+      "inputFacts": {
+        "id": "science-f49806e648203e32",
+        "title": "NASA’s SpaceX CRS-35 Mission to Launch Health Research",
+        "url": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research",
+        "publishedAt": "2026-10-12T17:45:27Z",
+        "summary": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
+        "finding": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
+        "sourceUpdatedAt": "2026-10-12T17:52:13Z"
+      },
+      "publishedAt": "2026-10-12T13:45:27-04:00",
+      "publicationEvidence": "2026-10-12T13:45:27-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-b89177a69ceadc8f",
       "inputFacts": {
         "id": "science-b89177a69ceadc8f",
@@ -287,17 +450,144 @@
       "publishedAt": "2026-10-07T11:01:11-04:00",
       "publicationEvidence": "2026-10-07T11:01:11-04:00",
       "datePrecision": "time"
+    },
+    {
+      "id": "science-41eb8051a9c2c0bc",
+      "inputFacts": {
+        "id": "science-41eb8051a9c2c0bc",
+        "title": "APOD: 2026 October 15 – The Milky Way over Manhattan",
+        "url": "https://science.nasa.gov/image-article/apod-2026-october-15-the-milky-way-over-manhattan",
+        "publishedAt": "2026-10-15T04:05:00Z",
+        "summary": "The Milky Way can be photographed over Manhattan by using a near-infrared filter that blocks most visible light, effectively reducing light pollution from common urban light sources like fluorescent and LED bulbs.",
+        "finding": "The Milky Way can be photographed over Manhattan by using a near-infrared filter that blocks most visible light, effectively reducing light pollution from common urban light sources like fluorescent and LED bulbs.",
+        "sourceUpdatedAt": "2026-10-15T04:05:00Z"
+      },
+      "publishedAt": "2026-10-15T00:05:00-04:00",
+      "publicationEvidence": "2026-10-15T00:05:00-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-29d8aa2115fe9503",
+      "inputFacts": {
+        "id": "science-29d8aa2115fe9503",
+        "title": "APOD: 2026 October 14 – Mars and the Beehive Under an Aurora",
+        "url": "https://science.nasa.gov/image-article/apod-2026-october-14-mars-and-the-beehive-under-an-aurora",
+        "publishedAt": "2026-10-14T04:05:00Z",
+        "summary": "An eruption from the Sun reached Earth on October 10, 2026, causing strong disturbances in Earth's magnetic field and resulting in a colorful aurora visible near Lansjärv, Sweden.",
+        "finding": "An eruption from the Sun reached Earth on October 10, 2026, causing strong disturbances in Earth's magnetic field and resulting in a colorful aurora visible near Lansjärv, Sweden.",
+        "sourceUpdatedAt": "2026-10-14T04:05:00Z"
+      },
+      "publishedAt": "2026-10-14T00:05:00-04:00",
+      "publicationEvidence": "2026-10-14T00:05:00-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-7372c3e01f24fcad",
+      "inputFacts": {
+        "id": "science-7372c3e01f24fcad",
+        "title": "Comparing Off-World Rover Driving Distances",
+        "url": "https://science.nasa.gov/photojournal/comparing-off-world-rover-driving-distances",
+        "publishedAt": "2026-10-13T17:56:08Z",
+        "summary": "As of October 11, 2026, NASA's Perseverance rover has surpassed the driving distance record previously held by the Opportunity rover on Mars.",
+        "finding": "As of October 11, 2026, NASA's Perseverance rover has surpassed the driving distance record previously held by the Opportunity rover on Mars.",
+        "sourceUpdatedAt": "2026-10-13T17:56:12Z"
+      },
+      "publishedAt": "2026-10-13T13:56:08-04:00",
+      "publicationEvidence": "2026-10-13T13:56:08-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-5abd4545c45025a8",
+      "inputFacts": {
+        "id": "science-5abd4545c45025a8",
+        "title": "Your chances of Alzheimer’s disease vary based on where you live. Why is that?",
+        "url": "https://news.umich.edu/your-chances-of-alzheimers-disease-vary-based-on-where-you-live-why-is-that",
+        "publishedAt": "2026-10-13T14:31:56Z",
+        "summary": "A research team from the University of Michigan School of Public Health will combine and standardize memory and thinking test data from older adults in 20 countries to investigate why dementia risk varies globally. The study aims to understand how factors like education, heart health, social isolation, and depression influence cognitive decline and dementia risk, and whether these factors have a greater impact in lower-income countries or on women due to gender inequality.",
+        "finding": "A research team from the University of Michigan School of Public Health will combine and standardize memory and thinking test data from older adults in 20 countries to investigate why dementia risk varies globally. The study aims to understand how factors like education, heart health, social isolation, and depression influence cognitive decline and dementia risk, and whether these factors have a greater impact in lower-income countries or on women due to gender inequality.",
+        "sourceUpdatedAt": "2026-10-13T17:45:07Z"
+      },
+      "publishedAt": "2026-10-13T10:31:56-04:00",
+      "publicationEvidence": "2026-10-13T10:31:56-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-f7176b47f07ea772",
+      "inputFacts": {
+        "id": "science-f7176b47f07ea772",
+        "title": "How celebrity culture reshapes political leadership",
+        "url": "https://news.umich.edu/how-celebrity-culture-reshapes-political-leadership",
+        "publishedAt": "2026-10-13T14:24:00Z",
+        "summary": "Celebrity culture is increasingly shaping political leadership by providing new ways for leaders to construct authority and present themselves to the public, moving beyond traditional political arguments to create personal impressions.",
+        "finding": "Celebrity culture is increasingly shaping political leadership by providing new ways for leaders to construct authority and present themselves to the public, moving beyond traditional political arguments to create personal impressions.",
+        "sourceUpdatedAt": "2026-10-13T14:24:10Z"
+      },
+      "publishedAt": "2026-10-13T10:24:00-04:00",
+      "publicationEvidence": "2026-10-13T10:24:00-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-996b79babe601422",
+      "inputFacts": {
+        "id": "science-996b79babe601422",
+        "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
+        "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
+        "publishedAt": "2026-10-13T13:00:00Z",
+        "summary": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness for a lunar mission.",
+        "finding": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness for a lunar mission.",
+        "sourceUpdatedAt": "2026-10-13T13:05:06Z"
+      },
+      "publishedAt": "2026-10-13T09:00:00-04:00",
+      "publicationEvidence": "2026-10-13T09:00:00-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-9216e6cae5d0a88a",
+      "inputFacts": {
+        "id": "science-9216e6cae5d0a88a",
+        "title": "Mars moon lander set to launch on 19 October",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_moon_lander_set_to_launch_on_19_October",
+        "publishedAt": "2026-10-13T12:00:00Z",
+        "summary": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, to collect a sample from Mars's moon Phobos and return it to Earth.",
+        "finding": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, to collect a sample from Mars's moon Phobos and return it to Earth.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-13T00:00:00-04:00",
+      "publicationEvidence": "13/10/2026",
+      "datePrecision": "date"
+    },
+    {
+      "id": "science-053fd0b7f05650b5",
+      "inputFacts": {
+        "id": "science-053fd0b7f05650b5",
+        "title": "NSF lays the foundation for the next generation of technologies and support for American talent",
+        "url": "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support",
+        "publishedAt": "2026-10-08T13:45:03Z",
+        "summary": "The U.S. National Science Foundation (NSF) is establishing an Office of Metascience to study how scientific communities respond to novel review and funding mechanisms, with the goal of applying these lessons to accelerate discovery within NSF programs.",
+        "finding": "The U.S. National Science Foundation (NSF) is establishing an Office of Metascience to study how scientific communities respond to novel review and funding mechanisms, with the goal of applying these lessons to accelerate discovery within NSF programs.",
+        "sourceUpdatedAt": "2026-10-13T20:29:37Z"
+      },
+      "publishedAt": "2026-10-08T09:45:03-04:00",
+      "publicationEvidence": "2026-10-08T09:45:03-0400",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-63bdbcb865b29ff9",
+      "inputFacts": {
+        "id": "science-63bdbcb865b29ff9",
+        "title": "NSF–UKRI metascience statement",
+        "url": "https://www.nsf.gov/news/nsf-ukri-metascience-statement",
+        "publishedAt": "2026-10-08T13:26:57Z",
+        "summary": "The United States National Science Foundation (NSF) and United Kingdom Research and Innovation (UKRI) intend to collaborate on metascience, applying scientific experimental and analytical processes to the funding, practice, and orchestration of their science and technology enterprises.",
+        "finding": "The United States National Science Foundation (NSF) and United Kingdom Research and Innovation (UKRI) intend to collaborate on metascience, applying scientific experimental and analytical processes to the funding, practice, and orchestration of their science and technology enterprises.",
+        "sourceUpdatedAt": "2026-10-14T20:54:04Z"
+      },
+      "publishedAt": "2026-10-08T09:26:57-04:00",
+      "publicationEvidence": "2026-10-08T09:26:57-0400",
+      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-10-13",
-      "selectedIds": [
-        "science-3f01fb21be9ace53",
-        "science-f49806e648203e32",
-        "science-d7bc2296036a996c"
-      ]
-    },
     {
       "date": "2026-10-14",
       "selectedIds": [
@@ -312,6 +602,14 @@
         "science-3f01fb21be9ace53",
         "science-f49806e648203e32",
         "science-d7bc2296036a996c"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "selectedIds": [
+        "science-7f03a5df97184a3b",
+        "science-3f01fb21be9ace53",
+        "science-21579838c4cb1b39"
       ]
     }
   ]
