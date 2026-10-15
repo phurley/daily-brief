@@ -1,8 +1,95 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-10-14T23:42:23.475442-04:00",
+  "generatedAt": "2026-10-15T12:21:45.496030-04:00",
   "stories": [
+    {
+      "id": "a-natural-ability-of-getting-someone-to-news-2026-10-15",
+      "title": "‘A natural ability of getting someone to open up’: The therapy dogs helping ease exam season stress",
+      "summary": "Therapaws of Michigan, a volunteer organization with over 120 dog-human pairs, provides therapy dog visits to more than 25 locations in Washtenaw County, including the University of Michigan during exam season and local elementary schools, offering emotional support and comfort.",
+      "url": "https://www.michigandaily.com/news/campus-life/a-natural-ability-of-getting-someone-to-open-up-the-therapy-dogs-helping-ease-exam-season-stress/",
+      "publishedAt": "2026-10-15T04:44:01+00:00",
+      "addedAt": "2026-10-15T12:19:10-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Amanda Piel",
+        "The Michigan Daily"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "campus life",
+        "therapy dogs",
+        "exam stress",
+        "student wellness"
+      ],
+      "source": {
+        "name": "Amanda Piel",
+        "publication": "The Michigan Daily"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.3,
+          "distinctive": 0.24,
+          "eclectic": 0.15,
+          "technical_science": 0.06,
+          "artsy": 0.09,
+          "progressive": 0.48,
+          "outdoors": 0.06,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.61,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.07,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/10/IMG_8286-scaled-e1791943198417.jpeg?resize=800%2C600&ssl=1",
+        "alt": "Courtesy of Kevin Gonzaga."
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-15T12:21:45.496030-04:00",
+        "expiresAt": "2026-10-18T12:21:45.496030-04:00",
+        "inputFacts": {
+          "id": "a-natural-ability-of-getting-someone-to-news-2026-10-15",
+          "title": "‘A natural ability of getting someone to open up’: The therapy dogs helping ease exam season stress",
+          "url": "https://www.michigandaily.com/news/campus-life/a-natural-ability-of-getting-someone-to-open-up-the-therapy-dogs-helping-ease-exam-season-stress/",
+          "publishedAt": "2026-10-15T00:00:00-04:00",
+          "summary": "Therapy dogs are providing comfort to students during exam season at the University of Michigan. The animals help ease stress and encourage students to open up about their challenges. The initiative is part of campus efforts to support student wellness during high-pressure academic periods.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-10-15T04:44:01+00:00",
+        "datePrecision": "time",
+        "sourceHash": "38e29f6a4c580ad478a91ad052a940e4fbd4cc79a9c8df6df23417543a07ff31",
+        "relevance": 3,
+        "novelty": 3,
+        "reason": "The article details a local organization providing a public service in a nearby community, directly impacting mental well-being for students and children.",
+        "storyKey": "therapaws-michigan-therapy-dogs",
+        "localConnection": "Washtenaw County is a nearby community, and the University of Michigan is a significant regional institution. The service directly benefits residents in the area.",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims in the summary, including the organization's size, locations, and activities. The information is a useful local development for the community."
+      }
+    },
     {
       "id": "massive-google-data-center-faces-decisio-news-2026-10-14",
       "title": "Massive Google data center faces decision day in Michigan’s Van Buren Township",
@@ -95,108 +182,6 @@
         "localConnection": "E0",
         "grounded": true,
         "groundingReason": "The article confirms that Van Buren Township officials are negotiating agreements with Google regarding the data center, including Google covering potential residential water rate increases and reducing generator reliance. It also states that tax incentives were used to secure advanced environmental controls and sound dampening measures."
-      }
-    },
-    {
-      "id": "township-vote-paves-way-for-michigan-s-s-news-2026-10-14",
-      "title": "Township vote paves way for Michigan’s second hyperscale data center",
-      "summary": "Van Buren Township approved Google's 1-gigawatt data center, Michigan's second hyperscale facility, despite resident concerns about construction noise and dust. The project, expected to draw power by late 2027, will consume energy equivalent to 750,000 homes and draw up to 3.6 million gallons of water daily, but DTE's contract aims to avoid residential rate increases.",
-      "url": "https://bridgemi.com/michigan-environment-watch/township-vote-paves-way-for-michigans-second-hyperscale-data-center/",
-      "publishedAt": "2026-10-15T01:05:09+00:00",
-      "addedAt": "2026-10-14T23:41:11-04:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Google",
-        "Van Buren Township",
-        "DTE Energy",
-        "Ashley Shukait",
-        "Pannatoni",
-        "Walbridge",
-        "Oracle",
-        "OpenAI",
-        "Microsoft",
-        "Consumers",
-        "Anthropic",
-        "Citizens Research Council of Michigan",
-        "Eric Dennis",
-        "Michigan Public Service Commission"
-      ],
-      "locations": [
-        "Michigan",
-        "Van Buren Township"
-      ],
-      "localityIndex": 1,
-      "topics": [
-        "data centers",
-        "google",
-        "michigan",
-        "environment",
-        "public opposition",
-        "energy"
-      ],
-      "source": {
-        "name": "Kelly House",
-        "publication": "Bridge Michigan"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.02,
-          "distinctive": 0.3,
-          "eclectic": 0.18,
-          "technical_science": 0.94,
-          "artsy": 0.02,
-          "progressive": 0.35,
-          "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.04,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.04,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.05,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://bridgemi.com/wp-content/uploads/2026/10/Van-Buren-Township-data-center-rendering.jpg",
-        "alt": "Township vote paves way for Michigan’s second hyperscale data center"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-14T23:42:23.475442-04:00",
-        "expiresAt": "2026-10-17T23:42:23.475442-04:00",
-        "inputFacts": {
-          "id": "township-vote-paves-way-for-michigan-s-s-news-2026-10-14",
-          "title": "Township vote paves way for Michigan’s second hyperscale data center",
-          "url": "https://bridgemi.com/michigan-environment-watch/township-vote-paves-way-for-michigans-second-hyperscale-data-center/",
-          "publishedAt": "2026-10-14T00:00:00-04:00",
-          "summary": "Van Buren Township officials approved Google's proposed 1-gigawatt data center near Detroit Metro Airport, clearing the way for construction after a year-long approval process. The project faces public opposition over construction impacts while securing energy contracts and tax incentives. Google expects operations to begin by late 2027.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-15T01:05:09+00:00",
-        "datePrecision": "time",
-        "sourceHash": "c4999956b9ddaf1b4eec11419bf1ffbf594da7b6178ed5532e692b51cc68316f",
-        "relevance": 5,
-        "novelty": 4,
-        "reason": "This article details a significant local civic decision with substantial environmental and economic consequences for a nearby community, Van Buren Township, which is adjacent to Canton and Plymouth. The scale of the data center's resource consumption (energy, water) and the local tax implications are highly relevant. The public opposition and recall efforts also highlight a significant local civic issue.",
-        "storyKey": "google-van-buren-data-center-approval",
-        "localConnection": "E0",
-        "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, including specific quantities, timelines, and mechanisms. The news is substantive as it details a significant local development in Van Buren Township, Michigan, with broader implications for the state's energy and water resources."
       }
     },
     {
@@ -293,6 +278,21 @@
   ],
   "corrections": [
     {
+      "id": "a-natural-ability-of-getting-someone-to-news-2026-10-15",
+      "inputFacts": {
+        "id": "a-natural-ability-of-getting-someone-to-news-2026-10-15",
+        "title": "‘A natural ability of getting someone to open up’: The therapy dogs helping ease exam season stress",
+        "url": "https://www.michigandaily.com/news/campus-life/a-natural-ability-of-getting-someone-to-open-up-the-therapy-dogs-helping-ease-exam-season-stress/",
+        "publishedAt": "2026-10-15T00:00:00-04:00",
+        "summary": "Therapy dogs are providing comfort to students during exam season at the University of Michigan. The animals help ease stress and encourage students to open up about their challenges. The initiative is part of campus efforts to support student wellness during high-pressure academic periods.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-15T04:44:01+00:00",
+      "publicationEvidence": "2026-10-15T04:44:01+00:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "massive-google-data-center-faces-decisio-news-2026-10-14",
       "inputFacts": {
         "id": "massive-google-data-center-faces-decisio-news-2026-10-14",
@@ -305,21 +305,6 @@
       },
       "publishedAt": "2026-10-13T19:44:48+00:00",
       "publicationEvidence": "2026-10-13T19:44:48+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "township-vote-paves-way-for-michigan-s-s-news-2026-10-14",
-      "inputFacts": {
-        "id": "township-vote-paves-way-for-michigan-s-s-news-2026-10-14",
-        "title": "Township vote paves way for Michigan’s second hyperscale data center",
-        "url": "https://bridgemi.com/michigan-environment-watch/township-vote-paves-way-for-michigans-second-hyperscale-data-center/",
-        "publishedAt": "2026-10-14T00:00:00-04:00",
-        "summary": "Van Buren Township officials approved Google's proposed 1-gigawatt data center near Detroit Metro Airport, clearing the way for construction after a year-long approval process. The project faces public opposition over construction impacts while securing energy contracts and tax incentives. Google expects operations to begin by late 2027.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-15T01:05:09+00:00",
-      "publicationEvidence": "2026-10-15T01:05:09+00:00",
       "datePrecision": "time"
     },
     {
@@ -383,6 +368,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "michigan-residents-invited-to-observe-vo-news-2026-10-15",
+      "inputFacts": {
+        "id": "michigan-residents-invited-to-observe-vo-news-2026-10-15",
+        "title": "Michigan residents invited to observe voting machine testing ahead of General Election",
+        "url": "https://www.clickondetroit.com/news/local/2026/10/15/residents-invited-to-observe-election-equipment-testing-ahead-of-early-voting-period/",
+        "publishedAt": "2026-10-15T07:59:00-04:00",
+        "summary": "Michigan residents are invited to observe voting machine testing ahead of the General Election. The event is organized by local authorities to ensure transparency in the electoral process. Observations will take place in Ann Arbor and Ypsilanti.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-15T11:59:18.839000+00:00",
+      "publicationEvidence": "2026-10-15T11:59:18.839Z",
+      "datePrecision": "time"
+    },
+    {
       "id": "54-year-old-bicyclist-killed-after-being-news-2026-10-13",
       "inputFacts": {
         "id": "54-year-old-bicyclist-killed-after-being-news-2026-10-13",
@@ -395,6 +395,36 @@
       },
       "publishedAt": "2026-10-14T03:53:25.517000+00:00",
       "publicationEvidence": "2026-10-14T03:53:25.517Z",
+      "datePrecision": "time"
+    },
+    {
+      "id": "theride-receives-6-6-million-state-grant-news-2026-10-15",
+      "inputFacts": {
+        "id": "theride-receives-6-6-million-state-grant-news-2026-10-15",
+        "title": "TheRide receives $6.6 million state grant for Bus Rapid Transit study",
+        "url": "https://www.michigandaily.com/news/ann-arbor/theride-receives-6-6-million-state-grant-for-bus-rapid-transit-study/",
+        "publishedAt": "2026-10-15T00:00:00-04:00",
+        "summary": "The state of Michigan awarded the Ann Arbor Area Transportation Authority $6.6 million to study a potential Bus Rapid Transit route aimed at decreasing commuting times on Washtenaw Avenue, as announced by Gov. Gretchen Whitmer. The study will explore creating a BRT route following the Interstate 94 Business Loop.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-15T05:34:25+00:00",
+      "publicationEvidence": "2026-10-15T05:34:25+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "who-is-umichgreg-meet-the-account-romant-news-2026-10-15",
+      "inputFacts": {
+        "id": "who-is-umichgreg-meet-the-account-romant-news-2026-10-15",
+        "title": "Who is umichgreg? Meet the account romanticizing the U-M campus",
+        "url": "https://www.michigandaily.com/news/features-2/who-is-umichgreg-meet-the-account-romanticizing-the-u-m-campus/",
+        "publishedAt": "2026-10-15T00:00:00-04:00",
+        "summary": "The @umichgreg TikTok account is romanticizing the University of Michigan campus with videos featuring scenes like West Hall under golden light and Taylor Swift’s music, offering students a moment to slow down and appreciate campus life.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-15T05:16:24+00:00",
+      "publicationEvidence": "2026-10-15T05:16:24+00:00",
       "datePrecision": "time"
     },
     {
@@ -413,13 +443,28 @@
       "datePrecision": "time"
     },
     {
+      "id": "groves-high-school-celebrates-inclusion-news-2026-10-14",
+      "inputFacts": {
+        "id": "groves-high-school-celebrates-inclusion-news-2026-10-14",
+        "title": "Groves High School celebrates inclusion with Victory Day event during Powderpuff football game",
+        "url": "https://www.clickondetroit.com/news/local/2026/10/15/groves-high-school-hosts-victory-day-event-to-give-students-with-disabilities-their-moment-to-the-field/",
+        "publishedAt": "2026-10-14T22:24:00-04:00",
+        "summary": "Groves High School hosted a Victory Day event during its Powderpuff football game to provide students with disabilities an opportunity to shine on the field. The event was part of efforts to promote inclusion and celebrate diverse student abilities.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-15T02:24:54.107000+00:00",
+      "publicationEvidence": "2026-10-15T02:24:54.107Z",
+      "datePrecision": "time"
+    },
+    {
       "id": "student-arrested-for-assaulting-hospital-news-2026-10-14",
       "inputFacts": {
         "id": "student-arrested-for-assaulting-hospital-news-2026-10-14",
         "title": "Student arrested for assaulting, hospitalizing teacher at Emerson Elementary-Middle School",
         "url": "https://www.clickondetroit.com/news/local/2026/10/15/student-arrested-after-assaulting-teacher-at-emerson-elementarymiddle-school/",
         "publishedAt": "2026-10-14T21:16:00-04:00",
-        "summary": "A student was arrested after assaulting and hospitalizing a special education teacher at Emerson Elementary-Middle School on October 14. The teacher was released from the hospital and is recovering at home, while the student was expelled. Details about the incident's location or circumstances remain unclear.",
+        "summary": "A student was arrested after assaulting and hospitalizing a special education teacher at Emerson Elementary-Middle School. The teacher has since been released and is recovering at home, while the student was expelled. Details about the incident's location or circumstances remain unclear.",
         "finding": null,
         "sourceUpdatedAt": null
       },
@@ -434,27 +479,12 @@
         "title": "From record heat to rainy, cool end of workweek in Metro Detroit",
         "url": "https://www.clickondetroit.com/weather/2026/10/14/from-record-heat-to-rainy-cool-end-of-workweek-in-metro-detroit/",
         "publishedAt": "2026-10-14T20:13:00-04:00",
-        "summary": "Metro Detroit experienced a record high of 87 degrees on October 13, breaking the 1975 record of 83 degrees. The area is now transitioning to cooler, rainy conditions with gusty winds and potential frost this weekend.",
+        "summary": "Meteorologist Ron Hilliard reports a transition from record heat to rainy and cooler conditions by the end of the workweek in Metro Detroit. The weather update includes publication and update timestamps for October 14, 2026.",
         "finding": null,
         "sourceUpdatedAt": null
       },
       "publishedAt": "2026-10-15T00:13:22.147000+00:00",
       "publicationEvidence": "2026-10-15T00:13:22.147Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "why-aren-t-michigan-election-results-ins-news-2026-10-14",
-      "inputFacts": {
-        "id": "why-aren-t-michigan-election-results-ins-news-2026-10-14",
-        "title": "Why aren't Michigan election results instant? How our votes are counted",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/14/why-arent-michigan-election-results-instant-how-our-votes-are-counted/",
-        "publishedAt": "2026-10-14T19:39:00-04:00",
-        "summary": "Michigan’s slower election results are due to legal requirements and intentional verification processes. Millions of ballots undergo signature matching, security sleeve removal, and write-in processing before being tabulated. Early in-person votes cannot be officially reported until 8 p.m. on Election Day, and time-zone differences along with multiple verification layers cause some counties to report later.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-14T23:39:50.805000+00:00",
-      "publicationEvidence": "2026-10-14T23:39:50.805Z",
       "datePrecision": "time"
     },
     {
@@ -501,51 +531,13 @@
       "publishedAt": "2026-10-01T19:19:31+00:00",
       "publicationEvidence": "2026-10-01T19:19:31+00:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "two-michigan-boys-found-safe-in-ohio-aft-news-2026-10-14",
-      "inputFacts": {
-        "id": "two-michigan-boys-found-safe-in-ohio-aft-news-2026-10-14",
-        "title": "Two Michigan boys found safe in Ohio after father flees with children from Inkster home",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/14/two-michigan-boys-found-safe-in-ohio-after-father-flees-with-children-from-inkster-home/",
-        "publishedAt": "2026-10-14T00:00:00-04:00",
-        "summary": "Inkster officers, with assistance from Detroit Police and Michigan State Police, located two boys and their father in Norwalk, Ohio, after a search spanning two states. The father was found dead from a self-inflicted gunshot wound, while the children were unharmed. Inkster police confirmed no ongoing community threat.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-14T23:28:02.779000+00:00",
-      "publicationEvidence": "2026-10-14T23:28:02.779Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "progressive-coalition-organizes-black-mi-news-2026-10-14",
-      "inputFacts": {
-        "id": "progressive-coalition-organizes-black-mi-news-2026-10-14",
-        "title": "Progressive coalition organizes Black Michiganders against Rogers",
-        "url": "https://www.wemu.org/michigan-news/2026-10-14/progressive-coalition-organizes-black-michiganders-against-rogers",
-        "publishedAt": "2026-10-14T06:27:00-04:00",
-        "summary": "A progressive-backed group is mobilizing Black voters against Republican U.S. Senate nominee Mike Rogers in Michigan. The coalition, including the American Federation of Teachers and Detroit Action, criticized Rogers for his role in a 1999 law that led to state control of Detroit's schools and his alignment with Donald Trump's policies. Rogers' campaign counters that Democratic leadership has failed Michigan's education system and housing market.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-14T10:27:29.741000-04:00",
-      "publicationEvidence": "2026-10-14T10:27:29.741",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-10-13",
-      "selectedIds": [
-        "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
-        "massive-google-data-center-faces-decisio-news-2026-10-14"
-      ]
-    },
-    {
       "date": "2026-10-14",
       "selectedIds": [
         "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
-        "township-vote-paves-way-for-michigan-s-s-news-2026-10-14",
         "massive-google-data-center-faces-decisio-news-2026-10-14"
       ]
     },
@@ -553,8 +545,16 @@
       "date": "2026-10-15",
       "selectedIds": [
         "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
-        "township-vote-paves-way-for-michigan-s-s-news-2026-10-14",
-        "massive-google-data-center-faces-decisio-news-2026-10-14"
+        "massive-google-data-center-faces-decisio-news-2026-10-14",
+        "a-natural-ability-of-getting-someone-to-news-2026-10-15"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "selectedIds": [
+        "massive-google-data-center-faces-decisio-news-2026-10-14",
+        "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
+        "a-natural-ability-of-getting-someone-to-news-2026-10-15"
       ]
     }
   ]
