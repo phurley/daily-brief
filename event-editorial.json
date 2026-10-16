@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-16T07:40:52.180224-04:00",
+  "generatedAt": "2026-10-16T14:35:21.459952-04:00",
   "events": [
     {
       "id": "occ-a9ac75bce2eafe2c376cd09c",
@@ -167,17 +167,20 @@
       "priceMin": 27.6,
       "priceMax": 27.6,
       "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-15T12:21:05.842945-04:00",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-10-16T14:35:21.459952-04:00",
       "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
       "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
       "timePrecision": "time",
       "statusEvidence": "Organizer detail reviewed",
       "aliases": [
-        "src-a2e82fb47ee5a12e7f79a516",
+        "src-05c44d6a7bd544ce03fdf039",
+        "src-911345da96eada9425549045",
         "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-17"
       ],
       "legacyOccurrenceKeys": [
-        "src-a2e82fb47ee5a12e7f79a516|2026-10-17T20:00:00-04:00",
+        "src-05c44d6a7bd544ce03fdf039|2026-10-17T20:00:00-04:00",
+        "src-911345da96eada9425549045|2026-10-17T20:00:00-04:00",
         "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-17|2026-10-17T20:00:00-04:00"
       ],
       "legacySeriesKeys": [
@@ -192,10 +195,20 @@
       ],
       "sources": [
         {
-          "sourceRecordId": "src-a2e82fb47ee5a12e7f79a516",
+          "sourceRecordId": "src-911345da96eada9425549045",
           "sourceId": "planet-ant-theatre",
           "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
           "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        },
+        {
+          "sourceRecordId": "src-05c44d6a7bd544ce03fdf039",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-16T07:40:08-04:00",
           "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
           "sourceAuthority": "organizer",
           "status": "scheduled",
@@ -205,15 +218,15 @@
       "identity": {
         "ruleVersion": "occurrence-v1",
         "reasons": [
-          "new-occurrence"
+          "native-occurrence"
         ],
         "fields": {
-          "title": "src-a2e82fb47ee5a12e7f79a516",
-          "start": "src-a2e82fb47ee5a12e7f79a516",
-          "venue": "src-a2e82fb47ee5a12e7f79a516",
-          "url": "src-a2e82fb47ee5a12e7f79a516",
-          "status": "src-a2e82fb47ee5a12e7f79a516",
-          "imageUrl": "src-a2e82fb47ee5a12e7f79a516"
+          "title": "src-911345da96eada9425549045",
+          "start": "src-911345da96eada9425549045",
+          "venue": "src-911345da96eada9425549045",
+          "url": "src-911345da96eada9425549045",
+          "status": "src-911345da96eada9425549045",
+          "imageUrl": "src-911345da96eada9425549045"
         },
         "conflicts": {}
       },
@@ -256,8 +269,8 @@
       "bookingUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-15T12:21:05.842945-04:00",
-        "expiresAt": "2026-10-16T12:21:05.842945-04:00",
+        "reviewedAt": "2026-10-16T14:35:21.459952-04:00",
+        "expiresAt": "2026-10-17T14:35:21.459952-04:00",
         "sourceUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
         "sourceHash": "18da4b8f2013d1b44ece1b8cadce3aa677b0b3e92f98ca4dca44bd5142165c39",
         "inputFacts": {
@@ -267,7 +280,7 @@
           "end": null,
           "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
           "city": "Hamtramck",
-          "price": "$27.6–$32.85 including fees",
+          "price": "$27.6",
           "status": "scheduled"
         },
         "evidence": {
@@ -279,12 +292,12 @@
           "registration": "Online sales end 1 (one) hour before the start of a performance."
         }
       },
-      "reviewExpiresAt": "2026-10-16T12:21:05.842945-04:00"
+      "reviewExpiresAt": "2026-10-17T14:35:21.459952-04:00"
     },
     {
       "id": "occ-75d2326e2712c93f82860713",
       "title": "Big Fun Murder | An Improvised Murder Mystery",
-      "summary": "A ghost needs help solving their own murder in this improvised mystery. Audience participation helps the ghost remember what happened and guess the culprit as they relive their last day. This show features a special guest each week.",
+      "summary": "Witness an improvised murder mystery where a ghost tries to solve their own demise. This interactive comedy show relies on audience participation to help the spectral detective piece together clues and identify the killer, promising a unique and engaging theatrical experience.",
       "url": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
       "start": "2026-10-16T21:30:00-04:00",
       "venue": "Go Comedy Improv Theater",
@@ -301,7 +314,7 @@
       "priceMax": 22.14,
       "priceCurrency": "USD",
       "availability": "InStock",
-      "lastCheckedAt": "2026-10-15T15:57:08.777344-04:00",
+      "lastCheckedAt": "2026-10-16T14:35:21.459952-04:00",
       "canonicalUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
       "venueId": "go comedy improv theater|ferndale",
       "timePrecision": "time",
@@ -404,10 +417,10 @@
       "bookingUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21:30:00",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-15T15:57:08.777344-04:00",
-        "expiresAt": "2026-10-16T15:57:08.777344-04:00",
+        "reviewedAt": "2026-10-16T14:35:21.459952-04:00",
+        "expiresAt": "2026-10-17T14:35:21.459952-04:00",
         "sourceUrl": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
-        "sourceHash": "660d3e4b1efd3ff96ad3155687570815dba0d8677c07337e882442e19b6491de",
+        "sourceHash": "d7e787b46f195f7f8ba841e64bdf98ea95e5ca79cd27f4a421bdafdd9ce94397",
         "inputFacts": {
           "id": "occ-75d2326e2712c93f82860713",
           "url": "https://www.crowdwork.com/e/big-fun-murder?date=2026-10-16T21%3A30%3A00.000-04%3A00",
@@ -427,7 +440,7 @@
           "registration": "Get Tickets!"
         }
       },
-      "reviewExpiresAt": "2026-10-16T15:57:08.777344-04:00"
+      "reviewExpiresAt": "2026-10-17T14:35:21.459952-04:00"
     },
     {
       "id": "occ-c4334009d3e671280f4f9e77",
@@ -448,7 +461,7 @@
       "priceMin": 16.94,
       "priceMax": 16.94,
       "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-15T12:21:05.842945-04:00",
+      "lastCheckedAt": "2026-10-16T14:35:21.459952-04:00",
       "canonicalUrl": "https://www.crowdwork.com/e/amalgamation-community-sketch-show?date=2026-10-22T19%3A30%3A00.000-04%3A00",
       "venueId": "go comedy improv theater|ferndale",
       "timePrecision": "time",
@@ -530,8 +543,8 @@
       "bookingUrl": "https://www.crowdwork.com/e/amalgamation-community-sketch-show?date=2026-10-22T19%3A30%3A00.000-04%3A00",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-15T12:21:05.842945-04:00",
-        "expiresAt": "2026-10-16T12:21:05.842945-04:00",
+        "reviewedAt": "2026-10-16T14:35:21.459952-04:00",
+        "expiresAt": "2026-10-17T14:35:21.459952-04:00",
         "sourceUrl": "https://www.crowdwork.com/e/amalgamation-community-sketch-show?date=2026-10-22T19%3A30%3A00.000-04%3A00",
         "sourceHash": "c506092955fbc7e6f07c82f717f5412f95846d1fd3d6f32d977d15df0ca0a7e6",
         "inputFacts": {
@@ -553,12 +566,12 @@
           "registration": "Get Tickets!"
         }
       },
-      "reviewExpiresAt": "2026-10-16T12:21:05.842945-04:00"
+      "reviewExpiresAt": "2026-10-17T14:35:21.459952-04:00"
     },
     {
       "id": "occ-da3d0abd30f59190dc79fac7",
       "title": "THEATRE l I'd Love to Have You for Dinner",
-      "summary": "Experience a psychological thriller where a first date turns deadly. An ancient vampire and a vampire hunter meet for a home-cooked meal, leading to a two-act horror story exploring themes of legacy, cannibalism, and predation.",
+      "summary": "This two-act psychological thriller explores a first date between an ancient vampire and a vampire hunter. The horror/thriller highlights themes of legacy, cannibalism, and the complex moral nature of predation, promising a suspenseful and thought-provoking theatrical experience.",
       "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
       "start": "2026-10-16T20:00:00-04:00",
       "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
@@ -575,16 +588,18 @@
       "priceMax": 27.6,
       "priceCurrency": "USD",
       "availability": "InStock",
-      "lastCheckedAt": "2026-10-15T12:21:05.842945-04:00",
+      "lastCheckedAt": "2026-10-16T14:35:21.459952-04:00",
       "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
       "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
       "timePrecision": "time",
       "statusEvidence": "Organizer detail reviewed",
       "aliases": [
+        "src-767294cc69c7307abd40e094",
         "src-cedb8cc34515296b4e9080f3",
         "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-16"
       ],
       "legacyOccurrenceKeys": [
+        "src-767294cc69c7307abd40e094|2026-10-16T20:00:00-04:00",
         "src-cedb8cc34515296b4e9080f3|2026-10-16T20:00:00-04:00",
         "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-16|2026-10-16T20:00:00-04:00"
       ],
@@ -604,6 +619,16 @@
           "sourceId": "planet-ant-theatre",
           "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
           "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        },
+        {
+          "sourceRecordId": "src-767294cc69c7307abd40e094",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-16T07:40:08-04:00",
           "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
           "sourceAuthority": "organizer",
           "status": "scheduled",
@@ -660,14 +685,14 @@
       },
       "localityTier": "unknown",
       "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"theatre l i d love to have you for dinner\"]",
-      "registration": "Purchase Tickets",
+      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
       "bookingUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-15T12:21:05.842945-04:00",
-        "expiresAt": "2026-10-16T12:21:05.842945-04:00",
+        "reviewedAt": "2026-10-16T14:35:21.459952-04:00",
+        "expiresAt": "2026-10-17T14:35:21.459952-04:00",
         "sourceUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
-        "sourceHash": "56308f39b2985e1e0a394141d9b6eaf246a1150bc49b7d631ac43264fc510b13",
+        "sourceHash": "c3dce9e1d59a945dc580221bc80a153347e86c4b6d263ab55a648a01cca95356",
         "inputFacts": {
           "id": "occ-da3d0abd30f59190dc79fac7",
           "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20%3A00%3A00.000-04%3A00",
@@ -684,10 +709,10 @@
           "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
           "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-16T20:00:00\", \"price\": 27.6, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
           "description": "This two act, four-course horror/thriller highlights legacy, cannibalism, the inevitability of personal failure, and the complex moral nature of predation in all its incarnations.",
-          "registration": "Purchase Tickets"
+          "registration": "Online sales end 1 (one) hour before the start of a performance."
         }
       },
-      "reviewExpiresAt": "2026-10-16T12:21:05.842945-04:00"
+      "reviewExpiresAt": "2026-10-17T14:35:21.459952-04:00"
     },
     {
       "id": "occ-ef17a80befb53337144d5c79",
@@ -851,7 +876,7 @@
       "occurrenceId": "occ-12cdcd5136c10e9e64b7d1aa",
       "seriesId": "series-aacd18dd85835e25013a7c54",
       "sourceUpdatedAt": "2026-10-02T12:43:38-04:00",
-      "lastCheckedAt": "2026-10-15T12:21:05.842945-04:00",
+      "lastCheckedAt": "2026-10-16T14:35:21.459952-04:00",
       "canonicalUrl": "https://events.umich.edu/event/153119",
       "venueId": "east quadrangle|ann arbor",
       "timePrecision": "time",
@@ -931,15 +956,15 @@
       "experienceId": "experience:[\"ann arbor\",\"east quadrangle\",\"rc players evening of scenes\"]",
       "price": "Free",
       "end": "2026-10-17T22:00:00-04:00",
-      "bookingUrl": "https://events.umich.edu/event/153119",
+      "bookingUrl": "",
       "statusEvidence": "Organizer detail reviewed",
       "priceMin": 0.0,
       "priceMax": 0.0,
       "priceCurrency": "USD",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-15T12:21:05.842945-04:00",
-        "expiresAt": "2026-10-16T12:21:05.842945-04:00",
+        "reviewedAt": "2026-10-16T14:35:21.459952-04:00",
+        "expiresAt": "2026-10-17T14:35:21.459952-04:00",
         "sourceUrl": "https://events.umich.edu/event/153119",
         "sourceHash": "e537efe869acc5ddbb7f14d67eab0ad2707eab5ff5cdfddb7ea5719052813ed7",
         "inputFacts": {
@@ -953,7 +978,7 @@
           "status": "scheduled"
         },
         "evidence": {
-          "date": "Sat, Oct 17 2026",
+          "date": "Oct 17 2026",
           "time": "8:00pm",
           "venue": "East Quadrangle - Keene Theater",
           "admission": "This event is free and open to the public.",
@@ -961,12 +986,12 @@
           "end": "10:00pm"
         }
       },
-      "reviewExpiresAt": "2026-10-16T12:21:05.842945-04:00"
+      "reviewExpiresAt": "2026-10-17T14:35:21.459952-04:00"
     },
     {
       "id": "occ-7fed3669b1256a04e90f18ff",
       "title": "COMEDY l The Thursday Show w/ The Planet Ant Farm Team",
-      "summary": "Experience Planet Ant's weekly live variety night, featuring original sketch comedy, improv, character bits, and guest performers. Each show is created fresh with a rotating monthly theme, blending scripted and unscripted comedy for a fast-moving, collaborative experience.",
+      "summary": "Experience a weekly live variety night featuring original sketch comedy, improv, character bits, and guest performers. Each show is created fresh with a rotating monthly theme, blending scripted and unscripted comedy into a fast-moving, collaborative experience. No two shows are the same.",
       "url": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-22T20%3A00%3A00.000-04%3A00",
       "start": "2026-10-22T20:00:00-04:00",
       "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
@@ -982,7 +1007,7 @@
       "priceMin": 11.84,
       "priceMax": 11.84,
       "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-15T12:21:05.842945-04:00",
+      "lastCheckedAt": "2026-10-16T14:35:21.459952-04:00",
       "canonicalUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-22T20%3A00%3A00.000-04%3A00",
       "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
       "timePrecision": "time",
@@ -1069,14 +1094,14 @@
       },
       "localityTier": "unknown",
       "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"comedy l the thursday show w the planet ant farm team\"]",
-      "registration": "Online sales end 1 (one) hour before the start of a performance.",
-      "bookingUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-22T20%3A00%3A00.000-04%3A00",
+      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
+      "bookingUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-22T20:00:00",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-15T12:21:05.842945-04:00",
-        "expiresAt": "2026-10-16T12:21:05.842945-04:00",
+        "reviewedAt": "2026-10-16T14:35:21.459952-04:00",
+        "expiresAt": "2026-10-17T14:35:21.459952-04:00",
         "sourceUrl": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-22T20%3A00%3A00.000-04%3A00",
-        "sourceHash": "2c3eb9c62191483747137871786c67256a232772deb147350ab807b562698e98",
+        "sourceHash": "1bee46cb2c6dc151db3676905e80f199d05a8fbad8afa7b77834ca5549a6d4ba",
         "inputFacts": {
           "id": "occ-7fed3669b1256a04e90f18ff",
           "url": "https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-22T20%3A00%3A00.000-04%3A00",
@@ -1089,14 +1114,14 @@
         },
         "evidence": {
           "date": "Oct 22",
-          "time": "8:00 PM EDT",
+          "time": "8:00 PM",
           "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
           "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/comedy-l-the-thursday-show-w-the-planet-ant-farm-team?date=2026-10-22T20:00:00\", \"price\": 11.84, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
           "description": "The Thursday Show is Planet Ant’s weekly live variety night, featuring original sketch comedy, improv, character bits, and guest performers.",
           "registration": "Online sales end 1 (one) hour before the start of a performance."
         }
       },
-      "reviewExpiresAt": "2026-10-16T12:21:05.842945-04:00"
+      "reviewExpiresAt": "2026-10-17T14:35:21.459952-04:00"
     },
     {
       "id": "occ-84e56d6f81b2d0140ec73142",
@@ -1227,7 +1252,7 @@
     {
       "id": "occ-8802a159b5d629748d00e296",
       "title": "Evening of Scenes",
-      "summary": "Enjoy an evening of short, comedic scenes written, directed, and acted by students. This two-hour show promises witty banter and absurd situations, offering a fresh dose of humor and entertainment while celebrating student creativity.",
+      "summary": "Enjoy an evening of short, comedic scenes, all written, directed, and acted by students. This two-hour show promises a fresh dose of humor and entertainment, celebrating student creativity and the arts.",
       "url": "https://events.umich.edu/event/153671",
       "start": "2026-10-17T20:00:00-04:00",
       "venue": "East Quadrangle - Keene Theater",
@@ -1239,7 +1264,7 @@
       "occurrenceId": "occ-8802a159b5d629748d00e296",
       "seriesId": "series-42247f573118cb6b0a9803bb",
       "sourceUpdatedAt": "2026-10-13T20:01:02-04:00",
-      "lastCheckedAt": "2026-10-15T15:57:08.777344-04:00",
+      "lastCheckedAt": "2026-10-16T14:35:21.459952-04:00",
       "canonicalUrl": "https://events.umich.edu/event/153671",
       "venueId": "east quadrangle|ann arbor",
       "timePrecision": "time",
@@ -1326,8 +1351,8 @@
       "priceCurrency": "USD",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-15T15:57:08.777344-04:00",
-        "expiresAt": "2026-10-16T15:57:08.777344-04:00",
+        "reviewedAt": "2026-10-16T14:35:21.459952-04:00",
+        "expiresAt": "2026-10-17T14:35:21.459952-04:00",
         "sourceUrl": "https://events.umich.edu/event/153671",
         "sourceHash": "7f8420a51b5fbb94fdf46a07602ce8b4d22a5484952bd44c8b96378526914927",
         "inputFacts": {
@@ -1349,7 +1374,7 @@
           "end": "10:00pm"
         }
       },
-      "reviewExpiresAt": "2026-10-16T15:57:08.777344-04:00"
+      "reviewExpiresAt": "2026-10-17T14:35:21.459952-04:00"
     },
     {
       "id": "occ-737ae3d3340d1d6b281266a7",
@@ -1483,6 +1508,138 @@
       "reviewExpiresAt": "2026-10-17T07:40:52.180224-04:00"
     },
     {
+      "id": "occ-a17c9d4188494a7c4c157269",
+      "title": "THEATRE l My Daddy is Haunted!",
+      "summary": "Experience Planet Ant's original horror comedy, \"My Daddy is Haunted!\" This one-act play blends humor and scares as the Maplesquatch family's vacation to an ancient castle turns terrifying. Discover if their father is truly haunted in this unique theatrical event.",
+      "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+      "start": "2026-10-16T20:00:00-04:00",
+      "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+      "city": "Hamtramck",
+      "price": "$32.85",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/17881/web-resmydaddyishauntedsocials_socials.jpg",
+      "imageAlt": "THEATRE l My Daddy is Haunted!",
+      "status": "confirmed",
+      "occurrenceId": "occ-a17c9d4188494a7c4c157269",
+      "seriesId": "series-dbf2ca983f5f3ac243c9cb7e",
+      "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
+      "priceMin": 32.85,
+      "priceMax": 32.85,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-10-16T14:35:21.459952-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+      "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "src-3f086893b7149c859c82615f",
+        "theatre-l-my-daddy-is-haunted-event-2026-10-16"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-3f086893b7149c859c82615f|2026-10-16T20:00:00-04:00",
+        "theatre-l-my-daddy-is-haunted-event-2026-10-16|2026-10-16T20:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-14836ed386fe113a8cf114f3",
+        "series-47907b221b1d6d8dd9ec7688",
+        "series-90c9028d779d072843d2fa1d",
+        "series-bd8e2be8f2b668113b480292",
+        "series-c0c9032e291b7fc942f6c4bc",
+        "series-dbf2ca983f5f3ac243c9cb7e"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-3f086893b7149c859c82615f",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "title": "src-3f086893b7149c859c82615f",
+          "start": "src-3f086893b7149c859c82615f",
+          "venue": "src-3f086893b7149c859c82615f",
+          "url": "src-3f086893b7149c859c82615f",
+          "status": "src-3f086893b7149c859c82615f",
+          "imageUrl": "src-3f086893b7149c859c82615f"
+        },
+        "conflicts": {}
+      },
+      "score": 94,
+      "scoring": {
+        "signals": {
+          "funny": 0.95,
+          "distinctive": 0.72,
+          "eclectic": 0.89,
+          "technical_science": 0.05,
+          "artsy": 0.98,
+          "progressive": 0.15,
+          "outdoors": 0.02,
+          "theatre": 0.99,
+          "live_music": 0.02,
+          "live_comedy": 0.12,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.19,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.69,
+          "children_activity": 0.12,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 94,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"theatre l my daddy is haunted\"]",
+      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
+      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20:00:00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-16T14:35:21.459952-04:00",
+        "expiresAt": "2026-10-17T14:35:21.459952-04:00",
+        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+        "sourceHash": "10f93b8dcc2eb6fac75b69c2b1df55b1c72eaae92d6381e6387b76fb78701c75",
+        "inputFacts": {
+          "id": "occ-a17c9d4188494a7c4c157269",
+          "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
+          "start": "2026-10-16T20:00:00-04:00",
+          "end": null,
+          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+          "city": "Hamtramck",
+          "price": "$32.85",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Oct 16",
+          "time": "8:00 PM",
+          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20:00:00\", \"price\": 32.85, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "Join us at the Ant Hall this October for the debut of Planet Ant's original horror comedy, My Daddy is Haunted!",
+          "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office."
+        }
+      },
+      "reviewExpiresAt": "2026-10-17T14:35:21.459952-04:00"
+    },
+    {
       "id": "occ-8ac59d2a2ce747a53bbf2152",
       "title": "\"The Fairytale Lives of Russian Girls\" by Meg Miroshnik",
       "summary": "Experience a theatrical studio performance of \"The Fairytale Lives of Russian Girls,\" directed by a senior BFA student. This production offers a unique opportunity to engage with contemporary theatre and storytelling, showcasing emerging talent in a compelling dramatic presentation.",
@@ -1614,7 +1771,7 @@
     {
       "id": "occ-aced827efb10ac4dd0e2b2c4",
       "title": "AIM Seminar: From woven baskets to filamentous mycelium: harnessing entanglement for structural resilience",
-      "summary": "This seminar explores how entanglement of slender elements, through weaving or growth, creates composite structural systems with enhanced properties. Discover how woven baskets achieve high stiffness and damage resilience, and how mycelium-bound composites offer a low-cost, renewable material with strong bonding capabilities.",
+      "summary": "This seminar explores how entanglement creates resilient composite structures, examining both woven baskets and mycelium-bound composites. Discover how weaving thin ribbons creates damage-resistant metamaterials and how growing filamentous fungi on waste forms strong, biodegradable bonds with various materials, including metals.",
       "url": "https://events.umich.edu/event/148878",
       "start": "2026-10-16T15:00:00-04:00",
       "venue": "East Hall",
@@ -1624,7 +1781,7 @@
       "occurrenceId": "occ-aced827efb10ac4dd0e2b2c4",
       "seriesId": "series-7da83f3f651313928685afa7",
       "sourceUpdatedAt": "2026-10-13T22:55:54-04:00",
-      "lastCheckedAt": "2026-10-15T12:21:05.842945-04:00",
+      "lastCheckedAt": "2026-10-16T14:35:21.459952-04:00",
       "canonicalUrl": "https://events.umich.edu/event/148878",
       "venueId": "east hall|ann arbor",
       "timePrecision": "time",
@@ -1714,15 +1871,15 @@
       "experienceId": "experience:[\"ann arbor\",\"east hall\",\"aim seminar from woven baskets to filamentous mycelium harnessing entanglement for structural resilience\"]",
       "price": "Free",
       "end": "2026-10-16T16:00:00-04:00",
-      "bookingUrl": "https://events.umich.edu/event/148878",
+      "bookingUrl": "",
       "statusEvidence": "Organizer detail reviewed",
       "priceMin": 0.0,
       "priceMax": 0.0,
       "priceCurrency": "USD",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-15T12:21:05.842945-04:00",
-        "expiresAt": "2026-10-16T12:21:05.842945-04:00",
+        "reviewedAt": "2026-10-16T14:35:21.459952-04:00",
+        "expiresAt": "2026-10-17T14:35:21.459952-04:00",
         "sourceUrl": "https://events.umich.edu/event/148878",
         "sourceHash": "26aae431abd71316367461f7c4bc16acff6819dc37d42eac21a69760df1e5be3",
         "inputFacts": {
@@ -1744,7 +1901,7 @@
           "end": "4:00pm"
         }
       },
-      "reviewExpiresAt": "2026-10-16T12:21:05.842945-04:00"
+      "reviewExpiresAt": "2026-10-17T14:35:21.459952-04:00"
     },
     {
       "id": "occ-eed5005f948c16aa8875c9b3",
@@ -2152,13 +2309,13 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-41d04441a18c171266004012",
       "title": "Comics Beyond Sight",
       "url": "https://events.umich.edu/event/150276",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
         "id": "occ-41d04441a18c171266004012",
         "url": "https://events.umich.edu/event/150276",
@@ -2169,7 +2326,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-f1cae3775f7b0d4be56f76e1",
@@ -2186,7 +2343,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-4e8e0a37b7ff23817929f41a",
@@ -2203,7 +2360,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-7bec2c2b6c0c4864e668fb4e",
@@ -2220,7 +2377,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-e8f9e4784645e34676c5c428",
@@ -2237,7 +2394,7 @@
         "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-969d7bbd3e8af511f2880241",
@@ -2254,7 +2411,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-e8414b8d9b885d76505aa2c4",
@@ -2271,13 +2428,13 @@
         "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-71c7ed8ed7a84e7e242a8e6b",
       "title": "Comics Beyond Sight",
       "url": "https://events.umich.edu/event/150276",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
         "id": "occ-71c7ed8ed7a84e7e242a8e6b",
         "url": "https://events.umich.edu/event/150276",
@@ -2288,7 +2445,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-c4c862ed74ca166ee4b95e0a",
@@ -2305,7 +2462,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-9fb335522a784a2a4394f323",
@@ -2322,7 +2479,7 @@
         "price": "$25",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-682aeea2626ad64e183ae6f6",
@@ -2339,7 +2496,7 @@
         "price": "$33.50 - $44.50",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-ac6d12226608cd9543a2d42f",
@@ -2356,7 +2513,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-45fb1d036699d1ec38c2c0ad",
@@ -2373,13 +2530,13 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-c073f8857d8cf9ec1d9b9478",
       "title": "Faster and More Fun: American Home Cooking in the 1920s",
       "url": "https://events.umich.edu/event/150658",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
         "id": "occ-c073f8857d8cf9ec1d9b9478",
         "url": "https://events.umich.edu/event/150658",
@@ -2390,30 +2547,13 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
-    },
-    {
-      "id": "occ-a17c9d4188494a7c4c157269",
-      "title": "THEATRE l My Daddy is Haunted!",
-      "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-a17c9d4188494a7c4c157269",
-        "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-16T20%3A00%3A00.000-04%3A00",
-        "start": "2026-10-16T20:00:00-04:00",
-        "end": null,
-        "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-        "city": "Hamtramck",
-        "price": "$32.85",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-d003cbe723c88b9d1635e48b",
       "title": "Down in Ann Arbor Town: Pictorial Maps, Campus Traditions, and the Women Who Made Them",
       "url": "https://events.umich.edu/event/150290",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
         "id": "occ-d003cbe723c88b9d1635e48b",
         "url": "https://events.umich.edu/event/150290",
@@ -2424,13 +2564,13 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     },
     {
       "id": "occ-5e57385492c4802efa558e47",
       "title": "Grand Vision",
       "url": "https://events.umich.edu/event/149620",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
         "id": "occ-5e57385492c4802efa558e47",
         "url": "https://events.umich.edu/event/149620",
@@ -2441,7 +2581,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-16T10:40:52.180224-04:00"
+      "retryAt": "2026-10-16T17:35:21.459952-04:00"
     }
   ]
 }
