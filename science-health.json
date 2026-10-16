@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-16T10:02:47.778170Z",
-  "status": "partial",
-  "lastSuccessfulCheckAt": "2026-10-10T10:16:39.118957Z",
-  "documentGeneratedAt": "2026-10-16T10:02:47.778170Z",
+  "generatedAt": "2026-10-16T17:03:25.071759Z",
+  "status": "ok",
+  "lastSuccessfulCheckAt": "2026-10-16T17:03:25.071759Z",
+  "documentGeneratedAt": "2026-10-16T17:03:25.071759Z",
   "newestVerifiedStoryAt": "2026-10-16T04:05:00Z",
   "sources": {
     "nasa": {
@@ -43,23 +43,19 @@
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-16T10:02:47.778170Z",
+      "lastAttemptAt": "2026-10-16T17:03:25.071759Z",
       "lastSuccessAt": "2026-10-16T10:02:47.778170Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
-      "errors": [
-        "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought: ValueError: unverified paper URL"
-      ],
-      "candidateCount": 15,
-      "acceptedCount": 3,
-      "deferredCount": 7,
-      "rejectedCount": 4,
+      "errors": [],
+      "candidateCount": 1,
+      "acceptedCount": 1,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-16T10:02:47.778170Z",
-      "failedUrls": [
-        "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought"
-      ],
+      "failedUrls": [],
       "feedFailed": false,
-      "retryCount": 10,
-      "nextRetryAt": "2026-10-16T16:02:47.778170Z"
+      "retryCount": 0,
+      "nextRetryAt": null
     },
     "nsf": {
       "name": "NSF",
@@ -96,7 +92,6 @@
       "nextRetryAt": null
     }
   },
-  "error": "Incomplete source checks: esa",
   "metrics": {
     "verifiedStories": 68,
     "sourceCounts": {
@@ -128,10 +123,10 @@
       "politics": 2,
       "social-science": 11,
       "sustainability": 1,
-      "technology": 39,
+      "technology": 40,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 5.96,
+    "newestStoryAgeHours": 12.97,
     "maxPublicationLagHours": 1114.28
   }
 }

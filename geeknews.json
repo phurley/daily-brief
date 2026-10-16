@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-16T10:02:47.778170Z",
+  "generatedAt": "2026-10-16T17:03:25.071759Z",
   "editionDate": "2026-10-16",
   "starshipEstimatedLaunch": {
     "status": "targeted",
@@ -1414,10 +1414,10 @@
     {
       "id": "science-718e414f27ebb381",
       "title": "Mars’s oddest cloud may be even odder than we thought",
-      "summary": "New modeling suggests that the Arsia Mons Elongated Cloud (AMEC) on Mars forms through homogeneous nucleation, a process where water vapor directly freezes into ice particles without requiring dust or other particles for condensation.",
-      "finding": "New modeling suggests that the Arsia Mons Elongated Cloud (AMEC) on Mars forms through homogeneous nucleation, a process where water vapor directly freezes into ice particles without requiring dust or other particles for condensation.",
-      "significance": "This finding indicates that Mars's atmosphere can reach extreme humidity levels, previously unobserved, and highlights that unusual physical processes may be at play in planetary atmospheres, including those of exoplanets.",
-      "caveat": "While the model successfully reproduced the AMEC, some aspects of the modeled cloud do not exactly match observations.",
+      "summary": "The Arsia Mons Elongated Cloud (AMEC) on Mars forms through homogeneous nucleation, a process where water vapor directly freezes into ice particles without requiring dust or other particles as condensation nuclei. This process occurs due to extreme humidity levels created by air rapidly cooling as it is lifted by winds flowing past the Arsia Mons volcano.",
+      "finding": "The Arsia Mons Elongated Cloud (AMEC) on Mars forms through homogeneous nucleation, a process where water vapor directly freezes into ice particles without requiring dust or other particles as condensation nuclei. This process occurs due to extreme humidity levels created by air rapidly cooling as it is lifted by winds flowing past the Arsia Mons volcano.",
+      "significance": "This finding suggests that extreme humidity levels can be reached in planetary atmospheres, enabling a rare physical process previously considered theoretical in nature. Understanding this mechanism can improve atmospheric models for Mars and other celestial bodies, including exoplanets, by considering less common physical phenomena.",
+      "caveat": "While the new modeling successfully reproduced the AMEC, some aspects of the modeled cloud do not exactly match observations. The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought",
       "primarySourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought",
       "source": {
@@ -1427,18 +1427,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-07T15:00:00Z",
       "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-13T10:00:01.886016Z",
-      "verifiedAt": "2026-10-13T10:00:01.886016Z",
+      "checkedAt": "2026-10-16T17:03:25.071759Z",
+      "verifiedAt": "2026-10-16T17:03:25.071759Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
-        "physics"
+        "physics",
+        "technology"
       ],
       "entities": [
         "Mars Express",
         "Arsia Mons Elongated Cloud",
-        "Mars",
         "Arsia Mons",
+        "homogeneous nucleation",
         "Nature Geoscience"
       ],
       "milestoneStatus": "unknown",
