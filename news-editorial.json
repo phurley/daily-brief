@@ -1,8 +1,101 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-10-16T14:35:51.988479-04:00",
+  "generatedAt": "2026-10-16T23:46:49.595678-04:00",
   "stories": [
+    {
+      "id": "van-buren-township-planning-commission-a-news-2026-10-15",
+      "title": "Van Buren Township Planning Commission approves data center plan",
+      "summary": "The Van Buren Township Planning Commission approved the final site plan for the Project Cannoli Data Center, developed by Panattoni for Google, despite resident opposition. Preliminary construction has begun on the 282-acre site near Haggerty Road and I-95, with operations potentially starting late next year.",
+      "url": "https://www.wemu.org/wemu-news/2026-10-15/van-buren-township-planning-commission-approves-data-center-plan",
+      "publishedAt": "2026-10-15T21:51:47.767000-04:00",
+      "addedAt": "2026-10-16T23:44:07-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Van Buren Township Planning Commission",
+        "Project Cannoli Data Center",
+        "Panattoni Development",
+        "Google",
+        "Jeffrey Jahr",
+        "Kevin Meerschaert"
+      ],
+      "locations": [
+        "Van Buren Township",
+        "Haggerty Road and I-95 Service Drive"
+      ],
+      "localityIndex": 1,
+      "topics": [
+        "data center",
+        "planning commission",
+        "development",
+        "opposition",
+        "google"
+      ],
+      "source": {
+        "name": "Kevin Meerschaert",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.22,
+          "eclectic": 0.09,
+          "technical_science": 0.9,
+          "artsy": 0.03,
+          "progressive": 0.19,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.12,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/8a8e79d/2147483647/strip/true/crop/1920x1080+0+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F1f%2F69%2F404136324b84a6f0b7e48fbbc197%2Fvbt-planning.png",
+        "alt": "The president of Panattoni Development addresses the Van Buren Township Planning Commission at its October 15, 2026 meeting."
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-16T23:46:49.595678-04:00",
+        "expiresAt": "2026-10-19T23:46:49.595678-04:00",
+        "inputFacts": {
+          "id": "van-buren-township-planning-commission-a-news-2026-10-15",
+          "title": "Van Buren Township Planning Commission approves data center plan",
+          "url": "https://www.wemu.org/wemu-news/2026-10-15/van-buren-township-planning-commission-approves-data-center-plan",
+          "publishedAt": "2026-10-15T17:51:00-04:00",
+          "summary": "The Van Buren Township Planning Commission approved the final site plan for the Project Cannoli Data Center, developed by Panattoni for Google. Preliminary construction has begun on the 282-acre site near Haggerty Road and I-95 Service Drive, despite public opposition from residents. Operations could start late next year.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-10-15T21:51:47.767",
+        "datePrecision": "time",
+        "sourceHash": "2d438ee569cbbad4e60f958d37ed6ec4235218822533681bf84293e0b314c751",
+        "relevance": 4,
+        "novelty": 3,
+        "reason": "The approval of a large data center in a neighboring community has potential implications for local infrastructure, traffic, and environmental considerations, making it relevant to Canton and Plymouth residents.",
+        "storyKey": "van-buren-data-center-approval",
+        "localConnection": "Van Buren Township is a neighboring community to Canton and Plymouth.",
+        "grounded": true,
+        "groundingReason": "The summary accurately reflects the article's content regarding the approval of the data center, the developer, the client, resident opposition, and the project's timeline and location. This is a local development for Van Buren Township."
+      }
+    },
     {
       "id": "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
       "title": "Samuel and Dan Habib speak about producing and directing ‘The Ride Ahead’",
@@ -107,194 +200,6 @@
         "localConnection": "E3",
         "grounded": true,
         "groundingReason": "The summary accurately reflects the article's content regarding the documentary, its themes, the co-directors, and the upcoming screening at the University of Michigan."
-      }
-    },
-    {
-      "id": "umich-board-of-regents-discusses-recent-news-2026-10-16",
-      "title": "UMich Board of Regents discusses recent construction projects and satellite campuses",
-      "summary": "The University of Michigan Board of Regents discussed a planned $1.25 billion data center near Ypsilanti, which the university claims will use significantly less energy than commercial facilities and not impact the Huron River or local groundwater. Community members expressed apprehension regarding the project's environmental impact and leadership decisions.",
-      "url": "https://www.michigandaily.com/news/administration/umich-board-of-regents-discusses-recent-construction-projects-and-satellite-campuses/",
-      "publishedAt": "2026-10-16T04:56:18+00:00",
-      "addedAt": "2026-10-16T14:34:39-04:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "University of Michigan",
-        "Board of Regents",
-        "Domenico Grasso",
-        "Los Alamos National Laboratory",
-        "Michigan Medicine",
-        "Ganesh Palapattu",
-        "DTE Energy"
-      ],
-      "locations": [
-        "Ann Arbor, MI",
-        "Flint, MI",
-        "Ypsilanti, MI"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "university",
-        "construction",
-        "data center",
-        "education",
-        "regents meeting"
-      ],
-      "source": {
-        "name": "THE MICHIGAN DAILY NEWS STAFF",
-        "publication": "The Michigan Daily (University of Michigan)"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.02,
-          "distinctive": 0.22,
-          "eclectic": 0.16,
-          "technical_science": 0.93,
-          "artsy": 0.03,
-          "progressive": 0.46,
-          "outdoors": 0.01,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.77,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.08,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.05,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://www.michigandaily.com/wp-content/uploads/2026/10/Screenshot-2026-10-15-152213.jpg",
-        "alt": "A screenshot of a Regents meeting."
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-16T14:35:51.988479-04:00",
-        "expiresAt": "2026-10-19T14:35:51.988479-04:00",
-        "inputFacts": {
-          "id": "umich-board-of-regents-discusses-recent-news-2026-10-16",
-          "title": "UMich Board of Regents discusses recent construction projects and satellite campuses",
-          "url": "https://www.michigandaily.com/news/administration/umich-board-of-regents-discusses-recent-construction-projects-and-satellite-campuses/",
-          "publishedAt": "2026-10-16T00:00:00-04:00",
-          "summary": "The University of Michigan’s Board of Regents met at the Flint campus to discuss enrollment growth, a planned $1.25 billion research computing center collaboration with Los Alamos National Laboratory, and introduced Ganesh Palapattu as interim executive vice president for medical affairs. President Domenico Grasso addressed community concerns about the facility, emphasizing its research potential and energy efficiency compared to commercial data centers.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-16T04:56:18+00:00",
-        "datePrecision": "time",
-        "sourceHash": "45e7aac129833ea3704cffc6433a4227717975fcc66c938c081173cb0c3f4bd3",
-        "relevance": 4,
-        "novelty": 3,
-        "reason": "The proposed data center near Ypsilanti is a significant local civic decision with potential environmental and economic consequences for nearby communities, including Canton and Plymouth. The discussion of its energy use and water impact is directly relevant to local concerns.",
-        "storyKey": "umich-data-center-ypsilanti",
-        "localConnection": "E6",
-        "grounded": true,
-        "groundingReason": "The article confirms the discussion of the planned data center, its cost, location near Ypsilanti, and the university's claims about energy usage and environmental impact. It also details community apprehension and specific concerns raised during public comment."
-      }
-    },
-    {
-      "id": "npr-investigates-sales-scheme-that-targe-news-2026-10-15",
-      "title": "NPR investigates sales scheme that targeted vulnerable adults at Briarwood Mall",
-      "summary": "An investigation revealed that skin care stores, including one at Briarwood Mall in Washtenaw County, pressured vulnerable adults into spending thousands on products. Salespeople reportedly targeted elderly or disabled individuals, with one 84-year-old Ann Arbor man with dementia charged $42,000.",
-      "url": "https://www.wemu.org/wemu-news/2026-10-15/npr-investigates-sales-scheme-that-targeted-vulnerable-adults-at-briarwood-mall",
-      "publishedAt": "2026-10-15T17:23:00.881000-04:00",
-      "addedAt": "2026-10-15T15:56:23-04:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "NPR",
-        "Mazal Group",
-        "Caroline MacGregor",
-        "Monica Evstahtieva",
-        "Jackie Lay",
-        "Briarwood Mall"
-      ],
-      "locations": [
-        "Washtenaw County, MI",
-        "Briarwood Mall, Ann Arbor, MI"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "sales scheme",
-        "consumer fraud",
-        "elderly abuse",
-        "skincare products",
-        "corporate malpractice"
-      ],
-      "source": {
-        "name": "Caroline MacGregor",
-        "publication": "WEMU 89.1 FM"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.02,
-          "distinctive": 0.48,
-          "eclectic": 0.12,
-          "technical_science": 0.06,
-          "artsy": 0.02,
-          "progressive": 0.25,
-          "outdoors": 0.02,
-          "theatre": 0.02,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.02,
-          "sporting": 0.01,
-          "recurring": 0.05,
-          "craft_fair_shopping": 0.06,
-          "religious": 0.02,
-          "large_venue": 0.06,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.04,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.04,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/172ce9f/2147483647/strip/true/crop/1200x675+0+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F18%2F64%2F9b81abc24e62b5fd10ce6e83ea13%2Fnpr-skin-collage.jpg",
-        "alt": "NPR investigation into skincare sales scheme"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-16T07:41:16.771589-04:00",
-        "expiresAt": "2026-10-19T07:41:16.771589-04:00",
-        "inputFacts": {
-          "id": "npr-investigates-sales-scheme-that-targe-news-2026-10-15",
-          "title": "NPR investigates sales scheme that targeted vulnerable adults at Briarwood Mall",
-          "url": "https://www.wemu.org/wemu-news/2026-10-15/npr-investigates-sales-scheme-that-targeted-vulnerable-adults-at-briarwood-mall",
-          "publishedAt": "2026-10-15T13:23:00-04:00",
-          "summary": "An NPR investigation has uncovered how skincare stores across the U.S., including in Washtenaw County, pressured customers into spending thousands of dollars on products they did not want. A California-based company, Mazal Group, distributed these products under multiple brand names, with salespeople often targeting the elderly or disabled. An 84-year-old Ann Arbor man with dementia was charged $42,000 through aggressive sales tactics, and while Mazal dissolved in September, a new company under the same ownership continues operations.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-15T17:23:00.881",
-        "datePrecision": "time",
-        "sourceHash": "7d287525cd6762b0f391178b240b71ef4aae26fa1d8daa541fcc635a99899bec",
-        "relevance": 5,
-        "novelty": 4,
-        "reason": "This story details a significant consumer protection issue impacting vulnerable adults in a nearby community, with direct financial consequences for residents. The investigation uncovers a pattern of predatory sales tactics.",
-        "storyKey": "briarwood-mall-predatory-sales",
-        "localConnection": "Briarwood Mall in Washtenaw County, Ann Arbor residents affected.",
-        "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, including the location, target population, and specific monetary amounts. The investigation into predatory sales practices at a local mall is a significant local development."
       }
     },
     {
@@ -573,18 +478,33 @@
   ],
   "corrections": [
     {
-      "id": "artist-holly-bass-presents-we-hold-these-news-2026-10-16",
+      "id": "van-buren-township-planning-commission-a-news-2026-10-15",
       "inputFacts": {
-        "id": "artist-holly-bass-presents-we-hold-these-news-2026-10-16",
-        "title": "Artist Holly Bass presents ‘We Hold These Truths’ UMMA exhibition centering American history and democracy",
-        "url": "https://www.michigandaily.com/news/campus-life/artist-holly-bass-presents-we-hold-these-truths-umma-exhibition-centering-american-history-and-democracy/",
-        "publishedAt": "2026-10-16T00:00:00-04:00",
-        "summary": "The University of Michigan Museum of Art recently opened its newest exhibit, “We Hold These Truths,” by artist Holly Bass, the museum’s 2025-2026 Roman J. Witt Resident artist-in-residence and Towsley policymaker in residence. The exhibit — Bass’ largest yet — seeks to highlight key political divides and the evolution of patriotism over the American anniversary.",
+        "id": "van-buren-township-planning-commission-a-news-2026-10-15",
+        "title": "Van Buren Township Planning Commission approves data center plan",
+        "url": "https://www.wemu.org/wemu-news/2026-10-15/van-buren-township-planning-commission-approves-data-center-plan",
+        "publishedAt": "2026-10-15T17:51:00-04:00",
+        "summary": "The Van Buren Township Planning Commission approved the final site plan for the Project Cannoli Data Center, developed by Panattoni for Google. Preliminary construction has begun on the 282-acre site near Haggerty Road and I-95 Service Drive, despite public opposition from residents. Operations could start late next year.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-10-16T04:53:21+00:00",
-      "publicationEvidence": "2026-10-16T04:53:21+00:00",
+      "publishedAt": "2026-10-15T21:51:47.767000-04:00",
+      "publicationEvidence": "2026-10-15T21:51:47.767",
+      "datePrecision": "time"
+    },
+    {
+      "id": "emu-board-of-regents-passes-contract-agr-news-2026-10-16",
+      "inputFacts": {
+        "id": "emu-board-of-regents-passes-contract-agr-news-2026-10-16",
+        "title": "EMU Board of Regents passes contract agreements with teacher and police unions",
+        "url": "https://www.wemu.org/wemu-news/2026-10-16/emu-board-of-regents-passes-contract-agreements-with-teacher-and-police-unions",
+        "publishedAt": "2026-10-16T07:01:00-04:00",
+        "summary": "The EMU Board of Regents approved collective bargaining agreements with the school’s teacher and police unions, including salary increases, health care adjustments, and an AI policy for faculty. The contracts are effective for three years and were negotiated to support employees in serving students.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-16T11:01:39.737000-04:00",
+      "publicationEvidence": "2026-10-16T11:01:39.737",
       "datePrecision": "time"
     },
     {
@@ -600,36 +520,6 @@
       },
       "publishedAt": "2026-10-13T13:36:30+00:00",
       "publicationEvidence": "2026-10-13T13:36:30+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "umich-board-of-regents-discusses-recent-news-2026-10-16",
-      "inputFacts": {
-        "id": "umich-board-of-regents-discusses-recent-news-2026-10-16",
-        "title": "UMich Board of Regents discusses recent construction projects and satellite campuses",
-        "url": "https://www.michigandaily.com/news/administration/umich-board-of-regents-discusses-recent-construction-projects-and-satellite-campuses/",
-        "publishedAt": "2026-10-16T00:00:00-04:00",
-        "summary": "The University of Michigan’s Board of Regents met at the Flint campus to discuss enrollment growth, a planned $1.25 billion research computing center collaboration with Los Alamos National Laboratory, and introduced Ganesh Palapattu as interim executive vice president for medical affairs. President Domenico Grasso addressed community concerns about the facility, emphasizing its research potential and energy efficiency compared to commercial data centers.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-16T04:56:18+00:00",
-      "publicationEvidence": "2026-10-16T04:56:18+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "npr-investigates-sales-scheme-that-targe-news-2026-10-15",
-      "inputFacts": {
-        "id": "npr-investigates-sales-scheme-that-targe-news-2026-10-15",
-        "title": "NPR investigates sales scheme that targeted vulnerable adults at Briarwood Mall",
-        "url": "https://www.wemu.org/wemu-news/2026-10-15/npr-investigates-sales-scheme-that-targeted-vulnerable-adults-at-briarwood-mall",
-        "publishedAt": "2026-10-15T13:23:00-04:00",
-        "summary": "An NPR investigation has uncovered how skincare stores across the U.S., including in Washtenaw County, pressured customers into spending thousands of dollars on products they did not want. A California-based company, Mazal Group, distributed these products under multiple brand names, with salespeople often targeting the elderly or disabled. An 84-year-old Ann Arbor man with dementia was charged $42,000 through aggressive sales tactics, and while Mazal dissolved in September, a new company under the same ownership continues operations.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-15T17:23:00.881000-04:00",
-      "publicationEvidence": "2026-10-15T17:23:00.881",
       "datePrecision": "time"
     },
     {
@@ -678,6 +568,36 @@
       "datePrecision": "time"
     },
     {
+      "id": "are-you-too-old-to-rake-leaves-why-it-ma-news-2026-10-16",
+      "inputFacts": {
+        "id": "are-you-too-old-to-rake-leaves-why-it-ma-news-2026-10-16",
+        "title": "Are you too old to rake leaves? Why it may be better to leave them",
+        "url": "https://www.hometownlife.com/story/news/health/2026/10/16/raking-leaves-too-old-injuries-heart-attack-michigan-fall-health/92282352007/",
+        "publishedAt": "2026-10-16T12:48:00-04:00",
+        "summary": "Experts warn that raking leaves can pose significant health risks, particularly for older adults or those with heart disease, as the activity can strain the heart similarly to shoveling snow. Medical professionals advise starting slowly and avoiding overexertion, while environmental experts suggest leaving leaves to decompose naturally for ecological benefits. Southern Illinois University and the Cleveland Clinic highlight the risks of sudden physical exertion after periods of inactivity.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-16T16:48:28+00:00",
+      "publicationEvidence": "2026-10-16T16:48:28Z",
+      "datePrecision": "time"
+    },
+    {
+      "id": "michigan-roadside-parks-are-closing-when-news-2026-10-16",
+      "inputFacts": {
+        "id": "michigan-roadside-parks-are-closing-when-news-2026-10-16",
+        "title": "Michigan roadside parks are closing. When gates lock for winter",
+        "url": "https://www.hometownlife.com/story/travel/michigan/2026/10/16/michigan-roadside-parks-close-winter-schedule/92279671007/",
+        "publishedAt": "2026-10-16T09:59:00-04:00",
+        "summary": "Most Michigan roadside parks will close on Oct. 29 as the Michigan Department of Transportation (MDOT) prepares for winter. Nearly all 82 parks maintained by MDOT close each fall in late October and reopen in late April. Rest areas along major freeways and roads remain open 24/7 for travelers.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-16T13:59:11+00:00",
+      "publicationEvidence": "2026-10-16T13:59:11Z",
+      "datePrecision": "time"
+    },
+    {
       "id": "grand-valley-s-corpse-flower-blooms-how-news-2026-10-15",
       "inputFacts": {
         "id": "grand-valley-s-corpse-flower-blooms-how-news-2026-10-15",
@@ -708,6 +628,51 @@
       "datePrecision": "time"
     },
     {
+      "id": "google-wins-zoning-approval-for-huge-dat-news-2026-10-15",
+      "inputFacts": {
+        "id": "google-wins-zoning-approval-for-huge-dat-news-2026-10-15",
+        "title": "Google wins zoning approval for huge data center near Detroit airport",
+        "url": "https://www.michiganpublic.org/politics-government/2026-10-15/google-wins-zoning-approval-for-huge-data-center-near-detroit-airport",
+        "publishedAt": "2026-10-15T19:07:00-04:00",
+        "summary": "Google's proposed 282-acre hyperscale data center (Project Cannoli) near Detroit Metro Airport received final zoning approval from Van Buren Township's Planning Commission despite resident opposition. The project, which will bring significant investment and tax revenue to the area, faces concerns about noise pollution, construction impacts, and environmental effects. Local officials and developers highlight the economic benefits, while residents and activists continue to push back against the development.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-15T23:07:53.049000-04:00",
+      "publicationEvidence": "2026-10-15T23:07:53.049",
+      "datePrecision": "time"
+    },
+    {
+      "id": "east-jackson-school-board-president-chal-news-2026-10-16",
+      "inputFacts": {
+        "id": "east-jackson-school-board-president-chal-news-2026-10-16",
+        "title": "East Jackson School Board president challenges incumbent rep in 46th District",
+        "url": "https://www.wemu.org/wemu-news/2026-10-16/east-jackson-school-board-president-challenges-incumbent-rep-in-46th-district",
+        "publishedAt": "2026-10-16T08:11:00-04:00",
+        "summary": "Democrat Jan Maino, East Jackson School Board president, is challenging two-term Republican state Rep. Kathy Schmaltz in Michigan’s reliably red 46th House District. Both candidates focus on affordability and education, with Maino advocating for affordable housing projects and Medicaid preservation, while Schmaltz emphasizes tax cuts and per-pupil funding increases. The race is part of WEMU's 2026 midterm election coverage.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-16T12:11:26.893000-04:00",
+      "publicationEvidence": "2026-10-16T12:11:26.893",
+      "datePrecision": "time"
+    },
+    {
+      "id": "12-year-old-bicyclist-seriously-injured-news-2026-10-16",
+      "inputFacts": {
+        "id": "12-year-old-bicyclist-seriously-injured-news-2026-10-16",
+        "title": "12-year-old bicyclist seriously injured in Warren crash, expected to survive",
+        "url": "https://www.clickondetroit.com/news/local/2026/10/16/12-year-old-bicyclist-seriously-injured-in-warren-crash-expected-to-survive/",
+        "publishedAt": "2026-10-16T21:02:00-04:00",
+        "summary": "A 12-year-old bicyclist was seriously injured and dragged in a crash in Warren but is expected to survive. The incident occurred on October 16, 2026.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-16T00:29:15.192000+00:00",
+      "publicationEvidence": "2026-10-16T00:29:15.192Z",
+      "datePrecision": "time"
+    },
+    {
       "id": "man-killed-in-overnight-shooting-on-detr-news-2026-10-16",
       "inputFacts": {
         "id": "man-killed-in-overnight-shooting-on-detr-news-2026-10-16",
@@ -721,66 +686,6 @@
       "publishedAt": "2026-10-16T10:18:13.297000+00:00",
       "publicationEvidence": "2026-10-16T10:18:13.297Z",
       "datePrecision": "time"
-    },
-    {
-      "id": "we-re-better-than-what-s-happening-michi-news-2026-10-16",
-      "inputFacts": {
-        "id": "we-re-better-than-what-s-happening-michi-news-2026-10-16",
-        "title": "‘We’re better than what’s happening’: Michigan football OC Jason Beck addresses offensive struggles",
-        "url": "https://www.clickondetroit.com/sports/2026/10/15/were-better-than-whats-happening-michigan-football-oc-jason-beck-addresses-offensive-struggles/",
-        "publishedAt": "2026-10-16T05:00:00-04:00",
-        "summary": "Michigan football offensive coordinator Jason Beck addressed the team's recent offensive struggles, stating that the Wolverines are better than their current performance and expressing confidence in their ability to improve. The comments come as the team looks to adjust following recent challenges on offense.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-16T09:00:01+00:00",
-      "publicationEvidence": "2026-10-16T09:00:01Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "university-of-michigan-approves-new-100m-news-2026-10-16",
-      "inputFacts": {
-        "id": "university-of-michigan-approves-new-100m-news-2026-10-16",
-        "title": "University of Michigan approves new $100M sports medicine institute in Ann Arbor",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/16/university-of-michigan-approves-new-dollar100m-sports-medicine-institute-in-ann-arbor/",
-        "publishedAt": "2026-10-16T00:00:00-04:00",
-        "summary": "The University of Michigan has approved a new $100 million sports medicine institute in Ann Arbor, funded by a major gift from Nathan and Catherine Forbes. The institute, scheduled for completion in fall 2028, builds on the Forbes' longstanding support for the university, including their roles in the Look to Michigan fundraising campaign. Additional philanthropic partnerships will further support the project's development.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-16T09:00:01+00:00",
-      "publicationEvidence": "2026-10-16T09:00:01Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "benson-james-clash-over-health-care-trum-news-2026-10-15",
-      "inputFacts": {
-        "id": "benson-james-clash-over-health-care-trum-news-2026-10-15",
-        "title": "Benson, James clash over health care, Trump, Lansing record in final Michigan governor debate",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/16/benson-and-james-clash-over-health-care-trump-and-lansing-record-in-final-michigan-governor-debate/",
-        "publishedAt": "2026-10-15T22:55:00-04:00",
-        "summary": "Jocelyn Benson and John James faced off in their final gubernatorial debate, focusing on health care costs, data center development, education, and government accountability. Benson accused James of profiting from data center stocks while advocating tax breaks, while James criticized Benson's husband's involvement in a Saline development. Both candidates highlighted their plans to lower health care costs and taxes, with Benson emphasizing transparency in government and James defending his work on price transparency legislation. The debate also featured attacks on each other's ties to Trump and Lansing's Democratic leadership.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-16T02:55:32.790000+00:00",
-      "publicationEvidence": "2026-10-16T02:55:32.79Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "new-exhibit-highlights-100-year-history-news-2026-10-16",
-      "inputFacts": {
-        "id": "new-exhibit-highlights-100-year-history-news-2026-10-16",
-        "title": "New exhibit highlights 100-year history of America’s Thanksgiving Parade in Detroit",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/16/new-exhibit-highlights-100-year-history-of-americas-thanksgiving-parade/",
-        "publishedAt": "2026-10-16T12:43:00-04:00",
-        "summary": "The Detroit Historical Society’s 'This is 100: America’s Thanksgiving Parade' exhibit showcases the parade’s history from its 1924 debut through modern times, featuring artifacts, costumes, and interactive elements. On view at the Detroit Historical Museum through January 3, 2027, the exhibit highlights milestones like radio and TV broadcasts, and the parade’s continuation despite World War II disruptions.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-16T16:43:44.419000+00:00",
-      "publicationEvidence": "2026-10-16T16:43:44.419Z",
-      "datePrecision": "time"
     }
   ],
   "days": [
@@ -790,8 +695,8 @@
         "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
         "massive-google-data-center-faces-decisio-news-2026-10-14",
         "many-older-adults-make-medicare-decision-news-2026-10-15",
-        "npr-investigates-sales-scheme-that-targe-news-2026-10-15",
-        "samuel-and-dan-habib-speak-about-produci-news-2026-10-16"
+        "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
+        "van-buren-township-planning-commission-a-news-2026-10-15"
       ]
     },
     {
@@ -800,18 +705,18 @@
         "massive-google-data-center-faces-decisio-news-2026-10-14",
         "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
         "many-older-adults-make-medicare-decision-news-2026-10-15",
-        "npr-investigates-sales-scheme-that-targe-news-2026-10-15",
-        "umich-board-of-regents-discusses-recent-news-2026-10-16"
+        "van-buren-township-planning-commission-a-news-2026-10-15",
+        "samuel-and-dan-habib-speak-about-produci-news-2026-10-16"
       ]
     },
     {
       "date": "2026-10-17",
       "selectedIds": [
-        "npr-investigates-sales-scheme-that-targe-news-2026-10-15",
         "many-older-adults-make-medicare-decision-news-2026-10-15",
         "massive-google-data-center-faces-decisio-news-2026-10-14",
         "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
-        "umich-board-of-regents-discusses-recent-news-2026-10-16"
+        "van-buren-township-planning-commission-a-news-2026-10-15",
+        "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12"
       ]
     }
   ]
