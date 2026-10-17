@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-10-16T23:46:49.595678-04:00",
+  "generatedAt": "2026-10-17T14:23:35.845804-04:00",
   "stories": [
     {
       "id": "van-buren-township-planning-commission-a-news-2026-10-15",
@@ -94,6 +94,98 @@
         "localConnection": "Van Buren Township is a neighboring community to Canton and Plymouth.",
         "grounded": true,
         "groundingReason": "The summary accurately reflects the article's content regarding the approval of the data center, the developer, the client, resident opposition, and the project's timeline and location. This is a local development for Van Buren Township."
+      }
+    },
+    {
+      "id": "emu-board-of-regents-passes-contract-agr-news-2026-10-16",
+      "title": "EMU Board of Regents passes contract agreements with teacher and police unions",
+      "summary": "The Eastern Michigan University Board of Regents approved new three-year contracts with its teacher and police unions, including salary increases, healthcare adjustments, and an AI policy for faculty work and research to protect intellectual property. These agreements aim to support employees in serving students.",
+      "url": "https://www.wemu.org/wemu-news/2026-10-16/emu-board-of-regents-passes-contract-agreements-with-teacher-and-police-unions",
+      "publishedAt": "2026-10-16T11:01:39.737000-04:00",
+      "addedAt": "2026-10-16T23:44:06-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Eastern Michigan University",
+        "EMU Board of Regents",
+        "Police Officers Association of Michigan",
+        "American Association of University Professors",
+        "Curt Ellis",
+        "Ana Longoria"
+      ],
+      "locations": [
+        "Ypsilanti & Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "education",
+        "labor contracts",
+        "university",
+        "police",
+        "ai policy"
+      ],
+      "source": {
+        "name": "Ana Longoria",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.12,
+          "eclectic": 0.1,
+          "technical_science": 0.12,
+          "artsy": 0.03,
+          "progressive": 0.25,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.42,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.03
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/d9a2f06/2147483647/strip/true/crop/4624x2428+0+176/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0a%2F6c%2F9862b5424c6a8ab663e5522afe7f%2F20261015-143411.jpg",
+        "alt": "EMU Board of Regents passes contract agreements with teacher and police unions"
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-16T23:46:49.595678-04:00",
+        "expiresAt": "2026-10-19T23:46:49.595678-04:00",
+        "inputFacts": {
+          "id": "emu-board-of-regents-passes-contract-agr-news-2026-10-16",
+          "title": "EMU Board of Regents passes contract agreements with teacher and police unions",
+          "url": "https://www.wemu.org/wemu-news/2026-10-16/emu-board-of-regents-passes-contract-agreements-with-teacher-and-police-unions",
+          "publishedAt": "2026-10-16T07:01:00-04:00",
+          "summary": "The EMU Board of Regents approved collective bargaining agreements with the school’s teacher and police unions, including salary increases, health care adjustments, and an AI policy for faculty. The contracts are effective for three years and were negotiated to support employees in serving students.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-10-16T11:01:39.737",
+        "datePrecision": "time",
+        "sourceHash": "0e2205fdf81d82de7860fd6becf3f1efe68c6a8f3e1ae2610e53e447cd54e2a1",
+        "relevance": 3,
+        "novelty": 3,
+        "reason": "EMU is a significant local institution, and its labor agreements, especially those impacting faculty and police, have direct relevance to the community through employment, public services, and the university's operational stability. The AI policy is a novel development in academic contracts.",
+        "storyKey": "emu-union-contracts-2026",
+        "localConnection": "E0",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims in the summary, detailing the approval of new three-year contracts for teacher and police unions at Eastern Michigan University, including salary increases, healthcare adjustments, and an AI policy to protect faculty intellectual property. This is a local development for a major institution in the region."
       }
     },
     {
@@ -383,97 +475,6 @@
         "grounded": true,
         "groundingReason": "The article confirms that Van Buren Township officials are negotiating agreements with Google regarding the data center, including Google covering potential residential water rate increases and reducing generator reliance. It also states that tax incentives were used to secure advanced environmental controls and sound dampening measures."
       }
-    },
-    {
-      "id": "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
-      "title": "PCEP Peer to Peer Program Promotes Inclusive Environment",
-      "summary": "The Plymouth-Canton Community Schools' Peer to Peer Program at PCEP fosters an inclusive environment by pairing general education students with special education students for activities like learning, music, and social events. The program, which has a broad research base, aims to create meaningful connections and develop skills for all participants, with plans to expand into areas like team games and entrepreneurship.",
-      "url": "https://plymouthlibrary.substack.com/p/pcep-peer-to-peer-program-promotes",
-      "publishedAt": "2026-10-12T14:02:09+00:00",
-      "addedAt": "2026-10-13T13:00:14-04:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Jacklyn Klotz",
-        "Plymouth Canton Community Schools (P-CCS)",
-        "Plymouth Canton Education Park (PCEP)",
-        "National Clearinghouse on Autism Evidence and Practice (NCAEP)"
-      ],
-      "locations": [
-        "Plymouth, MI"
-      ],
-      "localityIndex": 0,
-      "topics": [
-        "education",
-        "inclusion",
-        "special education",
-        "student programs",
-        "peer interaction",
-        "community"
-      ],
-      "source": {
-        "name": "Daniel O’Karma",
-        "publication": "Plymouth District Library"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.12,
-          "distinctive": 0.25,
-          "eclectic": 0.4,
-          "technical_science": 0.06,
-          "artsy": 0.25,
-          "progressive": 0.86,
-          "outdoors": 0.03,
-          "theatre": 0.02,
-          "live_music": 0.05,
-          "live_comedy": 0.01,
-          "farmer_market": 0.02,
-          "sporting": 0.02,
-          "recurring": 0.84,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.04,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.04,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.04,
-          "sales_related": 0.06,
-          "children_activity": 0.07,
-          "running": 0.01,
-          "exercise": 0.02,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://substackcdn.com/image/fetch/$s_!EBVG!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fplymouthlibrary.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D1813632301%26version%3D9",
-        "alt": "PCEP Peer to Peer Program Promotes Inclusive Environment"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-14T14:00:41.483616-04:00",
-        "expiresAt": "2026-10-17T14:00:41.483616-04:00",
-        "inputFacts": {
-          "id": "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
-          "title": "PCEP Peer to Peer Program Promotes Inclusive Environment",
-          "url": "https://plymouthlibrary.substack.com/p/pcep-peer-to-peer-program-promotes",
-          "publishedAt": "2026-10-12T00:00:00-04:00",
-          "summary": "The Peer to Peer Program at Plymouth Canton Education Park (PCEP) fosters inclusive connections between students with and without disabilities through collaborative activities like quizzes, music sessions, and social events. Led by Jacklyn Klotz and special education teachers, the program is recognized as an Evidence-Based Practice for students with disabilities and aims to expand with new initiatives like team games and entrepreneurship training.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-12T14:02:09+00:00",
-        "datePrecision": "time",
-        "sourceHash": "3c32864805e715ba026a98a2603d17dcef77891250f670ca351b3c72af40cc87",
-        "relevance": 4,
-        "novelty": 3,
-        "reason": "This article describes a specific program within the local school district that directly impacts students in Canton and Plymouth, promoting inclusion and skill development. It details current activities and future plans, making it relevant to the community.",
-        "storyKey": "pcep-peer-to-peer-program",
-        "localConnection": "The program is run within the Plymouth Canton Community Schools (P-CCS) at the Plymouth Canton Education Park (PCEP), directly serving students in Canton and Plymouth.",
-        "grounded": true,
-        "groundingReason": "The article fully supports all claims made in the summary, detailing the program's activities, goals, research basis, and future expansion plans. The program is a local development for Plymouth-Canton Community Schools."
-      }
     }
   ],
   "corrections": [
@@ -553,18 +554,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
+      "id": "great-lakes-crossing-twelve-oaks-mall-ge-news-2026-10-17",
       "inputFacts": {
-        "id": "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
-        "title": "PCEP Peer to Peer Program Promotes Inclusive Environment",
-        "url": "https://plymouthlibrary.substack.com/p/pcep-peer-to-peer-program-promotes",
-        "publishedAt": "2026-10-12T00:00:00-04:00",
-        "summary": "The Peer to Peer Program at Plymouth Canton Education Park (PCEP) fosters inclusive connections between students with and without disabilities through collaborative activities like quizzes, music sessions, and social events. Led by Jacklyn Klotz and special education teachers, the program is recognized as an Evidence-Based Practice for students with disabilities and aims to expand with new initiatives like team games and entrepreneurship training.",
+        "id": "great-lakes-crossing-twelve-oaks-mall-ge-news-2026-10-17",
+        "title": "Great Lakes Crossing, Twelve Oaks Mall getting new stores, attractions",
+        "url": "https://www.hometownlife.com/story/news/local/michigan/oakland/2026/09/18/great-lakes-crossing-twelve-oaks-mall-getting-new-stores-attractions/91795715007/",
+        "publishedAt": "2026-10-17T00:00:00-04:00",
+        "summary": "Twelve Oaks Mall and Great Lakes Crossing are adding new stores and attractions in 2026, including Popmart, Platform, Body and Soul Medical Spa, and Round1 Bowling and Arcade. Simon Property Group emphasizes enhancing in-person shopping experiences with mixed-use offerings. Great Lakes Crossing will host a trick-or-treat event on October 17, with more store openings planned.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-10-12T14:02:09+00:00",
-      "publicationEvidence": "2026-10-12T14:02:09+00:00",
+      "publishedAt": "2026-09-18T10:06:36+00:00",
+      "publicationEvidence": "2026-09-18T10:06:36Z",
       "datePrecision": "time"
     },
     {
@@ -598,6 +599,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "disgraced-michigan-doctor-farid-fata-see-news-2026-10-17",
+      "inputFacts": {
+        "id": "disgraced-michigan-doctor-farid-fata-see-news-2026-10-17",
+        "title": "Disgraced Michigan doctor Farid Fata seeks early release again as victims oppose",
+        "url": "https://www.clickondetroit.com/news/local/2026/10/17/disgraced-michigan-doctor-farid-fata-seeks-early-release-again-heres-what-victims-say/",
+        "publishedAt": "2026-10-17T00:00:00-04:00",
+        "summary": "Decades after being sentenced to 45 years in prison for healthcare fraud involving unnecessary cancer treatments, disgraced Michigan oncologist Farid Fata has again requested compassionate release. His victims continue to oppose his efforts, with federal prosecutors rejecting his latest bid as of September 29, 2026. Fata's current projected release date remains December 11, 2050, and there is no limit on how many times he can request early release.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-17T09:00:01+00:00",
+      "publicationEvidence": "2026-10-17T09:00:01Z",
+      "datePrecision": "time"
+    },
+    {
       "id": "grand-valley-s-corpse-flower-blooms-how-news-2026-10-15",
       "inputFacts": {
         "id": "grand-valley-s-corpse-flower-blooms-how-news-2026-10-15",
@@ -610,6 +626,21 @@
       },
       "publishedAt": "2026-10-15T16:21:05+00:00",
       "publicationEvidence": "2026-10-15T16:21:05Z",
+      "datePrecision": "time"
+    },
+    {
+      "id": "shoot-every-person-in-there-man-accused-news-2026-10-17",
+      "inputFacts": {
+        "id": "shoot-every-person-in-there-man-accused-news-2026-10-17",
+        "title": "'Shoot every person in there': Man accused of threatening crowd at Holly restaurant reopening",
+        "url": "https://www.clickondetroit.com/news/local/2026/10/17/shoot-every-person-in-there-man-accused-of-threatening-crowd-at-holly-restaurant-reopening/",
+        "publishedAt": "2026-10-17T05:00:00-04:00",
+        "summary": "Daniel James Gibson, 26, was charged with making a false report or threat of terrorism after allegedly threatening to shoot people at Andy’s Place’s Oct. 10 reopening celebration in Holly. Police reported Gibson attempted to bring alcohol to the event, climbed a fence after being removed, and threatened attendees while reaching into his backpack. He was arrested near Crapo Park with alcohol and a large knife, though no gun was found.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-17T09:00:01+00:00",
+      "publicationEvidence": "2026-10-17T09:00:01Z",
       "datePrecision": "time"
     },
     {
@@ -656,57 +687,17 @@
       "publishedAt": "2026-10-16T12:11:26.893000-04:00",
       "publicationEvidence": "2026-10-16T12:11:26.893",
       "datePrecision": "time"
-    },
-    {
-      "id": "12-year-old-bicyclist-seriously-injured-news-2026-10-16",
-      "inputFacts": {
-        "id": "12-year-old-bicyclist-seriously-injured-news-2026-10-16",
-        "title": "12-year-old bicyclist seriously injured in Warren crash, expected to survive",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/16/12-year-old-bicyclist-seriously-injured-in-warren-crash-expected-to-survive/",
-        "publishedAt": "2026-10-16T21:02:00-04:00",
-        "summary": "A 12-year-old bicyclist was seriously injured and dragged in a crash in Warren but is expected to survive. The incident occurred on October 16, 2026.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-16T00:29:15.192000+00:00",
-      "publicationEvidence": "2026-10-16T00:29:15.192Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "man-killed-in-overnight-shooting-on-detr-news-2026-10-16",
-      "inputFacts": {
-        "id": "man-killed-in-overnight-shooting-on-detr-news-2026-10-16",
-        "title": "Man killed in overnight shooting on Detroit’s west side",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/16/man-killed-in-overnight-shooting-on-detroits-west-side/",
-        "publishedAt": "2026-10-16T06:18:00-04:00",
-        "summary": "A man was fatally shot overnight on Detroit’s west side near Heyden Street and west Outer Drive. Police responded to the scene around 1:15 a.m. and found the victim with at least one gunshot wound. He was taken to a hospital but later died, and no details about the suspect or circumstances have been released.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-16T10:18:13.297000+00:00",
-      "publicationEvidence": "2026-10-16T10:18:13.297Z",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-10-15",
-      "selectedIds": [
-        "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
-        "massive-google-data-center-faces-decisio-news-2026-10-14",
-        "many-older-adults-make-medicare-decision-news-2026-10-15",
-        "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
-        "van-buren-township-planning-commission-a-news-2026-10-15"
-      ]
-    },
-    {
       "date": "2026-10-16",
       "selectedIds": [
         "massive-google-data-center-faces-decisio-news-2026-10-14",
-        "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12",
         "many-older-adults-make-medicare-decision-news-2026-10-15",
         "van-buren-township-planning-commission-a-news-2026-10-15",
-        "samuel-and-dan-habib-speak-about-produci-news-2026-10-16"
+        "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
+        "emu-board-of-regents-passes-contract-agr-news-2026-10-16"
       ]
     },
     {
@@ -716,7 +707,17 @@
         "massive-google-data-center-faces-decisio-news-2026-10-14",
         "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
         "van-buren-township-planning-commission-a-news-2026-10-15",
-        "pcep-peer-to-peer-program-promotes-inclu-news-2026-10-12"
+        "emu-board-of-regents-passes-contract-agr-news-2026-10-16"
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "selectedIds": [
+        "van-buren-township-planning-commission-a-news-2026-10-15",
+        "many-older-adults-make-medicare-decision-news-2026-10-15",
+        "massive-google-data-center-faces-decisio-news-2026-10-14",
+        "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
+        "emu-board-of-regents-passes-contract-agr-news-2026-10-16"
       ]
     }
   ]
