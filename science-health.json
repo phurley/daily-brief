@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-17T10:01:38.386991Z",
-  "status": "partial",
-  "lastSuccessfulCheckAt": "2026-10-16T17:03:25.071759Z",
-  "documentGeneratedAt": "2026-10-17T10:01:38.386991Z",
+  "generatedAt": "2026-10-17T11:49:01.701877Z",
+  "status": "ok",
+  "lastSuccessfulCheckAt": "2026-10-17T11:49:01.701877Z",
+  "documentGeneratedAt": "2026-10-17T11:49:01.701877Z",
   "newestVerifiedStoryAt": "2026-10-17T04:05:00Z",
   "sources": {
     "nasa": {
@@ -77,26 +77,21 @@
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-17T10:01:38.386991Z",
+      "lastAttemptAt": "2026-10-17T11:49:01.701877Z",
       "lastSuccessAt": "2026-10-17T10:01:38.386991Z",
       "lastNewStoryAt": "2026-10-17T10:01:38.386991Z",
-      "errors": [
-        "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves/: ValueError: completed finding conflicts with prospective supporting evidence"
-      ],
-      "candidateCount": 20,
-      "acceptedCount": 3,
-      "deferredCount": 12,
+      "errors": [],
+      "candidateCount": 1,
+      "acceptedCount": 1,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-17T10:01:38.386991Z",
-      "failedUrls": [
-        "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves/"
-      ],
+      "failedUrls": [],
       "feedFailed": false,
-      "retryCount": 1,
-      "nextRetryAt": "2026-10-17T11:01:38.386991Z"
+      "retryCount": 0,
+      "nextRetryAt": null
     }
   },
-  "error": "Incomplete source checks: umich",
   "metrics": {
     "verifiedStories": 71,
     "sourceCounts": {
@@ -131,7 +126,7 @@
       "technology": 42,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 5.94,
+    "newestStoryAgeHours": 7.73,
     "maxPublicationLagHours": 1114.28
   }
 }

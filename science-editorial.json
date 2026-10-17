@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-10-17T06:30:57.621790-04:00",
+  "generatedAt": "2026-10-17T07:49:05.346331-04:00",
   "stories": [
     {
       "id": "science-1a44212d3a049509",
@@ -183,65 +183,6 @@
         "grounded": true,
         "groundingReason": "The article fully supports all claims in the summary, detailing the link between El Niño and the severe fire season, increased fire activity and smoke emissions since September 2026, and the resulting poor air quality and disruptions in Manaus. This is a new finding/development."
       }
-    },
-    {
-      "id": "science-21579838c4cb1b39",
-      "title": "Treating life-threatening blood clots in minutes with swirling sound waves",
-      "summary": "A U-M-led team is developing a minimally invasive device using 'vortex ultrasound' to break up life-threatening pulmonary embolisms. Preliminary lab tests with cow's blood showed the swirling sound waves could restore flow through a three-inch clot in eight minutes, potentially offering a faster, safer alternative to current treatments.",
-      "finding": "A U-M-led team is developing a minimally invasive device using 'vortex ultrasound' to break up life-threatening pulmonary embolisms. Preliminary lab tests with cow's blood showed the swirling sound waves could restore flow through a three-inch clot in eight minutes, potentially offering a faster, safer alternative to current treatments.",
-      "significance": "This technology could offer a faster and safer alternative to current treatments for pulmonary embolism, which include clot-busting drugs that carry a high risk of internal bleeding and mechanical removal methods that can damage blood vessels or require open-chest surgery.",
-      "caveat": "The research is in its early stages, with initial tests conducted in a laboratory setting using cow blood. Further development and testing in pigs are planned to refine the device and evaluate its safety before human clinical use.",
-      "url": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
-      "primarySourceUrl": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T12:25:49-04:00",
-      "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-14T10:00:06.638546Z",
-      "verifiedAt": "2026-10-14T10:00:06.638546Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "health",
-        "technology",
-        "biology"
-      ],
-      "entities": [
-        "National Institutes of Health",
-        "University of Michigan",
-        "pulmonary embolism",
-        "vortex ultrasound"
-      ],
-      "milestoneStatus": "planned",
-      "sourceUpdatedAt": "2026-10-13T19:23:00Z",
-      "localConnection": "University of Michigan research in Ann Arbor.",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-15T06:21:06.260137-04:00",
-        "expiresAt": "2026-10-18T06:21:06.260137-04:00",
-        "inputFacts": {
-          "id": "science-21579838c4cb1b39",
-          "title": "Treating life-threatening blood clots in minutes with swirling sound waves",
-          "url": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
-          "publishedAt": "2026-10-13T16:25:49Z",
-          "summary": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch clot in eight minutes.",
-          "finding": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch clot in eight minutes.",
-          "sourceUpdatedAt": "2026-10-13T19:23:00Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-13T12:25:49-04:00",
-        "datePrecision": "time",
-        "sourceHash": "120c7822f7b625dee3b66d6f4003d8c5096aa16b78f8da4f161e5e2754735524",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "Substantive new medical technology development with potential significant health impact, led by a local university.",
-        "storyKey": "vortex-ultrasound-blood-clot-treatment",
-        "localConnection": "University of Michigan is leading the research.",
-        "grounded": true,
-        "groundingReason": "The summary accurately reflects the article's content regarding the U-M-led team's development of a 'vortex ultrasound' device for pulmonary embolisms, including the preliminary lab test results with cow's blood and the potential benefits over current treatments. This represents a new technical advance in medical device development."
-      }
     }
   ],
   "corrections": [
@@ -348,21 +289,6 @@
       },
       "publishedAt": "2026-10-14T00:01:00-04:00",
       "publicationEvidence": "2026-10-14T00:01:00-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-21579838c4cb1b39",
-      "inputFacts": {
-        "id": "science-21579838c4cb1b39",
-        "title": "Treating life-threatening blood clots in minutes with swirling sound waves",
-        "url": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
-        "publishedAt": "2026-10-13T16:25:49Z",
-        "summary": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch clot in eight minutes.",
-        "finding": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch clot in eight minutes.",
-        "sourceUpdatedAt": "2026-10-13T19:23:00Z"
-      },
-      "publishedAt": "2026-10-13T12:25:49-04:00",
-      "publicationEvidence": "2026-10-13T12:25:49-04:00",
       "datePrecision": "time"
     },
     {
@@ -596,8 +522,8 @@
       "date": "2026-10-16",
       "selectedIds": [
         "science-7f03a5df97184a3b",
-        "science-21579838c4cb1b39",
-        "science-1a44212d3a049509"
+        "science-1a44212d3a049509",
+        "science-8c5bf27decf07391"
       ]
     },
     {
