@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-10-16T13:03:30.122648-04:00",
+  "generatedAt": "2026-10-17T06:30:57.621790-04:00",
   "stories": [
     {
       "id": "science-1a44212d3a049509",
@@ -185,65 +185,6 @@
       }
     },
     {
-      "id": "science-3f01fb21be9ace53",
-      "title": "Can you trust a robot in charge?",
-      "summary": "A University of Michigan study found that public trust in security robots as authority figures is significantly influenced by perceived fairness. Interactional fairness (how the robot treats people) and distributive fairness (consistent rule application) were key factors in participants' willingness to accept robotic authority in a simulated parking lot scenario.",
-      "finding": "A University of Michigan study found that public trust in security robots as authority figures is significantly influenced by perceived fairness. Interactional fairness (how the robot treats people) and distributive fairness (consistent rule application) were key factors in participants' willingness to accept robotic authority in a simulated parking lot scenario.",
-      "significance": "As security robots are increasingly deployed in public spaces, understanding the factors that build public trust is crucial for their effective and ethical integration into society. This research provides initial insights for designing robots that can gain public acceptance in authoritative roles.",
-      "caveat": "The study used a parking-lot security scenario, and responses could differ in settings with higher stakes. The source does not specify material limitations; independent verification is not established.",
-      "url": "https://news.umich.edu/can-you-trust-a-robot-in-charge",
-      "primarySourceUrl": "https://news.umich.edu/can-you-trust-a-robot-in-charge",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T13:09:11-04:00",
-      "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-14T10:00:06.638546Z",
-      "verifiedAt": "2026-10-14T10:00:06.638546Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "technology",
-        "social-science"
-      ],
-      "entities": [
-        "University of Michigan",
-        "Xin Ye",
-        "Lionel Robert",
-        "security robots"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://journals.sagepub.com/doi/full/10.1177/10711813261475182",
-      "sourceUpdatedAt": "2026-10-13T17:09:17Z",
-      "localConnection": "University of Michigan research in Ann Arbor.",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-14T14:00:41.483619-04:00",
-        "expiresAt": "2026-10-17T14:00:41.483619-04:00",
-        "inputFacts": {
-          "id": "science-3f01fb21be9ace53",
-          "title": "Can you trust a robot in charge?",
-          "url": "https://news.umich.edu/can-you-trust-a-robot-in-charge",
-          "publishedAt": "2026-10-13T17:09:11Z",
-          "summary": "A study found that fairness significantly influences how people trust the authority of security robots. Specifically, fair interactions and consistent application of rules by a security robot increased participants' trust and willingness to accept the robot as an authority figure.",
-          "finding": "A study found that fairness significantly influences how people trust the authority of security robots. Specifically, fair interactions and consistent application of rules by a security robot increased participants' trust and willingness to accept the robot as an authority figure.",
-          "sourceUpdatedAt": "2026-10-13T17:09:17Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-13T13:09:11-04:00",
-        "datePrecision": "time",
-        "sourceHash": "e4d88a19a53be0e2ded7402a4d5709b02da8ea3da9f5591f3f9cd63412ba74ba",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "Substantive new finding from a local university relevant to human-robot interaction and the deployment of AI in public spaces.",
-        "storyKey": "umich-robot-fairness-trust",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The summary accurately reflects the study's findings regarding the influence of perceived fairness (interactional and distributive) on public trust in security robots as authority figures in a simulated parking lot scenario, as detailed in the article."
-      }
-    },
-    {
       "id": "science-21579838c4cb1b39",
       "title": "Treating life-threatening blood clots in minutes with swirling sound waves",
       "summary": "A U-M-led team is developing a minimally invasive device using 'vortex ultrasound' to break up life-threatening pulmonary embolisms. Preliminary lab tests with cow's blood showed the swirling sound waves could restore flow through a three-inch clot in eight minutes, potentially offering a faster, safer alternative to current treatments.",
@@ -301,125 +242,6 @@
         "grounded": true,
         "groundingReason": "The summary accurately reflects the article's content regarding the U-M-led team's development of a 'vortex ultrasound' device for pulmonary embolisms, including the preliminary lab test results with cow's blood and the potential benefits over current treatments. This represents a new technical advance in medical device development."
       }
-    },
-    {
-      "id": "science-d7bc2296036a996c",
-      "title": "How nature lovers can aid ecology with an assist from AI",
-      "summary": "University of Michigan-led research demonstrates AI tools like Claude and ChatGPT can efficiently extract ecological data from public observations on platforms like eBird and iNaturalist. This method helped identify non-native plants on the West Coast and various bird interactions in Michigan, offering a new way to study species interactions across broad scales.",
-      "finding": "University of Michigan-led research demonstrates AI tools like Claude and ChatGPT can efficiently extract ecological data from public observations on platforms like eBird and iNaturalist. This method helped identify non-native plants on the West Coast and various bird interactions in Michigan, offering a new way to study species interactions across broad scales.",
-      "significance": "This approach allows ecologists to efficiently access and analyze a vast, previously underutilized source of observational data, enabling them to study species interactions and ecosystem health across broad spatial and temporal scales, which is crucial for understanding responses to global change.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
-      "primarySourceUrl": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-12T09:00:00-04:00",
-      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
-      "checkedAt": "2026-10-15T10:00:00.772183Z",
-      "verifiedAt": "2026-10-15T10:00:00.772183Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "ecology",
-        "technology",
-        "environment"
-      ],
-      "entities": [
-        "University of Michigan",
-        "Claude",
-        "ChatGPT",
-        "eBird",
-        "iNaturalist"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2602244123",
-      "sourceUpdatedAt": "2026-10-12T15:21:32Z",
-      "localConnection": "University of Michigan research in Ann Arbor.",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-15T06:21:06.260137-04:00",
-        "expiresAt": "2026-10-18T06:21:06.260137-04:00",
-        "inputFacts": {
-          "id": "science-d7bc2296036a996c",
-          "title": "How nature lovers can aid ecology with an assist from AI",
-          "url": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
-          "publishedAt": "2026-10-12T13:00:00Z",
-          "summary": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
-          "finding": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
-          "sourceUpdatedAt": "2026-10-12T15:21:32Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-12T09:00:00-04:00",
-        "datePrecision": "time",
-        "sourceHash": "a318b26271dee3e4ee2f5a0210e60709ec1550e4057326b4a8c014f64a0f3905",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "New method for ecological research using AI to leverage citizen science data, with local Michigan relevance.",
-        "storyKey": "ai-citizen-science-ecology",
-        "localConnection": "University of Michigan-led study, with a case study on Michigan bird interactions.",
-        "grounded": true,
-        "groundingReason": "The article details a new research method led by the University of Michigan demonstrating how AI tools can efficiently extract ecological data from public observation platforms. This is a technical advance with specific evidenced results, including identifying non-native plants and various bird interactions, and a significant time-saving over manual methods."
-      }
-    },
-    {
-      "id": "science-f49806e648203e32",
-      "title": "NASA’s SpaceX CRS-35 Mission to Launch Health Research",
-      "summary": "NASA's upcoming SpaceX mission will send experiments to the ISS, including 3D human brain models to study cellular changes in microgravity, a crop disease study to understand fungal impact, and a compact microplate reader to assess astronaut health. It also continues research on antibiotic-resistant bacteria in space.",
-      "finding": "NASA's upcoming SpaceX mission will send experiments to the ISS, including 3D human brain models to study cellular changes in microgravity, a crop disease study to understand fungal impact, and a compact microplate reader to assess astronaut health. It also continues research on antibiotic-resistant bacteria in space.",
-      "significance": "This research aims to benefit life on Earth by guiding plant breeding for disease-resistant crops and providing insights into superbug development. It also supports future space exploration by addressing astronaut health risks during long-duration missions, improving space agriculture systems, and enabling timely detection of health issues in remote locations.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research",
-      "primarySourceUrl": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-12T13:45:27-04:00",
-      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
-      "checkedAt": "2026-10-12T21:09:35.027780Z",
-      "verifiedAt": "2026-10-12T21:09:35.027780Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "health",
-        "biology",
-        "technology"
-      ],
-      "entities": [
-        "NASA",
-        "SpaceX CRS-35 Mission",
-        "International Space Station",
-        "Cape Canaveral Space Force Station"
-      ],
-      "milestoneStatus": "planned",
-      "sourceUpdatedAt": "2026-10-12T17:52:13Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-14T14:00:41.483619-04:00",
-        "expiresAt": "2026-10-17T14:00:41.483619-04:00",
-        "inputFacts": {
-          "id": "science-f49806e648203e32",
-          "title": "NASA’s SpaceX CRS-35 Mission to Launch Health Research",
-          "url": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research",
-          "publishedAt": "2026-10-12T17:45:27Z",
-          "summary": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
-          "finding": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
-          "sourceUpdatedAt": "2026-10-12T17:52:13Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-12T13:45:27-04:00",
-        "datePrecision": "time",
-        "sourceHash": "6c59bbc8b4c4681a666d7cff4da507a91f5c9fc51d914977b77e302288c41760",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "This article details multiple new scientific investigations with potential implications for human health and agriculture, both in space and on Earth. The findings could advance understanding of brain health, disease resistance in crops, rapid health assessment, and antibiotic resistance.",
-        "storyKey": "nasa-spacex-crs35-health-research",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article details specific new experiments and ongoing research being sent to the ISS, including 3D human brain models, a crop disease study, and a compact microplate reader, which represent new findings and technical advances in space science."
-      }
     }
   ],
   "corrections": [
@@ -454,48 +276,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-7f03a5df97184a3b",
-      "inputFacts": {
-        "id": "science-7f03a5df97184a3b",
-        "title": "Fires Arrive in the Amazon Rainforest",
-        "url": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
-        "publishedAt": "2026-10-15T04:01:00Z",
-        "summary": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
-        "finding": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
-        "sourceUpdatedAt": "2026-10-15T04:01:00Z"
-      },
-      "publishedAt": "2026-10-15T00:01:00-04:00",
-      "publicationEvidence": "2026-10-15T00:01:00-04:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-56e6d03cc572f45c",
       "inputFacts": {
         "id": "science-56e6d03cc572f45c",
         "title": "Mollusk microbiome? It’s all in the family",
         "url": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
         "publishedAt": "2026-10-14T14:59:06Z",
-        "summary": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, compared to different species living in the same location.",
-        "finding": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, compared to different species living in the same location.",
+        "summary": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
+        "finding": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
         "sourceUpdatedAt": "2026-10-14T14:59:14Z"
       },
       "publishedAt": "2026-10-14T10:59:06-04:00",
       "publicationEvidence": "2026-10-14T10:59:06-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-3f01fb21be9ace53",
-      "inputFacts": {
-        "id": "science-3f01fb21be9ace53",
-        "title": "Can you trust a robot in charge?",
-        "url": "https://news.umich.edu/can-you-trust-a-robot-in-charge",
-        "publishedAt": "2026-10-13T17:09:11Z",
-        "summary": "A study found that fairness significantly influences how people trust the authority of security robots. Specifically, fair interactions and consistent application of rules by a security robot increased participants' trust and willingness to accept the robot as an authority figure.",
-        "finding": "A study found that fairness significantly influences how people trust the authority of security robots. Specifically, fair interactions and consistent application of rules by a security robot increased participants' trust and willingness to accept the robot as an authority figure.",
-        "sourceUpdatedAt": "2026-10-13T17:09:17Z"
-      },
-      "publishedAt": "2026-10-13T13:09:11-04:00",
-      "publicationEvidence": "2026-10-13T13:09:11-04:00",
       "datePrecision": "time"
     },
     {
@@ -527,6 +319,21 @@
       "publishedAt": "2026-10-08T00:00:00-04:00",
       "publicationEvidence": "08/10/2026",
       "datePrecision": "date"
+    },
+    {
+      "id": "science-7f03a5df97184a3b",
+      "inputFacts": {
+        "id": "science-7f03a5df97184a3b",
+        "title": "Fires Arrive in the Amazon Rainforest",
+        "url": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
+        "publishedAt": "2026-10-15T04:01:00Z",
+        "summary": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
+        "finding": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
+        "sourceUpdatedAt": "2026-10-15T04:01:00Z"
+      },
+      "publishedAt": "2026-10-15T00:01:00-04:00",
+      "publicationEvidence": "2026-10-15T00:01:00-04:00",
+      "datePrecision": "time"
     },
     {
       "id": "science-cc77e498becd23e7",
@@ -601,6 +408,21 @@
       },
       "publishedAt": "2026-10-07T11:01:11-04:00",
       "publicationEvidence": "2026-10-07T11:01:11-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-178a4d548f348666",
+      "inputFacts": {
+        "id": "science-178a4d548f348666",
+        "title": "APOD: 2026 October 17 – 3D 67P",
+        "url": "https://science.nasa.gov/image-article/apod-2026-october-17-3d-67p",
+        "publishedAt": "2026-10-17T04:05:00Z",
+        "summary": "The Rosetta spacecraft captured stereo images of Comet 67P/Churyumov-Gerasimenko on July 25, 2015, from a distance of 184 kilometers, revealing its jagged, double-lobed nucleus with a larger lobe approximately 4 kilometers in diameter and a smaller lobe of 2.5 kilometers joined by a narrow neck. Numerous jets were observed emanating from the comet's active surface.",
+        "finding": "The Rosetta spacecraft captured stereo images of Comet 67P/Churyumov-Gerasimenko on July 25, 2015, from a distance of 184 kilometers, revealing its jagged, double-lobed nucleus with a larger lobe approximately 4 kilometers in diameter and a smaller lobe of 2.5 kilometers joined by a narrow neck. Numerous jets were observed emanating from the comet's active surface.",
+        "sourceUpdatedAt": "2026-10-17T04:05:00Z"
+      },
+      "publishedAt": "2026-10-17T00:05:00-04:00",
+      "publicationEvidence": "2026-10-17T00:05:00-04:00",
       "datePrecision": "time"
     },
     {
@@ -694,18 +516,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-41eb8051a9c2c0bc",
+      "id": "science-1db75c28cb0e7b8e",
       "inputFacts": {
-        "id": "science-41eb8051a9c2c0bc",
-        "title": "APOD: 2026 October 15 – The Milky Way over Manhattan",
-        "url": "https://science.nasa.gov/image-article/apod-2026-october-15-the-milky-way-over-manhattan",
-        "publishedAt": "2026-10-15T04:05:00Z",
-        "summary": "The Milky Way can be photographed over Manhattan by using a near-infrared filter that blocks most visible light, effectively reducing light pollution from common urban light sources like fluorescent and LED bulbs.",
-        "finding": "The Milky Way can be photographed over Manhattan by using a near-infrared filter that blocks most visible light, effectively reducing light pollution from common urban light sources like fluorescent and LED bulbs.",
-        "sourceUpdatedAt": "2026-10-15T04:05:00Z"
+        "id": "science-1db75c28cb0e7b8e",
+        "title": "Recycle Bowl returns to Michigan Stadium after record-setting year",
+        "url": "https://news.umich.edu/recycle-bowl-returns-to-michigan-stadium-after-record-setting-year",
+        "publishedAt": "2026-10-15T14:21:01Z",
+        "summary": "The Recycle Bowl event at Michigan Stadium has successfully increased the collection of recyclable and compostable materials from game day activities each year, with over 47,000 pounds collected in 2025, demonstrating that large events can significantly boost recycling participation and material recovery.",
+        "finding": "The Recycle Bowl event at Michigan Stadium has successfully increased the collection of recyclable and compostable materials from game day activities each year, with over 47,000 pounds collected in 2025, demonstrating that large events can significantly boost recycling participation and material recovery.",
+        "sourceUpdatedAt": "2026-10-15T14:21:09Z"
       },
-      "publishedAt": "2026-10-15T00:05:00-04:00",
-      "publicationEvidence": "2026-10-15T00:05:00-04:00",
+      "publishedAt": "2026-10-15T10:21:01-04:00",
+      "publicationEvidence": "2026-10-15T10:21:01-04:00",
       "datePrecision": "time"
     },
     {
@@ -771,23 +593,23 @@
   ],
   "days": [
     {
-      "date": "2026-10-15",
-      "selectedIds": [
-        "science-3f01fb21be9ace53",
-        "science-f49806e648203e32",
-        "science-d7bc2296036a996c"
-      ]
-    },
-    {
       "date": "2026-10-16",
       "selectedIds": [
         "science-7f03a5df97184a3b",
-        "science-3f01fb21be9ace53",
-        "science-21579838c4cb1b39"
+        "science-21579838c4cb1b39",
+        "science-1a44212d3a049509"
       ]
     },
     {
       "date": "2026-10-17",
+      "selectedIds": [
+        "science-1a44212d3a049509",
+        "science-8c5bf27decf07391",
+        "science-7f03a5df97184a3b"
+      ]
+    },
+    {
+      "date": "2026-10-18",
       "selectedIds": [
         "science-1a44212d3a049509",
         "science-8c5bf27decf07391",
