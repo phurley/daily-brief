@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-18T10:14:03.151044Z",
-  "status": "partial",
-  "lastSuccessfulCheckAt": "2026-10-17T11:49:01.701877Z",
-  "documentGeneratedAt": "2026-10-18T10:14:03.151044Z",
+  "generatedAt": "2026-10-18T20:05:50.950465Z",
+  "status": "ok",
+  "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
+  "documentGeneratedAt": "2026-10-18T20:05:50.950465Z",
   "newestVerifiedStoryAt": "2026-10-18T04:05:00Z",
   "sources": {
     "nasa": {
@@ -43,23 +43,19 @@
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-18T10:14:03.151044Z",
+      "lastAttemptAt": "2026-10-18T20:05:50.950465Z",
       "lastSuccessAt": "2026-10-18T10:14:03.151044Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
-      "errors": [
-        "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought: ValueError: unverified paper URL"
-      ],
-      "candidateCount": 15,
-      "acceptedCount": 3,
-      "deferredCount": 6,
-      "rejectedCount": 5,
+      "errors": [],
+      "candidateCount": 1,
+      "acceptedCount": 1,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-18T10:14:03.151044Z",
-      "failedUrls": [
-        "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought"
-      ],
+      "failedUrls": [],
       "feedFailed": false,
-      "retryCount": 1,
-      "nextRetryAt": "2026-10-18T11:14:03.151044Z"
+      "retryCount": 0,
+      "nextRetryAt": null
     },
     "nsf": {
       "name": "NSF",
@@ -96,7 +92,6 @@
       "nextRetryAt": null
     }
   },
-  "error": "Incomplete source checks: esa",
   "metrics": {
     "verifiedStories": 72,
     "sourceCounts": {
@@ -131,7 +126,7 @@
       "technology": 43,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 6.15,
+    "newestStoryAgeHours": 16.01,
     "maxPublicationLagHours": 1114.28
   }
 }
