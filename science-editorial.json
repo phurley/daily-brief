@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-10-17T07:49:05.346331-04:00",
+  "generatedAt": "2026-10-18T06:32:05.535140-04:00",
   "stories": [
     {
       "id": "science-1a44212d3a049509",
       "title": "Whatcha lookin’ at? Social anxiety heightens brain sensitivity to others’ gaze",
       "summary": "A University of Michigan study found young adults with higher social anxiety showed stronger brain responses to mismatched social cues, specifically when a word describing thoughts or feelings didn't align with a gaze. This neural sensitivity (N400 response) did not improve their explicit judgments of gaze meaning, suggesting potential for increased rumination rather than better social insight.",
       "finding": "A University of Michigan study found young adults with higher social anxiety showed stronger brain responses to mismatched social cues, specifically when a word describing thoughts or feelings didn't align with a gaze. This neural sensitivity (N400 response) did not improve their explicit judgments of gaze meaning, suggesting potential for increased rumination rather than better social insight.",
-      "significance": "This research offers a new perspective on social anxiety, suggesting that it involves enhanced neural sensitivity to social cues, which could have both benefits (noticing important signals) and drawbacks (increased worry and rumination). Understanding this mechanism could lead to more nuanced approaches to social anxiety, moving beyond viewing it solely as a source of distress.",
-      "caveat": "While individuals with higher social anxiety showed greater neural sensitivity to gaze meaning, this advantage was not reflected in their subsequent explicit judgments. The study did not establish whether this sensitivity is beneficial in real-world social situations, and the authors suggest this initial neural sensitivity might contribute to excessive monitoring or rumination.",
+      "significance": "This finding suggests that social anxiety may involve heightened neural sensitivity to social cues, offering a new perspective on social anxiety beyond just distress. This sensitivity could potentially be beneficial in certain social contexts, but also contribute to excessive worry.",
+      "caveat": "While individuals with higher social anxiety showed greater neural sensitivity, this did not translate to improved accuracy or speed in their explicit judgments about the meaning of a gaze. The study also did not establish whether this sensitivity helps people navigate real-world social situations.",
       "url": "https://news.umich.edu/whatcha-lookin-at-social-anxiety-heightens-brain-sensitivity-to-others-gaze",
       "primarySourceUrl": "https://news.umich.edu/whatcha-lookin-at-social-anxiety-heightens-brain-sensitivity-to-others-gaze",
       "source": {
@@ -19,8 +19,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-15T13:03:02-04:00",
       "firstSeenAt": "2026-10-16T10:02:47.778170Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "health",
@@ -28,11 +28,11 @@
         "biology"
       ],
       "entities": [
-        "social anxiety",
-        "brain",
-        "gaze patterns",
+        "University of Michigan",
+        "Irene Melani",
         "Psychophysiology",
-        "N400"
+        "National Science Foundation",
+        "Shinobu Kitayama"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://onlinelibrary.wiley.com/doi/10.1111/psyp.70409",
@@ -40,15 +40,15 @@
       "localConnection": "University of Michigan research in Ann Arbor.",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-16T06:21:02.604545-04:00",
-        "expiresAt": "2026-10-19T06:21:02.604545-04:00",
+        "reviewedAt": "2026-10-18T06:32:05.535140-04:00",
+        "expiresAt": "2026-10-21T06:32:05.535140-04:00",
         "inputFacts": {
           "id": "science-1a44212d3a049509",
           "title": "Whatcha lookin’ at? Social anxiety heightens brain sensitivity to others’ gaze",
           "url": "https://news.umich.edu/whatcha-lookin-at-social-anxiety-heightens-brain-sensitivity-to-others-gaze",
           "publishedAt": "2026-10-15T17:03:02Z",
-          "summary": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting social cues, specifically when a word describing mental states does not match the meaning conveyed by gaze patterns. This heightened neural sensitivity does not, however, translate into improved explicit judgments about the meaning of the gaze.",
-          "finding": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting social cues, specifically when a word describing mental states does not match the meaning conveyed by gaze patterns. This heightened neural sensitivity does not, however, translate into improved explicit judgments about the meaning of the gaze.",
+          "summary": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting information between a person's gaze and a word describing their mental state.",
+          "finding": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting information between a person's gaze and a word describing their mental state.",
           "sourceUpdatedAt": "2026-10-15T17:03:13Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
@@ -69,8 +69,8 @@
       "title": "They get knocked down—but they get up again",
       "summary": "University of Michigan researchers found that low doses of the herbicide dicamba can cause oxalis weeds to produce more flowers, a phenomenon known as hormesis. While this did not consistently lead to increased seed production or genetic changes in the weed population, it altered pollinator visitation patterns and flower size.",
       "finding": "University of Michigan researchers found that low doses of the herbicide dicamba can cause oxalis weeds to produce more flowers, a phenomenon known as hormesis. While this did not consistently lead to increased seed production or genetic changes in the weed population, it altered pollinator visitation patterns and flower size.",
-      "significance": "This finding suggests that the inadvertent drift of herbicides, such as dicamba, might unintentionally enhance the reproductive capacity of certain weeds, potentially making them more persistent in agricultural and residential areas. Understanding this response is crucial for effective weed management strategies.",
-      "caveat": "While the study found that oxalis produced more flowers after exposure to low doses of dicamba, it did not consistently translate to increased seed production in the second year of the experiment. Additionally, plants with more flowers due to dicamba exposure actually experienced lower pollinator visitation rates, and their flowers were smaller. The study also found no evidence that this increased flower production trait is heritable or would evolve in the population.",
+      "significance": "This finding suggests that the inadvertent drift of herbicides at low concentrations might be making weeds more robust, rather than eliminating them, potentially impacting agricultural practices and lawn care.",
+      "caveat": "The study found no evidence that the increased flower production trait was heritable or would evolve in the oxalis population, and the increased flower production did not consistently translate to increased seed production in the second year of the experiment. Additionally, plants with more flowers due to dicamba exposure had lower pollinator visitation rates.",
       "url": "https://news.umich.edu/they-get-knocked-downbut-they-get-up-again",
       "primarySourceUrl": "https://news.umich.edu/they-get-knocked-downbut-they-get-up-again",
       "source": {
@@ -80,13 +80,12 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-15T10:29:26-04:00",
       "firstSeenAt": "2026-10-16T10:02:47.778170Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
-        "technology",
-        "environment"
+        "technology"
       ],
       "entities": [
         "University of Michigan",
@@ -101,15 +100,15 @@
       "localConnection": "University of Michigan research in Ann Arbor.",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-16T06:21:02.604545-04:00",
-        "expiresAt": "2026-10-19T06:21:02.604545-04:00",
+        "reviewedAt": "2026-10-18T06:32:05.535140-04:00",
+        "expiresAt": "2026-10-21T06:32:05.535140-04:00",
         "inputFacts": {
           "id": "science-8c5bf27decf07391",
           "title": "They get knocked down—but they get up again",
           "url": "https://news.umich.edu/they-get-knocked-downbut-they-get-up-again",
           "publishedAt": "2026-10-15T14:29:26Z",
-          "summary": "Low doses of the herbicide dicamba can cause the common weed oxalis (wood sorrel) to produce more flowers, a phenomenon known as hormesis. This effect is a single-generation response and does not appear to be heritable or lead to evolution in the weed population.",
-          "finding": "Low doses of the herbicide dicamba can cause the common weed oxalis (wood sorrel) to produce more flowers, a phenomenon known as hormesis. This effect is a single-generation response and does not appear to be heritable or lead to evolution in the weed population.",
+          "summary": "Low doses of the herbicide dicamba can cause the common weed oxalis to produce more flowers, a phenomenon known as hormesis.",
+          "finding": "Low doses of the herbicide dicamba can cause the common weed oxalis to produce more flowers, a phenomenon known as hormesis.",
           "sourceUpdatedAt": "2026-10-15T14:29:32Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
@@ -126,62 +125,63 @@
       }
     },
     {
-      "id": "science-7f03a5df97184a3b",
-      "title": "Fires Arrive in the Amazon Rainforest",
-      "summary": "A drought linked to El Niño has led to a severe fire season in the Amazon rainforest, with satellites detecting increased fire activity and smoke emissions since September 2026. This has caused extremely poor air quality in cities like Manaus, disrupting daily life and leading to school closures.",
-      "finding": "A drought linked to El Niño has led to a severe fire season in the Amazon rainforest, with satellites detecting increased fire activity and smoke emissions since September 2026. This has caused extremely poor air quality in cities like Manaus, disrupting daily life and leading to school closures.",
-      "significance": "The fires are causing significant ecological damage, as rainforest species are not adapted to fire, and are leading to extremely poor air quality in populated areas like Manaus, disrupting daily life and posing health risks. This pattern of fires during El Niño events is recurring, indicating a predictable and worsening environmental crisis.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
-      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
+      "id": "science-56e6d03cc572f45c",
+      "title": "Mollusk microbiome? It’s all in the family",
+      "summary": "University of Michigan researchers found that mollusk microbiome composition is primarily determined by species rather than environment, based on a review of 85 studies. This suggests that genetic lineage, or \"family tree,\" is more influential than habitat in shaping these microbial communities, which aid digestion and protection.",
+      "finding": "University of Michigan researchers found that mollusk microbiome composition is primarily determined by species rather than environment, based on a review of 85 studies. This suggests that genetic lineage, or \"family tree,\" is more influential than habitat in shaping these microbial communities, which aid digestion and protection.",
+      "significance": "Understanding the factors that shape mollusk microbiomes is crucial for predicting how these populations will respond to environmental changes, such as pollution or rising temperatures. This knowledge can help in preventing mollusk die-offs, which are important for ecosystem health.",
+      "caveat": "The study highlights a significant gap in research, noting that most studies focus on edible mollusk species and are concentrated in specific geographic regions. This human-centered research limits the understanding of the vast diversity of mollusk microbiomes and their responses to environmental changes.",
+      "url": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
+      "primarySourceUrl": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
       "source": {
-        "name": "NASA"
+        "name": "University of Michigan News"
       },
-      "sourceGroup": "NASA",
+      "sourceGroup": "U-M",
       "sourceQuality": 2,
-      "publishedAt": "2026-10-15T00:01:00-04:00",
+      "publishedAt": "2026-10-14T10:59:06-04:00",
       "firstSeenAt": "2026-10-15T10:00:00.772183Z",
-      "checkedAt": "2026-10-15T10:00:00.772183Z",
-      "verifiedAt": "2026-10-15T10:00:00.772183Z",
-      "evidenceType": "agency-announcement",
+      "checkedAt": "2026-10-17T10:01:38.386991Z",
+      "verifiedAt": "2026-10-17T10:01:38.386991Z",
+      "evidenceType": "peer-reviewed-research",
       "topics": [
-        "earth-science",
-        "wildfires",
-        "climate"
+        "biology",
+        "environment"
       ],
       "entities": [
-        "Amazon rainforest",
-        "El Niño",
-        "NASA",
-        "Manaus",
-        "MODIS"
+        "mollusk",
+        "microbiome",
+        "University of Michigan",
+        "Diana Vergara-Flórez",
+        "The ISME Journal"
       ],
       "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-15T04:01:00Z",
+      "paperUrl": "https://academic.oup.com/ismej/article/20/1/wrag092/8660834",
+      "sourceUpdatedAt": "2026-10-14T14:59:14Z",
+      "localConnection": "University of Michigan research in Ann Arbor.",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-15T06:21:06.260137-04:00",
-        "expiresAt": "2026-10-18T06:21:06.260137-04:00",
+        "reviewedAt": "2026-10-17T06:30:57.621790-04:00",
+        "expiresAt": "2026-10-20T06:30:57.621790-04:00",
         "inputFacts": {
-          "id": "science-7f03a5df97184a3b",
-          "title": "Fires Arrive in the Amazon Rainforest",
-          "url": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
-          "publishedAt": "2026-10-15T04:01:00Z",
-          "summary": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
-          "finding": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
-          "sourceUpdatedAt": "2026-10-15T04:01:00Z"
+          "id": "science-56e6d03cc572f45c",
+          "title": "Mollusk microbiome? It’s all in the family",
+          "url": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
+          "publishedAt": "2026-10-14T14:59:06Z",
+          "summary": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
+          "finding": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
+          "sourceUpdatedAt": "2026-10-14T14:59:14Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-15T00:01:00-04:00",
+        "publicationEvidence": "2026-10-14T10:59:06-04:00",
         "datePrecision": "time",
-        "sourceHash": "4b96f6c0f25861d818ff4f5952f94c5ac76be287df27bb0a52d216ac5d29ce43",
+        "sourceHash": "65a9a940e7b38ea6594653b094b85a771a9c8d32b300eac2e0a1cb2e2a094988",
         "relevance": 4,
         "novelty": 4,
-        "reason": "New findings on the impact of El Niño on the Amazon rainforest, with significant environmental and societal consequences.",
-        "storyKey": "amazon-rainforest-fires-el-nino-2026",
-        "localConnection": "",
+        "reason": "Substantive new finding in biology from a local university, relevant to understanding ecosystem health.",
+        "storyKey": "mollusk-microbiome-genetics",
+        "localConnection": "University of Michigan",
         "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, detailing the link between El Niño and the severe fire season, increased fire activity and smoke emissions since September 2026, and the resulting poor air quality and disruptions in Manaus. This is a new finding/development."
+        "groundingReason": "University of Michigan researchers conducted a review of 85 studies to determine that mollusk microbiome composition is primarily determined by species rather than environment, a new finding in the field."
       }
     }
   ],
@@ -193,8 +193,8 @@
         "title": "Whatcha lookin’ at? Social anxiety heightens brain sensitivity to others’ gaze",
         "url": "https://news.umich.edu/whatcha-lookin-at-social-anxiety-heightens-brain-sensitivity-to-others-gaze",
         "publishedAt": "2026-10-15T17:03:02Z",
-        "summary": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting social cues, specifically when a word describing mental states does not match the meaning conveyed by gaze patterns. This heightened neural sensitivity does not, however, translate into improved explicit judgments about the meaning of the gaze.",
-        "finding": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting social cues, specifically when a word describing mental states does not match the meaning conveyed by gaze patterns. This heightened neural sensitivity does not, however, translate into improved explicit judgments about the meaning of the gaze.",
+        "summary": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting information between a person's gaze and a word describing their mental state.",
+        "finding": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting information between a person's gaze and a word describing their mental state.",
         "sourceUpdatedAt": "2026-10-15T17:03:13Z"
       },
       "publishedAt": "2026-10-15T13:03:02-04:00",
@@ -208,8 +208,8 @@
         "title": "They get knocked down—but they get up again",
         "url": "https://news.umich.edu/they-get-knocked-downbut-they-get-up-again",
         "publishedAt": "2026-10-15T14:29:26Z",
-        "summary": "Low doses of the herbicide dicamba can cause the common weed oxalis (wood sorrel) to produce more flowers, a phenomenon known as hormesis. This effect is a single-generation response and does not appear to be heritable or lead to evolution in the weed population.",
-        "finding": "Low doses of the herbicide dicamba can cause the common weed oxalis (wood sorrel) to produce more flowers, a phenomenon known as hormesis. This effect is a single-generation response and does not appear to be heritable or lead to evolution in the weed population.",
+        "summary": "Low doses of the herbicide dicamba can cause the common weed oxalis to produce more flowers, a phenomenon known as hormesis.",
+        "finding": "Low doses of the herbicide dicamba can cause the common weed oxalis to produce more flowers, a phenomenon known as hormesis.",
         "sourceUpdatedAt": "2026-10-15T14:29:32Z"
       },
       "publishedAt": "2026-10-15T10:29:26-04:00",
@@ -247,93 +247,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-f433a319fc4cd0e6",
+      "id": "science-05ac95315a4bdee0",
       "inputFacts": {
-        "id": "science-f433a319fc4cd0e6",
-        "title": "Solar Orbiter tracks origin of mysterious magnetic switchbacks",
-        "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_tracks_origin_of_mysterious_magnetic_switchbacks",
-        "publishedAt": "2026-10-08T09:00:00Z",
-        "summary": "The Solar Orbiter spacecraft has traced the origin of a magnetic switchback in the solar wind back to the Sun's surface, identifying a mix of charged oxygen and carbon particles that indicate formation within hot magnetic field loops at the Sun's surface through a process called 'interchange reconnection'. Additionally, waves and turbulence appear to govern the switchback's movement after it leaves the Sun.",
-        "finding": "The Solar Orbiter spacecraft has traced the origin of a magnetic switchback in the solar wind back to the Sun's surface, identifying a mix of charged oxygen and carbon particles that indicate formation within hot magnetic field loops at the Sun's surface through a process called 'interchange reconnection'. Additionally, waves and turbulence appear to govern the switchback's movement after it leaves the Sun.",
-        "sourceUpdatedAt": null
+        "id": "science-05ac95315a4bdee0",
+        "title": "APOD: 2026 October 18 – Sonified: Eagle Nebula Pillars",
+        "url": "https://science.nasa.gov/image-article/apod-2026-october-18-sonified-eagle-nebula-pillars",
+        "publishedAt": "2026-10-18T04:05:00Z",
+        "summary": "The Eagle Nebula (M16) has been sonified, allowing for an auditory experience of its features, where stars and dust produce sounds as a line moves across the image, with vertical position determining pitch.",
+        "finding": "The Eagle Nebula (M16) has been sonified, allowing for an auditory experience of its features, where stars and dust produce sounds as a line moves across the image, with vertical position determining pitch.",
+        "sourceUpdatedAt": "2026-10-18T04:05:00Z"
       },
-      "publishedAt": "2026-10-08T00:00:00-04:00",
-      "publicationEvidence": "08/10/2026",
-      "datePrecision": "date"
-    },
-    {
-      "id": "science-7f03a5df97184a3b",
-      "inputFacts": {
-        "id": "science-7f03a5df97184a3b",
-        "title": "Fires Arrive in the Amazon Rainforest",
-        "url": "https://science.nasa.gov/earth/earth-observatory/fires-arrive-in-the-amazon-rainforest",
-        "publishedAt": "2026-10-15T04:01:00Z",
-        "summary": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
-        "finding": "The Amazon rainforest has entered the early stages of a severe fire season, with sharp increases in fire activity and smoke emissions detected by satellites in the central and eastern Amazon starting in September 2026. This is attributed to a drought accompanying the current El Niño.",
-        "sourceUpdatedAt": "2026-10-15T04:01:00Z"
-      },
-      "publishedAt": "2026-10-15T00:01:00-04:00",
-      "publicationEvidence": "2026-10-15T00:01:00-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-cc77e498becd23e7",
-      "inputFacts": {
-        "id": "science-cc77e498becd23e7",
-        "title": "Hurricane Simon Lurks Off the Mexican Coast",
-        "url": "https://science.nasa.gov/earth/earth-observatory/hurricane-simon-lurks-off-the-mexican-coast",
-        "publishedAt": "2026-10-14T04:01:00Z",
-        "summary": "Hurricane Simon generated atmospheric gravity waves that were observable in the mesosphere via airglow, as captured by the VIIRS instrument on the NOAA-21 satellite on October 11, 2026.",
-        "finding": "Hurricane Simon generated atmospheric gravity waves that were observable in the mesosphere via airglow, as captured by the VIIRS instrument on the NOAA-21 satellite on October 11, 2026.",
-        "sourceUpdatedAt": "2026-10-14T04:01:00Z"
-      },
-      "publishedAt": "2026-10-14T00:01:00-04:00",
-      "publicationEvidence": "2026-10-14T00:01:00-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-d7bc2296036a996c",
-      "inputFacts": {
-        "id": "science-d7bc2296036a996c",
-        "title": "How nature lovers can aid ecology with an assist from AI",
-        "url": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
-        "publishedAt": "2026-10-12T13:00:00Z",
-        "summary": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
-        "finding": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
-        "sourceUpdatedAt": "2026-10-12T15:21:32Z"
-      },
-      "publishedAt": "2026-10-12T09:00:00-04:00",
-      "publicationEvidence": "2026-10-12T09:00:00-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-f49806e648203e32",
-      "inputFacts": {
-        "id": "science-f49806e648203e32",
-        "title": "NASA’s SpaceX CRS-35 Mission to Launch Health Research",
-        "url": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research",
-        "publishedAt": "2026-10-12T17:45:27Z",
-        "summary": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
-        "finding": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
-        "sourceUpdatedAt": "2026-10-12T17:52:13Z"
-      },
-      "publishedAt": "2026-10-12T13:45:27-04:00",
-      "publicationEvidence": "2026-10-12T13:45:27-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-b89177a69ceadc8f",
-      "inputFacts": {
-        "id": "science-b89177a69ceadc8f",
-        "title": "As voters weigh incumbents, U-M research complicates case for congressional term limits",
-        "url": "https://news.umich.edu/as-voters-weigh-incumbents-u-m-research-complicates-case-for-congressional-term-limits",
-        "publishedAt": "2026-10-07T15:01:11Z",
-        "summary": "Experienced lawmakers' offices develop greater capacity, expertise, and institutional knowledge, enabling them to perform more constituent service and policy work, which complicates the argument for congressional term limits.",
-        "finding": "Experienced lawmakers' offices develop greater capacity, expertise, and institutional knowledge, enabling them to perform more constituent service and policy work, which complicates the argument for congressional term limits.",
-        "sourceUpdatedAt": "2026-10-07T18:05:02Z"
-      },
-      "publishedAt": "2026-10-07T11:01:11-04:00",
-      "publicationEvidence": "2026-10-07T11:01:11-04:00",
+      "publishedAt": "2026-10-18T00:05:00-04:00",
+      "publicationEvidence": "2026-10-18T00:05:00-04:00",
       "datePrecision": "time"
     },
     {
@@ -343,8 +268,8 @@
         "title": "APOD: 2026 October 17 – 3D 67P",
         "url": "https://science.nasa.gov/image-article/apod-2026-october-17-3d-67p",
         "publishedAt": "2026-10-17T04:05:00Z",
-        "summary": "The Rosetta spacecraft captured stereo images of Comet 67P/Churyumov-Gerasimenko on July 25, 2015, from a distance of 184 kilometers, revealing its jagged, double-lobed nucleus with a larger lobe approximately 4 kilometers in diameter and a smaller lobe of 2.5 kilometers joined by a narrow neck. Numerous jets were observed emanating from the comet's active surface.",
-        "finding": "The Rosetta spacecraft captured stereo images of Comet 67P/Churyumov-Gerasimenko on July 25, 2015, from a distance of 184 kilometers, revealing its jagged, double-lobed nucleus with a larger lobe approximately 4 kilometers in diameter and a smaller lobe of 2.5 kilometers joined by a narrow neck. Numerous jets were observed emanating from the comet's active surface.",
+        "summary": "Images from the Rosetta spacecraft's OSIRIS camera, taken on July 25, 2015, from 184 kilometers away, show numerous jets emanating from the active surface of Comet 67P/Churyumov-Gerasimenko near its closest approach to the Sun.",
+        "finding": "Images from the Rosetta spacecraft's OSIRIS camera, taken on July 25, 2015, from 184 kilometers away, show numerous jets emanating from the active surface of Comet 67P/Churyumov-Gerasimenko near its closest approach to the Sun.",
         "sourceUpdatedAt": "2026-10-17T04:05:00Z"
       },
       "publishedAt": "2026-10-17T00:05:00-04:00",
@@ -418,8 +343,8 @@
         "title": "NASA Satellites Observe Historic 2026 El Niño",
         "url": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino",
         "publishedAt": "2026-10-15T17:59:22Z",
-        "summary": "NASA satellites observed the unfolding of a historic 2026 El Ni\u0011o event, characterized by warmer-than-normal water temperatures in the equatorial Pacific, changes in sea surface height, and a measurable shift to bluer ocean colors due to decreased phytoplankton abundance.",
-        "finding": "NASA satellites observed the unfolding of a historic 2026 El Ni\u0011o event, characterized by warmer-than-normal water temperatures in the equatorial Pacific, changes in sea surface height, and a measurable shift to bluer ocean colors due to decreased phytoplankton abundance.",
+        "summary": "NASA satellites have observed the unfolding of a historic El Niño event in 2026, characterized by warmer-than-normal water temperatures in the equatorial Pacific, rising sea surface heights, and changes in ocean color due to decreased phytoplankton abundance.",
+        "finding": "NASA satellites have observed the unfolding of a historic El Niño event in 2026, characterized by warmer-than-normal water temperatures in the equatorial Pacific, rising sea surface heights, and changes in ocean color due to decreased phytoplankton abundance.",
         "sourceUpdatedAt": "2026-10-15T20:07:23Z"
       },
       "publishedAt": "2026-10-15T13:59:22-04:00",
@@ -433,8 +358,8 @@
         "title": "Many older adults make Medicare decisions quickly, most don’t change plans",
         "url": "https://news.umich.edu/many-older-adults-make-medicare-decisions-quickly-most-dont-change-plans",
         "publishedAt": "2026-10-15T16:55:19Z",
-        "summary": "A University of Michigan survey indicates that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all. Additionally, 80% of enrollees retain their previous year's Medicare coverage.",
-        "finding": "A University of Michigan survey indicates that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all. Additionally, 80% of enrollees retain their previous year's Medicare coverage.",
+        "summary": "A University of Michigan survey found that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all, and 80% retaining their previous year's coverage.",
+        "finding": "A University of Michigan survey found that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all, and 80% retaining their previous year's coverage.",
         "sourceUpdatedAt": "2026-10-15T16:55:27Z"
       },
       "publishedAt": "2026-10-15T12:55:19-04:00",
@@ -463,8 +388,8 @@
         "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
         "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
         "publishedAt": "2026-10-13T13:00:00Z",
-        "summary": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness to withstand the extreme conditions of space exploration.",
-        "finding": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness to withstand the extreme conditions of space exploration.",
+        "summary": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness for space exploration.",
+        "finding": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness for space exploration.",
         "sourceUpdatedAt": "2026-10-14T13:37:45Z"
       },
       "publishedAt": "2026-10-13T09:00:00-04:00",
@@ -478,8 +403,8 @@
         "title": "Mars moon lander set to launch on 19 October",
         "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_moon_lander_set_to_launch_on_19_October",
         "publishedAt": "2026-10-13T12:00:00Z",
-        "summary": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, aiming to be the first mission to collect a sample from Mars's moon Phobos and return it to Earth.",
-        "finding": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, aiming to be the first mission to collect a sample from Mars's moon Phobos and return it to Earth.",
+        "summary": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, to collect the first-ever sample from Mars's moon Phobos and return it to Earth.",
+        "finding": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, to collect the first-ever sample from Mars's moon Phobos and return it to Earth.",
         "sourceUpdatedAt": null
       },
       "publishedAt": "2026-10-13T00:00:00-04:00",
@@ -519,19 +444,11 @@
   ],
   "days": [
     {
-      "date": "2026-10-16",
-      "selectedIds": [
-        "science-7f03a5df97184a3b",
-        "science-1a44212d3a049509",
-        "science-8c5bf27decf07391"
-      ]
-    },
-    {
       "date": "2026-10-17",
       "selectedIds": [
         "science-1a44212d3a049509",
         "science-8c5bf27decf07391",
-        "science-7f03a5df97184a3b"
+        "science-56e6d03cc572f45c"
       ]
     },
     {
@@ -539,7 +456,15 @@
       "selectedIds": [
         "science-1a44212d3a049509",
         "science-8c5bf27decf07391",
-        "science-7f03a5df97184a3b"
+        "science-56e6d03cc572f45c"
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "selectedIds": [
+        "science-1a44212d3a049509",
+        "science-8c5bf27decf07391",
+        "science-56e6d03cc572f45c"
       ]
     }
   ]

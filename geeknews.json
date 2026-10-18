@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-17T11:49:01.701877Z",
-  "editionDate": "2026-10-17",
+  "generatedAt": "2026-10-18T10:14:03.151044Z",
+  "editionDate": "2026-10-18",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -21,11 +21,43 @@
   },
   "stories": [
     {
+      "id": "science-05ac95315a4bdee0",
+      "title": "APOD: 2026 October 18 – Sonified: Eagle Nebula Pillars",
+      "summary": "The Eagle Nebula (M16) has been sonified, allowing for an auditory experience of its features, where stars and dust produce sounds as a line moves across the image, with vertical position determining pitch.",
+      "finding": "The Eagle Nebula (M16) has been sonified, allowing for an auditory experience of its features, where stars and dust produce sounds as a line moves across the image, with vertical position determining pitch.",
+      "significance": "This sonification provides an alternative way to experience and understand astronomical data, making complex visual information accessible through sound. The turbulent environment within M16, where young stars are forming, is thought to be similar to the conditions that led to the formation of our own Sun.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-18-sonified-eagle-nebula-pillars",
+      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-october-18-sonified-eagle-nebula-pillars",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-18T04:05:00Z",
+      "firstSeenAt": "2026-10-18T10:14:03.151044Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "Eagle Nebula",
+        "M16",
+        "Hubble",
+        "Chandra"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-10-18T04:05:00Z"
+    },
+    {
       "id": "science-178a4d548f348666",
       "title": "APOD: 2026 October 17 – 3D 67P",
-      "summary": "The Rosetta spacecraft captured stereo images of Comet 67P/Churyumov-Gerasimenko on July 25, 2015, from a distance of 184 kilometers, revealing its jagged, double-lobed nucleus with a larger lobe approximately 4 kilometers in diameter and a smaller lobe of 2.5 kilometers joined by a narrow neck. Numerous jets were observed emanating from the comet's active surface.",
-      "finding": "The Rosetta spacecraft captured stereo images of Comet 67P/Churyumov-Gerasimenko on July 25, 2015, from a distance of 184 kilometers, revealing its jagged, double-lobed nucleus with a larger lobe approximately 4 kilometers in diameter and a smaller lobe of 2.5 kilometers joined by a narrow neck. Numerous jets were observed emanating from the comet's active surface.",
-      "significance": "These images provide detailed topographical information about Comet 67P, which is crucial for understanding the physical characteristics and activity of comets, offering insights into the early solar system's composition and evolution.",
+      "summary": "Images from the Rosetta spacecraft's OSIRIS camera, taken on July 25, 2015, from 184 kilometers away, show numerous jets emanating from the active surface of Comet 67P/Churyumov-Gerasimenko near its closest approach to the Sun.",
+      "finding": "Images from the Rosetta spacecraft's OSIRIS camera, taken on July 25, 2015, from 184 kilometers away, show numerous jets emanating from the active surface of Comet 67P/Churyumov-Gerasimenko near its closest approach to the Sun.",
+      "significance": "These observations provide detailed visual evidence of cometary activity, which is crucial for understanding the composition and behavior of comets as they interact with solar radiation.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://science.nasa.gov/image-article/apod-2026-october-17-3d-67p",
       "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-october-17-3d-67p",
@@ -36,17 +68,17 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-17T04:05:00Z",
       "firstSeenAt": "2026-10-17T10:01:38.386991Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-17T10:01:38.386991Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "astronomy",
-        "technology"
+        "physics"
       ],
       "entities": [
         "Rosetta spacecraft",
         "OSIRIS camera",
-        "ESA"
+        "Sun"
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-10-17T04:05:00Z"
@@ -54,9 +86,9 @@
     {
       "id": "science-5357de9353ef4cac",
       "title": "Artemis II Heat Shield After Splashdown",
-      "summary": "The heat shield of the Orion spacecraft on the Artemis II mission performed as expected during reentry into Earth's atmosphere, effectively safeguarding the crew and Orion systems.",
-      "finding": "The heat shield of the Orion spacecraft on the Artemis II mission performed as expected during reentry into Earth's atmosphere, effectively safeguarding the crew and Orion systems.",
-      "significance": "This confirms the critical thermal protection system's effectiveness for future crewed missions, ensuring astronaut safety during high-speed atmospheric re-entry.",
+      "summary": "The heat shield of the Orion spacecraft on the Artemis II mission performed as expected during reentry into Earth's atmosphere.",
+      "finding": "The heat shield of the Orion spacecraft on the Artemis II mission performed as expected during reentry into Earth's atmosphere.",
+      "significance": "This confirms the effectiveness of the thermal protection system, which is crucial for safeguarding the crew and spacecraft systems during future crewed missions.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown",
       "primarySourceUrl": "https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown",
@@ -67,8 +99,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-16T16:28:01Z",
       "firstSeenAt": "2026-10-17T10:01:38.386991Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-17T10:01:38.386991Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "technology",
@@ -77,7 +109,6 @@
       "entities": [
         "Artemis II",
         "Orion spacecraft",
-        "heat shield",
         "Earth"
       ],
       "milestoneStatus": "completed"
@@ -188,8 +219,8 @@
       "title": "The stakes appear high for college students who gamble",
       "summary": "The normalization of sports betting, particularly among young men, is a concern for college students, as many believe their sports knowledge provides an advantage or can supplement income, despite competing against a sophisticated industry designed for profit when bettors lose.",
       "finding": "The normalization of sports betting, particularly among young men, is a concern for college students, as many believe their sports knowledge provides an advantage or can supplement income, despite competing against a sophisticated industry designed for profit when bettors lose.",
-      "significance": "This finding highlights a potential risk for college students, as what may start as a social activity can lead to unhealthy gambling habits, financial losses, or academic and personal problems. It underscores the need for educational interventions and policy changes to mitigate harm.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "significance": "This finding highlights a potential risk for college students, as the widespread integration of sports betting into sports culture may lead to unhealthy gambling habits, financial losses, or academic and personal problems, especially given the false confidence some students may develop.",
+      "caveat": "The information presented is based on observations and concerns from a clinical assistant professor who is developing a study on the impact of online sports betting on college students. It does not represent findings from a completed, peer-reviewed study.",
       "url": "https://news.umich.edu/the-stakes-appear-high-for-college-students-who-gamble",
       "primarySourceUrl": "https://news.umich.edu/the-stakes-appear-high-for-college-students-who-gamble",
       "source": {
@@ -199,16 +230,16 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-15T19:50:38Z",
       "firstSeenAt": "2026-10-16T10:02:47.778170Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
-      "evidenceType": "agency-announcement",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
+      "evidenceType": "explanatory-background",
       "topics": [
         "social-science",
         "health"
       ],
       "entities": [
-        "University of Michigan",
         "Michal Lorenc",
+        "University of Michigan",
         "National Problem Gambling Helpline Report"
       ],
       "milestoneStatus": "unknown",
@@ -218,21 +249,21 @@
     {
       "id": "science-4b31a65269f1add9",
       "title": "NASA Satellites Observe Historic 2026 El Niño",
-      "summary": "NASA satellites observed the unfolding of a historic 2026 El Ni\u0011o event, characterized by warmer-than-normal water temperatures in the equatorial Pacific, changes in sea surface height, and a measurable shift to bluer ocean colors due to decreased phytoplankton abundance.",
-      "finding": "NASA satellites observed the unfolding of a historic 2026 El Ni\u0011o event, characterized by warmer-than-normal water temperatures in the equatorial Pacific, changes in sea surface height, and a measurable shift to bluer ocean colors due to decreased phytoplankton abundance.",
-      "significance": "This El Ni\u0011o is considered the strongest since 1950 and is impacting global weather patterns, sea levels, and marine ecosystems. Satellite observations provide crucial data for understanding and tracking these significant climate phenomena.",
+      "summary": "NASA satellites have observed the unfolding of a historic El Niño event in 2026, characterized by warmer-than-normal water temperatures in the equatorial Pacific, rising sea surface heights, and changes in ocean color due to decreased phytoplankton abundance.",
+      "finding": "NASA satellites have observed the unfolding of a historic El Niño event in 2026, characterized by warmer-than-normal water temperatures in the equatorial Pacific, rising sea surface heights, and changes in ocean color due to decreased phytoplankton abundance.",
+      "significance": "This El Niño is predicted to be the strongest since 1950, significantly impacting global weather patterns, marine ecosystems, and communities worldwide, including farmers, firefighters, and coastal populations.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino",
       "primarySourceUrl": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino",
       "source": {
-        "name": "NASA"
+        "name": "NASA JPL"
       },
       "sourceGroup": "NASA",
       "sourceQuality": 2,
       "publishedAt": "2026-10-15T17:59:22Z",
       "firstSeenAt": "2026-10-16T10:02:47.778170Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "earth-science",
@@ -241,9 +272,10 @@
       ],
       "entities": [
         "NASA",
+        "El Niño",
+        "National Oceanic and Atmospheric Administration",
         "Sentinel-6",
-        "PACE",
-        "NOAA"
+        "PACE"
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-10-15T20:07:23Z"
@@ -251,10 +283,10 @@
     {
       "id": "science-1a44212d3a049509",
       "title": "Whatcha lookin’ at? Social anxiety heightens brain sensitivity to others’ gaze",
-      "summary": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting social cues, specifically when a word describing mental states does not match the meaning conveyed by gaze patterns. This heightened neural sensitivity does not, however, translate into improved explicit judgments about the meaning of the gaze.",
-      "finding": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting social cues, specifically when a word describing mental states does not match the meaning conveyed by gaze patterns. This heightened neural sensitivity does not, however, translate into improved explicit judgments about the meaning of the gaze.",
-      "significance": "This research offers a new perspective on social anxiety, suggesting that it involves enhanced neural sensitivity to social cues, which could have both benefits (noticing important signals) and drawbacks (increased worry and rumination). Understanding this mechanism could lead to more nuanced approaches to social anxiety, moving beyond viewing it solely as a source of distress.",
-      "caveat": "While individuals with higher social anxiety showed greater neural sensitivity to gaze meaning, this advantage was not reflected in their subsequent explicit judgments. The study did not establish whether this sensitivity is beneficial in real-world social situations, and the authors suggest this initial neural sensitivity might contribute to excessive monitoring or rumination.",
+      "summary": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting information between a person's gaze and a word describing their mental state.",
+      "finding": "Young adults with higher social anxiety exhibit stronger brain responses (N400) when presented with conflicting information between a person's gaze and a word describing their mental state.",
+      "significance": "This finding suggests that social anxiety may involve heightened neural sensitivity to social cues, offering a new perspective on social anxiety beyond just distress. This sensitivity could potentially be beneficial in certain social contexts, but also contribute to excessive worry.",
+      "caveat": "While individuals with higher social anxiety showed greater neural sensitivity, this did not translate to improved accuracy or speed in their explicit judgments about the meaning of a gaze. The study also did not establish whether this sensitivity helps people navigate real-world social situations.",
       "url": "https://news.umich.edu/whatcha-lookin-at-social-anxiety-heightens-brain-sensitivity-to-others-gaze",
       "primarySourceUrl": "https://news.umich.edu/whatcha-lookin-at-social-anxiety-heightens-brain-sensitivity-to-others-gaze",
       "source": {
@@ -264,8 +296,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-15T17:03:02Z",
       "firstSeenAt": "2026-10-16T10:02:47.778170Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "health",
@@ -273,11 +305,11 @@
         "biology"
       ],
       "entities": [
-        "social anxiety",
-        "brain",
-        "gaze patterns",
+        "University of Michigan",
+        "Irene Melani",
         "Psychophysiology",
-        "N400"
+        "National Science Foundation",
+        "Shinobu Kitayama"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://onlinelibrary.wiley.com/doi/10.1111/psyp.70409",
@@ -287,9 +319,9 @@
     {
       "id": "science-21ed244dc27840c3",
       "title": "Many older adults make Medicare decisions quickly, most don’t change plans",
-      "summary": "A University of Michigan survey indicates that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all. Additionally, 80% of enrollees retain their previous year's Medicare coverage.",
-      "finding": "A University of Michigan survey indicates that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all. Additionally, 80% of enrollees retain their previous year's Medicare coverage.",
-      "significance": "These findings suggest that many older adults may not be fully optimizing their Medicare plans, potentially missing out on coverage better suited to their needs or financial situation. This highlights a need for greater engagement and utilization of available resources during the Open Enrollment period.",
+      "summary": "A University of Michigan survey found that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all, and 80% retaining their previous year's coverage.",
+      "finding": "A University of Michigan survey found that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all, and 80% retaining their previous year's coverage.",
+      "significance": "This finding suggests that many older adults may not be thoroughly evaluating their Medicare options, potentially missing out on coverage that better suits their needs or financial situation, especially given annual changes in available plans and policy updates.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://news.umich.edu/many-older-adults-make-medicare-decisions-quickly-most-dont-change-plans",
       "primarySourceUrl": "https://news.umich.edu/many-older-adults-make-medicare-decisions-quickly-most-dont-change-plans",
@@ -300,8 +332,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-15T16:55:19Z",
       "firstSeenAt": "2026-10-16T10:02:47.778170Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "health",
@@ -320,10 +352,10 @@
     {
       "id": "science-8c5bf27decf07391",
       "title": "They get knocked down—but they get up again",
-      "summary": "Low doses of the herbicide dicamba can cause the common weed oxalis (wood sorrel) to produce more flowers, a phenomenon known as hormesis. This effect is a single-generation response and does not appear to be heritable or lead to evolution in the weed population.",
-      "finding": "Low doses of the herbicide dicamba can cause the common weed oxalis (wood sorrel) to produce more flowers, a phenomenon known as hormesis. This effect is a single-generation response and does not appear to be heritable or lead to evolution in the weed population.",
-      "significance": "This finding suggests that the inadvertent drift of herbicides, such as dicamba, might unintentionally enhance the reproductive capacity of certain weeds, potentially making them more persistent in agricultural and residential areas. Understanding this response is crucial for effective weed management strategies.",
-      "caveat": "While the study found that oxalis produced more flowers after exposure to low doses of dicamba, it did not consistently translate to increased seed production in the second year of the experiment. Additionally, plants with more flowers due to dicamba exposure actually experienced lower pollinator visitation rates, and their flowers were smaller. The study also found no evidence that this increased flower production trait is heritable or would evolve in the population.",
+      "summary": "Low doses of the herbicide dicamba can cause the common weed oxalis to produce more flowers, a phenomenon known as hormesis.",
+      "finding": "Low doses of the herbicide dicamba can cause the common weed oxalis to produce more flowers, a phenomenon known as hormesis.",
+      "significance": "This finding suggests that the inadvertent drift of herbicides at low concentrations might be making weeds more robust, rather than eliminating them, potentially impacting agricultural practices and lawn care.",
+      "caveat": "The study found no evidence that the increased flower production trait was heritable or would evolve in the oxalis population, and the increased flower production did not consistently translate to increased seed production in the second year of the experiment. Additionally, plants with more flowers due to dicamba exposure had lower pollinator visitation rates.",
       "url": "https://news.umich.edu/they-get-knocked-downbut-they-get-up-again",
       "primarySourceUrl": "https://news.umich.edu/they-get-knocked-downbut-they-get-up-again",
       "source": {
@@ -333,13 +365,12 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-15T14:29:26Z",
       "firstSeenAt": "2026-10-16T10:02:47.778170Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
-        "technology",
-        "environment"
+        "technology"
       ],
       "entities": [
         "University of Michigan",
@@ -756,9 +787,9 @@
     {
       "id": "science-996b79babe601422",
       "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
-      "summary": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness to withstand the extreme conditions of space exploration.",
-      "finding": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness to withstand the extreme conditions of space exploration.",
-      "significance": "This successful testing is a major milestone for the Griffin-1 mission, confirming its ability to survive launch and the harsh lunar environment. It paves the way for the delivery of critical cargo to the lunar South Pole as part of NASA's CLPS initiative and the broader Moon Base Program, supporting future sustained lunar exploration.",
+      "summary": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness for space exploration.",
+      "finding": "Voyager Technologies' Griffin Mission One (Griffin-1) spacecraft has successfully completed a series of rigorous environmental tests at NASA's Jet Propulsion Laboratory, demonstrating its readiness for space exploration.",
+      "significance": "The successful testing of Griffin-1 is a major milestone for NASA's CLPS initiative and the Moon Base Program, as it confirms the lander's ability to withstand the harsh conditions of space and deliver critical cargo to the lunar South Pole, paving the way for future lunar outposts.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
       "primarySourceUrl": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
@@ -769,8 +800,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-13T13:00:00Z",
       "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "technology",
@@ -789,10 +820,10 @@
     {
       "id": "science-9216e6cae5d0a88a",
       "title": "Mars moon lander set to launch on 19 October",
-      "summary": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, aiming to be the first mission to collect a sample from Mars's moon Phobos and return it to Earth.",
-      "finding": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, aiming to be the first mission to collect a sample from Mars's moon Phobos and return it to Earth.",
-      "significance": "This mission will provide crucial data and samples to help scientists understand the formation and composition of Mars's moons, potentially shedding light on the evolution of Mars, the Solar System, and rocky planets around other stars. The ability to return samples from the Mars system could also pave the way for future robotic and human missions to Mars.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "summary": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, to collect the first-ever sample from Mars's moon Phobos and return it to Earth.",
+      "finding": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, to collect the first-ever sample from Mars's moon Phobos and return it to Earth.",
+      "significance": "This mission aims to address fundamental questions about the formation and composition of Mars's moons, Phobos and Deimos, which could provide insights into the evolution of Mars, the Solar System, and potentially rocky planets around other stars.",
+      "caveat": "The mission is currently planned and has not yet launched; its success depends on the successful execution of all planned phases, including launch, sample collection, and return to Earth.",
       "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_moon_lander_set_to_launch_on_19_October",
       "primarySourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Mars_moon_lander_set_to_launch_on_19_October",
       "source": {
@@ -802,19 +833,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-13T12:00:00Z",
       "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "astronomy",
         "technology"
       ],
       "entities": [
-        "Martian Moons eXploration (MMX) mission",
+        "Martian Moons eXploration (MMX)",
         "Phobos",
         "Mars",
-        "Earth",
-        "Japan Aerospace Exploration Agency (JAXA)"
+        "Japan Aerospace Exploration Agency (JAXA)",
+        "European Space Agency (ESA)"
       ],
       "milestoneStatus": "planned"
     },
@@ -1344,8 +1375,8 @@
       "title": "NASA’s SPHEREx Telescope Sees Menagerie of Brown Dwarfs",
       "summary": "NASA's SPHEREx telescope has observed that brown dwarfs possess chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane, similar to giant planets in our solar system.",
       "finding": "NASA's SPHEREx telescope has observed that brown dwarfs possess chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane, similar to giant planets in our solar system.",
-      "significance": "This finding provides new insights into the atmospheric composition of brown dwarfs, which are celestial objects that bridge the gap between stars and exoplanets. Understanding their atmospheric chemistry helps refine theoretical models of their formation, evolution, and storminess, and contributes to a broader understanding of planetary and stellar diversity.",
-      "caveat": "The current study focused on a limited sample of 37 brown dwarfs, and while the models generally capture chemical trends, they struggle to match data for cloudy transitions. The source does not specify material limitations; independent verification is not established.",
+      "significance": "This finding provides new insights into the atmospheric composition of brown dwarfs, which are celestial objects that bridge the gap between stars and exoplanets. Understanding their atmospheres helps refine theoretical models of their formation, evolution, and internal processes, and could inform our understanding of planetary atmospheres.",
+      "caveat": "The current study analyzed observations from only 37 brown dwarfs, and while the general chemical trends are captured by existing models, these models struggle to match the data for cloudy transitions. The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs",
       "primarySourceUrl": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs",
       "source": {
@@ -1355,8 +1386,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-08T18:22:48Z",
       "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -1389,7 +1420,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-08T13:45:03Z",
       "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
       "verifiedAt": "2026-10-16T10:02:47.778170Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -1424,7 +1455,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-08T13:26:57Z",
       "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
       "verifiedAt": "2026-10-15T10:00:00.772183Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -1443,9 +1474,9 @@
     {
       "id": "science-f433a319fc4cd0e6",
       "title": "Solar Orbiter tracks origin of mysterious magnetic switchbacks",
-      "summary": "The Solar Orbiter spacecraft has traced the origin of a magnetic switchback in the solar wind back to the Sun's surface, identifying a mix of charged oxygen and carbon particles that indicate formation within hot magnetic field loops at the Sun's surface through a process called 'interchange reconnection'. Additionally, waves and turbulence appear to govern the switchback's movement after it leaves the Sun.",
-      "finding": "The Solar Orbiter spacecraft has traced the origin of a magnetic switchback in the solar wind back to the Sun's surface, identifying a mix of charged oxygen and carbon particles that indicate formation within hot magnetic field loops at the Sun's surface through a process called 'interchange reconnection'. Additionally, waves and turbulence appear to govern the switchback's movement after it leaves the Sun.",
-      "significance": "This finding reconciles two competing theories for switchback formation, showing that both interchange reconnection and waves/turbulence are involved at different stages. Understanding switchbacks provides insight into how the Sun heats its atmosphere, accelerates solar wind particles, and imprints signatures onto these particles, which is crucial for predicting and mitigating dangerous solar storms and protecting space-based infrastructure.",
+      "summary": "The Solar Orbiter spacecraft traced the origin of a magnetic switchback in the solar wind back to the Sun's surface, identifying a mix of charged oxygen and carbon particles that indicate formation through 'interchange reconnection' within hot magnetic field loops. The study also suggests that waves and turbulence govern the switchback's movement after it leaves the Sun, reconciling two competing theories of switchback formation.",
+      "finding": "The Solar Orbiter spacecraft traced the origin of a magnetic switchback in the solar wind back to the Sun's surface, identifying a mix of charged oxygen and carbon particles that indicate formation through 'interchange reconnection' within hot magnetic field loops. The study also suggests that waves and turbulence govern the switchback's movement after it leaves the Sun, reconciling two competing theories of switchback formation.",
+      "significance": "Understanding the formation and movement of magnetic switchbacks provides insights into how the Sun heats its atmosphere, accelerates solar wind particles, and imprints signatures onto these particles. This knowledge is crucial for predicting and preparing for solar storms, which can impact space-based infrastructure and technology on Earth.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_tracks_origin_of_mysterious_magnetic_switchbacks",
       "primarySourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_tracks_origin_of_mysterious_magnetic_switchbacks",
@@ -1456,8 +1487,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-08T09:00:00Z",
       "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -1467,8 +1498,8 @@
         "Solar Orbiter",
         "Sun",
         "solar wind",
-        "magnetic field",
-        "Nature Astronomy"
+        "Nature Astronomy",
+        "ESA"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.nature.com/articles/s41550-026-02928-0"
@@ -1623,7 +1654,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-06T21:02:14Z",
       "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
       "verifiedAt": "2026-10-15T10:00:00.772183Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -1643,9 +1674,9 @@
     {
       "id": "science-785e57922ae85254",
       "title": "NASA’s Curiosity Rover Catches Stunning Martian Dawn",
-      "summary": "NASA's Curiosity rover captured a detailed panorama of distant, wind-carved Martian cliffs, known as yardangs, on August 11, 2026. Scientists are investigating their formation, with one hypothesis suggesting they are ash deposited by ancient volcanic eruptions.",
-      "finding": "NASA's Curiosity rover captured a detailed panorama of distant, wind-carved Martian cliffs, known as yardangs, on August 11, 2026. Scientists are investigating their formation, with one hypothesis suggesting they are ash deposited by ancient volcanic eruptions.",
-      "significance": "Understanding the formation of these yardangs could provide insights into Mars' geological history, including past volcanic activity and the processes that shaped its surface after water dried up.",
+      "summary": "NASA's Curiosity rover captured a detailed panorama of distant, wind-carved Martian cliffs, known as yardangs, on August 11, 2026, providing scientists with their most detailed view yet of these features.",
+      "finding": "NASA's Curiosity rover captured a detailed panorama of distant, wind-carved Martian cliffs, known as yardangs, on August 11, 2026, providing scientists with their most detailed view yet of these features.",
+      "significance": "This imagery is crucial for understanding the formation of these yardangs, which appear unusual in color and tilt, potentially offering insights into ancient Martian volcanic activity or wind erosion processes.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-rover-catches-stunning-martian-dawn",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-rover-catches-stunning-martian-dawn",
@@ -1656,12 +1687,12 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-06T15:30:07Z",
       "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "astronomy",
-        "geology"
+        "technology"
       ],
       "entities": [
         "NASA",
@@ -1670,15 +1701,15 @@
         "Mount Sharp",
         "Jet Propulsion Laboratory"
       ],
-      "milestoneStatus": "unknown",
+      "milestoneStatus": "completed",
       "sourceUpdatedAt": "2026-10-06T15:30:09Z"
     },
     {
       "id": "science-189a59772523fe89",
       "title": "Webb captures commotion from nebula’s stellar jets",
-      "summary": "The James Webb Space Telescope has revealed numerous stars previously obscured by dust clouds in the stellar nursery NGC 7129, located 3300 light-years from Earth. The observations show how stars at different developmental stages, including pre-main-sequence stars and protostars, influence their surroundings through outflows and stellar winds, creating cavities and photodissociation regions that affect the heating, cooling, and chemistry of molecular clouds.",
-      "finding": "The James Webb Space Telescope has revealed numerous stars previously obscured by dust clouds in the stellar nursery NGC 7129, located 3300 light-years from Earth. The observations show how stars at different developmental stages, including pre-main-sequence stars and protostars, influence their surroundings through outflows and stellar winds, creating cavities and photodissociation regions that affect the heating, cooling, and chemistry of molecular clouds.",
-      "significance": "Understanding these processes provides insight into how molecular clouds erode over millions of years and how new stars continue to form within these dynamic environments. The ability of Webb to penetrate dense dust clouds with infrared light is crucial for observing these hidden stellar phenomena.",
+      "summary": "The James Webb Space Telescope has revealed numerous stars previously obscured by dust clouds in the stellar nursery NGC 7129, located 3300 light-years from Earth. The observations show stars in various developmental stages, including pre-main-sequence stars and protostars, and illustrate how stellar outflows and light sculpt their surroundings.",
+      "finding": "The James Webb Space Telescope has revealed numerous stars previously obscured by dust clouds in the stellar nursery NGC 7129, located 3300 light-years from Earth. The observations show stars in various developmental stages, including pre-main-sequence stars and protostars, and illustrate how stellar outflows and light sculpt their surroundings.",
+      "significance": "This observation provides insights into how stars influence their environment, specifically how outflows from stars carve into dense molecular clouds, energize gas, and potentially trigger the formation of new stars. It also helps understand the erosion of molecular clouds over millions of years.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Webb_captures_commotion_from_nebula_s_stellar_jets",
       "primarySourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Webb_captures_commotion_from_nebula_s_stellar_jets",
@@ -1689,8 +1720,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-06T13:00:00Z",
       "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
+      "checkedAt": "2026-10-18T10:14:03.151044Z",
+      "verifiedAt": "2026-10-18T10:14:03.151044Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "astronomy",
@@ -1699,7 +1730,9 @@
       "entities": [
         "James Webb Space Telescope",
         "NGC 7129",
-        "LkH(alpha) 234"
+        "ESA",
+        "NASA",
+        "CSA"
       ],
       "milestoneStatus": "unknown"
     },
@@ -2643,53 +2676,53 @@
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-10-17",
+    "date": "2026-10-18",
     "selectedIds": [
       "science-1d060f804230bcac",
-      "science-3dc92304bbbb16d2",
+      "science-1a44212d3a049509",
       "science-9216e6cae5d0a88a",
       "science-053fd0b7f05650b5",
-      "science-1a44212d3a049509",
+      "science-8c5bf27decf07391",
       "science-93afb0f4dd6f8f94"
     ],
     "reasons": {
       "science-1d060f804230bcac": {
-        "score": 33,
+        "score": 32,
         "source": "NASA",
         "topic": "earth-science",
         "publishedAt": "2026-10-16T04:00:00Z",
         "interestMatch": false
       },
-      "science-3dc92304bbbb16d2": {
-        "score": 32,
+      "science-1a44212d3a049509": {
+        "score": 31,
         "source": "U-M",
-        "topic": "social-science",
-        "publishedAt": "2026-10-15T19:50:38Z",
+        "topic": "health",
+        "publishedAt": "2026-10-15T17:03:02Z",
         "interestMatch": false
       },
       "science-9216e6cae5d0a88a": {
-        "score": 30,
+        "score": 29,
         "source": "ESA",
         "topic": "astronomy",
         "publishedAt": "2026-10-13T12:00:00Z",
         "interestMatch": false
       },
       "science-053fd0b7f05650b5": {
-        "score": 25,
+        "score": 24,
         "source": "NSF",
         "topic": "technology",
         "publishedAt": "2026-10-08T13:45:03Z",
         "interestMatch": false
       },
-      "science-1a44212d3a049509": {
-        "score": 20,
+      "science-8c5bf27decf07391": {
+        "score": 19,
         "source": "U-M",
-        "topic": "health",
-        "publishedAt": "2026-10-15T17:03:02Z",
+        "topic": "biology",
+        "publishedAt": "2026-10-15T14:29:26Z",
         "interestMatch": false
       },
       "science-93afb0f4dd6f8f94": {
-        "score": 15,
+        "score": 14,
         "source": "NASA",
         "topic": "astronomy",
         "publishedAt": "2026-10-15T19:58:08Z",
