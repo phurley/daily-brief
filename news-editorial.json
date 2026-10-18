@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-10-18T14:01:42.637360-04:00",
+  "generatedAt": "2026-10-18T18:09:55.804137-04:00",
   "stories": [
     {
       "id": "construction-on-nathan-and-catherine-for-news-2026-10-17",
@@ -392,94 +392,6 @@
         "grounded": true,
         "groundingReason": "The summary accurately reflects the article's content regarding the documentary, its themes, the co-directors, and the upcoming screening at the University of Michigan."
       }
-    },
-    {
-      "id": "many-older-adults-make-medicare-decision-news-2026-10-15",
-      "title": "Many older adults make Medicare decisions quickly, most don’t change plans",
-      "summary": "A University of Michigan survey indicates that 60% of older adults spend less than an hour choosing Medicare coverage, with 80% retaining their previous year's plan. This suggests many may miss options better suited to their needs, especially given changes in available plans and drug cost policies for 2027.",
-      "url": "https://news.umich.edu/many-older-adults-make-medicare-decisions-quickly-most-dont-change-plans/",
-      "publishedAt": "2026-10-15T12:55:19-04:00",
-      "addedAt": "2026-10-15T15:56:23-04:00",
-      "urgentLocal": false,
-      "evidenceQuality": "primary",
-      "entities": [
-        "University of Michigan",
-        "Geoffrey Hoffman",
-        "Lianlian Lei",
-        "Jeffrey Kullgren"
-      ],
-      "locations": [
-        "Ann Arbor, MI"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "health",
-        "aging",
-        "medicare",
-        "older"
-      ],
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.02,
-          "distinctive": 0.07,
-          "eclectic": 0.09,
-          "technical_science": 0.1,
-          "artsy": 0.02,
-          "progressive": 0.15,
-          "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.82,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.03,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.04,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.03,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://news.umich.edu/wp-content/uploads/2025/06/Geoffrey-Hoffman-100x100.jpg",
-        "alt": "Geoffrey Hoffman"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-15T15:57:36.529394-04:00",
-        "expiresAt": "2026-10-18T15:57:36.529394-04:00",
-        "inputFacts": {
-          "id": "many-older-adults-make-medicare-decision-news-2026-10-15",
-          "title": "Many older adults make Medicare decisions quickly, most don’t change plans",
-          "url": "https://news.umich.edu/many-older-adults-make-medicare-decisions-quickly-most-dont-change-plans/",
-          "publishedAt": "2026-10-15T00:00:00-04:00",
-          "summary": "A University of Michigan survey shows 60% of older adults spend less than an hour choosing Medicare coverage during Open Enrollment, with 80% sticking to their previous year's plans. Researchers emphasize the need for more thorough review of options, as many may not be aware of changes affecting costs and coverage. The 2027 Open Enrollment period runs from October 15 to December 7.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-15T12:55:19-04:00",
-        "datePrecision": "time",
-        "sourceHash": "18a120706cb4145388f3c1431e4a58960fe93ea09c5061e7c54c12c94e4862ad",
-        "relevance": 4,
-        "novelty": 3,
-        "reason": "The article discusses Medicare decisions, a significant financial and health concern for many Canton residents. The University of Michigan's involvement and the practical implications for local seniors make it relevant.",
-        "storyKey": "medicare-open-enrollment-decision-making",
-        "localConnection": "Many Canton residents are Medicare-eligible and will face these decisions.",
-        "grounded": true,
-        "groundingReason": "The summary accurately reflects the survey findings regarding Medicare enrollment habits and highlights the implications of these habits in light of upcoming policy changes, which is a significant local development for older adults in Michigan."
-      }
     }
   ],
   "corrections": [
@@ -544,21 +456,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "many-older-adults-make-medicare-decision-news-2026-10-15",
-      "inputFacts": {
-        "id": "many-older-adults-make-medicare-decision-news-2026-10-15",
-        "title": "Many older adults make Medicare decisions quickly, most don’t change plans",
-        "url": "https://news.umich.edu/many-older-adults-make-medicare-decisions-quickly-most-dont-change-plans/",
-        "publishedAt": "2026-10-15T00:00:00-04:00",
-        "summary": "A University of Michigan survey shows 60% of older adults spend less than an hour choosing Medicare coverage during Open Enrollment, with 80% sticking to their previous year's plans. Researchers emphasize the need for more thorough review of options, as many may not be aware of changes affecting costs and coverage. The 2027 Open Enrollment period runs from October 15 to December 7.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-15T12:55:19-04:00",
-      "publicationEvidence": "2026-10-15T12:55:19-04:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "family-cleaning-out-home-finds-grenade-w-news-2026-10-17",
       "inputFacts": {
         "id": "family-cleaning-out-home-finds-grenade-w-news-2026-10-17",
@@ -571,6 +468,36 @@
       },
       "publishedAt": "2026-10-18T01:00:29+00:00",
       "publicationEvidence": "2026-10-18T01:00:29Z",
+      "datePrecision": "time"
+    },
+    {
+      "id": "detroit-media-exec-was-accused-of-postin-news-2026-10-18",
+      "inputFacts": {
+        "id": "detroit-media-exec-was-accused-of-postin-news-2026-10-18",
+        "title": "Detroit media exec was accused of posting racist meme. Now he owes $62M in discrimination case.",
+        "url": "https://www.clickondetroit.com/news/local/2026/10/18/detroit-media-exec-was-accused-of-posting-racist-meme-now-he-owes-62m-in-discrimination-case/",
+        "publishedAt": "2026-10-18T05:00:00-04:00",
+        "summary": "A federal jury ordered Detroit media executive Kevin Adell and The Word Network to pay Bishop George Bloomer $62.2 million in a discrimination case. The lawsuit alleged Adell created a racially hostile work environment by sharing a racist meme depicting Bloomer and other Black clergy members, and later retaliating against him. Adell's spokesperson declined to comment on the verdict.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-18T09:00:00+00:00",
+      "publicationEvidence": "2026-10-18T09:00:00Z",
+      "datePrecision": "time"
+    },
+    {
+      "id": "how-a-st-clair-county-5-year-old-s-quick-news-2026-10-18",
+      "inputFacts": {
+        "id": "how-a-st-clair-county-5-year-old-s-quick-news-2026-10-18",
+        "title": "How a St. Clair County 5-year-old’s quick thinking saved his grandmother’s life",
+        "url": "https://www.clickondetroit.com/news/local/2026/10/18/how-a-st-clair-county-5-year-olds-quick-thinking-saved-his-grandmothers-life/",
+        "publishedAt": "2026-10-18T05:00:00-04:00",
+        "summary": "A 5-year-old St. Clair County boy, Hudson Tenn, was honored for saving his grandmother’s life during a medical emergency. Hudson and his 3-year-old sister sought help when their unconscious grandmother fell, leading neighbors to assist and call 911. The incident occurred over the summer, and Hudson was later recognized for his bravery by township officials and the sheriff’s office.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-18T09:00:00+00:00",
+      "publicationEvidence": "2026-10-18T09:00:00Z",
       "datePrecision": "time"
     },
     {
@@ -619,6 +546,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "security-guard-charged-after-stabbing-ou-news-2026-10-18",
+      "inputFacts": {
+        "id": "security-guard-charged-after-stabbing-ou-news-2026-10-18",
+        "title": "Security guard charged after stabbing outside Buddy’s Pizza near Comerica Park",
+        "url": "https://www.clickondetroit.com/news/local/2026/10/18/security-guard-charged-after-stabbing-outside-buddys-pizza-near-comerica-park/",
+        "publishedAt": "2026-10-18T05:00:00-04:00",
+        "summary": "Terrion Jett, 25, a security guard at Buddy’s Pizza, faces an assault charge after prosecutors allege he stabbed a 43-year-old man during a fight outside the restaurant near Comerica Park in Detroit. The victim was hospitalized, though his condition remains unknown. Jett was working at the time of the incident.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-18T09:00:00+00:00",
+      "publicationEvidence": "2026-10-18T09:00:00Z",
+      "datePrecision": "time"
+    },
+    {
       "id": "race-for-saline-mayor-between-incumbent-news-2026-10-17",
       "inputFacts": {
         "id": "race-for-saline-mayor-between-incumbent-news-2026-10-17",
@@ -631,6 +573,21 @@
       },
       "publishedAt": "2026-10-17T12:04:00-04:00",
       "publicationEvidence": "2026-10-17T12:04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "detroit-82-year-old-gets-32k-water-bill-news-2026-10-17",
+      "inputFacts": {
+        "id": "detroit-82-year-old-gets-32k-water-bill-news-2026-10-17",
+        "title": "Detroit 82-year-old gets $32k water bill, city fixes issues after Local 4 reaches out",
+        "url": "https://www.clickondetroit.com/news/local/2026/10/18/detroit-82-year-old-gets-dollar32k-water-bill-city-fixes-issues-after-local-4-reaches-out/",
+        "publishedAt": "2026-10-17T22:25:00-04:00",
+        "summary": "An 82-year-old Detroit woman received a $32,000 water bill due to a faulty meter. After media intervention, the Detroit Water and Sewerage Department acknowledged the meter was non-compliant and replaced it. The department confirmed there are approximately 1,000 similar meters in storage and six in the field that require replacement to prevent billing errors.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-18T02:25:53.858000+00:00",
+      "publicationEvidence": "2026-10-18T02:25:53.858Z",
       "datePrecision": "time"
     },
     {
@@ -683,7 +640,6 @@
     {
       "date": "2026-10-17",
       "selectedIds": [
-        "many-older-adults-make-medicare-decision-news-2026-10-15",
         "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
         "van-buren-township-planning-commission-a-news-2026-10-15",
         "construction-on-nathan-and-catherine-for-news-2026-10-17",
@@ -694,7 +650,6 @@
       "date": "2026-10-18",
       "selectedIds": [
         "van-buren-township-planning-commission-a-news-2026-10-15",
-        "many-older-adults-make-medicare-decision-news-2026-10-15",
         "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
         "construction-on-nathan-and-catherine-for-news-2026-10-17",
         "scholten-s-grand-rapids-office-receives-news-2026-10-17"
@@ -704,7 +659,6 @@
       "date": "2026-10-19",
       "selectedIds": [
         "van-buren-township-planning-commission-a-news-2026-10-15",
-        "many-older-adults-make-medicare-decision-news-2026-10-15",
         "samuel-and-dan-habib-speak-about-produci-news-2026-10-16",
         "construction-on-nathan-and-catherine-for-news-2026-10-17",
         "scholten-s-grand-rapids-office-receives-news-2026-10-17"

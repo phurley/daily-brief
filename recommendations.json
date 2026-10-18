@@ -1,11 +1,157 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-10-18T20:06:12.482Z",
+  "generatedAt": "2026-10-18T22:10:02.037Z",
   "days": [
     {
       "date": "2026-10-18",
       "events": [
+        {
+          "id": "occ-71584e1bdc63fa3b1bf74296",
+          "title": "Wheelchair Sports Camp & Gaelynn Lea",
+          "summary": "Experience a free concert and discussion featuring Wheelchair Sports Camp, a unique hip-hop act, and Gaelynn Lea, known for her haunting fiddle tunes. This event also includes a book signing for Lea's memoir, offering a blend of music, advocacy, and storytelling.",
+          "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+          "start": "2026-10-18T13:00:00-04:00",
+          "venue": "The Ark",
+          "city": "Ann Arbor",
+          "price": "Free",
+          "category": "Music",
+          "imageUrl": "https://theark.org/wp-content/uploads/2026/08/Tiny-Mountain-Tour-E-flier-e1788199612961.webp",
+          "imageAlt": "Wheelchair Sports Camp & Gaelynn Lea",
+          "status": "confirmed",
+          "occurrenceId": "occ-71584e1bdc63fa3b1bf74296",
+          "seriesId": "series-5febb35041f2b80283e98944",
+          "priceCurrency": "USD",
+          "lastCheckedAt": "2026-10-18T18:09:31.480996-04:00",
+          "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+          "venueId": "the ark|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "src-e1ae91556e164a0220d8f227"
+          ],
+          "legacyOccurrenceKeys": [
+            "src-e1ae91556e164a0220d8f227|2026-10-18T00:00:00-04:00"
+          ],
+          "legacySeriesKeys": [
+            "series-3e0e9215a7488e9aa2c30f2a",
+            "series-5febb35041f2b80283e98944",
+            "series-7423fab6f2e94e03c049edf0",
+            "wheelchair sports camp & gaelynn lea|the ark"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-e1ae91556e164a0220d8f227",
+              "sourceId": "the-ark",
+              "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+              "observedAt": "2026-10-18T13:59:30-04:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "native-occurrence"
+            ],
+            "fields": {
+              "status": "src-e1ae91556e164a0220d8f227",
+              "title": "src-e1ae91556e164a0220d8f227",
+              "start": "src-e1ae91556e164a0220d8f227",
+              "venue": "src-e1ae91556e164a0220d8f227",
+              "registration": "src-e1ae91556e164a0220d8f227",
+              "url": "src-e1ae91556e164a0220d8f227",
+              "imageUrl": "src-e1ae91556e164a0220d8f227"
+            },
+            "conflicts": {}
+          },
+          "priceMin": 0,
+          "priceMax": 0,
+          "score": 96,
+          "scoring": {
+            "signals": {
+              "funny": 0.26,
+              "distinctive": 0.51,
+              "eclectic": 0.79,
+              "technical_science": 0.03,
+              "artsy": 0.98,
+              "progressive": 0.73,
+              "outdoors": 0.02,
+              "theatre": 0.04,
+              "live_music": 0.96,
+              "live_comedy": 0.02,
+              "farmer_market": 0.01,
+              "sporting": 0.02,
+              "recurring": 0.11,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.02,
+              "large_venue": 0.03,
+              "substance_recovery": 0.02,
+              "popular_music_cover_band": 0.04,
+              "market_or_shop": 0.01,
+              "punk_metal_or_rock": 0.11,
+              "dance": 0.04,
+              "sales_related": 0.1,
+              "children_activity": 0.04,
+              "running": 0.01,
+              "exercise": 0.02,
+              "employment_related": 0.01
+            },
+            "score": 96,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"ark\",\"wheelchair sports camp gaelynn lea\"]",
+          "end": "2026-10-18T23:00:00-04:00",
+          "registration": "Buy tickets online",
+          "bookingUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeEidwH5hynPjInnUpOfDriJt8joA_Dn7PzwCAJLzWzz-dwmQ/viewform",
+          "statusEvidence": "Organizer detail reviewed",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-10-18T18:09:31.480996-04:00",
+            "expiresAt": "2026-10-19T18:09:31.480996-04:00",
+            "sourceUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+            "sourceHash": "8d3093a349f365eba17697202f4b31457bfe3e6a4b8ab413fcf83ad733c69da2",
+            "inputFacts": {
+              "id": "occ-71584e1bdc63fa3b1bf74296",
+              "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+              "start": "2026-10-18T00:00:00-04:00",
+              "end": null,
+              "venue": "The Ark",
+              "city": "Ann Arbor",
+              "price": "Free",
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "October 18 2026",
+              "time": "1:00 pm",
+              "venue": "The Ark",
+              "admission": "{\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\", \"url\": \"https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-08-31T00:00:00+00:00\"}",
+              "description": "As part of the 2nd annual Michigan Arts Festival, the U-M Arts Initiative, with partners The Ark, Booksweet, and the Disability Network Washtenaw Monroe Livingston, will offer a free concert and discussion by artists Wheelchair Sports Camp & Gaelynn Lea.",
+              "registration": "Buy tickets online",
+              "end": "2026-10-18T23:00:00-04:00"
+            }
+          },
+          "reviewExpiresAt": "2026-10-19T18:09:31.480996-04:00",
+          "recommendation": {
+            "occurrenceId": "occ-71584e1bdc63fa3b1bf74296",
+            "score": 112,
+            "components": {
+              "taste": 96,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "eclectic +13",
+              "distinctive +12",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        },
         {
           "id": "occ-84e56d6f81b2d0140ec73142",
           "title": "UMS presents Sphinx Virtuosi with J'Nai Bridges, mezzo-soprano",
@@ -143,189 +289,6 @@
             "reasons": [
               "distinctive +16",
               "live music +12",
-              "Available on selected day +12",
-              "Confirmed/recent source information +4"
-            ],
-            "unknowns": [
-              "Distance unknown"
-            ]
-          }
-        },
-        {
-          "id": "occ-38667b8e19f939d3b09c4351",
-          "title": "Opera at the Bell’s: A MET OPERA LAFFONT COMPETITION – MICHIGAN FUNDRAISER",
-          "summary": "Enjoy an afternoon of opera and musical theatre featuring local celebrities, singers from Opera On Tap Detroit, Detroit Opera’s Resident Artists, and past Michigan District Laffont competitors. The event includes a singalong, a silent auction, and a special guest performing opera in a jazz style.",
-          "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-          "start": "2026-10-18T15:00:00-04:00",
-          "venue": "Cliff Bell's",
-          "city": "Detroit",
-          "price": "$50.00 – 150.00",
-          "category": "Music",
-          "imageUrl": "https://cliffbells.com/wp-content/uploads/2026/09/opera.jpg",
-          "imageAlt": "Opera at the Bell's: A MET OPERA LAFFONT COMPETITION - MICHIGAN FUNDRAISER",
-          "status": "confirmed",
-          "occurrenceId": "occ-38667b8e19f939d3b09c4351",
-          "seriesId": "series-962d964b70570c63011b9bd7",
-          "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-          "venueId": "cliff bell s|detroit",
-          "timePrecision": "time",
-          "statusEvidence": "Organizer detail reviewed",
-          "aliases": [
-            "opera-at-the-bell-s-a-met-opera-laffont-event-2026-10-18",
-            "src-098f2789294354c62d6d600a",
-            "src-64a478d3c74f1e90cecec2ac",
-            "src-e440b3ede872ac52c84a11c6"
-          ],
-          "legacyOccurrenceKeys": [
-            "opera-at-the-bell-s-a-met-opera-laffont-event-2026-10-18|2026-10-18T15:00:00-04:00",
-            "src-098f2789294354c62d6d600a|2026-10-18T15:00:00-04:00",
-            "src-64a478d3c74f1e90cecec2ac|2026-10-18T15:00:00-04:00",
-            "src-e440b3ede872ac52c84a11c6|2026-10-18T15:00:00-04:00"
-          ],
-          "legacySeriesKeys": [
-            "opera at the bell's: a met opera laffont competition - michigan fundraiser|cliff bell's",
-            "opera at the bell’s: a met opera laffont competition – michigan fundraiser|cliff bell's",
-            "series-962d964b70570c63011b9bd7"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-e440b3ede872ac52c84a11c6",
-              "sourceId": "cliff-bell-s",
-              "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-              "observedAt": "2026-10-09T17:12:32-04:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled",
-              "statusEvidence": "https://schema.org/EventScheduled"
-            },
-            {
-              "sourceRecordId": "src-64a478d3c74f1e90cecec2ac",
-              "sourceId": "cliff-bell-s",
-              "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-              "observedAt": "2026-10-09T17:12:32-04:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled",
-              "statusEvidence": "https://schema.org/EventScheduled"
-            },
-            {
-              "sourceRecordId": "src-098f2789294354c62d6d600a",
-              "sourceId": "cliff-bell-s",
-              "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-              "observedAt": "2026-10-09T17:12:32-04:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            },
-            {
-              "sourceRecordId": "src-c498c685307e822a5e692923",
-              "sourceId": "cliff-bell-s",
-              "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-              "observedAt": "2026-10-09T09:31:47-04:00",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "exact-title-time-venue",
-              "new-occurrence"
-            ],
-            "fields": {
-              "status": "src-e440b3ede872ac52c84a11c6",
-              "title": "src-e440b3ede872ac52c84a11c6",
-              "start": "src-e440b3ede872ac52c84a11c6",
-              "end": "src-e440b3ede872ac52c84a11c6",
-              "venue": "src-e440b3ede872ac52c84a11c6",
-              "registration": "src-e440b3ede872ac52c84a11c6",
-              "url": "src-e440b3ede872ac52c84a11c6",
-              "imageUrl": "src-c498c685307e822a5e692923"
-            },
-            "conflicts": {
-              "venue": [
-                "CLIFF BELL’S",
-                "Cliff Bell's"
-              ]
-            }
-          },
-          "score": 95,
-          "scoring": {
-            "signals": {
-              "funny": 0.77,
-              "distinctive": 0.69,
-              "eclectic": 0.53,
-              "technical_science": 0.02,
-              "artsy": 0.98,
-              "progressive": 0.18,
-              "outdoors": 0.02,
-              "theatre": 0.88,
-              "live_music": 0.59,
-              "live_comedy": 0.1,
-              "farmer_market": 0.01,
-              "sporting": 0.05,
-              "recurring": 0.13,
-              "craft_fair_shopping": 0.02,
-              "religious": 0.02,
-              "large_venue": 0.05,
-              "substance_recovery": 0.02,
-              "popular_music_cover_band": 0.07,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.02,
-              "dance": 0.02,
-              "sales_related": 0.48,
-              "children_activity": 0.03,
-              "running": 0.01,
-              "exercise": 0.02,
-              "employment_related": 0.02
-            },
-            "score": 95,
-            "rulesVersion": 2
-          },
-          "localityTier": "regional",
-          "experienceId": "experience:[\"detroit\",\"cliff bell s\",\"opera at the bell s a met opera laffont competition michigan fundraiser\"]",
-          "end": "2026-10-18T18:00:00-04:00",
-          "registration": "Purchase Tickets",
-          "bookingUrl": "https://www.zeffy.com/en-US/ticketing/opera-the-bells?zlinkid=21cd6cf4-8536-454e-a27e-8c2f7fa50b45&emailId=4e397a9c-0685-4a89-9db0-baa52ce92cbc&email=themarykramer%40gmail.com&punctualAmounts=%5B%5D",
-          "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
-          "priceMin": 50,
-          "priceMax": 50,
-          "priceCurrency": "USD",
-          "editorial": {
-            "state": "verified",
-            "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
-            "expiresAt": "2026-10-19T14:01:02.298898-04:00",
-            "sourceUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-            "sourceHash": "a1ab7f6861be50f8cf61fca5b3e6b89d1076d5861992bd659ee544c2fb7d7fe7",
-            "inputFacts": {
-              "id": "occ-38667b8e19f939d3b09c4351",
-              "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-              "start": "2026-10-18T15:00:00-04:00",
-              "end": "2026-10-18T18:00:00-04:00",
-              "venue": "Cliff Bell's",
-              "city": "Detroit",
-              "price": "$50 | $75 | $150",
-              "status": "scheduled"
-            },
-            "evidence": {
-              "date": "Sunday, October 18",
-              "time": "3:00 pm",
-              "venue": "Opera at the Bell's: A MET OPERA LAFFONT COMPETITION - MICHIGAN FUNDRAISER - Cliff Bell's",
-              "admission": "{\"@type\": \"Offer\", \"price\": \"50.00 – 150.00\", \"priceCurrency\": \"USD\", \"url\": \"https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-09-18T00:00:00+00:00\"}",
-              "description": "An afternoon filled with opera and musical theatre on CLIFF BELL’S stage.",
-              "registration": "Purchase Tickets",
-              "end": "6:00 pm"
-            }
-          },
-          "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00",
-          "recommendation": {
-            "occurrenceId": "occ-38667b8e19f939d3b09c4351",
-            "score": 111,
-            "components": {
-              "taste": 95,
-              "practicality": 12,
-              "novelty": 0,
-              "quality": 4
-            },
-            "reasons": [
-              "distinctive +17",
-              "theatre +11",
               "Available on selected day +12",
               "Confirmed/recent source information +4"
             ],

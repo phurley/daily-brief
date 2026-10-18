@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-18T14:01:02.298898-04:00",
+  "generatedAt": "2026-10-18T18:09:31.480996-04:00",
   "events": [
     {
       "id": "occ-c4334009d3e671280f4f9e77",
@@ -127,6 +127,133 @@
         }
       },
       "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
+    },
+    {
+      "id": "occ-71584e1bdc63fa3b1bf74296",
+      "title": "Wheelchair Sports Camp & Gaelynn Lea",
+      "summary": "Experience a free concert and discussion featuring Wheelchair Sports Camp, a unique hip-hop act, and Gaelynn Lea, known for her haunting fiddle tunes. This event also includes a book signing for Lea's memoir, offering a blend of music, advocacy, and storytelling.",
+      "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+      "start": "2026-10-18T13:00:00-04:00",
+      "venue": "The Ark",
+      "city": "Ann Arbor",
+      "price": "Free",
+      "category": "Music",
+      "imageUrl": "https://theark.org/wp-content/uploads/2026/08/Tiny-Mountain-Tour-E-flier-e1788199612961.webp",
+      "imageAlt": "Wheelchair Sports Camp & Gaelynn Lea",
+      "status": "confirmed",
+      "occurrenceId": "occ-71584e1bdc63fa3b1bf74296",
+      "seriesId": "series-5febb35041f2b80283e98944",
+      "priceCurrency": "USD",
+      "lastCheckedAt": "2026-10-18T18:09:31.480996-04:00",
+      "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+      "venueId": "the ark|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "src-e1ae91556e164a0220d8f227"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-e1ae91556e164a0220d8f227|2026-10-18T00:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-3e0e9215a7488e9aa2c30f2a",
+        "series-5febb35041f2b80283e98944",
+        "series-7423fab6f2e94e03c049edf0",
+        "wheelchair sports camp & gaelynn lea|the ark"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-e1ae91556e164a0220d8f227",
+          "sourceId": "the-ark",
+          "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+          "observedAt": "2026-10-18T13:59:30-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "status": "src-e1ae91556e164a0220d8f227",
+          "title": "src-e1ae91556e164a0220d8f227",
+          "start": "src-e1ae91556e164a0220d8f227",
+          "venue": "src-e1ae91556e164a0220d8f227",
+          "registration": "src-e1ae91556e164a0220d8f227",
+          "url": "src-e1ae91556e164a0220d8f227",
+          "imageUrl": "src-e1ae91556e164a0220d8f227"
+        },
+        "conflicts": {}
+      },
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "score": 96,
+      "scoring": {
+        "signals": {
+          "funny": 0.26,
+          "distinctive": 0.51,
+          "eclectic": 0.79,
+          "technical_science": 0.03,
+          "artsy": 0.98,
+          "progressive": 0.73,
+          "outdoors": 0.02,
+          "theatre": 0.04,
+          "live_music": 0.96,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.11,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.04,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.11,
+          "dance": 0.04,
+          "sales_related": 0.1,
+          "children_activity": 0.04,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.01
+        },
+        "score": 96,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"ark\",\"wheelchair sports camp gaelynn lea\"]",
+      "end": "2026-10-18T23:00:00-04:00",
+      "registration": "Buy tickets online",
+      "bookingUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeEidwH5hynPjInnUpOfDriJt8joA_Dn7PzwCAJLzWzz-dwmQ/viewform",
+      "statusEvidence": "Organizer detail reviewed",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-18T18:09:31.480996-04:00",
+        "expiresAt": "2026-10-19T18:09:31.480996-04:00",
+        "sourceUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+        "sourceHash": "8d3093a349f365eba17697202f4b31457bfe3e6a4b8ab413fcf83ad733c69da2",
+        "inputFacts": {
+          "id": "occ-71584e1bdc63fa3b1bf74296",
+          "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+          "start": "2026-10-18T00:00:00-04:00",
+          "end": null,
+          "venue": "The Ark",
+          "city": "Ann Arbor",
+          "price": "Free",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "October 18 2026",
+          "time": "1:00 pm",
+          "venue": "The Ark",
+          "admission": "{\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\", \"url\": \"https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-08-31T00:00:00+00:00\"}",
+          "description": "As part of the 2nd annual Michigan Arts Festival, the U-M Arts Initiative, with partners The Ark, Booksweet, and the Disability Network Washtenaw Monroe Livingston, will offer a free concert and discussion by artists Wheelchair Sports Camp & Gaelynn Lea.",
+          "registration": "Buy tickets online",
+          "end": "2026-10-18T23:00:00-04:00"
+        }
+      },
+      "reviewExpiresAt": "2026-10-19T18:09:31.480996-04:00"
     },
     {
       "id": "occ-ef17a80befb53337144d5c79",
@@ -537,168 +664,282 @@
       "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
     },
     {
-      "id": "occ-38667b8e19f939d3b09c4351",
-      "title": "Opera at the Bell’s: A MET OPERA LAFFONT COMPETITION – MICHIGAN FUNDRAISER",
-      "summary": "Enjoy an afternoon of opera and musical theatre featuring local celebrities, singers from Opera On Tap Detroit, Detroit Opera’s Resident Artists, and past Michigan District Laffont competitors. The event includes a singalong, a silent auction, and a special guest performing opera in a jazz style.",
-      "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+      "id": "occ-74145931f4b923a7fb05f2ab",
+      "title": "THEATRE l My Daddy is Haunted!",
+      "summary": "Experience a horror-comedy one-act play about the Maplesquatch family's vacation to an ancient castle. Their fun turns to terror when something starts to happen to dear old dad. Is he haunted? This show combines Hammer Horror with National Lampoon's Vacation.",
+      "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
       "start": "2026-10-18T15:00:00-04:00",
-      "venue": "Cliff Bell's",
-      "city": "Detroit",
-      "price": "$50.00 – 150.00",
-      "category": "Music",
-      "imageUrl": "https://cliffbells.com/wp-content/uploads/2026/09/opera.jpg",
-      "imageAlt": "Opera at the Bell's: A MET OPERA LAFFONT COMPETITION - MICHIGAN FUNDRAISER",
+      "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+      "city": "Hamtramck",
+      "price": "$30.00 USD",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/17881/web-resmydaddyishauntedsocials_socials.jpg",
+      "imageAlt": "THEATRE l My Daddy is Haunted!",
       "status": "confirmed",
-      "occurrenceId": "occ-38667b8e19f939d3b09c4351",
-      "seriesId": "series-962d964b70570c63011b9bd7",
-      "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-      "venueId": "cliff bell s|detroit",
+      "occurrenceId": "occ-74145931f4b923a7fb05f2ab",
+      "seriesId": "series-bd8e2be8f2b668113b480292",
+      "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
+      "priceMin": 30.0,
+      "priceMax": 30.0,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
+      "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
       "timePrecision": "time",
       "statusEvidence": "Organizer detail reviewed",
       "aliases": [
-        "opera-at-the-bell-s-a-met-opera-laffont-event-2026-10-18",
-        "src-098f2789294354c62d6d600a",
-        "src-64a478d3c74f1e90cecec2ac",
-        "src-e440b3ede872ac52c84a11c6"
+        "src-01e349ce0c5caccf2b1d2b7f",
+        "theatre-l-my-daddy-is-haunted-event-2026-10-18"
       ],
       "legacyOccurrenceKeys": [
-        "opera-at-the-bell-s-a-met-opera-laffont-event-2026-10-18|2026-10-18T15:00:00-04:00",
-        "src-098f2789294354c62d6d600a|2026-10-18T15:00:00-04:00",
-        "src-64a478d3c74f1e90cecec2ac|2026-10-18T15:00:00-04:00",
-        "src-e440b3ede872ac52c84a11c6|2026-10-18T15:00:00-04:00"
+        "src-01e349ce0c5caccf2b1d2b7f|2026-10-18T15:00:00-04:00",
+        "theatre-l-my-daddy-is-haunted-event-2026-10-18|2026-10-18T15:00:00-04:00"
       ],
       "legacySeriesKeys": [
-        "opera at the bell's: a met opera laffont competition - michigan fundraiser|cliff bell's",
-        "opera at the bell’s: a met opera laffont competition – michigan fundraiser|cliff bell's",
-        "series-962d964b70570c63011b9bd7"
+        "series-14836ed386fe113a8cf114f3",
+        "series-47907b221b1d6d8dd9ec7688",
+        "series-90c9028d779d072843d2fa1d",
+        "series-bd8e2be8f2b668113b480292",
+        "series-c0c9032e291b7fc942f6c4bc",
+        "series-dbf2ca983f5f3ac243c9cb7e"
       ],
       "sources": [
         {
-          "sourceRecordId": "src-e440b3ede872ac52c84a11c6",
-          "sourceId": "cliff-bell-s",
-          "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-          "observedAt": "2026-10-09T17:12:32-04:00",
+          "sourceRecordId": "src-01e349ce0c5caccf2b1d2b7f",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
           "sourceAuthority": "organizer",
           "status": "scheduled",
           "statusEvidence": "https://schema.org/EventScheduled"
-        },
-        {
-          "sourceRecordId": "src-64a478d3c74f1e90cecec2ac",
-          "sourceId": "cliff-bell-s",
-          "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-          "observedAt": "2026-10-09T17:12:32-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        },
-        {
-          "sourceRecordId": "src-098f2789294354c62d6d600a",
-          "sourceId": "cliff-bell-s",
-          "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-          "observedAt": "2026-10-09T17:12:32-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        },
-        {
-          "sourceRecordId": "src-c498c685307e822a5e692923",
-          "sourceId": "cliff-bell-s",
-          "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-          "observedAt": "2026-10-09T09:31:47-04:00",
-          "status": "scheduled"
         }
       ],
       "identity": {
         "ruleVersion": "occurrence-v1",
         "reasons": [
-          "exact-title-time-venue",
-          "new-occurrence"
+          "native-occurrence"
         ],
         "fields": {
-          "status": "src-e440b3ede872ac52c84a11c6",
-          "title": "src-e440b3ede872ac52c84a11c6",
-          "start": "src-e440b3ede872ac52c84a11c6",
-          "end": "src-e440b3ede872ac52c84a11c6",
-          "venue": "src-e440b3ede872ac52c84a11c6",
-          "registration": "src-e440b3ede872ac52c84a11c6",
-          "url": "src-e440b3ede872ac52c84a11c6",
-          "imageUrl": "src-c498c685307e822a5e692923"
+          "title": "src-01e349ce0c5caccf2b1d2b7f",
+          "start": "src-01e349ce0c5caccf2b1d2b7f",
+          "venue": "src-01e349ce0c5caccf2b1d2b7f",
+          "url": "src-01e349ce0c5caccf2b1d2b7f",
+          "status": "src-01e349ce0c5caccf2b1d2b7f",
+          "imageUrl": "src-01e349ce0c5caccf2b1d2b7f"
         },
-        "conflicts": {
-          "venue": [
-            "CLIFF BELL’S",
-            "Cliff Bell's"
-          ]
-        }
+        "conflicts": {}
       },
-      "score": 95,
+      "score": 93,
       "scoring": {
         "signals": {
-          "funny": 0.77,
-          "distinctive": 0.69,
-          "eclectic": 0.53,
-          "technical_science": 0.02,
+          "funny": 0.95,
+          "distinctive": 0.72,
+          "eclectic": 0.88,
+          "technical_science": 0.05,
           "artsy": 0.98,
-          "progressive": 0.18,
+          "progressive": 0.15,
           "outdoors": 0.02,
-          "theatre": 0.88,
-          "live_music": 0.59,
-          "live_comedy": 0.1,
+          "theatre": 0.99,
+          "live_music": 0.02,
+          "live_comedy": 0.11,
           "farmer_market": 0.01,
-          "sporting": 0.05,
-          "recurring": 0.13,
-          "craft_fair_shopping": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.21,
+          "craft_fair_shopping": 0.01,
           "religious": 0.02,
-          "large_venue": 0.05,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.07,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.48,
-          "children_activity": 0.03,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.69,
+          "children_activity": 0.13,
           "running": 0.01,
-          "exercise": 0.02,
-          "employment_related": 0.02
+          "exercise": 0.01,
+          "employment_related": 0.01
         },
-        "score": 95,
+        "score": 93,
         "rulesVersion": 2
       },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"detroit\",\"cliff bell s\",\"opera at the bell s a met opera laffont competition michigan fundraiser\"]",
-      "end": "2026-10-18T18:00:00-04:00",
-      "registration": "Purchase Tickets",
-      "bookingUrl": "https://www.zeffy.com/en-US/ticketing/opera-the-bells?zlinkid=21cd6cf4-8536-454e-a27e-8c2f7fa50b45&emailId=4e397a9c-0685-4a89-9db0-baa52ce92cbc&email=themarykramer%40gmail.com&punctualAmounts=%5B%5D",
-      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
-      "priceMin": 50.0,
-      "priceMax": 50.0,
-      "priceCurrency": "USD",
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"theatre l my daddy is haunted\"]",
+      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
+      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
       "editorial": {
         "state": "verified",
         "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
         "expiresAt": "2026-10-19T14:01:02.298898-04:00",
-        "sourceUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-        "sourceHash": "a1ab7f6861be50f8cf61fca5b3e6b89d1076d5861992bd659ee544c2fb7d7fe7",
+        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
+        "sourceHash": "e8f2939c3ddafb62bf5b0f2dc655c015f56816ae5b4e5580b7ea1d78dc575f17",
         "inputFacts": {
-          "id": "occ-38667b8e19f939d3b09c4351",
-          "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+          "id": "occ-74145931f4b923a7fb05f2ab",
+          "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
           "start": "2026-10-18T15:00:00-04:00",
-          "end": "2026-10-18T18:00:00-04:00",
-          "venue": "Cliff Bell's",
-          "city": "Detroit",
-          "price": "$50 | $75 | $150",
+          "end": null,
+          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+          "city": "Hamtramck",
+          "price": "$32.85",
           "status": "scheduled"
         },
         "evidence": {
-          "date": "Sunday, October 18",
-          "time": "3:00 pm",
-          "venue": "Opera at the Bell's: A MET OPERA LAFFONT COMPETITION - MICHIGAN FUNDRAISER - Cliff Bell's",
-          "admission": "{\"@type\": \"Offer\", \"price\": \"50.00 – 150.00\", \"priceCurrency\": \"USD\", \"url\": \"https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-09-18T00:00:00+00:00\"}",
-          "description": "An afternoon filled with opera and musical theatre on CLIFF BELL’S stage.",
-          "registration": "Purchase Tickets",
-          "end": "6:00 pm"
+          "date": "Oct 18",
+          "time": "3:00 PM",
+          "venue": "Where: Ant Hall",
+          "admission": "Price: $30 online l $35 at the door",
+          "description": "Join us at the Ant Hall this October for the debut of Planet Ant's original horror comedy,",
+          "registration": "Online sales end 1 (one) hour before the start of a performance."
         }
       },
       "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
+    },
+    {
+      "id": "occ-d865368f2cb4264bffacc35c",
+      "title": "THEATRE l I'd Love to Have You for Dinner",
+      "summary": "Experience a psychological thriller where a first date takes a dark turn. An ancient vampire and a vampire hunter meet for a home-cooked meal, leading to a two-act horror story exploring themes of cannibalism and predation. Viewer discretion is advised due to extreme violence and gore.",
+      "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
+      "start": "2026-10-24T20:00:00-04:00",
+      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+      "city": "Hamtramck",
+      "price": "$27.6",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18028/HORIZ.png",
+      "imageAlt": "THEATRE l I'd Love to Have You for Dinner",
+      "status": "confirmed",
+      "occurrenceId": "occ-d865368f2cb4264bffacc35c",
+      "seriesId": "series-4168b3b9cddf5675fb83e57e",
+      "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
+      "priceMin": 27.6,
+      "priceMax": 27.6,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-10-18T18:09:31.480996-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
+      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "src-25b8fa3a367c4d4a74365acc",
+        "src-dbe01611878823a1b4bf238a",
+        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-24"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-25b8fa3a367c4d4a74365acc|2026-10-24T20:00:00-04:00",
+        "src-dbe01611878823a1b4bf238a|2026-10-24T20:00:00-04:00",
+        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-24|2026-10-24T20:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-09c693fc8a94c835a5193f83",
+        "series-0c777bef0ca671d00f3958ef",
+        "series-4168b3b9cddf5675fb83e57e",
+        "series-53aa471eb4e114f156680d5b",
+        "series-6633ccd340406607b63a73f5",
+        "series-7f4ddc059623f3dd85aedae9",
+        "series-c07610dc0906eb589a504b40",
+        "series-ebfa5b312fbd6c351df7470f"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-dbe01611878823a1b4bf238a",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-16T07:40:08-04:00",
+          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        },
+        {
+          "sourceRecordId": "src-25b8fa3a367c4d4a74365acc",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "title": "src-dbe01611878823a1b4bf238a",
+          "start": "src-dbe01611878823a1b4bf238a",
+          "venue": "src-dbe01611878823a1b4bf238a",
+          "url": "src-dbe01611878823a1b4bf238a",
+          "status": "src-dbe01611878823a1b4bf238a",
+          "imageUrl": "src-dbe01611878823a1b4bf238a"
+        },
+        "conflicts": {}
+      },
+      "score": 99,
+      "scoring": {
+        "signals": {
+          "funny": 0.13,
+          "distinctive": 0.85,
+          "eclectic": 0.89,
+          "technical_science": 0.05,
+          "artsy": 0.97,
+          "progressive": 0.48,
+          "outdoors": 0.01,
+          "theatre": 0.98,
+          "live_music": 0.02,
+          "live_comedy": 0.05,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.08,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.45,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 99,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"theatre l i d love to have you for dinner\"]",
+      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
+      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-18T18:09:31.480996-04:00",
+        "expiresAt": "2026-10-19T18:09:31.480996-04:00",
+        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
+        "sourceHash": "8780d62a62741002f6821a13e1f240723c120ae3b52aed25ac84760ca1d6a8e7",
+        "inputFacts": {
+          "id": "occ-d865368f2cb4264bffacc35c",
+          "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
+          "start": "2026-10-24T20:00:00-04:00",
+          "end": null,
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "city": "Hamtramck",
+          "price": "$27.6",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Oct 24",
+          "time": "8:00 PM EDT",
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20:00:00\", \"price\": 27.6, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "This two act, four-course horror/thriller highlights legacy, cannibalism, the inevitability of personal failure, and the complex moral nature of predation in all its incarnations.",
+          "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office."
+        }
+      },
+      "reviewExpiresAt": "2026-10-19T18:09:31.480996-04:00"
     },
     {
       "id": "occ-b762d6425b95c93921c36bc8",
@@ -829,138 +1070,6 @@
           "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
           "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19:30:00\", \"price\": 11.84, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
           "description": "Every Monday night, the Black Box stage brings the longest-running improv show in Detroit— a fresh, new, and hilarious night of comedy from the legendary Planet Ant Home Team.",
-          "registration": "Online sales end 1 (one) hour before the start of a performance."
-        }
-      },
-      "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
-    },
-    {
-      "id": "occ-74145931f4b923a7fb05f2ab",
-      "title": "THEATRE l My Daddy is Haunted!",
-      "summary": "Experience a horror-comedy one-act play about the Maplesquatch family's vacation to an ancient castle. Their fun turns to terror when something starts to happen to dear old dad. Is he haunted? This show combines Hammer Horror with National Lampoon's Vacation.",
-      "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-      "start": "2026-10-18T15:00:00-04:00",
-      "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-      "city": "Hamtramck",
-      "price": "$30.00 USD",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/17881/web-resmydaddyishauntedsocials_socials.jpg",
-      "imageAlt": "THEATRE l My Daddy is Haunted!",
-      "status": "confirmed",
-      "occurrenceId": "occ-74145931f4b923a7fb05f2ab",
-      "seriesId": "series-bd8e2be8f2b668113b480292",
-      "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
-      "priceMin": 30.0,
-      "priceMax": 30.0,
-      "priceCurrency": "USD",
-      "availability": "InStock",
-      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-      "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "src-01e349ce0c5caccf2b1d2b7f",
-        "theatre-l-my-daddy-is-haunted-event-2026-10-18"
-      ],
-      "legacyOccurrenceKeys": [
-        "src-01e349ce0c5caccf2b1d2b7f|2026-10-18T15:00:00-04:00",
-        "theatre-l-my-daddy-is-haunted-event-2026-10-18|2026-10-18T15:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-14836ed386fe113a8cf114f3",
-        "series-47907b221b1d6d8dd9ec7688",
-        "series-90c9028d779d072843d2fa1d",
-        "series-bd8e2be8f2b668113b480292",
-        "series-c0c9032e291b7fc942f6c4bc",
-        "series-dbf2ca983f5f3ac243c9cb7e"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-01e349ce0c5caccf2b1d2b7f",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "native-occurrence"
-        ],
-        "fields": {
-          "title": "src-01e349ce0c5caccf2b1d2b7f",
-          "start": "src-01e349ce0c5caccf2b1d2b7f",
-          "venue": "src-01e349ce0c5caccf2b1d2b7f",
-          "url": "src-01e349ce0c5caccf2b1d2b7f",
-          "status": "src-01e349ce0c5caccf2b1d2b7f",
-          "imageUrl": "src-01e349ce0c5caccf2b1d2b7f"
-        },
-        "conflicts": {}
-      },
-      "score": 93,
-      "scoring": {
-        "signals": {
-          "funny": 0.95,
-          "distinctive": 0.72,
-          "eclectic": 0.88,
-          "technical_science": 0.05,
-          "artsy": 0.98,
-          "progressive": 0.15,
-          "outdoors": 0.02,
-          "theatre": 0.99,
-          "live_music": 0.02,
-          "live_comedy": 0.11,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.21,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.69,
-          "children_activity": 0.13,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        },
-        "score": 93,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"theatre l my daddy is haunted\"]",
-      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
-        "expiresAt": "2026-10-19T14:01:02.298898-04:00",
-        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-        "sourceHash": "e8f2939c3ddafb62bf5b0f2dc655c015f56816ae5b4e5580b7ea1d78dc575f17",
-        "inputFacts": {
-          "id": "occ-74145931f4b923a7fb05f2ab",
-          "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-          "start": "2026-10-18T15:00:00-04:00",
-          "end": null,
-          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-          "city": "Hamtramck",
-          "price": "$32.85",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Oct 18",
-          "time": "3:00 PM",
-          "venue": "Where: Ant Hall",
-          "admission": "Price: $30 online l $35 at the door",
-          "description": "Join us at the Ant Hall this October for the debut of Planet Ant's original horror comedy,",
           "registration": "Online sales end 1 (one) hour before the start of a performance."
         }
       },
@@ -1362,6 +1471,132 @@
       "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
     },
     {
+      "id": "occ-130f91bb789ddb1cf1fe9dbc",
+      "title": "Diana Velazquez Dissertation Defense",
+      "summary": "This dissertation defense explores how lake sediments serve as archives of environmental change, preserving geochemical signals linked to shifts in biogeochemical cycling. The research investigates organic matter burial and preservation in modern and ancient hypoxic aquatic environments, offering insights into carbon cycling and past environmental conditions.",
+      "url": "https://events.umich.edu/event/153496",
+      "start": "2026-10-19T09:00:00-04:00",
+      "venue": "1100 North University Building",
+      "city": "Ann Arbor",
+      "category": "Lecture / Discussion",
+      "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153496_original-1.jpg",
+      "imageAlt": "Diana Velazquez Dissertation Defense",
+      "status": "confirmed",
+      "occurrenceId": "occ-130f91bb789ddb1cf1fe9dbc",
+      "seriesId": "series-7842cbf4318597af112b8fa0",
+      "sourceUpdatedAt": "2026-10-09T09:14:22-04:00",
+      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
+      "canonicalUrl": "https://events.umich.edu/event/153496",
+      "venueId": "1100 north university building|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "diana-velazquez-dissertation-defense-event-2026-10-19",
+        "src-38be1bdcdc1bd69045a620ed"
+      ],
+      "legacyOccurrenceKeys": [
+        "diana-velazquez-dissertation-defense-event-2026-10-19|2026-10-19T09:00:00-04:00",
+        "src-38be1bdcdc1bd69045a620ed|2026-10-19T09:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-7842cbf4318597af112b8fa0"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-38be1bdcdc1bd69045a620ed",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/153496",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-10-09T09:14:22-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-38be1bdcdc1bd69045a620ed",
+          "start": "src-38be1bdcdc1bd69045a620ed",
+          "end": "src-38be1bdcdc1bd69045a620ed",
+          "venue": "src-38be1bdcdc1bd69045a620ed",
+          "url": "src-38be1bdcdc1bd69045a620ed",
+          "imageUrl": "src-38be1bdcdc1bd69045a620ed",
+          "status": "src-38be1bdcdc1bd69045a620ed"
+        },
+        "conflicts": {}
+      },
+      "score": 82,
+      "scoring": {
+        "signals": {
+          "funny": 0.01,
+          "distinctive": 0.63,
+          "eclectic": 0.12,
+          "technical_science": 0.99,
+          "artsy": 0.03,
+          "progressive": 0.46,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.03,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        },
+        "score": 82,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"1100 north university building\",\"diana velazquez dissertation defense\"]",
+      "price": "Free",
+      "end": "2026-10-19T10:00:00-04:00",
+      "bookingUrl": "",
+      "statusEvidence": "Organizer detail reviewed",
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "priceCurrency": "USD",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
+        "expiresAt": "2026-10-19T14:01:02.298898-04:00",
+        "sourceUrl": "https://events.umich.edu/event/153496",
+        "sourceHash": "67a2992c00a5b83943fe9c3a95b908afcd6aee8943f158388e649483eff95274",
+        "inputFacts": {
+          "id": "occ-130f91bb789ddb1cf1fe9dbc",
+          "url": "https://events.umich.edu/event/153496",
+          "start": "2026-10-19T09:00:00-04:00",
+          "end": "2026-10-19T10:00:00-04:00",
+          "venue": "1100 North University Building",
+          "city": "Ann Arbor",
+          "price": null,
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Mon, Oct 19",
+          "time": "9:00am",
+          "venue": "1100 North University Building",
+          "admission": "Free",
+          "description": "Lake sediments act as archives of environmental change, preserving geochemical signals that can be linked to local and global shifts in biogeochemical cycling throughout Earth’s history.",
+          "end": "10:00am"
+        }
+      },
+      "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
+    },
+    {
       "id": "occ-935abc40d8d02140d65a7803",
       "title": "Fresh Sauce | An Open Improv Jam",
       "summary": "Experience an open improv jam where anyone can get on stage and participate in short-form improv games. This weekly event offers a chance to play or simply enjoy watching spontaneous comedic performances.",
@@ -1494,752 +1729,73 @@
       "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
     },
     {
-      "id": "occ-130f91bb789ddb1cf1fe9dbc",
-      "title": "Diana Velazquez Dissertation Defense",
-      "summary": "This dissertation defense explores how lake sediments serve as archives of environmental change, preserving geochemical signals linked to shifts in biogeochemical cycling. The research investigates organic matter burial and preservation in modern and ancient hypoxic aquatic environments, offering insights into carbon cycling and past environmental conditions.",
-      "url": "https://events.umich.edu/event/153496",
-      "start": "2026-10-19T09:00:00-04:00",
-      "venue": "1100 North University Building",
-      "city": "Ann Arbor",
-      "category": "Lecture / Discussion",
-      "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153496_original-1.jpg",
-      "imageAlt": "Diana Velazquez Dissertation Defense",
+      "id": "occ-38667b8e19f939d3b09c4351",
+      "title": "Opera at the Bell’s: A MET OPERA LAFFONT COMPETITION – MICHIGAN FUNDRAISER",
+      "summary": "Enjoy an afternoon of opera and musical theatre featuring local celebrities, singers from Opera On Tap Detroit, Detroit Opera’s Resident Artists, and past Michigan District Laffont competitors. The event includes a singalong, a silent auction, and a special guest performing opera in a jazz style.",
+      "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+      "start": "2026-10-18T15:00:00-04:00",
+      "venue": "Cliff Bell's",
+      "city": "Detroit",
+      "price": "$50.00 – 150.00",
+      "category": "Music",
+      "imageUrl": "https://cliffbells.com/wp-content/uploads/2026/09/opera.jpg",
+      "imageAlt": "Opera at the Bell's: A MET OPERA LAFFONT COMPETITION - MICHIGAN FUNDRAISER",
       "status": "confirmed",
-      "occurrenceId": "occ-130f91bb789ddb1cf1fe9dbc",
-      "seriesId": "series-7842cbf4318597af112b8fa0",
-      "sourceUpdatedAt": "2026-10-09T09:14:22-04:00",
-      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
-      "canonicalUrl": "https://events.umich.edu/event/153496",
-      "venueId": "1100 north university building|ann arbor",
-      "timePrecision": "time",
-      "aliases": [
-        "diana-velazquez-dissertation-defense-event-2026-10-19",
-        "src-38be1bdcdc1bd69045a620ed"
-      ],
-      "legacyOccurrenceKeys": [
-        "diana-velazquez-dissertation-defense-event-2026-10-19|2026-10-19T09:00:00-04:00",
-        "src-38be1bdcdc1bd69045a620ed|2026-10-19T09:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-7842cbf4318597af112b8fa0"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-38be1bdcdc1bd69045a620ed",
-          "sourceId": "happening-at-michigan",
-          "canonicalUrl": "https://events.umich.edu/event/153496",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-10-09T09:14:22-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-38be1bdcdc1bd69045a620ed",
-          "start": "src-38be1bdcdc1bd69045a620ed",
-          "end": "src-38be1bdcdc1bd69045a620ed",
-          "venue": "src-38be1bdcdc1bd69045a620ed",
-          "url": "src-38be1bdcdc1bd69045a620ed",
-          "imageUrl": "src-38be1bdcdc1bd69045a620ed",
-          "status": "src-38be1bdcdc1bd69045a620ed"
-        },
-        "conflicts": {}
-      },
-      "score": 82,
-      "scoring": {
-        "signals": {
-          "funny": 0.01,
-          "distinctive": 0.63,
-          "eclectic": 0.12,
-          "technical_science": 0.99,
-          "artsy": 0.03,
-          "progressive": 0.46,
-          "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.03,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.03,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.02,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        },
-        "score": 82,
-        "rulesVersion": 2
-      },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"1100 north university building\",\"diana velazquez dissertation defense\"]",
-      "price": "Free",
-      "end": "2026-10-19T10:00:00-04:00",
-      "bookingUrl": "",
-      "statusEvidence": "Organizer detail reviewed",
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "priceCurrency": "USD",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
-        "expiresAt": "2026-10-19T14:01:02.298898-04:00",
-        "sourceUrl": "https://events.umich.edu/event/153496",
-        "sourceHash": "67a2992c00a5b83943fe9c3a95b908afcd6aee8943f158388e649483eff95274",
-        "inputFacts": {
-          "id": "occ-130f91bb789ddb1cf1fe9dbc",
-          "url": "https://events.umich.edu/event/153496",
-          "start": "2026-10-19T09:00:00-04:00",
-          "end": "2026-10-19T10:00:00-04:00",
-          "venue": "1100 North University Building",
-          "city": "Ann Arbor",
-          "price": null,
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Mon, Oct 19",
-          "time": "9:00am",
-          "venue": "1100 North University Building",
-          "admission": "Free",
-          "description": "Lake sediments act as archives of environmental change, preserving geochemical signals that can be linked to local and global shifts in biogeochemical cycling throughout Earth’s history.",
-          "end": "10:00am"
-        }
-      },
-      "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
-    },
-    {
-      "id": "occ-faee15bddd196d9af99689ba",
-      "title": "THEATRE l I'd Love to Have You for Dinner",
-      "summary": "Experience a psychological thriller where a first date takes a dark turn. This two-act horror play explores themes of legacy, cannibalism, and the complex nature of predation, promising a suspenseful evening for those who enjoy intense theatrical experiences.",
-      "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
-      "start": "2026-10-17T20:00:00-04:00",
-      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-      "city": "Hamtramck",
-      "price": "$27.6",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18028/HORIZ.png",
-      "imageAlt": "THEATRE l I'd Love to Have You for Dinner",
-      "status": "confirmed",
-      "occurrenceId": "occ-faee15bddd196d9af99689ba",
-      "seriesId": "series-ebfa5b312fbd6c351df7470f",
-      "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
-      "priceMin": 27.6,
-      "priceMax": 27.6,
-      "priceCurrency": "USD",
-      "availability": "InStock",
-      "lastCheckedAt": "2026-10-17T14:23:02.670368-04:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
-      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
+      "occurrenceId": "occ-38667b8e19f939d3b09c4351",
+      "seriesId": "series-962d964b70570c63011b9bd7",
+      "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+      "venueId": "cliff bell s|detroit",
       "timePrecision": "time",
       "statusEvidence": "Organizer detail reviewed",
       "aliases": [
-        "src-05c44d6a7bd544ce03fdf039",
-        "src-911345da96eada9425549045",
-        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-17"
+        "opera-at-the-bell-s-a-met-opera-laffont-event-2026-10-18",
+        "src-098f2789294354c62d6d600a",
+        "src-64a478d3c74f1e90cecec2ac",
+        "src-e440b3ede872ac52c84a11c6"
       ],
       "legacyOccurrenceKeys": [
-        "src-05c44d6a7bd544ce03fdf039|2026-10-17T20:00:00-04:00",
-        "src-911345da96eada9425549045|2026-10-17T20:00:00-04:00",
-        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-17|2026-10-17T20:00:00-04:00"
+        "opera-at-the-bell-s-a-met-opera-laffont-event-2026-10-18|2026-10-18T15:00:00-04:00",
+        "src-098f2789294354c62d6d600a|2026-10-18T15:00:00-04:00",
+        "src-64a478d3c74f1e90cecec2ac|2026-10-18T15:00:00-04:00",
+        "src-e440b3ede872ac52c84a11c6|2026-10-18T15:00:00-04:00"
       ],
       "legacySeriesKeys": [
-        "series-09c693fc8a94c835a5193f83",
-        "series-0c777bef0ca671d00f3958ef",
-        "series-4168b3b9cddf5675fb83e57e",
-        "series-53aa471eb4e114f156680d5b",
-        "series-6633ccd340406607b63a73f5",
-        "series-7f4ddc059623f3dd85aedae9",
-        "series-c07610dc0906eb589a504b40",
-        "series-ebfa5b312fbd6c351df7470f"
+        "opera at the bell's: a met opera laffont competition - michigan fundraiser|cliff bell's",
+        "opera at the bell’s: a met opera laffont competition – michigan fundraiser|cliff bell's",
+        "series-962d964b70570c63011b9bd7"
       ],
       "sources": [
         {
-          "sourceRecordId": "src-911345da96eada9425549045",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        },
-        {
-          "sourceRecordId": "src-05c44d6a7bd544ce03fdf039",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
-          "observedAt": "2026-10-16T07:40:08-04:00",
-          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "native-occurrence"
-        ],
-        "fields": {
-          "title": "src-911345da96eada9425549045",
-          "start": "src-911345da96eada9425549045",
-          "venue": "src-911345da96eada9425549045",
-          "url": "src-911345da96eada9425549045",
-          "status": "src-911345da96eada9425549045",
-          "imageUrl": "src-911345da96eada9425549045"
-        },
-        "conflicts": {}
-      },
-      "score": 99,
-      "scoring": {
-        "signals": {
-          "funny": 0.16,
-          "distinctive": 0.86,
-          "eclectic": 0.89,
-          "technical_science": 0.04,
-          "artsy": 0.97,
-          "progressive": 0.48,
-          "outdoors": 0.01,
-          "theatre": 0.98,
-          "live_music": 0.02,
-          "live_comedy": 0.05,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.08,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.48,
-          "children_activity": 0.02,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        },
-        "score": 99,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"theatre l i d love to have you for dinner\"]",
-      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20:00:00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-17T14:23:02.670368-04:00",
-        "expiresAt": "2026-10-18T14:23:02.670368-04:00",
-        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
-        "sourceHash": "2d0e3865941641ef0a283811d3d600fdc63a575b4fbe534ffa6230205d06818f",
-        "inputFacts": {
-          "id": "occ-faee15bddd196d9af99689ba",
-          "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20%3A00%3A00.000-04%3A00",
-          "start": "2026-10-17T20:00:00-04:00",
-          "end": null,
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "city": "Hamtramck",
-          "price": "$27.6",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Oct 17",
-          "time": "8:00 PM",
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-17T20:00:00\", \"price\": 27.6, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "This two act, four-course horror/thriller highlights legacy, cannibalism, the inevitability of personal failure, and the complex moral nature of predation in all its incarnations.",
-          "registration": "Online sales end 1 (one) hour before the start of a performance."
-        }
-      },
-      "reviewExpiresAt": "2026-10-18T14:23:02.670368-04:00"
-    },
-    {
-      "id": "occ-12cdcd5136c10e9e64b7d1aa",
-      "title": "RC Players - Evening of Scenes",
-      "summary": "Enjoy an evening of comedic scenes, written, directed, and acted by University of Michigan students. This two-hour show features several short scenes, each bringing a fresh dose of humor and entertainment, celebrating student creativity and the arts.",
-      "url": "https://events.umich.edu/event/153119",
-      "start": "2026-10-17T20:00:00-04:00",
-      "venue": "East Quadrangle - Keene Theater",
-      "city": "Ann Arbor",
-      "category": "Performance",
-      "imageUrl": "https://events.umich.edu/media/attachments/2026/09/event_153119_original-1.png",
-      "imageAlt": "RC Players - Evening of Scenes",
-      "status": "confirmed",
-      "occurrenceId": "occ-12cdcd5136c10e9e64b7d1aa",
-      "seriesId": "series-aacd18dd85835e25013a7c54",
-      "sourceUpdatedAt": "2026-10-02T12:43:38-04:00",
-      "lastCheckedAt": "2026-10-17T14:23:02.670368-04:00",
-      "canonicalUrl": "https://events.umich.edu/event/153119",
-      "venueId": "east quadrangle|ann arbor",
-      "timePrecision": "time",
-      "aliases": [
-        "rc-players-evening-of-scenes-event-2026-10-17",
-        "src-d5f0cf7c16863bd7a821f92a"
-      ],
-      "legacyOccurrenceKeys": [
-        "rc-players-evening-of-scenes-event-2026-10-17|2026-10-17T20:00:00-04:00",
-        "src-d5f0cf7c16863bd7a821f92a|2026-10-17T20:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-aacd18dd85835e25013a7c54"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-d5f0cf7c16863bd7a821f92a",
-          "sourceId": "happening-at-michigan",
-          "canonicalUrl": "https://events.umich.edu/event/153119",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-10-02T12:43:38-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-d5f0cf7c16863bd7a821f92a",
-          "start": "src-d5f0cf7c16863bd7a821f92a",
-          "end": "src-d5f0cf7c16863bd7a821f92a",
-          "venue": "src-d5f0cf7c16863bd7a821f92a",
-          "url": "src-d5f0cf7c16863bd7a821f92a",
-          "imageUrl": "src-d5f0cf7c16863bd7a821f92a",
-          "status": "src-d5f0cf7c16863bd7a821f92a"
-        },
-        "conflicts": {}
-      },
-      "score": 98,
-      "scoring": {
-        "signals": {
-          "funny": 0.99,
-          "distinctive": 0.29,
-          "eclectic": 0.16,
-          "technical_science": 0.04,
-          "artsy": 0.99,
-          "progressive": 0.26,
-          "outdoors": 0.04,
-          "theatre": 0.91,
-          "live_music": 0.02,
-          "live_comedy": 0.89,
-          "farmer_market": 0.01,
-          "sporting": 0.02,
-          "recurring": 0.21,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.05,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.02,
-          "sales_related": 0.08,
-          "children_activity": 0.04,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        },
-        "score": 98,
-        "rulesVersion": 2
-      },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"east quadrangle\",\"rc players evening of scenes\"]",
-      "price": "Free",
-      "end": "2026-10-17T22:00:00-04:00",
-      "bookingUrl": "",
-      "statusEvidence": "Organizer detail reviewed",
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "priceCurrency": "USD",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-17T14:23:02.670368-04:00",
-        "expiresAt": "2026-10-18T14:23:02.670368-04:00",
-        "sourceUrl": "https://events.umich.edu/event/153119",
-        "sourceHash": "6fbd682df32f5d68d2b9bab08f86f1d4ca88f3f999a61583cbf38b46f7753bff",
-        "inputFacts": {
-          "id": "occ-12cdcd5136c10e9e64b7d1aa",
-          "url": "https://events.umich.edu/event/153119",
-          "start": "2026-10-17T20:00:00-04:00",
-          "end": "2026-10-17T22:00:00-04:00",
-          "venue": "East Quadrangle",
-          "city": "Ann Arbor",
-          "price": null,
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Sat, Oct 17",
-          "time": "8:00pm",
-          "venue": "East Quadrangle \n                                    - Keene Theater",
-          "admission": "This event is free and open to the public.",
-          "description": "Evening of Scenes is a two-hour show where several 10-15 minute long comedic scenes are performed, each scene written, directed, and acted by students.",
-          "end": "10:00pm"
-        }
-      },
-      "reviewExpiresAt": "2026-10-18T14:23:02.670368-04:00"
-    },
-    {
-      "id": "occ-d865368f2cb4264bffacc35c",
-      "title": "THEATRE l I'd Love to Have You for Dinner",
-      "summary": "Experience a psychological thriller where a first date takes a dark turn. An ancient vampire and a vampire hunter meet for a home-cooked meal, leading to a suspenseful two-act horror story exploring themes of legacy, cannibalism, and predation.",
-      "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
-      "start": "2026-10-24T20:00:00-04:00",
-      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-      "city": "Hamtramck",
-      "price": "$27.6",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18028/HORIZ.png",
-      "imageAlt": "THEATRE l I'd Love to Have You for Dinner",
-      "status": "confirmed",
-      "occurrenceId": "occ-d865368f2cb4264bffacc35c",
-      "seriesId": "series-4168b3b9cddf5675fb83e57e",
-      "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
-      "priceMin": 27.6,
-      "priceMax": 27.6,
-      "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-17T14:23:02.670368-04:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
-      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "src-80992f2bb4a72cdbc06d3421",
-        "src-8a9d27014a80af3f1a350e36",
-        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-24"
-      ],
-      "legacyOccurrenceKeys": [
-        "src-80992f2bb4a72cdbc06d3421|2026-10-24T20:00:00-04:00",
-        "src-8a9d27014a80af3f1a350e36|2026-10-24T20:00:00-04:00",
-        "theatre-l-i-d-love-to-have-you-for-dinne-event-2026-10-24|2026-10-24T20:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-09c693fc8a94c835a5193f83",
-        "series-0c777bef0ca671d00f3958ef",
-        "series-4168b3b9cddf5675fb83e57e",
-        "series-53aa471eb4e114f156680d5b",
-        "series-6633ccd340406607b63a73f5",
-        "series-7f4ddc059623f3dd85aedae9",
-        "series-c07610dc0906eb589a504b40",
-        "series-ebfa5b312fbd6c351df7470f"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-8a9d27014a80af3f1a350e36",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        },
-        {
-          "sourceRecordId": "src-80992f2bb4a72cdbc06d3421",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
-          "observedAt": "2026-10-16T07:40:08-04:00",
-          "sourceUpdatedAt": "2026-10-05T22:12:01.154000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "native-occurrence",
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-8a9d27014a80af3f1a350e36",
-          "start": "src-8a9d27014a80af3f1a350e36",
-          "venue": "src-8a9d27014a80af3f1a350e36",
-          "url": "src-8a9d27014a80af3f1a350e36",
-          "status": "src-8a9d27014a80af3f1a350e36",
-          "imageUrl": "src-8a9d27014a80af3f1a350e36"
-        },
-        "conflicts": {}
-      },
-      "score": 99,
-      "scoring": {
-        "signals": {
-          "funny": 0.16,
-          "distinctive": 0.86,
-          "eclectic": 0.89,
-          "technical_science": 0.04,
-          "artsy": 0.97,
-          "progressive": 0.49,
-          "outdoors": 0.01,
-          "theatre": 0.98,
-          "live_music": 0.02,
-          "live_comedy": 0.05,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.08,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.45,
-          "children_activity": 0.02,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        },
-        "score": 99,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"theatre l i d love to have you for dinner\"]",
-      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-17T14:23:02.670368-04:00",
-        "expiresAt": "2026-10-18T14:23:02.670368-04:00",
-        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
-        "sourceHash": "b4fc14553f8886f2a1b3effe5ea7e4559a3b363f383e494ac03c33f4adcfeec6",
-        "inputFacts": {
-          "id": "occ-d865368f2cb4264bffacc35c",
-          "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
-          "start": "2026-10-24T20:00:00-04:00",
-          "end": null,
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "city": "Hamtramck",
-          "price": "$27.6–$32.85 including fees",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Oct 24",
-          "time": "8:00 PM",
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20:00:00\", \"price\": 27.6, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "This two act, four-course horror/thriller highlights legacy, cannibalism, the inevitability of personal failure, and the complex moral nature of predation in all its incarnations.",
-          "registration": "Online sales end 1 (one) hour before the start of a performance."
-        }
-      },
-      "reviewExpiresAt": "2026-10-18T14:23:02.670368-04:00"
-    },
-    {
-      "id": "occ-8802a159b5d629748d00e296",
-      "title": "Evening of Scenes",
-      "summary": "Enjoy an evening of short, comedic scenes written, directed, and acted by University of Michigan students. This performance showcases student creativity through witty banter and absurd situations, offering a fresh dose of humor and entertainment.",
-      "url": "https://events.umich.edu/event/153671",
-      "start": "2026-10-17T20:00:00-04:00",
-      "venue": "East Quadrangle - Keene Theater",
-      "city": "Ann Arbor",
-      "category": "Performance",
-      "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153671_original-1.webp",
-      "imageAlt": "Evening of Scenes",
-      "status": "confirmed",
-      "occurrenceId": "occ-8802a159b5d629748d00e296",
-      "seriesId": "series-42247f573118cb6b0a9803bb",
-      "sourceUpdatedAt": "2026-10-13T20:01:02-04:00",
-      "lastCheckedAt": "2026-10-17T14:23:02.670368-04:00",
-      "canonicalUrl": "https://events.umich.edu/event/153671",
-      "venueId": "east quadrangle|ann arbor",
-      "timePrecision": "time",
-      "aliases": [
-        "evening-of-scenes-event-2026-10-17",
-        "src-644744182b521a3e4f342196"
-      ],
-      "legacyOccurrenceKeys": [
-        "evening-of-scenes-event-2026-10-17|2026-10-17T20:00:00-04:00",
-        "src-644744182b521a3e4f342196|2026-10-17T20:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-42247f573118cb6b0a9803bb"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-644744182b521a3e4f342196",
-          "sourceId": "happening-at-michigan",
-          "canonicalUrl": "https://events.umich.edu/event/153671",
-          "observedAt": "2026-10-14T23:41:11-04:00",
-          "sourceUpdatedAt": "2026-10-13T20:01:02-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-644744182b521a3e4f342196",
-          "start": "src-644744182b521a3e4f342196",
-          "end": "src-644744182b521a3e4f342196",
-          "venue": "src-644744182b521a3e4f342196",
-          "url": "src-644744182b521a3e4f342196",
-          "imageUrl": "src-644744182b521a3e4f342196",
-          "status": "src-644744182b521a3e4f342196"
-        },
-        "conflicts": {}
-      },
-      "score": 96,
-      "scoring": {
-        "signals": {
-          "funny": 0.99,
-          "distinctive": 0.27,
-          "eclectic": 0.16,
-          "technical_science": 0.04,
-          "artsy": 0.99,
-          "progressive": 0.26,
-          "outdoors": 0.04,
-          "theatre": 0.92,
-          "live_music": 0.02,
-          "live_comedy": 0.87,
-          "farmer_market": 0.01,
-          "sporting": 0.02,
-          "recurring": 0.2,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.02,
-          "large_venue": 0.06,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.13,
-          "children_activity": 0.04,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        },
-        "score": 96,
-        "rulesVersion": 2
-      },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"east quadrangle\",\"evening of scenes\"]",
-      "price": "Free",
-      "end": "2026-10-17T22:00:00-04:00",
-      "bookingUrl": "",
-      "statusEvidence": "Organizer detail reviewed",
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "priceCurrency": "USD",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-17T14:23:02.670368-04:00",
-        "expiresAt": "2026-10-18T14:23:02.670368-04:00",
-        "sourceUrl": "https://events.umich.edu/event/153671",
-        "sourceHash": "65e4ea40b637008a226ea57d035b7262177d76e2afe1433e3d94eb0f960673f6",
-        "inputFacts": {
-          "id": "occ-8802a159b5d629748d00e296",
-          "url": "https://events.umich.edu/event/153671",
-          "start": "2026-10-17T20:00:00-04:00",
-          "end": "2026-10-17T22:00:00-04:00",
-          "venue": "East Quadrangle",
-          "city": "Ann Arbor",
-          "price": null,
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Sat, Oct 17",
-          "time": "8:00pm",
-          "venue": "East Quadrangle \n                                    - Keene Theater",
-          "admission": "Free",
-          "description": "Evening of Scenes is a two-hour show where several short, comedic scenes are performed, each written, directed, and acted by students.",
-          "end": "10:00pm"
-        }
-      },
-      "reviewExpiresAt": "2026-10-18T14:23:02.670368-04:00"
-    },
-    {
-      "id": "occ-9042c5d5e4e4051cd89b555f",
-      "title": "Wheelchair Sports Camp & Gaelynn Lea",
-      "summary": "Experience a free concert and discussion featuring Wheelchair Sports Camp, a unique hip-hop act, and Gaelynn Lea, known for her haunting fiddle tunes and disability advocacy. This event combines diverse musical styles with an engaging discussion, followed by a book signing.",
-      "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-      "start": "2026-10-18T13:00:00-04:00",
-      "venue": "The Ark",
-      "city": "Ann Arbor",
-      "price": "Free",
-      "category": "Event",
-      "imageUrl": "https://theark.org/wp-content/uploads/2026/08/Tiny-Mountain-Tour-E-flier-e1788199612961.webp",
-      "imageAlt": "Wheelchair Sports Camp & Gaelynn Lea",
-      "status": "confirmed",
-      "occurrenceId": "occ-9042c5d5e4e4051cd89b555f",
-      "seriesId": "series-7423fab6f2e94e03c049edf0",
-      "sourceUpdatedAt": "2026-08-31T18:13:27+00:00",
-      "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-17T14:23:02.670368-04:00",
-      "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-      "venueId": "the ark|ann arbor",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "src-ade67d999ab7365a3be31d69",
-        "src-ae25c8629eee224f4702fdd8",
-        "src-dc5640d0297c254d3f297476",
-        "wheelchair-sports-camp-gaelynn-lea-event-2026-10-18"
-      ],
-      "legacyOccurrenceKeys": [
-        "occ-1b8f79cba2261377a8a591ea",
-        "occ-ea4cba028747b16b05404574",
-        "src-4e1c8a3986f764f1d8ae80ea|2026-10-18T13:00:00-04:00",
-        "src-959299c1c6a88f04c6ea359b|2026-10-18T13:00:00-04:00",
-        "src-ade67d999ab7365a3be31d69|2026-10-18T13:00:00-04:00",
-        "src-ae25c8629eee224f4702fdd8|2026-10-18T13:00:00-04:00",
-        "src-dc5640d0297c254d3f297476|2026-10-18T13:00:00-04:00",
-        "src-dd14a5be39317b06508fa0fc|2026-10-18T13:00:00-04:00",
-        "wheelchair-sports-camp-gaelynn-lea-event-2026-10-18|2026-10-18T13:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-3e0e9215a7488e9aa2c30f2a",
-        "series-7423fab6f2e94e03c049edf0",
-        "wheelchair sports camp & gaelynn lea|the ark"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-dc5640d0297c254d3f297476",
-          "sourceId": "the-ark",
-          "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-          "observedAt": "2026-10-12T15:29:42-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        },
-        {
-          "sourceRecordId": "src-ae25c8629eee224f4702fdd8",
-          "sourceId": "the-ark",
-          "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+          "sourceRecordId": "src-e440b3ede872ac52c84a11c6",
+          "sourceId": "cliff-bell-s",
+          "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
           "observedAt": "2026-10-09T17:12:32-04:00",
           "sourceAuthority": "organizer",
           "status": "scheduled",
           "statusEvidence": "https://schema.org/EventScheduled"
         },
         {
-          "sourceRecordId": "src-ade67d999ab7365a3be31d69",
-          "sourceId": "the-ark",
-          "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-08-31T18:13:27+00:00",
+          "sourceRecordId": "src-64a478d3c74f1e90cecec2ac",
+          "sourceId": "cliff-bell-s",
+          "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+          "observedAt": "2026-10-09T17:12:32-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        },
+        {
+          "sourceRecordId": "src-098f2789294354c62d6d600a",
+          "sourceId": "cliff-bell-s",
+          "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+          "observedAt": "2026-10-09T17:12:32-04:00",
           "sourceAuthority": "organizer",
           "status": "scheduled"
         },
         {
-          "sourceRecordId": "src-dc4b6129a6e4eb2c39c5a8fd",
-          "sourceId": "the-ark",
-          "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-          "observedAt": "2026-10-09T12:18:14-04:00",
+          "sourceRecordId": "src-c498c685307e822a5e692923",
+          "sourceId": "cliff-bell-s",
+          "canonicalUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+          "observedAt": "2026-10-09T09:31:47-04:00",
           "status": "scheduled"
         }
       ],
@@ -2250,209 +1806,91 @@
           "new-occurrence"
         ],
         "fields": {
-          "title": "src-dc5640d0297c254d3f297476",
-          "start": "src-dc5640d0297c254d3f297476",
-          "end": "src-dc5640d0297c254d3f297476",
-          "venue": "src-dc5640d0297c254d3f297476",
-          "url": "src-dc5640d0297c254d3f297476",
-          "status": "src-dc5640d0297c254d3f297476",
-          "imageUrl": "src-ade67d999ab7365a3be31d69"
+          "status": "src-e440b3ede872ac52c84a11c6",
+          "title": "src-e440b3ede872ac52c84a11c6",
+          "start": "src-e440b3ede872ac52c84a11c6",
+          "end": "src-e440b3ede872ac52c84a11c6",
+          "venue": "src-e440b3ede872ac52c84a11c6",
+          "registration": "src-e440b3ede872ac52c84a11c6",
+          "url": "src-e440b3ede872ac52c84a11c6",
+          "imageUrl": "src-c498c685307e822a5e692923"
         },
-        "conflicts": {}
+        "conflicts": {
+          "venue": [
+            "CLIFF BELL’S",
+            "Cliff Bell's"
+          ]
+        }
       },
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "score": 91,
+      "score": 95,
       "scoring": {
         "signals": {
-          "funny": 0.3,
-          "distinctive": 0.6,
+          "funny": 0.77,
+          "distinctive": 0.69,
           "eclectic": 0.53,
-          "technical_science": 0.04,
+          "technical_science": 0.02,
           "artsy": 0.98,
-          "progressive": 0.84,
+          "progressive": 0.18,
           "outdoors": 0.02,
-          "theatre": 0.06,
-          "live_music": 0.83,
-          "live_comedy": 0.04,
+          "theatre": 0.88,
+          "live_music": 0.59,
+          "live_comedy": 0.1,
           "farmer_market": 0.01,
-          "sporting": 0.03,
+          "sporting": 0.05,
           "recurring": 0.13,
           "craft_fair_shopping": 0.02,
           "religious": 0.02,
           "large_venue": 0.05,
           "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.04,
+          "popular_music_cover_band": 0.07,
           "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.24,
-          "dance": 0.03,
-          "sales_related": 0.08,
-          "children_activity": 0.04,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.48,
+          "children_activity": 0.03,
           "running": 0.01,
           "exercise": 0.02,
           "employment_related": 0.02
         },
-        "score": 91,
+        "score": 95,
         "rulesVersion": 2
       },
       "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"ark\",\"wheelchair sports camp gaelynn lea\"]",
-      "registration": "Buy tickets online",
-      "bookingUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeEidwH5hynPjInnUpOfDriJt8joA_Dn7PzwCAJLzWzz-dwmQ/viewform",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-17T14:23:02.670368-04:00",
-        "expiresAt": "2026-10-18T14:23:02.670368-04:00",
-        "sourceUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-        "sourceHash": "8d3093a349f365eba17697202f4b31457bfe3e6a4b8ab413fcf83ad733c69da2",
-        "inputFacts": {
-          "id": "occ-9042c5d5e4e4051cd89b555f",
-          "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-          "start": "2026-10-18T13:00:00-04:00",
-          "end": "2026-10-18T23:00:00-04:00",
-          "venue": "The Ark",
-          "city": "Ann Arbor",
-          "price": "Free",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "October 18 2026",
-          "time": "1:00 pm",
-          "venue": "The Ark",
-          "admission": "{\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\", \"url\": \"https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-08-31T00:00:00+00:00\"}",
-          "description": "As part of the 2nd annual Michigan Arts Festival, the U-M Arts Initiative, with partners The Ark, Booksweet, and the Disability Network Washtenaw Monroe Livingston, will offer a free concert and discussion by artists Wheelchair Sports Camp & Gaelynn Lea.",
-          "registration": "Buy tickets online"
-        }
-      },
-      "reviewExpiresAt": "2026-10-18T14:23:02.670368-04:00"
-    },
-    {
-      "id": "occ-8ac59d2a2ce747a53bbf2152",
-      "title": "\"The Fairytale Lives of Russian Girls\" by Meg Miroshnik",
-      "summary": "Experience a theatrical studio performance of \"The Fairytale Lives of Russian Girls,\" directed by a senior BFA student. This production offers a unique opportunity to engage with emerging talent in a compelling dramatic setting.",
-      "url": "https://events.umich.edu/event/149054",
-      "start": "2026-10-17T19:30:00-04:00",
-      "venue": "Walgreen Drama Center",
-      "city": "Ann Arbor",
-      "price": "Free",
-      "category": "Performance",
-      "imageUrl": "https://events.umich.edu/media/attachments/2026/06/event_149054_original-1.jpg",
-      "imageAlt": "\"The Fairytale Lives of Russian Girls\" by Meg Miroshnik",
-      "status": "confirmed",
-      "occurrenceId": "occ-8ac59d2a2ce747a53bbf2152",
-      "seriesId": "series-6a9ee62958acb320ce51ccb8",
-      "sourceUpdatedAt": "2026-09-30T18:17:56-04:00",
-      "lastCheckedAt": "2026-10-17T14:23:02.670368-04:00",
-      "canonicalUrl": "https://events.umich.edu/event/149054",
-      "venueId": "walgreen drama center|ann arbor",
-      "timePrecision": "time",
-      "aliases": [
-        "src-2718ca3a9612ea63fc78f56d",
-        "the-fairytale-lives-of-russian-girls-by-event-2026-10-17"
-      ],
-      "legacyOccurrenceKeys": [
-        "src-2718ca3a9612ea63fc78f56d|2026-10-17T19:30:00-04:00",
-        "the-fairytale-lives-of-russian-girls-by-event-2026-10-17|2026-10-17T19:30:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-6a9ee62958acb320ce51ccb8"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-2718ca3a9612ea63fc78f56d",
-          "sourceId": "happening-at-michigan",
-          "canonicalUrl": "https://events.umich.edu/event/149054",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-09-30T18:17:56-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-2718ca3a9612ea63fc78f56d",
-          "start": "src-2718ca3a9612ea63fc78f56d",
-          "end": "src-2718ca3a9612ea63fc78f56d",
-          "venue": "src-2718ca3a9612ea63fc78f56d",
-          "url": "src-2718ca3a9612ea63fc78f56d",
-          "imageUrl": "src-2718ca3a9612ea63fc78f56d",
-          "status": "src-2718ca3a9612ea63fc78f56d"
-        },
-        "conflicts": {}
-      },
-      "score": 92,
-      "scoring": {
-        "signals": {
-          "funny": 0.44,
-          "distinctive": 0.52,
-          "eclectic": 0.25,
-          "technical_science": 0.05,
-          "artsy": 0.99,
-          "progressive": 0.66,
-          "outdoors": 0.02,
-          "theatre": 0.98,
-          "live_music": 0.02,
-          "live_comedy": 0.09,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.07,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.03,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.1,
-          "children_activity": 0.07,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        },
-        "score": 92,
-        "rulesVersion": 2
-      },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"walgreen drama center\",\"the fairytale lives of russian girls by meg miroshnik\"]",
-      "end": "2026-10-17T21:30:00-04:00",
-      "registration": "no tickets required",
-      "bookingUrl": "https://events.umich.edu/event/149054",
-      "statusEvidence": "Organizer detail reviewed",
-      "priceMin": 0.0,
-      "priceMax": 0.0,
+      "experienceId": "experience:[\"detroit\",\"cliff bell s\",\"opera at the bell s a met opera laffont competition michigan fundraiser\"]",
+      "end": "2026-10-18T18:00:00-04:00",
+      "registration": "Purchase Tickets",
+      "bookingUrl": "https://www.zeffy.com/en-US/ticketing/opera-the-bells?zlinkid=21cd6cf4-8536-454e-a27e-8c2f7fa50b45&emailId=4e397a9c-0685-4a89-9db0-baa52ce92cbc&email=themarykramer%40gmail.com&punctualAmounts=%5B%5D",
+      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
+      "priceMin": 50.0,
+      "priceMax": 50.0,
       "priceCurrency": "USD",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-17T14:23:02.670368-04:00",
-        "expiresAt": "2026-10-18T14:23:02.670368-04:00",
-        "sourceUrl": "https://events.umich.edu/event/149054",
-        "sourceHash": "668f1163ac909e33bf8a32cae591135c6916d8956f4395a36903dd15685a770a",
+        "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
+        "expiresAt": "2026-10-19T14:01:02.298898-04:00",
+        "sourceUrl": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+        "sourceHash": "a1ab7f6861be50f8cf61fca5b3e6b89d1076d5861992bd659ee544c2fb7d7fe7",
         "inputFacts": {
-          "id": "occ-8ac59d2a2ce747a53bbf2152",
-          "url": "https://events.umich.edu/event/149054",
-          "start": "2026-10-17T19:30:00-04:00",
-          "end": "2026-10-17T21:30:00-04:00",
-          "venue": "Walgreen Drama Center",
-          "city": "Ann Arbor",
-          "price": "Free - no tickets required",
+          "id": "occ-38667b8e19f939d3b09c4351",
+          "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+          "start": "2026-10-18T15:00:00-04:00",
+          "end": "2026-10-18T18:00:00-04:00",
+          "venue": "Cliff Bell's",
+          "city": "Detroit",
+          "price": "$50 | $75 | $150",
           "status": "scheduled"
         },
         "evidence": {
-          "date": "October 17",
-          "time": "7:30 pm",
-          "venue": "Walgreen Drama Center",
-          "admission": "Free - no tickets required",
-          "description": "The Department of Theatre & Drama presents a theatrical studio performance directed by Naomi Parr, a senior in the Directing BFA program.",
-          "registration": "Free - no tickets required",
-          "end": "7:30pm\n                                    - 9:30pm"
+          "date": "Sunday, October 18",
+          "time": "3:00 pm",
+          "venue": "Opera at the Bell's: A MET OPERA LAFFONT COMPETITION - MICHIGAN FUNDRAISER - Cliff Bell's",
+          "admission": "{\"@type\": \"Offer\", \"price\": \"50.00 – 150.00\", \"priceCurrency\": \"USD\", \"url\": \"https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-09-18T00:00:00+00:00\"}",
+          "description": "An afternoon filled with opera and musical theatre on CLIFF BELL’S stage.",
+          "registration": "Purchase Tickets",
+          "end": "6:00 pm"
         }
       },
-      "reviewExpiresAt": "2026-10-18T14:23:02.670368-04:00"
+      "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
     }
   ],
   "rejections": [
@@ -2471,7 +1909,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-df76c6ad637bc53d2d5371af",
@@ -2488,13 +1926,13 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-f1cae3775f7b0d4be56f76e1",
       "title": "Black, White, and Red: Black Women in Silent Film",
       "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-      "reason": "ParserError: Unknown string format: The museum is open from 9 Am - 5 Pm today.",
+      "reason": "ParserError: Unknown string format: 9 Am - 5 Pm today",
       "inputFacts": {
         "id": "occ-f1cae3775f7b0d4be56f76e1",
         "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
@@ -2505,7 +1943,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-2d809f0fe6fc3acb3d449976",
@@ -2522,13 +1960,13 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-a9ac75bce2eafe2c376cd09c",
       "title": "THEATRE l I'd Love to Have You for Dinner",
       "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-      "reason": "ValueError: Admission price unknown",
+      "reason": "ValueError: Not an actionable upcoming occurrence",
       "inputFacts": {
         "id": "occ-a9ac75bce2eafe2c376cd09c",
         "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-18T15%3A00%3A00.000-04%3A00",
@@ -2539,13 +1977,13 @@
         "price": "$27.6",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-7bec2c2b6c0c4864e668fb4e",
       "title": "Bill Smith: The Jeweler",
       "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-      "reason": "ValueError: Occurrence outside actionable window",
+      "reason": "ParserError: Unknown string format: The museum is open from 9 Am - 5 Pm today.",
       "inputFacts": {
         "id": "occ-7bec2c2b6c0c4864e668fb4e",
         "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
@@ -2556,13 +1994,13 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-2f0117bd57ec21b9282faf35",
       "title": "Grand Vision",
       "url": "https://events.umich.edu/event/149620",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
         "id": "occ-2f0117bd57ec21b9282faf35",
         "url": "https://events.umich.edu/event/149620",
@@ -2573,24 +2011,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
-    },
-    {
-      "id": "occ-71584e1bdc63fa3b1bf74296",
-      "title": "Wheelchair Sports Camp & Gaelynn Lea",
-      "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-71584e1bdc63fa3b1bf74296",
-        "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-        "start": "2026-10-18T00:00:00-04:00",
-        "end": null,
-        "venue": "The Ark",
-        "city": "Ann Arbor",
-        "price": "Free",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-e8f9e4784645e34676c5c428",
@@ -2607,7 +2028,7 @@
         "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-83ed422b3ec06538343f3bc1",
@@ -2624,7 +2045,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-e8414b8d9b885d76505aa2c4",
@@ -2641,13 +2062,13 @@
         "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-9eadbdf59380b2338fdc7b92",
       "title": "Faster and More Fun: American Home Cooking in the 1920s",
       "url": "https://events.umich.edu/event/150658",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
       "inputFacts": {
         "id": "occ-9eadbdf59380b2338fdc7b92",
         "url": "https://events.umich.edu/event/150658",
@@ -2658,7 +2079,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-c4c862ed74ca166ee4b95e0a",
@@ -2675,13 +2096,30 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
+    },
+    {
+      "id": "occ-ed6fdd0200b5c580d727176b",
+      "title": "Opera at the Bell’s: A MET OPERA LAFFONT COMPETITION – MICHIGAN FUNDRAISER",
+      "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+      "reason": "ValueError: Occurrence outside actionable window",
+      "inputFacts": {
+        "id": "occ-ed6fdd0200b5c580d727176b",
+        "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
+        "start": "2026-10-18T15:00:00-04:00",
+        "end": null,
+        "venue": "Cliff Bell's",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-8a0776b653859d3cbd455909",
       "title": "Down in Ann Arbor Town: Pictorial Maps, Campus Traditions, and the Women Who Made Them",
       "url": "https://events.umich.edu/event/150290",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "reason": "ValueError: Structured organizer start conflicts with occurrence",
       "inputFacts": {
         "id": "occ-8a0776b653859d3cbd455909",
         "url": "https://events.umich.edu/event/150290",
@@ -2692,24 +2130,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
-    },
-    {
-      "id": "occ-683dc1f6e3c0d87a8a717eeb",
-      "title": "Drag Queen Bingo Brunch",
-      "url": "https://events.five15.net/event/bingo-brunch/drag-queen-bingo-brunch-147",
-      "reason": "ValueError: Not an actionable upcoming occurrence",
-      "inputFacts": {
-        "id": "occ-683dc1f6e3c0d87a8a717eeb",
-        "url": "https://events.five15.net/event/bingo-brunch/drag-queen-bingo-brunch-147",
-        "start": "2026-10-18T11:00:00-04:00",
-        "end": null,
-        "venue": "Five15",
-        "city": "Royal Oak",
-        "price": "$30",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-cf9e65c39097bbf0300d9882",
@@ -2726,7 +2147,24 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
+    },
+    {
+      "id": "occ-683dc1f6e3c0d87a8a717eeb",
+      "title": "Drag Queen Bingo Brunch",
+      "url": "https://events.five15.net/event/bingo-brunch/drag-queen-bingo-brunch-147",
+      "reason": "ValueError: Not an actionable upcoming occurrence",
+      "inputFacts": {
+        "id": "occ-683dc1f6e3c0d87a8a717eeb",
+        "url": "https://events.five15.net/event/bingo-brunch/drag-queen-bingo-brunch-147",
+        "start": "2026-10-18T11:00:00-04:00",
+        "end": null,
+        "venue": "Five15",
+        "city": "Royal Oak",
+        "price": "$30",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-1cb35431eeabd02a9ec57920",
@@ -2743,24 +2181,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
-    },
-    {
-      "id": "occ-899465494e12851f6507094d",
-      "title": "Faster and More Fun: American Home Cooking in the 1920s",
-      "url": "https://events.umich.edu/event/150658",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-899465494e12851f6507094d",
-        "url": "https://events.umich.edu/event/150658",
-        "start": "2026-10-18T09:00:00-04:00",
-        "end": "2026-10-18T20:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
       "id": "occ-17c99b36f101990d25046063",
@@ -2777,24 +2198,24 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     },
     {
-      "id": "occ-61ca89093e868b37d27963bc",
-      "title": "Down in Ann Arbor Town: Pictorial Maps, Campus Traditions, and the Women Who Made Them",
-      "url": "https://events.umich.edu/event/150290",
+      "id": "occ-899465494e12851f6507094d",
+      "title": "Faster and More Fun: American Home Cooking in the 1920s",
+      "url": "https://events.umich.edu/event/150658",
       "reason": "ValueError: Structured organizer start conflicts with occurrence",
       "inputFacts": {
-        "id": "occ-61ca89093e868b37d27963bc",
-        "url": "https://events.umich.edu/event/150290",
-        "start": "2026-10-18T08:00:00-04:00",
-        "end": "2026-10-18T23:00:00-04:00",
+        "id": "occ-899465494e12851f6507094d",
+        "url": "https://events.umich.edu/event/150658",
+        "start": "2026-10-18T09:00:00-04:00",
+        "end": "2026-10-18T20:00:00-04:00",
         "venue": "Hatcher Graduate Library",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-18T17:01:02.298898-04:00"
+      "retryAt": "2026-10-18T21:09:31.480996-04:00"
     }
   ]
 }
