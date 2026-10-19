@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-19T14:46:12.481172-04:00",
+  "generatedAt": "2026-10-19T15:50:05.336832-04:00",
   "events": [
     {
       "id": "occ-b762d6425b95c93921c36bc8",
@@ -509,10 +509,10 @@
         "end": null,
         "venue": "Go Comedy Improv Theater",
         "city": "Ferndale",
-        "price": "$16.94 including fees",
+        "price": "$16.94",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T17:46:12.481172-04:00"
+      "retryAt": "2026-10-19T18:50:05.336832-04:00"
     },
     {
       "id": "occ-7bec2c2b6c0c4864e668fb4e",
@@ -645,10 +645,10 @@
         "end": null,
         "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
         "city": "Hamtramck",
-        "price": "$11.84–$22.35 including fees",
+        "price": "$11.84",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T17:46:12.481172-04:00"
+      "retryAt": "2026-10-19T18:50:05.336832-04:00"
     },
     {
       "id": "occ-e8414b8d9b885d76505aa2c4",
@@ -683,6 +683,23 @@
         "status": "scheduled"
       },
       "retryAt": "2026-10-19T16:42:44.178385-04:00"
+    },
+    {
+      "id": "occ-d865368f2cb4264bffacc35c",
+      "title": "THEATRE l I'd Love to Have You for Dinner",
+      "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-d865368f2cb4264bffacc35c",
+        "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-24T20%3A00%3A00.000-04%3A00",
+        "start": "2026-10-24T20:00:00-04:00",
+        "end": null,
+        "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+        "city": "Hamtramck",
+        "price": "$27.6",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-19T18:50:05.336832-04:00"
     },
     {
       "id": "occ-c4c862ed74ca166ee4b95e0a",
