@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-19T17:39:11.430447Z",
+  "generatedAt": "2026-10-19T21:56:22.543500Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
   "documentGeneratedAt": "2026-10-19T10:14:42.592285Z",
@@ -26,7 +26,7 @@
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-19T17:39:11.430447Z",
+      "lastAttemptAt": "2026-10-19T21:56:22.543500Z",
       "lastSuccessAt": "2026-10-19T10:14:42.592285Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -43,8 +43,8 @@
         "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/"
       ],
       "feedFailed": false,
-      "retryCount": 3,
-      "nextRetryAt": "2026-10-19T21:39:11.430447Z"
+      "retryCount": 4,
+      "nextRetryAt": "2026-10-20T03:56:22.543500Z"
     },
     "esa": {
       "name": "ESA",
@@ -133,7 +133,7 @@
       "technology": 43,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 13.57,
+    "newestStoryAgeHours": 17.86,
     "maxPublicationLagHours": 1114.28
   }
 }
