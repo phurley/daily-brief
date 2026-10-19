@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-19T15:30:03.814548Z",
+  "generatedAt": "2026-10-19T17:39:11.430447Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
   "documentGeneratedAt": "2026-10-19T10:14:42.592285Z",
@@ -26,12 +26,12 @@
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-19T15:30:03.814548Z",
+      "lastAttemptAt": "2026-10-19T17:39:11.430447Z",
       "lastSuccessAt": "2026-10-19T10:14:42.592285Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
-        "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/: LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"",
-        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\""
+        "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
+        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
       "candidateCount": 2,
       "acceptedCount": 0,
@@ -43,8 +43,8 @@
         "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/"
       ],
       "feedFailed": false,
-      "retryCount": 2,
-      "nextRetryAt": "2026-10-19T17:30:03.814548Z"
+      "retryCount": 3,
+      "nextRetryAt": "2026-10-19T21:39:11.430447Z"
     },
     "esa": {
       "name": "ESA",
@@ -133,7 +133,7 @@
       "technology": 43,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 11.42,
+    "newestStoryAgeHours": 13.57,
     "maxPublicationLagHours": 1114.28
   }
 }
