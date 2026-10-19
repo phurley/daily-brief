@@ -1,134 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-18T23:14:26.448605-04:00",
+  "generatedAt": "2026-10-19T10:29:29.827412-04:00",
   "events": [
-    {
-      "id": "occ-71584e1bdc63fa3b1bf74296",
-      "title": "Wheelchair Sports Camp & Gaelynn Lea",
-      "summary": "Experience a free concert and discussion featuring Wheelchair Sports Camp, a unique hip-hop act, and Gaelynn Lea, known for her haunting fiddle tunes. This event also includes a book signing for Lea's memoir, offering a blend of music, advocacy, and storytelling.",
-      "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-      "start": "2026-10-18T13:00:00-04:00",
-      "venue": "The Ark",
-      "city": "Ann Arbor",
-      "price": "Free",
-      "category": "Music",
-      "imageUrl": "https://theark.org/wp-content/uploads/2026/08/Tiny-Mountain-Tour-E-flier-e1788199612961.webp",
-      "imageAlt": "Wheelchair Sports Camp & Gaelynn Lea",
-      "status": "confirmed",
-      "occurrenceId": "occ-71584e1bdc63fa3b1bf74296",
-      "seriesId": "series-5febb35041f2b80283e98944",
-      "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-18T18:09:31.480996-04:00",
-      "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-      "venueId": "the ark|ann arbor",
-      "timePrecision": "time",
-      "aliases": [
-        "src-e1ae91556e164a0220d8f227"
-      ],
-      "legacyOccurrenceKeys": [
-        "src-e1ae91556e164a0220d8f227|2026-10-18T00:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-3e0e9215a7488e9aa2c30f2a",
-        "series-5febb35041f2b80283e98944",
-        "series-7423fab6f2e94e03c049edf0",
-        "wheelchair sports camp & gaelynn lea|the ark"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-e1ae91556e164a0220d8f227",
-          "sourceId": "the-ark",
-          "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-          "observedAt": "2026-10-18T13:59:30-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "native-occurrence"
-        ],
-        "fields": {
-          "status": "src-e1ae91556e164a0220d8f227",
-          "title": "src-e1ae91556e164a0220d8f227",
-          "start": "src-e1ae91556e164a0220d8f227",
-          "venue": "src-e1ae91556e164a0220d8f227",
-          "registration": "src-e1ae91556e164a0220d8f227",
-          "url": "src-e1ae91556e164a0220d8f227",
-          "imageUrl": "src-e1ae91556e164a0220d8f227"
-        },
-        "conflicts": {}
-      },
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "score": 96,
-      "scoring": {
-        "signals": {
-          "funny": 0.26,
-          "distinctive": 0.51,
-          "eclectic": 0.79,
-          "technical_science": 0.03,
-          "artsy": 0.98,
-          "progressive": 0.73,
-          "outdoors": 0.02,
-          "theatre": 0.04,
-          "live_music": 0.96,
-          "live_comedy": 0.02,
-          "farmer_market": 0.01,
-          "sporting": 0.02,
-          "recurring": 0.11,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.03,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.04,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.11,
-          "dance": 0.04,
-          "sales_related": 0.1,
-          "children_activity": 0.04,
-          "running": 0.01,
-          "exercise": 0.02,
-          "employment_related": 0.01
-        },
-        "score": 96,
-        "rulesVersion": 2
-      },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"ark\",\"wheelchair sports camp gaelynn lea\"]",
-      "end": "2026-10-18T23:00:00-04:00",
-      "registration": "Buy tickets online",
-      "bookingUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeEidwH5hynPjInnUpOfDriJt8joA_Dn7PzwCAJLzWzz-dwmQ/viewform",
-      "statusEvidence": "Organizer detail reviewed",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-18T18:09:31.480996-04:00",
-        "expiresAt": "2026-10-19T18:09:31.480996-04:00",
-        "sourceUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-        "sourceHash": "8d3093a349f365eba17697202f4b31457bfe3e6a4b8ab413fcf83ad733c69da2",
-        "inputFacts": {
-          "id": "occ-71584e1bdc63fa3b1bf74296",
-          "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
-          "start": "2026-10-18T00:00:00-04:00",
-          "end": null,
-          "venue": "The Ark",
-          "city": "Ann Arbor",
-          "price": "Free",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "October 18 2026",
-          "time": "1:00 pm",
-          "venue": "The Ark",
-          "admission": "{\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\", \"url\": \"https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-08-31T00:00:00+00:00\"}",
-          "description": "As part of the 2nd annual Michigan Arts Festival, the U-M Arts Initiative, with partners The Ark, Booksweet, and the Disability Network Washtenaw Monroe Livingston, will offer a free concert and discussion by artists Wheelchair Sports Camp & Gaelynn Lea.",
-          "registration": "Buy tickets online",
-          "end": "2026-10-18T23:00:00-04:00"
-        }
-      },
-      "reviewExpiresAt": "2026-10-19T18:09:31.480996-04:00"
-    },
     {
       "id": "occ-c4334009d3e671280f4f9e77",
       "title": "Amalgamation | Community Sketch Show",
@@ -251,138 +124,6 @@
           "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/amalgamation-community-sketch-show?date=2026-10-22T19:30:00\", \"price\": 16.94, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
           "description": "Each installment is a one-night-only mashup of original sketches, tossed together into a brand new amalgamation of comedic voices, styles, and delightful chaos.",
           "registration": "Get Tickets!"
-        }
-      },
-      "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
-    },
-    {
-      "id": "occ-74145931f4b923a7fb05f2ab",
-      "title": "THEATRE l My Daddy is Haunted!",
-      "summary": "Experience a horror-comedy one-act play about the Maplesquatch family's vacation to an ancient castle. Their fun turns to terror when something starts to happen to dear old dad. Is he haunted? This show combines Hammer Horror with National Lampoon's Vacation.",
-      "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-      "start": "2026-10-18T15:00:00-04:00",
-      "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-      "city": "Hamtramck",
-      "price": "$30.00 USD",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/17881/web-resmydaddyishauntedsocials_socials.jpg",
-      "imageAlt": "THEATRE l My Daddy is Haunted!",
-      "status": "confirmed",
-      "occurrenceId": "occ-74145931f4b923a7fb05f2ab",
-      "seriesId": "series-bd8e2be8f2b668113b480292",
-      "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
-      "priceMin": 30.0,
-      "priceMax": 30.0,
-      "priceCurrency": "USD",
-      "availability": "InStock",
-      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-      "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "src-01e349ce0c5caccf2b1d2b7f",
-        "theatre-l-my-daddy-is-haunted-event-2026-10-18"
-      ],
-      "legacyOccurrenceKeys": [
-        "src-01e349ce0c5caccf2b1d2b7f|2026-10-18T15:00:00-04:00",
-        "theatre-l-my-daddy-is-haunted-event-2026-10-18|2026-10-18T15:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-14836ed386fe113a8cf114f3",
-        "series-47907b221b1d6d8dd9ec7688",
-        "series-90c9028d779d072843d2fa1d",
-        "series-bd8e2be8f2b668113b480292",
-        "series-c0c9032e291b7fc942f6c4bc",
-        "series-dbf2ca983f5f3ac243c9cb7e"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-01e349ce0c5caccf2b1d2b7f",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "native-occurrence"
-        ],
-        "fields": {
-          "title": "src-01e349ce0c5caccf2b1d2b7f",
-          "start": "src-01e349ce0c5caccf2b1d2b7f",
-          "venue": "src-01e349ce0c5caccf2b1d2b7f",
-          "url": "src-01e349ce0c5caccf2b1d2b7f",
-          "status": "src-01e349ce0c5caccf2b1d2b7f",
-          "imageUrl": "src-01e349ce0c5caccf2b1d2b7f"
-        },
-        "conflicts": {}
-      },
-      "score": 93,
-      "scoring": {
-        "signals": {
-          "funny": 0.95,
-          "distinctive": 0.72,
-          "eclectic": 0.88,
-          "technical_science": 0.05,
-          "artsy": 0.98,
-          "progressive": 0.15,
-          "outdoors": 0.02,
-          "theatre": 0.99,
-          "live_music": 0.02,
-          "live_comedy": 0.11,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.21,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.69,
-          "children_activity": 0.13,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        },
-        "score": 93,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"theatre l my daddy is haunted\"]",
-      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
-        "expiresAt": "2026-10-19T14:01:02.298898-04:00",
-        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-        "sourceHash": "e8f2939c3ddafb62bf5b0f2dc655c015f56816ae5b4e5580b7ea1d78dc575f17",
-        "inputFacts": {
-          "id": "occ-74145931f4b923a7fb05f2ab",
-          "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-          "start": "2026-10-18T15:00:00-04:00",
-          "end": null,
-          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-          "city": "Hamtramck",
-          "price": "$32.85",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Oct 18",
-          "time": "3:00 PM",
-          "venue": "Where: Ant Hall",
-          "admission": "Price: $30 online l $35 at the door",
-          "description": "Join us at the Ant Hall this October for the debut of Planet Ant's original horror comedy,",
-          "registration": "Online sales end 1 (one) hour before the start of a performance."
         }
       },
       "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
@@ -670,6 +411,141 @@
       "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
     },
     {
+      "id": "occ-b762d6425b95c93921c36bc8",
+      "title": "IMPROV l Monday Night Improv w/ The Planet Ant Home Team",
+      "summary": "Experience Detroit's longest-running improv show with the legendary Planet Ant Home Team, featuring fresh and hilarious comedy. Each night includes opening performances from The Planet Ant Farm Team and a guest troupe, promising an evening of spontaneous entertainment.",
+      "url": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
+      "start": "2026-10-19T19:30:00-04:00",
+      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+      "city": "Hamtramck",
+      "price": "$11.84",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/16212/A_J.png",
+      "imageAlt": "IMPROV l Monday Night Improv w/ The Planet Ant Home Team",
+      "status": "confirmed",
+      "occurrenceId": "occ-b762d6425b95c93921c36bc8",
+      "seriesId": "series-68ae390e9044f3465e74e97b",
+      "sourceUpdatedAt": "2026-07-17T20:28:15.250000+00:00",
+      "priceMin": 11.84,
+      "priceMax": 11.84,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-10-18T23:14:26.448605-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
+      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "improv-l-monday-night-improv-w-the-plane-event-2026-10-19",
+        "src-6dc0709df73d486280cd39bd"
+      ],
+      "legacyOccurrenceKeys": [
+        "improv-l-monday-night-improv-w-the-plane-event-2026-10-19|2026-10-19T19:30:00-04:00",
+        "src-6dc0709df73d486280cd39bd|2026-10-19T19:30:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-0d2e2844d7838dcc1ec3405b",
+        "series-56db6955308f473e2e93ea5a",
+        "series-68ae390e9044f3465e74e97b",
+        "series-85387e495c9816bf7784255d",
+        "series-aadadfe4175d389eefccd9af",
+        "series-abe8af9028ee2b3a9c37666f",
+        "series-ac4926cf7ced09cc3df99c56",
+        "series-d74cae94283d3b1db2161f0f",
+        "series-f53a2cb35812fefbf2d5f51f"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-6dc0709df73d486280cd39bd",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-07-17T20:28:15.250000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "title": "src-6dc0709df73d486280cd39bd",
+          "start": "src-6dc0709df73d486280cd39bd",
+          "venue": "src-6dc0709df73d486280cd39bd",
+          "url": "src-6dc0709df73d486280cd39bd",
+          "status": "src-6dc0709df73d486280cd39bd",
+          "imageUrl": "src-6dc0709df73d486280cd39bd"
+        },
+        "conflicts": {}
+      },
+      "score": 87,
+      "scoring": {
+        "signals": {
+          "funny": 0.99,
+          "distinctive": 0.41,
+          "eclectic": 0.15,
+          "technical_science": 0.03,
+          "artsy": 0.97,
+          "progressive": 0.28,
+          "outdoors": 0.02,
+          "theatre": 0.33,
+          "live_music": 0.03,
+          "live_comedy": 0.99,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.99,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.03,
+          "sales_related": 0.48,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 87,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"improv l monday night improv w the planet ant home team\"]",
+      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
+      "bookingUrl": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-18T23:14:26.448605-04:00",
+        "expiresAt": "2026-10-19T23:14:26.448605-04:00",
+        "sourceUrl": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
+        "sourceHash": "caa5fe951a84f3969200005d29f86eb020edd4d22a57061906b3c97a23a1c05b",
+        "inputFacts": {
+          "id": "occ-b762d6425b95c93921c36bc8",
+          "url": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
+          "start": "2026-10-19T19:30:00-04:00",
+          "end": null,
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "city": "Hamtramck",
+          "price": "$11.84",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Oct 19",
+          "time": "7:30 PM",
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19:30:00\", \"price\": 11.84, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "Every Monday night, the Black Box stage brings the longest-running improv show in Detroit— a fresh, new, and hilarious night of comedy from the legendary Planet Ant Home Team.",
+          "registration": "Online sales end 1 (one) hour before the start of a performance."
+        }
+      },
+      "reviewExpiresAt": "2026-10-19T23:14:26.448605-04:00"
+    },
+    {
       "id": "occ-d865368f2cb4264bffacc35c",
       "title": "THEATRE l I'd Love to Have You for Dinner",
       "summary": "Experience a psychological thriller where a first date takes a dark turn. An ancient vampire and a vampire hunter meet for a home-cooked meal, leading to a two-act horror story exploring themes of cannibalism and predation. Viewer discretion is advised due to extreme violence and gore.",
@@ -814,273 +690,6 @@
         }
       },
       "reviewExpiresAt": "2026-10-19T18:09:31.480996-04:00"
-    },
-    {
-      "id": "occ-b762d6425b95c93921c36bc8",
-      "title": "IMPROV l Monday Night Improv w/ The Planet Ant Home Team",
-      "summary": "Experience Detroit's longest-running improv show with the legendary Planet Ant Home Team, featuring fresh and hilarious comedy. Each night includes opening performances from The Planet Ant Farm Team and a guest troupe, promising an evening of spontaneous entertainment.",
-      "url": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
-      "start": "2026-10-19T19:30:00-04:00",
-      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-      "city": "Hamtramck",
-      "price": "$11.84",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/16212/A_J.png",
-      "imageAlt": "IMPROV l Monday Night Improv w/ The Planet Ant Home Team",
-      "status": "confirmed",
-      "occurrenceId": "occ-b762d6425b95c93921c36bc8",
-      "seriesId": "series-68ae390e9044f3465e74e97b",
-      "sourceUpdatedAt": "2026-07-17T20:28:15.250000+00:00",
-      "priceMin": 11.84,
-      "priceMax": 11.84,
-      "priceCurrency": "USD",
-      "availability": "InStock",
-      "lastCheckedAt": "2026-10-18T23:14:26.448605-04:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
-      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "improv-l-monday-night-improv-w-the-plane-event-2026-10-19",
-        "src-6dc0709df73d486280cd39bd"
-      ],
-      "legacyOccurrenceKeys": [
-        "improv-l-monday-night-improv-w-the-plane-event-2026-10-19|2026-10-19T19:30:00-04:00",
-        "src-6dc0709df73d486280cd39bd|2026-10-19T19:30:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-0d2e2844d7838dcc1ec3405b",
-        "series-56db6955308f473e2e93ea5a",
-        "series-68ae390e9044f3465e74e97b",
-        "series-85387e495c9816bf7784255d",
-        "series-aadadfe4175d389eefccd9af",
-        "series-abe8af9028ee2b3a9c37666f",
-        "series-ac4926cf7ced09cc3df99c56",
-        "series-d74cae94283d3b1db2161f0f",
-        "series-f53a2cb35812fefbf2d5f51f"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-6dc0709df73d486280cd39bd",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-07-17T20:28:15.250000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "native-occurrence"
-        ],
-        "fields": {
-          "title": "src-6dc0709df73d486280cd39bd",
-          "start": "src-6dc0709df73d486280cd39bd",
-          "venue": "src-6dc0709df73d486280cd39bd",
-          "url": "src-6dc0709df73d486280cd39bd",
-          "status": "src-6dc0709df73d486280cd39bd",
-          "imageUrl": "src-6dc0709df73d486280cd39bd"
-        },
-        "conflicts": {}
-      },
-      "score": 87,
-      "scoring": {
-        "signals": {
-          "funny": 0.99,
-          "distinctive": 0.41,
-          "eclectic": 0.15,
-          "technical_science": 0.03,
-          "artsy": 0.97,
-          "progressive": 0.28,
-          "outdoors": 0.02,
-          "theatre": 0.33,
-          "live_music": 0.03,
-          "live_comedy": 0.99,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.99,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.03,
-          "sales_related": 0.48,
-          "children_activity": 0.02,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        },
-        "score": 87,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"improv l monday night improv w the planet ant home team\"]",
-      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-      "bookingUrl": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-18T23:14:26.448605-04:00",
-        "expiresAt": "2026-10-19T23:14:26.448605-04:00",
-        "sourceUrl": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
-        "sourceHash": "caa5fe951a84f3969200005d29f86eb020edd4d22a57061906b3c97a23a1c05b",
-        "inputFacts": {
-          "id": "occ-b762d6425b95c93921c36bc8",
-          "url": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19%3A30%3A00.000-04%3A00",
-          "start": "2026-10-19T19:30:00-04:00",
-          "end": null,
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "city": "Hamtramck",
-          "price": "$11.84",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Oct 19",
-          "time": "7:30 PM",
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-19T19:30:00\", \"price\": 11.84, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "Every Monday night, the Black Box stage brings the longest-running improv show in Detroit— a fresh, new, and hilarious night of comedy from the legendary Planet Ant Home Team.",
-          "registration": "Online sales end 1 (one) hour before the start of a performance."
-        }
-      },
-      "reviewExpiresAt": "2026-10-19T23:14:26.448605-04:00"
-    },
-    {
-      "id": "occ-935abc40d8d02140d65a7803",
-      "title": "Fresh Sauce | An Open Improv Jam",
-      "summary": "Experience an open improv jam where anyone can get on stage and participate in short-form improv games. This weekly event offers a chance to play or simply enjoy watching spontaneous comedic performances.",
-      "url": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
-      "start": "2026-10-18T21:00:00-04:00",
-      "venue": "Go Comedy Improv Theater",
-      "city": "Ferndale",
-      "price": "Free",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/16614/fresh_sauce.jpg",
-      "imageAlt": "Fresh Sauce | An Open Improv Jam",
-      "status": "confirmed",
-      "occurrenceId": "occ-935abc40d8d02140d65a7803",
-      "seriesId": "series-c63b6d077b1835aa164df36f",
-      "sourceUpdatedAt": "2026-07-22T22:37:10.020000+00:00",
-      "priceCurrency": "USD",
-      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
-      "venueId": "go comedy improv theater|ferndale",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "fresh-sauce-an-open-improv-jam-event-2026-10-18",
-        "src-fa01a4a6ed74da411ecff0fa"
-      ],
-      "legacyOccurrenceKeys": [
-        "fresh-sauce-an-open-improv-jam-event-2026-10-18|2026-10-18T21:00:00-04:00",
-        "src-fa01a4a6ed74da411ecff0fa|2026-10-18T21:00:00-04:00"
-      ],
-      "legacySeriesKeys": [
-        "series-1e80c37f6934fdd40b087316",
-        "series-3303052e61d74fa87046fc99",
-        "series-52894ddb2bbb39e8ee5c660a",
-        "series-7efd45e15631e72674726cfc",
-        "series-af4118034094fed55daed09e",
-        "series-b47f2cc8b616b6373cbede33",
-        "series-c63b6d077b1835aa164df36f"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-fa01a4a6ed74da411ecff0fa",
-          "sourceId": "go-comedy-improv-theater",
-          "canonicalUrl": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
-          "observedAt": "2026-10-12T15:41:41-04:00",
-          "sourceUpdatedAt": "2026-07-22T22:37:10.020000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-fa01a4a6ed74da411ecff0fa",
-          "start": "src-fa01a4a6ed74da411ecff0fa",
-          "venue": "src-fa01a4a6ed74da411ecff0fa",
-          "url": "src-fa01a4a6ed74da411ecff0fa",
-          "status": "src-fa01a4a6ed74da411ecff0fa",
-          "imageUrl": "src-fa01a4a6ed74da411ecff0fa"
-        },
-        "conflicts": {}
-      },
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "score": 90,
-      "scoring": {
-        "signals": {
-          "funny": 0.99,
-          "distinctive": 0.18,
-          "eclectic": 0.1,
-          "technical_science": 0.02,
-          "artsy": 0.98,
-          "progressive": 0.34,
-          "outdoors": 0.01,
-          "theatre": 0.35,
-          "live_music": 0.02,
-          "live_comedy": 0.99,
-          "farmer_market": 0.01,
-          "sporting": 0.02,
-          "recurring": 0.98,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.01,
-          "sales_related": 0.09,
-          "children_activity": 0.03,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        },
-        "score": 90,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"ferndale\",\"go comedy improv theater\",\"fresh sauce an open improv jam\"]",
-      "registration": "Just show up early to sign up and play (or feel free to stop by and watch).",
-      "bookingUrl": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21:00:00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
-        "expiresAt": "2026-10-19T14:01:02.298898-04:00",
-        "sourceUrl": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
-        "sourceHash": "c2fc82e7d9b5c8dc20b0d2fb741ea9e67186a757140b8cd9a4b15f7aa0e39ca5",
-        "inputFacts": {
-          "id": "occ-935abc40d8d02140d65a7803",
-          "url": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
-          "start": "2026-10-18T21:00:00-04:00",
-          "end": null,
-          "venue": "Go Comedy Improv Theater",
-          "city": "Ferndale",
-          "price": "$0 including fees",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Oct 18",
-          "time": "9:00 PM",
-          "venue": "Go Comedy Improv Theater",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21:00:00\", \"price\": 0.0, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "Our weekly short form improv jam, where anyone can get onstage and play improv games.",
-          "registration": "Just show up early to sign up and play (or feel free to stop by and watch)."
-        }
-      },
-      "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
     },
     {
       "id": "occ-eed5005f948c16aa8875c9b3",
@@ -1473,6 +1082,397 @@
           "description": "Join us to celebrate and experience ambisonics, an immersive audio technology that surrounds you with sound from all directions.",
           "registration": "Seating is limited and available on a first-come, first-served basis.",
           "end": "9:00pm"
+        }
+      },
+      "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
+    },
+    {
+      "id": "occ-71584e1bdc63fa3b1bf74296",
+      "title": "Wheelchair Sports Camp & Gaelynn Lea",
+      "summary": "Experience a free concert and discussion featuring Wheelchair Sports Camp, a unique hip-hop act, and Gaelynn Lea, known for her haunting fiddle tunes. This event also includes a book signing for Lea's memoir, offering a blend of music, advocacy, and storytelling.",
+      "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+      "start": "2026-10-18T13:00:00-04:00",
+      "venue": "The Ark",
+      "city": "Ann Arbor",
+      "price": "Free",
+      "category": "Music",
+      "imageUrl": "https://theark.org/wp-content/uploads/2026/08/Tiny-Mountain-Tour-E-flier-e1788199612961.webp",
+      "imageAlt": "Wheelchair Sports Camp & Gaelynn Lea",
+      "status": "confirmed",
+      "occurrenceId": "occ-71584e1bdc63fa3b1bf74296",
+      "seriesId": "series-5febb35041f2b80283e98944",
+      "priceCurrency": "USD",
+      "lastCheckedAt": "2026-10-18T18:09:31.480996-04:00",
+      "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+      "venueId": "the ark|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "src-e1ae91556e164a0220d8f227"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-e1ae91556e164a0220d8f227|2026-10-18T00:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-3e0e9215a7488e9aa2c30f2a",
+        "series-5febb35041f2b80283e98944",
+        "series-7423fab6f2e94e03c049edf0",
+        "wheelchair sports camp & gaelynn lea|the ark"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-e1ae91556e164a0220d8f227",
+          "sourceId": "the-ark",
+          "canonicalUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+          "observedAt": "2026-10-18T13:59:30-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "status": "src-e1ae91556e164a0220d8f227",
+          "title": "src-e1ae91556e164a0220d8f227",
+          "start": "src-e1ae91556e164a0220d8f227",
+          "venue": "src-e1ae91556e164a0220d8f227",
+          "registration": "src-e1ae91556e164a0220d8f227",
+          "url": "src-e1ae91556e164a0220d8f227",
+          "imageUrl": "src-e1ae91556e164a0220d8f227"
+        },
+        "conflicts": {}
+      },
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "score": 96,
+      "scoring": {
+        "signals": {
+          "funny": 0.26,
+          "distinctive": 0.51,
+          "eclectic": 0.79,
+          "technical_science": 0.03,
+          "artsy": 0.98,
+          "progressive": 0.73,
+          "outdoors": 0.02,
+          "theatre": 0.04,
+          "live_music": 0.96,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.11,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.04,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.11,
+          "dance": 0.04,
+          "sales_related": 0.1,
+          "children_activity": 0.04,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.01
+        },
+        "score": 96,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"ark\",\"wheelchair sports camp gaelynn lea\"]",
+      "end": "2026-10-18T23:00:00-04:00",
+      "registration": "Buy tickets online",
+      "bookingUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeEidwH5hynPjInnUpOfDriJt8joA_Dn7PzwCAJLzWzz-dwmQ/viewform",
+      "statusEvidence": "Organizer detail reviewed",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-18T18:09:31.480996-04:00",
+        "expiresAt": "2026-10-19T18:09:31.480996-04:00",
+        "sourceUrl": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+        "sourceHash": "8d3093a349f365eba17697202f4b31457bfe3e6a4b8ab413fcf83ad733c69da2",
+        "inputFacts": {
+          "id": "occ-71584e1bdc63fa3b1bf74296",
+          "url": "https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/",
+          "start": "2026-10-18T00:00:00-04:00",
+          "end": null,
+          "venue": "The Ark",
+          "city": "Ann Arbor",
+          "price": "Free",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "October 18 2026",
+          "time": "1:00 pm",
+          "venue": "The Ark",
+          "admission": "{\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\", \"url\": \"https://theark.org/event/wheelchair-sports-camp-gaelynn-lea/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-08-31T00:00:00+00:00\"}",
+          "description": "As part of the 2nd annual Michigan Arts Festival, the U-M Arts Initiative, with partners The Ark, Booksweet, and the Disability Network Washtenaw Monroe Livingston, will offer a free concert and discussion by artists Wheelchair Sports Camp & Gaelynn Lea.",
+          "registration": "Buy tickets online",
+          "end": "2026-10-18T23:00:00-04:00"
+        }
+      },
+      "reviewExpiresAt": "2026-10-19T18:09:31.480996-04:00"
+    },
+    {
+      "id": "occ-74145931f4b923a7fb05f2ab",
+      "title": "THEATRE l My Daddy is Haunted!",
+      "summary": "Experience a horror-comedy one-act play about the Maplesquatch family's vacation to an ancient castle. Their fun turns to terror when something starts to happen to dear old dad. Is he haunted? This show combines Hammer Horror with National Lampoon's Vacation.",
+      "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
+      "start": "2026-10-18T15:00:00-04:00",
+      "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+      "city": "Hamtramck",
+      "price": "$30.00 USD",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/17881/web-resmydaddyishauntedsocials_socials.jpg",
+      "imageAlt": "THEATRE l My Daddy is Haunted!",
+      "status": "confirmed",
+      "occurrenceId": "occ-74145931f4b923a7fb05f2ab",
+      "seriesId": "series-bd8e2be8f2b668113b480292",
+      "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
+      "priceMin": 30.0,
+      "priceMax": 30.0,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
+      "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "src-01e349ce0c5caccf2b1d2b7f",
+        "theatre-l-my-daddy-is-haunted-event-2026-10-18"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-01e349ce0c5caccf2b1d2b7f|2026-10-18T15:00:00-04:00",
+        "theatre-l-my-daddy-is-haunted-event-2026-10-18|2026-10-18T15:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-14836ed386fe113a8cf114f3",
+        "series-47907b221b1d6d8dd9ec7688",
+        "series-90c9028d779d072843d2fa1d",
+        "series-bd8e2be8f2b668113b480292",
+        "series-c0c9032e291b7fc942f6c4bc",
+        "series-dbf2ca983f5f3ac243c9cb7e"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-01e349ce0c5caccf2b1d2b7f",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-10-06T00:04:42.818000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "title": "src-01e349ce0c5caccf2b1d2b7f",
+          "start": "src-01e349ce0c5caccf2b1d2b7f",
+          "venue": "src-01e349ce0c5caccf2b1d2b7f",
+          "url": "src-01e349ce0c5caccf2b1d2b7f",
+          "status": "src-01e349ce0c5caccf2b1d2b7f",
+          "imageUrl": "src-01e349ce0c5caccf2b1d2b7f"
+        },
+        "conflicts": {}
+      },
+      "score": 93,
+      "scoring": {
+        "signals": {
+          "funny": 0.95,
+          "distinctive": 0.72,
+          "eclectic": 0.88,
+          "technical_science": 0.05,
+          "artsy": 0.98,
+          "progressive": 0.15,
+          "outdoors": 0.02,
+          "theatre": 0.99,
+          "live_music": 0.02,
+          "live_comedy": 0.11,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.21,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.69,
+          "children_activity": 0.13,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 93,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"theatre l my daddy is haunted\"]",
+      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
+      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
+        "expiresAt": "2026-10-19T14:01:02.298898-04:00",
+        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
+        "sourceHash": "e8f2939c3ddafb62bf5b0f2dc655c015f56816ae5b4e5580b7ea1d78dc575f17",
+        "inputFacts": {
+          "id": "occ-74145931f4b923a7fb05f2ab",
+          "url": "https://www.crowdwork.com/e/theatre-l-my-daddy-is-haunted?date=2026-10-18T15%3A00%3A00.000-04%3A00",
+          "start": "2026-10-18T15:00:00-04:00",
+          "end": null,
+          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+          "city": "Hamtramck",
+          "price": "$32.85",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Oct 18",
+          "time": "3:00 PM",
+          "venue": "Where: Ant Hall",
+          "admission": "Price: $30 online l $35 at the door",
+          "description": "Join us at the Ant Hall this October for the debut of Planet Ant's original horror comedy,",
+          "registration": "Online sales end 1 (one) hour before the start of a performance."
+        }
+      },
+      "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
+    },
+    {
+      "id": "occ-935abc40d8d02140d65a7803",
+      "title": "Fresh Sauce | An Open Improv Jam",
+      "summary": "Experience an open improv jam where anyone can get on stage and participate in short-form improv games. This weekly event offers a chance to play or simply enjoy watching spontaneous comedic performances.",
+      "url": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
+      "start": "2026-10-18T21:00:00-04:00",
+      "venue": "Go Comedy Improv Theater",
+      "city": "Ferndale",
+      "price": "Free",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/16614/fresh_sauce.jpg",
+      "imageAlt": "Fresh Sauce | An Open Improv Jam",
+      "status": "confirmed",
+      "occurrenceId": "occ-935abc40d8d02140d65a7803",
+      "seriesId": "series-c63b6d077b1835aa164df36f",
+      "sourceUpdatedAt": "2026-07-22T22:37:10.020000+00:00",
+      "priceCurrency": "USD",
+      "lastCheckedAt": "2026-10-18T14:01:02.298898-04:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
+      "venueId": "go comedy improv theater|ferndale",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "fresh-sauce-an-open-improv-jam-event-2026-10-18",
+        "src-fa01a4a6ed74da411ecff0fa"
+      ],
+      "legacyOccurrenceKeys": [
+        "fresh-sauce-an-open-improv-jam-event-2026-10-18|2026-10-18T21:00:00-04:00",
+        "src-fa01a4a6ed74da411ecff0fa|2026-10-18T21:00:00-04:00"
+      ],
+      "legacySeriesKeys": [
+        "series-1e80c37f6934fdd40b087316",
+        "series-3303052e61d74fa87046fc99",
+        "series-52894ddb2bbb39e8ee5c660a",
+        "series-7efd45e15631e72674726cfc",
+        "series-af4118034094fed55daed09e",
+        "series-b47f2cc8b616b6373cbede33",
+        "series-c63b6d077b1835aa164df36f"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-fa01a4a6ed74da411ecff0fa",
+          "sourceId": "go-comedy-improv-theater",
+          "canonicalUrl": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
+          "observedAt": "2026-10-12T15:41:41-04:00",
+          "sourceUpdatedAt": "2026-07-22T22:37:10.020000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-fa01a4a6ed74da411ecff0fa",
+          "start": "src-fa01a4a6ed74da411ecff0fa",
+          "venue": "src-fa01a4a6ed74da411ecff0fa",
+          "url": "src-fa01a4a6ed74da411ecff0fa",
+          "status": "src-fa01a4a6ed74da411ecff0fa",
+          "imageUrl": "src-fa01a4a6ed74da411ecff0fa"
+        },
+        "conflicts": {}
+      },
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "score": 90,
+      "scoring": {
+        "signals": {
+          "funny": 0.99,
+          "distinctive": 0.18,
+          "eclectic": 0.1,
+          "technical_science": 0.02,
+          "artsy": 0.98,
+          "progressive": 0.34,
+          "outdoors": 0.01,
+          "theatre": 0.35,
+          "live_music": 0.02,
+          "live_comedy": 0.99,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.98,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.09,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 90,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"ferndale\",\"go comedy improv theater\",\"fresh sauce an open improv jam\"]",
+      "registration": "Just show up early to sign up and play (or feel free to stop by and watch).",
+      "bookingUrl": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21:00:00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-18T14:01:02.298898-04:00",
+        "expiresAt": "2026-10-19T14:01:02.298898-04:00",
+        "sourceUrl": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
+        "sourceHash": "c2fc82e7d9b5c8dc20b0d2fb741ea9e67186a757140b8cd9a4b15f7aa0e39ca5",
+        "inputFacts": {
+          "id": "occ-935abc40d8d02140d65a7803",
+          "url": "https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21%3A00%3A00.000-04%3A00",
+          "start": "2026-10-18T21:00:00-04:00",
+          "end": null,
+          "venue": "Go Comedy Improv Theater",
+          "city": "Ferndale",
+          "price": "$0 including fees",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Oct 18",
+          "time": "9:00 PM",
+          "venue": "Go Comedy Improv Theater",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/fresh-sauce?date=2026-10-18T21:00:00\", \"price\": 0.0, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "Our weekly short form improv jam, where anyone can get onstage and play improv games.",
+          "registration": "Just show up early to sign up and play (or feel free to stop by and watch)."
         }
       },
       "reviewExpiresAt": "2026-10-19T14:01:02.298898-04:00"
@@ -1896,61 +1896,10 @@
   ],
   "rejections": [
     {
-      "id": "occ-a9ac75bce2eafe2c376cd09c",
-      "title": "THEATRE l I'd Love to Have You for Dinner",
-      "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-      "reason": "ValueError: Not an actionable upcoming occurrence",
-      "inputFacts": {
-        "id": "occ-a9ac75bce2eafe2c376cd09c",
-        "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-18T15%3A00%3A00.000-04%3A00",
-        "start": "2026-10-18T15:00:00-04:00",
-        "end": null,
-        "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-        "city": "Hamtramck",
-        "price": "$27.6",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
-    },
-    {
-      "id": "occ-df76c6ad637bc53d2d5371af",
-      "title": "Comics Beyond Sight",
-      "url": "https://events.umich.edu/event/150276",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-df76c6ad637bc53d2d5371af",
-        "url": "https://events.umich.edu/event/150276",
-        "start": "2026-10-20T08:00:00-04:00",
-        "end": "2026-10-20T23:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
-    },
-    {
-      "id": "occ-f1cae3775f7b0d4be56f76e1",
-      "title": "Black, White, and Red: Black Women in Silent Film",
-      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-      "reason": "ParserError: Unknown string format: 9 Am - 5 Pm today",
-      "inputFacts": {
-        "id": "occ-f1cae3775f7b0d4be56f76e1",
-        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-        "start": "2026-07-30T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
-    },
-    {
       "id": "occ-2d809f0fe6fc3acb3d449976",
       "title": "Comics Beyond Sight",
       "url": "https://events.umich.edu/event/150276",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
         "id": "occ-2d809f0fe6fc3acb3d449976",
         "url": "https://events.umich.edu/event/150276",
@@ -1961,30 +1910,64 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
-      "id": "occ-7bec2c2b6c0c4864e668fb4e",
-      "title": "Bill Smith: The Jeweler",
-      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-      "reason": "ParserError: Unknown string format: The museum is open from 9 Am - 5 Pm today.",
+      "id": "occ-ef78ce9e913572edb8dfad9c",
+      "title": "Comics Beyond Sight",
+      "url": "https://events.umich.edu/event/150276",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
-        "id": "occ-7bec2c2b6c0c4864e668fb4e",
-        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-        "start": "2026-07-09T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit, MI",
+        "id": "occ-ef78ce9e913572edb8dfad9c",
+        "url": "https://events.umich.edu/event/150276",
+        "start": "2026-10-21T08:00:00-04:00",
+        "end": "2026-10-21T23:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
+    },
+    {
+      "id": "occ-f1cae3775f7b0d4be56f76e1",
+      "title": "Black, White, and Red: Black Women in Silent Film",
+      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
+      "inputFacts": {
+        "id": "occ-f1cae3775f7b0d4be56f76e1",
+        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
+        "start": "2026-07-30T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
+    },
+    {
+      "id": "occ-df76c6ad637bc53d2d5371af",
+      "title": "Comics Beyond Sight",
+      "url": "https://events.umich.edu/event/150276",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
+      "inputFacts": {
+        "id": "occ-df76c6ad637bc53d2d5371af",
+        "url": "https://events.umich.edu/event/150276",
+        "start": "2026-10-20T08:00:00-04:00",
+        "end": "2026-10-20T23:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
       "id": "occ-2f0117bd57ec21b9282faf35",
       "title": "Grand Vision",
       "url": "https://events.umich.edu/event/149620",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
         "id": "occ-2f0117bd57ec21b9282faf35",
         "url": "https://events.umich.edu/event/149620",
@@ -1995,30 +1978,47 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
-      "id": "occ-e8f9e4784645e34676c5c428",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-      "reason": "ValueError: Not an actionable upcoming occurrence",
+      "id": "occ-7bec2c2b6c0c4864e668fb4e",
+      "title": "Bill Smith: The Jeweler",
+      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
-        "id": "occ-e8f9e4784645e34676c5c428",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2027-01-03T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts (DIA)",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
+        "id": "occ-7bec2c2b6c0c4864e668fb4e",
+        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+        "start": "2026-07-09T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit, MI",
+        "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
+    },
+    {
+      "id": "occ-b6ef22447ad7b0896b42c0cd",
+      "title": "Fashion/Forward",
+      "url": "https://events.umich.edu/event/149758",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
+      "inputFacts": {
+        "id": "occ-b6ef22447ad7b0896b42c0cd",
+        "url": "https://events.umich.edu/event/149758",
+        "start": "2026-10-20T09:00:00-04:00",
+        "end": "2026-10-20T17:00:00-04:00",
+        "venue": "202 S. Thayer",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
       "id": "occ-83ed422b3ec06538343f3bc1",
       "title": "Fashion/Forward",
       "url": "https://events.umich.edu/event/149758",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
         "id": "occ-83ed422b3ec06538343f3bc1",
         "url": "https://events.umich.edu/event/149758",
@@ -2029,47 +2029,47 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
-      "id": "occ-ed6fdd0200b5c580d727176b",
-      "title": "Opera at the Bell’s: A MET OPERA LAFFONT COMPETITION – MICHIGAN FUNDRAISER",
-      "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-      "reason": "ValueError: Occurrence outside actionable window",
+      "id": "occ-e8f9e4784645e34676c5c428",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
-        "id": "occ-ed6fdd0200b5c580d727176b",
-        "url": "https://cliffbells.com/event/opera-at-the-bells-a-met-opera-laffont-competition-michigan-fundraiser/",
-        "start": "2026-10-18T15:00:00-04:00",
-        "end": null,
-        "venue": "Cliff Bell's",
+        "id": "occ-e8f9e4784645e34676c5c428",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2027-01-03T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts (DIA)",
         "city": "Detroit",
+        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
+    },
+    {
+      "id": "occ-511212a0caa7e9e427f1aeff",
+      "title": "Grand Vision",
+      "url": "https://events.umich.edu/event/149620",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
+      "inputFacts": {
+        "id": "occ-511212a0caa7e9e427f1aeff",
+        "url": "https://events.umich.edu/event/149620",
+        "start": "2026-10-20T09:00:00-04:00",
+        "end": "2026-10-20T17:00:00-04:00",
+        "venue": "202 S. Thayer",
+        "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
-    },
-    {
-      "id": "occ-e8414b8d9b885d76505aa2c4",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-e8414b8d9b885d76505aa2c4",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2026-12-11T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
       "id": "occ-9eadbdf59380b2338fdc7b92",
       "title": "Faster and More Fun: American Home Cooking in the 1920s",
       "url": "https://events.umich.edu/event/150658",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
         "id": "occ-9eadbdf59380b2338fdc7b92",
         "url": "https://events.umich.edu/event/150658",
@@ -2080,13 +2080,47 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
+    },
+    {
+      "id": "occ-e8414b8d9b885d76505aa2c4",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
+      "inputFacts": {
+        "id": "occ-e8414b8d9b885d76505aa2c4",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2026-12-11T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
+    },
+    {
+      "id": "occ-77dea2362a5bef4b52dee7ea",
+      "title": "Faster and More Fun: American Home Cooking in the 1920s",
+      "url": "https://events.umich.edu/event/150658",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
+      "inputFacts": {
+        "id": "occ-77dea2362a5bef4b52dee7ea",
+        "url": "https://events.umich.edu/event/150658",
+        "start": "2026-10-20T09:00:00-04:00",
+        "end": "2026-10-20T20:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
       "id": "occ-c4c862ed74ca166ee4b95e0a",
       "title": "Who Votes? The Electoral College",
       "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-      "reason": "ValueError: Occurrence outside actionable window",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
         "id": "occ-c4c862ed74ca166ee4b95e0a",
         "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
@@ -2097,30 +2131,30 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
-      "id": "occ-683dc1f6e3c0d87a8a717eeb",
-      "title": "Drag Queen Bingo Brunch",
-      "url": "https://events.five15.net/event/bingo-brunch/drag-queen-bingo-brunch-147",
-      "reason": "ValueError: Not an actionable upcoming occurrence",
+      "id": "occ-7c6539ede3c45b7fb95ba3ca",
+      "title": "Black Birth Joy",
+      "url": "https://events.umich.edu/event/153178",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
-        "id": "occ-683dc1f6e3c0d87a8a717eeb",
-        "url": "https://events.five15.net/event/bingo-brunch/drag-queen-bingo-brunch-147",
-        "start": "2026-10-18T11:00:00-04:00",
-        "end": null,
-        "venue": "Five15",
-        "city": "Royal Oak",
-        "price": "$30",
+        "id": "occ-7c6539ede3c45b7fb95ba3ca",
+        "url": "https://events.umich.edu/event/153178",
+        "start": "2026-10-20T09:00:00-04:00",
+        "end": "2026-10-20T17:00:00-04:00",
+        "venue": "Lane Hall",
+        "city": "Ann Arbor",
+        "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
       "id": "occ-8a0776b653859d3cbd455909",
       "title": "Down in Ann Arbor Town: Pictorial Maps, Campus Traditions, and the Women Who Made Them",
       "url": "https://events.umich.edu/event/150290",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
         "id": "occ-8a0776b653859d3cbd455909",
         "url": "https://events.umich.edu/event/150290",
@@ -2131,13 +2165,30 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
+    },
+    {
+      "id": "occ-0b23d7b9a5e23a73098acf1f",
+      "title": "Down in Ann Arbor Town: Pictorial Maps, Campus Traditions, and the Women Who Made Them",
+      "url": "https://events.umich.edu/event/150290",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
+      "inputFacts": {
+        "id": "occ-0b23d7b9a5e23a73098acf1f",
+        "url": "https://events.umich.edu/event/150290",
+        "start": "2026-10-20T08:00:00-04:00",
+        "end": "2026-10-20T23:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
       "id": "occ-cf9e65c39097bbf0300d9882",
       "title": "Black Birth Joy",
       "url": "https://events.umich.edu/event/153178",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
         "id": "occ-cf9e65c39097bbf0300d9882",
         "url": "https://events.umich.edu/event/153178",
@@ -2148,30 +2199,30 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
-      "id": "occ-859204fb1efe1f1a0fc19746",
-      "title": "The Weekend Finale | Weekly Improv Comedy Show",
-      "url": "https://www.crowdwork.com/e/the-weekend-finale?date=2026-10-18T19%3A00%3A00.000-04%3A00",
-      "reason": "ValueError: Not an actionable upcoming occurrence",
+      "id": "occ-5c105a8a40813847addbc8ce",
+      "title": "WCEE Exhibition. The Art of Memory, Paintings by Felix Lembersky",
+      "url": "https://events.umich.edu/event/149975",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
-        "id": "occ-859204fb1efe1f1a0fc19746",
-        "url": "https://www.crowdwork.com/e/the-weekend-finale?date=2026-10-18T19%3A00%3A00.000-04%3A00",
-        "start": "2026-10-18T19:00:00-04:00",
-        "end": null,
-        "venue": "Go Comedy Improv Theater",
-        "city": "Ferndale",
-        "price": "$11.74 including fees",
+        "id": "occ-5c105a8a40813847addbc8ce",
+        "url": "https://events.umich.edu/event/149975",
+        "start": "2026-10-20T08:00:00-04:00",
+        "end": "2026-10-20T17:00:00-04:00",
+        "venue": "Weiser Hall",
+        "city": "Ann Arbor",
+        "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
       "id": "occ-1cb35431eeabd02a9ec57920",
       "title": "WCEE Exhibition. The Art of Memory, Paintings by Felix Lembersky",
       "url": "https://events.umich.edu/event/149975",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
         "id": "occ-1cb35431eeabd02a9ec57920",
         "url": "https://events.umich.edu/event/149975",
@@ -2182,30 +2233,30 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
-      "id": "occ-78ee5ee45a5b2b8620fa5922",
-      "title": "THEATRE l Stand Up Student Showcase | Fall 2026",
-      "url": "https://www.crowdwork.com/e/theatre-l-stand-up-student-showcase-fall-2026?date=2026-10-18T19%3A00%3A00.000-04%3A00",
-      "reason": "ValueError: Occurrence outside actionable window",
+      "id": "occ-167dead18cc5bf5255d42cc0",
+      "title": "CCPS Photo Exhibition. This is the Place",
+      "url": "https://events.umich.edu/event/149978",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
-        "id": "occ-78ee5ee45a5b2b8620fa5922",
-        "url": "https://www.crowdwork.com/e/theatre-l-stand-up-student-showcase-fall-2026?date=2026-10-18T19%3A00%3A00.000-04%3A00",
-        "start": "2026-10-18T19:00:00-04:00",
-        "end": null,
-        "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-        "city": "Hamtramck",
-        "price": "$9.74 including fees",
+        "id": "occ-167dead18cc5bf5255d42cc0",
+        "url": "https://events.umich.edu/event/149978",
+        "start": "2026-10-20T08:00:00-04:00",
+        "end": "2026-10-20T17:00:00-04:00",
+        "venue": "Weiser Hall",
+        "city": "Ann Arbor",
+        "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
       "id": "occ-17c99b36f101990d25046063",
       "title": "CCPS Photo Exhibition. This is the Place",
       "url": "https://events.umich.edu/event/149978",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
         "id": "occ-17c99b36f101990d25046063",
         "url": "https://events.umich.edu/event/149978",
@@ -2216,24 +2267,41 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     },
     {
-      "id": "occ-4729673f87fb3bff14950628",
-      "title": "Zade Dirani Live in Concert",
-      "url": "https://www.dso.org/events-and-tickets/events/26-27-fall/zade-dirani-live-in-concert?performance=11687",
-      "reason": "ValueError: Not an actionable upcoming occurrence",
+      "id": "occ-a9663796b198be056cebfb30",
+      "title": "The Moth StorySLAM - FRENEMIES",
+      "url": "https://blindpigmusic.com/tm-event/the-moth-storyslam-2/",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
       "inputFacts": {
-        "id": "occ-4729673f87fb3bff14950628",
-        "url": "https://www.dso.org/events-and-tickets/events/26-27-fall/zade-dirani-live-in-concert?performance=11687",
-        "start": "2026-10-18T20:00:00-04:00",
+        "id": "occ-a9663796b198be056cebfb30",
+        "url": "https://blindpigmusic.com/tm-event/the-moth-storyslam-2/",
+        "start": "2026-10-20T18:00:00-04:00",
         "end": null,
-        "venue": "Orchestra Hall",
-        "city": "Detroit",
-        "price": "$70–$200",
+        "venue": "The Blind Pig",
+        "city": "Ann Arbor, MI",
+        "price": "$21.91 +$5 AT THE DOOR IF UNDER 21",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-19T02:14:26.448605-04:00"
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
+    },
+    {
+      "id": "occ-8a051336fb0688f39ff8fc0e",
+      "title": "Bonnie “Prince” Billy",
+      "url": "https://theark.org/event/bonnie-prince-billy-261019/",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\"",
+      "inputFacts": {
+        "id": "occ-8a051336fb0688f39ff8fc0e",
+        "url": "https://theark.org/event/bonnie-prince-billy-261019/",
+        "start": "2026-10-19T20:00:00-04:00",
+        "end": "2026-10-19T23:00:00-04:00",
+        "venue": "The Ark",
+        "city": "Ann Arbor",
+        "price": "$40.00",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-19T13:29:29.827412-04:00"
     }
   ]
 }
