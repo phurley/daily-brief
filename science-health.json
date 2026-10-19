@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-19T10:14:42.592285Z",
+  "generatedAt": "2026-10-19T15:30:03.814548Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
   "documentGeneratedAt": "2026-10-19T10:14:42.592285Z",
@@ -26,25 +26,25 @@
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-19T10:14:42.592285Z",
+      "lastAttemptAt": "2026-10-19T15:30:03.814548Z",
       "lastSuccessAt": "2026-10-19T10:14:42.592285Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
-        "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/: ValueError: finding quote not present in article",
-        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: ValueError: evidence classification requires an article quote"
+        "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/: LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\"",
+        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: LLMError: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 3636. To increase, visit https://openrouter.ai/settings/credits and add more credits\",\"code\":402,\""
       ],
-      "candidateCount": 10,
-      "acceptedCount": 2,
-      "deferredCount": 4,
-      "rejectedCount": 2,
+      "candidateCount": 2,
+      "acceptedCount": 0,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-19T10:14:42.592285Z",
       "failedUrls": [
         "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/",
         "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/"
       ],
       "feedFailed": false,
-      "retryCount": 1,
-      "nextRetryAt": "2026-10-19T11:14:42.592285Z"
+      "retryCount": 2,
+      "nextRetryAt": "2026-10-19T17:30:03.814548Z"
     },
     "esa": {
       "name": "ESA",
@@ -133,7 +133,7 @@
       "technology": 43,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 6.16,
+    "newestStoryAgeHours": 11.42,
     "maxPublicationLagHours": 1114.28
   }
 }
