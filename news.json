@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-19T19:07:38-04:00",
+  "generatedAt": "2026-10-19T23:33:23-04:00",
   "editionDate": "2026-10-19",
   "stories": [
     {
@@ -94767,62 +94767,6 @@
       }
     },
     {
-      "id": "src-5e30665fac2e3a2af41afad6",
-      "title": "Jackopierce",
-      "summary": "The Ark announces ticket pricing details for Jackopierce's upcoming event. Online/phone purchases include MUTO's processing fee, while in-person purchases at The Ark during box office hours are available without fees. The event features Jack O’Neill and Cary Pi.",
-      "url": "https://theark.org/event/jackopierce-261023/",
-      "publishedAt": "2026-10-23T20:00:00-04:00",
-      "addedAt": "2026-10-09T17:12:32-04:00",
-      "urgentLocal": false,
-      "evidenceQuality": "primary",
-      "entities": [
-        "Jackopierce",
-        "The Ark"
-      ],
-      "locations": [
-        "Ann Arbor, MI"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "concert",
-        "event",
-        "ticket pricing"
-      ],
-      "source": {
-        "name": "The Ark"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.59,
-          "distinctive": 0.21,
-          "eclectic": 0.28,
-          "technical_science": 0.06,
-          "artsy": 0.92,
-          "progressive": 0.2,
-          "outdoors": 0.03,
-          "theatre": 0.08,
-          "live_music": 0.96,
-          "live_comedy": 0.35,
-          "farmer_market": 0.02,
-          "sporting": 0.02,
-          "recurring": 0.08,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.02,
-          "large_venue": 0.1,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.33,
-          "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.62,
-          "dance": 0.05,
-          "sales_related": 0.7,
-          "children_activity": 0.03,
-          "running": 0.02,
-          "exercise": 0.02,
-          "employment_related": 0.02
-        }
-      }
-    },
-    {
       "id": "jackopierce-to-perform-at-the-ark-in-ann-news-2026-10-23",
       "title": "Jackopierce to Perform at The Ark in Ann Arbor, MI",
       "summary": "Jackopierce, the musical duo consisting of Jack O’Neill and Cary Pierce, will perform at The Ark in Ann Arbor, MI. The duo has been creating music for 35 years and has amassed a loyal global fanbase through their high-energy live shows.",
@@ -170181,6 +170125,62 @@
           "sales_related": 0.27,
           "children_activity": 0.13,
           "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      }
+    },
+    {
+      "id": "src-5e30665fac2e3a2af41afad6",
+      "title": "Jackopierce",
+      "summary": "The Ark announces ticket pricing details for Jackopierce's upcoming event. Online/phone purchases include MUTO's processing fee, while in-person purchases at The Ark during box office hours are available without fees. The event features Jack O’Neill and Cary Pi.",
+      "url": "https://theark.org/event/jackopierce-261023/",
+      "publishedAt": "2026-10-23T20:00:00-04:00",
+      "addedAt": "2026-10-09T17:12:32-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "primary",
+      "entities": [
+        "Jackopierce",
+        "The Ark"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "concert",
+        "event",
+        "ticket pricing"
+      ],
+      "source": {
+        "name": "The Ark"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.59,
+          "distinctive": 0.21,
+          "eclectic": 0.28,
+          "technical_science": 0.06,
+          "artsy": 0.92,
+          "progressive": 0.2,
+          "outdoors": 0.03,
+          "theatre": 0.08,
+          "live_music": 0.96,
+          "live_comedy": 0.35,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.08,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.1,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.33,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.62,
+          "dance": 0.05,
+          "sales_related": 0.7,
+          "children_activity": 0.03,
+          "running": 0.02,
           "exercise": 0.02,
           "employment_related": 0.02
         }
