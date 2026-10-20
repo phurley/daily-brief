@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-10-19T23:35:23.920489-04:00",
+  "generatedAt": "2026-10-20T07:05:06.675165-04:00",
   "stories": [
     {
       "id": "construction-on-nathan-and-catherine-for-news-2026-10-17",
@@ -193,99 +193,6 @@
         "grounded": true,
         "groundingReason": "The article confirms that a suspicious letter was intercepted en route to Representative Elissa Slotkin's Detroit office, that it was part of a series of similar incidents, and that the FBI and U.S. Postal Inspection Service are investigating, with all staff reported safe."
       }
-    },
-    {
-      "id": "van-buren-township-planning-commission-a-news-2026-10-15",
-      "title": "Van Buren Township Planning Commission approves data center plan",
-      "summary": "The Van Buren Township Planning Commission approved the final site plan for the Project Cannoli Data Center, developed by Panattoni for Google, despite resident opposition. Preliminary construction has begun on the 282-acre site near Haggerty Road and I-95, with operations potentially starting late next year.",
-      "url": "https://www.wemu.org/wemu-news/2026-10-15/van-buren-township-planning-commission-approves-data-center-plan",
-      "publishedAt": "2026-10-15T21:51:47.767000-04:00",
-      "addedAt": "2026-10-16T23:44:07-04:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Van Buren Township Planning Commission",
-        "Project Cannoli Data Center",
-        "Panattoni Development",
-        "Google",
-        "Jeffrey Jahr",
-        "Kevin Meerschaert"
-      ],
-      "locations": [
-        "Van Buren Township",
-        "Haggerty Road and I-95 Service Drive"
-      ],
-      "localityIndex": 1,
-      "topics": [
-        "data center",
-        "planning commission",
-        "development",
-        "opposition",
-        "google"
-      ],
-      "source": {
-        "name": "Kevin Meerschaert",
-        "publication": "WEMU 89.1 FM"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.03,
-          "distinctive": 0.22,
-          "eclectic": 0.09,
-          "technical_science": 0.9,
-          "artsy": 0.03,
-          "progressive": 0.19,
-          "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.12,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.02,
-          "large_venue": 0.04,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.03,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/8a8e79d/2147483647/strip/true/crop/1920x1080+0+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F1f%2F69%2F404136324b84a6f0b7e48fbbc197%2Fvbt-planning.png",
-        "alt": "The president of Panattoni Development addresses the Van Buren Township Planning Commission at its October 15, 2026 meeting."
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-16T23:46:49.595678-04:00",
-        "expiresAt": "2026-10-19T23:46:49.595678-04:00",
-        "inputFacts": {
-          "id": "van-buren-township-planning-commission-a-news-2026-10-15",
-          "title": "Van Buren Township Planning Commission approves data center plan",
-          "url": "https://www.wemu.org/wemu-news/2026-10-15/van-buren-township-planning-commission-approves-data-center-plan",
-          "publishedAt": "2026-10-15T17:51:00-04:00",
-          "summary": "The Van Buren Township Planning Commission approved the final site plan for the Project Cannoli Data Center, developed by Panattoni for Google. Preliminary construction has begun on the 282-acre site near Haggerty Road and I-95 Service Drive, despite public opposition from residents. Operations could start late next year.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-15T21:51:47.767",
-        "datePrecision": "time",
-        "sourceHash": "2d438ee569cbbad4e60f958d37ed6ec4235218822533681bf84293e0b314c751",
-        "relevance": 4,
-        "novelty": 3,
-        "reason": "The approval of a large data center in a neighboring community has potential implications for local infrastructure, traffic, and environmental considerations, making it relevant to Canton and Plymouth residents.",
-        "storyKey": "van-buren-data-center-approval",
-        "localConnection": "Van Buren Township is a neighboring community to Canton and Plymouth.",
-        "grounded": true,
-        "groundingReason": "The summary accurately reflects the article's content regarding the approval of the data center, the developer, the client, resident opposition, and the project's timeline and location. This is a local development for Van Buren Township."
-      }
     }
   ],
   "corrections": [
@@ -320,21 +227,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "van-buren-township-planning-commission-a-news-2026-10-15",
-      "inputFacts": {
-        "id": "van-buren-township-planning-commission-a-news-2026-10-15",
-        "title": "Van Buren Township Planning Commission approves data center plan",
-        "url": "https://www.wemu.org/wemu-news/2026-10-15/van-buren-township-planning-commission-approves-data-center-plan",
-        "publishedAt": "2026-10-15T17:51:00-04:00",
-        "summary": "The Van Buren Township Planning Commission approved the final site plan for the Project Cannoli Data Center, developed by Panattoni for Google. Preliminary construction has begun on the 282-acre site near Haggerty Road and I-95 Service Drive, despite public opposition from residents. Operations could start late next year.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-15T21:51:47.767000-04:00",
-      "publicationEvidence": "2026-10-15T21:51:47.767",
-      "datePrecision": "time"
-    },
-    {
       "id": "michigan-advocates-work-to-ease-election-news-2026-10-19",
       "inputFacts": {
         "id": "michigan-advocates-work-to-ease-election-news-2026-10-19",
@@ -350,33 +242,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "commerce-township-based-outrun-hunger-to-news-2026-10-18",
+      "id": "how-to-register-to-vote-in-michigan-news-2026-10-20",
       "inputFacts": {
-        "id": "commerce-township-based-outrun-hunger-to-news-2026-10-18",
-        "title": "Commerce Township-based Outrun Hunger to host ‘Sweet 16 Running Strong’ 5k and 1-mile run to combat hunger",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/18/commerce-townships-outrun-hunger-to-host-sweet-16-running-strong-5k-and-1-mile-run-to-combat-hunger/",
-        "publishedAt": "2026-10-18T17:19:00-04:00",
-        "summary": "Outrun Hunger, a Commerce Township nonprofit, is hosting its 16th annual 5K and 1-mile run/walk on November 14 to combat hunger. The event has raised over $308,000 since 2011, helping nearly 12,000 families through local food pantries. Participants can register for races, volunteer, or donate, with prizes and sponsor gifts available for early registrants.",
+        "id": "how-to-register-to-vote-in-michigan-news-2026-10-20",
+        "title": "How to register to vote in Michigan",
+        "url": "https://www.hometownlife.com/story/news/politics/elections/2026/10/13/how-to-register-to-vote-in-michigan-november-election/92215000007/",
+        "publishedAt": "2026-10-20T00:00:00-04:00",
+        "summary": "The article outlines eligibility requirements and registration methods for voting in Michigan, including in-person, online, and mail options. Voters must be U.S. citizens, Michigan residents for 30 days, and at least 17½ years old. Registration deadlines and required documentation are detailed for the November election.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-10-18T21:19:11.008000+00:00",
-      "publicationEvidence": "2026-10-18T21:19:11.008Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "family-cleaning-out-home-finds-grenade-w-news-2026-10-17",
-      "inputFacts": {
-        "id": "family-cleaning-out-home-finds-grenade-w-news-2026-10-17",
-        "title": "Family cleaning out home finds grenade. What happened",
-        "url": "https://www.hometownlife.com/story/news/local/michigan/2026/10/17/hand-grenade-family-grandfather-van-buren-kalamazoo/92311540007/",
-        "publishedAt": "2026-10-17T21:00:00-04:00",
-        "summary": "Family members cleaning out their grandfather's Van Buren County home discovered a World War II-era hand grenade on Oct. 17, 2026. The decommissioned 1945 grenade was safely examined and dismantled by the Kalamazoo Bomb Squad after being reported to authorities at 12:20 p.m. The item was confirmed to have been previously decommissioned after initial uncertainty about its status.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-18T01:00:29+00:00",
-      "publicationEvidence": "2026-10-18T01:00:29Z",
+      "publishedAt": "2026-10-13T10:06:44+00:00",
+      "publicationEvidence": "2026-10-13T10:06:44Z",
       "datePrecision": "time"
     },
     {
@@ -453,36 +330,12 @@
       "publishedAt": "2026-10-19T09:00:00+00:00",
       "publicationEvidence": "2026-10-19T09:00:00Z",
       "datePrecision": "time"
-    },
-    {
-      "id": "geo-files-unfair-labor-practice-charge-a-news-2026-10-18",
-      "inputFacts": {
-        "id": "geo-files-unfair-labor-practice-charge-a-news-2026-10-18",
-        "title": "GEO files unfair labor practice charge against UMich",
-        "url": "https://www.michigandaily.com/news/administration/geo-files-unfair-labor-practice-charge-against-umich/",
-        "publishedAt": "2026-10-18T00:00:00-04:00",
-        "summary": "The University of Michigan’s Graduate Employees’ Organization (GEO) filed an unfair labor practice charge against the University for filing two felony charges against GEO President Hiab Teshome. GEO alleges the charges were retaliation for protected union activity, while the University denies the claims. Contract negotiations between GEO and UMich have stalled since November 2025, with core demands including better compensation and protections for international students.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-18T22:40:29+00:00",
-      "publicationEvidence": "2026-10-18T22:40:29+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-10-18",
-      "selectedIds": [
-        "van-buren-township-planning-commission-a-news-2026-10-15",
-        "construction-on-nathan-and-catherine-for-news-2026-10-17",
-        "scholten-s-grand-rapids-office-receives-news-2026-10-17"
-      ]
-    },
-    {
       "date": "2026-10-19",
       "selectedIds": [
-        "van-buren-township-planning-commission-a-news-2026-10-15",
         "construction-on-nathan-and-catherine-for-news-2026-10-17",
         "scholten-s-grand-rapids-office-receives-news-2026-10-17"
       ]
@@ -490,7 +343,13 @@
     {
       "date": "2026-10-20",
       "selectedIds": [
-        "van-buren-township-planning-commission-a-news-2026-10-15",
+        "construction-on-nathan-and-catherine-for-news-2026-10-17",
+        "scholten-s-grand-rapids-office-receives-news-2026-10-17"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "selectedIds": [
         "construction-on-nathan-and-catherine-for-news-2026-10-17",
         "scholten-s-grand-rapids-office-receives-news-2026-10-17"
       ]
