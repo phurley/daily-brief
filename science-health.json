@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-20T18:45:35.897421Z",
+  "generatedAt": "2026-10-20T23:24:18.971654Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
   "documentGeneratedAt": "2026-10-20T10:14:17.067713Z",
@@ -9,7 +9,7 @@
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-20T18:45:35.897421Z",
+      "lastAttemptAt": "2026-10-20T23:24:18.971654Z",
       "lastSuccessAt": "2026-10-20T10:14:17.067713Z",
       "lastNewStoryAt": "2026-10-19T10:14:42.592285Z",
       "errors": [
@@ -30,13 +30,13 @@
         "https://www.nasa.gov/centers-and-facilities/kennedy/nasa-improves-shock-vibration-analysis/"
       ],
       "feedFailed": false,
-      "retryCount": 3,
-      "nextRetryAt": "2026-10-20T22:45:35.897421Z"
+      "retryCount": 4,
+      "nextRetryAt": "2026-10-21T05:24:18.971654Z"
     },
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-20T16:15:36.070895Z",
+      "lastAttemptAt": "2026-10-20T23:24:18.971654Z",
       "lastSuccessAt": "2026-10-20T10:14:17.067713Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -57,13 +57,13 @@
         "https://www.nasa.gov/news-release/nasa-selects-far-infrared-telescope-as-first-in-new-mission-class/"
       ],
       "feedFailed": false,
-      "retryCount": 6,
-      "nextRetryAt": "2026-10-20T22:15:36.070895Z"
+      "retryCount": 7,
+      "nextRetryAt": "2026-10-21T05:24:18.971654Z"
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-20T18:45:35.897421Z",
+      "lastAttemptAt": "2026-10-20T23:24:18.971654Z",
       "lastSuccessAt": "2026-10-20T10:14:17.067713Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -84,13 +84,13 @@
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/Where_winds_blow_and_lava_flows"
       ],
       "feedFailed": false,
-      "retryCount": 3,
-      "nextRetryAt": "2026-10-20T22:45:35.897421Z"
+      "retryCount": 4,
+      "nextRetryAt": "2026-10-21T05:24:18.971654Z"
     },
     "nsf": {
       "name": "NSF",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-20T18:45:35.897421Z",
+      "lastAttemptAt": "2026-10-20T23:24:18.971654Z",
       "lastSuccessAt": "2026-10-20T10:14:17.067713Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -105,13 +105,13 @@
         "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support"
       ],
       "feedFailed": false,
-      "retryCount": 3,
-      "nextRetryAt": "2026-10-20T22:45:35.897421Z"
+      "retryCount": 4,
+      "nextRetryAt": "2026-10-21T05:24:18.971654Z"
     },
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-20T18:45:35.897421Z",
+      "lastAttemptAt": "2026-10-20T23:24:18.971654Z",
       "lastSuccessAt": "2026-10-20T10:14:17.067713Z",
       "lastNewStoryAt": "2026-10-17T10:01:38.386991Z",
       "errors": [
@@ -132,8 +132,8 @@
         "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family/"
       ],
       "feedFailed": false,
-      "retryCount": 3,
-      "nextRetryAt": "2026-10-20T22:45:35.897421Z"
+      "retryCount": 4,
+      "nextRetryAt": "2026-10-21T05:24:18.971654Z"
     }
   },
   "error": "Incomplete source checks: nasa, jpl, esa, nsf, umich",
@@ -171,7 +171,7 @@
       "technology": 43,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 38.68,
+    "newestStoryAgeHours": 43.32,
     "maxPublicationLagHours": 1114.28
   }
 }
