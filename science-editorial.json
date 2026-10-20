@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-10-20T06:14:28.238799-04:00",
+  "generatedAt": "2026-10-20T12:31:55.503135-04:00",
   "stories": [
     {
       "id": "science-e5124c0745a1a06e",
@@ -182,66 +182,6 @@
         "grounded": true,
         "groundingReason": "The article details a new finding by University of Michigan researchers regarding the hormetic effect of low-dose dicamba on oxalis weeds, including specific observations on flowering, seed production, pollinator interactions, and flower size, and explicitly states that it is a new finding."
       }
-    },
-    {
-      "id": "science-56e6d03cc572f45c",
-      "title": "Mollusk microbiome? It’s all in the family",
-      "summary": "University of Michigan researchers found that mollusk microbiome composition is primarily determined by species rather than environment, based on a review of 85 studies. This suggests that genetic lineage, or \"family tree,\" is more influential than habitat in shaping these microbial communities, which aid digestion and protection.",
-      "finding": "University of Michigan researchers found that mollusk microbiome composition is primarily determined by species rather than environment, based on a review of 85 studies. This suggests that genetic lineage, or \"family tree,\" is more influential than habitat in shaping these microbial communities, which aid digestion and protection.",
-      "significance": "Understanding the factors that shape mollusk microbiomes is crucial for predicting how these populations will respond to environmental changes, such as pollution or rising temperatures. This knowledge can help in preventing mollusk die-offs, which are important for ecosystem health.",
-      "caveat": "The study highlights a significant gap in research, noting that most studies focus on edible mollusk species and are concentrated in specific geographic regions. This human-centered research limits the understanding of the vast diversity of mollusk microbiomes and their responses to environmental changes.",
-      "url": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
-      "primarySourceUrl": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-14T10:59:06-04:00",
-      "firstSeenAt": "2026-10-15T10:00:00.772183Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-17T10:01:38.386991Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "biology",
-        "environment"
-      ],
-      "entities": [
-        "mollusk",
-        "microbiome",
-        "University of Michigan",
-        "Diana Vergara-Flórez",
-        "The ISME Journal"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://academic.oup.com/ismej/article/20/1/wrag092/8660834",
-      "sourceUpdatedAt": "2026-10-14T14:59:14Z",
-      "localConnection": "University of Michigan research in Ann Arbor.",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-10-17T06:30:57.621790-04:00",
-        "expiresAt": "2026-10-20T06:30:57.621790-04:00",
-        "inputFacts": {
-          "id": "science-56e6d03cc572f45c",
-          "title": "Mollusk microbiome? It’s all in the family",
-          "url": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
-          "publishedAt": "2026-10-14T14:59:06Z",
-          "summary": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
-          "finding": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
-          "sourceUpdatedAt": "2026-10-14T14:59:14Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-10-14T10:59:06-04:00",
-        "datePrecision": "time",
-        "sourceHash": "65a9a940e7b38ea6594653b094b85a771a9c8d32b300eac2e0a1cb2e2a094988",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "Substantive new finding in biology from a local university, relevant to understanding ecosystem health.",
-        "storyKey": "mollusk-microbiome-genetics",
-        "localConnection": "University of Michigan",
-        "grounded": true,
-        "groundingReason": "University of Michigan researchers conducted a review of 85 studies to determine that mollusk microbiome composition is primarily determined by species rather than environment, a new finding in the field."
-      }
     }
   ],
   "corrections": [
@@ -303,21 +243,6 @@
       },
       "publishedAt": "2026-10-15T10:29:26-04:00",
       "publicationEvidence": "2026-10-15T10:29:26-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-56e6d03cc572f45c",
-      "inputFacts": {
-        "id": "science-56e6d03cc572f45c",
-        "title": "Mollusk microbiome? It’s all in the family",
-        "url": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
-        "publishedAt": "2026-10-14T14:59:06Z",
-        "summary": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
-        "finding": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
-        "sourceUpdatedAt": "2026-10-14T14:59:14Z"
-      },
-      "publishedAt": "2026-10-14T10:59:06-04:00",
-      "publicationEvidence": "2026-10-14T10:59:06-04:00",
       "datePrecision": "time"
     },
     {
@@ -522,7 +447,7 @@
       "selectedIds": [
         "science-1a44212d3a049509",
         "science-8c5bf27decf07391",
-        "science-56e6d03cc572f45c"
+        "science-e5124c0745a1a06e"
       ]
     },
     {
