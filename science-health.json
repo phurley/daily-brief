@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-20T16:15:36.070895Z",
+  "generatedAt": "2026-10-20T18:45:35.897421Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
   "documentGeneratedAt": "2026-10-20T10:14:17.067713Z",
@@ -9,7 +9,7 @@
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-20T16:15:36.070895Z",
+      "lastAttemptAt": "2026-10-20T18:45:35.897421Z",
       "lastSuccessAt": "2026-10-20T10:14:17.067713Z",
       "lastNewStoryAt": "2026-10-19T10:14:42.592285Z",
       "errors": [
@@ -30,8 +30,8 @@
         "https://www.nasa.gov/centers-and-facilities/kennedy/nasa-improves-shock-vibration-analysis/"
       ],
       "feedFailed": false,
-      "retryCount": 2,
-      "nextRetryAt": "2026-10-20T18:15:36.070895Z"
+      "retryCount": 3,
+      "nextRetryAt": "2026-10-20T22:45:35.897421Z"
     },
     "jpl": {
       "name": "NASA JPL",
@@ -63,12 +63,12 @@
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-20T16:15:36.070895Z",
+      "lastAttemptAt": "2026-10-20T18:45:35.897421Z",
       "lastSuccessAt": "2026-10-20T10:14:17.067713Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
-        "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time: Timeout: Failed to perform, curl: (28) Operation timed out after 965148 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+        "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/Where_winds_blow_and_lava_flows: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
@@ -84,13 +84,13 @@
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/Where_winds_blow_and_lava_flows"
       ],
       "feedFailed": false,
-      "retryCount": 2,
-      "nextRetryAt": "2026-10-20T18:15:36.070895Z"
+      "retryCount": 3,
+      "nextRetryAt": "2026-10-20T22:45:35.897421Z"
     },
     "nsf": {
       "name": "NSF",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-20T16:15:36.070895Z",
+      "lastAttemptAt": "2026-10-20T18:45:35.897421Z",
       "lastSuccessAt": "2026-10-20T10:14:17.067713Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -105,13 +105,13 @@
         "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support"
       ],
       "feedFailed": false,
-      "retryCount": 2,
-      "nextRetryAt": "2026-10-20T18:15:36.070895Z"
+      "retryCount": 3,
+      "nextRetryAt": "2026-10-20T22:45:35.897421Z"
     },
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-20T16:15:36.070895Z",
+      "lastAttemptAt": "2026-10-20T18:45:35.897421Z",
       "lastSuccessAt": "2026-10-20T10:14:17.067713Z",
       "lastNewStoryAt": "2026-10-17T10:01:38.386991Z",
       "errors": [
@@ -132,8 +132,8 @@
         "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family/"
       ],
       "feedFailed": false,
-      "retryCount": 2,
-      "nextRetryAt": "2026-10-20T18:15:36.070895Z"
+      "retryCount": 3,
+      "nextRetryAt": "2026-10-20T22:45:35.897421Z"
     }
   },
   "error": "Incomplete source checks: nasa, jpl, esa, nsf, umich",
@@ -171,7 +171,7 @@
       "technology": 43,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 36.18,
+    "newestStoryAgeHours": 38.68,
     "maxPublicationLagHours": 1114.28
   }
 }
