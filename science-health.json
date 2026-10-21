@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-21T10:01:07.061340Z",
+  "generatedAt": "2026-10-21T17:17:12.021723Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
   "documentGeneratedAt": "2026-10-21T10:01:07.061340Z",
@@ -9,7 +9,7 @@
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-21T10:01:07.061340Z",
+      "lastAttemptAt": "2026-10-21T17:17:12.021723Z",
       "lastSuccessAt": "2026-10-21T10:01:07.061340Z",
       "lastNewStoryAt": "2026-10-19T10:14:42.592285Z",
       "errors": [
@@ -18,9 +18,9 @@
         "https://www.nasa.gov/general/nasa-to-conduct-low-altitude-flights-over-texas-farmland/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://www.nasa.gov/centers-and-facilities/glenn/sr-1-freedom-advances-with-progress-on-nuclear-power-module/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
-      "candidateCount": 10,
+      "candidateCount": 4,
       "acceptedCount": 0,
-      "deferredCount": 6,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-21T10:01:07.061340Z",
       "failedUrls": [
@@ -30,13 +30,13 @@
         "https://www.nasa.gov/centers-and-facilities/glenn/sr-1-freedom-advances-with-progress-on-nuclear-power-module/"
       ],
       "feedFailed": false,
-      "retryCount": 5,
-      "nextRetryAt": "2026-10-21T16:01:07.061340Z"
+      "retryCount": 6,
+      "nextRetryAt": "2026-10-21T23:17:12.021723Z"
     },
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-21T10:01:07.061340Z",
+      "lastAttemptAt": "2026-10-21T17:17:12.021723Z",
       "lastSuccessAt": "2026-10-21T10:01:07.061340Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -45,10 +45,10 @@
         "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-rover-catches-stunning-martian-dawn/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
-      "candidateCount": 10,
+      "candidateCount": 4,
       "acceptedCount": 0,
-      "deferredCount": 4,
-      "rejectedCount": 2,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-21T10:01:07.061340Z",
       "failedUrls": [
         "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/",
@@ -57,25 +57,25 @@
         "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-rover-catches-stunning-martian-dawn/"
       ],
       "feedFailed": false,
-      "retryCount": 8,
-      "nextRetryAt": "2026-10-21T16:01:07.061340Z"
+      "retryCount": 9,
+      "nextRetryAt": "2026-10-21T23:17:12.021723Z"
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-21T10:01:07.061340Z",
+      "lastAttemptAt": "2026-10-21T17:17:12.021723Z",
       "lastSuccessAt": "2026-10-21T10:01:07.061340Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
-        "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
-        "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
-        "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
-        "https://www.esa.int/ESA_Multimedia/Images/2026/10/Where_winds_blow_and_lava_flows: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
+        "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos: ValueError: feed publication date not corroborated by article",
+        "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time: ValueError: feed publication date not corroborated by article",
+        "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet: ValueError: feed publication date not corroborated by article",
+        "https://www.esa.int/ESA_Multimedia/Images/2026/10/Where_winds_blow_and_lava_flows: ValueError: feed publication date not corroborated by article"
       ],
-      "candidateCount": 15,
+      "candidateCount": 4,
       "acceptedCount": 0,
-      "deferredCount": 7,
-      "rejectedCount": 4,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-21T10:01:07.061340Z",
       "failedUrls": [
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos",
@@ -84,13 +84,13 @@
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/Where_winds_blow_and_lava_flows"
       ],
       "feedFailed": false,
-      "retryCount": 5,
-      "nextRetryAt": "2026-10-21T16:01:07.061340Z"
+      "retryCount": 6,
+      "nextRetryAt": "2026-10-21T23:17:12.021723Z"
     },
     "nsf": {
       "name": "NSF",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-21T10:01:07.061340Z",
+      "lastAttemptAt": "2026-10-21T17:17:12.021723Z",
       "lastSuccessAt": "2026-10-21T10:01:07.061340Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -98,10 +98,10 @@
         "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
-      "candidateCount": 15,
+      "candidateCount": 3,
       "acceptedCount": 0,
-      "deferredCount": 6,
-      "rejectedCount": 2,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-21T10:01:07.061340Z",
       "failedUrls": [
         "https://www.nsf.gov/news/podcast-can-americas-most-powerful-laser-unlock-universe",
@@ -109,13 +109,13 @@
         "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support"
       ],
       "feedFailed": false,
-      "retryCount": 5,
-      "nextRetryAt": "2026-10-21T16:01:07.061340Z"
+      "retryCount": 6,
+      "nextRetryAt": "2026-10-21T23:17:12.021723Z"
     },
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-21T10:01:07.061340Z",
+      "lastAttemptAt": "2026-10-21T17:17:12.021723Z",
       "lastSuccessAt": "2026-10-21T10:01:07.061340Z",
       "lastNewStoryAt": "2026-10-17T10:01:38.386991Z",
       "errors": [
@@ -124,9 +124,9 @@
         "https://news.umich.edu/the-stakes-appear-high-for-college-students-who-gamble/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://news.umich.edu/whatcha-lookin-at-social-anxiety-heightens-brain-sensitivity-to-others-gaze/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
-      "candidateCount": 20,
+      "candidateCount": 4,
       "acceptedCount": 0,
-      "deferredCount": 16,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-21T10:01:07.061340Z",
       "failedUrls": [
@@ -136,8 +136,8 @@
         "https://news.umich.edu/whatcha-lookin-at-social-anxiety-heightens-brain-sensitivity-to-others-gaze/"
       ],
       "feedFailed": false,
-      "retryCount": 5,
-      "nextRetryAt": "2026-10-21T16:01:07.061340Z"
+      "retryCount": 6,
+      "nextRetryAt": "2026-10-21T23:17:12.021723Z"
     }
   },
   "error": "Incomplete source checks: nasa, jpl, esa, nsf, umich",
@@ -175,7 +175,7 @@
       "technology": 43,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 53.94,
+    "newestStoryAgeHours": 61.2,
     "maxPublicationLagHours": 1114.28
   }
 }
