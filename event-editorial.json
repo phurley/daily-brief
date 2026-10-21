@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-21T17:59:52.133287-04:00",
+  "generatedAt": "2026-10-21T19:03:27.402961-04:00",
   "events": [],
   "rejections": [
     {
@@ -429,23 +429,6 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
-      "id": "occ-c8f085e4518a109cea05756e",
-      "title": "Happy Hour: Bart Moore & the Hot Boys of Jenison",
-      "url": "https://www.nstarlounge.com/events/hhbartmoorehboj",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-c8f085e4518a109cea05756e",
-        "url": "https://www.nstarlounge.com/events/hhbartmoorehboj",
-        "start": "2026-10-21T17:30:00-04:00",
-        "end": "2026-10-21T18:30:00-04:00",
-        "venue": "North Star Lounge, 301 North 5th Avenue, Ann Arbor, MI, 48104, United States",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-21T20:59:52.133287-04:00"
-    },
-    {
       "id": "occ-933d82015880e99b1a6ce3c5",
       "title": "Extra Credit",
       "url": "https://theark.org/event/extra-credit-261027/",
@@ -480,6 +463,23 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
+      "id": "occ-53b66b0050fff1b841c9a15c",
+      "title": "20th Annual Prechter Lecture: Celebrating Legacy and the Future",
+      "url": "https://events.umich.edu/event/151000",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-53b66b0050fff1b841c9a15c",
+        "url": "https://events.umich.edu/event/151000",
+        "start": "2026-10-21T17:30:00-04:00",
+        "end": "2026-10-21T20:15:00-04:00",
+        "venue": "Taubman Biomedical Science Research Building",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-21T22:03:27.402961-04:00"
+    },
+    {
       "id": "occ-38130f847665b4961c5f0e9c",
       "title": "Fashion/Forward",
       "url": "https://events.umich.edu/event/149758",
@@ -497,21 +497,21 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
-      "id": "occ-fd09b2390bdbc83c2d7bfd4a",
-      "title": "Temporal Belongings",
-      "url": "https://events.umich.edu/event/149773",
+      "id": "occ-a1f5423d38ffd821bc9d79ed",
+      "title": "International Candy Quiz - Trick or Treat at Oxford",
+      "url": "https://events.umich.edu/event/153578",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-fd09b2390bdbc83c2d7bfd4a",
-        "url": "https://events.umich.edu/event/149773",
-        "start": "2026-10-21T17:00:00-04:00",
-        "end": "2026-10-21T19:00:00-04:00",
-        "venue": "202 S. Thayer",
+        "id": "occ-a1f5423d38ffd821bc9d79ed",
+        "url": "https://events.umich.edu/event/153578",
+        "start": "2026-10-21T18:00:00-04:00",
+        "end": "2026-10-21T20:00:00-04:00",
+        "venue": "Oxford Housing",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-21T20:59:52.133287-04:00"
+      "retryAt": "2026-10-21T22:03:27.402961-04:00"
     },
     {
       "id": "occ-c987858bfe6e52e5289c4ce0",
