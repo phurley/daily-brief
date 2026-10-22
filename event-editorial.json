@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-21T19:03:27.402961-04:00",
+  "generatedAt": "2026-10-21T20:58:23.068085-04:00",
   "events": [],
   "rejections": [
     {
@@ -140,16 +140,16 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
-      "id": "occ-b3bbe7bb05f7c7cf3e7aaca6",
-      "title": "Faster and More Fun: American Home Cooking in the 1920s",
-      "url": "https://events.umich.edu/event/150658",
+      "id": "occ-8199431aa2f8f4a514efa135",
+      "title": "Comedy Workshop Graduation Performance",
+      "url": "https://www.aacomedy.com/comedy-workshop",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-b3bbe7bb05f7c7cf3e7aaca6",
-        "url": "https://events.umich.edu/event/150658",
-        "start": "2026-10-21T09:00:00-04:00",
-        "end": "2026-10-21T20:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
+        "id": "occ-8199431aa2f8f4a514efa135",
+        "url": "https://www.aacomedy.com/comedy-workshop",
+        "start": "2026-10-21T19:15:00-04:00",
+        "end": null,
+        "venue": "Ann Arbor Comedy Showcase",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
@@ -208,18 +208,18 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
-      "id": "occ-8199431aa2f8f4a514efa135",
-      "title": "Comedy Workshop Graduation Performance",
-      "url": "https://www.aacomedy.com/comedy-workshop",
+      "id": "occ-f5e75e1ece7959d120c7b1b3",
+      "title": "University Philharmonia Orchestra",
+      "url": "https://events.umich.edu/event/148666",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-8199431aa2f8f4a514efa135",
-        "url": "https://www.aacomedy.com/comedy-workshop",
-        "start": "2026-10-21T19:15:00-04:00",
-        "end": null,
-        "venue": "Ann Arbor Comedy Showcase",
+        "id": "occ-f5e75e1ece7959d120c7b1b3",
+        "url": "https://events.umich.edu/event/148666",
+        "start": "2026-10-21T20:00:00-04:00",
+        "end": "2026-10-21T22:00:00-04:00",
+        "venue": "Hill Auditorium",
         "city": "Ann Arbor",
-        "price": null,
+        "price": "Free - no tickets required",
         "status": "scheduled"
       },
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
@@ -259,18 +259,18 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
-      "id": "occ-f5e75e1ece7959d120c7b1b3",
-      "title": "University Philharmonia Orchestra",
-      "url": "https://events.umich.edu/event/148666",
+      "id": "occ-4098dfbb1396cbb0d6355a51",
+      "title": "Sav Madigan, The Burney Sisters and Emma Zinck",
+      "url": "https://theark.org/event/sav-madigan-emma-zinck-and-the-burney-sisters/",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-f5e75e1ece7959d120c7b1b3",
-        "url": "https://events.umich.edu/event/148666",
+        "id": "occ-4098dfbb1396cbb0d6355a51",
+        "url": "https://theark.org/event/sav-madigan-emma-zinck-and-the-burney-sisters/",
         "start": "2026-10-21T20:00:00-04:00",
-        "end": "2026-10-21T22:00:00-04:00",
-        "venue": "Hill Auditorium",
+        "end": "2026-10-21T23:00:00-04:00",
+        "venue": "The Ark",
         "city": "Ann Arbor",
-        "price": "Free - no tickets required",
+        "price": "$29.00 - $40.00",
         "status": "scheduled"
       },
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
@@ -327,21 +327,21 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
-      "id": "occ-4098dfbb1396cbb0d6355a51",
-      "title": "Sav Madigan, The Burney Sisters and Emma Zinck",
-      "url": "https://theark.org/event/sav-madigan-emma-zinck-and-the-burney-sisters/",
+      "id": "occ-4b96a10d9f9030fd21b7de16",
+      "title": "Down in Ann Arbor Town: Pictorial Maps, Campus Traditions, and the Women Who Made Them",
+      "url": "https://events.umich.edu/event/150290",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-4098dfbb1396cbb0d6355a51",
-        "url": "https://theark.org/event/sav-madigan-emma-zinck-and-the-burney-sisters/",
-        "start": "2026-10-21T20:00:00-04:00",
+        "id": "occ-4b96a10d9f9030fd21b7de16",
+        "url": "https://events.umich.edu/event/150290",
+        "start": "2026-10-21T08:00:00-04:00",
         "end": "2026-10-21T23:00:00-04:00",
-        "venue": "The Ark",
+        "venue": "Hatcher Graduate Library",
         "city": "Ann Arbor",
-        "price": "$29.00 - $40.00",
+        "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-21T20:59:52.133287-04:00"
+      "retryAt": "2026-10-21T23:58:23.068085-04:00"
     },
     {
       "id": "occ-0965000dbb63b4db2e87d0fb",
@@ -378,23 +378,6 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
-      "id": "occ-4b96a10d9f9030fd21b7de16",
-      "title": "Down in Ann Arbor Town: Pictorial Maps, Campus Traditions, and the Women Who Made Them",
-      "url": "https://events.umich.edu/event/150290",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-4b96a10d9f9030fd21b7de16",
-        "url": "https://events.umich.edu/event/150290",
-        "start": "2026-10-21T08:00:00-04:00",
-        "end": "2026-10-21T23:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-21T19:10:59.718535-04:00"
-    },
-    {
       "id": "occ-7258f00ad4d32ef779502910",
       "title": "After Dark: Weird Science",
       "url": "https://www.mi-sci.org/after-dark-weird-science-oct-23/",
@@ -427,6 +410,23 @@
         "status": "scheduled"
       },
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
+    },
+    {
+      "id": "occ-f5588f6dd7e0e52a9cd5ff8e",
+      "title": "Jason Dennie & Grant Flick",
+      "url": "https://www.nstarlounge.com/events/dennieflick10-21",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-f5588f6dd7e0e52a9cd5ff8e",
+        "url": "https://www.nstarlounge.com/events/dennieflick10-21",
+        "start": "2026-10-21T19:30:00-04:00",
+        "end": "2026-10-21T21:00:00-04:00",
+        "venue": "North Star Lounge",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-21T23:58:23.068085-04:00"
     },
     {
       "id": "occ-933d82015880e99b1a6ce3c5",
@@ -463,21 +463,21 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
-      "id": "occ-53b66b0050fff1b841c9a15c",
-      "title": "20th Annual Prechter Lecture: Celebrating Legacy and the Future",
-      "url": "https://events.umich.edu/event/151000",
+      "id": "occ-08c900820983cb50e116adc8",
+      "title": "Date Night: Aris Chalin Piano Duo",
+      "url": "https://bluellamaclub.com/event/aris-chalin-piano-duo-2/",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-53b66b0050fff1b841c9a15c",
-        "url": "https://events.umich.edu/event/151000",
-        "start": "2026-10-21T17:30:00-04:00",
-        "end": "2026-10-21T20:15:00-04:00",
-        "venue": "Taubman Biomedical Science Research Building",
+        "id": "occ-08c900820983cb50e116adc8",
+        "url": "https://bluellamaclub.com/event/aris-chalin-piano-duo-2/",
+        "start": "2026-10-21T19:00:00-04:00",
+        "end": null,
+        "venue": "Blue LLaMA Jazz Club",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-21T22:03:27.402961-04:00"
+      "retryAt": "2026-10-21T23:58:23.068085-04:00"
     },
     {
       "id": "occ-38130f847665b4961c5f0e9c",
@@ -497,21 +497,21 @@
       "retryAt": "2026-10-21T20:59:52.133287-04:00"
     },
     {
-      "id": "occ-a1f5423d38ffd821bc9d79ed",
-      "title": "International Candy Quiz - Trick or Treat at Oxford",
-      "url": "https://events.umich.edu/event/153578",
+      "id": "occ-9f12261cd2ac2ce9c586de72",
+      "title": "Sav Madigan, Emma Zinck, and Beth Nielsen Chapman",
+      "url": "https://events.umich.edu/event/151831",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-a1f5423d38ffd821bc9d79ed",
-        "url": "https://events.umich.edu/event/153578",
-        "start": "2026-10-21T18:00:00-04:00",
-        "end": "2026-10-21T20:00:00-04:00",
-        "venue": "Oxford Housing",
+        "id": "occ-9f12261cd2ac2ce9c586de72",
+        "url": "https://events.umich.edu/event/151831",
+        "start": "2026-10-21T20:00:00-04:00",
+        "end": "2026-10-21T23:00:00-04:00",
+        "venue": "The Ark",
         "city": "Ann Arbor",
-        "price": null,
+        "price": "See Site For Pricing Information",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-21T22:03:27.402961-04:00"
+      "retryAt": "2026-10-21T23:58:23.068085-04:00"
     },
     {
       "id": "occ-c987858bfe6e52e5289c4ce0",
