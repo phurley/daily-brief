@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-23T00:06:20.615973Z",
+  "generatedAt": "2026-10-23T06:41:04.841308Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
-  "documentGeneratedAt": "2026-10-22T10:02:27.044927Z",
+  "documentGeneratedAt": "2026-10-23T06:41:04.841308Z",
   "newestVerifiedStoryAt": "2026-10-19T04:05:00Z",
   "sources": {
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-23T00:06:20.615973Z",
+      "lastAttemptAt": "2026-10-23T06:41:04.841308Z",
       "lastSuccessAt": "2026-10-22T10:02:27.044927Z",
       "lastNewStoryAt": "2026-10-19T10:14:42.592285Z",
       "errors": [
@@ -30,13 +30,13 @@
         "https://www.nasa.gov/image-article/rs-25-engine-test-in-support-of-future-artemis-missions/"
       ],
       "feedFailed": false,
-      "retryCount": 11,
-      "nextRetryAt": "2026-10-23T06:06:20.615973Z"
+      "retryCount": 12,
+      "nextRetryAt": "2026-10-23T12:41:04.841308Z"
     },
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-23T00:06:20.615973Z",
+      "lastAttemptAt": "2026-10-23T06:41:04.841308Z",
       "lastSuccessAt": "2026-10-22T10:02:27.044927Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -57,13 +57,13 @@
         "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs/"
       ],
       "feedFailed": false,
-      "retryCount": 14,
-      "nextRetryAt": "2026-10-23T06:06:20.615973Z"
+      "retryCount": 15,
+      "nextRetryAt": "2026-10-23T12:41:04.841308Z"
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-23T00:06:20.615973Z",
+      "lastAttemptAt": "2026-10-23T06:41:04.841308Z",
       "lastSuccessAt": "2026-10-22T10:02:27.044927Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -84,13 +84,13 @@
         "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet"
       ],
       "feedFailed": false,
-      "retryCount": 11,
-      "nextRetryAt": "2026-10-23T06:06:20.615973Z"
+      "retryCount": 12,
+      "nextRetryAt": "2026-10-23T12:41:04.841308Z"
     },
     "nsf": {
       "name": "NSF",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-23T00:06:20.615973Z",
+      "lastAttemptAt": "2026-10-23T06:41:04.841308Z",
       "lastSuccessAt": "2026-10-22T10:02:27.044927Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
@@ -109,13 +109,13 @@
         "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support"
       ],
       "feedFailed": false,
-      "retryCount": 11,
-      "nextRetryAt": "2026-10-23T06:06:20.615973Z"
+      "retryCount": 12,
+      "nextRetryAt": "2026-10-23T12:41:04.841308Z"
     },
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-23T00:06:20.615973Z",
+      "lastAttemptAt": "2026-10-23T06:41:04.841308Z",
       "lastSuccessAt": "2026-10-22T10:02:27.044927Z",
       "lastNewStoryAt": "2026-10-17T10:01:38.386991Z",
       "errors": [
@@ -136,8 +136,8 @@
         "https://news.umich.edu/proposed-additional-id-requirements-for-voting-could-disenfranchise-more-than-1-in-4-detroit-adults/"
       ],
       "feedFailed": false,
-      "retryCount": 11,
-      "nextRetryAt": "2026-10-23T06:06:20.615973Z"
+      "retryCount": 12,
+      "nextRetryAt": "2026-10-23T12:41:04.841308Z"
     }
   },
   "error": "Incomplete source checks: nasa, jpl, esa, nsf, umich",
@@ -175,7 +175,7 @@
       "technology": 43,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 92.02,
+    "newestStoryAgeHours": 98.6,
     "maxPublicationLagHours": 1114.28
   }
 }
