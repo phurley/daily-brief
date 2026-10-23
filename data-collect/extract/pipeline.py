@@ -169,6 +169,19 @@ def _store_fingerprint(record: dict[str, Any]) -> Optional[str]:
     return f"{slug}:{EXTRACTOR_VERSION}:{cid}" if slug and cid else None
 
 
+def _content_key(rec: dict[str, Any]) -> Optional[tuple[str, str]]:
+    """Page-independent identity of a chunk's text.
+
+    ``chunk_id`` hashes the whole page and the chunk's offsets, so any edit
+    elsewhere on a page (a trending box, a new teaser) renames every chunk on
+    it. Identical normalized text from the same source is the same work.
+    Feeds already fingerprint their content and are excluded.
+    """
+    if rec.get("_kind") == "feed" or not rec.get("content_hash"):
+        return None
+    return rec.get("source_slug") or "", rec["content_hash"]
+
+
 def load_index(path: Path) -> set[str]:
     return {fp for fp, state in retry.load_states(path).items()
             if state.get("outcome") in retry.TERMINAL}
@@ -313,7 +326,10 @@ def select_work(candidates, states, archived, store, ref, *, max_items, retry_li
             all_candidates[row["fp"]] = c
     all_candidates.update({_fingerprint(c): c for c in candidates})
     previous = previous_outputs(store, list(all_candidates.values()))
-    fresh, pending = [], []
+    # Text already through the gate under another chunk_id keeps that state
+    # (and its retry budget); the renamed copy is not paid for again.
+    known = {_content_key(c) for fp, c in all_candidates.items() if fp in states} - {None}
+    fresh, pending, content_cached = [], [], 0
     for fp, c in all_candidates.items():
         if not c.get("in_window", True) or not c.get("is_canonical", True):
             continue
@@ -327,7 +343,15 @@ def select_work(candidates, states, archived, store, ref, *, max_items, retry_li
         if days is not None and days < -stale_days:
             continue
         state = states.get(fp, {})
-        if c.get("source_slug") in reextract_sources or not state:
+        if c.get("source_slug") in reextract_sources:
+            fresh.append(c)
+        elif not state:
+            key = _content_key(c)
+            if key in known:
+                content_cached += 1
+                continue
+            if key:
+                known.add(key)
             fresh.append(c)
         elif retry.due(state, ref, max_attempts):
             pending.append(c)
@@ -343,7 +367,8 @@ def select_work(candidates, states, archived, store, ref, *, max_items, retry_li
     fresh = [c for c in fresh if id(c) not in direct]
     repairs = select(pending, min(retry_limit, max_items), ref)
     selected = mechanical + repairs + select(fresh, max_items - len(repairs), ref)
-    return selected, previous, {"fresh": len(fresh) + len(mechanical), "retry_due": len(pending), "retry_selected": len(repairs)}
+    return selected, previous, {"fresh": len(fresh) + len(mechanical), "retry_due": len(pending),
+                                "retry_selected": len(repairs), "content_cached": content_cached}
 
 
 def priority(rec: dict[str, Any], ref: datetime) -> tuple:
@@ -792,6 +817,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         replay_days=opts.replay_days, stale_days=opts.stale_days,
         reextract_sources=opts.reextract_source, source_specs=load_source_specs(opts.source_file))
     print(f"candidates={len(candidates)} fresh={selection['fresh']} "
+          f"content_cached={selection['content_cached']} "
           f"retry_due={selection['retry_due']} retry_selected={selection['retry_selected']} "
           f"selected={len(selected)} store={len(store)}", flush=True)
     if opts.dry_run:

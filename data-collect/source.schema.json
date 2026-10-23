@@ -78,11 +78,12 @@
         "frequency": {
           "type": "string",
           "title": "Frequency",
-          "description": "How often the source is expected to be polled or is known to publish. \"4hours\" denotes four-times-daily polling; \"2weeks\" is once every 14 days.",
+          "description": "How often the source is expected to be polled or is known to publish. \"4hours\" denotes four-times-daily polling; \"3days\" is once every 3 days; \"2weeks\" is once every 14 days.",
           "enum": [
             "hourly",
             "4hours",
             "daily",
+            "3days",
             "weekly",
             "2weeks",
             "monthly"

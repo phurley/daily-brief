@@ -7,12 +7,12 @@
 #   4. vibe-check/run.sh -> refresh repo-root vibe.json (best-effort)
 #
 # Serialized with a lock, keeps the Mac awake, appends to data-collect/cron.log.
-# Designed to run hourly from cron/launchd: the crawler itself decides which
-# sources are due from their `frequency`, so an invocation with nothing due
-# exits immediately after step 1.
+# Designed to run daily from launchd: the crawler itself decides which
+# sources are due from their `frequency` (daily / 3days / weekly ...), so an
+# invocation with nothing due exits immediately after step 1.
 #
 # Usage:
-#   ./run_collect.sh                 # normal hourly run
+#   ./run_collect.sh                 # normal scheduled run
 #   ./run_collect.sh --force         # re-crawl every source (args go to crawl_sources.py)
 #   COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2   # verify without touching GitHub
 #
@@ -82,7 +82,7 @@ case "$EVENT_IDENTITY_FUZZY" in 0|1) ;; *) echo "invalid EVENT_IDENTITY_FUZZY"; 
 export EVENT_IDENTITY_MODE EVENT_IDENTITY_FUZZY
 echo "event identity: mode=$EVENT_IDENTITY_MODE fuzzy=$EVENT_IDENTITY_FUZZY"
 
-# Reuse the hourly wakeup for failed science work only. Healthy sources keep
+# Reuse the collection wakeup for failed science work only. Healthy sources keep
 # their daily schedule; run before the local crawler so its failures cannot
 # prevent science recovery. The science wrapper owns its own lock and backoff.
 if [ "${SCIENCE_RETRY_ENABLED:-1}" = 1 ] && [ "${COLLECT_NO_PUSH:-}" != 1 ] && [ "${COLLECT_OUT_DIR:-$ROOT}" = "$ROOT" ]; then

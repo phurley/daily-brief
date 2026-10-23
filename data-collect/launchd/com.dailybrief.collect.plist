@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
-  Hourly Daily Brief collection job.
+  Daily Daily Brief collection job (01:30).
 
-  Install (see README "Scheduled collection (hourly)"):
+  Install (see README "Configure the daily job (launchd)"):
     cp launchd/com.dailybrief.collect.plist ~/Library/LaunchAgents/
     launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.dailybrief.collect.plist
 
   Edit the three /Users/phurley/daily-brief/data-collect paths below if this
   checkout lives somewhere else. launchd (not cron) is used because cron does
-  not fire while the Mac is asleep and launchd coalesces missed runs on wake.
+  not fire while the Mac is asleep; launchd runs a missed calendar slot on wake.
 -->
 <plist version="1.0">
 <dict>
@@ -24,9 +24,15 @@
     <key>WorkingDirectory</key>
     <string>/Users/phurley/daily-brief/data-collect</string>
 
-    <!-- Every hour. launchd coalesces missed runs after sleep/wake. -->
-    <key>StartInterval</key>
-    <integer>3600</integer>
+    <!-- Once a day, after the 00:05 edition rollover. Sources declare their
+         own frequency (daily / 3days / weekly ...); a missed slot runs on wake. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>1</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
 
     <key>RunAtLoad</key>
     <false/>

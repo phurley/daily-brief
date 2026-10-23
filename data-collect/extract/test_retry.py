@@ -206,6 +206,60 @@ class RetryTests(unittest.TestCase):
         c["signals"] = {"date_spans":[{"iso":"2026-10-23T12:00:00-04:00"}]}
         self.assertEqual(len(self.select([], states, archived={fp:{"fp":fp,"candidate":c}})[0]), 1)
 
+    def test_renamed_chunk_with_known_text_is_not_paid_again(self):
+        # A page edit elsewhere renames every chunk_id; the text is unchanged.
+        old, renamed = candidate("old", content_hash="h1"), candidate("new", content_hash="h1")
+        fp = pipeline._fingerprint(old)
+        states = {fp: {"outcome": "rejected", "ts": NOW.isoformat()}}
+        selected, _, stats = self.select([renamed], states, archived={fp: {"fp": fp, "candidate": old}})
+        self.assertEqual(selected, [])
+        self.assertEqual(stats["content_cached"], 1)
+
+    def test_renamed_chunk_leaves_retries_to_the_original_state(self):
+        old, renamed = candidate("old", content_hash="h1"), candidate("new", content_hash="h1")
+        fp = pipeline._fingerprint(old)
+        states = {fp: {"outcome": "retry", "attempts": 1, "nextRetryAt": NOW.isoformat()}}
+        selected, _, stats = self.select([renamed], states, archived={fp: {"fp": fp, "candidate": old}})
+        self.assertEqual([c["chunk_id"] for c in selected], ["old"])
+        self.assertEqual(stats["retry_selected"], 1)
+        self.assertEqual(stats["content_cached"], 1)
+
+    def test_identical_text_in_one_run_is_selected_once(self):
+        a, b = candidate("a", content_hash="h1"), candidate("b", content_hash="h1")
+        selected, _, stats = self.select([a, b], {})
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(stats["content_cached"], 1)
+
+    def test_content_cache_is_per_source_and_bypassed_by_reextract(self):
+        old = candidate("old", content_hash="h1")
+        fp = pipeline._fingerprint(old)
+        states = {fp: {"outcome": "rejected", "ts": NOW.isoformat()}}
+        archived = {fp: {"fp": fp, "candidate": old}}
+        other = candidate("new", content_hash="h1", source_slug="other")
+        self.assertEqual(self.select([other], states, archived=archived)[0], [other])
+        renamed = candidate("new", content_hash="h1")
+        self.assertIn(renamed, self.select([renamed], states, archived=archived, reextract_sources=("venue",))[0])
+
+    def test_main_does_not_repay_a_renamed_chunk(self):
+        chat, _ = self.clients()
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "venue"
+            source.mkdir()
+            chunks = source / "chunks.jsonl"
+            out, index = root / "records.jsonl", root / "index.jsonl"
+            args = ["--processed", str(root), "--out", str(out), "--index", str(index),
+                    "--source-file", str(root / "missing.json"), "--no-enrich", "--workers", "1"]
+            chunks.write_text(json.dumps(candidate("before-edit", content_hash="h1")) + "\n")
+            self.assertEqual(pipeline.main(args), 0)
+            self.assertEqual(chat.complete_json.call_count, 1)
+            chunks.write_text(json.dumps(candidate("after-edit", content_hash="h1")) + "\n")
+            with patch("sys.stdout", new_callable=io.StringIO) as stdout:
+                self.assertEqual(pipeline.main(args), 0)
+            self.assertIn("content_cached=1", stdout.getvalue())
+            self.assertEqual(chat.complete_json.call_count, 1)
+            self.assertEqual(len(pipeline.load_store(out)), 1)
+
     def test_main_persists_retry_then_success_and_skips_third_run(self):
         chat, _ = self.clients()
         chat.complete_json.side_effect = [llm.LLMError("503"), event()]

@@ -70,11 +70,16 @@ FREQUENCY_SECONDS: dict[str, int] = {
     "hourly": 60 * 60,
     "4hours": 4 * 60 * 60,
     "daily": 24 * 60 * 60,
+    "3days": 3 * 24 * 60 * 60,
     "weekly": 7 * 24 * 60 * 60,
     "2weeks": 14 * 24 * 60 * 60,
     "monthly": 30 * 24 * 60 * 60,
 }
 DEFAULT_FREQUENCY = "daily"
+# A source counts as due slightly early so a fixed daily run does not miss a
+# source whose previous crawl finished a few minutes after the run started.
+DUE_SLACK_FRACTION = 0.1
+DUE_SLACK_MAX_SECONDS = 2 * 60 * 60
 DEFAULT_ENGINE = "auto"
 ENGINES = ("auto", "browser", "http", "api")
 
@@ -279,6 +284,10 @@ class Source:
     @property
     def period_seconds(self) -> int:
         return FREQUENCY_SECONDS.get(self.frequency, FREQUENCY_SECONDS[DEFAULT_FREQUENCY])
+
+    def due_at(self, last_ok: datetime) -> datetime:
+        slack = min(self.period_seconds * DUE_SLACK_FRACTION, DUE_SLACK_MAX_SECONDS)
+        return last_ok + timedelta(seconds=self.period_seconds - slack)
 
     def to_meta(self) -> dict[str, Any]:
         return {
@@ -2309,7 +2318,7 @@ def select_jobs(
             jobs.append(Job(source, "force"))
             continue
         last_ok = successes.get(source.name)
-        due_at = last_ok + timedelta(seconds=source.period_seconds) if last_ok else None
+        due_at = source.due_at(last_ok) if last_ok else None
         if due_at is None or now >= due_at:
             jobs.append(Job(source, "scheduled"))
         else:
@@ -2343,7 +2352,7 @@ def print_status(
         if last_ok is None:
             next_due = "due now"
         else:
-            due = last_ok + timedelta(seconds=source.period_seconds)
+            due = source.due_at(last_ok)
             next_due = human_until(due, now)
 
         rows.append(

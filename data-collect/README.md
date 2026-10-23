@@ -27,13 +27,15 @@ python3 -m venv .venv
 .venv/bin/python crawl_sources.py --prune 50  # trim the log to 50 rows/source
 ```
 
-Run from cron/launchd as often as the shortest frequency (e.g. hourly); the
-crawler itself decides what is due.
+Run from launchd once a day (01:30); the crawler itself decides what is due.
+A source becomes due up to 10% of its period early (at most 2 hours), so a
+fixed daily run does not skip a source whose last crawl finished a few minutes
+after the previous run started.
 
 ## How it decides what to crawl
 
 Each source has a `frequency` in `source.json` (`hourly`, `4hours`, `daily`,
-`weekly`, `2weeks`, `monthly`). A source is crawled when its **last successful** run is
+`3days`, `weekly`, `2weeks`, `monthly`). A source is crawled when its **last successful** run is
 older than that period. `--force` ignores the schedule. Because scheduling keys
 off success, a source that fails but succeeded recently is not hammered every
 run; once it is overdue it is retried until it succeeds.
@@ -172,7 +174,7 @@ Without a key/template the provider is disabled automatically.
 Because it is only a fallback, usage is tiny: only the handful of sources that
 survive every mechanical tier.
 
-## Scheduled collection (hourly)
+## Scheduled collection (daily)
 
 `run_collect.sh` is the one entry point: it runs the full pipeline and publishes
 the result. It serializes runs (no overlap), keeps the Mac awake for the whole
@@ -186,11 +188,11 @@ run, and appends timestamped output to `data-collect/cron.log`.
 For individual stages or a manual run, see [Extraction](#extraction) below;
 `run_crawler.sh` runs only step 1.
 
-### Configure the hourly job (launchd)
+### Configure the daily job (launchd)
 
 A ready-to-install agent is tracked at
 [`launchd/com.dailybrief.collect.plist`](launchd/com.dailybrief.collect.plist)
-(`StartInterval` 3600). Edit its three `/Users/phurley/…` paths if the checkout
+(`StartCalendarInterval` 01:30 daily). Edit its three `/Users/phurley/…` paths if the checkout
 lives elsewhere, then install:
 
 ```sh
@@ -200,7 +202,7 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.dailybrief.collect.p
 ```
 
 `launchd` is used instead of cron because cron does **not** fire while the Mac
-is asleep and launchd coalesces missed runs on wake. `caffeinate` only prevents
+is asleep, while launchd runs a missed calendar slot on wake. `caffeinate` only prevents
 sleep *during* a run.
 
 Manage the job:
@@ -208,7 +210,7 @@ Manage the job:
 ```sh
 launchctl print gui/$(id -u)/com.dailybrief.collect          # status
 launchctl kickstart -k gui/$(id -u)/com.dailybrief.collect   # run now
-launchctl bootout gui/$(id -u)/com.dailybrief.collect        # stop hourly runs
+launchctl bootout gui/$(id -u)/com.dailybrief.collect        # stop daily runs
 ```
 
 #### Cron alternative
@@ -225,7 +227,7 @@ If cron gets `Operation not permitted`, grant `/usr/sbin/cron` Full Disk Access
 `kitchen.local` uses the system LaunchDaemon template
 [`launchd/com.dailybrief.collect.daemon.plist`](launchd/com.dailybrief.collect.daemon.plist),
 running as `phurley`, so collection does not depend on that user's GUI login.
-It runs at load and hourly. Install it as
+It runs daily at 01:30. Install it as
 `/Library/LaunchDaemons/com.dailybrief.collect.plist` (root:wheel, mode 644),
 then bootstrap it with `sudo launchctl bootstrap system <installed path>`.
 Before switching, boot out the old GUI job if loaded and move its installed
@@ -252,7 +254,7 @@ saving changes. Unknown session closing times remain omitted. Genuine continuous
 events retain their original range. Unresolved schedules go to the private
 event quarantine rather than appearing available on every day.
 
-The hourly collector runs `python -m extract.repair_schedules --apply` before
+The scheduled collector runs `python -m extract.repair_schedules --apply` before
 publication. This idempotent migration recovers legacy spans from archived or
 current matching source candidates without model calls or resetting extraction
 fingerprints. Changed stores are backed up beside `extracted_records.jsonl`,
@@ -287,15 +289,19 @@ COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
 
 ### Run knobs and review
 
-- Cadence: hourly matches the shortest `frequency`; `4hours`/`daily`/`weekly`/
-  `monthly` sources only run when due. With nothing due, step 1 exits
+- Cadence: daily; `3days`/`weekly`/`2weeks`/`monthly` sources only run when
+  due. With nothing due, step 1 exits
   immediately; the funnel still re-runs over the existing corpus.
 - Review: `.venv/bin/python crawl_sources.py --status` / `--errors`; `tail -f cron.log`.
 - Env knobs: `COLLECT_MAX_ITEMS` (2000), `COLLECT_EXTRACT_LIMIT` (800),
   `COLLECT_CONCURRENCY` (8), `COLLECT_OUT_DIR` (repo root), `COLLECT_NO_PUSH`.
 - Incremental funnel: every triaged/extracted candidate is fingerprinted in
   `processed/extraction_index.jsonl`; successful candidates are not paid for again,
-  while failed or incomplete attempts enter the bounded retry queue below. Records
+  while failed or incomplete attempts enter the bounded retry queue below. A page
+  chunk's `chunk_id` changes whenever anything else on its page changes, so a
+  chunk whose normalized text (`content_hash`) was already triaged for the same
+  source is skipped (`content_cached` in the run summary) and the earlier copy
+  keeps its state and retry budget. Records
   accumulate in `processed/extracted_records.jsonl`. `COLLECT_MAX_ITEMS` is a
   per-run cap, not a steady-state cost — candidates dated more than 2 days
   in the past are skipped entirely and the rest are sorted nearest-to-today
@@ -314,7 +320,7 @@ fingerprint controls scheduling.
 Retries wait one hour after the first attempt and four hours after the second;
 three unsuccessful attempts end in `exhausted`. The original candidate and
 incomplete records remain available for inspection. There is no sleep inside a
-collection run: a later hourly run handles due work. The retry allowance is 50
+collection run: a later scheduled run handles due work. The retry allowance is 50
 candidates per run, inside the existing overall selection/extraction limits.
 
 Incomplete event retries revisit the event's own detail page, trying matching
@@ -334,7 +340,7 @@ output is a replay candidate, not proof of a missed unique event.
 
 Controls: `--retry-limit 50` (`0` disables retries/replay), `--max-attempts 3`,
 `--retry-backoff-hours 1`, and `--replay-days 14` (`0` disables legacy replay).
-`--dry-run` previews selection with no API calls or writes. The normal hourly
+`--dry-run` previews selection with no API calls or writes. The normal scheduled
 entry point uses these defaults without a new timer. The run summary reports
 retry selection, validated completions, repair candidates, and exhausted work;
 index entries include attempt counts, reasons, next retry times, and valid output
