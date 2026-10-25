@@ -1,43 +1,43 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-25T05:30:02.885844Z",
+  "generatedAt": "2026-10-25T10:07:23.492406Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
-  "documentGeneratedAt": "2026-10-25T05:30:02.885844Z",
+  "documentGeneratedAt": "2026-10-25T10:07:23.492406Z",
   "newestVerifiedStoryAt": "2026-10-19T04:05:00Z",
   "sources": {
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-25T05:30:02.885844Z",
-      "lastSuccessAt": "2026-10-24T10:00:53.303959Z",
+      "lastAttemptAt": "2026-10-25T10:07:23.492406Z",
+      "lastSuccessAt": "2026-10-25T10:07:23.492406Z",
       "lastNewStoryAt": "2026-10-19T10:14:42.592285Z",
       "errors": [
+        "https://science.nasa.gov/image-article/apod-2026-october-25-dark-matter-in-a-simulated-universe/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://science.nasa.gov/image-article/apod-2026-october-24-rosettas-selfie/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://www.nasa.gov/missions/artemis/nasa-partners-accelerate-lander-development-for-2028-moon-missions/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
-        "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
-        "https://science.nasa.gov/missions/swift/nasas-swift-mission-ends/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
+        "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
-      "candidateCount": 4,
+      "candidateCount": 10,
       "acceptedCount": 0,
-      "deferredCount": 0,
+      "deferredCount": 6,
       "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-24T10:00:53.303959Z",
+      "lastFullAttemptAt": "2026-10-25T10:07:23.492406Z",
       "failedUrls": [
+        "https://science.nasa.gov/image-article/apod-2026-october-25-dark-matter-in-a-simulated-universe/",
         "https://science.nasa.gov/image-article/apod-2026-october-24-rosettas-selfie/",
         "https://www.nasa.gov/missions/artemis/nasa-partners-accelerate-lander-development-for-2028-moon-missions/",
-        "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/",
-        "https://science.nasa.gov/missions/swift/nasas-swift-mission-ends/"
+        "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/"
       ],
       "feedFailed": false,
-      "retryCount": 16,
-      "nextRetryAt": "2026-10-25T11:30:02.885844Z"
+      "retryCount": 17,
+      "nextRetryAt": "2026-10-25T16:07:23.492406Z"
     },
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-25T05:30:02.885844Z",
-      "lastSuccessAt": "2026-10-24T10:00:53.303959Z",
+      "lastAttemptAt": "2026-10-25T10:07:23.492406Z",
+      "lastSuccessAt": "2026-10-25T10:07:23.492406Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
         "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
@@ -45,11 +45,11 @@
         "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
-      "candidateCount": 4,
+      "candidateCount": 10,
       "acceptedCount": 0,
-      "deferredCount": 0,
-      "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-24T10:00:53.303959Z",
+      "deferredCount": 5,
+      "rejectedCount": 1,
+      "lastFullAttemptAt": "2026-10-25T10:07:23.492406Z",
       "failedUrls": [
         "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/",
         "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/",
@@ -57,14 +57,14 @@
         "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs/"
       ],
       "feedFailed": false,
-      "retryCount": 19,
-      "nextRetryAt": "2026-10-25T11:30:02.885844Z"
+      "retryCount": 20,
+      "nextRetryAt": "2026-10-25T16:07:23.492406Z"
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-25T05:30:02.885844Z",
-      "lastSuccessAt": "2026-10-24T10:00:53.303959Z",
+      "lastAttemptAt": "2026-10-25T10:07:23.492406Z",
+      "lastSuccessAt": "2026-10-25T10:07:23.492406Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
@@ -72,11 +72,11 @@
         "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
-      "candidateCount": 4,
+      "candidateCount": 15,
       "acceptedCount": 0,
-      "deferredCount": 0,
-      "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-24T10:00:53.303959Z",
+      "deferredCount": 7,
+      "rejectedCount": 4,
+      "lastFullAttemptAt": "2026-10-25T10:07:23.492406Z",
       "failedUrls": [
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos",
@@ -84,14 +84,14 @@
         "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet"
       ],
       "feedFailed": false,
-      "retryCount": 16,
-      "nextRetryAt": "2026-10-25T11:30:02.885844Z"
+      "retryCount": 17,
+      "nextRetryAt": "2026-10-25T16:07:23.492406Z"
     },
     "nsf": {
       "name": "NSF",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-25T05:30:02.885844Z",
-      "lastSuccessAt": "2026-10-24T10:00:53.303959Z",
+      "lastAttemptAt": "2026-10-25T10:07:23.492406Z",
+      "lastSuccessAt": "2026-10-25T10:07:23.492406Z",
       "lastNewStoryAt": "2026-10-14T10:00:06.638546Z",
       "errors": [
         "https://www.nsf.gov/news/podcast-can-americas-most-powerful-laser-unlock-universe: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
@@ -99,11 +99,11 @@
         "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://www.nsf.gov/news/nsf-ukri-metascience-statement: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
-      "candidateCount": 4,
+      "candidateCount": 15,
       "acceptedCount": 0,
-      "deferredCount": 0,
-      "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-24T10:00:53.303959Z",
+      "deferredCount": 8,
+      "rejectedCount": 3,
+      "lastFullAttemptAt": "2026-10-25T10:07:23.492406Z",
       "failedUrls": [
         "https://www.nsf.gov/news/podcast-can-americas-most-powerful-laser-unlock-universe",
         "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes",
@@ -111,14 +111,14 @@
         "https://www.nsf.gov/news/nsf-ukri-metascience-statement"
       ],
       "feedFailed": false,
-      "retryCount": 16,
-      "nextRetryAt": "2026-10-25T11:30:02.885844Z"
+      "retryCount": 17,
+      "nextRetryAt": "2026-10-25T16:07:23.492406Z"
     },
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-25T05:30:02.885844Z",
-      "lastSuccessAt": "2026-10-24T10:00:53.303959Z",
+      "lastAttemptAt": "2026-10-25T10:07:23.492406Z",
+      "lastSuccessAt": "2026-10-25T10:07:23.492406Z",
       "lastNewStoryAt": "2026-10-17T10:01:38.386991Z",
       "errors": [
         "https://news.umich.edu/as-concerns-over-purchasing-power-dominate-consumer-sentiment-moves-sideways/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
@@ -126,11 +126,11 @@
         "https://news.umich.edu/cleaner-brick-kilns-cut-pollution-but-gains-did-not-reach-workers-u-m-research-finds/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or ",
         "https://news.umich.edu/early-voting-open-at-u-m-2-voting-hubs-20-new-ballot-education-stations/: LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or "
       ],
-      "candidateCount": 4,
+      "candidateCount": 20,
       "acceptedCount": 0,
-      "deferredCount": 0,
+      "deferredCount": 16,
       "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-24T10:00:53.303959Z",
+      "lastFullAttemptAt": "2026-10-25T10:07:23.492406Z",
       "failedUrls": [
         "https://news.umich.edu/as-concerns-over-purchasing-power-dominate-consumer-sentiment-moves-sideways/",
         "https://news.umich.edu/beyond-the-whiteboard-u-m-experts-explore-scaling-aiwithout-losing-the-human/",
@@ -138,8 +138,8 @@
         "https://news.umich.edu/early-voting-open-at-u-m-2-voting-hubs-20-new-ballot-education-stations/"
       ],
       "feedFailed": false,
-      "retryCount": 16,
-      "nextRetryAt": "2026-10-25T11:30:02.885844Z"
+      "retryCount": 17,
+      "nextRetryAt": "2026-10-25T16:07:23.492406Z"
     }
   },
   "error": "Incomplete source checks: nasa, jpl, esa, nsf, umich",
@@ -177,7 +177,7 @@
       "technology": 43,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 145.42,
+    "newestStoryAgeHours": 150.04,
     "maxPublicationLagHours": 1114.28
   }
 }
