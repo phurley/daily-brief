@@ -1,59 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-26T01:39:52.278128-04:00",
+  "generatedAt": "2026-10-27T04:05:05.145948-04:00",
   "events": [],
   "rejections": [
-    {
-      "id": "occ-0e5e6372d21b379c254a8d52",
-      "title": "Comics Beyond Sight",
-      "url": "https://events.umich.edu/event/150276",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-0e5e6372d21b379c254a8d52",
-        "url": "https://events.umich.edu/event/150276",
-        "start": "2026-10-26T08:00:00-04:00",
-        "end": "2026-10-26T23:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-71e0f9a5e54319f32abe4f30",
-      "title": "Murray Hill – Showbiz! The Tour",
-      "url": "https://theark.org/event/murray-hill-showbiz-the-tour/",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-71e0f9a5e54319f32abe4f30",
-        "url": "https://theark.org/event/murray-hill-showbiz-the-tour/",
-        "start": "2026-10-31T20:00:00-04:00",
-        "end": "2026-10-31T23:00:00-04:00",
-        "venue": "The Ark",
-        "city": "Ann Arbor",
-        "price": "$40.00",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-f1cae3775f7b0d4be56f76e1",
-      "title": "Black, White, and Red: Black Women in Silent Film",
-      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-f1cae3775f7b0d4be56f76e1",
-        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-        "start": "2026-07-30T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
     {
       "id": "occ-933d82015880e99b1a6ce3c5",
       "title": "Extra Credit",
@@ -69,160 +18,7 @@
         "price": "Free, donations accepted for Food Gatherers",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-ad1fdec505e2e5554ceb1795",
-      "title": "Grand Vision",
-      "url": "https://events.umich.edu/event/149620",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-ad1fdec505e2e5554ceb1795",
-        "url": "https://events.umich.edu/event/149620",
-        "start": "2026-10-26T09:00:00-04:00",
-        "end": "2026-10-26T17:00:00-04:00",
-        "venue": "202 S. Thayer",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-173acfac2bbec6523ae003c5",
-      "title": "Twilight Rocky Horror Shadow Cast",
-      "url": "https://events.five15.net/event/12-drags-presents/twilight-rocky-horror-shadow-cast-10",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-173acfac2bbec6523ae003c5",
-        "url": "https://events.five15.net/event/12-drags-presents/twilight-rocky-horror-shadow-cast-10",
-        "start": "2026-10-30T22:00:00-04:00",
-        "end": null,
-        "venue": "Five15",
-        "city": "Royal Oak",
-        "price": "$25",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-7bec2c2b6c0c4864e668fb4e",
-      "title": "Bill Smith: The Jeweler",
-      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-7bec2c2b6c0c4864e668fb4e",
-        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-        "start": "2026-07-09T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit, MI",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-d62965d48158915649586429",
-      "title": "Comics Beyond Sight",
-      "url": "https://events.umich.edu/event/150276",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-d62965d48158915649586429",
-        "url": "https://events.umich.edu/event/150276",
-        "start": "2026-10-27T08:00:00-04:00",
-        "end": "2026-10-27T23:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-c665994b0289141c0564deaa",
-      "title": "Fashion/Forward",
-      "url": "https://events.umich.edu/event/149758",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-c665994b0289141c0564deaa",
-        "url": "https://events.umich.edu/event/149758",
-        "start": "2026-10-26T09:00:00-04:00",
-        "end": "2026-10-26T17:00:00-04:00",
-        "venue": "202 S. Thayer",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-6e18c0d9c1b1b3b589b57fd1",
-      "title": "THEATRE l I'd Love to Have You for Dinner",
-      "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-31T20%3A00%3A00.000-04%3A00",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-6e18c0d9c1b1b3b589b57fd1",
-        "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-31T20%3A00%3A00.000-04%3A00",
-        "start": "2026-10-31T20:00:00-04:00",
-        "end": null,
-        "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-        "city": "Hamtramck",
-        "price": "$6.59–$32.85 including fees",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-e8f9e4784645e34676c5c428",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-e8f9e4784645e34676c5c428",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2027-01-03T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts (DIA)",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-515350be5cf194ccafb42fc6",
-      "title": "Visualizing Care: Storytelling as Data Visualization at MohenjoDaro",
-      "url": "https://events.umich.edu/event/153678",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-515350be5cf194ccafb42fc6",
-        "url": "https://events.umich.edu/event/153678",
-        "start": "2026-10-27T16:00:00-04:00",
-        "end": "2026-10-27T17:30:00-04:00",
-        "venue": "Kelsey Museum of Archaeology",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-cb8a31454834c7201b3dbbc3",
-      "title": "Austin Zhu, carillon",
-      "url": "https://events.umich.edu/event/153648",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-cb8a31454834c7201b3dbbc3",
-        "url": "https://events.umich.edu/event/153648",
-        "start": "2026-10-26T12:00:00-04:00",
-        "end": "2026-10-26T12:30:00-04:00",
-        "venue": "Burton Memorial Tower",
-        "city": "Ann Arbor",
-        "price": "Free - no tickets required",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
       "id": "occ-f7b0602297d4f0e3089c2529",
@@ -239,160 +35,24 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
-      "id": "occ-e8414b8d9b885d76505aa2c4",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+      "id": "occ-f1cae3775f7b0d4be56f76e1",
+      "title": "Black, White, and Red: Black Women in Silent Film",
+      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-e8414b8d9b885d76505aa2c4",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2026-12-11T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-6e92e1bd457872cf0e172d13",
-      "title": "Faster and More Fun: American Home Cooking in the 1920s",
-      "url": "https://events.umich.edu/event/150658",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-6e92e1bd457872cf0e172d13",
-        "url": "https://events.umich.edu/event/150658",
-        "start": "2026-10-26T09:00:00-04:00",
-        "end": "2026-10-26T20:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-173230863dba78fc1d508bce",
-      "title": "Hip Prov | A Night of Improv Games and Musical Challenges",
-      "url": "https://www.crowdwork.com/e/hip-prov?date=2026-11-06T21%3A30%3A00.000-05%3A00",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-173230863dba78fc1d508bce",
-        "url": "https://www.crowdwork.com/e/hip-prov?date=2026-11-06T21%3A30%3A00.000-05%3A00",
-        "start": "2026-11-06T21:30:00-05:00",
-        "end": null,
-        "venue": "Go Comedy Improv Theater",
-        "city": "Ferndale",
-        "price": "$16.94 including fees",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-c4c862ed74ca166ee4b95e0a",
-      "title": "Who Votes? The Electoral College",
-      "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-c4c862ed74ca166ee4b95e0a",
-        "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-        "start": "2026-08-06T00:00:00-04:00",
-        "end": "2027-03-21T00:00:00-04:00",
+        "id": "occ-f1cae3775f7b0d4be56f76e1",
+        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
+        "start": "2026-07-30T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
         "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit, MI",
+        "city": "Detroit",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-2debd5d09959bcf24c94eb71",
-      "title": "Grand Vision",
-      "url": "https://events.umich.edu/event/149620",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-2debd5d09959bcf24c94eb71",
-        "url": "https://events.umich.edu/event/149620",
-        "start": "2026-10-27T09:00:00-04:00",
-        "end": "2026-10-27T17:00:00-04:00",
-        "venue": "202 S. Thayer",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-875f609ac91c0a4447ef8115",
-      "title": "Small Works: Prints & Book Objects from Detroit, 2020–2026",
-      "url": "https://events.umich.edu/event/152872",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-875f609ac91c0a4447ef8115",
-        "url": "https://events.umich.edu/event/152872",
-        "start": "2026-10-26T09:00:00-04:00",
-        "end": "2026-10-26T16:30:00-04:00",
-        "venue": "East Quadrangle",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-071131adb9be0393cbf36b76",
-      "title": "Everything I Want to Do In a Show | A One Woman Show",
-      "url": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-071131adb9be0393cbf36b76",
-        "url": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
-        "start": "2026-11-13T19:30:00-05:00",
-        "end": null,
-        "venue": "Go Comedy Improv Theater",
-        "city": "Ferndale",
-        "price": "$27.34 including fees",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-fc64b1bd179b3f6a5ffb242f",
-      "title": "Fashion/Forward",
-      "url": "https://events.umich.edu/event/149758",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-fc64b1bd179b3f6a5ffb242f",
-        "url": "https://events.umich.edu/event/149758",
-        "start": "2026-10-27T09:00:00-04:00",
-        "end": "2026-10-27T17:00:00-04:00",
-        "venue": "202 S. Thayer",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-d9c6135810791acf3c81f116",
-      "title": "Adam Lenhart, carillon",
-      "url": "https://events.umich.edu/event/151970",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-d9c6135810791acf3c81f116",
-        "url": "https://events.umich.edu/event/151970",
-        "start": "2026-10-26T13:20:00-04:00",
-        "end": "2026-10-26T13:50:00-04:00",
-        "venue": "Lurie Ann & Robert H. Tower",
-        "city": "Ann Arbor",
-        "price": "Free - no tickets required",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
       "id": "occ-feff36f8401278408bae2ad3",
@@ -409,41 +69,58 @@
         "price": "USD\t\t\t\t\t\t\tclass= 25",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
-      "id": "occ-a10bb9630bdaa4ac04f86b86",
-      "title": "Faster and More Fun: American Home Cooking in the 1920s",
-      "url": "https://events.umich.edu/event/150658",
+      "id": "occ-d62965d48158915649586429",
+      "title": "Comics Beyond Sight",
+      "url": "https://events.umich.edu/event/150276",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-a10bb9630bdaa4ac04f86b86",
-        "url": "https://events.umich.edu/event/150658",
-        "start": "2026-10-27T09:00:00-04:00",
-        "end": "2026-10-27T20:00:00-04:00",
+        "id": "occ-d62965d48158915649586429",
+        "url": "https://events.umich.edu/event/150276",
+        "start": "2026-10-27T08:00:00-04:00",
+        "end": "2026-10-27T23:00:00-04:00",
         "venue": "Hatcher Graduate Library",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
-      "id": "occ-ffd67ffbbac061f21aca27b0",
-      "title": "IMPROV l Monday Night Improv w/ The Planet Ant Home Team",
-      "url": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-26T19%3A30%3A00.000-04%3A00",
+      "id": "occ-71e0f9a5e54319f32abe4f30",
+      "title": "Murray Hill – Showbiz! The Tour",
+      "url": "https://theark.org/event/murray-hill-showbiz-the-tour/",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-ffd67ffbbac061f21aca27b0",
-        "url": "https://www.crowdwork.com/e/improv-l-monday-night-improv-w-the-planet-ant-home-team?date=2026-10-26T19%3A30%3A00.000-04%3A00",
-        "start": "2026-10-26T19:30:00-04:00",
-        "end": null,
-        "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-        "city": "Hamtramck",
-        "price": "$11.84–$22.35 including fees",
+        "id": "occ-71e0f9a5e54319f32abe4f30",
+        "url": "https://theark.org/event/murray-hill-showbiz-the-tour/",
+        "start": "2026-10-31T20:00:00-04:00",
+        "end": "2026-10-31T23:00:00-04:00",
+        "venue": "The Ark",
+        "city": "Ann Arbor",
+        "price": "$40.00",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-7bec2c2b6c0c4864e668fb4e",
+      "title": "Bill Smith: The Jeweler",
+      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-7bec2c2b6c0c4864e668fb4e",
+        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+        "start": "2026-07-09T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit, MI",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
       "id": "occ-83e7b0798d3c162df0da5052",
@@ -460,7 +137,296 @@
         "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-515350be5cf194ccafb42fc6",
+      "title": "Visualizing Care: Storytelling as Data Visualization at MohenjoDaro",
+      "url": "https://events.umich.edu/event/153678",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-515350be5cf194ccafb42fc6",
+        "url": "https://events.umich.edu/event/153678",
+        "start": "2026-10-27T16:00:00-04:00",
+        "end": "2026-10-27T17:30:00-04:00",
+        "venue": "Kelsey Museum of Archaeology",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-173acfac2bbec6523ae003c5",
+      "title": "Twilight Rocky Horror Shadow Cast",
+      "url": "https://events.five15.net/event/12-drags-presents/twilight-rocky-horror-shadow-cast-10",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-173acfac2bbec6523ae003c5",
+        "url": "https://events.five15.net/event/12-drags-presents/twilight-rocky-horror-shadow-cast-10",
+        "start": "2026-10-30T22:00:00-04:00",
+        "end": null,
+        "venue": "Five15",
+        "city": "Royal Oak",
+        "price": "$25",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-e8f9e4784645e34676c5c428",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-e8f9e4784645e34676c5c428",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2027-01-03T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts (DIA)",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-c9af0f9c4516b6430b346933",
+      "title": "UM Social Science and Medicine Hub Launch Event",
+      "url": "https://events.umich.edu/event/153586",
+      "reason": "ValueError: HTTP 404: https://events.umich.edu/event/153586",
+      "inputFacts": {
+        "id": "occ-c9af0f9c4516b6430b346933",
+        "url": "https://events.umich.edu/event/153586",
+        "start": "2026-10-28T17:00:00-04:00",
+        "end": "2026-10-28T19:00:00-04:00",
+        "venue": "Michigan League",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-6e18c0d9c1b1b3b589b57fd1",
+      "title": "THEATRE l I'd Love to Have You for Dinner",
+      "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-31T20%3A00%3A00.000-04%3A00",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-6e18c0d9c1b1b3b589b57fd1",
+        "url": "https://www.crowdwork.com/e/theatre-l-i-d-love-to-have-you-for-dinner?date=2026-10-31T20%3A00%3A00.000-04%3A00",
+        "start": "2026-10-31T20:00:00-04:00",
+        "end": null,
+        "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+        "city": "Hamtramck",
+        "price": "$6.59–$32.85 including fees",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-e8414b8d9b885d76505aa2c4",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-e8414b8d9b885d76505aa2c4",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2026-12-11T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-07e80e6c7fa494eb39338119",
+      "title": "Probability and Analysis Seminar: Conformal removability and bubble connectivity of non-simple SLE",
+      "url": "https://events.umich.edu/event/153682",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-07e80e6c7fa494eb39338119",
+        "url": "https://events.umich.edu/event/153682",
+        "start": "2026-10-28T16:00:00-04:00",
+        "end": "2026-10-28T17:00:00-04:00",
+        "venue": "East Hall",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-2debd5d09959bcf24c94eb71",
+      "title": "Grand Vision",
+      "url": "https://events.umich.edu/event/149620",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-2debd5d09959bcf24c94eb71",
+        "url": "https://events.umich.edu/event/149620",
+        "start": "2026-10-27T09:00:00-04:00",
+        "end": "2026-10-27T17:00:00-04:00",
+        "venue": "202 S. Thayer",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-173230863dba78fc1d508bce",
+      "title": "Hip Prov | A Night of Improv Games and Musical Challenges",
+      "url": "https://www.crowdwork.com/e/hip-prov?date=2026-11-06T21%3A30%3A00.000-05%3A00",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-173230863dba78fc1d508bce",
+        "url": "https://www.crowdwork.com/e/hip-prov?date=2026-11-06T21%3A30%3A00.000-05%3A00",
+        "start": "2026-11-06T21:30:00-05:00",
+        "end": null,
+        "venue": "Go Comedy Improv Theater",
+        "city": "Ferndale",
+        "price": "$16.94 including fees",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-c4c862ed74ca166ee4b95e0a",
+      "title": "Who Votes? The Electoral College",
+      "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-c4c862ed74ca166ee4b95e0a",
+        "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
+        "start": "2026-08-06T00:00:00-04:00",
+        "end": "2027-03-21T00:00:00-04:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit, MI",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-cde5fa222a3d4af2ecada934",
+      "title": "Pumpkin Painting at the TSC for Transfer Student Week",
+      "url": "https://events.umich.edu/event/153724",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-cde5fa222a3d4af2ecada934",
+        "url": "https://events.umich.edu/event/153724",
+        "start": "2026-10-28T09:00:00-04:00",
+        "end": "2026-10-28T19:00:00-04:00",
+        "venue": "LSA Building",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-fc64b1bd179b3f6a5ffb242f",
+      "title": "Fashion/Forward",
+      "url": "https://events.umich.edu/event/149758",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-fc64b1bd179b3f6a5ffb242f",
+        "url": "https://events.umich.edu/event/149758",
+        "start": "2026-10-27T09:00:00-04:00",
+        "end": "2026-10-27T17:00:00-04:00",
+        "venue": "202 S. Thayer",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-071131adb9be0393cbf36b76",
+      "title": "Everything I Want to Do In a Show | A One Woman Show",
+      "url": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-071131adb9be0393cbf36b76",
+        "url": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
+        "start": "2026-11-13T19:30:00-05:00",
+        "end": null,
+        "venue": "Go Comedy Improv Theater",
+        "city": "Ferndale",
+        "price": "$27.34 including fees",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-072c3ba7f107bf75a41a21c8",
+      "title": "Succulent Making",
+      "url": "https://events.umich.edu/event/153641",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-072c3ba7f107bf75a41a21c8",
+        "url": "https://events.umich.edu/event/153641",
+        "start": "2026-10-28T19:30:00-04:00",
+        "end": "2026-10-28T21:00:00-04:00",
+        "venue": "Newberry Residence",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-a10bb9630bdaa4ac04f86b86",
+      "title": "Faster and More Fun: American Home Cooking in the 1920s",
+      "url": "https://events.umich.edu/event/150658",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-a10bb9630bdaa4ac04f86b86",
+        "url": "https://events.umich.edu/event/150658",
+        "start": "2026-10-27T09:00:00-04:00",
+        "end": "2026-10-27T20:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-f2b8ef8ed4400c92d6f60496",
+      "title": "Adam Lenhart, carillon",
+      "url": "https://events.umich.edu/event/153651",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-f2b8ef8ed4400c92d6f60496",
+        "url": "https://events.umich.edu/event/153651",
+        "start": "2026-10-29T12:00:00-04:00",
+        "end": "2026-10-29T12:30:00-04:00",
+        "venue": "Burton Memorial Tower",
+        "city": "Ann Arbor",
+        "price": "Free - no tickets required",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-86107c0b83ab019c33db9525",
+      "title": "Pumpkin Decorating",
+      "url": "https://events.umich.edu/event/153642",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-86107c0b83ab019c33db9525",
+        "url": "https://events.umich.edu/event/153642",
+        "start": "2026-10-28T19:30:00-04:00",
+        "end": "2026-10-28T21:00:00-04:00",
+        "venue": "Couzens Hall",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
       "id": "occ-2050dd40fb340323c2e10afd",
@@ -477,24 +443,7 @@
         "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
-    },
-    {
-      "id": "occ-82d389c9c61cdfb41a890a59",
-      "title": "Down in Ann Arbor Town: Pictorial Maps, Campus Traditions, and the Women Who Made Them",
-      "url": "https://events.umich.edu/event/150290",
-      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
-      "inputFacts": {
-        "id": "occ-82d389c9c61cdfb41a890a59",
-        "url": "https://events.umich.edu/event/150290",
-        "start": "2026-10-26T08:00:00-04:00",
-        "end": "2026-10-26T23:00:00-04:00",
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
       "id": "occ-8dea774fd070da3ffc6a1049",
@@ -511,7 +460,24 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-723e62ebbe2f72f843c6a32d",
+      "title": "Jacob Hart Quartet",
+      "url": "https://bluellamaclub.com/event/jacob-hart-quartet/",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-723e62ebbe2f72f843c6a32d",
+        "url": "https://bluellamaclub.com/event/jacob-hart-quartet/",
+        "start": "2026-10-28T19:00:00-04:00",
+        "end": "2026-10-28T20:30:00-04:00",
+        "venue": "Blue LLaMA Jazz Club",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
       "id": "occ-1dd3a521ced6d0e0daf7de89",
@@ -528,24 +494,58 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     },
     {
-      "id": "occ-041e22b752994fa493660be8",
-      "title": "Black Birth Joy",
-      "url": "https://events.umich.edu/event/153178",
+      "id": "occ-5dba4e03565a8e8ef1b41ee6",
+      "title": "America at 250: History, Memory, and Truth",
+      "url": "http://events.umich.edu/event/142899",
       "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
       "inputFacts": {
-        "id": "occ-041e22b752994fa493660be8",
-        "url": "https://events.umich.edu/event/153178",
-        "start": "2026-10-26T09:00:00-04:00",
-        "end": "2026-10-26T17:00:00-04:00",
-        "venue": "Lane Hall",
+        "id": "occ-5dba4e03565a8e8ef1b41ee6",
+        "url": "http://events.umich.edu/event/142899",
+        "start": "2026-10-28T18:00:00-04:00",
+        "end": "2026-10-28T20:00:00-04:00",
+        "venue": "Rackham Graduate School (Horace H.)",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-10-26T04:39:52.278128-04:00"
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-37ec657e3ec2208439a8b662",
+      "title": "Down in Ann Arbor Town: Pictorial Maps, Campus Traditions, and the Women Who Made Them",
+      "url": "https://events.umich.edu/event/150290",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-37ec657e3ec2208439a8b662",
+        "url": "https://events.umich.edu/event/150290",
+        "start": "2026-10-27T08:00:00-04:00",
+        "end": "2026-10-27T23:00:00-04:00",
+        "venue": "Hatcher Graduate Library",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
+    },
+    {
+      "id": "occ-e4a27bf23714cf2db065a23f",
+      "title": "Haggis X-1 (featuring members of Enter the Haggis)",
+      "url": "https://theark.org/event/haggis-x-1-261028/",
+      "reason": "LLMError: HTTP 402: {\"error\":{\"message\":\"Insufficient credits. Add more using https://openrouter.ai/settings/credits\",\"code\":402,\"metadata\":{\"limit_source\":\"openrouter_credits\",\"remedy_hint\":\"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance",
+      "inputFacts": {
+        "id": "occ-e4a27bf23714cf2db065a23f",
+        "url": "https://theark.org/event/haggis-x-1-261028/",
+        "start": "2026-10-28T20:00:00-04:00",
+        "end": "2026-10-28T23:00:00-04:00",
+        "venue": "The Ark",
+        "city": "Ann Arbor",
+        "price": "$35.00",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-10-27T07:05:05.145948-04:00"
     }
   ]
 }
