@@ -1,147 +1,140 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-29T05:30:05.908168Z",
+  "generatedAt": "2026-10-29T10:00:35.738305Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
-  "documentGeneratedAt": "2026-10-29T05:30:05.908168Z",
-  "newestVerifiedStoryAt": "2026-10-28T05:39:46Z",
+  "documentGeneratedAt": "2026-10-29T10:00:35.738305Z",
+  "newestVerifiedStoryAt": "2026-10-29T04:05:00Z",
   "sources": {
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-29T05:30:05.908168Z",
-      "lastSuccessAt": "2026-10-28T10:00:06.089062Z",
-      "lastNewStoryAt": "2026-10-29T05:30:05.908168Z",
+      "lastAttemptAt": "2026-10-29T10:00:35.738305Z",
+      "lastSuccessAt": "2026-10-29T10:00:35.738305Z",
+      "lastNewStoryAt": "2026-10-29T10:00:35.738305Z",
       "errors": [
-        "https://science.nasa.gov/image-article/apod-2026-october-28-the-mutual-occultation-of-ganymede-and-io/: LLMError: TimeoutError: The read operation timed out",
-        "https://www.nasa.gov/news-release/nasa-invites-media-to-crew-completion-of-yearlong-mars-simulation/: LLMError: TimeoutError: The read operation timed out"
+        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/: LLMError: TimeoutError: The read operation timed out"
       ],
-      "candidateCount": 4,
-      "acceptedCount": 2,
-      "deferredCount": 0,
+      "candidateCount": 10,
+      "acceptedCount": 3,
+      "deferredCount": 5,
       "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-28T10:00:06.089062Z",
+      "lastFullAttemptAt": "2026-10-29T10:00:35.738305Z",
       "failedUrls": [
-        "https://science.nasa.gov/image-article/apod-2026-october-28-the-mutual-occultation-of-ganymede-and-io/",
-        "https://www.nasa.gov/news-release/nasa-invites-media-to-crew-completion-of-yearlong-mars-simulation/"
+        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/"
       ],
       "feedFailed": false,
-      "retryCount": 24,
-      "nextRetryAt": "2026-10-29T11:30:05.908168Z"
+      "retryCount": 25,
+      "nextRetryAt": "2026-10-29T16:00:35.738305Z"
     },
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-29T05:30:05.908168Z",
-      "lastSuccessAt": "2026-10-28T10:00:06.089062Z",
+      "lastAttemptAt": "2026-10-29T10:00:35.738305Z",
+      "lastSuccessAt": "2026-10-29T10:00:35.738305Z",
       "lastNewStoryAt": "2026-10-29T05:30:05.908168Z",
       "errors": [
-        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/: ValidationError: 'More firsts are on the way. \"Over the course of 90 years, JPL\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t",
-        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: ValueError: evidence classification requires an article quote"
+        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/: LLMError: TimeoutError: The read operation timed out",
+        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/: ValueError: finding quote not present in article"
       ],
-      "candidateCount": 4,
+      "candidateCount": 10,
       "acceptedCount": 2,
-      "deferredCount": 0,
+      "deferredCount": 4,
       "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-28T10:00:06.089062Z",
+      "lastFullAttemptAt": "2026-10-29T10:00:35.738305Z",
       "failedUrls": [
-        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/",
-        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/"
+        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/",
+        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/"
       ],
       "feedFailed": false,
-      "retryCount": 27,
-      "nextRetryAt": "2026-10-29T11:30:05.908168Z"
+      "retryCount": 28,
+      "nextRetryAt": "2026-10-29T16:00:35.738305Z"
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-29T05:30:05.908168Z",
-      "lastSuccessAt": "2026-10-28T10:00:06.089062Z",
-      "lastNewStoryAt": "2026-10-29T05:30:05.908168Z",
+      "lastAttemptAt": "2026-10-29T10:00:35.738305Z",
+      "lastSuccessAt": "2026-10-29T10:00:35.738305Z",
+      "lastNewStoryAt": "2026-10-29T10:00:35.738305Z",
       "errors": [
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos: ValueError: evidence classification requires an article quote",
-        "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time: ValueError: evidence classification requires an article quote",
         "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet: LLMError: TimeoutError: The read operation timed out"
       ],
-      "candidateCount": 4,
-      "acceptedCount": 1,
-      "deferredCount": 0,
-      "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-28T10:00:06.089062Z",
+      "candidateCount": 15,
+      "acceptedCount": 2,
+      "deferredCount": 6,
+      "rejectedCount": 4,
+      "lastFullAttemptAt": "2026-10-29T10:00:35.738305Z",
       "failedUrls": [
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos",
-        "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time",
         "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet"
       ],
       "feedFailed": false,
-      "retryCount": 24,
-      "nextRetryAt": "2026-10-29T11:30:05.908168Z"
+      "retryCount": 25,
+      "nextRetryAt": "2026-10-29T16:00:35.738305Z"
     },
     "nsf": {
       "name": "NSF",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-29T05:30:05.908168Z",
-      "lastSuccessAt": "2026-10-28T10:00:06.089062Z",
+      "lastAttemptAt": "2026-10-29T10:00:35.738305Z",
+      "lastSuccessAt": "2026-10-29T10:00:35.738305Z",
       "lastNewStoryAt": "2026-10-29T05:30:05.908168Z",
-      "errors": [
-        "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes: Timeout: Failed to perform, curl: (28) Connection timed out after 332942 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
-      ],
-      "candidateCount": 4,
-      "acceptedCount": 2,
-      "deferredCount": 0,
-      "rejectedCount": 1,
-      "lastFullAttemptAt": "2026-10-28T10:00:06.089062Z",
-      "failedUrls": [
-        "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes"
-      ],
+      "errors": [],
+      "candidateCount": 15,
+      "acceptedCount": 1,
+      "deferredCount": 6,
+      "rejectedCount": 5,
+      "lastFullAttemptAt": "2026-10-29T10:00:35.738305Z",
+      "failedUrls": [],
       "feedFailed": false,
-      "retryCount": 24,
-      "nextRetryAt": "2026-10-29T11:30:05.908168Z"
+      "retryCount": 0,
+      "nextRetryAt": null
     },
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-29T05:30:05.908168Z",
-      "lastSuccessAt": "2026-10-28T10:00:06.089062Z",
-      "lastNewStoryAt": "2026-10-29T05:30:05.908168Z",
+      "lastAttemptAt": "2026-10-29T10:00:35.738305Z",
+      "lastSuccessAt": "2026-10-29T10:00:35.738305Z",
+      "lastNewStoryAt": "2026-10-29T10:00:35.738305Z",
       "errors": [
-        "https://news.umich.edu/embolism-treatment-developed-at-u-m-receives-fda-clearance/: LLMError: JSONDecodeError: Unterminated string starting at: line 1 column 31 (char 30)"
+        "https://news.umich.edu/most-of-michigans-local-leaders-say-democracy-is-healthy-in-their-communities-u-m-survey-finds/: LLMError: JSONDecodeError: Unterminated string starting at: line 1 column 1146 (char 1145)"
       ],
-      "candidateCount": 4,
+      "candidateCount": 20,
       "acceptedCount": 3,
-      "deferredCount": 0,
+      "deferredCount": 13,
       "rejectedCount": 0,
-      "lastFullAttemptAt": "2026-10-28T10:00:06.089062Z",
+      "lastFullAttemptAt": "2026-10-29T10:00:35.738305Z",
       "failedUrls": [
-        "https://news.umich.edu/embolism-treatment-developed-at-u-m-receives-fda-clearance/"
+        "https://news.umich.edu/most-of-michigans-local-leaders-say-democracy-is-healthy-in-their-communities-u-m-survey-finds/"
       ],
       "feedFailed": false,
-      "retryCount": 24,
-      "nextRetryAt": "2026-10-29T11:30:05.908168Z"
+      "retryCount": 25,
+      "nextRetryAt": "2026-10-29T16:00:35.738305Z"
     }
   },
-  "error": "Incomplete source checks: nasa, jpl, esa, nsf, umich",
+  "error": "Incomplete source checks: nasa, jpl, esa, umich",
   "metrics": {
-    "verifiedStories": 83,
+    "verifiedStories": 89,
     "sourceCounts": {
-      "ESA": 10,
-      "NASA": 30,
+      "ESA": 12,
+      "NASA": 33,
       "NASA JPL": 11,
-      "NSF": 11,
-      "University of Michigan News": 21
+      "NSF": 9,
+      "University of Michigan News": 24
     },
     "topicCounts": {
-      "astronomy": 40,
-      "biology": 12,
+      "astronomy": 44,
+      "biology": 11,
       "climate": 2,
+      "climatology": 1,
       "computer-science": 1,
-      "earth-science": 19,
+      "earth-science": 21,
       "ecology": 1,
       "economics": 2,
       "education": 2,
       "environment": 4,
       "geology": 1,
-      "health": 12,
+      "health": 13,
       "human dimensions": 1,
       "law": 1,
       "law & politics": 2,
@@ -150,12 +143,12 @@
       "planetary science": 1,
       "planetary-science": 1,
       "politics": 2,
-      "social-science": 14,
+      "social-science": 16,
       "sustainability": 1,
-      "technology": 45,
+      "technology": 47,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 23.84,
+    "newestStoryAgeHours": 5.93,
     "maxPublicationLagHours": 1114.28
   }
 }
