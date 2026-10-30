@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-10-30T03:39:01.123888-04:00",
+  "generatedAt": "2026-10-30T07:44:44.046625-04:00",
   "stories": [
     {
       "id": "science-54f31a9a44470168",
@@ -124,9 +124,9 @@
     {
       "id": "science-29a4ffbe1d32dba8",
       "title": "Stars brewing in a nebulous cauldron",
-      "summary": "The James Webb Space Telescope captured detailed images of N159, a star-forming region in the Large Magellanic Cloud. New data allowed astronomers to detect dim stars less than a tenth the Sun's mass and distinguish young stellar objects from fully evolved stars, revealing the western region is in an earlier stage of star formation.",
-      "finding": "The James Webb Space Telescope captured detailed images of N159, a star-forming region in the Large Magellanic Cloud. New data allowed astronomers to detect dim stars less than a tenth the Sun's mass and distinguish young stellar objects from fully evolved stars, revealing the western region is in an earlier stage of star formation.",
-      "significance": "This research provides an opportunity to study H II regions under conditions similar to those in the early Universe, offering insights into star formation processes during that epoch. Observing the entire sequence of star formation occurring simultaneously in N159 allows for a detailed examination of molecular cloud evolution.",
+      "summary": "The James Webb Space Telescope captured detailed images of N159, a star-forming region in the Large Magellanic Cloud, revealing dim stars less than a tenth the Sun's mass and distinguishing young stellar objects from fully evolved stars. This allows researchers to study star formation in conditions similar to the early Universe.",
+      "finding": "The James Webb Space Telescope captured detailed images of N159, a star-forming region in the Large Magellanic Cloud, revealing dim stars less than a tenth the Sun's mass and distinguishing young stellar objects from fully evolved stars. This allows researchers to study star formation in conditions similar to the early Universe.",
+      "significance": "This research provides an opportunity to study H II regions under conditions similar to the early Universe, offering insights into star formation processes during that epoch. The ability to observe the entire sequence of star formation in N159 helps astronomers understand the evolution of collapsing molecular clouds.",
       "caveat": "Preprint / working paper; peer review is not established. The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
       "primarySourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
@@ -137,46 +137,46 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-22T00:00:00-04:00",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-10-29T05:30:05.908168Z",
-      "verifiedAt": "2026-10-29T05:30:05.908168Z",
+      "checkedAt": "2026-10-30T10:01:04.491389Z",
+      "verifiedAt": "2026-10-30T10:01:04.491389Z",
       "evidenceType": "preprint",
       "topics": [
         "astronomy",
         "physics"
       ],
       "entities": [
-        "NASA/ESA James Webb Space Telescope",
+        "James Webb Space Telescope",
+        "Near-Infrared Camera",
         "N159",
         "Large Magellanic Cloud",
-        "Milky Way galaxy",
-        "NIRCam"
+        "Milky Way galaxy"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://arxiv.org/abs/2609.27126",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-29T03:38:54.987275-04:00",
-        "expiresAt": "2026-11-01T03:38:54.987275-05:00",
+        "reviewedAt": "2026-10-30T07:44:44.046625-04:00",
+        "expiresAt": "2026-11-02T07:44:44.046625-05:00",
         "inputFacts": {
           "id": "science-29a4ffbe1d32dba8",
           "title": "Stars brewing in a nebulous cauldron",
           "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
           "publishedAt": "2026-10-22T08:00:00Z",
-          "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region of the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
-          "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region of the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
+          "summary": "Astronomers, using data from the James Webb Space Telescope's Near-Infrared Camera (NIRCam), detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects in the N159 star-forming region of the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
+          "finding": "Astronomers, using data from the James Webb Space Telescope's Near-Infrared Camera (NIRCam), detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects in the N159 star-forming region of the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
           "sourceUpdatedAt": null
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
         "publicationEvidence": "22/10/2026",
         "datePrecision": "date",
-        "sourceHash": "5cc34c93062630d4a6f45fcf1213cd7ab8a4ca88b272d3f4fa47ea4120d36f0d",
+        "sourceHash": "63c02b17be0db98206469d5ec0cd6e1403d1d8f79a2841f6482644d4213cb173",
         "relevance": 5,
         "novelty": 4,
-        "reason": "New findings from the James Webb Space Telescope provide a substantive advance in understanding star formation, particularly in conditions similar to the early universe.",
+        "reason": "New, detailed observations of star formation using advanced telescope technology, offering insights into early universe conditions.",
         "storyKey": "jwst-n159-star-formation",
         "localConnection": "",
         "grounded": true,
-        "groundingReason": "The article confirms the James Webb Space Telescope captured detailed images of N159, and new data allowed astronomers to detect dim stars less than a tenth the Sun's mass and distinguish young stellar objects from fully evolved stars. It also states that the western region of N159 has more young stellar objects in a more concentrated area, indicating an earlier stage of star formation."
+        "groundingReason": "The James Webb Space Telescope captured new detailed images of N159, allowing researchers to detect extremely dim stars less than a tenth the Sun's mass and distinguish young stellar objects from fully evolved stars, providing new insights into star formation in early Universe-like conditions."
       }
     },
     {
@@ -361,33 +361,33 @@
   ],
   "corrections": [
     {
+      "id": "science-5c3380370cf61ae7",
+      "inputFacts": {
+        "id": "science-5c3380370cf61ae7",
+        "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
+        "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
+        "publishedAt": "2026-10-29T18:18:09Z",
+        "summary": "The rose-colored meteorite Teghaza 001, discovered in the Sahara Desert in 2022, has been identified as a piece of Mars that formed over 4.1 billion years ago. This makes it one of the oldest Martian meteorites ever found on Earth, providing a rare glimpse into Mars' ancient crust and formation, including evidence of water alteration around 4.1 billion years ago.",
+        "finding": "The rose-colored meteorite Teghaza 001, discovered in the Sahara Desert in 2022, has been identified as a piece of Mars that formed over 4.1 billion years ago. This makes it one of the oldest Martian meteorites ever found on Earth, providing a rare glimpse into Mars' ancient crust and formation, including evidence of water alteration around 4.1 billion years ago.",
+        "sourceUpdatedAt": "2026-10-29T18:50:48Z"
+      },
+      "publishedAt": "2026-10-29T14:18:09-04:00",
+      "publicationEvidence": "2026-10-29T14:18:09-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-edbada0a99652d00",
       "inputFacts": {
         "id": "science-edbada0a99652d00",
         "title": "Optimizing AI energy consumption throughout its entire lifecycle",
         "url": "https://news.umich.edu/optimizing-ai-energy-consumption-throughout-its-entire-lifecycle",
         "publishedAt": "2026-10-28T15:13:22Z",
-        "summary": "Researchers at the University of Michigan, University of Illinois, and BAE Systems are developing a system to estimate AI energy usage across its entire workflow, from data processing to deployment. This system, funded by DARPA, aims to reduce AI's energy consumption by up to half through more efficient software design.",
-        "finding": "Researchers at the University of Michigan, University of Illinois, and BAE Systems are developing a system to estimate AI energy usage across its entire workflow, from data processing to deployment. This system, funded by DARPA, aims to reduce AI's energy consumption by up to half through more efficient software design.",
+        "summary": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems are developing a system to estimate AI energy usage across its entire workflow, from data processing to deployment. This system, funded by DARPA, aims to reduce AI's energy consumption by up to half through more efficient software design.",
+        "finding": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems are developing a system to estimate AI energy usage across its entire workflow, from data processing to deployment. This system, funded by DARPA, aims to reduce AI's energy consumption by up to half through more efficient software design.",
         "sourceUpdatedAt": "2026-10-28T19:51:23Z"
       },
       "publishedAt": "2026-10-28T11:13:22-04:00",
       "publicationEvidence": "2026-10-28T11:13:22-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-a9e27b8b436f0d65",
-      "inputFacts": {
-        "id": "science-a9e27b8b436f0d65",
-        "title": "Curiosity Blog, Sols 5043-5049: Preparing to Drill at ‘Nazca’",
-        "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5043-5049-preparing-to-drill-at-nazca",
-        "publishedAt": "2026-10-28T05:39:46Z",
-        "summary": "NASA's Curiosity rover is preparing to drill at a Martian site named \"Nazca,\" which, like a nearby block \"Chiu Chiu,\" is rich in disc- and needle-shaped crystal forms. Scientists hypothesize these shapes were created during crystal growth, providing clues about the temperature and availability of salts and fluids when they formed.",
-        "finding": "NASA's Curiosity rover is preparing to drill at a Martian site named \"Nazca,\" which, like a nearby block \"Chiu Chiu,\" is rich in disc- and needle-shaped crystal forms. Scientists hypothesize these shapes were created during crystal growth, providing clues about the temperature and availability of salts and fluids when they formed.",
-        "sourceUpdatedAt": "2026-10-28T05:39:49Z"
-      },
-      "publishedAt": "2026-10-28T01:39:46-04:00",
-      "publicationEvidence": "2026-10-28T01:39:46-04:00",
       "datePrecision": "time"
     },
     {
@@ -427,13 +427,28 @@
         "title": "Stars brewing in a nebulous cauldron",
         "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
         "publishedAt": "2026-10-22T08:00:00Z",
-        "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region of the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
-        "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region of the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
+        "summary": "Astronomers, using data from the James Webb Space Telescope's Near-Infrared Camera (NIRCam), detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects in the N159 star-forming region of the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
+        "finding": "Astronomers, using data from the James Webb Space Telescope's Near-Infrared Camera (NIRCam), detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects in the N159 star-forming region of the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
         "sourceUpdatedAt": null
       },
       "publishedAt": "2026-10-22T00:00:00-04:00",
       "publicationEvidence": "22/10/2026",
       "datePrecision": "date"
+    },
+    {
+      "id": "science-a9e27b8b436f0d65",
+      "inputFacts": {
+        "id": "science-a9e27b8b436f0d65",
+        "title": "Curiosity Blog, Sols 5043-5049: Preparing to Drill at ‘Nazca’",
+        "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5043-5049-preparing-to-drill-at-nazca",
+        "publishedAt": "2026-10-28T05:39:46Z",
+        "summary": "NASA's Curiosity rover is preparing to drill at a Martian site named \"Nazca,\" which, like a nearby block \"Chiu Chiu,\" is rich in disc- and needle-shaped crystal forms. Scientists hypothesize these shapes were created during crystal growth, providing clues about the temperature and availability of salts and fluids when they formed.",
+        "finding": "NASA's Curiosity rover is preparing to drill at a Martian site named \"Nazca,\" which, like a nearby block \"Chiu Chiu,\" is rich in disc- and needle-shaped crystal forms. Scientists hypothesize these shapes were created during crystal growth, providing clues about the temperature and availability of salts and fluids when they formed.",
+        "sourceUpdatedAt": "2026-10-28T05:39:49Z"
+      },
+      "publishedAt": "2026-10-28T01:39:46-04:00",
+      "publicationEvidence": "2026-10-28T01:39:46-04:00",
+      "datePrecision": "time"
     },
     {
       "id": "science-3dc92304bbbb16d2",
@@ -511,6 +526,66 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-7cf97945aa6283b8",
+      "inputFacts": {
+        "id": "science-7cf97945aa6283b8",
+        "title": "APOD: 2026 October 30 – Haunting the Cepheus Flare",
+        "url": "https://science.nasa.gov/image-article/apod-2026-october-30-haunting-the-cepheus-flare",
+        "publishedAt": "2026-10-30T04:05:00Z",
+        "summary": "The Ghost Nebula (vdB 141 or Sh2-136), located within the Cepheus Flare molecular cloud complex, exhibits reddish indicators of dense cores undergoing collapse, which signifies the early stages of star formation.",
+        "finding": "The Ghost Nebula (vdB 141 or Sh2-136), located within the Cepheus Flare molecular cloud complex, exhibits reddish indicators of dense cores undergoing collapse, which signifies the early stages of star formation.",
+        "sourceUpdatedAt": "2026-10-30T04:05:00Z"
+      },
+      "publishedAt": "2026-10-30T00:05:00-04:00",
+      "publicationEvidence": "2026-10-30T00:05:00-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-c546feec3ff82ee7",
+      "inputFacts": {
+        "id": "science-c546feec3ff82ee7",
+        "title": "Map Showing Potential Origins of Martian Meteorite Teghaza 001",
+        "url": "https://science.nasa.gov/photojournal/map-showing-potential-origins-of-martian-meteorite-teghaza-001",
+        "publishedAt": "2026-10-30T00:07:39Z",
+        "summary": "Scientists have identified 13 locations on Mars that match the mineralogy and chemistry of Teghaza 001, one of the most ancient Martian meteorites found on Earth. These locations are primarily in the southern hemisphere highlands of Mars.",
+        "finding": "Scientists have identified 13 locations on Mars that match the mineralogy and chemistry of Teghaza 001, one of the most ancient Martian meteorites found on Earth. These locations are primarily in the southern hemisphere highlands of Mars.",
+        "sourceUpdatedAt": "2026-10-30T00:07:44Z"
+      },
+      "publishedAt": "2026-10-29T20:07:39-04:00",
+      "publicationEvidence": "2026-10-29T20:07:39-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-492332e2065372ee",
+      "inputFacts": {
+        "id": "science-492332e2065372ee",
+        "title": "Slice of Martian Meteorite Teghaza 001",
+        "url": "https://science.nasa.gov/photojournal/slice-of-martian-meteorite-teghaza-001",
+        "publishedAt": "2026-10-29T23:32:35Z",
+        "summary": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
+        "finding": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
+        "sourceUpdatedAt": "2026-10-29T23:32:40Z"
+      },
+      "publishedAt": "2026-10-29T19:32:35-04:00",
+      "publicationEvidence": "2026-10-29T19:32:35-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-2de7be04e8e370b9",
+      "inputFacts": {
+        "id": "science-2de7be04e8e370b9",
+        "title": "Education on the ballot: U-M experts available",
+        "url": "https://news.umich.edu/education-on-the-ballot-u-m-experts-available",
+        "publishedAt": "2026-10-29T18:06:13Z",
+        "summary": "Literacy development is a lifelong process that extends beyond early childhood, requiring continued investment in supporting older students as they navigate complex subject areas and abstract concepts. Advanced technologies, such as extended reality powered by AI, offer promising possibilities to enhance learning by making abstract concepts more tangible and bringing complex ideas to life.",
+        "finding": "Literacy development is a lifelong process that extends beyond early childhood, requiring continued investment in supporting older students as they navigate complex subject areas and abstract concepts. Advanced technologies, such as extended reality powered by AI, offer promising possibilities to enhance learning by making abstract concepts more tangible and bringing complex ideas to life.",
+        "sourceUpdatedAt": "2026-10-29T18:06:23Z"
+      },
+      "publishedAt": "2026-10-29T14:06:13-04:00",
+      "publicationEvidence": "2026-10-29T14:06:13-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-8382e242923f3b28",
       "inputFacts": {
         "id": "science-8382e242923f3b28",
@@ -562,8 +637,8 @@
         "title": "Navigating AI in transportation: New national research consortium aims to guide agencies",
         "url": "https://news.umich.edu/navigating-ai-in-transportation-new-national-research-consortium-aims-to-guide-agencies",
         "publishedAt": "2026-10-28T19:20:44Z",
-        "summary": "Three leading transportation research institutes have launched the National AI Consortium for Transportation (NAICT) to provide public transportation agencies with a credible, non-commercial resource for evaluating, deploying, and governing AI in transportation systems.",
-        "finding": "Three leading transportation research institutes have launched the National AI Consortium for Transportation (NAICT) to provide public transportation agencies with a credible, non-commercial resource for evaluating, deploying, and governing AI in transportation systems.",
+        "summary": "Three leading transportation research institutes, the University of Michigan Transportation Research Institute (UMTRI), the University of California Berkeley Institute of Transportation Studies (ITS Berkeley), and the Texas A&M Transportation Institute (TTI), have launched the National AI Consortium for Transportation (NAICT). This consortium aims to provide public transportation agencies with a credible, non-commercial resource for evaluating, deploying, and governing AI technologies.",
+        "finding": "Three leading transportation research institutes, the University of Michigan Transportation Research Institute (UMTRI), the University of California Berkeley Institute of Transportation Studies (ITS Berkeley), and the Texas A&M Transportation Institute (TTI), have launched the National AI Consortium for Transportation (NAICT). This consortium aims to provide public transportation agencies with a credible, non-commercial resource for evaluating, deploying, and governing AI technologies.",
         "sourceUpdatedAt": "2026-10-28T19:36:28Z"
       },
       "publishedAt": "2026-10-28T15:20:44-04:00",
@@ -577,27 +652,12 @@
         "title": "Michigan Minds: The rural healthcare blame game",
         "url": "https://news.umich.edu/michigan-minds-the-rural-healthcare-blame-game",
         "publishedAt": "2026-10-28T16:21:12Z",
-        "summary": "Rural voters in the U.S. often attribute negative healthcare outcomes, such as hospital closures, to the Democratic Party, even when these closures predominantly occur in Republican-controlled states that have not expanded Medicaid. This phenomenon is influenced by the complexity of healthcare policy, the Democratic Party's association with healthcare, and voters' strong partisan identities, which can lead them to interpret events through a party-aligned lens.",
-        "finding": "Rural voters in the U.S. often attribute negative healthcare outcomes, such as hospital closures, to the Democratic Party, even when these closures predominantly occur in Republican-controlled states that have not expanded Medicaid. This phenomenon is influenced by the complexity of healthcare policy, the Democratic Party's association with healthcare, and voters' strong partisan identities, which can lead them to interpret events through a party-aligned lens.",
+        "summary": "Rural health outcomes are often viewed through a racialized, \"us-vs.-them\" lens, and the nationalization of news media influences who voters blame for healthcare issues. This can lead rural white voters to perceive that certain health policies benefit racial and ethnic minority groups more, even if objectively untrue, and to blame national political parties or the government for local healthcare problems like hospital closures.",
+        "finding": "Rural health outcomes are often viewed through a racialized, \"us-vs.-them\" lens, and the nationalization of news media influences who voters blame for healthcare issues. This can lead rural white voters to perceive that certain health policies benefit racial and ethnic minority groups more, even if objectively untrue, and to blame national political parties or the government for local healthcare problems like hospital closures.",
         "sourceUpdatedAt": "2026-10-28T19:03:52Z"
       },
       "publishedAt": "2026-10-28T12:21:12-04:00",
       "publicationEvidence": "2026-10-28T12:21:12-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-16ec12418638d42c",
-      "inputFacts": {
-        "id": "science-16ec12418638d42c",
-        "title": "The Land of the Standing-Up Rocks",
-        "url": "https://science.nasa.gov/earth/earth-observatory/the-land-of-the-standing-up-rocks",
-        "publishedAt": "2026-10-28T04:01:00Z",
-        "summary": "Approximately 27 million years ago, a volcanic eruption in southeastern Arizona released a massive amount of volcanic material, leading to the collapse of the ground and the formation of the Turkey Creek caldera. Subsequent erosion and weathering sculpted the hardened volcanic deposits into dramatic spires, hoodoos, and canyons, now preserved in Chiricahua National Park.",
-        "finding": "Approximately 27 million years ago, a volcanic eruption in southeastern Arizona released a massive amount of volcanic material, leading to the collapse of the ground and the formation of the Turkey Creek caldera. Subsequent erosion and weathering sculpted the hardened volcanic deposits into dramatic spires, hoodoos, and canyons, now preserved in Chiricahua National Park.",
-        "sourceUpdatedAt": "2026-10-28T11:55:28Z"
-      },
-      "publishedAt": "2026-10-28T00:01:00-04:00",
-      "publicationEvidence": "2026-10-28T00:01:00-04:00",
       "datePrecision": "time"
     },
     {
@@ -646,21 +706,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-7682722f480a7677",
-      "inputFacts": {
-        "id": "science-7682722f480a7677",
-        "title": "As concerns over purchasing power dominate, consumer sentiment moves sideways",
-        "url": "https://news.umich.edu/as-concerns-over-purchasing-power-dominate-consumer-sentiment-moves-sideways",
-        "publishedAt": "2026-10-23T14:37:10Z",
-        "summary": "Consumer sentiment remained largely unchanged in October 2026, with the Consumer Sentiment Index falling to 48.0 from 48.1 in September. This stability masks underlying shifts, as increases in sentiment among Republicans and Democrats were offset by declines among independents. The decline in the Current Conditions subindex was primarily due to an 18% plunge in buying conditions for durable goods, driven by higher interest rates and affordability concerns. Homebuying conditions also plummeted, with 85% of consumers deeming it a bad time to buy a house, largely due to high interest rates.",
-        "finding": "Consumer sentiment remained largely unchanged in October 2026, with the Consumer Sentiment Index falling to 48.0 from 48.1 in September. This stability masks underlying shifts, as increases in sentiment among Republicans and Democrats were offset by declines among independents. The decline in the Current Conditions subindex was primarily due to an 18% plunge in buying conditions for durable goods, driven by higher interest rates and affordability concerns. Homebuying conditions also plummeted, with 85% of consumers deeming it a bad time to buy a house, largely due to high interest rates.",
-        "sourceUpdatedAt": "2026-10-23T14:37:20Z"
-      },
-      "publishedAt": "2026-10-23T10:37:10-04:00",
-      "publicationEvidence": "2026-10-23T10:37:10-04:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-0502a592ce1ff45a",
       "inputFacts": {
         "id": "science-0502a592ce1ff45a",
@@ -674,6 +719,36 @@
       "publishedAt": "2026-10-19T00:00:00-04:00",
       "publicationEvidence": "19/10/2026",
       "datePrecision": "date"
+    },
+    {
+      "id": "science-16ec12418638d42c",
+      "inputFacts": {
+        "id": "science-16ec12418638d42c",
+        "title": "The Land of the Standing-Up Rocks",
+        "url": "https://science.nasa.gov/earth/earth-observatory/the-land-of-the-standing-up-rocks",
+        "publishedAt": "2026-10-28T04:01:00Z",
+        "summary": "Approximately 27 million years ago, a volcanic eruption in southeastern Arizona released a massive amount of volcanic material, leading to the collapse of the ground and the formation of the Turkey Creek caldera. Subsequent erosion and weathering sculpted the hardened volcanic deposits into dramatic spires, hoodoos, and canyons, now preserved in Chiricahua National Park.",
+        "finding": "Approximately 27 million years ago, a volcanic eruption in southeastern Arizona released a massive amount of volcanic material, leading to the collapse of the ground and the formation of the Turkey Creek caldera. Subsequent erosion and weathering sculpted the hardened volcanic deposits into dramatic spires, hoodoos, and canyons, now preserved in Chiricahua National Park.",
+        "sourceUpdatedAt": "2026-10-28T11:55:28Z"
+      },
+      "publishedAt": "2026-10-28T00:01:00-04:00",
+      "publicationEvidence": "2026-10-28T00:01:00-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-7682722f480a7677",
+      "inputFacts": {
+        "id": "science-7682722f480a7677",
+        "title": "As concerns over purchasing power dominate, consumer sentiment moves sideways",
+        "url": "https://news.umich.edu/as-concerns-over-purchasing-power-dominate-consumer-sentiment-moves-sideways",
+        "publishedAt": "2026-10-23T14:37:10Z",
+        "summary": "Consumer sentiment remained largely unchanged in October 2026, with the Consumer Sentiment Index falling to 48.0 from 48.1 in September. This stability masks underlying shifts, as increases in sentiment among Republicans and Democrats were offset by declines among independents. The decline in the Current Conditions subindex was primarily due to an 18% plunge in buying conditions for durable goods, driven by higher interest rates and affordability concerns. Homebuying conditions also plummeted, with 85% of consumers deeming it a bad time to buy a house, largely due to high interest rates.",
+        "finding": "Consumer sentiment remained largely unchanged in October 2026, with the Consumer Sentiment Index falling to 48.0 from 48.1 in September. This stability masks underlying shifts, as increases in sentiment among Republicans and Democrats were offset by declines among independents. The decline in the Current Conditions subindex was primarily due to an 18% plunge in buying conditions for durable goods, driven by higher interest rates and affordability concerns. Homebuying conditions also plummeted, with 85% of consumers deeming it a bad time to buy a house, largely due to high interest rates.",
+        "sourceUpdatedAt": "2026-10-23T14:37:20Z"
+      },
+      "publishedAt": "2026-10-23T10:37:10-04:00",
+      "publicationEvidence": "2026-10-23T10:37:10-04:00",
+      "datePrecision": "time"
     },
     {
       "id": "science-e5124c0745a1a06e",
