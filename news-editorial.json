@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-10-29T13:19:18.716288-04:00",
+  "generatedAt": "2026-10-30T10:41:02.447937-04:00",
   "stories": [
     {
       "id": "jewish-muslim-voters-see-communities-und-news-2026-10-28",
@@ -100,6 +100,186 @@
         "localConnection": "E0",
         "grounded": true,
         "groundingReason": "The article supports all claims in the summary, detailing the event in Canton with Congresswoman Rashida Tlaib and her concerns about anti-Muslim sentiment, as well as the separate press conference where rabbis called for more measured language and accused a PAC of using anti-Jewish stereotypes."
+      }
+    },
+    {
+      "id": "pittsfield-township-passes-new-data-cent-news-2026-10-29",
+      "title": "Pittsfield Township passes new data center regulations",
+      "summary": "Pittsfield Township's Board of Trustees approved new regulations for data centers and other high-resource facilities, following a year of discussion and an expiring moratorium. The ordinance includes environmental, zoning, and noise restrictions, along with requirements for neighborhood meetings and pre-construction studies. Changes may occur if the state enacts its own regulations.",
+      "url": "https://www.wemu.org/wemu-news/2026-10-29/pittsfield-township-passes-new-data-center-regulations",
+      "publishedAt": "2026-10-29T10:02:22.679000-04:00",
+      "addedAt": "2026-10-30T10:38:45-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Pittsfield Township Board of Trustees",
+        "Kevin Meerschaert",
+        "Trish Reilly"
+      ],
+      "locations": [
+        "Pittsfield Township",
+        "Ypsilanti & Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "data centers",
+        "regulations",
+        "local government"
+      ],
+      "source": {
+        "name": "Kevin Meerschaert",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.17,
+          "eclectic": 0.1,
+          "technical_science": 0.64,
+          "artsy": 0.02,
+          "progressive": 0.5,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.06,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/085d6a8/2147483647/strip/true/crop/4096x2304+0+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F02%2Fd5%2Fc7a116e34ace96d9de7c9bab1706%2Fimg-20261028-183305730-hdr.jpg",
+        "alt": "The Pittsfield Township Board of Trustees meets on Oct. 28, 2026 to approve new data center regulations."
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-30T10:41:02.447937-04:00",
+        "expiresAt": "2026-11-02T10:41:02.447937-05:00",
+        "inputFacts": {
+          "id": "pittsfield-township-passes-new-data-cent-news-2026-10-29",
+          "title": "Pittsfield Township passes new data center regulations",
+          "url": "https://www.wemu.org/wemu-news/2026-10-29/pittsfield-township-passes-new-data-center-regulations",
+          "publishedAt": "2026-10-29T06:02:00-04:00",
+          "summary": "The Pittsfield Township Board of Trustees passed a new ordinance regulating data centers and high-resource-demand facilities after a year of discussion. The regulations include environmental, zoning, and noise restrictions, with potential changes pending state legislation. Supervisor Trish Reilly noted no current plans for data center construction in the township.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-10-29T10:02:22.679",
+        "datePrecision": "time",
+        "sourceHash": "80d11d6a65b249e4ad9804ed45acdc1e658bc21625fe8c0e8646b76d4a09622b",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "New local civic decision with potential environmental and community impact in a nearby township.",
+        "storyKey": "pittsfield-data-center-regulations",
+        "localConnection": "Pittsfield Township is a nearby community, and decisions regarding high-resource facilities can have regional implications for infrastructure and environment.",
+        "grounded": true,
+        "groundingReason": "The article confirms the Pittsfield Township Board of Trustees approved new regulations for data centers after a year of discussion and an expiring moratorium. It details the types of restrictions (environmental, zoning, noise) and requirements (neighborhood meetings, pre-construction studies), and mentions potential changes if the state enacts its own regulations."
+      }
+    },
+    {
+      "id": "study-finds-michigan-s-young-men-struggl-news-2026-10-29",
+      "title": "Study finds Michigan's young men struggling in academic achievement",
+      "summary": "A new study by MiLEAP and AIBM indicates Michigan's young men face academic struggles, with 45% of four-year college enrollment and 41% of community college enrollment. Kindergarten readiness for boys aged 3-5 is 55%, compared to 73% for girls, and boys account for two-thirds of K-12 out-of-school suspensions.",
+      "url": "https://www.wemu.org/michigan-news/2026-10-29/study-finds-michigans-young-men-struggling-in-academic-achievement",
+      "publishedAt": "2026-10-29T09:56:23.124000-04:00",
+      "addedAt": "2026-10-30T10:38:45-04:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Michigan Department of Lifelong Education, Advancement and Potential (MiLEAP)",
+        "American Institute for Boys and Men (AIBM)",
+        "Beverly Walker-Griffea",
+        "John Roth",
+        "Amos O’Neal"
+      ],
+      "locations": [
+        "Michigan",
+        "Ypsilanti & Ann Arbor"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "education",
+        "gender gap",
+        "michigan",
+        "study",
+        "academic achievement"
+      ],
+      "source": {
+        "name": "Russ McNamara",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.13,
+          "eclectic": 0.1,
+          "technical_science": 0.07,
+          "artsy": 0.03,
+          "progressive": 0.43,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.09,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/1bd06b7/2147483647/strip/true/crop/1245x654+0+23/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F18%2F1b%2Fbd81b136444d97077215e2f0b2ad%2Fstudents-holding-graduation-caps-students-graduating.jpeg",
+        "alt": "Young men and boys in Michigan are struggling with finding opportunities after high school graduation"
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-10-30T10:41:02.447937-04:00",
+        "expiresAt": "2026-11-02T10:41:02.447937-05:00",
+        "inputFacts": {
+          "id": "study-finds-michigan-s-young-men-struggl-news-2026-10-29",
+          "title": "Study finds Michigan's young men struggling in academic achievement",
+          "url": "https://www.wemu.org/michigan-news/2026-10-29/study-finds-michigans-young-men-struggling-in-academic-achievement",
+          "publishedAt": "2026-10-29T05:56:00-04:00",
+          "summary": "A new study by Michigan's MiLEAP and AIBM reveals young men in the state face significant challenges in academic performance and post-high school opportunities. The research shows boys lag behind girls in kindergarten readiness, college enrollment rates, and graduation outcomes, with socioeconomic disparities exacerbating the issue. State officials emphasize the need for systemic support to address these gaps.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-10-29T09:56:23.124",
+        "datePrecision": "time",
+        "sourceHash": "7da1e4c51f3bb778a29217772940de4600284b070b9e6a034065cea5bb939511",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The study highlights significant educational and societal challenges for young men in Michigan, directly impacting families and communities, including Canton and Plymouth. The findings on kindergarten readiness, college enrollment, and disciplinary actions are concrete and relevant to local public services and civic discussions.",
+        "storyKey": "michigan-young-men-academic-struggles",
+        "localConnection": "Michigan statewide data on educational outcomes directly impacts Canton and Plymouth residents, schools, and future workforce.",
+        "grounded": true,
+        "groundingReason": "The summary accurately reflects the key findings of the study as presented in the article, including specific percentages for college enrollment, kindergarten readiness, and K-12 suspensions. The article presents a new study with specific findings about academic struggles among young men in Michigan, which is a substantive development for the state."
       }
     },
     {
@@ -309,6 +489,36 @@
       "datePrecision": "time"
     },
     {
+      "id": "pittsfield-township-passes-new-data-cent-news-2026-10-29",
+      "inputFacts": {
+        "id": "pittsfield-township-passes-new-data-cent-news-2026-10-29",
+        "title": "Pittsfield Township passes new data center regulations",
+        "url": "https://www.wemu.org/wemu-news/2026-10-29/pittsfield-township-passes-new-data-center-regulations",
+        "publishedAt": "2026-10-29T06:02:00-04:00",
+        "summary": "The Pittsfield Township Board of Trustees passed a new ordinance regulating data centers and high-resource-demand facilities after a year of discussion. The regulations include environmental, zoning, and noise restrictions, with potential changes pending state legislation. Supervisor Trish Reilly noted no current plans for data center construction in the township.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-29T10:02:22.679000-04:00",
+      "publicationEvidence": "2026-10-29T10:02:22.679",
+      "datePrecision": "time"
+    },
+    {
+      "id": "study-finds-michigan-s-young-men-struggl-news-2026-10-29",
+      "inputFacts": {
+        "id": "study-finds-michigan-s-young-men-struggl-news-2026-10-29",
+        "title": "Study finds Michigan's young men struggling in academic achievement",
+        "url": "https://www.wemu.org/michigan-news/2026-10-29/study-finds-michigans-young-men-struggling-in-academic-achievement",
+        "publishedAt": "2026-10-29T05:56:00-04:00",
+        "summary": "A new study by Michigan's MiLEAP and AIBM reveals young men in the state face significant challenges in academic performance and post-high school opportunities. The research shows boys lag behind girls in kindergarten readiness, college enrollment rates, and graduation outcomes, with socioeconomic disparities exacerbating the issue. State officials emphasize the need for systemic support to address these gaps.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-29T09:56:23.124000-04:00",
+      "publicationEvidence": "2026-10-29T09:56:23.124",
+      "datePrecision": "time"
+    },
+    {
       "id": "state-funding-advances-arbor-south-devel-news-2026-10-29",
       "inputFacts": {
         "id": "state-funding-advances-arbor-south-devel-news-2026-10-29",
@@ -339,6 +549,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "proposal-e-for-city-owned-utility-in-ann-news-2026-10-29",
+      "inputFacts": {
+        "id": "proposal-e-for-city-owned-utility-in-ann-news-2026-10-29",
+        "title": "Proposal E for city-owned utility in Ann Arbor faces new lawsuit ... from the city itself",
+        "url": "https://www.michiganpublic.org/politics-government/2026-10-29/proposal-e-ann-arbor-lawsuit",
+        "publishedAt": "2026-10-29T15:56:00-04:00",
+        "summary": "A ballot proposal (Proposal E) to establish a city-owned utility in Ann Arbor faces a new lawsuit filed by the city itself, which argues the proposal improperly amended the city charter instead of revising it. The proposal previously survived a legal challenge from a DTE Energy-backed group. The city council had already voted to oppose Proposal E, and the lawsuit aims to invalidate it days before the November 3 election.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-29T19:56:43.619000-04:00",
+      "publicationEvidence": "2026-10-29T19:56:43.619",
+      "datePrecision": "time"
+    },
+    {
       "id": "csg-takes-part-in-sapac-workshop-news-2026-10-29",
       "inputFacts": {
         "id": "csg-takes-part-in-sapac-workshop-news-2026-10-29",
@@ -351,6 +576,36 @@
       },
       "publishedAt": "2026-10-29T04:19:02+00:00",
       "publicationEvidence": "2026-10-29T04:19:02+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "education-on-the-ballot-u-m-experts-avai-news-2026-10-29",
+      "inputFacts": {
+        "id": "education-on-the-ballot-u-m-experts-avai-news-2026-10-29",
+        "title": "Education on the ballot: U-M experts available",
+        "url": "https://news.umich.edu/education-on-the-ballot-u-m-experts-available/",
+        "publishedAt": "2026-10-29T00:00:00-04:00",
+        "summary": "As the U.S. midterm elections approach, University of Michigan researchers are available to discuss education policy topics including literacy instruction, teacher preparation, educational inequality, and the use of artificial intelligence in schools. Experts highlight the need for expanded literacy support for older students and thoughtful integration of AI technologies in education.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-29T14:06:13-04:00",
+      "publicationEvidence": "2026-10-29T14:06:13-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "republicans-spread-positive-message-in-w-news-2026-10-29",
+      "inputFacts": {
+        "id": "republicans-spread-positive-message-in-w-news-2026-10-29",
+        "title": "Republicans spread 'positive' message in West Michigan",
+        "url": "https://www.wemu.org/michigan-news/2026-10-29/republicans-spread-positive-message-in-west-michigan",
+        "publishedAt": "2026-10-29T00:00:00-04:00",
+        "summary": "Former Michigan Gov. Rick Snyder called for a more 'positive' message while stumping for Republican candidates in West Michigan Wednesday. The story was reported by WEMU 89.1 FM as part of their Michigan News coverage.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-29T09:53:21.769000-04:00",
+      "publicationEvidence": "2026-10-29T09:53:21.769",
       "datePrecision": "time"
     },
     {
@@ -369,145 +624,47 @@
       "datePrecision": "time"
     },
     {
-      "id": "republicans-distort-rape-case-to-falsely-news-2026-10-29",
+      "id": "historic-palisades-nuclear-plant-restart-news-2026-10-29",
       "inputFacts": {
-        "id": "republicans-distort-rape-case-to-falsely-news-2026-10-29",
-        "title": "Republicans distort rape case to falsely attack Christina Hines",
-        "url": "https://www.metrotimes.com/news/republicans-distort-rape-case-to-falsely-attack-christina-hines/",
-        "publishedAt": "2026-10-29T00:00:00-04:00",
-        "summary": "A forensic investigation into allegations that Smith raped Fields in 2026 found no evidence to substantiate the claims, leading prosecutors to dismiss the case. Despite this, Republican campaigns have used the case to attack Christina Hines, who previously prosecuted over 100 serious crimes. Hines' opponent, Michael Bouchard Jr., has also faced scrutiny over political ties and campaign donations.",
+        "id": "historic-palisades-nuclear-plant-restart-news-2026-10-29",
+        "title": "Historic Palisades nuclear plant restart may only be weeks away, energy secretary says",
+        "url": "https://www.michiganpublic.org/transportation-infrastructure/2026-10-29/historic-palisades-nuclear-plant-restart-may-only-be-weeks-away-energy-secretary-says",
+        "publishedAt": "2026-10-29T19:29:00-04:00",
+        "summary": "U.S. Energy Secretary Chris Wright stated the Palisades nuclear plant in Michigan could restart as soon as late November 2026 after years of delays. The plant, previously owned by Entergy and sold to Holtec International for decommissioning, is now being revived with federal loan support. Opponents raise safety concerns, while Holtec executives call it a 'nuclear renaissance.'",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-10-16T18:04:13+00:00",
-      "publicationEvidence": "2026-10-16T18:04:13+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "is-my-son-really-safe-taylor-high-school-news-2026-10-28",
-      "inputFacts": {
-        "id": "is-my-son-really-safe-taylor-high-school-news-2026-10-28",
-        "title": "'Is my son really safe?': Taylor High School brawls prompt parent concerns",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/29/is-my-son-really-safe-taylor-high-school-brawls-prompt-parent-concerns/",
-        "publishedAt": "2026-10-28T22:27:00-04:00",
-        "summary": "Four students were arrested following two separate fights at Taylor High School on Monday and Tuesday, according to police. Videos of the fights circulated on social media, showing large groups of students joining the altercations and raising concerns about school safety. Parents are demanding answers after the incidents, which also involved the discovery of four illegally possessed weapons, including an automatic weapon, during a separate police encounter.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-29T02:27:20.545000+00:00",
-      "publicationEvidence": "2026-10-29T02:27:20.545Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "ypsilanti-community-schools-upgrading-em-news-2026-10-28",
-      "inputFacts": {
-        "id": "ypsilanti-community-schools-upgrading-em-news-2026-10-28",
-        "title": "Ypsilanti Community Schools upgrading emergency alert system",
-        "url": "https://www.wemu.org/wemu-news/2026-10-28/ypsilanti-community-schools-upgrading-emergency-alert-system",
-        "publishedAt": "2026-10-28T06:37:00-04:00",
-        "summary": "Ypsilanti Community Schools is rolling out the Centegix Crisis Alert system to replace the aging EPIC SAFE Alerts. The new system uses wearable badges that staff can activate by pressing a button three times to send emergency alerts or initiate facility-wide lockdowns. Technology Director Solomon Zheng highlighted the system's expanded range, covering areas from the high school to RCTC.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-28T10:37:25.899000-04:00",
-      "publicationEvidence": "2026-10-28T10:37:25.899",
-      "datePrecision": "time"
-    },
-    {
-      "id": "taylor-police-multiple-arrested-more-sus-news-2026-10-28",
-      "inputFacts": {
-        "id": "taylor-police-multiple-arrested-more-sus-news-2026-10-28",
-        "title": "Taylor police: Multiple arrested, more suspended after back-to-back fights at Taylor High School",
-        "url": "https://www.clickondetroit.com/news/local/2026/10/29/taylor-police-multiple-arrested-more-suspended-after-back-to-back-fights-at-taylor-high-school/",
-        "publishedAt": "2026-10-28T20:57:00-04:00",
-        "summary": "Taylor police arrested five students following two fights at Taylor High School, with two male students and three men later released. Three men were arrested with four illegally possessed weapons, including an automatic weapon. At least 11 students were suspended, and school officials urged parents to prevent further conflicts.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-29T00:57:26.855000+00:00",
-      "publicationEvidence": "2026-10-29T00:57:26.855Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "ann-arbor-voters-to-decide-fate-of-munic-news-2026-10-28",
-      "inputFacts": {
-        "id": "ann-arbor-voters-to-decide-fate-of-munic-news-2026-10-28",
-        "title": "Ann Arbor voters to decide fate of municipal electric utility board",
-        "url": "https://www.wemu.org/wemu-news/2026-10-28/voters-to-decide-fate-of-proposal-e-on-november-3rd",
-        "publishedAt": "2026-10-28T00:00:00-04:00",
-        "summary": "Ann Arbor voters will decide the fate of Proposal E, which affects the municipal electric utility board.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-28T14:00:33.805000-04:00",
-      "publicationEvidence": "2026-10-28T14:00:33.805",
-      "datePrecision": "time"
-    },
-    {
-      "id": "at-ann-arbor-s-maker-works-a-growing-com-news-2026-10-28",
-      "inputFacts": {
-        "id": "at-ann-arbor-s-maker-works-a-growing-com-news-2026-10-28",
-        "title": "At Ann Arbor’s Maker Works, a growing community is finding ways to create",
-        "url": "https://concentratemedia.com/at-ann-arbors-maker-works-a-growing-community-is-finding-ways-to-create/",
-        "publishedAt": "2026-10-28T00:00:00-04:00",
-        "summary": "Maker Works has spent the past several years expanding its equipment, classes, and membership while learning what it means to operate as a nonprofit.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-28T21:09:14+00:00",
-      "publicationEvidence": "2026-10-28T21:09:14+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "lsa-opportunity-hub-celebrates-10-year-a-news-2026-10-28",
-      "inputFacts": {
-        "id": "lsa-opportunity-hub-celebrates-10-year-a-news-2026-10-28",
-        "title": "LSA Opportunity Hub celebrates 10-year anniversary as a resource for student career success",
-        "url": "https://www.michigandaily.com/news/academics/lsa-opportunity-hub-celebrates-10-year-anniversary-as-a-resource-for-student-career-success/",
-        "publishedAt": "2026-10-28T00:00:00-04:00",
-        "summary": "The LSA Opportunity Hub marked its 10th anniversary as a key resource for students seeking career guidance and professional development opportunities within the College of Literature, Science, and the Arts.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-29T03:21:17+00:00",
-      "publicationEvidence": "2026-10-29T03:21:17+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "students-organize-for-syria-hosts-psychi-news-2026-10-28",
-      "inputFacts": {
-        "id": "students-organize-for-syria-hosts-psychi-news-2026-10-28",
-        "title": "Students Organize for Syria hosts ‘Psychiatry in Syria’",
-        "url": "https://www.michigandaily.com/michigan-in-color/students-organize-for-syria-hosts-psychiatry-in-syria/",
-        "publishedAt": "2026-10-28T00:00:00-04:00",
-        "summary": "Students Organize for Syria hosted a panel discussion on the psychological impact of conflict and displacement on Syrian communities at the University of Michigan. The event, held in collaboration with The Muslim Coalition and Wolverine Shifa, featured experts discussing trauma, cultural stigma around mental health, and strategies for support. Panelists emphasized the long-term effects of war trauma and the importance of culturally relevant mental health approaches.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-28T19:34:42+00:00",
-      "publicationEvidence": "2026-10-28T19:34:42+00:00",
+      "publishedAt": "2026-10-29T23:29:43.611000-04:00",
+      "publicationEvidence": "2026-10-29T23:29:43.611",
       "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-10-28",
-      "selectedIds": [
-        "jewish-muslim-voters-see-communities-und-news-2026-10-28",
-        "beyond-the-books-how-toyota-and-the-ypsi-news-2026-10-28"
-      ]
-    },
-    {
       "date": "2026-10-29",
       "selectedIds": [
         "jewish-muslim-voters-see-communities-und-news-2026-10-28",
         "state-funding-advances-arbor-south-devel-news-2026-10-29",
-        "beyond-the-books-how-toyota-and-the-ypsi-news-2026-10-28"
+        "beyond-the-books-how-toyota-and-the-ypsi-news-2026-10-28",
+        "pittsfield-township-passes-new-data-cent-news-2026-10-29",
+        "study-finds-michigan-s-young-men-struggl-news-2026-10-29"
       ]
     },
     {
       "date": "2026-10-30",
       "selectedIds": [
+        "jewish-muslim-voters-see-communities-und-news-2026-10-28",
+        "state-funding-advances-arbor-south-devel-news-2026-10-29",
+        "beyond-the-books-how-toyota-and-the-ypsi-news-2026-10-28",
+        "pittsfield-township-passes-new-data-cent-news-2026-10-29",
+        "study-finds-michigan-s-young-men-struggl-news-2026-10-29"
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "selectedIds": [
+        "pittsfield-township-passes-new-data-cent-news-2026-10-29",
+        "study-finds-michigan-s-young-men-struggl-news-2026-10-29",
         "jewish-muslim-voters-see-communities-und-news-2026-10-28",
         "state-funding-advances-arbor-south-devel-news-2026-10-29",
         "beyond-the-books-how-toyota-and-the-ypsi-news-2026-10-28"
