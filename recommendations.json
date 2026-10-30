@@ -1,158 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-10-29T21:12:10.660Z",
+  "generatedAt": "2026-10-30T05:56:07.584Z",
   "days": [
-    {
-      "date": "2026-10-29",
-      "events": [
-        {
-          "id": "occ-163c170a6c721b2f4036be03",
-          "title": "Movie Night Fright",
-          "summary": "Enjoy a late-night screening of Tim Burton's Corpse Bride, a Halloween classic. This event offers a chance to gather with friends, enjoy complimentary snacks, and immerse yourself in the animated world of this eclectic film.",
-          "url": "https://events.umich.edu/event/153187",
-          "start": "2026-10-29T20:00:00-04:00",
-          "venue": "Michigan Union",
-          "city": "Ann Arbor",
-          "category": "Social / Informal Gathering",
-          "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153187_original-1.png",
-          "imageAlt": "Movie Night Fright",
-          "status": "confirmed",
-          "occurrenceId": "occ-163c170a6c721b2f4036be03",
-          "seriesId": "series-82af59c34c11eb37214a2a54",
-          "sourceUpdatedAt": "2026-10-28T15:37:32-04:00",
-          "lastCheckedAt": "2026-10-29T13:17:02.161083-04:00",
-          "canonicalUrl": "https://events.umich.edu/event/153187",
-          "venueId": "michigan union|ann arbor",
-          "timePrecision": "time",
-          "aliases": [
-            "movie-night-fright-event-2026-10-29",
-            "src-86d2f45da618c11ef6c46063"
-          ],
-          "legacyOccurrenceKeys": [
-            "movie-night-fright-event-2026-10-29|2026-10-29T20:00:00-04:00",
-            "src-86d2f45da618c11ef6c46063|2026-10-29T20:00:00-04:00"
-          ],
-          "legacySeriesKeys": [
-            "series-82af59c34c11eb37214a2a54"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-86d2f45da618c11ef6c46063",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/153187",
-              "observedAt": "2026-10-29T13:14:42-04:00",
-              "sourceUpdatedAt": "2026-10-28T15:37:32-04:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "new-occurrence"
-            ],
-            "fields": {
-              "title": "src-86d2f45da618c11ef6c46063",
-              "start": "src-86d2f45da618c11ef6c46063",
-              "end": "src-86d2f45da618c11ef6c46063",
-              "venue": "src-86d2f45da618c11ef6c46063",
-              "url": "src-86d2f45da618c11ef6c46063",
-              "imageUrl": "src-86d2f45da618c11ef6c46063",
-              "status": "src-86d2f45da618c11ef6c46063"
-            },
-            "conflicts": {}
-          },
-          "score": 68,
-          "scoring": {
-            "signals": {
-              "funny": 0.71,
-              "distinctive": 0.25,
-              "eclectic": 0.16,
-              "technical_science": 0.03,
-              "artsy": 0.59,
-              "progressive": 0.13,
-              "outdoors": 0.03,
-              "theatre": 0.03,
-              "live_music": 0.02,
-              "live_comedy": 0.02,
-              "farmer_market": 0.01,
-              "sporting": 0.01,
-              "recurring": 0.17,
-              "craft_fair_shopping": 0.01,
-              "religious": 0.02,
-              "large_venue": 0.07,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.01,
-              "market_or_shop": 0.01,
-              "punk_metal_or_rock": 0.01,
-              "dance": 0.02,
-              "sales_related": 0.06,
-              "children_activity": 0.05,
-              "running": 0.01,
-              "exercise": 0.01,
-              "employment_related": 0.01
-            },
-            "score": 68,
-            "rulesVersion": 2
-          },
-          "localityTier": "regional",
-          "experienceId": "experience:[\"ann arbor\",\"michigan union\",\"movie night fright\"]",
-          "price": "Free",
-          "end": "2026-10-29T22:00:00-04:00",
-          "bookingUrl": "https://events.umich.edu/event/153187",
-          "statusEvidence": "Organizer detail reviewed",
-          "priceMin": 0,
-          "priceMax": 0,
-          "priceCurrency": "USD",
-          "editorial": {
-            "state": "verified",
-            "reviewedAt": "2026-10-29T13:17:02.161083-04:00",
-            "expiresAt": "2026-10-30T13:17:02.161083-04:00",
-            "sourceUrl": "https://events.umich.edu/event/153187",
-            "sourceHash": "54152e082c71951f3ac289cc4004ed5c7ac2c62bf8de5225e0e0f2f5bc271191",
-            "inputFacts": {
-              "id": "occ-163c170a6c721b2f4036be03",
-              "url": "https://events.umich.edu/event/153187",
-              "start": "2026-10-29T20:00:00-04:00",
-              "end": "2026-10-29T22:00:00-04:00",
-              "venue": "Michigan Union",
-              "city": "Ann Arbor",
-              "price": null,
-              "status": "scheduled"
-            },
-            "evidence": {
-              "date": "Thu, Oct 29",
-              "time": "8:00pm",
-              "venue": "Michigan Union",
-              "admission": "Free",
-              "description": "Join us for a late-night screening of Tim Burton's Corpse Bride!",
-              "end": "10:00pm"
-            }
-          },
-          "reviewExpiresAt": "2026-10-30T13:17:02.161083-04:00",
-          "recommendation": {
-            "occurrenceId": "occ-163c170a6c721b2f4036be03",
-            "score": 84,
-            "components": {
-              "taste": 68,
-              "practicality": 12,
-              "novelty": 0,
-              "quality": 4
-            },
-            "reasons": [
-              "funny +9",
-              "distinctive +6",
-              "Available on selected day +12",
-              "Confirmed/recent source information +4"
-            ],
-            "unknowns": [
-              "Distance unknown"
-            ]
-          }
-        }
-      ]
-    },
     {
       "date": "2026-10-30",
       "events": [
@@ -801,6 +651,10 @@
           }
         }
       ]
+    },
+    {
+      "date": "2026-10-31",
+      "events": []
     }
   ]
 }
