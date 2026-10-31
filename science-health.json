@@ -1,77 +1,75 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-30T10:01:04.491389Z",
+  "generatedAt": "2026-10-31T05:30:06.342663Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
-  "documentGeneratedAt": "2026-10-30T10:01:04.491389Z",
+  "documentGeneratedAt": "2026-10-31T05:30:06.342663Z",
   "newestVerifiedStoryAt": "2026-10-30T04:05:00Z",
   "sources": {
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-30T10:01:04.491389Z",
+      "lastAttemptAt": "2026-10-31T05:30:06.342663Z",
       "lastSuccessAt": "2026-10-30T10:01:04.491389Z",
       "lastNewStoryAt": "2026-10-30T10:01:04.491389Z",
       "errors": [
         "https://science.nasa.gov/earth/earth-observatory/vega-island-frozen-in-fright/: LLMError: TimeoutError: The read operation timed out"
       ],
-      "candidateCount": 10,
-      "acceptedCount": 3,
-      "deferredCount": 6,
+      "candidateCount": 1,
+      "acceptedCount": 0,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-30T10:01:04.491389Z",
       "failedUrls": [
         "https://science.nasa.gov/earth/earth-observatory/vega-island-frozen-in-fright/"
       ],
       "feedFailed": false,
-      "retryCount": 27,
-      "nextRetryAt": "2026-10-30T16:01:04.491389Z"
+      "retryCount": 28,
+      "nextRetryAt": "2026-10-31T11:30:06.342663Z"
     },
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-30T10:01:04.491389Z",
+      "lastAttemptAt": "2026-10-31T05:30:06.342663Z",
       "lastSuccessAt": "2026-10-30T10:01:04.491389Z",
       "lastNewStoryAt": "2026-10-30T10:01:04.491389Z",
       "errors": [
-        "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust/: LLMError: IncompleteRead: IncompleteRead(143 bytes read)",
-        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/: LLMError: TimeoutError: The read operation timed out"
+        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/: ValueError: finding quote not present in article"
       ],
-      "candidateCount": 10,
-      "acceptedCount": 2,
-      "deferredCount": 5,
+      "candidateCount": 2,
+      "acceptedCount": 1,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-30T10:01:04.491389Z",
       "failedUrls": [
-        "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust/",
         "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/"
       ],
       "feedFailed": false,
-      "retryCount": 30,
-      "nextRetryAt": "2026-10-30T16:01:04.491389Z"
+      "retryCount": 31,
+      "nextRetryAt": "2026-10-31T11:30:06.342663Z"
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-30T10:01:04.491389Z",
+      "lastAttemptAt": "2026-10-31T05:30:06.342663Z",
       "lastSuccessAt": "2026-10-30T10:01:04.491389Z",
       "lastNewStoryAt": "2026-10-29T10:00:35.738305Z",
       "errors": [
         "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb: LLMError: TimeoutError: The read operation timed out",
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos: ValueError: evidence classification requires an article quote"
       ],
-      "candidateCount": 15,
-      "acceptedCount": 1,
-      "deferredCount": 7,
-      "rejectedCount": 4,
+      "candidateCount": 2,
+      "acceptedCount": 0,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-30T10:01:04.491389Z",
       "failedUrls": [
         "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb",
         "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos"
       ],
       "feedFailed": false,
-      "retryCount": 27,
-      "nextRetryAt": "2026-10-30T16:01:04.491389Z"
+      "retryCount": 28,
+      "nextRetryAt": "2026-10-31T11:30:06.342663Z"
     },
     "nsf": {
       "name": "NSF",
@@ -144,7 +142,7 @@
       "technology": 48,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 5.93,
+    "newestStoryAgeHours": 25.42,
     "maxPublicationLagHours": 1114.28
   }
 }

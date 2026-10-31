@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-30T10:01:04.491389Z",
-  "editionDate": "2026-10-30",
+  "generatedAt": "2026-10-31T05:30:06.342663Z",
+  "editionDate": "2026-10-31",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -594,9 +594,9 @@
     {
       "id": "science-6d879a7a5c5c91f8",
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
-      "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit material samples over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. Different materials on the calibration target attracted grains of different sizes, with organic polymers like Teflon readily collecting fine dust.",
-      "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit material samples over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. Different materials on the calibration target attracted grains of different sizes, with organic polymers like Teflon readily collecting fine dust.",
-      "significance": "This research provides the first on-site measurements of fine and ultrafine dust particles on Mars, which is crucial for informing spacesuit and habitat design, developing dust-removal procedures, and establishing crew health standards for future human missions to Mars. Understanding how different materials collect dust can guide the selection of protective coatings and materials to mitigate health risks for astronauts.",
+      "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit material samples, with some particles small enough to penetrate lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and that static electricity influences which dust particle sizes adhere to different surfaces.",
+      "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit material samples, with some particles small enough to penetrate lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and that static electricity influences which dust particle sizes adhere to different surfaces.",
+      "significance": "These findings are crucial for designing future spacesuits and habitats, developing effective dust-removal procedures, and establishing crew health standards for upcoming NASA missions to Mars. Understanding dust behavior and composition can help mitigate health risks and equipment degradation for astronauts.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
@@ -607,8 +607,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-26T21:07:28Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-10-29T05:30:05.908168Z",
-      "verifiedAt": "2026-10-29T05:30:05.908168Z",
+      "checkedAt": "2026-10-31T05:30:06.342663Z",
+      "verifiedAt": "2026-10-31T05:30:06.342663Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "health",
@@ -623,7 +623,7 @@
         "Proceedings of the National Academy of Sciences",
         "PIXL"
       ],
-      "milestoneStatus": "completed",
+      "milestoneStatus": "unknown",
       "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2620747123",
       "sourceUpdatedAt": "2026-10-27T21:01:38Z"
     },
@@ -3411,56 +3411,56 @@
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-10-30",
+    "date": "2026-10-31",
     "selectedIds": [
+      "science-c546feec3ff82ee7",
+      "science-2de7be04e8e370b9",
+      "science-6afcd2fe4e37bc6f",
       "science-7a5a1db73b614abf",
-      "science-1618e886f6eaf875",
-      "science-54f31a9a44470168",
       "science-29a4ffbe1d32dba8",
-      "science-7158509b82ff6dd6",
-      "science-6d879a7a5c5c91f8"
+      "science-7158509b82ff6dd6"
     ],
     "reasons": {
+      "science-c546feec3ff82ee7": {
+        "score": 32,
+        "source": "NASA",
+        "topic": "astronomy",
+        "publishedAt": "2026-10-30T00:07:39Z",
+        "interestMatch": false
+      },
+      "science-2de7be04e8e370b9": {
+        "score": 32,
+        "source": "U-M",
+        "topic": "education",
+        "publishedAt": "2026-10-29T18:06:13Z",
+        "interestMatch": false
+      },
+      "science-6afcd2fe4e37bc6f": {
+        "score": 30,
+        "source": "NSF",
+        "topic": "technology",
+        "publishedAt": "2026-10-27T20:23:58Z",
+        "interestMatch": false
+      },
       "science-7a5a1db73b614abf": {
-        "score": 33,
+        "score": 20,
         "source": "NASA",
         "topic": "earth-science",
         "publishedAt": "2026-10-29T04:01:00Z",
         "interestMatch": false
       },
-      "science-1618e886f6eaf875": {
-        "score": 32,
-        "source": "U-M",
-        "topic": "technology",
-        "publishedAt": "2026-10-28T19:20:44Z",
-        "interestMatch": false
-      },
-      "science-54f31a9a44470168": {
-        "score": 31,
-        "source": "NSF",
-        "topic": "astronomy",
-        "publishedAt": "2026-10-27T18:51:35Z",
-        "interestMatch": false
-      },
       "science-29a4ffbe1d32dba8": {
-        "score": 21,
+        "score": 20,
         "source": "ESA",
         "topic": "astronomy",
         "publishedAt": "2026-10-22T08:00:00Z",
         "interestMatch": false
       },
       "science-7158509b82ff6dd6": {
-        "score": 20,
+        "score": 19,
         "source": "U-M",
         "topic": "social-science",
         "publishedAt": "2026-10-28T16:21:12Z",
-        "interestMatch": false
-      },
-      "science-6d879a7a5c5c91f8": {
-        "score": 18,
-        "source": "NASA",
-        "topic": "health",
-        "publishedAt": "2026-10-26T21:07:28Z",
         "interestMatch": false
       }
     }
