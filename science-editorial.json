@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-10-31T02:10:37.976939-04:00",
+  "generatedAt": "2026-10-31T09:02:29.188353-04:00",
   "stories": [
     {
       "id": "science-54f31a9a44470168",
@@ -124,9 +124,9 @@
     {
       "id": "science-29a4ffbe1d32dba8",
       "title": "Stars brewing in a nebulous cauldron",
-      "summary": "The James Webb Space Telescope captured detailed images of N159, a star-forming region in the Large Magellanic Cloud, revealing dim stars less than a tenth the Sun's mass and distinguishing young stellar objects from fully evolved stars. This allows researchers to study star formation in conditions similar to the early Universe.",
-      "finding": "The James Webb Space Telescope captured detailed images of N159, a star-forming region in the Large Magellanic Cloud, revealing dim stars less than a tenth the Sun's mass and distinguishing young stellar objects from fully evolved stars. This allows researchers to study star formation in conditions similar to the early Universe.",
-      "significance": "This research provides an opportunity to study H II regions under conditions similar to the early Universe, offering insights into star formation processes during that epoch. The ability to observe the entire sequence of star formation in N159 helps astronomers understand the evolution of collapsing molecular clouds.",
+      "summary": "The James Webb Space Telescope captured detailed images of N159, a star-forming region in the Large Magellanic Cloud, revealing thousands of stars in early formation stages. New data allowed astronomers to detect dim stars less than a tenth the Sun's mass and distinguish young stellar objects from fully evolved stars, indicating the western region is in an earlier collapse stage.",
+      "finding": "The James Webb Space Telescope captured detailed images of N159, a star-forming region in the Large Magellanic Cloud, revealing thousands of stars in early formation stages. New data allowed astronomers to detect dim stars less than a tenth the Sun's mass and distinguish young stellar objects from fully evolved stars, indicating the western region is in an earlier collapse stage.",
+      "significance": "This research provides an opportunity to study H II regions in conditions similar to the early Universe, offering insights into star formation processes during that epoch. Observing the entire sequence of star formation occurring simultaneously in N159 allows for a detailed examination of molecular cloud evolution.",
       "caveat": "Preprint / working paper; peer review is not established. The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
       "primarySourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
@@ -137,16 +137,16 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-22T00:00:00-04:00",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-10-30T10:01:04.491389Z",
-      "verifiedAt": "2026-10-30T10:01:04.491389Z",
+      "checkedAt": "2026-10-31T10:01:18.956601Z",
+      "verifiedAt": "2026-10-31T10:01:18.956601Z",
       "evidenceType": "preprint",
       "topics": [
         "astronomy",
         "physics"
       ],
       "entities": [
-        "James Webb Space Telescope",
-        "Near-Infrared Camera",
+        "NASA/ESA James Webb Space Telescope",
+        "LHA 120-N 159",
         "N159",
         "Large Magellanic Cloud",
         "Milky Way galaxy"
@@ -155,47 +155,32 @@
       "paperUrl": "https://arxiv.org/abs/2609.27126",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-30T07:44:44.046625-04:00",
-        "expiresAt": "2026-11-02T07:44:44.046625-05:00",
+        "reviewedAt": "2026-10-31T09:02:29.188353-04:00",
+        "expiresAt": "2026-11-03T09:02:29.188353-05:00",
         "inputFacts": {
           "id": "science-29a4ffbe1d32dba8",
           "title": "Stars brewing in a nebulous cauldron",
           "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
           "publishedAt": "2026-10-22T08:00:00Z",
-          "summary": "Astronomers, using data from the James Webb Space Telescope's Near-Infrared Camera (NIRCam), detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects in the N159 star-forming region of the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
-          "finding": "Astronomers, using data from the James Webb Space Telescope's Near-Infrared Camera (NIRCam), detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects in the N159 star-forming region of the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
+          "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
+          "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
           "sourceUpdatedAt": null
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
         "publicationEvidence": "22/10/2026",
         "datePrecision": "date",
-        "sourceHash": "63c02b17be0db98206469d5ec0cd6e1403d1d8f79a2841f6482644d4213cb173",
-        "relevance": 5,
+        "sourceHash": "0a65db484d3242db149d296e699818cb9367039658443b5afe36090a81f2416f",
+        "relevance": 4,
         "novelty": 4,
-        "reason": "New, detailed observations of star formation using advanced telescope technology, offering insights into early universe conditions.",
+        "reason": "New findings from the James Webb Space Telescope provide a substantive advance in understanding star formation, including the detection of previously unobserved dim stars and insights into the evolutionary stages of a star-forming region.",
         "storyKey": "jwst-n159-star-formation",
         "localConnection": "",
         "grounded": true,
-        "groundingReason": "The James Webb Space Telescope captured new detailed images of N159, allowing researchers to detect extremely dim stars less than a tenth the Sun's mass and distinguish young stellar objects from fully evolved stars, providing new insights into star formation in early Universe-like conditions."
+        "groundingReason": "The James Webb Space Telescope captured new detailed images of N159, revealing thousands of stars in early formation stages. New data allowed astronomers to detect dim stars less than a tenth the Sun's mass and distinguish young stellar objects from fully evolved stars, indicating the western region is in an earlier collapse stage."
       }
     }
   ],
   "corrections": [
-    {
-      "id": "science-5c3380370cf61ae7",
-      "inputFacts": {
-        "id": "science-5c3380370cf61ae7",
-        "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-        "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
-        "publishedAt": "2026-10-29T18:18:09Z",
-        "summary": "The rose-colored meteorite Teghaza 001, discovered in the Sahara Desert in 2022, has been identified as a piece of Mars that formed over 4.1 billion years ago. This makes it one of the oldest Martian meteorites ever found on Earth, providing a rare glimpse into Mars' ancient crust and formation, including evidence of water alteration around 4.1 billion years ago.",
-        "finding": "The rose-colored meteorite Teghaza 001, discovered in the Sahara Desert in 2022, has been identified as a piece of Mars that formed over 4.1 billion years ago. This makes it one of the oldest Martian meteorites ever found on Earth, providing a rare glimpse into Mars' ancient crust and formation, including evidence of water alteration around 4.1 billion years ago.",
-        "sourceUpdatedAt": "2026-10-29T18:50:48Z"
-      },
-      "publishedAt": "2026-10-29T14:18:09-04:00",
-      "publicationEvidence": "2026-10-29T14:18:09-04:00",
-      "datePrecision": "time"
-    },
     {
       "id": "science-edbada0a99652d00",
       "inputFacts": {
@@ -227,6 +212,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-970c87606ea95eb7",
+      "inputFacts": {
+        "id": "science-970c87606ea95eb7",
+        "title": "New research gauges community immunity to valley fever as fungal infection cases increase",
+        "url": "https://news.umich.edu/new-research-gauges-community-immunity-to-valley-fever-as-fungal-infection-cases-increase",
+        "publishedAt": "2026-10-27T15:58:55Z",
+        "summary": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
+        "finding": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
+        "sourceUpdatedAt": "2026-10-28T19:50:56Z"
+      },
+      "publishedAt": "2026-10-27T11:58:55-04:00",
+      "publicationEvidence": "2026-10-27T11:58:55-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-6d879a7a5c5c91f8",
       "inputFacts": {
         "id": "science-6d879a7a5c5c91f8",
@@ -248,8 +248,8 @@
         "title": "Stars brewing in a nebulous cauldron",
         "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
         "publishedAt": "2026-10-22T08:00:00Z",
-        "summary": "Astronomers, using data from the James Webb Space Telescope's Near-Infrared Camera (NIRCam), detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects in the N159 star-forming region of the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
-        "finding": "Astronomers, using data from the James Webb Space Telescope's Near-Infrared Camera (NIRCam), detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects in the N159 star-forming region of the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
+        "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
+        "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
         "sourceUpdatedAt": null
       },
       "publishedAt": "2026-10-22T00:00:00-04:00",
@@ -347,6 +347,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-e6da576f1b1a6c97",
+      "inputFacts": {
+        "id": "science-e6da576f1b1a6c97",
+        "title": "APOD: 2026 October 31 – Night on a Spooky Planet",
+        "url": "https://science.nasa.gov/image-article/apod-2026-october-31-night-on-a-spooky-planet",
+        "publishedAt": "2026-10-31T04:05:00Z",
+        "summary": "Geomagnetic storms, triggered by solar activity, release energetic particles trapped in Earth's magnetic field, which then penetrate the planet's upper atmosphere at high latitudes, creating auroral displays.",
+        "finding": "Geomagnetic storms, triggered by solar activity, release energetic particles trapped in Earth's magnetic field, which then penetrate the planet's upper atmosphere at high latitudes, creating auroral displays.",
+        "sourceUpdatedAt": "2026-10-31T04:05:00Z"
+      },
+      "publishedAt": "2026-10-31T00:05:00-04:00",
+      "publicationEvidence": "2026-10-31T00:05:00-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-7cf97945aa6283b8",
       "inputFacts": {
         "id": "science-7cf97945aa6283b8",
@@ -377,30 +392,15 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-492332e2065372ee",
-      "inputFacts": {
-        "id": "science-492332e2065372ee",
-        "title": "Slice of Martian Meteorite Teghaza 001",
-        "url": "https://science.nasa.gov/photojournal/slice-of-martian-meteorite-teghaza-001",
-        "publishedAt": "2026-10-29T23:32:35Z",
-        "summary": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
-        "finding": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
-        "sourceUpdatedAt": "2026-10-29T23:32:40Z"
-      },
-      "publishedAt": "2026-10-29T19:32:35-04:00",
-      "publicationEvidence": "2026-10-29T19:32:35-04:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-2de7be04e8e370b9",
       "inputFacts": {
         "id": "science-2de7be04e8e370b9",
-        "title": "Education on the ballot: U-M experts available",
+        "title": "Education on the ballot: U-M experts share insights",
         "url": "https://news.umich.edu/education-on-the-ballot-u-m-experts-available",
         "publishedAt": "2026-10-29T18:06:13Z",
-        "summary": "Literacy development is a lifelong process that extends beyond early childhood, requiring continued investment in supporting older students as they navigate complex subject areas and abstract concepts. Advanced technologies, such as extended reality powered by AI, offer promising possibilities to enhance learning by making abstract concepts more tangible and bringing complex ideas to life.",
-        "finding": "Literacy development is a lifelong process that extends beyond early childhood, requiring continued investment in supporting older students as they navigate complex subject areas and abstract concepts. Advanced technologies, such as extended reality powered by AI, offer promising possibilities to enhance learning by making abstract concepts more tangible and bringing complex ideas to life.",
-        "sourceUpdatedAt": "2026-10-29T18:06:23Z"
+        "summary": "University of Michigan researchers suggest that literacy learning progresses throughout a person's life, not just in early childhood. They emphasize the need to support older students in developing literacy skills for complex subject areas like physics, history, and algebra, especially with the integration of advanced technologies such as AI and extended reality.",
+        "finding": "University of Michigan researchers suggest that literacy learning progresses throughout a person's life, not just in early childhood. They emphasize the need to support older students in developing literacy skills for complex subject areas like physics, history, and algebra, especially with the integration of advanced technologies such as AI and extended reality.",
+        "sourceUpdatedAt": "2026-10-30T14:33:15Z"
       },
       "publishedAt": "2026-10-29T14:06:13-04:00",
       "publicationEvidence": "2026-10-29T14:06:13-04:00",
@@ -434,21 +434,6 @@
       },
       "publishedAt": "2026-10-29T00:01:00-04:00",
       "publicationEvidence": "2026-10-29T00:01:00-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-ec2503a37a6c8797",
-      "inputFacts": {
-        "id": "science-ec2503a37a6c8797",
-        "title": "NASA Welcomes Vietnam as Newest Artemis Accords Signatory",
-        "url": "https://www.nasa.gov/organizations/oiir/nasa-welcomes-vietnam-as-newest-artemis-accords-signatory",
-        "publishedAt": "2026-10-28T21:50:01Z",
-        "summary": "The Socialist Republic of Vietnam became the 78th nation to sign the Artemis Accords, committing to principles for peaceful, transparent, and responsible space exploration.",
-        "finding": "The Socialist Republic of Vietnam became the 78th nation to sign the Artemis Accords, committing to principles for peaceful, transparent, and responsible space exploration.",
-        "sourceUpdatedAt": "2026-10-28T21:50:02Z"
-      },
-      "publishedAt": "2026-10-28T17:50:01-04:00",
-      "publicationEvidence": "2026-10-28T17:50:01-04:00",
       "datePrecision": "time"
     },
     {
@@ -494,21 +479,6 @@
       },
       "publishedAt": "2026-10-27T16:23:58-04:00",
       "publicationEvidence": "2026-10-27T16:23:58-0400",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-970c87606ea95eb7",
-      "inputFacts": {
-        "id": "science-970c87606ea95eb7",
-        "title": "New research gauges community immunity to valley fever as fungal infection cases increase",
-        "url": "https://news.umich.edu/new-research-gauges-community-immunity-to-valley-fever-as-fungal-infection-cases-increase",
-        "publishedAt": "2026-10-27T15:58:55Z",
-        "summary": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
-        "finding": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
-        "sourceUpdatedAt": "2026-10-28T19:50:56Z"
-      },
-      "publishedAt": "2026-10-27T11:58:55-04:00",
-      "publicationEvidence": "2026-10-27T11:58:55-04:00",
       "datePrecision": "time"
     },
     {
