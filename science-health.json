@@ -1,83 +1,75 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-31T10:01:18.956601Z",
+  "generatedAt": "2026-11-01T05:30:06.966511Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
-  "documentGeneratedAt": "2026-10-31T10:01:18.956601Z",
+  "documentGeneratedAt": "2026-11-01T05:30:06.966511Z",
   "newestVerifiedStoryAt": "2026-10-31T04:05:00Z",
   "sources": {
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-31T10:01:18.956601Z",
+      "lastAttemptAt": "2026-11-01T05:30:06.966511Z",
       "lastSuccessAt": "2026-10-31T10:01:18.956601Z",
-      "lastNewStoryAt": "2026-10-31T10:01:18.956601Z",
+      "lastNewStoryAt": "2026-11-01T05:30:06.966511Z",
       "errors": [
-        "https://www.nasa.gov/news-release/nasa-releases-max-power-key-events-for-media-participants/: ValidationError: 'America\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t",
         "https://www.nasa.gov/image-article/nasas-james-webb-space-telescope-captures-eerie-cats-head/: LLMError: TimeoutError: The read operation timed out",
-        "https://science.nasa.gov/missions/hubble/nasa-explores-potential-commercial-servicing-for-hubble-telescope/: LLMError: TimeoutError: The read operation timed out"
+        "https://science.nasa.gov/missions/hubble/nasa-explores-potential-commercial-servicing-for-hubble-telescope/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 735)"
       ],
-      "candidateCount": 10,
+      "candidateCount": 3,
       "acceptedCount": 1,
-      "deferredCount": 6,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-31T10:01:18.956601Z",
       "failedUrls": [
-        "https://www.nasa.gov/news-release/nasa-releases-max-power-key-events-for-media-participants/",
         "https://www.nasa.gov/image-article/nasas-james-webb-space-telescope-captures-eerie-cats-head/",
         "https://science.nasa.gov/missions/hubble/nasa-explores-potential-commercial-servicing-for-hubble-telescope/"
       ],
       "feedFailed": false,
-      "retryCount": 29,
-      "nextRetryAt": "2026-10-31T16:01:18.956601Z"
+      "retryCount": 30,
+      "nextRetryAt": "2026-11-01T11:30:06.966511Z"
     },
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-31T10:01:18.956601Z",
+      "lastAttemptAt": "2026-11-01T05:30:06.966511Z",
       "lastSuccessAt": "2026-10-31T10:01:18.956601Z",
-      "lastNewStoryAt": "2026-10-30T10:01:04.491389Z",
+      "lastNewStoryAt": "2026-11-01T05:30:06.966511Z",
       "errors": [
-        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/: LLMError: TimeoutError: The read operation timed out",
-        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/: LLMError: TimeoutError: The read operation timed out",
-        "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/: ValueError: finding quote not present in article"
+        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/: LLMError: TimeoutError: The read operation timed out"
       ],
-      "candidateCount": 10,
-      "acceptedCount": 1,
-      "deferredCount": 5,
+      "candidateCount": 3,
+      "acceptedCount": 2,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-31T10:01:18.956601Z",
       "failedUrls": [
-        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/",
-        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/",
-        "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/"
+        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/"
       ],
       "feedFailed": false,
-      "retryCount": 32,
-      "nextRetryAt": "2026-10-31T16:01:18.956601Z"
+      "retryCount": 33,
+      "nextRetryAt": "2026-11-01T11:30:06.966511Z"
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-31T10:01:18.956601Z",
+      "lastAttemptAt": "2026-11-01T05:30:06.966511Z",
       "lastSuccessAt": "2026-10-31T10:01:18.956601Z",
-      "lastNewStoryAt": "2026-10-29T10:00:35.738305Z",
+      "lastNewStoryAt": "2026-11-01T05:30:06.966511Z",
       "errors": [
-        "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb: LLMError: TimeoutError: The read operation timed out",
-        "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos: ValueError: evidence classification requires an article quote"
+        "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb: LLMError: TimeoutError: The read operation timed out"
       ],
-      "candidateCount": 15,
+      "candidateCount": 2,
       "acceptedCount": 1,
-      "deferredCount": 7,
-      "rejectedCount": 4,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-31T10:01:18.956601Z",
       "failedUrls": [
-        "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb",
-        "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos"
+        "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb"
       ],
       "feedFailed": false,
-      "retryCount": 29,
-      "nextRetryAt": "2026-10-31T16:01:18.956601Z"
+      "retryCount": 30,
+      "nextRetryAt": "2026-11-01T11:30:06.966511Z"
     },
     "nsf": {
       "name": "NSF",
@@ -99,42 +91,42 @@
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-10-31T10:01:18.956601Z",
+      "lastAttemptAt": "2026-11-01T05:30:06.966511Z",
       "lastSuccessAt": "2026-10-31T10:01:18.956601Z",
       "lastNewStoryAt": "2026-10-30T10:01:04.491389Z",
       "errors": [
-        "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/: LLMError: TimeoutError: The read operation timed out"
+        "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/: ValueError: caveatQuote not present in article"
       ],
-      "candidateCount": 20,
-      "acceptedCount": 1,
-      "deferredCount": 16,
-      "rejectedCount": 2,
+      "candidateCount": 1,
+      "acceptedCount": 0,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-10-31T10:01:18.956601Z",
       "failedUrls": [
         "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/"
       ],
       "feedFailed": false,
-      "retryCount": 1,
-      "nextRetryAt": "2026-10-31T11:01:18.956601Z"
+      "retryCount": 2,
+      "nextRetryAt": "2026-11-01T07:30:06.966511Z"
     }
   },
   "error": "Incomplete source checks: nasa, jpl, esa, umich",
   "metrics": {
-    "verifiedStories": 95,
+    "verifiedStories": 98,
     "sourceCounts": {
-      "ESA": 12,
-      "NASA": 37,
-      "NASA JPL": 12,
+      "ESA": 13,
+      "NASA": 38,
+      "NASA JPL": 13,
       "NSF": 9,
       "University of Michigan News": 25
     },
     "topicCounts": {
-      "astronomy": 49,
+      "astronomy": 51,
       "biology": 11,
       "climate": 2,
       "climatology": 1,
       "computer-science": 1,
-      "earth-science": 25,
+      "earth-science": 26,
       "ecology": 1,
       "economics": 2,
       "education": 3,
@@ -151,10 +143,10 @@
       "politics": 2,
       "social-science": 17,
       "sustainability": 1,
-      "technology": 48,
+      "technology": 52,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 5.94,
+    "newestStoryAgeHours": 25.42,
     "maxPublicationLagHours": 1114.28
   }
 }

@@ -1,8 +1,68 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-10-31T09:02:29.188353-04:00",
+  "generatedAt": "2026-11-01T01:41:53.460682-05:00",
   "stories": [
+    {
+      "id": "science-5c3380370cf61ae7",
+      "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
+      "summary": "Scientists have age-dated the Martian meteorite Teghaza 001 to over 4.1 billion years old, making it one of the most ancient found on Earth. Its unique mix of igneous minerals provides a rare snapshot of Mars' early crust formation and suggests a dynamic water cycle on the planet around that time.",
+      "finding": "Scientists have age-dated the Martian meteorite Teghaza 001 to over 4.1 billion years old, making it one of the most ancient found on Earth. Its unique mix of igneous minerals provides a rare snapshot of Mars' early crust formation and suggests a dynamic water cycle on the planet around that time.",
+      "significance": "This meteorite offers a rare glimpse into Mars' early geological history, providing a 'Rosetta Stone' for understanding how the planet's crust formed from cooling magma and how water interacted with rocks on ancient Mars. Future studies could help answer fundamental questions about the planet's past habitability and water cycle.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
+      "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
+      "source": {
+        "name": "NASA JPL"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-29T14:18:09-04:00",
+      "firstSeenAt": "2026-10-30T10:01:04.491389Z",
+      "checkedAt": "2026-10-31T10:01:18.956601Z",
+      "verifiedAt": "2026-10-31T10:01:18.956601Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy",
+        "earth-science",
+        "physics"
+      ],
+      "entities": [
+        "Teghaza 001",
+        "Mars",
+        "Sahara Desert",
+        "NASA",
+        "Jet Propulsion Laboratory"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
+      "sourceUpdatedAt": "2026-10-29T18:50:48Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-01T01:41:53.460682-05:00",
+        "expiresAt": "2026-11-04T01:41:53.460682-05:00",
+        "inputFacts": {
+          "id": "science-5c3380370cf61ae7",
+          "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
+          "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
+          "publishedAt": "2026-10-29T18:18:09Z",
+          "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides insights into the formation of Mars' ancient crust and its alteration by subsurface water.",
+          "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides insights into the formation of Mars' ancient crust and its alteration by subsurface water.",
+          "sourceUpdatedAt": "2026-10-29T18:50:48Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-10-29T14:18:09-04:00",
+        "datePrecision": "time",
+        "sourceHash": "46cebebb92d9a77d8e2a9d1ebd8cf230e35275fa9092b20f5575fe5a79a2fcde",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "This article details a significant new finding in planetary science, specifically regarding the early history of Mars and the presence of water, which aligns with scientific interests.",
+        "storyKey": "ancient-mars-meteorite-teghaza-001",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims in the summary, including the age of the meteorite, its unique mineral composition, and the implications for Mars' early crust and water cycle. The finding represents a new scientific discovery about Mars' geological history."
+      }
+    },
     {
       "id": "science-54f31a9a44470168",
       "title": "New dwarf planet candidate discovered by NSF–DOE Rubin Observatory",
@@ -19,7 +79,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T14:51:35-04:00",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-10-29T05:30:05.908168Z",
+      "checkedAt": "2026-10-31T10:01:18.956601Z",
       "verifiedAt": "2026-10-29T05:30:05.908168Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -36,8 +96,8 @@
       "sourceUpdatedAt": "2026-10-27T18:51:35Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-10-29T03:38:54.987275-04:00",
-        "expiresAt": "2026-11-01T03:38:54.987275-05:00",
+        "reviewedAt": "2026-11-01T01:41:53.460682-05:00",
+        "expiresAt": "2026-11-04T01:41:53.460682-05:00",
         "inputFacts": {
           "id": "science-54f31a9a44470168",
           "title": "New dwarf planet candidate discovered by NSF–DOE Rubin Observatory",
@@ -182,6 +242,21 @@
   ],
   "corrections": [
     {
+      "id": "science-5c3380370cf61ae7",
+      "inputFacts": {
+        "id": "science-5c3380370cf61ae7",
+        "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
+        "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
+        "publishedAt": "2026-10-29T18:18:09Z",
+        "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides insights into the formation of Mars' ancient crust and its alteration by subsurface water.",
+        "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides insights into the formation of Mars' ancient crust and its alteration by subsurface water.",
+        "sourceUpdatedAt": "2026-10-29T18:50:48Z"
+      },
+      "publishedAt": "2026-10-29T14:18:09-04:00",
+      "publicationEvidence": "2026-10-29T14:18:09-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-edbada0a99652d00",
       "inputFacts": {
         "id": "science-edbada0a99652d00",
@@ -257,6 +332,21 @@
       "datePrecision": "date"
     },
     {
+      "id": "science-ebd5ed8eaec52f79",
+      "inputFacts": {
+        "id": "science-ebd5ed8eaec52f79",
+        "title": "NASA JPL Looks to Next 90 Years of Innovation, Exploration",
+        "url": "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration",
+        "publishedAt": "2026-10-21T18:35:56Z",
+        "summary": "The Jet Propulsion Laboratory (JPL) is developing several missions for future space exploration and Earth observation. These include SkyFall, which will deploy helicopters on Mars to map ice and analyze weather; MoonFall, which will land propulsive drones at the lunar South Pole; SunRISE, a formation-flying satellite constellation to study solar activity; NEO Surveyor, an asteroid-hunting mission; and various Earth-observing missions to monitor water movement, tropical storms, and air pollution.",
+        "finding": "The Jet Propulsion Laboratory (JPL) is developing several missions for future space exploration and Earth observation. These include SkyFall, which will deploy helicopters on Mars to map ice and analyze weather; MoonFall, which will land propulsive drones at the lunar South Pole; SunRISE, a formation-flying satellite constellation to study solar activity; NEO Surveyor, an asteroid-hunting mission; and various Earth-observing missions to monitor water movement, tropical storms, and air pollution.",
+        "sourceUpdatedAt": "2026-10-21T18:35:57Z"
+      },
+      "publishedAt": "2026-10-21T14:35:56-04:00",
+      "publicationEvidence": "2026-10-21T14:35:56-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-a9e27b8b436f0d65",
       "inputFacts": {
         "id": "science-a9e27b8b436f0d65",
@@ -269,81 +359,6 @@
       },
       "publishedAt": "2026-10-28T01:39:46-04:00",
       "publicationEvidence": "2026-10-28T01:39:46-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-3dc92304bbbb16d2",
-      "inputFacts": {
-        "id": "science-3dc92304bbbb16d2",
-        "title": "The stakes appear high for college students who gamble",
-        "url": "https://news.umich.edu/the-stakes-appear-high-for-college-students-who-gamble",
-        "publishedAt": "2026-10-15T19:50:38Z",
-        "summary": "The normalization of sports betting, particularly among young men, is a concern for college students, as many believe their sports knowledge provides an advantage or can supplement income, despite competing against a sophisticated industry designed for profit when bettors lose.",
-        "finding": "The normalization of sports betting, particularly among young men, is a concern for college students, as many believe their sports knowledge provides an advantage or can supplement income, despite competing against a sophisticated industry designed for profit when bettors lose.",
-        "sourceUpdatedAt": "2026-10-15T19:50:46Z"
-      },
-      "publishedAt": "2026-10-15T15:50:38-04:00",
-      "publicationEvidence": "2026-10-15T15:50:38-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-1a44212d3a049509",
-      "inputFacts": {
-        "id": "science-1a44212d3a049509",
-        "title": "Whatcha lookin’ at? Social anxiety heightens brain sensitivity to others’ gaze",
-        "url": "https://news.umich.edu/whatcha-lookin-at-social-anxiety-heightens-brain-sensitivity-to-others-gaze",
-        "publishedAt": "2026-10-15T17:03:02Z",
-        "summary": "Young adults with higher levels of social anxiety exhibit stronger brain responses when a word describing mental states conflicts with what a gaze pattern seems to convey. This heightened neural sensitivity, specifically the N400 response, suggests an increased alertness to social cues, but it does not improve their explicit judgments about the meaning of the gaze.",
-        "finding": "Young adults with higher levels of social anxiety exhibit stronger brain responses when a word describing mental states conflicts with what a gaze pattern seems to convey. This heightened neural sensitivity, specifically the N400 response, suggests an increased alertness to social cues, but it does not improve their explicit judgments about the meaning of the gaze.",
-        "sourceUpdatedAt": "2026-10-15T17:03:13Z"
-      },
-      "publishedAt": "2026-10-15T13:03:02-04:00",
-      "publicationEvidence": "2026-10-15T13:03:02-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-21ed244dc27840c3",
-      "inputFacts": {
-        "id": "science-21ed244dc27840c3",
-        "title": "Many older adults make Medicare decisions quickly, most don’t change plans",
-        "url": "https://news.umich.edu/many-older-adults-make-medicare-decisions-quickly-most-dont-change-plans",
-        "publishedAt": "2026-10-15T16:55:19Z",
-        "summary": "A University of Michigan survey indicates that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all and 80% retaining their previous year's coverage.",
-        "finding": "A University of Michigan survey indicates that 60% of older adults spend less than an hour choosing their Medicare coverage during Open Enrollment, with 27% not reviewing options at all and 80% retaining their previous year's coverage.",
-        "sourceUpdatedAt": "2026-10-15T16:55:27Z"
-      },
-      "publishedAt": "2026-10-15T12:55:19-04:00",
-      "publicationEvidence": "2026-10-15T12:55:19-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-8c5bf27decf07391",
-      "inputFacts": {
-        "id": "science-8c5bf27decf07391",
-        "title": "They get knocked down—but they get up again",
-        "url": "https://news.umich.edu/they-get-knocked-downbut-they-get-up-again",
-        "publishedAt": "2026-10-15T14:29:26Z",
-        "summary": "Low doses of the herbicide dicamba can cause the common weed oxalis (wood sorrel) to produce more flowers, a phenomenon known as hormesis. This effect is a single-generation response and does not appear to be heritable or lead to evolution in the oxalis population.",
-        "finding": "Low doses of the herbicide dicamba can cause the common weed oxalis (wood sorrel) to produce more flowers, a phenomenon known as hormesis. This effect is a single-generation response and does not appear to be heritable or lead to evolution in the oxalis population.",
-        "sourceUpdatedAt": "2026-10-15T14:29:32Z"
-      },
-      "publishedAt": "2026-10-15T10:29:26-04:00",
-      "publicationEvidence": "2026-10-15T10:29:26-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-56e6d03cc572f45c",
-      "inputFacts": {
-        "id": "science-56e6d03cc572f45c",
-        "title": "Mollusk microbiome? It’s all in the family",
-        "url": "https://news.umich.edu/mollusk-microbiome-its-all-in-the-family",
-        "publishedAt": "2026-10-14T14:59:06Z",
-        "summary": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
-        "finding": "The composition of a mollusk's microbiome is primarily determined by its species (family tree) rather than its living environment. This means that mollusks of the same species will have more similar microbiomes, even if they live in different locations, than mollusks of different species living in the same environment.",
-        "sourceUpdatedAt": "2026-10-14T14:59:14Z"
-      },
-      "publishedAt": "2026-10-14T10:59:06-04:00",
-      "publicationEvidence": "2026-10-14T10:59:06-04:00",
       "datePrecision": "time"
     },
     {
@@ -392,6 +407,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-492332e2065372ee",
+      "inputFacts": {
+        "id": "science-492332e2065372ee",
+        "title": "Slice of Martian Meteorite Teghaza 001",
+        "url": "https://science.nasa.gov/photojournal/slice-of-martian-meteorite-teghaza-001",
+        "publishedAt": "2026-10-29T23:32:35Z",
+        "summary": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
+        "finding": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
+        "sourceUpdatedAt": "2026-10-29T23:32:40Z"
+      },
+      "publishedAt": "2026-10-29T19:32:35-04:00",
+      "publicationEvidence": "2026-10-29T19:32:35-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-2de7be04e8e370b9",
       "inputFacts": {
         "id": "science-2de7be04e8e370b9",
@@ -419,21 +449,6 @@
       },
       "publishedAt": "2026-10-29T00:05:00-04:00",
       "publicationEvidence": "2026-10-29T00:05:00-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-7a5a1db73b614abf",
-      "inputFacts": {
-        "id": "science-7a5a1db73b614abf",
-        "title": "Arnab Strikes India",
-        "url": "https://science.nasa.gov/earth/earth-observatory/arnab-strikes-india",
-        "publishedAt": "2026-10-29T04:01:00Z",
-        "summary": "Cyclone Arnab, the first named storm of the 2026 North Indian Ocean cyclone season, made landfall along the coast of Andhra Pradesh, India, on October 28, 2026, with sustained winds of 130 kilometers per hour. This occurred during an El Niño event, which is typically associated with reduced tropical cyclone activity in the Bay of Bengal.",
-        "finding": "Cyclone Arnab, the first named storm of the 2026 North Indian Ocean cyclone season, made landfall along the coast of Andhra Pradesh, India, on October 28, 2026, with sustained winds of 130 kilometers per hour. This occurred during an El Niño event, which is typically associated with reduced tropical cyclone activity in the Bay of Bengal.",
-        "sourceUpdatedAt": "2026-10-29T04:01:00Z"
-      },
-      "publishedAt": "2026-10-29T00:01:00-04:00",
-      "publicationEvidence": "2026-10-29T00:01:00-04:00",
       "datePrecision": "time"
     },
     {
@@ -495,32 +510,9 @@
       "publishedAt": "2026-10-27T11:21:29-04:00",
       "publicationEvidence": "2026-10-27T11:21:29-04:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-0502a592ce1ff45a",
-      "inputFacts": {
-        "id": "science-0502a592ce1ff45a",
-        "title": "Celebrating BepiColombo, three words at a time",
-        "url": "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time",
-        "publishedAt": "2026-10-19T15:00:00Z",
-        "summary": "The ESA/JAXA BepiColombo mission is scheduled to arrive at Mercury on December 9, 2026, after an eight-year journey through the inner Solar System.",
-        "finding": "The ESA/JAXA BepiColombo mission is scheduled to arrive at Mercury on December 9, 2026, after an eight-year journey through the inner Solar System.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-19T00:00:00-04:00",
-      "publicationEvidence": "19/10/2026",
-      "datePrecision": "date"
     }
   ],
   "days": [
-    {
-      "date": "2026-10-30",
-      "selectedIds": [
-        "science-54f31a9a44470168",
-        "science-6d879a7a5c5c91f8",
-        "science-29a4ffbe1d32dba8"
-      ]
-    },
     {
       "date": "2026-10-31",
       "selectedIds": [
@@ -535,6 +527,14 @@
         "science-54f31a9a44470168",
         "science-6d879a7a5c5c91f8",
         "science-29a4ffbe1d32dba8"
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "selectedIds": [
+        "science-54f31a9a44470168",
+        "science-6d879a7a5c5c91f8",
+        "science-5c3380370cf61ae7"
       ]
     }
   ]
