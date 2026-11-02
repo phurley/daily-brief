@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-02T06:30:06.465706Z",
+  "generatedAt": "2026-11-02T11:00:03.175573Z",
   "editionDate": "2026-11-02",
   "starshipEstimatedLaunch": {
     "status": "targeted",
@@ -91,7 +91,7 @@
       "title": "NASA Releases MAX POWER Key Events for Media, Participants",
       "summary": "NASA will provide its latest update on the Moon Base, humanity's first outpost for long-term lunar exploration located near the lunar South Pole, during a news conference at 5 p.m. EST on November 7.",
       "finding": "NASA will provide its latest update on the Moon Base, humanity's first outpost for long-term lunar exploration located near the lunar South Pole, during a news conference at 5 p.m. EST on November 7.",
-      "significance": "This update is significant as it pertains to the progress and future of humanity's first long-term lunar outpost, which could pave the way for sustained human presence and research on the Moon.",
+      "significance": "This update is significant as it pertains to the progress of humanity's first long-term lunar outpost, which could pave the way for sustained human presence and research on the Moon.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/news-release/nasa-releases-max-power-key-events-for-media-participants",
       "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-releases-max-power-key-events-for-media-participants",
@@ -102,8 +102,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T19:31:02Z",
       "firstSeenAt": "2026-11-01T05:30:06.966511Z",
-      "checkedAt": "2026-11-01T05:30:06.966511Z",
-      "verifiedAt": "2026-11-01T05:30:06.966511Z",
+      "checkedAt": "2026-11-02T11:00:03.175573Z",
+      "verifiedAt": "2026-11-02T11:00:03.175573Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "astronomy",
@@ -112,7 +112,7 @@
       "entities": [
         "NASA",
         "Moon Base",
-        "Kennedy Space Center"
+        "lunar South Pole"
       ],
       "milestoneStatus": "unknown"
     },
@@ -422,9 +422,9 @@
     {
       "id": "science-7158509b82ff6dd6",
       "title": "Michigan Minds: The rural healthcare blame game",
-      "summary": "Rural health outcomes are often viewed through a racialized, \"us-vs.-them\" lens, and the nationalization of news media influences who voters blame for healthcare issues. This can lead rural white voters to perceive that certain health policies benefit racial and ethnic minority groups more, even if objectively untrue, and to blame national political parties or the government for local healthcare problems like hospital closures.",
-      "finding": "Rural health outcomes are often viewed through a racialized, \"us-vs.-them\" lens, and the nationalization of news media influences who voters blame for healthcare issues. This can lead rural white voters to perceive that certain health policies benefit racial and ethnic minority groups more, even if objectively untrue, and to blame national political parties or the government for local healthcare problems like hospital closures.",
-      "significance": "This research highlights how complex factors like race, media, and political identity shape public perception of healthcare policy, particularly in rural areas. Understanding these dynamics is crucial for addressing health disparities and improving healthcare access, as misattributing blame can hinder effective policy solutions and exacerbate partisan divisions.",
+      "summary": "Rural white voters often perceive healthcare access and policy through a racialized \"us-vs.-them\" lens, believing that certain health policies disproportionately benefit racial and ethnic minority groups over rural white communities, even when objective data does not support this view. This perception is influenced by political rhetoric and media framing that connect health issues with racial considerations.",
+      "finding": "Rural white voters often perceive healthcare access and policy through a racialized \"us-vs.-them\" lens, believing that certain health policies disproportionately benefit racial and ethnic minority groups over rural white communities, even when objective data does not support this view. This perception is influenced by political rhetoric and media framing that connect health issues with racial considerations.",
+      "significance": "This finding highlights how racial attitudes and media nationalization can distort perceptions of healthcare policy and outcomes, potentially leading to misinformed political behaviors and a \"blame structure\" that hinders effective solutions for rural health disparities. Understanding these dynamics is crucial for addressing the complex challenges in rural healthcare access and policy.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://news.umich.edu/michigan-minds-the-rural-healthcare-blame-game",
       "primarySourceUrl": "https://news.umich.edu/michigan-minds-the-rural-healthcare-blame-game",
@@ -435,9 +435,9 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-28T16:21:12Z",
       "firstSeenAt": "2026-10-29T10:00:35.738305Z",
-      "checkedAt": "2026-10-30T10:01:04.491389Z",
-      "verifiedAt": "2026-10-30T10:01:04.491389Z",
-      "evidenceType": "unknown",
+      "checkedAt": "2026-11-02T11:00:03.175573Z",
+      "verifiedAt": "2026-11-02T11:00:03.175573Z",
+      "evidenceType": "agency-announcement",
       "topics": [
         "social-science",
         "health"
@@ -445,21 +445,21 @@
       "entities": [
         "Michael Shepherd",
         "University of Michigan School of Public Health",
-        "U.S. health politics and policy",
-        "rural health disparities",
-        "Medicaid"
+        "rural white voters",
+        "Medicaid",
+        "Affordable Care Act"
       ],
       "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-28T19:03:52Z",
+      "sourceUpdatedAt": "2026-10-30T14:35:12Z",
       "localConnection": "University of Michigan research in Ann Arbor."
     },
     {
       "id": "science-edbada0a99652d00",
       "title": "Optimizing AI energy consumption throughout its entire lifecycle",
-      "summary": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems are developing a system to estimate AI energy usage across its entire workflow, from data processing to deployment. This system, funded by DARPA, aims to reduce AI's energy consumption by up to half through more efficient software design.",
-      "finding": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems are developing a system to estimate AI energy usage across its entire workflow, from data processing to deployment. This system, funded by DARPA, aims to reduce AI's energy consumption by up to half through more efficient software design.",
-      "significance": "The anticipated doubling of data center energy consumption by 2030, largely driven by AI, necessitates more efficient solutions. Reducing AI energy use can lower costs, alleviate strain on power infrastructure, and extend battery life for AI-enabled devices, which is crucial for national defense and military technology.",
-      "caveat": "The proposed system is currently under development, with researchers planning to build high-precision energy measurement tools and release them as open-source documentation and software. The project is a two-year initiative, and the energy reduction is an aim, not a completed result.",
+      "summary": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems propose that more efficient software design could reduce AI energy consumption by up to half. They are developing a system to estimate energy usage across all stages of an AI workflow, from data processing to model training and deployment, to avoid extensive trial-and-error testing.",
+      "finding": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems propose that more efficient software design could reduce AI energy consumption by up to half. They are developing a system to estimate energy usage across all stages of an AI workflow, from data processing to model training and deployment, to avoid extensive trial-and-error testing.",
+      "significance": "This initiative is important because data center energy consumption is projected to more than double by 2030, largely due to AI. Reducing AI's energy footprint could lower operational costs, decrease strain on power infrastructure, and extend battery life for AI-enabled devices, which is crucial for applications in national defense and military technology.",
+      "caveat": "The proposed system and tools are currently under development as part of a two-year project funded by DARPA. The \"energy calculus\" framework and high-precision energy measurement tools, combining physical sensors with software analysis, are yet to be built and released as open-source documentation and software.",
       "url": "https://news.umich.edu/optimizing-ai-energy-consumption-throughout-its-entire-lifecycle",
       "primarySourceUrl": "https://news.umich.edu/optimizing-ai-energy-consumption-throughout-its-entire-lifecycle",
       "source": {
@@ -469,8 +469,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-28T15:13:22Z",
       "firstSeenAt": "2026-10-29T10:00:35.738305Z",
-      "checkedAt": "2026-10-30T10:01:04.491389Z",
-      "verifiedAt": "2026-10-30T10:01:04.491389Z",
+      "checkedAt": "2026-11-02T11:00:03.175573Z",
+      "verifiedAt": "2026-11-02T11:00:03.175573Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "technology",
@@ -484,7 +484,7 @@
         "AI"
       ],
       "milestoneStatus": "planned",
-      "sourceUpdatedAt": "2026-10-28T19:51:23Z",
+      "sourceUpdatedAt": "2026-10-30T14:37:44Z",
       "localConnection": "University of Michigan research in Ann Arbor."
     },
     {
@@ -840,7 +840,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-20T07:00:00Z",
       "firstSeenAt": "2026-11-01T05:30:06.966511Z",
-      "checkedAt": "2026-11-01T05:30:06.966511Z",
+      "checkedAt": "2026-11-02T11:00:03.175573Z",
       "verifiedAt": "2026-11-01T05:30:06.966511Z",
       "evidenceType": "mission-milestone",
       "topics": [
@@ -1184,9 +1184,9 @@
     {
       "id": "science-4b31a65269f1add9",
       "title": "NASA Satellites Observe Historic 2026 El Niño",
-      "summary": "NASA satellites observed the unfolding of a strong El Ni\n\no event in 2026, characterized by warmer-than-normal sea surface temperatures, elevated sea surface heights, and changes in ocean color due to reduced phytoplankton abundance in the equatorial Pacific.",
-      "finding": "NASA satellites observed the unfolding of a strong El Ni\n\no event in 2026, characterized by warmer-than-normal sea surface temperatures, elevated sea surface heights, and changes in ocean color due to reduced phytoplankton abundance in the equatorial Pacific.",
-      "significance": "El Ni\n\no is a natural climate pattern that significantly impacts global weather, affecting communities worldwide through altered rain patterns, sea levels, and marine ecosystems. Tracking these changes helps scientists understand the phenomenon and its effects.",
+      "summary": "NASA satellites observed the unfolding of a historic El Ni\n\n\n\no event in 2026, characterized by warmer-than-normal sea surface temperatures, elevated sea surface heights, and changes in ocean color due to reduced phytoplankton abundance in the equatorial Pacific.",
+      "finding": "NASA satellites observed the unfolding of a historic El Ni\n\n\n\no event in 2026, characterized by warmer-than-normal sea surface temperatures, elevated sea surface heights, and changes in ocean color due to reduced phytoplankton abundance in the equatorial Pacific.",
+      "significance": "This El Ni\n\n\n\no is considered the strongest since 1950, impacting global weather patterns, rain distribution, and marine ecosystems. The observations provide critical data for understanding and predicting the effects of such powerful climate phenomena on communities worldwide, including farmers, firefighters, and coastal populations.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino",
       "primarySourceUrl": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino",
@@ -1197,19 +1197,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-15T17:59:22Z",
       "firstSeenAt": "2026-10-16T10:02:47.778170Z",
-      "checkedAt": "2026-11-01T05:30:06.966511Z",
-      "verifiedAt": "2026-11-01T05:30:06.966511Z",
+      "checkedAt": "2026-11-02T11:00:03.175573Z",
+      "verifiedAt": "2026-11-02T11:00:03.175573Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "earth-science",
         "biology",
-        "technology"
+        "climate-change"
       ],
       "entities": [
         "NASA",
+        "National Oceanic and Atmospheric Administration",
         "Sentinel-6 satellites",
-        "PACE satellite",
-        "National Oceanic and Atmospheric Administration (NOAA)"
+        "Kelvin wave"
       ],
       "milestoneStatus": "completed",
       "sourceUpdatedAt": "2026-10-15T20:07:23Z"
@@ -1501,7 +1501,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-14T09:00:00Z",
       "firstSeenAt": "2026-10-29T10:00:35.738305Z",
-      "checkedAt": "2026-10-29T10:00:35.738305Z",
+      "checkedAt": "2026-11-02T11:00:03.175573Z",
       "verifiedAt": "2026-10-29T10:00:35.738305Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -2339,10 +2339,10 @@
     {
       "id": "science-fd82550bcb5ef02d",
       "title": "NASA’s SPHEREx Telescope Sees Menagerie of Brown Dwarfs",
-      "summary": "NASA's SPHEREx telescope has observed 37 nearby brown dwarfs, revealing chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane. These findings indicate that brown dwarf atmospheres are more complex than previously understood, with current theoretical models struggling to match the observed data, especially concerning cloudy transitions.",
-      "finding": "NASA's SPHEREx telescope has observed 37 nearby brown dwarfs, revealing chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane. These findings indicate that brown dwarf atmospheres are more complex than previously understood, with current theoretical models struggling to match the observed data, especially concerning cloudy transitions.",
-      "significance": "This research significantly advances the understanding of brown dwarfs, which bridge the gap between stars and exoplanets. By analyzing thousands more brown dwarfs, scientists can refine atmospheric models, gain insights into the variety of these celestial objects, and better comprehend their formation and evolution, which could also inform our understanding of giant planets.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "summary": "Observations from NASA's SPHEREx telescope have revealed that brown dwarfs possess chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane. These findings were derived from analyzing the brightness of 37 nearby brown dwarfs across 102 different colors, creating a spectrum that showed molecular signatures changing with temperature.",
+      "finding": "Observations from NASA's SPHEREx telescope have revealed that brown dwarfs possess chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane. These findings were derived from analyzing the brightness of 37 nearby brown dwarfs across 102 different colors, creating a spectrum that showed molecular signatures changing with temperature.",
+      "significance": "This research provides new insights into the atmospheric composition and evolution of brown dwarfs, which are celestial objects that share characteristics with both stars and giant planets. Understanding their complex atmospheres helps refine theoretical models of these \"dark wanderers\" and their role in the cosmos, particularly how their exotic clouds transition to methane-rich atmospheres as they cool.",
+      "caveat": "The current state-of-the-art models are capturing the general chemical trend, but they are struggling to match the data when it comes to cloudy transitions in brown dwarf atmospheres, indicating that the models need further refinement to accurately represent the observed phenomena.",
       "url": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs",
       "primarySourceUrl": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs",
       "source": {
@@ -2352,8 +2352,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-08T18:22:48Z",
       "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-29T10:00:35.738305Z",
-      "verifiedAt": "2026-10-29T10:00:35.738305Z",
+      "checkedAt": "2026-11-02T11:00:03.175573Z",
+      "verifiedAt": "2026-11-02T11:00:03.175573Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -2364,7 +2364,7 @@
         "SPHEREx",
         "brown dwarfs",
         "The Astrophysical Journal",
-        "Zafar Rustamkulov"
+        "Jet Propulsion Laboratory"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://iopscience.iop.org/article/10.3847/1538-4357/ae9d66",
@@ -2386,7 +2386,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-08T13:26:57Z",
       "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-10-29T10:00:35.738305Z",
+      "checkedAt": "2026-11-02T11:00:03.175573Z",
       "verifiedAt": "2026-10-29T10:00:35.738305Z",
       "evidenceType": "agency-announcement",
       "topics": [
