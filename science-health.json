@@ -1,25 +1,25 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-02T11:00:03.175573Z",
+  "generatedAt": "2026-11-03T06:30:02.144326Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
-  "documentGeneratedAt": "2026-11-02T11:00:03.175573Z",
+  "documentGeneratedAt": "2026-11-03T06:30:02.144326Z",
   "newestVerifiedStoryAt": "2026-11-01T04:05:00Z",
   "sources": {
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-11-02T11:00:03.175573Z",
+      "lastAttemptAt": "2026-11-03T06:30:02.144326Z",
       "lastSuccessAt": "2026-11-02T11:00:03.175573Z",
       "lastNewStoryAt": "2026-11-01T11:13:31.530463Z",
       "errors": [
         "https://science.nasa.gov/image-article/apod-2026-november-2-a-long-cloud-on-mars/: ValueError: finding quote not present in article",
-        "https://science.nasa.gov/earth/earth-observatory/pennsylvanias-grand-canyon/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 915)",
-        "https://www.nasa.gov/image-article/nasas-james-webb-space-telescope-captures-eerie-cats-head/: ValidationError: \"Intricate structures within the Cat\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n"
+        "https://science.nasa.gov/earth/earth-observatory/pennsylvanias-grand-canyon/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 929)",
+        "https://www.nasa.gov/image-article/nasas-james-webb-space-telescope-captures-eerie-cats-head/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 706)"
       ],
-      "candidateCount": 10,
-      "acceptedCount": 1,
-      "deferredCount": 4,
+      "candidateCount": 3,
+      "acceptedCount": 0,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-11-02T11:00:03.175573Z",
       "failedUrls": [
@@ -28,54 +28,52 @@
         "https://www.nasa.gov/image-article/nasas-james-webb-space-telescope-captures-eerie-cats-head/"
       ],
       "feedFailed": false,
-      "retryCount": 33,
-      "nextRetryAt": "2026-11-02T17:00:03.175573Z"
+      "retryCount": 34,
+      "nextRetryAt": "2026-11-03T12:30:02.144326Z"
     },
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-11-02T11:00:03.175573Z",
+      "lastAttemptAt": "2026-11-03T06:30:02.144326Z",
       "lastSuccessAt": "2026-11-02T11:00:03.175573Z",
       "lastNewStoryAt": "2026-11-01T05:30:06.966511Z",
       "errors": [
-        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 1008)",
-        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 931)"
+        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 782)"
       ],
-      "candidateCount": 10,
-      "acceptedCount": 2,
-      "deferredCount": 3,
+      "candidateCount": 2,
+      "acceptedCount": 1,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-11-02T11:00:03.175573Z",
       "failedUrls": [
-        "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration/",
         "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/"
       ],
       "feedFailed": false,
-      "retryCount": 36,
-      "nextRetryAt": "2026-11-02T17:00:03.175573Z"
+      "retryCount": 37,
+      "nextRetryAt": "2026-11-03T12:30:02.144326Z"
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-11-02T11:00:03.175573Z",
+      "lastAttemptAt": "2026-11-03T06:30:02.144326Z",
       "lastSuccessAt": "2026-11-02T11:00:03.175573Z",
       "lastNewStoryAt": "2026-11-01T05:30:06.966511Z",
       "errors": [
-        "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb: LLMError: JSONDecodeError: Unterminated string starting at: line 1 column 849 (char 848)",
-        "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 1200)"
+        "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb: ValidationError: 'Hubble\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\",
+        "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 1165)"
       ],
-      "candidateCount": 15,
+      "candidateCount": 2,
       "acceptedCount": 0,
-      "deferredCount": 5,
-      "rejectedCount": 4,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-11-02T11:00:03.175573Z",
       "failedUrls": [
         "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb",
         "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet"
       ],
       "feedFailed": false,
-      "retryCount": 33,
-      "nextRetryAt": "2026-11-02T17:00:03.175573Z"
+      "retryCount": 34,
+      "nextRetryAt": "2026-11-03T12:30:02.144326Z"
     },
     "nsf": {
       "name": "NSF",
@@ -97,25 +95,23 @@
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-11-02T11:00:03.175573Z",
+      "lastAttemptAt": "2026-11-03T06:30:02.144326Z",
       "lastSuccessAt": "2026-11-02T11:00:03.175573Z",
       "lastNewStoryAt": "2026-10-30T10:01:04.491389Z",
       "errors": [
-        "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/: ValueError: caveatQuote not present in article",
-        "https://news.umich.edu/navigating-ai-in-transportation-new-national-research-consortium-aims-to-guide-agencies/: ValueError: caveatQuote not present in article"
+        "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/: ValueError: caveatQuote not present in article"
       ],
-      "candidateCount": 20,
-      "acceptedCount": 2,
-      "deferredCount": 13,
+      "candidateCount": 2,
+      "acceptedCount": 1,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-11-02T11:00:03.175573Z",
       "failedUrls": [
-        "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/",
-        "https://news.umich.edu/navigating-ai-in-transportation-new-national-research-consortium-aims-to-guide-agencies/"
+        "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/"
       ],
       "feedFailed": false,
-      "retryCount": 5,
-      "nextRetryAt": "2026-11-02T17:00:03.175573Z"
+      "retryCount": 6,
+      "nextRetryAt": "2026-11-03T12:30:02.144326Z"
     }
   },
   "error": "Incomplete source checks: nasa, jpl, esa, umich",
@@ -155,7 +151,7 @@
       "technology": 51,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 30.92,
+    "newestStoryAgeHours": 50.42,
     "maxPublicationLagHours": 1114.28
   }
 }
