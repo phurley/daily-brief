@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-03T06:30:02.144326Z",
+  "generatedAt": "2026-11-03T11:00:02.680578Z",
   "editionDate": "2026-11-03",
   "starshipEstimatedLaunch": {
     "status": "targeted",
@@ -20,6 +20,138 @@
     ]
   },
   "stories": [
+    {
+      "id": "science-90c08f78aa09ed89",
+      "title": "APOD: 2026 November 3 – Comet PanSTARRs and Rainbow Meteor",
+      "summary": "The article presents an image featuring Comet C/2025 R3 (PanSTARRS) and a colorful meteor, noting that the meteor likely did not originate from this specific comet. It also highlights that three meteor showers, the Southern Taurids, Northern Taurids, and Leonids, will reach their peaks in November, originating from Comet 2P/Encke and Comet 55P/Tempel-Tuttle respectively.",
+      "finding": "The article presents an image featuring Comet C/2025 R3 (PanSTARRS) and a colorful meteor, noting that the meteor likely did not originate from this specific comet. It also highlights that three meteor showers, the Southern Taurids, Northern Taurids, and Leonids, will reach their peaks in November, originating from Comet 2P/Encke and Comet 55P/Tempel-Tuttle respectively.",
+      "significance": "This information helps distinguish between celestial objects that appear close in an image but are not physically related, and provides a guide for upcoming astronomical events, allowing skywatchers to anticipate and observe meteor showers and their parent comets.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/image-article/apod-2026-november-3-comet-panstarrs-and-rainbow-meteor",
+      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-november-3-comet-panstarrs-and-rainbow-meteor",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-03T05:05:00Z",
+      "firstSeenAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "Comet C/2025 R3 (PanSTARRS)",
+        "Southern Taurids",
+        "Northern Taurids",
+        "Leonids Meteor Shower",
+        "Comet 2P/Encke"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-03T05:05:00Z"
+    },
+    {
+      "id": "science-735eb38c5458cb01",
+      "title": "Podcast: The laser that could break the laws of physics",
+      "summary": "The NSF Optical Parametric Amplifier Line (NSF OPAL) laser facility is being designed to provide researchers with advanced capabilities to explore fundamental scientific questions.",
+      "finding": "The NSF Optical Parametric Amplifier Line (NSF OPAL) laser facility is being designed to provide researchers with advanced capabilities to explore fundamental scientific questions.",
+      "significance": "This facility aims to push the boundaries of scientific understanding by enabling investigations into open questions at the frontiers of science, potentially leading to breakthroughs in physics.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nsf.gov/news/podcast-laser-could-break-laws-physics",
+      "primarySourceUrl": "https://www.nsf.gov/news/podcast-laser-could-break-laws-physics",
+      "source": {
+        "name": "NSF"
+      },
+      "sourceGroup": "NSF",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-02T21:07:52Z",
+      "firstSeenAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "NSF Optical Parametric Amplifier Line",
+        "NSF OPAL",
+        "Jonathan Zuegel",
+        "U.S. National Science Foundation"
+      ],
+      "milestoneStatus": "planned",
+      "sourceUpdatedAt": "2026-11-02T21:07:52Z"
+    },
+    {
+      "id": "science-a20db8c134bc2054",
+      "title": "TB 26-09 Measured Hammer-Tap Inputs",
+      "summary": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
+      "finding": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
+      "significance": "This finding is significant for modal analysis and pyroshock testing, as it clarifies that variations in hammer-tap inputs, such as crest ripples and separated contacts, are acceptable if properly measured. This understanding can lead to more robust and accurate structural testing methodologies, reducing the need to reject tests based solely on waveform appearance.",
+      "caveat": "The adequacy of a hammer test, despite variations in force shape, depends critically on the measurement accuracy, bandwidth, signal-to-noise ratio, and comprehensive coverage of the test objective. Without these factors, the test results may not be reliable.",
+      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-09-measured-hammer-tap-inputs",
+      "primarySourceUrl": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-09-measured-hammer-tap-inputs",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-02T20:47:41Z",
+      "firstSeenAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "hammer test",
+        "half-sine waveform",
+        "force",
+        "response",
+        "modal analysis"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-02T20:49:49Z"
+    },
+    {
+      "id": "science-36784852208b206d",
+      "title": "Five U-M researchers named American Physical Society fellows",
+      "summary": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics. Scott Baalrud was recognized for advancements in the kinetic theory of plasmas. Emanuel Gull was recognized for advances in numerical methods for strongly correlated electron systems. Cagliyan Kurdak was recognized for leadership in broadening participation in physics graduate education. Venkat Raman was recognized for insights and computational methods for rotating detonation engines. Dominika Zgid was recognized for contributions to ab initio many-body methods for molecules and solids.",
+      "finding": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics. Scott Baalrud was recognized for advancements in the kinetic theory of plasmas. Emanuel Gull was recognized for advances in numerical methods for strongly correlated electron systems. Cagliyan Kurdak was recognized for leadership in broadening participation in physics graduate education. Venkat Raman was recognized for insights and computational methods for rotating detonation engines. Dominika Zgid was recognized for contributions to ab initio many-body methods for molecules and solids.",
+      "significance": "This recognition highlights significant contributions to various fields of physics, including plasma physics, condensed matter physics, aerospace engineering, and theoretical chemistry. These advancements have applications in areas such as fusion energy, quantum computing, and high-speed propulsion, demonstrating the impact of their research on scientific and technological progress.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://news.umich.edu/five-u-m-researchers-named-american-physical-society-fellows",
+      "primarySourceUrl": "https://news.umich.edu/five-u-m-researchers-named-american-physical-society-fellows",
+      "source": {
+        "name": "University of Michigan News"
+      },
+      "sourceGroup": "U-M",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-02T15:22:09Z",
+      "firstSeenAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "physics",
+        "technology",
+        "chemistry"
+      ],
+      "entities": [
+        "University of Michigan",
+        "American Physical Society",
+        "Scott Baalrud",
+        "Emanuel Gull",
+        "Cagliyan Kurdak"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-02T15:22:19Z",
+      "localConnection": "University of Michigan research in Ann Arbor."
+    },
     {
       "id": "science-7b620b8ee23e792e",
       "title": "APOD: 2026 November 1 – Colors of the Moon",
@@ -115,6 +247,41 @@
         "lunar South Pole"
       ],
       "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-e10edceaccaeeca7",
+      "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
+      "summary": "Chimpanzees from the Ngogo community in Kibale National Park, Uganda, split into two groups in January 2018 after a period of increasing aggression, leading to the killing of 28 individuals from one splinter group by members of the other. This lethal intergroup aggression occurred between individuals who had previously spent their entire lives together, affiliated, and cooperated.",
+      "finding": "Chimpanzees from the Ngogo community in Kibale National Park, Uganda, split into two groups in January 2018 after a period of increasing aggression, leading to the killing of 28 individuals from one splinter group by members of the other. This lethal intergroup aggression occurred between individuals who had previously spent their entire lives together, affiliated, and cooperated.",
+      "significance": "This finding challenges the understanding of chimpanzee social behavior, particularly the nature of aggression within a known community. It also provides a comparative context for human behavior, suggesting that while similarities exist, humans exhibit a unique prosocial and cooperative capacity, even towards strangers, which is not observed in chimpanzees or other animal species.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
+      "primarySourceUrl": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
+      "source": {
+        "name": "University of Michigan News"
+      },
+      "sourceGroup": "U-M",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-30T14:08:23Z",
+      "firstSeenAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "social-science"
+      ],
+      "entities": [
+        "Ngogo Chimpanzee Project",
+        "John Mitani",
+        "Kibale National Park",
+        "University of Michigan",
+        "Nature Human Behaviour"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41562-026-02601-6",
+      "sourceUpdatedAt": "2026-11-02T15:08:51Z",
+      "localConnection": "University of Michigan research in Ann Arbor."
     },
     {
       "id": "science-7cf97945aa6283b8",
@@ -219,9 +386,9 @@
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
-      "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
-      "significance": "This meteorite offers a rare glimpse into Mars' ancient crust and formation, potentially helping scientists understand the interaction between water and rocks on early Mars. It represents the first piece of Martian crust from a region previously unsampled, providing crucial data for understanding the planet's early geological history and water cycle.",
+      "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
+      "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
+      "significance": "This meteorite offers a \"Rosetta Stone\" for Mars, providing direct evidence of the planet's early geological history and the interaction of water and rock. Future studies of Teghaza 001 could help answer critical questions about the ancient Martian water cycle and the planet's atmospheric evolution.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
@@ -232,8 +399,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T18:18:09Z",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-01T11:13:31.530463Z",
-      "verifiedAt": "2026-11-01T11:13:31.530463Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -243,9 +410,9 @@
       "entities": [
         "Teghaza 001",
         "Mars",
+        "Earth",
         "Sahara Desert",
-        "Jet Propulsion Laboratory",
-        "Science"
+        "Yang Liu"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
@@ -556,9 +723,9 @@
     {
       "id": "science-6afcd2fe4e37bc6f",
       "title": "Podcast: The future of electronics goes beyond circuit boards",
-      "summary": "NSF-supported researcher Ethan Secor discusses a specialized additive manufacturing technique and the materials involved, which can produce circuits customized for complex 3D surfaces.",
-      "finding": "NSF-supported researcher Ethan Secor discusses a specialized additive manufacturing technique and the materials involved, which can produce circuits customized for complex 3D surfaces.",
-      "significance": "This advancement could enable the creation of next-generation electronics that are not limited to traditional flat circuit boards, opening possibilities for more integrated and complex technological designs.",
+      "summary": "NSF-supported researcher Ethan Secor is developing a specialized additive manufacturing technique to create customized circuits for complex 3D surfaces, moving beyond traditional circuit boards.",
+      "finding": "NSF-supported researcher Ethan Secor is developing a specialized additive manufacturing technique to create customized circuits for complex 3D surfaces, moving beyond traditional circuit boards.",
+      "significance": "This research could enable the next generation of technologies by allowing electronics to be integrated into more diverse and complex shapes, potentially leading to innovations in various fields.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nsf.gov/news/podcast-future-electronics-goes-beyond-circuit-boards",
       "primarySourceUrl": "https://www.nsf.gov/news/podcast-future-electronics-goes-beyond-circuit-boards",
@@ -569,18 +736,17 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T20:23:58Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-01T11:13:31.530463Z",
-      "verifiedAt": "2026-10-29T05:30:05.908168Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "technology",
         "physics"
       ],
       "entities": [
-        "NSF",
         "Ethan Secor",
-        "additive manufacturing",
-        "3D surfaces"
+        "NSF",
+        "additive manufacturing"
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-10-27T20:23:58Z"
@@ -601,7 +767,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T18:51:35Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-01T11:13:31.530463Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
       "verifiedAt": "2026-10-29T05:30:05.908168Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -760,9 +926,9 @@
     {
       "id": "science-29a4ffbe1d32dba8",
       "title": "Stars brewing in a nebulous cauldron",
-      "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
-      "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
-      "significance": "This research provides an opportunity to study H II regions in conditions similar to the early Universe, offering insights into star formation processes during that epoch. Observing the entire sequence of star formation occurring simultaneously in N159 allows for a detailed examination of molecular cloud evolution.",
+      "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results showed that the western region of N159 has more young stellar objects in a more concentrated area, indicating it is at an earlier stage of collapsing to form stars.",
+      "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results showed that the western region of N159 has more young stellar objects in a more concentrated area, indicating it is at an earlier stage of collapsing to form stars.",
+      "significance": "This research provides an opportunity to study H II regions in conditions similar to those found in the early Universe, helping to understand star formation during that period. N159 is one of the youngest star-forming regions in the Large Magellanic Cloud, containing thousands of stars at their earliest stages of formation, making it a unique place to observe the evolution of a collapsing molecular cloud.",
       "caveat": "Preprint / working paper; peer review is not established. The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
       "primarySourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
@@ -773,18 +939,18 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-22T08:00:00Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-01T11:13:31.530463Z",
-      "verifiedAt": "2026-10-31T10:01:18.956601Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "preprint",
       "topics": [
         "astronomy",
         "physics"
       ],
       "entities": [
-        "NASA/ESA James Webb Space Telescope",
-        "LHA 120-N 159",
         "N159",
         "Large Magellanic Cloud",
+        "James Webb Space Telescope",
+        "NIRCam",
         "Milky Way galaxy"
       ],
       "milestoneStatus": "unknown",

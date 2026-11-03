@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-03T02:08:27.014430-05:00",
+  "generatedAt": "2026-11-03T06:43:39.605500-05:00",
   "stories": [
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "summary": "Scientists have age-dated the Martian meteorite Teghaza 001 to over 4.1 billion years old, making it one of the most ancient found on Earth. Its unique mix of igneous minerals provides a rare snapshot of Mars' early crust formation and suggests a dynamic water cycle on the planet around that time.",
-      "finding": "Scientists have age-dated the Martian meteorite Teghaza 001 to over 4.1 billion years old, making it one of the most ancient found on Earth. Its unique mix of igneous minerals provides a rare snapshot of Mars' early crust formation and suggests a dynamic water cycle on the planet around that time.",
-      "significance": "This meteorite offers a rare glimpse into Mars' ancient crust and formation, potentially helping scientists understand the interaction between water and rocks on early Mars. It represents the first piece of Martian crust from a region previously unsampled, providing crucial data for understanding the planet's early geological history and water cycle.",
+      "summary": "Scientists age-dated the Teghaza 001 meteorite, finding it formed over 4.1 billion years ago, making it one of the oldest Martian meteorites. Its unique mineralogy provides a rare snapshot of Mars' ancient crust and suggests early interactions between water and rock, matching observations from the Mars Reconnaissance Orbiter.",
+      "finding": "Scientists age-dated the Teghaza 001 meteorite, finding it formed over 4.1 billion years ago, making it one of the oldest Martian meteorites. Its unique mineralogy provides a rare snapshot of Mars' ancient crust and suggests early interactions between water and rock, matching observations from the Mars Reconnaissance Orbiter.",
+      "significance": "This meteorite offers a \"Rosetta Stone\" for Mars, providing direct evidence of the planet's early geological history and the interaction of water and rock. Future studies of Teghaza 001 could help answer critical questions about the ancient Martian water cycle and the planet's atmospheric evolution.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
@@ -19,8 +19,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T14:18:09-04:00",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-01T11:13:31.530463Z",
-      "verifiedAt": "2026-11-01T11:13:31.530463Z",
+      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -30,24 +30,24 @@
       "entities": [
         "Teghaza 001",
         "Mars",
+        "Earth",
         "Sahara Desert",
-        "Jet Propulsion Laboratory",
-        "Science"
+        "Yang Liu"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
       "sourceUpdatedAt": "2026-10-29T18:50:48Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-01T07:32:42.047491-05:00",
-        "expiresAt": "2026-11-04T07:32:42.047491-05:00",
+        "reviewedAt": "2026-11-03T06:43:39.605500-05:00",
+        "expiresAt": "2026-11-06T06:43:39.605500-05:00",
         "inputFacts": {
           "id": "science-5c3380370cf61ae7",
           "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
           "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
           "publishedAt": "2026-10-29T18:18:09Z",
-          "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
-          "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
+          "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
+          "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
           "sourceUpdatedAt": "2026-10-29T18:50:48Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
@@ -56,11 +56,11 @@
         "sourceHash": "46cebebb92d9a77d8e2a9d1ebd8cf230e35275fa9092b20f5575fe5a79a2fcde",
         "relevance": 4,
         "novelty": 4,
-        "reason": "This article details a significant new finding in planetary science, specifically regarding the early history of Mars and the presence of water, which aligns with scientific interests.",
+        "reason": "New findings on an ancient Martian meteorite provide significant insights into the early formation and water history of Mars, aligning with astronomy and earth-science interests.",
         "storyKey": "ancient-mars-meteorite-teghaza-001",
         "localConnection": "",
         "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, including the age of the meteorite, its unique mineral mix, and the implications for Mars' early crust and water cycle. The finding represents a new scientific discovery about Mars' geological history."
+        "groundingReason": "The summary accurately reflects the article's claims about the age, unique mineralogy, and implications for early Mars' water-rock interactions, supported by the Mars Reconnaissance Orbiter observations. This represents a new scientific finding regarding a specific Martian meteorite."
       }
     },
     {
@@ -184,14 +184,29 @@
   ],
   "corrections": [
     {
+      "id": "science-e10edceaccaeeca7",
+      "inputFacts": {
+        "id": "science-e10edceaccaeeca7",
+        "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
+        "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
+        "publishedAt": "2026-10-30T14:08:23Z",
+        "summary": "Chimpanzees from the Ngogo community in Kibale National Park, Uganda, split into two groups in January 2018 after a period of increasing aggression, leading to the killing of 28 individuals from one splinter group by members of the other. This lethal intergroup aggression occurred between individuals who had previously spent their entire lives together, affiliated, and cooperated.",
+        "finding": "Chimpanzees from the Ngogo community in Kibale National Park, Uganda, split into two groups in January 2018 after a period of increasing aggression, leading to the killing of 28 individuals from one splinter group by members of the other. This lethal intergroup aggression occurred between individuals who had previously spent their entire lives together, affiliated, and cooperated.",
+        "sourceUpdatedAt": "2026-11-02T15:08:51Z"
+      },
+      "publishedAt": "2026-10-30T10:08:23-04:00",
+      "publicationEvidence": "2026-10-30T10:08:23-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-5c3380370cf61ae7",
       "inputFacts": {
         "id": "science-5c3380370cf61ae7",
         "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
         "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
         "publishedAt": "2026-10-29T18:18:09Z",
-        "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
-        "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
+        "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
+        "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
         "sourceUpdatedAt": "2026-10-29T18:50:48Z"
       },
       "publishedAt": "2026-10-29T14:18:09-04:00",
@@ -229,21 +244,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-970c87606ea95eb7",
-      "inputFacts": {
-        "id": "science-970c87606ea95eb7",
-        "title": "New research gauges community immunity to valley fever as fungal infection cases increase",
-        "url": "https://news.umich.edu/new-research-gauges-community-immunity-to-valley-fever-as-fungal-infection-cases-increase",
-        "publishedAt": "2026-10-27T15:58:55Z",
-        "summary": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
-        "finding": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
-        "sourceUpdatedAt": "2026-10-28T19:50:56Z"
-      },
-      "publishedAt": "2026-10-27T11:58:55-04:00",
-      "publicationEvidence": "2026-10-27T11:58:55-04:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-6d879a7a5c5c91f8",
       "inputFacts": {
         "id": "science-6d879a7a5c5c91f8",
@@ -265,13 +265,28 @@
         "title": "Stars brewing in a nebulous cauldron",
         "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
         "publishedAt": "2026-10-22T08:00:00Z",
-        "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
-        "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. The western region of N159 shows a higher concentration of young stellar objects, indicating it is in an earlier stage of stellar collapse.",
+        "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results showed that the western region of N159 has more young stellar objects in a more concentrated area, indicating it is at an earlier stage of collapsing to form stars.",
+        "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results showed that the western region of N159 has more young stellar objects in a more concentrated area, indicating it is at an earlier stage of collapsing to form stars.",
         "sourceUpdatedAt": null
       },
       "publishedAt": "2026-10-22T00:00:00-04:00",
       "publicationEvidence": "22/10/2026",
       "datePrecision": "date"
+    },
+    {
+      "id": "science-970c87606ea95eb7",
+      "inputFacts": {
+        "id": "science-970c87606ea95eb7",
+        "title": "New research gauges community immunity to valley fever as fungal infection cases increase",
+        "url": "https://news.umich.edu/new-research-gauges-community-immunity-to-valley-fever-as-fungal-infection-cases-increase",
+        "publishedAt": "2026-10-27T15:58:55Z",
+        "summary": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
+        "finding": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
+        "sourceUpdatedAt": "2026-10-28T19:50:56Z"
+      },
+      "publishedAt": "2026-10-27T11:58:55-04:00",
+      "publicationEvidence": "2026-10-27T11:58:55-04:00",
+      "datePrecision": "time"
     },
     {
       "id": "science-ebd5ed8eaec52f79",
@@ -286,6 +301,66 @@
       },
       "publishedAt": "2026-10-21T14:35:56-04:00",
       "publicationEvidence": "2026-10-21T14:35:56-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-90c08f78aa09ed89",
+      "inputFacts": {
+        "id": "science-90c08f78aa09ed89",
+        "title": "APOD: 2026 November 3 – Comet PanSTARRs and Rainbow Meteor",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-3-comet-panstarrs-and-rainbow-meteor",
+        "publishedAt": "2026-11-03T05:05:00Z",
+        "summary": "The article presents an image featuring Comet C/2025 R3 (PanSTARRS) and a colorful meteor, noting that the meteor likely did not originate from this specific comet. It also highlights that three meteor showers, the Southern Taurids, Northern Taurids, and Leonids, will reach their peaks in November, originating from Comet 2P/Encke and Comet 55P/Tempel-Tuttle respectively.",
+        "finding": "The article presents an image featuring Comet C/2025 R3 (PanSTARRS) and a colorful meteor, noting that the meteor likely did not originate from this specific comet. It also highlights that three meteor showers, the Southern Taurids, Northern Taurids, and Leonids, will reach their peaks in November, originating from Comet 2P/Encke and Comet 55P/Tempel-Tuttle respectively.",
+        "sourceUpdatedAt": "2026-11-03T05:05:00Z"
+      },
+      "publishedAt": "2026-11-03T00:05:00-05:00",
+      "publicationEvidence": "2026-11-03T00:05:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-735eb38c5458cb01",
+      "inputFacts": {
+        "id": "science-735eb38c5458cb01",
+        "title": "Podcast: The laser that could break the laws of physics",
+        "url": "https://www.nsf.gov/news/podcast-laser-could-break-laws-physics",
+        "publishedAt": "2026-11-02T21:07:52Z",
+        "summary": "The NSF Optical Parametric Amplifier Line (NSF OPAL) laser facility is being designed to provide researchers with advanced capabilities to explore fundamental scientific questions.",
+        "finding": "The NSF Optical Parametric Amplifier Line (NSF OPAL) laser facility is being designed to provide researchers with advanced capabilities to explore fundamental scientific questions.",
+        "sourceUpdatedAt": "2026-11-02T21:07:52Z"
+      },
+      "publishedAt": "2026-11-02T16:07:52-05:00",
+      "publicationEvidence": "2026-11-02T16:07:52-0500",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-a20db8c134bc2054",
+      "inputFacts": {
+        "id": "science-a20db8c134bc2054",
+        "title": "TB 26-09 Measured Hammer-Tap Inputs",
+        "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-09-measured-hammer-tap-inputs",
+        "publishedAt": "2026-11-02T20:47:41Z",
+        "summary": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
+        "finding": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
+        "sourceUpdatedAt": "2026-11-02T20:49:49Z"
+      },
+      "publishedAt": "2026-11-02T15:47:41-05:00",
+      "publicationEvidence": "2026-11-02T15:47:41-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-36784852208b206d",
+      "inputFacts": {
+        "id": "science-36784852208b206d",
+        "title": "Five U-M researchers named American Physical Society fellows",
+        "url": "https://news.umich.edu/five-u-m-researchers-named-american-physical-society-fellows",
+        "publishedAt": "2026-11-02T15:22:09Z",
+        "summary": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics. Scott Baalrud was recognized for advancements in the kinetic theory of plasmas. Emanuel Gull was recognized for advances in numerical methods for strongly correlated electron systems. Cagliyan Kurdak was recognized for leadership in broadening participation in physics graduate education. Venkat Raman was recognized for insights and computational methods for rotating detonation engines. Dominika Zgid was recognized for contributions to ab initio many-body methods for molecules and solids.",
+        "finding": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics. Scott Baalrud was recognized for advancements in the kinetic theory of plasmas. Emanuel Gull was recognized for advances in numerical methods for strongly correlated electron systems. Cagliyan Kurdak was recognized for leadership in broadening participation in physics graduate education. Venkat Raman was recognized for insights and computational methods for rotating detonation engines. Dominika Zgid was recognized for contributions to ab initio many-body methods for molecules and solids.",
+        "sourceUpdatedAt": "2026-11-02T15:22:19Z"
+      },
+      "publishedAt": "2026-11-02T10:22:09-05:00",
+      "publicationEvidence": "2026-11-02T10:22:09-05:00",
       "datePrecision": "time"
     },
     {
@@ -331,36 +406,6 @@
       },
       "publishedAt": "2026-10-30T00:05:00-04:00",
       "publicationEvidence": "2026-10-30T00:05:00-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-c546feec3ff82ee7",
-      "inputFacts": {
-        "id": "science-c546feec3ff82ee7",
-        "title": "Map Showing Potential Origins of Martian Meteorite Teghaza 001",
-        "url": "https://science.nasa.gov/photojournal/map-showing-potential-origins-of-martian-meteorite-teghaza-001",
-        "publishedAt": "2026-10-30T00:07:39Z",
-        "summary": "Scientists have identified 13 locations on Mars that match the mineralogy and chemistry of Teghaza 001, one of the most ancient Martian meteorites found on Earth. These locations are primarily in the southern hemisphere highlands of Mars.",
-        "finding": "Scientists have identified 13 locations on Mars that match the mineralogy and chemistry of Teghaza 001, one of the most ancient Martian meteorites found on Earth. These locations are primarily in the southern hemisphere highlands of Mars.",
-        "sourceUpdatedAt": "2026-10-30T00:07:44Z"
-      },
-      "publishedAt": "2026-10-29T20:07:39-04:00",
-      "publicationEvidence": "2026-10-29T20:07:39-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-492332e2065372ee",
-      "inputFacts": {
-        "id": "science-492332e2065372ee",
-        "title": "Slice of Martian Meteorite Teghaza 001",
-        "url": "https://science.nasa.gov/photojournal/slice-of-martian-meteorite-teghaza-001",
-        "publishedAt": "2026-10-29T23:32:35Z",
-        "summary": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
-        "finding": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
-        "sourceUpdatedAt": "2026-10-29T23:32:40Z"
-      },
-      "publishedAt": "2026-10-29T19:32:35-04:00",
-      "publicationEvidence": "2026-10-29T19:32:35-04:00",
       "datePrecision": "time"
     },
     {
@@ -415,12 +460,42 @@
         "title": "Podcast: The future of electronics goes beyond circuit boards",
         "url": "https://www.nsf.gov/news/podcast-future-electronics-goes-beyond-circuit-boards",
         "publishedAt": "2026-10-27T20:23:58Z",
-        "summary": "NSF-supported researcher Ethan Secor discusses a specialized additive manufacturing technique and the materials involved, which can produce circuits customized for complex 3D surfaces.",
-        "finding": "NSF-supported researcher Ethan Secor discusses a specialized additive manufacturing technique and the materials involved, which can produce circuits customized for complex 3D surfaces.",
+        "summary": "NSF-supported researcher Ethan Secor is developing a specialized additive manufacturing technique to create customized circuits for complex 3D surfaces, moving beyond traditional circuit boards.",
+        "finding": "NSF-supported researcher Ethan Secor is developing a specialized additive manufacturing technique to create customized circuits for complex 3D surfaces, moving beyond traditional circuit boards.",
         "sourceUpdatedAt": "2026-10-27T20:23:58Z"
       },
       "publishedAt": "2026-10-27T16:23:58-04:00",
       "publicationEvidence": "2026-10-27T16:23:58-0400",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-c546feec3ff82ee7",
+      "inputFacts": {
+        "id": "science-c546feec3ff82ee7",
+        "title": "Map Showing Potential Origins of Martian Meteorite Teghaza 001",
+        "url": "https://science.nasa.gov/photojournal/map-showing-potential-origins-of-martian-meteorite-teghaza-001",
+        "publishedAt": "2026-10-30T00:07:39Z",
+        "summary": "Scientists have identified 13 locations on Mars that match the mineralogy and chemistry of Teghaza 001, one of the most ancient Martian meteorites found on Earth. These locations are primarily in the southern hemisphere highlands of Mars.",
+        "finding": "Scientists have identified 13 locations on Mars that match the mineralogy and chemistry of Teghaza 001, one of the most ancient Martian meteorites found on Earth. These locations are primarily in the southern hemisphere highlands of Mars.",
+        "sourceUpdatedAt": "2026-10-30T00:07:44Z"
+      },
+      "publishedAt": "2026-10-29T20:07:39-04:00",
+      "publicationEvidence": "2026-10-29T20:07:39-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-492332e2065372ee",
+      "inputFacts": {
+        "id": "science-492332e2065372ee",
+        "title": "Slice of Martian Meteorite Teghaza 001",
+        "url": "https://science.nasa.gov/photojournal/slice-of-martian-meteorite-teghaza-001",
+        "publishedAt": "2026-10-29T23:32:35Z",
+        "summary": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
+        "finding": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
+        "sourceUpdatedAt": "2026-10-29T23:32:40Z"
+      },
+      "publishedAt": "2026-10-29T19:32:35-04:00",
+      "publicationEvidence": "2026-10-29T19:32:35-04:00",
       "datePrecision": "time"
     },
     {
