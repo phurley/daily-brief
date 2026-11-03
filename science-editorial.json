@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-03T06:43:39.605500-05:00",
+  "generatedAt": "2026-11-03T13:24:13.290233-05:00",
   "stories": [
     {
       "id": "science-5c3380370cf61ae7",
@@ -125,7 +125,7 @@
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
       "summary": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that static electricity influences particle adhesion, with organic polymers collecting fine dust. These findings could inform future spacesuit and habitat designs, dust-removal procedures, and crew health standards for Mars missions.",
       "finding": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that static electricity influences particle adhesion, with organic polymers collecting fine dust. These findings could inform future spacesuit and habitat designs, dust-removal procedures, and crew health standards for Mars missions.",
-      "significance": "These findings are crucial for designing future spacesuits and habitats, developing effective dust-removal procedures, and establishing crew health standards for human missions to Mars. Understanding how different materials attract and retain dust, especially ultrafine particles that can penetrate the lungs and bloodstream, will help protect astronauts from potential health hazards and equipment degradation.",
+      "significance": "This research provides the first on-site measurements of fine and ultrafine dust on Mars, which is crucial for informing the design of spacesuits and habitats, developing dust-removal procedures, and establishing crew health standards for future human missions to Mars. Understanding dust behavior and composition is vital for protecting astronauts from potential health risks and equipment degradation.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
@@ -136,12 +136,12 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-26T17:07:28-04:00",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-01T11:13:31.530463Z",
-      "verifiedAt": "2026-11-01T11:13:31.530463Z",
+      "checkedAt": "2026-11-03T17:48:21.733897Z",
+      "verifiedAt": "2026-11-03T17:48:21.733897Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "technology",
         "health",
+        "technology",
         "astronomy",
         "physics"
       ],
@@ -149,23 +149,23 @@
         "NASA",
         "Perseverance Mars rover",
         "Mars",
-        "Proceedings of the National Academy of Sciences",
-        "PIXL"
+        "PIXL",
+        "SHERLOC"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2620747123",
       "sourceUpdatedAt": "2026-10-27T21:01:38Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-01T07:32:42.047491-05:00",
-        "expiresAt": "2026-11-04T07:32:42.047491-05:00",
+        "reviewedAt": "2026-11-03T13:24:13.290233-05:00",
+        "expiresAt": "2026-11-06T13:24:13.290233-05:00",
         "inputFacts": {
           "id": "science-6d879a7a5c5c91f8",
           "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
           "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
           "publishedAt": "2026-10-26T21:07:28Z",
-          "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and that the finest particles (down to 100 nanometers) remained attached through years of driving and drilling. The dust is chemically rich in iron, sulfur, phosphorus, and calcium sulfate, and contains chemically reactive compounds like perchlorates and reactive iron.",
-          "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and that the finest particles (down to 100 nanometers) remained attached through years of driving and drilling. The dust is chemically rich in iron, sulfur, phosphorus, and calcium sulfate, and contains chemically reactive compounds like perchlorates and reactive iron.",
+          "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
+          "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
           "sourceUpdatedAt": "2026-10-27T21:01:38Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
@@ -178,7 +178,7 @@
         "storyKey": "perseverance-mars-dust-measurements",
         "localConnection": "",
         "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, detailing the measurements of fine and ultrafine Martian dust particles on spacesuit materials over 1,645 Martian days, the influence of static electricity, and the collection of fine dust by organic polymers. It also explains how these findings will inform future mission designs and health standards. This represents a new finding regarding Martian dust characteristics and their implications for human exploration."
+        "groundingReason": "The article fully supports all claims in the summary, including the duration of the measurements, the types of particles, the influence of static electricity, the specific materials mentioned, and the potential implications for future missions. The study presents new findings regarding the direct measurement of fine and ultrafine dust particles on Mars and their interaction with spacesuit materials."
       }
     }
   ],
@@ -250,8 +250,8 @@
         "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
         "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
         "publishedAt": "2026-10-26T21:07:28Z",
-        "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and that the finest particles (down to 100 nanometers) remained attached through years of driving and drilling. The dust is chemically rich in iron, sulfur, phosphorus, and calcium sulfate, and contains chemically reactive compounds like perchlorates and reactive iron.",
-        "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and that the finest particles (down to 100 nanometers) remained attached through years of driving and drilling. The dust is chemically rich in iron, sulfur, phosphorus, and calcium sulfate, and contains chemically reactive compounds like perchlorates and reactive iron.",
+        "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
+        "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
         "sourceUpdatedAt": "2026-10-27T21:01:38Z"
       },
       "publishedAt": "2026-10-26T17:07:28-04:00",
@@ -272,21 +272,6 @@
       "publishedAt": "2026-10-22T00:00:00-04:00",
       "publicationEvidence": "22/10/2026",
       "datePrecision": "date"
-    },
-    {
-      "id": "science-970c87606ea95eb7",
-      "inputFacts": {
-        "id": "science-970c87606ea95eb7",
-        "title": "New research gauges community immunity to valley fever as fungal infection cases increase",
-        "url": "https://news.umich.edu/new-research-gauges-community-immunity-to-valley-fever-as-fungal-infection-cases-increase",
-        "publishedAt": "2026-10-27T15:58:55Z",
-        "summary": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
-        "finding": "University of Michigan researchers will conduct a five-year study to assess population immunity to valley fever, a fungal infection, which is crucial for understanding disease burden and designing vaccine trials. This study aims to overcome limitations in current immunity measurement methods.",
-        "sourceUpdatedAt": "2026-10-28T19:50:56Z"
-      },
-      "publishedAt": "2026-10-27T11:58:55-04:00",
-      "publicationEvidence": "2026-10-27T11:58:55-04:00",
-      "datePrecision": "time"
     },
     {
       "id": "science-ebd5ed8eaec52f79",
@@ -316,6 +301,21 @@
       },
       "publishedAt": "2026-11-03T00:05:00-05:00",
       "publicationEvidence": "2026-11-03T00:05:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-d87bd0a830188828",
+      "inputFacts": {
+        "id": "science-d87bd0a830188828",
+        "title": "The Pacific’s Busy Storm Season",
+        "url": "https://science.nasa.gov/earth/earth-observatory/the-pacifics-busy-storm-season",
+        "publishedAt": "2026-11-03T05:01:00Z",
+        "summary": "The Northwest Pacific Basin experienced elevated tropical cyclone activity since April 2026, with Super Typhoon In-fa developing an unusually large eye and the remnants of Typhoon Champi transitioning into an extratropical storm that impacted Alaska. This activity included five typhoons affecting the Mariana Islands and four ex-typhoons entering Alaskan waters in 2026.",
+        "finding": "The Northwest Pacific Basin experienced elevated tropical cyclone activity since April 2026, with Super Typhoon In-fa developing an unusually large eye and the remnants of Typhoon Champi transitioning into an extratropical storm that impacted Alaska. This activity included five typhoons affecting the Mariana Islands and four ex-typhoons entering Alaskan waters in 2026.",
+        "sourceUpdatedAt": "2026-11-03T12:05:20Z"
+      },
+      "publishedAt": "2026-11-03T00:01:00-05:00",
+      "publicationEvidence": "2026-11-03T00:01:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -394,21 +394,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-7cf97945aa6283b8",
-      "inputFacts": {
-        "id": "science-7cf97945aa6283b8",
-        "title": "APOD: 2026 October 30 – Haunting the Cepheus Flare",
-        "url": "https://science.nasa.gov/image-article/apod-2026-october-30-haunting-the-cepheus-flare",
-        "publishedAt": "2026-10-30T04:05:00Z",
-        "summary": "The Ghost Nebula (vdB 141 or Sh2-136), located within the Cepheus Flare molecular cloud complex, exhibits reddish indicators of dense cores undergoing collapse, which signifies the early stages of star formation.",
-        "finding": "The Ghost Nebula (vdB 141 or Sh2-136), located within the Cepheus Flare molecular cloud complex, exhibits reddish indicators of dense cores undergoing collapse, which signifies the early stages of star formation.",
-        "sourceUpdatedAt": "2026-10-30T04:05:00Z"
-      },
-      "publishedAt": "2026-10-30T00:05:00-04:00",
-      "publicationEvidence": "2026-10-30T00:05:00-04:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-2de7be04e8e370b9",
       "inputFacts": {
         "id": "science-2de7be04e8e370b9",
@@ -466,51 +451,6 @@
       },
       "publishedAt": "2026-10-27T16:23:58-04:00",
       "publicationEvidence": "2026-10-27T16:23:58-0400",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-c546feec3ff82ee7",
-      "inputFacts": {
-        "id": "science-c546feec3ff82ee7",
-        "title": "Map Showing Potential Origins of Martian Meteorite Teghaza 001",
-        "url": "https://science.nasa.gov/photojournal/map-showing-potential-origins-of-martian-meteorite-teghaza-001",
-        "publishedAt": "2026-10-30T00:07:39Z",
-        "summary": "Scientists have identified 13 locations on Mars that match the mineralogy and chemistry of Teghaza 001, one of the most ancient Martian meteorites found on Earth. These locations are primarily in the southern hemisphere highlands of Mars.",
-        "finding": "Scientists have identified 13 locations on Mars that match the mineralogy and chemistry of Teghaza 001, one of the most ancient Martian meteorites found on Earth. These locations are primarily in the southern hemisphere highlands of Mars.",
-        "sourceUpdatedAt": "2026-10-30T00:07:44Z"
-      },
-      "publishedAt": "2026-10-29T20:07:39-04:00",
-      "publicationEvidence": "2026-10-29T20:07:39-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-492332e2065372ee",
-      "inputFacts": {
-        "id": "science-492332e2065372ee",
-        "title": "Slice of Martian Meteorite Teghaza 001",
-        "url": "https://science.nasa.gov/photojournal/slice-of-martian-meteorite-teghaza-001",
-        "publishedAt": "2026-10-29T23:32:35Z",
-        "summary": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
-        "finding": "A slice of the Martian meteorite Teghaza 001, one of the most ancient Martian meteorites found on Earth, was used to determine the age of the rock. Reflected light images of the meteorite reveal minerals such as iron-titanium oxides, pyroxene, and shocked plagioclase, which provide insights into the formation of Mars' crust and mantle.",
-        "sourceUpdatedAt": "2026-10-29T23:32:40Z"
-      },
-      "publishedAt": "2026-10-29T19:32:35-04:00",
-      "publicationEvidence": "2026-10-29T19:32:35-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-7622a872ac4dea5f",
-      "inputFacts": {
-        "id": "science-7622a872ac4dea5f",
-        "title": "Helping student veterans navigate the next chapter",
-        "url": "https://news.umich.edu/helping-student-veterans-navigate-the-next-chapter",
-        "publishedAt": "2026-10-27T15:21:29Z",
-        "summary": "The University of Michigan-Flint's Student Veterans Resource Center has assisted hundreds of veterans since its establishment in 2009, with 285 veterans served last year, an 18% increase over 2024. The center provides support for admissions, benefits, and camaraderie, helping student veterans transition from military to civilian life and navigate their education.",
-        "finding": "The University of Michigan-Flint's Student Veterans Resource Center has assisted hundreds of veterans since its establishment in 2009, with 285 veterans served last year, an 18% increase over 2024. The center provides support for admissions, benefits, and camaraderie, helping student veterans transition from military to civilian life and navigate their education.",
-        "sourceUpdatedAt": "2026-10-27T16:03:13Z"
-      },
-      "publishedAt": "2026-10-27T11:21:29-04:00",
-      "publicationEvidence": "2026-10-27T11:21:29-04:00",
       "datePrecision": "time"
     }
   ],

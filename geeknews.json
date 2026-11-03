@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-03T11:00:02.680578Z",
+  "generatedAt": "2026-11-03T17:48:21.733897Z",
   "editionDate": "2026-11-03",
   "starshipEstimatedLaunch": {
     "status": "targeted",
@@ -51,6 +51,39 @@
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-11-03T05:05:00Z"
+    },
+    {
+      "id": "science-d87bd0a830188828",
+      "title": "The Pacific’s Busy Storm Season",
+      "summary": "The Northwest Pacific Basin experienced elevated tropical cyclone activity since April 2026, with Super Typhoon In-fa developing an unusually large eye and the remnants of Typhoon Champi transitioning into an extratropical storm that impacted Alaska. This activity included five typhoons affecting the Mariana Islands and four ex-typhoons entering Alaskan waters in 2026.",
+      "finding": "The Northwest Pacific Basin experienced elevated tropical cyclone activity since April 2026, with Super Typhoon In-fa developing an unusually large eye and the remnants of Typhoon Champi transitioning into an extratropical storm that impacted Alaska. This activity included five typhoons affecting the Mariana Islands and four ex-typhoons entering Alaskan waters in 2026.",
+      "significance": "The increased tropical cyclone activity and the frequent extratropical transitions affecting Alaska highlight the dynamic nature of Pacific storm seasons. The strong El Ni\n\n\n\no is a likely contributor to this increased activity, influencing storm paths and potentially leading to more frequent impacts on regions like the Mariana Islands and Alaska.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/the-pacifics-busy-storm-season",
+      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/the-pacifics-busy-storm-season",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-03T05:01:00Z",
+      "firstSeenAt": "2026-11-03T17:48:21.733897Z",
+      "checkedAt": "2026-11-03T17:48:21.733897Z",
+      "verifiedAt": "2026-11-03T17:48:21.733897Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "earth-science",
+        "extreme weather",
+        "cyclones"
+      ],
+      "entities": [
+        "Northwest Pacific Basin",
+        "Super Typhoon In-fa",
+        "Typhoon Champi",
+        "Alaska"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-03T12:05:20Z"
     },
     {
       "id": "science-735eb38c5458cb01",
@@ -856,9 +889,9 @@
     {
       "id": "science-6d879a7a5c5c91f8",
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
-      "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and that the finest particles (down to 100 nanometers) remained attached through years of driving and drilling. The dust is chemically rich in iron, sulfur, phosphorus, and calcium sulfate, and contains chemically reactive compounds like perchlorates and reactive iron.",
-      "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and that the finest particles (down to 100 nanometers) remained attached through years of driving and drilling. The dust is chemically rich in iron, sulfur, phosphorus, and calcium sulfate, and contains chemically reactive compounds like perchlorates and reactive iron.",
-      "significance": "These findings are crucial for designing future spacesuits and habitats, developing effective dust-removal procedures, and establishing crew health standards for human missions to Mars. Understanding how different materials attract and retain dust, especially ultrafine particles that can penetrate the lungs and bloodstream, will help protect astronauts from potential health hazards and equipment degradation.",
+      "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
+      "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
+      "significance": "This research provides the first on-site measurements of fine and ultrafine dust on Mars, which is crucial for informing the design of spacesuits and habitats, developing dust-removal procedures, and establishing crew health standards for future human missions to Mars. Understanding dust behavior and composition is vital for protecting astronauts from potential health risks and equipment degradation.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
@@ -869,12 +902,12 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-26T21:07:28Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-01T11:13:31.530463Z",
-      "verifiedAt": "2026-11-01T11:13:31.530463Z",
+      "checkedAt": "2026-11-03T17:48:21.733897Z",
+      "verifiedAt": "2026-11-03T17:48:21.733897Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "technology",
         "health",
+        "technology",
         "astronomy",
         "physics"
       ],
@@ -882,8 +915,8 @@
         "NASA",
         "Perseverance Mars rover",
         "Mars",
-        "Proceedings of the National Academy of Sciences",
-        "PIXL"
+        "PIXL",
+        "SHERLOC"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2620747123",

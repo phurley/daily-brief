@@ -1,74 +1,70 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-03T11:00:02.680578Z",
+  "generatedAt": "2026-11-03T17:48:21.733897Z",
   "status": "partial",
   "lastSuccessfulCheckAt": "2026-10-18T20:05:50.950465Z",
-  "documentGeneratedAt": "2026-11-03T11:00:02.680578Z",
+  "documentGeneratedAt": "2026-11-03T17:48:21.733897Z",
   "newestVerifiedStoryAt": "2026-11-03T05:05:00Z",
   "sources": {
     "nasa": {
       "name": "NASA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-11-03T11:00:02.680578Z",
+      "lastAttemptAt": "2026-11-03T17:48:21.733897Z",
       "lastSuccessAt": "2026-11-03T11:00:02.680578Z",
-      "lastNewStoryAt": "2026-11-03T11:00:02.680578Z",
+      "lastNewStoryAt": "2026-11-03T17:48:21.733897Z",
       "errors": [
-        "https://science.nasa.gov/earth/earth-observatory/the-pacifics-busy-storm-season/: ValueError: finding quote not present in article",
-        "https://www.nasa.gov/centers-and-facilities/johnson/happy-65-years-nasas-johnson-space-center-then-and-now/: LLMError: JSONDecodeError: Unterminated string starting at: line 1 column 753 (char 752)"
+        "https://www.nasa.gov/centers-and-facilities/johnson/happy-65-years-nasas-johnson-space-center-then-and-now/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 810)"
       ],
-      "candidateCount": 10,
-      "acceptedCount": 2,
-      "deferredCount": 6,
+      "candidateCount": 2,
+      "acceptedCount": 1,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-11-03T11:00:02.680578Z",
       "failedUrls": [
-        "https://science.nasa.gov/earth/earth-observatory/the-pacifics-busy-storm-season/",
         "https://www.nasa.gov/centers-and-facilities/johnson/happy-65-years-nasas-johnson-space-center-then-and-now/"
       ],
       "feedFailed": false,
-      "retryCount": 35,
-      "nextRetryAt": "2026-11-03T17:00:02.680578Z"
+      "retryCount": 36,
+      "nextRetryAt": "2026-11-03T23:48:21.733897Z"
     },
     "jpl": {
       "name": "NASA JPL",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-11-03T11:00:02.680578Z",
+      "lastAttemptAt": "2026-11-03T17:48:21.733897Z",
       "lastSuccessAt": "2026-11-03T11:00:02.680578Z",
       "lastNewStoryAt": "2026-11-01T05:30:06.966511Z",
       "errors": [
-        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 554)",
-        "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust/: HTTPError: HTTP Error 403: ",
-        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: HTTPError: HTTP Error 403: "
+        "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 612)",
+        "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 782)"
       ],
-      "candidateCount": 10,
+      "candidateCount": 3,
       "acceptedCount": 1,
-      "deferredCount": 3,
+      "deferredCount": 0,
       "rejectedCount": 0,
       "lastFullAttemptAt": "2026-11-03T11:00:02.680578Z",
       "failedUrls": [
         "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/",
-        "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust/",
         "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/"
       ],
       "feedFailed": false,
-      "retryCount": 38,
-      "nextRetryAt": "2026-11-03T17:00:02.680578Z"
+      "retryCount": 39,
+      "nextRetryAt": "2026-11-03T23:48:21.733897Z"
     },
     "esa": {
       "name": "ESA",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-11-03T11:00:02.680578Z",
+      "lastAttemptAt": "2026-11-03T17:48:21.733897Z",
       "lastSuccessAt": "2026-11-03T11:00:02.680578Z",
       "lastNewStoryAt": "2026-11-01T05:30:06.966511Z",
       "errors": [
-        "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 813)",
+        "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb: ValidationError: \"Hubble\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\",
         "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time: ValueError: evidence classification requires an article quote",
-        "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet: LLMError: JSONDecodeError: Unterminated string starting at: line 6 column 22 (char 1200)"
+        "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet: ValueError: finding quote not present in article"
       ],
-      "candidateCount": 15,
-      "acceptedCount": 1,
-      "deferredCount": 5,
-      "rejectedCount": 4,
+      "candidateCount": 3,
+      "acceptedCount": 0,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-11-03T11:00:02.680578Z",
       "failedUrls": [
         "https://www.esa.int/Science_Exploration/Space_Science/Webb/Ghostly_Cat_s_Head_Nebula_lurks_within_sight_of_Hubble_and_Webb",
@@ -76,8 +72,8 @@
         "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet"
       ],
       "feedFailed": false,
-      "retryCount": 35,
-      "nextRetryAt": "2026-11-03T17:00:02.680578Z"
+      "retryCount": 36,
+      "nextRetryAt": "2026-11-03T23:48:21.733897Z"
     },
     "nsf": {
       "name": "NSF",
@@ -99,31 +95,31 @@
     "umich": {
       "name": "University of Michigan News",
       "staleAfterHours": 36,
-      "lastAttemptAt": "2026-11-03T11:00:02.680578Z",
+      "lastAttemptAt": "2026-11-03T17:48:21.733897Z",
       "lastSuccessAt": "2026-11-03T11:00:02.680578Z",
       "lastNewStoryAt": "2026-11-03T11:00:02.680578Z",
       "errors": [
-        "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/: LLMError: JSONDecodeError: Unterminated string starting at: line 7 column 18 (char 1352)"
+        "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/: LLMError: JSONDecodeError: Unterminated string starting at: line 7 column 18 (char 1365)"
       ],
-      "candidateCount": 20,
-      "acceptedCount": 2,
-      "deferredCount": 13,
-      "rejectedCount": 1,
+      "candidateCount": 1,
+      "acceptedCount": 0,
+      "deferredCount": 0,
+      "rejectedCount": 0,
       "lastFullAttemptAt": "2026-11-03T11:00:02.680578Z",
       "failedUrls": [
         "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies/"
       ],
       "feedFailed": false,
-      "retryCount": 7,
-      "nextRetryAt": "2026-11-03T17:00:02.680578Z"
+      "retryCount": 8,
+      "nextRetryAt": "2026-11-03T23:48:21.733897Z"
     }
   },
   "error": "Incomplete source checks: nasa, jpl, esa, umich",
   "metrics": {
-    "verifiedStories": 104,
+    "verifiedStories": 105,
     "sourceCounts": {
       "ESA": 13,
-      "NASA": 41,
+      "NASA": 42,
       "NASA JPL": 13,
       "NSF": 10,
       "University of Michigan News": 27
@@ -136,11 +132,13 @@
       "climate-change": 1,
       "climatology": 1,
       "computer-science": 1,
-      "earth-science": 27,
+      "cyclones": 1,
+      "earth-science": 28,
       "ecology": 1,
       "economics": 2,
       "education": 3,
       "environment": 4,
+      "extreme weather": 1,
       "geology": 1,
       "health": 13,
       "human dimensions": 1,
@@ -156,7 +154,7 @@
       "technology": 54,
       "wildfires": 1
     },
-    "newestStoryAgeHours": 5.92,
+    "newestStoryAgeHours": 12.72,
     "maxPublicationLagHours": 1114.28
   }
 }
