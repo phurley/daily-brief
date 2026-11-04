@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-04T06:35:06.509351Z",
+  "generatedAt": "2026-11-04T11:00:25.118236Z",
   "editionDate": "2026-11-04",
   "starshipEstimatedLaunch": {
     "status": "targeted",
@@ -20,6 +20,137 @@
     ]
   },
   "stories": [
+    {
+      "id": "science-acc301e7ba339cf7",
+      "title": "APOD: 2026 November 4 – The Not-So-Hidden Galaxy, IC 342",
+      "summary": "Magnetic field maps of the spiral galaxy IC 342 suggest that magnetic fields might significantly contribute to the formation of spiral arms.",
+      "finding": "Magnetic field maps of the spiral galaxy IC 342 suggest that magnetic fields might significantly contribute to the formation of spiral arms.",
+      "significance": "Understanding the role of magnetic fields in spiral arm formation could help solve a major puzzle in galactic evolution, providing insights into how galaxies like our Milky Way develop their characteristic structures.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/image-article/apod-2026-november-4-the-not-so-hidden-galaxy-ic-342",
+      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-november-4-the-not-so-hidden-galaxy-ic-342",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-04T05:05:00Z",
+      "firstSeenAt": "2026-11-04T11:00:25.118236Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "IC 342",
+        "Milky Way",
+        "Local Group"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-04T05:05:00Z"
+    },
+    {
+      "id": "science-79e632d7c84fde6c",
+      "title": "Before the Dawn in America’s Heartland",
+      "summary": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
+      "finding": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
+      "significance": "These observations, along with other remote sensing data, are valuable for tracking changes in the built environment and urban development. Quantifying urban lights' brightness, color, and extent can provide insights into how cities grow and evolve, and can be used to track power outages, infrastructure changes, and transitions to LED lighting.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/before-the-dawn-in-americas-heartland",
+      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/before-the-dawn-in-americas-heartland",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-04T05:01:00Z",
+      "firstSeenAt": "2026-11-04T11:00:25.118236Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "earth-science",
+        "technology",
+        "astronomy"
+      ],
+      "entities": [
+        "International Space Station",
+        "U.S. Midwest",
+        "airglow",
+        "NASA Earth Observatory",
+        "NASA Johnson Space Center"
+      ],
+      "milestoneStatus": "completed",
+      "sourceUpdatedAt": "2026-11-04T05:01:00Z"
+    },
+    {
+      "id": "science-e7caf41e8d8fd246",
+      "title": "Astronaut and Earth",
+      "summary": "Astronauts Joshua Kutryk and Anil Menon installed a new roll-out solar array on the International Space Station and completed preparatory work for their subsequent spacewalk.",
+      "finding": "Astronauts Joshua Kutryk and Anil Menon installed a new roll-out solar array on the International Space Station and completed preparatory work for their subsequent spacewalk.",
+      "significance": "The installation of new solar arrays is crucial for increasing the International Space Station's available power, with the full set of eight arrays projected to boost power by up to 30%. This enhancement supports ongoing operations and future research capabilities.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/image-article/astronaut-and-earth",
+      "primarySourceUrl": "https://www.nasa.gov/image-article/astronaut-and-earth",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-03T16:37:42Z",
+      "firstSeenAt": "2026-11-04T11:00:25.118236Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "technology",
+        "astronomy"
+      ],
+      "entities": [
+        "Joshua Kutryk",
+        "Anil Menon",
+        "International Space Station",
+        "South Atlantic Ocean",
+        "Canadian Space Agency"
+      ],
+      "milestoneStatus": "completed"
+    },
+    {
+      "id": "science-b2886d89a4265d7c",
+      "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
+      "summary": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+      "finding": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+      "significance": "This finding is significant for NASA projects that widely use chip resistors, as it provides insights into potential failure mechanisms and offers guidelines to mitigate flexure-induced cracking risks in ceramic body components on printed circuit boards, thereby enhancing reliability and safety of electronic systems.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+      "primarySourceUrl": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-03T15:35:14Z",
+      "firstSeenAt": "2026-11-04T11:00:25.118236Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "technology",
+        "physics"
+      ],
+      "entities": [
+        "NASA",
+        "chip resistors",
+        "printed circuit board assemblies",
+        "thermal cycling",
+        "vibration testing"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nasa.gov/wp-content/uploads/2026/11/tb-26-10.pdf?emrc=dd9296",
+      "sourceUpdatedAt": "2026-11-03T15:37:33Z"
+    },
     {
       "id": "science-90c08f78aa09ed89",
       "title": "APOD: 2026 November 3 – Comet PanSTARRs and Rainbow Meteor",
@@ -101,7 +232,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-02T21:07:52Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -155,7 +286,7 @@
       "title": "Five U-M researchers named American Physical Society fellows",
       "summary": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics. Scott Baalrud was recognized for advancements in the kinetic theory of plasmas. Emanuel Gull was recognized for advances in numerical methods for strongly correlated electron systems. Cagliyan Kurdak was recognized for leadership in broadening participation in physics graduate education. Venkat Raman was recognized for insights and computational methods for rotating detonation engines. Dominika Zgid was recognized for contributions to ab initio many-body methods for molecules and solids.",
       "finding": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics. Scott Baalrud was recognized for advancements in the kinetic theory of plasmas. Emanuel Gull was recognized for advances in numerical methods for strongly correlated electron systems. Cagliyan Kurdak was recognized for leadership in broadening participation in physics graduate education. Venkat Raman was recognized for insights and computational methods for rotating detonation engines. Dominika Zgid was recognized for contributions to ab initio many-body methods for molecules and solids.",
-      "significance": "This recognition highlights significant contributions to various fields of physics, including plasma physics, condensed matter physics, aerospace engineering, and theoretical chemistry. These advancements have applications in areas such as fusion energy, quantum computing, and high-speed propulsion, demonstrating the impact of their research on scientific and technological progress.",
+      "significance": "This recognition highlights significant contributions to various fields of physics, including plasma physics, condensed matter physics, aerospace engineering, and theoretical chemistry. These advancements can impact areas such as fusion energy, quantum computing, and high-speed propulsion.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://news.umich.edu/five-u-m-researchers-named-american-physical-society-fellows",
       "primarySourceUrl": "https://news.umich.edu/five-u-m-researchers-named-american-physical-society-fellows",
@@ -166,8 +297,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-02T15:22:09Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-03T11:00:02.680578Z",
-      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "physics",
@@ -282,11 +413,45 @@
       "milestoneStatus": "unknown"
     },
     {
+      "id": "science-3e0cd4d79f561ced",
+      "title": "Midterm elections: Voters want solutions, but campaigns deliver polarization",
+      "summary": "Voters in the 2026 midterm elections are primarily motivated by concerns about the cost of living, including grocery and gas prices, mirroring issues from the 2024 election. However, campaign rhetoric is largely combative and polarizing, focusing on personal attacks and portraying opponents as dangerous or extreme, rather than offering solution-oriented policy discussions.",
+      "finding": "Voters in the 2026 midterm elections are primarily motivated by concerns about the cost of living, including grocery and gas prices, mirroring issues from the 2024 election. However, campaign rhetoric is largely combative and polarizing, focusing on personal attacks and portraying opponents as dangerous or extreme, rather than offering solution-oriented policy discussions.",
+      "significance": "This finding suggests a disconnect between voter priorities for practical solutions to economic issues and the strategies employed by political campaigns, which prioritize strong rhetoric and polarization. This could lead to voter dissatisfaction and potentially impact election outcomes and the effectiveness of future governance.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://news.umich.edu/midterm-elections-voters-want-solutions-but-campaigns-deliver-polarization",
+      "primarySourceUrl": "https://news.umich.edu/midterm-elections-voters-want-solutions-but-campaigns-deliver-polarization",
+      "source": {
+        "name": "University of Michigan News"
+      },
+      "sourceGroup": "U-M",
+      "sourceQuality": 2,
+      "publishedAt": "2026-10-30T15:12:13Z",
+      "firstSeenAt": "2026-11-04T11:00:25.118236Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "social-science",
+        "politics"
+      ],
+      "entities": [
+        "voters",
+        "midterm elections",
+        "cost of living",
+        "campaigns",
+        "political polarization"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-03T15:59:33Z",
+      "localConnection": "University of Michigan research in Ann Arbor."
+    },
+    {
       "id": "science-e10edceaccaeeca7",
       "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
-      "summary": "Chimpanzees from the Ngogo community in Kibale National Park, Uganda, split into two groups in January 2018 after a period of increasing aggression, leading to the killing of 28 individuals from one splinter group by members of the other. This lethal intergroup aggression occurred between individuals who had previously spent their entire lives together, affiliated, and cooperated.",
-      "finding": "Chimpanzees from the Ngogo community in Kibale National Park, Uganda, split into two groups in January 2018 after a period of increasing aggression, leading to the killing of 28 individuals from one splinter group by members of the other. This lethal intergroup aggression occurred between individuals who had previously spent their entire lives together, affiliated, and cooperated.",
-      "significance": "This finding challenges the understanding of chimpanzee social behavior, particularly the nature of aggression within a known community. It also provides a comparative context for human behavior, suggesting that while similarities exist, humans exhibit a unique prosocial and cooperative capacity, even towards strangers, which is not observed in chimpanzees or other animal species.",
+      "summary": "A long-term study of Ngogo chimpanzees in Kibale National Park, Uganda, observed a large community of nearly 200 individuals split into two groups, leading to lethal intergroup aggression resulting in 28 deaths over nine years. This aggression occurred between individuals who had previously coexisted, affiliated, and cooperated.",
+      "finding": "A long-term study of Ngogo chimpanzees in Kibale National Park, Uganda, observed a large community of nearly 200 individuals split into two groups, leading to lethal intergroup aggression resulting in 28 deaths over nine years. This aggression occurred between individuals who had previously coexisted, affiliated, and cooperated.",
+      "significance": "This finding challenges the understanding of chimpanzee social behavior and provides a comparative context for human behavior, suggesting that while chimpanzees exhibit lethal aggression even among familiar individuals, humans demonstrate a unique capacity for prosociality and cooperation, even with strangers, which offers hope amidst societal polarization.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "primarySourceUrl": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
@@ -297,8 +462,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T14:08:23Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-03T11:00:02.680578Z",
-      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
@@ -308,7 +473,7 @@
         "Ngogo Chimpanzee Project",
         "John Mitani",
         "Kibale National Park",
-        "University of Michigan",
+        "Uganda",
         "Nature Human Behaviour"
       ],
       "milestoneStatus": "unknown",
@@ -419,9 +584,9 @@
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
-      "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
-      "significance": "This meteorite offers a \"Rosetta Stone\" for Mars, providing direct evidence of the planet's early geological history and the interaction of water and rock. Future studies of Teghaza 001 could help answer critical questions about the ancient Martian water cycle and the planet's atmospheric evolution.",
+      "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
+      "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
+      "significance": "This meteorite offers a rare glimpse into Mars' ancient crust and formation, potentially helping scientists understand the interaction between water and rocks on early Mars. It represents the first piece of Martian crust from a region previously unsampled, providing crucial data for understanding the planet's early geological history and water cycle.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
@@ -432,8 +597,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T18:18:09Z",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-03T11:00:02.680578Z",
-      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -443,9 +608,9 @@
       "entities": [
         "Teghaza 001",
         "Mars",
-        "Earth",
         "Sahara Desert",
-        "Yang Liu"
+        "Jet Propulsion Laboratory",
+        "Science"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
@@ -769,7 +934,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T20:23:58Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -800,7 +965,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T18:51:35Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
       "verifiedAt": "2026-10-29T05:30:05.908168Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -959,9 +1124,9 @@
     {
       "id": "science-29a4ffbe1d32dba8",
       "title": "Stars brewing in a nebulous cauldron",
-      "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results showed that the western region of N159 has more young stellar objects in a more concentrated area, indicating it is at an earlier stage of collapsing to form stars.",
-      "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results showed that the western region of N159 has more young stellar objects in a more concentrated area, indicating it is at an earlier stage of collapsing to form stars.",
-      "significance": "This research provides an opportunity to study H II regions in conditions similar to those found in the early Universe, helping to understand star formation during that period. N159 is one of the youngest star-forming regions in the Large Magellanic Cloud, containing thousands of stars at their earliest stages of formation, making it a unique place to observe the evolution of a collapsing molecular cloud.",
+      "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
+      "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
+      "significance": "This research provides an opportunity to study H II regions under conditions similar to the early Universe, offering insights into star formation processes during that epoch. Observing the entire sequence of star formation occurring simultaneously in N159 allows for a detailed examination of molecular cloud evolution.",
       "caveat": "Preprint / working paper; peer review is not established. The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
       "primarySourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
@@ -972,19 +1137,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-22T08:00:00Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-03T11:00:02.680578Z",
-      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
       "evidenceType": "preprint",
       "topics": [
         "astronomy",
         "physics"
       ],
       "entities": [
+        "NASA/ESA James Webb Space Telescope",
         "N159",
         "Large Magellanic Cloud",
-        "James Webb Space Telescope",
-        "NIRCam",
-        "Milky Way galaxy"
+        "Milky Way galaxy",
+        "NIRCam"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://arxiv.org/abs/2609.27126"

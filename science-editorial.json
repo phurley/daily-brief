@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-04T03:29:44.658444-05:00",
+  "generatedAt": "2026-11-04T07:38:52.700174-05:00",
   "stories": [
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "summary": "Scientists age-dated the Teghaza 001 meteorite, finding it formed over 4.1 billion years ago, making it one of the oldest Martian meteorites. Its unique mineralogy provides a rare snapshot of Mars' ancient crust and suggests early interactions between water and rock, matching observations from the Mars Reconnaissance Orbiter.",
-      "finding": "Scientists age-dated the Teghaza 001 meteorite, finding it formed over 4.1 billion years ago, making it one of the oldest Martian meteorites. Its unique mineralogy provides a rare snapshot of Mars' ancient crust and suggests early interactions between water and rock, matching observations from the Mars Reconnaissance Orbiter.",
-      "significance": "This meteorite offers a \"Rosetta Stone\" for Mars, providing direct evidence of the planet's early geological history and the interaction of water and rock. Future studies of Teghaza 001 could help answer critical questions about the ancient Martian water cycle and the planet's atmospheric evolution.",
+      "summary": "Scientists have age-dated the Martian meteorite Teghaza 001 to over 4.1 billion years old, making it one of the most ancient found on Earth. Its unique mix of igneous minerals provides a rare snapshot of Mars' early crust formation and suggests a dynamic water cycle on the planet around that time.",
+      "finding": "Scientists have age-dated the Martian meteorite Teghaza 001 to over 4.1 billion years old, making it one of the most ancient found on Earth. Its unique mix of igneous minerals provides a rare snapshot of Mars' early crust formation and suggests a dynamic water cycle on the planet around that time.",
+      "significance": "This meteorite offers a rare glimpse into Mars' ancient crust and formation, potentially helping scientists understand the interaction between water and rocks on early Mars. It represents the first piece of Martian crust from a region previously unsampled, providing crucial data for understanding the planet's early geological history and water cycle.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
@@ -19,8 +19,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T14:18:09-04:00",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-03T11:00:02.680578Z",
-      "verifiedAt": "2026-11-03T11:00:02.680578Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -30,24 +30,24 @@
       "entities": [
         "Teghaza 001",
         "Mars",
-        "Earth",
         "Sahara Desert",
-        "Yang Liu"
+        "Jet Propulsion Laboratory",
+        "Science"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
       "sourceUpdatedAt": "2026-10-29T18:50:48Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-03T06:43:39.605500-05:00",
-        "expiresAt": "2026-11-06T06:43:39.605500-05:00",
+        "reviewedAt": "2026-11-04T07:38:52.700174-05:00",
+        "expiresAt": "2026-11-07T07:38:52.700174-05:00",
         "inputFacts": {
           "id": "science-5c3380370cf61ae7",
           "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
           "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
           "publishedAt": "2026-10-29T18:18:09Z",
-          "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
-          "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
+          "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
+          "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
           "sourceUpdatedAt": "2026-10-29T18:50:48Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
@@ -56,11 +56,11 @@
         "sourceHash": "46cebebb92d9a77d8e2a9d1ebd8cf230e35275fa9092b20f5575fe5a79a2fcde",
         "relevance": 4,
         "novelty": 4,
-        "reason": "New findings on an ancient Martian meteorite provide significant insights into the early formation and water history of Mars, aligning with astronomy and earth-science interests.",
+        "reason": "This article details a significant new finding in planetary science, specifically regarding the early history of Mars and the presence of water, which aligns with scientific interests.",
         "storyKey": "ancient-mars-meteorite-teghaza-001",
         "localConnection": "",
         "grounded": true,
-        "groundingReason": "The summary accurately reflects the article's claims about the age, unique mineralogy, and implications for early Mars' water-rock interactions, supported by the Mars Reconnaissance Orbiter observations. This represents a new scientific finding regarding a specific Martian meteorite."
+        "groundingReason": "The article fully supports all claims in the summary, including the age of the meteorite, its unique mineral composition, and the implications for Mars' early crust and water cycle. The finding represents a new scientific discovery about Mars' geological history."
       }
     },
     {
@@ -184,14 +184,44 @@
   ],
   "corrections": [
     {
+      "id": "science-79e632d7c84fde6c",
+      "inputFacts": {
+        "id": "science-79e632d7c84fde6c",
+        "title": "Before the Dawn in America’s Heartland",
+        "url": "https://science.nasa.gov/earth/earth-observatory/before-the-dawn-in-americas-heartland",
+        "publishedAt": "2026-11-04T05:01:00Z",
+        "summary": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
+        "finding": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
+        "sourceUpdatedAt": "2026-11-04T05:01:00Z"
+      },
+      "publishedAt": "2026-11-04T00:01:00-05:00",
+      "publicationEvidence": "2026-11-04T00:01:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-b2886d89a4265d7c",
+      "inputFacts": {
+        "id": "science-b2886d89a4265d7c",
+        "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
+        "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+        "publishedAt": "2026-11-03T15:35:14Z",
+        "summary": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+        "finding": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+        "sourceUpdatedAt": "2026-11-03T15:37:33Z"
+      },
+      "publishedAt": "2026-11-03T10:35:14-05:00",
+      "publicationEvidence": "2026-11-03T10:35:14-05:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-e10edceaccaeeca7",
       "inputFacts": {
         "id": "science-e10edceaccaeeca7",
         "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
         "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
         "publishedAt": "2026-10-30T14:08:23Z",
-        "summary": "Chimpanzees from the Ngogo community in Kibale National Park, Uganda, split into two groups in January 2018 after a period of increasing aggression, leading to the killing of 28 individuals from one splinter group by members of the other. This lethal intergroup aggression occurred between individuals who had previously spent their entire lives together, affiliated, and cooperated.",
-        "finding": "Chimpanzees from the Ngogo community in Kibale National Park, Uganda, split into two groups in January 2018 after a period of increasing aggression, leading to the killing of 28 individuals from one splinter group by members of the other. This lethal intergroup aggression occurred between individuals who had previously spent their entire lives together, affiliated, and cooperated.",
+        "summary": "A long-term study of Ngogo chimpanzees in Kibale National Park, Uganda, observed a large community of nearly 200 individuals split into two groups, leading to lethal intergroup aggression resulting in 28 deaths over nine years. This aggression occurred between individuals who had previously coexisted, affiliated, and cooperated.",
+        "finding": "A long-term study of Ngogo chimpanzees in Kibale National Park, Uganda, observed a large community of nearly 200 individuals split into two groups, leading to lethal intergroup aggression resulting in 28 deaths over nine years. This aggression occurred between individuals who had previously coexisted, affiliated, and cooperated.",
         "sourceUpdatedAt": "2026-11-02T15:08:51Z"
       },
       "publishedAt": "2026-10-30T10:08:23-04:00",
@@ -205,27 +235,12 @@
         "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
         "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
         "publishedAt": "2026-10-29T18:18:09Z",
-        "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
-        "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique igneous mineral composition provides a rare glimpse into Mars' ancient crust formation and how it was subsequently altered by subsurface water.",
+        "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
+        "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
         "sourceUpdatedAt": "2026-10-29T18:50:48Z"
       },
       "publishedAt": "2026-10-29T14:18:09-04:00",
       "publicationEvidence": "2026-10-29T14:18:09-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-edbada0a99652d00",
-      "inputFacts": {
-        "id": "science-edbada0a99652d00",
-        "title": "Optimizing AI energy consumption throughout its entire lifecycle",
-        "url": "https://news.umich.edu/optimizing-ai-energy-consumption-throughout-its-entire-lifecycle",
-        "publishedAt": "2026-10-28T15:13:22Z",
-        "summary": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems propose that more efficient software design could reduce AI energy consumption by up to half. They are developing a system to estimate energy usage across all stages of an AI workflow, from data processing to model training and deployment, to avoid extensive trial-and-error testing.",
-        "finding": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems propose that more efficient software design could reduce AI energy consumption by up to half. They are developing a system to estimate energy usage across all stages of an AI workflow, from data processing to model training and deployment, to avoid extensive trial-and-error testing.",
-        "sourceUpdatedAt": "2026-10-30T14:37:44Z"
-      },
-      "publishedAt": "2026-10-28T11:13:22-04:00",
-      "publicationEvidence": "2026-10-28T11:13:22-04:00",
       "datePrecision": "time"
     },
     {
@@ -265,13 +280,28 @@
         "title": "Stars brewing in a nebulous cauldron",
         "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
         "publishedAt": "2026-10-22T08:00:00Z",
-        "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results showed that the western region of N159 has more young stellar objects in a more concentrated area, indicating it is at an earlier stage of collapsing to form stars.",
-        "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results showed that the western region of N159 has more young stellar objects in a more concentrated area, indicating it is at an earlier stage of collapsing to form stars.",
+        "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
+        "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
         "sourceUpdatedAt": null
       },
       "publishedAt": "2026-10-22T00:00:00-04:00",
       "publicationEvidence": "22/10/2026",
       "datePrecision": "date"
+    },
+    {
+      "id": "science-edbada0a99652d00",
+      "inputFacts": {
+        "id": "science-edbada0a99652d00",
+        "title": "Optimizing AI energy consumption throughout its entire lifecycle",
+        "url": "https://news.umich.edu/optimizing-ai-energy-consumption-throughout-its-entire-lifecycle",
+        "publishedAt": "2026-10-28T15:13:22Z",
+        "summary": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems propose that more efficient software design could reduce AI energy consumption by up to half. They are developing a system to estimate energy usage across all stages of an AI workflow, from data processing to model training and deployment, to avoid extensive trial-and-error testing.",
+        "finding": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems propose that more efficient software design could reduce AI energy consumption by up to half. They are developing a system to estimate energy usage across all stages of an AI workflow, from data processing to model training and deployment, to avoid extensive trial-and-error testing.",
+        "sourceUpdatedAt": "2026-10-30T14:37:44Z"
+      },
+      "publishedAt": "2026-10-28T11:13:22-04:00",
+      "publicationEvidence": "2026-10-28T11:13:22-04:00",
+      "datePrecision": "time"
     },
     {
       "id": "science-ebd5ed8eaec52f79",
@@ -286,6 +316,21 @@
       },
       "publishedAt": "2026-10-21T14:35:56-04:00",
       "publicationEvidence": "2026-10-21T14:35:56-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-acc301e7ba339cf7",
+      "inputFacts": {
+        "id": "science-acc301e7ba339cf7",
+        "title": "APOD: 2026 November 4 – The Not-So-Hidden Galaxy, IC 342",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-4-the-not-so-hidden-galaxy-ic-342",
+        "publishedAt": "2026-11-04T05:05:00Z",
+        "summary": "Magnetic field maps of the spiral galaxy IC 342 suggest that magnetic fields might significantly contribute to the formation of spiral arms.",
+        "finding": "Magnetic field maps of the spiral galaxy IC 342 suggest that magnetic fields might significantly contribute to the formation of spiral arms.",
+        "sourceUpdatedAt": "2026-11-04T05:05:00Z"
+      },
+      "publishedAt": "2026-11-04T00:05:00-05:00",
+      "publicationEvidence": "2026-11-04T00:05:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -334,21 +379,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-a20db8c134bc2054",
-      "inputFacts": {
-        "id": "science-a20db8c134bc2054",
-        "title": "TB 26-09 Measured Hammer-Tap Inputs",
-        "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-09-measured-hammer-tap-inputs",
-        "publishedAt": "2026-11-02T20:47:41Z",
-        "summary": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
-        "finding": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
-        "sourceUpdatedAt": "2026-11-02T20:49:49Z"
-      },
-      "publishedAt": "2026-11-02T15:47:41-05:00",
-      "publicationEvidence": "2026-11-02T15:47:41-05:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-36784852208b206d",
       "inputFacts": {
         "id": "science-36784852208b206d",
@@ -364,33 +394,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-7b620b8ee23e792e",
+      "id": "science-3e0cd4d79f561ced",
       "inputFacts": {
-        "id": "science-7b620b8ee23e792e",
-        "title": "APOD: 2026 November 1 – Colors of the Moon",
-        "url": "https://science.nasa.gov/image-article/apod-2026-november-1-colors-of-the-moon",
-        "publishedAt": "2026-11-01T04:05:00Z",
-        "summary": "The apparent color of the Moon, as observed from Earth, varies depending on atmospheric conditions and the Moon's position relative to the horizon. A collection of full moon images over 10 years from Italy shows that red or yellow hues typically occur when the Moon is near the horizon due to blue light scattering, while a blue Moon is rarer and may indicate larger atmospheric dust particles. A purple Moon's cause is unclear, possibly a combination of effects.",
-        "finding": "The apparent color of the Moon, as observed from Earth, varies depending on atmospheric conditions and the Moon's position relative to the horizon. A collection of full moon images over 10 years from Italy shows that red or yellow hues typically occur when the Moon is near the horizon due to blue light scattering, while a blue Moon is rarer and may indicate larger atmospheric dust particles. A purple Moon's cause is unclear, possibly a combination of effects.",
-        "sourceUpdatedAt": "2026-11-01T04:05:00Z"
+        "id": "science-3e0cd4d79f561ced",
+        "title": "Midterm elections: Voters want solutions, but campaigns deliver polarization",
+        "url": "https://news.umich.edu/midterm-elections-voters-want-solutions-but-campaigns-deliver-polarization",
+        "publishedAt": "2026-10-30T15:12:13Z",
+        "summary": "Voters in the 2026 midterm elections are primarily motivated by concerns about the cost of living, including grocery and gas prices, mirroring issues from the 2024 election. However, campaign rhetoric is largely combative and polarizing, focusing on personal attacks and portraying opponents as dangerous or extreme, rather than offering solution-oriented policy discussions.",
+        "finding": "Voters in the 2026 midterm elections are primarily motivated by concerns about the cost of living, including grocery and gas prices, mirroring issues from the 2024 election. However, campaign rhetoric is largely combative and polarizing, focusing on personal attacks and portraying opponents as dangerous or extreme, rather than offering solution-oriented policy discussions.",
+        "sourceUpdatedAt": "2026-11-03T15:59:33Z"
       },
-      "publishedAt": "2026-11-01T00:05:00-04:00",
-      "publicationEvidence": "2026-11-01T00:05:00-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-e6da576f1b1a6c97",
-      "inputFacts": {
-        "id": "science-e6da576f1b1a6c97",
-        "title": "APOD: 2026 October 31 – Night on a Spooky Planet",
-        "url": "https://science.nasa.gov/image-article/apod-2026-october-31-night-on-a-spooky-planet",
-        "publishedAt": "2026-10-31T04:05:00Z",
-        "summary": "Geomagnetic storms, triggered by solar activity, are causing auroral displays in Earth's upper atmosphere at high latitudes. This phenomenon is occurring while the Sun is in the early phases of decline from its solar activity cycle peak.",
-        "finding": "Geomagnetic storms, triggered by solar activity, are causing auroral displays in Earth's upper atmosphere at high latitudes. This phenomenon is occurring while the Sun is in the early phases of decline from its solar activity cycle peak.",
-        "sourceUpdatedAt": "2026-10-31T14:45:33Z"
-      },
-      "publishedAt": "2026-10-31T00:05:00-04:00",
-      "publicationEvidence": "2026-10-31T00:05:00-04:00",
+      "publishedAt": "2026-10-30T11:12:13-04:00",
+      "publicationEvidence": "2026-10-30T11:12:13-04:00",
       "datePrecision": "time"
     },
     {
@@ -451,6 +466,51 @@
       },
       "publishedAt": "2026-10-27T16:23:58-04:00",
       "publicationEvidence": "2026-10-27T16:23:58-0400",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-a20db8c134bc2054",
+      "inputFacts": {
+        "id": "science-a20db8c134bc2054",
+        "title": "TB 26-09 Measured Hammer-Tap Inputs",
+        "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-09-measured-hammer-tap-inputs",
+        "publishedAt": "2026-11-02T20:47:41Z",
+        "summary": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
+        "finding": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
+        "sourceUpdatedAt": "2026-11-02T20:49:49Z"
+      },
+      "publishedAt": "2026-11-02T15:47:41-05:00",
+      "publicationEvidence": "2026-11-02T15:47:41-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-7b620b8ee23e792e",
+      "inputFacts": {
+        "id": "science-7b620b8ee23e792e",
+        "title": "APOD: 2026 November 1 – Colors of the Moon",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-1-colors-of-the-moon",
+        "publishedAt": "2026-11-01T04:05:00Z",
+        "summary": "The apparent color of the Moon, as observed from Earth, varies depending on atmospheric conditions and the Moon's position relative to the horizon. A collection of full moon images over 10 years from Italy shows that red or yellow hues typically occur when the Moon is near the horizon due to blue light scattering, while a blue Moon is rarer and may indicate larger atmospheric dust particles. A purple Moon's cause is unclear, possibly a combination of effects.",
+        "finding": "The apparent color of the Moon, as observed from Earth, varies depending on atmospheric conditions and the Moon's position relative to the horizon. A collection of full moon images over 10 years from Italy shows that red or yellow hues typically occur when the Moon is near the horizon due to blue light scattering, while a blue Moon is rarer and may indicate larger atmospheric dust particles. A purple Moon's cause is unclear, possibly a combination of effects.",
+        "sourceUpdatedAt": "2026-11-01T04:05:00Z"
+      },
+      "publishedAt": "2026-11-01T00:05:00-04:00",
+      "publicationEvidence": "2026-11-01T00:05:00-04:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-e6da576f1b1a6c97",
+      "inputFacts": {
+        "id": "science-e6da576f1b1a6c97",
+        "title": "APOD: 2026 October 31 – Night on a Spooky Planet",
+        "url": "https://science.nasa.gov/image-article/apod-2026-october-31-night-on-a-spooky-planet",
+        "publishedAt": "2026-10-31T04:05:00Z",
+        "summary": "Geomagnetic storms, triggered by solar activity, are causing auroral displays in Earth's upper atmosphere at high latitudes. This phenomenon is occurring while the Sun is in the early phases of decline from its solar activity cycle peak.",
+        "finding": "Geomagnetic storms, triggered by solar activity, are causing auroral displays in Earth's upper atmosphere at high latitudes. This phenomenon is occurring while the Sun is in the early phases of decline from its solar activity cycle peak.",
+        "sourceUpdatedAt": "2026-10-31T14:45:33Z"
+      },
+      "publishedAt": "2026-10-31T00:05:00-04:00",
+      "publicationEvidence": "2026-10-31T00:05:00-04:00",
       "datePrecision": "time"
     }
   ],
