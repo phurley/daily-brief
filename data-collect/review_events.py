@@ -2,7 +2,9 @@
 
 Every factual field requires literal source evidence. Failed, stale, incomplete,
 cancelled or changed records cannot become featured recommendations. The archive
-is never rewritten. Existing successful reviews are reused for up to 24 hours.
+is never rewritten. Existing successful reviews are reused for up to 24 hours;
+after that an unchanged organizer page reuses the cached model answer
+(extract.llm.ResponseCache) and only the deterministic checks re-run.
 """
 import argparse
 from concurrent.futures import ThreadPoolExecutor
@@ -25,6 +27,7 @@ from verified_calendars import fetch
 
 ROOT = Path(__file__).resolve().parent.parent
 TZ = ZoneInfo('America/Detroit')
+DEFAULT_MODEL = 'google/gemini-2.5-flash'
 FIELDS = ['id', 'url', 'start', 'end', 'venue', 'city', 'price', 'status']
 QUOTES = ['date', 'time', 'venue', 'admission', 'description', 'registration', 'end']
 SCHEMA = {'type': 'object', 'additionalProperties': False, 'properties': {
@@ -122,6 +125,30 @@ def page_evidence(html, url):
         if 2 <= len(fragment) <= 600 and normalized(fragment) in normalized(combined):
             items[f'E{len(items)}'] = fragment
     return {'text': combined, 'links': links, 'events': structured, 'url': url, 'evidenceItems': items, 'occurrences': occurrences}
+
+
+# Prompt budget. Validation always uses the full page; the model sees the head of
+# the page text plus structured events, the evidence items inside that excerpt,
+# and booking-like links first. Large pages otherwise cost ~4x a typical one.
+PROMPT_TEXT_CHARS = 12000
+PROMPT_STRUCTURED_CHARS = 6000
+PROMPT_LINKS = 60
+BOOKING_LINK = re.compile(r'ticket|regist|book|rsvp|buy|reserve|admission|event|details', re.I)
+
+
+def model_evidence(page):
+    body, _, structured = page['text'].partition('\nSTRUCTURED EVENTS: ')
+    excerpt = body[:PROMPT_TEXT_CHARS]
+    if structured:
+        excerpt += '\nSTRUCTURED EVENTS: ' + structured[:PROMPT_STRUCTURED_CHARS]
+    visible = normalized(excerpt)
+    items = {key: value for key, value in page['evidenceItems'].items() if normalized(value) in visible}
+    seen, links = set(), []
+    for link in sorted(page['links'], key=lambda a: not BOOKING_LINK.search(a['label'] + ' ' + a['url'])):
+        if link['url'] not in seen:
+            seen.add(link['url'])
+            links.append(link)
+    return {'organizerEvidence': excerpt, 'links': links[:PROMPT_LINKS], 'evidenceItems': items}
 
 
 def clock_matches(quote, expected, last=False):
@@ -316,10 +343,11 @@ def main():
     out = opts.root / 'event-editorial.json'
     previous = json.loads(out.read_text()) if out.exists() and not opts.force else {}
     env.load_dotenv()
+    client = ChatClient(model=os.getenv('OPENROUTER_EDITORIAL_MODEL', DEFAULT_MODEL), retries=1, timeout=60,
+                        caller='review_events', cache=True)
     def generate(candidate, page):
-        client = ChatClient(model=os.getenv('OPENROUTER_EDITORIAL_MODEL', 'google/gemini-2.5-flash'), retries=1, timeout=60)
         payload = {'candidate': {key: candidate.get(key) for key in ['title', 'start', 'venue', 'city', 'category']},
-                   'organizerEvidence': page['text'], 'links': page['links'], 'evidenceItems': page['evidenceItems']}
+                   **model_evidence(page)}
         return client.complete_json([{'role': 'system', 'content': PROMPT},
             {'role': 'user', 'content': json.dumps(payload, ensure_ascii=False)}], SCHEMA, schema_name='featured_event_review')
     document = review_candidates(candidates, previous, now, lambda url: fetch(url, timeout=15), generate, opts.workers)

@@ -190,11 +190,29 @@ def verify_date(entry, article, now):
     return iso(published)
 
 
+DEFAULT_MODEL = "google/gemini-2.5-flash"
+# Prompt budget; verification still runs against the full article.
+PROMPT_TEXT_CHARS = 14000
+PROMPT_LINKS = 80
+_CLIENT = None
+
+
+def prompt_article(article, url):
+    """Head of the article plus off-site links first (paper/DOI links live there)."""
+    host = urlsplit(url).hostname or ""
+    links = sorted(article["links"], key=lambda link: (urlsplit(link).hostname or "") == host)
+    return {**article, "text": article["text"][:PROMPT_TEXT_CHARS], "links": links[:PROMPT_LINKS]}
+
+
 def extract(entry, article):
-    env.load_dotenv()
-    return make_chat_client(model=os.getenv("OPENROUTER_SCIENCE_MODEL", "google/gemini-2.5-flash"), timeout=60, retries=1).complete_json([
+    global _CLIENT
+    if _CLIENT is None:
+        env.load_dotenv()
+        _CLIENT = make_chat_client(model=os.getenv("OPENROUTER_SCIENCE_MODEL", DEFAULT_MODEL), timeout=60, retries=1,
+                                   caller="science", cache=True)
+    return _CLIENT.complete_json([
         {"role": "system", "content": PROMPT},
-        {"role": "user", "content": json.dumps({"title": entry["title"], "article": article})},
+        {"role": "user", "content": json.dumps({"title": entry["title"], "article": prompt_article(article, entry["url"])})},
     ], EXTRACTION_SCHEMA, schema_name="science_story")
 
 

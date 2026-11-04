@@ -1,7 +1,7 @@
 import copy
 from datetime import datetime, timedelta
 import unittest
-from review_events import validate_review, page_evidence, review_candidates, input_facts, TZ
+from review_events import validate_review, page_evidence, review_candidates, input_facts, model_evidence, TZ
 
 
 class FeaturedReviewTest(unittest.TestCase):
@@ -81,5 +81,18 @@ class FeaturedReviewTest(unittest.TestCase):
         doc = review_candidates([self.candidate], {'events': [old]}, self.now + timedelta(hours=25), unavailable, unavailable)
         self.assertEqual(doc['events'], [])
 
+
+    def test_model_evidence_is_bounded_but_keeps_booking_links(self):
+        filler = ''.join(f'<a href="https://example.org/nav/{i}">Menu {i}</a>' for i in range(200))
+        page = page_evidence(self.html + filler + '<p>' + 'Long history. ' * 3000 + '</p>', self.candidate['url'])
+        self.assertGreater(len(page['links']), 200)
+        excerpt = model_evidence(page)
+        self.assertLessEqual(len(excerpt['links']), 60)
+        labels = [link['label'] for link in excerpt['links']]
+        self.assertIn('Organizer event details / booking', labels)
+        self.assertIn('Register', labels)
+        self.assertLess(labels.index('Organizer event details / booking'), labels.index('Menu 0'))
+        self.assertLess(len(excerpt['organizerEvidence']), 12000 + 6000 + 40)
+        self.assertTrue(set(excerpt['evidenceItems']) <= set(page['evidenceItems']))
 
 if __name__ == '__main__': unittest.main()

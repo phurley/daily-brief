@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import json
 import unittest
 from review_stories import (TZ, DEFAULT_POLICY, publication, source_page, validate_review,
-                            run_review, choose_days, input_facts)
+                            run_review, choose_days, input_facts, gate_reason, news_gate_state)
 
 
 class StoryEditorTest(unittest.TestCase):
@@ -102,6 +102,29 @@ class StoryEditorTest(unittest.TestCase):
             refreshed = self.run_editor(doc, getter=forbidden, generate=forbidden)
             self.assertEqual(len(refreshed['stories']), int(include))
             self.assertEqual(len(refreshed['rejections']), int(not include))
+
+    def test_jev_gate_rejects_before_fetch_and_is_cached(self):
+        def forbidden(*args): raise AssertionError('Gate rejection made a paid call')
+        doc = self.run_editor(getter=forbidden, generate=forbidden, gate=lambda story: 'Jev gate: routine item (p=0.97)')
+        self.assertEqual(doc['stories'], [])
+        self.assertTrue(doc['rejections'][0]['gate'])
+        self.assertFalse(doc['rejections'][0]['transient'])
+        calls = []
+        again = self.run_editor(doc, getter=forbidden, generate=forbidden, gate=lambda story: calls.append(story))
+        self.assertEqual(calls, [])
+        self.assertEqual(len(again['rejections']), 1)
+
+    def test_jev_gate_passes_and_fails_open(self):
+        self.assertEqual(len(self.run_editor(gate=lambda story: None)['stories']), 1)
+        def broken(story): raise RuntimeError('Jev unavailable')
+        self.assertEqual(len(self.run_editor(gate=broken)['stories']), 1)
+
+    def test_gate_only_rejects_confident_answers(self):
+        self.assertIsNone(gate_reason({'routine': {'probability': 0.7}, 'brief_worthy': {'probability': 0.3}}))
+        self.assertIsNone(gate_reason({}))
+        self.assertRegex(gate_reason({'routine': {'probability': 0.9}}), 'routine')
+        self.assertRegex(gate_reason({'brief_worthy': {'probability': 0.05}}), 'not brief-worthy')
+        self.assertIn('Title: Plymouth library hours', news_gate_state(self.story))
 
     def test_changed_source_and_policy_require_new_review(self):
         doc = self.run_editor()
