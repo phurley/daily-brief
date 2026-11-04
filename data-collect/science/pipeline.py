@@ -24,7 +24,7 @@ import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 from curl_cffi import requests
 import jsonschema
-from extract.llm import make_chat_client
+from extract.llm import TruncatedOutput, make_chat_client
 from extract import env
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -190,12 +190,48 @@ def verify_date(entry, article, now):
     return iso(published)
 
 
+DEFAULT_MODEL = "google/gemini-2.5-flash"
+# Prompt budget; verification still runs against the full article.
+PROMPT_TEXT_CHARS = 14000
+PROMPT_LINKS = 80
+
+
+def prompt_article(article, url):
+    """Head of the article plus off-site links first (paper/DOI links live there)."""
+    host = urlsplit(url).hostname or ""
+    links = sorted(article["links"], key=lambda link: (urlsplit(link).hostname or "") == host)
+    return {**article, "text": article["text"][:PROMPT_TEXT_CHARS], "links": links[:PROMPT_LINKS]}
+
+
+# 2.5 Flash loops inside a JSON string on ~1 in 4 articles (A/B 2026-11-03), burning
+# ~34k output tokens per attempt. Cap it and hand truncated cases to 3.1 Flash-Lite,
+# which did not run away but rejects more quotes, so it is only the fallback.
+FALLBACK_MODEL = "google/gemini-3.1-flash-lite"
+_CLIENTS = {}
+
+
+def _client(model):
+    if model not in _CLIENTS:
+        env.load_dotenv()
+        _CLIENTS[model] = make_chat_client(model=model, timeout=60, retries=1, caller="science", cache=True,
+                                           max_tokens=2500)
+    return _CLIENTS[model]
+
+
 def extract(entry, article):
     env.load_dotenv()
-    return make_chat_client(model=os.getenv("OPENROUTER_SCIENCE_MODEL", "google/gemini-2.5-flash"), timeout=60, retries=1).complete_json([
+    messages = [
         {"role": "system", "content": PROMPT},
-        {"role": "user", "content": json.dumps({"title": entry["title"], "article": article})},
-    ], EXTRACTION_SCHEMA, schema_name="science_story")
+        {"role": "user", "content": json.dumps({"title": entry["title"], "article": prompt_article(article, entry["url"])})},
+    ]
+    primary = os.getenv("OPENROUTER_SCIENCE_MODEL", DEFAULT_MODEL)
+    fallback = os.getenv("OPENROUTER_SCIENCE_FALLBACK_MODEL", FALLBACK_MODEL)
+    try:
+        return _client(primary).complete_json(messages, EXTRACTION_SCHEMA, schema_name="science_story")
+    except TruncatedOutput:
+        if not fallback or fallback == primary:
+            raise
+        return _client(fallback).complete_json(messages, EXTRACTION_SCHEMA, schema_name="science_story")
 
 
 def build_story(entry, article, result, source, stamp, published, old=None):

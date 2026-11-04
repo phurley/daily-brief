@@ -351,6 +351,37 @@ For isolated replay, use a separate `--processed` input, `--out` store, and
 `--max-items`, `--extract-limit`, and `--enrich-limit` small. Run the offline
 regressions with `python3 -m unittest extract.test_retry extract.test_publish`.
 
+## LLM spend: attribution and caching
+
+All OpenRouter callers share one key, so the key's usage total cannot say where
+money goes. Every chat and Jev call now appends a row to
+`processed/llm-usage.jsonl` (caller, model, tokens and the `cost` OpenRouter
+reports). Summarize it with:
+
+```sh
+.venv/bin/python -m extract.usage --days 1     # or --days 7
+```
+
+`LLM_USAGE_LOG=/path` redirects the log; `LLM_USAGE_LOG=off` disables it.
+
+The featured-event reviewer, the news/science story editor and checker, and the
+science extractor reuse model answers through an exact-request cache
+(`processed/llm-cache.sqlite`, `extract.llm.ResponseCache`). The key hashes
+the whole request (model, prompt, schema and source text), so a changed page,
+prompt or model is always a fresh call. Every reuse still re-runs the callers'
+deterministic validation against the current time, so expiry, freshness and
+actionable-window rules behave as before. Entries unused for 30 days are
+pruned. `LLM_CACHE=off` disables it.
+
+News stories pass a conservative Jev pre-screen (`NEWS_GATE` in
+`review_stories.py`) before the article fetch and editor call. It skips only
+confident rejects, falls through on Jev errors, and caches its rejections for a
+week unless the story's inputs change. `NEWS_JEV_GATE=0` turns it off.
+
+Model overrides: `OPENROUTER_EDITORIAL_MODEL`, `OPENROUTER_EDITORIAL_CHECK_MODEL`,
+`OPENROUTER_SCIENCE_MODEL`, `OPENROUTER_EXTRACT_MODEL`, `OPENROUTER_VIBE_MODEL`
+and `OPENROUTER_STARSHIP_MODEL`.
+
 ## Output layout
 
 ```

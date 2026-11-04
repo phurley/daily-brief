@@ -36,7 +36,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterable, Optional, Protocol
 
-from . import env
+from . import env, usage
 
 # --------------------------------------------------------------------------- #
 # Task vocabulary
@@ -650,7 +650,9 @@ class HttpJevClient:
             request = urllib.request.Request(self.endpoint, data=body, headers=headers)
             try:
                 with urllib.request.urlopen(request, timeout=self.timeout) as response:
-                    return json.loads(response.read().decode("utf-8"))
+                    data = json.loads(response.read().decode("utf-8"))
+                usage.record(None, payload.get("model") or "jev", data.get("usage"), kind="jev")
+                return data
             except urllib.error.HTTPError as exc:
                 detail = exc.read().decode("utf-8", "replace")[:400]
                 last_error = f"HTTP {exc.code}: {detail}"

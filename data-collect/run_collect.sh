@@ -82,10 +82,11 @@ case "$EVENT_IDENTITY_FUZZY" in 0|1) ;; *) echo "invalid EVENT_IDENTITY_FUZZY"; 
 export EVENT_IDENTITY_MODE EVENT_IDENTITY_FUZZY
 echo "event identity: mode=$EVENT_IDENTITY_MODE fuzzy=$EVENT_IDENTITY_FUZZY"
 
-# Reuse the collection wakeup for failed science work only. Healthy sources keep
-# their daily schedule; run before the local crawler so its failures cannot
-# prevent science recovery. The science wrapper owns its own lock and backoff.
-if [ "${SCIENCE_RETRY_ENABLED:-1}" = 1 ] && [ "${COLLECT_NO_PUSH:-}" != 1 ] && [ "${COLLECT_OUT_DIR:-$ROOT}" = "$ROOT" ]; then
+# Optionally reuse the collection wakeup for failed science work. Off by default:
+# science runs once a day from its own 06:00 job, and verification rejections are
+# now recorded instead of retried, so this extra pass mostly re-paid for nothing.
+# Set SCIENCE_RETRY_ENABLED=1 to restore it. The science wrapper owns its lock.
+if [ "${SCIENCE_RETRY_ENABLED:-0}" = 1 ] && [ "${COLLECT_NO_PUSH:-}" != 1 ] && [ "${COLLECT_OUT_DIR:-$ROOT}" = "$ROOT" ]; then
     SCIENCE_VIBE_ENABLED=0 "$DIR/run_science.sh" --retry-failed || echo "science retry failed; continuing local collection"
 fi
 

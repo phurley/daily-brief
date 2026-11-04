@@ -9,15 +9,19 @@ chosen model rejects `response_format`.
 
 from __future__ import annotations
 
+import hashlib
 import http.client
 import json
+import os
+import sqlite3
+import threading
 import re
 import time
 import urllib.error
 import urllib.request
 from typing import Any, Optional
 
-from . import env
+from . import env, usage
 
 # Successor to the benchmarked qwen/qwen-2.5-72b-instruct (retired by
 # OpenRouter). Override with OPENROUTER_EXTRACT_MODEL in the environment/.env
@@ -25,10 +29,59 @@ from . import env
 DEFAULT_MODEL = "qwen/qwen3-32b"
 DEFAULT_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 _RETRYABLE = {429, 500, 502, 503, 524, 529}
+CACHE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "processed", "llm-cache.sqlite")
+CACHE_DAYS = 30
+
+
+class ResponseCache:
+    """Exact-request memo for temperature-0 structured calls.
+
+    The key is a hash of the full request (model, messages, schema), so any
+    change to the prompt, source text or model is a miss. Callers still run
+    their own deterministic validation on every reuse; only the paid model
+    answer is reused. SQLite because collect and science can run concurrently.
+    Entries unused for ``CACHE_DAYS`` are pruned. ``LLM_CACHE=off`` disables it.
+    """
+
+    def __init__(self, path: str = CACHE_PATH) -> None:
+        self.path = path
+        self._lock = threading.Lock()
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with self._connect() as db:
+            db.execute("CREATE TABLE IF NOT EXISTS responses (key TEXT PRIMARY KEY, model TEXT,"
+                       " response TEXT, created REAL, used REAL)")
+            db.execute("DELETE FROM responses WHERE used < ?", (time.time() - CACHE_DAYS * 86400,))
+
+    def _connect(self) -> sqlite3.Connection:
+        return sqlite3.connect(self.path, timeout=30)
+
+    @staticmethod
+    def key(payload: dict[str, Any]) -> str:
+        return hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()
+
+    def get(self, key: str) -> Optional[dict[str, Any]]:
+        with self._lock, self._connect() as db:
+            row = db.execute("SELECT response FROM responses WHERE key = ?", (key,)).fetchone()
+            if row:
+                db.execute("UPDATE responses SET used = ? WHERE key = ?", (time.time(), key))
+        return json.loads(row[0]) if row else None
+
+    def put(self, key: str, model: str, response: dict[str, Any]) -> None:
+        now = time.time()
+        with self._lock, self._connect() as db:
+            db.execute("INSERT OR REPLACE INTO responses VALUES (?, ?, ?, ?, ?)",
+                       (key, model, json.dumps(response, ensure_ascii=False), now, now))
 
 
 class LLMError(RuntimeError):
     pass
+
+
+class TruncatedOutput(LLMError):
+    """The model stopped at max_tokens; the JSON is incomplete. Never retried."""
+
+
+_TRUNCATED = {"__truncated__": True}
 
 
 def _strip_fences(text: str) -> str:
@@ -51,6 +104,9 @@ class ChatClient:
         timeout: float = 60.0,
         retries: int = 3,
         backoff: float = 1.0,
+        caller: Optional[str] = None,
+        cache: bool | ResponseCache = False,
+        max_tokens: Optional[int] = None,
     ) -> None:
         env.load_dotenv()
         self.api_key = api_key or env.getenv("OPENROUTER_API_KEY", "OPENROUTE_API_KEY")
@@ -61,6 +117,14 @@ class ChatClient:
         self.timeout = timeout
         self.retries = retries
         self.backoff = backoff
+        # Names this client's rows in processed/llm-usage.jsonl.
+        self.caller = caller
+        if cache is True:
+            cache = ResponseCache() if os.getenv("LLM_CACHE", "on") != "off" else False
+        self.cache: Optional[ResponseCache] = cache or None
+        # Caps runaway generations. Gemini 2.5 Flash sometimes loops inside a JSON
+        # string until ~65k output tokens (~$0.08/call) and the result never parses.
+        self.max_tokens = max_tokens
 
     def complete_json(
         self,
@@ -74,15 +138,36 @@ class ChatClient:
             "messages": messages,
             "temperature": 0,
         }
+        if self.max_tokens:
+            payload["max_tokens"] = self.max_tokens
         if schema is not None:
             payload["response_format"] = {
                 "type": "json_schema",
                 "json_schema": {"name": schema_name, "strict": True, "schema": schema},
             }
+        key = self.cache.key(payload) if self.cache else None
+        if key:
+            hit = self.cache.get(key)
+            if hit is not None:
+                usage.record(self.caller, self.model, None, kind="cache-hit")
+                if hit == _TRUNCATED:
+                    raise TruncatedOutput("cached: output hit the token limit for this exact request")
+                return hit
+        try:
+            result = self._complete(payload, schema)
+        except TruncatedOutput:
+            if key:  # deterministic runaway: remember it so callers can go straight to a fallback
+                self.cache.put(key, self.model, _TRUNCATED)
+            raise
+        if key:
+            self.cache.put(key, self.model, result)
+        return result
+
+    def _complete(self, payload: dict[str, Any], schema: Optional[dict[str, Any]]) -> dict[str, Any]:
         try:
             return self._post(payload)
         except LLMError as exc:
-            if schema is not None and "400" in str(exc):
+            if schema is not None and "400" in str(exc) and not isinstance(exc, TruncatedOutput):
                 # Model may not support response_format; retry as plain JSON.
                 payload.pop("response_format", None)
                 return self._post(payload)
@@ -139,6 +224,8 @@ class ChatClient:
         return result
 
     def _post(self, payload: dict[str, Any]) -> dict[str, Any]:
+        # Ask OpenRouter to report the billed cost so every call is attributable.
+        payload = {**payload, "usage": {"include": True}}
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
         headers = {"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"}
         last = "unknown"
@@ -147,7 +234,13 @@ class ChatClient:
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as resp:
                     data = json.loads(resp.read().decode("utf-8"))
+                usage.record(self.caller, data.get("model") or self.model, data.get("usage"))
                 choice = (data.get("choices") or [{}])[0]
+                if choice.get("finish_reason") == "length":
+                    # Deterministic at temperature 0: retrying re-pays for the same runaway.
+                    raise TruncatedOutput(
+                        f"output hit the token limit (max_tokens={payload.get('max_tokens')})"
+                    )
                 content = (choice.get("message") or {}).get("content")
                 if not content:
                     raise LLMError(
