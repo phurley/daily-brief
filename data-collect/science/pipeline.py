@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import tempfile
 import unicodedata
@@ -455,7 +456,7 @@ def run(config, out, state_dir, *, now=None, force=False, retry_failed=False, ca
             new_ids = {s["id"] for s in stories} - {s["id"] for s in old_doc["stories"]}
             material = any(s["id"] in new_ids and s["publishedAt"][:10] == stamp[:10]
                            and s.get("evidenceType") in ("peer-reviewed-research", "preprint", "mission-milestone") for s in stories)
-            result = subprocess.run([os.getenv("SCIENCE_NODE", "/opt/homebrew/bin/node"), str(ROOT / "scripts/select_science.mjs")],
+            result = subprocess.run([os.getenv("SCIENCE_NODE") or shutil.which("node") or "/opt/homebrew/bin/node", str(ROOT / "scripts/select_science.mjs")],
                                     input=json.dumps({"document": doc, "date": doc["editionDate"], "reset": material}),
                                     capture_output=True, text=True, check=True)
             doc["selection"] = json.loads(result.stdout)

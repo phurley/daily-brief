@@ -17,7 +17,8 @@ class ScienceScheduleTest(unittest.TestCase):
             (self.root / folder).mkdir(parents=True)
         self.trace = self.root / 'trace'
         self.env = {**os.environ, 'BRIEF_TEST_ROOT': str(self.root),
-                    'SCIENCE_CAFFEINATED': '1', 'DAILYBRIEF_CAFFEINATED': '1'}
+                    'SCIENCE_CAFFEINATED': '1', 'DAILYBRIEF_CAFFEINATED': '1',
+                    'DAILYBRIEF_DEPLOY_GUARD': '1'}
         for name in ('geeknews.json', 'science-health.json'):
             (self.root / name).write_text('{}')
         self.executable('lock', '#!/bin/sh\nexit 0\n')
@@ -63,10 +64,13 @@ echo '{"status":"partial"}' > "$BRIEF_TEST_ROOT/science-health.json"
         runner = self.wrapper('data-collect/run_collect.sh')
         self.executable('data-collect/run_science.sh', '#!/bin/sh\necho retry:$*:vibe=$SCIENCE_VIBE_ENABLED >> "$BRIEF_TEST_ROOT/trace"\nexit 1\n')
         self.executable('data-collect/.venv/bin/python', '#!/bin/sh\necho "$1" >> "$BRIEF_TEST_ROOT/trace"\nexit 1\n')
-        result = self.run_wrapper(runner)
+        result = self.run_wrapper(runner, SCIENCE_RETRY_ENABLED='1')
         self.assertEqual(result.returncode, 1)
         self.assertEqual(self.trace.read_text().splitlines(), ['retry:--retry-failed:vibe=0', 'crawl_sources.py'])
-        for env in ({'COLLECT_NO_PUSH':'1'}, {'COLLECT_OUT_DIR':str(self.root/'other')}, {'SCIENCE_RETRY_ENABLED':'0'}):
+        # Off by default: science runs once a day on its own schedule.
+        for env in ({}, {'SCIENCE_RETRY_ENABLED':'1', 'COLLECT_NO_PUSH':'1'},
+                    {'SCIENCE_RETRY_ENABLED':'1', 'COLLECT_OUT_DIR':str(self.root/'other')},
+                    {'SCIENCE_RETRY_ENABLED':'0'}):
             self.trace.write_text('')
             result = self.run_wrapper(runner, **env)
             self.assertEqual(result.returncode, 1)

@@ -1,5 +1,8 @@
 #!/bin/sh
 # Independent daily source collection, immutable history and publication.
+# Scheduled runs start from a clean origin/main in the deploy checkout (scripts/deploy_guard.py).
+DEPLOY_GUARD="$(cd "$(dirname "$0")/.." && pwd)/scripts/deploy_guard.py"
+if [ -z "${DAILYBRIEF_DEPLOY_GUARD:-}" ] && [ -f "$DEPLOY_GUARD" ]; then exec /usr/bin/python3 "$DEPLOY_GUARD" "$0" "$@"; fi
 set -eu
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 NODE="${STARSHIP_NODE:-/opt/homebrew/bin/node}"

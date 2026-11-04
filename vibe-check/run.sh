@@ -17,6 +17,9 @@
 #   VIBE_DRY_RUN        [unset]                   set to 1 to skip write/push
 #   VIBE_WAIT_LIMIT     [1800]                    seconds to wait for the collector lock
 #   OPENROUTER_VIBE_MODEL, VIBE_RETENTION_HOURS   passed through to generate.mjs
+# Scheduled runs start from a clean origin/main in the deploy checkout (scripts/deploy_guard.py).
+DEPLOY_GUARD="$(cd "$(dirname "$0")/.." && pwd)/scripts/deploy_guard.py"
+if [ -z "${DAILYBRIEF_DEPLOY_GUARD:-}" ] && [ -f "$DEPLOY_GUARD" ]; then exec /usr/bin/python3 "$DEPLOY_GUARD" "$0" "$@"; fi
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$DIR/.." && pwd)"

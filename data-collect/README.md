@@ -241,6 +241,28 @@ From `/Users/phurley/daily-brief`, run `sudo -v` then
 the old LaunchAgents. They run as `phurley` at load and at 03:30, 06:00 and 07:25
 Detroit time respectively, without requiring a desktop login.
 
+#### Deploy checkout
+
+On kitchen.local, `/Users/phurley/daily-brief` is the deploy checkout: every
+scheduled job runs from it, and nobody edits there. Develop in a worktree
+(`git worktree add ~/daily-brief-<topic> -b <topic> origin/main`) and merge to
+`main`.
+
+The git-ignored marker file `.deploy-checkout` at the repo root turns on
+[`scripts/deploy_guard.py`](../scripts/deploy_guard.py). Each entry script
+(`run_collect.sh`, `run_science.sh`, `run_calendar.sh`, `starship/run.sh`,
+`run_edition.sh`, `vibe-check/run.sh`) calls it first. The guard:
+
+- waits for any other Daily Brief job, so jobs run one at a time;
+- force-checks out `origin/main`;
+- then runs the job.
+
+Local edits, local commits, another branch, or untracked files that would be
+overwritten are saved under `~/daily-brief-discarded/<time>/` and logged with a
+`[deploy] WARNING` line. Git-ignored state is never touched: `.env`, `.venv`,
+`processed/`, `crawl/`, `calendars.json` and logs. Checkouts without the marker,
+such as development worktrees, are never reset.
+
 #### Recurring event schedules
 
 Recurring sessions are stored with a private `schedule`, separately from a
