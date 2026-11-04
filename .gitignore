@@ -16,3 +16,5 @@ starship.json.tmp-*
 node_modules/
 test-results/
 editions/*.tmp-*
+# Marks the launchd deploy checkout on kitchen; see scripts/deploy_guard.py.
+.deploy-checkout

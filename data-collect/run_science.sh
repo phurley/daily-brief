@@ -1,5 +1,8 @@
 #!/bin/sh
 # Daily independent science refresh. Browser rotation needs no collector job.
+# Scheduled runs start from a clean origin/main in the deploy checkout (scripts/deploy_guard.py).
+DEPLOY_GUARD="$(cd "$(dirname "$0")/.." && pwd)/scripts/deploy_guard.py"
+if [ -z "${DAILYBRIEF_DEPLOY_GUARD:-}" ] && [ -f "$DEPLOY_GUARD" ]; then exec /usr/bin/python3 "$DEPLOY_GUARD" "$0" "$@"; fi
 DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$DIR/.." && pwd)"
 LOCK=/tmp/dailybrief-science.lock
