@@ -400,9 +400,11 @@ def main():
     env.load_dotenv()
     # Validate credentials before per-item errors can masquerade as a quiet day.
     editor_client = ChatClient(model=os.getenv('OPENROUTER_EDITORIAL_MODEL', EDITOR_MODEL), retries=1, timeout=60,
-                               caller=f'review_stories:{opts.section}:editor', cache=True)
+                               caller=f'review_stories:{opts.section}:editor', cache=True,
+                               max_tokens=1500)
     check_client = ChatClient(model=os.getenv('OPENROUTER_EDITORIAL_CHECK_MODEL', CHECK_MODEL), retries=1, timeout=60,
-                              caller=f'review_stories:{opts.section}:check', cache=True)
+                              caller=f'review_stories:{opts.section}:check', cache=True,
+                              max_tokens=800)
     def generate(story, page, section, policy):
         payload = {'section': section, 'policy': policy, 'candidateTitle': story['title'],
                    'publicationDate': page['publishedAt'], 'evidenceItems': page['evidenceItems'],

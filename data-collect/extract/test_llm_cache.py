@@ -63,5 +63,25 @@ class ResponseCacheTest(unittest.TestCase):
             self.assertIsNone(llm.ChatClient("k", model="m", cache=True).cache)
 
 
+    def test_truncated_output_is_capped_and_not_retried(self):
+        client = llm.ChatClient("k", model="m", retries=3, backoff=0, max_tokens=50)
+        body = {"choices": [{"finish_reason": "length", "message": {"content": '{"quote": "aaaa'}}], "usage": {"cost": 0.01}}
+        with mock.patch("urllib.request.urlopen", side_effect=lambda *a, **k: io.BytesIO(json.dumps(body).encode())) as post:
+            with self.assertRaises(llm.TruncatedOutput):
+                client.complete_json(self.messages)
+        self.assertEqual(post.call_count, 1)
+        self.assertEqual(json.loads(post.call_args[0][0].data)["max_tokens"], 50)
+
+
+    def test_cached_truncation_skips_the_paid_runaway(self):
+        client = llm.ChatClient("k", model="m", retries=0, max_tokens=50, cache=self.cache)
+        body = {"choices": [{"finish_reason": "length", "message": {"content": '{"q": "aa'}}]}
+        with mock.patch("urllib.request.urlopen", side_effect=lambda *a, **k: io.BytesIO(json.dumps(body).encode())) as post:
+            for _ in range(2):
+                with self.assertRaises(llm.TruncatedOutput):
+                    client.complete_json(self.messages)
+        self.assertEqual(post.call_count, 1)
+
+
 if __name__ == "__main__":
     unittest.main()

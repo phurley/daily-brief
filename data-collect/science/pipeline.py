@@ -24,7 +24,7 @@ import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 from curl_cffi import requests
 import jsonschema
-from extract.llm import make_chat_client
+from extract.llm import TruncatedOutput, make_chat_client
 from extract import env
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -194,7 +194,6 @@ DEFAULT_MODEL = "google/gemini-2.5-flash"
 # Prompt budget; verification still runs against the full article.
 PROMPT_TEXT_CHARS = 14000
 PROMPT_LINKS = 80
-_CLIENT = None
 
 
 def prompt_article(article, url):
@@ -204,16 +203,35 @@ def prompt_article(article, url):
     return {**article, "text": article["text"][:PROMPT_TEXT_CHARS], "links": links[:PROMPT_LINKS]}
 
 
-def extract(entry, article):
-    global _CLIENT
-    if _CLIENT is None:
+# 2.5 Flash loops inside a JSON string on ~1 in 4 articles (A/B 2026-11-03), burning
+# ~34k output tokens per attempt. Cap it and hand truncated cases to 3.1 Flash-Lite,
+# which did not run away but rejects more quotes, so it is only the fallback.
+FALLBACK_MODEL = "google/gemini-3.1-flash-lite"
+_CLIENTS = {}
+
+
+def _client(model):
+    if model not in _CLIENTS:
         env.load_dotenv()
-        _CLIENT = make_chat_client(model=os.getenv("OPENROUTER_SCIENCE_MODEL", DEFAULT_MODEL), timeout=60, retries=1,
-                                   caller="science", cache=True)
-    return _CLIENT.complete_json([
+        _CLIENTS[model] = make_chat_client(model=model, timeout=60, retries=1, caller="science", cache=True,
+                                           max_tokens=2500)
+    return _CLIENTS[model]
+
+
+def extract(entry, article):
+    env.load_dotenv()
+    messages = [
         {"role": "system", "content": PROMPT},
         {"role": "user", "content": json.dumps({"title": entry["title"], "article": prompt_article(article, entry["url"])})},
-    ], EXTRACTION_SCHEMA, schema_name="science_story")
+    ]
+    primary = os.getenv("OPENROUTER_SCIENCE_MODEL", DEFAULT_MODEL)
+    fallback = os.getenv("OPENROUTER_SCIENCE_FALLBACK_MODEL", FALLBACK_MODEL)
+    try:
+        return _client(primary).complete_json(messages, EXTRACTION_SCHEMA, schema_name="science_story")
+    except TruncatedOutput:
+        if not fallback or fallback == primary:
+            raise
+        return _client(fallback).complete_json(messages, EXTRACTION_SCHEMA, schema_name="science_story")
 
 
 def build_story(entry, article, result, source, stamp, published, old=None):

@@ -27,7 +27,8 @@ from verified_calendars import fetch
 
 ROOT = Path(__file__).resolve().parent.parent
 TZ = ZoneInfo('America/Detroit')
-DEFAULT_MODEL = 'google/gemini-2.5-flash'
+# A/B 2026-11-03 on 14 live shortlist pages: identical verdicts to 2.5 Flash at half the cost.
+DEFAULT_MODEL = 'google/gemini-2.5-flash-lite'
 FIELDS = ['id', 'url', 'start', 'end', 'venue', 'city', 'price', 'status']
 QUOTES = ['date', 'time', 'venue', 'admission', 'description', 'registration', 'end']
 SCHEMA = {'type': 'object', 'additionalProperties': False, 'properties': {
@@ -344,7 +345,7 @@ def main():
     previous = json.loads(out.read_text()) if out.exists() and not opts.force else {}
     env.load_dotenv()
     client = ChatClient(model=os.getenv('OPENROUTER_EDITORIAL_MODEL', DEFAULT_MODEL), retries=1, timeout=60,
-                        caller='review_events', cache=True)
+                        caller='review_events', cache=True, max_tokens=1500)
     def generate(candidate, page):
         payload = {'candidate': {key: candidate.get(key) for key in ['title', 'start', 'venue', 'city', 'category']},
                    **model_evidence(page)}

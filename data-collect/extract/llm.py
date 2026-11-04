@@ -77,6 +77,13 @@ class LLMError(RuntimeError):
     pass
 
 
+class TruncatedOutput(LLMError):
+    """The model stopped at max_tokens; the JSON is incomplete. Never retried."""
+
+
+_TRUNCATED = {"__truncated__": True}
+
+
 def _strip_fences(text: str) -> str:
     if not text:
         return ""
@@ -99,6 +106,7 @@ class ChatClient:
         backoff: float = 1.0,
         caller: Optional[str] = None,
         cache: bool | ResponseCache = False,
+        max_tokens: Optional[int] = None,
     ) -> None:
         env.load_dotenv()
         self.api_key = api_key or env.getenv("OPENROUTER_API_KEY", "OPENROUTE_API_KEY")
@@ -114,6 +122,9 @@ class ChatClient:
         if cache is True:
             cache = ResponseCache() if os.getenv("LLM_CACHE", "on") != "off" else False
         self.cache: Optional[ResponseCache] = cache or None
+        # Caps runaway generations. Gemini 2.5 Flash sometimes loops inside a JSON
+        # string until ~65k output tokens (~$0.08/call) and the result never parses.
+        self.max_tokens = max_tokens
 
     def complete_json(
         self,
@@ -127,6 +138,8 @@ class ChatClient:
             "messages": messages,
             "temperature": 0,
         }
+        if self.max_tokens:
+            payload["max_tokens"] = self.max_tokens
         if schema is not None:
             payload["response_format"] = {
                 "type": "json_schema",
@@ -137,8 +150,15 @@ class ChatClient:
             hit = self.cache.get(key)
             if hit is not None:
                 usage.record(self.caller, self.model, None, kind="cache-hit")
+                if hit == _TRUNCATED:
+                    raise TruncatedOutput("cached: output hit the token limit for this exact request")
                 return hit
-        result = self._complete(payload, schema)
+        try:
+            result = self._complete(payload, schema)
+        except TruncatedOutput:
+            if key:  # deterministic runaway: remember it so callers can go straight to a fallback
+                self.cache.put(key, self.model, _TRUNCATED)
+            raise
         if key:
             self.cache.put(key, self.model, result)
         return result
@@ -147,7 +167,7 @@ class ChatClient:
         try:
             return self._post(payload)
         except LLMError as exc:
-            if schema is not None and "400" in str(exc):
+            if schema is not None and "400" in str(exc) and not isinstance(exc, TruncatedOutput):
                 # Model may not support response_format; retry as plain JSON.
                 payload.pop("response_format", None)
                 return self._post(payload)
@@ -216,6 +236,11 @@ class ChatClient:
                     data = json.loads(resp.read().decode("utf-8"))
                 usage.record(self.caller, data.get("model") or self.model, data.get("usage"))
                 choice = (data.get("choices") or [{}])[0]
+                if choice.get("finish_reason") == "length":
+                    # Deterministic at temperature 0: retrying re-pays for the same runaway.
+                    raise TruncatedOutput(
+                        f"output hit the token limit (max_tokens={payload.get('max_tokens')})"
+                    )
                 content = (choice.get("message") or {}).get("content")
                 if not content:
                     raise LLMError(
