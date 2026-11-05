@@ -23,10 +23,11 @@ from typing import Any, Optional
 
 from . import env, usage
 
-# Successor to the benchmarked qwen/qwen-2.5-72b-instruct (retired by
-# OpenRouter). Override with OPENROUTER_EXTRACT_MODEL in the environment/.env
-# to re-run the model bench and pick a replacement.
-DEFAULT_MODEL = "qwen/qwen3-32b"
+# Chosen by bench_live.py on 17 live chunks (2026-11-05):
+#   gemini-3.1-flash-lite: 100% valid JSON, 0 errors, judge 4.06, 12% made-up details, 2.4s p50
+#   qwen/qwen3-32b:        65% valid JSON, 6 errors, judge 3.73, 27% made-up details, 66s p50 (DeepInfra stalls)
+# It costs about 5x qwen per call. Override with OPENROUTER_EXTRACT_MODEL.
+DEFAULT_MODEL = "google/gemini-3.1-flash-lite"
 DEFAULT_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 _RETRYABLE = {429, 500, 502, 503, 524, 529}
 CACHE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "processed", "llm-cache.sqlite")
