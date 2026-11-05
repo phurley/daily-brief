@@ -41,6 +41,8 @@ class ResponseCache:
     their own deterministic validation on every reuse; only the paid model
     answer is reused. SQLite because collect and science can run concurrently.
     Entries unused for ``CACHE_DAYS`` are pruned. ``LLM_CACHE=off`` disables it.
+    ``get(max_age=...)`` ignores answers older than that, for callers whose
+    retries are meant to ask again (collect reuses answers only across a restart).
     """
 
     def __init__(self, path: str = CACHE_PATH) -> None:
@@ -59,9 +61,11 @@ class ResponseCache:
     def key(payload: dict[str, Any]) -> str:
         return hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()
 
-    def get(self, key: str) -> Optional[dict[str, Any]]:
+    def get(self, key: str, max_age: Optional[float] = None) -> Optional[dict[str, Any]]:
         with self._lock, self._connect() as db:
-            row = db.execute("SELECT response FROM responses WHERE key = ?", (key,)).fetchone()
+            row = db.execute("SELECT response, created FROM responses WHERE key = ?", (key,)).fetchone()
+            if row and max_age is not None and time.time() - row[1] > max_age:
+                row = None
             if row:
                 db.execute("UPDATE responses SET used = ? WHERE key = ?", (time.time(), key))
         return json.loads(row[0]) if row else None
@@ -124,6 +128,7 @@ class ChatClient:
         cache: bool | ResponseCache = False,
         max_tokens: Optional[int] = None,
         deadline: Optional[float] = None,
+        cache_max_age: Optional[float] = None,
     ) -> None:
         env.load_dotenv()
         self.api_key = api_key or env.getenv("OPENROUTER_API_KEY", "OPENROUTE_API_KEY")
@@ -139,6 +144,7 @@ class ChatClient:
         if cache is True:
             cache = ResponseCache() if os.getenv("LLM_CACHE", "on") != "off" else False
         self.cache: Optional[ResponseCache] = cache or None
+        self.cache_max_age = cache_max_age
         # Caps runaway generations. Gemini 2.5 Flash sometimes loops inside a JSON
         # string until ~65k output tokens (~$0.08/call) and the result never parses.
         self.max_tokens = max_tokens
@@ -168,7 +174,7 @@ class ChatClient:
             }
         key = self.cache.key(payload) if self.cache else None
         if key:
-            hit = self.cache.get(key)
+            hit = self.cache.get(key, self.cache_max_age)
             if hit is not None:
                 usage.record(self.caller, self.model, None, kind="cache-hit")
                 if hit == _TRUNCATED:

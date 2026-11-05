@@ -31,6 +31,7 @@ import argparse
 import copy
 import concurrent.futures as futures
 import json
+import os
 import re
 import threading
 from datetime import datetime, timedelta, timezone
@@ -51,6 +52,7 @@ DEFAULT_SOURCE_FILE = SCRIPT_DIR / "source.json"
 EXTRACTOR_VERSION = 1
 
 STALE_DAYS = 2.0          # never triage candidates dated older than this
+RESTART_CACHE_HOURS = 36  # reuse paid Jev/LLM answers across a stopped or crashed run
 RECORD_MAX_AGE_DAYS = 183  # prune the store past this age (roughly 6 months)
 
 _CONTENT_HINTS = {"event", "news", "notice", "agenda"}
@@ -535,7 +537,12 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
     candidates beyond ``--extract-limit`` are *not* included — they stay
     un-fingerprinted and are retried on a later run.
     """
-    jev_client = None if mechanical_only else jev.make_client()
+    # Every paid answer is cached for RESTART_CACHE_HOURS, so a run that is
+    # stopped or crashes keeps its work: the restart reuses identical requests.
+    # Longer-lived retries (days later) still ask again.
+    cache = llm.ResponseCache() if os.getenv("LLM_CACHE", "on") != "off" else None
+    max_age = RESTART_CACHE_HOURS * 3600
+    jev_client = None if mechanical_only else jev.make_client(cache=cache, cache_max_age=max_age)
 
     def triage_one(rec: dict[str, Any]):
         spec = (source_specs or {}).get(rec.get("source_slug"), {})
@@ -571,7 +578,8 @@ def run(items: list[dict[str, Any]], *, workers: int, extract_limit: int,
             deferred += 1  # leave un-fingerprinted; retried next run
 
     needs_generation = any(not structured_event(rec, (source_specs or {}).get(rec.get("source_slug"))) for rec, _ in accepted)
-    chat = llm.make_chat_client(model) if accepted and needs_generation and not mechanical_only else None
+    chat = (llm.make_chat_client(model, caller="pipeline", cache=cache or False, cache_max_age=max_age)
+            if accepted and needs_generation and not mechanical_only else None)
     enrich_lock = threading.Lock()
     enrich_state = {"used": 0, "ok": 0, "mechanical": 0, "repair": 0, "generation": 0, "scored": 0}
     hints = enrich_hints or {}
