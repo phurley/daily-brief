@@ -41,9 +41,10 @@ def record(caller: Optional[str], model: str, usage: Optional[dict[str, Any]], k
         "caller": caller or default_caller(),
         "kind": kind,
         "model": model,
-        "promptTokens": usage.get("prompt_tokens"),
+        # Chat APIs say prompt/completion; Jev (OpenRouter and TypeSafe) says input/output.
+        "promptTokens": usage.get("prompt_tokens", usage.get("input_tokens")),
         "cachedTokens": (usage.get("prompt_tokens_details") or {}).get("cached_tokens"),
-        "completionTokens": usage.get("completion_tokens"),
+        "completionTokens": usage.get("completion_tokens", usage.get("output_tokens")),
         "reasoningTokens": (usage.get("completion_tokens_details") or {}).get("reasoning_tokens"),
         "cost": usage.get("cost"),
     }
@@ -57,9 +58,17 @@ def record(caller: Optional[str], model: str, usage: Optional[dict[str, Any]], k
         pass
 
 
-def summarize(path: Path, days: float) -> list[tuple[str, str, int, float]]:
+def summarize(path: Path, days: float) -> list[tuple[str, str, int, float, int, int, int]]:
+    """Rows of (caller, model, calls, cost, errors, input tokens, output tokens).
+
+    ``errors`` are failed attempts (timeouts, HTTP errors), logged without cost.
+    Tokens matter where the provider reports no cost (TypeSafe's direct Jev API).
+    """
     since = datetime.now(timezone.utc) - timedelta(days=days)
     calls: dict[tuple[str, str], int] = collections.Counter()
+    errors: dict[tuple[str, str], int] = collections.Counter()
+    tokens_in: dict[tuple[str, str], int] = collections.Counter()
+    tokens_out: dict[tuple[str, str], int] = collections.Counter()
     cost: dict[tuple[str, str], float] = collections.defaultdict(float)
     if path.exists():
         for line in path.read_text(encoding="utf-8").splitlines():
@@ -70,9 +79,16 @@ def summarize(path: Path, days: float) -> list[tuple[str, str, int, float]]:
             except (ValueError, KeyError):
                 continue
             key = (row.get("caller") or "?", row.get("model") or "?")
+            if row.get("kind") == "error":
+                errors[key] += 1
+                calls[key] += 0
+                continue
             calls[key] += 1
             cost[key] += float(row.get("cost") or 0)
-    return sorted(((c, m, calls[(c, m)], cost[(c, m)]) for c, m in calls), key=lambda r: -r[3])
+            tokens_in[key] += int(row.get("promptTokens") or 0)
+            tokens_out[key] += int(row.get("completionTokens") or 0)
+    return sorted(((c, m, calls[(c, m)], cost[(c, m)], errors[(c, m)], tokens_in[(c, m)], tokens_out[(c, m)])
+                   for c, m in calls), key=lambda r: (-r[3], -r[2]))
 
 
 def main(argv: Optional[list[str]] = None) -> int:
@@ -82,9 +98,11 @@ def main(argv: Optional[list[str]] = None) -> int:
     opts = parser.parse_args(argv)
     rows = summarize(opts.log or log_path(), opts.days)
     total = sum(r[3] for r in rows)
-    print(f"last {opts.days:g} day(s): ${total:.4f} over {sum(r[2] for r in rows)} calls")
-    for caller, model, n, dollars in rows:
-        print(f"  ${dollars:8.4f}  {n:5d}  {caller:28s} {model}")
+    print(f"last {opts.days:g} day(s): ${total:.4f} over {sum(r[2] for r in rows)} calls, "
+          f"{sum(r[4] for r in rows)} failed attempts")
+    print(f"  {'cost':>9s}  {'calls':>5s}  {'fail':>4s}  {'in tok':>9s}  {'out tok':>8s}  caller / model")
+    for caller, model, n, dollars, failed, tin, tout in rows:
+        print(f"  ${dollars:8.4f}  {n:5d}  {failed:4d}  {tin:9d}  {tout:8d}  {caller:28s} {model}")
     return 0
 
 

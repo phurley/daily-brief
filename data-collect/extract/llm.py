@@ -84,6 +84,22 @@ class TruncatedOutput(LLMError):
 _TRUNCATED = {"__truncated__": True}
 
 
+class DeadlineExceeded(TimeoutError):
+    """The response did not finish within the client's wall-clock deadline."""
+
+
+def _read_body(resp: Any, deadline_at: float) -> bytes:
+    """Read a response body, giving up at ``deadline_at`` (time.monotonic)."""
+    parts = []
+    while True:
+        if time.monotonic() > deadline_at:
+            raise DeadlineExceeded("response still incomplete at the call deadline")
+        chunk = resp.read1(65536)  # returns as soon as any bytes arrive
+        if not chunk:
+            return b"".join(parts)
+        parts.append(chunk)
+
+
 def _strip_fences(text: str) -> str:
     if not text:
         return ""
@@ -107,6 +123,7 @@ class ChatClient:
         caller: Optional[str] = None,
         cache: bool | ResponseCache = False,
         max_tokens: Optional[int] = None,
+        deadline: Optional[float] = None,
     ) -> None:
         env.load_dotenv()
         self.api_key = api_key or env.getenv("OPENROUTER_API_KEY", "OPENROUTE_API_KEY")
@@ -125,6 +142,10 @@ class ChatClient:
         # Caps runaway generations. Gemini 2.5 Flash sometimes loops inside a JSON
         # string until ~65k output tokens (~$0.08/call) and the result never parses.
         self.max_tokens = max_tokens
+        # Wall-clock limit per attempt. ``timeout`` only bounds each socket read,
+        # and a stalled provider (seen with qwen3-32b on DeepInfra) keeps the
+        # connection alive for ~19 minutes before failing.
+        self.deadline = deadline if deadline is not None else float(os.getenv("LLM_CALL_DEADLINE", "120"))
 
     def complete_json(
         self,
@@ -232,8 +253,9 @@ class ChatClient:
         for attempt in range(self.retries + 1):
             req = urllib.request.Request(self.endpoint, data=body, headers=headers)
             try:
+                deadline_at = time.monotonic() + self.deadline
                 with urllib.request.urlopen(req, timeout=self.timeout) as resp:
-                    data = json.loads(resp.read().decode("utf-8"))
+                    data = json.loads(_read_body(resp, deadline_at).decode("utf-8"))
                 usage.record(self.caller, data.get("model") or self.model, data.get("usage"))
                 choice = (data.get("choices") or [{}])[0]
                 if choice.get("finish_reason") == "length":
@@ -250,13 +272,21 @@ class ChatClient:
             except urllib.error.HTTPError as exc:
                 detail = exc.read().decode("utf-8", "replace")[:300]
                 last = f"HTTP {exc.code}: {detail}"
+                usage.record(self.caller, self.model, None, kind="error")
                 if exc.code in _RETRYABLE and attempt < self.retries:
                     time.sleep(self.backoff * (2 ** attempt))
                     continue
                 raise LLMError(last) from exc
+            except DeadlineExceeded as exc:
+                # A stalled provider trickles keep-alive bytes, so the socket timeout
+                # never fires. Stalls repeat for the same prompt; do not retry.
+                usage.record(self.caller, self.model, None, kind="error")
+                raise LLMError(f"DeadlineExceeded: {exc}") from exc
             except (urllib.error.URLError, http.client.HTTPException, TimeoutError,
                     OSError, KeyError, json.JSONDecodeError) as exc:
                 last = f"{type(exc).__name__}: {exc}"
+                if not isinstance(exc, (KeyError, json.JSONDecodeError)):
+                    usage.record(self.caller, self.model, None, kind="error")  # transport failure, unbilled row
                 if attempt < self.retries:
                     time.sleep(self.backoff * (2 ** attempt))
                     continue

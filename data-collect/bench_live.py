@@ -6,7 +6,7 @@ extraction prompts through competing OpenRouter models, judge quality.
     .venv/bin/python -u bench_live.py --phase judge     # reads rows, adds judge scores
     .venv/bin/python -u bench_live.py --phase report    # prints the table
 """
-import argparse, collections, json, random, statistics, sys
+import argparse, collections, json, os, random, statistics, sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -28,6 +28,9 @@ MODELS = [
     "deepseek/deepseek-v4-flash",
     "z-ai/glm-5.3-flash",
 ]
+# BENCH_MODELS=a,b,c narrows the run to specific models.
+if os.getenv("BENCH_MODELS"):
+    MODELS = [m.strip() for m in os.environ["BENCH_MODELS"].split(",") if m.strip()]
 JUDGE_MODEL = "openai/gpt-4.1-mini"
 ROWS_PATH = Path("/tmp/model-bench-live.jsonl")
 SAMPLE_PATH = Path("/tmp/model-bench-sample.json")
