@@ -79,6 +79,20 @@ class DeployGuardTest(unittest.TestCase):
         [saved] = (self.tmp / "discarded").iterdir()
         self.assertIn("local only", (saved / "README.txt").read_text())
 
+    def test_running_job_blocks_the_reset_but_not_the_next_job(self):
+        import fcntl
+        (self.deploy / ".deploy-checkout").touch()
+        (self.deploy / "version.txt").write_text("unpublished output\n")
+        self.publish("v2")
+        with open(self.tmp / "deploy.lock", "w") as held:
+            fcntl.flock(held, fcntl.LOCK_SH)  # another job is mid-run
+            result = self.run_job()
+        self.assertEqual(result.stdout.strip(), "ran unpublished output args=")
+        self.assertIn("skipping the reset", result.stderr)
+        self.assertFalse((self.tmp / "discarded").exists())
+        # Once that job is done, the next one resets as usual.
+        self.assertEqual(self.run_job().stdout.strip(), "ran v2 args=")
+
     def test_unmarked_checkout_is_never_touched(self):
         (self.deploy / "version.txt").write_text("developer work\n")
         self.publish("v2")
