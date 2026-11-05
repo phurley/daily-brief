@@ -253,9 +253,10 @@ The git-ignored marker file `.deploy-checkout` at the repo root turns on
 (`run_collect.sh`, `run_science.sh`, `run_calendar.sh`, `starship/run.sh`,
 `run_edition.sh`, `vibe-check/run.sh`) calls it first. The guard:
 
-- waits for any other Daily Brief job, so jobs run one at a time;
-- force-checks out `origin/main`;
-- then runs the job.
+- force-checks out `origin/main`, but only when no other Daily Brief job is
+  running, so a reset never discards another job's unpublished output;
+- then runs the job. When another job is running (collect can take hours), it
+  runs on the current checkout without waiting, and a later job catches up.
 
 Local edits, local commits, another branch, or untracked files that would be
 overwritten are saved under `~/daily-brief-discarded/<time>/` and logged with a

@@ -15,15 +15,18 @@ starship/run.sh, run_edition.sh, vibe-check/run.sh) begins with
 
 In the deploy checkout the guard then:
 
-1. Takes one lock shared by every job, so a reset never discards another
-   job's output before that job publishes it. The lock is inherited by the job
-   and released when it and its children exit; nested jobs (collect running
-   science and vibe-check) inherit DAILYBRIEF_DEPLOY_GUARD and skip the guard.
-2. Fetches origin/main. Any local edits, local commits, another branch or
-   untracked files in the way are saved under ~/daily-brief-discarded/<time>/
-   and reported in the job log, then the checkout is forced to origin/main.
-   Git-ignored state (.env, .venv, processed/, crawl/ ...) is never touched.
-3. Execs the job's current script from the fresh checkout.
+1. Every running job holds a shared lock, inherited by its children and
+   released when they all exit. Nested jobs (collect running science and
+   vibe-check) inherit DAILYBRIEF_DEPLOY_GUARD and skip the guard.
+2. If no other job is running (the exclusive lock is free), it fetches
+   origin/main and forces the checkout to it. Any local edits, local commits,
+   another branch or untracked files in the way are first saved under
+   ~/daily-brief-discarded/<time>/ and reported in the job log. Git-ignored
+   state (.env, .venv, processed/, crawl/ ...) is never touched.
+   If another job is running, the reset is skipped, so it never discards that
+   job's unpublished output, and this job runs on the current checkout without
+   waiting. Collect can run for hours; the next quiet job catches up.
+3. Execs the job's current script.
 """
 from __future__ import annotations
 
@@ -32,14 +35,12 @@ import os
 import shutil
 import subprocess
 import sys
-import time
 from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MARKER = ".deploy-checkout"
 LOCK_PATH = Path(os.getenv("DAILYBRIEF_DEPLOY_LOCK", "/tmp/dailybrief-deploy.lock"))
-LOCK_WAIT = float(os.getenv("DAILYBRIEF_DEPLOY_LOCK_WAIT", str(4 * 3600)))
 DISCARD_ROOT = Path(os.getenv("DAILYBRIEF_DISCARD_DIR", str(Path.home() / "daily-brief-discarded")))
 
 
@@ -54,24 +55,24 @@ def git(*args: str, check: bool = True) -> str:
     return result.stdout
 
 
-def acquire_lock() -> int:
+def lock_and_sync() -> None:
     fd = os.open(LOCK_PATH, os.O_RDWR | os.O_CREAT, 0o644)
-    deadline = time.monotonic() + LOCK_WAIT
-    waited = False
-    while True:
+    try:
+        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        exclusive = True
+    except BlockingIOError:
+        exclusive = False
+    if exclusive:
         try:
-            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            break
-        except BlockingIOError:
-            if time.monotonic() >= deadline:
-                log(f"gave up after {LOCK_WAIT:.0f}s waiting for another Daily Brief job")
-                sys.exit(75)
-            if not waited:
-                log("waiting for another Daily Brief job to finish")
-                waited = True
-            time.sleep(10)
+            sync()
+        except Exception as exc:  # never skip the job because of the guard
+            log(f"WARNING: sync failed, running the current checkout: {exc}")
+    else:
+        log("another Daily Brief job is running; skipping the reset to origin/main")
+    # Shared from here on: other jobs may start, but none resets under us.
+    # Blocks only while another job is mid-reset (seconds).
+    fcntl.flock(fd, fcntl.LOCK_SH)
     os.set_inheritable(fd, True)  # held by the job and its children until they exit
-    return fd
 
 
 def untracked_in_the_way() -> list[str]:
@@ -123,11 +124,7 @@ def main(argv: list[str]) -> None:
     script = os.path.abspath(argv[1])
     os.environ["DAILYBRIEF_DEPLOY_GUARD"] = "1"
     if (ROOT / MARKER).exists():
-        acquire_lock()
-        try:
-            sync()
-        except Exception as exc:  # never skip the job because of the guard
-            log(f"WARNING: sync failed, running the current checkout: {exc}")
+        lock_and_sync()
     os.execv(script, [script, *argv[2:]])
 
 
