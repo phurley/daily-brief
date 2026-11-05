@@ -329,8 +329,9 @@ COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
   per-run cap, not a steady-state cost — candidates dated more than 2 days
   in the past are skipped entirely and the rest are sorted nearest-to-today
   first.
-- Extraction model: `OPENROUTER_EXTRACT_MODEL` (default `qwen/qwen3-32b`); the
-  previously benchmarked `qwen/qwen-2.5-72b-instruct` was retired by OpenRouter.
+- Extraction model: `OPENROUTER_EXTRACT_MODEL` (default
+  `google/gemini-3.1-flash-lite`, chosen over `qwen/qwen3-32b` by `bench_live.py`
+  on 2026-11-05 for quality and speed, at about 5x the cost per call).
 
 ### Extraction retries and repair
 
