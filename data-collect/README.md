@@ -405,6 +405,13 @@ Model overrides: `OPENROUTER_EDITORIAL_MODEL`, `OPENROUTER_EDITORIAL_CHECK_MODEL
 `OPENROUTER_SCIENCE_MODEL`, `OPENROUTER_EXTRACT_MODEL`, `OPENROUTER_VIBE_MODEL`
 and `OPENROUTER_STARSHIP_MODEL`.
 
+Collect also caches its Jev decisions and extraction answers, but reuses them
+for only 36 hours (`RESTART_CACHE_HOURS` in `extract/pipeline.py`). A collect
+run that is stopped or crashes keeps its paid work: a restart reuses every
+identical request. Retries a few days later still ask the model again. Each
+attempt has a 2-minute wall-clock limit (`LLM_CALL_DEADLINE`), and failed
+attempts show in the `fail` column of `python -m extract.usage`.
+
 ## Output layout
 
 ```

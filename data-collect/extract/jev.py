@@ -628,9 +628,15 @@ class HttpJevClient:
         retries: int = 3,
         backoff: float = 1.0,
         extra_headers: Optional[dict[str, str]] = None,
+        cache: Any = None,
+        cache_max_age: Optional[float] = None,
     ) -> None:
         if not api_key:
             raise JevError("missing API key")
+        # Optional llm.ResponseCache: reuse an identical decision instead of paying
+        # again (collect passes one so a restarted run keeps its paid work).
+        self.cache = cache
+        self.cache_max_age = cache_max_age
         self.endpoint = endpoint
         self.model = model
         self.api_key = api_key
@@ -641,6 +647,18 @@ class HttpJevClient:
 
     # -- request ----------------------------------------------------------- #
     def _post(self, payload: dict[str, Any]) -> dict[str, Any]:
+        key = self.cache.key({"endpoint": self.endpoint, **payload}) if self.cache else None
+        if key:
+            hit = self.cache.get(key, self.cache_max_age)
+            if hit is not None:
+                usage.record(None, payload.get("model") or "jev", None, kind="cache-hit")
+                return hit
+        data = self._post_uncached(payload)
+        if key:
+            self.cache.put(key, payload.get("model") or "jev", data)
+        return data
+
+    def _post_uncached(self, payload: dict[str, Any]) -> dict[str, Any]:
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
         headers = {
             "Authorization": f"Bearer {self.api_key}",
