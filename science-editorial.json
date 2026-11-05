@@ -1,15 +1,74 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-04T07:38:52.700174-05:00",
+  "generatedAt": "2026-11-05T06:29:41.983035-05:00",
   "stories": [
+    {
+      "id": "science-b2886d89a4265d7c",
+      "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
+      "summary": "NASA identified factors contributing to rare chip resistor cracking on printed circuit boards during thermal cycling after vibration, including component orientation, excessive solder, and mounting stresses. Recommendations include careful component placement, finite element analysis, controlled solder fillet height, and functional thermal shock testing to mitigate flexure-induced cracking risks in ceramic body components.",
+      "finding": "NASA identified factors contributing to rare chip resistor cracking on printed circuit boards during thermal cycling after vibration, including component orientation, excessive solder, and mounting stresses. Recommendations include careful component placement, finite element analysis, controlled solder fillet height, and functional thermal shock testing to mitigate flexure-induced cracking risks in ceramic body components.",
+      "significance": "This finding is significant for NASA projects that widely use chip resistors, as it provides insights into potential failure mechanisms and offers guidelines to mitigate flexure-induced cracking risks in ceramic body components on printed circuit boards, thereby enhancing reliability and safety of electronic systems.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+      "primarySourceUrl": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-03T10:35:14-05:00",
+      "firstSeenAt": "2026-11-04T11:00:25.118236Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "technology",
+        "physics"
+      ],
+      "entities": [
+        "NASA",
+        "chip resistors",
+        "printed circuit board assemblies",
+        "thermal cycling",
+        "vibration testing"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nasa.gov/wp-content/uploads/2026/11/tb-26-10.pdf?emrc=dd9296",
+      "sourceUpdatedAt": "2026-11-03T15:37:33Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-04T07:38:52.700174-05:00",
+        "expiresAt": "2026-11-07T07:38:52.700174-05:00",
+        "inputFacts": {
+          "id": "science-b2886d89a4265d7c",
+          "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
+          "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+          "publishedAt": "2026-11-03T15:35:14Z",
+          "summary": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+          "finding": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+          "sourceUpdatedAt": "2026-11-03T15:37:33Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-03T10:35:14-05:00",
+        "datePrecision": "time",
+        "sourceHash": "d849442b7c9d1a14f78c97ee1b826b089cc45ad0ee45d7d647cf6a5a4fcc36fd",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "This article presents a new finding regarding a specific failure mode in electronic components, which is relevant to engineering and technology. The findings are substantive and offer practical mitigation strategies.",
+        "storyKey": "nasa-chip-resistor-cracking",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article details NASA's identification of factors contributing to rare chip resistor cracking and provides specific recommendations to mitigate these risks, representing a new finding and technical advance in component reliability for NASA projects."
+      }
+    },
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
       "summary": "Scientists have age-dated the Martian meteorite Teghaza 001 to over 4.1 billion years old, making it one of the most ancient found on Earth. Its unique mix of igneous minerals provides a rare snapshot of Mars' early crust formation and suggests a dynamic water cycle on the planet around that time.",
       "finding": "Scientists have age-dated the Martian meteorite Teghaza 001 to over 4.1 billion years old, making it one of the most ancient found on Earth. Its unique mix of igneous minerals provides a rare snapshot of Mars' early crust formation and suggests a dynamic water cycle on the planet around that time.",
-      "significance": "This meteorite offers a rare glimpse into Mars' ancient crust and formation, potentially helping scientists understand the interaction between water and rocks on early Mars. It represents the first piece of Martian crust from a region previously unsampled, providing crucial data for understanding the planet's early geological history and water cycle.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "significance": "As one of the oldest Martian meteorites discovered, Teghaza 001 provides a rare, early-history sample of the Martian crust, offering insights into the planet's geological formation and its ancient interaction with water.",
+      "caveat": "The exact origin of the meteorite on Mars remains unknown, and the study relies on mineralogical and chemical comparisons to potential source locations rather than direct sampling.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "source": {
@@ -19,18 +78,17 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T14:18:09-04:00",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-04T11:00:25.118236Z",
-      "verifiedAt": "2026-11-04T11:00:25.118236Z",
+      "checkedAt": "2026-11-05T11:24:38.846856Z",
+      "verifiedAt": "2026-11-05T11:24:38.846856Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
-        "earth-science",
-        "physics"
+        "earth-science"
       ],
       "entities": [
         "Teghaza 001",
         "Mars",
-        "Sahara Desert",
+        "NASA",
         "Jet Propulsion Laboratory",
         "Science"
       ],
@@ -39,15 +97,15 @@
       "sourceUpdatedAt": "2026-10-29T18:50:48Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-04T07:38:52.700174-05:00",
-        "expiresAt": "2026-11-07T07:38:52.700174-05:00",
+        "reviewedAt": "2026-11-05T06:29:41.983035-05:00",
+        "expiresAt": "2026-11-08T06:29:41.983035-05:00",
         "inputFacts": {
           "id": "science-5c3380370cf61ae7",
           "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
           "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
           "publishedAt": "2026-10-29T18:18:09Z",
-          "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
-          "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
+          "summary": "Researchers identified a Martian meteorite, Teghaza 001, that formed more than 4.1 billion years ago. The rock contains igneous minerals and evidence of alteration by subsurface water, suggesting a dynamic water cycle on early Mars.",
+          "finding": "Researchers identified a Martian meteorite, Teghaza 001, that formed more than 4.1 billion years ago. The rock contains igneous minerals and evidence of alteration by subsurface water, suggesting a dynamic water cycle on early Mars.",
           "sourceUpdatedAt": "2026-10-29T18:50:48Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
@@ -123,10 +181,10 @@
     {
       "id": "science-6d879a7a5c5c91f8",
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
-      "summary": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that static electricity influences particle adhesion, with organic polymers collecting fine dust. These findings could inform future spacesuit and habitat designs, dust-removal procedures, and crew health standards for Mars missions.",
-      "finding": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The study found that static electricity influences particle adhesion, with organic polymers collecting fine dust. These findings could inform future spacesuit and habitat designs, dust-removal procedures, and crew health standards for Mars missions.",
-      "significance": "This research provides the first on-site measurements of fine and ultrafine dust on Mars, which is crucial for informing the design of spacesuits and habitats, developing dust-removal procedures, and establishing crew health standards for future human missions to Mars. Understanding dust behavior and composition is vital for protecting astronauts from potential health risks and equipment degradation.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "summary": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The findings, to be published in PNAS, indicate these particles are small enough to penetrate lungs and bloodstream, informing future spacesuit and habitat designs, dust-removal procedures, and crew health standards for Mars missions.",
+      "finding": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. The findings, to be published in PNAS, indicate these particles are small enough to penetrate lungs and bloodstream, informing future spacesuit and habitat designs, dust-removal procedures, and crew health standards for Mars missions.",
+      "significance": "These measurements provide data to inform the design of future spacesuits, habitats, and dust-mitigation procedures, as fine particles can potentially penetrate human lungs and enter the bloodstream.",
+      "caveat": "The health risks of Mars dust are believed to depend on the quantity of dust and length of exposure, but specific human health impacts from these specific particle sizes on Mars remain to be determined.",
       "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "source": {
@@ -136,19 +194,16 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-26T17:07:28-04:00",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-03T17:48:21.733897Z",
-      "verifiedAt": "2026-11-03T17:48:21.733897Z",
+      "checkedAt": "2026-11-05T11:24:38.846856Z",
+      "verifiedAt": "2026-11-05T11:24:38.846856Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "health",
         "technology",
-        "astronomy",
-        "physics"
+        "health"
       ],
       "entities": [
+        "Perseverance",
         "NASA",
-        "Perseverance Mars rover",
-        "Mars",
         "PIXL",
         "SHERLOC"
       ],
@@ -157,15 +212,15 @@
       "sourceUpdatedAt": "2026-10-27T21:01:38Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-03T13:24:13.290233-05:00",
-        "expiresAt": "2026-11-06T13:24:13.290233-05:00",
+        "reviewedAt": "2026-11-05T06:29:41.983035-05:00",
+        "expiresAt": "2026-11-08T06:29:41.983035-05:00",
         "inputFacts": {
           "id": "science-6d879a7a5c5c91f8",
           "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
           "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
           "publishedAt": "2026-10-26T21:07:28Z",
-          "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
-          "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
+          "summary": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles on spacesuit material samples, identifying particles as small as 100 nanometers that adhere to surfaces via static electricity.",
+          "finding": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles on spacesuit material samples, identifying particles as small as 100 nanometers that adhere to surfaces via static electricity.",
           "sourceUpdatedAt": "2026-10-27T21:01:38Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
@@ -174,11 +229,11 @@
         "sourceHash": "ef661a7447173bc9f01775bfccd525b15c4c4a363a0009888bde63d01a111c8b",
         "relevance": 5,
         "novelty": 4,
-        "reason": "The article presents new, direct measurements of fine and ultrafine Martian dust, which is a significant hazard for future human missions. The findings have direct implications for engineering and health protocols for space exploration.",
+        "reason": "The article presents new, direct measurements of fine and ultrafine Martian dust, which has significant implications for the health and safety of future human missions to Mars. This is a substantive scientific finding with clear engineering and health consequences.",
         "storyKey": "perseverance-mars-dust-measurements",
         "localConnection": "",
         "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, including the duration of the measurements, the types of particles, the influence of static electricity, the specific materials mentioned, and the potential implications for future missions. The study presents new findings regarding the direct measurement of fine and ultrafine dust particles on Mars and their interaction with spacesuit materials."
+        "groundingReason": "The article fully supports all claims in the summary, detailing the rover's measurements of fine and ultrafine Martian dust particles on spacesuit materials over 1,645 Martian days, their potential health implications, and how these findings will inform future mission designs and health standards. This represents a new finding regarding direct measurement of ultrafine dust on Mars."
       }
     }
   ],
@@ -214,6 +269,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-e77a7638ee47a43c",
+      "inputFacts": {
+        "id": "science-e77a7638ee47a43c",
+        "title": "It’s not (just) the heat, it’s the humidity: Examining the impact of intensifying humid heat on pregnancies",
+        "url": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
+        "publishedAt": "2026-10-30T15:38:09Z",
+        "summary": "In Nigeria, exposure to high wet-bulb globe temperatures is associated with an increased likelihood of early pregnancy termination and a shift in the timing of conceptions, where initial declines in conception rates are followed by increases in subsequent months.",
+        "finding": "In Nigeria, exposure to high wet-bulb globe temperatures is associated with an increased likelihood of early pregnancy termination and a shift in the timing of conceptions, where initial declines in conception rates are followed by increases in subsequent months.",
+        "sourceUpdatedAt": "2026-10-30T15:38:20Z"
+      },
+      "publishedAt": "2026-10-30T11:38:09-04:00",
+      "publicationEvidence": "2026-10-30T11:38:09-04:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-e10edceaccaeeca7",
       "inputFacts": {
         "id": "science-e10edceaccaeeca7",
@@ -235,8 +305,8 @@
         "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
         "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
         "publishedAt": "2026-10-29T18:18:09Z",
-        "summary": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
-        "finding": "The Martian meteorite Teghaza 001, discovered in 2022, formed over 4.1 billion years ago, making it one of the oldest Martian meteorites found on Earth. Its unique mix of igneous minerals provides insights into how Mars' crust formed from cooling magma and was subsequently altered by subsurface water.",
+        "summary": "Researchers identified a Martian meteorite, Teghaza 001, that formed more than 4.1 billion years ago. The rock contains igneous minerals and evidence of alteration by subsurface water, suggesting a dynamic water cycle on early Mars.",
+        "finding": "Researchers identified a Martian meteorite, Teghaza 001, that formed more than 4.1 billion years ago. The rock contains igneous minerals and evidence of alteration by subsurface water, suggesting a dynamic water cycle on early Mars.",
         "sourceUpdatedAt": "2026-10-29T18:50:48Z"
       },
       "publishedAt": "2026-10-29T14:18:09-04:00",
@@ -265,8 +335,8 @@
         "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
         "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
         "publishedAt": "2026-10-26T21:07:28Z",
-        "summary": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
-        "finding": "NASA's Perseverance Mars rover measured fine and ultrafine Martian dust particles clinging to spacesuit materials over 1,645 Martian days. These particles, some as small as 100 nanometers, are small enough to penetrate human lungs and enter the bloodstream. The study found that organic polymers, common in spacesuit outer layers, readily collect fine dust, and static electricity influences which dust particle sizes adhere to different surfaces.",
+        "summary": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles on spacesuit material samples, identifying particles as small as 100 nanometers that adhere to surfaces via static electricity.",
+        "finding": "NASA's Perseverance rover measured fine and ultrafine Martian dust particles on spacesuit material samples, identifying particles as small as 100 nanometers that adhere to surfaces via static electricity.",
         "sourceUpdatedAt": "2026-10-27T21:01:38Z"
       },
       "publishedAt": "2026-10-26T17:07:28-04:00",
@@ -319,6 +389,36 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-8f73d19c713edd85",
+      "inputFacts": {
+        "id": "science-8f73d19c713edd85",
+        "title": "APOD: 2026 November 5 – Enceladus in Silhouette",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-5-enceladus-in-silhouette",
+        "publishedAt": "2026-11-05T05:05:00Z",
+        "summary": "The Cassini spacecraft captured an image of plumes continuously spewing into space from the south pole of Saturn's moon Enceladus, backlit by the Sun. These icy plumes, discovered in 2005, are believed to originate from a subsurface ocean and contribute material to Saturn's E ring, making Enceladus's surface highly reflective.",
+        "finding": "The Cassini spacecraft captured an image of plumes continuously spewing into space from the south pole of Saturn's moon Enceladus, backlit by the Sun. These icy plumes, discovered in 2005, are believed to originate from a subsurface ocean and contribute material to Saturn's E ring, making Enceladus's surface highly reflective.",
+        "sourceUpdatedAt": "2026-11-05T05:05:00Z"
+      },
+      "publishedAt": "2026-11-05T00:05:00-05:00",
+      "publicationEvidence": "2026-11-05T00:05:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-70aad3303bf3bdd1",
+      "inputFacts": {
+        "id": "science-70aad3303bf3bdd1",
+        "title": "Cyprus: Island of Snakes, Cats, and Ophiolites",
+        "url": "https://science.nasa.gov/earth/earth-observatory/cyprus-island-of-snakes-cats-and-ophiolites",
+        "publishedAt": "2026-11-05T05:01:00Z",
+        "summary": "The Akrotiri Peninsula on Cyprus formed from two land bridges, or tombolos, created by river and marine sediments. The more westerly Kouris River tombolo developed approximately 50,000 years ago, while the eastern tombolo, which cut off the Mediterranean Sea to form Akrotiri Salt Lake, formed within the past 2,000 years.",
+        "finding": "The Akrotiri Peninsula on Cyprus formed from two land bridges, or tombolos, created by river and marine sediments. The more westerly Kouris River tombolo developed approximately 50,000 years ago, while the eastern tombolo, which cut off the Mediterranean Sea to form Akrotiri Salt Lake, formed within the past 2,000 years.",
+        "sourceUpdatedAt": "2026-11-05T05:01:00Z"
+      },
+      "publishedAt": "2026-11-05T00:01:00-05:00",
+      "publicationEvidence": "2026-11-05T00:01:00-05:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-acc301e7ba339cf7",
       "inputFacts": {
         "id": "science-acc301e7ba339cf7",
@@ -331,36 +431,6 @@
       },
       "publishedAt": "2026-11-04T00:05:00-05:00",
       "publicationEvidence": "2026-11-04T00:05:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-90c08f78aa09ed89",
-      "inputFacts": {
-        "id": "science-90c08f78aa09ed89",
-        "title": "APOD: 2026 November 3 – Comet PanSTARRs and Rainbow Meteor",
-        "url": "https://science.nasa.gov/image-article/apod-2026-november-3-comet-panstarrs-and-rainbow-meteor",
-        "publishedAt": "2026-11-03T05:05:00Z",
-        "summary": "The article presents an image featuring Comet C/2025 R3 (PanSTARRS) and a colorful meteor, noting that the meteor likely did not originate from this specific comet. It also highlights that three meteor showers, the Southern Taurids, Northern Taurids, and Leonids, will reach their peaks in November, originating from Comet 2P/Encke and Comet 55P/Tempel-Tuttle respectively.",
-        "finding": "The article presents an image featuring Comet C/2025 R3 (PanSTARRS) and a colorful meteor, noting that the meteor likely did not originate from this specific comet. It also highlights that three meteor showers, the Southern Taurids, Northern Taurids, and Leonids, will reach their peaks in November, originating from Comet 2P/Encke and Comet 55P/Tempel-Tuttle respectively.",
-        "sourceUpdatedAt": "2026-11-03T05:05:00Z"
-      },
-      "publishedAt": "2026-11-03T00:05:00-05:00",
-      "publicationEvidence": "2026-11-03T00:05:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-d87bd0a830188828",
-      "inputFacts": {
-        "id": "science-d87bd0a830188828",
-        "title": "The Pacific’s Busy Storm Season",
-        "url": "https://science.nasa.gov/earth/earth-observatory/the-pacifics-busy-storm-season",
-        "publishedAt": "2026-11-03T05:01:00Z",
-        "summary": "The Northwest Pacific Basin experienced elevated tropical cyclone activity since April 2026, with Super Typhoon In-fa developing an unusually large eye and the remnants of Typhoon Champi transitioning into an extratropical storm that impacted Alaska. This activity included five typhoons affecting the Mariana Islands and four ex-typhoons entering Alaskan waters in 2026.",
-        "finding": "The Northwest Pacific Basin experienced elevated tropical cyclone activity since April 2026, with Super Typhoon In-fa developing an unusually large eye and the remnants of Typhoon Champi transitioning into an extratropical storm that impacted Alaska. This activity included five typhoons affecting the Mariana Islands and four ex-typhoons entering Alaskan waters in 2026.",
-        "sourceUpdatedAt": "2026-11-03T12:05:20Z"
-      },
-      "publishedAt": "2026-11-03T00:01:00-05:00",
-      "publicationEvidence": "2026-11-03T00:01:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -385,27 +455,12 @@
         "title": "Five U-M researchers named American Physical Society fellows",
         "url": "https://news.umich.edu/five-u-m-researchers-named-american-physical-society-fellows",
         "publishedAt": "2026-11-02T15:22:09Z",
-        "summary": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics. Scott Baalrud was recognized for advancements in the kinetic theory of plasmas. Emanuel Gull was recognized for advances in numerical methods for strongly correlated electron systems. Cagliyan Kurdak was recognized for leadership in broadening participation in physics graduate education. Venkat Raman was recognized for insights and computational methods for rotating detonation engines. Dominika Zgid was recognized for contributions to ab initio many-body methods for molecules and solids.",
-        "finding": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics. Scott Baalrud was recognized for advancements in the kinetic theory of plasmas. Emanuel Gull was recognized for advances in numerical methods for strongly correlated electron systems. Cagliyan Kurdak was recognized for leadership in broadening participation in physics graduate education. Venkat Raman was recognized for insights and computational methods for rotating detonation engines. Dominika Zgid was recognized for contributions to ab initio many-body methods for molecules and solids.",
+        "summary": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics, chemistry, nuclear engineering, and aerospace engineering. Their work includes advancements in kinetic theory of plasmas, numerical methods for strongly correlated electron systems, leadership in physics graduate education, computational methods for high-speed propulsion, and ab initio many-body methods for molecules and solids.",
+        "finding": "Five University of Michigan researchers were elected as fellows of the American Physical Society for their contributions to physics, chemistry, nuclear engineering, and aerospace engineering. Their work includes advancements in kinetic theory of plasmas, numerical methods for strongly correlated electron systems, leadership in physics graduate education, computational methods for high-speed propulsion, and ab initio many-body methods for molecules and solids.",
         "sourceUpdatedAt": "2026-11-02T15:22:19Z"
       },
       "publishedAt": "2026-11-02T10:22:09-05:00",
       "publicationEvidence": "2026-11-02T10:22:09-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-3e0cd4d79f561ced",
-      "inputFacts": {
-        "id": "science-3e0cd4d79f561ced",
-        "title": "Midterm elections: Voters want solutions, but campaigns deliver polarization",
-        "url": "https://news.umich.edu/midterm-elections-voters-want-solutions-but-campaigns-deliver-polarization",
-        "publishedAt": "2026-10-30T15:12:13Z",
-        "summary": "Voters in the 2026 midterm elections are primarily motivated by concerns about the cost of living, including grocery and gas prices, mirroring issues from the 2024 election. However, campaign rhetoric is largely combative and polarizing, focusing on personal attacks and portraying opponents as dangerous or extreme, rather than offering solution-oriented policy discussions.",
-        "finding": "Voters in the 2026 midterm elections are primarily motivated by concerns about the cost of living, including grocery and gas prices, mirroring issues from the 2024 election. However, campaign rhetoric is largely combative and polarizing, focusing on personal attacks and portraying opponents as dangerous or extreme, rather than offering solution-oriented policy discussions.",
-        "sourceUpdatedAt": "2026-11-03T15:59:33Z"
-      },
-      "publishedAt": "2026-10-30T11:12:13-04:00",
-      "publicationEvidence": "2026-10-30T11:12:13-04:00",
       "datePrecision": "time"
     },
     {
@@ -467,62 +522,9 @@
       "publishedAt": "2026-10-27T16:23:58-04:00",
       "publicationEvidence": "2026-10-27T16:23:58-0400",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-a20db8c134bc2054",
-      "inputFacts": {
-        "id": "science-a20db8c134bc2054",
-        "title": "TB 26-09 Measured Hammer-Tap Inputs",
-        "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-09-measured-hammer-tap-inputs",
-        "publishedAt": "2026-11-02T20:47:41Z",
-        "summary": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
-        "finding": "An instrumented hammer test does not require an idealized single half-sine waveform for valid results, provided that the complete force and response are measured accurately. Crest ripples and separated contacts, while changing excitation, do not inherently invalidate the record if known inputs are maintained.",
-        "sourceUpdatedAt": "2026-11-02T20:49:49Z"
-      },
-      "publishedAt": "2026-11-02T15:47:41-05:00",
-      "publicationEvidence": "2026-11-02T15:47:41-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-7b620b8ee23e792e",
-      "inputFacts": {
-        "id": "science-7b620b8ee23e792e",
-        "title": "APOD: 2026 November 1 – Colors of the Moon",
-        "url": "https://science.nasa.gov/image-article/apod-2026-november-1-colors-of-the-moon",
-        "publishedAt": "2026-11-01T04:05:00Z",
-        "summary": "The apparent color of the Moon, as observed from Earth, varies depending on atmospheric conditions and the Moon's position relative to the horizon. A collection of full moon images over 10 years from Italy shows that red or yellow hues typically occur when the Moon is near the horizon due to blue light scattering, while a blue Moon is rarer and may indicate larger atmospheric dust particles. A purple Moon's cause is unclear, possibly a combination of effects.",
-        "finding": "The apparent color of the Moon, as observed from Earth, varies depending on atmospheric conditions and the Moon's position relative to the horizon. A collection of full moon images over 10 years from Italy shows that red or yellow hues typically occur when the Moon is near the horizon due to blue light scattering, while a blue Moon is rarer and may indicate larger atmospheric dust particles. A purple Moon's cause is unclear, possibly a combination of effects.",
-        "sourceUpdatedAt": "2026-11-01T04:05:00Z"
-      },
-      "publishedAt": "2026-11-01T00:05:00-04:00",
-      "publicationEvidence": "2026-11-01T00:05:00-04:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-e6da576f1b1a6c97",
-      "inputFacts": {
-        "id": "science-e6da576f1b1a6c97",
-        "title": "APOD: 2026 October 31 – Night on a Spooky Planet",
-        "url": "https://science.nasa.gov/image-article/apod-2026-october-31-night-on-a-spooky-planet",
-        "publishedAt": "2026-10-31T04:05:00Z",
-        "summary": "Geomagnetic storms, triggered by solar activity, are causing auroral displays in Earth's upper atmosphere at high latitudes. This phenomenon is occurring while the Sun is in the early phases of decline from its solar activity cycle peak.",
-        "finding": "Geomagnetic storms, triggered by solar activity, are causing auroral displays in Earth's upper atmosphere at high latitudes. This phenomenon is occurring while the Sun is in the early phases of decline from its solar activity cycle peak.",
-        "sourceUpdatedAt": "2026-10-31T14:45:33Z"
-      },
-      "publishedAt": "2026-10-31T00:05:00-04:00",
-      "publicationEvidence": "2026-10-31T00:05:00-04:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-03",
-      "selectedIds": [
-        "science-54f31a9a44470168",
-        "science-6d879a7a5c5c91f8",
-        "science-5c3380370cf61ae7"
-      ]
-    },
     {
       "date": "2026-11-04",
       "selectedIds": [
@@ -537,6 +539,14 @@
         "science-54f31a9a44470168",
         "science-6d879a7a5c5c91f8",
         "science-5c3380370cf61ae7"
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "selectedIds": [
+        "science-54f31a9a44470168",
+        "science-6d879a7a5c5c91f8",
+        "science-b2886d89a4265d7c"
       ]
     }
   ]
