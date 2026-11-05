@@ -14,12 +14,14 @@ Three question types map onto the gate:
 This module builds the request, parses answers back into
 ``{field: {value, confidence}}`` decisions, and routes chunks. Clients:
 
-    * :class:`OpenRouterJevClient` — ``POST /api/alpha/decisions`` (default)
-    * :class:`TypeSafeJevClient`   — ``POST /v1/systemone`` (native)
+    * :class:`TypeSafeJevClient`   — ``POST /v1/systemone`` (native; default
+      when ``TYPESAFE_API_KEY`` is set)
+    * :class:`OpenRouterJevClient` — ``POST /api/alpha/decisions``
     * :class:`StubJevClient`       — deterministic, offline, for tests
 
-The API key is read from ``OPENROUTER_API_KEY`` (or ``TYPESAFE_API_KEY``) after
-loading ``.env``. See :func:`make_client`.
+Keys are read from ``TYPESAFE_API_KEY`` / ``OPENROUTER_API_KEY`` after loading
+``.env``; ``JEV_PROVIDER=openrouter|typesafe|stub`` overrides the choice. See
+:func:`make_client`.
 """
 
 from __future__ import annotations
@@ -656,12 +658,14 @@ class HttpJevClient:
             except urllib.error.HTTPError as exc:
                 detail = exc.read().decode("utf-8", "replace")[:400]
                 last_error = f"HTTP {exc.code}: {detail}"
+                usage.record(None, payload.get("model") or "jev", None, kind="error")
                 if exc.code in _RETRYABLE_STATUS and attempt < self.retries:
                     time.sleep(self._delay(attempt, exc.headers.get("Retry-After")))
                     continue
                 raise JevError(last_error) from exc
             except (urllib.error.URLError, http.client.HTTPException, TimeoutError, OSError) as exc:
                 last_error = f"{type(exc).__name__}: {exc}"
+                usage.record(None, payload.get("model") or "jev", None, kind="error")
                 if attempt < self.retries:
                     time.sleep(self._delay(attempt, None))
                     continue
@@ -749,18 +753,23 @@ class TypeSafeJevClient(HttpJevClient):
 
 
 def make_client(prefer: Optional[str] = None, **kwargs: Any) -> JevClient:
-    """Pick a client: OpenRouter if keyed, else TypeSafe, else the stub."""
+    """Pick a client: TypeSafe direct if keyed, else OpenRouter, else the stub.
+
+    The direct API returned the same triage as OpenRouter on 8/8 live chunks at
+    about 0.2s per call. ``JEV_PROVIDER`` overrides; so does ``prefer``.
+    """
     env.load_dotenv()
+    prefer = prefer or env.getenv("JEV_PROVIDER") or None
     if prefer == "openrouter":
         return OpenRouterJevClient(**kwargs)
     if prefer == "typesafe":
         return TypeSafeJevClient(**kwargs)
     if prefer == "stub":
         return StubJevClient()
-    if env.getenv("OPENROUTER_API_KEY", "OPENROUTE_API_KEY"):
-        return OpenRouterJevClient(**kwargs)
     if env.getenv("TYPESAFE_API_KEY"):
         return TypeSafeJevClient(**kwargs)
+    if env.getenv("OPENROUTER_API_KEY", "OPENROUTE_API_KEY"):
+        return OpenRouterJevClient(**kwargs)
     return StubJevClient()
 
 

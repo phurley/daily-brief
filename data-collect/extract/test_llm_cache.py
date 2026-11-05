@@ -82,6 +82,30 @@ class ResponseCacheTest(unittest.TestCase):
                     client.complete_json(self.messages)
         self.assertEqual(post.call_count, 1)
 
+    def test_stalled_response_hits_the_deadline_once_and_is_logged(self):
+        class Trickle(io.BytesIO):
+            def read1(self, n=-1):  # a keep-alive byte at a time, never the body
+                import time
+                time.sleep(0.02)
+                return b" "
+        client = llm.ChatClient("k", model="m", retries=3, backoff=0, caller="test", deadline=0.1)
+        with mock.patch("urllib.request.urlopen", side_effect=lambda *a, **k: Trickle()) as post:
+            with self.assertRaisesRegex(llm.LLMError, "DeadlineExceeded"):
+                client.complete_json(self.messages)
+        self.assertEqual(post.call_count, 1)  # stalls repeat for the same prompt; no retry
+        rows = [json.loads(line) for line in open(self.log)]
+        self.assertEqual([r["kind"] for r in rows], ["error"])
+        [(caller, model, calls, cost, errors, *_)] = usage.summarize(usage.Path(self.log), days=1)
+        self.assertEqual((caller, calls, errors), ("test", 0, 1))
+
+    def test_transport_failures_are_logged_per_attempt(self):
+        client = llm.ChatClient("k", model="m", retries=1, backoff=0, caller="test")
+        with mock.patch("urllib.request.urlopen", side_effect=OSError("reset")):
+            with self.assertRaises(llm.LLMError):
+                client.complete_json(self.messages)
+        rows = [json.loads(line) for line in open(self.log)]
+        self.assertEqual([r["kind"] for r in rows], ["error", "error"])
+
 
 if __name__ == "__main__":
     unittest.main()
