@@ -79,6 +79,7 @@ optional; the default is the feeds → HTTP → browser ladder above.
 | `engine` | `auto` (default): feeds, then HTTP crawl, escalating to the browser only when needed. `http`: feeds + HTTP crawl, never a browser. `browser`: force the headless browser. All produce the same output. |
 | `crawl_urls` | Extra seeds crawled in addition to `url`/`events_url` (e.g. a Drupal `events-feed/upcoming` route). |
 | `feed_urls` | RSS/Atom/ICS/JSON URLs fetched over plain HTTP (preferred, dated, cheap). A public **Instagram profile** URL also works: recent post captions (often carrying event dates and ticket links) are extracted. |
+| `verified_calendar` | Read a public calendar API directly with an adapter in `verified_calendars.py` instead of crawling: no model, exact times, complete coverage of the requested window. Replaces the source's crawl, so news-bearing sources get a separate events-only entry. Local adapters: `librarycalendar` (LibraryMarket JSON feed; Canton and Plymouth libraries) and `ical` (any RFC 5545 feed, `urls` list, recurrences expanded; Canton Township's CivicPlus categories). |
 | `max_pages` | Per-source override of the global `--max-pages` budget, to bound pathologically slow/paywalled sources. |
 
 A source may also have feeds/PDFs auto-discovered from its HTML; those are
@@ -372,7 +373,10 @@ COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
   `processed/health/<date>.md` and `.json`: freshness of every published file,
   last-26h job runs (exit codes, durations, problem lines), spend vs budget,
   failed-attempt rates, free-key share, science fallbacks, failing feeds and
-  overdue crawl sources, section counts and the latest canary. When anything is
+  overdue crawl sources, section counts, local coverage (events near home in
+  the next 7 days, and each source's published events, against the median of
+  the last 7 reports: near-home below half fails, a source normally publishing
+  10+ that falls below half warns) and the latest canary. When anything is
   WARN or FAIL it notifies `HEALTH_NTFY_TOPIC` (ntfy.sh, or
   `HEALTH_NTFY_SERVER`) and/or `HEALTH_WEBHOOK_URL` (JSON `{"text": ...}`) from
   `.env`. Run by hand: `.venv/bin/python health_report.py --no-notify`.

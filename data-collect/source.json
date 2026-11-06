@@ -1457,6 +1457,82 @@
         "category": "Classical Music",
         "venue": "Orchestra Hall"
       }
+    },
+    {
+      "name": "Canton Public Library Events Calendar",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "Library",
+      "type": "Library",
+      "content_mode": "event",
+      "identity_authority": "organizer",
+      "url": "https://cantonpl.librarycalendar.com/events/month",
+      "events_url": "https://cantonpl.librarycalendar.com/events/month",
+      "feed_urls": [],
+      "frequency": "daily",
+      "description": "Every public program on the Canton Public Library calendar (LibraryCalendar JSON feed: storytimes, classes, clubs, talks), read without a model.",
+      "verified_calendar": {
+        "adapter": "librarycalendar",
+        "url": "https://cantonpl.librarycalendar.com",
+        "venue": "Canton Public Library",
+        "city": "Canton",
+        "category": "Library Program"
+      }
+    },
+    {
+      "name": "Plymouth District Library Events Calendar",
+      "locality_index": 0,
+      "location": "Plymouth, MI",
+      "category": "Library",
+      "type": "Library",
+      "content_mode": "event",
+      "identity_authority": "organizer",
+      "url": "https://plymouth.librarycalendar.com/events/month",
+      "events_url": "https://plymouth.librarycalendar.com/events/month",
+      "feed_urls": [],
+      "frequency": "daily",
+      "description": "Every public program on the Plymouth District Library calendar (LibraryCalendar JSON feed), read without a model.",
+      "verified_calendar": {
+        "adapter": "librarycalendar",
+        "url": "https://plymouth.librarycalendar.com",
+        "venue": "Plymouth District Library",
+        "city": "Plymouth",
+        "category": "Library Program"
+      }
+    },
+    {
+      "name": "Canton Township Community Calendar",
+      "locality_index": 0,
+      "location": "Canton, MI",
+      "category": "Community Events",
+      "type": "Official Government",
+      "content_mode": "event",
+      "identity_authority": "organizer",
+      "url": "https://www.cantonmi.gov/calendar.aspx",
+      "events_url": "https://www.cantonmi.gov/calendar.aspx",
+      "feed_urls": [],
+      "frequency": "daily",
+      "description": "Canton Township's public event calendars (CivicPlus iCal: Township Events, Community and Special Events). Board meetings, tax dates and holidays are left out.",
+      "verified_calendar": {
+        "adapter": "ical",
+        "urls": [
+          "https://www.cantonmi.gov/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
+          "https://www.cantonmi.gov/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=29"
+        ],
+        "venue": "Canton Township",
+        "city": "Canton",
+        "cities": [
+          "Canton",
+          "Plymouth",
+          "Westland",
+          "Belleville",
+          "Van Buren",
+          "Wayne",
+          "Livonia",
+          "Northville"
+        ],
+        "category": "Community Event"
+      }
     }
   ]
 }
