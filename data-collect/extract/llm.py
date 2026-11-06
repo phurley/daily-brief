@@ -91,6 +91,30 @@ class LLMError(RuntimeError):
     pass
 
 
+class BudgetExceeded(LLMError):
+    """Past the hard daily budget and no free-tier route for this call."""
+
+
+_SPEND_TTL = 300.0  # seconds between re-reads of the usage log
+_spend_cache = {"checked": float("-inf"), "dollars": 0.0}
+
+
+def budget_mode() -> str:
+    """"ok", "cheap" (past daily_usd) or "free" (past hard_daily_usd), from the
+    last 24h of processed/llm-usage.jsonl, re-read at most every 5 minutes."""
+    limits = models.budget()
+    if not limits.get("daily_usd") or os.getenv("LLM_USAGE_LOG") == "off":
+        return "ok"
+    if time.monotonic() - _spend_cache["checked"] > _SPEND_TTL:
+        from datetime import datetime, timedelta, timezone
+        _spend_cache["dollars"] = usage.spend_since(datetime.now(timezone.utc) - timedelta(hours=24))
+        _spend_cache["checked"] = time.monotonic()
+    spent = _spend_cache["dollars"]
+    if limits.get("hard_daily_usd") and spent > limits["hard_daily_usd"]:
+        return "free"
+    return "cheap" if spent > limits["daily_usd"] else "ok"
+
+
 class TruncatedOutput(LLMError):
     """The model stopped at max_tokens; the JSON is incomplete. Never retried."""
 
@@ -186,6 +210,9 @@ class ChatClient:
         *,
         schema_name: str = "record",
     ) -> dict[str, Any]:
+        delegate = self._over_budget_client()
+        if delegate is not None:
+            return delegate.complete_json(messages, schema, schema_name=schema_name)
         payload: dict[str, Any] = {
             "model": self.model,
             "messages": messages,
@@ -217,6 +244,36 @@ class ChatClient:
         if key:
             self.cache.put(key, self.model, result)
         return result
+
+    def _over_budget_client(self) -> Optional["ChatClient"]:
+        """None to proceed; else the client to use instead (models.json budget)."""
+        mode = budget_mode()
+        if mode == "ok" or getattr(self, "_budget_route", None) == mode:
+            return None
+        cheap = models.budget().get("over_budget_model")
+        if mode == "cheap" and self.model == cheap:
+            return None
+        routes = getattr(self, "_budget_routes", None)
+        if routes is None:
+            routes = self._budget_routes = {}
+        if mode not in routes:
+            client = ChatClient(model=cheap, caller=f"{self.caller or usage.default_caller()} (over budget)",
+                                cache=self.cache or False, max_tokens=self.max_tokens, deadline=self.deadline,
+                                timeout=self.timeout, retries=self.retries, backoff=self.backoff,
+                                cache_max_age=self.cache_max_age)
+            if mode == "free":
+                if "free" not in client.tiers:
+                    routes[mode] = None
+                else:
+                    client.tiers = ["free"]
+                    client._budget_route = mode
+                    routes[mode] = client
+            else:
+                client._budget_route = mode
+                routes[mode] = client
+        if routes[mode] is None:
+            raise BudgetExceeded("past the hard daily LLM budget; no free-tier route for this call")
+        return routes[mode]
 
     def _complete(self, payload: dict[str, Any], schema: Optional[dict[str, Any]]) -> dict[str, Any]:
         try:

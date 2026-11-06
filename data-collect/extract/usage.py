@@ -58,6 +58,46 @@ def record(caller: Optional[str], model: str, usage: Optional[dict[str, Any]], k
         pass
 
 
+def _row(raw: bytes) -> Optional[dict[str, Any]]:
+    try:
+        row = json.loads(raw)
+        row["_at"] = datetime.fromisoformat(row["at"])
+        return row
+    except (ValueError, KeyError, TypeError):
+        return None
+
+
+def recent_rows(path: Path, since: datetime, block: int = 1 << 16) -> list[dict[str, Any]]:
+    """Rows logged at or after ``since``, oldest first, reading from the end of
+    the file so the cost does not grow with the log's age."""
+    if not path.exists():
+        return []
+    newest_first: list[dict[str, Any]] = []
+    with open(path, "rb") as handle:
+        position = handle.seek(0, os.SEEK_END)
+        carry = b""
+        while True:
+            step = min(block, position)
+            position -= step
+            handle.seek(position)
+            lines = (handle.read(step) + carry).split(b"\n")
+            carry = lines.pop(0) if position > 0 else b""  # first line may be cut
+            for raw in reversed(lines):
+                row = _row(raw)
+                if row is None:
+                    continue
+                if row["_at"] < since:
+                    return [{k: v for k, v in r.items() if k != "_at"} for r in reversed(newest_first)]
+                newest_first.append(row)
+            if position == 0:
+                return [{k: v for k, v in r.items() if k != "_at"} for r in reversed(newest_first)]
+
+
+def spend_since(since: datetime, path: Optional[Path] = None) -> float:
+    """Dollars reported for paid calls since ``since``."""
+    return sum(float(r.get("cost") or 0) for r in recent_rows(path or log_path(), since) if r.get("kind") == "chat")
+
+
 def summarize(path: Path, days: float) -> list[tuple[str, str, int, float, int, int, int]]:
     """Rows of (caller, model, calls, cost, errors, input tokens, output tokens).
 

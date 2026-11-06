@@ -359,6 +359,23 @@ COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
   `models.json`). Chosen by `bench_science.py` on 30 stored articles
   (2026-11-06).
 
+- Spend cap: `models.json` `budget` sets a rolling-24h limit read from
+  `processed/llm-usage.jsonl` (re-read every 5 minutes). Past `daily_usd`
+  ($1.50) every paid call switches to `over_budget_model`
+  (`google/gemini-3.1-flash-lite`, free key first); past `hard_daily_usd` ($3)
+  only free-tier calls run and the rest raise `BudgetExceeded`, which callers
+  treat like any failed call. Usage rows read `<caller> (over budget)`.
+  `LLM_DAILY_BUDGET`, `LLM_HARD_DAILY_BUDGET` override; `LLM_BUDGET=off`
+  disables.
+- Health report: `scripts/run_health.sh` (launchd `com.dailybrief.health`,
+  08:00 daily; Sundays it runs `quality_canary.py` first) writes
+  `processed/health/<date>.md` and `.json`: freshness of every published file,
+  last-26h job runs (exit codes, durations, problem lines), spend vs budget,
+  failed-attempt rates, free-key share, science fallbacks, failing feeds and
+  overdue crawl sources, section counts and the latest canary. When anything is
+  WARN or FAIL it notifies `HEALTH_NTFY_TOPIC` (ntfy.sh, or
+  `HEALTH_NTFY_SERVER`) and/or `HEALTH_WEBHOOK_URL` (JSON `{"text": ...}`) from
+  `.env`. Run by hand: `.venv/bin/python health_report.py --no-notify`.
 ### Extraction retries and repair
 
 `extract.pipeline` marks a candidate `extracted` only after its output passes

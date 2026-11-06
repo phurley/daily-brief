@@ -1,10 +1,10 @@
 #!/bin/sh
-# Install the kitchen.local calendar, science and Starship system timers.
+# Install the kitchen.local calendar, science, Starship and health system timers.
 # Run as phurley after obtaining administrator credentials with sudo -v.
 set -eu
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 ARCHIVE="/Users/phurley/Library/LaunchAgents/DisabledDailyBrief/$(date '+%Y%m%d-%H%M%S')"
-JOBS="calendar science starship"
+JOBS="calendar science starship health"
 
 sudo -n true
 # Validate every input before changing installed timers.
@@ -14,7 +14,8 @@ for job in $JOBS; do
 done
 for script in /Users/phurley/daily-brief/scripts/run_calendar.sh \
               /Users/phurley/daily-brief/data-collect/run_science.sh \
-              /Users/phurley/daily-brief/starship/run.sh; do
+              /Users/phurley/daily-brief/starship/run.sh \
+              /Users/phurley/daily-brief/scripts/run_health.sh; do
     [ -x "$script" ] || { echo "Missing executable: $script" >&2; exit 1; }
 done
 for job in $JOBS; do
