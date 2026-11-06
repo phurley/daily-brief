@@ -48,41 +48,72 @@ def publication_lock(gitdir):
             yield
 
 
-def sync_checkout(commit, captured):
-    """Fast-forward when safe. Never stash, rebase or overwrite newer source work."""
+def is_derived(name):
+    return any(name == d or name.startswith(d + '/') for d in DERIVED)
+
+
+def target_blob(commit, name):
+    blob = subprocess.run(['git', 'rev-parse', '--verify', '--quiet', f'{commit}:{name}'], cwd=ROOT,
+                          capture_output=True, text=True)
+    return blob.stdout.strip() if blob.returncode == 0 else None
+
+
+def write_atomic(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(path.name + '.dailybrief-tmp')
+    temporary.write_bytes(data)
+    os.replace(temporary, path)
+
+
+def sync_checkout(commit, captured=None):
+    """Fast-forward the collector checkout to the commit just published.
+
+    Never stash, rebase or overwrite unpublished source work. Every job writes
+    its output into this checkout, so after a publication it usually holds
+    other jobs' files too. A changed file that is byte-identical to the
+    published commit holds nothing unpublished and is staged, which lets git
+    fast-forward over it. Derived files (manifest, widgets, recommendations,
+    editions) are rebuilt by every publication, so a locally built copy is
+    replaced by the published one. Anything else that differs is unpublished
+    work: it stays, and the fast-forward waits for the publication that
+    carries it. Returns the paths that blocked the fast-forward (empty when it
+    went through).
+    """
     index = Path(output('git', 'rev-parse', '--path-format=absolute', '--git-path', 'index'))
     original_index = index.read_bytes()
-    regenerated = {}
-    # Git permits a fast-forward over staged content identical to the new tree.
-    # Stage only our captured files that are still identical to the published copy.
-    for name, data in captured.items():
-        path = ROOT / name
-        if not path.is_file() or path.read_bytes() != data:
+    incoming = set(filter(None, output('git', 'diff', '--name-only', 'HEAD', commit).split('\n')))
+    local = set(filter(None, output('git', 'diff', '--name-only', 'HEAD').split('\n')))
+    untracked = set(filter(None, output('git', 'ls-files', '--others', '--exclude-standard').split('\n')))
+    replaced, blocking = {}, []
+    # Local changes the merge would touch, plus every changed derived file: a
+    # locally rebuilt one differs from the publication even when the merge
+    # leaves that file alone.
+    candidates = (local | untracked) & incoming | {n for n in local | untracked if is_derived(n)}
+    for name in sorted(candidates):
+        path, blob = ROOT / name, target_blob(commit, name)
+        if not path.is_file():
+            if name in incoming:
+                blocking.append(name)  # deleted locally; leave the decision to a person
             continue
-        blob = subprocess.run(['git', 'rev-parse', f'{commit}:{name}'], cwd=ROOT, capture_output=True, text=True)
-        if blob.returncode != 0:
-            continue
-        if name in DERIVED and output('git', 'hash-object', '--', name) != blob.stdout.strip():
-            # The collector may pass a preliminary shortlist. The edition build
-            # regenerates it; replace only the captured copy we still own.
-            regenerated[name] = data
-            fresh = subprocess.check_output(['git', 'show', f'{commit}:{name}'], cwd=ROOT)
-            temporary = path.with_name(path.name + '.dailybrief-tmp')
-            temporary.write_bytes(fresh)
-            os.replace(temporary, path)
-        if output('git', 'hash-object', '--', name) == blob.stdout.strip():
+        if blob and output('git', 'hash-object', '--', name) == blob:
             run('git', 'add', '--', name)
+        elif blob and is_derived(name):
+            replaced[name] = path.read_bytes()
+            write_atomic(path, subprocess.check_output(['git', 'show', f'{commit}:{name}'], cwd=ROOT))
+            run('git', 'add', '--', name)
+        elif name in incoming:
+            blocking.append(name)
     result = subprocess.run(['git', 'merge', '--ff-only', '--no-autostash', commit], cwd=ROOT)
     if result.returncode:
         temporary = index.with_name('index.dailybrief-tmp')
         temporary.write_bytes(original_index)
         os.replace(temporary, index)
-        for name, data in regenerated.items():
-            path = ROOT / name
-            temporary = path.with_name(path.name + '.dailybrief-tmp')
-            temporary.write_bytes(data)
-            os.replace(temporary, path)
-        print('Publication succeeded. Local edits prevent a safe fast-forward; checkout and index preserved. Future publications still start from origin/main.')
+        for name, data in replaced.items():
+            write_atomic(ROOT / name, data)
+        print('Publication succeeded. Local edits prevent a safe fast-forward; checkout and index preserved: '
+              + (', '.join(blocking) or 'see git status') + '. Future publications still start from origin/main.')
+        return blocking or ['?']
+    return []
 
 
 def main():
