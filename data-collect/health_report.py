@@ -300,18 +300,89 @@ def notify(report: dict, text: str) -> list[str]:
     return sent
 
 
+# Home is Canton; these towns (or an event tagged localityTier "nearby") count
+# as near home for the coverage check.
+NEAR_HOME = ("Canton", "Plymouth", "Northville", "Westland", "Livonia", "Belleville", "Wayne", "Van Buren")
+DROP_FRACTION = 0.5     # warn below half of the recent median
+MIN_SOURCE_BASELINE = 10  # ignore sources that normally publish fewer events
+
+
+def history(out: Path, before: str, days: int = 7) -> list[dict]:
+    """The last ``days`` daily reports before ``before`` (YYYY-MM-DD), oldest first."""
+    reports = []
+    for path in sorted(out.glob("20??-??-??.json")):
+        if path.stem < before:
+            try:
+                reports.append(json.loads(path.read_text()))
+            except ValueError:
+                continue
+    return reports[-days:]
+
+
+def near_home_week(now: datetime, root: Path) -> int:
+    path = root / "events.json"
+    if not path.exists():
+        return 0
+    count = 0
+    for event in json.loads(path.read_text()).get("events", []):
+        start = _parse_time(event.get("start"))
+        town = (event.get("city") or "").split(",")[0].strip()
+        if start and now <= start < now + timedelta(days=7) and (
+                town in NEAR_HOME or event.get("localityTier") == "nearby"):
+            count += 1
+    return count
+
+
+def source_yield(processed: Path) -> dict[str, int]:
+    """Published occurrences per crawl source, from calendar_health.json."""
+    path = processed / "calendar_health.json"
+    if not path.exists():
+        return {}
+    return {s.get("slug") or s.get("name"): int(s.get("publishedOccurrences") or 0)
+            for s in json.loads(path.read_text()).get("sources", [])}
+
+
+def coverage(near: int, yields: dict[str, int], earlier: list[dict]) -> list[dict]:
+    """Local coverage against the median of earlier reports: near-home events
+    this week, and each source's published events (a source that quietly
+    falls from 600 to 10 is otherwise invisible)."""
+    results = []
+    past_near = [r["coverage"]["nearHomeWeek"] for r in earlier if "coverage" in r]
+    if past_near:
+        median = statistics.median(past_near)
+        status = "fail" if near < median * DROP_FRACTION else "ok"
+        results.append(check("coverage:near-home", status, f"{near} events near home in the next 7 days "
+                             f"(median {median:g} over {len(past_near)} reports)"))
+    else:
+        results.append(check("coverage:near-home", "ok", f"{near} events near home in the next 7 days (no baseline yet)"))
+    drops = []
+    for slug, today in sorted(yields.items()):
+        past = [r["coverage"]["sources"][slug] for r in earlier if slug in r.get("coverage", {}).get("sources", {})]
+        if not past:
+            continue
+        median = statistics.median(past)
+        if median >= MIN_SOURCE_BASELINE and today < median * DROP_FRACTION:
+            drops.append(f"{slug} {today} (median {median:g})")
+    results.append(check("coverage:sources", "warn" if drops else "ok",
+                         "; ".join(drops) or f"no source fell below half its usual count ({len(yields)} sources)",
+                         drops=drops))
+    return results
+
+
 def build(now: datetime, root: Path = ROOT, processed: Path = PROCESSED) -> dict:
     out = processed / "health"
     previous = None
     if (out / "latest.json").exists():
         previous = json.loads((out / "latest.json").read_text())
     section_checks, counts = sections(root, previous)
+    near, yields = near_home_week(now, root), source_yield(processed)
     checks = (freshness(now, root) + jobs(now, job_logs(root)) + spend(now, usage.log_path())
-              + sources(now, root, processed)
+              + sources(now, root, processed) + coverage(near, yields, history(out, now.date().isoformat()))
               + section_checks + quality(now, processed / "model-quality.jsonl"))
     status = max((c["status"] for c in checks), key=RANK.get, default="ok")
     return {"date": now.date().isoformat(), "generatedAt": now.isoformat(timespec="seconds"),
-            "status": status, "counts": counts, "checks": checks}
+            "status": status, "counts": counts, "coverage": {"nearHomeWeek": near, "sources": yields},
+            "checks": checks}
 
 
 def main(argv=None) -> int:

@@ -228,5 +228,125 @@ class CalendarTests(unittest.TestCase):
             self.assertEqual(len(json.loads((out/'events.json').read_text())['events']),1)
 
 
+class LocalCalendarFeedTests(unittest.TestCase):
+    """LibraryCalendar (Canton/Plymouth libraries) and iCal (CivicPlus) feeds."""
+    def test_librarycalendar_window_fields_and_private_events(self):
+        requested = []
+        feed = [
+            {"title": "Family Storytime (ages 0-5)", "id": "990", "public": True, "published": True,
+             "start_date": "2026-10-14 10:00:00", "end_date": "2026-10-14 10:30:00", "timezone": "America/Detroit",
+             "url": "https://lib.test/event/family-storytime-990", "branch": {"72": "Canton Public Library"},
+             "room": {"73": "Community Room"}, "age_group": {"2": "Kids"}, "program_type": {"89": "Storytime"},
+             "registration_enabled": True, "description": "<p>Songs and <b>stories</b>.</p>",
+             "image": "https://lib.test/a.png", "offsite_address": None, "changed": "2026-10-01 12:00:00"},
+            {"title": "Staff only", "id": "991", "public": False, "published": True,
+             "start_date": "2026-10-15 10:00:00", "timezone": "America/Detroit", "branch": {"72": "Canton Public Library"}},
+            {"title": "Book club at the cafe", "id": "992", "public": True, "published": True,
+             "start_date": "2026-10-16 19:00:00", "end_date": "2026-10-16 20:00:00", "timezone": "America/Detroit",
+             "url": "https://lib.test/event/club-992", "branch": {"72": "Canton Public Library"},
+             "offsite_address": "Sweet Cafe\n123 Main St\nCanton, MI 48187\nUnited States",
+             "offsite_address_raw": {"country_code": "US", "locality": "Canton", "organization": None},
+             "branch": {"85": "Off-Site Location"}, "description": ""},
+            {"title": "ELL Conversation - ZOOM", "id": "993", "public": True, "published": True,
+             "start_date": "2026-10-17 18:00:00", "timezone": "America/Detroit", "url": "https://lib.test/event/ell-993",
+             "branch": {"72": "Canton Public Library"}, "offsite_address": "United States",
+             "offsite_address_raw": {"country_code": "US", "locality": None}, "online_address": "https://zoom.test/1"},
+        ]
+        def getter(url, *args):
+            requested.append(url)
+            return json.dumps(feed)
+        result = calendars.collect(source('librarycalendar', url='https://lib.test'), reference_day='2026-10-12', getter=getter)
+        self.assertEqual(requested, ['https://lib.test/events/feed/json?start=2026-10-12&end=2027-01-09'])
+        self.assertEqual(result.coverage['status'], 'ok')
+        [story, club, online] = sorted(result.events, key=lambda e: e['startDate'])
+        self.assertEqual((story['name'], story['startDate'], story['endDate']),
+                         ('Family Storytime (ages 0-5)', '2026-10-14T10:00:00-04:00', '2026-10-14T10:30:00-04:00'))
+        self.assertEqual(story['location']['name'], 'Canton Public Library')
+        self.assertEqual((story['room'], story['audience'], story['registration'], story['eventCategory']),
+                         ('Community Room', ['Kids'], 'Registration required', 'Storytime'))
+        self.assertIn('Songs and stories', story['description'])
+        self.assertEqual(club['location'], {'@type': 'Place', 'name': 'Sweet Cafe', 'address': {'addressLocality': 'Canton'}})
+        self.assertNotIn('room', club)
+        self.assertEqual((online['location']['name'], online['onlineUrl']), ('Canton Public Library', 'https://zoom.test/1'))
+
+    ICS = """BEGIN:VCALENDAR\r
+VERSION:2.0\r
+BEGIN:VEVENT\r
+UID:4860\r
+SUMMARY:Bunny Hop Family Dance\r
+URL:/calendar.aspx?EID=4860\r
+DESCRIPTION:Enjoy a day of music and dancing\\, then a craft. Pre-registrat\r
+ ion is required.  https://town.test/calendar.aspx?EID=4860\r
+DTSTART;TZID=America/New_York:20261017T140000\r
+DTEND;TZID=America/New_York:20261017T170000\r
+LOCATION:<p>The Factory at Cherry Hill</p> - 50755 Cherry Hill Rd\\, Canton\\, MI 48187\r
+END:VEVENT\r
+BEGIN:VEVENT\r
+UID:weekly-yoga\r
+SUMMARY:Park Yoga\r
+DTSTART;TZID=America/Detroit:20261013T090000\r
+DTEND;TZID=America/Detroit:20261013T100000\r
+RRULE:FREQ=WEEKLY;COUNT=4\r
+EXDATE;TZID=America/Detroit:20261020T090000\r
+LOCATION:Heritage Park - 1150 S Canton Center Rd\\, Canton\r
+END:VEVENT\r
+BEGIN:VEVENT\r
+UID:fair\r
+SUMMARY:Fall Fair\r
+DTSTART;VALUE=DATE:20261024\r
+STATUS:CANCELLED\r
+LOCATION:Plymouth Township Park - Plymouth\r
+END:VEVENT\r
+BEGIN:VEVENT\r
+UID:utc\r
+SUMMARY:Night Sky Walk\r
+DTSTART:20261018T000000Z\r
+END:VEVENT\r
+END:VCALENDAR\r
+"""
+
+    def test_library_events_reach_the_public_contract_without_a_model(self):
+        feed = [{"title": "Lego Club", "id": "5", "public": True, "published": True, "timezone": "America/Detroit",
+                 "start_date": "2026-10-20 16:00:00", "end_date": "2026-10-20 17:00:00",
+                 "url": "https://lib.test/event/lego-club-5", "branch": {"72": "Canton Public Library"},
+                 "age_group": {"2": "Kids"}, "program_type": {"9": "Youth Enrichment"}, "description": "<p>Build.</p>"}]
+        spec = source('librarycalendar', url='https://lib.test')
+        spec['verified_calendar']['city'] = 'Canton'
+        result = calendars.collect(spec, reference_day='2026-10-12', getter=lambda *a: json.dumps(feed))
+        item = feeds.parse_jsonld_markdown(result.markdown())[0]
+        item.update(source_slug='canton-library', source_name='Canton Public Library Events Calendar', _kind='feed')
+        specs = {'canton-library': {'verified_calendar': True}}
+        with patch.object(pipeline.jev, 'make_client', side_effect=AssertionError('No gate')):
+            rows, stats, outcomes = pipeline.run([item], workers=1, extract_limit=0, model=None,
+                                                 source_specs=specs, mechanical_only=True)
+        self.assertEqual((stats['completed'], outcomes[0][1]), (1, 'extracted'))
+        record = pipeline.finalize(rows[0], dict(item))
+        self.assertTrue(pipeline.valid_record(record))
+        event = publish.to_event(record)
+        self.assertEqual((event['title'], event['start'], event['venue'], event['city']),
+                         ('Lego Club', '2026-10-20T16:00:00-04:00', 'Canton Public Library', 'Canton'))
+    def test_ical_folding_zones_recurrence_all_day_and_cancellation(self):
+        result = calendars.collect(source('ical', urls=['https://town.test/a.ics'], cities=['Canton', 'Plymouth']),
+                                   reference_day='2026-10-12', getter=lambda *a: self.ICS)
+        self.assertEqual(result.coverage['status'], 'ok', result.coverage)
+        by_name = {}
+        for e in result.events:
+            by_name.setdefault(e['name'], []).append(e)
+        [dance] = by_name['Bunny Hop Family Dance']
+        self.assertEqual((dance['startDate'], dance['endDate']), ('2026-10-17T14:00:00-04:00', '2026-10-17T17:00:00-04:00'))
+        self.assertEqual(dance['location'], {'@type': 'Place', 'name': 'The Factory at Cherry Hill', 'address': {'addressLocality': 'Canton'}})
+        self.assertIn('Pre-registration is required', dance['description'])
+        self.assertEqual(dance['url'], 'https://town.test/calendar.aspx?EID=4860')
+        yoga = sorted(e['startDate'] for e in by_name['Park Yoga'])
+        self.assertEqual(yoga, ['2026-10-13T09:00:00-04:00', '2026-10-27T09:00:00-04:00', '2026-11-03T09:00:00-05:00'])
+        [fair] = by_name['Fall Fair']
+        self.assertEqual((fair['startDate'], fair['location']['address']['addressLocality']), ('2026-10-24', 'Plymouth'))
+        self.assertEqual(fair['eventStatus'], 'https://schema.org/EventCancelled')
+        [walk] = by_name['Night Sky Walk']
+        self.assertEqual(walk['startDate'], '2026-10-17T20:00:00-04:00')
+        self.assertEqual(walk['location']['name'], 'Test venue')  # config default when LOCATION is missing
+
+
+
 if __name__=='__main__':
     unittest.main()

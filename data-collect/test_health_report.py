@@ -102,5 +102,39 @@ class ChecksTest(unittest.TestCase):
         self.assertLess(text.index("[WARN] b"), text.index("[ok] a"))
 
 
+class CoverageTest(unittest.TestCase):
+    def test_near_home_week_counts_home_towns_and_nearby_tier(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            soon = (NOW + timedelta(days=2)).isoformat()
+            (root / "events.json").write_text(json.dumps({"events": [
+                {"start": soon, "city": "Canton"}, {"start": soon, "city": "Plymouth, MI"},
+                {"start": soon, "city": "Ann Arbor"}, {"start": soon, "city": "Superior Twp", "localityTier": "nearby"},
+                {"start": (NOW + timedelta(days=9)).isoformat(), "city": "Canton"},
+                {"start": (NOW - timedelta(days=1)).isoformat(), "city": "Canton"}]}))
+            self.assertEqual(hr.near_home_week(NOW, root), 3)
+
+    def test_drops_against_the_recent_median(self):
+        earlier = [{"coverage": {"nearHomeWeek": n, "sources": {"library": lib, "tiny": 4}}}
+                   for n, lib in ((60, 150), (64, 140), (58, 160))]
+        [near, sources] = hr.coverage(25, {"library": 20, "tiny": 0, "new": 50}, earlier)
+        self.assertEqual(near["status"], "fail")
+        self.assertIn("25 events near home", near["detail"])
+        self.assertEqual(sources["status"], "warn")
+        self.assertEqual(sources["drops"], ["library 20 (median 150)"])  # tiny and new sources are ignored
+        [near, sources] = hr.coverage(55, {"library": 120}, earlier)
+        self.assertEqual((near["status"], sources["status"]), ("ok", "ok"))
+        [first, _] = hr.coverage(40, {"library": 120}, [])
+        self.assertIn("no baseline yet", first["detail"])
+
+    def test_history_reads_earlier_daily_reports_only(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            for day in ("2026-10-29", "2026-11-04", "2026-11-05", "2026-11-06"):
+                (out / f"{day}.json").write_text(json.dumps({"date": day}))
+            (out / "latest.json").write_text("{}")
+            self.assertEqual([r["date"] for r in hr.history(out, "2026-11-06", days=2)], ["2026-11-04", "2026-11-05"])
+
+
 if __name__ == "__main__":
     unittest.main()

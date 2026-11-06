@@ -618,10 +618,151 @@ def atg(c):
     c.complete = True
 
 
+def _html_text(value):
+    return re.sub(r"\s+", " ", BeautifulSoup(value or "", "html.parser").get_text(" ")).strip()
+
+
+def librarycalendar(c):
+    """LibraryCalendar (LibraryMarket, Drupal) JSON feed: every published event
+    in the requested window, with zone-local times, branch, room and audience.
+    Used by the Canton and Plymouth libraries. The feed matches the calendar's
+    own day view (checked 2026-11-06), so one bounded request is complete."""
+    base = c.url.rstrip("/")
+    if not base.endswith("/events/feed/json"):
+        base = urlunsplit(urlsplit(base)[:2] + ("/events/feed/json", "", ""))
+    data = c.json(query(base, start=str(c.first), end=str(c.last)))
+    if not isinstance(data, list):
+        raise ValueError("LibraryCalendar feed changed shape")
+    names = lambda field: [str(v) for v in (field or {}).values()] if isinstance(field, dict) else []
+    for r in data:
+        if not r.get("public", True) or not r.get("published", True):
+            continue
+        tz = r.get("timezone") or "America/Detroit"
+        # An off-site event has a structured address with a town; online and
+        # in-library events carry only a country ("United States") there.
+        raw = r.get("offsite_address_raw") if isinstance(r.get("offsite_address_raw"), dict) else {}
+        lines = [x.strip() for x in BeautifulSoup(r.get("offsite_address") or "", "html.parser").get_text("\n").split("\n") if x.strip()]
+        offsite = ((raw.get("organization") or (lines[0] if lines else "")).strip() or None) if raw.get("locality") else None
+        branch = next((b for b in names(r.get("branch")) if b != "Off-Site Location"), None)
+        audience = names(r.get("age_group"))
+        kinds = names(r.get("program_type"))
+        description = _html_text(r.get("description"))
+        extra = {"room": ", ".join(names(r.get("room"))), "audience": audience, "onlineUrl": r.get("online_address"),
+                 "registration": "Registration required" if r.get("registration_enabled") else None,
+                 "dateModified": stamp(r.get("changed"), tz)}
+        c.add(r.get("title"), stamp(r.get("start_date"), tz), end=stamp(r.get("end_date"), tz),
+              url=r.get("url"), native_id=f"librarycalendar:{urlsplit(base).netloc}:{r.get('id')}",
+              venue=offsite or branch, city=raw.get("locality") if offsite else None, description=description,
+              category=", ".join(kinds) or None, image=r.get("image"),
+              **{k: v for k, v in extra.items() if v})
+    c.complete = True
+
+
+def _ical_lines(body):
+    lines = []
+    for raw in body.replace("\r\n", "\n").replace("\r", "\n").split("\n"):
+        if raw[:1] in (" ", "\t") and lines:
+            lines[-1] += raw[1:]
+        elif raw:
+            lines.append(raw)
+    return lines
+
+
+def _ical_value(value):
+    """RFC 5545 TEXT unescaping: \\n, \\, \\; and \\\\."""
+    return re.sub(r"\\([nN,;\\])", lambda m: "\n" if m.group(1) in "nN" else m.group(1), value)
+
+
+def _ical_datetime(params, value):
+    """A DTSTART/DTEND/EXDATE value as a date (all-day) or a datetime in its
+    real zone (ZoneInfo, so recurrences keep wall-clock time across DST)."""
+    value = value.strip()
+    if params.get("VALUE") == "DATE" or re.fullmatch(r"\d{8}", value):
+        return date(int(value[:4]), int(value[4:6]), int(value[6:8]))
+    if value.endswith("Z"):
+        return datetime.strptime(value, "%Y%m%dT%H%M%SZ").replace(tzinfo=timezone.utc).astimezone(DETROIT)
+    try:
+        zone = ZoneInfo(params.get("TZID", "America/Detroit"))
+    except Exception:
+        zone = DETROIT
+    return datetime.strptime(value, "%Y%m%dT%H%M%S").replace(tzinfo=zone)
+
+
+def _ical_time(params, value):
+    """(ISO stamp or date string, all_day) from a DTSTART/DTEND property."""
+    moment = _ical_datetime(params, value)
+    return moment.isoformat(), not isinstance(moment, datetime)
+
+
+def ical_events(body):
+    """VEVENTs as dicts of (params, value) per property name; RRULE kept raw."""
+    events, current = [], None
+    for line in _ical_lines(body):
+        if line == "BEGIN:VEVENT":
+            current = {}
+        elif line == "END:VEVENT" and current is not None:
+            events.append(current)
+            current = None
+        elif current is not None and ":" in line:
+            head, value = line.split(":", 1)
+            name, *raw_params = head.split(";")
+            params = dict(p.split("=", 1) for p in raw_params if "=" in p)
+            current.setdefault(name.upper(), []).append((params, value))
+    return events
+
+
+def ical(c):
+    """Any RFC 5545 feed: config "urls" (one or more), plus venue/city defaults.
+    Recurring events are expanded inside the window; EXDATEs are honoured and
+    STATUS:CANCELLED marks the occurrence canceled. Used for CivicPlus
+    (Canton Township) calendars, one feed per public category."""
+    from dateutil.rrule import rrulestr
+    urls = c.config.get("urls") or [c.url]
+    for feed in urls:
+        events = ical_events(c.get(feed))
+        for ev in events:
+            first = lambda name: (ev.get(name) or [({}, "")])[0]
+            summary = _ical_value(first("SUMMARY")[1]).strip()
+            if not ev.get("DTSTART"):
+                c.problem(summary, "VEVENT without DTSTART", feed)
+                continue
+            start, all_day = _ical_time(*first("DTSTART"))
+            end = _ical_time(*first("DTEND"))[0] if ev.get("DTEND") else None
+            description = _html_text(_ical_value(first("DESCRIPTION")[1]))
+            location = _html_text(_ical_value(first("LOCATION")[1]))
+            venue, _, address = location.partition(" - ")
+            city = c.config.get("city")
+            for town in c.config.get("cities", []):
+                if re.search(rf"\b{re.escape(town)}\b", address):
+                    city = town
+            link = first("URL")[1] or next(iter(re.findall(r"https?://\S+", description)), None)
+            link = urljoin(feed, link) if link else None
+            status = "canceled" if first("STATUS")[1].strip().upper() == "CANCELLED" else None
+            uid = first("UID")[1] or f"{summary}:{start}"
+            starts = [start]
+            if ev.get("RRULE") and not all_day:
+                begin = _ical_datetime(*first("DTSTART"))
+                rule = rrulestr(first("RRULE")[1], dtstart=begin)
+                excluded = {_ical_datetime(p, x).isoformat() for p, v in ev.get("EXDATE", []) for x in v.split(",")}
+                window_end = datetime.combine(c.last, datetime.max.time(), DETROIT)
+                window_start = datetime.combine(c.first, datetime.min.time(), DETROIT)
+                starts = [s.isoformat() for s in rule.between(window_start, window_end, inc=True)
+                          if s.isoformat() not in excluded]
+            duration = (_ical_datetime(*first("DTEND")) - _ical_datetime(*first("DTSTART"))) if end and not all_day else None
+            zone = begin.tzinfo if ev.get("RRULE") and not all_day else None
+            for slot in starts:
+                local = datetime.fromisoformat(slot)
+                local = local.replace(tzinfo=None).replace(tzinfo=zone) if zone else local
+                slot_end = (local + duration).isoformat() if duration else (None if all_day else end)
+                c.add(summary, slot, end=slot_end, url=link or feed, native_id=f"{uid}:{slot}",
+                      venue=venue.strip() or None, city=city, description=description, status=status)
+    c.complete = True
+
+
 ADAPTERS = {"umich": umich, "crowdwork": crowdwork, "squarespace": squarespace,
             "tribe": tribe, "ovationtix": ovationtix, "semja": semja, "season": dated_season,
             "nature": nature, "etix": etix, "atg": atg, "dso": dso,
-            "kempf": kempf, "five15": five15}
+            "kempf": kempf, "five15": five15, "librarycalendar": librarycalendar, "ical": ical}
 
 
 def collect(source, reference_day=None, horizon_days=90, timeout=20, getter=fetch):

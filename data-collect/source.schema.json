@@ -190,7 +190,11 @@
         },
         "identity_authority": {
           "type": "string",
-          "enum": ["organizer", "ticket", "unknown"],
+          "enum": [
+            "organizer",
+            "ticket",
+            "unknown"
+          ],
           "description": "Authority of event facts when reconciling source snapshots."
         },
         "verified_calendar": {
@@ -215,7 +219,9 @@
                 "atg",
                 "dso",
                 "kempf",
-                "five15"
+                "five15",
+                "librarycalendar",
+                "ical"
               ]
             },
             "url": {
@@ -248,6 +254,22 @@
             },
             "clientId": {
               "type": "string"
+            },
+            "urls": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "description": "ical: one or more RFC 5545 feeds"
+            },
+            "cities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "ical: towns recognised in LOCATION addresses; city otherwise"
             }
           }
         }
