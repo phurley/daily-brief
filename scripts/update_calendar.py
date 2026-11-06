@@ -81,8 +81,9 @@ PUBLIC_FIELDS = ("id", "type", "title", "date", "startTime", "endTime")
 # near-duplicate entries that the deterministic (title, date, time) key misses
 # (e.g. "Collin's Birthday" vs "Collin's BDay") and strips bogus times from
 # all-day occasions (birthdays, anniversaries, holidays). Override the model
-# with OPENROUTER_CALENDAR_MODEL or `llmModel` in calendars.json.
-DEFAULT_LLM_MODEL = "qwen/qwen3-32b"
+# with OPENROUTER_CALENDAR_MODEL or `llmModel` in calendars.json; the default is
+# models.json role "calendar".
+DEFAULT_LLM_MODEL = json.loads((REPO / "models.json").read_text())["roles"]["calendar"]["chain"][0]["model"]
 OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 LLM_TIMEOUT = 90.0
 LLM_RETRYABLE = {429, 500, 502, 503, 524, 529}

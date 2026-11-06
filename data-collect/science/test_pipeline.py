@@ -281,19 +281,19 @@ class ExtractionChainTest(unittest.TestCase):
         from extract.llm import LLMError, TruncatedOutput
         outer = self
         class Fake:
-            def __init__(self, model): self.model = model
+            def __init__(self, entry): self.model = entry['model']
             def complete_json(self, *a, **k):
                 outer.tried.append(self.model)
                 if self.model in failures:
                     raise failures[self.model]
                 return {'model': self.model}
-        return lambda model: Fake(model)
+        return lambda entry: Fake(entry)
 
     def test_chain_order_and_fallthrough(self):
         from extract.llm import LLMError, TruncatedOutput
         self.assertEqual(self.pipeline.extraction_models(),
-                         ['google/gemini-3.8-flash', 'google/gemini-2.5-flash', 'google/gemini-3.1-flash-lite'])
-        self.assertEqual(self.pipeline.REASONING_EFFORT['google/gemini-3.8-flash'], 'low')
+                         [{'model': 'google/gemini-3.8-flash', 'reasoning_effort': 'low'},
+                          {'model': 'google/gemini-2.5-flash'}, {'model': 'google/gemini-3.1-flash-lite'}])
         entry, article = {'title': 't', 'url': 'https://science.example/a'}, {'text': 'x', 'links': []}
         fails = {'google/gemini-3.8-flash': LLMError('HTTP 503'), 'google/gemini-2.5-flash': TruncatedOutput('runaway')}
         with patch.object(self.pipeline, '_client', self.client_for(fails)):
@@ -307,7 +307,7 @@ class ExtractionChainTest(unittest.TestCase):
     def test_last_failure_is_raised(self):
         from extract.llm import LLMError
         entry, article = {'title': 't', 'url': 'https://science.example/a'}, {'text': 'x', 'links': []}
-        fails = {m: LLMError(m) for m in self.pipeline.extraction_models()}
+        fails = {e['model']: LLMError(e['model']) for e in self.pipeline.extraction_models()}
         with patch.object(self.pipeline, '_client', self.client_for(fails)):
             with self.assertRaises(LLMError):
                 self.pipeline.extract(entry, article)

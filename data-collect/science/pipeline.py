@@ -26,7 +26,7 @@ from bs4 import BeautifulSoup
 from curl_cffi import requests
 import jsonschema
 from extract.llm import LLMError, make_chat_client
-from extract import env
+from extract import env, models
 
 ROOT = Path(__file__).resolve().parents[2]
 UTC = timezone.utc
@@ -191,13 +191,6 @@ def verify_date(entry, article, now):
     return iso(published)
 
 
-# bench_science.py on 30 stored articles (2026-11-06), share accepted by build_story:
-#   gemini-3.8-flash, low thinking: 16/30, 0 truncated, 0 rejected, judge 5.00/4.38/3.88
-#   gemini-2.5-flash:                13/30, 11 truncated (JSON runaway), judge 4.92/4.31/3.31
-#   gemini-3.1-flash-lite:            9/30, 13 rejected (caveat quotes not in the article)
-# Default thinking on 3.8 Flash spends the 2500-token cap and truncates 7/30.
-DEFAULT_MODEL = "google/gemini-3.8-flash"
-REASONING_EFFORT = {"google/gemini-3.8-flash": "low"}
 # Prompt budget; verification still runs against the full article.
 PROMPT_TEXT_CHARS = 14000
 PROMPT_LINKS = 80
@@ -210,27 +203,23 @@ def prompt_article(article, url):
     return {**article, "text": article["text"][:PROMPT_TEXT_CHARS], "links": links[:PROMPT_LINKS]}
 
 
-# Each model is tried in turn when the one before it fails (no answer, error or
-# truncation). 3.8 Flash is on Google's paid standard tier; 2.5 Flash on
-# OpenRouter loops inside a JSON string on ~1 in 4 articles (A/B 2026-11-03), so
-# 3.1 Flash-Lite, which rejects more quotes but does not run away, is last.
-FALLBACK_MODEL = "google/gemini-2.5-flash"
-LAST_RESORT_MODEL = "google/gemini-3.1-flash-lite"
+# The model chain (3.8 Flash with low thinking, then 2.5 Flash, then 3.1
+# Flash-Lite), thinking level and token cap come from models.json, role "science".
 _CLIENTS = {}
 
 
-def _client(model):
-    if model not in _CLIENTS:
+def _client(entry):
+    key = (entry["model"], entry.get("reasoning_effort"))
+    if key not in _CLIENTS:
         env.load_dotenv()
-        _CLIENTS[model] = make_chat_client(model=model, timeout=60, retries=1, caller="science", cache=True,
-                                           max_tokens=2500, reasoning_effort=REASONING_EFFORT.get(model))
-    return _CLIENTS[model]
+        _CLIENTS[key] = make_chat_client(model=entry["model"], timeout=60, retries=1, caller="science", cache=True,
+                                         max_tokens=models.max_tokens("science"),
+                                         reasoning_effort=entry.get("reasoning_effort"))
+    return _CLIENTS[key]
 
 
 def extraction_models():
-    chain = [os.getenv("OPENROUTER_SCIENCE_MODEL", DEFAULT_MODEL),
-             os.getenv("OPENROUTER_SCIENCE_FALLBACK_MODEL", FALLBACK_MODEL), LAST_RESORT_MODEL]
-    return [m for i, m in enumerate(chain) if m and m not in chain[:i]]
+    return models.chain("science")
 
 
 def extract(entry, article):
@@ -239,12 +228,12 @@ def extract(entry, article):
         {"role": "system", "content": PROMPT},
         {"role": "user", "content": json.dumps({"title": entry["title"], "article": prompt_article(article, entry["url"])})},
     ]
-    models = extraction_models()
-    for i, model in enumerate(models):
+    chain = extraction_models()
+    for i, entry in enumerate(chain):
         try:
-            return _client(model).complete_json(messages, EXTRACTION_SCHEMA, schema_name="science_story")
+            return _client(entry).complete_json(messages, EXTRACTION_SCHEMA, schema_name="science_story")
         except LLMError:
-            if i == len(models) - 1:
+            if i == len(chain) - 1:
                 raise
 
 

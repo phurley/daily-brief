@@ -15,7 +15,7 @@
  *
  * Environment (read from ./​.env if present):
  *   OPENROUTER_API_KEY        required
- *   OPENROUTER_VIBE_MODEL     default google/gemini-2.5-flash-lite
+ *   OPENROUTER_VIBE_MODEL     default: models.json role "vibe"
  *   VIBE_RETENTION_HOURS      default 24
  */
 
@@ -40,7 +40,7 @@ const CACHE_DIR = path.join(HERE, "cache");
 
 const TIME_ZONE = "America/Detroit";
 const FALLBACK_LOCATION = { name: "Canton", region: "Michigan", latitude: 42.3086, longitude: -83.4824, timeZone: TIME_ZONE };
-const DEFAULT_MODEL = "google/gemini-2.5-flash-lite";
+const DEFAULT_MODEL = JSON.parse(fs.readFileSync(path.join(ROOT, "models.json"), "utf8")).roles.vibe.chain[0].model;
 const ENDPOINT = "https://openrouter.ai/api/v1/chat/completions";
 const MAX_TEXT = 420;
 const SUMMARY_CHARS = 260;

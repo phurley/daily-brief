@@ -21,35 +21,20 @@ import urllib.error
 import urllib.request
 from typing import Any, Optional
 
-from . import env, usage
+from . import env, models, usage
 
-# Chosen by bench_live.py on 17 live chunks (2026-11-05):
-#   gemini-3.1-flash-lite: 100% valid JSON, 0 errors, judge 4.06, 12% made-up details, 2.4s p50
-#   qwen/qwen3-32b:        65% valid JSON, 6 errors, judge 3.73, 27% made-up details, 66s p50 (DeepInfra stalls)
-# It costs about 5x qwen per call. Override with OPENROUTER_EXTRACT_MODEL.
-DEFAULT_MODEL = "google/gemini-3.1-flash-lite"
+# Models, fallbacks, Gemini names/tiers and prices live in models.json (repo root).
+DEFAULT_MODEL = models.registry()["roles"]["extract"]["chain"][0]["model"]
 DEFAULT_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
-# Google's own OpenAI-compatible endpoint. Models listed in _GEMINI_NAMES go here
+# Google's own OpenAI-compatible endpoint. Models with a "gemini" name in models.json go here
 # instead of OpenRouter when a Gemini key is set, down a price ladder:
 #   free  FREE_TIER_GEMINI_API_KEY (project without billing; rate-limited, $0)
 #   flex  GEMINI_API_KEY, Flex tier (half price, best-effort latency)
 #   default  GEMINI_API_KEY, standard tier (full price)
 # A rung that is out of quota, busy or slow drops the call to the next one.
-# LLM_PROVIDER=openrouter switches back; GEMINI_TIERS (e.g. "flex,default")
-# overrides the ladder.
+# A model's "tiers" in models.json sets its ladder; GEMINI_TIERS (e.g.
+# "flex,default") overrides it for every model; LLM_PROVIDER=openrouter switches back.
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
-# Only models these projects can use: new Google projects get 404 for 2.5 Flash.
-_GEMINI_NAMES = {
-    "google/gemini-3.1-flash-lite": "gemini-3.1-flash-lite-preview",
-    "google/gemini-3.8-flash": "gemini-3.8-flash",
-}
-# Per-model ladder when GEMINI_TIERS is unset. 3.8 Flash queues past our
-# timeouts on the free key and Flex returned 503 "high demand" (2026-11-06).
-_GEMINI_MODEL_TIERS = {"google/gemini-3.8-flash": "default"}
-# USD per million tokens (input, output) at the standard tier; Flex is half.
-# Google reports tokens but no cost, so the usage log estimates it from these.
-# 3.8 Flash is reported to rise to (1.50, 7.50) on 2027-01-01.
-_GEMINI_PRICES = {"gemini-3.1-flash-lite-preview": (0.25, 1.50), "gemini-3.8-flash": (0.75, 3.75)}
 _TIER_FALLBACK = {403, 429, 500, 503, 529}  # quota, capacity or a key problem on this rung
 _FREE_COOLDOWN = 60.0  # seconds off the free rung after a per-minute 429
 _free_blocked_until = 0.0  # shared by every client in the process
@@ -160,10 +145,9 @@ class ChatClient:
         self.model = model
         self.tiers: list[str] = []
         self.gemini_keys = {"free": env.getenv("FREE_TIER_GEMINI_API_KEY"), "paid": env.getenv("GEMINI_API_KEY")}
-        default_ladder = _GEMINI_MODEL_TIERS.get(model, "free,flex,default")
-        ladder = [t.strip() for t in os.getenv("GEMINI_TIERS", default_ladder).split(",") if t.strip()]
+        ladder = [t.strip() for t in os.getenv("GEMINI_TIERS", models.gemini_tiers(model)).split(",") if t.strip()]
         ladder = [t for t in ladder if self.gemini_keys["free" if t == "free" else "paid"]]
-        if (api_key is None and endpoint is None and ladder and model in _GEMINI_NAMES
+        if (api_key is None and endpoint is None and ladder and models.gemini_name(model)
                 and os.getenv("LLM_PROVIDER", "auto") != "openrouter"):
             self.provider = "gemini"
             self.tiers = ladder
@@ -297,7 +281,7 @@ class ChatClient:
     def _wire(self, payload: dict[str, Any], tier: Optional[str]) -> dict[str, Any]:
         """The request body for this client's provider."""
         if self.provider == "gemini":
-            wire = {**payload, "model": _GEMINI_NAMES[self.model]}
+            wire = {**payload, "model": models.gemini_name(self.model)}
             if tier in ("flex", "default"):
                 wire["service_tier"] = tier
             return wire
@@ -336,7 +320,7 @@ class ChatClient:
         raw = dict(raw or {})
         if self.provider != "gemini" or "cost" in raw:
             return raw
-        price = _GEMINI_PRICES.get(_GEMINI_NAMES[self.model])
+        price = models.price(self.model)
         if tier == "free":
             raw["cost"] = 0.0
         elif price:
@@ -420,6 +404,6 @@ class ChatClient:
 def make_chat_client(model: Optional[str] = None, **kwargs: Any) -> ChatClient:
     env.load_dotenv()
     return ChatClient(
-        model=model or env.getenv("OPENROUTER_EXTRACT_MODEL") or DEFAULT_MODEL,
+        model=model or models.primary("extract"),
         **kwargs,
     )
