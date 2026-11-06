@@ -15,7 +15,8 @@
  *
  * Environment (read from ./​.env if present):
  *   OPENROUTER_API_KEY        required
- *   OPENROUTER_VIBE_MODEL     default: models.json role "vibe"
+ *   OPENROUTER_VIBE_MODEL     replaces the first model of models.json role "vibe"
+ *   LLM_USAGE_LOG             usage log (default data-collect/processed/llm-usage.jsonl; "off")
  *   VIBE_RETENTION_HOURS      default 24
  */
 
@@ -40,13 +41,17 @@ const CACHE_DIR = path.join(HERE, "cache");
 
 const TIME_ZONE = "America/Detroit";
 const FALLBACK_LOCATION = { name: "Canton", region: "Michigan", latitude: 42.3086, longitude: -83.4824, timeZone: TIME_ZONE };
-const DEFAULT_MODEL = JSON.parse(fs.readFileSync(path.join(ROOT, "models.json"), "utf8")).roles.vibe.chain[0].model;
+const VIBE_ROLE = JSON.parse(fs.readFileSync(path.join(ROOT, "models.json"), "utf8")).roles.vibe;
 const ENDPOINT = "https://openrouter.ai/api/v1/chat/completions";
+// Each model gets this many attempts before the next model in the chain.
+// Failures seen 2026-10/11: OpenRouter 429, JSON cut off mid-string, invalid copy.
+const ATTEMPTS_PER_MODEL = 3;
+const CALL_TIMEOUT_MS = 120000;
 const MAX_TEXT = 420;
 const SUMMARY_CHARS = 260;
 
 // Every (section, role) the page renders. masthead/eyebrow is deterministic.
-const SECTIONS = [
+export const SECTIONS = [
   { section: "masthead", role: "headline", guide: "A magazine-cover headline for the whole day (max ~70 chars). Lead with a concrete image or unlikely juxtaposition from the day. Never a weather label or a category word." },
   { section: "masthead", role: "summary", guide: "2 sentences framing the day: the weather feel plus the single most interesting local or science thread." },
   { section: "weather", role: "note", guide: "One sentence with the day's conditions and high/low, mentioning rain chance only if notable." },
@@ -322,31 +327,111 @@ function buildMessages(context) {
   ];
 }
 
-async function callModel(messages, apiKey, model) {
+export class ModelError extends Error {
+  constructor(message, { status = null, retryable = true } = {}) {
+    super(message);
+    this.status = status;
+    this.retryable = retryable;
+  }
+}
+
+/** The vibe model chain: models.json role "vibe", first entry replaceable by env. */
+export function vibeModels(role = VIBE_ROLE, env = process.env) {
+  const chain = role.chain.map((entry) => entry.model);
+  if (env.OPENROUTER_VIBE_MODEL) chain[0] = env.OPENROUTER_VIBE_MODEL;
+  return [...new Set(chain)];
+}
+
+/** Append one row to the shared LLM usage log (same format as extract/usage.py). */
+export function recordUsage(model, usage, kind = "chat", env = process.env) {
+  const target = env.LLM_USAGE_LOG || path.join(ROOT, "data-collect", "processed", "llm-usage.jsonl");
+  if (target === "off") return;
+  const row = {
+    at: new Date().toISOString().replace(/\.\d{3}Z$/, "+00:00"), caller: "vibe", kind, model,
+    promptTokens: usage?.prompt_tokens ?? null, cachedTokens: usage?.prompt_tokens_details?.cached_tokens ?? null,
+    completionTokens: usage?.completion_tokens ?? null,
+    reasoningTokens: usage?.completion_tokens_details?.reasoning_tokens ?? null, cost: usage?.cost ?? null,
+  };
+  try {
+    fs.mkdirSync(path.dirname(target), { recursive: true });
+    fs.appendFileSync(target, JSON.stringify(row) + "\n");
+  } catch { /* logging never fails a run */ }
+}
+
+async function callModel(messages, apiKey, model, fetchImpl = fetch) {
   const body = {
     model,
     messages,
     temperature: 0.6,
+    max_tokens: VIBE_ROLE.max_tokens || 4000,
+    usage: { include: true },
     response_format: { type: "json_schema", json_schema: { name: "vibe", strict: true, schema: RESPONSE_SCHEMA } },
   };
-  const response = await fetch(ENDPOINT, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-      "HTTP-Referer": "https://phurley.github.io/daily-brief/",
-      "X-Title": "Daily Brief vibe-check",
-    },
-    body: JSON.stringify(body),
-  });
+  let response;
+  try {
+    response = await fetchImpl(ENDPOINT, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://phurley.github.io/daily-brief/",
+        "X-Title": "Daily Brief vibe-check",
+      },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(CALL_TIMEOUT_MS),
+    });
+  } catch (error) {
+    recordUsage(model, null, "error");
+    throw new ModelError(`request failed: ${error.message}`);
+  }
   const text = await response.text();
   if (!response.ok) {
-    throw new Error(`OpenRouter ${response.status}: ${truncate(text, 300)}`);
+    recordUsage(model, null, "error");
+    // 402 = out of credits and 401 = bad key: no retry or other model fixes those.
+    throw new ModelError(`OpenRouter ${response.status}: ${truncate(text, 300)}`,
+      { status: response.status, retryable: ![401, 402].includes(response.status) });
   }
-  const payload = JSON.parse(text);
-  const content = payload?.choices?.[0]?.message?.content;
-  if (!content) throw new Error(`model returned no content: ${truncate(text, 300)}`);
-  return { data: parseJson(content), usage: payload.usage || null };
+  let payload;
+  try {
+    payload = JSON.parse(text);
+  } catch (error) {
+    throw new ModelError(`unparseable response: ${error.message}`);
+  }
+  recordUsage(model, payload.usage);
+  const choice = payload?.choices?.[0];
+  const content = choice?.message?.content;
+  if (!content) throw new ModelError(`model returned no content (finish ${choice?.finish_reason})`);
+  if (choice.finish_reason === "length") throw new ModelError("output hit max_tokens");
+  try {
+    return { data: parseJson(content), usage: payload.usage || null };
+  } catch (error) {
+    throw new ModelError(`invalid JSON: ${error.message}`);
+  }
+}
+
+/**
+ * Call each model in the chain until one returns valid copy. Each model gets
+ * ATTEMPTS_PER_MODEL tries (2s, then 4s backoff); invalid copy counts as a
+ * failed try. A 401/402 stops at once. Returns { generated, usage, model }.
+ */
+export async function generateCopy(messages, apiKey, models, {
+  fetchImpl = fetch, sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms)), log = console.error,
+} = {}) {
+  let last;
+  for (const model of models) {
+    for (let attempt = 1; attempt <= ATTEMPTS_PER_MODEL; attempt++) {
+      try {
+        const { data, usage } = await callModel(messages, apiKey, model, fetchImpl);
+        return { generated: validateGenerated(data?.messages), usage, model };
+      } catch (error) {
+        last = error;
+        if (error instanceof ModelError && !error.retryable) throw error;
+        log(`vibe-check: ${model} attempt ${attempt} failed: ${error.message}`);
+        if (attempt < ATTEMPTS_PER_MODEL) await sleep(2000 * attempt);
+      }
+    }
+  }
+  throw last;
 }
 
 function parseJson(content) {
@@ -428,11 +513,8 @@ async function main() {
 
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) throw new Error("OPENROUTER_API_KEY is not set (see .env.example)");
-  const model = process.env.OPENROUTER_VIBE_MODEL || DEFAULT_MODEL;
-
   const messages = buildMessages(context);
-  const { data, usage } = await callModel(messages, apiKey, model);
-  const generated = validateGenerated(data.messages);
+  const { generated, usage, model } = await generateCopy(messages, apiKey, vibeModels());
   // Enforce the freshness contract even if the model ignores its instructions.
   generated.set("starship/note", { text: context.geeknews.starship.summary });
   const scienceCopy = scienceEditorial(context.geeknews);
@@ -461,9 +543,11 @@ async function main() {
   return 0;
 }
 
-main()
-  .then((code) => process.exit(code ?? 0))
-  .catch((error) => {
-    console.error(`vibe-check failed: ${error.message}`);
-    process.exit(1);
-  });
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main()
+    .then((code) => process.exit(code ?? 0))
+    .catch((error) => {
+      console.error(`vibe-check failed: ${error.message}`);
+      process.exit(1);
+    });
+}

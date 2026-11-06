@@ -40,7 +40,9 @@
     },
     "vibe": {
       "env": ["OPENROUTER_VIBE_MODEL"],
-      "chain": [{"model": "google/gemini-2.5-flash-lite"}]
+      "chain": [{"model": "google/gemini-3.1-flash-lite"}, {"model": "google/gemini-2.5-flash-lite"}],
+      "max_tokens": 4000,
+      "note": "vibe-check/generate.mjs (Node, OpenRouter): 3 attempts per model, then the next. 2.5 Flash-Lite was primary until 2026-11-06; OpenRouter's shared Google quota for it returns 429 'temporarily rate-limited upstream' on vibe's request most tries"
     },
     "calendar": {
       "env": ["OPENROUTER_CALENDAR_MODEL"],

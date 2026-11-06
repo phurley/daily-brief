@@ -210,6 +210,27 @@ class PipelineTest(unittest.TestCase):
         with self.assertRaises(ValueError):verify_date(entry,article,NOW)
         entry['publishedAt']='Wed, 07 Oct 2026 12:00:00 +0000'
         with self.assertRaises(ValueError):verify_date(entry,article,NOW)
+    def test_trusted_feed_date_skips_only_the_article_corroboration(self):
+        entry=parse_feed(self.feed)[0]
+        undated=article_content(b'<html><main><p>'+b'Mission news without a printed date. '*20+b'</p></main></html>',entry['url'])
+        entry['publishedAt']='Wed, 07 Oct 2026 12:00:00 +0000'
+        with self.assertRaises(ValueError):verify_date(entry,undated,NOW)
+        self.assertEqual(verify_date(entry,undated,NOW,trust_feed=True),'2026-10-07T12:00:00Z')
+        for bad in ('Thu, 08 Oct 2026 12:00:00','Sat, 10 Oct 2026 12:00:00 +0000'):  # no timezone; future
+            entry['publishedAt']=bad
+            with self.assertRaises(ValueError):verify_date(entry,undated,NOW,trust_feed=True)
+    def test_story_in_main_wins_over_small_article_cards(self):
+        # ESA 2026 redesign: related-story cards are <article>s; the story is in <main>.
+        story='Gas seeping above volcanic rifts suggests Mars is sleeping. '*15
+        html=(f'<html><body><main><h1>Mars</h1><p>{story}</p>'
+              '<article class="box"><a href="/a">Related card one</a></article>'
+              '<article class="box"><a href="/b">Related card two</a></article></main></body></html>')
+        article=article_content(html.encode(),'https://www.esa.int/articles/x')
+        self.assertIn('volcanic rifts',article['text'])
+        self.assertGreater(len(article['text'].split()),100)
+        # A substantive first <article> is still used on its own.
+        normal=article_content((FIX/'article.html').read_bytes(),'https://science.example/study')
+        self.assertIn('Researchers observed the effect',normal['text'])
     def test_recheck_does_not_redate_or_reextract_unchanged_article(self):
         self.run_pipeline(); original=self.doc()['stories'][0]
         self.run_pipeline(now=NOW+timedelta(days=2))
