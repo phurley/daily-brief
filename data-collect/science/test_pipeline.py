@@ -266,3 +266,49 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(self.doc()['stories'][0]['id'],'original-id')
 
 if __name__=='__main__': unittest.main()
+
+class ExtractionChainTest(unittest.TestCase):
+    """3.8 Flash first; any failure moves the article to the next model."""
+    def setUp(self):
+        from science import pipeline
+        self.pipeline = pipeline
+        for name in ('OPENROUTER_SCIENCE_MODEL', 'OPENROUTER_SCIENCE_FALLBACK_MODEL'):
+            patcher = patch.dict('os.environ', {}, clear=False); patcher.start(); self.addCleanup(patcher.stop)
+            import os; os.environ.pop(name, None)
+        self.tried = []
+
+    def client_for(self, failures):
+        from extract.llm import LLMError, TruncatedOutput
+        outer = self
+        class Fake:
+            def __init__(self, model): self.model = model
+            def complete_json(self, *a, **k):
+                outer.tried.append(self.model)
+                if self.model in failures:
+                    raise failures[self.model]
+                return {'model': self.model}
+        return lambda model: Fake(model)
+
+    def test_chain_order_and_fallthrough(self):
+        from extract.llm import LLMError, TruncatedOutput
+        self.assertEqual(self.pipeline.extraction_models(),
+                         ['google/gemini-3.8-flash', 'google/gemini-2.5-flash', 'google/gemini-3.1-flash-lite'])
+        self.assertEqual(self.pipeline.REASONING_EFFORT['google/gemini-3.8-flash'], 'low')
+        entry, article = {'title': 't', 'url': 'https://science.example/a'}, {'text': 'x', 'links': []}
+        fails = {'google/gemini-3.8-flash': LLMError('HTTP 503'), 'google/gemini-2.5-flash': TruncatedOutput('runaway')}
+        with patch.object(self.pipeline, '_client', self.client_for(fails)):
+            self.assertEqual(self.pipeline.extract(entry, article), {'model': 'google/gemini-3.1-flash-lite'})
+        self.assertEqual(self.tried, ['google/gemini-3.8-flash', 'google/gemini-2.5-flash', 'google/gemini-3.1-flash-lite'])
+        self.tried.clear()
+        with patch.object(self.pipeline, '_client', self.client_for({})):
+            self.assertEqual(self.pipeline.extract(entry, article), {'model': 'google/gemini-3.8-flash'})
+        self.assertEqual(self.tried, ['google/gemini-3.8-flash'])
+
+    def test_last_failure_is_raised(self):
+        from extract.llm import LLMError
+        entry, article = {'title': 't', 'url': 'https://science.example/a'}, {'text': 'x', 'links': []}
+        fails = {m: LLMError(m) for m in self.pipeline.extraction_models()}
+        with patch.object(self.pipeline, '_client', self.client_for(fails)):
+            with self.assertRaises(LLMError):
+                self.pipeline.extract(entry, article)
+

@@ -341,6 +341,13 @@ COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
   cost estimated from tokens. `GEMINI_TIERS=flex,default` changes the ladder;
   `LLM_PROVIDER=openrouter` turns it off. Other Gemini models (2.5 Flash is
   closed to new Google projects) stay on OpenRouter.
+- Science extraction (`science/pipeline.py`) tries `google/gemini-3.8-flash`
+  with low thinking on Google's paid standard tier (never the free key or Flex,
+  which time out or return 503 for it), then `google/gemini-2.5-flash` on
+  OpenRouter, then `google/gemini-3.1-flash-lite`; any failure, including a
+  truncated answer, moves the article to the next model. Chosen by
+  `bench_science.py` on 30 stored articles (2026-11-06). Override with
+  `OPENROUTER_SCIENCE_MODEL` / `OPENROUTER_SCIENCE_FALLBACK_MODEL`.
 
 ### Extraction retries and repair
 
