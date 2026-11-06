@@ -329,9 +329,19 @@ COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
   per-run cap, not a steady-state cost — candidates dated more than 2 days
   in the past are skipped entirely and the rest are sorted nearest-to-today
   first.
-- Extraction model: `OPENROUTER_EXTRACT_MODEL` (default
-  `google/gemini-3.1-flash-lite`, chosen over `qwen/qwen3-32b` by `bench_live.py`
-  on 2026-11-05 for quality and speed, at about 5x the cost per call).
+- Models: every job's model, fallbacks, thinking level and token cap, plus each
+  model's Google name, tier ladder and dated prices, live in `models.json` at the
+  repo root (read by `extract/models.py`, `vibe-check/generate.mjs` and
+  `scripts/update_calendar.py`). Each role lists the env vars that override it
+  (`OPENROUTER_EXTRACT_MODEL`, `OPENROUTER_SCIENCE_MODEL` ...). Extraction uses
+  `google/gemini-3.1-flash-lite`, chosen over `qwen/qwen3-32b` by
+  `bench_live.py` on 2026-11-05.
+- Quality canary: `quality_canary.py` runs each role's current model (extract,
+  science) over frozen samples in `processed/quality-canary/`, judges the
+  answers with `openai/gpt-4.1-mini` and appends a row to
+  `processed/model-quality.jsonl`, flagging drops against earlier runs of the
+  same model and sample (judge -0.3, valid/accept rate -10 points). Weekly via
+  the health job; `--refreeze` picks new samples (a new baseline).
 - Gemini direct: with `FREE_TIER_GEMINI_API_KEY` and/or `GEMINI_API_KEY` in
   `.env`, `google/gemini-3.1-flash-lite` calls skip OpenRouter and go to
   Google, trying the free-tier project first ($0, rate-limited), then the
@@ -339,15 +349,15 @@ COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
   free-tier per-minute limit sends calls to the next rung for 60s; a daily limit
   for the rest of the run. Usage rows read `... (gemini free|flex|default)`, with
   cost estimated from tokens. `GEMINI_TIERS=flex,default` changes the ladder;
-  `LLM_PROVIDER=openrouter` turns it off. Other Gemini models (2.5 Flash is
-  closed to new Google projects) stay on OpenRouter.
+  `LLM_PROVIDER=openrouter` turns it off. Only models with a `gemini` name in
+  `models.json` go direct (2.5 Flash is closed to new Google projects).
 - Science extraction (`science/pipeline.py`) tries `google/gemini-3.8-flash`
   with low thinking on Google's paid standard tier (never the free key or Flex,
   which time out or return 503 for it), then `google/gemini-2.5-flash` on
   OpenRouter, then `google/gemini-3.1-flash-lite`; any failure, including a
-  truncated answer, moves the article to the next model. Chosen by
-  `bench_science.py` on 30 stored articles (2026-11-06). Override with
-  `OPENROUTER_SCIENCE_MODEL` / `OPENROUTER_SCIENCE_FALLBACK_MODEL`.
+  truncated answer, moves the article to the next model (role `science` in
+  `models.json`). Chosen by `bench_science.py` on 30 stored articles
+  (2026-11-06).
 
 ### Extraction retries and repair
 
@@ -418,9 +428,8 @@ News stories pass a conservative Jev pre-screen (`NEWS_GATE` in
 confident rejects, falls through on Jev errors, and caches its rejections for a
 week unless the story's inputs change. `NEWS_JEV_GATE=0` turns it off.
 
-Model overrides: `OPENROUTER_EDITORIAL_MODEL`, `OPENROUTER_EDITORIAL_CHECK_MODEL`,
-`OPENROUTER_SCIENCE_MODEL`, `OPENROUTER_EXTRACT_MODEL`, `OPENROUTER_VIBE_MODEL`
-and `OPENROUTER_STARSHIP_MODEL`.
+Model defaults and their env overrides are listed per role in `models.json`;
+Starship keeps its own model in `starship/config.json` (`OPENROUTER_STARSHIP_MODEL` overrides).
 
 Collect also caches its Jev decisions and extraction answers, but reuses them
 for only 36 hours (`RESTART_CACHE_HOURS` in `extract/pipeline.py`). A collect

@@ -1,0 +1,71 @@
+{
+  "about": "Which LLM each Daily Brief job uses, and what we know about each model. Read by data-collect/extract/models.py (Python jobs), vibe-check/generate.mjs and scripts/update_calendar.py. A role's chain is tried in order when a call fails; each env var, if set, replaces the model at that position. Switching a model is a one-line change here; run bench_live.py / bench_science.py first. Prices are USD per million tokens at the standard tier, used to estimate cost where the provider reports none (Google direct; Flex is half).",
+  "roles": {
+    "extract": {
+      "env": ["OPENROUTER_EXTRACT_MODEL"],
+      "chain": [{"model": "google/gemini-3.1-flash-lite"}],
+      "chosen": "bench_live.py 2026-11-05: 100% valid JSON, judge 4.06, 12% made-up details, 2.4s p50 (qwen3-32b: 65%, 3.73, 27%, 66s)"
+    },
+    "science": {
+      "env": ["OPENROUTER_SCIENCE_MODEL", "OPENROUTER_SCIENCE_FALLBACK_MODEL"],
+      "chain": [
+        {"model": "google/gemini-3.8-flash", "reasoning_effort": "low"},
+        {"model": "google/gemini-2.5-flash"},
+        {"model": "google/gemini-3.1-flash-lite"}
+      ],
+      "max_tokens": 2500,
+      "chosen": "bench_science.py 2026-11-06 on 30 articles: 3.8 Flash low 16/30 accepted, 0 truncated, judge 5.00/4.38/3.88; 2.5 Flash 13/30, 11 truncated; 3.1 Flash-Lite 9/30, 13 caveat quotes rejected"
+    },
+    "review_events": {
+      "env": ["OPENROUTER_EDITORIAL_MODEL"],
+      "chain": [{"model": "google/gemini-2.5-flash-lite"}],
+      "max_tokens": 1500,
+      "chosen": "A/B 2026-11-03 on 14 shortlist pages: same verdicts as 2.5 Flash at half the cost"
+    },
+    "review_stories_editor": {
+      "env": ["OPENROUTER_EDITORIAL_MODEL"],
+      "chain": [{"model": "google/gemini-2.5-flash"}],
+      "max_tokens": 1500
+    },
+    "review_stories_check": {
+      "env": ["OPENROUTER_EDITORIAL_CHECK_MODEL"],
+      "chain": [{"model": "google/gemini-2.5-flash"}],
+      "max_tokens": 800
+    },
+    "vibe": {
+      "env": ["OPENROUTER_VIBE_MODEL"],
+      "chain": [{"model": "google/gemini-2.5-flash-lite"}]
+    },
+    "calendar": {
+      "env": ["OPENROUTER_CALENDAR_MODEL"],
+      "chain": [{"model": "qwen/qwen3-32b"}],
+      "note": "update_calendar.py has its own HTTP client (no call deadline, no usage log); calendars.json llmModel overrides"
+    }
+  },
+  "models": {
+    "google/gemini-3.1-flash-lite": {
+      "gemini": "gemini-3.1-flash-lite-preview",
+      "tiers": "free,flex,default",
+      "preview": true,
+      "prices": [{"from": "2026-01-01", "input": 0.25, "output": 1.50}]
+    },
+    "google/gemini-3.8-flash": {
+      "gemini": "gemini-3.8-flash",
+      "tiers": "default",
+      "tiers_note": "free key queues past our timeouts; Flex returned 503 high demand (2026-11-06)",
+      "prices": [
+        {"from": "2026-01-01", "input": 0.75, "output": 3.75},
+        {"from": "2027-01-01", "input": 1.50, "output": 7.50, "note": "reported by grounded Gemini 2026-11-06, not confirmed on the pricing page"}
+      ]
+    },
+    "google/gemini-2.5-flash": {
+      "note": "Google returns 404 for new projects; OpenRouter only, which may drop it"
+    },
+    "google/gemini-2.5-flash-lite": {
+      "note": "OpenRouter only; not tried on Google direct"
+    },
+    "qwen/qwen3-32b": {
+      "note": "DeepInfra stalls ~19 min per call at times (2026-11-05); replaced for extraction"
+    }
+  }
+}

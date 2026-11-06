@@ -22,13 +22,12 @@ from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 from dateutil.parser import parse
 from extract import env, evidence
+from extract import models
 from extract.llm import ChatClient
 from verified_calendars import fetch
 
 ROOT = Path(__file__).resolve().parent.parent
 TZ = ZoneInfo('America/Detroit')
-# A/B 2026-11-03 on 14 live shortlist pages: identical verdicts to 2.5 Flash at half the cost.
-DEFAULT_MODEL = 'google/gemini-2.5-flash-lite'
 FIELDS = ['id', 'url', 'start', 'end', 'venue', 'city', 'price', 'status']
 QUOTES = ['date', 'time', 'venue', 'admission', 'description', 'registration', 'end']
 SCHEMA = {'type': 'object', 'additionalProperties': False, 'properties': {
@@ -344,8 +343,9 @@ def main():
     out = opts.root / 'event-editorial.json'
     previous = json.loads(out.read_text()) if out.exists() and not opts.force else {}
     env.load_dotenv()
-    client = ChatClient(model=os.getenv('OPENROUTER_EDITORIAL_MODEL', DEFAULT_MODEL), retries=1, timeout=60,
-                        caller='review_events', cache=True, max_tokens=1500)
+    # Model and token cap: models.json role "review_events".
+    client = ChatClient(model=models.primary('review_events'), retries=1, timeout=60,
+                        caller='review_events', cache=True, max_tokens=models.max_tokens('review_events'))
     def generate(candidate, page):
         payload = {'candidate': {key: candidate.get(key) for key in ['title', 'start', 'venue', 'city', 'category']},
                    **model_evidence(page)}

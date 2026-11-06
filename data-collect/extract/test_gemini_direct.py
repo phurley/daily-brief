@@ -122,7 +122,8 @@ class GeminiLadderTest(unittest.TestCase):
         self.assertEqual(sent, [("Bearer paid-key", "default")])
         body = json.loads(post.call_args[0][0].data)
         self.assertEqual((body["model"], body["reasoning_effort"]), ("gemini-3.8-flash", "low"))
-        self.assertAlmostEqual(self.rows()[0]["cost"], (1000 * 0.75 + 200 * 3.75) / 1e6)
+        price_in, price_out = llm.models.price("google/gemini-3.8-flash")  # dated: rises 2027-01-01
+        self.assertAlmostEqual(self.rows()[0]["cost"], (1000 * price_in + 200 * price_out) / 1e6)
 
     def test_reasoning_effort_uses_openrouter_syntax_there(self):
         client = llm.ChatClient("k", model="google/gemini-2.5-flash", retries=0, reasoning_effort="low")
