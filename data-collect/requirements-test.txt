@@ -1,0 +1,6 @@
+# What the unit tests import: requirements.txt without crawl4ai/pypdf/fonttools,
+# which only the live crawler needs. CI installs this; keep the bounds in step.
+curl_cffi>=0.7,<1
+beautifulsoup4>=4.12,<5
+jsonschema>=4.20,<5
+python-dateutil>=2.9,<3

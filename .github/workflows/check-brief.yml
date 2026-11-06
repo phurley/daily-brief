@@ -8,15 +8,9 @@ on:
       - '*.css'
       - '*.html'
       - 'scripts/**'
-      - 'data-collect/review_events.py'
-      - 'data-collect/test_review_events.py'
-      - 'data-collect/review_stories.py'
-      - 'data-collect/test_review_stories.py'
+      - 'data-collect/**'
       - 'schemas/story-editorial.schema.json'
       - 'brief-preferences.json'
-      - 'data-collect/science/**'
-      - 'data-collect/run_science.sh'
-      - 'data-collect/run_collect.sh'
       - 'schemas/science-health.schema.json'
       - 'preferences.mjs'
       - 'DailyBriefWidgets/**'
@@ -27,8 +21,30 @@ on:
 permissions:
   contents: read
 jobs:
+  python:
+    # Every Python unit test: collector, LLM client, science, reviews, deploy
+    # guard and publishers. Fast; no browsers.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: data-collect/requirements-test.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: python -m pip install -r data-collect/requirements-test.txt
+      - name: data-collect unit tests
+        working-directory: data-collect
+        run: SCIENCE_NODE=$(command -v node) python -m unittest discover -s . -p 'test_*.py'
+      - name: Script tests
+        run: for t in scripts/test_*.py; do echo "== $t"; python "$t" || exit 1; done
   web:
     runs-on: ubuntu-latest
+    env:
+      PLAYWRIGHT_MODULE: ${{ github.workspace }}/scripts/pinned-playwright.cjs
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -36,25 +52,11 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
+      - name: Pin published data to the ci-browser-data snapshot
+        # Today's published events/news must not decide whether a PR passes.
+        run: echo "BRIEF_CLOCK=$(scripts/pin_browser_data.sh)" >> "$GITHUB_ENV"
       - run: npm run build:shell
       - run: npm test
-      - name: Featured editorial evidence regression checks
-        run: |
-          python3 -m pip install beautifulsoup4 python-dateutil
-          cd data-collect
-          python3 -m unittest test_review_events
-      - name: Science partial publication and retry checks
-        run: |
-          python3 -m pip install 'curl_cffi>=0.7,<1' 'jsonschema>=4.20,<5'
-          cd data-collect
-          SCIENCE_NODE=$(command -v node) python3 -m unittest science.test_pipeline test_review_stories
-      - name: Collector and publisher regression checks
-        run: |
-          python3 scripts/test_calendar_retry.py
-          python3 scripts/test_starship_job_lock.py
-          python3 scripts/test_publish_brief.py
-          python3 scripts/test_update_photos.py
-          python3 scripts/test_science_retry_schedule.py
       - run: npx playwright install --with-deps chromium webkit
       - name: Cached report upgrade checks
         run: |
