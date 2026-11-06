@@ -25,7 +25,7 @@ import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 from curl_cffi import requests
 import jsonschema
-from extract.llm import TruncatedOutput, make_chat_client
+from extract.llm import LLMError, make_chat_client
 from extract import env
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -191,7 +191,13 @@ def verify_date(entry, article, now):
     return iso(published)
 
 
-DEFAULT_MODEL = "google/gemini-2.5-flash"
+# bench_science.py on 30 stored articles (2026-11-06), share accepted by build_story:
+#   gemini-3.8-flash, low thinking: 16/30, 0 truncated, 0 rejected, judge 5.00/4.38/3.88
+#   gemini-2.5-flash:                13/30, 11 truncated (JSON runaway), judge 4.92/4.31/3.31
+#   gemini-3.1-flash-lite:            9/30, 13 rejected (caveat quotes not in the article)
+# Default thinking on 3.8 Flash spends the 2500-token cap and truncates 7/30.
+DEFAULT_MODEL = "google/gemini-3.8-flash"
+REASONING_EFFORT = {"google/gemini-3.8-flash": "low"}
 # Prompt budget; verification still runs against the full article.
 PROMPT_TEXT_CHARS = 14000
 PROMPT_LINKS = 80
@@ -204,10 +210,12 @@ def prompt_article(article, url):
     return {**article, "text": article["text"][:PROMPT_TEXT_CHARS], "links": links[:PROMPT_LINKS]}
 
 
-# 2.5 Flash loops inside a JSON string on ~1 in 4 articles (A/B 2026-11-03), burning
-# ~34k output tokens per attempt. Cap it and hand truncated cases to 3.1 Flash-Lite,
-# which did not run away but rejects more quotes, so it is only the fallback.
-FALLBACK_MODEL = "google/gemini-3.1-flash-lite"
+# Each model is tried in turn when the one before it fails (no answer, error or
+# truncation). 3.8 Flash is on Google's paid standard tier; 2.5 Flash on
+# OpenRouter loops inside a JSON string on ~1 in 4 articles (A/B 2026-11-03), so
+# 3.1 Flash-Lite, which rejects more quotes but does not run away, is last.
+FALLBACK_MODEL = "google/gemini-2.5-flash"
+LAST_RESORT_MODEL = "google/gemini-3.1-flash-lite"
 _CLIENTS = {}
 
 
@@ -215,8 +223,14 @@ def _client(model):
     if model not in _CLIENTS:
         env.load_dotenv()
         _CLIENTS[model] = make_chat_client(model=model, timeout=60, retries=1, caller="science", cache=True,
-                                           max_tokens=2500)
+                                           max_tokens=2500, reasoning_effort=REASONING_EFFORT.get(model))
     return _CLIENTS[model]
+
+
+def extraction_models():
+    chain = [os.getenv("OPENROUTER_SCIENCE_MODEL", DEFAULT_MODEL),
+             os.getenv("OPENROUTER_SCIENCE_FALLBACK_MODEL", FALLBACK_MODEL), LAST_RESORT_MODEL]
+    return [m for i, m in enumerate(chain) if m and m not in chain[:i]]
 
 
 def extract(entry, article):
@@ -225,14 +239,13 @@ def extract(entry, article):
         {"role": "system", "content": PROMPT},
         {"role": "user", "content": json.dumps({"title": entry["title"], "article": prompt_article(article, entry["url"])})},
     ]
-    primary = os.getenv("OPENROUTER_SCIENCE_MODEL", DEFAULT_MODEL)
-    fallback = os.getenv("OPENROUTER_SCIENCE_FALLBACK_MODEL", FALLBACK_MODEL)
-    try:
-        return _client(primary).complete_json(messages, EXTRACTION_SCHEMA, schema_name="science_story")
-    except TruncatedOutput:
-        if not fallback or fallback == primary:
-            raise
-        return _client(fallback).complete_json(messages, EXTRACTION_SCHEMA, schema_name="science_story")
+    models = extraction_models()
+    for i, model in enumerate(models):
+        try:
+            return _client(model).complete_json(messages, EXTRACTION_SCHEMA, schema_name="science_story")
+        except LLMError:
+            if i == len(models) - 1:
+                raise
 
 
 def build_story(entry, article, result, source, stamp, published, old=None):

@@ -39,10 +39,17 @@ DEFAULT_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 # overrides the ladder.
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 # Only models these projects can use: new Google projects get 404 for 2.5 Flash.
-_GEMINI_NAMES = {"google/gemini-3.1-flash-lite": "gemini-3.1-flash-lite-preview"}
+_GEMINI_NAMES = {
+    "google/gemini-3.1-flash-lite": "gemini-3.1-flash-lite-preview",
+    "google/gemini-3.8-flash": "gemini-3.8-flash",
+}
+# Per-model ladder when GEMINI_TIERS is unset. 3.8 Flash queues past our
+# timeouts on the free key and Flex returned 503 "high demand" (2026-11-06).
+_GEMINI_MODEL_TIERS = {"google/gemini-3.8-flash": "default"}
 # USD per million tokens (input, output) at the standard tier; Flex is half.
 # Google reports tokens but no cost, so the usage log estimates it from these.
-_GEMINI_PRICES = {"gemini-3.1-flash-lite-preview": (0.25, 1.50)}
+# 3.8 Flash is reported to rise to (1.50, 7.50) on 2027-01-01.
+_GEMINI_PRICES = {"gemini-3.1-flash-lite-preview": (0.25, 1.50), "gemini-3.8-flash": (0.75, 3.75)}
 _TIER_FALLBACK = {403, 429, 500, 503, 529}  # quota, capacity or a key problem on this rung
 _FREE_COOLDOWN = 60.0  # seconds off the free rung after a per-minute 429
 _free_blocked_until = 0.0  # shared by every client in the process
@@ -147,12 +154,14 @@ class ChatClient:
         max_tokens: Optional[int] = None,
         deadline: Optional[float] = None,
         cache_max_age: Optional[float] = None,
+        reasoning_effort: Optional[str] = None,
     ) -> None:
         env.load_dotenv()
         self.model = model
         self.tiers: list[str] = []
         self.gemini_keys = {"free": env.getenv("FREE_TIER_GEMINI_API_KEY"), "paid": env.getenv("GEMINI_API_KEY")}
-        ladder = [t.strip() for t in os.getenv("GEMINI_TIERS", "free,flex,default").split(",") if t.strip()]
+        default_ladder = _GEMINI_MODEL_TIERS.get(model, "free,flex,default")
+        ladder = [t.strip() for t in os.getenv("GEMINI_TIERS", default_ladder).split(",") if t.strip()]
         ladder = [t for t in ladder if self.gemini_keys["free" if t == "free" else "paid"]]
         if (api_key is None and endpoint is None and ladder and model in _GEMINI_NAMES
                 and os.getenv("LLM_PROVIDER", "auto") != "openrouter"):
@@ -178,6 +187,9 @@ class ChatClient:
         # Caps runaway generations. Gemini 2.5 Flash sometimes loops inside a JSON
         # string until ~65k output tokens (~$0.08/call) and the result never parses.
         self.max_tokens = max_tokens
+        # Thinking budget ("none", "low", "medium", "high"). Thinking tokens count
+        # toward max_tokens, so a capped call with default thinking can truncate.
+        self.reasoning_effort = reasoning_effort
         # Wall-clock limit per attempt. ``timeout`` only bounds each socket read,
         # and a stalled provider (seen with qwen3-32b on DeepInfra) keeps the
         # connection alive for ~19 minutes before failing.
@@ -197,6 +209,8 @@ class ChatClient:
         }
         if self.max_tokens:
             payload["max_tokens"] = self.max_tokens
+        if self.reasoning_effort:
+            payload["reasoning_effort"] = self.reasoning_effort
         if schema is not None:
             payload["response_format"] = {
                 "type": "json_schema",
@@ -288,7 +302,11 @@ class ChatClient:
                 wire["service_tier"] = tier
             return wire
         # Ask OpenRouter to report the billed cost so every call is attributable.
-        return {**payload, "usage": {"include": True}}
+        wire = {**payload, "usage": {"include": True}}
+        effort = wire.pop("reasoning_effort", None)
+        if effort:
+            wire["reasoning"] = {"effort": effort}
+        return wire
 
     def _key(self, tier: Optional[str]) -> str:
         if self.provider != "gemini":

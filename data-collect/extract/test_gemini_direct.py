@@ -115,6 +115,22 @@ class GeminiLadderTest(unittest.TestCase):
         self.run_calls(client, [reply({"ok": 1}, 1000, 100, 1600)])
         self.assertAlmostEqual(self.rows()[0]["cost"], (1000 * 0.25 + 600 * 1.50) / 2 / 1e6)
 
+    def test_flash_38_uses_the_paid_standard_tier_with_low_thinking(self):
+        client = llm.ChatClient(model="google/gemini-3.8-flash", retries=0, reasoning_effort="low")
+        self.assertEqual(client.tiers, ["default"])  # never the free key or Flex
+        _, sent, post = self.run_calls(client, [reply({"ok": 1})])
+        self.assertEqual(sent, [("Bearer paid-key", "default")])
+        body = json.loads(post.call_args[0][0].data)
+        self.assertEqual((body["model"], body["reasoning_effort"]), ("gemini-3.8-flash", "low"))
+        self.assertAlmostEqual(self.rows()[0]["cost"], (1000 * 0.75 + 200 * 3.75) / 1e6)
+
+    def test_reasoning_effort_uses_openrouter_syntax_there(self):
+        client = llm.ChatClient("k", model="google/gemini-2.5-flash", retries=0, reasoning_effort="low")
+        _, _, post = self.run_calls(client, [reply({"ok": 1})])
+        body = json.loads(post.call_args[0][0].data)
+        self.assertEqual(body["reasoning"], {"effort": "low"})
+        self.assertNotIn("reasoning_effort", body)
+
     def test_openrouter_for_unlisted_models_and_on_request(self):
         # Google 404s gemini-2.5-flash for new projects, so it stays on OpenRouter.
         self.assertEqual(llm.ChatClient(model="google/gemini-2.5-flash").provider, "openrouter")
