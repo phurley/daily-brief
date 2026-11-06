@@ -144,6 +144,21 @@ date's forecast; the header labels that distinction. Weather motion respects
 the system's reduced-motion preference. Run its regression checks with
 `node --test scripts/weather-appearance.test.mjs`.
 
+## Tests and CI
+`Check brief` (`.github/workflows/check-brief.yml`) has two jobs:
+- `python`: every Python unit test (`data-collect` via `unittest discover`, plus
+  `scripts/test_*.py`) on Python 3.12 with `data-collect/requirements-test.txt`.
+- `web`: node unit tests and the Playwright browser checks. These run against a
+  pinned copy of the published data (tag `ci-browser-data`, restored by
+  `scripts/pin_browser_data.sh`) with the browser clock started 30 minutes after
+  that snapshot was published (`scripts/pinned-playwright.cjs`), so a PR passes
+  or fails on its code, not on what the jobs published that day. When a change
+  needs newer data (a new field, say), move the tag:
+  `git tag -f ci-browser-data origin/main && git push -f origin ci-browser-data`.
+
+To run the browser checks locally against live data, serve the repo root on port
+4173 (`python3 -m http.server 4173`) and run e.g. `npm run test:mobile`.
+
 ## Local preview
 
 Event collectors must store timing only as absolute `start` and optional `end`
