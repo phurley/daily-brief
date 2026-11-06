@@ -332,6 +332,15 @@ COLLECT_NO_PUSH=1 ./run_collect.sh --limit 2
 - Extraction model: `OPENROUTER_EXTRACT_MODEL` (default
   `google/gemini-3.1-flash-lite`, chosen over `qwen/qwen3-32b` by `bench_live.py`
   on 2026-11-05 for quality and speed, at about 5x the cost per call).
+- Gemini direct: with `FREE_TIER_GEMINI_API_KEY` and/or `GEMINI_API_KEY` in
+  `.env`, `google/gemini-3.1-flash-lite` calls skip OpenRouter and go to
+  Google, trying the free-tier project first ($0, rate-limited), then the
+  billed project on the Flex tier (half price), then its standard tier. A
+  free-tier per-minute limit sends calls to the next rung for 60s; a daily limit
+  for the rest of the run. Usage rows read `... (gemini free|flex|default)`, with
+  cost estimated from tokens. `GEMINI_TIERS=flex,default` changes the ladder;
+  `LLM_PROVIDER=openrouter` turns it off. Other Gemini models (2.5 Flash is
+  closed to new Google projects) stay on OpenRouter.
 
 ### Extraction retries and repair
 
