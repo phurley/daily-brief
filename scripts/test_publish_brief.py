@@ -140,6 +140,48 @@ os.execv({self.git!r},[{self.git!r},*sys.argv[1:]])
         self.assertEqual(self.command('diff','--cached','--name-only').strip(),'notes.txt')
         self.assertEqual(self.command('diff','--name-only','--','recommendations.json').strip(),'')
 
+    def other_publishes(self, name, field, value):
+        """Another job's publication from a different checkout (as vibe or collect would)."""
+        p=self.other/name;d=json.loads(p.read_text());d[field]=value;p.write_text(json.dumps(d))
+        self.command('pull','-q','origin','main',cwd=self.other)
+        p=self.other/name;d=json.loads(p.read_text());d[field]=value;p.write_text(json.dumps(d))
+        self.build(self.other)
+        self.command('add','.',cwd=self.other);self.command('commit','-qm',f'publish {name}',cwd=self.other)
+        self.command('push','-q','origin','main',cwd=self.other)
+        return p.read_bytes()
+
+    def test_published_outputs_and_rebuilt_derived_files_no_longer_block_sync(self):
+        # 2026-11-06: vibe had published vibe.json, but its fast-forward of the
+        # collector checkout failed, so vibe.json (identical to origin) and a
+        # locally rebuilt recommendations.json stayed modified, and every later
+        # publication left the checkout dirty until the deploy guard discarded it.
+        published=self.other_publishes('vibe.json','generatedAt','2026-10-09T11:10:00Z')
+        (self.repo/'vibe.json').write_bytes(published)
+        r=self.repo/'recommendations.json';d=json.loads(r.read_text());d['generatedAt']='2026-10-09T09:00:00Z';r.write_text(json.dumps(d))
+        (self.root/'raced').touch()  # no competing push this time
+        result=self.publish('race')
+        self.assertEqual(result.returncode,0,result.stdout)
+        self.assertNotIn('Local edits prevent',result.stdout)
+        self.assertEqual(self.command('rev-parse','HEAD'),self.command('rev-parse','origin/main'))
+        self.assertEqual(self.command('diff','--name-only').strip(),'')  # nothing left modified
+        self.assertEqual(self.command('diff','--cached','--name-only').strip(),'notes.txt')
+        self.assertEqual(json.loads((self.repo/'vibe.json').read_text())['generatedAt'],'2026-10-09T11:10:00Z')
+
+    def test_unpublished_source_output_blocks_sync_and_survives(self):
+        self.other_publishes('news.json','generatedAt','2026-10-09T11:20:00Z')
+        mine=json.dumps({**json.loads((self.repo/'news.json').read_text()),'generatedAt':'2026-10-09T11:40:00Z'})
+        (self.repo/'news.json').write_text(mine)  # a running collect's newer, unpublished output
+        r=self.repo/'recommendations.json';d=json.loads(r.read_text());d['generatedAt']='2026-10-09T09:00:00Z'
+        local_derived=json.dumps(d);r.write_text(local_derived)
+        (self.root/'raced').touch()
+        result=self.publish('race')
+        self.assertEqual(result.returncode,0,result.stdout)
+        self.assertIn('Local edits prevent a safe fast-forward; checkout and index preserved: news.json',result.stdout)
+        self.assertEqual(self.command('rev-parse','HEAD').strip(),self.base)
+        self.assertEqual((self.repo/'news.json').read_text(),mine)
+        self.assertEqual(r.read_text(),local_derived)  # restored after the failed fast-forward
+        self.assertEqual(self.command('diff','--cached','--name-only').strip(),'notes.txt')
+
     def test_exhausted_retries_preserve_checkout_and_recovery_commit(self):
         result=self.publish('reject')
         self.assertNotEqual(result.returncode,0)
