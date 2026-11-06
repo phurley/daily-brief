@@ -29,6 +29,23 @@ from . import env, usage
 # It costs about 5x qwen per call. Override with OPENROUTER_EXTRACT_MODEL.
 DEFAULT_MODEL = "google/gemini-3.1-flash-lite"
 DEFAULT_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
+# Google's own OpenAI-compatible endpoint. Models listed in _GEMINI_NAMES go here
+# instead of OpenRouter when a Gemini key is set, down a price ladder:
+#   free  FREE_TIER_GEMINI_API_KEY (project without billing; rate-limited, $0)
+#   flex  GEMINI_API_KEY, Flex tier (half price, best-effort latency)
+#   default  GEMINI_API_KEY, standard tier (full price)
+# A rung that is out of quota, busy or slow drops the call to the next one.
+# LLM_PROVIDER=openrouter switches back; GEMINI_TIERS (e.g. "flex,default")
+# overrides the ladder.
+GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+# Only models these projects can use: new Google projects get 404 for 2.5 Flash.
+_GEMINI_NAMES = {"google/gemini-3.1-flash-lite": "gemini-3.1-flash-lite-preview"}
+# USD per million tokens (input, output) at the standard tier; Flex is half.
+# Google reports tokens but no cost, so the usage log estimates it from these.
+_GEMINI_PRICES = {"gemini-3.1-flash-lite-preview": (0.25, 1.50)}
+_TIER_FALLBACK = {403, 429, 500, 503, 529}  # quota, capacity or a key problem on this rung
+_FREE_COOLDOWN = 60.0  # seconds off the free rung after a per-minute 429
+_free_blocked_until = 0.0  # shared by every client in the process
 _RETRYABLE = {429, 500, 502, 503, 524, 529}
 CACHE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "processed", "llm-cache.sqlite")
 CACHE_DAYS = 30
@@ -121,7 +138,7 @@ class ChatClient:
         api_key: Optional[str] = None,
         *,
         model: str = DEFAULT_MODEL,
-        endpoint: str = DEFAULT_ENDPOINT,
+        endpoint: Optional[str] = None,
         timeout: float = 60.0,
         retries: int = 3,
         backoff: float = 1.0,
@@ -132,11 +149,23 @@ class ChatClient:
         cache_max_age: Optional[float] = None,
     ) -> None:
         env.load_dotenv()
-        self.api_key = api_key or env.getenv("OPENROUTER_API_KEY", "OPENROUTE_API_KEY")
-        if not self.api_key:
-            raise LLMError("missing OPENROUTER_API_KEY")
         self.model = model
-        self.endpoint = endpoint
+        self.tiers: list[str] = []
+        self.gemini_keys = {"free": env.getenv("FREE_TIER_GEMINI_API_KEY"), "paid": env.getenv("GEMINI_API_KEY")}
+        ladder = [t.strip() for t in os.getenv("GEMINI_TIERS", "free,flex,default").split(",") if t.strip()]
+        ladder = [t for t in ladder if self.gemini_keys["free" if t == "free" else "paid"]]
+        if (api_key is None and endpoint is None and ladder and model in _GEMINI_NAMES
+                and os.getenv("LLM_PROVIDER", "auto") != "openrouter"):
+            self.provider = "gemini"
+            self.tiers = ladder
+            self.api_key = ""  # chosen per rung
+            self.endpoint = GEMINI_ENDPOINT
+        else:
+            self.provider = "openrouter"
+            self.api_key = api_key or env.getenv("OPENROUTER_API_KEY", "OPENROUTE_API_KEY")
+            if not self.api_key:
+                raise LLMError("missing OPENROUTER_API_KEY")
+            self.endpoint = endpoint or DEFAULT_ENDPOINT
         self.timeout = timeout
         self.retries = retries
         self.backoff = backoff
@@ -216,15 +245,15 @@ class ChatClient:
             "model": self.model,
             "messages": messages,
             "temperature": 0,
-            "usage": {"include": True},
         }
         if schema is not None:
             payload["response_format"] = {
                 "type": "json_schema",
                 "json_schema": {"name": schema_name, "strict": True, "schema": schema},
             }
-        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-        headers = {"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"}
+        tier = self.tiers[0] if self.tiers else None
+        body = json.dumps(self._wire(payload, tier), ensure_ascii=False).encode("utf-8")
+        headers = {"Authorization": f"Bearer {self._key(tier)}", "Content-Type": "application/json"}
         request = urllib.request.Request(self.endpoint, data=body, headers=headers)
         started = time.time()
         result: dict[str, Any] = {
@@ -236,7 +265,7 @@ class ChatClient:
                 response = json.loads(resp.read().decode("utf-8"))
             content = response["choices"][0]["message"]["content"]
             result["content"] = content
-            result["usage"] = response.get("usage", {})
+            result["usage"] = self._usage_with_cost(response.get("usage"), tier)
             try:
                 result["data"] = json.loads(_strip_fences(content))
             except json.JSONDecodeError as exc:
@@ -251,19 +280,78 @@ class ChatClient:
         result["latency"] = round(time.time() - started, 2)
         return result
 
-    def _post(self, payload: dict[str, Any]) -> dict[str, Any]:
+    def _wire(self, payload: dict[str, Any], tier: Optional[str]) -> dict[str, Any]:
+        """The request body for this client's provider."""
+        if self.provider == "gemini":
+            wire = {**payload, "model": _GEMINI_NAMES[self.model]}
+            if tier in ("flex", "default"):
+                wire["service_tier"] = tier
+            return wire
         # Ask OpenRouter to report the billed cost so every call is attributable.
-        payload = {**payload, "usage": {"include": True}}
-        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-        headers = {"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"}
+        return {**payload, "usage": {"include": True}}
+
+    def _key(self, tier: Optional[str]) -> str:
+        if self.provider != "gemini":
+            return self.api_key
+        return self.gemini_keys["free" if tier == "free" else "paid"]
+
+    def _first_tier(self) -> Optional[str]:
+        usable = [t for t in self.tiers if t != "free" or time.monotonic() >= _free_blocked_until]
+        return (usable or self.tiers or [None])[0]
+
+    def _next_tier(self, tier: Optional[str], detail: str = "") -> Optional[str]:
+        """The rung below ``tier``, or None at the bottom. Rate limits on the free
+        rung also keep later calls off it: for good on a daily quota, else briefly."""
+        global _free_blocked_until
+        if tier == "free" and ("429" in detail or "RESOURCE_EXHAUSTED" in detail):
+            _free_blocked_until = time.monotonic() + (float("inf") if "PerDay" in detail else _FREE_COOLDOWN)
+        if tier not in self.tiers:
+            return None
+        i = self.tiers.index(tier)
+        return self.tiers[i + 1] if i + 1 < len(self.tiers) else None
+
+    def _log_model(self, tier: Optional[str]) -> str:
+        return f"{self.model} (gemini {tier})" if self.provider == "gemini" else self.model
+
+    def _usage_with_cost(self, raw: Optional[dict[str, Any]], tier: Optional[str]) -> dict[str, Any]:
+        """Usage as reported, plus an estimated ``cost`` where the provider gives none."""
+        raw = dict(raw or {})
+        if self.provider != "gemini" or "cost" in raw:
+            return raw
+        price = _GEMINI_PRICES.get(_GEMINI_NAMES[self.model])
+        if tier == "free":
+            raw["cost"] = 0.0
+        elif price:
+            tokens_in = int(raw.get("prompt_tokens") or 0)
+            # Thinking tokens are billed as output but left out of completion_tokens.
+            tokens_out = max(int(raw.get("total_tokens") or 0) - tokens_in, int(raw.get("completion_tokens") or 0))
+            factor = 0.5 if tier in ("flex", "batch") else 1.0
+            raw["cost"] = round((tokens_in * price[0] + tokens_out * price[1]) * factor / 1e6, 8)
+        return raw
+
+    def _post(self, payload: dict[str, Any]) -> dict[str, Any]:
+        tier = self._first_tier()
         last = "unknown"
-        for attempt in range(self.retries + 1):
+        attempt = 0  # retries on one rung; dropping to the next Gemini rung is not a retry
+
+        def retry() -> bool:
+            nonlocal attempt
+            if attempt >= self.retries:
+                return False
+            time.sleep(self.backoff * (2 ** attempt))
+            attempt += 1
+            return True
+
+        while True:
+            headers = {"Authorization": f"Bearer {self._key(tier)}", "Content-Type": "application/json"}
+            body = json.dumps(self._wire(payload, tier), ensure_ascii=False).encode("utf-8")
             req = urllib.request.Request(self.endpoint, data=body, headers=headers)
             try:
                 deadline_at = time.monotonic() + self.deadline
                 with urllib.request.urlopen(req, timeout=self.timeout) as resp:
                     data = json.loads(_read_body(resp, deadline_at).decode("utf-8"))
-                usage.record(self.caller, data.get("model") or self.model, data.get("usage"))
+                usage.record(self.caller, self._log_model(tier) if self.provider == "gemini"
+                             else data.get("model") or self.model, self._usage_with_cost(data.get("usage"), tier))
                 choice = (data.get("choices") or [{}])[0]
                 if choice.get("finish_reason") == "length":
                     # Deterministic at temperature 0: retrying re-pays for the same runaway.
@@ -277,28 +365,38 @@ class ChatClient:
                     )
                 return json.loads(_strip_fences(content))
             except urllib.error.HTTPError as exc:
-                detail = exc.read().decode("utf-8", "replace")[:300]
-                last = f"HTTP {exc.code}: {detail}"
-                usage.record(self.caller, self.model, None, kind="error")
-                if exc.code in _RETRYABLE and attempt < self.retries:
-                    time.sleep(self.backoff * (2 ** attempt))
+                detail = exc.read().decode("utf-8", "replace")
+                last = f"HTTP {exc.code}: {detail[:300]}"
+                usage.record(self.caller, self._log_model(tier), None, kind="error")
+                lower = self._next_tier(tier, f"{exc.code} {detail}") if exc.code in _TIER_FALLBACK else None
+                if lower:  # out of free quota or Flex capacity: next rung now, rather than wait
+                    tier = lower
+                    continue
+                if exc.code in _RETRYABLE and retry():
                     continue
                 raise LLMError(last) from exc
             except DeadlineExceeded as exc:
                 # A stalled provider trickles keep-alive bytes, so the socket timeout
-                # never fires. Stalls repeat for the same prompt; do not retry.
-                usage.record(self.caller, self.model, None, kind="error")
+                # never fires. Stalls repeat for the same prompt; do not retry,
+                # except on the next Gemini rung (a slow free or Flex queue).
+                usage.record(self.caller, self._log_model(tier), None, kind="error")
+                lower = self._next_tier(tier)
+                if lower:
+                    tier = lower
+                    continue
                 raise LLMError(f"DeadlineExceeded: {exc}") from exc
             except (urllib.error.URLError, http.client.HTTPException, TimeoutError,
                     OSError, KeyError, json.JSONDecodeError) as exc:
                 last = f"{type(exc).__name__}: {exc}"
                 if not isinstance(exc, (KeyError, json.JSONDecodeError)):
-                    usage.record(self.caller, self.model, None, kind="error")  # transport failure, unbilled row
-                if attempt < self.retries:
-                    time.sleep(self.backoff * (2 ** attempt))
+                    usage.record(self.caller, self._log_model(tier), None, kind="error")  # transport failure, unbilled row
+                    lower = self._next_tier(tier) if isinstance(exc, TimeoutError) else None
+                    if lower:  # queued past the socket timeout
+                        tier = lower
+                        continue
+                if retry():
                     continue
                 raise LLMError(last) from exc
-        raise LLMError(last)  # pragma: no cover
 
 
 def make_chat_client(model: Optional[str] = None, **kwargs: Any) -> ChatClient:
