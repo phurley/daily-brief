@@ -1,67 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-05T06:29:41.983035-05:00",
+  "generatedAt": "2026-11-06T06:21:52.758080-05:00",
   "stories": [
-    {
-      "id": "science-b2886d89a4265d7c",
-      "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
-      "summary": "NASA identified factors contributing to rare chip resistor cracking on printed circuit boards during thermal cycling after vibration, including component orientation, excessive solder, and mounting stresses. Recommendations include careful component placement, finite element analysis, controlled solder fillet height, and functional thermal shock testing to mitigate flexure-induced cracking risks in ceramic body components.",
-      "finding": "NASA identified factors contributing to rare chip resistor cracking on printed circuit boards during thermal cycling after vibration, including component orientation, excessive solder, and mounting stresses. Recommendations include careful component placement, finite element analysis, controlled solder fillet height, and functional thermal shock testing to mitigate flexure-induced cracking risks in ceramic body components.",
-      "significance": "This finding is significant for NASA projects that widely use chip resistors, as it provides insights into potential failure mechanisms and offers guidelines to mitigate flexure-induced cracking risks in ceramic body components on printed circuit boards, thereby enhancing reliability and safety of electronic systems.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
-      "primarySourceUrl": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-11-03T10:35:14-05:00",
-      "firstSeenAt": "2026-11-04T11:00:25.118236Z",
-      "checkedAt": "2026-11-04T11:00:25.118236Z",
-      "verifiedAt": "2026-11-04T11:00:25.118236Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "physics"
-      ],
-      "entities": [
-        "NASA",
-        "chip resistors",
-        "printed circuit board assemblies",
-        "thermal cycling",
-        "vibration testing"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nasa.gov/wp-content/uploads/2026/11/tb-26-10.pdf?emrc=dd9296",
-      "sourceUpdatedAt": "2026-11-03T15:37:33Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-04T07:38:52.700174-05:00",
-        "expiresAt": "2026-11-07T07:38:52.700174-05:00",
-        "inputFacts": {
-          "id": "science-b2886d89a4265d7c",
-          "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
-          "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
-          "publishedAt": "2026-11-03T15:35:14Z",
-          "summary": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
-          "finding": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
-          "sourceUpdatedAt": "2026-11-03T15:37:33Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-03T10:35:14-05:00",
-        "datePrecision": "time",
-        "sourceHash": "d849442b7c9d1a14f78c97ee1b826b089cc45ad0ee45d7d647cf6a5a4fcc36fd",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "This article presents a new finding regarding a specific failure mode in electronic components, which is relevant to engineering and technology. The findings are substantive and offer practical mitigation strategies.",
-        "storyKey": "nasa-chip-resistor-cracking",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article details NASA's identification of factors contributing to rare chip resistor cracking and provides specific recommendations to mitigate these risks, representing a new finding and technical advance in component reliability for NASA projects."
-      }
-    },
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
@@ -235,39 +176,68 @@
         "grounded": true,
         "groundingReason": "The article fully supports all claims in the summary, detailing the rover's measurements of fine and ultrafine Martian dust particles on spacesuit materials over 1,645 Martian days, their potential health implications, and how these findings will inform future mission designs and health standards. This represents a new finding regarding direct measurement of ultrafine dust on Mars."
       }
-    }
-  ],
-  "corrections": [
-    {
-      "id": "science-79e632d7c84fde6c",
-      "inputFacts": {
-        "id": "science-79e632d7c84fde6c",
-        "title": "Before the Dawn in America’s Heartland",
-        "url": "https://science.nasa.gov/earth/earth-observatory/before-the-dawn-in-americas-heartland",
-        "publishedAt": "2026-11-04T05:01:00Z",
-        "summary": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
-        "finding": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
-        "sourceUpdatedAt": "2026-11-04T05:01:00Z"
-      },
-      "publishedAt": "2026-11-04T00:01:00-05:00",
-      "publicationEvidence": "2026-11-04T00:01:00-05:00",
-      "datePrecision": "time"
     },
     {
       "id": "science-b2886d89a4265d7c",
-      "inputFacts": {
-        "id": "science-b2886d89a4265d7c",
-        "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
-        "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
-        "publishedAt": "2026-11-03T15:35:14Z",
-        "summary": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
-        "finding": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
-        "sourceUpdatedAt": "2026-11-03T15:37:33Z"
+      "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
+      "summary": "NASA identified factors contributing to rare chip resistor cracking on printed circuit boards during thermal cycling after vibration, including component orientation, excessive solder, and mounting stresses. Recommendations include careful component placement, finite element analysis, controlled solder fillet height, and functional thermal shock testing to mitigate flexure-induced cracking risks in ceramic body components.",
+      "finding": "NASA identified factors contributing to rare chip resistor cracking on printed circuit boards during thermal cycling after vibration, including component orientation, excessive solder, and mounting stresses. Recommendations include careful component placement, finite element analysis, controlled solder fillet height, and functional thermal shock testing to mitigate flexure-induced cracking risks in ceramic body components.",
+      "significance": "This finding is significant for NASA projects that widely use chip resistors, as it provides insights into potential failure mechanisms and offers guidelines to mitigate flexure-induced cracking risks in ceramic body components on printed circuit boards, thereby enhancing reliability and safety of electronic systems.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+      "primarySourceUrl": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+      "source": {
+        "name": "NASA"
       },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
       "publishedAt": "2026-11-03T10:35:14-05:00",
-      "publicationEvidence": "2026-11-03T10:35:14-05:00",
-      "datePrecision": "time"
-    },
+      "firstSeenAt": "2026-11-04T11:00:25.118236Z",
+      "checkedAt": "2026-11-04T11:00:25.118236Z",
+      "verifiedAt": "2026-11-04T11:00:25.118236Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "technology",
+        "physics"
+      ],
+      "entities": [
+        "NASA",
+        "chip resistors",
+        "printed circuit board assemblies",
+        "thermal cycling",
+        "vibration testing"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nasa.gov/wp-content/uploads/2026/11/tb-26-10.pdf?emrc=dd9296",
+      "sourceUpdatedAt": "2026-11-03T15:37:33Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-04T07:38:52.700174-05:00",
+        "expiresAt": "2026-11-07T07:38:52.700174-05:00",
+        "inputFacts": {
+          "id": "science-b2886d89a4265d7c",
+          "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
+          "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+          "publishedAt": "2026-11-03T15:35:14Z",
+          "summary": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+          "finding": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+          "sourceUpdatedAt": "2026-11-03T15:37:33Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-03T10:35:14-05:00",
+        "datePrecision": "time",
+        "sourceHash": "d849442b7c9d1a14f78c97ee1b826b089cc45ad0ee45d7d647cf6a5a4fcc36fd",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "This article presents a new finding regarding a specific failure mode in electronic components, which is relevant to engineering and technology. The findings are substantive and offer practical mitigation strategies.",
+        "storyKey": "nasa-chip-resistor-cracking",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article details NASA's identification of factors contributing to rare chip resistor cracking and provides specific recommendations to mitigate these risks, representing a new finding and technical advance in component reliability for NASA projects."
+      }
+    }
+  ],
+  "corrections": [
     {
       "id": "science-e77a7638ee47a43c",
       "inputFacts": {
@@ -290,8 +260,8 @@
         "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
         "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
         "publishedAt": "2026-10-30T14:08:23Z",
-        "summary": "A long-term study of Ngogo chimpanzees in Kibale National Park, Uganda, observed a large community of nearly 200 individuals split into two groups, leading to lethal intergroup aggression resulting in 28 deaths over nine years. This aggression occurred between individuals who had previously coexisted, affiliated, and cooperated.",
-        "finding": "A long-term study of Ngogo chimpanzees in Kibale National Park, Uganda, observed a large community of nearly 200 individuals split into two groups, leading to lethal intergroup aggression resulting in 28 deaths over nine years. This aggression occurred between individuals who had previously coexisted, affiliated, and cooperated.",
+        "summary": "A long-term study of Ngogo chimpanzees in Kibale National Park, Uganda, observed a large community of nearly 200 individuals split into two groups in 2018, followed by lethal aggression resulting in 28 deaths. This aggression occurred between individuals who had previously coexisted, suggesting a surprising capacity for violence even among familiar chimpanzees.",
+        "finding": "A long-term study of Ngogo chimpanzees in Kibale National Park, Uganda, observed a large community of nearly 200 individuals split into two groups in 2018, followed by lethal aggression resulting in 28 deaths. This aggression occurred between individuals who had previously coexisted, suggesting a surprising capacity for violence even among familiar chimpanzees.",
         "sourceUpdatedAt": "2026-11-02T15:08:51Z"
       },
       "publishedAt": "2026-10-30T10:08:23-04:00",
@@ -344,6 +314,36 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-79e632d7c84fde6c",
+      "inputFacts": {
+        "id": "science-79e632d7c84fde6c",
+        "title": "Before the Dawn in America’s Heartland",
+        "url": "https://science.nasa.gov/earth/earth-observatory/before-the-dawn-in-americas-heartland",
+        "publishedAt": "2026-11-04T05:01:00Z",
+        "summary": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
+        "finding": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
+        "sourceUpdatedAt": "2026-11-04T05:01:00Z"
+      },
+      "publishedAt": "2026-11-04T00:01:00-05:00",
+      "publicationEvidence": "2026-11-04T00:01:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-b2886d89a4265d7c",
+      "inputFacts": {
+        "id": "science-b2886d89a4265d7c",
+        "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
+        "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
+        "publishedAt": "2026-11-03T15:35:14Z",
+        "summary": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+        "finding": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
+        "sourceUpdatedAt": "2026-11-03T15:37:33Z"
+      },
+      "publishedAt": "2026-11-03T10:35:14-05:00",
+      "publicationEvidence": "2026-11-03T10:35:14-05:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-29a4ffbe1d32dba8",
       "inputFacts": {
         "id": "science-29a4ffbe1d32dba8",
@@ -359,33 +359,33 @@
       "datePrecision": "date"
     },
     {
-      "id": "science-edbada0a99652d00",
+      "id": "science-46b7465cdfaae4c4",
       "inputFacts": {
-        "id": "science-edbada0a99652d00",
-        "title": "Optimizing AI energy consumption throughout its entire lifecycle",
-        "url": "https://news.umich.edu/optimizing-ai-energy-consumption-throughout-its-entire-lifecycle",
-        "publishedAt": "2026-10-28T15:13:22Z",
-        "summary": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems propose that more efficient software design could reduce AI energy consumption by up to half. They are developing a system to estimate energy usage across all stages of an AI workflow, from data processing to model training and deployment, to avoid extensive trial-and-error testing.",
-        "finding": "Researchers at the University of Michigan Engineering, University of Illinois, and BAE Systems propose that more efficient software design could reduce AI energy consumption by up to half. They are developing a system to estimate energy usage across all stages of an AI workflow, from data processing to model training and deployment, to avoid extensive trial-and-error testing.",
-        "sourceUpdatedAt": "2026-10-30T14:37:44Z"
+        "id": "science-46b7465cdfaae4c4",
+        "title": "Taking a Gander at Utah’s Goosenecks",
+        "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks",
+        "publishedAt": "2026-11-06T05:01:00Z",
+        "summary": "The San Juan River formed entrenched meanders, or goosenecks, after geologic forces elevated the Colorado Plateau, which increased the river's gradient and erosive power, allowing it to carve deep paths through 300-million-year-old rock.",
+        "finding": "The San Juan River formed entrenched meanders, or goosenecks, after geologic forces elevated the Colorado Plateau, which increased the river's gradient and erosive power, allowing it to carve deep paths through 300-million-year-old rock.",
+        "sourceUpdatedAt": "2026-11-06T05:01:00Z"
       },
-      "publishedAt": "2026-10-28T11:13:22-04:00",
-      "publicationEvidence": "2026-10-28T11:13:22-04:00",
+      "publishedAt": "2026-11-06T00:01:00-05:00",
+      "publicationEvidence": "2026-11-06T00:01:00-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-ebd5ed8eaec52f79",
+      "id": "science-6337b15d045c3dd1",
       "inputFacts": {
-        "id": "science-ebd5ed8eaec52f79",
-        "title": "NASA JPL Looks to Next 90 Years of Innovation, Exploration",
-        "url": "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration",
-        "publishedAt": "2026-10-21T18:35:56Z",
-        "summary": "The Jet Propulsion Laboratory (JPL) is developing several missions planned for launch in the coming years, including SkyFall and MoonFall in 2028, SunRISE in 2027, and NEO Surveyor. These missions aim to advance understanding of Mars, the Moon, the Sun, and near-Earth objects.",
-        "finding": "The Jet Propulsion Laboratory (JPL) is developing several missions planned for launch in the coming years, including SkyFall and MoonFall in 2028, SunRISE in 2027, and NEO Surveyor. These missions aim to advance understanding of Mars, the Moon, the Sun, and near-Earth objects.",
-        "sourceUpdatedAt": "2026-10-21T18:35:57Z"
+        "id": "science-6337b15d045c3dd1",
+        "title": "NASA Astronauts to Answer Questions from Florida Students",
+        "url": "https://www.nasa.gov/learning-resources/nasa-astronauts-to-answer-questions-from-florida-students-2",
+        "publishedAt": "2026-11-05T15:11:25Z",
+        "summary": "NASA astronauts Jessica Watkins and Luke Delaney will answer prerecorded STEM questions from Florida students while aboard the International Space Station.",
+        "finding": "NASA astronauts Jessica Watkins and Luke Delaney will answer prerecorded STEM questions from Florida students while aboard the International Space Station.",
+        "sourceUpdatedAt": "2026-11-05T15:11:28Z"
       },
-      "publishedAt": "2026-10-21T14:35:56-04:00",
-      "publicationEvidence": "2026-10-21T14:35:56-04:00",
+      "publishedAt": "2026-11-05T10:11:25-05:00",
+      "publicationEvidence": "2026-11-05T10:11:25-05:00",
       "datePrecision": "time"
     },
     {
@@ -485,8 +485,8 @@
         "title": "Navigating AI in transportation: New national research consortium aims to guide agencies",
         "url": "https://news.umich.edu/navigating-ai-in-transportation-new-national-research-consortium-aims-to-guide-agencies",
         "publishedAt": "2026-10-28T19:20:44Z",
-        "summary": "The National AI Consortium for Transportation (NAICT) has been launched by three leading transportation research institutes to provide public transportation agencies with a credible, non-commercial resource for evaluating, deploying, and governing AI in transportation systems.",
-        "finding": "The National AI Consortium for Transportation (NAICT) has been launched by three leading transportation research institutes to provide public transportation agencies with a credible, non-commercial resource for evaluating, deploying, and governing AI in transportation systems.",
+        "summary": "Three leading transportation research institutes, the University of Michigan Transportation Research Institute (UMTRI), the University of California Berkeley Institute of Transportation Studies (ITS Berkeley), and the Texas A&M Transportation Institute (TTI), have launched the National AI Consortium for Transportation (NAICT). This consortium aims to provide public transportation agencies with a credible, non-commercial resource for evaluating, deploying, and governing AI in transportation systems.",
+        "finding": "Three leading transportation research institutes, the University of Michigan Transportation Research Institute (UMTRI), the University of California Berkeley Institute of Transportation Studies (ITS Berkeley), and the Texas A&M Transportation Institute (TTI), have launched the National AI Consortium for Transportation (NAICT). This consortium aims to provide public transportation agencies with a credible, non-commercial resource for evaluating, deploying, and governing AI in transportation systems.",
         "sourceUpdatedAt": "2026-10-28T19:36:28Z"
       },
       "publishedAt": "2026-10-28T15:20:44-04:00",
@@ -526,14 +526,6 @@
   ],
   "days": [
     {
-      "date": "2026-11-04",
-      "selectedIds": [
-        "science-54f31a9a44470168",
-        "science-6d879a7a5c5c91f8",
-        "science-5c3380370cf61ae7"
-      ]
-    },
-    {
       "date": "2026-11-05",
       "selectedIds": [
         "science-54f31a9a44470168",
@@ -543,6 +535,14 @@
     },
     {
       "date": "2026-11-06",
+      "selectedIds": [
+        "science-54f31a9a44470168",
+        "science-6d879a7a5c5c91f8",
+        "science-b2886d89a4265d7c"
+      ]
+    },
+    {
+      "date": "2026-11-07",
       "selectedIds": [
         "science-54f31a9a44470168",
         "science-6d879a7a5c5c91f8",
