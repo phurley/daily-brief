@@ -147,6 +147,9 @@ def parse_feed(raw):
     return entries
 
 
+MIN_ARTICLE_WORDS = 60
+
+
 def article_content(raw, url):
     soup = BeautifulSoup(raw, "html.parser")
     dates, updated = [], []
@@ -169,16 +172,30 @@ def article_content(raw, url):
     date_text = soup.get_text(" ", strip=True)[:1800]
     for element in soup(["script", "style", "nav", "header", "footer", "noscript"]):
         element.decompose()
+    # The first <article> is usually the story, but ESA's 2026 redesign puts
+    # small related-story cards in <article> tags and the story in <main>. If
+    # the first one is tiny, take the largest candidate instead.
     article = soup.find("article") or soup.find("main") or soup
+    if len(article.get_text(" ", strip=True).split()) < MIN_ARTICLE_WORDS:
+        candidates = soup.find_all("article") + soup.find_all("main")
+        article = max(candidates, key=lambda node: len(node.get_text(" ", strip=True).split()), default=soup)
     text = re.sub(r"\s+", " ", article.get_text(" ", strip=True))
     links = list(dict.fromkeys(urljoin(url, a["href"]) for a in article.find_all("a", href=True)))
     return {"text": text[:24000], "links": links[:150], "dates": dates, "updated": updated, "dateText": date_text}
 
 
-def verify_date(entry, article, now):
+def verify_date(entry, article, now, trust_feed=False):
+    """The feed's publication date, corroborated by the article.
+
+    ``trust_feed`` (source option "trustFeedDate") skips the corroboration for
+    a publisher's own official feed whose article pages carry no date at all
+    (ESA since its 2026 redesign). The date must still parse and not be future.
+    """
     published = parse_date(entry["publishedAt"])
     if not published or published > now:
         raise ValueError("missing, ambiguous, or future feed publication date")
+    if trust_feed:
+        return iso(published)
     # Metadata dates may omit time; compare calendar dates without inventing time.
     day = published.date().isoformat()
     corroborated = any(str(d)[:10] == day or (parse_date(d) and parse_date(d).date() == published.date()) for d in article["dates"])
@@ -399,7 +416,7 @@ def run(config, out, state_dir, *, now=None, force=False, retry_failed=False, ca
                     attempts += 1
                     print(f"[{key}] verifying {url}", flush=True)
                     article = article_content(fetcher(url), url)
-                    published = verify_date(entry, article, now)
+                    published = verify_date(entry, article, now, trust_feed=source.get("trustFeedDate", False))
                     body_fp = hashlib.sha256(("science-v2:" + json.dumps(article, sort_keys=True)).encode()).hexdigest()
                     existing = records.get(url) or next((s for s in old_doc["stories"] if canonical(s["url"]) == url), None)
                     if cached.get("body") == body_fp:

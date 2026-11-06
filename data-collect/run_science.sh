@@ -34,7 +34,7 @@ if [ "${SCIENCE_NO_PUSH:-}" != 1 ]; then
     "$ROOT/scripts/push_generated.sh" "Refresh science digest and source health" geeknews.json science-health.json science-editorial.json || exit 1
 fi
 if [ "$rc" = 0 ] && [ "$before" != "$(cksum "$ROOT/geeknews.json")" ] && [ "${SCIENCE_VIBE_ENABLED:-1}" = 1 ]; then
-    VIBE_SKIP_SCIENCE_WAIT=1 VIBE_MIN_INTERVAL=0 VIBE_NO_PUSH="${SCIENCE_NO_PUSH:-0}" "$ROOT/vibe-check/run.sh" || echo "science editorial refresh failed"
+    VIBE_SKIP_SCIENCE_WAIT=1 VIBE_MIN_INTERVAL=0 VIBE_NO_PUSH="${SCIENCE_NO_PUSH:-0}" "$ROOT/vibe-check/run.sh" || echo "vibe refresh after science failed; see vibe-check/vibe.log"
 fi
 echo "$(date '+%Y-%m-%d %H:%M:%S') [done] science exit=$rc"
 exit "$rc"
