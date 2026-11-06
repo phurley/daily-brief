@@ -110,3 +110,7 @@ if [ "${VIBE_NO_PUSH:-}" = "1" ]; then
 else
     BRIEF_NODE="$NODE" /usr/bin/python3 scripts/publish_brief.py vibe.json
 fi
+rc=$?
+# Every run ends with a [done] line; the health report reads it.
+echo "$(date '+%Y-%m-%d %H:%M:%S') [done] exit=$rc"
+exit "$rc"

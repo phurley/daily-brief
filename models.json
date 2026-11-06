@@ -1,5 +1,11 @@
 {
   "about": "Which LLM each Daily Brief job uses, and what we know about each model. Read by data-collect/extract/models.py (Python jobs), vibe-check/generate.mjs and scripts/update_calendar.py. A role's chain is tried in order when a call fails; each env var, if set, replaces the model at that position. Switching a model is a one-line change here; run bench_live.py / bench_science.py first. Prices are USD per million tokens at the standard tier, used to estimate cost where the provider reports none (Google direct; Flex is half).",
+  "budget": {
+    "daily_usd": 1.50,
+    "hard_daily_usd": 3.00,
+    "over_budget_model": "google/gemini-3.1-flash-lite",
+    "about": "Rolling 24h spend from processed/llm-usage.jsonl. Past daily_usd every paid call switches to over_budget_model; past hard_daily_usd only free-tier calls run and the rest fail (callers retry later). Expected spend is under $1/day."
+  },
   "roles": {
     "extract": {
       "env": ["OPENROUTER_EXTRACT_MODEL"],

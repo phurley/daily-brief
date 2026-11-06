@@ -8,7 +8,7 @@ this guard does nothing but run the job, so a developer's worktree is never
 reset.
 
 Each entry script (run_collect.sh, run_science.sh, run_calendar.sh,
-starship/run.sh, run_edition.sh, vibe-check/run.sh) begins with
+starship/run.sh, run_edition.sh, vibe-check/run.sh, run_health.sh) begins with
 
     DEPLOY_GUARD=<root>/scripts/deploy_guard.py
     if [ -z "${DAILYBRIEF_DEPLOY_GUARD:-}" ] && [ -f "$DEPLOY_GUARD" ]; then exec /usr/bin/python3 "$DEPLOY_GUARD" "$0" "$@"; fi
