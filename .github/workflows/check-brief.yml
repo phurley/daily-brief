@@ -9,6 +9,8 @@ on:
       - '*.html'
       - 'scripts/**'
       - 'data-collect/**'
+      - 'models.json'
+      - 'vibe-check/**'
       - 'schemas/story-editorial.schema.json'
       - 'brief-preferences.json'
       - 'schemas/science-health.schema.json'

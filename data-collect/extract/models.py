@@ -77,3 +77,19 @@ def price(name: str, on: Optional[date] = None) -> Optional[tuple[float, float]]
         if entry["from"] <= on:
             current = (entry["input"], entry["output"])
     return current
+
+
+def budget() -> dict[str, Any]:
+    """Daily LLM spend limits (models.json "budget"; env overrides).
+
+    daily_usd: past it, paid calls switch to over_budget_model.
+    hard_daily_usd: past it, only free-tier calls run.
+    LLM_BUDGET=off disables both.
+    """
+    if os.getenv("LLM_BUDGET", "on") == "off":
+        return {}
+    spec = dict(registry().get("budget", {}))
+    for key, name in (("daily_usd", "LLM_DAILY_BUDGET"), ("hard_daily_usd", "LLM_HARD_DAILY_BUDGET")):
+        if os.getenv(name):
+            spec[key] = float(os.environ[name])
+    return spec
