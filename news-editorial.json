@@ -1,100 +1,177 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-11-06T03:04:11.410417-05:00",
+  "generatedAt": "2026-11-07T01:42:20.445798-05:00",
   "stories": [
     {
-      "id": "michigan-democrats-prepare-for-a-second-news-2026-11-05",
-      "title": "Michigan Democrats prepare for a second trifecta",
-      "summary": "Michigan Democrats secured a legislative trifecta, regaining full control of the state House and Senate, along with the governor's office. House Minority Leader Ranjeev Puri (D-Canton) is expected to continue leading House Democrats, with the party holding more than a one-vote majority in the upcoming session.",
-      "url": "https://www.wemu.org/michigan-news/2026-11-05/michigan-democrats-prepare-for-a-second-trifecta",
-      "publishedAt": "2026-11-05T11:39:21.646000-05:00",
-      "addedAt": "2026-11-05T13:19:34-05:00",
+      "id": "1st-friday-focus-on-the-environment-ding-news-2026-11-06",
+      "title": "1st Friday Focus on the Environment: Dingell talks environmental policy in a Democrat-controlled Congress",
+      "summary": "Congresswoman Debbie Dingell announced plans to introduce a 'Data Center Bill of Rights' to address environmental and infrastructure concerns surrounding large-scale data centers in her district. The proposed legislation aims to mandate transparency, independent monitoring, and community benefit agreements.",
+      "url": "https://www.wemu.org/show/1st-friday-focus-on-the-environment/2026-11-06/1st-friday-focus-on-the-environment-dingell-talks-environmental-policy-in-a-democrat-controlled-congress",
+      "publishedAt": "2026-11-06T07:36:44+00:00",
+      "addedAt": "2026-11-07T01:38:58-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Michigan Democrats",
-        "Alabas Farhat",
-        "Ranjeev Puri",
-        "Jocelyn Benson",
-        "Winnie Brinks",
-        "Darrin Camilleri",
-        "Associated Press"
+        "Debbie Dingell",
+        "Rebekah Warren",
+        "Lisa Wozniak"
       ],
       "locations": [
-        "Ypsilanti & Ann Arbor, MI"
+        "Ann Arbor"
       ],
       "localityIndex": 2,
       "topics": [
+        "environment",
         "politics",
-        "elections",
-        "democrats",
-        "legislature",
-        "governor",
-        "michigan"
+        "congress"
       ],
       "source": {
-        "name": "Colin Jackson",
-        "publication": "WEMU 89.1 FM"
+        "name": "WEMU 89.1 FM"
       },
       "scoring": {
         "signals": {
-          "funny": 0.02,
-          "distinctive": 0.2,
-          "eclectic": 0.06,
-          "technical_science": 0.03,
-          "artsy": 0.03,
-          "progressive": 0.57,
-          "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.02,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.08,
+          "funny": 0.05,
+          "distinctive": 0.22,
+          "eclectic": 0.23,
+          "technical_science": 0.08,
+          "artsy": 0.1,
+          "progressive": 0.31,
+          "outdoors": 0.04,
+          "theatre": 0.02,
+          "live_music": 0.03,
+          "live_comedy": 0.02,
+          "farmer_market": 0.03,
+          "sporting": 0.02,
+          "recurring": 0.44,
+          "craft_fair_shopping": 0.03,
+          "religious": 0.02,
+          "large_venue": 0.08,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.05,
+          "sales_related": 0.04,
+          "children_activity": 0.04,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/fa5b6b2/2147483647/strip/true/crop/2550x1421+0+677/resize/280x156!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwemu%2Ffiles%2F201809%2FDebbie_Dingell_Official_Headshot.jpg",
+        "alt": "Debbie Dingell"
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-07T01:42:20.445798-05:00",
+        "expiresAt": "2026-11-10T01:42:20.445798-05:00",
+        "inputFacts": {
+          "id": "1st-friday-focus-on-the-environment-ding-news-2026-11-06",
+          "title": "1st Friday Focus on the Environment: Dingell talks environmental policy in a Democrat-controlled Congress",
+          "url": "https://www.wemu.org/show/1st-friday-focus-on-the-environment/2026-11-06/1st-friday-focus-on-the-environment-dingell-talks-environmental-policy-in-a-democrat-controlled-congress",
+          "publishedAt": "2026-11-06T00:00:00-05:00",
+          "summary": "Following the 2026 midterm elections, Democrats are set to control both chambers of Congress. Ann Arbor Congresswoman Debbie Dingell discussed potential environmental policy goals for the upcoming term.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-06T07:36:44Z",
+        "datePrecision": "time",
+        "sourceHash": "9650b4c6aaa10b19d697bba8b5c27411d41c5b47380cb3f8844ebab1d1a0b609",
+        "relevance": 4,
+        "novelty": 3,
+        "reason": "The article provides a specific, upcoming legislative action by a local representative regarding data centers, which are a significant and controversial development in the region's infrastructure and environment.",
+        "storyKey": "dingell-data-center-bill-of-rights",
+        "localConnection": "E100",
+        "grounded": true,
+        "groundingReason": "The summary accurately reflects Congresswoman Dingell's stated intent to introduce a 'Data Center Bill of Rights' to address environmental and infrastructure concerns, which is a substantive legislative development for her district."
+      }
+    },
+    {
+      "id": "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
+      "title": "Ann Arbor's iconic Blimpy Burger reopens under new ownership",
+      "summary": "Ann Arbor's Krazy Jim's Blimpy Burger has reopened following a seven-month closure under new local ownership. The establishment has introduced menu additions, including alcoholic beverages and soft-serve ice cream, while navigating community adjustments to operational changes ahead of a planned mid-November ribbon-cutting.",
+      "url": "https://www.wemu.org/wemu-news/2026-11-06/ann-arbors-iconic-blimpy-burger-reopens-under-new-ownership",
+      "publishedAt": "2026-11-06T13:28:14.007000-05:00",
+      "addedAt": "2026-11-07T01:38:58-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Blimpy Burger"
+      ],
+      "locations": [
+        "Ann Arbor"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "business",
+        "restaurants",
+        "local"
+      ],
+      "source": {
+        "name": "WEMU 89.1 FM",
+        "publication": "WEMU News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.04,
+          "distinctive": 0.4,
+          "eclectic": 0.17,
+          "technical_science": 0.04,
+          "artsy": 0.06,
+          "progressive": 0.36,
+          "outdoors": 0.03,
+          "theatre": 0.02,
+          "live_music": 0.03,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.21,
           "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.05,
-          "substance_recovery": 0.01,
+          "large_venue": 0.08,
+          "substance_recovery": 0.02,
           "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.03,
-          "children_activity": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.02,
+          "sales_related": 0.04,
+          "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/59349b0/2147483647/strip/true/crop/1024x538+0+115/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff6%2F3a%2F7914713549ddb4dd88e9423b9b0e%2Fcapitol.jpg",
-        "alt": "Michigan Capitol Building"
+        "url": "https://npr.brightspotcdn.com/dims4/default/af7ce62/2147483647/strip/true/crop/3072x1712+0+168/resize/280x156!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fbc%2F93%2F882afc694f11aaa5394dad3438c8%2F3832092777-f4e20d89e9-o.jpg",
+        "alt": "Blimpy Burger."
       },
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-05T13:20:59.641141-05:00",
-        "expiresAt": "2026-11-08T13:20:59.641141-05:00",
+        "reviewedAt": "2026-11-07T01:42:20.445798-05:00",
+        "expiresAt": "2026-11-10T01:42:20.445798-05:00",
         "inputFacts": {
-          "id": "michigan-democrats-prepare-for-a-second-news-2026-11-05",
-          "title": "Michigan Democrats prepare for a second trifecta",
-          "url": "https://www.wemu.org/michigan-news/2026-11-05/michigan-democrats-prepare-for-a-second-trifecta",
-          "publishedAt": "2026-11-05T06:39:00-05:00",
-          "summary": "Michigan Democrats have regained full control of the state Legislature and governor’s office following election night wins, expanding their Senate majority and flipping multiple House seats. The party aims to advance policies like gun safety and clean energy with a stronger majority, learning from their previous trifecta period. Leadership transitions and new members will shape the upcoming legislative session.",
+          "id": "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
+          "title": "Ann Arbor's iconic Blimpy Burger reopens under new ownership",
+          "url": "https://www.wemu.org/wemu-news/2026-11-06/ann-arbors-iconic-blimpy-burger-reopens-under-new-ownership",
+          "publishedAt": "2026-11-06T00:00:00-05:00",
+          "summary": "The iconic Ann Arbor restaurant Blimpy Burger has reopened its doors under new ownership.",
           "finding": null,
           "sourceUpdatedAt": null
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-05T11:39:21.646",
+        "publicationEvidence": "2026-11-06T13:28:14.007",
         "datePrecision": "time",
-        "sourceHash": "8dc81aef3d0201f15aae30a11a8b16859b71f88aa24d9d8113c33e86242e436c",
-        "relevance": 5,
-        "novelty": 5,
-        "reason": "The article details a significant political shift in Michigan with direct implications for state governance and specifically mentions Canton's representative, Ranjeev Puri, in a leadership role.",
-        "storyKey": "michigan-democrats-trifecta-2026",
-        "localConnection": "Ranjeev Puri (D-Canton) is mentioned as House Minority Leader and is expected to continue leading House Democrats.",
+        "sourceHash": "58160f14772d1a9774fc2f06a57f385222d9230e1128a6e19a2f867486a419ac",
+        "relevance": 4,
+        "novelty": 3,
+        "reason": "The reopening of a long-standing, culturally significant regional institution in Ann Arbor is highly relevant to the Canton/Plymouth community, which shares the local dining ecosystem.",
+        "storyKey": "blimpy-burger-reopening",
+        "localConnection": "Ann Arbor is a neighboring community with significant cultural and dining overlap for Canton/Plymouth residents.",
         "grounded": true,
-        "groundingReason": "The article confirms Michigan Democrats secured a legislative trifecta, regained control of the state House and Senate, and the governor's office. It also states that House Minority Leader Ranjeev Puri (D-Canton) is expected to continue leading House Democrats and that the party will hold more than a one-vote majority."
+        "groundingReason": "The summary accurately reflects the reopening of a well-known local establishment in Ann Arbor, including details on new ownership, menu changes, and the upcoming ribbon-cutting ceremony."
       }
     },
     {
@@ -206,18 +283,33 @@
   ],
   "corrections": [
     {
-      "id": "michigan-democrats-prepare-for-a-second-news-2026-11-05",
+      "id": "1st-friday-focus-on-the-environment-ding-news-2026-11-06",
       "inputFacts": {
-        "id": "michigan-democrats-prepare-for-a-second-news-2026-11-05",
-        "title": "Michigan Democrats prepare for a second trifecta",
-        "url": "https://www.wemu.org/michigan-news/2026-11-05/michigan-democrats-prepare-for-a-second-trifecta",
-        "publishedAt": "2026-11-05T06:39:00-05:00",
-        "summary": "Michigan Democrats have regained full control of the state Legislature and governor’s office following election night wins, expanding their Senate majority and flipping multiple House seats. The party aims to advance policies like gun safety and clean energy with a stronger majority, learning from their previous trifecta period. Leadership transitions and new members will shape the upcoming legislative session.",
+        "id": "1st-friday-focus-on-the-environment-ding-news-2026-11-06",
+        "title": "1st Friday Focus on the Environment: Dingell talks environmental policy in a Democrat-controlled Congress",
+        "url": "https://www.wemu.org/show/1st-friday-focus-on-the-environment/2026-11-06/1st-friday-focus-on-the-environment-dingell-talks-environmental-policy-in-a-democrat-controlled-congress",
+        "publishedAt": "2026-11-06T00:00:00-05:00",
+        "summary": "Following the 2026 midterm elections, Democrats are set to control both chambers of Congress. Ann Arbor Congresswoman Debbie Dingell discussed potential environmental policy goals for the upcoming term.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-05T11:39:21.646000-05:00",
-      "publicationEvidence": "2026-11-05T11:39:21.646",
+      "publishedAt": "2026-11-06T07:36:44+00:00",
+      "publicationEvidence": "2026-11-06T07:36:44Z",
+      "datePrecision": "time"
+    },
+    {
+      "id": "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
+      "inputFacts": {
+        "id": "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
+        "title": "Ann Arbor's iconic Blimpy Burger reopens under new ownership",
+        "url": "https://www.wemu.org/wemu-news/2026-11-06/ann-arbors-iconic-blimpy-burger-reopens-under-new-ownership",
+        "publishedAt": "2026-11-06T00:00:00-05:00",
+        "summary": "The iconic Ann Arbor restaurant Blimpy Burger has reopened its doors under new ownership.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-06T13:28:14.007000-05:00",
+      "publicationEvidence": "2026-11-06T13:28:14.007",
       "datePrecision": "time"
     },
     {
@@ -233,6 +325,111 @@
       },
       "publishedAt": "2026-11-04T07:05:12+00:00",
       "publicationEvidence": "2026-11-04T07:05:12Z",
+      "datePrecision": "time"
+    },
+    {
+      "id": "controversial-scarecrow-goes-missing-news-2026-11-05",
+      "inputFacts": {
+        "id": "controversial-scarecrow-goes-missing-news-2026-11-05",
+        "title": "Controversial Scarecrow Goes Missing",
+        "url": "https://plymouthlibrary.substack.com/p/controversial-scarecrow-goes-missing",
+        "publishedAt": "2026-11-05T00:00:00-05:00",
+        "summary": "A scarecrow depicting Dr. Frank-N-Furter from The Rocky Horror Picture Show, sponsored by PFLAG for Plymouth's annual Scarecrows in the Park event, was stolen from Kellogg Park on October 16. The display had previously sparked controversy and community debate regarding its appropriateness for a public park, though it also garnered significant support.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-05T16:30:39+00:00",
+      "publicationEvidence": "2026-11-05T16:30:39+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "250-000-investment-from-keybank-foundati-news-2026-11-06",
+      "inputFacts": {
+        "id": "250-000-investment-from-keybank-foundati-news-2026-11-06",
+        "title": "$250,000 investment from KeyBank Foundation to expand warming center and support for homeless adults",
+        "url": "https://concentratemedia.com/250000-investment-from-keybank-foundation-to-expand-warming-center-and-support-for-homeless-adults/",
+        "publishedAt": "2026-11-06T00:00:00-05:00",
+        "summary": "A $250,000 investment from the KeyBank Foundation is expanding shelter and support services for homeless adults in Ypsilanti and eastern Washtenaw County. The funding supports a daytime resource hub and warming center at St. Luke’s Episcopal Church, providing case management, housing assistance, and basic necessities.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-06T17:23:02+00:00",
+      "publicationEvidence": "2026-11-06T17:23:02+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "aadl-celebrates-books-and-authors-with-a-news-2026-11-06",
+      "inputFacts": {
+        "id": "aadl-celebrates-books-and-authors-with-a-news-2026-11-06",
+        "title": "AADL celebrates books and authors with annual Printmaking Festival and A2 Community Bookfest",
+        "url": "https://concentratemedia.com/aadl-celebrates-books-and-authors-with-annual-printmaking-festival-and-a2-community-bookfest/",
+        "publishedAt": "2026-11-06T00:00:00-05:00",
+        "summary": "The Ann Arbor District Library is hosting its annual Printmaking Festival and A2 Community Bookfest. These free events will include author talks, hands-on activities, and numerous vendors on November 14 and 15, 2026.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-06T19:07:19+00:00",
+      "publicationEvidence": "2026-11-06T19:07:19+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "ann-arbor-police-chief-anderson-to-retir-news-2026-11-06",
+      "inputFacts": {
+        "id": "ann-arbor-police-chief-anderson-to-retir-news-2026-11-06",
+        "title": "Ann Arbor Police Chief Anderson to retire",
+        "url": "https://www.wemu.org/wemu-news/2026-11-06/ann-arbor-police-chief-anderson-to-retire",
+        "publishedAt": "2026-11-06T00:00:00-05:00",
+        "summary": "Ann Arbor Police Chief Andre Anderson has announced his retirement, which will take effect in February. He previously addressed the City Council regarding a pilot program for an unarmed crisis response team.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-06T19:22:56.015000-05:00",
+      "publicationEvidence": "2026-11-06T19:22:56.015",
+      "datePrecision": "time"
+    },
+    {
+      "id": "current-ann-arbor-city-council-holds-its-news-2026-11-06",
+      "inputFacts": {
+        "id": "current-ann-arbor-city-council-holds-its-news-2026-11-06",
+        "title": "Current Ann Arbor City Council holds its final meeting",
+        "url": "https://www.wemu.org/wemu-news/2026-11-06/current-ann-arbor-city-council-holds-its-final-meeting",
+        "publishedAt": "2026-11-06T00:00:00-05:00",
+        "summary": "The Ann Arbor City Council held its final meeting of the current term. The session marked the last council meeting for Mayor Christopher Taylor.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-06T11:00:00-05:00",
+      "publicationEvidence": "2026-11-06T11:00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "michigan-attorney-general-says-no-charge-news-2026-11-06",
+      "inputFacts": {
+        "id": "michigan-attorney-general-says-no-charge-news-2026-11-06",
+        "title": "Michigan Attorney General says no charges for deputies who shot Navy veteran",
+        "url": "https://www.wemu.org/wemu-news/2026-11-06/michigan-attorney-general-says-no-charges-for-deputies-who-shot-navy-veteran",
+        "publishedAt": "2026-11-06T00:00:00-05:00",
+        "summary": "The Michigan Attorney General's office has announced that no charges will be filed against Washtenaw County deputies involved in the fatal shooting of Navy veteran John Jenuwine. The incident occurred on January 6, 2026.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-06T21:45:48.549000-05:00",
+      "publicationEvidence": "2026-11-06T21:45:48.549",
+      "datePrecision": "time"
+    },
+    {
+      "id": "no-5-michigan-women-s-basketball-notches-news-2026-11-06",
+      "inputFacts": {
+        "id": "no-5-michigan-women-s-basketball-notches-news-2026-11-06",
+        "title": "No. 5 Michigan women's basketball notches signature win over No. 2 UConn",
+        "url": "https://www.michiganpublic.org/sports/2026-11-06/michigan-uconn-womens-basketball",
+        "publishedAt": "2026-11-06T00:00:00-05:00",
+        "summary": "In her 15th season, coach Kim Barnes Arico led the Michigan women's basketball team to a significant victory against No. 2 UConn. This win marks a milestone for the program's development into a competitive power.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-06T13:23:42.542000-05:00",
+      "publicationEvidence": "2026-11-06T13:23:42.542",
       "datePrecision": "time"
     },
     {
@@ -281,101 +478,44 @@
       "datePrecision": "time"
     },
     {
-      "id": "what-michigan-election-results-mean-for-news-2026-11-05",
+      "id": "washtenaw-county-voters-came-out-in-reco-news-2026-11-05",
       "inputFacts": {
-        "id": "what-michigan-election-results-mean-for-news-2026-11-05",
-        "title": "What Michigan election results mean for data centers, DTE, clean energy",
-        "url": "https://planetdetroit.org/2026/11/election-2026-michigan-data-centers-dte/",
-        "publishedAt": "2026-11-05T13:00:00-05:00",
-        "summary": "Democrats retained control of Michigan's governor's office and state Senate while gaining the House majority, enabling potential advancements in clean energy and environmental protections. The Michiganders for Money Out of Politics ballot initiative banning utility political spending passed with 81% support, while a constitutional convention measure failed. Abdul El-Sayed's Senate victory could influence federal data center regulations, and new leaders like Eli Savit pledged to continue utility ratepayer advocacy. Ballot initiatives like Proposal 2 and Ann Arbor's Proposition E had mixed outcomes, with the latter failing to establish a municipal energy utility.",
+        "id": "washtenaw-county-voters-came-out-in-reco-news-2026-11-05",
+        "title": "Washtenaw County voters came out in record numbers for 2026 midterms",
+        "url": "https://www.wemu.org/wemu-news/2026-11-05/washtenaw-county-voters-came-out-in-record-numbers-for-2026-midterms",
+        "publishedAt": "2026-11-05T16:00:00-05:00",
+        "summary": "The Washtenaw County Clerk’s Office reported record voter turnout for the 2026 midterm elections, with over 202,000 ballots cast. County Clerk Larry Kestenbaum noted that the high volume of absentee and early voting influenced the outcomes of local measures, including the rejection of Proposal E.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-05T01:42:40+00:00",
-      "publicationEvidence": "2026-11-05T01:42:40+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "detroiters-have-until-nov-6-to-apply-for-news-2026-11-06",
-      "inputFacts": {
-        "id": "detroiters-have-until-nov-6-to-apply-for-news-2026-11-06",
-        "title": "Detroiters have until Nov. 6 to apply for this property tax reduction",
-        "url": "https://outliermedia.org/detroit-homeowners-property-tax-exemption/",
-        "publishedAt": "2026-11-06T00:00:00-05:00",
-        "summary": "The Homeowners Property Exemption can reduce or eliminate 2025 and 2026 property taxes for Detroit residents. Applications must be submitted by November 6.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-28T10:00:00+00:00",
-      "publicationEvidence": "2026-10-28T10:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "nonprofit-consultants-hiring-news-2026-11-06",
-      "inputFacts": {
-        "id": "nonprofit-consultants-hiring-news-2026-11-06",
-        "title": "Nonprofit Consultants Hiring",
-        "url": "https://www.detroittransit.org/nonprofit-consultants-26/",
-        "publishedAt": "2026-11-06T00:00:00-05:00",
-        "summary": "Transportation Riders United is seeking proposals from nonprofit consultants to assist with strategic planning and operational improvements. Proposals are requested by today.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-01T19:39:49+00:00",
-      "publicationEvidence": "2026-10-01T19:39:49+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "el-sayed-cited-islamic-faith-with-this-p-news-2026-11-05",
-      "inputFacts": {
-        "id": "el-sayed-cited-islamic-faith-with-this-p-news-2026-11-05",
-        "title": "El-Sayed cited Islamic faith with this phrase. What it means",
-        "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/05/alhamdulillah-el-sayed-candidate-religion-james-bible-arabic/92622831007/",
-        "publishedAt": "2026-11-05T15:28:00-05:00",
-        "summary": "Democrat Abdul El-Sayed, who recently won Michigan's U.S. Senate race, gained attention for using Arabic phrases like 'Inshallah' and 'Alhamdulillah' in his victory speech. Experts note that his public embrace of his Islamic faith reflects the state's diverse cultural fabric and history.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-05T19:30:18+00:00",
-      "publicationEvidence": "2026-11-05T19:30:18Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "el-sayed-calls-vance-habibi-in-victory-s-news-2026-11-05",
-      "inputFacts": {
-        "id": "el-sayed-calls-vance-habibi-in-victory-s-news-2026-11-05",
-        "title": "El-Sayed calls Vance habibi in victory speech. What does it mean?",
-        "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/04/habibi-mean-abdul-el-sayed-jd-vance-election/92609094007/",
-        "publishedAt": "2026-11-05T15:21:00-05:00",
-        "summary": "Democrat Abdul El-Sayed used the Arabic term 'habibi' to refer to Vice President JD Vance during his election night victory speech. El-Sayed, who will become the first Muslim U.S. senator after defeating Mike Rogers, used the term to highlight the irony of Vance swearing him into office.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-04T19:46:59+00:00",
-      "publicationEvidence": "2026-11-04T19:46:59Z",
+      "publishedAt": "2026-11-05T21:00:00-05:00",
+      "publicationEvidence": "2026-11-05T21:00:00",
       "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-05",
-      "selectedIds": [
-        "michigan-democrats-prepare-for-a-second-news-2026-11-05",
-        "el-sayed-claims-victory-wins-historic-u-news-2026-11-04"
-      ]
-    },
-    {
       "date": "2026-11-06",
       "selectedIds": [
-        "michigan-democrats-prepare-for-a-second-news-2026-11-05",
-        "el-sayed-claims-victory-wins-historic-u-news-2026-11-04"
+        "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
+        "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
+        "1st-friday-focus-on-the-environment-ding-news-2026-11-06"
       ]
     },
     {
       "date": "2026-11-07",
       "selectedIds": [
-        "michigan-democrats-prepare-for-a-second-news-2026-11-05",
-        "el-sayed-claims-victory-wins-historic-u-news-2026-11-04"
+        "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
+        "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
+        "1st-friday-focus-on-the-environment-ding-news-2026-11-06"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "selectedIds": [
+        "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
+        "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
+        "1st-friday-focus-on-the-environment-ding-news-2026-11-06"
       ]
     }
   ]

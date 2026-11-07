@@ -1,15 +1,160 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-11-07T06:07:12.622Z",
+  "generatedAt": "2026-11-07T06:43:30.373Z",
   "days": [
     {
       "date": "2026-11-07",
       "events": [
         {
+          "id": "occ-a00ff78b395badb3b05bd728",
+          "title": "Performance of Jen Silverman's Witch",
+          "summary": "The RC Players present a theatrical production of Jen Silverman's play, which explores themes of power, desire, and morality in Jacobean England. This performance follows the devil's attempts to claim souls in the town of Edmonton, focusing on the outcast Elizabeth Sawyer.",
+          "url": "https://events.umich.edu/event/154432",
+          "start": "2026-11-07T20:00:00-05:00",
+          "venue": "East Quadrangle - Keene Theater",
+          "city": "Ann Arbor",
+          "category": "Performance",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/11/event_154432_original-2.jpg",
+          "imageAlt": "Performance of Jen Silverman's Witch",
+          "status": "confirmed",
+          "occurrenceId": "occ-a00ff78b395badb3b05bd728",
+          "seriesId": "series-7d04eea7c98f9b2908714c5f",
+          "sourceUpdatedAt": "2026-11-03T21:11:06-05:00",
+          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/154432",
+          "venueId": "east quadrangle|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "performance-of-jen-silverman-s-witch-event-2026-11-07",
+            "src-fd04ec1a035e707bc99aaad8"
+          ],
+          "legacyOccurrenceKeys": [
+            "performance-of-jen-silverman-s-witch-event-2026-11-07|2026-11-07T20:00:00-05:00",
+            "src-fd04ec1a035e707bc99aaad8|2026-11-07T20:00:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "series-7d04eea7c98f9b2908714c5f"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-fd04ec1a035e707bc99aaad8",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/154432",
+              "observedAt": "2026-11-05T13:19:34-05:00",
+              "sourceUpdatedAt": "2026-11-03T21:11:06-05:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-fd04ec1a035e707bc99aaad8",
+              "start": "src-fd04ec1a035e707bc99aaad8",
+              "end": "src-fd04ec1a035e707bc99aaad8",
+              "venue": "src-fd04ec1a035e707bc99aaad8",
+              "url": "src-fd04ec1a035e707bc99aaad8",
+              "imageUrl": "src-fd04ec1a035e707bc99aaad8",
+              "status": "src-fd04ec1a035e707bc99aaad8"
+            },
+            "conflicts": {}
+          },
+          "score": 97,
+          "scoring": {
+            "signals": {
+              "funny": 0.37,
+              "distinctive": 0.69,
+              "eclectic": 0.59,
+              "technical_science": 0.04,
+              "artsy": 0.98,
+              "progressive": 0.57,
+              "outdoors": 0.11,
+              "theatre": 0.96,
+              "live_music": 0.04,
+              "live_comedy": 0.07,
+              "farmer_market": 0.01,
+              "sporting": 0.02,
+              "recurring": 0.08,
+              "craft_fair_shopping": 0.02,
+              "religious": 0.04,
+              "large_venue": 0.12,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.03,
+              "dance": 0.03,
+              "sales_related": 0.13,
+              "children_activity": 0.04,
+              "running": 0.02,
+              "exercise": 0.02,
+              "employment_related": 0.02
+            },
+            "score": 97,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"east quadrangle\",\"performance of jen silverman s witch\"]",
+          "price": "Free",
+          "end": "2026-11-07T22:00:00-05:00",
+          "bookingUrl": "",
+          "statusEvidence": "Organizer detail reviewed",
+          "priceMin": 0,
+          "priceMax": 0,
+          "priceCurrency": "USD",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
+            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
+            "sourceUrl": "https://events.umich.edu/event/154432",
+            "sourceHash": "c47ad07ceca5b609c1664e2d34d5be2618989931f882184236fc8c810a440eab",
+            "inputFacts": {
+              "id": "occ-a00ff78b395badb3b05bd728",
+              "url": "https://events.umich.edu/event/154432",
+              "start": "2026-11-07T20:00:00-05:00",
+              "end": "2026-11-07T22:00:00-05:00",
+              "venue": "East Quadrangle",
+              "city": "Ann Arbor",
+              "price": null,
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "Sat, Nov 7 2026",
+              "time": "8:00pm",
+              "venue": "East Quadrangle - Keene Theater",
+              "admission": "Free",
+              "description": "In the town of Edmonton in Jacobean England, the devil has come to town.",
+              "end": "10:00pm"
+            }
+          },
+          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-a00ff78b395badb3b05bd728",
+            "score": 113,
+            "components": {
+              "taste": 97,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "distinctive +17",
+              "theatre +12",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        },
+        {
           "id": "occ-f4b807363f414bd8c93b51d6",
           "title": "Big Sky Company: A Benefit for the ACLU",
-          "summary": "Experience live music from Big Sky Company, a collective performing original songs. Proceeds from this event benefit the ACLU, offering a chance to enjoy local talent while supporting a cause.",
+          "summary": "This musical showcase features a collective of artists debuting a new project. Individual performers will present their own songs, followed by the debut of a collaborative recording project benefiting the ACLU, highlighting the local music community's commitment to social advocacy through live performance.",
           "url": "https://www.nstarlounge.com/events/bigskycompany",
           "start": "2026-11-07T18:00:00-05:00",
           "venue": "North Star Lounge",
@@ -25,7 +170,7 @@
           "priceMin": 25,
           "priceMax": 25,
           "priceCurrency": "USD",
-          "lastCheckedAt": "2026-11-06T03:03:42.627641-05:00",
+          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
           "canonicalUrl": "https://www.nstarlounge.com/events/bigskycompany",
           "venueId": "north star lounge|ann arbor",
           "timePrecision": "time",
@@ -128,8 +273,8 @@
           "statusEvidence": "Organizer detail reviewed",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-11-06T03:03:42.627641-05:00",
-            "expiresAt": "2026-11-07T03:03:42.627641-05:00",
+            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
+            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
             "sourceUrl": "https://www.nstarlounge.com/events/bigskycompany",
             "sourceHash": "2ebc266668633993665a0d2bec111b2be66a67a3708ff79f6f40add775737f1d",
             "inputFacts": {
@@ -143,16 +288,16 @@
               "status": "scheduled"
             },
             "evidence": {
-              "date": "November 7, 2026",
-              "time": "6:00 PM",
+              "date": "Saturday, November 7, 2026",
+              "time": "6:00 PM",
               "venue": "North Star Lounge",
               "admission": "$25 tickets with proceeds going to the ACLU.",
               "description": "Mike, Annie, Dave, Kristi will each perform a few of their own songs and debut the new project on November 7th at North Star Lounge.",
               "registration": "PURCHASE TICKETS",
-              "end": "7:45 PM"
+              "end": "7:45 PM"
             }
           },
-          "reviewExpiresAt": "2026-11-07T03:03:42.627641-05:00",
+          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
           "recommendation": {
             "occurrenceId": "occ-f4b807363f414bd8c93b51d6",
             "score": 99,
@@ -174,142 +319,167 @@
           }
         },
         {
-          "id": "occ-43af6f8da4855da649076606",
-          "title": "Detroit Wrestling Extravaganza Presented by Throwdown Theatre",
-          "summary": "Experience Detroit wrestling history with classic film screenings, live wrestling matches, Q&A sessions, and autograph signings with legends. This event celebrates the rich legacy of professional wrestling in the city.",
-          "url": "https://www.crowdwork.com/e/detroit-wrestling-extravaganza-presented-by-throwdown-theatre?date=2026-11-07T17%3A00%3A00.000-05%3A00",
-          "start": "2026-11-07T17:00:00-05:00",
-          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-          "city": "Hamtramck",
-          "price": "$22.35",
-          "category": "Comedy",
-          "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18654/532498FE-7705-4441-97F1-2B9A064A8C4B.jpeg",
-          "imageAlt": "Detroit Wrestling Extravaganza Presented by Throwdown Theatre",
+          "id": "occ-b79d3862aa8d6d528637a4fe",
+          "title": "John Mange, band conducting",
+          "summary": "A doctoral candidate in band conducting presents a dissertation recital featuring an ensemble. This performance offers an opportunity to experience advanced musical leadership and academic research in a live setting, showcasing the culmination of graduate-level study within the university's music program.",
+          "url": "https://events.umich.edu/event/153524",
+          "start": "2026-11-07T18:30:00-05:00",
+          "venue": "Earl V. Moore Building",
+          "city": "Ann Arbor",
+          "price": "Free",
+          "category": "Performance",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153524_original-1.jpg",
+          "imageAlt": "John Mange, band conducting",
           "status": "confirmed",
-          "occurrenceId": "occ-43af6f8da4855da649076606",
-          "seriesId": "series-b285b5615f733238b82d08e6",
-          "sourceUpdatedAt": "2026-10-12T21:05:35.295000+00:00",
-          "priceMin": 22.35,
-          "priceMax": 22.35,
-          "priceCurrency": "USD",
-          "lastCheckedAt": "2026-11-06T03:03:42.627641-05:00",
-          "canonicalUrl": "https://www.crowdwork.com/e/detroit-wrestling-extravaganza-presented-by-throwdown-theatre?date=2026-11-07T17%3A00%3A00.000-05%3A00",
-          "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
+          "occurrenceId": "occ-b79d3862aa8d6d528637a4fe",
+          "seriesId": "series-8a7ba4dbfb6410f0c4a0c8c2",
+          "sourceUpdatedAt": "2026-11-05T18:17:04-05:00",
+          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/153524",
+          "venueId": "earl v moore building|ann arbor",
           "timePrecision": "time",
-          "statusEvidence": "Organizer detail reviewed",
           "aliases": [
-            "detroit-wrestling-extravaganza-presented-event-2026-11-07",
-            "src-11140d336f7d968d8128bba8"
+            "john-mange-band-conducting-event-2026-11-07",
+            "src-d475e9b3b30bdc1786828ebe",
+            "src-d542387a9ea19fd6ab162394",
+            "src-f5865fc7d1190b94a0f352dc"
           ],
           "legacyOccurrenceKeys": [
-            "detroit-wrestling-extravaganza-presented-event-2026-11-07|2026-11-07T17:00:00-05:00",
-            "src-11140d336f7d968d8128bba8|2026-11-07T17:00:00-05:00"
+            "john-mange-band-conducting-event-2026-11-07|2026-11-07T18:30:00-05:00",
+            "src-d475e9b3b30bdc1786828ebe|2026-11-07T18:30:00-05:00",
+            "src-d542387a9ea19fd6ab162394|2026-11-07T18:30:00-05:00",
+            "src-f5865fc7d1190b94a0f352dc|2026-11-07T18:30:00-05:00"
           ],
           "legacySeriesKeys": [
-            "series-b285b5615f733238b82d08e6"
+            "series-8a7ba4dbfb6410f0c4a0c8c2"
           ],
           "sources": [
             {
-              "sourceRecordId": "src-11140d336f7d968d8128bba8",
-              "sourceId": "planet-ant-theatre",
-              "canonicalUrl": "https://www.crowdwork.com/e/detroit-wrestling-extravaganza-presented-by-throwdown-theatre?date=2026-11-07T17%3A00%3A00.000-05%3A00",
-              "observedAt": "2026-10-13T18:17:27-04:00",
-              "sourceUpdatedAt": "2026-10-12T21:05:35.295000+00:00",
+              "sourceRecordId": "src-d542387a9ea19fd6ab162394",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/153524",
+              "observedAt": "2026-11-07T01:38:58-05:00",
+              "sourceUpdatedAt": "2026-11-05T18:17:04-05:00",
               "sourceAuthority": "organizer",
-              "status": "scheduled",
-              "statusEvidence": "https://schema.org/EventScheduled"
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-f5865fc7d1190b94a0f352dc",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/153524",
+              "observedAt": "2026-11-05T13:19:34-05:00",
+              "sourceUpdatedAt": "2026-11-02T18:17:00-05:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-d475e9b3b30bdc1786828ebe",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/153524",
+              "observedAt": "2026-10-29T13:14:42-04:00",
+              "sourceUpdatedAt": "2026-10-28T18:16:52-04:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
             }
           ],
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
+              "native-occurrence",
               "new-occurrence"
             ],
             "fields": {
-              "title": "src-11140d336f7d968d8128bba8",
-              "start": "src-11140d336f7d968d8128bba8",
-              "venue": "src-11140d336f7d968d8128bba8",
-              "url": "src-11140d336f7d968d8128bba8",
-              "status": "src-11140d336f7d968d8128bba8",
-              "imageUrl": "src-11140d336f7d968d8128bba8"
+              "title": "src-d542387a9ea19fd6ab162394",
+              "start": "src-d542387a9ea19fd6ab162394",
+              "end": "src-d542387a9ea19fd6ab162394",
+              "venue": "src-d542387a9ea19fd6ab162394",
+              "url": "src-d542387a9ea19fd6ab162394",
+              "imageUrl": "src-d542387a9ea19fd6ab162394",
+              "status": "src-d542387a9ea19fd6ab162394"
             },
             "conflicts": {}
           },
-          "score": 69,
+          "score": 81,
           "scoring": {
             "signals": {
-              "funny": 0.35,
-              "distinctive": 0.85,
-              "eclectic": 0.87,
-              "technical_science": 0.03,
-              "artsy": 0.83,
-              "progressive": 0.17,
-              "outdoors": 0.01,
-              "theatre": 0.1,
-              "live_music": 0.02,
-              "live_comedy": 0.06,
+              "funny": 0.06,
+              "distinctive": 0.47,
+              "eclectic": 0.08,
+              "technical_science": 0.14,
+              "artsy": 0.98,
+              "progressive": 0.15,
+              "outdoors": 0.02,
+              "theatre": 0.05,
+              "live_music": 0.95,
+              "live_comedy": 0.02,
               "farmer_market": 0.01,
-              "sporting": 0.38,
-              "recurring": 0.05,
+              "sporting": 0.02,
+              "recurring": 0.06,
               "craft_fair_shopping": 0.02,
-              "religious": 0.01,
+              "religious": 0.02,
               "large_venue": 0.04,
               "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.02,
-              "market_or_shop": 0.04,
-              "punk_metal_or_rock": 0.02,
+              "popular_music_cover_band": 0.03,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.03,
               "dance": 0.02,
-              "sales_related": 0.63,
+              "sales_related": 0.05,
               "children_activity": 0.03,
               "running": 0.01,
               "exercise": 0.02,
-              "employment_related": 0.01
+              "employment_related": 0.02
             },
-            "score": 69,
+            "score": 81,
             "rulesVersion": 2
           },
-          "localityTier": "unknown",
-          "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"detroit wrestling extravaganza presented by throwdown theatre\"]",
-          "registration": "Get Tickets",
-          "bookingUrl": "https://www.crowdwork.com/e/detroit-wrestling-extravaganza-presented-by-throwdown-theatre?date=2026-11-07T17%3A00%3A00.000-05%3A00",
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"earl v moore building\",\"john mange band conducting\"]",
+          "end": "2026-11-07T20:00:00-05:00",
+          "registration": "No tickets required",
+          "bookingUrl": "",
+          "statusEvidence": "Organizer detail reviewed",
+          "priceMin": 0,
+          "priceMax": 0,
+          "priceCurrency": "USD",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-11-06T03:03:42.627641-05:00",
-            "expiresAt": "2026-11-07T03:03:42.627641-05:00",
-            "sourceUrl": "https://www.crowdwork.com/e/detroit-wrestling-extravaganza-presented-by-throwdown-theatre?date=2026-11-07T17%3A00%3A00.000-05%3A00",
-            "sourceHash": "d8ad9949e83e010103204d96d57a6f8c847ce768da06ec3678e4ce199ba7d210",
+            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
+            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
+            "sourceUrl": "https://events.umich.edu/event/153524",
+            "sourceHash": "f3fc4411c2c261fc50c44913682210e6068c58066eb7859689512935aaf33327",
             "inputFacts": {
-              "id": "occ-43af6f8da4855da649076606",
-              "url": "https://www.crowdwork.com/e/detroit-wrestling-extravaganza-presented-by-throwdown-theatre?date=2026-11-07T17%3A00%3A00.000-05%3A00",
-              "start": "2026-11-07T17:00:00-05:00",
-              "end": null,
-              "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-              "city": "Hamtramck",
-              "price": "$22.35–$27.6 including fees",
+              "id": "occ-b79d3862aa8d6d528637a4fe",
+              "url": "https://events.umich.edu/event/153524",
+              "start": "2026-11-07T18:30:00-05:00",
+              "end": "2026-11-07T20:00:00-05:00",
+              "venue": "Earl V. Moore Building",
+              "city": "Ann Arbor",
+              "price": "Free - no tickets required",
               "status": "scheduled"
             },
             "evidence": {
-              "date": "Nov 7, 2026",
-              "time": "5:00 PM",
-              "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-              "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/detroit-wrestling-extravaganza-presented-by-throwdown-theatre?date=2026-11-07T17:00:00\", \"price\": 22.35, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-              "description": "A celebration of Detroit wrestling history like you've never experienced before!",
-              "registration": "Get Tickets"
+              "date": "Sat, Nov 7",
+              "time": "6:30pm",
+              "venue": "Earl V. Moore Building",
+              "admission": "Free - no tickets required",
+              "description": "Doctoral candidate in band conducting John Mange performs a dissertation recital with an ensemble.",
+              "registration": "no tickets required",
+              "end": "8:00pm"
             }
           },
-          "reviewExpiresAt": "2026-11-07T03:03:42.627641-05:00",
+          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
           "recommendation": {
-            "occurrenceId": "occ-43af6f8da4855da649076606",
-            "score": 85,
+            "occurrenceId": "occ-b79d3862aa8d6d528637a4fe",
+            "score": 97,
             "components": {
-              "taste": 69,
+              "taste": 81,
               "practicality": 12,
               "novelty": 0,
               "quality": 4
             },
             "reasons": [
-              "distinctive +20",
-              "eclectic +14",
+              "live music +11",
+              "distinctive +11",
               "Available on selected day +12",
               "Confirmed/recent source information +4"
             ],
@@ -326,7 +496,7 @@
         {
           "id": "occ-b7d2c997d65fea6071bf0075",
           "title": "Andrea Gibson’s Love Letter from the Afterlife",
-          "summary": "Experience a multimedia event celebrating Andrea Gibson's poetry with film, live music, and storytelling. Featuring Megan Falley and The Goosebumps Orchestra, this performance blends cinema and live artistry for an immersive tribute.",
+          "summary": "This multimedia event celebrates the legacy of poet Andrea Gibson through a unique blend of film, live poetry, and orchestral music. Featuring narration by Megan Falley and live performances by guest artists, the evening offers an immersive, communal experience that honors Gibson's enduring artistic voice and storytelling.",
           "url": "https://theark.org/event/andrea-gibsons-love-letter-from-the-afterlife/",
           "start": "2026-11-08T19:30:00-05:00",
           "venue": "Michigan Theater",
@@ -342,20 +512,23 @@
           "priceMin": 52.4,
           "priceMax": 101.35,
           "priceCurrency": "USD",
-          "lastCheckedAt": "2026-11-06T03:03:42.627641-05:00",
+          "availability": "inStock",
+          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
           "canonicalUrl": "https://theark.org/event/andrea-gibsons-love-letter-from-the-afterlife/",
           "venueId": "michigan theater|ann arbor",
           "timePrecision": "time",
           "statusEvidence": "Organizer detail reviewed",
           "aliases": [
             "andrea-gibson-s-love-letter-from-the-aft-event-2026-11-08",
-            "src-09aecd6677266c9ac8702a27",
-            "src-91d738895908e7d8bd24d8e7"
+            "src-3b0c65517067837a69198e14",
+            "src-aa2ecdd6ddfa9f51de8566b3",
+            "src-ada2be386a5694071af89f0e"
           ],
           "legacyOccurrenceKeys": [
             "andrea-gibson-s-love-letter-from-the-aft-event-2026-11-08|2026-11-08T19:30:00-05:00",
-            "src-09aecd6677266c9ac8702a27|2026-11-08T19:30:00-05:00",
-            "src-91d738895908e7d8bd24d8e7|2026-11-08T19:30:00-05:00"
+            "src-3b0c65517067837a69198e14|2026-11-08T19:30:00-05:00",
+            "src-aa2ecdd6ddfa9f51de8566b3|2026-11-08T19:30:00-05:00",
+            "src-ada2be386a5694071af89f0e|2026-11-08T19:30:00-05:00"
           ],
           "legacySeriesKeys": [
             "andrea gibson's love letter from the afterlife|the michigan theater",
@@ -366,7 +539,7 @@
           ],
           "sources": [
             {
-              "sourceRecordId": "src-09aecd6677266c9ac8702a27",
+              "sourceRecordId": "src-aa2ecdd6ddfa9f51de8566b3",
               "sourceId": "the-ark",
               "canonicalUrl": "https://theark.org/event/andrea-gibsons-love-letter-from-the-afterlife/",
               "observedAt": "2026-10-09T19:21:20-04:00",
@@ -375,7 +548,7 @@
               "statusEvidence": "https://schema.org/EventScheduled"
             },
             {
-              "sourceRecordId": "src-91d738895908e7d8bd24d8e7",
+              "sourceRecordId": "src-3b0c65517067837a69198e14",
               "sourceId": "the-ark",
               "canonicalUrl": "https://theark.org/event/andrea-gibsons-love-letter-from-the-afterlife/",
               "observedAt": "2026-10-12T15:41:41-04:00",
@@ -384,7 +557,7 @@
               "status": "scheduled"
             },
             {
-              "sourceRecordId": "src-4c25925500ffa4590dc11232",
+              "sourceRecordId": "src-ada2be386a5694071af89f0e",
               "sourceId": "the-ark",
               "canonicalUrl": "https://theark.org/event/andrea-gibsons-love-letter-from-the-afterlife/",
               "observedAt": "2026-10-02T17:14:22-04:00",
@@ -394,17 +567,16 @@
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
-              "exact-title-time-venue",
-              "new-occurrence"
+              "exact-title-time-venue"
             ],
             "fields": {
-              "title": "src-09aecd6677266c9ac8702a27",
-              "start": "src-09aecd6677266c9ac8702a27",
-              "end": "src-09aecd6677266c9ac8702a27",
-              "venue": "src-09aecd6677266c9ac8702a27",
-              "url": "src-09aecd6677266c9ac8702a27",
-              "status": "src-09aecd6677266c9ac8702a27",
-              "imageUrl": "src-91d738895908e7d8bd24d8e7"
+              "title": "src-aa2ecdd6ddfa9f51de8566b3",
+              "start": "src-aa2ecdd6ddfa9f51de8566b3",
+              "end": "src-aa2ecdd6ddfa9f51de8566b3",
+              "venue": "src-aa2ecdd6ddfa9f51de8566b3",
+              "url": "src-aa2ecdd6ddfa9f51de8566b3",
+              "status": "src-aa2ecdd6ddfa9f51de8566b3",
+              "imageUrl": "src-3b0c65517067837a69198e14"
             },
             "conflicts": {}
           },
@@ -444,12 +616,12 @@
           "localityTier": "regional",
           "experienceId": "experience:[\"ann arbor\",\"michigan theater\",\"andrea gibson s love letter from the afterlife\"]",
           "end": "2026-11-08T23:00:00-05:00",
-          "registration": "Buy Tickets Online",
+          "registration": "Buy tickets online",
           "bookingUrl": "https://www.ticketmaster.com/event/08006507D2C98E17",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-11-06T03:03:42.627641-05:00",
-            "expiresAt": "2026-11-07T03:03:42.627641-05:00",
+            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
+            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
             "sourceUrl": "https://theark.org/event/andrea-gibsons-love-letter-from-the-afterlife/",
             "sourceHash": "38cd89f8bacfbe6ea235133c6d76d18c33b7d041a4dc7886c797a23150c7969a",
             "inputFacts": {
@@ -459,20 +631,20 @@
               "end": "2026-11-08T23:00:00-05:00",
               "venue": "Michigan Theater",
               "city": "Ann Arbor",
-              "price": "$52.40",
+              "price": "$52.40 - $101.35",
               "status": "scheduled"
             },
             "evidence": {
-              "date": "November 8",
-              "time": "2026-11-08T19:30:00-05:00",
+              "date": "November 08 2026",
+              "time": "7:30 pm",
               "venue": "Michigan Theater",
               "admission": "{\"@type\": \"Offer\", \"price\": \"52.40<span class=\\\"tribe-events-extra-ticket-info\\\"> - $101.35</span>\", \"priceCurrency\": \"USD\", \"url\": \"https://theark.org/event/andrea-gibsons-love-letter-from-the-afterlife/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-08-11T00:00:00+00:00\"}",
-              "description": "join us for Andrea Gibson’s Love Letter from the Afterlife— a multimedia event bringing together film, live poetry, music, orchestral accompaniment, and intimate storytelling in a celebration of one of the most beloved voices of a generation.",
-              "registration": "Tickets:",
+              "description": "a multimedia event bringing together film, live poetry, music, orchestral accompaniment, and intimate storytelling in a celebration of one of the most beloved voices of a generation.",
+              "registration": "Buy tickets online",
               "end": "2026-11-08T23:00:00-05:00"
             }
           },
-          "reviewExpiresAt": "2026-11-07T03:03:42.627641-05:00",
+          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
           "recommendation": {
             "occurrenceId": "occ-b7d2c997d65fea6071bf0075",
             "score": 107,
@@ -485,6 +657,320 @@
             "reasons": [
               "distinctive +21",
               "eclectic +15",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        },
+        {
+          "id": "occ-fa1fa0f88337c7966fb176e7",
+          "title": "Henna Night at Betsy-Barbour",
+          "summary": "Celebrate Diwali with a community gathering featuring henna application, food, and drinks. This event offers a creative space for residents to connect and practice henna skills in an informal, social setting hosted by the Betsy-Barbour Diversity Peer Educator.",
+          "url": "https://events.umich.edu/event/154290",
+          "start": "2026-11-08T14:00:00-05:00",
+          "venue": "Betsy Barbour House",
+          "city": "Ann Arbor",
+          "category": "Social / Informal Gathering",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_154290_original-1.jpg",
+          "imageAlt": "Henna Night at Betsy-Barbour",
+          "status": "confirmed",
+          "occurrenceId": "occ-fa1fa0f88337c7966fb176e7",
+          "seriesId": "series-2f7caec023b389d788c1c0d2",
+          "sourceUpdatedAt": "2026-10-29T13:47:16-04:00",
+          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/154290",
+          "venueId": "betsy barbour house|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "henna-night-at-betsy-barbour-event-2026-11-08",
+            "src-7b6d56306b370af7a29727cc"
+          ],
+          "legacyOccurrenceKeys": [
+            "henna-night-at-betsy-barbour-event-2026-11-08|2026-11-08T19:00:00-05:00",
+            "src-7b6d56306b370af7a29727cc|2026-11-08T19:00:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "series-2f7caec023b389d788c1c0d2"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-7b6d56306b370af7a29727cc",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/154290",
+              "observedAt": "2026-10-30T10:38:45-04:00",
+              "sourceUpdatedAt": "2026-10-29T13:47:16-04:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-7b6d56306b370af7a29727cc",
+              "start": "src-7b6d56306b370af7a29727cc",
+              "end": "src-7b6d56306b370af7a29727cc",
+              "venue": "src-7b6d56306b370af7a29727cc",
+              "url": "src-7b6d56306b370af7a29727cc",
+              "imageUrl": "src-7b6d56306b370af7a29727cc",
+              "status": "src-7b6d56306b370af7a29727cc"
+            },
+            "conflicts": {}
+          },
+          "score": 81,
+          "scoring": {
+            "signals": {
+              "funny": 0.65,
+              "distinctive": 0.54,
+              "eclectic": 0.28,
+              "technical_science": 0.05,
+              "artsy": 0.87,
+              "progressive": 0.72,
+              "outdoors": 0.03,
+              "theatre": 0.02,
+              "live_music": 0.03,
+              "live_comedy": 0.02,
+              "farmer_market": 0.02,
+              "sporting": 0.01,
+              "recurring": 0.12,
+              "craft_fair_shopping": 0.03,
+              "religious": 0.18,
+              "large_venue": 0.02,
+              "substance_recovery": 0.02,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.01,
+              "dance": 0.04,
+              "sales_related": 0.04,
+              "children_activity": 0.07,
+              "running": 0.01,
+              "exercise": 0.02,
+              "employment_related": 0.01
+            },
+            "score": 81,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"betsy barbour house\",\"henna night at betsy barbour\"]",
+          "price": "Free",
+          "end": "2026-11-08T15:30:00-05:00",
+          "bookingUrl": "",
+          "statusEvidence": "Organizer detail reviewed",
+          "priceMin": 0,
+          "priceMax": 0,
+          "priceCurrency": "USD",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
+            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
+            "sourceUrl": "https://events.umich.edu/event/154290",
+            "sourceHash": "cf3f248e69fb11a84dfcef21ea0186154b2bea36a82b89ad8462a186b9ec7747",
+            "inputFacts": {
+              "id": "occ-fa1fa0f88337c7966fb176e7",
+              "url": "https://events.umich.edu/event/154290",
+              "start": "2026-11-08T19:00:00-05:00",
+              "end": "2026-11-08T20:30:00-05:00",
+              "venue": "Betsy Barbour House",
+              "city": "Ann Arbor",
+              "price": null,
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "Sun, Nov 8 2026",
+              "time": "2:00pm",
+              "venue": "Betsy Barbour House",
+              "admission": "Free",
+              "description": "Join the Betsy-Barbour Diversity Peer Educator for a fun Diwali celebration! Enjoy tasty food and drinks, connect with residents, and practice your henna skills!",
+              "registration": "No results",
+              "end": "3:30pm"
+            }
+          },
+          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-fa1fa0f88337c7966fb176e7",
+            "score": 97,
+            "components": {
+              "taste": 81,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "distinctive +13",
+              "artsy +9",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        },
+        {
+          "id": "occ-a72dc1dc5810a4af11934bca",
+          "title": "Mara Mayer, clarinet",
+          "summary": "Graduate student Mara Mayer presents a final master's degree recital. This performance showcases advanced clarinet repertoire, offering an opportunity to experience high-level classical music artistry within the university's academic setting. The event is open to the public and highlights the talent of emerging musicians.",
+          "url": "https://events.umich.edu/event/153527",
+          "start": "2026-11-08T14:00:00-05:00",
+          "venue": "Earl V. Moore Building",
+          "city": "Ann Arbor",
+          "price": "Free",
+          "category": "Performance",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153527_original-1.jpg",
+          "imageAlt": "Mara Mayer, clarinet",
+          "status": "confirmed",
+          "occurrenceId": "occ-a72dc1dc5810a4af11934bca",
+          "seriesId": "series-f91bcb99c02a825dddda4abe",
+          "sourceUpdatedAt": "2026-11-02T18:17:02-05:00",
+          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/153527",
+          "venueId": "earl v moore building|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "mara-mayer-clarinet-event-2026-11-08",
+            "src-2352129a5046c3875fd3a3cc",
+            "src-c1fa81d3b1df962b6953dc65",
+            "src-dc8fda214f9d633d6539e6ba"
+          ],
+          "legacyOccurrenceKeys": [
+            "mara-mayer-clarinet-event-2026-11-08|2026-11-08T14:00:00-05:00",
+            "src-2352129a5046c3875fd3a3cc|2026-11-08T14:00:00-05:00",
+            "src-c1fa81d3b1df962b6953dc65|2026-11-08T14:00:00-05:00",
+            "src-dc8fda214f9d633d6539e6ba|2026-11-08T14:00:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "series-f91bcb99c02a825dddda4abe"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-dc8fda214f9d633d6539e6ba",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/153527",
+              "observedAt": "2026-11-05T13:19:34-05:00",
+              "sourceUpdatedAt": "2026-11-02T18:17:02-05:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-c1fa81d3b1df962b6953dc65",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/153527",
+              "observedAt": "2026-10-21T20:57:29-04:00",
+              "sourceUpdatedAt": "2026-10-20T18:16:58-04:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-2352129a5046c3875fd3a3cc",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/153527",
+              "observedAt": "2026-10-12T15:41:41-04:00",
+              "sourceUpdatedAt": "2026-10-09T18:17:39-04:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "native-occurrence",
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-dc8fda214f9d633d6539e6ba",
+              "start": "src-dc8fda214f9d633d6539e6ba",
+              "end": "src-dc8fda214f9d633d6539e6ba",
+              "venue": "src-dc8fda214f9d633d6539e6ba",
+              "url": "src-dc8fda214f9d633d6539e6ba",
+              "imageUrl": "src-dc8fda214f9d633d6539e6ba",
+              "status": "src-dc8fda214f9d633d6539e6ba"
+            },
+            "conflicts": {}
+          },
+          "score": 79,
+          "scoring": {
+            "signals": {
+              "funny": 0.06,
+              "distinctive": 0.39,
+              "eclectic": 0.07,
+              "technical_science": 0.09,
+              "artsy": 0.98,
+              "progressive": 0.13,
+              "outdoors": 0.02,
+              "theatre": 0.04,
+              "live_music": 0.96,
+              "live_comedy": 0.02,
+              "farmer_market": 0.01,
+              "sporting": 0.02,
+              "recurring": 0.06,
+              "craft_fair_shopping": 0.02,
+              "religious": 0.02,
+              "large_venue": 0.04,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.02,
+              "sales_related": 0.06,
+              "children_activity": 0.02,
+              "running": 0.01,
+              "exercise": 0.02,
+              "employment_related": 0.02
+            },
+            "score": 79,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"earl v moore building\",\"mara mayer clarinet\"]",
+          "end": "2026-11-08T15:00:00-05:00",
+          "bookingUrl": "",
+          "statusEvidence": "Organizer detail reviewed",
+          "priceMin": 0,
+          "priceMax": 0,
+          "priceCurrency": "USD",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
+            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
+            "sourceUrl": "https://events.umich.edu/event/153527",
+            "sourceHash": "a13e1a32194fc785679e0d3589cc5b214aecafde538f714488fb513f9910bbbc",
+            "inputFacts": {
+              "id": "occ-a72dc1dc5810a4af11934bca",
+              "url": "https://events.umich.edu/event/153527",
+              "start": "2026-11-08T14:00:00-05:00",
+              "end": "2026-11-08T15:00:00-05:00",
+              "venue": "Earl V. Moore Building",
+              "city": "Ann Arbor",
+              "price": "Free - no tickets required",
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "Sun, Nov 8 2026",
+              "time": "2:00pm",
+              "venue": "Earl V. Moore Building",
+              "admission": "Free - no tickets required",
+              "description": "Graduate student Mara Mayer performs a final master's degree recital.",
+              "end": "3:00pm"
+            }
+          },
+          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-a72dc1dc5810a4af11934bca",
+            "score": 95,
+            "components": {
+              "taste": 79,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "live music +12",
+              "artsy +10",
               "Available on selected day +12",
               "Confirmed/recent source information +4"
             ],
