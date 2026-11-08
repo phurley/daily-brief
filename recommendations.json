@@ -1,495 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-11-07T23:41:31.441Z",
+  "generatedAt": "2026-11-08T06:11:58.159Z",
   "days": [
-    {
-      "date": "2026-11-07",
-      "events": [
-        {
-          "id": "occ-a00ff78b395badb3b05bd728",
-          "title": "Performance of Jen Silverman's Witch",
-          "summary": "The RC Players present a theatrical production of Jen Silverman's play, which explores themes of power, desire, and morality in Jacobean England. This performance follows the devil's attempts to claim souls in the town of Edmonton, focusing on the outcast Elizabeth Sawyer.",
-          "url": "https://events.umich.edu/event/154432",
-          "start": "2026-11-07T20:00:00-05:00",
-          "venue": "East Quadrangle - Keene Theater",
-          "city": "Ann Arbor",
-          "category": "Performance",
-          "imageUrl": "https://events.umich.edu/media/attachments/2026/11/event_154432_original-2.jpg",
-          "imageAlt": "Performance of Jen Silverman's Witch",
-          "status": "confirmed",
-          "occurrenceId": "occ-a00ff78b395badb3b05bd728",
-          "seriesId": "series-7d04eea7c98f9b2908714c5f",
-          "sourceUpdatedAt": "2026-11-03T21:11:06-05:00",
-          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
-          "canonicalUrl": "https://events.umich.edu/event/154432",
-          "venueId": "east quadrangle|ann arbor",
-          "timePrecision": "time",
-          "aliases": [
-            "performance-of-jen-silverman-s-witch-event-2026-11-07",
-            "src-fd04ec1a035e707bc99aaad8"
-          ],
-          "legacyOccurrenceKeys": [
-            "performance-of-jen-silverman-s-witch-event-2026-11-07|2026-11-07T20:00:00-05:00",
-            "src-fd04ec1a035e707bc99aaad8|2026-11-07T20:00:00-05:00"
-          ],
-          "legacySeriesKeys": [
-            "series-7d04eea7c98f9b2908714c5f"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-fd04ec1a035e707bc99aaad8",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/154432",
-              "observedAt": "2026-11-05T13:19:34-05:00",
-              "sourceUpdatedAt": "2026-11-03T21:11:06-05:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "new-occurrence"
-            ],
-            "fields": {
-              "title": "src-fd04ec1a035e707bc99aaad8",
-              "start": "src-fd04ec1a035e707bc99aaad8",
-              "end": "src-fd04ec1a035e707bc99aaad8",
-              "venue": "src-fd04ec1a035e707bc99aaad8",
-              "url": "src-fd04ec1a035e707bc99aaad8",
-              "imageUrl": "src-fd04ec1a035e707bc99aaad8",
-              "status": "src-fd04ec1a035e707bc99aaad8"
-            },
-            "conflicts": {}
-          },
-          "score": 97,
-          "scoring": {
-            "signals": {
-              "funny": 0.37,
-              "distinctive": 0.69,
-              "eclectic": 0.59,
-              "technical_science": 0.04,
-              "artsy": 0.98,
-              "progressive": 0.57,
-              "outdoors": 0.11,
-              "theatre": 0.96,
-              "live_music": 0.04,
-              "live_comedy": 0.07,
-              "farmer_market": 0.01,
-              "sporting": 0.02,
-              "recurring": 0.08,
-              "craft_fair_shopping": 0.02,
-              "religious": 0.04,
-              "large_venue": 0.12,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.02,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.03,
-              "dance": 0.03,
-              "sales_related": 0.13,
-              "children_activity": 0.04,
-              "running": 0.02,
-              "exercise": 0.02,
-              "employment_related": 0.02
-            },
-            "score": 97,
-            "rulesVersion": 2
-          },
-          "localityTier": "regional",
-          "experienceId": "experience:[\"ann arbor\",\"east quadrangle\",\"performance of jen silverman s witch\"]",
-          "price": "Free",
-          "end": "2026-11-07T22:00:00-05:00",
-          "bookingUrl": "",
-          "statusEvidence": "Organizer detail reviewed",
-          "priceMin": 0,
-          "priceMax": 0,
-          "priceCurrency": "USD",
-          "editorial": {
-            "state": "verified",
-            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
-            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
-            "sourceUrl": "https://events.umich.edu/event/154432",
-            "sourceHash": "c47ad07ceca5b609c1664e2d34d5be2618989931f882184236fc8c810a440eab",
-            "inputFacts": {
-              "id": "occ-a00ff78b395badb3b05bd728",
-              "url": "https://events.umich.edu/event/154432",
-              "start": "2026-11-07T20:00:00-05:00",
-              "end": "2026-11-07T22:00:00-05:00",
-              "venue": "East Quadrangle",
-              "city": "Ann Arbor",
-              "price": null,
-              "status": "scheduled"
-            },
-            "evidence": {
-              "date": "Sat, Nov 7 2026",
-              "time": "8:00pm",
-              "venue": "East Quadrangle - Keene Theater",
-              "admission": "Free",
-              "description": "In the town of Edmonton in Jacobean England, the devil has come to town.",
-              "end": "10:00pm"
-            }
-          },
-          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
-          "recommendation": {
-            "occurrenceId": "occ-a00ff78b395badb3b05bd728",
-            "score": 113,
-            "components": {
-              "taste": 97,
-              "practicality": 12,
-              "novelty": 0,
-              "quality": 4
-            },
-            "reasons": [
-              "distinctive +17",
-              "theatre +12",
-              "Available on selected day +12",
-              "Confirmed/recent source information +4"
-            ],
-            "unknowns": [
-              "Distance unknown"
-            ]
-          }
-        },
-        {
-          "id": "occ-f4b807363f414bd8c93b51d6",
-          "title": "Big Sky Company: A Benefit for the ACLU",
-          "summary": "This musical showcase features a collective of artists debuting a new project. Individual performers will present their own songs, followed by the debut of a collaborative recording project benefiting the ACLU, highlighting the local music community's commitment to social advocacy through live performance.",
-          "url": "https://www.nstarlounge.com/events/bigskycompany",
-          "start": "2026-11-07T18:00:00-05:00",
-          "venue": "North Star Lounge",
-          "city": "Ann Arbor",
-          "price": "$25",
-          "category": "Music",
-          "imageUrl": "https://images.squarespace-cdn.com/content/v1/62fd75cb471e0713728b1b71/39a2e635-8232-4807-a7b3-040fa88127ae/1080x1350_BigSky.jpg?format=1000w",
-          "imageAlt": "Big Sky Company: A Benefit for the ACLU",
-          "status": "confirmed",
-          "occurrenceId": "occ-f4b807363f414bd8c93b51d6",
-          "seriesId": "series-c95bbb722d345d6daa85bf92",
-          "sourceUpdatedAt": "2026-09-18T15:12:29-04:00",
-          "priceMin": 25,
-          "priceMax": 25,
-          "priceCurrency": "USD",
-          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
-          "canonicalUrl": "https://www.nstarlounge.com/events/bigskycompany",
-          "venueId": "north star lounge|ann arbor",
-          "timePrecision": "time",
-          "aliases": [
-            "big-sky-company-a-benefit-for-the-aclu-event-2026-11-07",
-            "src-aa3e41558c86ad195cd64ab2",
-            "src-ad5c969dae435359c1de6f70"
-          ],
-          "legacyOccurrenceKeys": [
-            "big-sky-company-a-benefit-for-the-aclu-event-2026-11-07|2026-11-07T18:00:00-05:00",
-            "src-aa3e41558c86ad195cd64ab2|2026-11-07T18:00:00-05:00",
-            "src-ad5c969dae435359c1de6f70|2026-11-07T18:00:00-05:00"
-          ],
-          "legacySeriesKeys": [
-            "big sky company: a benefit for the aclu|north star lounge",
-            "series-c95bbb722d345d6daa85bf92"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-aa3e41558c86ad195cd64ab2",
-              "sourceId": "north-star-lounge",
-              "canonicalUrl": "https://www.nstarlounge.com/events/bigskycompany",
-              "observedAt": "2026-10-09T19:21:20-04:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            },
-            {
-              "sourceRecordId": "src-ad5c969dae435359c1de6f70",
-              "sourceId": "north-star-lounge",
-              "canonicalUrl": "https://www.nstarlounge.com/events/bigskycompany",
-              "observedAt": "2026-10-12T15:41:41-04:00",
-              "sourceUpdatedAt": "2026-09-18T15:12:29-04:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            },
-            {
-              "sourceRecordId": "src-520fdbf6ed240db41c70ea84",
-              "sourceId": "north-star-lounge",
-              "canonicalUrl": "https://www.nstarlounge.com/events/bigskycompany",
-              "observedAt": "2026-10-09T09:31:47-04:00",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "exact-title-time-venue",
-              "new-occurrence"
-            ],
-            "fields": {
-              "status": "src-aa3e41558c86ad195cd64ab2",
-              "title": "src-aa3e41558c86ad195cd64ab2",
-              "start": "src-aa3e41558c86ad195cd64ab2",
-              "end": "src-aa3e41558c86ad195cd64ab2",
-              "venue": "src-aa3e41558c86ad195cd64ab2",
-              "registration": "src-aa3e41558c86ad195cd64ab2",
-              "url": "src-aa3e41558c86ad195cd64ab2",
-              "imageUrl": "src-aa3e41558c86ad195cd64ab2"
-            },
-            "conflicts": {}
-          },
-          "score": 83,
-          "scoring": {
-            "signals": {
-              "funny": 0.26,
-              "distinctive": 0.37,
-              "eclectic": 0.3,
-              "technical_science": 0.03,
-              "artsy": 0.97,
-              "progressive": 0.83,
-              "outdoors": 0.02,
-              "theatre": 0.05,
-              "live_music": 0.97,
-              "live_comedy": 0.03,
-              "farmer_market": 0.01,
-              "sporting": 0.01,
-              "recurring": 0.09,
-              "craft_fair_shopping": 0.02,
-              "religious": 0.02,
-              "large_venue": 0.03,
-              "substance_recovery": 0.02,
-              "popular_music_cover_band": 0.04,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.16,
-              "dance": 0.03,
-              "sales_related": 0.22,
-              "children_activity": 0.02,
-              "running": 0.01,
-              "exercise": 0.01,
-              "employment_related": 0.02
-            },
-            "score": 83,
-            "rulesVersion": 2
-          },
-          "localityTier": "regional",
-          "experienceId": "experience:[\"ann arbor\",\"north star lounge\",\"big sky company a benefit for the aclu\"]",
-          "end": "2026-11-07T19:45:00-05:00",
-          "registration": "PURCHASE TICKETS",
-          "bookingUrl": "https://nstarlounge.com/tickets/p/bigskycompany",
-          "statusEvidence": "Organizer detail reviewed",
-          "editorial": {
-            "state": "verified",
-            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
-            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
-            "sourceUrl": "https://www.nstarlounge.com/events/bigskycompany",
-            "sourceHash": "2ebc266668633993665a0d2bec111b2be66a67a3708ff79f6f40add775737f1d",
-            "inputFacts": {
-              "id": "occ-f4b807363f414bd8c93b51d6",
-              "url": "https://www.nstarlounge.com/events/bigskycompany",
-              "start": "2026-11-07T18:00:00-05:00",
-              "end": "2026-11-07T19:45:00-05:00",
-              "venue": "North Star Lounge",
-              "city": "Ann Arbor",
-              "price": "$25",
-              "status": "scheduled"
-            },
-            "evidence": {
-              "date": "Saturday, November 7, 2026",
-              "time": "6:00 PM",
-              "venue": "North Star Lounge",
-              "admission": "$25 tickets with proceeds going to the ACLU.",
-              "description": "Mike, Annie, Dave, Kristi will each perform a few of their own songs and debut the new project on November 7th at North Star Lounge.",
-              "registration": "PURCHASE TICKETS",
-              "end": "7:45 PM"
-            }
-          },
-          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
-          "recommendation": {
-            "occurrenceId": "occ-f4b807363f414bd8c93b51d6",
-            "score": 99,
-            "components": {
-              "taste": 83,
-              "practicality": 12,
-              "novelty": 0,
-              "quality": 4
-            },
-            "reasons": [
-              "live music +12",
-              "artsy +10",
-              "Available on selected day +12",
-              "Confirmed/recent source information +4"
-            ],
-            "unknowns": [
-              "Distance unknown"
-            ]
-          }
-        },
-        {
-          "id": "occ-b79d3862aa8d6d528637a4fe",
-          "title": "John Mange, band conducting",
-          "summary": "A doctoral candidate in band conducting presents a dissertation recital featuring an ensemble. This performance offers an opportunity to experience advanced musical leadership and academic research in a live setting, showcasing the culmination of graduate-level study within the university's music program.",
-          "url": "https://events.umich.edu/event/153524",
-          "start": "2026-11-07T18:30:00-05:00",
-          "venue": "Earl V. Moore Building",
-          "city": "Ann Arbor",
-          "price": "Free",
-          "category": "Performance",
-          "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153524_original-1.jpg",
-          "imageAlt": "John Mange, band conducting",
-          "status": "confirmed",
-          "occurrenceId": "occ-b79d3862aa8d6d528637a4fe",
-          "seriesId": "series-8a7ba4dbfb6410f0c4a0c8c2",
-          "sourceUpdatedAt": "2026-11-05T18:17:04-05:00",
-          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
-          "canonicalUrl": "https://events.umich.edu/event/153524",
-          "venueId": "earl v moore building|ann arbor",
-          "timePrecision": "time",
-          "aliases": [
-            "john-mange-band-conducting-event-2026-11-07",
-            "src-d475e9b3b30bdc1786828ebe",
-            "src-d542387a9ea19fd6ab162394",
-            "src-f5865fc7d1190b94a0f352dc"
-          ],
-          "legacyOccurrenceKeys": [
-            "john-mange-band-conducting-event-2026-11-07|2026-11-07T18:30:00-05:00",
-            "src-d475e9b3b30bdc1786828ebe|2026-11-07T18:30:00-05:00",
-            "src-d542387a9ea19fd6ab162394|2026-11-07T18:30:00-05:00",
-            "src-f5865fc7d1190b94a0f352dc|2026-11-07T18:30:00-05:00"
-          ],
-          "legacySeriesKeys": [
-            "series-8a7ba4dbfb6410f0c4a0c8c2"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-d542387a9ea19fd6ab162394",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/153524",
-              "observedAt": "2026-11-07T01:38:58-05:00",
-              "sourceUpdatedAt": "2026-11-05T18:17:04-05:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            },
-            {
-              "sourceRecordId": "src-f5865fc7d1190b94a0f352dc",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/153524",
-              "observedAt": "2026-11-05T13:19:34-05:00",
-              "sourceUpdatedAt": "2026-11-02T18:17:00-05:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            },
-            {
-              "sourceRecordId": "src-d475e9b3b30bdc1786828ebe",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/153524",
-              "observedAt": "2026-10-29T13:14:42-04:00",
-              "sourceUpdatedAt": "2026-10-28T18:16:52-04:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "native-occurrence",
-              "new-occurrence"
-            ],
-            "fields": {
-              "title": "src-d542387a9ea19fd6ab162394",
-              "start": "src-d542387a9ea19fd6ab162394",
-              "end": "src-d542387a9ea19fd6ab162394",
-              "venue": "src-d542387a9ea19fd6ab162394",
-              "url": "src-d542387a9ea19fd6ab162394",
-              "imageUrl": "src-d542387a9ea19fd6ab162394",
-              "status": "src-d542387a9ea19fd6ab162394"
-            },
-            "conflicts": {}
-          },
-          "score": 81,
-          "scoring": {
-            "signals": {
-              "funny": 0.06,
-              "distinctive": 0.47,
-              "eclectic": 0.08,
-              "technical_science": 0.14,
-              "artsy": 0.98,
-              "progressive": 0.15,
-              "outdoors": 0.02,
-              "theatre": 0.05,
-              "live_music": 0.95,
-              "live_comedy": 0.02,
-              "farmer_market": 0.01,
-              "sporting": 0.02,
-              "recurring": 0.06,
-              "craft_fair_shopping": 0.02,
-              "religious": 0.02,
-              "large_venue": 0.04,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.03,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.03,
-              "dance": 0.02,
-              "sales_related": 0.05,
-              "children_activity": 0.03,
-              "running": 0.01,
-              "exercise": 0.02,
-              "employment_related": 0.02
-            },
-            "score": 81,
-            "rulesVersion": 2
-          },
-          "localityTier": "regional",
-          "experienceId": "experience:[\"ann arbor\",\"earl v moore building\",\"john mange band conducting\"]",
-          "end": "2026-11-07T20:00:00-05:00",
-          "registration": "No tickets required",
-          "bookingUrl": "",
-          "statusEvidence": "Organizer detail reviewed",
-          "priceMin": 0,
-          "priceMax": 0,
-          "priceCurrency": "USD",
-          "editorial": {
-            "state": "verified",
-            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
-            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
-            "sourceUrl": "https://events.umich.edu/event/153524",
-            "sourceHash": "f3fc4411c2c261fc50c44913682210e6068c58066eb7859689512935aaf33327",
-            "inputFacts": {
-              "id": "occ-b79d3862aa8d6d528637a4fe",
-              "url": "https://events.umich.edu/event/153524",
-              "start": "2026-11-07T18:30:00-05:00",
-              "end": "2026-11-07T20:00:00-05:00",
-              "venue": "Earl V. Moore Building",
-              "city": "Ann Arbor",
-              "price": "Free - no tickets required",
-              "status": "scheduled"
-            },
-            "evidence": {
-              "date": "Sat, Nov 7",
-              "time": "6:30pm",
-              "venue": "Earl V. Moore Building",
-              "admission": "Free - no tickets required",
-              "description": "Doctoral candidate in band conducting John Mange performs a dissertation recital with an ensemble.",
-              "registration": "no tickets required",
-              "end": "8:00pm"
-            }
-          },
-          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
-          "recommendation": {
-            "occurrenceId": "occ-b79d3862aa8d6d528637a4fe",
-            "score": 97,
-            "components": {
-              "taste": 81,
-              "practicality": 12,
-              "novelty": 0,
-              "quality": 4
-            },
-            "reasons": [
-              "live music +11",
-              "distinctive +11",
-              "Available on selected day +12",
-              "Confirmed/recent source information +4"
-            ],
-            "unknowns": [
-              "Distance unknown"
-            ]
-          }
-        }
-      ]
-    },
     {
       "date": "2026-11-08",
       "events": [
@@ -971,6 +484,160 @@
             "reasons": [
               "live music +12",
               "artsy +10",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "events": [
+        {
+          "id": "occ-e82d73559dd133f0f0235ee4",
+          "title": "Austin Zhu, carillon",
+          "summary": "Experience a unique musical performance featuring the Charles Baird Carillon, an instrument consisting of 53 bronze bells. This recital offers a rare opportunity to hear the historic tower's bells played live, followed by an interactive session with the performer.",
+          "url": "https://events.umich.edu/event/154330",
+          "start": "2026-11-09T12:00:00-05:00",
+          "venue": "Burton Memorial Tower",
+          "city": "Ann Arbor",
+          "price": "Free",
+          "category": "Performance",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_154330_original-1.jpg",
+          "imageAlt": "Austin Zhu, carillon",
+          "status": "confirmed",
+          "occurrenceId": "occ-e82d73559dd133f0f0235ee4",
+          "seriesId": "series-1ceb6cbe0971a9056cf449c0",
+          "sourceUpdatedAt": "2026-10-30T12:16:54-04:00",
+          "lastCheckedAt": "2026-11-07T01:40:01.693504-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/154330",
+          "venueId": "burton memorial tower|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "austin-zhu-carillon-event-2026-11-09",
+            "src-abcdf7fb10fe7b792467906f"
+          ],
+          "legacyOccurrenceKeys": [
+            "austin-zhu-carillon-event-2026-11-09|2026-11-09T12:00:00-05:00",
+            "src-abcdf7fb10fe7b792467906f|2026-11-09T12:00:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "series-1ceb6cbe0971a9056cf449c0",
+            "series-86b9f0dceddcad39c2ad76da",
+            "series-912fc67394d826f86421fce3",
+            "series-af48391d7de5d7326c1e4a02"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-abcdf7fb10fe7b792467906f",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/154330",
+              "observedAt": "2026-10-31T09:45:58-04:00",
+              "sourceUpdatedAt": "2026-10-30T12:16:54-04:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-abcdf7fb10fe7b792467906f",
+              "start": "src-abcdf7fb10fe7b792467906f",
+              "end": "src-abcdf7fb10fe7b792467906f",
+              "venue": "src-abcdf7fb10fe7b792467906f",
+              "url": "src-abcdf7fb10fe7b792467906f",
+              "imageUrl": "src-abcdf7fb10fe7b792467906f",
+              "status": "src-abcdf7fb10fe7b792467906f"
+            },
+            "conflicts": {}
+          },
+          "score": 93,
+          "scoring": {
+            "signals": {
+              "funny": 0.09,
+              "distinctive": 0.84,
+              "eclectic": 0.1,
+              "technical_science": 0.31,
+              "artsy": 0.98,
+              "progressive": 0.11,
+              "outdoors": 0.02,
+              "theatre": 0.03,
+              "live_music": 0.9,
+              "live_comedy": 0.01,
+              "farmer_market": 0.01,
+              "sporting": 0.01,
+              "recurring": 0.97,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.04,
+              "large_venue": 0.03,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.01,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.02,
+              "sales_related": 0.04,
+              "children_activity": 0.04,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.01
+            },
+            "score": 93,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"burton memorial tower\",\"austin zhu carillon\"]",
+          "end": "2026-11-09T12:30:00-05:00",
+          "bookingUrl": "",
+          "statusEvidence": "Organizer detail reviewed",
+          "priceMin": 0,
+          "priceMax": 0,
+          "priceCurrency": "USD",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-07T01:40:01.693504-05:00",
+            "expiresAt": "2026-11-08T01:40:01.693504-05:00",
+            "sourceUrl": "https://events.umich.edu/event/154330",
+            "sourceHash": "9b0c8b722490a136553667f7eca007cabd0155423eca5d064d853a3013c4fbaa",
+            "inputFacts": {
+              "id": "occ-e82d73559dd133f0f0235ee4",
+              "url": "https://events.umich.edu/event/154330",
+              "start": "2026-11-09T12:00:00-05:00",
+              "end": "2026-11-09T12:30:00-05:00",
+              "venue": "Burton Memorial Tower",
+              "city": "Ann Arbor",
+              "price": "Free - no tickets required",
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "Mon, Nov 9",
+              "time": "12:00pm",
+              "venue": "Burton Memorial Tower",
+              "admission": "Free - no tickets required",
+              "description": "Economics graduate student Austin Zhu performs on the Charles Baird Carillon, an instrument of 53 bronze bells located inside the Burton Memorial Tower.",
+              "registration": "no tickets required",
+              "end": "12:30pm"
+            }
+          },
+          "reviewExpiresAt": "2026-11-08T01:40:01.693504-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-e82d73559dd133f0f0235ee4",
+            "score": 109,
+            "components": {
+              "taste": 93,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "distinctive +20",
+              "live music +11",
               "Available on selected day +12",
               "Confirmed/recent source information +4"
             ],
