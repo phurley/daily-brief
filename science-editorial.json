@@ -1,15 +1,74 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-07T07:14:07.195177-05:00",
+  "generatedAt": "2026-11-08T06:48:29.564149-05:00",
   "stories": [
+    {
+      "id": "science-336af74c1de5a917",
+      "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
+      "summary": "A blend of linguistic, archaeological, and genetic research is reconstructing the Bantu expansion, a major human migration across sub-Saharan Africa over thousands of years. New findings suggest a single path through the Congo rainforest before splitting, and evidence of intermixing between Bantu speakers and indigenous hunter-gatherer groups, sometimes with distinct gender patterns.",
+      "finding": "A blend of linguistic, archaeological, and genetic research is reconstructing the Bantu expansion, a major human migration across sub-Saharan Africa over thousands of years. New findings suggest a single path through the Congo rainforest before splitting, and evidence of intermixing between Bantu speakers and indigenous hunter-gatherer groups, sometimes with distinct gender patterns.",
+      "significance": "This clarifies the timeline, route, and cultural assimilation dynamics of one of history's largest migrations, which permanently reshaped sub-Saharan Africa's languages, demography, and technology.",
+      "caveat": "Conclusive archaeological evidence directly confirming the western African homeland remains thin, and it is uncertain whether Bantu speakers invented or adopted iron smelting.",
+      "url": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-07T12:15:55+00:00",
+      "firstSeenAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-08T11:01:02.111901Z",
+      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "social-science",
+        "biology"
+      ],
+      "entities": [
+        "Great Zimbabwe",
+        "University of Leicester",
+        "University of Oxford",
+        "Uppsala University",
+        "Ghent University"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41467-023-43717-x",
+      "sourceUpdatedAt": "2026-11-07T12:26:45Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-08T06:48:29.564149-05:00",
+        "expiresAt": "2026-11-11T06:48:29.564149-05:00",
+        "inputFacts": {
+          "id": "science-336af74c1de5a917",
+          "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
+          "url": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
+          "publishedAt": "2026-11-07T12:15:55Z",
+          "summary": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
+          "finding": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
+          "sourceUpdatedAt": "2026-11-07T12:26:45Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-07T12:15:55+00:00",
+        "datePrecision": "time",
+        "sourceHash": "cbe205b547185a5dda99568c0c2dafb030075d3f76cc620749363e998d19cccf",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "This article presents a substantive new finding in human migration and genetics, detailing how interdisciplinary research is uncovering the complex history of the Bantu expansion. It discusses new evidence regarding migration paths and genetic intermixing, which is a significant advance in understanding human history and population dynamics.",
+        "storyKey": "bantu-expansion-reconstruction",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article supports all claims in the summary, detailing how linguistic, archaeological, and genetic research is used to reconstruct the Bantu expansion. It specifically mentions new findings suggesting a single path through the Congo rainforest before splitting, and provides evidence of intermixing between Bantu speakers and indigenous hunter-gatherer groups, including distinct gender patterns in the genetic evidence."
+      }
+    },
     {
       "id": "science-fc8dda36a9e816be",
       "title": "Earth's churning mantle may have created the Great Unconformity",
       "summary": "New models suggest Earth's churning mantle, in combination with glacial erosion, created the Great Unconformity, a significant gap in the geological record. This process involved continents uplifting for hundreds of millions of years, allowing glaciers to grind them down, followed by sinking and burial by sediments. The models also explain why this unconformity is more prominent in North America.",
       "finding": "New models suggest Earth's churning mantle, in combination with glacial erosion, created the Great Unconformity, a significant gap in the geological record. This process involved continents uplifting for hundreds of millions of years, allowing glaciers to grind them down, followed by sinking and burial by sediments. The models also explain why this unconformity is more prominent in North America.",
-      "significance": "This provides a mechanism explaining the timing and regional variation of a billion-year gap in the geologic record, and hints at how nutrient runoff might have aided the Cambrian explosion.",
-      "caveat": "The starting configurations of the mantle simulations are uncertain, as paleomagnetic data do not track longitude and ancient ocean floors had to be invented from scratch.",
+      "significance": "The findings help resolve the long-standing mystery of why this massive gap in the geologic record appears prominently in North America but is less evident elsewhere.",
+      "caveat": "The starting configurations of the simulations carry uncertainties, including continent longitudes and ancient ocean floor data that had to be reconstructed from scratch.",
       "url": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
       "source": {
@@ -19,46 +78,46 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-06T20:24:20+00:00",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-07T11:01:01.958577Z",
-      "verifiedAt": "2026-11-07T11:01:01.958577Z",
+      "checkedAt": "2026-11-08T11:01:02.111901Z",
+      "verifiedAt": "2026-11-08T11:01:02.111901Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "earth-science"
       ],
       "entities": [
-        "Grand Canyon",
-        "University of Wollongong",
-        "Nature",
         "Nicolas Flament",
-        "Santosh Dhungana"
+        "Santosh Dhungana",
+        "University of Wollongong",
+        "Grand Canyon",
+        "Laurentia"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1038/s41586-026-11156-5",
       "sourceUpdatedAt": "2026-11-06T21:20:33Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-07T07:14:07.195177-05:00",
-        "expiresAt": "2026-11-10T07:14:07.195177-05:00",
+        "reviewedAt": "2026-11-08T06:48:29.564149-05:00",
+        "expiresAt": "2026-11-11T06:48:29.564149-05:00",
         "inputFacts": {
           "id": "science-fc8dda36a9e816be",
           "title": "Earth's churning mantle may have created the Great Unconformity",
           "url": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
           "publishedAt": "2026-11-06T20:24:20Z",
-          "summary": "Geodynamic models suggest the Great Unconformity formed from a combination of mantle-driven continental uplift coinciding with extensive glacial erosion, followed by subsidence that buried the eroded surface.",
-          "finding": "Geodynamic models suggest the Great Unconformity formed from a combination of mantle-driven continental uplift coinciding with extensive glacial erosion, followed by subsidence that buried the eroded surface.",
+          "summary": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
+          "finding": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
           "sourceUpdatedAt": "2026-11-06T21:20:33Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
         "publicationEvidence": "2026-11-06T20:24:20+00:00",
         "datePrecision": "time",
-        "sourceHash": "25311d225918dec2cb5882293932da0e3962bfb49249c6326b9562e1139c5b07",
+        "sourceHash": "a47e35a84b1331829438cf17dd52c00b4607aaca50b8e0dc2c10c8a675655854",
         "relevance": 4,
         "novelty": 4,
         "reason": "The article presents a new, quantitatively tested hypothesis for a major geological feature, combining mantle dynamics with glaciation, which is a substantive scientific finding.",
         "storyKey": "great-unconformity-mantle-glaciation",
         "localConnection": "",
         "grounded": true,
-        "groundingReason": "The article describes new models and simulations that propose a mechanism for the Great Unconformity, combining mantle dynamics and glacial erosion, and explains its prominence in North America. This is a new scientific finding."
+        "groundingReason": "The summary accurately reflects the new models and findings presented in the article regarding the formation of the Great Unconformity, including the role of mantle convection and glacial erosion, and the explanation for its prominence in North America. This is a new scientific finding supported by the research described."
       }
     },
     {
@@ -123,7 +182,7 @@
       "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
       "summary": "The PBR theorem, experimentally confirmed multiple times, rules out the possibility that objective reality exists independently of observation while the quantum wave function is merely a state of knowledge. This forces physicists to either accept a surreal objective reality where quantum states are real physical properties or reject objective reality entirely, aligning with the Copenhagen interpretation.",
       "finding": "The PBR theorem, experimentally confirmed multiple times, rules out the possibility that objective reality exists independently of observation while the quantum wave function is merely a state of knowledge. This forces physicists to either accept a surreal objective reality where quantum states are real physical properties or reject objective reality entirely, aligning with the Copenhagen interpretation.",
-      "significance": "The findings dismantle the intuitive perspective that particles possess intrinsic, independent physical properties prior to measurement without abandoning locality or the nature of quantum states.",
+      "significance": "The findings challenge the view that quantum states merely reflect incomplete knowledge of an underlying objective reality, compelling physicists to reconsider fundamental assumptions about the nature of the physical world.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
       "primarySourceUrl": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
@@ -134,8 +193,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-06T15:48:54+00:00",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-07T11:01:01.958577Z",
-      "verifiedAt": "2026-11-07T11:01:01.958577Z",
+      "checkedAt": "2026-11-08T11:01:02.111901Z",
+      "verifiedAt": "2026-11-08T11:01:02.111901Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "physics"
@@ -151,15 +210,15 @@
       "sourceUpdatedAt": "2026-11-06T15:50:25Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-07T07:14:07.195177-05:00",
-        "expiresAt": "2026-11-10T07:14:07.195177-05:00",
+        "reviewedAt": "2026-11-08T06:48:29.564149-05:00",
+        "expiresAt": "2026-11-11T06:48:29.564149-05:00",
         "inputFacts": {
           "id": "science-08a83d58613fad43",
           "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
           "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
           "publishedAt": "2026-11-06T15:48:54Z",
-          "summary": "Theoretical advancements starting from Bell's theorem through the PBR theorem show that quantum mechanics is incompatible with a local, objective view of physical reality.",
-          "finding": "Theoretical advancements starting from Bell's theorem through the PBR theorem show that quantum mechanics is incompatible with a local, objective view of physical reality.",
+          "summary": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
+          "finding": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
           "sourceUpdatedAt": "2026-11-06T15:50:25Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
@@ -174,68 +233,24 @@
         "grounded": true,
         "groundingReason": "The summary accurately reflects the PBR theorem's implications as described in the article, including its experimental confirmation and the two extreme interpretations it forces upon physicists regarding objective reality and the quantum wave function."
       }
-    },
-    {
-      "id": "science-b2886d89a4265d7c",
-      "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
-      "summary": "NASA identified factors contributing to rare chip resistor cracking on printed circuit boards during thermal cycling after vibration, including component orientation, excessive solder, and mounting stresses. Recommendations include careful component placement, finite element analysis, controlled solder fillet height, and functional thermal shock testing to mitigate flexure-induced cracking risks in ceramic body components.",
-      "finding": "NASA identified factors contributing to rare chip resistor cracking on printed circuit boards during thermal cycling after vibration, including component orientation, excessive solder, and mounting stresses. Recommendations include careful component placement, finite element analysis, controlled solder fillet height, and functional thermal shock testing to mitigate flexure-induced cracking risks in ceramic body components.",
-      "significance": "This finding is significant for NASA projects that widely use chip resistors, as it provides insights into potential failure mechanisms and offers guidelines to mitigate flexure-induced cracking risks in ceramic body components on printed circuit boards, thereby enhancing reliability and safety of electronic systems.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
-      "primarySourceUrl": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-11-03T10:35:14-05:00",
-      "firstSeenAt": "2026-11-04T11:00:25.118236Z",
-      "checkedAt": "2026-11-04T11:00:25.118236Z",
-      "verifiedAt": "2026-11-04T11:00:25.118236Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "physics"
-      ],
-      "entities": [
-        "NASA",
-        "chip resistors",
-        "printed circuit board assemblies",
-        "thermal cycling",
-        "vibration testing"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nasa.gov/wp-content/uploads/2026/11/tb-26-10.pdf?emrc=dd9296",
-      "sourceUpdatedAt": "2026-11-03T15:37:33Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-04T07:38:52.700174-05:00",
-        "expiresAt": "2026-11-07T07:38:52.700174-05:00",
-        "inputFacts": {
-          "id": "science-b2886d89a4265d7c",
-          "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
-          "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
-          "publishedAt": "2026-11-03T15:35:14Z",
-          "summary": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
-          "finding": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
-          "sourceUpdatedAt": "2026-11-03T15:37:33Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-03T10:35:14-05:00",
-        "datePrecision": "time",
-        "sourceHash": "d849442b7c9d1a14f78c97ee1b826b089cc45ad0ee45d7d647cf6a5a4fcc36fd",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "This article presents a new finding regarding a specific failure mode in electronic components, which is relevant to engineering and technology. The findings are substantive and offer practical mitigation strategies.",
-        "storyKey": "nasa-chip-resistor-cracking",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article details NASA's identification of factors contributing to rare chip resistor cracking and provides specific recommendations to mitigate these risks, representing a new finding and technical advance in component reliability for NASA projects."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-336af74c1de5a917",
+      "inputFacts": {
+        "id": "science-336af74c1de5a917",
+        "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
+        "url": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
+        "publishedAt": "2026-11-07T12:15:55Z",
+        "summary": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
+        "finding": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
+        "sourceUpdatedAt": "2026-11-07T12:26:45Z"
+      },
+      "publishedAt": "2026-11-07T12:15:55+00:00",
+      "publicationEvidence": "2026-11-07T12:15:55+00:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-fc8dda36a9e816be",
       "inputFacts": {
@@ -243,8 +258,8 @@
         "title": "Earth's churning mantle may have created the Great Unconformity",
         "url": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
         "publishedAt": "2026-11-06T20:24:20Z",
-        "summary": "Geodynamic models suggest the Great Unconformity formed from a combination of mantle-driven continental uplift coinciding with extensive glacial erosion, followed by subsidence that buried the eroded surface.",
-        "finding": "Geodynamic models suggest the Great Unconformity formed from a combination of mantle-driven continental uplift coinciding with extensive glacial erosion, followed by subsidence that buried the eroded surface.",
+        "summary": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
+        "finding": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
         "sourceUpdatedAt": "2026-11-06T21:20:33Z"
       },
       "publishedAt": "2026-11-06T20:24:20+00:00",
@@ -273,8 +288,8 @@
         "title": "This may be the best evidence yet that dinosaur blood can fossilize",
         "url": "https://www.sciencenews.org/article/evidence-dinosaur-blood-fossilize",
         "publishedAt": "2026-11-06T16:00:00Z",
-        "summary": "Researchers identified ellipsoid microstructures and chemical traces consistent with heme in the 115-million-year-old fossilized limb bones of Aratasaurus museunacionali, proposing they are remnants of red blood cells.",
-        "finding": "Researchers identified ellipsoid microstructures and chemical traces consistent with heme in the 115-million-year-old fossilized limb bones of Aratasaurus museunacionali, proposing they are remnants of red blood cells.",
+        "summary": "Researchers detected microstructures in an Aratasaurus museunacionali limb bone with chemical signatures of heme, proposing they are 115-million-year-old fossilized red blood cells.",
+        "finding": "Researchers detected microstructures in an Aratasaurus museunacionali limb bone with chemical signatures of heme, proposing they are 115-million-year-old fossilized red blood cells.",
         "sourceUpdatedAt": "2026-11-06T16:00:00Z"
       },
       "publishedAt": "2026-11-06T11:00:00-05:00",
@@ -288,8 +303,8 @@
         "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
         "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
         "publishedAt": "2026-11-06T15:48:54Z",
-        "summary": "Theoretical advancements starting from Bell's theorem through the PBR theorem show that quantum mechanics is incompatible with a local, objective view of physical reality.",
-        "finding": "Theoretical advancements starting from Bell's theorem through the PBR theorem show that quantum mechanics is incompatible with a local, objective view of physical reality.",
+        "summary": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
+        "finding": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
         "sourceUpdatedAt": "2026-11-06T15:50:25Z"
       },
       "publishedAt": "2026-11-06T15:48:54+00:00",
@@ -327,63 +342,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-79e632d7c84fde6c",
+      "id": "science-4d1edc58dbf944a9",
       "inputFacts": {
-        "id": "science-79e632d7c84fde6c",
-        "title": "Before the Dawn in America’s Heartland",
-        "url": "https://science.nasa.gov/earth/earth-observatory/before-the-dawn-in-americas-heartland",
-        "publishedAt": "2026-11-04T05:01:00Z",
-        "summary": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
-        "finding": "Astronauts aboard the International Space Station captured wide-angle photos of nighttime lights in the U.S. Midwest on October 18, 2026, revealing illuminated cities and their interconnections. A diffuse layer of green and orange light, identified as airglow, was also visible along the horizon.",
-        "sourceUpdatedAt": "2026-11-04T05:01:00Z"
+        "id": "science-4d1edc58dbf944a9",
+        "title": "APOD: 2026 November 8 – Major Fireball Meteor",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-8-major-fireball-meteor",
+        "publishedAt": "2026-11-08T05:05:00Z",
+        "summary": "A major fireball meteor tracked over Germany was consistent with originating near the radiant of the Northern Taurid Meteor Shower, which is linked to dust from Encke's comet.",
+        "finding": "A major fireball meteor tracked over Germany was consistent with originating near the radiant of the Northern Taurid Meteor Shower, which is linked to dust from Encke's comet.",
+        "sourceUpdatedAt": "2026-11-08T05:05:00Z"
       },
-      "publishedAt": "2026-11-04T00:01:00-05:00",
-      "publicationEvidence": "2026-11-04T00:01:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-b2886d89a4265d7c",
-      "inputFacts": {
-        "id": "science-b2886d89a4265d7c",
-        "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
-        "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking",
-        "publishedAt": "2026-11-03T15:35:14Z",
-        "summary": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
-        "finding": "Two instances of thick-film chip resistor cracking were observed during thermal cycling after vibration testing on printed circuit board assemblies, with fractures occurring across the short axis due to bending. Failure analyses ruled out defective lots and fatigue, identifying board flexure, component orientation, excessive solder, and mounting stresses as contributing factors.",
-        "sourceUpdatedAt": "2026-11-03T15:37:33Z"
-      },
-      "publishedAt": "2026-11-03T10:35:14-05:00",
-      "publicationEvidence": "2026-11-03T10:35:14-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-29a4ffbe1d32dba8",
-      "inputFacts": {
-        "id": "science-29a4ffbe1d32dba8",
-        "title": "Stars brewing in a nebulous cauldron",
-        "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
-        "publishedAt": "2026-10-22T08:00:00Z",
-        "summary": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
-        "finding": "Astronomers detected extremely dim stars less than a tenth as massive as the Sun and distinguished larger, hotter, fully evolved stars from young stellar objects still wrapped in thick clouds within the N159 star-forming region in the Large Magellanic Cloud. Their results indicate that the western region of N159 has a higher concentration of young stellar objects, suggesting it is in an earlier stage of stellar collapse.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-22T00:00:00-04:00",
-      "publicationEvidence": "22/10/2026",
-      "datePrecision": "date"
-    },
-    {
-      "id": "science-9f7215bf24ee1281",
-      "inputFacts": {
-        "id": "science-9f7215bf24ee1281",
-        "title": "APOD: 2026 November 7 – De Gerlache-Kocher Massif",
-        "url": "https://science.nasa.gov/image-article/apod-2026-november-7-de-gerlache-kocher-massif",
-        "publishedAt": "2026-11-07T05:05:00Z",
-        "summary": "Telescopic imaging captured the De Gerlache-Kocher massif rising about 4 kilometers near the lunar south pole, viewed during favorable lunar libration.",
-        "finding": "Telescopic imaging captured the De Gerlache-Kocher massif rising about 4 kilometers near the lunar south pole, viewed during favorable lunar libration.",
-        "sourceUpdatedAt": "2026-11-07T05:05:00Z"
-      },
-      "publishedAt": "2026-11-07T00:05:00-05:00",
-      "publicationEvidence": "2026-11-07T00:05:00-05:00",
+      "publishedAt": "2026-11-08T00:05:00-05:00",
+      "publicationEvidence": "2026-11-08T00:05:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -423,45 +393,22 @@
         "title": "This armored amphibian once lived and hunted on the seafloor",
         "url": "https://www.sciencenews.org/article/first-marine-amphibian-ancient-fossil",
         "publishedAt": "2026-11-06T14:00:00Z",
-        "summary": "Chemical analysis of Gerrothorax maritimus fossils from the late Triassic indicates the armored amphibian lived entirely in saltwater without land or freshwater access.",
-        "finding": "Chemical analysis of Gerrothorax maritimus fossils from the late Triassic indicates the armored amphibian lived entirely in saltwater without land or freshwater access.",
+        "summary": "Chemical analysis of Gerrothorax maritimus fossils from the late Triassic indicates this armored amphibian lived and hunted in the ocean without access to land or freshwater.",
+        "finding": "Chemical analysis of Gerrothorax maritimus fossils from the late Triassic indicates this armored amphibian lived and hunted in the ocean without access to land or freshwater.",
         "sourceUpdatedAt": "2026-11-06T14:00:00Z"
       },
       "publishedAt": "2026-11-06T09:00:00-05:00",
       "publicationEvidence": "2026-11-06T09:00:00-05:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-46b7465cdfaae4c4",
-      "inputFacts": {
-        "id": "science-46b7465cdfaae4c4",
-        "title": "Taking a Gander at Utah’s Goosenecks",
-        "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks",
-        "publishedAt": "2026-11-06T05:01:00Z",
-        "summary": "The San Juan River formed entrenched meanders, or goosenecks, after geologic forces elevated the Colorado Plateau, which increased the river's gradient and erosive power, allowing it to carve deep paths through 300-million-year-old rock.",
-        "finding": "The San Juan River formed entrenched meanders, or goosenecks, after geologic forces elevated the Colorado Plateau, which increased the river's gradient and erosive power, allowing it to carve deep paths through 300-million-year-old rock.",
-        "sourceUpdatedAt": "2026-11-06T05:01:00Z"
-      },
-      "publishedAt": "2026-11-06T00:01:00-05:00",
-      "publicationEvidence": "2026-11-06T00:01:00-05:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-06",
-      "selectedIds": [
-        "science-b2886d89a4265d7c",
-        "science-08a83d58613fad43",
-        "science-fc8dda36a9e816be"
-      ]
-    },
-    {
       "date": "2026-11-07",
       "selectedIds": [
-        "science-b2886d89a4265d7c",
         "science-08a83d58613fad43",
-        "science-fc8dda36a9e816be"
+        "science-fc8dda36a9e816be",
+        "science-336af74c1de5a917"
       ]
     },
     {
@@ -470,6 +417,14 @@
         "science-08a83d58613fad43",
         "science-fc8dda36a9e816be",
         "science-44ca837be7e31108"
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "selectedIds": [
+        "science-08a83d58613fad43",
+        "science-336af74c1de5a917",
+        "science-fc8dda36a9e816be"
       ]
     }
   ]
