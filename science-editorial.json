@@ -1,8 +1,66 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-08T06:48:29.564149-05:00",
+  "generatedAt": "2026-11-09T06:16:41.127759-05:00",
   "stories": [
+    {
+      "id": "science-8ea0785cc9c63a50",
+      "title": "Physicists listened to electrical noise to crack a superconductor mystery",
+      "summary": "Physicists used electrical noise measurements to investigate high-temperature superconductivity in cuprates, finding evidence that electron pairs form at higher temperatures within the pseudogap state, before the material achieves full superconductivity. This suggests that the bottleneck for higher superconducting temperatures might be achieving phase coherence among these pre-formed pairs, rather than the pairing itself. The experiment does not fully rule out intertwined patterns.",
+      "finding": "Physicists used electrical noise measurements to investigate high-temperature superconductivity in cuprates, finding evidence that electron pairs form at higher temperatures within the pseudogap state, before the material achieves full superconductivity. This suggests that the bottleneck for higher superconducting temperatures might be achieving phase coherence among these pre-formed pairs, rather than the pairing itself. The experiment does not fully rule out intertwined patterns.",
+      "significance": "The finding suggests the primary bottleneck for cuprate superconductivity may be establishing phase coherence among electron pairs rather than forming the pairs themselves, offering clues for raising critical temperatures.",
+      "caveat": "The method loses sensitivity at higher temperatures, preventing measurements above the critical superconducting temperature where pseudogaps are typically defined, and it does not exclude other coupled effects or patterns.",
+      "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-08T12:15:31+00:00",
+      "firstSeenAt": "2026-11-09T11:00:04.003337Z",
+      "checkedAt": "2026-11-09T11:00:04.003337Z",
+      "verifiedAt": "2026-11-09T11:00:04.003337Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "physics"
+      ],
+      "entities": [
+        "Milan Allan",
+        "Ingmar Swart",
+        "Ludwig Maximilian University of Munich",
+        "Utrecht University",
+        "Science"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1126/science.adt3444",
+      "sourceUpdatedAt": "2026-11-06T23:42:08Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-09T06:16:41.127759-05:00",
+        "expiresAt": "2026-11-12T06:16:41.127759-05:00",
+        "inputFacts": {
+          "id": "science-8ea0785cc9c63a50",
+          "title": "Physicists listened to electrical noise to crack a superconductor mystery",
+          "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
+          "publishedAt": "2026-11-08T12:15:31Z",
+          "summary": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
+          "finding": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
+          "sourceUpdatedAt": "2026-11-06T23:42:08Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-08T12:15:31+00:00",
+        "datePrecision": "time",
+        "sourceHash": "cbfc123dbb65ed6a7c136ac87b73dd6bc37330938a58785ca26c80f4746932da",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "This is a substantive new finding in physics regarding high-temperature superconductivity, a long-standing mystery. The research provides new insights into the mechanism of these materials, which could have significant implications for future technological applications.",
+        "storyKey": "cuprate-superconductor-pseudogap-mystery",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article details a new experimental finding using electrical noise measurements to investigate high-temperature superconductivity in cuprates, providing evidence for pre-formed electron pairs within the pseudogap state at higher temperatures than full superconductivity. This is a new technical advance in understanding the mechanism of high-temperature superconductivity."
+      }
+    },
     {
       "id": "science-336af74c1de5a917",
       "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
@@ -237,6 +295,21 @@
   ],
   "corrections": [
     {
+      "id": "science-8ea0785cc9c63a50",
+      "inputFacts": {
+        "id": "science-8ea0785cc9c63a50",
+        "title": "Physicists listened to electrical noise to crack a superconductor mystery",
+        "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
+        "publishedAt": "2026-11-08T12:15:31Z",
+        "summary": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
+        "finding": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
+        "sourceUpdatedAt": "2026-11-06T23:42:08Z"
+      },
+      "publishedAt": "2026-11-08T12:15:31+00:00",
+      "publicationEvidence": "2026-11-08T12:15:31+00:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-336af74c1de5a917",
       "inputFacts": {
         "id": "science-336af74c1de5a917",
@@ -312,6 +385,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-f6c4f38b852e436b",
+      "inputFacts": {
+        "id": "science-f6c4f38b852e436b",
+        "title": "Parkinson’s may be driven by ‘vicious cycle’ that disrupts brain waste drainage",
+        "url": "https://www.newscientist.com/article/2597911-parkinsons-may-be-driven-by-vicious-cycle-that-disrupts-brain-waste-drainage",
+        "publishedAt": "2026-11-06T15:00:00Z",
+        "summary": "Alpha-synuclein clumps accumulate in the brain's meninges, provoking immune inflammation via TNF-alpha that makes lymphatic vessels leaky and impairs the drainage of brain waste.",
+        "finding": "Alpha-synuclein clumps accumulate in the brain's meninges, provoking immune inflammation via TNF-alpha that makes lymphatic vessels leaky and impairs the drainage of brain waste.",
+        "sourceUpdatedAt": "2026-11-06T15:34:51Z"
+      },
+      "publishedAt": "2026-11-06T15:00:00+00:00",
+      "publicationEvidence": "2026-11-06T15:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-89a92c97d83383c6",
       "inputFacts": {
         "id": "science-89a92c97d83383c6",
@@ -339,6 +427,21 @@
       },
       "publishedAt": "2026-11-05T16:00:00-05:00",
       "publicationEvidence": "2026-11-05T16:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-155d9f5cc0b5428b",
+      "inputFacts": {
+        "id": "science-155d9f5cc0b5428b",
+        "title": "Ozone Hole Reaches Its 2026 Maximum",
+        "url": "https://science.nasa.gov/earth/earth-observatory/ozone-hole-reaches-its-2026-maximum",
+        "publishedAt": "2026-11-09T05:00:00Z",
+        "summary": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
+        "finding": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
+        "sourceUpdatedAt": "2026-11-09T05:00:00Z"
+      },
+      "publishedAt": "2026-11-09T00:00:00-05:00",
+      "publicationEvidence": "2026-11-09T00:00:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -404,14 +507,6 @@
   ],
   "days": [
     {
-      "date": "2026-11-07",
-      "selectedIds": [
-        "science-08a83d58613fad43",
-        "science-fc8dda36a9e816be",
-        "science-336af74c1de5a917"
-      ]
-    },
-    {
       "date": "2026-11-08",
       "selectedIds": [
         "science-08a83d58613fad43",
@@ -425,6 +520,14 @@
         "science-08a83d58613fad43",
         "science-336af74c1de5a917",
         "science-fc8dda36a9e816be"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "selectedIds": [
+        "science-08a83d58613fad43",
+        "science-8ea0785cc9c63a50",
+        "science-336af74c1de5a917"
       ]
     }
   ]
