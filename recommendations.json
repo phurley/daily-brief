@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-11-09T06:45:24.387Z",
+  "generatedAt": "2026-11-09T08:17:03.565Z",
   "days": [
     {
       "date": "2026-11-09",
@@ -21,7 +21,7 @@
           "occurrenceId": "occ-20af94c24629bc58290ede29",
           "seriesId": "series-f877f64aa3fcfc954dba569a",
           "sourceUpdatedAt": "2026-11-02T20:40:11-05:00",
-          "lastCheckedAt": "2026-11-08T02:28:43.516723-05:00",
+          "lastCheckedAt": "2026-11-09T02:56:21.983155-05:00",
           "canonicalUrl": "https://events.umich.edu/event/154463",
           "venueId": "east hall|ann arbor",
           "timePrecision": "time",
@@ -107,8 +107,8 @@
           "priceCurrency": "USD",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-11-08T02:28:43.516723-05:00",
-            "expiresAt": "2026-11-09T02:28:43.516723-05:00",
+            "reviewedAt": "2026-11-09T02:56:21.983155-05:00",
+            "expiresAt": "2026-11-10T02:56:21.983155-05:00",
             "sourceUrl": "https://events.umich.edu/event/154463",
             "sourceHash": "758b938e827c6cd95d0a185004942f5e4fe958a940e1055babe8848bc6bcd135",
             "inputFacts": {
@@ -130,7 +130,7 @@
               "end": "4:00pm"
             }
           },
-          "reviewExpiresAt": "2026-11-09T02:28:43.516723-05:00",
+          "reviewExpiresAt": "2026-11-10T02:56:21.983155-05:00",
           "recommendation": {
             "occurrenceId": "occ-20af94c24629bc58290ede29",
             "score": 107,
@@ -170,18 +170,18 @@
           "priceMin": 3,
           "priceMax": 3,
           "priceCurrency": "USD",
-          "lastCheckedAt": "2026-11-08T02:28:43.516723-05:00",
+          "lastCheckedAt": "2026-11-09T02:56:21.983155-05:00",
           "canonicalUrl": "https://theark.org/event/the-arks-open-stage-261109/",
           "venueId": "the ark|ann arbor",
           "timePrecision": "time",
           "statusEvidence": "Organizer detail reviewed",
           "aliases": [
-            "src-9a2339dea0e8a0539843d763",
+            "src-0057bf30c5f86b933cb02614",
             "src-d3d552581c0c7129dc9798b4",
             "the-ark-s-open-stage-event-2026-11-09"
           ],
           "legacyOccurrenceKeys": [
-            "src-9a2339dea0e8a0539843d763|2026-11-09T20:00:00-05:00",
+            "src-0057bf30c5f86b933cb02614|2026-11-09T20:00:00-05:00",
             "src-d3d552581c0c7129dc9798b4|2026-11-09T20:00:00-05:00",
             "the-ark-s-open-stage-event-2026-11-09|2026-11-09T20:00:00-05:00"
           ],
@@ -194,7 +194,7 @@
           ],
           "sources": [
             {
-              "sourceRecordId": "src-9a2339dea0e8a0539843d763",
+              "sourceRecordId": "src-0057bf30c5f86b933cb02614",
               "sourceId": "the-ark",
               "canonicalUrl": "https://theark.org/event/the-arks-open-stage-261109/",
               "observedAt": "2026-10-09T19:21:20-04:00",
@@ -215,16 +215,15 @@
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
-              "exact-title-time-venue",
-              "new-occurrence"
+              "exact-title-time-venue"
             ],
             "fields": {
-              "title": "src-9a2339dea0e8a0539843d763",
-              "start": "src-9a2339dea0e8a0539843d763",
-              "end": "src-9a2339dea0e8a0539843d763",
-              "venue": "src-9a2339dea0e8a0539843d763",
-              "url": "src-9a2339dea0e8a0539843d763",
-              "status": "src-9a2339dea0e8a0539843d763",
+              "title": "src-0057bf30c5f86b933cb02614",
+              "start": "src-0057bf30c5f86b933cb02614",
+              "end": "src-0057bf30c5f86b933cb02614",
+              "venue": "src-0057bf30c5f86b933cb02614",
+              "url": "src-0057bf30c5f86b933cb02614",
+              "status": "src-0057bf30c5f86b933cb02614",
               "imageUrl": "src-d3d552581c0c7129dc9798b4"
             },
             "conflicts": {}
@@ -269,8 +268,8 @@
           "bookingUrl": "https://theark.org/event/the-arks-open-stage-261109/",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-11-08T02:28:43.516723-05:00",
-            "expiresAt": "2026-11-09T02:28:43.516723-05:00",
+            "reviewedAt": "2026-11-09T02:56:21.983155-05:00",
+            "expiresAt": "2026-11-10T02:56:21.983155-05:00",
             "sourceUrl": "https://theark.org/event/the-arks-open-stage-261109/",
             "sourceHash": "98da7ef5131d08c263b69a8c5ea318cdb2ec117df43825890b8a158c424a5950",
             "inputFacts": {
@@ -293,7 +292,7 @@
               "end": "2026-11-09T23:00:00-05:00"
             }
           },
-          "reviewExpiresAt": "2026-11-09T02:28:43.516723-05:00",
+          "reviewExpiresAt": "2026-11-10T02:56:21.983155-05:00",
           "recommendation": {
             "occurrenceId": "occ-9ff3641f3dee25793864de1c",
             "score": 97,
@@ -320,42 +319,275 @@
       "date": "2026-11-10",
       "events": [
         {
-          "id": "occ-270cbd0c9be5332078e4c6ae",
-          "title": "Tropical precarity",
-          "summary": "Explore the intersections of performance, visual art, gender expression, and cultural resistance in Puerto Rico through a panel discussion with acclaimed artists Freddie Mercado Velázquez and Mickey Negrón. This event delves into themes of identity and Caribbean culture.",
-          "url": "https://events.umich.edu/event/154628",
-          "start": "2026-11-12T16:30:00-05:00",
-          "venue": "Haven Hall",
+          "id": "occ-832ae9405482de70eaf7c1f3",
+          "title": "Veterans for Peace Concert",
+          "summary": "Enjoy a diverse lineup of local and regional musicians performing at The Ark. This concert benefits the Veterans for Peace Chapter 93 Peace Scholarship Fund, supporting peace studies and trauma assistance for combat veterans.",
+          "url": "https://theark.org/event/veterans-for-peace-concert-261110/",
+          "start": "2026-11-10T19:30:00-05:00",
+          "venue": "The Ark",
           "city": "Ann Arbor",
-          "category": "Presentation",
-          "imageUrl": "https://events.umich.edu/media/attachments/2026/11/event_154628_original-1.jpg",
-          "imageAlt": "Tropical precarity",
+          "price": "$24",
+          "category": "Music",
+          "imageUrl": "https://theark.org/wp-content/uploads/2026/07/ConcertForPeace2026-e1793804046973.jpeg",
+          "imageAlt": "Veterans for Peace Concert",
           "status": "confirmed",
-          "occurrenceId": "occ-270cbd0c9be5332078e4c6ae",
-          "seriesId": "series-d37afc462a0eb08c28154202",
-          "sourceUpdatedAt": "2026-11-06T13:40:52-05:00",
-          "lastCheckedAt": "2026-11-08T02:28:43.516723-05:00",
-          "canonicalUrl": "https://events.umich.edu/event/154628",
-          "venueId": "haven hall|ann arbor",
+          "occurrenceId": "occ-832ae9405482de70eaf7c1f3",
+          "seriesId": "series-2bc95f739f9d7fe2f3a98127",
+          "sourceUpdatedAt": "2026-11-04T14:54:17+00:00",
+          "priceMin": 24,
+          "priceMax": 24,
+          "priceCurrency": "USD",
+          "lastCheckedAt": "2026-11-09T02:56:21.983155-05:00",
+          "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
+          "venueId": "the ark|ann arbor",
           "timePrecision": "time",
+          "statusEvidence": "Organizer detail reviewed",
           "aliases": [
-            "src-7e06a0332a2e9b417cf17af3",
-            "tropical-precarity-event-2026-11-12"
+            "src-141a6ec6461aa8252f0731dc",
+            "src-50eecaa5f9aad17c34b07e88",
+            "src-a293c7c0c5a752357528b363",
+            "src-af9d2d58e883ca9c5e964b0a",
+            "veterans-for-peace-concert-event-2026-11-10"
           ],
           "legacyOccurrenceKeys": [
-            "src-7e06a0332a2e9b417cf17af3|2026-11-12T16:30:00-05:00",
-            "tropical-precarity-event-2026-11-12|2026-11-12T16:30:00-05:00"
+            "occ-c8565dc089714a7d6cd68b09",
+            "occ-cabd8967866ea0ab42879252",
+            "src-141a6ec6461aa8252f0731dc|2026-11-10T19:30:00-05:00",
+            "src-50eecaa5f9aad17c34b07e88|2026-11-10T19:30:00-05:00",
+            "src-8d879a50e0e2a79c3eea0ec3|2026-11-10T20:00:00-05:00",
+            "src-a293c7c0c5a752357528b363|2026-11-10T19:30:00-05:00",
+            "src-a364e2092ad41f06fffedcfd|2026-11-10T20:00:00-05:00",
+            "src-af9d2d58e883ca9c5e964b0a|2026-11-10T19:30:00-05:00",
+            "veterans-for-peace-concert-event-2026-11-10|2026-11-10T19:30:00-05:00",
+            "veterans-for-peace-concert-event-2026-11-10|2026-11-10T20:00:00-05:00"
           ],
           "legacySeriesKeys": [
-            "series-d37afc462a0eb08c28154202"
+            "series-2bc95f739f9d7fe2f3a98127",
+            "series-4def36028226ca9de9c132d1",
+            "veterans for peace concert|ark, 316 s. main, ann arbor",
+            "veterans for peace concert|the ark",
+            "“veterans for peace concert.”|ark"
           ],
           "sources": [
             {
-              "sourceRecordId": "src-7e06a0332a2e9b417cf17af3",
+              "sourceRecordId": "src-a293c7c0c5a752357528b363",
+              "sourceId": "the-ark",
+              "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
+              "observedAt": "2026-11-05T13:19:34-05:00",
+              "sourceUpdatedAt": "2026-11-04T14:54:17+00:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-141a6ec6461aa8252f0731dc",
+              "sourceId": "the-ark",
+              "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
+              "observedAt": "2026-10-24T02:32:14-04:00",
+              "sourceUpdatedAt": "2026-10-23T14:24:07+00:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-50eecaa5f9aad17c34b07e88",
+              "sourceId": "the-ark",
+              "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
+              "observedAt": "2026-10-09T19:21:20-04:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled",
+              "statusEvidence": "https://schema.org/EventScheduled"
+            },
+            {
+              "sourceRecordId": "src-af9d2d58e883ca9c5e964b0a",
+              "sourceId": "the-ark",
+              "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
+              "observedAt": "2026-10-12T15:41:41-04:00",
+              "sourceUpdatedAt": "2026-07-16T14:04:57+00:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-1ae96d2483e4e6048a317755",
+              "sourceId": "the-ark",
+              "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
+              "observedAt": "2026-10-02T17:14:22-04:00",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "exact-title-time-venue",
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-a293c7c0c5a752357528b363",
+              "start": "src-a293c7c0c5a752357528b363",
+              "end": "src-a293c7c0c5a752357528b363",
+              "venue": "src-a293c7c0c5a752357528b363",
+              "url": "src-a293c7c0c5a752357528b363",
+              "imageUrl": "src-a293c7c0c5a752357528b363",
+              "status": "src-50eecaa5f9aad17c34b07e88"
+            },
+            "conflicts": {}
+          },
+          "score": 87,
+          "scoring": {
+            "signals": {
+              "funny": 0.16,
+              "distinctive": 0.41,
+              "eclectic": 0.57,
+              "technical_science": 0.03,
+              "artsy": 0.96,
+              "progressive": 0.85,
+              "outdoors": 0.02,
+              "theatre": 0.06,
+              "live_music": 0.98,
+              "live_comedy": 0.04,
+              "farmer_market": 0.02,
+              "sporting": 0.01,
+              "recurring": 0.58,
+              "craft_fair_shopping": 0.02,
+              "religious": 0.04,
+              "large_venue": 0.04,
+              "substance_recovery": 0.02,
+              "popular_music_cover_band": 0.06,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.07,
+              "dance": 0.03,
+              "sales_related": 0.28,
+              "children_activity": 0.03,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.01
+            },
+            "score": 87,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"ark\",\"veterans for peace concert\"]",
+          "end": "2026-11-10T23:00:00-05:00",
+          "registration": "Buy tickets online",
+          "bookingUrl": "https://mutotix.umich.edu/6764",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-09T02:56:21.983155-05:00",
+            "expiresAt": "2026-11-10T02:56:21.983155-05:00",
+            "sourceUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
+            "sourceHash": "1c7b79709d5ae4ed9809319231fad4c7ef648e7a5069b03b3a5ef463f504a63e",
+            "inputFacts": {
+              "id": "occ-832ae9405482de70eaf7c1f3",
+              "url": "https://theark.org/event/veterans-for-peace-concert-261110/",
+              "start": "2026-11-10T19:30:00-05:00",
+              "end": "2026-11-10T23:00:00-05:00",
+              "venue": "The Ark",
+              "city": "Ann Arbor",
+              "price": "$24.00",
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "November 10 2026",
+              "time": "7:30 pm",
+              "venue": "The Ark",
+              "admission": "{\"@type\": \"Offer\", \"price\": \"24.00\", \"priceCurrency\": \"USD\", \"url\": \"https://theark.org/event/veterans-for-peace-concert-261110/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-07-16T00:00:00+00:00\"}",
+              "description": "This annual concert benefits the Veterans for Peace Chapter 93 Peace Scholarship Fund.",
+              "registration": "Buy tickets online",
+              "end": "2026-11-10T23:00:00-05:00"
+            }
+          },
+          "reviewExpiresAt": "2026-11-10T02:56:21.983155-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-832ae9405482de70eaf7c1f3",
+            "score": 103,
+            "components": {
+              "taste": 87,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "live music +12",
+              "distinctive +10",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        },
+        {
+          "id": "occ-e8832ca9540ef2d486f988d4",
+          "title": "Saxophone Studio Chamber Recital",
+          "summary": "Experience an evening of classical saxophone chamber music performed by students of Professor Timothy McAllister. The program features quartets and large ensembles playing works by various composers, offering a diverse showcase of the instrument's capabilities.",
+          "url": "https://events.umich.edu/event/153269",
+          "start": "2026-11-10T20:00:00-05:00",
+          "venue": "Earl V. Moore Building",
+          "city": "Ann Arbor",
+          "price": "Free",
+          "category": "Performance",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153269_original-2.jpg",
+          "imageAlt": "Saxophone Studio Chamber Recital",
+          "status": "confirmed",
+          "occurrenceId": "occ-e8832ca9540ef2d486f988d4",
+          "seriesId": "series-222ac065f8aaf38972ef678e",
+          "sourceUpdatedAt": "2026-11-06T12:16:51-05:00",
+          "lastCheckedAt": "2026-11-09T02:56:21.983155-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/153269",
+          "venueId": "earl v moore building|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "saxophone-studio-chamber-recital-event-2026-11-10",
+            "saxophone-studio-recital-event-2026-11-10",
+            "src-61fef239875ffc38b8c37764",
+            "src-8e7c5e3ebf72ce01e88c3291",
+            "src-9663769dc63d0583d34f362d",
+            "src-9de3e4321e2ebe5771bb70db"
+          ],
+          "legacyOccurrenceKeys": [
+            "saxophone-studio-chamber-recital-event-2026-11-10|2026-11-10T20:00:00-05:00",
+            "saxophone-studio-recital-event-2026-11-10|2026-11-10T20:00:00-05:00",
+            "src-61fef239875ffc38b8c37764|2026-11-10T20:00:00-05:00",
+            "src-8e7c5e3ebf72ce01e88c3291|2026-11-10T20:00:00-05:00",
+            "src-9663769dc63d0583d34f362d|2026-11-10T20:00:00-05:00",
+            "src-9de3e4321e2ebe5771bb70db|2026-11-10T20:00:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "series-222ac065f8aaf38972ef678e"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-9663769dc63d0583d34f362d",
               "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/154628",
+              "canonicalUrl": "https://events.umich.edu/event/153269",
               "observedAt": "2026-11-07T01:38:58-05:00",
-              "sourceUpdatedAt": "2026-11-06T13:40:52-05:00",
+              "sourceUpdatedAt": "2026-11-06T12:16:51-05:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-8e7c5e3ebf72ce01e88c3291",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/153269",
+              "observedAt": "2026-11-05T13:19:34-05:00",
+              "sourceUpdatedAt": "2026-11-02T18:17:07-05:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-9de3e4321e2ebe5771bb70db",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/153269",
+              "observedAt": "2026-10-14T23:41:11-04:00",
+              "sourceUpdatedAt": "2026-10-14T12:17:32-04:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-61fef239875ffc38b8c37764",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/153269",
+              "observedAt": "2026-10-12T15:41:41-04:00",
+              "sourceUpdatedAt": "2026-10-05T12:18:11-04:00",
               "sourceAuthority": "organizer",
               "status": "scheduled"
             }
@@ -363,35 +595,36 @@
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
+              "native-occurrence",
               "new-occurrence"
             ],
             "fields": {
-              "title": "src-7e06a0332a2e9b417cf17af3",
-              "start": "src-7e06a0332a2e9b417cf17af3",
-              "end": "src-7e06a0332a2e9b417cf17af3",
-              "venue": "src-7e06a0332a2e9b417cf17af3",
-              "url": "src-7e06a0332a2e9b417cf17af3",
-              "imageUrl": "src-7e06a0332a2e9b417cf17af3",
-              "status": "src-7e06a0332a2e9b417cf17af3"
+              "title": "src-9663769dc63d0583d34f362d",
+              "start": "src-9663769dc63d0583d34f362d",
+              "end": "src-9663769dc63d0583d34f362d",
+              "venue": "src-9663769dc63d0583d34f362d",
+              "url": "src-9663769dc63d0583d34f362d",
+              "imageUrl": "src-9663769dc63d0583d34f362d",
+              "status": "src-9663769dc63d0583d34f362d"
             },
             "conflicts": {}
           },
-          "score": 98,
+          "score": 81,
           "scoring": {
             "signals": {
-              "funny": 0.12,
-              "distinctive": 0.78,
-              "eclectic": 0.85,
+              "funny": 0.06,
+              "distinctive": 0.38,
+              "eclectic": 0.17,
               "technical_science": 0.05,
-              "artsy": 0.98,
-              "progressive": 0.96,
+              "artsy": 0.99,
+              "progressive": 0.38,
               "outdoors": 0.02,
-              "theatre": 0.16,
-              "live_music": 0.04,
-              "live_comedy": 0.04,
-              "farmer_market": 0.02,
+              "theatre": 0.04,
+              "live_music": 0.98,
+              "live_comedy": 0.01,
+              "farmer_market": 0.01,
               "sporting": 0.01,
-              "recurring": 0.06,
+              "recurring": 0.18,
               "craft_fair_shopping": 0.02,
               "religious": 0.02,
               "large_venue": 0.03,
@@ -399,20 +632,20 @@
               "popular_music_cover_band": 0.02,
               "market_or_shop": 0.02,
               "punk_metal_or_rock": 0.02,
-              "dance": 0.07,
-              "sales_related": 0.07,
-              "children_activity": 0.02,
+              "dance": 0.02,
+              "sales_related": 0.08,
+              "children_activity": 0.03,
               "running": 0.01,
               "exercise": 0.02,
               "employment_related": 0.02
             },
-            "score": 98,
+            "score": 81,
             "rulesVersion": 2
           },
           "localityTier": "regional",
-          "experienceId": "experience:[\"ann arbor\",\"haven hall\",\"tropical precarity\"]",
-          "price": "Free",
-          "end": "2026-11-12T18:30:00-05:00",
+          "experienceId": "experience:[\"ann arbor\",\"earl v moore building\",\"saxophone studio chamber recital\"]",
+          "end": "2026-11-10T21:30:00-05:00",
+          "registration": "no tickets required",
           "bookingUrl": "",
           "statusEvidence": "Organizer detail reviewed",
           "priceMin": 0,
@@ -420,354 +653,44 @@
           "priceCurrency": "USD",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-11-08T02:28:43.516723-05:00",
-            "expiresAt": "2026-11-09T02:28:43.516723-05:00",
-            "sourceUrl": "https://events.umich.edu/event/154628",
-            "sourceHash": "a459941d319da4fc70c3a38c1091218c760878a1181e683e780673fe618f58f4",
+            "reviewedAt": "2026-11-09T02:56:21.983155-05:00",
+            "expiresAt": "2026-11-10T02:56:21.983155-05:00",
+            "sourceUrl": "https://events.umich.edu/event/153269",
+            "sourceHash": "df0fdb86365d934fc3f562d563aa22d7b332a98323a5a2c6b27ccbe141a440e6",
             "inputFacts": {
-              "id": "occ-270cbd0c9be5332078e4c6ae",
-              "url": "https://events.umich.edu/event/154628",
-              "start": "2026-11-12T16:30:00-05:00",
-              "end": "2026-11-12T18:30:00-05:00",
-              "venue": "Haven Hall",
+              "id": "occ-e8832ca9540ef2d486f988d4",
+              "url": "https://events.umich.edu/event/153269",
+              "start": "2026-11-10T20:00:00-05:00",
+              "end": "2026-11-10T21:30:00-05:00",
+              "venue": "Earl V. Moore Building",
               "city": "Ann Arbor",
-              "price": null,
+              "price": "Free - no tickets required",
               "status": "scheduled"
             },
             "evidence": {
-              "date": "November 12, 2026",
-              "time": "4:30 PM",
-              "venue": "Haven Hall",
-              "admission": "Free",
-              "description": "The Latina/o Studies and the Contemporary Performance in Puerto Rico Working Group, in partnership with the Department of American Culture, invites you to Tropical Precarity: Drag and Visual Arts in Puerto Rico, a special performance and panel discussion. This event features an in-depth conversation with acclaimed Puerto Rican artists Freddie Mercado Velázquez and Mickey Negrón, exploring the intersections of performance, visual art, gender expression, and cultural resistance.",
-              "end": "6:30pm"
+              "date": "Tue, Nov 10",
+              "time": "8:00pm",
+              "venue": "Earl V. Moore Building",
+              "admission": "Free - no tickets required",
+              "description": "Join the classical saxophone studio in an evening of chamber music written for the saxophone! Students of Professor Timothy McAllister perform in quartet and large saxophone ensemble settings. Music from composers Jennifer Higdon, Viet Cuong, Fernande Decruck, William Bolcom, Gabriel Pierne, and Tianci Lu.",
+              "registration": "no tickets required",
+              "end": "9:30pm"
             }
           },
-          "reviewExpiresAt": "2026-11-09T02:28:43.516723-05:00",
+          "reviewExpiresAt": "2026-11-10T02:56:21.983155-05:00",
           "recommendation": {
-            "occurrenceId": "occ-270cbd0c9be5332078e4c6ae",
-            "score": 110,
+            "occurrenceId": "occ-e8832ca9540ef2d486f988d4",
+            "score": 97,
             "components": {
-              "taste": 98,
-              "practicality": 8,
+              "taste": 81,
+              "practicality": 12,
               "novelty": 0,
               "quality": 4
             },
             "reasons": [
-              "distinctive +19",
-              "eclectic +14",
-              "Coming soon +8",
-              "Confirmed/recent source information +4"
-            ],
-            "unknowns": [
-              "Distance unknown"
-            ]
-          }
-        },
-        {
-          "id": "occ-071131adb9be0393cbf36b76",
-          "title": "Everything I Want to Do In a Show | A One Woman Show",
-          "summary": "Heather Sejnow presents a campy, crazy, and heartfelt one-woman show featuring puppets, impressions, burlesque, song, dance, and Shakespeare. This interactive performance is a love letter to creativity and the people met along the way.",
-          "url": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
-          "start": "2026-11-13T19:30:00-05:00",
-          "venue": "Go Comedy Improv Theater",
-          "city": "Ferndale",
-          "price": "$27.34",
-          "category": "Comedy",
-          "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18386/Everything_I_Want_to_Do_Final_Edit.jpg",
-          "imageAlt": "Everything I Want to Do In a Show | A One Woman Show",
-          "status": "confirmed",
-          "occurrenceId": "occ-071131adb9be0393cbf36b76",
-          "seriesId": "series-8ffb02807a21cbd11343797d",
-          "sourceUpdatedAt": "2026-10-14T16:18:15.079000+00:00",
-          "priceMin": 27.34,
-          "priceMax": 27.34,
-          "priceCurrency": "USD",
-          "availability": "InStock",
-          "lastCheckedAt": "2026-11-08T02:28:43.516723-05:00",
-          "canonicalUrl": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
-          "venueId": "go comedy improv theater|ferndale",
-          "timePrecision": "time",
-          "statusEvidence": "Organizer detail reviewed",
-          "aliases": [
-            "everything-i-want-to-do-in-a-show-a-one-event-2026-11-13",
-            "src-264023aac2e96580ecbe0f7d"
-          ],
-          "legacyOccurrenceKeys": [
-            "everything-i-want-to-do-in-a-show-a-one-event-2026-11-13|2026-11-13T19:30:00-05:00",
-            "src-264023aac2e96580ecbe0f7d|2026-11-13T19:30:00-05:00"
-          ],
-          "legacySeriesKeys": [
-            "series-8ffb02807a21cbd11343797d"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-264023aac2e96580ecbe0f7d",
-              "sourceId": "go-comedy-improv-theater",
-              "canonicalUrl": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
-              "observedAt": "2026-10-14T23:41:11-04:00",
-              "sourceUpdatedAt": "2026-10-14T16:18:15.079000+00:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled",
-              "statusEvidence": "https://schema.org/EventScheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "native-occurrence"
-            ],
-            "fields": {
-              "title": "src-264023aac2e96580ecbe0f7d",
-              "start": "src-264023aac2e96580ecbe0f7d",
-              "venue": "src-264023aac2e96580ecbe0f7d",
-              "url": "src-264023aac2e96580ecbe0f7d",
-              "status": "src-264023aac2e96580ecbe0f7d",
-              "imageUrl": "src-264023aac2e96580ecbe0f7d"
-            },
-            "conflicts": {}
-          },
-          "score": 100,
-          "scoring": {
-            "signals": {
-              "funny": 0.99,
-              "distinctive": 0.87,
-              "eclectic": 0.95,
-              "technical_science": 0.02,
-              "artsy": 0.98,
-              "progressive": 0.51,
-              "outdoors": 0.01,
-              "theatre": 0.53,
-              "live_music": 0.04,
-              "live_comedy": 0.9,
-              "farmer_market": 0.01,
-              "sporting": 0.01,
-              "recurring": 0.06,
-              "craft_fair_shopping": 0.01,
-              "religious": 0.01,
-              "large_venue": 0.02,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.02,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.02,
-              "dance": 0.03,
-              "sales_related": 0.48,
-              "children_activity": 0.02,
-              "running": 0.01,
-              "exercise": 0.01,
-              "employment_related": 0.01
-            },
-            "score": 100,
-            "rulesVersion": 2
-          },
-          "localityTier": "unknown",
-          "experienceId": "experience:[\"ferndale\",\"go comedy improv theater\",\"everything i want to do in a show a one woman show\"]",
-          "registration": "Get Tickets!",
-          "bookingUrl": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
-          "editorial": {
-            "state": "verified",
-            "reviewedAt": "2026-11-08T02:28:43.516723-05:00",
-            "expiresAt": "2026-11-09T02:28:43.516723-05:00",
-            "sourceUrl": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
-            "sourceHash": "8f64f187fab562093343ce96afd0edc1d6d08c0a64c408595ca7f3a95c565894",
-            "inputFacts": {
-              "id": "occ-071131adb9be0393cbf36b76",
-              "url": "https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19%3A30%3A00.000-05%3A00",
-              "start": "2026-11-13T19:30:00-05:00",
-              "end": null,
-              "venue": "Go Comedy Improv Theater",
-              "city": "Ferndale",
-              "price": "$27.34",
-              "status": "scheduled"
-            },
-            "evidence": {
-              "date": "Nov 13, 2026",
-              "time": "7:30 PM",
-              "venue": "Go Comedy Improv Theater",
-              "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19:30:00\", \"price\": 27.34, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-              "description": "So for my mid-life crisis I'm putting on a show of \"Everything I Want to Do in a Show\". It's campy, crazy, and heartfelt. Most importantly, it's a love letter to everyone I've met and all the vessels of creativity I've learned along the way. Oh! And it's interactive, NSFW, and there will be some prizes for attendees. So come join me on a wild ride filled with puppets, impressions, burlesque, song, dance, and even Shakespeare. It's definitely... \"Everything\".",
-              "registration": "Get Tickets!"
-            }
-          },
-          "reviewExpiresAt": "2026-11-09T02:28:43.516723-05:00",
-          "recommendation": {
-            "occurrenceId": "occ-071131adb9be0393cbf36b76",
-            "score": 108,
-            "components": {
-              "taste": 100,
-              "practicality": 4,
-              "novelty": 0,
-              "quality": 4
-            },
-            "reasons": [
-              "distinctive +21",
-              "eclectic +15",
-              "Coming soon +4",
-              "Confirmed/recent source information +4"
-            ],
-            "unknowns": [
-              "Distance unknown"
-            ]
-          }
-        },
-        {
-          "id": "occ-a3450677db06362ff4959f28",
-          "title": "THEATRE l She Kills Monsters",
-          "summary": "Experience \"She Kills Monsters,\" a play blending comedy, drama, and adventure. Follow Agnes as she navigates a Dungeons & Dragons world to connect with her late sister, celebrating storytelling and inner strength.",
-          "url": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-          "start": "2026-12-04T20:00:00-05:00",
-          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-          "city": "Hamtramck",
-          "price": "$32.85",
-          "ageRestriction": "ages 13+",
-          "category": "Comedy",
-          "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18757/Eventbrite_header_graphic-She_Kills_Monsters.png",
-          "imageAlt": "THEATRE l She Kills Monsters",
-          "status": "confirmed",
-          "occurrenceId": "occ-a3450677db06362ff4959f28",
-          "seriesId": "series-d2025cc95f48546d49eb97ad",
-          "sourceUpdatedAt": "2026-10-16T04:07:58.242000+00:00",
-          "priceMin": 32.85,
-          "priceMax": 32.85,
-          "priceCurrency": "USD",
-          "availability": "InStock",
-          "lastCheckedAt": "2026-11-08T02:28:43.516723-05:00",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-          "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
-          "timePrecision": "time",
-          "statusEvidence": "Organizer detail reviewed",
-          "aliases": [
-            "src-498cddba7500eed296d4d5a9",
-            "src-d821d1c9ca582af13f8e2f3a",
-            "theatre-l-she-kills-monsters-event-2026-12-04"
-          ],
-          "legacyOccurrenceKeys": [
-            "src-498cddba7500eed296d4d5a9|2026-12-04T20:00:00-05:00",
-            "src-d821d1c9ca582af13f8e2f3a|2026-12-04T20:00:00-05:00",
-            "theatre-l-she-kills-monsters-event-2026-12-04|2026-12-04T20:00:00-05:00"
-          ],
-          "legacySeriesKeys": [
-            "series-150a3c131cebbfb5cc20431c",
-            "series-1d5e3db4432d82cd91e23c5c",
-            "series-3a01b6952ffebba3c8cbf3e9",
-            "series-7c246a9215fd632a82d409f3",
-            "series-8d1f3d2b4bb1f42f87226794",
-            "series-958512adbfd24e39b1c40f4c",
-            "series-9f91af8c3120c4a76755f300",
-            "series-d2025cc95f48546d49eb97ad"
-          ],
-          "sources": [
-            {
-              "sourceRecordId": "src-d821d1c9ca582af13f8e2f3a",
-              "sourceId": "planet-ant-theatre",
-              "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-              "observedAt": "2026-10-17T14:22:18-04:00",
-              "sourceUpdatedAt": "2026-10-16T04:07:58.242000+00:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled",
-              "statusEvidence": "https://schema.org/EventScheduled"
-            },
-            {
-              "sourceRecordId": "src-498cddba7500eed296d4d5a9",
-              "sourceId": "planet-ant-theatre",
-              "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-              "observedAt": "2026-11-08T02:10:42-05:00",
-              "sourceUpdatedAt": "2026-10-16T04:07:58.242000+00:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled",
-              "statusEvidence": "https://schema.org/EventScheduled"
-            }
-          ],
-          "identity": {
-            "ruleVersion": "occurrence-v1",
-            "reasons": [
-              "native-occurrence"
-            ],
-            "fields": {
-              "title": "src-d821d1c9ca582af13f8e2f3a",
-              "start": "src-d821d1c9ca582af13f8e2f3a",
-              "venue": "src-d821d1c9ca582af13f8e2f3a",
-              "url": "src-d821d1c9ca582af13f8e2f3a",
-              "status": "src-d821d1c9ca582af13f8e2f3a",
-              "imageUrl": "src-d821d1c9ca582af13f8e2f3a"
-            },
-            "conflicts": {}
-          },
-          "score": 99,
-          "scoring": {
-            "signals": {
-              "funny": 0.9,
-              "distinctive": 0.62,
-              "eclectic": 0.92,
-              "technical_science": 0.06,
-              "artsy": 0.98,
-              "progressive": 0.77,
-              "outdoors": 0.02,
-              "theatre": 0.99,
-              "live_music": 0.02,
-              "live_comedy": 0.08,
-              "farmer_market": 0.01,
-              "sporting": 0.01,
-              "recurring": 0.05,
-              "craft_fair_shopping": 0.01,
-              "religious": 0.01,
-              "large_venue": 0.03,
-              "substance_recovery": 0.01,
-              "popular_music_cover_band": 0.02,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.02,
-              "dance": 0.01,
-              "sales_related": 0.7,
-              "children_activity": 0.04,
-              "running": 0.01,
-              "exercise": 0.01,
-              "employment_related": 0.01
-            },
-            "score": 99,
-            "rulesVersion": 2
-          },
-          "localityTier": "unknown",
-          "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"theatre l she kills monsters\"]",
-          "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-          "bookingUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20:00:00",
-          "editorial": {
-            "state": "verified",
-            "reviewedAt": "2026-11-08T02:28:43.516723-05:00",
-            "expiresAt": "2026-11-09T02:28:43.516723-05:00",
-            "sourceUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-            "sourceHash": "eeabc53a8c37a38e81dd460a7628ceb2f38f95f71a9828f6cd07b2b9b03ab0b2",
-            "inputFacts": {
-              "id": "occ-a3450677db06362ff4959f28",
-              "url": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-              "start": "2026-12-04T20:00:00-05:00",
-              "end": null,
-              "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-              "city": "Hamtramck",
-              "price": "$32.85",
-              "status": "scheduled"
-            },
-            "evidence": {
-              "date": "Dec 4, 2026",
-              "time": "8:00 PM EST",
-              "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-              "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20:00:00\", \"price\": 32.85, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-              "description": "Planet Ant Theatre presents SHE KILLS MONSTERS by Qui Nguyen, December 4-19, 2026, at Ant Hall. When Agnes Evans loses her teenage sister Tilly, she realizes she barely knew her. Tilly's Dungeons & Dragons notebook pulls Agnes into a fantastical world of epic quests, homicidal fairies, snarling ogres, and 90s pop culture as she tries to reconnect with her sister and find the courage she never knew she had. Equal parts comedy, heartfelt drama, and action-packed adventure, the play celebrates the power of great storytelling and the geek and warrior in all of us.",
-              "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office."
-            }
-          },
-          "reviewExpiresAt": "2026-11-09T02:28:43.516723-05:00",
-          "recommendation": {
-            "occurrenceId": "occ-a3450677db06362ff4959f28",
-            "score": 103,
-            "components": {
-              "taste": 99,
-              "practicality": 0,
-              "novelty": 0,
-              "quality": 4
-            },
-            "reasons": [
-              "distinctive +15",
-              "eclectic +15",
+              "live music +12",
+              "artsy +10",
+              "Available on selected day +12",
               "Confirmed/recent source information +4"
             ],
             "unknowns": [

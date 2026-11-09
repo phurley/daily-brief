@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-11-08T02:28:23-05:00",
-  "editionDate": "2026-11-08",
+  "generatedAt": "2026-11-09T02:56:03-05:00",
+  "editionDate": "2026-11-09",
   "stories": [
     {
       "id": "1-044m-for-first-responder-mental-health-news-2031-09-30",
@@ -4421,10 +4421,10 @@
     {
       "id": "2026-midterm-elections-u-m-experts-avail-news-2026-10-29",
       "title": "2026 midterm elections: U-M experts available to comment",
-      "summary": "The University of Michigan has made several faculty members available to provide research-based insights and analysis regarding the 2026 midterm elections. These experts cover topics ranging from political communication and public opinion to electoral rules and political behavior.",
+      "summary": "The University of Michigan has made several faculty members available to provide research-based insights and analysis regarding the 2026 midterm elections. These experts cover topics ranging from political communication and public opinion to electoral rules and systems theory.",
       "url": "https://news.umich.edu/2026-midterm-elections-u-m-experts-available-to-comment/",
       "publishedAt": "2026-10-29T00:00:00-04:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "primary",
       "entities": [
@@ -4434,7 +4434,7 @@
         "Rusty Hills",
         "Michael Traugott",
         "Jenna Bednar",
-        "Mara Ostfeld",
+        "Mara Cecilia Ostfeld",
         "Josh Pasek"
       ],
       "locations": [
@@ -4453,28 +4453,28 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.03,
-          "distinctive": 0.1,
-          "eclectic": 0.09,
-          "technical_science": 0.06,
+          "funny": 0.02,
+          "distinctive": 0.09,
+          "eclectic": 0.12,
+          "technical_science": 0.1,
           "artsy": 0.03,
-          "progressive": 0.13,
+          "progressive": 0.19,
           "outdoors": 0.02,
-          "theatre": 0.02,
-          "live_music": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.16,
+          "recurring": 0.19,
           "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.05,
+          "large_venue": 0.04,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
+          "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.05,
+          "sales_related": 0.11,
           "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
@@ -8975,6 +8975,73 @@
       }
     },
     {
+      "id": "60-foot-spruce-completes-journey-from-u-news-2026-11-07",
+      "title": "60-foot spruce completes journey from U.P. When it will light holidays",
+      "summary": "A 60-foot spruce tree donated by the Larry Riccio family has arrived at the Michigan Capitol in Lansing after being transported from Iron Mountain. The tree, which was harvested in the Upper Peninsula, will serve as the state's official 2026 Christmas tree.",
+      "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/07/spruce-iron-mountain-michigan-capitol-christmas-tree-lansing/92659402007/",
+      "publishedAt": "2026-11-07T10:41:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Dan Basso",
+        "Boy Scouts",
+        "Larry Riccio",
+        "Michigan Department of Technology, Management & Budget",
+        "DTMB"
+      ],
+      "locations": [
+        "Iron Mountain",
+        "Lansing",
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "holidays",
+        "christmas",
+        "michigan capitol",
+        "community"
+      ],
+      "source": {
+        "name": "Dan Basso",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.15,
+          "distinctive": 0.45,
+          "eclectic": 0.1,
+          "technical_science": 0.08,
+          "artsy": 0.43,
+          "progressive": 0.08,
+          "outdoors": 0.21,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.67,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.04,
+          "large_venue": 0.1,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.02,
+          "sales_related": 0.04,
+          "children_activity": 0.04,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/11/07/PLSJ/92660404007-261107-state-xmas-tree-025-a.JPG?crop=1999,1125,x0,y103&width=660&height=372&format=pjpg&auto=webp",
+        "alt": "A 60-foot spruce tree being prepared for installation at the Michigan Capitol."
+      }
+    },
+    {
       "id": "615-600-awarded-to-michigan-s-military-h-news-2026-10-01",
       "title": "$615,600 Awarded to Michigan’s Military Heritage Museum for Facility Expansion",
       "summary": "Michigan’s Military Heritage Museum in Jackson County will receive $615,600 for facility expansion, modernization of exhibits, and new features. The funds will enhance the museum's ability to showcase military history.",
@@ -9749,10 +9816,10 @@
     {
       "id": "a-beautifully-american-story-el-sayed-s-news-2026-11-05",
       "title": "‘A beautifully American story’: El-Sayed's historic Senate victory resonates with Muslim Americans",
-      "summary": "Michigan Democrat Abdul El-Sayed has been elected to the U.S. Senate, becoming the first Muslim to hold the office. The victory is being celebrated as a historic milestone for Muslim Americans.",
+      "summary": "Michigan Democrat Abdul El-Sayed has become the first Muslim elected to the U.S. Senate. This victory is being celebrated as a significant milestone for Muslim Americans.",
       "url": "https://www.michiganpublic.org/politics-government/2026-11-05/a-beautifully-american-story-el-sayeds-historic-senate-victory-resonates-with-muslim-americans",
       "publishedAt": "2026-11-05T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -9765,8 +9832,9 @@
       "localityIndex": 3,
       "topics": [
         "politics",
-        "election",
-        "muslim americans"
+        "senate",
+        "muslim americans",
+        "elections"
       ],
       "source": {
         "name": "The Associated Press",
@@ -9774,30 +9842,30 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.08,
-          "distinctive": 0.5,
-          "eclectic": 0.18,
-          "technical_science": 0.29,
-          "artsy": 0.1,
-          "progressive": 0.71,
-          "outdoors": 0.05,
-          "theatre": 0.02,
-          "live_music": 0.02,
-          "live_comedy": 0.02,
-          "farmer_market": 0.02,
-          "sporting": 0.02,
-          "recurring": 0.5,
-          "craft_fair_shopping": 0.03,
+          "funny": 0.03,
+          "distinctive": 0.94,
+          "eclectic": 0.13,
+          "technical_science": 0.03,
+          "artsy": 0.03,
+          "progressive": 0.9,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.04,
+          "craft_fair_shopping": 0.01,
           "religious": 0.03,
-          "large_venue": 0.16,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.09,
-          "children_activity": 0.03,
-          "running": 0.02,
+          "large_venue": 0.13,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
         }
@@ -12666,10 +12734,10 @@
     {
       "id": "a-pretty-sweet-victory-news-2026-11-05",
       "title": "A Pretty Sweet Victory",
-      "summary": "A team led by Sonntag, including Swanson and Pritchard, won the Foodtastic competition on Disney+ by utilizing creative materials like jicama. Sonntag is now expanding her bakery business and reflecting on her 20-year career and the mentorship she received at Schoolcraft College.",
+      "summary": "A team of bakers led by Sonntag won the Foodtastic competition on Disney+ by utilizing creative materials like jicama. Sonntag is now expanding her bakery business and reflecting on her 20-year career and the mentorship she received at Schoolcraft College.",
       "url": "https://schoolcraftconnection.com/32157/news/a-pretty-sweet-victory/",
       "publishedAt": "2026-11-05T00:00:00-05:00",
-      "addedAt": "2026-11-07T01:38:58-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -12681,11 +12749,11 @@
         "Kim Sperl",
         "Bella e Dolce",
         "Schoolcraft College",
-        "Disney+"
+        "Disney+",
+        "Vae O’Neil"
       ],
       "locations": [
-        "Livonia, MI",
-        "Michigan"
+        "Livonia, MI"
       ],
       "localityIndex": 1,
       "topics": [
@@ -12700,31 +12768,31 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.56,
-          "distinctive": 0.65,
-          "eclectic": 0.26,
-          "technical_science": 0.48,
-          "artsy": 0.86,
-          "progressive": 0.32,
+          "funny": 0.46,
+          "distinctive": 0.68,
+          "eclectic": 0.24,
+          "technical_science": 0.58,
+          "artsy": 0.88,
+          "progressive": 0.43,
           "outdoors": 0.02,
-          "theatre": 0.03,
+          "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.03,
-          "sporting": 0.45,
-          "recurring": 0.16,
-          "craft_fair_shopping": 0.03,
+          "sporting": 0.38,
+          "recurring": 0.13,
+          "craft_fair_shopping": 0.04,
           "religious": 0.02,
-          "large_venue": 0.1,
+          "large_venue": 0.09,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
           "dance": 0.02,
-          "sales_related": 0.15,
+          "sales_related": 0.14,
           "children_activity": 0.04,
-          "running": 0.02,
-          "exercise": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
           "employment_related": 0.03
         }
       },
@@ -14875,69 +14943,61 @@
     {
       "id": "abdul-el-sayed-s-win-how-it-happened-imp-news-2026-11-04",
       "title": "Abdul El-Sayed's win: How it happened, impact of his historic victory",
-      "summary": "Following his historic election victory, Senator-elect Abdul El-Sayed faces the challenge of bridging divides within his constituency, particularly among Jewish voters concerned about his past rhetoric and political associations. While some community members express apprehension, others, including former U.S. Rep. Andy Levin, highlight the significance of electing the first Muslim senator in Michigan as a milestone for democratic representation.",
+      "summary": "Following his historic election victory, Abdul El-Sayed prepares to join the U.S. Senate as he navigates a complex political landscape involving inflation, foreign policy, and a Democratic majority. The article explores the significance of his background and the challenges he faces as a new lawmaker in Washington.",
       "url": "https://www.hometownlife.com/story/news/politics/elections/2026/11/04/abdul-el-sayed-michigan-election-result-winner-senate/92609142007/",
       "publishedAt": "2026-11-04T00:00:00Z",
-      "addedAt": "2026-11-06T02:49:40-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Abdul El-Sayed",
-        "Piker",
-        "Tucker Carlson",
-        "Rogers",
-        "Regina Hayut",
-        "Temple Beth Emeth",
-        "Nonnegotiable Michigan",
-        "Elissa Slotkin",
-        "Donald Trump",
-        "Jim Runestad",
-        "Michigan Republican Party",
-        "Andy Levin"
+        "Rashida Tlaib",
+        "Ilhan Omar",
+        "Omar Khorfan",
+        "John F. Kennedy",
+        "Donald Trump"
       ],
       "locations": [
-        "Canton",
-        "Plymouth",
-        "Livonia",
         "Michigan",
-        "Ann Arbor",
-        "Bloomfield Township"
+        "Macomb County",
+        "Detroit",
+        "Bloomfield Hills"
       ],
-      "localityIndex": 0,
+      "localityIndex": 3,
       "topics": [
         "politics",
         "elections",
         "senate",
-        "religion",
-        "representation"
+        "government"
       ],
       "source": {
-        "name": "Hometown Life (Observer & Eccentric)"
+        "name": "Todd Spangler",
+        "publication": "Hometown Life"
       },
       "scoring": {
         "signals": {
-          "funny": 0.02,
-          "distinctive": 0.81,
-          "eclectic": 0.21,
+          "funny": 0.03,
+          "distinctive": 0.72,
+          "eclectic": 0.1,
           "technical_science": 0.03,
           "artsy": 0.03,
-          "progressive": 0.9,
+          "progressive": 0.71,
           "outdoors": 0.02,
-          "theatre": 0.01,
+          "theatre": 0.02,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
           "recurring": 0.05,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.03,
-          "large_venue": 0.06,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.08,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.01,
+          "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.02,
+          "sales_related": 0.03,
           "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
@@ -16919,6 +16979,67 @@
       }
     },
     {
+      "id": "after-a-successful-trip-to-uruguay-pope-news-2026-11-08",
+      "title": "After a successful trip to Uruguay, Pope Leo heads to Argentina",
+      "summary": "Following a successful visit to Uruguay, Pope Leo is continuing his travels with a scheduled trip to Argentina.",
+      "url": "https://www.michiganpublic.org/2026-11-08/after-a-successful-trip-to-uruguay-pope-leo-heads-to-argentina",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Pope Leo"
+      ],
+      "locations": [
+        "Uruguay",
+        "Argentina"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "pope leo",
+        "religion",
+        "international travel"
+      ],
+      "source": {
+        "name": "Michigan Radio (Michigan Public)",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.07,
+          "distinctive": 0.24,
+          "eclectic": 0.11,
+          "technical_science": 0.03,
+          "artsy": 0.05,
+          "progressive": 0.12,
+          "outdoors": 0.04,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.13,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.19,
+          "large_venue": 0.21,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.04,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/d8201b9/2147483647/strip/true/crop/3005x1695+0+155/resize/610x344!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2Fd1%2Fe46ecf5c44928d564376c67802b0%2Fmichigan-state-preview-football-25231658510051.jpg",
+        "alt": "Michigan State football preview"
+      }
+    },
+    {
       "id": "after-booting-760k-off-aca-health-plans-news-2026-10-14",
       "title": "After booting 760K off ACA health plans, the Trump administration adds some people back",
       "summary": "The Trump administration removed 760,000 people from ACA health plans but has since reinstated some, though details about outreach, reinstatement timelines, and reversal rates remain unclear. Experts note the lack of transparency and highlight the administration's broader focus on combating fraud in government health programs. Officials cited data-matching efforts and duplicate coverage as reasons for cancellations.",
@@ -17360,14 +17481,25 @@
     {
       "id": "all-hallows-illumination-fosters-communi-news-2026-11-07",
       "title": "All Hallows Illumination fosters community as Halloween celebrations end",
-      "summary": "The annual All Hallows Illumination event took place at Frog Island Park on November 1. Attendees gathered to collectively light up the park with jack-o-lanterns to foster community spirit.",
+      "summary": "The seventh-annual All Hallows Illumination event brought Ypsilanti residents together at Frog Island Park to display jack-o-lanterns and enjoy live music. The community-focused gathering featured activities like haunted mini golf and provided a space for neighbors to connect after the Halloween season.",
       "url": "https://www.easternecho.com/article/2026/11/all-hallows-illumination-fosters-community-as-halloween-celebrations-end",
-      "publishedAt": "2026-11-07T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "publishedAt": "2026-11-07T18:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Frog Island Park"
+        "Hannah Borders",
+        "James Decker",
+        "Spooktacular",
+        "Putt-R-Round",
+        "Jon Hammonds",
+        "Galen Bundy",
+        "Sami Calamity",
+        "Cory Tripathy",
+        "Karen McCollough",
+        "Josh McCollough",
+        "Tabetha Chaney",
+        "Eastern Michigan University"
       ],
       "locations": [
         "Ypsilanti, MI",
@@ -17378,7 +17510,7 @@
         "community",
         "halloween",
         "events",
-        "ypsilanti"
+        "local culture"
       ],
       "source": {
         "name": "Hannah Borders",
@@ -17386,37 +17518,37 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.62,
-          "distinctive": 0.54,
-          "eclectic": 0.18,
-          "technical_science": 0.08,
-          "artsy": 0.85,
-          "progressive": 0.25,
-          "outdoors": 0.94,
+          "funny": 0.76,
+          "distinctive": 0.33,
+          "eclectic": 0.33,
+          "technical_science": 0.05,
+          "artsy": 0.84,
+          "progressive": 0.26,
+          "outdoors": 0.86,
           "theatre": 0.03,
-          "live_music": 0.04,
+          "live_music": 0.16,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
           "sporting": 0.02,
-          "recurring": 0.9,
+          "recurring": 0.7,
           "craft_fair_shopping": 0.03,
-          "religious": 0.14,
-          "large_venue": 0.08,
+          "religious": 0.05,
+          "large_venue": 0.05,
           "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.02,
+          "popular_music_cover_band": 0.12,
           "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.03,
-          "sales_related": 0.03,
-          "children_activity": 0.17,
+          "punk_metal_or_rock": 0.08,
+          "dance": 0.02,
+          "sales_related": 0.04,
+          "children_activity": 0.2,
           "running": 0.02,
           "exercise": 0.02,
-          "employment_related": 0.02
+          "employment_related": 0.01
         }
       },
       "photo": {
-        "url": "https://d2c076l7bqbhhm.cloudfront.net/9f0fc8d75963ebbda63eb514bcfb6348/dist/img/fb-hidden-icon.png",
-        "alt": "All Hallows Illumination fosters community as Halloween celebrations end"
+        "url": "https://snworksceo.imgix.net/emu/0b0b1441-9915-4d5b-acb4-c35a65a04424.sized-1000x1000.jpg?w=800&h=600",
+        "alt": "Event attendees admire jack-o-lanterns at All Hallows Illumination of Frog Island Park"
       }
     },
     {
@@ -20963,10 +21095,10 @@
     {
       "id": "ann-arbor-police-chief-anderson-to-retir-news-2026-11-06",
       "title": "Ann Arbor Police Chief Anderson to retire",
-      "summary": "Ann Arbor Police Chief Andre Anderson is set to retire. He recently addressed the City Council regarding a pilot program for an unarmed crisis response team.",
+      "summary": "Ann Arbor Police Chief Andre Anderson has announced his retirement. He previously addressed the City Council regarding a pilot program for an unarmed crisis response team.",
       "url": "https://www.wemu.org/wemu-news/2026-11-06/ann-arbor-police-chief-anderson-to-retire",
       "publishedAt": "2026-11-06T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -20978,9 +21110,9 @@
       ],
       "localityIndex": 2,
       "topics": [
+        "local government",
         "police",
-        "retirement",
-        "local government"
+        "retirement"
       ],
       "source": {
         "name": "WEMU 89.1 FM",
@@ -20989,31 +21121,31 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.25,
-          "eclectic": 0.14,
-          "technical_science": 0.2,
-          "artsy": 0.05,
-          "progressive": 0.3,
-          "outdoors": 0.05,
-          "theatre": 0.02,
-          "live_music": 0.04,
-          "live_comedy": 0.02,
-          "farmer_market": 0.04,
-          "sporting": 0.02,
-          "recurring": 0.14,
-          "craft_fair_shopping": 0.04,
+          "distinctive": 0.24,
+          "eclectic": 0.07,
+          "technical_science": 0.04,
+          "artsy": 0.03,
+          "progressive": 0.41,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.04,
+          "craft_fair_shopping": 0.01,
           "religious": 0.02,
-          "large_venue": 0.07,
+          "large_venue": 0.04,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.03,
-          "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.03,
-          "dance": 0.02,
-          "sales_related": 0.03,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
           "children_activity": 0.02,
-          "running": 0.02,
+          "running": 0.01,
           "exercise": 0.01,
-          "employment_related": 0.02
+          "employment_related": 0.03
         }
       },
       "photo": {
@@ -21910,25 +22042,24 @@
     {
       "id": "ann-arbor-uses-180-000-budget-to-repair-news-2026-11-07",
       "title": "Ann Arbor uses $180,000 budget to repair city’s aging emergency sirens",
-      "summary": "The City of Ann Arbor is allocating $180,000 to repair and maintain its emergency siren system. This move reverses a previous decision by the City Council to decommission the sirens earlier this year.",
+      "summary": "The City of Ann Arbor is allocating $180,000 to repair and maintain its emergency siren system. This move reverses a previous decision by the City Council to decommission the aging sirens.",
       "url": "https://www.wemu.org/wemu-news/2026-11-07/ann-arbor-uses-180-000-budget-to-repair-citys-aging-emergency-sirens",
       "publishedAt": "2026-11-07T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Ann Arbor Fire Department",
         "City of Ann Arbor",
-        "City Council"
+        "Ann Arbor Fire Department"
       ],
       "locations": [
         "Ann Arbor"
       ],
       "localityIndex": 2,
       "topics": [
-        "emergency services",
-        "city budget",
-        "public safety"
+        "local government",
+        "public safety",
+        "budget"
       ],
       "source": {
         "name": "Ana Longoria",
@@ -21936,30 +22067,30 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.02,
-          "distinctive": 0.25,
-          "eclectic": 0.14,
-          "technical_science": 0.2,
-          "artsy": 0.05,
-          "progressive": 0.3,
-          "outdoors": 0.05,
-          "theatre": 0.02,
-          "live_music": 0.04,
-          "live_comedy": 0.02,
-          "farmer_market": 0.04,
-          "sporting": 0.02,
-          "recurring": 0.14,
-          "craft_fair_shopping": 0.04,
-          "religious": 0.02,
-          "large_venue": 0.07,
+          "funny": 0.03,
+          "distinctive": 0.29,
+          "eclectic": 0.07,
+          "technical_science": 0.45,
+          "artsy": 0.02,
+          "progressive": 0.17,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.12,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.03,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.03,
-          "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.03,
-          "dance": 0.02,
-          "sales_related": 0.03,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
           "children_activity": 0.02,
-          "running": 0.02,
+          "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
         }
@@ -46107,6 +46238,74 @@
       }
     },
     {
+      "id": "consumers-energy-gets-more-time-to-negot-news-2026-11-08",
+      "title": "Consumers Energy gets more time to negotiate with dam sale opponents, but they don't seem interested",
+      "summary": "The Michigan Public Service Commission has granted Consumers Energy a final extension to negotiate the sale of its 13 hydroelectric dams, despite opposition from intervenors who claim the talks are unproductive. If no settlement is reached by December 9, the commission will issue a final ruling on the controversial sale on December 17.",
+      "url": "https://www.michiganpublic.org/politics-government/2026-11-08/consumers-energy-gets-more-time-to-negotiate-with-dam-sale-opponents-but-they-dont-seem-interested",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Consumers Energy",
+        "Michigan Public Service Commission",
+        "Howard Learner",
+        "Environmental Law and Policy Center",
+        "Michigan Department of Natural Resources",
+        "Confluence Hydro",
+        "Chris Fultz"
+      ],
+      "locations": [
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "energy",
+        "environment",
+        "utilities",
+        "infrastructure",
+        "government"
+      ],
+      "source": {
+        "name": "Tracy Samilton",
+        "publication": "Michigan Radio (Michigan Public)"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.3,
+          "eclectic": 0.14,
+          "technical_science": 0.36,
+          "artsy": 0.02,
+          "progressive": 0.17,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.06,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.05,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/ab829ac/2147483647/strip/false/crop/6016x4016+0+0/resize/791x528!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F64%2F4e%2Fef0c814c47c98e2a22106b0e8b44%2Fhodenpyl-dam-shoreline.jpg",
+        "alt": "Shoreline of the Hodenpyl Dam."
+      }
+    },
+    {
       "id": "consumers-energy-plans-natural-gas-plant-news-2026-10-16",
       "title": "Consumers Energy plans natural gas plant in Hampton Township to meet electricity demands",
       "summary": "Consumers Energy will build a natural gas power plant in Hampton Township to serve 2 million customers over two decades. A community forum on Sept. 30 drew over 50 attendees to discuss the project.",
@@ -55453,6 +55652,93 @@
       "photo": {
         "url": "https://snworksceo.imgix.net/emu/3c2822c8-0b04-440c-ae97-700c3e5ab557.sized-1000x1000.jpg?w=800&h=600",
         "alt": "Michigan 'I Voted' stickers available at Eastern Michigan University voting site"
+      }
+    },
+    {
+      "id": "democratic-socialists-who-unseated-the-e-news-2026-08-20",
+      "title": "Democratic socialists who unseated the establishment",
+      "summary": "Democratic socialist candidates achieved several primary victories across the United States, including notable wins in New York, Michigan, Colorado, and Pennsylvania. While many of these nominees are expected to win in heavily Democratic districts, political analysts have shifted the outlook for the Florida Senate race to 'Safe Republican' following Angie Nixon's primary win.",
+      "url": "https://www.hometownlife.com/story/news/politics/elections/2026/08/20/angie-nixon-democratic-socialist-winners/91374978007/",
+      "publishedAt": "2026-08-20T00:00:00Z",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Angie Nixon",
+        "Democratic Socialists of America",
+        "Rashida Tlaib",
+        "Alexandria Ocasio-Cortez",
+        "Avila Chevalier",
+        "Adriano Espaillat",
+        "Valdez",
+        "Antonio Reynoso",
+        "Nydia Velázquez",
+        "Donavan McKinney",
+        "Shri Thanedar",
+        "Kiros",
+        "Diana DeGette",
+        "Rabb",
+        "Janeese Lewis George",
+        "Donald Trump",
+        "Kyle Kondik",
+        "Sabato's Crystal Ball",
+        "University of Virginia's Center for Politics"
+      ],
+      "locations": [
+        "New York",
+        "Pennsylvania",
+        "Colorado",
+        "Michigan",
+        "Florida",
+        "Washington",
+        "Detroit",
+        "Denver",
+        "Philadelphia"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "politics",
+        "elections",
+        "democratic socialists",
+        "primaries"
+      ],
+      "source": {
+        "name": "Hometown Life (Observer & Eccentric)",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.22,
+          "eclectic": 0.09,
+          "technical_science": 0.03,
+          "artsy": 0.03,
+          "progressive": 0.86,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.28,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.02,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/07/08/USAT/90842685007-16505.jpg?crop=8183,4601,x0,y333&width=660&height=372&format=pjpg&auto=webp",
+        "alt": "Angie Nixon's Florida win among these democratic socialist victories"
       }
     },
     {
@@ -75792,6 +76078,68 @@
       }
     },
     {
+      "id": "eagle-sports-tips-and-tales-nov-8-14-news-2026-11-08",
+      "title": "Eagle Sports Tips and Tales | Nov. 8-14",
+      "summary": "This article provides a weekly roundup of sports news and events at Eastern Michigan University for the week of November 8-14, 2026. It serves as a guide for students and community members to stay updated on campus athletics.",
+      "url": "https://www.easternecho.com/article/2026/11/eagle-sports-tips-and-tales-nov-8-14",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Ruby Brannon",
+        "Eastern Echo"
+      ],
+      "locations": [
+        "Ypsilanti, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "sports",
+        "university",
+        "campus news",
+        "weekly roundup"
+      ],
+      "source": {
+        "name": "Ruby Brannon",
+        "publication": "Eastern Echo"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.12,
+          "distinctive": 0.09,
+          "eclectic": 0.12,
+          "technical_science": 0.03,
+          "artsy": 0.06,
+          "progressive": 0.08,
+          "outdoors": 0.05,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.12,
+          "recurring": 0.95,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.26,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.05,
+          "children_activity": 0.03,
+          "running": 0.03,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://d2c076l7bqbhhm.cloudfront.net/9f0fc8d75963ebbda63eb514bcfb6348/dist/img/fb-hidden-icon.png",
+        "alt": "Eastern Echo logo"
+      }
+    },
+    {
       "id": "eagle-sports-tips-and-tales-sept-28-oct-news-2026-09-28",
       "title": "Eagle Sports Tips and Tales | Sept. 28 - Oct. 4",
       "summary": "What to look out for in this week of sports at Eastern Michigan University, from historical tales to practical game day tips.",
@@ -83398,6 +83746,71 @@
       }
     },
     {
+      "id": "english-and-science-classes-increase-in-news-2026-11-08",
+      "title": "English and Science Classes Increase in Size",
+      "summary": "Students and teachers at Skyline High School report that classrooms are becoming increasingly crowded, with many English and science courses reaching or exceeding capacity. Administrators note that while class sizes have fluctuated over time, the current scheduling approach has led to higher student-to-teacher ratios, impacting both classroom space and teacher grading workloads.",
+      "url": "https://skylinepost.org/12609/lifestyles/english-and-science-classes-increase-in-size/",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Skyline High School",
+        "Ashley Ducker",
+        "Terri Patterson",
+        "Cristopher Cole",
+        "Carina Seitz"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "education",
+        "high school",
+        "class size",
+        "school administration"
+      ],
+      "source": {
+        "name": "Olive Boog",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.12,
+          "eclectic": 0.07,
+          "technical_science": 0.27,
+          "artsy": 0.03,
+          "progressive": 0.09,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.26,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/56vMdNnGom11pqjasEMbuTCpQTyDSG7Tirt0C8rc.jpg",
+        "alt": "A full Advanced Placement Literature class."
+      }
+    },
+    {
       "id": "environmental-groups-call-for-transparen-news-2026-09-21",
       "title": "Environmental Groups Call for Transparency in Data Center Tax Breaks",
       "summary": "After the Michigan Economic Development Corporation declined to identify companies seeking tax breaks under a 2024 law, over 30 environmental groups urged state leaders to ensure transparency by changing the law. The groups sent a letter to Governor Gretchen Whitmer and other leaders, arguing that data center developers should not receive incentives without public knowledge of the beneficiaries and amounts.",
@@ -83971,6 +84384,71 @@
       "photo": {
         "url": "https://dzqz6ifvh9nkv.cloudfront.net/wp-content/uploads/2026/08/Screenshot-2026-08-25-at-8.33.38-AM.png",
         "alt": "Members of the Royal Court mingle with guests, sparking conversations and entertaining visitors with wit, charm, and surprise. Photo by Donna Iadipaolo."
+      }
+    },
+    {
+      "id": "europe-to-join-u-s-brokered-ukraine-talk-news-2026-11-08",
+      "title": "Europe to join U.S.-brokered Ukraine talks in Abu Dhabi, defying Kremlin objections",
+      "summary": "European nations are set to participate in U.S.-brokered talks regarding Ukraine in Abu Dhabi. This move comes despite explicit objections from the Kremlin.",
+      "url": "https://www.michiganpublic.org/2026-11-08/europe-to-join-u-s-brokered-ukraine-talks-in-abu-dhabi-defying-kremlin-objections",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Europe",
+        "U.S.",
+        "Ukraine",
+        "Kremlin"
+      ],
+      "locations": [
+        "Abu Dhabi",
+        "Europe",
+        "Ukraine"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "diplomacy",
+        "ukraine",
+        "international relations"
+      ],
+      "source": {
+        "name": "Michigan Radio (Michigan Public)",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.51,
+          "eclectic": 0.09,
+          "technical_science": 0.03,
+          "artsy": 0.02,
+          "progressive": 0.3,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.07,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.14,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/d8201b9/2147483647/strip/true/crop/3005x1695+0+155/resize/610x344!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2Fd1%2Fe46ecf5c44928d564376c67802b0%2Fmichigan-state-preview-football-25231658510051.jpg",
+        "alt": "Michigan State football preview"
       }
     },
     {
@@ -91198,6 +91676,67 @@
       "photo": {
         "url": "https://www.mlive.com/resizer/v2/JV6HFM5JZ5AUFDEAPPWX7NABPQ.JPG?auth=6d7469e6135e4a51a242fe7bbb3a9dcdecbcc98cfaaab6d788ced8d986a344db&width=1280&smart=true&quality=90",
         "alt": "After devastating fire, beloved Mexican restaurant 7 Mares has returned as food truck across from the restaurant, 1403 Kalamazoo Ave. SE, in Grand Rapids, Mich."
+      }
+    },
+    {
+      "id": "firearm-safety-and-education-tour-teache-news-2026-11-08",
+      "title": "Firearm safety and education tour teaches safe practices, provides gun locks, safes",
+      "summary": "A firearm safety and education tour is providing the community with information on safe handling practices. The initiative also distributes free gun locks and safes to promote responsible firearm storage.",
+      "url": "https://www.easternecho.com/article/2026/11/firearm-safety-and-education-tour-teaches-safe-practices-provides-gun-locks-safes",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Kate Stephenson"
+      ],
+      "locations": [
+        "Ypsilanti, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "firearm safety",
+        "education",
+        "community health",
+        "public safety"
+      ],
+      "source": {
+        "name": "Kate Stephenson",
+        "publication": "The Eastern Echo"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.21,
+          "eclectic": 0.1,
+          "technical_science": 0.18,
+          "artsy": 0.03,
+          "progressive": 0.36,
+          "outdoors": 0.04,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.32,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.09,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.02,
+          "sales_related": 0.07,
+          "children_activity": 0.05,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://d2c076l7bqbhhm.cloudfront.net/9f0fc8d75963ebbda63eb514bcfb6348/dist/img/fb-hidden-icon.png",
+        "alt": "Firearm safety and education tour teaches safe practices, provides gun locks, safes"
       }
     },
     {
@@ -111813,6 +112352,64 @@
       }
     },
     {
+      "id": "how-a-bank-collapse-left-millions-in-lim-news-2026-11-09",
+      "title": "How a bank collapse left millions in limbo and toppled Paraguay's president",
+      "summary": "A major banking failure in Paraguay has resulted in widespread financial instability and the political downfall of the nation's president.",
+      "url": "https://www.michiganpublic.org/2026-11-09/how-a-bank-collapse-left-millions-in-limbo-and-toppled-paraguays-president",
+      "publishedAt": "2026-11-09T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [],
+      "locations": [
+        "Paraguay"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "finance",
+        "politics",
+        "international"
+      ],
+      "source": {
+        "name": "Michigan Radio (Michigan Public)",
+        "publication": "NPR"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.64,
+          "eclectic": 0.35,
+          "technical_science": 0.04,
+          "artsy": 0.02,
+          "progressive": 0.07,
+          "outdoors": 0.01,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.03,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/d8201b9/2147483647/strip/true/crop/3005x1695+0+155/resize/610x344!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2Fd1%2Fe46ecf5c44928d564376c67802b0%2Fmichigan-state-preview-football-25231658510051.jpg",
+        "alt": "Michigan State preview football"
+      }
+    },
+    {
       "id": "how-a-cash-app-tip-led-the-fbi-to-a-mich-news-2026-10-17",
       "title": "How a Cash App tip led the FBI to a Michigan teacher accused of sex trafficking teen",
       "summary": "A 48-year-old Lapeer area teacher faces federal charges of sex trafficking a minor and sexual exploitation of children. The FBI received a tip about 21 Cash App payments totaling $839 from Corwin Gutenschwager to a 17-year-old girl for sex and explicit content. The teen confirmed meeting Gutenschwager through social media, staying in Flint hotels, and communicating via Telegram, with evidence dating back to when she was 16. Gutenschwager allegedly admitted to paying multiple girls for sex and explicit content without verifying their ages.",
@@ -112945,10 +113542,10 @@
     {
       "id": "how-michigan-s-arab-and-muslim-voters-he-news-2026-11-06",
       "title": "How Michigan's Arab and Muslim voters helped Abdul El-Sayed win a US Senate seat",
-      "summary": "An analysis of the voting patterns and influence of Arab and Muslim communities in Michigan during Abdul El-Sayed's successful U.S. Senate campaign.",
+      "summary": "This report examines the role of Arab and Muslim voter turnout in the successful U.S. Senate campaign of Abdul El-Sayed in Michigan.",
       "url": "https://www.michiganpublic.org/section/stateside/2026-11-06/abdul-el-sayed-us-senate-arab-muslim-voters",
       "publishedAt": "2026-11-06T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -112969,37 +113566,37 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.09,
-          "distinctive": 0.15,
-          "eclectic": 0.19,
-          "technical_science": 0.07,
-          "artsy": 0.12,
-          "progressive": 0.23,
-          "outdoors": 0.06,
-          "theatre": 0.02,
-          "live_music": 0.02,
+          "funny": 0.03,
+          "distinctive": 0.49,
+          "eclectic": 0.11,
+          "technical_science": 0.03,
+          "artsy": 0.03,
+          "progressive": 0.67,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
-          "sporting": 0.1,
-          "recurring": 0.73,
-          "craft_fair_shopping": 0.03,
-          "religious": 0.02,
-          "large_venue": 0.26,
+          "sporting": 0.01,
+          "recurring": 0.08,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.03,
+          "large_venue": 0.1,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.45,
-          "children_activity": 0.03,
-          "running": 0.02,
-          "exercise": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
           "employment_related": 0.02
         }
       },
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/1502a08/2147483647/strip/true/crop/5712x3779+0+253/resize/130x86!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fab%2F99%2F9e2484f942c8b9a6e4bc36858908%2Fimage.png",
-        "alt": "Supporters at Abdul El-Sayed's victory party."
+        "alt": "A woman in a blue hijab embraces another woman in a white shawl with brown hair at the victory party for Abdul El-Sayed's U.S. Senate victory."
       }
     },
     {
@@ -123445,6 +124042,67 @@
       "photo": {
         "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/11/election-day-graphics-01.png?fit=1024%2C1024&amp;ssl=1",
         "alt": "Election day graphic"
+      }
+    },
+    {
+      "id": "jennifer-lawrence-wins-washtenaw-county-news-2026-11-01",
+      "title": "Jennifer Lawrence wins Washtenaw County probate court bid",
+      "summary": "Jennifer Lawrence has successfully secured a bid for the Washtenaw County probate court. The announcement follows recent local election results.",
+      "url": "https://www.easternecho.com/article/2026/11/jennifer-lawrence-wins-washtenaw-county-probate-court-bid",
+      "publishedAt": "2026-11-01T00:00:00Z",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Jennifer Lawrence"
+      ],
+      "locations": [
+        "Washtenaw County"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "politics",
+        "elections",
+        "law",
+        "local government"
+      ],
+      "source": {
+        "name": "Eastern Echo (Eastern Michigan University)",
+        "publication": "The Eastern Echo"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.19,
+          "distinctive": 0.28,
+          "eclectic": 0.09,
+          "technical_science": 0.03,
+          "artsy": 0.03,
+          "progressive": 0.15,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.27,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.02,
+          "exercise": 0.01,
+          "employment_related": 0.03
+        }
+      },
+      "photo": {
+        "url": "https://d2c076l7bqbhhm.cloudfront.net/9f0fc8d75963ebbda63eb514bcfb6348/dist/img/fb-hidden-icon.png",
+        "alt": "The Eastern Echo logo"
       }
     },
     {
@@ -136440,6 +137098,71 @@
       }
     },
     {
+      "id": "love-decorating-for-halloween-bay-city-c-news-2026-10-22",
+      "title": "Love decorating for Halloween? Bay City contest is open to residents and businesses and you can enter now",
+      "summary": "Bay City is hosting a Halloween decorating contest for local residents and businesses, with winners to be selected in two categories. Participants must submit their entries by October 31, and winners will be announced at the City Commission meeting on November 9.",
+      "url": "https://www.mlive.com/news/saginaw-bay-city/2026/10/love-decorating-for-halloween-bay-city-contest-is-open-to-residents-and-businesses-and-you-can-enter-now.html",
+      "publishedAt": "2026-10-22T14:11:00-04:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Bay City",
+        "Mayor",
+        "City Commission",
+        "Bay City Government",
+        "MLive Express Desk"
+      ],
+      "locations": [
+        "Bay City, MI"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "halloween",
+        "contest",
+        "community",
+        "local government"
+      ],
+      "source": {
+        "name": "MLive Express Desk",
+        "publication": "MLive / The Ann Arbor News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.64,
+          "distinctive": 0.17,
+          "eclectic": 0.09,
+          "technical_science": 0.05,
+          "artsy": 0.95,
+          "progressive": 0.09,
+          "outdoors": 0.11,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.05,
+          "recurring": 0.31,
+          "craft_fair_shopping": 0.04,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.02,
+          "sales_related": 0.09,
+          "children_activity": 0.06,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/TFWJXKT2I5BH3JY3JECEAGC43E.JPG?auth=07b6b5f9a0cee48fee4607bbefa87a2d9d0bf05e95bd36abfe72d2dfe1e2eda2&width=1280&smart=true",
+        "alt": "Halloween decorations"
+      }
+    },
+    {
       "id": "low-income-detroiters-can-apply-for-help-news-2026-10-06",
       "title": "Low-income Detroiters can apply for help with water bills",
       "summary": "An apartment building near Eastern Market finally opened after nearly a decade in development. The Hive has 78 affordable units for those earning 30%-60% of the area median income, with a second phase planned for older adults. The project faced delays due to the pandemic and federal funding restrictions.",
@@ -144572,14 +145295,19 @@
     {
       "id": "meet-the-newly-elected-grand-rapids-publ-news-2026-11-04",
       "title": "Meet the newly elected Grand Rapids Public School board members",
-      "summary": "The election for the Grand Rapids Public School District Board of Education has concluded. Four new members have been elected to join two incumbents on the board.",
+      "summary": "The article introduces the newly elected members of the Grand Rapids Public School board, including incumbents and new representatives.",
       "url": "https://www.michiganpublic.org/politics-government/2026-11-04/meet-the-newly-elected-grand-rapids-public-school-board-members",
       "publishedAt": "2026-11-04T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Grand Rapids Public School District Board of Education"
+        "Erika VanDyke",
+        "Carlos Kulas-Dominguez",
+        "Antoinette Chapman",
+        "Amaad Hardy",
+        "Jose Rodriguez",
+        "Ismalis Nunez"
       ],
       "locations": [
         "Grand Rapids"
@@ -144587,8 +145315,9 @@
       "localityIndex": 4,
       "topics": [
         "education",
-        "politics",
-        "election"
+        "school board",
+        "grand rapids",
+        "elections"
       ],
       "source": {
         "name": "Michelle Jokisch Polo",
@@ -144596,30 +145325,30 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.08,
-          "distinctive": 0.5,
-          "eclectic": 0.18,
-          "technical_science": 0.29,
-          "artsy": 0.1,
-          "progressive": 0.71,
-          "outdoors": 0.05,
+          "funny": 0.04,
+          "distinctive": 0.17,
+          "eclectic": 0.07,
+          "technical_science": 0.03,
+          "artsy": 0.03,
+          "progressive": 0.2,
+          "outdoors": 0.02,
           "theatre": 0.02,
-          "live_music": 0.02,
-          "live_comedy": 0.02,
-          "farmer_market": 0.02,
-          "sporting": 0.02,
-          "recurring": 0.5,
-          "craft_fair_shopping": 0.03,
-          "religious": 0.03,
-          "large_venue": 0.16,
-          "substance_recovery": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.26,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.06,
+          "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.09,
-          "children_activity": 0.03,
-          "running": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
         }
@@ -146548,65 +147277,6 @@
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/ZZSKJTNW4BHYXEZXZ3PVSEJBZU.jpg?api_key=clickondetroit_06f87fefb2123598",
         "alt": "Blue Cross Blue Shield logo on building. (WDIV)"
-      }
-    },
-    {
-      "id": "michigan-ag-candidate-doug-lloyd-cut-cha-news-2026-05-10",
-      "title": "Michigan AG candidate Doug Lloyd cut charges, sought no jail in sex-crime cases",
-      "summary": "Republican Doug Lloyd is running for Michigan attorney general on his three decades of experience as a prosecutor. However, a Metro Times review of court records and case files found instances during his tenure as Eaton County prosecutor where cases involving sexual assault, child exploitation, and domestic violence resulted in reduced charges, probation instead of jail, or no prosecution. The findings emerge as Lloyd faces Democrat Eli Savit in a closely contested race to succeed term-limited Attorney General Dana Nessel.",
-      "url": "https://www.metrotimes.com/news/michigan-ag-candidate-doug-lloyd-cut-charges-sought-no-jail-in-sex-crime-cases/",
-      "publishedAt": "2026-05-10T00:00:00-04:00",
-      "addedAt": "2026-09-20T13:05:22-04:00",
-      "locations": [
-        "Michigan",
-        "Detroit Metro Area"
-      ],
-      "localityIndex": 3,
-      "topics": [
-        "politics",
-        "elections",
-        "attorney general",
-        "sex crimes",
-        "prosecution",
-        "criminal justice"
-      ],
-      "source": {
-        "name": "Steve Neavling",
-        "publication": "Metro Times"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.02,
-          "distinctive": 0.32,
-          "eclectic": 0.12,
-          "technical_science": 0.02,
-          "artsy": 0.02,
-          "progressive": 0.13,
-          "outdoors": 0.01,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.07,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.05,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.03,
-          "children_activity": 0.01,
-          "running": 0.03,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://i0.wp.com/www.metrotimes.com/wp-content/uploads/2026/09/AG-candidate-Lloyd.jpg?fit=1024%2C777&amp;ssl=1",
-        "alt": "Doug Lloyd, Michigan AG candidate"
       }
     },
     {
@@ -149659,45 +150329,39 @@
     {
       "id": "michigan-attorney-general-says-no-charge-news-2026-11-06",
       "title": "Michigan Attorney General says no charges for deputies who shot Navy veteran",
-      "summary": "Michigan Attorney General Dana Nessel announced that no criminal charges will be filed against Washtenaw County deputies involved in the fatal January 2026 shooting of Navy veteran John Jenuwine. While the Attorney General concluded the officers faced a legitimate threat, the family's legal counsel plans to continue with a pending civil lawsuit.",
+      "summary": "Michigan Attorney General Dana Nessel's office announced that no charges will be filed against Washtenaw County deputies involved in the fatal shooting of Navy veteran John Jenuwine.",
       "url": "https://www.wemu.org/wemu-news/2026-11-06/michigan-attorney-general-says-no-charges-for-deputies-who-shot-navy-veteran",
-      "publishedAt": "2026-11-06T16:45:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "publishedAt": "2026-11-06T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
+        "Washtenaw County Sheriff's Department",
         "John Jenuwine",
-        "Dana Nessel",
-        "Caroline MacGregor",
-        "Washtenaw County Sheriff's Office",
-        "Maura Battersby",
-        "Flood Law",
-        "Michigan Attorney General's Office"
+        "Michigan Attorney General",
+        "Dana Nessel"
       ],
       "locations": [
-        "Ypsilanti, MI",
-        "Washtenaw County, MI"
+        "Washtenaw County"
       ],
       "localityIndex": 2,
       "topics": [
         "law enforcement",
         "legal",
-        "shooting",
-        "investigation",
-        "civil rights"
+        "justice"
       ],
       "source": {
         "name": "Caroline MacGregor",
-        "publication": "WEMU 89.1 FM"
+        "publication": "WEMU News"
       },
       "scoring": {
         "signals": {
           "funny": 0.01,
-          "distinctive": 0.52,
+          "distinctive": 0.4,
           "eclectic": 0.07,
           "technical_science": 0.03,
           "artsy": 0.02,
-          "progressive": 0.11,
+          "progressive": 0.14,
           "outdoors": 0.02,
           "theatre": 0.01,
           "live_music": 0.01,
@@ -149707,13 +150371,13 @@
           "recurring": 0.03,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
-          "large_venue": 0.03,
+          "large_venue": 0.02,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
+          "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.02,
+          "sales_related": 0.01,
           "children_activity": 0.01,
           "running": 0.01,
           "exercise": 0.01,
@@ -149721,8 +150385,8 @@
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/406f67d/2147483647/strip/true/crop/626x329+0+138/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F97%2F4f%2F751a7b8a4ea5b07710e2e29880b3%2Fjohn-in-uniform.png",
-        "alt": "A photo of U.S. Navy veteran John Andrew Jenuwine"
+        "url": "https://npr.brightspotcdn.com/dims4/default/ba37683/2147483647/strip/true/crop/626x349+0+127/resize/280x156!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F97%2F4f%2F751a7b8a4ea5b07710e2e29880b3%2Fjohn-in-uniform.png",
+        "alt": "A photo of U.S. Navy veteran John Andrew Jenuwine, who was shot and killed by Washtenaw County Sheriff's deputies on January 6, 2026."
       }
     },
     {
@@ -151867,10 +152531,10 @@
     {
       "id": "michigan-democrats-prepare-for-a-second-news-2026-11-04",
       "title": "Michigan Democrats prepare for a second trifecta in state government",
-      "summary": "Following recent election results, Michigan Democrats have secured control of the governor's office, the state House, and an expanded majority in the state Senate. This marks a second consecutive trifecta for the party in state government.",
+      "summary": "Following the recent election, Michigan Democrats have secured the governor's race, control of the state House, and an expanded majority in the state Senate. This marks their second trifecta in state government.",
       "url": "https://www.michiganpublic.org/politics-government/2026-11-04/michigan-democrats-prepare-for-a-second-trifecta-in-state-government",
       "publishedAt": "2026-11-04T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -151883,7 +152547,8 @@
       "localityIndex": 4,
       "topics": [
         "politics",
-        "election",
+        "michigan",
+        "elections",
         "government"
       ],
       "source": {
@@ -151892,29 +152557,29 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.08,
-          "distinctive": 0.5,
-          "eclectic": 0.18,
-          "technical_science": 0.29,
-          "artsy": 0.1,
-          "progressive": 0.71,
-          "outdoors": 0.05,
-          "theatre": 0.02,
-          "live_music": 0.02,
-          "live_comedy": 0.02,
-          "farmer_market": 0.02,
-          "sporting": 0.02,
-          "recurring": 0.5,
-          "craft_fair_shopping": 0.03,
-          "religious": 0.03,
-          "large_venue": 0.16,
-          "substance_recovery": 0.02,
+          "funny": 0.03,
+          "distinctive": 0.25,
+          "eclectic": 0.05,
+          "technical_science": 0.03,
+          "artsy": 0.02,
+          "progressive": 0.41,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.11,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.06,
+          "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.09,
-          "children_activity": 0.03,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.01,
           "running": 0.02,
           "exercise": 0.01,
           "employment_related": 0.02
@@ -155592,6 +156257,79 @@
       "photo": {
         "url": "https://www.chalkbeat.org/resizer/v2/PHCUYUZJHFHM7NCS6HQDV3GDVQ.JPG?smart=true&auth=3c381d5b6ad861fa6deb67304d11221018c88082f6b7bbccc3898028365c2913&width=1200&height=630",
         "alt": "Michigan governor race: Where candidates stand on school policy"
+      }
+    },
+    {
+      "id": "michigan-guard-unit-deploying-to-souther-news-2026-11-08",
+      "title": "Michigan Guard unit deploying to southern border. What they will do",
+      "summary": "Approximately 125 soldiers from the Michigan National Guard's 1432nd Engineer Company are deploying to the U.S.-Mexico border to support Customs and Border Protection operations. The unit, based in Kingsford and Gladstone, is expected to serve for up to one year.",
+      "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/08/gladstone-kingsford-national-guard-troops-deploy-border-cbp/92677099007/",
+      "publishedAt": "2026-11-08T10:30:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Michigan National Guard",
+        "1432nd Engineer Company",
+        "Michigan Department of Military and Veteran Affairs",
+        "Paul D. Rogers",
+        "U.S. Customs and Border Protection",
+        "U.S. Northern Command",
+        "Joint Task Force North",
+        "Donald Trump",
+        "Joe Biden"
+      ],
+      "locations": [
+        "Gladstone",
+        "Kingsford",
+        "Escanaba",
+        "Michigan",
+        "U.S. southern border"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "military",
+        "national guard",
+        "border security",
+        "deployment"
+      ],
+      "source": {
+        "name": "Dan Basso",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.24,
+          "eclectic": 0.07,
+          "technical_science": 0.17,
+          "artsy": 0.02,
+          "progressive": 0.09,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.13,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/11/08/PLSJ/92677222007-guard-unit.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp",
+        "alt": "Michigan National Guard unit"
       }
     },
     {
@@ -163965,6 +164703,77 @@
       "photo": {
         "url": "https://michiganadvance.com/wp-content/uploads/2026/10/Outside-of-building-1024x738.jpg",
         "alt": "Grounds of the Southeast Michigan Psychiatric Hospital in Northville on Oct. 7, 2026"
+      }
+    },
+    {
+      "id": "michigan-sex-offender-pleads-guilty-to-t-news-2026-10-19",
+      "title": "Michigan sex offender pleads guilty to trying to meet up with ‘teen girl’ who was adult man",
+      "summary": "Kevin R. Nau, a 36-year-old sex offender, pleaded guilty to charges including accosting children for immoral purposes after attempting to meet a 14-year-old girl who was actually an adult male decoy from a vigilante group. Nau is scheduled to be sentenced on November 9, 2026, by Saginaw County Circuit Judge Manvel Trice III.",
+      "url": "https://www.mlive.com/news/saginaw-bay-city/2026/10/michigan-sex-offender-pleads-guilty-to-trying-to-meet-up-with-teen-girl-who-was-adult-man.html",
+      "publishedAt": "2026-10-19T15:18:00-04:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Kevin R. Nau",
+        "Manvel Trice III",
+        "Maximum Exposures Michigan",
+        "Chris Hansen",
+        "James R. Yager",
+        "Matthew J. Hoeppner"
+      ],
+      "locations": [
+        "Saginaw, MI",
+        "Saginaw County, MI",
+        "Alpena County, MI",
+        "Lapeer, MI",
+        "Flint, MI",
+        "Jackson, MI"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "crime",
+        "legal",
+        "sex offender",
+        "vigilante group"
+      ],
+      "source": {
+        "name": "Cole Waterman",
+        "publication": "MLive"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.06,
+          "distinctive": 0.45,
+          "eclectic": 0.15,
+          "technical_science": 0.03,
+          "artsy": 0.02,
+          "progressive": 0.09,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.04,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.mlive.com/resizer/v2/SM4W2OB57VALXODDSS54HCIXEY.JPG?auth=59a627a8f0cfbb2c0e7047a0b8f7ea11b5ac671b580b3c128ebb9e3c76cca451&width=1280&smart=true",
+        "alt": "Michigan man pleads guilty to trying to meet 14-year-old girl for sex who was actually adult male decoy"
       }
     },
     {
@@ -176719,6 +177528,66 @@
       }
     },
     {
+      "id": "nasa-is-looking-for-astronauts-to-live-a-news-2026-11-08",
+      "title": "NASA is looking for astronauts to live and work on the Moon",
+      "summary": "NASA has announced a recruitment drive for astronauts to participate in long-term missions involving living and working on the lunar surface.",
+      "url": "https://www.michiganpublic.org/2026-11-08/nasa-is-looking-for-astronauts-to-live-and-work-on-the-moon",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "NASA"
+      ],
+      "locations": [
+        "Moon"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "space",
+        "science",
+        "exploration"
+      ],
+      "source": {
+        "name": "Michigan Radio (Michigan Public)",
+        "publication": "NPR"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.59,
+          "eclectic": 0.12,
+          "technical_science": 0.98,
+          "artsy": 0.04,
+          "progressive": 0.81,
+          "outdoors": 0.03,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.16,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.31,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.8
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/d8201b9/2147483647/strip/true/crop/3005x1695+0+155/resize/610x344!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2Fd1%2Fe46ecf5c44928d564376c67802b0%2Fmichigan-state-preview-football-25231658510051.jpg",
+        "alt": "Michigan State preview football"
+      }
+    },
+    {
       "id": "national-average-gas-price-hits-4-33-per-news-2026-10-15",
       "title": "National average gas price hits $4.33 per gallon as of Oct. 15, 2026",
       "summary": "The national average gas price reached $4.33 per gallon on October 15, 2026, according to AAA Fuel Prices data. State prices ranged from $3.704 in North Carolina to $6.237 in California, with Michigan averaging $4.579. The report provides a detailed breakdown of regular gasoline prices across all 50 states.",
@@ -181207,6 +182076,66 @@
       }
     },
     {
+      "id": "no-clear-winner-in-new-zealand-election-news-2026-11-08",
+      "title": "No clear winner in New Zealand election, as leaders prepare for weeks of talks",
+      "summary": "The recent New Zealand election has concluded without a clear winner. Political leaders are now preparing for a period of negotiations that is expected to last several weeks.",
+      "url": "https://www.michiganpublic.org/2026-11-08/no-clear-winner-in-new-zealand-election-as-leaders-prepare-for-weeks-of-talks",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "New Zealand"
+      ],
+      "locations": [
+        "New Zealand"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "elections",
+        "politics",
+        "new zealand"
+      ],
+      "source": {
+        "name": "Michigan Radio (Michigan Public)",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.21,
+          "eclectic": 0.06,
+          "technical_science": 0.02,
+          "artsy": 0.03,
+          "progressive": 0.15,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.26,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/d8201b9/2147483647/strip/true/crop/3005x1695+0+155/resize/610x344!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2Fd1%2Fe46ecf5c44928d564376c67802b0%2Fmichigan-state-preview-football-25231658510051.jpg",
+        "alt": "Michigan State football preview"
+      }
+    },
+    {
       "id": "no-kings-day-rally-draws-hundreds-to-dow-news-2026-10-17",
       "title": "No Kings Day rally draws hundreds to downtown Grand Rapids",
       "summary": "A voter rights rally and march organized by multiple local groups drew hundreds to Grand Rapids on Oct. 17, 2026, to encourage midterm election participation and address issues like immigration detention and government corruption. The event featured educational booths, nonpartisan voting information, and a march through downtown with police accompaniment. Protesters highlighted concerns about wars, ICE policies, and election integrity while distributing voter resources.",
@@ -183337,6 +184266,64 @@
       }
     },
     {
+      "id": "nvidia-launches-investigation-into-ceo-s-news-2026-11-08",
+      "title": "Nvidia launches investigation into CEO's alleged relationship with Chinese spy",
+      "summary": "Technology giant Nvidia has initiated an internal investigation following allegations regarding its CEO and a potential connection to a Chinese intelligence operative.",
+      "url": "https://www.michiganpublic.org/2026-11-08/nvidia-launches-investigation-into-ceos-alleged-relationship-with-chinese-spy",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Nvidia"
+      ],
+      "locations": [],
+      "localityIndex": 4,
+      "topics": [
+        "technology",
+        "business",
+        "espionage"
+      ],
+      "source": {
+        "name": "Michigan Radio (Michigan Public)",
+        "publication": "NPR"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.79,
+          "eclectic": 0.5,
+          "technical_science": 0.83,
+          "artsy": 0.03,
+          "progressive": 0.09,
+          "outdoors": 0.01,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.03,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/d8201b9/2147483647/strip/true/crop/3005x1695+0+155/resize/610x344!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2Fd1%2Fe46ecf5c44928d564376c67802b0%2Fmichigan-state-preview-football-25231658510051.jpg",
+        "alt": "Michigan State preview football"
+      }
+    },
+    {
       "id": "nyt-journalist-discusses-trump-administr-news-2026-10-08",
       "title": "NYT journalist discusses Trump administration’s threats to press",
       "summary": "University of Michigan hosted a discussion on threats to press freedom under the Trump administration, featuring New York Times journalist Eric Schmitt and Reporters Committee policy VP Gabe Rottman. Schmitt described receiving a subpoena for reporting on Air Force One security flaws, while Rottman highlighted increased federal subpoenas against journalists during Trump's second term. The event emphasized the importance of public advocacy for press freedoms.",
@@ -184769,10 +185756,10 @@
     {
       "id": "ojibwe-author-speaks-to-the-violence-ame-news-2026-11-05",
       "title": "Ojibwe author speaks to the violence America inherited in ‘The Savage Mind’ | The Metro",
-      "summary": "Ojibwe author David Treuer discusses his new book, 'The Savage Mind: An American Legacy,' which explores the enduring impact of America's violent frontier history. Treuer is scheduled to speak about his work at the Henry Ford Museum of American Innovation on November 7 and the Detroit Public Library on November 8.",
+      "summary": "Ojibwe author David Treuer explores the enduring legacy of American violence in his new book, 'The Savage Mind: An American Legacy.' Treuer is scheduled to discuss his work at The Henry Ford Museum of American Innovation on November 7 and at the Detroit Public Library on November 8.",
       "url": "https://wdet.org/2026/11/05/ojibwe-author-speaks-to-the-violence-america-inherited-in-the-savage-mind-the-metro/",
       "publishedAt": "2026-11-05T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:42-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -184792,8 +185779,8 @@
       "localityIndex": 3,
       "topics": [
         "books",
-        "history",
         "literature",
+        "history",
         "native american",
         "events"
       ],
@@ -184803,29 +185790,29 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.04,
-          "distinctive": 0.32,
+          "funny": 0.05,
+          "distinctive": 0.33,
           "eclectic": 0.2,
           "technical_science": 0.06,
-          "artsy": 0.74,
-          "progressive": 0.67,
+          "artsy": 0.81,
+          "progressive": 0.7,
           "outdoors": 0.03,
           "theatre": 0.03,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.01,
-          "sporting": 0.01,
+          "sporting": 0.02,
           "recurring": 0.07,
           "craft_fair_shopping": 0.02,
-          "religious": 0.02,
+          "religious": 0.03,
           "large_venue": 0.06,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.02,
-          "sales_related": 0.28,
-          "children_activity": 0.04,
+          "sales_related": 0.29,
+          "children_activity": 0.03,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
@@ -192197,10 +193184,10 @@
     {
       "id": "president-kelly-delivers-six-month-repor-news-2026-11-07",
       "title": "President Kelly delivers six-month report to EMU Board of Regents",
-      "summary": "Eastern Michigan University President Brendan Kelly presented a six-month progress report to the Board of Regents, focusing on enrollment strategies, student support services, and institutional adaptation. During the meeting, Kelly officially appointed Dwight Hamilton as Vice President of Student Affairs and discussed ongoing feedback initiatives led by his steering team.",
+      "summary": "Eastern Michigan University President Brendan Kelly presented a six-month progress report to the Board of Regents, focusing on enrollment strategies, student support services, and institutional adaptation. During the meeting, Kelly officially appointed Dwight Hamilton as Vice President of Student Affairs and discussed ongoing efforts to gather stakeholder feedback for future improvements.",
       "url": "https://www.easternecho.com/article/2026/11/president-kelly-delivers-six-month-report-to-emu-board-of-regents",
       "publishedAt": "2026-11-07T08:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -192230,9 +193217,9 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.16,
-          "eclectic": 0.05,
-          "technical_science": 0.04,
+          "distinctive": 0.15,
+          "eclectic": 0.06,
+          "technical_science": 0.05,
           "artsy": 0.03,
           "progressive": 0.18,
           "outdoors": 0.01,
@@ -192251,7 +193238,7 @@
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
           "sales_related": 0.03,
-          "children_activity": 0.01,
+          "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.04
@@ -192259,7 +193246,7 @@
       },
       "photo": {
         "url": "https://snworksceo.imgix.net/emu/38e9052a-0e15-4cd8-a286-a45c598b07a1.sized-1000x1000.jpg?w=800&h=600",
-        "alt": "President Kelly delivers six-month report to EMU Board of Regents"
+        "alt": "President Brendan Kelly"
       }
     },
     {
@@ -195463,6 +196450,69 @@
           "exercise": 0.01,
           "employment_related": 0.02
         }
+      }
+    },
+    {
+      "id": "queer-michigan-history-was-made-in-the-m-news-2026-11-05",
+      "title": "Queer Michigan history was made in the midterms this year",
+      "summary": "Historic victories for Jeremy Moss, Joanna Whaley, and Jason Hoskins mark a new chapter for LGBTQ+ representation in Michigan government. These wins occurred during the recent midterm elections.",
+      "url": "https://www.michiganpublic.org/politics-government/2026-11-05/queer-michigan-history-was-made-in-the-midterms-this-year",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Jeremy Moss",
+        "Joanna Whaley",
+        "Jason Hoskins"
+      ],
+      "locations": [
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "lgbtq+",
+        "politics",
+        "michigan",
+        "elections"
+      ],
+      "source": {
+        "name": "Katherine Dailey",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.04,
+          "distinctive": 0.76,
+          "eclectic": 0.12,
+          "technical_science": 0.02,
+          "artsy": 0.04,
+          "progressive": 0.92,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.15,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/9eaa79a/2147483647/strip/true/crop/1536x856+0+84/resize/280x156!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc5%2F0b%2F4fac9e2848f9bbc187cc8c5c266a%2Fdsc-0498-2-1536x1024.jpg",
+        "alt": "LGBTQ+ Pride flags fly in front of the Michigan Senate building."
       }
     },
     {
@@ -203209,10 +204259,10 @@
     {
       "id": "robert-s-return-news-2026-11-05",
       "title": "Robert’s Return",
-      "summary": "Former Community High School teacher Robert Lavelanet returned to the school to perform a new poem at the Poetry Club's Day of the Dead reading. Lavelanet, who is currently on a leave of absence, is working with club leader Ellen Stone to revive the school's annual Poetry Slam, scheduled for December 10.",
+      "summary": "Former Community High School teacher Robert Lavelanet returned to the school to perform a new poem at a Poetry Club event. Lavelanet, who is currently on a leave of absence, is working with club leader Ellen Stone to revive the school's annual Poetry Slam, scheduled for December 10.",
       "url": "https://chscommunicator.com/114168/news/2026/11/roberts-return/",
       "publishedAt": "2026-11-05T00:00:00-05:00",
-      "addedAt": "2026-11-07T01:38:58-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -203232,8 +204282,8 @@
       "topics": [
         "education",
         "poetry",
-        "arts",
-        "community"
+        "community",
+        "arts"
       ],
       "source": {
         "name": "Alden Koschmann",
@@ -203241,36 +204291,36 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.62,
-          "distinctive": 0.61,
+          "funny": 0.25,
+          "distinctive": 0.47,
           "eclectic": 0.17,
-          "technical_science": 0.03,
+          "technical_science": 0.04,
           "artsy": 0.98,
-          "progressive": 0.34,
+          "progressive": 0.5,
           "outdoors": 0.02,
-          "theatre": 0.04,
-          "live_music": 0.02,
-          "live_comedy": 0.02,
-          "farmer_market": 0.01,
-          "sporting": 0.04,
-          "recurring": 0.24,
+          "theatre": 0.13,
+          "live_music": 0.03,
+          "live_comedy": 0.03,
+          "farmer_market": 0.02,
+          "sporting": 0.03,
+          "recurring": 0.46,
           "craft_fair_shopping": 0.02,
-          "religious": 0.03,
+          "religious": 0.02,
           "large_venue": 0.03,
-          "substance_recovery": 0.01,
+          "substance_recovery": 0.02,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
           "dance": 0.02,
-          "sales_related": 0.06,
-          "children_activity": 0.03,
+          "sales_related": 0.05,
+          "children_activity": 0.05,
           "running": 0.01,
-          "exercise": 0.01,
+          "exercise": 0.02,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://chscommunicator.com/wp-content/uploads/2026/11/f8VYVvREijyCRQqormKR4zOncASMfsFgMwCjprG9-1200x800.jpg",
+        "url": "https://chscommunicator.com/wp-content/uploads/2026/11/f8VYVvREijyCRQqormKR4zOncASMfsFgMwCjprG9.jpg",
         "alt": "CHS Poetry Club leader Ellen Stone performs an original poem at the Day of the Dead Poetry Reading in the CHS library."
       }
     },
@@ -213101,6 +214151,77 @@
       }
     },
     {
+      "id": "smaller-lunchrooms-how-s-it-affecting-ev-news-2026-11-08",
+      "title": "Smaller Lunchrooms: How’s it Affecting Everyone?",
+      "summary": "Skyline High School students and staff are reporting significant overcrowding and accessibility issues following the conversion of part of the lunchroom into temporary classrooms. While students and Community Assistants express concerns over safety and mobility, the school principal has stated these changes are temporary and will be resolved by the next school year.",
+      "url": "https://skylinepost.org/12612/lifestyles/smaller-lunchrooms-hows-it-affecting-everyone/",
+      "publishedAt": "2026-11-08T00:00:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Shiyanne Kimbrough",
+        "Sophia Cardenas-Hernandez",
+        "Katelyn Dybdahl",
+        "Tj Dresch",
+        "Timo von Kluge",
+        "Romeo Ayala",
+        "Wyatt Yonder",
+        "Ruby Pickford",
+        "Gary Cooper",
+        "Terri Patterson",
+        "Skyline High School"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "education",
+        "school facilities",
+        "accessibility",
+        "student life"
+      ],
+      "source": {
+        "name": "Shiyanne Kimbrough",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.25,
+          "eclectic": 0.09,
+          "technical_science": 0.07,
+          "artsy": 0.03,
+          "progressive": 0.13,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.08,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/Dc1cYegT2HR3HZvLG9iX6Y5Yv2R9ccfOzMbRWOgz.jpg",
+        "alt": "The packed lunchroom, right at the start of late lunch"
+      }
+    },
+    {
       "id": "snap-rolls-shrink-straining-michigan-foo-news-2026-10-15",
       "title": "SNAP rolls shrink, straining Michigan food banks",
       "summary": "Michigan food banks face surging demand as Supplemental Nutrition Assistance Program (SNAP) rolls shrink, exacerbating food insecurity.",
@@ -214233,10 +215354,10 @@
     {
       "id": "soldier-s-angels-news-2026-11-05",
       "title": "Soldier’s Angels",
-      "summary": "Soldiers’ Angels is a national non-profit organization dedicated to providing aid, comfort, and resources to veterans, deployed military personnel, and their families. The organization offers various volunteer opportunities, including virtual and in-person roles such as food distribution and the creation of care packages.",
+      "summary": "Soldiers’ Angels is a national non-profit organization dedicated to providing aid, comfort, and resources to veterans, deployed military personnel, and their families. The organization offers various volunteer opportunities, including virtual and in-person roles such as food distribution, event support, and the creation of care packages.",
       "url": "https://schoolcraftconnection.com/34410/news/get-involved-in-your-neighborhood/",
       "publishedAt": "2026-11-05T00:00:00-05:00",
-      "addedAt": "2026-11-07T01:38:58-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -214260,22 +215381,22 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.03,
+          "funny": 0.04,
           "distinctive": 0.11,
-          "eclectic": 0.09,
-          "technical_science": 0.04,
-          "artsy": 0.07,
-          "progressive": 0.24,
-          "outdoors": 0.04,
+          "eclectic": 0.11,
+          "technical_science": 0.05,
+          "artsy": 0.09,
+          "progressive": 0.2,
+          "outdoors": 0.05,
           "theatre": 0.03,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.03,
           "sporting": 0.02,
-          "recurring": 0.52,
+          "recurring": 0.47,
           "craft_fair_shopping": 0.03,
           "religious": 0.05,
-          "large_venue": 0.06,
+          "large_venue": 0.08,
           "substance_recovery": 0.02,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.03,
@@ -214285,7 +215406,7 @@
           "children_activity": 0.04,
           "running": 0.02,
           "exercise": 0.02,
-          "employment_related": 0.1
+          "employment_related": 0.09
         }
       },
       "photo": {
@@ -218600,7 +219721,7 @@
       "summary": "The Stateside program hosted by April Baer covers daily news and conversations relevant to Michigan listeners.",
       "url": "https://www.michiganpublic.org/stateside/2026-11-06/stateside-friday-nov-6-2026",
       "publishedAt": "2026-11-06T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -218621,28 +219742,28 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.09,
-          "distinctive": 0.15,
-          "eclectic": 0.19,
+          "funny": 0.1,
+          "distinctive": 0.11,
+          "eclectic": 0.18,
           "technical_science": 0.07,
-          "artsy": 0.12,
-          "progressive": 0.23,
-          "outdoors": 0.06,
+          "artsy": 0.11,
+          "progressive": 0.34,
+          "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
-          "sporting": 0.1,
-          "recurring": 0.73,
-          "craft_fair_shopping": 0.03,
+          "sporting": 0.02,
+          "recurring": 0.93,
+          "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.26,
-          "substance_recovery": 0.01,
+          "large_venue": 0.04,
+          "substance_recovery": 0.02,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
           "dance": 0.02,
-          "sales_related": 0.45,
+          "sales_related": 0.07,
           "children_activity": 0.03,
           "running": 0.02,
           "exercise": 0.02,
@@ -218651,7 +219772,7 @@
       },
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/6827ad1/2147483647/strip/true/crop/1633x1080+119+0/resize/130x86!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc1%2F5a%2F3a28ad974cfea2c1e36682a3098e%2Fstateside-full-show-pod.png",
-        "alt": "Portrait of April Baer."
+        "alt": "A black and white portrait of April Baer--a white woman with brown curly hair and a white blazer. The photo is against a green and blue ombre background. Text on the photo reads \"Stateside with April Baer. Weekdays at 3pm and 8pm. On demand on your favorite podcast platform.\""
       }
     },
     {
@@ -218999,10 +220120,10 @@
     {
       "id": "stateside-thursday-nov-5-2026-news-2026-11-05",
       "title": "Stateside: Thursday, Nov. 5, 2026",
-      "summary": "The Stateside program hosted by April Baer covers daily news and conversations relevant to Michigan listeners.",
+      "summary": "The Stateside program hosted by April Baer provides daily news and analysis for the Michigan audience.",
       "url": "https://www.michiganpublic.org/stateside/2026-11-05/stateside-thursday-nov-5-2026",
       "publishedAt": "2026-11-05T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -219023,28 +220144,28 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.09,
-          "distinctive": 0.15,
-          "eclectic": 0.19,
+          "funny": 0.07,
+          "distinctive": 0.1,
+          "eclectic": 0.14,
           "technical_science": 0.07,
-          "artsy": 0.12,
-          "progressive": 0.23,
-          "outdoors": 0.06,
+          "artsy": 0.1,
+          "progressive": 0.29,
+          "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
-          "sporting": 0.1,
-          "recurring": 0.73,
-          "craft_fair_shopping": 0.03,
+          "sporting": 0.02,
+          "recurring": 0.95,
+          "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.26,
-          "substance_recovery": 0.01,
+          "large_venue": 0.04,
+          "substance_recovery": 0.02,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
           "dance": 0.02,
-          "sales_related": 0.45,
+          "sales_related": 0.08,
           "children_activity": 0.03,
           "running": 0.02,
           "exercise": 0.02,
@@ -219053,7 +220174,7 @@
       },
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/6827ad1/2147483647/strip/true/crop/1633x1080+119+0/resize/130x86!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc1%2F5a%2F3a28ad974cfea2c1e36682a3098e%2Fstateside-full-show-pod.png",
-        "alt": "Portrait of April Baer."
+        "alt": "A black and white portrait of April Baer--a white woman with brown curly hair and a white blazer. The photo is against a green and blue ombre background. Text on the photo reads \"Stateside with April Baer. Weekdays at 3pm and 8pm. On demand on your favorite podcast platform.\""
       }
     },
     {
@@ -219470,10 +220591,10 @@
     {
       "id": "stateside-wednesday-nov-4-2026-news-2026-11-04",
       "title": "Stateside: Wednesday, Nov. 4, 2026",
-      "summary": "The program reviews the results of the midterm elections, highlighting the national Democratic sweep and Michigan-specific victories. The episode features analysis of the election outcomes for the U.S. Senate and state Legislature.",
+      "summary": "The show discusses the midterm election results, including the national sweep by Democrats and the historic victory of U.S. Senator-elect Abdul El-Sayed in Michigan. It also covers the Democratic control of the state Legislature.",
       "url": "https://www.michiganpublic.org/stateside/2026-11-04/stateside-wednesday-nov-4-2026",
       "publishedAt": "2026-11-04T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -219485,8 +220606,9 @@
       "localityIndex": 4,
       "topics": [
         "politics",
-        "election",
-        "radio"
+        "elections",
+        "michigan",
+        "podcast"
       ],
       "source": {
         "name": "Stateside Staff",
@@ -219494,29 +220616,29 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.08,
-          "distinctive": 0.5,
-          "eclectic": 0.18,
-          "technical_science": 0.29,
-          "artsy": 0.1,
-          "progressive": 0.71,
-          "outdoors": 0.05,
+          "funny": 0.12,
+          "distinctive": 0.44,
+          "eclectic": 0.14,
+          "technical_science": 0.03,
+          "artsy": 0.08,
+          "progressive": 0.68,
+          "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.02,
-          "live_comedy": 0.02,
+          "live_comedy": 0.06,
           "farmer_market": 0.02,
-          "sporting": 0.02,
-          "recurring": 0.5,
-          "craft_fair_shopping": 0.03,
-          "religious": 0.03,
-          "large_venue": 0.16,
+          "sporting": 0.01,
+          "recurring": 0.73,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.05,
           "substance_recovery": 0.02,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
           "dance": 0.02,
-          "sales_related": 0.09,
-          "children_activity": 0.03,
+          "sales_related": 0.05,
+          "children_activity": 0.02,
           "running": 0.02,
           "exercise": 0.01,
           "employment_related": 0.02
@@ -235789,6 +236911,74 @@
       }
     },
     {
+      "id": "transmitters-show-monarch-butterflies-he-news-2026-11-07",
+      "title": "Transmitters show monarch butterflies heading south. How to watch",
+      "summary": "Researchers are using solar-powered BlūMorpho transmitters to track the migration of monarch butterflies to Mexico. The technology, which operates on Bluetooth frequencies, allows both scientists and the public to monitor individual butterflies via a dedicated app.",
+      "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/07/monarch-butterflies-transmitters-track-insects-mexico-migration/92659874007/",
+      "publishedAt": "2026-11-07T00:00:00Z",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Monarch Joint Venture",
+        "Cellular Tracking Technologies",
+        "Cape May Point Arts & Science Center",
+        "Eric Johnson"
+      ],
+      "locations": [
+        "Canton",
+        "Plymouth",
+        "Livonia",
+        "Michigan",
+        "Mexico"
+      ],
+      "localityIndex": 0,
+      "topics": [
+        "science",
+        "wildlife",
+        "technology",
+        "environment",
+        "migration"
+      ],
+      "source": {
+        "name": "Hometown Life (Observer & Eccentric)"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.05,
+          "distinctive": 0.61,
+          "eclectic": 0.42,
+          "technical_science": 0.98,
+          "artsy": 0.06,
+          "progressive": 0.77,
+          "outdoors": 0.49,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.41,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.01,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.09,
+          "children_activity": 0.06,
+          "running": 0.02,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/11/07/PLSJ/92660324007-map-1.png?width=294&height=640&fit=crop&format=pjpg&auto=webp",
+        "alt": "Map showing monarch butterfly migration tracking"
+      }
+    },
+    {
       "id": "transportation-economic-development-allo-news-2027-09-30",
       "title": "Transportation Economic Development Allocation",
       "summary": "Transportation Economic Development receives $53.483 million from the economic development fund, supporting forest roads, rural and urban county infrastructure, and target industries/economic redevelopment initiatives.",
@@ -235892,6 +237082,76 @@
       "photo": {
         "url": "https://www.313presents.com/assets/img/default_thumb-d8465f487e.jpg",
         "alt": "Travel Packages Available Now for CareSource Invitational in Detroit"
+      }
+    },
+    {
+      "id": "traverse-city-coast-guard-helicopter-res-news-2026-11-08",
+      "title": "Traverse City Coast Guard helicopter rescues sailor off Wisconsin",
+      "summary": "A U.S. Coast Guard helicopter crew from Traverse City rescued a sailor whose 28-foot sailboat lost power and capsized in Green Bay. The sailor was hoisted from a sandbar near Menominee and transported to a regional airport for treatment of hypothermia.",
+      "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/08/traverse-city-uscg-helicopter-rescue-sailor-menominee-green-bay/92683719007/",
+      "publishedAt": "2026-11-08T19:39:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "U.S. Coast Guard",
+        "Coast Guard Air Station Traverse City",
+        "Gregory Grubbs",
+        "Coast Guard Great Lakes District Command Center",
+        "Coast Guard Station Sturgeon Bay",
+        "Dan Basso"
+      ],
+      "locations": [
+        "Traverse City, Michigan",
+        "Menominee, Michigan",
+        "Green Bay, Wisconsin",
+        "Sturgeon Bay, Wisconsin"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "coast guard",
+        "rescue",
+        "sailing",
+        "lake michigan",
+        "emergency"
+      ],
+      "source": {
+        "name": "Dan Basso",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.37,
+          "eclectic": 0.09,
+          "technical_science": 0.38,
+          "artsy": 0.02,
+          "progressive": 0.05,
+          "outdoors": 0.16,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.05,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/presto/2022/10/18/PLSJ/1fa47914-6780-4e8b-8604-f07f52ce743b-Basso_Dan.JPG?crop=1332,1332,x1,y130&width=48&height=48&format=pjpg&auto=webp",
+        "alt": "Portrait of Dan Basso"
       }
     },
     {
@@ -237188,6 +238448,71 @@
       "photo": {
         "url": "https://michiganadvance.com/wp-content/uploads/2026/10/trumpnebraska.jpg",
         "alt": "Photo by Getty images"
+      }
+    },
+    {
+      "id": "trump-in-truth-social-post-calls-for-doj-news-2026-11-07",
+      "title": "Trump, in Truth Social post, calls for DOJ to investigate Slotkin",
+      "summary": "President Donald Trump issued a Truth Social post ordering the Department of Justice to investigate Michigan Senator Elissa Slotkin, accusing her of threatening Republican donors and young voters. Slotkin responded on Facebook, dismissing the threats as part of a pattern of intimidation and asserting that she remains committed to holding officials accountable for illegal actions.",
+      "url": "https://www.hometownlife.com/story/news/politics/2026/11/07/donald-trump-doj-investigate-elissa-slotkin-truth-social/92670300007/",
+      "publishedAt": "2026-11-07T21:10:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Donald Trump",
+        "Elissa Slotkin",
+        "Department of Justice",
+        "Pete Hegseth",
+        "Steven Miller"
+      ],
+      "locations": [
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "politics",
+        "government",
+        "investigation",
+        "senate"
+      ],
+      "source": {
+        "name": "Dan Basso",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.04,
+          "distinctive": 0.42,
+          "eclectic": 0.09,
+          "technical_science": 0.02,
+          "artsy": 0.03,
+          "progressive": 0.1,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.06,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/10/30/PBAC/92514881007-dsc-05308.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp",
+        "alt": "Portrait of Dan Basso"
       }
     },
     {
@@ -249178,25 +250503,25 @@
     {
       "id": "washtenaw-county-school-to-host-new-free-news-2026-08-04",
       "title": "Washtenaw County school to host new free pre-kindergarten program",
-      "summary": "A new free pre-kindergarten program will be available to 15 3- and 4-year-olds in the Washtenaw Intermediate School District (WISD) this school year.",
+      "summary": "A new free pre-kindergarten program is launching for 15 children aged 3 and 4 within the Washtenaw Intermediate School District. The initiative aims to provide early education opportunities for local families during the upcoming school year.",
       "url": "https://concentratemedia.com/washtenaw-county-school-to-host-new-free-pre-kindergarten-program/",
       "publishedAt": "2026-08-04T00:00:00-04:00",
-      "addedAt": "2026-11-01T08:48:08-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Washtenaw Intermediate School District (WISD)",
-        "Maria Patton"
+        "Washtenaw Intermediate School District",
+        "WISD"
       ],
       "locations": [
-        "Washtenaw County",
-        "Ann Arbor & Ypsilanti, MI"
+        "Washtenaw County"
       ],
       "localityIndex": 2,
       "topics": [
         "education",
         "pre-kindergarten",
-        "school-program"
+        "early childhood education",
+        "washtenaw county"
       ],
       "source": {
         "name": "Maria Patton",
@@ -249205,19 +250530,19 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.2,
-          "eclectic": 0.04,
+          "distinctive": 0.21,
+          "eclectic": 0.05,
           "technical_science": 0.04,
           "artsy": 0.04,
-          "progressive": 0.7,
+          "progressive": 0.63,
           "outdoors": 0.02,
-          "theatre": 0.02,
+          "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.43,
-          "craft_fair_shopping": 0.01,
+          "recurring": 0.29,
+          "craft_fair_shopping": 0.02,
           "religious": 0.02,
           "large_venue": 0.03,
           "substance_recovery": 0.01,
@@ -249225,15 +250550,15 @@
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.04,
-          "children_activity": 0.85,
+          "sales_related": 0.05,
+          "children_activity": 0.81,
           "running": 0.01,
-          "exercise": 0.01,
+          "exercise": 0.02,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://d3ggs9wi9hwg8r.cloudfront.net/wp-content/uploads/2026/10/22180408/IMG_4447-scaled.jpeg",
+        "url": "https://d3ggs9wi9hwg8r.cloudfront.net/wp-content/uploads/2026/10/20193952/Mast-Keith-Johnson-1.jpg",
         "alt": "Washtenaw County school to host new free pre-kindergarten program"
       }
     },
@@ -253076,21 +254401,19 @@
     {
       "id": "what-could-the-blue-wave-mean-for-econom-news-2026-11-06",
       "title": "What could the blue wave mean for economic policy in Michigan?",
-      "summary": "Following the 2026 midterm elections, this report analyzes the potential impacts of Democratic electoral success on Michigan's economic policy.",
+      "summary": "Following the 2026 midterm elections, this segment analyzes the potential impacts of Democratic electoral success on Michigan's economic policy landscape.",
       "url": "https://www.michiganpublic.org/section/stateside/2026-11-06/michigan-economic-policy-midterm-election-2026",
       "publishedAt": "2026-11-06T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Abdul El-Sayed",
         "Michigan Democratic Party"
       ],
       "locations": [
-        "Michigan",
-        "Detroit"
+        "Michigan"
       ],
-      "localityIndex": 3,
+      "localityIndex": 4,
       "topics": [
         "politics",
         "economy",
@@ -253102,37 +254425,37 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.09,
-          "distinctive": 0.15,
-          "eclectic": 0.19,
-          "technical_science": 0.07,
-          "artsy": 0.12,
-          "progressive": 0.23,
-          "outdoors": 0.06,
+          "funny": 0.03,
+          "distinctive": 0.16,
+          "eclectic": 0.17,
+          "technical_science": 0.04,
+          "artsy": 0.04,
+          "progressive": 0.47,
+          "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
-          "sporting": 0.1,
-          "recurring": 0.73,
-          "craft_fair_shopping": 0.03,
+          "sporting": 0.01,
+          "recurring": 0.17,
+          "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.26,
+          "large_venue": 0.06,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.45,
-          "children_activity": 0.03,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.04,
+          "children_activity": 0.02,
           "running": 0.02,
-          "exercise": 0.02,
+          "exercise": 0.01,
           "employment_related": 0.02
         }
       },
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/dce2afa/2147483647/strip/true/crop/8640x5716+0+22/resize/130x86!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fe6%2Fe2%2Fbb28c61e4482bfebb50580df9ab0%2Faptopix-election-2026-michigan-26308219143957.jpg",
-        "alt": "People watch election returns in Detroit."
+        "alt": "People watch returns come in before Michigan Democratic Senate candidate Abdul El-Sayed arrives at a Michigan Democratic Party election night event, early Wednesday, Nov. 4, 2026, in Detroit."
       }
     },
     {
@@ -253256,12 +254579,78 @@
       }
     },
     {
+      "id": "what-do-monarch-butterflies-eat-news-2026-09-09",
+      "title": "What do monarch butterflies eat?",
+      "summary": "Monarch butterflies rely on nectar from a variety of flowers, with a specific preference for milkweed plants for egg-laying. Experts from MSU Extension and MonarchWatch.org highlight several native plant species that support monarch populations in the Midwest.",
+      "url": "https://www.hometownlife.com/story/news/local/michigan/2026/09/09/monarch-butterflies-fall-migration-michigan-great-lakes/91661853007/",
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "MSU Extension",
+        "MonarchWatch.org",
+        "Sarah Moore"
+      ],
+      "locations": [
+        "Michigan",
+        "Midwest",
+        "U.S."
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "monarch butterflies",
+        "wildlife",
+        "gardening",
+        "conservation",
+        "nature"
+      ],
+      "source": {
+        "name": "Sarah Moore",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.04,
+          "distinctive": 0.06,
+          "eclectic": 0.11,
+          "technical_science": 0.83,
+          "artsy": 0.07,
+          "progressive": 0.21,
+          "outdoors": 0.59,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.03,
+          "sporting": 0.01,
+          "recurring": 0.14,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.05,
+          "children_activity": 0.16,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2025/03/14/PLSJ/82410848007-screenshot-of-butterfly.jpg?width=300&height=386&fit=crop&format=pjpg&auto=webp",
+        "alt": "Monarch butterfly"
+      }
+    },
+    {
       "id": "what-does-habibi-mean-see-what-el-sayed-news-2026-11-04",
       "title": "What does habibi mean? See what El-Sayed called Vance",
-      "summary": "The term 'habibi' is an Arabic word meaning 'my love' or 'my sweetheart' that is commonly used among friends, family, and romantic partners. The definition was highlighted following a recent comment made by Abdul El-Sayed regarding JD Vance.",
+      "summary": "The term 'habibi' is an Arabic word meaning 'my love' or 'my sweetheart' in English. It is commonly used as a term of endearment among friends, family, and romantic partners.",
       "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/04/habibi-mean-abdul-el-sayed-jd-vance-election/92609094007/",
       "publishedAt": "2026-11-04T00:00:00Z",
-      "addedAt": "2026-11-06T02:49:40-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -253288,32 +254677,32 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.39,
-          "distinctive": 0.49,
-          "eclectic": 0.21,
+          "funny": 0.46,
+          "distinctive": 0.4,
+          "eclectic": 0.48,
           "technical_science": 0.03,
-          "artsy": 0.06,
-          "progressive": 0.2,
+          "artsy": 0.11,
+          "progressive": 0.18,
           "outdoors": 0.03,
-          "theatre": 0.02,
-          "live_music": 0.02,
-          "live_comedy": 0.02,
-          "farmer_market": 0.04,
+          "theatre": 0.03,
+          "live_music": 0.03,
+          "live_comedy": 0.06,
+          "farmer_market": 0.05,
           "sporting": 0.02,
-          "recurring": 0.07,
+          "recurring": 0.1,
           "craft_fair_shopping": 0.04,
           "religious": 0.03,
-          "large_venue": 0.15,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.03,
-          "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.02,
+          "large_venue": 0.17,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.05,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.03,
           "dance": 0.02,
           "sales_related": 0.05,
-          "children_activity": 0.02,
+          "children_activity": 0.06,
           "running": 0.02,
-          "exercise": 0.01,
-          "employment_related": 0.02
+          "exercise": 0.02,
+          "employment_related": 0.03
         }
       },
       "photo": {
@@ -253579,6 +254968,70 @@
       "photo": {
         "url": "https://www.hometownlife.com/gciaf/prod/p?a=pageview&p=POEN-TEALIUM-TANGENT&m=web&k=f14ebdd6-0569-4c64-af73-99937bc06379&s=noscript",
         "alt": "What is Peters' political history?"
+      }
+    },
+    {
+      "id": "what-is-the-fall-migration-flight-route-news-2026-09-09",
+      "title": "What is the fall migration flight route of a monarch butterfly in Michigan?",
+      "summary": "Monarch butterflies undertake a 3,000-mile migration to central Mexico, southern Florida, or the Pacific coast. During their journey, they are often observed roosting in trees, a behavior experts believe may provide safety and warmth.",
+      "url": "https://www.hometownlife.com/story/news/local/michigan/2026/09/09/monarch-butterflies-fall-migration-michigan-great-lakes/91661853007/",
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Journey North",
+        "Okies for Monarchs"
+      ],
+      "locations": [
+        "Michigan",
+        "Mexico",
+        "Florida",
+        "California"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "monarch butterflies",
+        "migration",
+        "wildlife",
+        "nature"
+      ],
+      "source": {
+        "name": "Hometown Life (Observer & Eccentric)"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.13,
+          "eclectic": 0.09,
+          "technical_science": 0.9,
+          "artsy": 0.06,
+          "progressive": 0.06,
+          "outdoors": 0.64,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.86,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.11,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2025/03/14/PLSJ/82410848007-screenshot-of-butterfly.jpg?width=300&height=386&fit=crop&format=pjpg&auto=webp",
+        "alt": "Monarch butterfly"
       }
     },
     {
@@ -254574,15 +256027,15 @@
     {
       "id": "what-s-the-history-behind-the-msu-v-u-m-news-2026-11-07",
       "title": "What's the history behind the MSU v. U-M rivalry?",
-      "summary": "This podcast episode explores the historical context of the long-standing athletic rivalry between Michigan State University and the University of Michigan.",
+      "summary": "This podcast episode explores the historical context and development of the long-standing athletic rivalry between Michigan State University and the University of Michigan.",
       "url": "https://www.michiganpublic.org/podcast/on-hand/2026-11-07/whats-the-history-behind-the-msu-v-u-m-rivalry",
       "publishedAt": "2026-11-07T00:00:00-05:00",
-      "addedAt": "2026-11-08T02:10:43-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "MSU",
-        "U-M"
+        "Michigan State University",
+        "University of Michigan"
       ],
       "locations": [
         "Michigan"
@@ -254599,28 +256052,28 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.09,
+          "funny": 0.21,
           "distinctive": 0.15,
-          "eclectic": 0.19,
-          "technical_science": 0.07,
+          "eclectic": 0.18,
+          "technical_science": 0.03,
           "artsy": 0.12,
-          "progressive": 0.23,
-          "outdoors": 0.06,
+          "progressive": 0.09,
+          "outdoors": 0.03,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
-          "sporting": 0.1,
-          "recurring": 0.73,
-          "craft_fair_shopping": 0.03,
+          "sporting": 0.22,
+          "recurring": 0.34,
+          "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.26,
+          "large_venue": 0.35,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
           "dance": 0.02,
-          "sales_related": 0.45,
+          "sales_related": 0.04,
           "children_activity": 0.03,
           "running": 0.02,
           "exercise": 0.02,
@@ -254629,7 +256082,7 @@
       },
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/ce638ca/2147483647/strip/true/crop/3005x1988+0+8/resize/130x86!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2Fd1%2Fe46ecf5c44928d564376c67802b0%2Fmichigan-state-preview-football-25231658510051.jpg",
-        "alt": "Michigan State quarterback Aidan Chiles prepares to throw as Michigan linebacker Jaishawn Barham chases him."
+        "alt": "FILE - Michigan State quarterback Aidan Chiles, left, prepares to throw as Michigan linebacker Jaishawn Barham chases him in the second half of an NCAA college football game, Saturday, Oct. 26, 2024, in Ann Arbor, Mich."
       }
     },
     {
@@ -257254,6 +258707,90 @@
       "photo": {
         "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/01/30/PDTF/88433464007-josh-and-jace-ford-field.png?width=300&height=447&fit=crop&format=pjpg&auto=webp",
         "alt": "Josh and Jase"
+      }
+    },
+    {
+      "id": "where-did-the-monarchs-travel-news-2026-11-07",
+      "title": "Where did the monarchs travel?",
+      "summary": "Researchers are tracking the migration paths of monarch butterflies using transmitters as they travel from various locations in North America toward Mexico. Data shows the insects taking diverse routes through the U.S. and Canada, including paths through the Detroit area and across Michigan.",
+      "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/07/monarch-butterflies-transmitters-track-insects-mexico-migration/92659874007/",
+      "publishedAt": "2026-11-07T00:00:00Z",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Cape May Monarchs",
+        "Saving Monarchs",
+        "Monarchs Migrating Through Ontario"
+      ],
+      "locations": [
+        "New Jersey",
+        "Virginia",
+        "North Carolina",
+        "South Carolina",
+        "Georgia",
+        "Florida",
+        "Louisiana",
+        "Texas",
+        "Mexico",
+        "Toronto",
+        "Canada",
+        "Ohio",
+        "Indiana",
+        "Illinois",
+        "Missouri",
+        "Nebraska",
+        "Oklahoma",
+        "Detroit",
+        "Lake Huron",
+        "Michigan",
+        "Lake Michigan",
+        "Chicago"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "monarch butterflies",
+        "migration",
+        "wildlife",
+        "science",
+        "environment"
+      ],
+      "source": {
+        "name": "Hometown Life (Observer & Eccentric)"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.04,
+          "distinctive": 0.18,
+          "eclectic": 0.12,
+          "technical_science": 0.97,
+          "artsy": 0.05,
+          "progressive": 0.29,
+          "outdoors": 0.52,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.61,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.08,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/11/07/PLSJ/92660324007-map-1.png?width=294&height=640&fit=crop&format=pjpg&auto=webp",
+        "alt": "Map showing monarch butterfly migration routes"
       }
     },
     {
@@ -266173,6 +267710,141 @@
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/8490e4d/2147483647/strip/true/crop/4032x2268+0+378/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F09%2Fb8%2F07d8f6f94044a393cb68704d04d2%2Fimg-9279.jpg",
         "alt": "Washtenaw County Prosecuting Attorney Eli Savit looks on as U.S. Rep. Debbie Dingell, Dr. Abdul El-Sayed and U.S. Sen. Elizabeth Warren take questions following El-Sayed's rally at the Eastern Michigan University Student Center."
+      }
+    },
+    {
+      "id": "ypsilanti-voters-approve-police-budget-p-news-2026-11-01",
+      "title": "Ypsilanti voters approve police budget proposal",
+      "summary": "Voters in Ypsilanti have officially approved a new budget proposal for the local police department. The decision follows recent local election activity.",
+      "url": "https://www.easternecho.com/article/2026/11/ypsilanti-voters-approve-police-budget-proposal",
+      "publishedAt": "2026-11-01T00:00:00Z",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Ypsilanti"
+      ],
+      "locations": [
+        "Ypsilanti, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "local government",
+        "police",
+        "budget",
+        "elections"
+      ],
+      "source": {
+        "name": "Eastern Echo (Eastern Michigan University)",
+        "publication": "Eastern Echo"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.14,
+          "eclectic": 0.05,
+          "technical_science": 0.03,
+          "artsy": 0.02,
+          "progressive": 0.2,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.32,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://d2c076l7bqbhhm.cloudfront.net/9f0fc8d75963ebbda63eb514bcfb6348/dist/img/fb-hidden-icon.png",
+        "alt": "Eastern Echo logo"
+      }
+    },
+    {
+      "id": "ypsilanti-voters-reflect-on-casting-ball-news-2026-11-05",
+      "title": "Ypsilanti voters reflect on casting ballots as Michigan sees record turnout",
+      "summary": "Michigan saw record voter turnout for the recent midterm election, with over 4.8 million ballots cast across the state. Voters in Ypsilanti shared their experiences and priorities at the Eastern Michigan University Honors College polling location, noting a smooth process despite the high volume of participants.",
+      "url": "https://www.easternecho.com/article/2026/11/ypsilanti-voters-reflect-on-casting-ballots-as-michigan-sees-record-turnout",
+      "publishedAt": "2026-11-05T14:30:00-05:00",
+      "addedAt": "2026-11-09T02:39:56-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Kate Stephenson",
+        "Marlie Hooper",
+        "Brittney Donaldson",
+        "Ruby Brewis",
+        "Liz Street",
+        "Gabrielle Walker",
+        "April Tate",
+        "Jonathan Frontier",
+        "Mary Seelhorst",
+        "Eastern Michigan University",
+        "The Eastern Echo"
+      ],
+      "locations": [
+        "Ypsilanti, MI",
+        "Washtenaw County",
+        "Michigan"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "elections",
+        "voting",
+        "midterms",
+        "politics",
+        "ypsilanti"
+      ],
+      "source": {
+        "name": "Kate Stephenson",
+        "publication": "The Eastern Echo"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.24,
+          "eclectic": 0.07,
+          "technical_science": 0.03,
+          "artsy": 0.03,
+          "progressive": 0.23,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.18,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://snworksceo.imgix.net/emu/bfe30af4-e0bf-45a3-bd0f-7c148d0544a5.sized-1000x1000.jpg?w=800&h=600",
+        "alt": "Poll worker Marlie Hooper poses with I Voted stickers and a ballot folder at the Honors College voting site on Tuesday, Nov. 3, 2026."
       }
     },
     {

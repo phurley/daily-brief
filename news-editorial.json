@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-11-08T02:31:54.123683-05:00",
+  "generatedAt": "2026-11-09T03:16:52.107379-05:00",
   "stories": [
     {
       "id": "families-of-13-children-sue-hospitals-mi-news-2026-11-06",
@@ -278,6 +278,108 @@
       }
     },
     {
+      "id": "250-000-investment-from-keybank-foundati-news-2026-11-06",
+      "title": "$250,000 investment from KeyBank Foundation to expand warming center and support for homeless adults",
+      "summary": "KeyBank Foundation invested $250,000 to expand the Shelter Association of Washtenaw County's warming center and daytime resource hub in Ypsilanti. The funding will support operating expenses, food, and facility costs, aiming to serve 40 people daily and connect 200-250 individuals annually with case management, housing assistance, and healthcare.",
+      "url": "https://concentratemedia.com/250000-investment-from-keybank-foundation-to-expand-warming-center-and-support-for-homeless-adults/",
+      "publishedAt": "2026-11-06T17:23:02+00:00",
+      "addedAt": "2026-11-07T01:38:58-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "KeyBank Foundation",
+        "Shelter Association of Washtenaw County",
+        "St. Luke’s Episcopal Church",
+        "Ann Arbor Housing Development Corporation",
+        "University Bank",
+        "Meg Lower",
+        "Versell Smith Jr.",
+        "Second Baptist Church",
+        "Dave Mannarino",
+        "Dave Purkiss",
+        "Yvonne Harrington",
+        "Alondra Burne",
+        "Nicole Adelman",
+        "Martin Delonis"
+      ],
+      "locations": [
+        "Ann Arbor",
+        "Ypsilanti",
+        "Washtenaw County"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "housing",
+        "homelessness",
+        "nonprofit",
+        "community",
+        "social services"
+      ],
+      "source": {
+        "name": "Clifton Kirkman II",
+        "publication": "Concentrate"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.01,
+          "distinctive": 0.17,
+          "eclectic": 0.07,
+          "technical_science": 0.04,
+          "artsy": 0.03,
+          "progressive": 0.68,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.19,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.08,
+          "large_venue": 0.03,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.08,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://d3ggs9wi9hwg8r.cloudfront.net/wp-content/uploads/2026/11/06112257/IMG_0189-1-1024x768.jpeg",
+        "alt": "Left to right: Dave Mannarino (KeyBank), Dave Purkiss (SAWC Board), Yvonne Harrington (KeyBank), Alondra Burne (SAWC), Nicole Adelman (SAWC), Martin Delonis (SAWC Board), and Versell Smith (SAWC)."
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-08T02:31:54.123683-05:00",
+        "expiresAt": "2026-11-11T02:31:54.123683-05:00",
+        "inputFacts": {
+          "id": "250-000-investment-from-keybank-foundati-news-2026-11-06",
+          "title": "$250,000 investment from KeyBank Foundation to expand warming center and support for homeless adults",
+          "url": "https://concentratemedia.com/250000-investment-from-keybank-foundation-to-expand-warming-center-and-support-for-homeless-adults/",
+          "publishedAt": "2026-11-06T00:00:00-05:00",
+          "summary": "A $250,000 investment from the KeyBank Foundation is expanding shelter and support services for homeless adults in Ypsilanti and eastern Washtenaw County. The funding supports a daytime resource hub and warming center at St. Luke’s Episcopal Church, providing case management, housing assistance, and basic necessities.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-06T17:23:02+00:00",
+        "datePrecision": "time",
+        "sourceHash": "83fb22482c5cf1cbfaa8a5c1bbbedb07ebf5a7f520ed325e0a57faac57e64774",
+        "relevance": 3,
+        "novelty": 3,
+        "reason": "This story details a significant investment in social services for a nearby community (Washtenaw County), directly impacting vulnerable populations and public services. The expansion of a warming center and resource hub is a concrete development with practical relevance.",
+        "storyKey": "washtenaw-homeless-shelter-expansion",
+        "localConnection": "Washtenaw County is a nearby community, and the expansion of services for homeless adults has a direct impact on public services in the region.",
+        "grounded": true,
+        "groundingReason": "The summary accurately reflects the KeyBank Foundation's investment, the purpose of the funding, and the anticipated services and reach of the expanded warming center and resource hub in Ypsilanti, as detailed in the article."
+      }
+    },
+    {
       "id": "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
       "title": "Ann Arbor's iconic Blimpy Burger reopens under new ownership",
       "summary": "Ann Arbor's Krazy Jim's Blimpy Burger has reopened following a seven-month closure under new local ownership. The establishment has introduced menu additions, including alcoholic beverages and soft-serve ice cream, while navigating community adjustments to operational changes ahead of a planned mid-November ribbon-cutting.",
@@ -361,112 +463,6 @@
         "grounded": true,
         "groundingReason": "The summary accurately reflects the reopening of a well-known local establishment in Ann Arbor, including details on new ownership, menu changes, and the upcoming ribbon-cutting ceremony."
       }
-    },
-    {
-      "id": "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
-      "title": "El-Sayed claims victory, wins historic U.S. Senate race",
-      "summary": "Abdul El-Sayed, former Wayne County and Detroit health director, won Michigan's open U.S. Senate seat, becoming the nation's first Muslim U.S. senator. He defeated Republican Mike Rogers in a hard-fought race, campaigning on a progressive platform focused on healthcare, the environment, and economic issues.",
-      "url": "https://www.hometownlife.com/story/news/politics/elections/2026/11/04/el-sayed-rogers-who-won-michigan-senate-race/92501377007/",
-      "publishedAt": "2026-11-04T07:05:12+00:00",
-      "addedAt": "2026-11-06T02:49:40-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Abdul El-Sayed",
-        "Mike Rogers",
-        "Gary Peters",
-        "Donald Trump",
-        "John James",
-        "Jocelyn Benson",
-        "Decision Desk HQ",
-        "Fox News",
-        "University of Michigan",
-        "Anokhi Changra",
-        "Chloe Slawson",
-        "Angela Fletcher-Cook",
-        "Breanna Wynn",
-        "Tammy Shammaz",
-        "Sahar Haddad"
-      ],
-      "locations": [
-        "Michigan",
-        "Wayne County",
-        "Detroit",
-        "Ann Arbor",
-        "Livonia",
-        "West Bloomfield",
-        "Dearborn"
-      ],
-      "localityIndex": 1,
-      "topics": [
-        "politics",
-        "elections",
-        "senate",
-        "michigan"
-      ],
-      "source": {
-        "name": "Todd Spangler",
-        "publication": "Detroit Free Press"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.02,
-          "distinctive": 0.91,
-          "eclectic": 0.08,
-          "technical_science": 0.03,
-          "artsy": 0.02,
-          "progressive": 0.91,
-          "outdoors": 0.01,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.02,
-          "recurring": 0.06,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.08,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.02,
-          "children_activity": 0.02,
-          "running": 0.02,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        }
-      },
-      "photo": {
-        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/11/04/PDTF/92606253007-110326-democratic-watch-party-rg-43.jpg?crop=2399,1350,x0,y160&width=660&height=372&format=pjpg&auto=webp",
-        "alt": "Democratic watch party"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-06T03:04:11.410417-05:00",
-        "expiresAt": "2026-11-09T03:04:11.410417-05:00",
-        "inputFacts": {
-          "id": "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
-          "title": "El-Sayed claims victory, wins historic U.S. Senate race",
-          "url": "https://www.hometownlife.com/story/news/politics/elections/2026/11/04/el-sayed-rogers-who-won-michigan-senate-race/92501377007/",
-          "publishedAt": "2026-11-04T13:25:00-05:00",
-          "summary": "Abdul El-Sayed has won Michigan's open U.S. Senate seat, defeating Republican Mike Rogers to become the nation's first Muslim U.S. senator. El-Sayed, a progressive former health director, secured the victory as part of a broader Democratic wave that saw the party gain control of both chambers of Congress.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-04T07:05:12Z",
-        "datePrecision": "time",
-        "sourceHash": "ab71996bd098f198529a8f68ffc63b2df58510e448cb8d7271a47ff76d86e634",
-        "relevance": 5,
-        "novelty": 5,
-        "reason": "This is a significant statewide election outcome with substantial practical and cultural relevance for Michigan residents, including those in Canton and Plymouth.",
-        "storyKey": "michigan-us-senate-election-el-sayed-wins",
-        "localConnection": "Michigan residents, including those in Canton and Plymouth, are directly impacted by the outcome of a U.S. Senate race.",
-        "grounded": true,
-        "groundingReason": "The article confirms Abdul El-Sayed won Michigan's open U.S. Senate seat, becoming the nation's first Muslim U.S. senator, and defeated Mike Rogers after campaigning on a progressive platform focused on healthcare, the environment, and economic issues."
-      }
     }
   ],
   "corrections": [
@@ -546,18 +542,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
+      "id": "legacy-gallery-news-2026-11-09",
       "inputFacts": {
-        "id": "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
-        "title": "El-Sayed claims victory, wins historic U.S. Senate race",
-        "url": "https://www.hometownlife.com/story/news/politics/elections/2026/11/04/el-sayed-rogers-who-won-michigan-senate-race/92501377007/",
-        "publishedAt": "2026-11-04T13:25:00-05:00",
-        "summary": "Abdul El-Sayed has won Michigan's open U.S. Senate seat, defeating Republican Mike Rogers to become the nation's first Muslim U.S. senator. El-Sayed, a progressive former health director, secured the victory as part of a broader Democratic wave that saw the party gain control of both chambers of Congress.",
+        "id": "legacy-gallery-news-2026-11-09",
+        "title": "Legacy Gallery",
+        "url": "https://discoverscienceandnature.org/site-features/blog-post-title-four-3kd77",
+        "publishedAt": "2026-11-09T00:00:00-05:00",
+        "summary": "The Legacy Gallery at Ann Arbor Hands-On Museum features exhibits like the Ferrofluid Magnetoscope by local artist Michael Flynn. Visitors can explore simple machines, traffic light mechanics, the internet, giant soap bubbles, HAM radio, and Morse code. The post is authored by George Crane.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-04T07:05:12+00:00",
-      "publicationEvidence": "2026-11-04T07:05:12Z",
+      "publishedAt": "2021-11-09T13:04:00-05:00",
+      "publicationEvidence": "2021-11-09T13:04:00-0500",
       "datePrecision": "time"
     },
     {
@@ -576,6 +572,36 @@
       "datePrecision": "time"
     },
     {
+      "id": "michigan-wants-to-scrap-rarely-used-spec-news-2026-11-09",
+      "inputFacts": {
+        "id": "michigan-wants-to-scrap-rarely-used-spec-news-2026-11-09",
+        "title": "Michigan wants to scrap rarely used special ed rule. Child advocates fear harm",
+        "url": "https://bridgemi.com/michigan-education-watch/michigan-plans-to-strike-rarely-used-special-ed-rule-child-advocates-fear-harm/",
+        "publishedAt": "2026-11-09T00:00:00-05:00",
+        "summary": "Michigan is proposing changes to state special education rules, including removing a 'stay put' provision that allows students to remain in their current educational setting during investigations. Advocates warn this could disrupt learning for children with disabilities, while the state argues the provision is rarely used and aligns with federal law. Over 200 public comments have been received on the proposal.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-30T15:42:03+00:00",
+      "publicationEvidence": "2026-10-30T15:42:03+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "traverse-city-coast-guard-helicopter-res-news-2026-11-08",
+      "inputFacts": {
+        "id": "traverse-city-coast-guard-helicopter-res-news-2026-11-08",
+        "title": "Traverse City Coast Guard helicopter rescues sailor off Wisconsin",
+        "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/08/traverse-city-uscg-helicopter-rescue-sailor-menominee-green-bay/92683719007/",
+        "publishedAt": "2026-11-08T19:39:00-05:00",
+        "summary": "A U.S. Coast Guard helicopter crew from Traverse City rescued a sailor whose 28-foot sailboat lost power and capsized in Green Bay. The sailor was hoisted from a sandbar near Menominee and transported to a regional airport for treatment of hypothermia.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-09T00:39:22+00:00",
+      "publicationEvidence": "2026-11-09T00:39:22Z",
+      "datePrecision": "time"
+    },
+    {
       "id": "the-henry-ford-museum-evacuated-after-re-news-2026-11-07",
       "inputFacts": {
         "id": "the-henry-ford-museum-evacuated-after-re-news-2026-11-07",
@@ -591,13 +617,28 @@
       "datePrecision": "time"
     },
     {
+      "id": "michigan-guard-unit-deploying-to-souther-news-2026-11-08",
+      "inputFacts": {
+        "id": "michigan-guard-unit-deploying-to-souther-news-2026-11-08",
+        "title": "Michigan Guard unit deploying to southern border. What they will do",
+        "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/08/gladstone-kingsford-national-guard-troops-deploy-border-cbp/92677099007/",
+        "publishedAt": "2026-11-08T10:30:00-05:00",
+        "summary": "Approximately 125 soldiers from the Michigan National Guard's 1432nd Engineer Company are deploying to the U.S.-Mexico border to support Customs and Border Protection operations. The unit, based in Kingsford and Gladstone, is expected to serve for up to one year.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-08T15:30:25+00:00",
+      "publicationEvidence": "2026-11-08T15:30:25Z",
+      "datePrecision": "time"
+    },
+    {
       "id": "ann-arbor-uses-180-000-budget-to-repair-news-2026-11-07",
       "inputFacts": {
         "id": "ann-arbor-uses-180-000-budget-to-repair-news-2026-11-07",
         "title": "Ann Arbor uses $180,000 budget to repair city’s aging emergency sirens",
         "url": "https://www.wemu.org/wemu-news/2026-11-07/ann-arbor-uses-180-000-budget-to-repair-citys-aging-emergency-sirens",
         "publishedAt": "2026-11-07T00:00:00-05:00",
-        "summary": "The City of Ann Arbor is allocating $180,000 to repair and maintain its emergency siren system. This move reverses a previous decision by the City Council to decommission the sirens earlier this year.",
+        "summary": "The City of Ann Arbor is allocating $180,000 to repair and maintain its emergency siren system. This move reverses a previous decision by the City Council to decommission the aging sirens.",
         "finding": null,
         "sourceUpdatedAt": null
       },
@@ -634,112 +675,37 @@
       "publishedAt": "2026-11-07T14:51:17.086000-05:00",
       "publicationEvidence": "2026-11-07T14:51:17.086",
       "datePrecision": "time"
-    },
-    {
-      "id": "detroit-families-affected-by-fentanyl-ga-news-2026-11-07",
-      "inputFacts": {
-        "id": "detroit-families-affected-by-fentanyl-ga-news-2026-11-07",
-        "title": "Detroit families affected by fentanyl gather at DEA summit for prevention",
-        "url": "https://www.clickondetroit.com/news/local/2026/11/07/detroit-families-affected-by-fentanyl-gather-at-dea-summit-for-prevention/",
-        "publishedAt": "2026-11-07T00:00:00Z",
-        "summary": "Families in Detroit who have lost loved ones to fentanyl gathered at a DEA summit to share their experiences and promote prevention. Attendees emphasized the importance of talking about their loss as part of the healing process.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-07T17:12:42.016000+00:00",
-      "publicationEvidence": "2026-11-07T17:12:42.016Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "michigan-attorney-general-says-no-charge-news-2026-11-06",
-      "inputFacts": {
-        "id": "michigan-attorney-general-says-no-charge-news-2026-11-06",
-        "title": "Michigan Attorney General says no charges for deputies who shot Navy veteran",
-        "url": "https://www.wemu.org/wemu-news/2026-11-06/michigan-attorney-general-says-no-charges-for-deputies-who-shot-navy-veteran",
-        "publishedAt": "2026-11-06T16:45:00-05:00",
-        "summary": "Michigan Attorney General Dana Nessel announced that no criminal charges will be filed against Washtenaw County deputies involved in the fatal January 2026 shooting of Navy veteran John Jenuwine. While the Attorney General concluded the officers faced a legitimate threat, the family's legal counsel plans to continue with a pending civil lawsuit.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-06T21:45:48.549000-05:00",
-      "publicationEvidence": "2026-11-06T21:45:48.549",
-      "datePrecision": "time"
-    },
-    {
-      "id": "70-million-gift-excites-michigan-tribal-news-2026-11-07",
-      "inputFacts": {
-        "id": "70-million-gift-excites-michigan-tribal-news-2026-11-07",
-        "title": "$70 million gift excites Michigan tribal college, but funding gaps remain",
-        "url": "https://michiganadvance.com/2026/11/07/70-million-gift-excites-michigan-tribal-college-but-funding-gaps-remain/",
-        "publishedAt": "2026-11-07T07:00:00-05:00",
-        "summary": "A $70 million donation from philanthropist MacKenzie Scott to the American Indian College Fund aims to support a seven-year plan for Native American higher education. Despite the gift, leaders at institutions like Saginaw Chippewa Tribal College note that persistent funding gaps and reliance on temporary grants continue to challenge program sustainability.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-07T12:00:03+00:00",
-      "publicationEvidence": "2026-11-07T12:00:03+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "aadl-celebrates-books-and-authors-with-a-news-2026-11-06",
-      "inputFacts": {
-        "id": "aadl-celebrates-books-and-authors-with-a-news-2026-11-06",
-        "title": "AADL celebrates books and authors with annual Printmaking Festival and A2 Community Bookfest",
-        "url": "https://concentratemedia.com/aadl-celebrates-books-and-authors-with-annual-printmaking-festival-and-a2-community-bookfest/",
-        "publishedAt": "2026-11-06T00:00:00-05:00",
-        "summary": "The Ann Arbor District Library is hosting its annual Printmaking Festival and A2 Community Bookfest. These free events will include author talks, hands-on activities, and a variety of vendors on November 14 and 15, 2026.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-06T19:07:19+00:00",
-      "publicationEvidence": "2026-11-06T19:07:19+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "ann-arbor-police-chief-anderson-to-retir-news-2026-11-06",
-      "inputFacts": {
-        "id": "ann-arbor-police-chief-anderson-to-retir-news-2026-11-06",
-        "title": "Ann Arbor Police Chief Anderson to retire",
-        "url": "https://www.wemu.org/wemu-news/2026-11-06/ann-arbor-police-chief-anderson-to-retire",
-        "publishedAt": "2026-11-06T00:00:00-05:00",
-        "summary": "Ann Arbor Police Chief Andre Anderson is set to retire. He recently addressed the City Council regarding a pilot program for an unarmed crisis response team.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-06T19:22:56.015000-05:00",
-      "publicationEvidence": "2026-11-06T19:22:56.015",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-07",
-      "selectedIds": [
-        "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
-        "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
-        "1st-friday-focus-on-the-environment-ding-news-2026-11-06",
-        "families-of-13-children-sue-hospitals-mi-news-2026-11-06",
-        "controversial-scarecrow-goes-missing-news-2026-11-05"
-      ]
-    },
-    {
       "date": "2026-11-08",
       "selectedIds": [
-        "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
         "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
         "1st-friday-focus-on-the-environment-ding-news-2026-11-06",
         "families-of-13-children-sue-hospitals-mi-news-2026-11-06",
-        "controversial-scarecrow-goes-missing-news-2026-11-05"
+        "controversial-scarecrow-goes-missing-news-2026-11-05",
+        "250-000-investment-from-keybank-foundati-news-2026-11-06"
       ]
     },
     {
       "date": "2026-11-09",
       "selectedIds": [
-        "el-sayed-claims-victory-wins-historic-u-news-2026-11-04",
         "families-of-13-children-sue-hospitals-mi-news-2026-11-06",
         "controversial-scarecrow-goes-missing-news-2026-11-05",
         "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
-        "1st-friday-focus-on-the-environment-ding-news-2026-11-06"
+        "1st-friday-focus-on-the-environment-ding-news-2026-11-06",
+        "250-000-investment-from-keybank-foundati-news-2026-11-06"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "selectedIds": [
+        "families-of-13-children-sue-hospitals-mi-news-2026-11-06",
+        "controversial-scarecrow-goes-missing-news-2026-11-05",
+        "ann-arbor-s-iconic-blimpy-burger-reopens-news-2026-11-06",
+        "1st-friday-focus-on-the-environment-ding-news-2026-11-06",
+        "250-000-investment-from-keybank-foundati-news-2026-11-06"
       ]
     }
   ]
