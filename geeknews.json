@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-09T11:00:04.003337Z",
-  "editionDate": "2026-11-09",
+  "generatedAt": "2026-11-10T11:01:01.192536Z",
+  "editionDate": "2026-11-10",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -20,6 +20,396 @@
     ]
   },
   "stories": [
+    {
+      "id": "science-1695ef8e6db7acbe",
+      "title": "Toxic secrets are hiding in Arctic ice",
+      "summary": "Arctic ice cores reveal Industrial Revolution arsenic levels up to 15 times higher than pre-industrial levels, likely originating from a Montana copper smelting operation.",
+      "finding": "Arctic ice cores reveal Industrial Revolution arsenic levels up to 15 times higher than pre-industrial levels, likely originating from a Montana copper smelting operation.",
+      "significance": "The findings quantify historical heavy metal emissions and demonstrate long-range atmospheric transport of industrial toxins from North America to polar regions.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencenews.org/article/toxic-secrets-hiding-arctic-ice-harm",
+      "primarySourceUrl": "https://www.sciencenews.org/article/toxic-secrets-hiding-arctic-ice-harm",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T10:00:00Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "earth-science",
+        "health"
+      ],
+      "entities": [
+        "Desert Research Institute",
+        "Joseph McConnell",
+        "Anaconda Copper Mining Company",
+        "Greenland",
+        "Montana"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-10T10:00:00Z"
+    },
+    {
+      "id": "science-0a037ddef00bff3c",
+      "title": "Newly described insect may live its whole life on a spider’s web",
+      "summary": "Researchers have identified a newly described web-loving true bug species, Heissophila sinica, that may spend its entire life cycle residing directly on spider webs.",
+      "finding": "Researchers have identified a newly described web-loving true bug species, Heissophila sinica, that may spend its entire life cycle residing directly on spider webs.",
+      "significance": "The discovery sheds light on rare, specialized microhabitats and unusual symbiotic or commensal relationships between minute predatory insects and their arachnid hosts.",
+      "caveat": "Researchers are not yet sure whether the bugs primarily help or harm the host spiders, and precisely how they navigate the silk without sticking remains unclear.",
+      "url": "https://www.newscientist.com/article/2598153-newly-described-bug-lives-its-whole-life-on-a-spider-web",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598153-newly-described-bug-lives-its-whole-life-on-a-spider-web",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T10:00:00Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology"
+      ],
+      "entities": [
+        "China Agricultural University",
+        "American Museum of Natural History",
+        "Fujian",
+        "ZooKeys"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.3897/zookeys.1296.200871"
+    },
+    {
+      "id": "science-ed72f46bb287cd6e",
+      "title": "How neutrinos are beginning to reveal the secrets of our galaxy",
+      "summary": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
+      "finding": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
+      "significance": "Neutrinos offer a distinct observational window into cosmic phenomena and natural particle acceleration mechanisms that light alone cannot provide.",
+      "caveat": "Preprint / working paper; peer review is not established. Scientists face difficulties matching detected neutrino sources directly with known high-energy light sources under the assumption they share a common origin.",
+      "url": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T09:00:00Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "IceCube Neutrino Observatory",
+        "Francis Halzen",
+        "Naoko Kurahashi Neilson",
+        "Drexel University",
+        "Milky Way"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://arxiv.org/abs/2609.22577"
+    },
+    {
+      "id": "science-fc400f5c232b380e",
+      "title": "Curiosity Blog, Sols 5056-5062: Charging Back Up!",
+      "summary": "NASA's Curiosity rover carried out an engineering test of activity parallelism by executing the CheMin data transfer simultaneously with an orbiter downlink communication window to conserve power.",
+      "finding": "NASA's Curiosity rover carried out an engineering test of activity parallelism by executing the CheMin data transfer simultaneously with an orbiter downlink communication window to conserve power.",
+      "significance": "As the rover's power output declines over time, parallel activity execution reduces awake time and operational energy consumption.",
+      "caveat": "The test appeared to go well, but the results remain to be analyzed and confirmed by the engineering team.",
+      "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5056-5062-charging-back-up",
+      "primarySourceUrl": "https://science.nasa.gov/blog/curiosity-blog-sols-5056-5062-charging-back-up",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-10T01:07:45Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "technology",
+        "astronomy"
+      ],
+      "entities": [
+        "Curiosity",
+        "NASA",
+        "CheMin",
+        "ChemCam",
+        "SAM"
+      ],
+      "milestoneStatus": "completed",
+      "sourceUpdatedAt": "2026-11-10T01:07:49Z"
+    },
+    {
+      "id": "science-901e4c6072cf569b",
+      "title": "Curiosity Blog, Sols 5050-5055: It’s Nazca, Our 49th Drill Hole",
+      "summary": "NASA's Curiosity rover successfully drilled its 49th Martian hole, named Nazca, targeting rock containing potential crystal inclusions, and delivered the sample to the CheMin instrument.",
+      "finding": "NASA's Curiosity rover successfully drilled its 49th Martian hole, named Nazca, targeting rock containing potential crystal inclusions, and delivered the sample to the CheMin instrument.",
+      "significance": "Analyzing rock containing potential crystal inclusions could help scientists reconstruct past environmental conditions on Mars by comparing them to Earth's geology.",
+      "caveat": "CheMin results have not yet been analyzed as data is still transmitting to Earth, and it remains unconfirmed whether the disc-shaped inclusions are actually crystals.",
+      "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5050-5055-its-nazca-our-49th-drill-hole",
+      "primarySourceUrl": "https://science.nasa.gov/blog/curiosity-blog-sols-5050-5055-its-nazca-our-49th-drill-hole",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-10T01:05:48Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "Curiosity",
+        "Nazca",
+        "CheMin",
+        "ChemCam",
+        "NASA"
+      ],
+      "milestoneStatus": "completed",
+      "sourceUpdatedAt": "2026-11-10T01:05:51Z"
+    },
+    {
+      "id": "science-e08f23602165bffd",
+      "title": "Fossil fuel emissions are down in 2026. Green energy isn’t the reason",
+      "summary": "Scientists project that global carbon dioxide emissions from fossil fuels will decrease by 0.4 percent in 2026, primarily driven by high oil prices from conflict rather than clean energy expansion.",
+      "finding": "Scientists project that global carbon dioxide emissions from fossil fuels will decrease by 0.4 percent in 2026, primarily driven by high oil prices from conflict rather than clean energy expansion.",
+      "significance": "Renewable technologies counteract substantial emissions growth, but the clean energy transition must accelerate to produce sustained declines without relying on geopolitical energy shocks.",
+      "caveat": "The observed dip in fossil fuel emissions may be temporary and global emissions likely would have risen without the energy shock.",
+      "url": "https://www.sciencenews.org/article/fossil-fuel-emissions-down-2026-gas",
+      "primarySourceUrl": "https://www.sciencenews.org/article/fossil-fuel-emissions-down-2026-gas",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T01:00:00Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "Nature Climate Change",
+        "Glen Peters",
+        "Claude"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1038/s41558-026-02821-8",
+      "sourceUpdatedAt": "2026-11-10T01:00:00Z"
+    },
+    {
+      "id": "science-19c6f2c923ddd7fb",
+      "title": "Global carbon emissions set to fall in 2026 due to Iran energy shock",
+      "summary": "Global carbon dioxide emissions from fossil fuels are projected to decrease by 0.4 percent in 2026, driven partly by an energy shock and oil price spike alongside renewable energy growth.",
+      "finding": "Global carbon dioxide emissions from fossil fuels are projected to decrease by 0.4 percent in 2026, driven partly by an energy shock and oil price spike alongside renewable energy growth.",
+      "significance": "This marks the first projected annual decline in global fossil fuel emissions in five years, influenced by high oil prices and the expansion of clean energy alternatives.",
+      "caveat": "The emissions decrease may only be a temporary blip, with researchers warning that emissions are likely to rebound if oil prices normalize before renewable energy accelerates enough.",
+      "url": "https://www.newscientist.com/article/2598130-global-carbon-emissions-fall-in-2026-due-to-iran-energy-shock",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598130-global-carbon-emissions-fall-in-2026-due-to-iran-energy-shock",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T01:00:00Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "CICERO",
+        "Robbie Andrew",
+        "University of East Anglia",
+        "Corinne Le Quéré"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41558-026-02821-8%20"
+    },
+    {
+      "id": "science-5d3be687b385fb30",
+      "title": "Scientists finally discover why we learn to love bitter coffee",
+      "summary": "Researchers identified a gut-to-brain dopamine pathway concentrated in the left basolateral amygdala that drives learning to prefer specific flavors based on post-ingestive nutrient sensing.",
+      "finding": "Researchers identified a gut-to-brain dopamine pathway concentrated in the left basolateral amygdala that drives learning to prefer specific flavors based on post-ingestive nutrient sensing.",
+      "significance": "Understanding how gut nutrients teach the brain to enjoy initially unappealing flavors may inform new interventions to alter eating habits and food cravings.",
+      "caveat": "Why dopamine signaling is concentrated specifically on the left side of the brain remains unexplained, and potential links to GLP-1 drug actions remain untested hypotheses.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261108233100.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261108233100.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-09T23:19:35Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "health"
+      ],
+      "entities": [
+        "UC San Francisco",
+        "Nature",
+        "Zachary Knight",
+        "James Grove",
+        "Dana Small"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41586-026-11229-5"
+    },
+    {
+      "id": "science-427e7bb58879cf1b",
+      "title": "Cold therapy may be worse than doing nothing for post-exercise recovery",
+      "summary": "Adults who used ice baths after intense leg exercise exhibited elevated markers of muscle damage for longer and regained less muscle strength than those who practiced passive rest.",
+      "finding": "Adults who used ice baths after intense leg exercise exhibited elevated markers of muscle damage for longer and regained less muscle strength than those who practiced passive rest.",
+      "significance": "The results challenge the popular practice of post-workout ice baths, suggesting they may delay muscle recovery rather than accelerate it.",
+      "caveat": "It remains unknown if outcomes differ with longer follow-ups, other exercise types, or modified interventions, and ice baths only temporarily masked pain.",
+      "url": "https://www.newscientist.com/article/2598085-cold-therapy-may-be-worse-than-doing-nothing-for-post-exercise-recovery",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598085-cold-therapy-may-be-worse-than-doing-nothing-for-post-exercise-recovery",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-09T19:00:00Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "health",
+        "biology"
+      ],
+      "entities": [
+        "Freya Bayne",
+        "University of East London",
+        "Ken Nosaka",
+        "Edith Cowan University",
+        "Mike Tipton"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.sciencedirect.com/science/article/pii/S0306456526001841?via%3Dihub",
+      "sourceUpdatedAt": "2026-11-10T08:51:22Z"
+    },
+    {
+      "id": "science-97ffe59ce15abb83",
+      "title": "Drugs like Ozempic may help reverse chronic kidney disease",
+      "summary": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
+      "finding": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
+      "significance": "The findings explain how GLP-1 drugs directly protect and repair kidney blood vessels, offering a biological mechanism for their ability to slow kidney disease progression.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencenews.org/article/semaglutide-chronic-kidney-disease",
+      "primarySourceUrl": "https://www.sciencenews.org/article/semaglutide-chronic-kidney-disease",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-09T16:00:00Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "health",
+        "biology"
+      ],
+      "entities": [
+        "Nature Medicine",
+        "Susan Quaggin",
+        "Peter Nguyen",
+        "Katherine Tuttle",
+        "Ozempic"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41591-026-04674-2",
+      "sourceUpdatedAt": "2026-11-09T16:00:00Z"
+    },
+    {
+      "id": "science-ae28a572f4f0fdc6",
+      "title": "Did Life Begin in an RNA World?",
+      "summary": "Researchers identified a 45-nucleotide RNA molecule named QT45 that can copy another RNA strand, showing that self-replicating RNAs do not need to be several hundred nucleotides long.",
+      "finding": "Researchers identified a 45-nucleotide RNA molecule named QT45 that can copy another RNA strand, showing that self-replicating RNAs do not need to be several hundred nucleotides long.",
+      "significance": "Finding catalytic copying activity in small RNAs supports the plausibility that functional ribozymes could emerge spontaneously from random pools on early Earth.",
+      "caveat": "It remains unknown whether a suitable, long-lasting habitat existed on early Earth, and early life likely required metabolic energy harvesting beyond mere genetic replication.",
+      "url": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109",
+      "primarySourceUrl": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109",
+      "source": {
+        "name": "Quanta Magazine"
+      },
+      "sourceGroup": "Quanta Magazine",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-09T15:20:29Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "biology"
+      ],
+      "entities": [
+        "Gerald Joyce",
+        "Salk Institute",
+        "Philipp Holliger",
+        "MRC Laboratory of Molecular Biology",
+        "Walter Gilbert"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-09T15:28:13Z"
+    },
+    {
+      "id": "science-f7b623d516c9558f",
+      "title": "A high-fiber diet may clear away plastic in the gut",
+      "summary": "In mice fed plastic particles, consuming medium- or high-fiber diets helped clear more particles from the gut within 24 hours and prevented gut tissue damage seen in low-fiber mice.",
+      "finding": "In mice fed plastic particles, consuming medium- or high-fiber diets helped clear more particles from the gut within 24 hours and prevented gut tissue damage seen in low-fiber mice.",
+      "significance": "The results suggest that dietary fiber may offer a potential mechanism to trap ingested micro- and nanoplastics and shield gut tissue from damage.",
+      "caveat": "The research was conducted only in mice using fiber amounts far exceeding recommended human intake, and it is uncertain whether dietary fiber provides the same effect in people.",
+      "url": "https://www.sciencenews.org/article/high-fiber-diet-nanoplastic-gut-health",
+      "primarySourceUrl": "https://www.sciencenews.org/article/high-fiber-diet-nanoplastic-gut-health",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-09T14:00:00Z",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "health"
+      ],
+      "entities": [
+        "Eddy Y. Zeng",
+        "South China University of Technology",
+        "Nature Communications"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41467-026-78675-7",
+      "sourceUpdatedAt": "2026-11-09T14:00:00Z"
+    },
     {
       "id": "science-155d9f5cc0b5428b",
       "title": "Ozone Hole Reaches Its 2026 Maximum",
@@ -153,10 +543,10 @@
     {
       "id": "science-8ea0785cc9c63a50",
       "title": "Physicists listened to electrical noise to crack a superconductor mystery",
-      "summary": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
-      "finding": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
-      "significance": "The finding suggests the primary bottleneck for cuprate superconductivity may be establishing phase coherence among electron pairs rather than forming the pairs themselves, offering clues for raising critical temperatures.",
-      "caveat": "The method loses sensitivity at higher temperatures, preventing measurements above the critical superconducting temperature where pseudogaps are typically defined, and it does not exclude other coupled effects or patterns.",
+      "summary": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
+      "finding": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
+      "significance": "The evidence supports the idea that electron pairing can occur prior to the onset of phase coherence, potentially opening avenues to increase superconducting transition temperatures.",
+      "caveat": "The technique loses sensitivity at higher temperatures, preventing measurements above the superconducting transition temperature where the pseudogap typically appears, and it does not fully rule out entangled charge patterns.",
       "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
       "source": {
@@ -166,22 +556,22 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-08T12:15:31Z",
       "firstSeenAt": "2026-11-09T11:00:04.003337Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "physics"
       ],
       "entities": [
         "Milan Allan",
-        "Ingmar Swart",
         "Ludwig Maximilian University of Munich",
+        "Ingmar Swart",
         "Utrecht University",
         "Science"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1126/science.adt3444",
-      "sourceUpdatedAt": "2026-11-06T23:42:08Z"
+      "sourceUpdatedAt": "2026-11-09T13:13:29Z"
     },
     {
       "id": "science-0e34e988e4e9a6f2",
@@ -346,10 +736,10 @@
     {
       "id": "science-336af74c1de5a917",
       "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
-      "summary": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
-      "finding": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
-      "significance": "This clarifies the timeline, route, and cultural assimilation dynamics of one of history's largest migrations, which permanently reshaped sub-Saharan Africa's languages, demography, and technology.",
-      "caveat": "Conclusive archaeological evidence directly confirming the western African homeland remains thin, and it is uncertain whether Bantu speakers invented or adopted iron smelting.",
+      "summary": "Linguistic, genetic, and archaeological evidence indicates Bantu-speaking ancestors crossed the Congo rainforest together before splitting into eastern and southern migratory routes approximately 2,500 to 3,500 years ago.",
+      "finding": "Linguistic, genetic, and archaeological evidence indicates Bantu-speaking ancestors crossed the Congo rainforest together before splitting into eastern and southern migratory routes approximately 2,500 to 3,500 years ago.",
+      "significance": "Clarifies the route and timing of one of history's largest human migrations, which reshaped the demography, languages, and technologies of sub-Saharan Africa.",
+      "caveat": "Conclusive archaeological evidence directly confirming the Bantu homeland in western Africa remains sparse, and historical records and research funding are limited.",
       "url": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
       "source": {
@@ -359,8 +749,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-07T12:15:55Z",
       "firstSeenAt": "2026-11-08T11:01:02.111901Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "social-science",
@@ -368,13 +758,13 @@
       ],
       "entities": [
         "Great Zimbabwe",
+        "Field Museum of Natural History",
         "University of Leicester",
         "University of Oxford",
-        "Uppsala University",
-        "Ghent University"
+        "Uppsala University"
       ],
       "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nature.com/articles/s41467-023-43717-x",
+      "paperUrl": "https://www.nature.com/articles/s41586-023-06770-6",
       "sourceUpdatedAt": "2026-11-07T12:26:45Z"
     },
     {
@@ -674,9 +1064,9 @@
     {
       "id": "science-08a83d58613fad43",
       "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
-      "summary": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
-      "finding": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
-      "significance": "The findings challenge the view that quantum states merely reflect incomplete knowledge of an underlying objective reality, compelling physicists to reconsider fundamental assumptions about the nature of the physical world.",
+      "summary": "Theoretical work and tests, including the PBR theorem, demonstrate that quantum mechanics is incompatible with everyday notions of an objective, local reality.",
+      "finding": "Theoretical work and tests, including the PBR theorem, demonstrate that quantum mechanics is incompatible with everyday notions of an objective, local reality.",
+      "significance": "It challenges foundational assumptions that physical systems hold intrinsic, observer-independent properties separate from measurement.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
       "primarySourceUrl": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
@@ -687,8 +1077,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-06T15:48:54Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "physics"
@@ -701,7 +1091,7 @@
         "Terry Rudolph"
       ],
       "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-06T15:50:25Z"
+      "sourceUpdatedAt": "2026-11-09T17:13:01Z"
     },
     {
       "id": "science-f6c4f38b852e436b",
@@ -786,7 +1176,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T11:01:03Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
       "verifiedAt": "2026-11-07T11:01:01.958577Z",
       "evidenceType": "mission-milestone",
       "topics": [
@@ -866,10 +1256,10 @@
     {
       "id": "science-bd3627b78838f002",
       "title": "Euclid discovers new comet",
-      "summary": "The Euclid space telescope detected its first previously unknown comet, designated C/2026 S1 (Euclid), at approximately 1.3 billion kilometres from Earth.",
-      "finding": "The Euclid space telescope detected its first previously unknown comet, designated C/2026 S1 (Euclid), at approximately 1.3 billion kilometres from Earth.",
-      "significance": "The detection demonstrates that Euclid can identify distant comets outside the planetary plane, serving as a test case for future missions such as Comet Interceptor.",
-      "caveat": "Euclid rarely discovers comets because it avoids the comet-rich planetary plane and its survey strategy generally images sky sections only once.",
+      "summary": "The Euclid space telescope identified its first previously unknown comet, designated C/2026 S1 (Euclid), located approximately 1.3 billion kilometres from Earth.",
+      "finding": "The Euclid space telescope identified its first previously unknown comet, designated C/2026 S1 (Euclid), located approximately 1.3 billion kilometres from Earth.",
+      "significance": "The detection demonstrates that Euclid can discover and quickly validate distant comets, providing a test case for future coordination with missions like ESA's Comet Interceptor.",
+      "caveat": "Very few comets are expected to be detected by Euclid because it avoids the comet-rich plane of the Solar System and typically images each sky section only once.",
       "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-discovers-new-comet",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-discovers-new-comet",
       "source": {
@@ -879,8 +1269,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T08:24:42Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "astronomy"
@@ -888,8 +1278,9 @@
       "entities": [
         "European Space Agency",
         "Euclid",
+        "University of Helsinki",
         "Minor Planet Center",
-        "University of Helsinki"
+        "Comet Interceptor"
       ],
       "milestoneStatus": "unknown"
     },
@@ -1255,10 +1646,10 @@
     {
       "id": "science-8c416cac2e1213d0",
       "title": "New Research Tests Whether AI Models Know Their Own Thoughts",
-      "summary": "Experiments show large language models can detect artificially injected neural activation patterns, functioning as a form of anomaly detection regarding their internal state.",
-      "finding": "Experiments show large language models can detect artificially injected neural activation patterns, functioning as a form of anomaly detection regarding their internal state.",
-      "significance": "Understanding whether neural networks can identify internal disruptions informs debates over artificial introspection and transparency in large language models.",
-      "caveat": "Preprint / working paper; peer review is not established. Models appear able to notice internal anomalies without identifying details about the injected concept, and whether anomaly detection qualifies as true introspection remains contested.",
+      "summary": "Experiments show large language models can reliably detect when artificial neural activations are injected into their internal processing, an ability termed anomaly detection.",
+      "finding": "Experiments show large language models can reliably detect when artificial neural activations are injected into their internal processing, an ability termed anomaly detection.",
+      "significance": "Understanding whether artificial neural networks can monitor internal processing provides an empirical way to test cognitive questions about introspection and interpretability.",
+      "caveat": "Preprint / working paper; peer review is not established. Models struggle to identify specific injected concepts and may only detect general internal unusual activity, leaving active debate over whether this represents genuine introspection.",
       "url": "https://www.quantamagazine.org/new-research-tests-whether-ai-models-know-their-own-thoughts-20261104",
       "primarySourceUrl": "https://www.quantamagazine.org/new-research-tests-whether-ai-models-know-their-own-thoughts-20261104",
       "source": {
@@ -1268,19 +1659,18 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-04T15:32:52Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "preprint",
       "topics": [
-        "technology",
-        "social-science"
+        "technology"
       ],
       "entities": [
         "Jack Lindsey",
         "Anthropic",
         "Claude",
-        "Harvey Lederman",
-        "Kyle Mahowald"
+        "Kyle Mahowald",
+        "Harvey Lederman"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://arxiv.org/abs/2603.05414",
@@ -1630,7 +2020,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-02T21:07:52Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -1715,10 +2105,10 @@
     {
       "id": "science-7d4b212037cf07a3",
       "title": "Is There Anything Left in the Dream of Cold Fusion?",
-      "summary": "Researchers are using exotic atoms, which replace electrons with heavier particles like muons or kaons, to probe extreme electric fields and nuclear structure.",
-      "finding": "Researchers are using exotic atoms, which replace electrons with heavier particles like muons or kaons, to probe extreme electric fields and nuclear structure.",
-      "significance": "These shrunken atoms generate immense Coulomb fields that breach the Schwinger limit, allowing tests of quantum electrodynamics and investigations beyond the Standard Model.",
-      "caveat": "While these exotic systems stretch fundamental physics, they are not expected to resolve global energy problems.",
+      "summary": "Physicists use exotic atoms substituted with heavier negatively charged particles, such as muons and antiprotons, to dramatically shrink atomic dimensions and create ultra-strong electric fields.",
+      "finding": "Physicists use exotic atoms substituted with heavier negatively charged particles, such as muons and antiprotons, to dramatically shrink atomic dimensions and create ultra-strong electric fields.",
+      "significance": "Shrunken atoms subject fundamental physics to extreme tests, enabling high-precision stress-testing of quantum electrodynamics and probing nuclear structures beyond the reach of standard atoms.",
+      "caveat": "The direct spontaneous creation of particles from empty space under ultra-strong fields has not been observed directly, though related phenomena have been identified.",
       "url": "https://www.quantamagazine.org/is-there-anything-left-in-the-dream-of-cold-fusion-20261102",
       "primarySourceUrl": "https://www.quantamagazine.org/is-there-anything-left-in-the-dream-of-cold-fusion-20261102",
       "source": {
@@ -1728,16 +2118,17 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-02T15:48:57Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "physics"
       ],
       "entities": [
-        "CERN",
         "Large Hadron Collider",
+        "CERN",
         "Antiproton Decelerator",
+        "ELENA",
         "National Institute of Standards and Technology"
       ],
       "milestoneStatus": "unknown",
@@ -1812,9 +2203,9 @@
     {
       "id": "science-ad7ae09a7d1dd377",
       "title": "Webb reveals stunning panorama of star formation",
-      "summary": "Astronomers using the James Webb Space Telescope identified brown dwarfs in the star-forming region IC 348 with masses as low as approximately twice that of Jupiter.",
-      "finding": "Astronomers using the James Webb Space Telescope identified brown dwarfs in the star-forming region IC 348 with masses as low as approximately twice that of Jupiter.",
-      "significance": "Representing the least massive brown dwarfs identified to date, these objects challenge established models of star formation and demonstrate that planet-mass objects can form via cloud collapse.",
+      "summary": "Astronomers discovered brown dwarfs with masses as low as two times that of Jupiter in the star-forming region IC 348.",
+      "finding": "Astronomers discovered brown dwarfs with masses as low as two times that of Jupiter in the star-forming region IC 348.",
+      "significance": "Representing the least massive brown dwarfs identified, these planetary-mass objects challenge existing models of star formation.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/articles/about-us/directorates/science/webb/webb-reveals-stunning-panorama-of-star-formation",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/science/webb/webb-reveals-stunning-panorama-of-star-formation",
@@ -1825,12 +2216,11 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-31T00:37:37Z",
       "firstSeenAt": "2026-11-09T11:00:04.003337Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "astronomy",
-        "physics"
+        "astronomy"
       ],
       "entities": [
         "James Webb Space Telescope",
@@ -1875,10 +2265,10 @@
     {
       "id": "science-e77a7638ee47a43c",
       "title": "It’s not (just) the heat, it’s the humidity: Examining the impact of intensifying humid heat on pregnancies",
-      "summary": "In Nigeria, increasing humid heat correlates with a greater risk of early pregnancy terminations and shifts conception timing, with conceptions dropping during heat exposure but rebounding in following months.",
-      "finding": "In Nigeria, increasing humid heat correlates with a greater risk of early pregnancy terminations and shifts conception timing, with conceptions dropping during heat exposure but rebounding in following months.",
-      "significance": "Combining satellite climate data with national health surveys helps reveal how climate change and extreme humid heat influence fertility and pregnancy risks in vulnerable, low-resource nations.",
-      "caveat": "The demographic surveys analyzed do not distinguish between induced and spontaneous pregnancy terminations.",
+      "summary": "In Nigeria, increasing humid heat is strongly associated with a higher likelihood of early pregnancy terminations and temporary shifts in conception timing.",
+      "finding": "In Nigeria, increasing humid heat is strongly associated with a higher likelihood of early pregnancy terminations and temporary shifts in conception timing.",
+      "significance": "Understanding humid-heat impacts helps public health workers advise pregnant women and address climate-vulnerability disparities in lower- and middle-income nations.",
+      "caveat": "The demographic survey data does not distinguish between spontaneous miscarriages and induced pregnancy terminations.",
       "url": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "primarySourceUrl": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "source": {
@@ -1888,8 +2278,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T15:38:09Z",
       "firstSeenAt": "2026-11-05T11:24:38.846856Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "health",
@@ -1898,10 +2288,10 @@
       ],
       "entities": [
         "University of Michigan",
-        "Proceedings of the National Academy of Sciences",
+        "Nigeria",
+        "NASA Land-Cover and Land Use Change Program",
         "Nina Brooks",
-        "Cascade Tuholske",
-        "Katie McMahon"
+        "Proceedings of the National Academy of Sciences"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1073/pnas.2321152122",
@@ -1945,10 +2335,10 @@
     {
       "id": "science-e10edceaccaeeca7",
       "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
-      "summary": "Long-term monitoring of the Ngogo chimpanzee community revealed that members of a splinter group engaged in lethal aggression against former groupmates, killing 28 individuals after the community split.",
-      "finding": "Long-term monitoring of the Ngogo chimpanzee community revealed that members of a splinter group engaged in lethal aggression against former groupmates, killing 28 individuals after the community split.",
-      "significance": "The observations show chimpanzees will kill familiar individuals they previously cooperated with, while highlighting human prosociality and altruism toward strangers as a distinct contrast.",
-      "caveat": "The asymmetrical nature and causes of the lethal intergroup attacks remain difficult to explain.",
+      "summary": "Long-term monitoring showed a large chimpanzee community split into two groups that engaged in lethal aggression, with one splinter group killing 28 members of the other.",
+      "finding": "Long-term monitoring showed a large chimpanzee community split into two groups that engaged in lethal aggression, with one splinter group killing 28 members of the other.",
+      "significance": "The findings demonstrate that lethal intergroup aggression in chimpanzees can occur even between individuals who previously shared a cooperative community and spent their lives together.",
+      "caveat": "Researchers note that the asymmetric pattern of the lethal attacks has been difficult to fully explain.",
       "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "primarySourceUrl": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "source": {
@@ -1958,8 +2348,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T14:08:23Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
@@ -1972,7 +2362,7 @@
         "Ngogo Chimpanzee Project"
       ],
       "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nature.com/articles/s41562-026-02601-6",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.adz4944?referrer=https%3A%2F%2Fwww.google.com%2F",
       "sourceUpdatedAt": "2026-11-02T15:08:51Z",
       "localConnection": "University of Michigan research in Ann Arbor."
     },
@@ -2079,10 +2469,10 @@
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "summary": "Scientists dated the Martian meteorite Teghaza 001 to more than 4.1 billion years ago, revealing evidence of early crust formation and water-rock interactions.",
-      "finding": "Scientists dated the Martian meteorite Teghaza 001 to more than 4.1 billion years ago, revealing evidence of early crust formation and water-rock interactions.",
-      "significance": "As one of Earth's oldest Martian meteorites, its mineralogy offers a direct sample of ancient Martian crust and provides clues about the early planet's dynamic water cycle.",
-      "caveat": "Scientists cannot determine the exact origin site of the meteorite on Mars, though several candidate locations have been identified.",
+      "summary": "Researchers characterized Teghaza 001, a Martian meteorite that formed over 4.1 billion years ago and preserves evidence of early crust formation and water-rock interactions.",
+      "finding": "Researchers characterized Teghaza 001, a Martian meteorite that formed over 4.1 billion years ago and preserves evidence of early crust formation and water-rock interactions.",
+      "significance": "As one of only three extremely ancient Martian meteorites known, it offers a rare physical sample of Mars' ancient crust and insights into the planet's early water cycle.",
+      "caveat": "Scientists cannot determine the precise point of origin on Mars for the meteorite, though several candidate regions match its mineralogy and chemistry.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "source": {
@@ -2092,8 +2482,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T18:18:09Z",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
@@ -2101,9 +2491,9 @@
       "entities": [
         "NASA",
         "Jet Propulsion Laboratory",
+        "Caltech",
         "Science",
-        "Yang Liu",
-        "Lee Saper"
+        "University of New Mexico"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
@@ -2358,7 +2748,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T20:23:58Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -2389,7 +2779,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T18:51:35Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
       "verifiedAt": "2026-10-29T05:30:05.908168Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -2478,10 +2868,10 @@
     {
       "id": "science-6d879a7a5c5c91f8",
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
-      "summary": "NASA's Perseverance rover directly measured fine particles under 2.5 micrometers and ultrafine particles around 100 nanometers clinging to spacesuit materials on Mars.",
-      "finding": "NASA's Perseverance rover directly measured fine particles under 2.5 micrometers and ultrafine particles around 100 nanometers clinging to spacesuit materials on Mars.",
-      "significance": "Understanding the size and adherence of fine Martian dust can inform spacesuit design, dust removal methods, and health standards for future human missions to Mars.",
-      "caveat": "Scientists believe the actual health risks to crews will depend on the quantity of dust encountered and the total length of exposure.",
+      "summary": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, ranging from under 2.5 micrometers down to roughly 100 nanometers, adhering to spacesuit material samples via static electricity.",
+      "finding": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, ranging from under 2.5 micrometers down to roughly 100 nanometers, adhering to spacesuit material samples via static electricity.",
+      "significance": "Understanding the size and adhesion of fine Mars dust can inform future spacesuit, habitat, airlock designs, and astronaut health standards to mitigate respiratory and cellular risks.",
+      "caveat": "Scientists believe the actual health risks to crews will depend on dust quantity and duration of exposure.",
       "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "source": {
@@ -2491,20 +2881,20 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-26T21:07:28Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
-        "health",
-        "technology"
+        "technology",
+        "health"
       ],
       "entities": [
         "NASA",
         "Perseverance",
-        "Jet Propulsion Laboratory",
         "SHERLOC",
-        "PIXL"
+        "PIXL",
+        "Jet Propulsion Laboratory"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2620747123",
@@ -5288,91 +5678,60 @@
         "astronomy",
         "science missions"
       ]
-    },
-    {
-      "id": "nasa-starling-demonstrates-gps-free-autonomous-navigation",
-      "title": "NASA's Starling satellites demonstrate GPS-free autonomous navigation",
-      "summary": "The FALCON experiment used onboard cameras and a catalog of space objects to determine Starling's orbit without GPS or ground navigation. Over three days it also improved orbit estimates for more than 200 tracked objects, a step toward autonomous lunar satellite swarms and better collision avoidance.",
-      "url": "https://www.nasa.gov/blogs/smallsatellites/2026/08/17/nasas-starling-mission-opens-new-frontiers-in-space-navigation/",
-      "source": {
-        "name": "NASA"
-      },
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "topics": [
-        "space",
-        "autonomous systems",
-        "satellites"
-      ]
-    },
-    {
-      "id": "hubble-reveals-early-milky-way-merger",
-      "title": "Hubble identifies a major merger from the Milky Way’s infancy",
-      "summary": "Hubble measurements of 39 inner-Milky-Way globular clusters, combined with Gaia data, isolate a third cluster population that points to an ancient collision with a dwarf galaxy dubbed LKH. The result pushes definitive evidence of the Galaxy’s assembly history about 1.8 billion years farther back, to roughly 11.8 billion years ago.",
-      "url": "https://science.nasa.gov/missions/hubble/hubble-solves-merger-mystery-from-milky-ways-early-years/",
-      "source": {
-        "name": "NASA Hubble"
-      },
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "topics": [
-        "space",
-        "astronomy",
-        "Milky Way",
-        "galaxy evolution"
-      ]
     }
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "selectedIds": [
-      "science-155d9f5cc0b5428b",
-      "science-b7a2f4b84df2a343",
+      "science-fc400f5c232b380e",
+      "science-0a037ddef00bff3c",
+      "science-1695ef8e6db7acbe",
       "science-8ea0785cc9c63a50",
-      "science-b1eef9bd8d6da9ac",
-      "science-a0c2d1da562becd0",
-      "science-8c416cac2e1213d0"
+      "science-0e34e988e4e9a6f2",
+      "science-b1eef9bd8d6da9ac"
     ],
     "reasons": {
-      "science-155d9f5cc0b5428b": {
-        "score": 34,
+      "science-fc400f5c232b380e": {
+        "score": 33,
         "source": "NASA",
-        "topic": "earth-science",
-        "publishedAt": "2026-11-09T05:00:00Z",
+        "topic": "technology",
+        "publishedAt": "2026-11-10T01:07:45Z",
         "interestMatch": false
       },
-      "science-b7a2f4b84df2a343": {
-        "score": 31,
-        "source": "ScienceDaily",
+      "science-0a037ddef00bff3c": {
+        "score": 32,
+        "source": "New Scientist",
         "topic": "biology",
-        "publishedAt": "2026-11-08T23:56:14Z",
+        "publishedAt": "2026-11-10T10:00:00Z",
+        "interestMatch": false
+      },
+      "science-1695ef8e6db7acbe": {
+        "score": 32,
+        "source": "Science News",
+        "topic": "earth-science",
+        "publishedAt": "2026-11-10T10:00:00Z",
         "interestMatch": false
       },
       "science-8ea0785cc9c63a50": {
-        "score": 31,
+        "score": 30,
         "source": "Ars Technica Science",
         "topic": "physics",
         "publishedAt": "2026-11-08T12:15:31Z",
         "interestMatch": false
       },
+      "science-0e34e988e4e9a6f2": {
+        "score": 30,
+        "source": "ScienceDaily",
+        "topic": "astronomy",
+        "publishedAt": "2026-11-08T10:11:25Z",
+        "interestMatch": false
+      },
       "science-b1eef9bd8d6da9ac": {
-        "score": 31,
+        "score": 25,
         "source": "ESA",
         "topic": "astronomy",
         "publishedAt": "2026-11-06T11:01:03Z",
-        "interestMatch": false
-      },
-      "science-a0c2d1da562becd0": {
-        "score": 29,
-        "source": "New Scientist",
-        "topic": "health",
-        "publishedAt": "2026-11-06T16:00:00Z",
-        "interestMatch": false
-      },
-      "science-8c416cac2e1213d0": {
-        "score": 27,
-        "source": "Quanta Magazine",
-        "topic": "technology",
-        "publishedAt": "2026-11-04T15:32:52Z",
         "interestMatch": false
       }
     }

@@ -1,15 +1,190 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-09T06:16:41.127759-05:00",
+  "generatedAt": "2026-11-10T07:12:23.099370-05:00",
   "stories": [
+    {
+      "id": "science-ed72f46bb287cd6e",
+      "title": "How neutrinos are beginning to reveal the secrets of our galaxy",
+      "summary": "The IceCube Neutrino Observatory has created a new neutrino-only map of the Milky Way, revealing an asymmetric galaxy with unexplained \"neutrino blobs.\" Researchers are now using these neutrino observations to investigate particle acceleration in the galactic center and to match neutrino sources with high-energy light sources.",
+      "finding": "The IceCube Neutrino Observatory has created a new neutrino-only map of the Milky Way, revealing an asymmetric galaxy with unexplained \"neutrino blobs.\" Researchers are now using these neutrino observations to investigate particle acceleration in the galactic center and to match neutrino sources with high-energy light sources.",
+      "significance": "Neutrinos offer a distinct observational window into cosmic phenomena and natural particle acceleration mechanisms that light alone cannot provide.",
+      "caveat": "Preprint / working paper; peer review is not established. Scientists face difficulties matching detected neutrino sources directly with known high-energy light sources under the assumption they share a common origin.",
+      "url": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T09:00:00+00:00",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "IceCube Neutrino Observatory",
+        "Francis Halzen",
+        "Naoko Kurahashi Neilson",
+        "Drexel University",
+        "Milky Way"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://arxiv.org/abs/2609.22577",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-10T07:12:23.099370-05:00",
+        "expiresAt": "2026-11-13T07:12:23.099370-05:00",
+        "inputFacts": {
+          "id": "science-ed72f46bb287cd6e",
+          "title": "How neutrinos are beginning to reveal the secrets of our galaxy",
+          "url": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
+          "publishedAt": "2026-11-10T09:00:00Z",
+          "summary": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
+          "finding": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-10T09:00:00+00:00",
+        "datePrecision": "time",
+        "sourceHash": "76c58aabf9e66020cde55d7c0570903dfe203c9d384a758f431893a19b077c45",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The article describes a significant new scientific finding: a novel map of the Milky Way using neutrinos, which offers a different perspective than light-based observations. This represents a substantive technical advance in astronomy and physics.",
+        "storyKey": "icecube-milky-way-neutrino-map",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article confirms IceCube created a new neutrino-only map of the Milky Way, revealing an asymmetric galaxy with 'neutrino blobs.' It also states researchers are using these observations to investigate particle acceleration in the galactic center and match neutrino sources with high-energy light sources. This represents a new finding and technical advance in astrophysics."
+      }
+    },
+    {
+      "id": "science-901e4c6072cf569b",
+      "title": "Curiosity Blog, Sols 5050-5055: It’s Nazca, Our 49th Drill Hole",
+      "summary": "NASA's Curiosity rover successfully drilled its 49th hole, named \"Nazca,\" on Mars, targeting a rock with potential disc-shaped crystals. Scientists anticipate results from CheMin analysis of the sample, which could indicate past environmental conditions. The rover also investigated dark pebbles and sedimentary structures on nearby buttes.",
+      "finding": "NASA's Curiosity rover successfully drilled its 49th hole, named \"Nazca,\" on Mars, targeting a rock with potential disc-shaped crystals. Scientists anticipate results from CheMin analysis of the sample, which could indicate past environmental conditions. The rover also investigated dark pebbles and sedimentary structures on nearby buttes.",
+      "significance": "Analyzing rock containing potential crystal inclusions could help scientists reconstruct past environmental conditions on Mars by comparing them to Earth's geology.",
+      "caveat": "CheMin results have not yet been analyzed as data is still transmitting to Earth, and it remains unconfirmed whether the disc-shaped inclusions are actually crystals.",
+      "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5050-5055-its-nazca-our-49th-drill-hole",
+      "primarySourceUrl": "https://science.nasa.gov/blog/curiosity-blog-sols-5050-5055-its-nazca-our-49th-drill-hole",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-09T20:05:48-05:00",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "Curiosity",
+        "Nazca",
+        "CheMin",
+        "ChemCam",
+        "NASA"
+      ],
+      "milestoneStatus": "completed",
+      "sourceUpdatedAt": "2026-11-10T01:05:51Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-10T07:12:23.099370-05:00",
+        "expiresAt": "2026-11-13T07:12:23.099370-05:00",
+        "inputFacts": {
+          "id": "science-901e4c6072cf569b",
+          "title": "Curiosity Blog, Sols 5050-5055: It’s Nazca, Our 49th Drill Hole",
+          "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5050-5055-its-nazca-our-49th-drill-hole",
+          "publishedAt": "2026-11-10T01:05:48Z",
+          "summary": "NASA's Curiosity rover successfully drilled its 49th Martian hole, named Nazca, targeting rock containing potential crystal inclusions, and delivered the sample to the CheMin instrument.",
+          "finding": "NASA's Curiosity rover successfully drilled its 49th Martian hole, named Nazca, targeting rock containing potential crystal inclusions, and delivered the sample to the CheMin instrument.",
+          "sourceUpdatedAt": "2026-11-10T01:05:51Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-09T20:05:48-05:00",
+        "datePrecision": "time",
+        "sourceHash": "a141c8fcd63d5d853005b876ca7ec511336ff63a538469a704e0148b01c477a3",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The article details a new drilling operation and scientific investigations by the Curiosity rover, representing a substantive new finding and mission milestone in planetary science.",
+        "storyKey": "curiosity-nazca-drill",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article confirms the 49th drill hole \"Nazca\" was successfully completed, targeting a rock with potential disc-shaped crystals, and that CheMin analysis results are anticipated. It also mentions investigations of dark pebbles and sedimentary structures on nearby buttes."
+      }
+    },
+    {
+      "id": "science-97ffe59ce15abb83",
+      "title": "Drugs like Ozempic may help reverse chronic kidney disease",
+      "summary": "The active ingredient in Ozempic, semaglutide, may help treat chronic kidney disease by repairing and restoring kidney blood vessels, increasing blood flow, and reducing inflammation. A study on a subset of patients showed visible tissue changes, reduced scarring, and decreased blood vessel stiffness, along with beneficial gene activity changes in kidney cells.",
+      "finding": "The active ingredient in Ozempic, semaglutide, may help treat chronic kidney disease by repairing and restoring kidney blood vessels, increasing blood flow, and reducing inflammation. A study on a subset of patients showed visible tissue changes, reduced scarring, and decreased blood vessel stiffness, along with beneficial gene activity changes in kidney cells.",
+      "significance": "The findings explain how GLP-1 drugs directly protect and repair kidney blood vessels, offering a biological mechanism for their ability to slow kidney disease progression.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencenews.org/article/semaglutide-chronic-kidney-disease",
+      "primarySourceUrl": "https://www.sciencenews.org/article/semaglutide-chronic-kidney-disease",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-09T11:00:00-05:00",
+      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "health",
+        "biology"
+      ],
+      "entities": [
+        "Nature Medicine",
+        "Susan Quaggin",
+        "Peter Nguyen",
+        "Katherine Tuttle",
+        "Ozempic"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41591-026-04674-2",
+      "sourceUpdatedAt": "2026-11-09T16:00:00Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-10T07:12:23.099370-05:00",
+        "expiresAt": "2026-11-13T07:12:23.099370-05:00",
+        "inputFacts": {
+          "id": "science-97ffe59ce15abb83",
+          "title": "Drugs like Ozempic may help reverse chronic kidney disease",
+          "url": "https://www.sciencenews.org/article/semaglutide-chronic-kidney-disease",
+          "publishedAt": "2026-11-09T16:00:00Z",
+          "summary": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
+          "finding": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
+          "sourceUpdatedAt": "2026-11-09T16:00:00Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-09T11:00:00-05:00",
+        "datePrecision": "time",
+        "sourceHash": "747467acea2810565161dbf0e9bb9d48fbf96b2020df1802e816c931a041fa17",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "This is a substantive new finding in health, directly relevant to a common and serious condition, with evidence of how the drug works at a cellular level.",
+        "storyKey": "semaglutide-kidney-repair",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article supports all claims in the summary, detailing how semaglutide repairs kidney blood vessels, increases blood flow, reduces inflammation, and leads to visible tissue changes and beneficial gene activity in a subset of patients."
+      }
+    },
     {
       "id": "science-8ea0785cc9c63a50",
       "title": "Physicists listened to electrical noise to crack a superconductor mystery",
       "summary": "Physicists used electrical noise measurements to investigate high-temperature superconductivity in cuprates, finding evidence that electron pairs form at higher temperatures within the pseudogap state, before the material achieves full superconductivity. This suggests that the bottleneck for higher superconducting temperatures might be achieving phase coherence among these pre-formed pairs, rather than the pairing itself. The experiment does not fully rule out intertwined patterns.",
       "finding": "Physicists used electrical noise measurements to investigate high-temperature superconductivity in cuprates, finding evidence that electron pairs form at higher temperatures within the pseudogap state, before the material achieves full superconductivity. This suggests that the bottleneck for higher superconducting temperatures might be achieving phase coherence among these pre-formed pairs, rather than the pairing itself. The experiment does not fully rule out intertwined patterns.",
-      "significance": "The finding suggests the primary bottleneck for cuprate superconductivity may be establishing phase coherence among electron pairs rather than forming the pairs themselves, offering clues for raising critical temperatures.",
-      "caveat": "The method loses sensitivity at higher temperatures, preventing measurements above the critical superconducting temperature where pseudogaps are typically defined, and it does not exclude other coupled effects or patterns.",
+      "significance": "The evidence supports the idea that electron pairing can occur prior to the onset of phase coherence, potentially opening avenues to increase superconducting transition temperatures.",
+      "caveat": "The technique loses sensitivity at higher temperatures, preventing measurements above the superconducting transition temperature where the pseudogap typically appears, and it does not fully rule out entangled charge patterns.",
       "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
       "source": {
@@ -19,105 +194,46 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-08T12:15:31+00:00",
       "firstSeenAt": "2026-11-09T11:00:04.003337Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
+      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "verifiedAt": "2026-11-10T11:01:01.192536Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "physics"
       ],
       "entities": [
         "Milan Allan",
-        "Ingmar Swart",
         "Ludwig Maximilian University of Munich",
+        "Ingmar Swart",
         "Utrecht University",
         "Science"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1126/science.adt3444",
-      "sourceUpdatedAt": "2026-11-06T23:42:08Z",
+      "sourceUpdatedAt": "2026-11-09T13:13:29Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-09T06:16:41.127759-05:00",
-        "expiresAt": "2026-11-12T06:16:41.127759-05:00",
+        "reviewedAt": "2026-11-10T07:12:23.099370-05:00",
+        "expiresAt": "2026-11-13T07:12:23.099370-05:00",
         "inputFacts": {
           "id": "science-8ea0785cc9c63a50",
           "title": "Physicists listened to electrical noise to crack a superconductor mystery",
           "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
           "publishedAt": "2026-11-08T12:15:31Z",
-          "summary": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
-          "finding": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
-          "sourceUpdatedAt": "2026-11-06T23:42:08Z"
+          "summary": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
+          "finding": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
+          "sourceUpdatedAt": "2026-11-09T13:13:29Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
         "publicationEvidence": "2026-11-08T12:15:31+00:00",
         "datePrecision": "time",
-        "sourceHash": "cbfc123dbb65ed6a7c136ac87b73dd6bc37330938a58785ca26c80f4746932da",
+        "sourceHash": "ba03d6d0b090c58cf47c3f0d19d29a01a64a998dc0088ea35d2e1eb7cef9aa8e",
         "relevance": 4,
         "novelty": 4,
         "reason": "This is a substantive new finding in physics regarding high-temperature superconductivity, a long-standing mystery. The research provides new insights into the mechanism of these materials, which could have significant implications for future technological applications.",
         "storyKey": "cuprate-superconductor-pseudogap-mystery",
         "localConnection": "",
         "grounded": true,
-        "groundingReason": "The article details a new experimental finding using electrical noise measurements to investigate high-temperature superconductivity in cuprates, providing evidence for pre-formed electron pairs within the pseudogap state at higher temperatures than full superconductivity. This is a new technical advance in understanding the mechanism of high-temperature superconductivity."
-      }
-    },
-    {
-      "id": "science-336af74c1de5a917",
-      "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
-      "summary": "A blend of linguistic, archaeological, and genetic research is reconstructing the Bantu expansion, a major human migration across sub-Saharan Africa over thousands of years. New findings suggest a single path through the Congo rainforest before splitting, and evidence of intermixing between Bantu speakers and indigenous hunter-gatherer groups, sometimes with distinct gender patterns.",
-      "finding": "A blend of linguistic, archaeological, and genetic research is reconstructing the Bantu expansion, a major human migration across sub-Saharan Africa over thousands of years. New findings suggest a single path through the Congo rainforest before splitting, and evidence of intermixing between Bantu speakers and indigenous hunter-gatherer groups, sometimes with distinct gender patterns.",
-      "significance": "This clarifies the timeline, route, and cultural assimilation dynamics of one of history's largest migrations, which permanently reshaped sub-Saharan Africa's languages, demography, and technology.",
-      "caveat": "Conclusive archaeological evidence directly confirming the western African homeland remains thin, and it is uncertain whether Bantu speakers invented or adopted iron smelting.",
-      "url": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
-      "primarySourceUrl": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
-      "source": {
-        "name": "Ars Technica Science"
-      },
-      "sourceGroup": "Ars Technica Science",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-07T12:15:55+00:00",
-      "firstSeenAt": "2026-11-08T11:01:02.111901Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "social-science",
-        "biology"
-      ],
-      "entities": [
-        "Great Zimbabwe",
-        "University of Leicester",
-        "University of Oxford",
-        "Uppsala University",
-        "Ghent University"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nature.com/articles/s41467-023-43717-x",
-      "sourceUpdatedAt": "2026-11-07T12:26:45Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-08T06:48:29.564149-05:00",
-        "expiresAt": "2026-11-11T06:48:29.564149-05:00",
-        "inputFacts": {
-          "id": "science-336af74c1de5a917",
-          "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
-          "url": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
-          "publishedAt": "2026-11-07T12:15:55Z",
-          "summary": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
-          "finding": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
-          "sourceUpdatedAt": "2026-11-07T12:26:45Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-07T12:15:55+00:00",
-        "datePrecision": "time",
-        "sourceHash": "cbe205b547185a5dda99568c0c2dafb030075d3f76cc620749363e998d19cccf",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "This article presents a substantive new finding in human migration and genetics, detailing how interdisciplinary research is uncovering the complex history of the Bantu expansion. It discusses new evidence regarding migration paths and genetic intermixing, which is a significant advance in understanding human history and population dynamics.",
-        "storyKey": "bantu-expansion-reconstruction",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article supports all claims in the summary, detailing how linguistic, archaeological, and genetic research is used to reconstruct the Bantu expansion. It specifically mentions new findings suggesting a single path through the Congo rainforest before splitting, and provides evidence of intermixing between Bantu speakers and indigenous hunter-gatherer groups, including distinct gender patterns in the genetic evidence."
+        "groundingReason": "The article details a new experimental finding using electrical noise measurements to investigate high-temperature superconductivity in cuprates, providing evidence for pre-formed electron pairs in the pseudogap state and suggesting a new understanding of the bottleneck for higher superconducting temperatures. This is a specific technical advance in understanding a long-standing scientific mystery."
       }
     },
     {
@@ -177,123 +293,114 @@
         "grounded": true,
         "groundingReason": "The summary accurately reflects the new models and findings presented in the article regarding the formation of the Great Unconformity, including the role of mantle convection and glacial erosion, and the explanation for its prominence in North America. This is a new scientific finding supported by the research described."
       }
-    },
-    {
-      "id": "science-44ca837be7e31108",
-      "title": "An unexpected feedback loop may be driving mega heatwaves",
-      "summary": "A newly identified three-way feedback loop involving high-pressure systems, dry soil, and extreme heat may amplify heatwaves by 10%, a factor not fully accounted for in current climate models. This mechanism could explain why recent heat extremes have outstripped predictions, with implications for future heatwave intensity in regions including North America.",
-      "finding": "A newly identified three-way feedback loop involving high-pressure systems, dry soil, and extreme heat may amplify heatwaves by 10%, a factor not fully accounted for in current climate models. This mechanism could explain why recent heat extremes have outstripped predictions, with implications for future heatwave intensity in regions including North America.",
-      "significance": "The mechanism helps explain why recent heat extremes have outpaced climate model projections, warning of severe impacts on ecosystems, public health, and infrastructure.",
-      "caveat": "The research only accounts for part of the gap between model predictions and heatwave severity, and models must be improved to fully capture the mechanism.",
-      "url": "https://www.newscientist.com/article/2597676-an-unexpected-feedback-loop-may-be-driving-mega-heatwaves",
-      "primarySourceUrl": "https://www.newscientist.com/article/2597676-an-unexpected-feedback-loop-may-be-driving-mega-heatwaves",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-06T19:00:00+00:00",
-      "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-07T11:01:01.958577Z",
-      "verifiedAt": "2026-11-07T11:01:01.958577Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "earth-science"
-      ],
-      "entities": [
-        "Kai Kornhuber",
-        "International Institute for Applied Systems Analysis",
-        "Dim Coumou",
-        "Free University of Amsterdam",
-        "Science Advances"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://eur02.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.science.org%2Fdoi%2F10.1126%2Fsciadv.aeh9111&data=05%7C02%7Cmadeleine.cuff%40newscientist.com%7C170cb795e031462fdc0a08df3b440ebb%7C0f3a4c644dc54a768d4152d85ca158a5%7C0%7C0%7C639294835667991796%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=CWJ3D1CtoEZSdcg5pauiPUAvmHiaz7dMXHCDU7yqq4U%3D&reserved=0",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-07T07:14:07.195177-05:00",
-        "expiresAt": "2026-11-10T07:14:07.195177-05:00",
-        "inputFacts": {
-          "id": "science-44ca837be7e31108",
-          "title": "An unexpected feedback loop may be driving mega heatwaves",
-          "url": "https://www.newscientist.com/article/2597676-an-unexpected-feedback-loop-may-be-driving-mega-heatwaves",
-          "publishedAt": "2026-11-06T19:00:00Z",
-          "summary": "A three-way feedback loop among dry soil, high atmospheric pressure, and extreme heat can intensify heatwaves, making them 10 percent hotter than they would otherwise be.",
-          "finding": "A three-way feedback loop among dry soil, high atmospheric pressure, and extreme heat can intensify heatwaves, making them 10 percent hotter than they would otherwise be.",
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-06T19:00:00+00:00",
-        "datePrecision": "time",
-        "sourceHash": "bcf3028096992223a2eb2a553cfc145575c76233d6ea907e3811fc3a966c2262",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The article describes a new scientific finding that explains why heatwaves are more intense than predicted, with direct implications for North America, including Michigan.",
-        "storyKey": "heatwave-feedback-loop",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article describes a newly identified three-way feedback loop involving high-pressure systems, dry soil, and extreme heat that amplifies heatwaves by 10%, a factor not fully accounted for in current climate models. This mechanism helps explain why recent heat extremes have outstripped predictions and has implications for future heatwave intensity in regions including North America. This is a new finding and technical advance."
-      }
-    },
-    {
-      "id": "science-08a83d58613fad43",
-      "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
-      "summary": "The PBR theorem, experimentally confirmed multiple times, rules out the possibility that objective reality exists independently of observation while the quantum wave function is merely a state of knowledge. This forces physicists to either accept a surreal objective reality where quantum states are real physical properties or reject objective reality entirely, aligning with the Copenhagen interpretation.",
-      "finding": "The PBR theorem, experimentally confirmed multiple times, rules out the possibility that objective reality exists independently of observation while the quantum wave function is merely a state of knowledge. This forces physicists to either accept a surreal objective reality where quantum states are real physical properties or reject objective reality entirely, aligning with the Copenhagen interpretation.",
-      "significance": "The findings challenge the view that quantum states merely reflect incomplete knowledge of an underlying objective reality, compelling physicists to reconsider fundamental assumptions about the nature of the physical world.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
-      "primarySourceUrl": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
-      "source": {
-        "name": "Quanta Magazine"
-      },
-      "sourceGroup": "Quanta Magazine",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-06T15:48:54+00:00",
-      "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "physics"
-      ],
-      "entities": [
-        "Albert Einstein",
-        "John Stewart Bell",
-        "Matthew Pusey",
-        "Jonathan Barrett",
-        "Terry Rudolph"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-06T15:50:25Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-08T06:48:29.564149-05:00",
-        "expiresAt": "2026-11-11T06:48:29.564149-05:00",
-        "inputFacts": {
-          "id": "science-08a83d58613fad43",
-          "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
-          "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
-          "publishedAt": "2026-11-06T15:48:54Z",
-          "summary": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
-          "finding": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
-          "sourceUpdatedAt": "2026-11-06T15:50:25Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-06T15:48:54+00:00",
-        "datePrecision": "time",
-        "sourceHash": "e3f470c491c8ee40c93788ea2a150e93046011683062377569cebef324ddff16",
-        "relevance": 5,
-        "novelty": 4,
-        "reason": "This article discusses a significant development in quantum foundations, a core physics interest. The PBR theorem represents a consequential advance in understanding the nature of reality in quantum mechanics, moving beyond long-standing debates.",
-        "storyKey": "pbr-theorem-quantum-reality",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The summary accurately reflects the PBR theorem's implications as described in the article, including its experimental confirmation and the two extreme interpretations it forces upon physicists regarding objective reality and the quantum wave function."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-0a037ddef00bff3c",
+      "inputFacts": {
+        "id": "science-0a037ddef00bff3c",
+        "title": "Newly described insect may live its whole life on a spider’s web",
+        "url": "https://www.newscientist.com/article/2598153-newly-described-bug-lives-its-whole-life-on-a-spider-web",
+        "publishedAt": "2026-11-10T10:00:00Z",
+        "summary": "Researchers have identified a newly described web-loving true bug species, Heissophila sinica, that may spend its entire life cycle residing directly on spider webs.",
+        "finding": "Researchers have identified a newly described web-loving true bug species, Heissophila sinica, that may spend its entire life cycle residing directly on spider webs.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-10T10:00:00+00:00",
+      "publicationEvidence": "2026-11-10T10:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-ed72f46bb287cd6e",
+      "inputFacts": {
+        "id": "science-ed72f46bb287cd6e",
+        "title": "How neutrinos are beginning to reveal the secrets of our galaxy",
+        "url": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
+        "publishedAt": "2026-11-10T09:00:00Z",
+        "summary": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
+        "finding": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-10T09:00:00+00:00",
+      "publicationEvidence": "2026-11-10T09:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-901e4c6072cf569b",
+      "inputFacts": {
+        "id": "science-901e4c6072cf569b",
+        "title": "Curiosity Blog, Sols 5050-5055: It’s Nazca, Our 49th Drill Hole",
+        "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5050-5055-its-nazca-our-49th-drill-hole",
+        "publishedAt": "2026-11-10T01:05:48Z",
+        "summary": "NASA's Curiosity rover successfully drilled its 49th Martian hole, named Nazca, targeting rock containing potential crystal inclusions, and delivered the sample to the CheMin instrument.",
+        "finding": "NASA's Curiosity rover successfully drilled its 49th Martian hole, named Nazca, targeting rock containing potential crystal inclusions, and delivered the sample to the CheMin instrument.",
+        "sourceUpdatedAt": "2026-11-10T01:05:51Z"
+      },
+      "publishedAt": "2026-11-09T20:05:48-05:00",
+      "publicationEvidence": "2026-11-09T20:05:48-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-97ffe59ce15abb83",
+      "inputFacts": {
+        "id": "science-97ffe59ce15abb83",
+        "title": "Drugs like Ozempic may help reverse chronic kidney disease",
+        "url": "https://www.sciencenews.org/article/semaglutide-chronic-kidney-disease",
+        "publishedAt": "2026-11-09T16:00:00Z",
+        "summary": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
+        "finding": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
+        "sourceUpdatedAt": "2026-11-09T16:00:00Z"
+      },
+      "publishedAt": "2026-11-09T11:00:00-05:00",
+      "publicationEvidence": "2026-11-09T11:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-ae28a572f4f0fdc6",
+      "inputFacts": {
+        "id": "science-ae28a572f4f0fdc6",
+        "title": "Did Life Begin in an RNA World?",
+        "url": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109",
+        "publishedAt": "2026-11-09T15:20:29Z",
+        "summary": "Researchers identified a 45-nucleotide RNA molecule named QT45 that can copy another RNA strand, showing that self-replicating RNAs do not need to be several hundred nucleotides long.",
+        "finding": "Researchers identified a 45-nucleotide RNA molecule named QT45 that can copy another RNA strand, showing that self-replicating RNAs do not need to be several hundred nucleotides long.",
+        "sourceUpdatedAt": "2026-11-09T15:28:13Z"
+      },
+      "publishedAt": "2026-11-09T15:20:29+00:00",
+      "publicationEvidence": "2026-11-09T15:20:29+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-f7b623d516c9558f",
+      "inputFacts": {
+        "id": "science-f7b623d516c9558f",
+        "title": "A high-fiber diet may clear away plastic in the gut",
+        "url": "https://www.sciencenews.org/article/high-fiber-diet-nanoplastic-gut-health",
+        "publishedAt": "2026-11-09T14:00:00Z",
+        "summary": "In mice fed plastic particles, consuming medium- or high-fiber diets helped clear more particles from the gut within 24 hours and prevented gut tissue damage seen in low-fiber mice.",
+        "finding": "In mice fed plastic particles, consuming medium- or high-fiber diets helped clear more particles from the gut within 24 hours and prevented gut tissue damage seen in low-fiber mice.",
+        "sourceUpdatedAt": "2026-11-09T14:00:00Z"
+      },
+      "publishedAt": "2026-11-09T09:00:00-05:00",
+      "publicationEvidence": "2026-11-09T09:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-155d9f5cc0b5428b",
+      "inputFacts": {
+        "id": "science-155d9f5cc0b5428b",
+        "title": "Ozone Hole Reaches Its 2026 Maximum",
+        "url": "https://science.nasa.gov/earth/earth-observatory/ozone-hole-reaches-its-2026-maximum",
+        "publishedAt": "2026-11-09T05:00:00Z",
+        "summary": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
+        "finding": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
+        "sourceUpdatedAt": "2026-11-09T05:00:00Z"
+      },
+      "publishedAt": "2026-11-09T00:00:00-05:00",
+      "publicationEvidence": "2026-11-09T00:00:00-05:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-8ea0785cc9c63a50",
       "inputFacts": {
@@ -301,27 +408,12 @@
         "title": "Physicists listened to electrical noise to crack a superconductor mystery",
         "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
         "publishedAt": "2026-11-08T12:15:31Z",
-        "summary": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
-        "finding": "By measuring shot noise with scanning tunneling microscopy, physicists detected electron pairing at the pseudogap energy scale in a cuprate superconductor, supporting the idea that pre-formed pairs precede superconductivity.",
-        "sourceUpdatedAt": "2026-11-06T23:42:08Z"
+        "summary": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
+        "finding": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
+        "sourceUpdatedAt": "2026-11-09T13:13:29Z"
       },
       "publishedAt": "2026-11-08T12:15:31+00:00",
       "publicationEvidence": "2026-11-08T12:15:31+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-336af74c1de5a917",
-      "inputFacts": {
-        "id": "science-336af74c1de5a917",
-        "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
-        "url": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
-        "publishedAt": "2026-11-07T12:15:55Z",
-        "summary": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
-        "finding": "Linguistic and genetic evidence indicates that expanding Bantu speakers migrated through the Congo rainforest together, diverging into eastern and southern streams only after reaching its southern border.",
-        "sourceUpdatedAt": "2026-11-07T12:26:45Z"
-      },
-      "publishedAt": "2026-11-07T12:15:55+00:00",
-      "publicationEvidence": "2026-11-07T12:15:55+00:00",
       "datePrecision": "time"
     },
     {
@@ -370,21 +462,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-08a83d58613fad43",
-      "inputFacts": {
-        "id": "science-08a83d58613fad43",
-        "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
-        "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
-        "publishedAt": "2026-11-06T15:48:54Z",
-        "summary": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
-        "finding": "Theoretical work including the PBR theorem and subsequent experimental tests demonstrate that quantum mechanics is incompatible with Einstein's commonsense concept of an objective, local reality.",
-        "sourceUpdatedAt": "2026-11-06T15:50:25Z"
-      },
-      "publishedAt": "2026-11-06T15:48:54+00:00",
-      "publicationEvidence": "2026-11-06T15:48:54+00:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-f6c4f38b852e436b",
       "inputFacts": {
         "id": "science-f6c4f38b852e436b",
@@ -430,104 +507,104 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-155d9f5cc0b5428b",
+      "id": "science-1695ef8e6db7acbe",
       "inputFacts": {
-        "id": "science-155d9f5cc0b5428b",
-        "title": "Ozone Hole Reaches Its 2026 Maximum",
-        "url": "https://science.nasa.gov/earth/earth-observatory/ozone-hole-reaches-its-2026-maximum",
-        "publishedAt": "2026-11-09T05:00:00Z",
-        "summary": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
-        "finding": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
-        "sourceUpdatedAt": "2026-11-09T05:00:00Z"
+        "id": "science-1695ef8e6db7acbe",
+        "title": "Toxic secrets are hiding in Arctic ice",
+        "url": "https://www.sciencenews.org/article/toxic-secrets-hiding-arctic-ice-harm",
+        "publishedAt": "2026-11-10T10:00:00Z",
+        "summary": "Arctic ice cores reveal Industrial Revolution arsenic levels up to 15 times higher than pre-industrial levels, likely originating from a Montana copper smelting operation.",
+        "finding": "Arctic ice cores reveal Industrial Revolution arsenic levels up to 15 times higher than pre-industrial levels, likely originating from a Montana copper smelting operation.",
+        "sourceUpdatedAt": "2026-11-10T10:00:00Z"
       },
-      "publishedAt": "2026-11-09T00:00:00-05:00",
-      "publicationEvidence": "2026-11-09T00:00:00-05:00",
+      "publishedAt": "2026-11-10T05:00:00-05:00",
+      "publicationEvidence": "2026-11-10T05:00:00-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-4d1edc58dbf944a9",
+      "id": "science-fc400f5c232b380e",
       "inputFacts": {
-        "id": "science-4d1edc58dbf944a9",
-        "title": "APOD: 2026 November 8 – Major Fireball Meteor",
-        "url": "https://science.nasa.gov/image-article/apod-2026-november-8-major-fireball-meteor",
-        "publishedAt": "2026-11-08T05:05:00Z",
-        "summary": "A major fireball meteor tracked over Germany was consistent with originating near the radiant of the Northern Taurid Meteor Shower, which is linked to dust from Encke's comet.",
-        "finding": "A major fireball meteor tracked over Germany was consistent with originating near the radiant of the Northern Taurid Meteor Shower, which is linked to dust from Encke's comet.",
-        "sourceUpdatedAt": "2026-11-08T05:05:00Z"
+        "id": "science-fc400f5c232b380e",
+        "title": "Curiosity Blog, Sols 5056-5062: Charging Back Up!",
+        "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5056-5062-charging-back-up",
+        "publishedAt": "2026-11-10T01:07:45Z",
+        "summary": "NASA's Curiosity rover carried out an engineering test of activity parallelism by executing the CheMin data transfer simultaneously with an orbiter downlink communication window to conserve power.",
+        "finding": "NASA's Curiosity rover carried out an engineering test of activity parallelism by executing the CheMin data transfer simultaneously with an orbiter downlink communication window to conserve power.",
+        "sourceUpdatedAt": "2026-11-10T01:07:49Z"
       },
-      "publishedAt": "2026-11-08T00:05:00-05:00",
-      "publicationEvidence": "2026-11-08T00:05:00-05:00",
+      "publishedAt": "2026-11-09T20:07:45-05:00",
+      "publicationEvidence": "2026-11-09T20:07:45-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-fd086a89d7d7dd43",
+      "id": "science-19c6f2c923ddd7fb",
       "inputFacts": {
-        "id": "science-fd086a89d7d7dd43",
-        "title": "Record-breaking, fast-spinning magnet could help uncover new physics",
-        "url": "https://www.newscientist.com/article/2597816-record-breaking-fast-spinning-magnet-could-help-uncover-new-physics",
-        "publishedAt": "2026-11-06T19:00:00Z",
-        "summary": "Researchers have spun a levitating, 30-micrometre neodymium-iron-boron magnet trapped in a superconducting lead cylinder up to 138 million revolutions per minute.",
-        "finding": "Researchers have spun a levitating, 30-micrometre neodymium-iron-boron magnet trapped in a superconducting lead cylinder up to 138 million revolutions per minute.",
+        "id": "science-19c6f2c923ddd7fb",
+        "title": "Global carbon emissions set to fall in 2026 due to Iran energy shock",
+        "url": "https://www.newscientist.com/article/2598130-global-carbon-emissions-fall-in-2026-due-to-iran-energy-shock",
+        "publishedAt": "2026-11-10T01:00:00Z",
+        "summary": "Global carbon dioxide emissions from fossil fuels are projected to decrease by 0.4 percent in 2026, driven partly by an energy shock and oil price spike alongside renewable energy growth.",
+        "finding": "Global carbon dioxide emissions from fossil fuels are projected to decrease by 0.4 percent in 2026, driven partly by an energy shock and oil price spike alongside renewable energy growth.",
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-06T19:00:00+00:00",
-      "publicationEvidence": "2026-11-06T19:00:00+00:00",
+      "publishedAt": "2026-11-10T01:00:00+00:00",
+      "publicationEvidence": "2026-11-10T01:00:00+00:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-a0c2d1da562becd0",
+      "id": "science-e08f23602165bffd",
       "inputFacts": {
-        "id": "science-a0c2d1da562becd0",
-        "title": "Less than 4 minutes of vigorous exercise a day could halve your dementia risk",
-        "url": "https://www.newscientist.com/article/2597936-less-than-4-minutes-of-vigorous-exercise-a-day-could-half-your-dementia-risk",
-        "publishedAt": "2026-11-06T16:00:00Z",
-        "summary": "Accumulating around 3.7 minutes daily of vigorous incidental activity was linked to a 48 percent lower risk of dementia and higher brain grey matter volumes.",
-        "finding": "Accumulating around 3.7 minutes daily of vigorous incidental activity was linked to a 48 percent lower risk of dementia and higher brain grey matter volumes.",
-        "sourceUpdatedAt": "2026-11-06T17:10:14Z"
+        "id": "science-e08f23602165bffd",
+        "title": "Fossil fuel emissions are down in 2026. Green energy isn’t the reason",
+        "url": "https://www.sciencenews.org/article/fossil-fuel-emissions-down-2026-gas",
+        "publishedAt": "2026-11-10T01:00:00Z",
+        "summary": "Scientists project that global carbon dioxide emissions from fossil fuels will decrease by 0.4 percent in 2026, primarily driven by high oil prices from conflict rather than clean energy expansion.",
+        "finding": "Scientists project that global carbon dioxide emissions from fossil fuels will decrease by 0.4 percent in 2026, primarily driven by high oil prices from conflict rather than clean energy expansion.",
+        "sourceUpdatedAt": "2026-11-10T01:00:00Z"
       },
-      "publishedAt": "2026-11-06T16:00:00+00:00",
-      "publicationEvidence": "2026-11-06T16:00:00+00:00",
+      "publishedAt": "2026-11-09T20:00:00-05:00",
+      "publicationEvidence": "2026-11-09T20:00:00-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-5d4e55c9e90be96b",
+      "id": "science-427e7bb58879cf1b",
       "inputFacts": {
-        "id": "science-5d4e55c9e90be96b",
-        "title": "This armored amphibian once lived and hunted on the seafloor",
-        "url": "https://www.sciencenews.org/article/first-marine-amphibian-ancient-fossil",
-        "publishedAt": "2026-11-06T14:00:00Z",
-        "summary": "Chemical analysis of Gerrothorax maritimus fossils from the late Triassic indicates this armored amphibian lived and hunted in the ocean without access to land or freshwater.",
-        "finding": "Chemical analysis of Gerrothorax maritimus fossils from the late Triassic indicates this armored amphibian lived and hunted in the ocean without access to land or freshwater.",
-        "sourceUpdatedAt": "2026-11-06T14:00:00Z"
+        "id": "science-427e7bb58879cf1b",
+        "title": "Cold therapy may be worse than doing nothing for post-exercise recovery",
+        "url": "https://www.newscientist.com/article/2598085-cold-therapy-may-be-worse-than-doing-nothing-for-post-exercise-recovery",
+        "publishedAt": "2026-11-09T19:00:00Z",
+        "summary": "Adults who used ice baths after intense leg exercise exhibited elevated markers of muscle damage for longer and regained less muscle strength than those who practiced passive rest.",
+        "finding": "Adults who used ice baths after intense leg exercise exhibited elevated markers of muscle damage for longer and regained less muscle strength than those who practiced passive rest.",
+        "sourceUpdatedAt": "2026-11-10T08:51:22Z"
       },
-      "publishedAt": "2026-11-06T09:00:00-05:00",
-      "publicationEvidence": "2026-11-06T09:00:00-05:00",
+      "publishedAt": "2026-11-09T19:00:00+00:00",
+      "publicationEvidence": "2026-11-09T19:00:00+00:00",
       "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-08",
-      "selectedIds": [
-        "science-08a83d58613fad43",
-        "science-fc8dda36a9e816be",
-        "science-44ca837be7e31108"
-      ]
-    },
-    {
       "date": "2026-11-09",
       "selectedIds": [
-        "science-08a83d58613fad43",
-        "science-336af74c1de5a917",
-        "science-fc8dda36a9e816be"
+        "science-fc8dda36a9e816be",
+        "science-901e4c6072cf569b",
+        "science-97ffe59ce15abb83"
       ]
     },
     {
       "date": "2026-11-10",
       "selectedIds": [
-        "science-08a83d58613fad43",
         "science-8ea0785cc9c63a50",
-        "science-336af74c1de5a917"
+        "science-ed72f46bb287cd6e",
+        "science-901e4c6072cf569b"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "selectedIds": [
+        "science-ed72f46bb287cd6e",
+        "science-901e4c6072cf569b",
+        "science-97ffe59ce15abb83"
       ]
     }
   ]
