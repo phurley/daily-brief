@@ -1,68 +1,51 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-11-10T02:45:32.038Z",
+  "generatedAt": "2026-11-10T09:21:31.567Z",
   "days": [
     {
-      "date": "2026-11-09",
+      "date": "2026-11-10",
       "events": [
         {
-          "id": "occ-9ff3641f3dee25793864de1c",
-          "title": "The Ark’s Open Stage",
-          "summary": "Musicians and performers are invited to take the stage for eight minutes or two songs at The Ark's Open Stage night. This event offers a supportive audience for those looking to hone their skills or simply share their music.",
-          "url": "https://theark.org/event/the-arks-open-stage-261109/",
-          "start": "2026-11-09T20:00:00-05:00",
-          "venue": "The Ark",
+          "id": "occ-d4e084f9bdbc0596e960b895",
+          "title": "Graduate Workshop Series | History, Memory, Research, and Creative Practice with Dr. Haekyoung Lee",
+          "summary": "Explore modern Korean history, archival methodology, public history, and creative practice in this 5-part graduate workshop series. Led by Dr. Haekyoung Lee, it delves into historical connections and diasporic networks, offering insights for interdisciplinary graduate students.",
+          "url": "https://events.umich.edu/event/154231",
+          "start": "2026-11-10T16:00:00-05:00",
+          "venue": "Weiser Hall",
           "city": "Ann Arbor",
-          "price": "$3.00, students and Ark members free",
-          "category": "Event",
-          "imageUrl": "https://theark.org/wp-content/uploads/2021/10/ArkNew_8.jpeg",
-          "imageAlt": "The Ark’s Open Stage",
+          "category": "Lecture / Discussion",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_154231_original-1.jpg",
+          "imageAlt": "Graduate Workshop Series | History, Memory, Research, and Creative Practice with Dr. Haekyoung Lee",
           "status": "confirmed",
-          "occurrenceId": "occ-9ff3641f3dee25793864de1c",
-          "seriesId": "series-9d142a6c58181439f8087ef1",
-          "sourceUpdatedAt": "2026-09-18T17:39:45+00:00",
-          "priceMin": 3,
-          "priceMax": 3,
-          "priceCurrency": "USD",
-          "lastCheckedAt": "2026-11-09T02:56:21.983155-05:00",
-          "canonicalUrl": "https://theark.org/event/the-arks-open-stage-261109/",
-          "venueId": "the ark|ann arbor",
+          "occurrenceId": "occ-d4e084f9bdbc0596e960b895",
+          "seriesId": "series-7b020e8b808174f33a7da7de",
+          "sourceUpdatedAt": "2026-10-28T15:17:43-04:00",
+          "lastCheckedAt": "2026-11-10T03:47:51.776053-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/154231",
+          "venueId": "weiser hall|ann arbor",
           "timePrecision": "time",
-          "statusEvidence": "Organizer detail reviewed",
           "aliases": [
-            "src-0057bf30c5f86b933cb02614",
-            "src-d3d552581c0c7129dc9798b4",
-            "the-ark-s-open-stage-event-2026-11-09"
+            "graduate-workshop-series-history-memory-event-2026-11-10",
+            "src-b936dc0cf874d4551992c869"
           ],
           "legacyOccurrenceKeys": [
-            "src-0057bf30c5f86b933cb02614|2026-11-09T20:00:00-05:00",
-            "src-d3d552581c0c7129dc9798b4|2026-11-09T20:00:00-05:00",
-            "the-ark-s-open-stage-event-2026-11-09|2026-11-09T20:00:00-05:00"
+            "graduate-workshop-series-history-memory-event-2026-11-10|2026-11-10T16:00:00-05:00",
+            "src-b936dc0cf874d4551992c869|2026-11-10T16:00:00-05:00"
           ],
           "legacySeriesKeys": [
-            "series-32bb2229e522ea7c4695ac2d",
-            "series-9d142a6c58181439f8087ef1",
-            "series-bc7f7ba4ded5504674eca596",
-            "series-eeee164334daa9924297b79b",
-            "the ark’s open stage|the ark"
+            "series-02de976be3cfcdb5e7f61f35",
+            "series-7b020e8b808174f33a7da7de",
+            "series-d92f1ebdf54ea74e3c3b7917",
+            "series-fdad8c5b614d9e4bd61b3218"
           ],
           "sources": [
             {
-              "sourceRecordId": "src-0057bf30c5f86b933cb02614",
-              "sourceId": "the-ark",
-              "canonicalUrl": "https://theark.org/event/the-arks-open-stage-261109/",
-              "observedAt": "2026-10-09T19:21:20-04:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled",
-              "statusEvidence": "https://schema.org/EventScheduled"
-            },
-            {
-              "sourceRecordId": "src-d3d552581c0c7129dc9798b4",
-              "sourceId": "the-ark",
-              "canonicalUrl": "https://theark.org/event/the-arks-open-stage-261109/",
-              "observedAt": "2026-10-12T15:41:41-04:00",
-              "sourceUpdatedAt": "2026-09-18T17:39:45+00:00",
+              "sourceRecordId": "src-b936dc0cf874d4551992c869",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/154231",
+              "observedAt": "2026-10-29T13:14:42-04:00",
+              "sourceUpdatedAt": "2026-10-28T15:17:43-04:00",
               "sourceAuthority": "organizer",
               "status": "scheduled"
             }
@@ -70,96 +53,97 @@
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
-              "exact-title-time-venue"
+              "new-occurrence"
             ],
             "fields": {
-              "title": "src-0057bf30c5f86b933cb02614",
-              "start": "src-0057bf30c5f86b933cb02614",
-              "end": "src-0057bf30c5f86b933cb02614",
-              "venue": "src-0057bf30c5f86b933cb02614",
-              "url": "src-0057bf30c5f86b933cb02614",
-              "status": "src-0057bf30c5f86b933cb02614",
-              "imageUrl": "src-d3d552581c0c7129dc9798b4"
+              "title": "src-b936dc0cf874d4551992c869",
+              "start": "src-b936dc0cf874d4551992c869",
+              "end": "src-b936dc0cf874d4551992c869",
+              "venue": "src-b936dc0cf874d4551992c869",
+              "url": "src-b936dc0cf874d4551992c869",
+              "imageUrl": "src-b936dc0cf874d4551992c869",
+              "status": "src-b936dc0cf874d4551992c869"
             },
             "conflicts": {}
           },
-          "score": 81,
+          "score": 88,
           "scoring": {
             "signals": {
-              "funny": 0.38,
-              "distinctive": 0.25,
-              "eclectic": 0.58,
-              "technical_science": 0.03,
-              "artsy": 0.97,
-              "progressive": 0.34,
-              "outdoors": 0.02,
-              "theatre": 0.12,
-              "live_music": 0.65,
-              "live_comedy": 0.19,
-              "farmer_market": 0.02,
-              "sporting": 0.02,
-              "recurring": 0.84,
-              "craft_fair_shopping": 0.02,
-              "religious": 0.03,
-              "large_venue": 0.03,
-              "substance_recovery": 0.03,
-              "popular_music_cover_band": 0.07,
-              "market_or_shop": 0.02,
-              "punk_metal_or_rock": 0.13,
-              "dance": 0.07,
-              "sales_related": 0.12,
-              "children_activity": 0.03,
+              "funny": 0.04,
+              "distinctive": 0.65,
+              "eclectic": 0.78,
+              "technical_science": 0.05,
+              "artsy": 0.83,
+              "progressive": 0.64,
+              "outdoors": 0.01,
+              "theatre": 0.05,
+              "live_music": 0.02,
+              "live_comedy": 0.02,
+              "farmer_market": 0.01,
+              "sporting": 0.01,
+              "recurring": 0.46,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.02,
+              "large_venue": 0.05,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.01,
+              "market_or_shop": 0.01,
+              "punk_metal_or_rock": 0.01,
+              "dance": 0.02,
+              "sales_related": 0.07,
+              "children_activity": 0.01,
               "running": 0.01,
-              "exercise": 0.02,
+              "exercise": 0.01,
               "employment_related": 0.02
             },
-            "score": 81,
+            "score": 88,
             "rulesVersion": 2
           },
           "localityTier": "regional",
-          "experienceId": "experience:[\"ann arbor\",\"ark\",\"the ark s open stage\"]",
-          "end": "2026-11-09T23:00:00-05:00",
-          "registration": "Tickets available at the door only.",
-          "bookingUrl": "https://theark.org/event/the-arks-open-stage-261109/",
+          "experienceId": "experience:[\"ann arbor\",\"weiser hall\",\"graduate workshop series history memory research and creative practice with dr haekyoung lee\"]",
+          "price": "Free",
+          "bookingUrl": "",
+          "statusEvidence": "Organizer detail reviewed",
+          "priceMin": 0,
+          "priceMax": 0,
+          "priceCurrency": "USD",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-11-09T02:56:21.983155-05:00",
-            "expiresAt": "2026-11-10T02:56:21.983155-05:00",
-            "sourceUrl": "https://theark.org/event/the-arks-open-stage-261109/",
-            "sourceHash": "98da7ef5131d08c263b69a8c5ea318cdb2ec117df43825890b8a158c424a5950",
+            "reviewedAt": "2026-11-10T03:47:51.776053-05:00",
+            "expiresAt": "2026-11-11T03:47:51.776053-05:00",
+            "sourceUrl": "https://events.umich.edu/event/154231",
+            "sourceHash": "43c1a10f771d7f6991ace3715b1ec57f553e25241442e679811e30fcaeee1089",
             "inputFacts": {
-              "id": "occ-9ff3641f3dee25793864de1c",
-              "url": "https://theark.org/event/the-arks-open-stage-261109/",
-              "start": "2026-11-09T20:00:00-05:00",
-              "end": "2026-11-09T23:00:00-05:00",
-              "venue": "The Ark",
+              "id": "occ-d4e084f9bdbc0596e960b895",
+              "url": "https://events.umich.edu/event/154231",
+              "start": "2026-11-10T16:00:00-05:00",
+              "end": "2026-11-10T17:00:00-05:00",
+              "venue": "Weiser Hall",
               "city": "Ann Arbor",
-              "price": "$3.00, students and Ark members free",
+              "price": null,
               "status": "scheduled"
             },
             "evidence": {
-              "date": "November 09 2026",
-              "time": "8:00 pm",
-              "venue": "The Ark",
-              "admission": "{\"@type\": \"Offer\", \"price\": \"3.00, students and Ark members free\", \"priceCurrency\": \"USD\", \"url\": \"https://theark.org/event/the-arks-open-stage-261109/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-09-18T00:00:00+00:00\"}",
-              "description": "Whether you’re looking for your big break, want to perfect your live performance skills, or just want to perform live for the sheer fun of it, Open Stage nights offer supportive audiences and a terrific space.",
-              "registration": "Tickets available at the door only.",
-              "end": "2026-11-09T23:00:00-05:00"
+              "date": "Nov 10 2026",
+              "time": "4:00pm",
+              "venue": "Weiser Hall",
+              "admission": "Free",
+              "description": "This is a 5-part Graduate Workshop Series led by Dr. Haekyoung Lee, Professor Emerita of Theater Arts at Kookmin University. Designed for graduate students across disciplines, this series explores modern Korean history, archival methodology, public history, and creative practice."
             }
           },
-          "reviewExpiresAt": "2026-11-10T02:56:21.983155-05:00",
+          "reviewExpiresAt": "2026-11-11T03:47:51.776053-05:00",
           "recommendation": {
-            "occurrenceId": "occ-9ff3641f3dee25793864de1c",
-            "score": 97,
+            "occurrenceId": "occ-d4e084f9bdbc0596e960b895",
+            "score": 104,
             "components": {
-              "taste": 81,
+              "taste": 88,
               "practicality": 12,
               "novelty": 0,
               "quality": 4
             },
             "reasons": [
-              "artsy +10",
-              "eclectic +9",
+              "distinctive +16",
+              "eclectic +12",
               "Available on selected day +12",
               "Confirmed/recent source information +4"
             ],
@@ -167,12 +151,7 @@
               "Distance unknown"
             ]
           }
-        }
-      ]
-    },
-    {
-      "date": "2026-11-10",
-      "events": [
+        },
         {
           "id": "occ-832ae9405482de70eaf7c1f3",
           "title": "Veterans for Peace Concert",
@@ -192,40 +171,46 @@
           "priceMin": 24,
           "priceMax": 24,
           "priceCurrency": "USD",
-          "lastCheckedAt": "2026-11-09T02:56:21.983155-05:00",
+          "availability": "inStock",
+          "lastCheckedAt": "2026-11-10T03:47:51.776053-05:00",
           "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
           "venueId": "the ark|ann arbor",
           "timePrecision": "time",
           "statusEvidence": "Organizer detail reviewed",
           "aliases": [
-            "src-141a6ec6461aa8252f0731dc",
-            "src-50eecaa5f9aad17c34b07e88",
-            "src-a293c7c0c5a752357528b363",
-            "src-af9d2d58e883ca9c5e964b0a",
+            "src-08e55287cc885487bc574877",
+            "src-3ae09c245ad7a9f7c1256292",
+            "src-590de7df5cae6c1739dbc164",
+            "src-7e0ddf6d3d557e2218815080",
+            "src-bb3f7eec4a35940d92573b4d",
             "veterans-for-peace-concert-event-2026-11-10"
           ],
           "legacyOccurrenceKeys": [
+            "occ-3bd6b76105e280ead7484a51",
             "occ-c8565dc089714a7d6cd68b09",
             "occ-cabd8967866ea0ab42879252",
-            "src-141a6ec6461aa8252f0731dc|2026-11-10T19:30:00-05:00",
-            "src-50eecaa5f9aad17c34b07e88|2026-11-10T19:30:00-05:00",
+            "src-08e55287cc885487bc574877|2026-11-10T19:30:00-05:00",
+            "src-3ae09c245ad7a9f7c1256292|2026-11-10T19:30:00-05:00",
+            "src-590de7df5cae6c1739dbc164|2026-11-10T19:30:00-05:00",
+            "src-7e0ddf6d3d557e2218815080|2026-11-10T19:30:00-05:00",
             "src-8d879a50e0e2a79c3eea0ec3|2026-11-10T20:00:00-05:00",
-            "src-a293c7c0c5a752357528b363|2026-11-10T19:30:00-05:00",
+            "src-9f92792332f1c7bc6b175edc|2026-11-10T20:00:00-05:00",
             "src-a364e2092ad41f06fffedcfd|2026-11-10T20:00:00-05:00",
-            "src-af9d2d58e883ca9c5e964b0a|2026-11-10T19:30:00-05:00",
+            "src-bb3f7eec4a35940d92573b4d|2026-11-10T19:30:00-05:00",
             "veterans-for-peace-concert-event-2026-11-10|2026-11-10T19:30:00-05:00",
             "veterans-for-peace-concert-event-2026-11-10|2026-11-10T20:00:00-05:00"
           ],
           "legacySeriesKeys": [
             "series-2bc95f739f9d7fe2f3a98127",
             "series-4def36028226ca9de9c132d1",
+            "series-89b19c9870a3b15a06217bf1",
             "veterans for peace concert|ark, 316 s. main, ann arbor",
             "veterans for peace concert|the ark",
             "“veterans for peace concert.”|ark"
           ],
           "sources": [
             {
-              "sourceRecordId": "src-a293c7c0c5a752357528b363",
+              "sourceRecordId": "src-bb3f7eec4a35940d92573b4d",
               "sourceId": "the-ark",
               "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
               "observedAt": "2026-11-05T13:19:34-05:00",
@@ -234,7 +219,7 @@
               "status": "scheduled"
             },
             {
-              "sourceRecordId": "src-141a6ec6461aa8252f0731dc",
+              "sourceRecordId": "src-590de7df5cae6c1739dbc164",
               "sourceId": "the-ark",
               "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
               "observedAt": "2026-10-24T02:32:14-04:00",
@@ -243,7 +228,7 @@
               "status": "scheduled"
             },
             {
-              "sourceRecordId": "src-50eecaa5f9aad17c34b07e88",
+              "sourceRecordId": "src-08e55287cc885487bc574877",
               "sourceId": "the-ark",
               "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
               "observedAt": "2026-10-09T19:21:20-04:00",
@@ -252,7 +237,7 @@
               "statusEvidence": "https://schema.org/EventScheduled"
             },
             {
-              "sourceRecordId": "src-af9d2d58e883ca9c5e964b0a",
+              "sourceRecordId": "src-7e0ddf6d3d557e2218815080",
               "sourceId": "the-ark",
               "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
               "observedAt": "2026-10-12T15:41:41-04:00",
@@ -261,7 +246,7 @@
               "status": "scheduled"
             },
             {
-              "sourceRecordId": "src-1ae96d2483e4e6048a317755",
+              "sourceRecordId": "src-3ae09c245ad7a9f7c1256292",
               "sourceId": "the-ark",
               "canonicalUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
               "observedAt": "2026-10-02T17:14:22-04:00",
@@ -271,17 +256,16 @@
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
-              "exact-title-time-venue",
-              "new-occurrence"
+              "exact-title-time-venue"
             ],
             "fields": {
-              "title": "src-a293c7c0c5a752357528b363",
-              "start": "src-a293c7c0c5a752357528b363",
-              "end": "src-a293c7c0c5a752357528b363",
-              "venue": "src-a293c7c0c5a752357528b363",
-              "url": "src-a293c7c0c5a752357528b363",
-              "imageUrl": "src-a293c7c0c5a752357528b363",
-              "status": "src-50eecaa5f9aad17c34b07e88"
+              "title": "src-bb3f7eec4a35940d92573b4d",
+              "start": "src-bb3f7eec4a35940d92573b4d",
+              "end": "src-bb3f7eec4a35940d92573b4d",
+              "venue": "src-bb3f7eec4a35940d92573b4d",
+              "url": "src-bb3f7eec4a35940d92573b4d",
+              "imageUrl": "src-bb3f7eec4a35940d92573b4d",
+              "status": "src-08e55287cc885487bc574877"
             },
             "conflicts": {}
           },
@@ -325,8 +309,8 @@
           "bookingUrl": "https://mutotix.umich.edu/6764",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-11-09T02:56:21.983155-05:00",
-            "expiresAt": "2026-11-10T02:56:21.983155-05:00",
+            "reviewedAt": "2026-11-10T03:47:51.776053-05:00",
+            "expiresAt": "2026-11-11T03:47:51.776053-05:00",
             "sourceUrl": "https://theark.org/event/veterans-for-peace-concert-261110/",
             "sourceHash": "1c7b79709d5ae4ed9809319231fad4c7ef648e7a5069b03b3a5ef463f504a63e",
             "inputFacts": {
@@ -349,7 +333,7 @@
               "end": "2026-11-10T23:00:00-05:00"
             }
           },
-          "reviewExpiresAt": "2026-11-10T02:56:21.983155-05:00",
+          "reviewExpiresAt": "2026-11-11T03:47:51.776053-05:00",
           "recommendation": {
             "occurrenceId": "occ-832ae9405482de70eaf7c1f3",
             "score": 103,
@@ -371,78 +355,38 @@
           }
         },
         {
-          "id": "occ-e8832ca9540ef2d486f988d4",
-          "title": "Saxophone Studio Chamber Recital",
-          "summary": "Experience an evening of classical saxophone chamber music performed by students of Professor Timothy McAllister. The program features quartets and large ensembles playing works by various composers, offering a diverse showcase of the instrument's capabilities.",
-          "url": "https://events.umich.edu/event/153269",
-          "start": "2026-11-10T20:00:00-05:00",
-          "venue": "Earl V. Moore Building",
+          "id": "occ-c2d480d8dea27418f28530d4",
+          "title": "MCSP/AADL Film Series: In the Belly of AI",
+          "summary": "Explore the hidden environmental and human costs of artificial intelligence in this film screening. The event delves into the often-unseen labor and resource consumption behind AI technologies, offering a critical perspective on its development.",
+          "url": "https://events.umich.edu/event/153533",
+          "start": "2026-11-10T18:00:00-05:00",
+          "venue": "Ann Arbor District Library Downtown, 343 S. Fifth Avenue, Ann Arbor",
           "city": "Ann Arbor",
-          "price": "Free",
-          "category": "Performance",
-          "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153269_original-2.jpg",
-          "imageAlt": "Saxophone Studio Chamber Recital",
+          "category": "Film Screening",
+          "imageUrl": "http://events.umich.edu/default-image.png",
+          "imageAlt": "MCSP/AADL Film Series: In the Belly of AI",
           "status": "confirmed",
-          "occurrenceId": "occ-e8832ca9540ef2d486f988d4",
-          "seriesId": "series-222ac065f8aaf38972ef678e",
-          "sourceUpdatedAt": "2026-11-06T12:16:51-05:00",
-          "lastCheckedAt": "2026-11-09T02:56:21.983155-05:00",
-          "canonicalUrl": "https://events.umich.edu/event/153269",
-          "venueId": "earl v moore building|ann arbor",
+          "occurrenceId": "occ-c2d480d8dea27418f28530d4",
+          "seriesId": "series-70695acc14b49abc4f87685d",
+          "canonicalUrl": "https://events.umich.edu/event/153533",
+          "venueId": "ann arbor district library downtown|ann arbor",
           "timePrecision": "time",
           "aliases": [
-            "saxophone-studio-chamber-recital-event-2026-11-10",
-            "saxophone-studio-recital-event-2026-11-10",
-            "src-61fef239875ffc38b8c37764",
-            "src-8e7c5e3ebf72ce01e88c3291",
-            "src-9663769dc63d0583d34f362d",
-            "src-9de3e4321e2ebe5771bb70db"
+            "src-a0bb26581eb6c3842f3f39ab"
           ],
           "legacyOccurrenceKeys": [
-            "saxophone-studio-chamber-recital-event-2026-11-10|2026-11-10T20:00:00-05:00",
-            "saxophone-studio-recital-event-2026-11-10|2026-11-10T20:00:00-05:00",
-            "src-61fef239875ffc38b8c37764|2026-11-10T20:00:00-05:00",
-            "src-8e7c5e3ebf72ce01e88c3291|2026-11-10T20:00:00-05:00",
-            "src-9663769dc63d0583d34f362d|2026-11-10T20:00:00-05:00",
-            "src-9de3e4321e2ebe5771bb70db|2026-11-10T20:00:00-05:00"
+            "src-a0bb26581eb6c3842f3f39ab|2026-11-10T18:00:00-05:00"
           ],
           "legacySeriesKeys": [
-            "series-222ac065f8aaf38972ef678e"
+            "mcsp/aadl film series: in the belly of ai|ann arbor district library downtown",
+            "series-70695acc14b49abc4f87685d"
           ],
           "sources": [
             {
-              "sourceRecordId": "src-9663769dc63d0583d34f362d",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/153269",
-              "observedAt": "2026-11-07T01:38:58-05:00",
-              "sourceUpdatedAt": "2026-11-06T12:16:51-05:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            },
-            {
-              "sourceRecordId": "src-8e7c5e3ebf72ce01e88c3291",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/153269",
-              "observedAt": "2026-11-05T13:19:34-05:00",
-              "sourceUpdatedAt": "2026-11-02T18:17:07-05:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            },
-            {
-              "sourceRecordId": "src-9de3e4321e2ebe5771bb70db",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/153269",
-              "observedAt": "2026-10-14T23:41:11-04:00",
-              "sourceUpdatedAt": "2026-10-14T12:17:32-04:00",
-              "sourceAuthority": "organizer",
-              "status": "scheduled"
-            },
-            {
-              "sourceRecordId": "src-61fef239875ffc38b8c37764",
-              "sourceId": "happening-at-michigan",
-              "canonicalUrl": "https://events.umich.edu/event/153269",
-              "observedAt": "2026-10-12T15:41:41-04:00",
-              "sourceUpdatedAt": "2026-10-05T12:18:11-04:00",
+              "sourceRecordId": "src-a0bb26581eb6c3842f3f39ab",
+              "sourceId": "university-of-michigan-museum-of-natural-history",
+              "canonicalUrl": "https://events.umich.edu/event/153533",
+              "observedAt": "2026-11-10T03:24:46-05:00",
               "sourceAuthority": "organizer",
               "status": "scheduled"
             }
@@ -450,57 +394,207 @@
           "identity": {
             "ruleVersion": "occurrence-v1",
             "reasons": [
-              "native-occurrence",
               "new-occurrence"
             ],
             "fields": {
-              "title": "src-9663769dc63d0583d34f362d",
-              "start": "src-9663769dc63d0583d34f362d",
-              "end": "src-9663769dc63d0583d34f362d",
-              "venue": "src-9663769dc63d0583d34f362d",
-              "url": "src-9663769dc63d0583d34f362d",
-              "imageUrl": "src-9663769dc63d0583d34f362d",
-              "status": "src-9663769dc63d0583d34f362d"
+              "status": "src-a0bb26581eb6c3842f3f39ab",
+              "title": "src-a0bb26581eb6c3842f3f39ab",
+              "start": "src-a0bb26581eb6c3842f3f39ab",
+              "venue": "src-a0bb26581eb6c3842f3f39ab",
+              "url": "src-a0bb26581eb6c3842f3f39ab",
+              "imageUrl": "src-a0bb26581eb6c3842f3f39ab"
             },
             "conflicts": {}
           },
-          "score": 81,
+          "score": 83,
           "scoring": {
             "signals": {
-              "funny": 0.06,
-              "distinctive": 0.38,
-              "eclectic": 0.17,
-              "technical_science": 0.05,
-              "artsy": 0.99,
-              "progressive": 0.38,
+              "funny": 0.28,
+              "distinctive": 0.34,
+              "eclectic": 0.22,
+              "technical_science": 0.81,
+              "artsy": 0.92,
+              "progressive": 0.62,
               "outdoors": 0.02,
               "theatre": 0.04,
-              "live_music": 0.98,
-              "live_comedy": 0.01,
-              "farmer_market": 0.01,
-              "sporting": 0.01,
-              "recurring": 0.18,
+              "live_music": 0.02,
+              "live_comedy": 0.02,
+              "farmer_market": 0.02,
+              "sporting": 0.02,
+              "recurring": 0.28,
               "craft_fair_shopping": 0.02,
-              "religious": 0.02,
-              "large_venue": 0.03,
+              "religious": 0.03,
+              "large_venue": 0.04,
               "substance_recovery": 0.01,
               "popular_music_cover_band": 0.02,
               "market_or_shop": 0.02,
               "punk_metal_or_rock": 0.02,
               "dance": 0.02,
-              "sales_related": 0.08,
-              "children_activity": 0.03,
+              "sales_related": 0.06,
+              "children_activity": 0.05,
               "running": 0.01,
               "exercise": 0.02,
               "employment_related": 0.02
             },
-            "score": 81,
+            "score": 83,
             "rulesVersion": 2
           },
           "localityTier": "regional",
-          "experienceId": "experience:[\"ann arbor\",\"earl v moore building\",\"saxophone studio chamber recital\"]",
-          "end": "2026-11-10T21:30:00-05:00",
-          "registration": "no tickets required",
+          "experienceId": "experience:[\"ann arbor\",\"ann arbor district library downtown\",\"mcsp aadl film series in the belly of ai\"]",
+          "price": "Free",
+          "end": "2026-11-10T19:30:00-05:00",
+          "bookingUrl": "",
+          "statusEvidence": "Organizer detail reviewed",
+          "lastCheckedAt": "2026-11-10T03:47:51.776053-05:00",
+          "priceMin": 0,
+          "priceMax": 0,
+          "priceCurrency": "USD",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-10T03:47:51.776053-05:00",
+            "expiresAt": "2026-11-11T03:47:51.776053-05:00",
+            "sourceUrl": "https://events.umich.edu/event/153533",
+            "sourceHash": "eede52df2d3aacf85c4afd68dd153e668d8392ba6320cf7517fb7764d7447c08",
+            "inputFacts": {
+              "id": "occ-c2d480d8dea27418f28530d4",
+              "url": "https://events.umich.edu/event/153533",
+              "start": "2026-11-10T18:00:00-05:00",
+              "end": null,
+              "venue": "Ann Arbor District Library Downtown",
+              "city": "Ann Arbor",
+              "price": null,
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "Nov 10 2026",
+              "time": "6:00pm",
+              "venue": "Ann Arbor District Library Downtown, 343 S. Fifth Avenue, Ann Arbor",
+              "admission": "Free",
+              "description": "Artificial Intelligence fuels our dreams and nightmares. But while tech giants promise the advent of a new humanity, behind the scenes AI remains totally hidden. While data centers concrete over landscapes and dry up rivers, millions of workers around the world prepare the billions of data that will feed Big Tech's voracious algorithms, at the cost of their mental and emotional health. They are hidden 'in the belly' of AI.\n\nJoin community members and friends of MCSP for this screening of a film that looks beyond the headline grabbing threats of AI to the environmental and human costs.",
+              "end": "7:30pm"
+            }
+          },
+          "reviewExpiresAt": "2026-11-11T03:47:51.776053-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-c2d480d8dea27418f28530d4",
+            "score": 99,
+            "components": {
+              "taste": 83,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "technical science +11",
+              "artsy +9",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "events": [
+        {
+          "id": "occ-e0de531499b7b598a418eb74",
+          "title": "Cookies, Crafts, & Climate",
+          "summary": "Join the Center for Campus Involvement for an afternoon of crafting and conversation. Make climate stripes friendship bracelets, enjoy fall treats, and connect with others interested in sustainability and environmental issues.",
+          "url": "https://events.umich.edu/event/154478",
+          "start": "2026-11-11T16:00:00-05:00",
+          "venue": "Michigan Union",
+          "city": "Ann Arbor",
+          "category": "Social / Informal Gathering",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/11/event_154478_original-1.png",
+          "imageAlt": "Cookies, Crafts, & Climate",
+          "status": "confirmed",
+          "occurrenceId": "occ-e0de531499b7b598a418eb74",
+          "seriesId": "series-9bdb5efaa31bacb4835b0474",
+          "sourceUpdatedAt": "2026-11-04T21:29:19-05:00",
+          "lastCheckedAt": "2026-11-10T03:47:51.776053-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/154478",
+          "venueId": "michigan union|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "cookies-crafts-climate-event-2026-11-11",
+            "src-2b5a5b81892b5d551d0d7dfa"
+          ],
+          "legacyOccurrenceKeys": [
+            "cookies-crafts-climate-event-2026-11-11|2026-11-11T16:00:00-05:00",
+            "src-2b5a5b81892b5d551d0d7dfa|2026-11-11T16:00:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "series-9bdb5efaa31bacb4835b0474"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-2b5a5b81892b5d551d0d7dfa",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/154478",
+              "observedAt": "2026-11-05T13:19:34-05:00",
+              "sourceUpdatedAt": "2026-11-04T21:29:19-05:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-2b5a5b81892b5d551d0d7dfa",
+              "start": "src-2b5a5b81892b5d551d0d7dfa",
+              "end": "src-2b5a5b81892b5d551d0d7dfa",
+              "venue": "src-2b5a5b81892b5d551d0d7dfa",
+              "url": "src-2b5a5b81892b5d551d0d7dfa",
+              "imageUrl": "src-2b5a5b81892b5d551d0d7dfa",
+              "status": "src-2b5a5b81892b5d551d0d7dfa"
+            },
+            "conflicts": {}
+          },
+          "score": 92,
+          "scoring": {
+            "signals": {
+              "funny": 0.54,
+              "distinctive": 0.47,
+              "eclectic": 0.67,
+              "technical_science": 0.48,
+              "artsy": 0.88,
+              "progressive": 0.81,
+              "outdoors": 0.04,
+              "theatre": 0.02,
+              "live_music": 0.02,
+              "live_comedy": 0.02,
+              "farmer_market": 0.02,
+              "sporting": 0.02,
+              "recurring": 0.16,
+              "craft_fair_shopping": 0.07,
+              "religious": 0.02,
+              "large_venue": 0.06,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.03,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.02,
+              "sales_related": 0.05,
+              "children_activity": 0.05,
+              "running": 0.01,
+              "exercise": 0.02,
+              "employment_related": 0.02
+            },
+            "score": 92,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"michigan union\",\"cookies crafts climate\"]",
+          "price": "Free",
+          "end": "2026-11-11T18:00:00-05:00",
+          "registration": "Students interested in sustainability, climate change, and the environment are invited to join the Center for Campus Involvement in making climate stripes friendship bracelets while snacking on some fall treats!",
           "bookingUrl": "",
           "statusEvidence": "Organizer detail reviewed",
           "priceMin": 0,
@@ -508,43 +602,43 @@
           "priceCurrency": "USD",
           "editorial": {
             "state": "verified",
-            "reviewedAt": "2026-11-09T02:56:21.983155-05:00",
-            "expiresAt": "2026-11-10T02:56:21.983155-05:00",
-            "sourceUrl": "https://events.umich.edu/event/153269",
-            "sourceHash": "df0fdb86365d934fc3f562d563aa22d7b332a98323a5a2c6b27ccbe141a440e6",
+            "reviewedAt": "2026-11-10T03:47:51.776053-05:00",
+            "expiresAt": "2026-11-11T03:47:51.776053-05:00",
+            "sourceUrl": "https://events.umich.edu/event/154478",
+            "sourceHash": "3365ef4dc52d3cf74b2fdfd20fdf3ea4037b1f571e205b14d64d208b31a5bf87",
             "inputFacts": {
-              "id": "occ-e8832ca9540ef2d486f988d4",
-              "url": "https://events.umich.edu/event/153269",
-              "start": "2026-11-10T20:00:00-05:00",
-              "end": "2026-11-10T21:30:00-05:00",
-              "venue": "Earl V. Moore Building",
+              "id": "occ-e0de531499b7b598a418eb74",
+              "url": "https://events.umich.edu/event/154478",
+              "start": "2026-11-11T16:00:00-05:00",
+              "end": "2026-11-11T18:00:00-05:00",
+              "venue": "Michigan Union",
               "city": "Ann Arbor",
-              "price": "Free - no tickets required",
+              "price": null,
               "status": "scheduled"
             },
             "evidence": {
-              "date": "Tue, Nov 10",
-              "time": "8:00pm",
-              "venue": "Earl V. Moore Building",
-              "admission": "Free - no tickets required",
-              "description": "Join the classical saxophone studio in an evening of chamber music written for the saxophone! Students of Professor Timothy McAllister perform in quartet and large saxophone ensemble settings. Music from composers Jennifer Higdon, Viet Cuong, Fernande Decruck, William Bolcom, Gabriel Pierne, and Tianci Lu.",
-              "registration": "no tickets required",
-              "end": "9:30pm"
+              "date": "Wed, Nov 11",
+              "time": "4:00pm",
+              "venue": "Michigan Union",
+              "admission": "Free",
+              "description": "Students interested in sustainability, climate change, and the environment are invited to join the Center for Campus Involvement in making climate stripes friendship bracelets while snacking on some fall treats!",
+              "registration": "Students interested in sustainability, climate change, and the environment are invited to join the Center for Campus Involvement in making climate stripes friendship bracelets while snacking on some fall treats!",
+              "end": "6:00pm"
             }
           },
-          "reviewExpiresAt": "2026-11-10T02:56:21.983155-05:00",
+          "reviewExpiresAt": "2026-11-11T03:47:51.776053-05:00",
           "recommendation": {
-            "occurrenceId": "occ-e8832ca9540ef2d486f988d4",
-            "score": 97,
+            "occurrenceId": "occ-e0de531499b7b598a418eb74",
+            "score": 108,
             "components": {
-              "taste": 81,
+              "taste": 92,
               "practicality": 12,
               "novelty": 0,
               "quality": 4
             },
             "reasons": [
-              "live music +12",
-              "artsy +10",
+              "distinctive +11",
+              "eclectic +11",
               "Available on selected day +12",
               "Confirmed/recent source information +4"
             ],
