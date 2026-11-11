@@ -1,15 +1,641 @@
 {
   "schemaVersion": "1.0.0",
   "rankingVersion": 1,
-  "generatedAt": "2026-11-11T09:03:00.184Z",
+  "generatedAt": "2026-11-11T09:40:18.219Z",
   "days": [
     {
       "date": "2026-11-11",
-      "events": []
+      "events": [
+        {
+          "id": "occ-e0de531499b7b598a418eb74",
+          "title": "Cookies, Crafts, & Climate",
+          "summary": "Join the Center for Campus Involvement for an afternoon of sustainability-focused crafts. Make climate stripes friendship bracelets and enjoy fall treats while learning about environmental issues. This event is open to students interested in climate change and the environment.",
+          "url": "https://events.umich.edu/event/154478",
+          "start": "2026-11-11T16:00:00-05:00",
+          "venue": "Michigan Union",
+          "city": "Ann Arbor",
+          "category": "Social / Informal Gathering",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/11/event_154478_original-1.png",
+          "imageAlt": "Cookies, Crafts, & Climate",
+          "status": "confirmed",
+          "occurrenceId": "occ-e0de531499b7b598a418eb74",
+          "seriesId": "series-9bdb5efaa31bacb4835b0474",
+          "sourceUpdatedAt": "2026-11-04T21:29:19-05:00",
+          "lastCheckedAt": "2026-11-11T04:26:16.498954-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/154478",
+          "venueId": "michigan union|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "cookies-crafts-climate-event-2026-11-11",
+            "src-2b5a5b81892b5d551d0d7dfa"
+          ],
+          "legacyOccurrenceKeys": [
+            "cookies-crafts-climate-event-2026-11-11|2026-11-11T16:00:00-05:00",
+            "src-2b5a5b81892b5d551d0d7dfa|2026-11-11T16:00:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "series-9bdb5efaa31bacb4835b0474"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-2b5a5b81892b5d551d0d7dfa",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/154478",
+              "observedAt": "2026-11-05T13:19:34-05:00",
+              "sourceUpdatedAt": "2026-11-04T21:29:19-05:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-2b5a5b81892b5d551d0d7dfa",
+              "start": "src-2b5a5b81892b5d551d0d7dfa",
+              "end": "src-2b5a5b81892b5d551d0d7dfa",
+              "venue": "src-2b5a5b81892b5d551d0d7dfa",
+              "url": "src-2b5a5b81892b5d551d0d7dfa",
+              "imageUrl": "src-2b5a5b81892b5d551d0d7dfa",
+              "status": "src-2b5a5b81892b5d551d0d7dfa"
+            },
+            "conflicts": {}
+          },
+          "score": 92,
+          "scoring": {
+            "signals": {
+              "funny": 0.54,
+              "distinctive": 0.47,
+              "eclectic": 0.67,
+              "technical_science": 0.48,
+              "artsy": 0.88,
+              "progressive": 0.81,
+              "outdoors": 0.04,
+              "theatre": 0.02,
+              "live_music": 0.02,
+              "live_comedy": 0.02,
+              "farmer_market": 0.02,
+              "sporting": 0.02,
+              "recurring": 0.16,
+              "craft_fair_shopping": 0.07,
+              "religious": 0.02,
+              "large_venue": 0.06,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.03,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.02,
+              "sales_related": 0.05,
+              "children_activity": 0.05,
+              "running": 0.01,
+              "exercise": 0.02,
+              "employment_related": 0.02
+            },
+            "score": 92,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"michigan union\",\"cookies crafts climate\"]",
+          "price": "Free",
+          "end": "2026-11-11T18:00:00-05:00",
+          "bookingUrl": "",
+          "statusEvidence": "Organizer detail reviewed",
+          "priceMin": 0,
+          "priceMax": 0,
+          "priceCurrency": "USD",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-11T04:26:16.498954-05:00",
+            "expiresAt": "2026-11-12T04:26:16.498954-05:00",
+            "sourceUrl": "https://events.umich.edu/event/154478",
+            "sourceHash": "3365ef4dc52d3cf74b2fdfd20fdf3ea4037b1f571e205b14d64d208b31a5bf87",
+            "inputFacts": {
+              "id": "occ-e0de531499b7b598a418eb74",
+              "url": "https://events.umich.edu/event/154478",
+              "start": "2026-11-11T16:00:00-05:00",
+              "end": "2026-11-11T18:00:00-05:00",
+              "venue": "Michigan Union",
+              "city": "Ann Arbor",
+              "price": null,
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "Wed, Nov 11 2026",
+              "time": "4:00pm",
+              "venue": "Michigan Union",
+              "admission": "Free",
+              "description": "Students interested in sustainability, climate change, and the environment are invited to join the Center for Campus Involvement in making climate stripes friendship bracelets while snacking on some fall treats!",
+              "end": "6:00pm"
+            }
+          },
+          "reviewExpiresAt": "2026-11-12T04:26:16.498954-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-e0de531499b7b598a418eb74",
+            "score": 108,
+            "components": {
+              "taste": 92,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "distinctive +11",
+              "eclectic +11",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        }
+      ]
     },
     {
       "date": "2026-11-12",
-      "events": []
+      "events": [
+        {
+          "id": "occ-e477e41c6c4854e9d542ae03",
+          "title": "Last Call Improv",
+          "summary": "Experience an unpredictable, one-of-a-kind improv comedy show featuring a rotating lineup of troupes and a headliner performing long-form sets. This late-night staple promises high-energy laughs and experimental forms for an engaging live performance.",
+          "url": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-12T21%3A00%3A00.000-05%3A00",
+          "start": "2026-11-12T21:00:00-05:00",
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "city": "Hamtramck",
+          "price": "Free",
+          "category": "Comedy",
+          "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/19466/lastcall-eventpage__2_.png",
+          "imageAlt": "Last Call Improv | FREE!",
+          "status": "confirmed",
+          "occurrenceId": "occ-e477e41c6c4854e9d542ae03",
+          "seriesId": "series-7286e08b0d1bfa20c9963253",
+          "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
+          "priceCurrency": "USD",
+          "lastCheckedAt": "2026-11-11T04:26:16.498954-05:00",
+          "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-12T21%3A00%3A00.000-05%3A00",
+          "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
+          "timePrecision": "time",
+          "statusEvidence": "Organizer detail reviewed",
+          "aliases": [
+            "last-call-improv-free-event-2026-11-12",
+            "src-9381e2b32d19aa1825fc47e8"
+          ],
+          "legacyOccurrenceKeys": [
+            "last-call-improv-free-event-2026-11-12|2026-11-12T21:00:00-05:00",
+            "src-9381e2b32d19aa1825fc47e8|2026-11-12T21:00:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "series-25001dbb19b5ba2141dad75a",
+            "series-32bf7fa61ccfec7043649ecd",
+            "series-53b8b1339dcf1ebde77e74dd",
+            "series-7286e08b0d1bfa20c9963253"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-9381e2b32d19aa1825fc47e8",
+              "sourceId": "planet-ant-theatre",
+              "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-12T21%3A00%3A00.000-05%3A00",
+              "observedAt": "2026-11-11T04:09:00-05:00",
+              "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled",
+              "statusEvidence": "https://schema.org/EventScheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-9381e2b32d19aa1825fc47e8",
+              "start": "src-9381e2b32d19aa1825fc47e8",
+              "venue": "src-9381e2b32d19aa1825fc47e8",
+              "url": "src-9381e2b32d19aa1825fc47e8",
+              "status": "src-9381e2b32d19aa1825fc47e8",
+              "imageUrl": "src-9381e2b32d19aa1825fc47e8"
+            },
+            "conflicts": {}
+          },
+          "priceMin": 0,
+          "priceMax": 0,
+          "score": 100,
+          "scoring": {
+            "signals": {
+              "funny": 0.99,
+              "distinctive": 0.83,
+              "eclectic": 0.86,
+              "technical_science": 0.02,
+              "artsy": 0.98,
+              "progressive": 0.58,
+              "outdoors": 0.01,
+              "theatre": 0.27,
+              "live_music": 0.03,
+              "live_comedy": 0.99,
+              "farmer_market": 0.01,
+              "sporting": 0.02,
+              "recurring": 0.97,
+              "craft_fair_shopping": 0.02,
+              "religious": 0.01,
+              "large_venue": 0.02,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.02,
+              "sales_related": 0.3,
+              "children_activity": 0.02,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.01
+            },
+            "score": 100,
+            "rulesVersion": 2
+          },
+          "localityTier": "unknown",
+          "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"last call improv free\"]",
+          "registration": "Enter your name and email and we'll send you a link to confirm your spot.",
+          "bookingUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-12T21%3A00%3A00.000-05%3A00",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-11T04:26:16.498954-05:00",
+            "expiresAt": "2026-11-12T04:26:16.498954-05:00",
+            "sourceUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-12T21%3A00%3A00.000-05%3A00",
+            "sourceHash": "0a7ecc8b4b08ead62bf0bf134dd4f1eeb0ec8a6769932ecab1feff6917334f20",
+            "inputFacts": {
+              "id": "occ-e477e41c6c4854e9d542ae03",
+              "url": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-12T21%3A00%3A00.000-05%3A00",
+              "start": "2026-11-12T21:00:00-05:00",
+              "end": null,
+              "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+              "city": "Hamtramck",
+              "price": "$0 including fees",
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "Nov 12, 2026",
+              "time": "9:00 PM EST",
+              "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+              "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-12T21:00:00\", \"price\": 0.0, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+              "description": "Last Call Improv takes over Thursday nights at 9:30 PM for a wild, dynamic mix of styles and forms. Following right after the regular Thursday show, this late-night staple features a rotating lineup of performance troupes hand-picked from open submissions. The evening is anchored by Wanted Live , a featured headliner performing a TJ and Dave-style long-form improv set, where grounded, authentic human behavior drives the comedy. Whether you are looking for experimental forms or high-energy laughs, Last Call Improv offers an unpredictable, one-of-a-kind experience every single week.",
+              "registration": "Enter your name and email and we'll send you a link to confirm your spot."
+            }
+          },
+          "reviewExpiresAt": "2026-11-12T04:26:16.498954-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-e477e41c6c4854e9d542ae03",
+            "score": 116,
+            "components": {
+              "taste": 100,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "distinctive +20",
+              "eclectic +14",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        },
+        {
+          "id": "occ-270cbd0c9be5332078e4c6ae",
+          "title": "Tropical precarity",
+          "summary": "Explore the intersections of performance, visual art, gender expression, and cultural resistance in Puerto Rico through a special performance and panel discussion featuring acclaimed artists Freddie Mercado Velázquez and Mickey Negrón.",
+          "url": "https://events.umich.edu/event/154628",
+          "start": "2026-11-12T16:30:00-05:00",
+          "venue": "Haven Hall",
+          "city": "Ann Arbor",
+          "category": "Presentation",
+          "imageUrl": "https://events.umich.edu/media/attachments/2026/11/event_154628_original-1.jpg",
+          "imageAlt": "Tropical precarity",
+          "status": "confirmed",
+          "occurrenceId": "occ-270cbd0c9be5332078e4c6ae",
+          "seriesId": "series-d37afc462a0eb08c28154202",
+          "sourceUpdatedAt": "2026-11-06T13:40:52-05:00",
+          "lastCheckedAt": "2026-11-11T04:26:16.498954-05:00",
+          "canonicalUrl": "https://events.umich.edu/event/154628",
+          "venueId": "haven hall|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "src-7e06a0332a2e9b417cf17af3",
+            "tropical-precarity-event-2026-11-12"
+          ],
+          "legacyOccurrenceKeys": [
+            "src-7e06a0332a2e9b417cf17af3|2026-11-12T16:30:00-05:00",
+            "tropical-precarity-event-2026-11-12|2026-11-12T16:30:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "series-d37afc462a0eb08c28154202"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-7e06a0332a2e9b417cf17af3",
+              "sourceId": "happening-at-michigan",
+              "canonicalUrl": "https://events.umich.edu/event/154628",
+              "observedAt": "2026-11-07T01:38:58-05:00",
+              "sourceUpdatedAt": "2026-11-06T13:40:52-05:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-7e06a0332a2e9b417cf17af3",
+              "start": "src-7e06a0332a2e9b417cf17af3",
+              "end": "src-7e06a0332a2e9b417cf17af3",
+              "venue": "src-7e06a0332a2e9b417cf17af3",
+              "url": "src-7e06a0332a2e9b417cf17af3",
+              "imageUrl": "src-7e06a0332a2e9b417cf17af3",
+              "status": "src-7e06a0332a2e9b417cf17af3"
+            },
+            "conflicts": {}
+          },
+          "score": 98,
+          "scoring": {
+            "signals": {
+              "funny": 0.12,
+              "distinctive": 0.78,
+              "eclectic": 0.85,
+              "technical_science": 0.05,
+              "artsy": 0.98,
+              "progressive": 0.96,
+              "outdoors": 0.02,
+              "theatre": 0.16,
+              "live_music": 0.04,
+              "live_comedy": 0.04,
+              "farmer_market": 0.02,
+              "sporting": 0.01,
+              "recurring": 0.06,
+              "craft_fair_shopping": 0.02,
+              "religious": 0.02,
+              "large_venue": 0.03,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.02,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.07,
+              "sales_related": 0.07,
+              "children_activity": 0.02,
+              "running": 0.01,
+              "exercise": 0.02,
+              "employment_related": 0.02
+            },
+            "score": 98,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"haven hall\",\"tropical precarity\"]",
+          "price": "Free",
+          "end": "2026-11-12T18:30:00-05:00",
+          "bookingUrl": "",
+          "statusEvidence": "Organizer detail reviewed",
+          "priceMin": 0,
+          "priceMax": 0,
+          "priceCurrency": "USD",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-11T04:26:16.498954-05:00",
+            "expiresAt": "2026-11-12T04:26:16.498954-05:00",
+            "sourceUrl": "https://events.umich.edu/event/154628",
+            "sourceHash": "a459941d319da4fc70c3a38c1091218c760878a1181e683e780673fe618f58f4",
+            "inputFacts": {
+              "id": "occ-270cbd0c9be5332078e4c6ae",
+              "url": "https://events.umich.edu/event/154628",
+              "start": "2026-11-12T16:30:00-05:00",
+              "end": "2026-11-12T18:30:00-05:00",
+              "venue": "Haven Hall",
+              "city": "Ann Arbor",
+              "price": null,
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "November 12, 2026",
+              "time": "4:30 PM",
+              "venue": "Haven Hall",
+              "admission": "Free",
+              "description": "The Latina/o Studies and the Contemporary Performance in Puerto Rico Working Group, in partnership with the Department of American Culture, invites you to Tropical Precarity: Drag and Visual Arts in Puerto Rico, a special performance and panel discussion. This event features an in-depth conversation with acclaimed Puerto Rican artists Freddie Mercado Velázquez and Mickey Negrón, exploring the intersections of performance, visual art, gender expression, and cultural resistance.",
+              "end": "6:30pm"
+            }
+          },
+          "reviewExpiresAt": "2026-11-12T04:26:16.498954-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-270cbd0c9be5332078e4c6ae",
+            "score": 114,
+            "components": {
+              "taste": 98,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "distinctive +19",
+              "eclectic +14",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        },
+        {
+          "id": "occ-ce2c3dbc3e91cee8275bd6f0",
+          "title": "Lisa Sung Quartet",
+          "summary": "Experience the Lisa Sung Quartet performing jazz interpretations of Asian melodies, including traditional Korean children's songs from her album Half Moon. This eclectic live music event offers a unique blend of cultural and musical exploration.",
+          "url": "https://bluellamaclub.com/event/lisa-sung/",
+          "start": "2026-11-12T19:00:00-05:00",
+          "venue": "Blue LLaMA Jazz Club",
+          "city": "Ann Arbor",
+          "category": "Jazz",
+          "imageUrl": "https://bluellamaclub.com/wp-content/uploads/2025/07/lisa-sung-piano.jpg",
+          "imageAlt": "Lisa Sung Quartet",
+          "status": "confirmed",
+          "occurrenceId": "occ-ce2c3dbc3e91cee8275bd6f0",
+          "seriesId": "series-d5d039752e8e9a3f0f7b5f87",
+          "sourceUpdatedAt": "2026-10-15T20:11:31+00:00",
+          "lastCheckedAt": "2026-11-11T04:26:16.498954-05:00",
+          "canonicalUrl": "https://bluellamaclub.com/event/lisa-sung/",
+          "venueId": "blue llama jazz club|ann arbor",
+          "timePrecision": "time",
+          "aliases": [
+            "lisa-sung-event-2026-11-12",
+            "lisa-sung-quartet-event-2026-11-12",
+            "src-35e94eeb3c59ebfd5e63d665",
+            "src-75dd256256e58fbd1585d019",
+            "src-7d9ba01459282f535f928911"
+          ],
+          "legacyOccurrenceKeys": [
+            "lisa-sung-event-2026-11-12|2026-11-12T19:00:00-05:00",
+            "lisa-sung-event-2026-11-29|2026-11-12T19:00:00-05:00",
+            "lisa-sung-event-2026-12-05|2026-11-12T19:00:00-05:00",
+            "lisa-sung-event-2026-12-17|2026-11-12T19:00:00-05:00",
+            "lisa-sung-quartet-event-2026-11-12|2026-11-12T19:00:00-05:00",
+            "occ-33fac7d1d0257c17e87c4f7d",
+            "occ-6d65088f346e22405fe10e39",
+            "occ-b2ce7c52e4408f507954b658",
+            "src-0c8018a3049e5d45eef8b4ac|2026-11-12T19:00:00-05:00",
+            "src-288067778be8d75ac492824f|2026-11-12T19:00:00-05:00",
+            "src-35e94eeb3c59ebfd5e63d665|2026-11-12T19:00:00-05:00",
+            "src-75dd256256e58fbd1585d019|2026-11-12T19:00:00-05:00",
+            "src-7d9ba01459282f535f928911|2026-11-12T19:00:00-05:00",
+            "src-c3d1a64fe56333ec1096ca4a|2026-11-12T19:00:00-05:00",
+            "src-d0f539fafec1eae7eaddc7a6|2026-11-12T19:00:00-05:00",
+            "src-edd49a1b03891aef7ec71ba7|2026-11-12T19:00:00-05:00"
+          ],
+          "legacySeriesKeys": [
+            "lisa sung|blue llama jazz club",
+            "lisa sung|langston m. kitchen & the mahogany collective",
+            "series-13bd6e5585243b658a568d3e",
+            "series-4cc734079964a2540771ba63",
+            "series-d5d039752e8e9a3f0f7b5f87"
+          ],
+          "sources": [
+            {
+              "sourceRecordId": "src-75dd256256e58fbd1585d019",
+              "sourceId": "blue-llama-jazz-club",
+              "canonicalUrl": "https://bluellamaclub.com/event/lisa-sung/",
+              "observedAt": "2026-10-16T07:40:08-04:00",
+              "sourceUpdatedAt": "2026-10-15T20:11:31+00:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-7d9ba01459282f535f928911",
+              "sourceId": "blue-llama-jazz-club",
+              "canonicalUrl": "https://bluellamaclub.com/event/lisa-sung/",
+              "observedAt": "2026-10-10T08:07:56-04:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            },
+            {
+              "sourceRecordId": "src-35e94eeb3c59ebfd5e63d665",
+              "sourceId": "blue-llama-jazz-club",
+              "canonicalUrl": "https://bluellamaclub.com/event/lisa-sung/",
+              "observedAt": "2026-10-12T15:41:41-04:00",
+              "sourceUpdatedAt": "2026-10-01T15:13:00+00:00",
+              "sourceAuthority": "organizer",
+              "status": "scheduled"
+            }
+          ],
+          "identity": {
+            "ruleVersion": "occurrence-v1",
+            "reasons": [
+              "exact-title-time-venue",
+              "native-occurrence",
+              "new-occurrence"
+            ],
+            "fields": {
+              "title": "src-75dd256256e58fbd1585d019",
+              "start": "src-75dd256256e58fbd1585d019",
+              "venue": "src-75dd256256e58fbd1585d019",
+              "url": "src-75dd256256e58fbd1585d019",
+              "imageUrl": "src-75dd256256e58fbd1585d019",
+              "status": "src-75dd256256e58fbd1585d019"
+            },
+            "conflicts": {}
+          },
+          "score": 81,
+          "scoring": {
+            "signals": {
+              "funny": 0.08,
+              "distinctive": 0.65,
+              "eclectic": 0.47,
+              "technical_science": 0.03,
+              "artsy": 0.99,
+              "progressive": 0.46,
+              "outdoors": 0.01,
+              "theatre": 0.03,
+              "live_music": 0.99,
+              "live_comedy": 0.02,
+              "farmer_market": 0.01,
+              "sporting": 0.01,
+              "recurring": 0.12,
+              "craft_fair_shopping": 0.01,
+              "religious": 0.02,
+              "large_venue": 0.02,
+              "substance_recovery": 0.01,
+              "popular_music_cover_band": 0.04,
+              "market_or_shop": 0.02,
+              "punk_metal_or_rock": 0.02,
+              "dance": 0.03,
+              "sales_related": 0.61,
+              "children_activity": 0.03,
+              "running": 0.01,
+              "exercise": 0.01,
+              "employment_related": 0.02
+            },
+            "score": 81,
+            "rulesVersion": 2
+          },
+          "localityTier": "regional",
+          "experienceId": "experience:[\"ann arbor\",\"blue llama jazz club\",\"lisa sung\"]",
+          "price": "$25",
+          "end": "2026-11-12T21:30:00-05:00",
+          "registration": "RESERVE TABLE",
+          "bookingUrl": "https://www.exploretock.com/blue-llama/search?date=2026-11-12&size=2&time=17%3A00",
+          "statusEvidence": "Organizer detail reviewed",
+          "priceMin": 25,
+          "priceMax": 25,
+          "priceCurrency": "USD",
+          "editorial": {
+            "state": "verified",
+            "reviewedAt": "2026-11-11T04:26:16.498954-05:00",
+            "expiresAt": "2026-11-12T04:26:16.498954-05:00",
+            "sourceUrl": "https://bluellamaclub.com/event/lisa-sung/",
+            "sourceHash": "eb4d9d06dfc4f4b854f21e3fc6ae8469e4028615068c75807a94b53bae530678",
+            "inputFacts": {
+              "id": "occ-ce2c3dbc3e91cee8275bd6f0",
+              "url": "https://bluellamaclub.com/event/lisa-sung/",
+              "start": "2026-11-12T19:00:00-05:00",
+              "end": null,
+              "venue": "Blue LLaMA Jazz Club",
+              "city": "Ann Arbor",
+              "price": null,
+              "status": "scheduled"
+            },
+            "evidence": {
+              "date": "Nov 12",
+              "time": "7pm",
+              "venue": "Blue LLama Jazz Club",
+              "admission": "$25 Cover",
+              "description": "Lisa Sung is an award-winning jazz educator and performer who received the highest artistic development award, the John Sites Jazz Award, in 2022.",
+              "registration": "RESERVE TABLE",
+              "end": "2026-11-12T21:30:00-05:00"
+            }
+          },
+          "reviewExpiresAt": "2026-11-12T04:26:16.498954-05:00",
+          "recommendation": {
+            "occurrenceId": "occ-ce2c3dbc3e91cee8275bd6f0",
+            "score": 97,
+            "components": {
+              "taste": 81,
+              "practicality": 12,
+              "novelty": 0,
+              "quality": 4
+            },
+            "reasons": [
+              "distinctive +16",
+              "live music +12",
+              "Available on selected day +12",
+              "Confirmed/recent source information +4"
+            ],
+            "unknowns": [
+              "Distance unknown"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
