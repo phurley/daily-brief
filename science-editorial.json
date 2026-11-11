@@ -1,8 +1,125 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-10T07:12:23.099370-05:00",
+  "generatedAt": "2026-11-11T06:30:41.901015-05:00",
   "stories": [
+    {
+      "id": "science-ee03630e6f626376",
+      "title": "Correcting quantum computer errors may be more complicated than expected",
+      "summary": "New research suggests that quantum computer errors may be more complex than previously assumed, with memory effects and non-Markovian noise appearing in experiments. These findings challenge long-standing assumptions in quantum error correction, potentially complicating the path to fault-tolerant quantum computing, though new error correction codes and mitigation strategies are being explored.",
+      "finding": "New research suggests that quantum computer errors may be more complex than previously assumed, with memory effects and non-Markovian noise appearing in experiments. These findings challenge long-standing assumptions in quantum error correction, potentially complicating the path to fault-tolerant quantum computing, though new error correction codes and mitigation strategies are being explored.",
+      "significance": "Correlated non-Markovian noise may limit the validity of theoretical fault-tolerance thresholds, potentially restricting the length or complexity of reliable computations on practical quantum computers.",
+      "caveat": "Researchers note that these noise models are difficult to fully characterize and that newer quantum error-correction codes or control algorithms may potentially adapt to and mitigate non-Markovian errors.",
+      "url": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T20:00:00+00:00",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "IBM",
+        "Google",
+        "Karlsruhe Institute of Technology",
+        "Dartmouth College",
+        "Monash University"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://journals.aps.org/prl/accepted/10.1103/j1r2-5ph7",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-11T06:30:41.901015-05:00",
+        "expiresAt": "2026-11-14T06:30:41.901015-05:00",
+        "inputFacts": {
+          "id": "science-ee03630e6f626376",
+          "title": "Correcting quantum computer errors may be more complicated than expected",
+          "url": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
+          "publishedAt": "2026-11-10T20:00:00Z",
+          "summary": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
+          "finding": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-10T20:00:00+00:00",
+        "datePrecision": "time",
+        "sourceHash": "b8f7f7ba26533cb196ac10424885926f31c5a3568bc0ecb6981a2113dbc84298",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The article discusses new findings regarding the complexity of errors in quantum computers, which is a significant development in the field of technology and engineering. It highlights a substantive new finding that could impact the future of quantum computing.",
+        "storyKey": "quantum-computer-error-complexity",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article supports all claims in the summary, detailing how new experimental findings challenge long-standing assumptions about quantum computer errors, specifically the presence of memory effects and non-Markovian noise. It also discusses the implications for quantum error correction and ongoing explorations of new mitigation strategies."
+      }
+    },
+    {
+      "id": "science-a085fbe1095eb29d",
+      "title": "Science to restore speech is moving fast. Here’s what’s next",
+      "summary": "Scientists are rapidly advancing brain-computer interfaces to restore speech for individuals with paralysis. A fully implantable, wireless device from Paradromics, about the size of a dime, was recently implanted in a Michigan woman with primary lateral sclerosis, allowing her to communicate. Researchers are also working on decoding emotional nuances and gestures directly from brain activity to create more natural digital voices and communication.",
+      "finding": "Scientists are rapidly advancing brain-computer interfaces to restore speech for individuals with paralysis. A fully implantable, wireless device from Paradromics, about the size of a dime, was recently implanted in a Michigan woman with primary lateral sclerosis, allowing her to communicate. Researchers are also working on decoding emotional nuances and gestures directly from brain activity to create more natural digital voices and communication.",
+      "significance": "These technological developments could allow people who have lost the ability to speak due to neurodegenerative illnesses to communicate intuitively and more rapidly.",
+      "caveat": "The technology remains in very early testing with fewer than ten people tested globally, and some systems remain non-portable and slow.",
+      "url": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
+      "primarySourceUrl": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T09:00:00-05:00",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "health",
+        "technology",
+        "biology"
+      ],
+      "entities": [
+        "BrainGate",
+        "Paradromics",
+        "Matthew Willsey",
+        "Leigh Hochberg",
+        "University of Michigan Health"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-10T14:00:00Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-11T06:30:41.901015-05:00",
+        "expiresAt": "2026-11-14T06:30:41.901015-05:00",
+        "inputFacts": {
+          "id": "science-a085fbe1095eb29d",
+          "title": "Science to restore speech is moving fast. Here’s what’s next",
+          "url": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
+          "publishedAt": "2026-11-10T14:00:00Z",
+          "summary": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
+          "finding": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
+          "sourceUpdatedAt": "2026-11-10T14:00:00Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-10T09:00:00-05:00",
+        "datePrecision": "time",
+        "sourceHash": "deeeb78e9c7853eb0dda375aaab7a062232a2d88aaef6432a0a6d149e896e7dc",
+        "relevance": 5,
+        "novelty": 4,
+        "reason": "The article details significant, recent advancements in brain-computer interface technology for speech restoration, including a local connection with a Michigan patient and a University of Michigan Health neurosurgeon. This represents a substantive new finding and technical advance in health and technology.",
+        "storyKey": "brain-computer-interface-speech-restoration",
+        "localConnection": "A 68-year-old Michigan woman with primary lateral sclerosis received a fully implantable brain-computer interface from Paradromics, allowing her to communicate. The device was implanted by Matthew Willsey, a neurosurgeon and biomedical engineer at the University of Michigan Health.",
+        "grounded": true,
+        "groundingReason": "The article details a new, fully implantable, wireless brain-computer interface from Paradromics, about the size of a dime, that was recently implanted in a Michigan woman with primary lateral sclerosis, allowing her to communicate. It also discusses ongoing research into decoding emotional nuances and gestures from brain activity to enhance communication."
+      }
+    },
     {
       "id": "science-ed72f46bb287cd6e",
       "title": "How neutrinos are beginning to reveal the secrets of our galaxy",
@@ -235,67 +352,39 @@
         "grounded": true,
         "groundingReason": "The article details a new experimental finding using electrical noise measurements to investigate high-temperature superconductivity in cuprates, providing evidence for pre-formed electron pairs in the pseudogap state and suggesting a new understanding of the bottleneck for higher superconducting temperatures. This is a specific technical advance in understanding a long-standing scientific mystery."
       }
-    },
-    {
-      "id": "science-fc8dda36a9e816be",
-      "title": "Earth's churning mantle may have created the Great Unconformity",
-      "summary": "New models suggest Earth's churning mantle, in combination with glacial erosion, created the Great Unconformity, a significant gap in the geological record. This process involved continents uplifting for hundreds of millions of years, allowing glaciers to grind them down, followed by sinking and burial by sediments. The models also explain why this unconformity is more prominent in North America.",
-      "finding": "New models suggest Earth's churning mantle, in combination with glacial erosion, created the Great Unconformity, a significant gap in the geological record. This process involved continents uplifting for hundreds of millions of years, allowing glaciers to grind them down, followed by sinking and burial by sediments. The models also explain why this unconformity is more prominent in North America.",
-      "significance": "The findings help resolve the long-standing mystery of why this massive gap in the geologic record appears prominently in North America but is less evident elsewhere.",
-      "caveat": "The starting configurations of the simulations carry uncertainties, including continent longitudes and ancient ocean floor data that had to be reconstructed from scratch.",
-      "url": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
-      "primarySourceUrl": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
-      "source": {
-        "name": "Ars Technica Science"
-      },
-      "sourceGroup": "Ars Technica Science",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-06T20:24:20+00:00",
-      "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "earth-science"
-      ],
-      "entities": [
-        "Nicolas Flament",
-        "Santosh Dhungana",
-        "University of Wollongong",
-        "Grand Canyon",
-        "Laurentia"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://doi.org/10.1038/s41586-026-11156-5",
-      "sourceUpdatedAt": "2026-11-06T21:20:33Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-08T06:48:29.564149-05:00",
-        "expiresAt": "2026-11-11T06:48:29.564149-05:00",
-        "inputFacts": {
-          "id": "science-fc8dda36a9e816be",
-          "title": "Earth's churning mantle may have created the Great Unconformity",
-          "url": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
-          "publishedAt": "2026-11-06T20:24:20Z",
-          "summary": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
-          "finding": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
-          "sourceUpdatedAt": "2026-11-06T21:20:33Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-06T20:24:20+00:00",
-        "datePrecision": "time",
-        "sourceHash": "a47e35a84b1331829438cf17dd52c00b4607aaca50b8e0dc2c10c8a675655854",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The article presents a new, quantitatively tested hypothesis for a major geological feature, combining mantle dynamics with glaciation, which is a substantive scientific finding.",
-        "storyKey": "great-unconformity-mantle-glaciation",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The summary accurately reflects the new models and findings presented in the article regarding the formation of the Great Unconformity, including the role of mantle convection and glacial erosion, and the explanation for its prominence in North America. This is a new scientific finding supported by the research described."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-ee03630e6f626376",
+      "inputFacts": {
+        "id": "science-ee03630e6f626376",
+        "title": "Correcting quantum computer errors may be more complicated than expected",
+        "url": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
+        "publishedAt": "2026-11-10T20:00:00Z",
+        "summary": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
+        "finding": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-10T20:00:00+00:00",
+      "publicationEvidence": "2026-11-10T20:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-a085fbe1095eb29d",
+      "inputFacts": {
+        "id": "science-a085fbe1095eb29d",
+        "title": "Science to restore speech is moving fast. Here’s what’s next",
+        "url": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
+        "publishedAt": "2026-11-10T14:00:00Z",
+        "summary": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
+        "finding": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
+        "sourceUpdatedAt": "2026-11-10T14:00:00Z"
+      },
+      "publishedAt": "2026-11-10T09:00:00-05:00",
+      "publicationEvidence": "2026-11-10T09:00:00-05:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-0a037ddef00bff3c",
       "inputFacts": {
@@ -417,51 +506,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-fc8dda36a9e816be",
-      "inputFacts": {
-        "id": "science-fc8dda36a9e816be",
-        "title": "Earth's churning mantle may have created the Great Unconformity",
-        "url": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
-        "publishedAt": "2026-11-06T20:24:20Z",
-        "summary": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
-        "finding": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
-        "sourceUpdatedAt": "2026-11-06T21:20:33Z"
-      },
-      "publishedAt": "2026-11-06T20:24:20+00:00",
-      "publicationEvidence": "2026-11-06T20:24:20+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-44ca837be7e31108",
-      "inputFacts": {
-        "id": "science-44ca837be7e31108",
-        "title": "An unexpected feedback loop may be driving mega heatwaves",
-        "url": "https://www.newscientist.com/article/2597676-an-unexpected-feedback-loop-may-be-driving-mega-heatwaves",
-        "publishedAt": "2026-11-06T19:00:00Z",
-        "summary": "A three-way feedback loop among dry soil, high atmospheric pressure, and extreme heat can intensify heatwaves, making them 10 percent hotter than they would otherwise be.",
-        "finding": "A three-way feedback loop among dry soil, high atmospheric pressure, and extreme heat can intensify heatwaves, making them 10 percent hotter than they would otherwise be.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-06T19:00:00+00:00",
-      "publicationEvidence": "2026-11-06T19:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-4fcea148a4a14d14",
-      "inputFacts": {
-        "id": "science-4fcea148a4a14d14",
-        "title": "This may be the best evidence yet that dinosaur blood can fossilize",
-        "url": "https://www.sciencenews.org/article/evidence-dinosaur-blood-fossilize",
-        "publishedAt": "2026-11-06T16:00:00Z",
-        "summary": "Researchers detected microstructures in an Aratasaurus museunacionali limb bone with chemical signatures of heme, proposing they are 115-million-year-old fossilized red blood cells.",
-        "finding": "Researchers detected microstructures in an Aratasaurus museunacionali limb bone with chemical signatures of heme, proposing they are 115-million-year-old fossilized red blood cells.",
-        "sourceUpdatedAt": "2026-11-06T16:00:00Z"
-      },
-      "publishedAt": "2026-11-06T11:00:00-05:00",
-      "publicationEvidence": "2026-11-06T11:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-f6c4f38b852e436b",
       "inputFacts": {
         "id": "science-f6c4f38b852e436b",
@@ -477,33 +521,78 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-89a92c97d83383c6",
+      "id": "science-f881bc45f9b01c42",
       "inputFacts": {
-        "id": "science-89a92c97d83383c6",
-        "title": "APOD: 2026 November 6 – A Farewell to Swift",
-        "url": "https://science.nasa.gov/image-article/apod-2026-november-6-a-farewell-to-swift",
-        "publishedAt": "2026-11-06T05:05:00Z",
-        "summary": "NASA's Neil Gehrels Swift Observatory re-entered Earth's atmosphere on November 4, 2026, over North Sumatra, Indonesia, ending nearly 22 years of service.",
-        "finding": "NASA's Neil Gehrels Swift Observatory re-entered Earth's atmosphere on November 4, 2026, over North Sumatra, Indonesia, ending nearly 22 years of service.",
-        "sourceUpdatedAt": "2026-11-06T20:45:53Z"
+        "id": "science-f881bc45f9b01c42",
+        "title": "APOD: 2026 November 11 – NGC 4449: Small Galaxy, Big Impact",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact",
+        "publishedAt": "2026-11-11T05:05:00Z",
+        "summary": "The dwarf galaxy NGC 4449 and similar dwarf galaxies are missing more oxygen than models predict, suggesting their stellar winds and supernovae efficiently expel oxygen and other heavy elements.",
+        "finding": "The dwarf galaxy NGC 4449 and similar dwarf galaxies are missing more oxygen than models predict, suggesting their stellar winds and supernovae efficiently expel oxygen and other heavy elements.",
+        "sourceUpdatedAt": "2026-11-11T05:05:00Z"
       },
-      "publishedAt": "2026-11-06T00:05:00-05:00",
-      "publicationEvidence": "2026-11-06T00:05:00-05:00",
+      "publishedAt": "2026-11-11T00:05:00-05:00",
+      "publicationEvidence": "2026-11-11T00:05:00-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-e1b5868eda521304",
+      "id": "science-db54524d5e99b1c6",
       "inputFacts": {
-        "id": "science-e1b5868eda521304",
-        "title": "How octopuses squeeze through tiny openings, step by step",
-        "url": "https://www.sciencenews.org/article/octopuses-squeeze-escape-steps-video",
-        "publishedAt": "2026-11-05T21:00:00Z",
-        "summary": "Common octopuses employ a systematic three- or four-step strategy to squeeze through small openings depending on hole size, while Mayan octopuses avoid narrower openings entirely.",
-        "finding": "Common octopuses employ a systematic three- or four-step strategy to squeeze through small openings depending on hole size, while Mayan octopuses avoid narrower openings entirely.",
-        "sourceUpdatedAt": "2026-11-05T21:00:00Z"
+        "id": "science-db54524d5e99b1c6",
+        "title": "Water Surges Into Navajo Reservoir",
+        "url": "https://science.nasa.gov/earth/earth-observatory/water-surges-into-navajo-reservoir",
+        "publishedAt": "2026-11-11T05:01:00Z",
+        "summary": "Landsat 9 satellite imagery and ground data revealed that Navajo Reservoir rose by nearly 60 feet between September and November 2026, reaching 108 percent of its average capacity.",
+        "finding": "Landsat 9 satellite imagery and ground data revealed that Navajo Reservoir rose by nearly 60 feet between September and November 2026, reaching 108 percent of its average capacity.",
+        "sourceUpdatedAt": "2026-11-11T05:01:00Z"
       },
-      "publishedAt": "2026-11-05T16:00:00-05:00",
-      "publicationEvidence": "2026-11-05T16:00:00-05:00",
+      "publishedAt": "2026-11-11T00:01:00-05:00",
+      "publicationEvidence": "2026-11-11T00:01:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-8bebeeb78f54a7d4",
+      "inputFacts": {
+        "id": "science-8bebeeb78f54a7d4",
+        "title": "High oil prices have led to a dip in global carbon emissions",
+        "url": "https://arstechnica.com/science/2026/11/carbon-emissions-are-down-this-year-but-that-probably-wont-last",
+        "publishedAt": "2026-11-10T16:29:27Z",
+        "summary": "An analysis estimates that global fossil fuel carbon emissions fell approximately 0.4 percent in 2026, primarily driven by a 1.9 percent reduction in oil emissions due to high prices.",
+        "finding": "An analysis estimates that global fossil fuel carbon emissions fell approximately 0.4 percent in 2026, primarily driven by a 1.9 percent reduction in oil emissions due to high prices.",
+        "sourceUpdatedAt": "2026-11-10T16:41:09Z"
+      },
+      "publishedAt": "2026-11-10T16:29:27+00:00",
+      "publicationEvidence": "2026-11-10T16:29:27+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-72dedef1aeda3d1c",
+      "inputFacts": {
+        "id": "science-72dedef1aeda3d1c",
+        "title": "What terrifying sleep paralysis demons reveal about the mind-body connection",
+        "url": "https://www.newscientist.com/article/2596521-what-terrifying-sleep-paralysis-demons-reveal-about-the-mind-body-connection",
+        "publishedAt": "2026-11-10T16:00:00Z",
+        "summary": "Sleep paralysis involves waking consciousness blending with REM sleep brain states, with cultural beliefs, environment, and priming strongly influencing the frequency, duration, and hallucinated imagery of episodes.",
+        "finding": "Sleep paralysis involves waking consciousness blending with REM sleep brain states, with cultural beliefs, environment, and priming strongly influencing the frequency, duration, and hallucinated imagery of episodes.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-10T16:00:00+00:00",
+      "publicationEvidence": "2026-11-10T16:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-6c2824fb2757db42",
+      "inputFacts": {
+        "id": "science-6c2824fb2757db42",
+        "title": "The Case for a Bubble at Life’s Start",
+        "url": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110",
+        "publishedAt": "2026-11-10T15:08:35Z",
+        "summary": "The lipid-first hypothesis proposes that early life originated through self-assembling lipid containers that could pass compositional information across generations and undergo natural selection.",
+        "finding": "The lipid-first hypothesis proposes that early life originated through self-assembling lipid containers that could pass compositional information across generations and undergo natural selection.",
+        "sourceUpdatedAt": "2026-11-10T15:08:56Z"
+      },
+      "publishedAt": "2026-11-10T15:08:35+00:00",
+      "publicationEvidence": "2026-11-10T15:08:35+00:00",
       "datePrecision": "time"
     },
     {
@@ -565,32 +654,9 @@
       "publishedAt": "2026-11-09T20:00:00-05:00",
       "publicationEvidence": "2026-11-09T20:00:00-05:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-427e7bb58879cf1b",
-      "inputFacts": {
-        "id": "science-427e7bb58879cf1b",
-        "title": "Cold therapy may be worse than doing nothing for post-exercise recovery",
-        "url": "https://www.newscientist.com/article/2598085-cold-therapy-may-be-worse-than-doing-nothing-for-post-exercise-recovery",
-        "publishedAt": "2026-11-09T19:00:00Z",
-        "summary": "Adults who used ice baths after intense leg exercise exhibited elevated markers of muscle damage for longer and regained less muscle strength than those who practiced passive rest.",
-        "finding": "Adults who used ice baths after intense leg exercise exhibited elevated markers of muscle damage for longer and regained less muscle strength than those who practiced passive rest.",
-        "sourceUpdatedAt": "2026-11-10T08:51:22Z"
-      },
-      "publishedAt": "2026-11-09T19:00:00+00:00",
-      "publicationEvidence": "2026-11-09T19:00:00+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-09",
-      "selectedIds": [
-        "science-fc8dda36a9e816be",
-        "science-901e4c6072cf569b",
-        "science-97ffe59ce15abb83"
-      ]
-    },
     {
       "date": "2026-11-10",
       "selectedIds": [
@@ -605,6 +671,14 @@
         "science-ed72f46bb287cd6e",
         "science-901e4c6072cf569b",
         "science-97ffe59ce15abb83"
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "selectedIds": [
+        "science-a085fbe1095eb29d",
+        "science-ee03630e6f626376",
+        "science-ed72f46bb287cd6e"
       ]
     }
   ]

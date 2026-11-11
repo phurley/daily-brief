@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-10T11:01:01.192536Z",
-  "editionDate": "2026-11-10",
+  "generatedAt": "2026-11-11T11:00:46.709649Z",
+  "editionDate": "2026-11-11",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -20,6 +20,334 @@
     ]
   },
   "stories": [
+    {
+      "id": "science-f881bc45f9b01c42",
+      "title": "APOD: 2026 November 11 – NGC 4449: Small Galaxy, Big Impact",
+      "summary": "The dwarf galaxy NGC 4449 and similar dwarf galaxies are missing more oxygen than models predict, suggesting their stellar winds and supernovae efficiently expel oxygen and other heavy elements.",
+      "finding": "The dwarf galaxy NGC 4449 and similar dwarf galaxies are missing more oxygen than models predict, suggesting their stellar winds and supernovae efficiently expel oxygen and other heavy elements.",
+      "significance": "Dwarf galaxies may play a major role in dispersing heavy elements throughout the universe.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact",
+      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-11T05:05:00Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "Milky Way",
+        "Hubble Space Telescope",
+        "NGC 4449",
+        "NASA",
+        "ESA"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-11T05:05:00Z"
+    },
+    {
+      "id": "science-db54524d5e99b1c6",
+      "title": "Water Surges Into Navajo Reservoir",
+      "summary": "Landsat 9 satellite imagery and ground data revealed that Navajo Reservoir rose by nearly 60 feet between September and November 2026, reaching 108 percent of its average capacity.",
+      "finding": "Landsat 9 satellite imagery and ground data revealed that Navajo Reservoir rose by nearly 60 feet between September and November 2026, reaching 108 percent of its average capacity.",
+      "significance": "Back-to-back extreme rain events ended short-term drought conditions across the Four Corners region, though they simultaneously triggered damaging river floods.",
+      "caveat": "While short-term drought conditions ended across the Southwest and Great Basin, long-term drought conditions continue to persist in certain areas.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/water-surges-into-navajo-reservoir",
+      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/water-surges-into-navajo-reservoir",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-11T05:01:00Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "Navajo Reservoir",
+        "Landsat 9",
+        "U.S. Army Corps of Engineers",
+        "Bureau of Reclamation",
+        "San Juan River"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-11T05:01:00Z"
+    },
+    {
+      "id": "science-a23485fd871564b0",
+      "title": "Astronomers discover hidden alien planet in James Webb images",
+      "summary": "Researchers developed a computational method named FLIP that uses a digital twin simulation of the James Webb Space Telescope to subtract starlight glare and reveal previously hidden exoplanets.",
+      "finding": "Researchers developed a computational method named FLIP that uses a digital twin simulation of the James Webb Space Telescope to subtract starlight glare and reveal previously hidden exoplanets.",
+      "significance": "The approach achieves two to 15 times greater detection sensitivity than conventional techniques and can uncover faint planets in archival telescope data without requiring hardware upgrades.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261108233028.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261108233028.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T23:56:04Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "James Webb Space Telescope",
+        "California Institute of Technology",
+        "Katie Bouman",
+        "Rodrigo Ferrer-Chavez",
+        "Jason Wang"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41586-026-11213-z"
+    },
+    {
+      "id": "science-ee03630e6f626376",
+      "title": "Correcting quantum computer errors may be more complicated than expected",
+      "summary": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
+      "finding": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
+      "significance": "Correlated non-Markovian noise may limit the validity of theoretical fault-tolerance thresholds, potentially restricting the length or complexity of reliable computations on practical quantum computers.",
+      "caveat": "Researchers note that these noise models are difficult to fully characterize and that newer quantum error-correction codes or control algorithms may potentially adapt to and mitigate non-Markovian errors.",
+      "url": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T20:00:00Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "IBM",
+        "Google",
+        "Karlsruhe Institute of Technology",
+        "Dartmouth College",
+        "Monash University"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://journals.aps.org/prl/accepted/10.1103/j1r2-5ph7"
+    },
+    {
+      "id": "science-c45c5c281dd2928f",
+      "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
+      "summary": "NASA's Voyager 1 spacecraft is scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
+      "finding": "NASA's Voyager 1 spacecraft is scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
+      "significance": "As the most distant human-made object, it marks the first time light from Earth requires a full 24 hours to reach an active spacecraft.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+      "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-10T19:22:45Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "Voyager 1",
+        "Jet Propulsion Laboratory",
+        "Caltech",
+        "Voyager 2"
+      ],
+      "milestoneStatus": "planned"
+    },
+    {
+      "id": "science-6103d40234ae1019",
+      "title": "NASA to Welcome Expedition 74 Astronauts Home at Space Center Houston",
+      "summary": "The Expedition 74 crew completed long-duration missions aboard the International Space Station, devoting more than 1,400 hours to scientific research and technology demonstrations.",
+      "finding": "The Expedition 74 crew completed long-duration missions aboard the International Space Station, devoting more than 1,400 hours to scientific research and technology demonstrations.",
+      "significance": "Their research advanced in-space 3D manufacturing, investigated human health effects of spaceflight, grew stem cells, crystallized proteins, and supported preparations for future Artemis exploration missions.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/news-release/nasa-to-welcome-expedition-74-astronauts-home-at-space-center-houston",
+      "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-to-welcome-expedition-74-astronauts-home-at-space-center-houston",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-10T18:06:33Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "technology",
+        "health",
+        "biology"
+      ],
+      "entities": [
+        "NASA",
+        "International Space Station",
+        "Space Center Houston",
+        "ESA",
+        "Roscosmos"
+      ],
+      "milestoneStatus": "completed"
+    },
+    {
+      "id": "science-8bebeeb78f54a7d4",
+      "title": "High oil prices have led to a dip in global carbon emissions",
+      "summary": "An analysis estimates that global fossil fuel carbon emissions fell approximately 0.4 percent in 2026, primarily driven by a 1.9 percent reduction in oil emissions due to high prices.",
+      "finding": "An analysis estimates that global fossil fuel carbon emissions fell approximately 0.4 percent in 2026, primarily driven by a 1.9 percent reduction in oil emissions due to high prices.",
+      "significance": "Clean technology additions offset nearly 70 percent of energy demand growth, suggesting that emissions peaks are approaching but still require faster deployment to become permanent.",
+      "caveat": "The drop is believed to be a temporary shock driven by geopolitical conflict and high oil prices rather than a permanent peak, with overall emissions projected to resume rising.",
+      "url": "https://arstechnica.com/science/2026/11/carbon-emissions-are-down-this-year-but-that-probably-wont-last",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/carbon-emissions-are-down-this-year-but-that-probably-wont-last",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T16:29:27Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "Corinne Le Quéré",
+        "University of East Anglia",
+        "Global Carbon Project",
+        "International Monetary Fund",
+        "Nature Climate Change"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41558-026-02821-8",
+      "sourceUpdatedAt": "2026-11-10T16:41:09Z"
+    },
+    {
+      "id": "science-72dedef1aeda3d1c",
+      "title": "What terrifying sleep paralysis demons reveal about the mind-body connection",
+      "summary": "Sleep paralysis involves waking consciousness blending with REM sleep brain states, with cultural beliefs, environment, and priming strongly influencing the frequency, duration, and hallucinated imagery of episodes.",
+      "finding": "Sleep paralysis involves waking consciousness blending with REM sleep brain states, with cultural beliefs, environment, and priming strongly influencing the frequency, duration, and hallucinated imagery of episodes.",
+      "significance": "Understanding the neurobiology and psychological priming behind sleep paralysis offers insights into consciousness, the mind-body connection, and potential cognitive techniques to reduce distressing episodes.",
+      "caveat": "The neurological explanations for why people see specific hallucinations remain theoretical, and the four-step intervention was tested in only six people.",
+      "url": "https://www.newscientist.com/article/2596521-what-terrifying-sleep-paralysis-demons-reveal-about-the-mind-body-connection",
+      "primarySourceUrl": "https://www.newscientist.com/article/2596521-what-terrifying-sleep-paralysis-demons-reveal-about-the-mind-body-connection",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T16:00:00Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "health",
+        "social-science"
+      ],
+      "entities": [
+        "Baland Jalal",
+        "Harvard University",
+        "The American University in Cairo",
+        "David Hinton"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://link.springer.com/article/10.1007/s11013-013-9327-x#Sec3"
+    },
+    {
+      "id": "science-6c2824fb2757db42",
+      "title": "The Case for a Bubble at Life’s Start",
+      "summary": "The lipid-first hypothesis proposes that early life originated through self-assembling lipid containers that could pass compositional information across generations and undergo natural selection.",
+      "finding": "The lipid-first hypothesis proposes that early life originated through self-assembling lipid containers that could pass compositional information across generations and undergo natural selection.",
+      "significance": "A physical container or membrane solves the problem of chemical dispersion, concentrating prebiotic molecules so they can assemble complex systems necessary for life.",
+      "caveat": "Critics note a lack of experimental proof for lipid evolution, uncertainty regarding prebiotic lipid synthesis, and models suggesting compositional replication may be too inaccurate for natural selection.",
+      "url": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110",
+      "primarySourceUrl": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110",
+      "source": {
+        "name": "Quanta Magazine"
+      },
+      "sourceGroup": "Quanta Magazine",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T15:08:35Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "biology",
+        "chemistry"
+      ],
+      "entities": [
+        "University of California, Santa Cruz",
+        "Doron Lancet",
+        "Daniel Segrè",
+        "Jack Szostak",
+        "Bruce Damer"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-10T15:08:56Z"
+    },
+    {
+      "id": "science-a085fbe1095eb29d",
+      "title": "Science to restore speech is moving fast. Here’s what’s next",
+      "summary": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
+      "finding": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
+      "significance": "These technological developments could allow people who have lost the ability to speak due to neurodegenerative illnesses to communicate intuitively and more rapidly.",
+      "caveat": "The technology remains in very early testing with fewer than ten people tested globally, and some systems remain non-portable and slow.",
+      "url": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
+      "primarySourceUrl": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-10T14:00:00Z",
+      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "health",
+        "technology",
+        "biology"
+      ],
+      "entities": [
+        "BrainGate",
+        "Paradromics",
+        "Matthew Willsey",
+        "Leigh Hochberg",
+        "University of Michigan Health"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-10T14:00:00Z"
+    },
     {
       "id": "science-1695ef8e6db7acbe",
       "title": "Toxic secrets are hiding in Arctic ice",
@@ -898,10 +1226,10 @@
     {
       "id": "science-fc8dda36a9e816be",
       "title": "Earth's churning mantle may have created the Great Unconformity",
-      "summary": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
-      "finding": "Geodynamic models suggest the Great Unconformity formed through a combination of mantle-driven continental uplift and glacial erosion during Snowball Earth events.",
-      "significance": "The findings help resolve the long-standing mystery of why this massive gap in the geologic record appears prominently in North America but is less evident elsewhere.",
-      "caveat": "The starting configurations of the simulations carry uncertainties, including continent longitudes and ancient ocean floor data that had to be reconstructed from scratch.",
+      "summary": "Geodynamic models suggest the Great Unconformity formed from a combination of mantle-driven continental uplift followed by widespread glacial erosion and subsequent sinking during the Cambrian.",
+      "finding": "Geodynamic models suggest the Great Unconformity formed from a combination of mantle-driven continental uplift followed by widespread glacial erosion and subsequent sinking during the Cambrian.",
+      "significance": "This mechanism offers a comprehensive explanation for the patchy global distribution of the massive geologic gap and may explain how nutrient runoff helped trigger the Cambrian explosion.",
+      "caveat": "The starting configuration of ancient continental plates in the simulations remains uncertain, and ancient ocean floor data had to be reconstructed from scratch.",
       "url": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity",
       "source": {
@@ -911,17 +1239,16 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-06T20:24:20Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "earth-science"
       ],
       "entities": [
-        "Nicolas Flament",
-        "Santosh Dhungana",
-        "University of Wollongong",
         "Grand Canyon",
+        "University of Wollongong",
+        "Nature",
         "Laurentia"
       ],
       "milestoneStatus": "unknown",
@@ -1030,10 +1357,10 @@
     {
       "id": "science-4fcea148a4a14d14",
       "title": "This may be the best evidence yet that dinosaur blood can fossilize",
-      "summary": "Researchers detected microstructures in an Aratasaurus museunacionali limb bone with chemical signatures of heme, proposing they are 115-million-year-old fossilized red blood cells.",
-      "finding": "Researchers detected microstructures in an Aratasaurus museunacionali limb bone with chemical signatures of heme, proposing they are 115-million-year-old fossilized red blood cells.",
-      "significance": "Identifying preserved cellular structures and biomolecules in ancient bones can provide insights into extinct animal physiology, metabolism, and mechanisms of soft-tissue preservation.",
-      "caveat": "An outside paleontologist noted that heme signals came from the whole bone rather than localized structures, and the microstructures differed in size and shape from living reptile and bird cells.",
+      "summary": "Researchers identified ellipse-shaped microstructures and chemical traces resembling heme in a 115-million-year-old dinosaur limb bone, proposing they represent fossilized red blood cells preserved by the mineral hausmannite.",
+      "finding": "Researchers identified ellipse-shaped microstructures and chemical traces resembling heme in a 115-million-year-old dinosaur limb bone, proposing they represent fossilized red blood cells preserved by the mineral hausmannite.",
+      "significance": "Confirming preserved blood cells and biomolecules could offer a molecular window into the physiology, metabolism, and activity levels of extinct organisms.",
+      "caveat": "Outside experts question whether heme was definitively identified, noting the biomarkers were not localized solely to the structures and that their shapes differ from modern birds and reptiles.",
       "url": "https://www.sciencenews.org/article/evidence-dinosaur-blood-fossilize",
       "primarySourceUrl": "https://www.sciencenews.org/article/evidence-dinosaur-blood-fossilize",
       "source": {
@@ -1043,18 +1370,17 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-06T16:00:00Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "biology",
-        "earth-science"
+        "biology"
       ],
       "entities": [
+        "Proceedings of the National Academy of Sciences",
+        "Kliti Grice",
         "Curtin University",
         "Aratasaurus museunacionali",
-        "Proceedings of the National Academy of Sciences",
-        "North Carolina State University",
         "Mary Schweitzer"
       ],
       "milestoneStatus": "unknown",
@@ -1129,9 +1455,9 @@
     {
       "id": "science-5d4e55c9e90be96b",
       "title": "This armored amphibian once lived and hunted on the seafloor",
-      "summary": "Chemical analysis of Gerrothorax maritimus fossils from the late Triassic indicates this armored amphibian lived and hunted in the ocean without access to land or freshwater.",
-      "finding": "Chemical analysis of Gerrothorax maritimus fossils from the late Triassic indicates this armored amphibian lived and hunted in the ocean without access to land or freshwater.",
-      "significance": "This provides the first direct evidence of an amphibian adapted for long-term marine life, defying the conventional understanding that amphibian biology precludes saltwater survival.",
+      "summary": "Chemical analysis of fossil bones reveals that the ancient armored amphibian Gerrothorax maritimus consumed seafood and seawater, indicating it lived on the ocean floor without access to land or freshwater.",
+      "finding": "Chemical analysis of fossil bones reveals that the ancient armored amphibian Gerrothorax maritimus consumed seafood and seawater, indicating it lived on the ocean floor without access to land or freshwater.",
+      "significance": "This provides the first evidence of an amphibian adapted for long-term oceanic life, showing traits like bony armor and retained internal gills helped overcome saltwater vulnerabilities.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.sciencenews.org/article/first-marine-amphibian-ancient-fossil",
       "primarySourceUrl": "https://www.sciencenews.org/article/first-marine-amphibian-ancient-fossil",
@@ -1142,19 +1468,18 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-06T14:00:00Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "biology",
-        "earth-science"
+        "biology"
       ],
       "entities": [
         "Gerrothorax maritimus",
+        "Nature Ecology & Evolution",
         "Ryosuke Motani",
-        "Lachlan Hart",
         "University of California, Davis",
-        "University of New South Wales"
+        "Lachlan Hart"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.nature.com/articles/s41559-026-03209-9",
@@ -1193,10 +1518,10 @@
     {
       "id": "science-8b317084cde7e6b6",
       "title": "European orbiter detects hints of volcanic activity on Mars",
-      "summary": "Localized detections of hydrogen chloride gas escaping from fissures on Mars' Alba Mons volcano suggest the planet may possess internal heat and dormant subsurface magma.",
-      "finding": "Localized detections of hydrogen chloride gas escaping from fissures on Mars' Alba Mons volcano suggest the planet may possess internal heat and dormant subsurface magma.",
-      "significance": "Active magmatic or hydrothermal systems on Mars could provide protected, warm niches with the energy and ingredients necessary to support microbial life.",
-      "caveat": "Scientists have not directly observed any active lava flows or volcanic eruptions on Mars.",
+      "summary": "Localized spikes of hydrogen chloride detected over fissures on Mars's Alba Mons volcano suggest that the planet retains internal heat and may support active or dormant magmatic systems.",
+      "finding": "Localized spikes of hydrogen chloride detected over fissures on Mars's Alba Mons volcano suggest that the planet retains internal heat and may support active or dormant magmatic systems.",
+      "significance": "Evidence of ongoing volcanic activity could reveal underground volcanic plumbing systems and potential hydrothermal environments capable of hosting microbial life.",
+      "caveat": "No fresh lava flows or eruptions have been directly observed on Mars, and researchers note that the volcanic connection relied initially on geological intuition and required indirect demonstration.",
       "url": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "primarySourceUrl": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "source": {
@@ -1206,16 +1531,17 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T10:05:36Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
       ],
       "entities": [
         "Alexander Trokhimovskiy",
-        "Trace Gas Orbiter",
+        "Daniel Mège",
         "Science Advances",
+        "Trace Gas Orbiter",
         "Colin Wilson"
       ],
       "milestoneStatus": "unknown",
@@ -1350,10 +1676,10 @@
     {
       "id": "science-e1b5868eda521304",
       "title": "How octopuses squeeze through tiny openings, step by step",
-      "summary": "Common octopuses employ a systematic three- or four-step strategy to squeeze through small openings depending on hole size, while Mayan octopuses avoid narrower openings entirely.",
-      "finding": "Common octopuses employ a systematic three- or four-step strategy to squeeze through small openings depending on hole size, while Mayan octopuses avoid narrower openings entirely.",
-      "significance": "Understanding the physical strategies octopuses use to navigate narrow spaces can guide the design of shape-morphing soft robots capable of accessing hard-to-reach areas.",
-      "caveat": "The findings are based on a small sample of seven octopuses across only two species navigating circular holes, and species differences or different opening shapes may yield different behaviors.",
+      "summary": "Common octopuses employ distinct, multi-step physical strategies to squeeze through small openings depending on whether the hole is larger or smaller than the distance between their eyes.",
+      "finding": "Common octopuses employ distinct, multi-step physical strategies to squeeze through small openings depending on whether the hole is larger or smaller than the distance between their eyes.",
+      "significance": "Understanding how octopuses systematically maneuver through tiny apertures could guide the design of novel, shape-shifting soft robots that access hard-to-reach spaces.",
+      "caveat": "The study was conducted on a small sample of captive octopuses, and species differences were observed, with Mayan octopuses ignoring holes smaller than their eye distance.",
       "url": "https://www.sciencenews.org/article/octopuses-squeeze-escape-steps-video",
       "primarySourceUrl": "https://www.sciencenews.org/article/octopuses-squeeze-escape-steps-video",
       "source": {
@@ -1363,8 +1689,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-05T21:00:00Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-07T11:01:01.958577Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
@@ -1375,7 +1701,7 @@
         "Robyn Crook",
         "San Francisco State University",
         "Michael Kuba",
-        "University of Naples Federico II"
+        "Wenci Xin"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://journals.biologists.com/jeb/article-lookup/doi/10.1242/jeb.252825",
@@ -1384,9 +1710,9 @@
     {
       "id": "science-be6b70ec9ad1cda9",
       "title": "Software squeezes more data out of Webb Telescope for imaging exoplanets",
-      "summary": "Researchers developed FLIP, a software tool using gradient descent to optimize physical telescope models and improve the signal-to-noise ratio in exoplanet imaging.",
-      "finding": "Researchers developed FLIP, a software tool using gradient descent to optimize physical telescope models and improve the signal-to-noise ratio in exoplanet imaging.",
-      "significance": "Reducing imaging noise can reveal dimmer, older, or lower-mass exoplanets that previously evaded detection.",
+      "summary": "Researchers developed a software process named FLIP that uses gradient descent to optimize physical models of telescope hardware, boosting the signal-to-noise ratio in James Webb Space Telescope exoplanet imaging.",
+      "finding": "Researchers developed a software process named FLIP that uses gradient descent to optimize physical models of telescope hardware, boosting the signal-to-noise ratio in James Webb Space Telescope exoplanet imaging.",
+      "significance": "By suppressing noise and increasing observation sensitivity, the approach can reveal dimmer, older, or lower-mass exoplanets that previously evaded direct imaging.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://arstechnica.com/science/2026/11/getting-software-to-help-block-out-a-star-so-we-can-see-exoplanets",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/getting-software-to-help-block-out-a-star-so-we-can-see-exoplanets",
@@ -1397,8 +1723,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-05T19:59:22Z",
       "firstSeenAt": "2026-11-08T11:01:02.111901Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -1406,7 +1732,10 @@
       ],
       "entities": [
         "James Webb Space Telescope",
-        "NIRCam"
+        "NIRCam",
+        "HIP 65426",
+        "51 Eridani",
+        "TYC 5899"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "http://dx.doi.org/10.1038/s41586-026-11213-z",
@@ -3895,9 +4224,9 @@
     {
       "id": "science-996b79babe601422",
       "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
-      "summary": "Voyager Technologies' Griffin-1 lunar lander successfully finished rigorous environmental testing at NASA's Jet Propulsion Laboratory, confirming its readiness to endure space launch and lunar conditions.",
-      "finding": "Voyager Technologies' Griffin-1 lunar lander successfully finished rigorous environmental testing at NASA's Jet Propulsion Laboratory, confirming its readiness to endure space launch and lunar conditions.",
-      "significance": "Griffin-1 is designed as an infrastructure-class commercial lander to deliver over 1,100 pounds of cargo and technology demonstrations to the Moon's South Pole.",
+      "summary": "Voyager Technologies' Griffin-1 lunar lander completed environmental testing at NASA's Jet Propulsion Laboratory, surviving simulated launch acoustic, vibration, and thermal vacuum space conditions.",
+      "finding": "Voyager Technologies' Griffin-1 lunar lander completed environmental testing at NASA's Jet Propulsion Laboratory, surviving simulated launch acoustic, vibration, and thermal vacuum space conditions.",
+      "significance": "Griffin-1 is designed as an infrastructure-class commercial lander to deliver over 1,100 pounds of cargo and technology demonstrations to the lunar South Pole.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
       "primarySourceUrl": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
@@ -3908,18 +4237,18 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-13T13:00:00Z",
       "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
       "evidenceType": "mission-milestone",
       "topics": [
-        "astronomy",
-        "technology"
+        "technology",
+        "astronomy"
       ],
       "entities": [
-        "NASA",
-        "Jet Propulsion Laboratory",
         "Voyager Technologies",
         "Griffin-1",
+        "NASA",
+        "Jet Propulsion Laboratory",
         "SpaceX"
       ],
       "milestoneStatus": "completed",
@@ -4481,10 +4810,10 @@
     {
       "id": "science-fd82550bcb5ef02d",
       "title": "NASA’s SPHEREx Telescope Sees Menagerie of Brown Dwarfs",
-      "summary": "SPHEREx observations of 37 brown dwarfs revealed chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane across a wide range of temperatures.",
-      "finding": "SPHEREx observations of 37 brown dwarfs revealed chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane across a wide range of temperatures.",
-      "significance": "The data allow researchers to study atmospheric chemistry and cloud transitions across diverse brown dwarfs, helping improve theoretical models of objects bridging stars and giant planets.",
-      "caveat": "Current state-of-the-art models struggle to match observational data during cloudy transitions, and spectra show significant individual variation even among brown dwarfs at identical temperatures.",
+      "summary": "Observations from the SPHEREx space telescope revealed that 37 nearby brown dwarfs possess chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane.",
+      "finding": "Observations from the SPHEREx space telescope revealed that 37 nearby brown dwarfs possess chemically rich atmospheres containing water, carbon dioxide, carbon monoxide, and methane.",
+      "significance": "SPHEREx's spectral coverage enables detailed atmospheric analysis of brown dwarfs, uncovering chemical diversity across different temperatures and testing current theoretical models.",
+      "caveat": "While current models capture broad chemical trends, they struggle to match observational data during cloudy transitions, and observed spectra vary even among brown dwarfs of the same temperature.",
       "url": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs",
       "primarySourceUrl": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs",
       "source": {
@@ -4494,18 +4823,18 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-08T18:22:48Z",
       "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
       ],
       "entities": [
-        "NASA",
         "SPHEREx",
+        "Jet Propulsion Laboratory",
         "The Astrophysical Journal",
-        "Zafar Rustamkulov",
-        "J. Davy Kirkpatrick"
+        "Caltech",
+        "Zafar Rustamkulov"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://iopscience.iop.org/article/10.3847/1538-4357/ae9d66",
@@ -4527,7 +4856,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-08T13:26:57Z",
       "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
       "verifiedAt": "2026-10-29T10:00:35.738305Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -4713,10 +5042,10 @@
     {
       "id": "science-785e57922ae85254",
       "title": "NASA’s Curiosity Rover Catches Stunning Martian Dawn",
-      "summary": "NASA's Curiosity rover reached 1 kilometer of elevation gain on Mount Sharp and captured detailed imagery of a distant yardang layer on the mountain's northwestern reaches.",
-      "finding": "NASA's Curiosity rover reached 1 kilometer of elevation gain on Mount Sharp and captured detailed imagery of a distant yardang layer on the mountain's northwestern reaches.",
-      "significance": "Reaching this elevation is a record for Mars ascent, providing visual access to mysterious geologic layers that may originate from ancient volcanic eruptions or wind erosion.",
-      "caveat": "Scientists do not yet know how the yardang layer formed, and close-up data collection with the rover's robotic arm is not anticipated until 2027.",
+      "summary": "NASA's Curiosity rover captured a detailed morning panorama of distant, wind-carved crags known as yardangs on Mount Sharp and achieved a record elevation gain of 1 kilometer above the crater floor.",
+      "finding": "NASA's Curiosity rover captured a detailed morning panorama of distant, wind-carved crags known as yardangs on Mount Sharp and achieved a record elevation gain of 1 kilometer above the crater floor.",
+      "significance": "Observing the yardangs and ascending Mount Sharp helps scientists analyze geological transitions on Mars, offering clues into ancient environmental shifts from watery conditions to dry periods.",
+      "caveat": "The exact origin of the yardang layer remains unconfirmed, though researchers hypothesize it may have formed from ancient volcanic ash deposits.",
       "url": "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-rover-catches-stunning-martian-dawn",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-rover-catches-stunning-martian-dawn",
       "source": {
@@ -4726,19 +5055,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-06T15:30:07Z",
       "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
+      "checkedAt": "2026-11-11T11:00:46.709649Z",
+      "verifiedAt": "2026-11-11T11:00:46.709649Z",
       "evidenceType": "mission-milestone",
       "topics": [
         "astronomy",
-        "technology"
+        "planetary-science"
       ],
       "entities": [
         "Curiosity",
         "Mount Sharp",
         "Mastcam",
-        "Jet Propulsion Laboratory",
-        "Gale Crater"
+        "Ashwin Vasavada",
+        "Jet Propulsion Laboratory"
       ],
       "milestoneStatus": "completed",
       "sourceUpdatedAt": "2026-10-06T15:30:09Z"
@@ -5467,271 +5796,60 @@
         "Gulf Stream"
       ],
       "caveat": "The observed downstream Gulf Stream change should not be read as a direct measure of the broader Atlantic Meridional Overturning Circulation (AMOC), which responds to different forcings."
-    },
-    {
-      "id": "esa-records-samba-targeted-reentry-science",
-      "title": "ESA records a precision-targeted satellite reentry for debris science",
-      "summary": "ESA deliberately guided the Cluster satellite Samba to a remote South Pacific reentry and flew an instrumented aircraft from Tonga to observe it. The satellite reentered at 21:39:38 UTC on August 31, with the final prediction accurate to the second; 29 of 30 airborne instruments recorded its breakup, yielding rare measurements of how a spacecraft heats, fragments, and sheds materials.",
-      "url": "https://www.esa.int/Space_Safety/Space_Debris/Samba_s_fiery_farewell_recorded",
-      "source": {
-        "name": "European Space Agency"
-      },
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "topics": [
-        "space safety",
-        "engineering",
-        "space debris",
-        "atmospheric reentry"
-      ],
-      "caveat": "ESA says the images and instrument data are still being processed, so detailed material-by-material results are not yet available."
-    },
-    {
-      "id": "science-4114e1449ea64a5f",
-      "title": "Podcast: Lasers and materials of the future",
-      "summary": "Chunlei Guo, an NSF-supported researcher, is working on designing materials with highly functionalized purposes using femtosecond lasers.",
-      "finding": "Chunlei Guo, an NSF-supported researcher, is working on designing materials with highly functionalized purposes using femtosecond lasers.",
-      "significance": "This research could lead to advances in materials science, similar to past innovations like nylon stockings and artificial joints, by enabling the creation of materials with specific and advanced functionalities.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nsf.gov/news/podcast-lasers-materials-future",
-      "primarySourceUrl": "https://www.nsf.gov/news/podcast-lasers-materials-future",
-      "source": {
-        "name": "NSF"
-      },
-      "sourceGroup": "NSF",
-      "sourceQuality": 2,
-      "publishedAt": "2026-08-31T19:02:25Z",
-      "firstSeenAt": "2026-10-10T10:16:39.118957Z",
-      "checkedAt": "2026-10-13T21:29:33.187489Z",
-      "verifiedAt": "2026-10-10T10:16:39.118957Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "materials-research",
-        "physics"
-      ],
-      "entities": [
-        "Chunlei Guo",
-        "NSF",
-        "femtosecond lasers"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-08-31T19:02:25Z"
-    },
-    {
-      "id": "noaa-lrauvs-expand-seafloor-scallop-survey",
-      "title": "NOAA’s long-range robots extend a seafloor survey where ships cannot go",
-      "summary": "NOAA Fisheries sent two long-range autonomous underwater vehicles along more than 200 nautical miles of Mid-Atlantic seafloor track lines, collecting over 68,000 images for the Atlantic sea-scallop assessment. Their camera, environmental, and navigation systems can sample inside and around offshore infrastructure where traditional survey vessels cannot safely operate; NOAA says comparable robot data have already passed technical review and entered annual abundance estimates.",
-      "url": "https://www.fisheries.noaa.gov/feature-story/meet-autonomous-underwater-robot-expanding-our-ability-survey-seafloor",
-      "source": {
-        "name": "NOAA Fisheries"
-      },
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "topics": [
-        "ocean science",
-        "robotics",
-        "seafloor surveying",
-        "fisheries science"
-      ]
-    },
-    {
-      "id": "science-3d9f59c719d9a8d0",
-      "title": "NASA’s Dark Universe-Seeking Nancy Grace Roman Space Telescope Launches",
-      "summary": "NASA's Nancy Grace Roman Space Telescope successfully launched aboard a SpaceX Falcon Heavy rocket and is on its way to the second Sun-Earth Lagrange point (L2), approximately one million miles from Earth.",
-      "finding": "NASA's Nancy Grace Roman Space Telescope successfully launched aboard a SpaceX Falcon Heavy rocket and is on its way to the second Sun-Earth Lagrange point (L2), approximately one million miles from Earth.",
-      "significance": "This mission is designed to explore dark matter, dark energy, and exoplanets with a large field of view and crisp infrared vision, potentially ushering in a new era of discovery and setting the foundation for the search for life beyond our solar system.",
-      "caveat": "The telescope is currently in its commissioning phase, and while initial deployments were successful, the scientific findings are anticipated to be released by early 2027 after calibration and testing.",
-      "url": "https://www.nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-space-telescope-launches",
-      "primarySourceUrl": "https://www.nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-space-telescope-launches",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-08-30T13:18:06Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-15T10:00:00.772183Z",
-      "verifiedAt": "2026-10-15T10:00:00.772183Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "astronomy",
-        "technology"
-      ],
-      "entities": [
-        "NASA",
-        "Nancy Grace Roman Space Telescope",
-        "SpaceX Falcon Heavy rocket",
-        "Kennedy Space Center",
-        "Sun-Earth Lagrange point"
-      ],
-      "milestoneStatus": "completed"
-    },
-    {
-      "id": "roman-telescope-launches-toward-l2",
-      "title": "NASA’s Roman telescope launches toward its dark-universe survey",
-      "summary": "NASA’s Nancy Grace Roman Space Telescope launched aboard a Falcon Heavy and separated from the rocket’s second stage, beginning its roughly three-month journey to the Sun–Earth L2 point. After commissioning, Roman will conduct wide, deep visible-to-near-infrared surveys to probe dark energy and dark matter and build a census of exoplanets.",
-      "url": "https://science.nasa.gov/blogs/roman/2026/08/30/nasa-concludes-roman-space-telescope-launch-coverage/",
-      "source": {
-        "name": "NASA Roman"
-      },
-      "publishedAt": "2026-08-30T00:00:00Z",
-      "topics": [
-        "space",
-        "astronomy",
-        "dark energy",
-        "exoplanets",
-        "science missions"
-      ]
-    },
-    {
-      "id": "nasa-swift-resumes-xray-ultraviolet-observations",
-      "title": "NASA’s Swift observatory resumes X-ray and ultraviolet science",
-      "summary": "NASA has restarted Swift’s X-ray and ultraviolet/optical instruments after months in low-drag mode intended to preserve the observatory for an attempted orbital boost. The boost spacecraft will no longer capture Swift, but the 21-year-old mission can again rapidly observe transient cosmic events while NASA estimates it has roughly one to two months above the altitude where operations become difficult.",
-      "url": "https://science.nasa.gov/blogs/swift/2026/08/28/nasas-swift-restarts-science-observations/",
-      "source": {
-        "name": "NASA Swift"
-      },
-      "publishedAt": "2026-08-28T00:00:00Z",
-      "topics": [
-        "space",
-        "astronomy",
-        "X-ray astronomy",
-        "space missions"
-      ],
-      "caveat": "Swift’s third instrument, the Burst Alert Telescope, remains offline as the team works to return it to data collection."
-    },
-    {
-      "id": "esa-launches-mtg-i2-weather-satellite",
-      "title": "Europe launches a high-frequency weather imager for severe-storm nowcasting",
-      "summary": "ESA launched the MTG-I2 weather satellite aboard Ariane 6, completing the first operational trio of Meteosat Third Generation satellites. Once commissioned, its Flexible Combined Imager and Lightning Imager will provide high-resolution views of developing weather across Europe and northern Africa every 2.5 minutes, strengthening severe-weather, wildfire, pollution, and climate monitoring.",
-      "url": "https://www.esa.int/Newsroom/Press_Releases/MTG-I2_completes_Europe_s_latest_weather_trio",
-      "source": {
-        "name": "European Space Agency"
-      },
-      "publishedAt": "2026-08-27T00:00:00Z",
-      "topics": [
-        "Earth science",
-        "weather",
-        "satellites",
-        "spaceflight"
-      ]
-    },
-    {
-      "id": "nasa-tests-lunar-landing-plume-physics",
-      "title": "NASA begins its most flight-relevant lunar landing plume tests",
-      "summary": "NASA has begun firing a simulated lander plume into lunar-regolith simulant inside a 60-foot vacuum sphere at Langley. Cameras and other instruments are measuring crater formation, ejecta geometry, and particle speeds to validate models for how rocket exhaust could endanger landers, surface equipment, and crews on the Moon—and eventually help prepare for Mars landings.",
-      "url": "https://www.nasa.gov/missions/artemis/nasa-begins-moon-mission-plume-surface-interaction-tests/",
-      "source": {
-        "name": "NASA"
-      },
-      "publishedAt": "2026-08-26T00:00:00Z",
-      "topics": [
-        "space",
-        "Moon",
-        "engineering",
-        "planetary science"
-      ]
-    },
-    {
-      "id": "nasa-dsn-dss23-enters-operations",
-      "title": "New Next-Gen Dish Adds Muscle to NASA’s Deep Space Network",
-      "summary": "NASA's Deep Space Network facility in California has added a new 34-meter-wide radio frequency antenna, Deep Space Station 23 (DSS-23), which began operations on August 3, tracking missions such as NASA's Chandra X-ray Observatory, Mars Reconnaissance Orbiter, Psyche, Juno, and Voyager 1.",
-      "finding": "NASA's Deep Space Network facility in California has added a new 34-meter-wide radio frequency antenna, Deep Space Station 23 (DSS-23), which began operations on August 3, tracking missions such as NASA's Chandra X-ray Observatory, Mars Reconnaissance Orbiter, Psyche, Juno, and Voyager 1.",
-      "significance": "This new antenna strengthens NASA's deep space communications infrastructure, enabling support for more missions exploring the solar system and interstellar space, and enhancing the agency's capabilities for future space exploration endeavors.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/technology/space-comms/deep-space-network/new-next-gen-dish-adds-muscle-to-nasas-deep-space-network",
-      "primarySourceUrl": "https://www.nasa.gov/technology/space-comms/deep-space-network/new-next-gen-dish-adds-muscle-to-nasas-deep-space-network",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-08-25T00:00:00Z",
-      "firstSeenAt": "2026-10-10T10:16:39.118957Z",
-      "checkedAt": "2026-10-10T10:16:39.118957Z",
-      "verifiedAt": "2026-10-10T10:16:39.118957Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "astronomy"
-      ],
-      "entities": [
-        "NASA",
-        "Deep Space Network",
-        "Deep Space Station 23",
-        "Goldstone Deep Space Communications Complex",
-        "Jet Propulsion Laboratory"
-      ],
-      "milestoneStatus": "completed",
-      "sourceUpdatedAt": "2026-08-25T22:28:36Z"
-    },
-    {
-      "id": "roman-telescope-clears-flight-readiness-review",
-      "title": "NASA's Roman telescope clears its flight-readiness review",
-      "summary": "NASA and SpaceX certified the Nancy Grace Roman Space Telescope to proceed into final launch preparations, targeting no earlier than 7:26 a.m. EDT on August 30 aboard Falcon Heavy. Roman's wide-field surveys are designed to study dark energy, dark matter, exoplanets, and the universe's evolution.",
-      "url": "https://science.nasa.gov/blogs/roman/2026/08/21/teams-complete-flight-readiness-review-for-nasas-roman-telescope/",
-      "source": {
-        "name": "NASA Science"
-      },
-      "publishedAt": "2026-08-21T16:49:00Z",
-      "topics": [
-        "space",
-        "astronomy",
-        "science missions"
-      ]
     }
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "selectedIds": [
-      "science-fc400f5c232b380e",
-      "science-0a037ddef00bff3c",
-      "science-1695ef8e6db7acbe",
-      "science-8ea0785cc9c63a50",
-      "science-0e34e988e4e9a6f2",
-      "science-b1eef9bd8d6da9ac"
+      "science-db54524d5e99b1c6",
+      "science-a23485fd871564b0",
+      "science-ee03630e6f626376",
+      "science-a085fbe1095eb29d",
+      "science-336af74c1de5a917",
+      "science-8c416cac2e1213d0"
     ],
     "reasons": {
-      "science-fc400f5c232b380e": {
-        "score": 33,
+      "science-db54524d5e99b1c6": {
+        "score": 34,
         "source": "NASA",
-        "topic": "technology",
-        "publishedAt": "2026-11-10T01:07:45Z",
-        "interestMatch": false
-      },
-      "science-0a037ddef00bff3c": {
-        "score": 32,
-        "source": "New Scientist",
-        "topic": "biology",
-        "publishedAt": "2026-11-10T10:00:00Z",
-        "interestMatch": false
-      },
-      "science-1695ef8e6db7acbe": {
-        "score": 32,
-        "source": "Science News",
         "topic": "earth-science",
-        "publishedAt": "2026-11-10T10:00:00Z",
+        "publishedAt": "2026-11-11T05:01:00Z",
         "interestMatch": false
       },
-      "science-8ea0785cc9c63a50": {
-        "score": 30,
-        "source": "Ars Technica Science",
-        "topic": "physics",
-        "publishedAt": "2026-11-08T12:15:31Z",
-        "interestMatch": false
-      },
-      "science-0e34e988e4e9a6f2": {
-        "score": 30,
+      "science-a23485fd871564b0": {
+        "score": 31,
         "source": "ScienceDaily",
         "topic": "astronomy",
-        "publishedAt": "2026-11-08T10:11:25Z",
+        "publishedAt": "2026-11-10T23:56:04Z",
         "interestMatch": false
       },
-      "science-b1eef9bd8d6da9ac": {
+      "science-ee03630e6f626376": {
+        "score": 31,
+        "source": "New Scientist",
+        "topic": "physics",
+        "publishedAt": "2026-11-10T20:00:00Z",
+        "interestMatch": false
+      },
+      "science-a085fbe1095eb29d": {
+        "score": 31,
+        "source": "Science News",
+        "topic": "health",
+        "publishedAt": "2026-11-10T14:00:00Z",
+        "interestMatch": false
+      },
+      "science-336af74c1de5a917": {
+        "score": 28,
+        "source": "Ars Technica Science",
+        "topic": "social-science",
+        "publishedAt": "2026-11-07T12:15:55Z",
+        "interestMatch": false
+      },
+      "science-8c416cac2e1213d0": {
         "score": 25,
-        "source": "ESA",
-        "topic": "astronomy",
-        "publishedAt": "2026-11-06T11:01:03Z",
+        "source": "Quanta Magazine",
+        "topic": "technology",
+        "publishedAt": "2026-11-04T15:32:52Z",
         "interestMatch": false
       }
     }
