@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-11T11:00:46.709649Z",
-  "editionDate": "2026-11-11",
+  "generatedAt": "2026-11-12T11:00:48.186424Z",
+  "editionDate": "2026-11-12",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -21,11 +21,302 @@
   },
   "stories": [
     {
+      "id": "science-36841df3d1321307",
+      "title": "Earth's fiery birth may have created hundreds of oceans' worth of water",
+      "summary": "High-temperature experiments show that iron oxide in silicate rocks reacts with hydrogen gas within minutes to form water vapor, suggesting early Earth could have produced vast amounts of its own water.",
+      "finding": "High-temperature experiments show that iron oxide in silicate rocks reacts with hydrogen gas within minutes to form water vapor, suggesting early Earth could have produced vast amounts of its own water.",
+      "significance": "This mechanism offers an alternative to external delivery by comets or asteroids and implies that water and habitability may naturally arise on rocky planets across the universe.",
+      "caveat": "The experiments do not determine how much of Earth's current water supply was created by this mechanism versus delivered by external objects like comets and meteorites.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261110042549.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261110042549.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T08:38:42Z",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science",
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "University of New Mexico",
+        "Nature Geoscience",
+        "Susmita Garai",
+        "Zachary Sharp",
+        "Peter Olson"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41561-026-02138-3"
+    },
+    {
+      "id": "science-5cf497c37d846708",
+      "title": "Curiosity Blog, Sols 5063-5069 Rocks and Chips",
+      "summary": "NASA's Curiosity rover completed a drill campaign at the Nazca drill hole to investigate bedrock containing chip-shaped crystal forms, delivering samples to SAM and performing ChemCam observations.",
+      "finding": "NASA's Curiosity rover completed a drill campaign at the Nazca drill hole to investigate bedrock containing chip-shaped crystal forms, delivering samples to SAM and performing ChemCam observations.",
+      "significance": "Investigating these unusual crystal formations helps characterize Martian bedrock geology and local mineralogy at Mount Sharp.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5063-5069-rocks-and-chips",
+      "primarySourceUrl": "https://science.nasa.gov/blog/curiosity-blog-sols-5063-5069-rocks-and-chips",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-12T00:41:35Z",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "Curiosity",
+        "NASA",
+        "Mars",
+        "MAHLI",
+        "ChemCam"
+      ],
+      "milestoneStatus": "completed",
+      "sourceUpdatedAt": "2026-11-12T00:41:39Z"
+    },
+    {
+      "id": "science-780a35cbfb8cfbda",
+      "title": "Some PFAS chemicals are declining in English rivers but others are appearing",
+      "summary": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
+      "finding": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
+      "significance": "The results demonstrate the efficacy of global restrictions on legacy forever chemicals, but highlight how replacement compounds are accumulating in freshwater ecosystems.",
+      "caveat": "Despite the decline, recorded PFOS concentrations often remain above Environmental Quality Standards, and the environmental and health impacts of replacement PFAS remain relatively understudied.",
+      "url": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T00:01:00Z",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science",
+        "health"
+      ],
+      "entities": [
+        "River Wye",
+        "Environment Agency",
+        "International Agency for Research on Cancer",
+        "University of York",
+        "Liverpool John Moores University"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://pubs.rsc.org/em/article/doi/10.1039/d6em00715e/1379687/National-scale-monitoring-reveals-widespread?searchresult=1"
+    },
+    {
+      "id": "science-2e12c6f9a47fc558",
+      "title": "Scientists discover that necks didn't evolve for the reason we thought",
+      "summary": "Biomechanical modeling using modern sturgeon analogs indicates that the earliest stem tetrapods had surprisingly stiff necks rather than flexible ones capable of turning.",
+      "finding": "Biomechanical modeling using modern sturgeon analogs indicates that the earliest stem tetrapods had surprisingly stiff necks rather than flexible ones capable of turning.",
+      "significance": "This finding challenges the prevailing hypothesis that necks evolved to improve head mobility, suggesting they initially emerged to support front-limb locomotion during the transition onto land.",
+      "caveat": "The models only evaluated the mechanical properties of the backbone; unmodeled tissues like muscles, skin, and dermal bones may have restricted neck mobility even further.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261108233101.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261108233101.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-11T23:49:03Z",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology"
+      ],
+      "entities": [
+        "Penn State",
+        "Tiktaalik",
+        "Nature",
+        "Uppsala University",
+        "University of Ottawa"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41586-026-11158-3"
+    },
+    {
+      "id": "science-78c34c8f8ab330b8",
+      "title": "Anduril says its first satellite can see adversaries maneuver in orbital night",
+      "summary": "Anduril demonstrated a long-wave infrared sensor on its Anduril-216 satellite that can image objects in full darkness, addressing tracking gaps when satellites maneuver within Earth's shadow.",
+      "finding": "Anduril demonstrated a long-wave infrared sensor on its Anduril-216 satellite that can image objects in full darkness, addressing tracking gaps when satellites maneuver within Earth's shadow.",
+      "significance": "Optical sensors often lose track of spacecraft when they pass through orbital darkness, but long-wave infrared detection of thermal signatures can maintain tracking custody during eclipses.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://arstechnica.com/space/2026/11/anduril-demos-night-vision-sensor-for-tracking-satellites-in-darkness",
+      "primarySourceUrl": "https://arstechnica.com/space/2026/11/anduril-demos-night-vision-sensor-for-tracking-satellites-in-darkness",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-11T20:22:03Z",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "technology",
+        "astronomy"
+      ],
+      "entities": [
+        "Anduril Industries",
+        "SpaceX",
+        "Anduril-216",
+        "Apex Space",
+        "Space Force"
+      ],
+      "milestoneStatus": "completed",
+      "sourceUpdatedAt": "2026-11-11T21:46:34Z"
+    },
+    {
+      "id": "science-4dcee2b3879b37c3",
+      "title": "Stone Age children left fingerprints on ancient art projects",
+      "summary": "Clay figurine fragments dating back up to 15,000 years in the Levant preserve fingerprints of both adults and young children, suggesting adults taught children how to shape clay.",
+      "finding": "Clay figurine fragments dating back up to 15,000 years in the Levant preserve fingerprints of both adults and young children, suggesting adults taught children how to shape clay.",
+      "significance": "The findings provide rare physical evidence of children's involvement in prehistoric art and intergenerational learning among hunter-gatherers before agriculture emerged.",
+      "caveat": "The exact purpose of the ancient figurines remains unclear, though their small size and lack of heavy wear suggest they were not maintained as precious heirlooms.",
+      "url": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
+      "primarySourceUrl": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-11T19:00:00Z",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "social-science"
+      ],
+      "entities": [
+        "Laurent Davin",
+        "Hebrew University of Jerusalem",
+        "Steven Dorland",
+        "Grand Valley State University"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1371/journal.pone.0360388",
+      "sourceUpdatedAt": "2026-11-11T19:00:00Z"
+    },
+    {
+      "id": "science-180d88ad69d22f79",
+      "title": "This magic mushroom can kill",
+      "summary": "Researchers identified Galerina indica as the first known fungus species to produce both hallucinogenic psilocybin and lethal amatoxin compounds.",
+      "finding": "Researchers identified Galerina indica as the first known fungus species to produce both hallucinogenic psilocybin and lethal amatoxin compounds.",
+      "significance": "The finding reveals unexpected diversity in fungal chemical synthesis, showing that fungi can combine distinct toxins and psychoactive compounds through genetic evolution.",
+      "caveat": "Limited knowledge of the fungi's evolutionary tree leaves it unclear whether psilocybin genes were acquired independently or passed down from a common ancestor.",
+      "url": "https://www.sciencenews.org/article/dark-magic-mushroom-psilocybin-amatoxin",
+      "primarySourceUrl": "https://www.sciencenews.org/article/dark-magic-mushroom-psilocybin-amatoxin",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-11T16:00:00Z",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology"
+      ],
+      "entities": [
+        "Current Biology",
+        "Andrew Kunik",
+        "Matthew Smith",
+        "University of Florida",
+        "Anne Pringle"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.cell.com/current-biology/fulltext/S0960-9822(26)01428-4",
+      "sourceUpdatedAt": "2026-11-11T16:00:00Z"
+    },
+    {
+      "id": "science-5398788b6a3f4743",
+      "title": "How a Metabolic Spark Could Have Jump-Started Life",
+      "summary": "Scientists hypothesize that self-sustaining energetic cycles of chemical reactions, potentially catalyzed around hydrothermal vents or in milder conditions, may have sparked the origin of life before genes or cells emerged.",
+      "finding": "Scientists hypothesize that self-sustaining energetic cycles of chemical reactions, potentially catalyzed around hydrothermal vents or in milder conditions, may have sparked the origin of life before genes or cells emerged.",
+      "significance": "A metabolism-first pathway offers an explanation for how complex organic molecules necessary for cellular life could form prior to genetic inheritance systems.",
+      "caveat": "Researchers lack a clear understanding of how these early metabolic reactions achieved stability to build complexity, connected with genetic material, and coexisted within cell membranes.",
+      "url": "https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111",
+      "primarySourceUrl": "https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111",
+      "source": {
+        "name": "Quanta Magazine"
+      },
+      "sourceGroup": "Quanta Magazine",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-11T15:10:30Z",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "biology"
+      ],
+      "entities": [
+        "William Martin",
+        "Harold Morowitz",
+        "Martina Preiner",
+        "Ramanarayanan Krishnamurthy"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-11T15:23:34Z"
+    },
+    {
+      "id": "science-ac9927faad7ed128",
+      "title": "Light is hard to block from every direction. This physicist found a way",
+      "summary": "Physicist Stefano Martiniani designed a new class of metamaterials called gyromorphs that combine crystal-like geometry and liquidlike randomness to block light from penetrating at any angle.",
+      "finding": "Physicist Stefano Martiniani designed a new class of metamaterials called gyromorphs that combine crystal-like geometry and liquidlike randomness to block light from penetrating at any angle.",
+      "significance": "Gyromorphs demonstrate that hybrid ordered-disordered structures are possible and could be utilized to develop more energy-efficient optical computers.",
+      "caveat": "The source notes that creating such hybrid materials is possible only under certain constraints, though broader limitations are not detailed.",
+      "url": "https://www.sciencenews.org/article/light-block-direction-physicist-sn10",
+      "primarySourceUrl": "https://www.sciencenews.org/article/light-block-direction-physicist-sn10",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-11T12:00:00Z",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "Stefano Martiniani",
+        "New York University",
+        "FReSCo"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-11T12:00:00Z"
+    },
+    {
       "id": "science-f881bc45f9b01c42",
       "title": "APOD: 2026 November 11 – NGC 4449: Small Galaxy, Big Impact",
-      "summary": "The dwarf galaxy NGC 4449 and similar dwarf galaxies are missing more oxygen than models predict, suggesting their stellar winds and supernovae efficiently expel oxygen and other heavy elements.",
-      "finding": "The dwarf galaxy NGC 4449 and similar dwarf galaxies are missing more oxygen than models predict, suggesting their stellar winds and supernovae efficiently expel oxygen and other heavy elements.",
-      "significance": "Dwarf galaxies may play a major role in dispersing heavy elements throughout the universe.",
+      "summary": "Observations show NGC 4449 and similar dwarf galaxies lack more oxygen than expected by models, suggesting stellar winds and supernovae effectively expel oxygen and heavy elements into space.",
+      "finding": "Observations show NGC 4449 and similar dwarf galaxies lack more oxygen than expected by models, suggesting stellar winds and supernovae effectively expel oxygen and heavy elements into space.",
+      "significance": "Dwarf galaxies may play a substantial role in dispersing the heavy elements necessary for forming future stars, planets, and life across the universe.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact",
       "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact",
@@ -36,16 +327,16 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-11T05:05:00Z",
       "firstSeenAt": "2026-11-11T11:00:46.709649Z",
-      "checkedAt": "2026-11-11T11:00:46.709649Z",
-      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "astronomy"
       ],
       "entities": [
+        "NGC 4449",
         "Milky Way",
         "Hubble Space Telescope",
-        "NGC 4449",
         "NASA",
         "ESA"
       ],
@@ -155,19 +446,19 @@
       "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
       "summary": "NASA's Voyager 1 spacecraft is scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
       "finding": "NASA's Voyager 1 spacecraft is scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
-      "significance": "As the most distant human-made object, it marks the first time light from Earth requires a full 24 hours to reach an active spacecraft.",
+      "significance": "Voyager 1 is the most distant human-made object, and reaching one light-day means light from Earth requires 24 hours to reach it.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
       "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
       "source": {
-        "name": "NASA"
+        "name": "NASA JPL"
       },
       "sourceGroup": "NASA",
       "sourceQuality": 2,
       "publishedAt": "2026-11-10T19:22:45Z",
       "firstSeenAt": "2026-11-11T11:00:46.709649Z",
-      "checkedAt": "2026-11-11T11:00:46.709649Z",
-      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "mission-milestone",
       "topics": [
         "astronomy",
@@ -176,9 +467,9 @@
       "entities": [
         "NASA",
         "Voyager 1",
+        "Voyager 2",
         "Jet Propulsion Laboratory",
-        "Caltech",
-        "Voyager 2"
+        "Caltech"
       ],
       "milestoneStatus": "planned"
     },
@@ -218,10 +509,10 @@
     {
       "id": "science-8bebeeb78f54a7d4",
       "title": "High oil prices have led to a dip in global carbon emissions",
-      "summary": "An analysis estimates that global fossil fuel carbon emissions fell approximately 0.4 percent in 2026, primarily driven by a 1.9 percent reduction in oil emissions due to high prices.",
-      "finding": "An analysis estimates that global fossil fuel carbon emissions fell approximately 0.4 percent in 2026, primarily driven by a 1.9 percent reduction in oil emissions due to high prices.",
-      "significance": "Clean technology additions offset nearly 70 percent of energy demand growth, suggesting that emissions peaks are approaching but still require faster deployment to become permanent.",
-      "caveat": "The drop is believed to be a temporary shock driven by geopolitical conflict and high oil prices rather than a permanent peak, with overall emissions projected to resume rising.",
+      "summary": "An analysis estimates that global fossil fuel emissions dropped about 0.4 percent in 2026, driven largely by high oil prices rather than a lasting peak in emissions.",
+      "finding": "An analysis estimates that global fossil fuel emissions dropped about 0.4 percent in 2026, driven largely by high oil prices rather than a lasting peak in emissions.",
+      "significance": "Renewables and electric vehicles offset roughly 70 percent of energy demand growth, suggesting peak emissions could be reached within a few years if clean technology deployment continues to accelerate.",
+      "caveat": "The decline represents a short-term dip linked to high oil prices rather than permanent structural progress, and emissions are expected to resume increasing without continued shocks.",
       "url": "https://arstechnica.com/science/2026/11/carbon-emissions-are-down-this-year-but-that-probably-wont-last",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/carbon-emissions-are-down-this-year-but-that-probably-wont-last",
       "source": {
@@ -231,11 +522,12 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-10T16:29:27Z",
       "firstSeenAt": "2026-11-11T11:00:46.709649Z",
-      "checkedAt": "2026-11-11T11:00:46.709649Z",
-      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "earth-science"
+        "earth-science",
+        "technology"
       ],
       "entities": [
         "Corinne Le Quéré",
@@ -284,10 +576,10 @@
     {
       "id": "science-6c2824fb2757db42",
       "title": "The Case for a Bubble at Life’s Start",
-      "summary": "The lipid-first hypothesis proposes that early life originated through self-assembling lipid containers that could pass compositional information across generations and undergo natural selection.",
-      "finding": "The lipid-first hypothesis proposes that early life originated through self-assembling lipid containers that could pass compositional information across generations and undergo natural selection.",
-      "significance": "A physical container or membrane solves the problem of chemical dispersion, concentrating prebiotic molecules so they can assemble complex systems necessary for life.",
-      "caveat": "Critics note a lack of experimental proof for lipid evolution, uncertainty regarding prebiotic lipid synthesis, and models suggesting compositional replication may be too inaccurate for natural selection.",
+      "summary": "The lipid-first theory suggests life began with self-enclosed lipid membranes that gathered chemistry and underwent evolution through compositional inheritance.",
+      "finding": "The lipid-first theory suggests life began with self-enclosed lipid membranes that gathered chemistry and underwent evolution through compositional inheritance.",
+      "significance": "Enclosures prevent early biochemical components from dispersing, potentially providing the physical compartmentalization required for natural selection before genetic systems existed.",
+      "caveat": "Critics point out the lack of experimental evidence for evolving lipid systems, alongside analyses indicating compositional replication may be too inaccurate for selection.",
       "url": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110",
       "primarySourceUrl": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110",
       "source": {
@@ -297,19 +589,19 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-10T15:08:35Z",
       "firstSeenAt": "2026-11-11T11:00:46.709649Z",
-      "checkedAt": "2026-11-11T11:00:46.709649Z",
-      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "biology",
         "chemistry"
       ],
       "entities": [
+        "Bruce Damer",
         "University of California, Santa Cruz",
         "Doron Lancet",
-        "Daniel Segrè",
-        "Jack Szostak",
-        "Bruce Damer"
+        "Daniel Segr\b",
+        "Jack Szostak"
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-11-10T15:08:56Z"
@@ -317,10 +609,10 @@
     {
       "id": "science-a085fbe1095eb29d",
       "title": "Science to restore speech is moving fast. Here’s what’s next",
-      "summary": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
-      "finding": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
-      "significance": "These technological developments could allow people who have lost the ability to speak due to neurodegenerative illnesses to communicate intuitively and more rapidly.",
-      "caveat": "The technology remains in very early testing with fewer than ten people tested globally, and some systems remain non-portable and slow.",
+      "summary": "Brain-computer interfaces that decode speech signals from the motor cortex are advancing toward direct brain-to-voice translation, reaching roughly 95 percent accuracy in tests with a paralyzed volunteer.",
+      "finding": "Brain-computer interfaces that decode speech signals from the motor cortex are advancing toward direct brain-to-voice translation, reaching roughly 95 percent accuracy in tests with a paralyzed volunteer.",
+      "significance": "Direct brain-to-voice systems and fully implantable wireless devices could allow people with severe paralysis or ALS to hold natural, real-time conversations without reliance on intermediate text displays.",
+      "caveat": "Very few individuals have tested speech-decoding implants, existing systems are still not fast enough for fully spontaneous interaction, and early direct brain-to-voice models have only recently become decipherable.",
       "url": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
       "primarySourceUrl": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
       "source": {
@@ -330,19 +622,16 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-10T14:00:00Z",
       "firstSeenAt": "2026-11-11T11:00:46.709649Z",
-      "checkedAt": "2026-11-11T11:00:46.709649Z",
-      "verifiedAt": "2026-11-11T11:00:46.709649Z",
-      "evidenceType": "preprint",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "explanatory-background",
       "topics": [
         "health",
-        "technology",
-        "biology"
+        "technology"
       ],
       "entities": [
         "BrainGate",
         "Paradromics",
-        "Matthew Willsey",
-        "Leigh Hochberg",
         "University of Michigan Health"
       ],
       "milestoneStatus": "unknown",
@@ -677,10 +966,10 @@
     {
       "id": "science-ae28a572f4f0fdc6",
       "title": "Did Life Begin in an RNA World?",
-      "summary": "Researchers identified a 45-nucleotide RNA molecule named QT45 that can copy another RNA strand, showing that self-replicating RNAs do not need to be several hundred nucleotides long.",
-      "finding": "Researchers identified a 45-nucleotide RNA molecule named QT45 that can copy another RNA strand, showing that self-replicating RNAs do not need to be several hundred nucleotides long.",
-      "significance": "Finding catalytic copying activity in small RNAs supports the plausibility that functional ribozymes could emerge spontaneously from random pools on early Earth.",
-      "caveat": "It remains unknown whether a suitable, long-lasting habitat existed on early Earth, and early life likely required metabolic energy harvesting beyond mere genetic replication.",
+      "summary": "Researchers identified a 45-nucleotide RNA molecule that can seize and copy another RNA strand, showing that self-replicating ribozymes do not necessarily require hundreds of linked nucleotides.",
+      "finding": "Researchers identified a 45-nucleotide RNA molecule that can seize and copy another RNA strand, showing that self-replicating ribozymes do not necessarily require hundreds of linked nucleotides.",
+      "significance": "Demonstrating that catalytic, self-replicating RNAs can be relatively small strengthens the plausibility that functional RNA sequences could have emerged by chance in a primordial prebiotic environment.",
+      "caveat": "It remains unknown if a suitable prebiotic niche existed on early Earth, and true living systems likely required more than genetic replication, such as metabolism.",
       "url": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109",
       "primarySourceUrl": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109",
       "source": {
@@ -690,21 +979,21 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-09T15:20:29Z",
       "firstSeenAt": "2026-11-10T11:01:01.192536Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "biology"
       ],
       "entities": [
-        "Gerald Joyce",
         "Salk Institute",
-        "Philipp Holliger",
         "MRC Laboratory of Molecular Biology",
+        "Gerald Joyce",
+        "Philipp Holliger",
         "Walter Gilbert"
       ],
       "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-09T15:28:13Z"
+      "sourceUpdatedAt": "2026-11-10T15:07:39Z"
     },
     {
       "id": "science-f7b623d516c9558f",
@@ -1390,9 +1679,9 @@
     {
       "id": "science-08a83d58613fad43",
       "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
-      "summary": "Theoretical work and tests, including the PBR theorem, demonstrate that quantum mechanics is incompatible with everyday notions of an objective, local reality.",
-      "finding": "Theoretical work and tests, including the PBR theorem, demonstrate that quantum mechanics is incompatible with everyday notions of an objective, local reality.",
-      "significance": "It challenges foundational assumptions that physical systems hold intrinsic, observer-independent properties separate from measurement.",
+      "summary": "Theoretical work and subsequent experiments, including the PBR theorem, demonstrated that quantum mechanics is incompatible with Einstein's commonsense conception of an objective, local reality.",
+      "finding": "Theoretical work and subsequent experiments, including the PBR theorem, demonstrated that quantum mechanics is incompatible with Einstein's commonsense conception of an objective, local reality.",
+      "significance": "The results challenge intuitive notions of object permanence and suggest that either objective reality or locality must be abandoned in quantum descriptions.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
       "primarySourceUrl": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106",
@@ -1403,8 +1692,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-06T15:48:54Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "physics"
@@ -1501,7 +1790,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T11:01:03Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
       "verifiedAt": "2026-11-07T11:01:01.958577Z",
       "evidenceType": "mission-milestone",
       "topics": [
@@ -1518,10 +1807,10 @@
     {
       "id": "science-8b317084cde7e6b6",
       "title": "European orbiter detects hints of volcanic activity on Mars",
-      "summary": "Localized spikes of hydrogen chloride detected over fissures on Mars's Alba Mons volcano suggest that the planet retains internal heat and may support active or dormant magmatic systems.",
-      "finding": "Localized spikes of hydrogen chloride detected over fissures on Mars's Alba Mons volcano suggest that the planet retains internal heat and may support active or dormant magmatic systems.",
-      "significance": "Evidence of ongoing volcanic activity could reveal underground volcanic plumbing systems and potential hydrothermal environments capable of hosting microbial life.",
-      "caveat": "No fresh lava flows or eruptions have been directly observed on Mars, and researchers note that the volcanic connection relied initially on geological intuition and required indirect demonstration.",
+      "summary": "Localized spikes of hydrogen chloride detected above fresh fissures on Mars's Alba Mons volcano suggest active or recent magmatic degassing from subsurface magma.",
+      "finding": "Localized spikes of hydrogen chloride detected above fresh fissures on Mars's Alba Mons volcano suggest active or recent magmatic degassing from subsurface magma.",
+      "significance": "The findings suggest Mars retains enough internal heat to maintain dormant volcanism and potentially warm hydrothermal niches capable of supporting microbial life.",
+      "caveat": "No active lava flows or volcanic eruptions have ever been directly observed on Mars, and the connection between the gas and fissures relies on inferential modeling.",
       "url": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "primarySourceUrl": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "source": {
@@ -1531,18 +1820,18 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T10:05:36Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-11T11:00:46.709649Z",
-      "verifiedAt": "2026-11-11T11:00:46.709649Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
       ],
       "entities": [
-        "Alexander Trokhimovskiy",
-        "Daniel Mège",
+        "Mars",
+        "Alba Mons",
+        "ExoMars Trace Gas Orbiter",
         "Science Advances",
-        "Trace Gas Orbiter",
-        "Colin Wilson"
+        "Polish Academy of Sciences"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/doi/10.1126/sciadv.aeb9422"
@@ -2349,7 +2638,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-02T21:07:52Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -2594,10 +2883,10 @@
     {
       "id": "science-e77a7638ee47a43c",
       "title": "It’s not (just) the heat, it’s the humidity: Examining the impact of intensifying humid heat on pregnancies",
-      "summary": "In Nigeria, increasing humid heat is strongly associated with a higher likelihood of early pregnancy terminations and temporary shifts in conception timing.",
-      "finding": "In Nigeria, increasing humid heat is strongly associated with a higher likelihood of early pregnancy terminations and temporary shifts in conception timing.",
-      "significance": "Understanding humid-heat impacts helps public health workers advise pregnant women and address climate-vulnerability disparities in lower- and middle-income nations.",
-      "caveat": "The demographic survey data does not distinguish between spontaneous miscarriages and induced pregnancy terminations.",
+      "summary": "Increasing humid heat in Nigeria is strongly associated with higher early pregnancy termination risks and temporary shifts in the timing of conceptions.",
+      "finding": "Increasing humid heat in Nigeria is strongly associated with higher early pregnancy termination risks and temporary shifts in the timing of conceptions.",
+      "significance": "The findings highlight how climate-driven humidity impacts reproductive health and fertility timing in vulnerable, lower- and middle-income regions.",
+      "caveat": "The underlying demographic surveys do not differentiate between spontaneous miscarriages and induced terminations.",
       "url": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "primarySourceUrl": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "source": {
@@ -2607,8 +2896,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T15:38:09Z",
       "firstSeenAt": "2026-11-05T11:24:38.846856Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "health",
@@ -2618,9 +2907,9 @@
       "entities": [
         "University of Michigan",
         "Nigeria",
-        "NASA Land-Cover and Land Use Change Program",
-        "Nina Brooks",
-        "Proceedings of the National Academy of Sciences"
+        "Proceedings of the National Academy of Sciences",
+        "USAID",
+        "NASA"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1073/pnas.2321152122",
@@ -2664,10 +2953,10 @@
     {
       "id": "science-e10edceaccaeeca7",
       "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
-      "summary": "Long-term monitoring showed a large chimpanzee community split into two groups that engaged in lethal aggression, with one splinter group killing 28 members of the other.",
-      "finding": "Long-term monitoring showed a large chimpanzee community split into two groups that engaged in lethal aggression, with one splinter group killing 28 members of the other.",
-      "significance": "The findings demonstrate that lethal intergroup aggression in chimpanzees can occur even between individuals who previously shared a cooperative community and spent their lives together.",
-      "caveat": "Researchers note that the asymmetric pattern of the lethal attacks has been difficult to fully explain.",
+      "summary": "Long-term monitoring showed a large chimpanzee community split into two factions that engaged in persistent, lethal aggression against former group members who had previously affiliated and cooperated.",
+      "finding": "Long-term monitoring showed a large chimpanzee community split into two factions that engaged in persistent, lethal aggression against former group members who had previously affiliated and cooperated.",
+      "significance": "The observations contrast with human social behavior, highlighting that while chimpanzees fatally target familiar former companions, humans uniquely extend prosocial cooperation to strangers.",
+      "caveat": "The researcher notes that the asymmetric nature of the killings and the exact causes behind the lethal fission remain difficult to explain.",
       "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "primarySourceUrl": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "source": {
@@ -2677,8 +2966,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T14:08:23Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
@@ -2686,12 +2975,13 @@
       ],
       "entities": [
         "John Mitani",
-        "University of Michigan",
         "Kibale National Park",
+        "University of Michigan",
+        "Nature Human Behaviour",
         "Ngogo Chimpanzee Project"
       ],
       "milestoneStatus": "unknown",
-      "paperUrl": "https://www.science.org/doi/10.1126/science.adz4944?referrer=https%3A%2F%2Fwww.google.com%2F",
+      "paperUrl": "https://www.nature.com/articles/s41562-026-02601-6",
       "sourceUpdatedAt": "2026-11-02T15:08:51Z",
       "localConnection": "University of Michigan research in Ann Arbor."
     },
@@ -2798,10 +3088,10 @@
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "summary": "Researchers characterized Teghaza 001, a Martian meteorite that formed over 4.1 billion years ago and preserves evidence of early crust formation and water-rock interactions.",
-      "finding": "Researchers characterized Teghaza 001, a Martian meteorite that formed over 4.1 billion years ago and preserves evidence of early crust formation and water-rock interactions.",
-      "significance": "As one of only three extremely ancient Martian meteorites known, it offers a rare physical sample of Mars' ancient crust and insights into the planet's early water cycle.",
-      "caveat": "Scientists cannot determine the precise point of origin on Mars for the meteorite, though several candidate regions match its mineralogy and chemistry.",
+      "summary": "Analysis of the Martian meteorite Teghaza 001 revealed it formed over 4.1 billion years ago and underwent alteration by subsurface water around that time.",
+      "finding": "Analysis of the Martian meteorite Teghaza 001 revealed it formed over 4.1 billion years ago and underwent alteration by subsurface water around that time.",
+      "significance": "The sample provides rare physical evidence of ancient Martian crust formation and points to a more dynamic water cycle on early Mars.",
+      "caveat": "The exact source location of the meteorite on the Martian surface cannot be definitively known, although potential matching sites were identified.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "source": {
@@ -2811,8 +3101,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T18:18:09Z",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
@@ -2820,9 +3110,9 @@
       "entities": [
         "NASA",
         "Jet Propulsion Laboratory",
-        "Caltech",
         "Science",
-        "University of New Mexico"
+        "Yang Liu",
+        "Caltech"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
@@ -3077,7 +3367,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T20:23:58Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -3108,7 +3398,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T18:51:35Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
       "verifiedAt": "2026-10-29T05:30:05.908168Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -3197,10 +3487,10 @@
     {
       "id": "science-6d879a7a5c5c91f8",
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
-      "summary": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, ranging from under 2.5 micrometers down to roughly 100 nanometers, adhering to spacesuit material samples via static electricity.",
-      "finding": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, ranging from under 2.5 micrometers down to roughly 100 nanometers, adhering to spacesuit material samples via static electricity.",
-      "significance": "Understanding the size and adhesion of fine Mars dust can inform future spacesuit, habitat, airlock designs, and astronaut health standards to mitigate respiratory and cellular risks.",
-      "caveat": "Scientists believe the actual health risks to crews will depend on dust quantity and duration of exposure.",
+      "summary": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, ranging down to approximately 100 nanometers, adhering to spacesuit material samples carried on the rover.",
+      "finding": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, ranging down to approximately 100 nanometers, adhering to spacesuit material samples carried on the rover.",
+      "significance": "Understanding the adhesion and presence of these minuscule particles helps guide spacesuit material selection, habitat engineering, and health mitigation strategies for future Mars missions.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "source": {
@@ -3210,8 +3500,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-26T21:07:28Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -3221,9 +3511,9 @@
       "entities": [
         "NASA",
         "Perseverance",
-        "SHERLOC",
+        "Jet Propulsion Laboratory",
         "PIXL",
-        "Jet Propulsion Laboratory"
+        "SHERLOC"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2620747123",
@@ -5627,229 +5917,60 @@
       ],
       "milestoneStatus": "planned",
       "sourceUpdatedAt": "2026-09-16T17:13:07Z"
-    },
-    {
-      "id": "usgs-detects-zebra-mussel-edna-colorado-river-utah",
-      "title": "USGS detects zebra mussel environmental DNA in Utah’s Colorado River for the first time",
-      "summary": "Autonomous eDNA samplers deployed near the Colorado River by Moab found zebra mussel genetic material in June and July, the first such detection in Utah. The field result gives managers an earlier warning of a potentially damaging invasive species and time to intensify sampling and consider control measures before a population is established.",
-      "url": "https://www.usgs.gov/centers/norock/news/environmental-dna-monitoring-leads-early-detection-invasive-zebra-mussel-dna",
-      "source": {
-        "name": "U.S. Geological Survey"
-      },
-      "publishedAt": "2026-09-11T00:00:00Z",
-      "topics": [
-        "ecology",
-        "invasive species",
-        "environmental DNA",
-        "freshwater science"
-      ],
-      "caveat": "The detection establishes zebra mussel DNA, not a confirmed living population; follow-up sampling is needed to determine whether mussels themselves are present."
-    },
-    {
-      "id": "science-d310e12924f5f441",
-      "title": "How 2 US, European Satellites Are Studying Hurricanes During El Niño",
-      "summary": "The Sentinel-6B satellite, launched in November, is now flying 30 seconds behind its predecessor, Sentinel-6 Michael Freilich, providing precise sea level height measurements. This data will help scientists better understand the current El Niño and create more accurate hurricane predictions.",
-      "finding": "The Sentinel-6B satellite, launched in November, is now flying 30 seconds behind its predecessor, Sentinel-6 Michael Freilich, providing precise sea level height measurements. This data will help scientists better understand the current El Niño and create more accurate hurricane predictions.",
-      "significance": "Improved hurricane predictions, especially regarding rapid intensification, can save lives by allowing officials to make timely and well-informed decisions about disaster response efforts, resource mobilization, and evacuation orders. The continuous, consistent data from these missions extends a crucial sea level observation record, aiding long-term climate understanding.",
-      "caveat": "The low-latency data from Sentinel-6B, which began delivery on July 15, will take some time to be incorporated into the research models used by meteorologists and climate scientists. Therefore, the immediate impact on current hurricane forecasting models is not yet realized.",
-      "url": "https://www.nasa.gov/missions/jason-cs-sentinel-6/how-2-us-european-satellites-are-studying-hurricanes-during-el-nino",
-      "primarySourceUrl": "https://www.nasa.gov/missions/jason-cs-sentinel-6/how-2-us-european-satellites-are-studying-hurricanes-during-el-nino",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-09T16:00:00Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-17T10:01:38.386991Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "earth-science",
-        "technology"
-      ],
-      "entities": [
-        "Sentinel-6B",
-        "Sentinel-6 Michael Freilich",
-        "El Niño",
-        "NASA",
-        "European Space Agency"
-      ],
-      "milestoneStatus": "completed",
-      "sourceUpdatedAt": "2026-09-09T16:00:03Z"
-    },
-    {
-      "id": "chandra-discovers-hypersoft-xray-sources",
-      "title": "Chandra finds a new class of ultraviolet-bright, hypersoft X-ray sources",
-      "summary": "Researchers mining Chandra observations of six galaxies identified 84 ‘hypersoft X-ray sources’ that emit unusually low-energy X-rays alongside intense ultraviolet radiation. Their spectral signature is unlike any known class and points to compact objects—possibly white dwarfs, neutron stars, or black holes—accreting from companions; the population could help account for missing Type Ia supernova progenitors and a poorly explained source of interstellar-gas ionization.",
-      "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-unveils-mysterious-x-ray-objects/",
-      "source": {
-        "name": "NASA Chandra"
-      },
-      "publishedAt": "2026-09-09T00:00:00Z",
-      "topics": [
-        "space",
-        "astrophysics",
-        "X-ray astronomy",
-        "stellar evolution"
-      ],
-      "caveat": "The study has not yet identified what physical systems produce the hypersoft X-ray sources; their link to Type Ia progenitors and interstellar-gas ionization remains a proposed explanation."
-    },
-    {
-      "id": "hubble-webb-reveal-tiny-trans-neptunian-objects",
-      "title": "Hubble and Webb reveal tiny outer-solar-system objects still preserve their origins",
-      "summary": "Joint Hubble and Webb observations discovered 27 exceptionally faint trans-Neptunian objects and measured their colors, sizes, and orbits in the deepest survey of its kind. The smallest observed body is about 5 kilometres across; surprisingly, these tiny objects retain the same color signatures as larger relatives and are less numerous than some planet-formation models predict, constraining how primordial planetesimals formed beyond Neptune.",
-      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-webb-find-far-out-solar-system-objects-remember-past/",
-      "source": {
-        "name": "NASA Hubble and Webb"
-      },
-      "publishedAt": "2026-09-08T00:00:00Z",
-      "topics": [
-        "space",
-        "planetary science",
-        "Kuiper Belt",
-        "planet formation"
-      ],
-      "caveat": "The reason the smallest bodies retain their original-looking surfaces remains unresolved; the teams are still assessing whether collisions are rarer than expected or whether the objects preserve primordial compositions."
-    },
-    {
-      "id": "nasa-x59-validates-flight-models-through-25-flights",
-      "title": "NASA’s X-59 completes 25 flights with flight behavior matching its models",
-      "summary": "NASA’s quiet-supersonic X-59 research aircraft has completed 25 test flights, including a 72-minute flight to Mach 1.2 and 49,000 feet. NASA reports that its handling, stability margin, and flight loads have closely matched the preflight digital-twin predictions, without unexpected aerodynamic instability or excessive vibration—clearing the way for acoustic-validation flights that will directly measure its low-boom sonic thumps.",
-      "url": "https://www.nasa.gov/blogs/quesst/2026/09/04/nasas-x-59-aircraft-builds-momentum-through-25th-flight/",
-      "source": {
-        "name": "NASA"
-      },
-      "publishedAt": "2026-09-04T00:00:00Z",
-      "topics": [
-        "aeronautics",
-        "supersonic flight",
-        "flight testing",
-        "engineering"
-      ],
-      "caveat": "The key low-boom claim is not yet validated: NASA’s dedicated acoustic measurement campaign is the next phase."
-    },
-    {
-      "id": "bepicolombo-separates-transfer-module-mercury-arrival",
-      "title": "BepiColombo successfully sheds its transfer stage on approach to Mercury",
-      "summary": "After almost eight years and billions of kilometres in flight, ESA and JAXA’s BepiColombo mission successfully separated its Mercury Transfer Module more than 200 million kilometres from Earth. The Mercury Planetary Orbiter and Magnetospheric Orbiter are now operating as a composite spacecraft on the next leg toward Mercury orbit insertion in November, a key milestone toward the first two-spacecraft scientific mission at the planet.",
-      "url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo/Latest_updates_BepiColombo_s_arrival_at_Mercury",
-      "source": {
-        "name": "European Space Agency"
-      },
-      "publishedAt": "2026-09-03T00:00:00Z",
-      "topics": [
-        "spaceflight",
-        "planetary science",
-        "Mercury",
-        "BepiColombo"
-      ],
-      "caveat": "The two orbiters have not yet entered Mercury orbit; ESA schedules orbital insertion for November 2026 and science operations for April 2027."
-    },
-    {
-      "id": "nasa-multipoint-sounding-rocket-probes-sporadic-e",
-      "title": "A multi-sensor rocket finds unexpected structure in radio-disrupting ionospheric clouds",
-      "summary": "New peer-reviewed results from NASA’s SpEED Demon sounding rocket provide the first simultaneous multi-point measurements inside a sporadic-E layer, a metal-ion cloud that can disrupt long-distance radio and GPS signals. Five detectors showed the layer was uneven and structured rather than a simple sheet, including a split into two peaks during descent—evidence that atmospheric turbulence shapes the plasma.",
-      "url": "https://science.nasa.gov/science-research/heliophysics/nasa-rocket-takes-first-multi-point-look-inside-radio-disrupting-clouds/",
-      "source": {
-        "name": "NASA"
-      },
-      "publishedAt": "2026-09-02T00:00:00Z",
-      "topics": [
-        "heliophysics",
-        "ionosphere",
-        "sounding rockets",
-        "radio science"
-      ],
-      "caveat": "The proposed Kelvin–Helmholtz turbulence explanation is plausible but unconfirmed because the flight did not directly measure local winds and electric fields."
-    },
-    {
-      "id": "hubble-discovers-saturn-south-pole-decagon",
-      "title": "Hubble finds a giant, evolving decagon around Saturn’s south pole",
-      "summary": "NASA’s Hubble observations have revealed a 10-sided atmospheric wave embedded in Saturn’s south-polar jet stream—the first large regular-sided jet pattern seen in the planet’s southern hemisphere. The structure reaches through multiple atmospheric layers and had faint precursors in data from 2023, giving researchers a chance to watch a giant-planet circulation pattern develop.",
-      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-tracks-new-decagon-encircling-saturns-south-pole/",
-      "source": {
-        "name": "NASA Hubble"
-      },
-      "publishedAt": "2026-09-02T00:00:00Z",
-      "topics": [
-        "space",
-        "planetary science",
-        "Saturn",
-        "atmospheric dynamics"
-      ],
-      "caveat": "Scientists do not yet know whether the new decagon will become a long-lived stable feature like Saturn’s northern hexagon or continue evolving."
-    },
-    {
-      "id": "noaa-documents-post-2014-gulf-stream-intensification",
-      "title": "Satellite record reveals a rapid post-2014 intensification of the Gulf Stream",
-      "summary": "A NOAA and University of Miami study of 31 years of satellite-altimeter observations found that the Gulf Stream downstream of the Florida Straits weakened until 2014, then shifted northward, stabilized, and rapidly strengthened through 2023. The result ties the change to wind-driven strengthening of the subtropical gyre and matters for North Atlantic heat transport, weather, sea level, and marine ecosystems.",
-      "url": "https://www.aoml.noaa.gov/satellite-data-reveals-gulf-stream-intensification/",
-      "source": {
-        "name": "NOAA Atlantic Oceanographic and Meteorological Laboratory"
-      },
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "topics": [
-        "ocean science",
-        "climate",
-        "satellite observations",
-        "Gulf Stream"
-      ],
-      "caveat": "The observed downstream Gulf Stream change should not be read as a direct measure of the broader Atlantic Meridional Overturning Circulation (AMOC), which responds to different forcings."
     }
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-11-11",
+    "date": "2026-11-12",
     "selectedIds": [
-      "science-db54524d5e99b1c6",
-      "science-a23485fd871564b0",
+      "science-5cf497c37d846708",
+      "science-36841df3d1321307",
+      "science-78c34c8f8ab330b8",
+      "science-4dcee2b3879b37c3",
       "science-ee03630e6f626376",
-      "science-a085fbe1095eb29d",
-      "science-336af74c1de5a917",
-      "science-8c416cac2e1213d0"
+      "science-b1eef9bd8d6da9ac"
     ],
     "reasons": {
-      "science-db54524d5e99b1c6": {
-        "score": 34,
+      "science-5cf497c37d846708": {
+        "score": 33,
         "source": "NASA",
-        "topic": "earth-science",
-        "publishedAt": "2026-11-11T05:01:00Z",
+        "topic": "astronomy",
+        "publishedAt": "2026-11-12T00:41:35Z",
         "interestMatch": false
       },
-      "science-a23485fd871564b0": {
-        "score": 31,
+      "science-36841df3d1321307": {
+        "score": 32,
         "source": "ScienceDaily",
-        "topic": "astronomy",
-        "publishedAt": "2026-11-10T23:56:04Z",
+        "topic": "earth-science",
+        "publishedAt": "2026-11-12T08:38:42Z",
+        "interestMatch": false
+      },
+      "science-78c34c8f8ab330b8": {
+        "score": 31,
+        "source": "Ars Technica Science",
+        "topic": "technology",
+        "publishedAt": "2026-11-11T20:22:03Z",
+        "interestMatch": false
+      },
+      "science-4dcee2b3879b37c3": {
+        "score": 31,
+        "source": "Science News",
+        "topic": "social-science",
+        "publishedAt": "2026-11-11T19:00:00Z",
         "interestMatch": false
       },
       "science-ee03630e6f626376": {
-        "score": 31,
+        "score": 30,
         "source": "New Scientist",
         "topic": "physics",
         "publishedAt": "2026-11-10T20:00:00Z",
         "interestMatch": false
       },
-      "science-a085fbe1095eb29d": {
-        "score": 31,
-        "source": "Science News",
-        "topic": "health",
-        "publishedAt": "2026-11-10T14:00:00Z",
-        "interestMatch": false
-      },
-      "science-336af74c1de5a917": {
-        "score": 28,
-        "source": "Ars Technica Science",
-        "topic": "social-science",
-        "publishedAt": "2026-11-07T12:15:55Z",
-        "interestMatch": false
-      },
-      "science-8c416cac2e1213d0": {
-        "score": 25,
-        "source": "Quanta Magazine",
-        "topic": "technology",
-        "publishedAt": "2026-11-04T15:32:52Z",
+      "science-b1eef9bd8d6da9ac": {
+        "score": 23,
+        "source": "ESA",
+        "topic": "astronomy",
+        "publishedAt": "2026-11-06T11:01:03Z",
         "interestMatch": false
       }
     }

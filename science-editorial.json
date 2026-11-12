@@ -1,8 +1,181 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-11T06:30:41.901015-05:00",
+  "generatedAt": "2026-11-12T06:24:06.133284-05:00",
   "stories": [
+    {
+      "id": "science-780a35cbfb8cfbda",
+      "title": "Some PFAS chemicals are declining in English rivers but others are appearing",
+      "summary": "A UK Environment Agency report indicates that concentrations of two legacy PFAS chemicals, PFOS and PFOA, in English rivers have declined by nearly 30% over the past decade, following global restrictions. However, other replacement PFAS chemicals, including short-chain PFAS and fluorotelomer compounds, are now emerging at detectable levels, complicating efforts to manage these persistent pollutants.",
+      "finding": "A UK Environment Agency report indicates that concentrations of two legacy PFAS chemicals, PFOS and PFOA, in English rivers have declined by nearly 30% over the past decade, following global restrictions. However, other replacement PFAS chemicals, including short-chain PFAS and fluorotelomer compounds, are now emerging at detectable levels, complicating efforts to manage these persistent pollutants.",
+      "significance": "The results demonstrate the efficacy of global restrictions on legacy forever chemicals, but highlight how replacement compounds are accumulating in freshwater ecosystems.",
+      "caveat": "Despite the decline, recorded PFOS concentrations often remain above Environmental Quality Standards, and the environmental and health impacts of replacement PFAS remain relatively understudied.",
+      "url": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T00:01:00+00:00",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science",
+        "health"
+      ],
+      "entities": [
+        "River Wye",
+        "Environment Agency",
+        "International Agency for Research on Cancer",
+        "University of York",
+        "Liverpool John Moores University"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://pubs.rsc.org/em/article/doi/10.1039/d6em00715e/1379687/National-scale-monitoring-reveals-widespread?searchresult=1",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-12T06:24:06.133284-05:00",
+        "expiresAt": "2026-11-15T06:24:06.133284-05:00",
+        "inputFacts": {
+          "id": "science-780a35cbfb8cfbda",
+          "title": "Some PFAS chemicals are declining in English rivers but others are appearing",
+          "url": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
+          "publishedAt": "2026-11-12T00:01:00Z",
+          "summary": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
+          "finding": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-12T00:01:00+00:00",
+        "datePrecision": "time",
+        "sourceHash": "61858b9b067cc2a074c4f0916082630f744075b68b49b4a36e4ea86ef2fd9b20",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The article presents a new finding regarding the effectiveness of global restrictions on specific PFAS chemicals while highlighting the emerging challenge of replacement chemicals. This is a substantive development in environmental science with broad implications for public health and policy.",
+        "storyKey": "pfas-decline-replacement-emergence",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article supports all claims in the summary, including specific chemicals, percentage declines, and the emergence of replacement PFAS. The finding represents a new scientific observation regarding the effectiveness of global restrictions and the evolving challenge of PFAS pollution."
+      }
+    },
+    {
+      "id": "science-4dcee2b3879b37c3",
+      "title": "Stone Age children left fingerprints on ancient art projects",
+      "summary": "Fragmented clay figurines, dating back 15,000 years and found in Israel, preserve the fingerprints of both adults and young children. This finding suggests intergenerational learning, where adults may have taught children to shape and decorate clay, offering new insights into children's contributions to prehistoric art and culture.",
+      "finding": "Fragmented clay figurines, dating back 15,000 years and found in Israel, preserve the fingerprints of both adults and young children. This finding suggests intergenerational learning, where adults may have taught children to shape and decorate clay, offering new insights into children's contributions to prehistoric art and culture.",
+      "significance": "The findings provide rare physical evidence of children's involvement in prehistoric art and intergenerational learning among hunter-gatherers before agriculture emerged.",
+      "caveat": "The exact purpose of the ancient figurines remains unclear, though their small size and lack of heavy wear suggest they were not maintained as precious heirlooms.",
+      "url": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
+      "primarySourceUrl": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-11T14:00:00-05:00",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "social-science"
+      ],
+      "entities": [
+        "Laurent Davin",
+        "Hebrew University of Jerusalem",
+        "Steven Dorland",
+        "Grand Valley State University"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1371/journal.pone.0360388",
+      "sourceUpdatedAt": "2026-11-11T19:00:00Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-12T06:24:06.133284-05:00",
+        "expiresAt": "2026-11-15T06:24:06.133284-05:00",
+        "inputFacts": {
+          "id": "science-4dcee2b3879b37c3",
+          "title": "Stone Age children left fingerprints on ancient art projects",
+          "url": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
+          "publishedAt": "2026-11-11T19:00:00Z",
+          "summary": "Clay figurine fragments dating back up to 15,000 years in the Levant preserve fingerprints of both adults and young children, suggesting adults taught children how to shape clay.",
+          "finding": "Clay figurine fragments dating back up to 15,000 years in the Levant preserve fingerprints of both adults and young children, suggesting adults taught children how to shape clay.",
+          "sourceUpdatedAt": "2026-11-11T19:00:00Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-11T14:00:00-05:00",
+        "datePrecision": "time",
+        "sourceHash": "ee6f9170514e2c7d1cd3211c8973bc4ddd2b765af629c473e2b72a37b0636617",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The article presents a novel finding about prehistoric intergenerational learning through art, which is a substantive development in biology/anthropology.",
+        "storyKey": "stone-age-children-fingerprints",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article supports all claims in the summary, including the age of the figurines, their location, the presence of both adult and child fingerprints, and the interpretation of intergenerational learning. The finding offers new insights into children's contributions to prehistoric art and culture."
+      }
+    },
+    {
+      "id": "science-180d88ad69d22f79",
+      "title": "This magic mushroom can kill",
+      "summary": "Researchers identified Galerina indica, a \"dark magic mushroom\" from Florida, as the first known fungal species to produce both hallucinogenic psilocybin and deadly amatoxin. Chemical analysis revealed a new amatoxin form, alpha-proamanitin, and genetic sequencing confirmed genes for both compounds, suggesting horizontal gene transfer in its evolution.",
+      "finding": "Researchers identified Galerina indica, a \"dark magic mushroom\" from Florida, as the first known fungal species to produce both hallucinogenic psilocybin and deadly amatoxin. Chemical analysis revealed a new amatoxin form, alpha-proamanitin, and genetic sequencing confirmed genes for both compounds, suggesting horizontal gene transfer in its evolution.",
+      "significance": "The finding reveals unexpected diversity in fungal chemical synthesis, showing that fungi can combine distinct toxins and psychoactive compounds through genetic evolution.",
+      "caveat": "Limited knowledge of the fungi's evolutionary tree leaves it unclear whether psilocybin genes were acquired independently or passed down from a common ancestor.",
+      "url": "https://www.sciencenews.org/article/dark-magic-mushroom-psilocybin-amatoxin",
+      "primarySourceUrl": "https://www.sciencenews.org/article/dark-magic-mushroom-psilocybin-amatoxin",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-11T11:00:00-05:00",
+      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology"
+      ],
+      "entities": [
+        "Current Biology",
+        "Andrew Kunik",
+        "Matthew Smith",
+        "University of Florida",
+        "Anne Pringle"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.cell.com/current-biology/fulltext/S0960-9822(26)01428-4",
+      "sourceUpdatedAt": "2026-11-11T16:00:00Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-12T06:24:06.133284-05:00",
+        "expiresAt": "2026-11-15T06:24:06.133284-05:00",
+        "inputFacts": {
+          "id": "science-180d88ad69d22f79",
+          "title": "This magic mushroom can kill",
+          "url": "https://www.sciencenews.org/article/dark-magic-mushroom-psilocybin-amatoxin",
+          "publishedAt": "2026-11-11T16:00:00Z",
+          "summary": "Researchers identified Galerina indica as the first known fungus species to produce both hallucinogenic psilocybin and lethal amatoxin compounds.",
+          "finding": "Researchers identified Galerina indica as the first known fungus species to produce both hallucinogenic psilocybin and lethal amatoxin compounds.",
+          "sourceUpdatedAt": "2026-11-11T16:00:00Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-11T11:00:00-05:00",
+        "datePrecision": "time",
+        "sourceHash": "e530f81811853a8e871fecd1ea77261f24040aad879a121cc6012035ba733ebd",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "This is a substantive new finding in biology, identifying a novel chemical profile in a fungal species and shedding light on evolutionary mechanisms like horizontal gene transfer. It has implications for understanding fungal chemistry and potential health risks.",
+        "storyKey": "dark-magic-mushroom-dual-toxin",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims in the summary, including the identification of Galerina indica, its dual production of psilocybin and amatoxin, the discovery of alpha-proamanitin, and the genetic evidence suggesting horizontal gene transfer. This represents a new finding in fungal biology."
+      }
+    },
     {
       "id": "science-ee03630e6f626376",
       "title": "Correcting quantum computer errors may be more complicated than expected",
@@ -59,65 +232,6 @@
         "localConnection": "",
         "grounded": true,
         "groundingReason": "The article supports all claims in the summary, detailing how new experimental findings challenge long-standing assumptions about quantum computer errors, specifically the presence of memory effects and non-Markovian noise. It also discusses the implications for quantum error correction and ongoing explorations of new mitigation strategies."
-      }
-    },
-    {
-      "id": "science-a085fbe1095eb29d",
-      "title": "Science to restore speech is moving fast. Here’s what’s next",
-      "summary": "Scientists are rapidly advancing brain-computer interfaces to restore speech for individuals with paralysis. A fully implantable, wireless device from Paradromics, about the size of a dime, was recently implanted in a Michigan woman with primary lateral sclerosis, allowing her to communicate. Researchers are also working on decoding emotional nuances and gestures directly from brain activity to create more natural digital voices and communication.",
-      "finding": "Scientists are rapidly advancing brain-computer interfaces to restore speech for individuals with paralysis. A fully implantable, wireless device from Paradromics, about the size of a dime, was recently implanted in a Michigan woman with primary lateral sclerosis, allowing her to communicate. Researchers are also working on decoding emotional nuances and gestures directly from brain activity to create more natural digital voices and communication.",
-      "significance": "These technological developments could allow people who have lost the ability to speak due to neurodegenerative illnesses to communicate intuitively and more rapidly.",
-      "caveat": "The technology remains in very early testing with fewer than ten people tested globally, and some systems remain non-portable and slow.",
-      "url": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
-      "primarySourceUrl": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
-      "source": {
-        "name": "Science News"
-      },
-      "sourceGroup": "Science News",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-10T09:00:00-05:00",
-      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
-      "checkedAt": "2026-11-11T11:00:46.709649Z",
-      "verifiedAt": "2026-11-11T11:00:46.709649Z",
-      "evidenceType": "preprint",
-      "topics": [
-        "health",
-        "technology",
-        "biology"
-      ],
-      "entities": [
-        "BrainGate",
-        "Paradromics",
-        "Matthew Willsey",
-        "Leigh Hochberg",
-        "University of Michigan Health"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-10T14:00:00Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-11T06:30:41.901015-05:00",
-        "expiresAt": "2026-11-14T06:30:41.901015-05:00",
-        "inputFacts": {
-          "id": "science-a085fbe1095eb29d",
-          "title": "Science to restore speech is moving fast. Here’s what’s next",
-          "url": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
-          "publishedAt": "2026-11-10T14:00:00Z",
-          "summary": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
-          "finding": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
-          "sourceUpdatedAt": "2026-11-10T14:00:00Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-10T09:00:00-05:00",
-        "datePrecision": "time",
-        "sourceHash": "deeeb78e9c7853eb0dda375aaab7a062232a2d88aaef6432a0a6d149e896e7dc",
-        "relevance": 5,
-        "novelty": 4,
-        "reason": "The article details significant, recent advancements in brain-computer interface technology for speech restoration, including a local connection with a Michigan patient and a University of Michigan Health neurosurgeon. This represents a substantive new finding and technical advance in health and technology.",
-        "storyKey": "brain-computer-interface-speech-restoration",
-        "localConnection": "A 68-year-old Michigan woman with primary lateral sclerosis received a fully implantable brain-computer interface from Paradromics, allowing her to communicate. The device was implanted by Matthew Willsey, a neurosurgeon and biomedical engineer at the University of Michigan Health.",
-        "grounded": true,
-        "groundingReason": "The article details a new, fully implantable, wireless brain-computer interface from Paradromics, about the size of a dime, that was recently implanted in a Michigan woman with primary lateral sclerosis, allowing her to communicate. It also discusses ongoing research into decoding emotional nuances and gestures from brain activity to enhance communication."
       }
     },
     {
@@ -294,67 +408,84 @@
         "grounded": true,
         "groundingReason": "The article supports all claims in the summary, detailing how semaglutide repairs kidney blood vessels, increases blood flow, reduces inflammation, and leads to visible tissue changes and beneficial gene activity in a subset of patients."
       }
-    },
-    {
-      "id": "science-8ea0785cc9c63a50",
-      "title": "Physicists listened to electrical noise to crack a superconductor mystery",
-      "summary": "Physicists used electrical noise measurements to investigate high-temperature superconductivity in cuprates, finding evidence that electron pairs form at higher temperatures within the pseudogap state, before the material achieves full superconductivity. This suggests that the bottleneck for higher superconducting temperatures might be achieving phase coherence among these pre-formed pairs, rather than the pairing itself. The experiment does not fully rule out intertwined patterns.",
-      "finding": "Physicists used electrical noise measurements to investigate high-temperature superconductivity in cuprates, finding evidence that electron pairs form at higher temperatures within the pseudogap state, before the material achieves full superconductivity. This suggests that the bottleneck for higher superconducting temperatures might be achieving phase coherence among these pre-formed pairs, rather than the pairing itself. The experiment does not fully rule out intertwined patterns.",
-      "significance": "The evidence supports the idea that electron pairing can occur prior to the onset of phase coherence, potentially opening avenues to increase superconducting transition temperatures.",
-      "caveat": "The technique loses sensitivity at higher temperatures, preventing measurements above the superconducting transition temperature where the pseudogap typically appears, and it does not fully rule out entangled charge patterns.",
-      "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
-      "primarySourceUrl": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
-      "source": {
-        "name": "Ars Technica Science"
-      },
-      "sourceGroup": "Ars Technica Science",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-08T12:15:31+00:00",
-      "firstSeenAt": "2026-11-09T11:00:04.003337Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "physics"
-      ],
-      "entities": [
-        "Milan Allan",
-        "Ludwig Maximilian University of Munich",
-        "Ingmar Swart",
-        "Utrecht University",
-        "Science"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://doi.org/10.1126/science.adt3444",
-      "sourceUpdatedAt": "2026-11-09T13:13:29Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-10T07:12:23.099370-05:00",
-        "expiresAt": "2026-11-13T07:12:23.099370-05:00",
-        "inputFacts": {
-          "id": "science-8ea0785cc9c63a50",
-          "title": "Physicists listened to electrical noise to crack a superconductor mystery",
-          "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
-          "publishedAt": "2026-11-08T12:15:31Z",
-          "summary": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
-          "finding": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
-          "sourceUpdatedAt": "2026-11-09T13:13:29Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-08T12:15:31+00:00",
-        "datePrecision": "time",
-        "sourceHash": "ba03d6d0b090c58cf47c3f0d19d29a01a64a998dc0088ea35d2e1eb7cef9aa8e",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "This is a substantive new finding in physics regarding high-temperature superconductivity, a long-standing mystery. The research provides new insights into the mechanism of these materials, which could have significant implications for future technological applications.",
-        "storyKey": "cuprate-superconductor-pseudogap-mystery",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article details a new experimental finding using electrical noise measurements to investigate high-temperature superconductivity in cuprates, providing evidence for pre-formed electron pairs in the pseudogap state and suggesting a new understanding of the bottleneck for higher superconducting temperatures. This is a specific technical advance in understanding a long-standing scientific mystery."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-780a35cbfb8cfbda",
+      "inputFacts": {
+        "id": "science-780a35cbfb8cfbda",
+        "title": "Some PFAS chemicals are declining in English rivers but others are appearing",
+        "url": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
+        "publishedAt": "2026-11-12T00:01:00Z",
+        "summary": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
+        "finding": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-12T00:01:00+00:00",
+      "publicationEvidence": "2026-11-12T00:01:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-4dcee2b3879b37c3",
+      "inputFacts": {
+        "id": "science-4dcee2b3879b37c3",
+        "title": "Stone Age children left fingerprints on ancient art projects",
+        "url": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
+        "publishedAt": "2026-11-11T19:00:00Z",
+        "summary": "Clay figurine fragments dating back up to 15,000 years in the Levant preserve fingerprints of both adults and young children, suggesting adults taught children how to shape clay.",
+        "finding": "Clay figurine fragments dating back up to 15,000 years in the Levant preserve fingerprints of both adults and young children, suggesting adults taught children how to shape clay.",
+        "sourceUpdatedAt": "2026-11-11T19:00:00Z"
+      },
+      "publishedAt": "2026-11-11T14:00:00-05:00",
+      "publicationEvidence": "2026-11-11T14:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-180d88ad69d22f79",
+      "inputFacts": {
+        "id": "science-180d88ad69d22f79",
+        "title": "This magic mushroom can kill",
+        "url": "https://www.sciencenews.org/article/dark-magic-mushroom-psilocybin-amatoxin",
+        "publishedAt": "2026-11-11T16:00:00Z",
+        "summary": "Researchers identified Galerina indica as the first known fungus species to produce both hallucinogenic psilocybin and lethal amatoxin compounds.",
+        "finding": "Researchers identified Galerina indica as the first known fungus species to produce both hallucinogenic psilocybin and lethal amatoxin compounds.",
+        "sourceUpdatedAt": "2026-11-11T16:00:00Z"
+      },
+      "publishedAt": "2026-11-11T11:00:00-05:00",
+      "publicationEvidence": "2026-11-11T11:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-ac9927faad7ed128",
+      "inputFacts": {
+        "id": "science-ac9927faad7ed128",
+        "title": "Light is hard to block from every direction. This physicist found a way",
+        "url": "https://www.sciencenews.org/article/light-block-direction-physicist-sn10",
+        "publishedAt": "2026-11-11T12:00:00Z",
+        "summary": "Physicist Stefano Martiniani designed a new class of metamaterials called gyromorphs that combine crystal-like geometry and liquidlike randomness to block light from penetrating at any angle.",
+        "finding": "Physicist Stefano Martiniani designed a new class of metamaterials called gyromorphs that combine crystal-like geometry and liquidlike randomness to block light from penetrating at any angle.",
+        "sourceUpdatedAt": "2026-11-11T12:00:00Z"
+      },
+      "publishedAt": "2026-11-11T07:00:00-05:00",
+      "publicationEvidence": "2026-11-11T07:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-f881bc45f9b01c42",
+      "inputFacts": {
+        "id": "science-f881bc45f9b01c42",
+        "title": "APOD: 2026 November 11 – NGC 4449: Small Galaxy, Big Impact",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact",
+        "publishedAt": "2026-11-11T05:05:00Z",
+        "summary": "Observations show NGC 4449 and similar dwarf galaxies lack more oxygen than expected by models, suggesting stellar winds and supernovae effectively expel oxygen and heavy elements into space.",
+        "finding": "Observations show NGC 4449 and similar dwarf galaxies lack more oxygen than expected by models, suggesting stellar winds and supernovae effectively expel oxygen and heavy elements into space.",
+        "sourceUpdatedAt": "2026-11-11T05:05:00Z"
+      },
+      "publishedAt": "2026-11-11T00:05:00-05:00",
+      "publicationEvidence": "2026-11-11T00:05:00-05:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-ee03630e6f626376",
       "inputFacts": {
@@ -371,18 +502,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-a085fbe1095eb29d",
+      "id": "science-6c2824fb2757db42",
       "inputFacts": {
-        "id": "science-a085fbe1095eb29d",
-        "title": "Science to restore speech is moving fast. Here’s what’s next",
-        "url": "https://www.sciencenews.org/article/talk-less-lose-voice-deep-end-podcast",
-        "publishedAt": "2026-11-10T14:00:00Z",
-        "summary": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
-        "finding": "Brain-computer interfaces and AI speech-decoding systems are advancing toward fully implantable, wireless devices and direct brain-to-voice synthesis for paralyzed individuals.",
-        "sourceUpdatedAt": "2026-11-10T14:00:00Z"
+        "id": "science-6c2824fb2757db42",
+        "title": "The Case for a Bubble at Life’s Start",
+        "url": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110",
+        "publishedAt": "2026-11-10T15:08:35Z",
+        "summary": "The lipid-first theory suggests life began with self-enclosed lipid membranes that gathered chemistry and underwent evolution through compositional inheritance.",
+        "finding": "The lipid-first theory suggests life began with self-enclosed lipid membranes that gathered chemistry and underwent evolution through compositional inheritance.",
+        "sourceUpdatedAt": "2026-11-10T15:08:56Z"
       },
-      "publishedAt": "2026-11-10T09:00:00-05:00",
-      "publicationEvidence": "2026-11-10T09:00:00-05:00",
+      "publishedAt": "2026-11-10T15:08:35+00:00",
+      "publicationEvidence": "2026-11-10T15:08:35+00:00",
       "datePrecision": "time"
     },
     {
@@ -446,21 +577,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-ae28a572f4f0fdc6",
-      "inputFacts": {
-        "id": "science-ae28a572f4f0fdc6",
-        "title": "Did Life Begin in an RNA World?",
-        "url": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109",
-        "publishedAt": "2026-11-09T15:20:29Z",
-        "summary": "Researchers identified a 45-nucleotide RNA molecule named QT45 that can copy another RNA strand, showing that self-replicating RNAs do not need to be several hundred nucleotides long.",
-        "finding": "Researchers identified a 45-nucleotide RNA molecule named QT45 that can copy another RNA strand, showing that self-replicating RNAs do not need to be several hundred nucleotides long.",
-        "sourceUpdatedAt": "2026-11-09T15:28:13Z"
-      },
-      "publishedAt": "2026-11-09T15:20:29+00:00",
-      "publicationEvidence": "2026-11-09T15:20:29+00:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-f7b623d516c9558f",
       "inputFacts": {
         "id": "science-f7b623d516c9558f",
@@ -506,33 +622,48 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-f6c4f38b852e436b",
+      "id": "science-5cf497c37d846708",
       "inputFacts": {
-        "id": "science-f6c4f38b852e436b",
-        "title": "Parkinson’s may be driven by ‘vicious cycle’ that disrupts brain waste drainage",
-        "url": "https://www.newscientist.com/article/2597911-parkinsons-may-be-driven-by-vicious-cycle-that-disrupts-brain-waste-drainage",
-        "publishedAt": "2026-11-06T15:00:00Z",
-        "summary": "Alpha-synuclein clumps accumulate in the brain's meninges, provoking immune inflammation via TNF-alpha that makes lymphatic vessels leaky and impairs the drainage of brain waste.",
-        "finding": "Alpha-synuclein clumps accumulate in the brain's meninges, provoking immune inflammation via TNF-alpha that makes lymphatic vessels leaky and impairs the drainage of brain waste.",
-        "sourceUpdatedAt": "2026-11-06T15:34:51Z"
+        "id": "science-5cf497c37d846708",
+        "title": "Curiosity Blog, Sols 5063-5069 Rocks and Chips",
+        "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5063-5069-rocks-and-chips",
+        "publishedAt": "2026-11-12T00:41:35Z",
+        "summary": "NASA's Curiosity rover completed a drill campaign at the Nazca drill hole to investigate bedrock containing chip-shaped crystal forms, delivering samples to SAM and performing ChemCam observations.",
+        "finding": "NASA's Curiosity rover completed a drill campaign at the Nazca drill hole to investigate bedrock containing chip-shaped crystal forms, delivering samples to SAM and performing ChemCam observations.",
+        "sourceUpdatedAt": "2026-11-12T00:41:39Z"
       },
-      "publishedAt": "2026-11-06T15:00:00+00:00",
-      "publicationEvidence": "2026-11-06T15:00:00+00:00",
+      "publishedAt": "2026-11-11T19:41:35-05:00",
+      "publicationEvidence": "2026-11-11T19:41:35-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-f881bc45f9b01c42",
+      "id": "science-78c34c8f8ab330b8",
       "inputFacts": {
-        "id": "science-f881bc45f9b01c42",
-        "title": "APOD: 2026 November 11 – NGC 4449: Small Galaxy, Big Impact",
-        "url": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact",
-        "publishedAt": "2026-11-11T05:05:00Z",
-        "summary": "The dwarf galaxy NGC 4449 and similar dwarf galaxies are missing more oxygen than models predict, suggesting their stellar winds and supernovae efficiently expel oxygen and other heavy elements.",
-        "finding": "The dwarf galaxy NGC 4449 and similar dwarf galaxies are missing more oxygen than models predict, suggesting their stellar winds and supernovae efficiently expel oxygen and other heavy elements.",
-        "sourceUpdatedAt": "2026-11-11T05:05:00Z"
+        "id": "science-78c34c8f8ab330b8",
+        "title": "Anduril says its first satellite can see adversaries maneuver in orbital night",
+        "url": "https://arstechnica.com/space/2026/11/anduril-demos-night-vision-sensor-for-tracking-satellites-in-darkness",
+        "publishedAt": "2026-11-11T20:22:03Z",
+        "summary": "Anduril demonstrated a long-wave infrared sensor on its Anduril-216 satellite that can image objects in full darkness, addressing tracking gaps when satellites maneuver within Earth's shadow.",
+        "finding": "Anduril demonstrated a long-wave infrared sensor on its Anduril-216 satellite that can image objects in full darkness, addressing tracking gaps when satellites maneuver within Earth's shadow.",
+        "sourceUpdatedAt": "2026-11-11T21:46:34Z"
       },
-      "publishedAt": "2026-11-11T00:05:00-05:00",
-      "publicationEvidence": "2026-11-11T00:05:00-05:00",
+      "publishedAt": "2026-11-11T20:22:03+00:00",
+      "publicationEvidence": "2026-11-11T20:22:03+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-5398788b6a3f4743",
+      "inputFacts": {
+        "id": "science-5398788b6a3f4743",
+        "title": "How a Metabolic Spark Could Have Jump-Started Life",
+        "url": "https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111",
+        "publishedAt": "2026-11-11T15:10:30Z",
+        "summary": "Scientists hypothesize that self-sustaining energetic cycles of chemical reactions, potentially catalyzed around hydrothermal vents or in milder conditions, may have sparked the origin of life before genes or cells emerged.",
+        "finding": "Scientists hypothesize that self-sustaining energetic cycles of chemical reactions, potentially catalyzed around hydrothermal vents or in milder conditions, may have sparked the origin of life before genes or cells emerged.",
+        "sourceUpdatedAt": "2026-11-11T15:23:34Z"
+      },
+      "publishedAt": "2026-11-11T15:10:30+00:00",
+      "publicationEvidence": "2026-11-11T15:10:30+00:00",
       "datePrecision": "time"
     },
     {
@@ -557,8 +688,8 @@
         "title": "High oil prices have led to a dip in global carbon emissions",
         "url": "https://arstechnica.com/science/2026/11/carbon-emissions-are-down-this-year-but-that-probably-wont-last",
         "publishedAt": "2026-11-10T16:29:27Z",
-        "summary": "An analysis estimates that global fossil fuel carbon emissions fell approximately 0.4 percent in 2026, primarily driven by a 1.9 percent reduction in oil emissions due to high prices.",
-        "finding": "An analysis estimates that global fossil fuel carbon emissions fell approximately 0.4 percent in 2026, primarily driven by a 1.9 percent reduction in oil emissions due to high prices.",
+        "summary": "An analysis estimates that global fossil fuel emissions dropped about 0.4 percent in 2026, driven largely by high oil prices rather than a lasting peak in emissions.",
+        "finding": "An analysis estimates that global fossil fuel emissions dropped about 0.4 percent in 2026, driven largely by high oil prices rather than a lasting peak in emissions.",
         "sourceUpdatedAt": "2026-11-10T16:41:09Z"
       },
       "publishedAt": "2026-11-10T16:29:27+00:00",
@@ -579,92 +710,9 @@
       "publishedAt": "2026-11-10T16:00:00+00:00",
       "publicationEvidence": "2026-11-10T16:00:00+00:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-6c2824fb2757db42",
-      "inputFacts": {
-        "id": "science-6c2824fb2757db42",
-        "title": "The Case for a Bubble at Life’s Start",
-        "url": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110",
-        "publishedAt": "2026-11-10T15:08:35Z",
-        "summary": "The lipid-first hypothesis proposes that early life originated through self-assembling lipid containers that could pass compositional information across generations and undergo natural selection.",
-        "finding": "The lipid-first hypothesis proposes that early life originated through self-assembling lipid containers that could pass compositional information across generations and undergo natural selection.",
-        "sourceUpdatedAt": "2026-11-10T15:08:56Z"
-      },
-      "publishedAt": "2026-11-10T15:08:35+00:00",
-      "publicationEvidence": "2026-11-10T15:08:35+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-1695ef8e6db7acbe",
-      "inputFacts": {
-        "id": "science-1695ef8e6db7acbe",
-        "title": "Toxic secrets are hiding in Arctic ice",
-        "url": "https://www.sciencenews.org/article/toxic-secrets-hiding-arctic-ice-harm",
-        "publishedAt": "2026-11-10T10:00:00Z",
-        "summary": "Arctic ice cores reveal Industrial Revolution arsenic levels up to 15 times higher than pre-industrial levels, likely originating from a Montana copper smelting operation.",
-        "finding": "Arctic ice cores reveal Industrial Revolution arsenic levels up to 15 times higher than pre-industrial levels, likely originating from a Montana copper smelting operation.",
-        "sourceUpdatedAt": "2026-11-10T10:00:00Z"
-      },
-      "publishedAt": "2026-11-10T05:00:00-05:00",
-      "publicationEvidence": "2026-11-10T05:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-fc400f5c232b380e",
-      "inputFacts": {
-        "id": "science-fc400f5c232b380e",
-        "title": "Curiosity Blog, Sols 5056-5062: Charging Back Up!",
-        "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5056-5062-charging-back-up",
-        "publishedAt": "2026-11-10T01:07:45Z",
-        "summary": "NASA's Curiosity rover carried out an engineering test of activity parallelism by executing the CheMin data transfer simultaneously with an orbiter downlink communication window to conserve power.",
-        "finding": "NASA's Curiosity rover carried out an engineering test of activity parallelism by executing the CheMin data transfer simultaneously with an orbiter downlink communication window to conserve power.",
-        "sourceUpdatedAt": "2026-11-10T01:07:49Z"
-      },
-      "publishedAt": "2026-11-09T20:07:45-05:00",
-      "publicationEvidence": "2026-11-09T20:07:45-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-19c6f2c923ddd7fb",
-      "inputFacts": {
-        "id": "science-19c6f2c923ddd7fb",
-        "title": "Global carbon emissions set to fall in 2026 due to Iran energy shock",
-        "url": "https://www.newscientist.com/article/2598130-global-carbon-emissions-fall-in-2026-due-to-iran-energy-shock",
-        "publishedAt": "2026-11-10T01:00:00Z",
-        "summary": "Global carbon dioxide emissions from fossil fuels are projected to decrease by 0.4 percent in 2026, driven partly by an energy shock and oil price spike alongside renewable energy growth.",
-        "finding": "Global carbon dioxide emissions from fossil fuels are projected to decrease by 0.4 percent in 2026, driven partly by an energy shock and oil price spike alongside renewable energy growth.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-10T01:00:00+00:00",
-      "publicationEvidence": "2026-11-10T01:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-e08f23602165bffd",
-      "inputFacts": {
-        "id": "science-e08f23602165bffd",
-        "title": "Fossil fuel emissions are down in 2026. Green energy isn’t the reason",
-        "url": "https://www.sciencenews.org/article/fossil-fuel-emissions-down-2026-gas",
-        "publishedAt": "2026-11-10T01:00:00Z",
-        "summary": "Scientists project that global carbon dioxide emissions from fossil fuels will decrease by 0.4 percent in 2026, primarily driven by high oil prices from conflict rather than clean energy expansion.",
-        "finding": "Scientists project that global carbon dioxide emissions from fossil fuels will decrease by 0.4 percent in 2026, primarily driven by high oil prices from conflict rather than clean energy expansion.",
-        "sourceUpdatedAt": "2026-11-10T01:00:00Z"
-      },
-      "publishedAt": "2026-11-09T20:00:00-05:00",
-      "publicationEvidence": "2026-11-09T20:00:00-05:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-10",
-      "selectedIds": [
-        "science-8ea0785cc9c63a50",
-        "science-ed72f46bb287cd6e",
-        "science-901e4c6072cf569b"
-      ]
-    },
     {
       "date": "2026-11-11",
       "selectedIds": [
@@ -676,9 +724,17 @@
     {
       "date": "2026-11-12",
       "selectedIds": [
-        "science-a085fbe1095eb29d",
         "science-ee03630e6f626376",
-        "science-ed72f46bb287cd6e"
+        "science-ed72f46bb287cd6e",
+        "science-780a35cbfb8cfbda"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "selectedIds": [
+        "science-780a35cbfb8cfbda",
+        "science-4dcee2b3879b37c3",
+        "science-180d88ad69d22f79"
       ]
     }
   ]
