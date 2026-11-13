@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-12T11:00:48.186424Z",
-  "editionDate": "2026-11-12",
+  "generatedAt": "2026-11-13T11:01:00.753629Z",
+  "editionDate": "2026-11-13",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -20,6 +20,491 @@
     ]
   },
   "stories": [
+    {
+      "id": "science-3d2e8c95745650ad",
+      "title": "Hera spies a half-hidden asteroid moonlet",
+      "summary": "ESA's Hera spacecraft acquired an image from 56 km away showing Didymos with an equatorial ridge, boulders, and smooth regions, with part of Dimorphos visible.",
+      "finding": "ESA's Hera spacecraft acquired an image from 56 km away showing Didymos with an equatorial ridge, boulders, and smooth regions, with part of Dimorphos visible.",
+      "significance": "Understanding the surface geology and structure of the Didymos system aids planetary defence research by clarifying the physical consequences of kinetic impacts like NASA's DART test.",
+      "caveat": "Key unknowns remain regarding what DART's impact did to Dimorphos, including whether it formed a crater or completely reshaped the asteroid.",
+      "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-spies-a-half-hidden-asteroid-moonlet",
+      "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-spies-a-half-hidden-asteroid-moonlet",
+      "source": {
+        "name": "ESA"
+      },
+      "sourceGroup": "ESA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-13T10:46:06Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "ESA",
+        "Didymos",
+        "Dimorphos",
+        "NASA",
+        "DART"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-c49fb4d96bbd993c",
+      "title": "Why we buy: 5 thinking errors companies exploit to make you shop",
+      "summary": "Marketing schemes deliberately target intuitive cognitive shortcuts like urgency, scarcity, and anchoring, which can sway consumer judgment away from conscious and accurate deliberation.",
+      "finding": "Marketing schemes deliberately target intuitive cognitive shortcuts like urgency, scarcity, and anchoring, which can sway consumer judgment away from conscious and accurate deliberation.",
+      "significance": "Understanding how marketing tactics exploit mental shortcuts can help consumers exercise conscious critical thinking to avoid impulsive and regrettable purchases.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.newscientist.com/article/2598587-why-we-buy-5-thinking-errors-companies-exploit-to-make-you-shop",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598587-why-we-buy-5-thinking-errors-companies-exploit-to-make-you-shop",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-13T09:00:00Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "social-science"
+      ],
+      "entities": [
+        "Durham University",
+        "University of Virginia",
+        "UN"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-6c50c567a596c770",
+      "title": "A Global Rebound for Mangroves",
+      "summary": "Satellite imagery analysis shows global mangrove forests rebounded after 2010, expanding by nearly 2,000 square kilometers and developing denser canopies following decades of decline.",
+      "finding": "Satellite imagery analysis shows global mangrove forests rebounded after 2010, expanding by nearly 2,000 square kilometers and developing denser canopies following decades of decline.",
+      "significance": "Mangroves store up to four times as much carbon as inland tropical forests, buffer coastal areas against storm surges and erosion, and serve as vital nurseries for marine life.",
+      "caveat": "Gains were not universal, as deforestation and cyclone damage caused significant mangrove losses in regions like the Niger Delta, North America, and southern Africa.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves",
+      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-13T05:01:00Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science",
+        "biology"
+      ],
+      "entities": [
+        "Landsat 5",
+        "Landsat 9",
+        "Tulane University",
+        "Zhen Zhang",
+        "Burma"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1126/science.aec9773",
+      "sourceUpdatedAt": "2026-11-13T05:01:00Z"
+    },
+    {
+      "id": "science-b0cd481433eb7ca1",
+      "title": "AI confirms a long-suspected limit on quantum computers’ advantages",
+      "summary": "Researchers using an AI model proved the Aaronson-Ambainis conjecture, confirming that quantum computers cannot significantly outperform classical computers on a class of unstructured, random mathematical problems.",
+      "finding": "Researchers using an AI model proved the Aaronson-Ambainis conjecture, confirming that quantum computers cannot significantly outperform classical computers on a class of unstructured, random mathematical problems.",
+      "significance": "The verified mathematical proof establishes clear theoretical limits on quantum speedups, helping guide researchers toward problem classes where quantum advantages are genuinely possible.",
+      "caveat": "The practical implications for quantum computing may be limited because the proof is more mathematical than practical, ruling out an avenue not widely considered plausible anyway.",
+      "url": "https://www.newscientist.com/article/2598418-ai-confirms-a-long-suspected-limit-on-quantum-computers-advantages",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598418-ai-confirms-a-long-suspected-limit-on-quantum-computers-advantages",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T20:00:00Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "technology",
+        "physics"
+      ],
+      "entities": [
+        "Scott Aaronson",
+        "University of Texas at Austin",
+        "Andris Ambainis",
+        "University of Latvia",
+        "Stanford University"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-f9dbd3c56fd3b6c5",
+      "title": "Can Network Science Transform Health and Nutrition?",
+      "summary": "Diverse systems share fundamental architectural traits, with disease genes clustering in network neighborhoods and food containing roughly 135,000 uncharacterized compounds outside standard nutrition.",
+      "finding": "Diverse systems share fundamental architectural traits, with disease genes clustering in network neighborhoods and food containing roughly 135,000 uncharacterized compounds outside standard nutrition.",
+      "significance": "Understanding molecular and biological network architecture may improve drug target identification, predict therapeutic responses, and illuminate cellular mechanisms driven by dietary compounds.",
+      "caveat": "The biological impacts of the large number of uncataloged dietary compounds remain poorly understood.",
+      "url": "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112",
+      "primarySourceUrl": "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112",
+      "source": {
+        "name": "Quanta Magazine"
+      },
+      "sourceGroup": "Quanta Magazine",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T19:40:54Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "biology",
+        "health"
+      ],
+      "entities": [
+        "Albert-László Barabási",
+        "Steven Strogatz",
+        "Janna Levin",
+        "Quanta Magazine",
+        "Northeastern University"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-12T21:42:04Z"
+    },
+    {
+      "id": "science-e9755bd1cb6983f9",
+      "title": "A robot has assembled a structure in space for the first time",
+      "summary": "A robotic arm has demonstrated autonomous in-orbit construction by assembling parts of a 1.4-meter radio antenna in space without astronaut assistance.",
+      "finding": "A robotic arm has demonstrated autonomous in-orbit construction by assembling parts of a 1.4-meter radio antenna in space without astronaut assistance.",
+      "significance": "Autonomous assembly offers a scalable alternative to unfolding pre-assembled payloads or using costly astronaut labor, enabling the future construction of larger orbital structures.",
+      "caveat": "Construction of the radio antenna is not yet fully completed, and the mission relies on researchers troubleshooting issues from the ground using a replica robot.",
+      "url": "https://www.newscientist.com/article/2598576-a-robot-has-assembled-a-structure-in-space-for-the-first-time",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598576-a-robot-has-assembled-a-structure-in-space-for-the-first-time",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T19:00:00Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "technology"
+      ],
+      "entities": [
+        "Sergio Pellegrino",
+        "California Institute of Technology",
+        "DARPA",
+        "Vandenberg Space Force Base"
+      ],
+      "milestoneStatus": "completed"
+    },
+    {
+      "id": "science-d6fd8a99fda43004",
+      "title": "Economics, not climate summits, will dictate the net-zero transition",
+      "summary": "The Global Carbon Budget projected that global fossil fuel emissions would decrease slightly by 0.4 percent in 2026, driven largely by rapid clean technology growth alongside an oil crisis.",
+      "finding": "The Global Carbon Budget projected that global fossil fuel emissions would decrease slightly by 0.4 percent in 2026, driven largely by rapid clean technology growth alongside an oil crisis.",
+      "significance": "Economic advantages of solar, wind, and battery technologies are helping drive emissions reductions even when international political negotiations lag.",
+      "caveat": "The minor decrease was partly reliant on the oil crisis caused by conflict involving Iran, and governments still maintain substantial fossil fuel subsidies.",
+      "url": "https://www.newscientist.com/article/2598706-economics-not-climate-summits-will-dictate-the-net-zero-transition",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598706-economics-not-climate-summits-will-dictate-the-net-zero-transition",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T18:20:00Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "earth-science",
+        "technology"
+      ],
+      "entities": [
+        "Global Carbon Budget",
+        "Eindhoven University of Technology",
+        "International Energy Agency",
+        "Ember Energy"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-12T20:20:49Z"
+    },
+    {
+      "id": "science-38d32834f94f250a",
+      "title": "The amazing disappearing exoplanet",
+      "summary": "The hot Jupiter exoplanet TOI-2535b ceased transiting its host star, likely caused by rapid orbital inclination shifts driven by an unseen companion planet on a different orbital plane.",
+      "finding": "The hot Jupiter exoplanet TOI-2535b ceased transiting its host star, likely caused by rapid orbital inclination shifts driven by an unseen companion planet on a different orbital plane.",
+      "significance": "This marks the fastest rate of orbital inclination change ever recorded for an exoplanet orbiting a single star.",
+      "caveat": "Clean radial velocity data are currently insufficient to directly detect the companion, and transit timing noise means a third planet cannot be ruled out.",
+      "url": "https://arstechnica.com/science/2026/11/the-amazing-disappearing-exoplanet",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/the-amazing-disappearing-exoplanet",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T17:18:10Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "TOI-2535b",
+        "TOI-2535",
+        "TESS",
+        "University of California, Los Angeles",
+        "The Astrophysical Journal Letters"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.3847/2041-8213/aeb4a4",
+      "sourceUpdatedAt": "2026-11-12T18:01:45Z"
+    },
+    {
+      "id": "science-4aadc1d98b6a357b",
+      "title": "The brain’s fear center moonlights as the save button for memories",
+      "summary": "Activity in specific human amygdala neurons predicts whether an image will be recalled, indicating the region acts as a save mechanism for memories.",
+      "finding": "Activity in specific human amygdala neurons predicts whether an image will be recalled, indicating the region acts as a save mechanism for memories.",
+      "significance": "Understanding how the amygdala marks information for storage could eventually help inform therapeutic approaches for memory disorders.",
+      "caveat": "The exact mechanism remains unconfirmed, and memory testing only assessed recall after a window of 10 to 30 minutes.",
+      "url": "https://www.sciencenews.org/article/brain-amygdala-neuron-saves-memories",
+      "primarySourceUrl": "https://www.sciencenews.org/article/brain-amygdala-neuron-saves-memories",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T16:00:00Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "health"
+      ],
+      "entities": [
+        "Nature Neuroscience",
+        "Jiayang Xiao",
+        "Cedars-Sinai Health Sciences University",
+        "Cory Inman",
+        "University of Utah"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1038/s41593-026-02493-9",
+      "sourceUpdatedAt": "2026-11-12T16:00:00Z"
+    },
+    {
+      "id": "science-ed14340572225b1f",
+      "title": "The Evolving Story of How Chemistry Became Biology",
+      "summary": "Origins-of-life researchers are moving away from single-molecule theories to investigate how complex chemical networks transitioned into stable evolutionary systems continuous with modern life.",
+      "finding": "Origins-of-life researchers are moving away from single-molecule theories to investigate how complex chemical networks transitioned into stable evolutionary systems continuous with modern life.",
+      "significance": "This conceptual shift bridges biology and prebiotic chemistry, encouraging synthetic biology experiments and broader hypotheses regarding how life can emerge and function.",
+      "caveat": "Explaining how nonliving molecular processes became a stable, reproducing evolutionary system that persisted over billions of years remains challenging.",
+      "url": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112",
+      "primarySourceUrl": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112",
+      "source": {
+        "name": "Quanta Magazine"
+      },
+      "sourceGroup": "Quanta Magazine",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T15:45:27Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "biology",
+        "chemistry"
+      ],
+      "entities": [
+        "University of California, Los Angeles",
+        "University of Wisconsin, Madison",
+        "University of Chicago",
+        "Scripps Research",
+        "Toulouse Biotechnology Institute"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-12T16:30:54Z"
+    },
+    {
+      "id": "science-0c210fd64684a210",
+      "title": "Europe’s Hera mission is ready to double down on asteroid science",
+      "summary": "The Hera spacecraft arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to investigate the system and the aftermath of the DART impact.",
+      "finding": "The Hera spacecraft arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to investigate the system and the aftermath of the DART impact.",
+      "significance": "The mission marks the first exploration of a binary asteroid pair, aiding planetary defense research and offering insights into asteroid formation and internal structures.",
+      "caveat": "Scientists must differentiate between natural binary asteroid characteristics and the alterations caused by the DART impact, such as potential tumbling of Dimorphos.",
+      "url": "https://www.sciencenews.org/article/europe-hera-mission-double-asteroid",
+      "primarySourceUrl": "https://www.sciencenews.org/article/europe-hera-mission-double-asteroid",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T14:00:00Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "European Space Agency",
+        "Hera",
+        "Didymos",
+        "Dimorphos",
+        "DART"
+      ],
+      "milestoneStatus": "completed",
+      "sourceUpdatedAt": "2026-11-12T14:00:00Z"
+    },
+    {
+      "id": "science-ed3d344d6200cc1b",
+      "title": "Crows can make decisions twice as fast as humans, scientists discover",
+      "summary": "Researchers found that carrion crows make visual decisions about the direction of moving dots in an average of 235 milliseconds, roughly twice as fast as humans and monkeys, while maintaining high accuracy.",
+      "finding": "Researchers found that carrion crows make visual decisions about the direction of moving dots in an average of 235 milliseconds, roughly twice as fast as humans and monkeys, while maintaining high accuracy.",
+      "significance": "The study demonstrates that non-layered avian brains can process visual decisions using neural dynamics similar to primate brains, likely driven by evolutionary demands like flight and foraging.",
+      "caveat": "The exact biological mechanisms enabling crows to make visual decisions so much faster than primates remain unknown, and the behavioral experiment involved only two carrion crows.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005850.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261111005850.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T12:17:19Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology"
+      ],
+      "entities": [
+        "Philipp Schmidbauer",
+        "Andreas Nieder",
+        "Science"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1126/science.aed6459"
+    },
+    {
+      "id": "science-5feab6ed5a874f1b",
+      "title": "AI-powered bionic eye breakthrough could help the blind see again",
+      "summary": "Researchers used a deep neural network to optimize electrical stimulation patterns for a visual cortex implant in a blind participant, predicting perceived flashes and shapes of light while using less electrical current.",
+      "finding": "Researchers used a deep neural network to optimize electrical stimulation patterns for a visual cortex implant in a blind participant, predicting perceived flashes and shapes of light while using less electrical current.",
+      "significance": "Brain implants that adapt to individual neural responses could bypass damaged eyes and optic nerves, moving closer to restoring reliable artificial vision.",
+      "caveat": "The technology remains experimental, tested in a single individual, and visual perceptions were limited to basic flashes and shapes of light rather than complex functional vision.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261110042553.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261110042553.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T11:55:55Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "technology",
+        "health",
+        "biology"
+      ],
+      "entities": [
+        "UC Santa Barbara",
+        "Neuron",
+        "Michael Beyeler",
+        "ETH Zurich",
+        "Hospital IMED Elche"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1016/j.neuron.2026.07.006"
+    },
+    {
+      "id": "science-0dcccc4b13d57233",
+      "title": "NASA’s Perseverance confirms a key ingredient for life hidden in ancient Mars rocks",
+      "summary": "NASA's Perseverance rover detected macromolecular organic carbon just a few microns below the surface of ancient mudstones in Mars' Bright Angel formation.",
+      "finding": "NASA's Perseverance rover detected macromolecular organic carbon just a few microns below the surface of ancient mudstones in Mars' Bright Angel formation.",
+      "significance": "Because similar organics were found thousands of miles away in Gale Crater, organic building blocks may have been widespread across ancient Martian lakes and rivers.",
+      "caveat": "Macromolecular carbon can form via non-biological chemical processes, meaning its presence alone does not establish that Mars was once inhabited.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005908.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261111005908.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T11:37:06Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "NASA",
+        "Perseverance",
+        "Science Advances",
+        "Bright Angel",
+        "Jezero crater"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1126/sciadv.adx0047"
+    },
+    {
+      "id": "science-f9f8fad9c380f8fe",
+      "title": "A new treasure map reveals where Earth's lost prehistoric life may be hiding",
+      "summary": "An analysis of 540 million years of shallow marine fossils indicates that the greatest opportunities for discovering unknown prehistoric species exist in more recent periods, notably the Cenozoic Era, rather than the distant past.",
+      "finding": "An analysis of 540 million years of shallow marine fossils indicates that the greatest opportunities for discovering unknown prehistoric species exist in more recent periods, notably the Cenozoic Era, rather than the distant past.",
+      "significance": "Mapping unexplored areas with exposed, suitable geological strata allows paleontologists to strategically prioritize expeditions and museum collection reviews to expand the fossil record.",
+      "caveat": "Expanding the fossil record remains challenging and advances slowly, with fossilization itself preserving only a tiny fraction of Earth's past life.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112025529.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261112025529.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-12T11:24:47Z",
+      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "earth-science"
+      ],
+      "entities": [
+        "Staatliche Naturwissenschaftliche Sammlungen Bayerns",
+        "Thomas A. Neubauer",
+        "Mathias Harzhauser",
+        "Natural History Museum in Vienna",
+        "Science Advances"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1126/sciadv.aeh3920"
+    },
     {
       "id": "science-36841df3d1321307",
       "title": "Earth's fiery birth may have created hundreds of oceans' worth of water",
@@ -154,9 +639,9 @@
     {
       "id": "science-78c34c8f8ab330b8",
       "title": "Anduril says its first satellite can see adversaries maneuver in orbital night",
-      "summary": "Anduril demonstrated a long-wave infrared sensor on its Anduril-216 satellite that can image objects in full darkness, addressing tracking gaps when satellites maneuver within Earth's shadow.",
-      "finding": "Anduril demonstrated a long-wave infrared sensor on its Anduril-216 satellite that can image objects in full darkness, addressing tracking gaps when satellites maneuver within Earth's shadow.",
-      "significance": "Optical sensors often lose track of spacecraft when they pass through orbital darkness, but long-wave infrared detection of thermal signatures can maintain tracking custody during eclipses.",
+      "summary": "Anduril demonstrated an orbital long-wave infrared sensor on the Anduril-216 satellite that can detect spacecraft heat signatures while operating in Earth's shadow.",
+      "finding": "Anduril demonstrated an orbital long-wave infrared sensor on the Anduril-216 satellite that can detect spacecraft heat signatures while operating in Earth's shadow.",
+      "significance": "The capability helps monitor satellites that alter their orbits during eclipse periods, closing a tracking gap where optical sensors and ground radars are hindered.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://arstechnica.com/space/2026/11/anduril-demos-night-vision-sensor-for-tracking-satellites-in-darkness",
       "primarySourceUrl": "https://arstechnica.com/space/2026/11/anduril-demos-night-vision-sensor-for-tracking-satellites-in-darkness",
@@ -167,19 +652,17 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-11T20:22:03Z",
       "firstSeenAt": "2026-11-12T11:00:48.186424Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
       "evidenceType": "mission-milestone",
       "topics": [
-        "technology",
-        "astronomy"
+        "technology"
       ],
       "entities": [
         "Anduril Industries",
-        "SpaceX",
         "Anduril-216",
-        "Apex Space",
-        "Space Force"
+        "SpaceX",
+        "Apex Space"
       ],
       "milestoneStatus": "completed",
       "sourceUpdatedAt": "2026-11-11T21:46:34Z"
@@ -187,10 +670,10 @@
     {
       "id": "science-4dcee2b3879b37c3",
       "title": "Stone Age children left fingerprints on ancient art projects",
-      "summary": "Clay figurine fragments dating back up to 15,000 years in the Levant preserve fingerprints of both adults and young children, suggesting adults taught children how to shape clay.",
-      "finding": "Clay figurine fragments dating back up to 15,000 years in the Levant preserve fingerprints of both adults and young children, suggesting adults taught children how to shape clay.",
-      "significance": "The findings provide rare physical evidence of children's involvement in prehistoric art and intergenerational learning among hunter-gatherers before agriculture emerged.",
-      "caveat": "The exact purpose of the ancient figurines remains unclear, though their small size and lack of heavy wear suggest they were not maintained as precious heirlooms.",
+      "summary": "Analyses of up to 15,000-year-old Natufian clay figurine fragments revealed fingerprints from both adults and young children, suggesting adults taught children how to sculpt clay.",
+      "finding": "Analyses of up to 15,000-year-old Natufian clay figurine fragments revealed fingerprints from both adults and young children, suggesting adults taught children how to sculpt clay.",
+      "significance": "The discovery provides rare physical evidence of intergenerational learning and children's participation in prehistoric art and culture prior to the advent of agriculture.",
+      "caveat": "The exact purpose of the small figurines remains unclear, though lack of wear indicates they were not used as durable heirlooms.",
       "url": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
       "primarySourceUrl": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
       "source": {
@@ -200,17 +683,18 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-11T19:00:00Z",
       "firstSeenAt": "2026-11-12T11:00:48.186424Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "social-science"
       ],
       "entities": [
-        "Laurent Davin",
         "Hebrew University of Jerusalem",
-        "Steven Dorland",
-        "Grand Valley State University"
+        "Grand Valley State University",
+        "PLOS One",
+        "Laurent Davin",
+        "Steven Dorland"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1371/journal.pone.0360388",
@@ -219,10 +703,10 @@
     {
       "id": "science-180d88ad69d22f79",
       "title": "This magic mushroom can kill",
-      "summary": "Researchers identified Galerina indica as the first known fungus species to produce both hallucinogenic psilocybin and lethal amatoxin compounds.",
-      "finding": "Researchers identified Galerina indica as the first known fungus species to produce both hallucinogenic psilocybin and lethal amatoxin compounds.",
-      "significance": "The finding reveals unexpected diversity in fungal chemical synthesis, showing that fungi can combine distinct toxins and psychoactive compounds through genetic evolution.",
-      "caveat": "Limited knowledge of the fungi's evolutionary tree leaves it unclear whether psilocybin genes were acquired independently or passed down from a common ancestor.",
+      "summary": "Researchers discovered that the fungus Galerina indica produces both hallucinogenic psilocybin and a deadly amatoxin, making it the first known mushroom species to produce both compounds.",
+      "finding": "Researchers discovered that the fungus Galerina indica produces both hallucinogenic psilocybin and a deadly amatoxin, making it the first known mushroom species to produce both compounds.",
+      "significance": "The discovery demonstrates unexpected diversity in fungal chemistry and shows how fungi can acquire complex chemical pathways, likely via horizontal gene transfer.",
+      "caveat": "Scientists do not yet know the exact evolutionary sequence behind the acquisition of psilocybin genes, as insufficient information is available regarding the fungus's family tree.",
       "url": "https://www.sciencenews.org/article/dark-magic-mushroom-psilocybin-amatoxin",
       "primarySourceUrl": "https://www.sciencenews.org/article/dark-magic-mushroom-psilocybin-amatoxin",
       "source": {
@@ -232,17 +716,17 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-11T16:00:00Z",
       "firstSeenAt": "2026-11-12T11:00:48.186424Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology"
       ],
       "entities": [
-        "Current Biology",
         "Andrew Kunik",
         "Matthew Smith",
         "University of Florida",
+        "Galerina indica",
         "Anne Pringle"
       ],
       "milestoneStatus": "unknown",
@@ -440,38 +924,6 @@
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://journals.aps.org/prl/accepted/10.1103/j1r2-5ph7"
-    },
-    {
-      "id": "science-c45c5c281dd2928f",
-      "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
-      "summary": "NASA's Voyager 1 spacecraft is scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
-      "finding": "NASA's Voyager 1 spacecraft is scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
-      "significance": "Voyager 1 is the most distant human-made object, and reaching one light-day means light from Earth requires 24 hours to reach it.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
-      "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-11-10T19:22:45Z",
-      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
-      "evidenceType": "mission-milestone",
-      "topics": [
-        "astronomy",
-        "technology"
-      ],
-      "entities": [
-        "NASA",
-        "Voyager 1",
-        "Voyager 2",
-        "Jet Propulsion Laboratory",
-        "Caltech"
-      ],
-      "milestoneStatus": "planned"
     },
     {
       "id": "science-6103d40234ae1019",
@@ -1790,7 +2242,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T11:01:03Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
       "verifiedAt": "2026-11-07T11:01:01.958577Z",
       "evidenceType": "mission-milestone",
       "topics": [
@@ -1807,10 +2259,10 @@
     {
       "id": "science-8b317084cde7e6b6",
       "title": "European orbiter detects hints of volcanic activity on Mars",
-      "summary": "Localized spikes of hydrogen chloride detected above fresh fissures on Mars's Alba Mons volcano suggest active or recent magmatic degassing from subsurface magma.",
-      "finding": "Localized spikes of hydrogen chloride detected above fresh fissures on Mars's Alba Mons volcano suggest active or recent magmatic degassing from subsurface magma.",
-      "significance": "The findings suggest Mars retains enough internal heat to maintain dormant volcanism and potentially warm hydrothermal niches capable of supporting microbial life.",
-      "caveat": "No active lava flows or volcanic eruptions have ever been directly observed on Mars, and the connection between the gas and fissures relies on inferential modeling.",
+      "summary": "Localized spikes of hydrogen chloride detected above fresh volcanic fissures on Alba Mons suggest that Mars may still experience dormant volcanism and retain internal heat.",
+      "finding": "Localized spikes of hydrogen chloride detected above fresh volcanic fissures on Alba Mons suggest that Mars may still experience dormant volcanism and retain internal heat.",
+      "significance": "Evidence of active subsurface magma and hydrothermal processes could reveal warm, shielded niches potentially capable of supporting microbial life on Mars.",
+      "caveat": "No direct observations of new lava flows or volcanic eruptions have ever been made.",
       "url": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "primarySourceUrl": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "source": {
@@ -1820,18 +2272,18 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T10:05:36Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
       ],
       "entities": [
-        "Mars",
         "Alba Mons",
-        "ExoMars Trace Gas Orbiter",
-        "Science Advances",
-        "Polish Academy of Sciences"
+        "Alexander Trokhimovskiy",
+        "Trace Gas Orbiter",
+        "Daniel Mège",
+        "Colin Wilson"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/doi/10.1126/sciadv.aeb9422"
@@ -1871,10 +2323,10 @@
     {
       "id": "science-bd3627b78838f002",
       "title": "Euclid discovers new comet",
-      "summary": "The Euclid space telescope identified its first previously unknown comet, designated C/2026 S1 (Euclid), located approximately 1.3 billion kilometres from Earth.",
-      "finding": "The Euclid space telescope identified its first previously unknown comet, designated C/2026 S1 (Euclid), located approximately 1.3 billion kilometres from Earth.",
-      "significance": "The detection demonstrates that Euclid can discover and quickly validate distant comets, providing a test case for future coordination with missions like ESA's Comet Interceptor.",
-      "caveat": "Very few comets are expected to be detected by Euclid because it avoids the comet-rich plane of the Solar System and typically images each sky section only once.",
+      "summary": "The Euclid space telescope discovered its first previously unknown comet, designated C/2026 S1 (Euclid), while scanning fields outside the Solar System's primary orbital plane.",
+      "finding": "The Euclid space telescope discovered its first previously unknown comet, designated C/2026 S1 (Euclid), while scanning fields outside the Solar System's primary orbital plane.",
+      "significance": "The detection demonstrates that Euclid can identify distant moving objects, helping to clean galaxy survey data and providing early alert coordination for future missions like Comet Interceptor.",
+      "caveat": "Very few comet discoveries are expected because Euclid avoids the comet-dense planetary plane and rarely revisits sky sections, and this comet is not a suitable target for Comet Interceptor.",
       "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-discovers-new-comet",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-discovers-new-comet",
       "source": {
@@ -1884,8 +2336,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T08:24:42Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "astronomy"
@@ -1895,7 +2347,7 @@
         "Euclid",
         "University of Helsinki",
         "Minor Planet Center",
-        "Comet Interceptor"
+        "International Astronomical Union"
       ],
       "milestoneStatus": "unknown"
     },
@@ -2638,7 +3090,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-02T21:07:52Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -2883,10 +3335,10 @@
     {
       "id": "science-e77a7638ee47a43c",
       "title": "It’s not (just) the heat, it’s the humidity: Examining the impact of intensifying humid heat on pregnancies",
-      "summary": "Increasing humid heat in Nigeria is strongly associated with higher early pregnancy termination risks and temporary shifts in the timing of conceptions.",
-      "finding": "Increasing humid heat in Nigeria is strongly associated with higher early pregnancy termination risks and temporary shifts in the timing of conceptions.",
-      "significance": "The findings highlight how climate-driven humidity impacts reproductive health and fertility timing in vulnerable, lower- and middle-income regions.",
-      "caveat": "The underlying demographic surveys do not differentiate between spontaneous miscarriages and induced terminations.",
+      "summary": "In Nigeria, increasing humid heat is linked to a higher risk of early pregnancy terminations and shifts conception timing, causing an initial drop in conception followed by subsequent increases.",
+      "finding": "In Nigeria, increasing humid heat is linked to a higher risk of early pregnancy terminations and shifts conception timing, causing an initial drop in conception followed by subsequent increases.",
+      "significance": "Demonstrates the impact of humid heat stress on reproductive health in vulnerable, lower- and middle-income regions by integrating satellite data with national health surveys.",
+      "caveat": "The demographic surveys evaluated do not differentiate whether the reported early pregnancy terminations were spontaneous or induced.",
       "url": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "primarySourceUrl": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "source": {
@@ -2896,8 +3348,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T15:38:09Z",
       "firstSeenAt": "2026-11-05T11:24:38.846856Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "health",
@@ -2906,10 +3358,10 @@
       ],
       "entities": [
         "University of Michigan",
-        "Nigeria",
         "Proceedings of the National Academy of Sciences",
-        "USAID",
-        "NASA"
+        "Nigeria",
+        "NASA Land-Cover and Land Use Change Program",
+        "Aix-Marseille University"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1073/pnas.2321152122",
@@ -2953,10 +3405,10 @@
     {
       "id": "science-e10edceaccaeeca7",
       "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
-      "summary": "Long-term monitoring showed a large chimpanzee community split into two factions that engaged in persistent, lethal aggression against former group members who had previously affiliated and cooperated.",
-      "finding": "Long-term monitoring showed a large chimpanzee community split into two factions that engaged in persistent, lethal aggression against former group members who had previously affiliated and cooperated.",
-      "significance": "The observations contrast with human social behavior, highlighting that while chimpanzees fatally target familiar former companions, humans uniquely extend prosocial cooperation to strangers.",
-      "caveat": "The researcher notes that the asymmetric nature of the killings and the exact causes behind the lethal fission remain difficult to explain.",
+      "summary": "Long-term monitoring of the Ngogo chimpanzee community revealed that after a group fission, splinter groups engaged in lethal intergroup aggression against former community members with whom they had shared long histories.",
+      "finding": "Long-term monitoring of the Ngogo chimpanzee community revealed that after a group fission, splinter groups engaged in lethal intergroup aggression against former community members with whom they had shared long histories.",
+      "significance": "The findings illustrate how chimpanzees exhibit lethal aggression toward familiar former group mates, highlighting behavioral contrasts with human prosociality and cooperation toward strangers.",
+      "caveat": "The asymmetric nature of the killings and the exact causes of why they occurred among individuals who formerly cooperated remain difficult to explain.",
       "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "primarySourceUrl": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "source": {
@@ -2966,8 +3418,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T14:08:23Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
@@ -2978,7 +3430,7 @@
         "Kibale National Park",
         "University of Michigan",
         "Nature Human Behaviour",
-        "Ngogo Chimpanzee Project"
+        "The Guardian"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.nature.com/articles/s41562-026-02601-6",
@@ -3088,10 +3540,10 @@
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "summary": "Analysis of the Martian meteorite Teghaza 001 revealed it formed over 4.1 billion years ago and underwent alteration by subsurface water around that time.",
-      "finding": "Analysis of the Martian meteorite Teghaza 001 revealed it formed over 4.1 billion years ago and underwent alteration by subsurface water around that time.",
-      "significance": "The sample provides rare physical evidence of ancient Martian crust formation and points to a more dynamic water cycle on early Mars.",
-      "caveat": "The exact source location of the meteorite on the Martian surface cannot be definitively known, although potential matching sites were identified.",
+      "summary": "Analysis of the Martian meteorite Teghaza 001 shows it formed over 4.1 billion years ago and underwent alteration by subsurface water around that time, marking it as one of Earth's oldest Mars meteorites.",
+      "finding": "Analysis of the Martian meteorite Teghaza 001 shows it formed over 4.1 billion years ago and underwent alteration by subsurface water around that time, marking it as one of Earth's oldest Mars meteorites.",
+      "significance": "The meteorite offers a rare glimpse into ancient Martian crust formation and points to a dynamic water cycle and rock-water interactions on early Mars.",
+      "caveat": "Scientists cannot determine the precise location on Mars from which the meteorite originated, though several matching candidate regions have been identified.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "source": {
@@ -3101,18 +3553,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T18:18:09Z",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "astronomy"
+        "astronomy",
+        "earth-science"
       ],
       "entities": [
         "NASA",
         "Jet Propulsion Laboratory",
         "Science",
-        "Yang Liu",
-        "Caltech"
+        "Science Advances",
+        "Mars Reconnaissance Orbiter"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
@@ -3367,7 +3820,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T20:23:58Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -3398,7 +3851,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T18:51:35Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
       "verifiedAt": "2026-10-29T05:30:05.908168Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -3487,10 +3940,10 @@
     {
       "id": "science-6d879a7a5c5c91f8",
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
-      "summary": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, ranging down to approximately 100 nanometers, adhering to spacesuit material samples carried on the rover.",
-      "finding": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, ranging down to approximately 100 nanometers, adhering to spacesuit material samples carried on the rover.",
-      "significance": "Understanding the adhesion and presence of these minuscule particles helps guide spacesuit material selection, habitat engineering, and health mitigation strategies for future Mars missions.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "summary": "NASA's Perseverance rover detected fine (under 2.5 micrometers) and ultrafine (around 100 nanometers) Martian dust clinging to spacesuit material samples, with the smallest particles remaining attached across years of movement.",
+      "finding": "NASA's Perseverance rover detected fine (under 2.5 micrometers) and ultrafine (around 100 nanometers) Martian dust clinging to spacesuit material samples, with the smallest particles remaining attached across years of movement.",
+      "significance": "Understanding the persistent adhesion of ultrafine, chemically reactive dust helps engineers design protective spacesuits, airlocks, and health standards for future human Mars exploration.",
+      "caveat": "Scientists note that the health risks associated with Mars dust depend on the specific quantity of dust and the duration of human exposure.",
       "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "source": {
@@ -3500,8 +3953,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-26T21:07:28Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
+      "checkedAt": "2026-11-13T11:01:00.753629Z",
+      "verifiedAt": "2026-11-13T11:01:00.753629Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -3509,11 +3962,11 @@
         "health"
       ],
       "entities": [
-        "NASA",
         "Perseverance",
-        "Jet Propulsion Laboratory",
         "PIXL",
-        "SHERLOC"
+        "SHERLOC",
+        "NASA",
+        "Jet Propulsion Laboratory"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2620747123",
@@ -5461,516 +5914,60 @@
       "milestoneStatus": "planned",
       "sourceUpdatedAt": "2026-10-07T18:43:08Z",
       "localConnection": "University of Michigan research in Ann Arbor."
-    },
-    {
-      "id": "science-b65c367f30fb2d3e",
-      "title": "Steering wheel communicates for better semi-autonomous driving performance",
-      "summary": "A specialized steering wheel that allows for negotiation between human drivers and an autonomous driving simulation improved driving performance and increased trust between the driver and autonomous vehicle features.",
-      "finding": "A specialized steering wheel that allows for negotiation between human drivers and an autonomous driving simulation improved driving performance and increased trust between the driver and autonomous vehicle features.",
-      "significance": "This two-way communication system, unlike current one-way warning systems, could enhance the effectiveness and acceptance of semi-autonomous vehicles by fostering better teamwork and reducing driver stress and confusion.",
-      "caveat": "While the negotiation system improved trust recovery, some drivers became overly trusting after successful negotiations, indicating a need for further study on trust dynamics with such a system.",
-      "url": "https://news.umich.edu/steering-wheel-communicates-for-better-semi-autonomous-driving-performance",
-      "primarySourceUrl": "https://news.umich.edu/steering-wheel-communicates-for-better-semi-autonomous-driving-performance",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-01T15:12:53Z",
-      "firstSeenAt": "2026-10-10T10:16:39.118957Z",
-      "checkedAt": "2026-10-10T10:16:39.118957Z",
-      "verifiedAt": "2026-10-10T10:16:39.118957Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "technology"
-      ],
-      "entities": [
-        "University of Michigan Engineering",
-        "Toyota Research Institute",
-        "Human Factors"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://journals.sagepub.com/doi/10.1177/00187208261483656",
-      "sourceUpdatedAt": "2026-10-01T15:13:01Z",
-      "localConnection": "University of Michigan research in Ann Arbor."
-    },
-    {
-      "id": "science-3bf2aef00178636c",
-      "title": "Science begins for Smile",
-      "summary": "The European-Chinese Smile mission has completed its in-space commissioning and is now ready to begin science operations, including collecting data on how Earth responds to the solar wind and capturing ultraviolet footage of auroras.",
-      "finding": "The European-Chinese Smile mission has completed its in-space commissioning and is now ready to begin science operations, including collecting data on how Earth responds to the solar wind and capturing ultraviolet footage of auroras.",
-      "significance": "This mission will provide vital information to better understand solar storms, geomagnetic storms, and space weather, which can affect electronic infrastructure on and around Earth.",
-      "caveat": "While the ultraviolet aurora imager (UVI) is fully operational, the soft X-ray imager (SXI) currently detects too much unwanted stray light when pointed towards Earth, requiring adjustments and software updates to reduce this interference.",
-      "url": "https://www.esa.int/Science_Exploration/Space_Science/Smile/Science_begins_for_Smile",
-      "primarySourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Smile/Science_begins_for_Smile",
-      "source": {
-        "name": "ESA"
-      },
-      "sourceGroup": "ESA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-30T07:05:00Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-19T10:14:42.592285Z",
-      "verifiedAt": "2026-10-19T10:14:42.592285Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "astronomy",
-        "physics",
-        "technology"
-      ],
-      "entities": [
-        "Smile mission",
-        "ESA",
-        "Chinese Academy of Sciences",
-        "soft X-ray imager (SXI)",
-        "ultraviolet aurora imager (UVI)"
-      ],
-      "milestoneStatus": "completed"
-    },
-    {
-      "id": "science-76b22a2d59c961e9",
-      "title": "Happy New Year on Mars",
-      "summary": "The 39th Martian year will commence on September 30, 2026, at 10:16 CEST/08:16 UTC, marking the Red Planet's new orbit around the Sun.",
-      "finding": "The 39th Martian year will commence on September 30, 2026, at 10:16 CEST/08:16 UTC, marking the Red Planet's new orbit around the Sun.",
-      "significance": "Understanding the Martian calendar and its differences from Earth's, such as longer days and years, unequal season lengths, and recurring dust storms, is crucial for planning future missions and interpreting climate data on Mars.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Happy_New_Year_on_Mars",
-      "primarySourceUrl": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Happy_New_Year_on_Mars",
-      "source": {
-        "name": "ESA"
-      },
-      "sourceGroup": "ESA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-30T06:00:00Z",
-      "firstSeenAt": "2026-10-10T10:16:39.118957Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-13T10:00:01.886016Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "astronomy",
-        "earth-science"
-      ],
-      "entities": [
-        "Mars",
-        "Earth",
-        "Sun",
-        "Red Planet"
-      ],
-      "milestoneStatus": "planned"
-    },
-    {
-      "id": "science-4d018e88d74bd3f6",
-      "title": "Galaxies in a cosmic house of mirrors",
-      "summary": "The James Webb Space Telescope (JWST) has captured detailed images of gravitationally lensed galaxies, including a group of galaxies 2 billion years after the Big Bang undergoing a merger with an enormous burst of star formation, and a single galaxy just 800 million years old after the Big Bang. The JWST also identified individual bright 'knots' within these lensed areas, corresponding to regions as small as 5 light-years across, magnified by a factor of more than 300.",
-      "finding": "The James Webb Space Telescope (JWST) has captured detailed images of gravitationally lensed galaxies, including a group of galaxies 2 billion years after the Big Bang undergoing a merger with an enormous burst of star formation, and a single galaxy just 800 million years old after the Big Bang. The JWST also identified individual bright 'knots' within these lensed areas, corresponding to regions as small as 5 light-years across, magnified by a factor of more than 300.",
-      "significance": "Gravitational lensing, as observed by JWST, allows astronomers to view extremely distant and faint objects that would otherwise be undetectable, providing insights into the early universe and galaxy evolution. The ability to resolve features as small as 5 light-years across in these distant galaxies offers unprecedented detail for studying star formation in the early cosmos.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/09/Galaxies_in_a_cosmic_house_of_mirrors",
-      "primarySourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2026/09/Galaxies_in_a_cosmic_house_of_mirrors",
-      "source": {
-        "name": "ESA"
-      },
-      "sourceGroup": "ESA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-29T08:00:00Z",
-      "firstSeenAt": "2026-10-10T10:16:39.118957Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-17T10:01:38.386991Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "astronomy",
-        "physics"
-      ],
-      "entities": [
-        "James Webb Space Telescope",
-        "MACS J0454.1-0300",
-        "gravitational lensing",
-        "NASA",
-        "ESA"
-      ],
-      "milestoneStatus": "unknown"
-    },
-    {
-      "id": "science-21c224b7f1e72026",
-      "title": "Successful Earth flyby improves Juice’s course to Jupiter",
-      "summary": "The Jupiter Icy Moons Explorer (Juice) successfully completed an Earth flyby on September 28, 2026, using Earth's gravity to alter its trajectory towards Jupiter and increase its velocity by 3.5 km/s, while also testing its science instruments.",
-      "finding": "The Jupiter Icy Moons Explorer (Juice) successfully completed an Earth flyby on September 28, 2026, using Earth's gravity to alter its trajectory towards Jupiter and increase its velocity by 3.5 km/s, while also testing its science instruments.",
-      "significance": "This successful flyby conserves propellant for future observations at Jupiter and provides valuable opportunities to calibrate and validate Juice's instruments under real space conditions, preparing them for critical data collection at Jupiter's icy moons.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Successful_Earth_flyby_improves_Juice_s_course_to_Jupiter",
-      "primarySourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Successful_Earth_flyby_improves_Juice_s_course_to_Jupiter",
-      "source": {
-        "name": "ESA"
-      },
-      "sourceGroup": "ESA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-28T15:00:00Z",
-      "firstSeenAt": "2026-10-10T10:16:39.118957Z",
-      "checkedAt": "2026-10-10T10:16:39.118957Z",
-      "verifiedAt": "2026-10-10T10:16:39.118957Z",
-      "evidenceType": "mission-milestone",
-      "topics": [
-        "astronomy",
-        "technology"
-      ],
-      "entities": [
-        "Jupiter Icy Moons Explorer",
-        "Juice",
-        "Earth",
-        "Jupiter",
-        "European Space Agency"
-      ],
-      "milestoneStatus": "completed",
-      "storyClusterId": "juice-milestones",
-      "supersedes": []
-    },
-    {
-      "id": "science-22b661cdd9e9935f",
-      "title": "US-India Satellite Captures Time-lapse Video of Volcanic Eruption",
-      "summary": "The NASA-ISRO Synthetic Aperture Radar (NISAR) mission has tracked the spread of lava from the northern crater of Krasheninnikov, a volcano pair on Russia’s Kamchatka Peninsula, from December 2025 to August 2026, following an eruption that began in July 2025.",
-      "finding": "The NASA-ISRO Synthetic Aperture Radar (NISAR) mission has tracked the spread of lava from the northern crater of Krasheninnikov, a volcano pair on Russia’s Kamchatka Peninsula, from December 2025 to August 2026, following an eruption that began in July 2025.",
-      "significance": "This demonstrates NISAR's capability to monitor natural hazards like volcanic eruptions with high precision and reliability, providing valuable data for both scientific research and potential emergency response, especially for volcanoes that are not closely monitored by ground instruments.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/missions/nisar/us-india-satellite-captures-time-lapse-video-of-volcanic-eruption",
-      "primarySourceUrl": "https://www.nasa.gov/missions/nisar/us-india-satellite-captures-time-lapse-video-of-volcanic-eruption",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-24T15:47:17Z",
-      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-10-16T10:02:47.778170Z",
-      "verifiedAt": "2026-10-16T10:02:47.778170Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "earth-science",
-        "technology"
-      ],
-      "entities": [
-        "NISAR",
-        "Krasheninnikov",
-        "Kamchatka Peninsula",
-        "NASA",
-        "ISRO"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-09-24T15:47:18Z"
-    },
-    {
-      "id": "science-272df72ef6c2a546",
-      "title": "NASA Selects Far-Infrared Telescope as First in New Mission Class",
-      "summary": "NASA's PRIMA (PRobe far-Infrared Mission for Astrophysics) space telescope is advancing to Phase B of development, aiming to launch in 2033 for a five-year mission to explore the universe in far-infrared light.",
-      "finding": "NASA's PRIMA (PRobe far-Infrared Mission for Astrophysics) space telescope is advancing to Phase B of development, aiming to launch in 2033 for a five-year mission to explore the universe in far-infrared light.",
-      "significance": "PRIMA will be the first in a new class of NASA astrophysics missions, bridging the gap between existing infrared observatories and radio telescopes. It will help scientists understand the formation of planets, stars, black holes, and the evolution of galaxies and heavy elements, providing insights into the universe's history and structure.",
-      "caveat": "The mission is subject to a confirmation review based on technical, programmatic, and cost performance before it can begin implementation in Phase C. Its launch and operational success are contingent on this review and future development phases.",
-      "url": "https://www.nasa.gov/news-release/nasa-selects-far-infrared-telescope-as-first-in-new-mission-class",
-      "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-selects-far-infrared-telescope-as-first-in-new-mission-class",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-23T20:09:42Z",
-      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-17T10:01:38.386991Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "astronomy",
-        "technology"
-      ],
-      "entities": [
-        "NASA",
-        "PRIMA",
-        "Explorers Program",
-        "James Webb Space Telescope",
-        "Jet Propulsion Laboratory"
-      ],
-      "milestoneStatus": "planned"
-    },
-    {
-      "id": "science-ee4c5e735e8fea2e",
-      "title": "Podcast: Can prosthetic limbs feel touch? (haptic feedback)",
-      "summary": "NSF-supported researcher Jeremy Brown is developing interfaces with haptic feedback for upper-limb prosthetics, rehabilitation tools, and surgical robotics.",
-      "finding": "NSF-supported researcher Jeremy Brown is developing interfaces with haptic feedback for upper-limb prosthetics, rehabilitation tools, and surgical robotics.",
-      "significance": "This research aims to improve the lives of American people by enhancing the functionality and sensory experience of prosthetic limbs and other assistive technologies.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nsf.gov/news/podcast-can-prosthetic-limbs-feel-touch-haptic-feedback",
-      "primarySourceUrl": "https://www.nsf.gov/news/podcast-can-prosthetic-limbs-feel-touch-haptic-feedback",
-      "source": {
-        "name": "NSF"
-      },
-      "sourceGroup": "NSF",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-21T20:47:33Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-20T10:14:17.067713Z",
-      "verifiedAt": "2026-10-15T10:00:00.772183Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "health"
-      ],
-      "entities": [
-        "NSF",
-        "Jeremy Brown",
-        "haptic feedback",
-        "upper-limb prosthetics",
-        "rehabilitation tools"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-09-21T20:48:40Z"
-    },
-    {
-      "id": "science-a7121263bf60a3eb",
-      "title": "A galaxy spinning out of sync",
-      "summary": "The spiral galaxy NGC 4698, located in the Virgo Cluster, exhibits an unusual configuration where its central bulge extends perpendicularly to the galactic disc, and the stars and gas near its center rotate perpendicular to the rest of the disc.",
-      "finding": "The spiral galaxy NGC 4698, located in the Virgo Cluster, exhibits an unusual configuration where its central bulge extends perpendicularly to the galactic disc, and the stars and gas near its center rotate perpendicular to the rest of the disc.",
-      "significance": "This finding challenges the understanding of typical spiral galaxy formation and evolution, suggesting that external influences like galactic mergers or gas accretion can significantly alter a galaxy's structure and dynamics.",
-      "caveat": "The exact cause of NGC 4698's unusual rotation and bulge orientation is still under investigation, with astronomers suggesting possible scenarios like gas funnelling from an outside source or a minor galactic merger, but these remain hypotheses.",
-      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/09/A_galaxy_spinning_out_of_sync",
-      "primarySourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2026/09/A_galaxy_spinning_out_of_sync",
-      "source": {
-        "name": "ESA"
-      },
-      "sourceGroup": "ESA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-18T08:00:00Z",
-      "firstSeenAt": "2026-10-10T10:16:39.118957Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-17T10:01:38.386991Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "astronomy",
-        "physics"
-      ],
-      "entities": [
-        "NGC 4698",
-        "Virgo Cluster",
-        "NASA/ESA Hubble Space Telescope"
-      ],
-      "milestoneStatus": "unknown"
-    },
-    {
-      "id": "science-2009c8f17073b4d4",
-      "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
-      "summary": "The National Science Foundation (NSF) is launching a new initiative, NSF ELEGANT, to help transition low-dimensional semiconductor technologies from laboratory settings to manufacturing platforms for U.S. companies.",
-      "finding": "The National Science Foundation (NSF) is launching a new initiative, NSF ELEGANT, to help transition low-dimensional semiconductor technologies from laboratory settings to manufacturing platforms for U.S. companies.",
-      "significance": "This initiative aims to position the U.S. as a leader in advanced microelectronics, crucial for developing next-generation technologies in AI, high-performance computing, and communications, thereby bolstering national security and economic competitiveness.",
-      "caveat": "The success of the NSF ELEGANT program is contingent on sustained industry participation, with progress validated by industry partners at each stage to ensure the adoption of relevant technologies.",
-      "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
-      "primarySourceUrl": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
-      "source": {
-        "name": "NSF"
-      },
-      "sourceGroup": "NSF",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-17T20:21:43Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-20T10:14:17.067713Z",
-      "verifiedAt": "2026-10-09T18:57:35.412035Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "physics",
-        "earth-science"
-      ],
-      "entities": [
-        "NSF",
-        "NSF ELEGANT",
-        "U.S. National Science Foundation",
-        "U.S. manufacturers",
-        "NSF TIP"
-      ],
-      "milestoneStatus": "planned",
-      "sourceUpdatedAt": "2026-09-18T13:35:21Z"
-    },
-    {
-      "id": "science-59cd805ddd9fcd5f",
-      "title": "NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts",
-      "summary": "The National Science Foundation (NSF) is expanding its NSF X-Labs initiative by adding three new topics: AI for Physical Systems, From Sequence to Function, and Computation at the Limit of Physics.",
-      "finding": "The National Science Foundation (NSF) is expanding its NSF X-Labs initiative by adding three new topics: AI for Physical Systems, From Sequence to Function, and Computation at the Limit of Physics.",
-      "significance": "This initiative aims to foster high-risk, high-impact research by bringing together researchers, engineers, and entrepreneurs to tackle significant scientific and technological challenges, potentially accelerating innovation and U.S. competitiveness.",
-      "caveat": "The article previews two of the topics, 'From Sequence to Function' and 'Computation at the Limit of Physics,' stating that full details and proposal submission timelines will be provided in forthcoming announcements, and proposals are not currently being accepted for these.",
-      "url": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
-      "primarySourceUrl": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
-      "source": {
-        "name": "NSF"
-      },
-      "sourceGroup": "NSF",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-16T17:13:07Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-09T18:57:35.412035Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "biology",
-        "physics",
-        "computer-science"
-      ],
-      "entities": [
-        "NSF X-Labs",
-        "National Science Foundation",
-        "AI for Physical Systems",
-        "From Sequence to Function",
-        "Computation at the Limit of Physics"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-08T13:45:03Z"
-    },
-    {
-      "id": "science-9c890060ddf72379",
-      "title": "NASA Watches Earth’s Weight, Finds Center of Mass",
-      "summary": "NASA scientists have developed a new technique using ultraprecise satellite tracking to estimate the displacement of Earth's center of mass to within fractions of inches. This technique combines GPS tracking with orbital data from multiple satellites and accounts for crustal deformation due to water and ice.",
-      "finding": "NASA scientists have developed a new technique using ultraprecise satellite tracking to estimate the displacement of Earth's center of mass to within fractions of inches. This technique combines GPS tracking with orbital data from multiple satellites and accounts for crustal deformation due to water and ice.",
-      "significance": "This improved accuracy in tracking Earth's center of mass is crucial for satellite navigation and elevation measurements, benefiting applications like global shipping logistics and precision agriculture by enabling better reference systems.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/science-research/earth-science/nasa-watches-earths-weight-finds-center-of-mass",
-      "primarySourceUrl": "https://www.nasa.gov/science-research/earth-science/nasa-watches-earths-weight-finds-center-of-mass",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-16T16:08:00Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-17T10:01:38.386991Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "earth-science",
-        "technology",
-        "physics"
-      ],
-      "entities": [
-        "NASA",
-        "Jet Propulsion Laboratory",
-        "Geophysical Journal International",
-        "Earth"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://academic.oup.com/gji/article/247/2/ggag314/8793649?searchresult=1",
-      "sourceUpdatedAt": "2026-09-16T16:08:00Z"
-    },
-    {
-      "id": "science-52c49ffee3fa5601",
-      "title": "Podcast: Creating thermal cloaking and new structures",
-      "summary": "Researchers are developing new structures using additive manufacturing and topology optimization, including a 3D thermal cloaking device.",
-      "finding": "Researchers are developing new structures using additive manufacturing and topology optimization, including a 3D thermal cloaking device.",
-      "significance": "These advanced technologies have the potential to transform industries and daily life.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nsf.gov/news/podcast-creating-thermal-cloaking-new-structures",
-      "primarySourceUrl": "https://www.nsf.gov/news/podcast-creating-thermal-cloaking-new-structures",
-      "source": {
-        "name": "NSF"
-      },
-      "sourceGroup": "NSF",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-14T21:28:01Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-13T19:00:39.612253Z",
-      "verifiedAt": "2026-10-09T18:57:35.412035Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "physics"
-      ],
-      "entities": [
-        "Shelly Zhang",
-        "NSF"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-09-14T21:28:01Z"
-    },
-    {
-      "id": "science-851e1e97d4123e75",
-      "title": "NSF launches $20M pilot to accelerate commercialization of promising deep technologies from small businesses",
-      "summary": "The U.S. National Science Foundation (NSF) is launching a two-year pilot program with a $20 million investment to support small businesses in commercializing deep-technology ventures.",
-      "finding": "The U.S. National Science Foundation (NSF) is launching a two-year pilot program with a $20 million investment to support small businesses in commercializing deep-technology ventures.",
-      "significance": "This pilot aims to bridge the gap between federally funded deep technology research and commercial success, fostering U.S. competitiveness and economic growth by helping breakthrough innovations reach the market.",
-      "caveat": "The pilot program is designed to evaluate which factors, conditions, and approaches most effectively help deep technology companies reach the marketplace, meaning its effectiveness is yet to be determined.",
-      "url": "https://www.nsf.gov/news/nsf-launches-20m-pilot-accelerate-commercialization",
-      "primarySourceUrl": "https://www.nsf.gov/news/nsf-launches-20m-pilot-accelerate-commercialization",
-      "source": {
-        "name": "NSF"
-      },
-      "sourceGroup": "NSF",
-      "sourceQuality": 2,
-      "publishedAt": "2026-09-14T14:00:32Z",
-      "firstSeenAt": "2026-10-10T10:16:39.118957Z",
-      "checkedAt": "2026-10-13T21:29:33.187489Z",
-      "verifiedAt": "2026-10-10T10:16:39.118957Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "economics"
-      ],
-      "entities": [
-        "U.S. National Science Foundation",
-        "NSF",
-        "University of Central Florida",
-        "UCF",
-        "National Commercialization and Translation Institute"
-      ],
-      "milestoneStatus": "planned",
-      "sourceUpdatedAt": "2026-09-16T17:13:07Z"
     }
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "selectedIds": [
-      "science-5cf497c37d846708",
-      "science-36841df3d1321307",
-      "science-78c34c8f8ab330b8",
-      "science-4dcee2b3879b37c3",
-      "science-ee03630e6f626376",
-      "science-b1eef9bd8d6da9ac"
+      "science-3d2e8c95745650ad",
+      "science-6c50c567a596c770",
+      "science-b0cd481433eb7ca1",
+      "science-4aadc1d98b6a357b",
+      "science-8ea0785cc9c63a50",
+      "science-974e1d23bd2b13b2"
     ],
     "reasons": {
-      "science-5cf497c37d846708": {
-        "score": 33,
-        "source": "NASA",
-        "topic": "astronomy",
-        "publishedAt": "2026-11-12T00:41:35Z",
-        "interestMatch": false
-      },
-      "science-36841df3d1321307": {
-        "score": 32,
-        "source": "ScienceDaily",
-        "topic": "earth-science",
-        "publishedAt": "2026-11-12T08:38:42Z",
-        "interestMatch": false
-      },
-      "science-78c34c8f8ab330b8": {
-        "score": 31,
-        "source": "Ars Technica Science",
-        "topic": "technology",
-        "publishedAt": "2026-11-11T20:22:03Z",
-        "interestMatch": false
-      },
-      "science-4dcee2b3879b37c3": {
-        "score": 31,
-        "source": "Science News",
-        "topic": "social-science",
-        "publishedAt": "2026-11-11T19:00:00Z",
-        "interestMatch": false
-      },
-      "science-ee03630e6f626376": {
-        "score": 30,
-        "source": "New Scientist",
-        "topic": "physics",
-        "publishedAt": "2026-11-10T20:00:00Z",
-        "interestMatch": false
-      },
-      "science-b1eef9bd8d6da9ac": {
-        "score": 23,
+      "science-3d2e8c95745650ad": {
+        "score": 34,
         "source": "ESA",
         "topic": "astronomy",
-        "publishedAt": "2026-11-06T11:01:03Z",
+        "publishedAt": "2026-11-13T10:46:06Z",
+        "interestMatch": false
+      },
+      "science-6c50c567a596c770": {
+        "score": 34,
+        "source": "NASA",
+        "topic": "earth-science",
+        "publishedAt": "2026-11-13T05:01:00Z",
+        "interestMatch": false
+      },
+      "science-b0cd481433eb7ca1": {
+        "score": 31,
+        "source": "New Scientist",
+        "topic": "technology",
+        "publishedAt": "2026-11-12T20:00:00Z",
+        "interestMatch": false
+      },
+      "science-4aadc1d98b6a357b": {
+        "score": 31,
+        "source": "Science News",
+        "topic": "biology",
+        "publishedAt": "2026-11-12T16:00:00Z",
+        "interestMatch": false
+      },
+      "science-8ea0785cc9c63a50": {
+        "score": 27,
+        "source": "Ars Technica Science",
+        "topic": "physics",
+        "publishedAt": "2026-11-08T12:15:31Z",
+        "interestMatch": false
+      },
+      "science-974e1d23bd2b13b2": {
+        "score": 27,
+        "source": "ScienceDaily",
+        "topic": "social-science",
+        "publishedAt": "2026-11-08T08:14:23Z",
         "interestMatch": false
       }
     }
