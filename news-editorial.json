@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-11-12T02:41:50.621728-05:00",
+  "generatedAt": "2026-11-13T03:03:34.988147-05:00",
   "stories": [
     {
       "id": "plymouth-testing-cameras-at-train-crossi-news-2026-11-11",
@@ -91,6 +91,201 @@
         "localConnection": "Plymouth, Michigan",
         "grounded": true,
         "groundingReason": "The summary accurately reflects the article's details about the pilot program, including its location, purpose, technology, cost, and potential for expansion. This is a new local development for Plymouth, Michigan."
+      }
+    },
+    {
+      "id": "southern-michigan-communities-turn-to-re-news-2026-11-12",
+      "title": "Southern Michigan communities turn to regional management of growing deer herds",
+      "summary": "Southern Michigan communities are increasingly adopting regional approaches to manage growing deer populations, aiming to reduce car crashes, protect biodiversity, and keep deer out of neighborhoods. Coalitions in Kent County and a group including Farmington Hills, Farmington, and Southfield are implementing strategies like roadside mowing, increased hunting permits, and professional sharpshooters, with some programs donating venison to food banks.",
+      "url": "https://www.michiganpublic.org/environment-climate-change/2026-11-12/southern-michigan-communities-turn-to-regional-management-of-growing-deer-herds",
+      "publishedAt": "2026-11-12T10:00:00-05:00",
+      "addedAt": "2026-11-13T02:37:54-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Kent County Deer Management Coalition",
+        "Grand State Valley University",
+        "Michigan Department of Natural Resources",
+        "Michigan Department of Transportation",
+        "Kent County Road Commission",
+        "Jerry Byrne",
+        "Farmington Hills",
+        "Farmington",
+        "Southfield",
+        "Karen Mondora",
+        "USDA Wildlife Services Department",
+        "Michigan Sportsmen Against Hunger",
+        "Washtenaw County",
+        "Humane Society of Huron Valley",
+        "Ann Arbor",
+        "Scio Township"
+      ],
+      "locations": [
+        "Kent County",
+        "Farmington Hills",
+        "Farmington",
+        "Southfield",
+        "Washtenaw County",
+        "Ann Arbor",
+        "Scio Township",
+        "Michigan"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "wildlife management",
+        "public safety",
+        "environment",
+        "local government"
+      ],
+      "source": {
+        "name": "Tracy Samilton",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.15,
+          "eclectic": 0.21,
+          "technical_science": 0.5,
+          "artsy": 0.03,
+          "progressive": 0.45,
+          "outdoors": 0.3,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.31,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/a490cea/2147483647/strip/true/crop/926x521+0+28/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F2f%2F6d%2Ff537e732452e8073384290eee875%2Fdeer-in-road.png",
+        "alt": "A group of deer pauses in the middle of a roadway in Kent County"
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-13T03:03:34.988147-05:00",
+        "expiresAt": "2026-11-16T03:03:34.988147-05:00",
+        "inputFacts": {
+          "id": "southern-michigan-communities-turn-to-re-news-2026-11-12",
+          "title": "Southern Michigan communities turn to regional management of growing deer herds",
+          "url": "https://www.michiganpublic.org/environment-climate-change/2026-11-12/southern-michigan-communities-turn-to-regional-management-of-growing-deer-herds",
+          "publishedAt": "2026-11-12T05:00:00-05:00",
+          "summary": "Communities across southern Michigan are forming regional coalitions to manage growing deer populations, aiming to improve public safety by reducing vehicle collisions and protecting local biodiversity. These efforts involve diverse strategies including roadside maintenance, hunting access programs, and the use of professional sharpshooters, though some initiatives face opposition from animal welfare groups.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-12T10:00:00",
+        "datePrecision": "time",
+        "sourceHash": "1d41eb11d765d29c7f3a716fad51dffccda9e9e74a2500cee6318203e8e3a93c",
+        "relevance": 4,
+        "novelty": 3,
+        "reason": "The article discusses a growing trend of regional deer management in Southern Michigan, with specific examples in nearby communities like Farmington Hills, Farmington, and Southfield. This directly impacts public safety, local environment, and civic decisions in the broader Canton/Plymouth area.",
+        "storyKey": "southern-michigan-deer-management",
+        "localConnection": "Nearby communities like Farmington Hills, Farmington, and Southfield are actively engaged in regional deer management programs, directly relevant to local civic decisions and public safety.",
+        "grounded": true,
+        "groundingReason": "The summary accurately reflects the article's content regarding regional deer management in Southern Michigan, including specific communities, methods, and goals. The article details new and ongoing local initiatives to address a significant community issue."
+      }
+    },
+    {
+      "id": "washtenaw-county-sheriff-warns-of-height-news-2026-11-12",
+      "title": "Washtenaw County Sheriff warns of heightened ICE activity",
+      "summary": "The Washtenaw County Sheriff's Office is monitoring increased ICE activity, including incidents in Ypsilanti and Pittsfield Township. The Sheriff expressed concern about agents using unmarked vehicles with concealed license plates, which is illegal in Michigan, and has reported these to the Department of Homeland Security.",
+      "url": "https://www.wemu.org/wemu-news/2026-11-12/washtenaw-county-sheriff-warns-of-heightened-ice-activity",
+      "publishedAt": "2026-11-12T11:55:55.765000-05:00",
+      "addedAt": "2026-11-13T02:37:54-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Washtenaw County Sheriff",
+        "Alyshia Dyer",
+        "ICE"
+      ],
+      "locations": [
+        "Washtenaw County"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "immigration",
+        "law enforcement",
+        "local news"
+      ],
+      "source": {
+        "name": "Patrick Dunn",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.25,
+          "eclectic": 0.07,
+          "technical_science": 0.03,
+          "artsy": 0.02,
+          "progressive": 0.27,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.09,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/1cb7612/2147483647/strip/true/crop/780x435+0+0/resize/280x156!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F91%2Fa6%2F57f27ea04edf9be6ca005eb72bef%2Fpolice-ice.jpg",
+        "alt": "Washtenaw County Sheriff warns of heightened ICE activity"
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-13T03:03:34.988147-05:00",
+        "expiresAt": "2026-11-16T03:03:34.988147-05:00",
+        "inputFacts": {
+          "id": "washtenaw-county-sheriff-warns-of-height-news-2026-11-12",
+          "title": "Washtenaw County Sheriff warns of heightened ICE activity",
+          "url": "https://www.wemu.org/wemu-news/2026-11-12/washtenaw-county-sheriff-warns-of-heightened-ice-activity",
+          "publishedAt": "2026-11-12T00:00:00-05:00",
+          "summary": "Washtenaw County Sheriff Alyshia Dyer is addressing reports of increased immigration enforcement activity within the county. WEMU's Patrick Dunn provides the report.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-12T11:55:55.765",
+        "datePrecision": "time",
+        "sourceHash": "0162a29cbdcafbd057c7d618bf038fbec49af232bbb8a26497f500a41596a455",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "Increased law enforcement activity, particularly with concerns about unmarked vehicles and concealed license plates, directly impacts public safety and civic decisions in a nearby community.",
+        "storyKey": "washtenaw-ice-activity-warning",
+        "localConnection": "Washtenaw County is a nearby community to Canton and Plymouth, and law enforcement activity there has direct relevance to residents.",
+        "grounded": true,
+        "groundingReason": "The article confirms the Washtenaw County Sheriff's Office is monitoring increased ICE activity, including incidents in Ypsilanti and Pittsfield Township. The Sheriff expressed concern about agents using unmarked vehicles with concealed license plates, which is illegal in Michigan, and has reported these to the Department of Homeland Security. This is a local development with community impact."
       }
     },
     {
@@ -184,188 +379,6 @@
         "localConnection": "Canton, Michigan resident affected by insurance billing issues.",
         "grounded": true,
         "groundingReason": "The summary accurately reflects the article's details about a Canton woman receiving fraudulent medical bills, the intervention of local media, and the resolution provided by UnitedHealthcare. This is a useful local development for Canton residents regarding insurance fraud and consumer protection."
-      }
-    },
-    {
-      "id": "trinity-health-receives-grant-to-bolster-news-2026-11-11",
-      "title": "Trinity Health receives grant to bolster its suicide prevention services",
-      "summary": "Trinity Health Southeast Michigan received a $200,000 grant to expand its mental health intensive outpatient program, aiming to provide immediate treatment for patients discharged from the emergency room after a mental health crisis. The program, accepting patients in January, will offer individual and group therapy sessions.",
-      "url": "https://www.wemu.org/wemu-news/2026-11-11/trinity-health-receives-grant-to-bolster-its-suicide-prevention-services",
-      "publishedAt": "2026-11-11T21:09:37.923000-05:00",
-      "addedAt": "2026-11-12T02:36:40-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Trinity Health",
-        "Ethel and James Flinn Foundation",
-        "Ana Longoria",
-        "Melissa Tolstyka"
-      ],
-      "locations": [
-        "Ypsilanti",
-        "Ann Arbor",
-        "Michigan"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "healthcare",
-        "mental health",
-        "suicide prevention",
-        "grants"
-      ],
-      "source": {
-        "name": "Ana Longoria",
-        "publication": "WEMU 89.1 FM"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.02,
-          "distinctive": 0.22,
-          "eclectic": 0.06,
-          "technical_science": 0.18,
-          "artsy": 0.03,
-          "progressive": 0.6,
-          "outdoors": 0.01,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.05,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.04,
-          "large_venue": 0.03,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.07,
-          "children_activity": 0.02,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/7c36fa7/2147483647/strip/true/crop/1920x1080+0+17/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd8%2Fea%2F13d901254443a688ca0e0aa70a37%2Fpexels-tima-miroshnichenko-5711000.jpg",
-        "alt": "A group of people embracing in a large room, symbolizing unity and emotional support."
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-12T02:41:50.621728-05:00",
-        "expiresAt": "2026-11-15T02:41:50.621728-05:00",
-        "inputFacts": {
-          "id": "trinity-health-receives-grant-to-bolster-news-2026-11-11",
-          "title": "Trinity Health receives grant to bolster its suicide prevention services",
-          "url": "https://www.wemu.org/wemu-news/2026-11-11/trinity-health-receives-grant-to-bolster-its-suicide-prevention-services",
-          "publishedAt": "2026-11-11T16:09:00-05:00",
-          "summary": "Trinity Health has received a $200,000 grant from the Ethel and James Flinn Foundation to enhance its suicide prevention services. The funding will support a new mental health intensive outpatient program designed to provide immediate treatment for patients following a mental health crisis.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-11T21:09:37.923",
-        "datePrecision": "time",
-        "sourceHash": "e2f7cafe02ccf2505d35fbb455a814f4b266159a093d1436ab9d91c6c6cf2ed0",
-        "relevance": 4,
-        "novelty": 3,
-        "reason": "Grant funding for a local healthcare system to expand mental health services directly impacts community well-being and public services in the Canton/Plymouth area.",
-        "storyKey": "trinity-health-suicide-prevention-grant",
-        "localConnection": "Trinity Health operates facilities serving the Canton/Plymouth area, and the expanded program will benefit local residents.",
-        "grounded": true,
-        "groundingReason": "The article confirms Trinity Health Southeast Michigan received a $200,000 grant to expand its mental health intensive outpatient program, specifically targeting patients discharged from the emergency room after a mental health crisis, and will offer individual and group therapy starting in January."
-      }
-    },
-    {
-      "id": "medicare-plans-will-drop-by-nearly-20-in-news-2026-11-11",
-      "title": "Medicare plans will drop by nearly 20% in Washtenaw County next year",
-      "summary": "Washtenaw County residents will have 19% fewer Medicare Advantage plans available in 2027, with 18 of 96 plans not returning. This reduction may inconvenience seniors who need to find new plans covering their doctors and prescriptions, though Medigap plans remain an option.",
-      "url": "https://www.wemu.org/wemu-news/2026-11-11/medicare-plans-will-drop-by-nearly-20-in-washtenaw-county-next-year",
-      "publishedAt": "2026-11-11T14:38:15.140000-05:00",
-      "addedAt": "2026-11-12T02:36:40-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Centers for Medicare and Medicaid",
-        "MI Medicare Plan",
-        "Stephen Soendker",
-        "Caroline MacGregor",
-        "WEMU"
-      ],
-      "locations": [
-        "Washtenaw County"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "medicare",
-        "healthcare",
-        "insurance",
-        "seniors",
-        "washtenaw county"
-      ],
-      "source": {
-        "name": "Caroline MacGregor",
-        "publication": "WEMU 89.1 FM"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.02,
-          "distinctive": 0.28,
-          "eclectic": 0.06,
-          "technical_science": 0.05,
-          "artsy": 0.02,
-          "progressive": 0.07,
-          "outdoors": 0.01,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.24,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.04,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/fba76df/2147483647/strip/true/crop/800x420+0+57/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fa1%2Ff5%2F1d05975b4614859a757677eb17b4%2Fhealth-care.jpg",
-        "alt": "health care"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-12T02:41:50.621728-05:00",
-        "expiresAt": "2026-11-15T02:41:50.621728-05:00",
-        "inputFacts": {
-          "id": "medicare-plans-will-drop-by-nearly-20-in-news-2026-11-11",
-          "title": "Medicare plans will drop by nearly 20% in Washtenaw County next year",
-          "url": "https://www.wemu.org/wemu-news/2026-11-11/medicare-plans-will-drop-by-nearly-20-in-washtenaw-county-next-year",
-          "publishedAt": "2026-11-11T09:38:00-05:00",
-          "summary": "Washtenaw County residents will face a 19% reduction in available Medicare Advantage plans for the 2027 coverage year, with 18 of 96 plans not returning. Experts advise that seniors whose plans are leaving the area may need to consider alternative options like Medigap plans to maintain coverage.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-11T14:38:15.14",
-        "datePrecision": "time",
-        "sourceHash": "bf9114f59ef75555de86f5d1433ce871463d38b6900ac58a1f1a041b9da5b7aa",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "Significant reduction in Medicare Advantage plans directly impacts seniors in a nearby county, affecting their healthcare choices and potentially increasing administrative burden.",
-        "storyKey": "washtenaw-medicare-advantage-reduction",
-        "localConnection": "Washtenaw County is a nearby community, and changes to healthcare options there are relevant to Canton residents.",
-        "grounded": true,
-        "groundingReason": "The summary accurately reflects the reduction in Medicare Advantage plans in Washtenaw County, including the percentage and number of plans, and the potential inconvenience for seniors, all supported by the article."
       }
     },
     {
@@ -566,6 +579,36 @@
       "datePrecision": "time"
     },
     {
+      "id": "southern-michigan-communities-turn-to-re-news-2026-11-12",
+      "inputFacts": {
+        "id": "southern-michigan-communities-turn-to-re-news-2026-11-12",
+        "title": "Southern Michigan communities turn to regional management of growing deer herds",
+        "url": "https://www.michiganpublic.org/environment-climate-change/2026-11-12/southern-michigan-communities-turn-to-regional-management-of-growing-deer-herds",
+        "publishedAt": "2026-11-12T05:00:00-05:00",
+        "summary": "Communities across southern Michigan are forming regional coalitions to manage growing deer populations, aiming to improve public safety by reducing vehicle collisions and protecting local biodiversity. These efforts involve diverse strategies including roadside maintenance, hunting access programs, and the use of professional sharpshooters, though some initiatives face opposition from animal welfare groups.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-12T10:00:00-05:00",
+      "publicationEvidence": "2026-11-12T10:00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "washtenaw-county-sheriff-warns-of-height-news-2026-11-12",
+      "inputFacts": {
+        "id": "washtenaw-county-sheriff-warns-of-height-news-2026-11-12",
+        "title": "Washtenaw County Sheriff warns of heightened ICE activity",
+        "url": "https://www.wemu.org/wemu-news/2026-11-12/washtenaw-county-sheriff-warns-of-heightened-ice-activity",
+        "publishedAt": "2026-11-12T00:00:00-05:00",
+        "summary": "Washtenaw County Sheriff Alyshia Dyer is addressing reports of increased immigration enforcement activity within the county. WEMU's Patrick Dunn provides the report.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-12T11:55:55.765000-05:00",
+      "publicationEvidence": "2026-11-12T11:55:55.765",
+      "datePrecision": "time"
+    },
+    {
       "id": "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
       "inputFacts": {
         "id": "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
@@ -578,51 +621,6 @@
       },
       "publishedAt": "2026-11-10T22:17:23.568000+00:00",
       "publicationEvidence": "2026-11-10T22:17:23.568Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "trinity-health-receives-grant-to-bolster-news-2026-11-11",
-      "inputFacts": {
-        "id": "trinity-health-receives-grant-to-bolster-news-2026-11-11",
-        "title": "Trinity Health receives grant to bolster its suicide prevention services",
-        "url": "https://www.wemu.org/wemu-news/2026-11-11/trinity-health-receives-grant-to-bolster-its-suicide-prevention-services",
-        "publishedAt": "2026-11-11T16:09:00-05:00",
-        "summary": "Trinity Health has received a $200,000 grant from the Ethel and James Flinn Foundation to enhance its suicide prevention services. The funding will support a new mental health intensive outpatient program designed to provide immediate treatment for patients following a mental health crisis.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-11T21:09:37.923000-05:00",
-      "publicationEvidence": "2026-11-11T21:09:37.923",
-      "datePrecision": "time"
-    },
-    {
-      "id": "city-of-ann-arbor-cracks-down-on-cyber-c-news-2026-11-11",
-      "inputFacts": {
-        "id": "city-of-ann-arbor-cracks-down-on-cyber-c-news-2026-11-11",
-        "title": "City of Ann Arbor cracks down on cyber currency kiosks",
-        "url": "https://www.wemu.org/wemu-news/2026-11-11/city-of-ann-arbor-cracks-down-on-cyber-currency-kiosks",
-        "publishedAt": "2026-11-11T16:06:00-05:00",
-        "summary": "The City of Ann Arbor has implemented new regulations for virtual currency kiosks to combat rising fraud. Operators are now required to obtain a city license and include mandatory fraud prevention disclosures and transaction limits.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-11T21:06:00-05:00",
-      "publicationEvidence": "2026-11-11T21:06:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "medicare-plans-will-drop-by-nearly-20-in-news-2026-11-11",
-      "inputFacts": {
-        "id": "medicare-plans-will-drop-by-nearly-20-in-news-2026-11-11",
-        "title": "Medicare plans will drop by nearly 20% in Washtenaw County next year",
-        "url": "https://www.wemu.org/wemu-news/2026-11-11/medicare-plans-will-drop-by-nearly-20-in-washtenaw-county-next-year",
-        "publishedAt": "2026-11-11T09:38:00-05:00",
-        "summary": "Washtenaw County residents will face a 19% reduction in available Medicare Advantage plans for the 2027 coverage year, with 18 of 96 plans not returning. Experts advise that seniors whose plans are leaving the area may need to consider alternative options like Medigap plans to maintain coverage.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-11T14:38:15.140000-05:00",
-      "publicationEvidence": "2026-11-11T14:38:15.14",
       "datePrecision": "time"
     },
     {
@@ -656,6 +654,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "washtenaw-county-s-my-future-fund-s-succ-news-2026-11-12",
+      "inputFacts": {
+        "id": "washtenaw-county-s-my-future-fund-s-succ-news-2026-11-12",
+        "title": "Washtenaw County's My Future Fund's success continues to grow",
+        "url": "https://www.wemu.org/wemu-news/2026-11-12/washtenaw-countys-my-future-funds-success-continues-to-grow",
+        "publishedAt": "2026-11-12T16:29:00-05:00",
+        "summary": "Washtenaw County's My Future Fund, a children's savings account program designed to support higher education, has reached nearly 27,000 students with a 93% enrollment rate among eligible youth. The program, which currently holds $4.45 million, aims to increase college enrollment and support local families.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-12T21:29:57.402000-05:00",
+      "publicationEvidence": "2026-11-12T21:29:57.402",
+      "datePrecision": "time"
+    },
+    {
       "id": "should-flags-be-at-half-staff-on-veteran-news-2026-11-11",
       "inputFacts": {
         "id": "should-flags-be-at-half-staff-on-veteran-news-2026-11-11",
@@ -668,6 +681,51 @@
       },
       "publishedAt": "2026-11-11T11:44:25+00:00",
       "publicationEvidence": "2026-11-11T11:44:25Z",
+      "datePrecision": "time"
+    },
+    {
+      "id": "new-era-detroit-launches-hotels-for-the-news-2026-11-13",
+      "inputFacts": {
+        "id": "new-era-detroit-launches-hotels-for-the-news-2026-11-13",
+        "title": "New Era Detroit launches 'Hotels for the Homeless' fundraiser concert",
+        "url": "https://www.metrotimes.com/music-2/new-era-detroit-launches-hotels-for-the-homeless-fundraiser-concert/",
+        "publishedAt": "2026-11-13T00:00:00-05:00",
+        "summary": "The nonprofit New Era Detroit is hosting its inaugural 'Hotels For The Homeless' fundraiser concert on November 13 to secure 200 hotel rooms for individuals without shelter during Thanksgiving. The event will feature a performance by Florella Strings and honor several community leaders for their contributions.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-02T16:33:44+00:00",
+      "publicationEvidence": "2026-11-02T16:33:44+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "ann-arbor-dda-testing-out-trash-corrals-news-2026-11-12",
+      "inputFacts": {
+        "id": "ann-arbor-dda-testing-out-trash-corrals-news-2026-11-12",
+        "title": "Ann Arbor DDA testing out trash corrals to tidy up downtown State Street",
+        "url": "https://www.wemu.org/wemu-news/2026-11-12/ann-arbor-dda-testing-out-trash-corrals-to-tidy-up-downtown-state-street",
+        "publishedAt": "2026-11-12T00:00:00-05:00",
+        "summary": "The Ann Arbor Downtown Development Authority is piloting new streetside trash corrals on State Street to address ongoing waste management concerns. The initiative follows numerous complaints from local residents and business owners regarding the cleanliness of the downtown area.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-12T20:55:06.164000-05:00",
+      "publicationEvidence": "2026-11-12T20:55:06.164",
+      "datePrecision": "time"
+    },
+    {
+      "id": "cinema-chat-polish-film-festival-being-h-news-2026-11-12",
+      "inputFacts": {
+        "id": "cinema-chat-polish-film-festival-being-h-news-2026-11-12",
+        "title": "Cinema Chat: Polish Film Festival, \"Being Heumann\" and \"Once Upon a Time in Harlem\" open in Ann Arbor",
+        "url": "https://www.wemu.org/show/cinema-chat/2026-11-12/cinema-chat-polish-film-festival-being-heumann-and-once-upon-a-time-in-harlem-open-in-ann-arbor",
+        "publishedAt": "2026-11-12T00:00:00-05:00",
+        "summary": "WEMU's Mat Hopson and Tara Calligan discuss the latest film releases at the Michigan and State theaters. The conversation also highlights the 2026 Ann Arbor Polish Film Festival.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-12T07:49:00+00:00",
+      "publicationEvidence": "2026-11-12T07:49:00Z",
       "datePrecision": "time"
     },
     {
@@ -684,94 +742,9 @@
       "publishedAt": "2026-10-23T18:29:26+00:00",
       "publicationEvidence": "2026-10-23T18:29:26+00:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "national-park-service-sites-are-free-on-news-2026-11-11",
-      "inputFacts": {
-        "id": "national-park-service-sites-are-free-on-news-2026-11-11",
-        "title": "National Park Service sites are free on Veterans Day. Where to visit",
-        "url": "https://www.hometownlife.com/story/news/local/michigan/2026/11/11/national-park-service-sites-free-veterans-day-visit/92707313007/",
-        "publishedAt": "2026-11-11T00:00:00Z",
-        "summary": "In honor of Veterans Day, National Park Service sites are offering free admission. Michigan features several national sites, including Sleeping Bear Dunes, Isle Royale, and Pictured Rocks, which offer various outdoor and historical experiences.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-11T11:03:33+00:00",
-      "publicationEvidence": "2026-11-11T11:03:33Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "northville-high-school-to-remain-open-we-news-2026-11-10",
-      "inputFacts": {
-        "id": "northville-high-school-to-remain-open-we-news-2026-11-10",
-        "title": "Northville High School to remain open Wednesday with increased police presence after threatening phone call",
-        "url": "https://www.clickondetroit.com/news/local/2026/11/11/northville-high-school-to-remain-open-wednesday-with-increased-police-presence-after-threatening-phone-call/",
-        "publishedAt": "2026-11-10T21:02:00-05:00",
-        "summary": "Northville High School will remain open on Wednesday following a lockdown triggered by a threatening phone call on Tuesday. Police conducted K-9 sweeps and determined the threat was likely a hoax, though an increased police presence will remain at the school as a precaution.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-11T02:02:26.693000+00:00",
-      "publicationEvidence": "2026-11-11T02:02:26.693Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "data-center-restrictions-pass-in-saginaw-news-2026-11-10",
-      "inputFacts": {
-        "id": "data-center-restrictions-pass-in-saginaw-news-2026-11-10",
-        "title": "Data center restrictions pass in Saginaw Township and Romulus",
-        "url": "https://www.michiganpublic.org/politics-government/2026-11-10/data-center-restrictions-pass-in-saginaw-township-and-romulus",
-        "publishedAt": "2026-11-10T16:44:00-05:00",
-        "summary": "Saginaw Township and Romulus have both approved new measures to restrict data center development. Saginaw Township passed a detailed ordinance regulating noise, water usage, and location, while Romulus enacted a 180-day moratorium to allow time for drafting permanent regulations.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-10T21:44:04.989000-05:00",
-      "publicationEvidence": "2026-11-10T21:44:04.989",
-      "datePrecision": "time"
-    },
-    {
-      "id": "threatening-phone-call-prompts-northvill-news-2026-11-10",
-      "inputFacts": {
-        "id": "threatening-phone-call-prompts-northvill-news-2026-11-10",
-        "title": "Threatening phone call prompts Northville High School to go into lockdown",
-        "url": "https://www.clickondetroit.com/news/local/2026/11/10/threatening-phone-call-prompts-northville-high-school-to-go-into-lockdown/",
-        "publishedAt": "2026-11-10T13:11:00-05:00",
-        "summary": "Northville High School was placed on lockdown following a threatening phone call on Tuesday, November 10, 2026. Although the school district determined the threat was not credible, law enforcement conducted a building sweep and closed a section of 6 Mile Road as a precaution.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-10T18:11:37.657000+00:00",
-      "publicationEvidence": "2026-11-10T18:11:37.657Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "city-of-dexter-looking-to-set-guidelines-news-2026-11-11",
-      "inputFacts": {
-        "id": "city-of-dexter-looking-to-set-guidelines-news-2026-11-11",
-        "title": "City of Dexter looking to set guidelines for data centers",
-        "url": "https://www.wemu.org/wemu-news/2026-11-11/city-of-dexter-looking-to-set-guidelines-for-data-centers",
-        "publishedAt": "2026-11-11T00:00:00-05:00",
-        "summary": "The Dexter City Council is currently working to establish new regulations and ground rules for data centers. WEMU's Kevin Meerschaert reports on the council's recent discussions.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-11T11:53:20.161000-05:00",
-      "publicationEvidence": "2026-11-11T11:53:20.161",
-      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-11",
-      "selectedIds": [
-        "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11",
-        "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
-        "university-of-michigan-detroit-tigers-pa-news-2026-11-09",
-        "plymouth-testing-cameras-at-train-crossi-news-2026-11-11",
-        "medicare-plans-will-drop-by-nearly-20-in-news-2026-11-11"
-      ]
-    },
     {
       "date": "2026-11-12",
       "selectedIds": [
@@ -779,15 +752,25 @@
         "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
         "university-of-michigan-detroit-tigers-pa-news-2026-11-09",
         "plymouth-testing-cameras-at-train-crossi-news-2026-11-11",
-        "medicare-plans-will-drop-by-nearly-20-in-news-2026-11-11"
+        "washtenaw-county-sheriff-warns-of-height-news-2026-11-12"
       ]
     },
     {
       "date": "2026-11-13",
       "selectedIds": [
         "plymouth-testing-cameras-at-train-crossi-news-2026-11-11",
-        "medicare-plans-will-drop-by-nearly-20-in-news-2026-11-11",
-        "trinity-health-receives-grant-to-bolster-news-2026-11-11",
+        "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11",
+        "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
+        "washtenaw-county-sheriff-warns-of-height-news-2026-11-12",
+        "southern-michigan-communities-turn-to-re-news-2026-11-12"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "selectedIds": [
+        "plymouth-testing-cameras-at-train-crossi-news-2026-11-11",
+        "washtenaw-county-sheriff-warns-of-height-news-2026-11-12",
+        "southern-michigan-communities-turn-to-re-news-2026-11-12",
         "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11",
         "canton-woman-gets-16-insurance-notices-f-news-2026-11-10"
       ]
