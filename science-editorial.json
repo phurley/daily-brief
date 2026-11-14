@@ -1,8 +1,66 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-13T06:19:46.538217-05:00",
+  "generatedAt": "2026-11-14T06:45:39.859414-05:00",
   "stories": [
+    {
+      "id": "science-7b0b0a977258a502",
+      "title": "In elephants, the resilience of communities has its limits",
+      "summary": "A 12-year study of wild Asian elephants in Sri Lanka suggests that sustained population losses, rather than sudden spikes, can fracture their social networks. Researchers observed that as losses outpaced new elephants, communities became smaller, more numerous, and isolated, even among resident individuals, potentially due to the loss of key social connectors.",
+      "finding": "A 12-year study of wild Asian elephants in Sri Lanka suggests that sustained population losses, rather than sudden spikes, can fracture their social networks. Researchers observed that as losses outpaced new elephants, communities became smaller, more numerous, and isolated, even among resident individuals, potentially due to the loss of key social connectors.",
+      "significance": "Demonstrates limits to elephant social resilience and shows that subtle network fluctuations could potentially act as early warning indicators before population collapse occurs.",
+      "caveat": "Detecting these social network warning signals requires extensive long-term observational data that are currently unavailable for many elephant populations.",
+      "url": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-13T20:03:13+00:00",
+      "firstSeenAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-14T11:01:01.420815Z",
+      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology"
+      ],
+      "entities": [
+        "University of California, San Diego",
+        "Anastasia Madsen",
+        "Shermin de Silva",
+        "Udawalawe National Park",
+        "Science"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1126/science.aef6714",
+      "sourceUpdatedAt": "2026-11-13T20:03:13Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-14T06:45:39.859414-05:00",
+        "expiresAt": "2026-11-17T06:45:39.859414-05:00",
+        "inputFacts": {
+          "id": "science-7b0b0a977258a502",
+          "title": "In elephants, the resilience of communities has its limits",
+          "url": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
+          "publishedAt": "2026-11-13T20:03:13Z",
+          "summary": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
+          "finding": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
+          "sourceUpdatedAt": "2026-11-13T20:03:13Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-13T20:03:13+00:00",
+        "datePrecision": "time",
+        "sourceHash": "b6f6eca4dab9befb92c21b578cf31a52ac8d7adbf0e4a62ab0d0c1da8a939805",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The study presents a novel finding on the long-term social impact of sustained population decline in a complex animal society, which is relevant to biology and conservation efforts.",
+        "storyKey": "elephant-social-fracture",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article describes a 12-year study of wild Asian elephants in Sri Lanka, finding that sustained population losses led to the fracturing of their social networks, with communities becoming smaller, more numerous, and isolated, even among resident individuals, potentially due to the loss of key social connectors. This directly supports all material claims in the summary."
+      }
+    },
     {
       "id": "science-b0cd481433eb7ca1",
       "title": "AI confirms a long-suspected limit on quantum computers’ advantages",
@@ -116,64 +174,6 @@
       }
     },
     {
-      "id": "science-0c210fd64684a210",
-      "title": "Europe’s Hera mission is ready to double down on asteroid science",
-      "summary": "The European Space Agency's Hera spacecraft is approaching the Didymos-Dimorphos asteroid system, aiming to investigate the aftermath of NASA's DART impact. Hera will release two companion spacecraft in January; one, Juventas, will use radar to study Dimorphos' internal structure and attempt a landing to characterize its surface.",
-      "finding": "The European Space Agency's Hera spacecraft is approaching the Didymos-Dimorphos asteroid system, aiming to investigate the aftermath of NASA's DART impact. Hera will release two companion spacecraft in January; one, Juventas, will use radar to study Dimorphos' internal structure and attempt a landing to characterize its surface.",
-      "significance": "The mission marks the first exploration of a binary asteroid pair, aiding planetary defense research and offering insights into asteroid formation and internal structures.",
-      "caveat": "Scientists must differentiate between natural binary asteroid characteristics and the alterations caused by the DART impact, such as potential tumbling of Dimorphos.",
-      "url": "https://www.sciencenews.org/article/europe-hera-mission-double-asteroid",
-      "primarySourceUrl": "https://www.sciencenews.org/article/europe-hera-mission-double-asteroid",
-      "source": {
-        "name": "Science News"
-      },
-      "sourceGroup": "Science News",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-12T09:00:00-05:00",
-      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-13T11:01:00.753629Z",
-      "verifiedAt": "2026-11-13T11:01:00.753629Z",
-      "evidenceType": "mission-milestone",
-      "topics": [
-        "astronomy",
-        "technology"
-      ],
-      "entities": [
-        "European Space Agency",
-        "Hera",
-        "Didymos",
-        "Dimorphos",
-        "DART"
-      ],
-      "milestoneStatus": "completed",
-      "sourceUpdatedAt": "2026-11-12T14:00:00Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-13T06:19:46.538217-05:00",
-        "expiresAt": "2026-11-16T06:19:46.538217-05:00",
-        "inputFacts": {
-          "id": "science-0c210fd64684a210",
-          "title": "Europe’s Hera mission is ready to double down on asteroid science",
-          "url": "https://www.sciencenews.org/article/europe-hera-mission-double-asteroid",
-          "publishedAt": "2026-11-12T14:00:00Z",
-          "summary": "The Hera spacecraft arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to investigate the system and the aftermath of the DART impact.",
-          "finding": "The Hera spacecraft arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to investigate the system and the aftermath of the DART impact.",
-          "sourceUpdatedAt": "2026-11-12T14:00:00Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-12T09:00:00-05:00",
-        "datePrecision": "time",
-        "sourceHash": "04a39eb6608251028246cf23e9ebf8a95a4ee6e2ef718ae6da80636de94db3c0",
-        "relevance": 5,
-        "novelty": 4,
-        "reason": "Substantive new mission milestone with significant implications for planetary defense and asteroid science, aligning with configured interests in astronomy and engineering.",
-        "storyKey": "hera-mission-didymos-dimorphos",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, detailing Hera's mission to investigate the DART impact aftermath, the release of two companion spacecraft in January, and Juventas's specific role in using radar to study internal structure and attempting a landing to characterize the surface. The mission represents a new finding and technical advance in planetary defense and asteroid science."
-      }
-    },
-    {
       "id": "science-780a35cbfb8cfbda",
       "title": "Some PFAS chemicals are declining in English rivers but others are appearing",
       "summary": "A UK Environment Agency report indicates that concentrations of two legacy PFAS chemicals, PFOS and PFOA, in English rivers have declined by nearly 30% over the past decade, following global restrictions. However, other replacement PFAS chemicals, including short-chain PFAS and fluorotelomer compounds, are now emerging at detectable levels, complicating efforts to manage these persistent pollutants.",
@@ -230,125 +230,39 @@
         "grounded": true,
         "groundingReason": "The article supports all claims in the summary, including specific chemicals, percentage declines, and the emergence of replacement PFAS. The finding represents a new scientific observation regarding the effectiveness of global restrictions and the evolving challenge of PFAS pollution."
       }
-    },
-    {
-      "id": "science-ee03630e6f626376",
-      "title": "Correcting quantum computer errors may be more complicated than expected",
-      "summary": "New research suggests that quantum computer errors may be more complex than previously assumed, with memory effects and non-Markovian noise appearing in experiments. These findings challenge long-standing assumptions in quantum error correction, potentially complicating the path to fault-tolerant quantum computing, though new error correction codes and mitigation strategies are being explored.",
-      "finding": "New research suggests that quantum computer errors may be more complex than previously assumed, with memory effects and non-Markovian noise appearing in experiments. These findings challenge long-standing assumptions in quantum error correction, potentially complicating the path to fault-tolerant quantum computing, though new error correction codes and mitigation strategies are being explored.",
-      "significance": "Correlated non-Markovian noise may limit the validity of theoretical fault-tolerance thresholds, potentially restricting the length or complexity of reliable computations on practical quantum computers.",
-      "caveat": "Researchers note that these noise models are difficult to fully characterize and that newer quantum error-correction codes or control algorithms may potentially adapt to and mitigate non-Markovian errors.",
-      "url": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
-      "primarySourceUrl": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-10T20:00:00+00:00",
-      "firstSeenAt": "2026-11-11T11:00:46.709649Z",
-      "checkedAt": "2026-11-11T11:00:46.709649Z",
-      "verifiedAt": "2026-11-11T11:00:46.709649Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "physics",
-        "technology"
-      ],
-      "entities": [
-        "IBM",
-        "Google",
-        "Karlsruhe Institute of Technology",
-        "Dartmouth College",
-        "Monash University"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://journals.aps.org/prl/accepted/10.1103/j1r2-5ph7",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-11T06:30:41.901015-05:00",
-        "expiresAt": "2026-11-14T06:30:41.901015-05:00",
-        "inputFacts": {
-          "id": "science-ee03630e6f626376",
-          "title": "Correcting quantum computer errors may be more complicated than expected",
-          "url": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
-          "publishedAt": "2026-11-10T20:00:00Z",
-          "summary": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
-          "finding": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-10T20:00:00+00:00",
-        "datePrecision": "time",
-        "sourceHash": "b8f7f7ba26533cb196ac10424885926f31c5a3568bc0ecb6981a2113dbc84298",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The article discusses new findings regarding the complexity of errors in quantum computers, which is a significant development in the field of technology and engineering. It highlights a substantive new finding that could impact the future of quantum computing.",
-        "storyKey": "quantum-computer-error-complexity",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article supports all claims in the summary, detailing how new experimental findings challenge long-standing assumptions about quantum computer errors, specifically the presence of memory effects and non-Markovian noise. It also discusses the implications for quantum error correction and ongoing explorations of new mitigation strategies."
-      }
-    },
-    {
-      "id": "science-ed72f46bb287cd6e",
-      "title": "How neutrinos are beginning to reveal the secrets of our galaxy",
-      "summary": "The IceCube Neutrino Observatory has created a new neutrino-only map of the Milky Way, revealing an asymmetric galaxy with unexplained \"neutrino blobs.\" Researchers are now using these neutrino observations to investigate particle acceleration in the galactic center and to match neutrino sources with high-energy light sources.",
-      "finding": "The IceCube Neutrino Observatory has created a new neutrino-only map of the Milky Way, revealing an asymmetric galaxy with unexplained \"neutrino blobs.\" Researchers are now using these neutrino observations to investigate particle acceleration in the galactic center and to match neutrino sources with high-energy light sources.",
-      "significance": "Neutrinos offer a distinct observational window into cosmic phenomena and natural particle acceleration mechanisms that light alone cannot provide.",
-      "caveat": "Preprint / working paper; peer review is not established. Scientists face difficulties matching detected neutrino sources directly with known high-energy light sources under the assumption they share a common origin.",
-      "url": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
-      "primarySourceUrl": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-10T09:00:00+00:00",
-      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "preprint",
-      "topics": [
-        "astronomy",
-        "physics"
-      ],
-      "entities": [
-        "IceCube Neutrino Observatory",
-        "Francis Halzen",
-        "Naoko Kurahashi Neilson",
-        "Drexel University",
-        "Milky Way"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://arxiv.org/abs/2609.22577",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-10T07:12:23.099370-05:00",
-        "expiresAt": "2026-11-13T07:12:23.099370-05:00",
-        "inputFacts": {
-          "id": "science-ed72f46bb287cd6e",
-          "title": "How neutrinos are beginning to reveal the secrets of our galaxy",
-          "url": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
-          "publishedAt": "2026-11-10T09:00:00Z",
-          "summary": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
-          "finding": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-10T09:00:00+00:00",
-        "datePrecision": "time",
-        "sourceHash": "76c58aabf9e66020cde55d7c0570903dfe203c9d384a758f431893a19b077c45",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The article describes a significant new scientific finding: a novel map of the Milky Way using neutrinos, which offers a different perspective than light-based observations. This represents a substantive technical advance in astronomy and physics.",
-        "storyKey": "icecube-milky-way-neutrino-map",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article confirms IceCube created a new neutrino-only map of the Milky Way, revealing an asymmetric galaxy with 'neutrino blobs.' It also states researchers are using these observations to investigate particle acceleration in the galactic center and match neutrino sources with high-energy light sources. This represents a new finding and technical advance in astrophysics."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-7b0b0a977258a502",
+      "inputFacts": {
+        "id": "science-7b0b0a977258a502",
+        "title": "In elephants, the resilience of communities has its limits",
+        "url": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
+        "publishedAt": "2026-11-13T20:03:13Z",
+        "summary": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
+        "finding": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
+        "sourceUpdatedAt": "2026-11-13T20:03:13Z"
+      },
+      "publishedAt": "2026-11-13T20:03:13+00:00",
+      "publicationEvidence": "2026-11-13T20:03:13+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-240279729ad0e4b5",
+      "inputFacts": {
+        "id": "science-240279729ad0e4b5",
+        "title": "The ‘hell chicken’ dinosaur was a real terror — to fruit",
+        "url": "https://www.sciencenews.org/article/hell-chicken-dinosaur-terror-fruit-eat",
+        "publishedAt": "2026-11-13T16:00:00Z",
+        "summary": "Skeletal reconstructions of the Cretaceous theropod dinosaur Infernogallus jamesi show jaw joints and muscles adapted for forward and back sliding motions, suggesting a specialized fruit-eating diet similar to modern parrots.",
+        "finding": "Skeletal reconstructions of the Cretaceous theropod dinosaur Infernogallus jamesi show jaw joints and muscles adapted for forward and back sliding motions, suggesting a specialized fruit-eating diet similar to modern parrots.",
+        "sourceUpdatedAt": "2026-11-13T16:00:00Z"
+      },
+      "publishedAt": "2026-11-13T11:00:00-05:00",
+      "publicationEvidence": "2026-11-13T11:00:00-05:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-6c50c567a596c770",
       "inputFacts": {
@@ -356,9 +270,9 @@
         "title": "A Global Rebound for Mangroves",
         "url": "https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves",
         "publishedAt": "2026-11-13T05:01:00Z",
-        "summary": "Satellite imagery analysis shows global mangrove forests rebounded after 2010, expanding by nearly 2,000 square kilometers and developing denser canopies following decades of decline.",
-        "finding": "Satellite imagery analysis shows global mangrove forests rebounded after 2010, expanding by nearly 2,000 square kilometers and developing denser canopies following decades of decline.",
-        "sourceUpdatedAt": "2026-11-13T05:01:00Z"
+        "summary": "After losing nearly 3,000 square kilometers from 1984 to 2010, global mangrove forest area rebounded with an unexpected net increase of nearly 2,000 square kilometers following 2010.",
+        "finding": "After losing nearly 3,000 square kilometers from 1984 to 2010, global mangrove forest area rebounded with an unexpected net increase of nearly 2,000 square kilometers following 2010.",
+        "sourceUpdatedAt": "2026-11-13T13:38:26Z"
       },
       "publishedAt": "2026-11-13T00:01:00-05:00",
       "publicationEvidence": "2026-11-13T00:01:00-05:00",
@@ -386,8 +300,8 @@
         "title": "Can Network Science Transform Health and Nutrition?",
         "url": "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112",
         "publishedAt": "2026-11-12T19:40:54Z",
-        "summary": "Diverse systems share fundamental architectural traits, with disease genes clustering in network neighborhoods and food containing roughly 135,000 uncharacterized compounds outside standard nutrition.",
-        "finding": "Diverse systems share fundamental architectural traits, with disease genes clustering in network neighborhoods and food containing roughly 135,000 uncharacterized compounds outside standard nutrition.",
+        "summary": "Diverse complex systems share common architectural network principles, such as hubs, which can be applied to understand cellular biology and nutrition.",
+        "finding": "Diverse complex systems share common architectural network principles, such as hubs, which can be applied to understand cellular biology and nutrition.",
         "sourceUpdatedAt": "2026-11-12T21:42:04Z"
       },
       "publishedAt": "2026-11-12T19:40:54+00:00",
@@ -431,8 +345,8 @@
         "title": "The amazing disappearing exoplanet",
         "url": "https://arstechnica.com/science/2026/11/the-amazing-disappearing-exoplanet",
         "publishedAt": "2026-11-12T17:18:10Z",
-        "summary": "The hot Jupiter exoplanet TOI-2535b ceased transiting its host star, likely caused by rapid orbital inclination shifts driven by an unseen companion planet on a different orbital plane.",
-        "finding": "The hot Jupiter exoplanet TOI-2535b ceased transiting its host star, likely caused by rapid orbital inclination shifts driven by an unseen companion planet on a different orbital plane.",
+        "summary": "The hot Jupiter exoplanet TOI-2535b ceased its regular transits across its host star, likely because the gravitational influence of an unseen companion changed its orbital inclination.",
+        "finding": "The hot Jupiter exoplanet TOI-2535b ceased its regular transits across its host star, likely because the gravitational influence of an unseen companion changed its orbital inclination.",
         "sourceUpdatedAt": "2026-11-12T18:01:45Z"
       },
       "publishedAt": "2026-11-12T17:18:10+00:00",
@@ -446,27 +360,12 @@
         "title": "The brain’s fear center moonlights as the save button for memories",
         "url": "https://www.sciencenews.org/article/brain-amygdala-neuron-saves-memories",
         "publishedAt": "2026-11-12T16:00:00Z",
-        "summary": "Activity in specific human amygdala neurons predicts whether an image will be recalled, indicating the region acts as a save mechanism for memories.",
-        "finding": "Activity in specific human amygdala neurons predicts whether an image will be recalled, indicating the region acts as a save mechanism for memories.",
+        "summary": "Activity in specific human amygdala neurons predicts whether an everyday image will be recalled, indicating the region helps select memories for longer-term storage.",
+        "finding": "Activity in specific human amygdala neurons predicts whether an everyday image will be recalled, indicating the region helps select memories for longer-term storage.",
         "sourceUpdatedAt": "2026-11-12T16:00:00Z"
       },
       "publishedAt": "2026-11-12T11:00:00-05:00",
       "publicationEvidence": "2026-11-12T11:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-0c210fd64684a210",
-      "inputFacts": {
-        "id": "science-0c210fd64684a210",
-        "title": "Europe’s Hera mission is ready to double down on asteroid science",
-        "url": "https://www.sciencenews.org/article/europe-hera-mission-double-asteroid",
-        "publishedAt": "2026-11-12T14:00:00Z",
-        "summary": "The Hera spacecraft arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to investigate the system and the aftermath of the DART impact.",
-        "finding": "The Hera spacecraft arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to investigate the system and the aftermath of the DART impact.",
-        "sourceUpdatedAt": "2026-11-12T14:00:00Z"
-      },
-      "publishedAt": "2026-11-12T09:00:00-05:00",
-      "publicationEvidence": "2026-11-12T09:00:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -515,21 +414,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-ee03630e6f626376",
-      "inputFacts": {
-        "id": "science-ee03630e6f626376",
-        "title": "Correcting quantum computer errors may be more complicated than expected",
-        "url": "https://www.newscientist.com/article/2598161-correcting-quantum-computer-errors-may-be-more-complicated-than-expected",
-        "publishedAt": "2026-11-10T20:00:00Z",
-        "summary": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
-        "finding": "Multiple studies demonstrate that qubit environments can retain memory effects and violate the long-standing Markov assumption, producing correlated errors not accounted for in standard quantum error-correction methods.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-10T20:00:00+00:00",
-      "publicationEvidence": "2026-11-10T20:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-6c2824fb2757db42",
       "inputFacts": {
         "id": "science-6c2824fb2757db42",
@@ -545,108 +429,33 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-0a037ddef00bff3c",
+      "id": "science-650d65519942a656",
       "inputFacts": {
-        "id": "science-0a037ddef00bff3c",
-        "title": "Newly described insect may live its whole life on a spider’s web",
-        "url": "https://www.newscientist.com/article/2598153-newly-described-bug-lives-its-whole-life-on-a-spider-web",
-        "publishedAt": "2026-11-10T10:00:00Z",
-        "summary": "Researchers have identified a newly described web-loving true bug species, Heissophila sinica, that may spend its entire life cycle residing directly on spider webs.",
-        "finding": "Researchers have identified a newly described web-loving true bug species, Heissophila sinica, that may spend its entire life cycle residing directly on spider webs.",
-        "sourceUpdatedAt": null
+        "id": "science-650d65519942a656",
+        "title": "It's the end of the world as we know it, per a physicist's 1960 prediction",
+        "url": "https://arstechnica.com/science/2026/11/its-the-end-of-the-world-as-we-know-it-per-a-physicists-1960-prediction",
+        "publishedAt": "2026-11-13T15:09:39Z",
+        "summary": "A 1960 mathematical model predicted that human population growth would reach an infinite breaking point by November 13, 2026.",
+        "finding": "A 1960 mathematical model predicted that human population growth would reach an infinite breaking point by November 13, 2026.",
+        "sourceUpdatedAt": "2026-11-13T17:14:16Z"
       },
-      "publishedAt": "2026-11-10T10:00:00+00:00",
-      "publicationEvidence": "2026-11-10T10:00:00+00:00",
+      "publishedAt": "2026-11-13T15:09:39+00:00",
+      "publicationEvidence": "2026-11-13T15:09:39+00:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-ed72f46bb287cd6e",
+      "id": "science-9072a5ad3b0a42fd",
       "inputFacts": {
-        "id": "science-ed72f46bb287cd6e",
-        "title": "How neutrinos are beginning to reveal the secrets of our galaxy",
-        "url": "https://www.newscientist.com/article/2598051-how-neutrinos-are-beginning-to-reveal-the-secrets-of-our-galaxy",
-        "publishedAt": "2026-11-10T09:00:00Z",
-        "summary": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
-        "finding": "IceCube researchers mapped the Milky Way using neutrinos and identified challenges in matching neutrino emission with high-energy light sources from the galactic centre.",
-        "sourceUpdatedAt": null
+        "id": "science-9072a5ad3b0a42fd",
+        "title": "Scientists warn 1.5°C climate change threshold could arrive by 2029",
+        "url": "https://arstechnica.com/science/2026/11/scientists-warn-the-1-5c-climate-change-threshold-could-arrive-by-2029",
+        "publishedAt": "2026-11-13T14:29:15Z",
+        "summary": "According to the European Union's Copernicus climate change service, global warming has accelerated, with the 1.5\u0000C threshold projected to be crossed as early as 2029.",
+        "finding": "According to the European Union's Copernicus climate change service, global warming has accelerated, with the 1.5\u0000C threshold projected to be crossed as early as 2029.",
+        "sourceUpdatedAt": "2026-11-13T17:42:25Z"
       },
-      "publishedAt": "2026-11-10T09:00:00+00:00",
-      "publicationEvidence": "2026-11-10T09:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-901e4c6072cf569b",
-      "inputFacts": {
-        "id": "science-901e4c6072cf569b",
-        "title": "Curiosity Blog, Sols 5050-5055: It’s Nazca, Our 49th Drill Hole",
-        "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5050-5055-its-nazca-our-49th-drill-hole",
-        "publishedAt": "2026-11-10T01:05:48Z",
-        "summary": "NASA's Curiosity rover successfully drilled its 49th Martian hole, named Nazca, targeting rock containing potential crystal inclusions, and delivered the sample to the CheMin instrument.",
-        "finding": "NASA's Curiosity rover successfully drilled its 49th Martian hole, named Nazca, targeting rock containing potential crystal inclusions, and delivered the sample to the CheMin instrument.",
-        "sourceUpdatedAt": "2026-11-10T01:05:51Z"
-      },
-      "publishedAt": "2026-11-09T20:05:48-05:00",
-      "publicationEvidence": "2026-11-09T20:05:48-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-97ffe59ce15abb83",
-      "inputFacts": {
-        "id": "science-97ffe59ce15abb83",
-        "title": "Drugs like Ozempic may help reverse chronic kidney disease",
-        "url": "https://www.sciencenews.org/article/semaglutide-chronic-kidney-disease",
-        "publishedAt": "2026-11-09T16:00:00Z",
-        "summary": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
-        "finding": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
-        "sourceUpdatedAt": "2026-11-09T16:00:00Z"
-      },
-      "publishedAt": "2026-11-09T11:00:00-05:00",
-      "publicationEvidence": "2026-11-09T11:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-f7b623d516c9558f",
-      "inputFacts": {
-        "id": "science-f7b623d516c9558f",
-        "title": "A high-fiber diet may clear away plastic in the gut",
-        "url": "https://www.sciencenews.org/article/high-fiber-diet-nanoplastic-gut-health",
-        "publishedAt": "2026-11-09T14:00:00Z",
-        "summary": "In mice fed plastic particles, consuming medium- or high-fiber diets helped clear more particles from the gut within 24 hours and prevented gut tissue damage seen in low-fiber mice.",
-        "finding": "In mice fed plastic particles, consuming medium- or high-fiber diets helped clear more particles from the gut within 24 hours and prevented gut tissue damage seen in low-fiber mice.",
-        "sourceUpdatedAt": "2026-11-09T14:00:00Z"
-      },
-      "publishedAt": "2026-11-09T09:00:00-05:00",
-      "publicationEvidence": "2026-11-09T09:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-155d9f5cc0b5428b",
-      "inputFacts": {
-        "id": "science-155d9f5cc0b5428b",
-        "title": "Ozone Hole Reaches Its 2026 Maximum",
-        "url": "https://science.nasa.gov/earth/earth-observatory/ozone-hole-reaches-its-2026-maximum",
-        "publishedAt": "2026-11-09T05:00:00Z",
-        "summary": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
-        "finding": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
-        "sourceUpdatedAt": "2026-11-09T05:00:00Z"
-      },
-      "publishedAt": "2026-11-09T00:00:00-05:00",
-      "publicationEvidence": "2026-11-09T00:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-8ea0785cc9c63a50",
-      "inputFacts": {
-        "id": "science-8ea0785cc9c63a50",
-        "title": "Physicists listened to electrical noise to crack a superconductor mystery",
-        "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
-        "publishedAt": "2026-11-08T12:15:31Z",
-        "summary": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
-        "finding": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
-        "sourceUpdatedAt": "2026-11-09T13:13:29Z"
-      },
-      "publishedAt": "2026-11-08T12:15:31+00:00",
-      "publicationEvidence": "2026-11-08T12:15:31+00:00",
+      "publishedAt": "2026-11-13T14:29:15+00:00",
+      "publicationEvidence": "2026-11-13T14:29:15+00:00",
       "datePrecision": "time"
     },
     {
@@ -671,53 +480,38 @@
         "title": "The Evolving Story of How Chemistry Became Biology",
         "url": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112",
         "publishedAt": "2026-11-12T15:45:27Z",
-        "summary": "Origins-of-life researchers are moving away from single-molecule theories to investigate how complex chemical networks transitioned into stable evolutionary systems continuous with modern life.",
-        "finding": "Origins-of-life researchers are moving away from single-molecule theories to investigate how complex chemical networks transitioned into stable evolutionary systems continuous with modern life.",
-        "sourceUpdatedAt": "2026-11-12T16:30:54Z"
+        "summary": "Origins-of-life researchers are shifting away from single-molecule theories toward integrative frameworks that examine how complex molecular mixtures transitioned into stable evolutionary systems.",
+        "finding": "Origins-of-life researchers are shifting away from single-molecule theories toward integrative frameworks that examine how complex molecular mixtures transitioned into stable evolutionary systems.",
+        "sourceUpdatedAt": "2026-11-13T17:04:21Z"
       },
       "publishedAt": "2026-11-12T15:45:27+00:00",
       "publicationEvidence": "2026-11-12T15:45:27+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-5cf497c37d846708",
-      "inputFacts": {
-        "id": "science-5cf497c37d846708",
-        "title": "Curiosity Blog, Sols 5063-5069 Rocks and Chips",
-        "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5063-5069-rocks-and-chips",
-        "publishedAt": "2026-11-12T00:41:35Z",
-        "summary": "NASA's Curiosity rover completed a drill campaign at the Nazca drill hole to investigate bedrock containing chip-shaped crystal forms, delivering samples to SAM and performing ChemCam observations.",
-        "finding": "NASA's Curiosity rover completed a drill campaign at the Nazca drill hole to investigate bedrock containing chip-shaped crystal forms, delivering samples to SAM and performing ChemCam observations.",
-        "sourceUpdatedAt": "2026-11-12T00:41:39Z"
-      },
-      "publishedAt": "2026-11-11T19:41:35-05:00",
-      "publicationEvidence": "2026-11-11T19:41:35-05:00",
       "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-12",
-      "selectedIds": [
-        "science-ee03630e6f626376",
-        "science-ed72f46bb287cd6e",
-        "science-780a35cbfb8cfbda"
-      ]
-    },
-    {
       "date": "2026-11-13",
       "selectedIds": [
         "science-780a35cbfb8cfbda",
-        "science-0c210fd64684a210",
-        "science-b0cd481433eb7ca1"
+        "science-b0cd481433eb7ca1",
+        "science-e9755bd1cb6983f9"
       ]
     },
     {
       "date": "2026-11-14",
       "selectedIds": [
-        "science-0c210fd64684a210",
         "science-b0cd481433eb7ca1",
-        "science-e9755bd1cb6983f9"
+        "science-e9755bd1cb6983f9",
+        "science-7b0b0a977258a502"
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "selectedIds": [
+        "science-b0cd481433eb7ca1",
+        "science-e9755bd1cb6983f9",
+        "science-7b0b0a977258a502"
       ]
     }
   ]
