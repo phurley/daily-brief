@@ -1,7 +1,679 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-13T02:45:48.675463-05:00",
+  "generatedAt": "2026-11-14T02:28:35.751930-05:00",
   "events": [
+    {
+      "id": "occ-6ccb10f510370b131d3ef6d0",
+      "title": "Math Grad Show and Tell Seminar: A mathematical introduction to knitting",
+      "summary": "Explore the mathematical underpinnings of knitting in this seminar. Learn how knitted fabrics are constructed, delve into topological models of knitting, and discover a new stitch designed by physicists. Participants can even practice knitting a few stitches.",
+      "url": "https://events.umich.edu/event/154887",
+      "start": "2026-11-16T15:00:00-05:00",
+      "venue": "East Hall",
+      "city": "Ann Arbor",
+      "category": "Workshop / Seminar",
+      "imageUrl": "https://events.umich.edu/media/attachments/2026/11/event_154887_original-1.png",
+      "imageAlt": "Math Grad Show and Tell Seminar: A mathematical introduction to knitting",
+      "status": "confirmed",
+      "occurrenceId": "occ-6ccb10f510370b131d3ef6d0",
+      "seriesId": "series-e18fa2722d87fc749af8e8a5",
+      "sourceUpdatedAt": "2026-11-12T21:06:25-05:00",
+      "lastCheckedAt": "2026-11-14T02:28:35.751930-05:00",
+      "canonicalUrl": "https://events.umich.edu/event/154887",
+      "venueId": "east hall|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "math-grad-show-and-tell-seminar-a-mathem-event-2026-11-16",
+        "src-79cc1cf75e9a6274f5979149"
+      ],
+      "legacyOccurrenceKeys": [
+        "math-grad-show-and-tell-seminar-a-mathem-event-2026-11-16|2026-11-16T15:00:00-05:00",
+        "src-79cc1cf75e9a6274f5979149|2026-11-16T15:00:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "series-e18fa2722d87fc749af8e8a5"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-79cc1cf75e9a6274f5979149",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/154887",
+          "observedAt": "2026-11-13T02:37:54-05:00",
+          "sourceUpdatedAt": "2026-11-12T21:06:25-05:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-79cc1cf75e9a6274f5979149",
+          "start": "src-79cc1cf75e9a6274f5979149",
+          "end": "src-79cc1cf75e9a6274f5979149",
+          "venue": "src-79cc1cf75e9a6274f5979149",
+          "url": "src-79cc1cf75e9a6274f5979149",
+          "imageUrl": "src-79cc1cf75e9a6274f5979149",
+          "status": "src-79cc1cf75e9a6274f5979149"
+        },
+        "conflicts": {}
+      },
+      "score": 100,
+      "scoring": {
+        "signals": {
+          "funny": 0.26,
+          "distinctive": 0.85,
+          "eclectic": 0.86,
+          "technical_science": 0.96,
+          "artsy": 0.63,
+          "progressive": 0.43,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.26,
+          "craft_fair_shopping": 0.03,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.02,
+          "sales_related": 0.05,
+          "children_activity": 0.06,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        },
+        "score": 100,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"east hall\",\"math grad show and tell seminar a mathematical introduction to knitting\"]",
+      "price": "Free",
+      "end": "2026-11-16T16:00:00-05:00",
+      "bookingUrl": "",
+      "statusEvidence": "Organizer detail reviewed",
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "priceCurrency": "USD",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-14T02:28:35.751930-05:00",
+        "expiresAt": "2026-11-15T02:28:35.751930-05:00",
+        "sourceUrl": "https://events.umich.edu/event/154887",
+        "sourceHash": "0f8d3a7668c465f90db095f99716aa61cd2bdc0cf185bbf9b8f6d70b89346114",
+        "inputFacts": {
+          "id": "occ-6ccb10f510370b131d3ef6d0",
+          "url": "https://events.umich.edu/event/154887",
+          "start": "2026-11-16T15:00:00-05:00",
+          "end": "2026-11-16T16:00:00-05:00",
+          "venue": "East Hall",
+          "city": "Ann Arbor",
+          "price": null,
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Mon, Nov 16",
+          "time": "3:00pm",
+          "venue": "East Hall",
+          "admission": "Free",
+          "description": "In this talk, we will learn how knitted textiles are constructed and explore topological models of knitting. We will learn what it means to be knittable and meet a new knitted stitch that physicists designed to be less prone to unraveling than standard knitting. You will also get to practice knitting a few stitches for yourself!",
+          "end": "4:00pm"
+        }
+      },
+      "reviewExpiresAt": "2026-11-15T02:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-cc81dea116e9163556c129c3",
+      "title": "Student Composer Concert Series",
+      "summary": "Experience new musical works by University of Michigan students at the Student Composer Concert Series. This performance showcases emerging talent in composition, offering a glimpse into the future of contemporary music.",
+      "url": "https://events.umich.edu/event/148724",
+      "start": "2026-11-15T19:00:00-05:00",
+      "venue": "Earl V. Moore Building",
+      "city": "Ann Arbor",
+      "price": "Free",
+      "category": "Performance",
+      "imageUrl": "https://events.umich.edu/media/attachments/2026/06/event_148724_original-1.jpg",
+      "imageAlt": "Student Composer Concert Series",
+      "status": "confirmed",
+      "occurrenceId": "occ-cc81dea116e9163556c129c3",
+      "seriesId": "series-9c2e1e9cc57dccdeceafcc3f",
+      "sourceUpdatedAt": "2026-11-12T12:16:49-05:00",
+      "lastCheckedAt": "2026-11-14T02:28:35.751930-05:00",
+      "canonicalUrl": "https://events.umich.edu/event/148724",
+      "venueId": "earl v moore building|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "src-627cbebc1e13950fc921210f",
+        "src-6371374ed56dd775f05727df",
+        "src-cdf5dc4cfcb5e1cf6caad00b",
+        "student-composer-concert-series-event-2026-11-15"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-627cbebc1e13950fc921210f|2026-11-15T19:00:00-05:00",
+        "src-6371374ed56dd775f05727df|2026-11-15T19:00:00-05:00",
+        "src-cdf5dc4cfcb5e1cf6caad00b|2026-11-15T19:00:00-05:00",
+        "student-composer-concert-series-event-2026-11-15|2026-11-15T19:00:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "series-9c2e1e9cc57dccdeceafcc3f"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-cdf5dc4cfcb5e1cf6caad00b",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/148724",
+          "observedAt": "2026-11-13T02:37:54-05:00",
+          "sourceUpdatedAt": "2026-11-12T12:16:49-05:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        },
+        {
+          "sourceRecordId": "src-6371374ed56dd775f05727df",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/148724",
+          "observedAt": "2026-11-12T02:36:40-05:00",
+          "sourceUpdatedAt": "2026-11-11T18:16:46-05:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        },
+        {
+          "sourceRecordId": "src-627cbebc1e13950fc921210f",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/148724",
+          "observedAt": "2026-10-12T15:41:42-04:00",
+          "sourceUpdatedAt": "2026-09-02T12:17:22-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence",
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-cdf5dc4cfcb5e1cf6caad00b",
+          "start": "src-cdf5dc4cfcb5e1cf6caad00b",
+          "end": "src-cdf5dc4cfcb5e1cf6caad00b",
+          "venue": "src-cdf5dc4cfcb5e1cf6caad00b",
+          "url": "src-cdf5dc4cfcb5e1cf6caad00b",
+          "imageUrl": "src-cdf5dc4cfcb5e1cf6caad00b",
+          "status": "src-cdf5dc4cfcb5e1cf6caad00b"
+        },
+        "conflicts": {}
+      },
+      "score": 81,
+      "scoring": {
+        "signals": {
+          "funny": 0.08,
+          "distinctive": 0.33,
+          "eclectic": 0.18,
+          "technical_science": 0.09,
+          "artsy": 0.99,
+          "progressive": 0.5,
+          "outdoors": 0.02,
+          "theatre": 0.06,
+          "live_music": 0.97,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.78,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.02,
+          "sales_related": 0.09,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        },
+        "score": 81,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"earl v moore building\",\"student composer concert series\"]",
+      "end": "2026-11-15T21:00:00-05:00",
+      "registration": "no tickets required",
+      "bookingUrl": "",
+      "statusEvidence": "Organizer detail reviewed",
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "priceCurrency": "USD",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-14T02:28:35.751930-05:00",
+        "expiresAt": "2026-11-15T02:28:35.751930-05:00",
+        "sourceUrl": "https://events.umich.edu/event/148724",
+        "sourceHash": "0611ea7e9e078d3b30e2c42b0daf38a4af208b36c532e7a301f0f9370dcabb74",
+        "inputFacts": {
+          "id": "occ-cc81dea116e9163556c129c3",
+          "url": "https://events.umich.edu/event/148724",
+          "start": "2026-11-15T19:00:00-05:00",
+          "end": "2026-11-15T21:00:00-05:00",
+          "venue": "Earl V. Moore Building",
+          "city": "Ann Arbor",
+          "price": "Free - no tickets required",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Nov 15 2026",
+          "time": "7:00pm",
+          "venue": "Earl V. Moore Building",
+          "admission": "Free - no tickets required",
+          "description": "Presented by the Department of Composition, the Student Composer Concert Series features new works written by University of Michigan undergraduate and graduate students.",
+          "registration": "no tickets required",
+          "end": "9:00pm"
+        }
+      },
+      "reviewExpiresAt": "2026-11-15T02:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-5454f42628ddd12c400b022f",
+      "title": "Last Call Improv | FREE!",
+      "summary": "Experience an unpredictable and energetic improv comedy show featuring a rotating lineup of troupes and a headliner performing a long-form set. This late-night staple promises high-energy laughs and experimental forms for a unique live entertainment experience.",
+      "url": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
+      "start": "2026-11-19T21:00:00-05:00",
+      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+      "city": "Hamtramck",
+      "price": "Free",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/19466/lastcall-eventpage__2_.png",
+      "imageAlt": "Last Call Improv | FREE!",
+      "status": "confirmed",
+      "occurrenceId": "occ-5454f42628ddd12c400b022f",
+      "seriesId": "series-32bf7fa61ccfec7043649ecd",
+      "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-11-14T02:28:35.751930-05:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
+      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "last-call-improv-free-event-2026-11-19",
+        "src-53683aa7e5569ba48150261b"
+      ],
+      "legacyOccurrenceKeys": [
+        "last-call-improv-free-event-2026-11-19|2026-11-19T21:00:00-05:00",
+        "src-53683aa7e5569ba48150261b|2026-11-19T21:00:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "series-25001dbb19b5ba2141dad75a",
+        "series-32bf7fa61ccfec7043649ecd",
+        "series-53b8b1339dcf1ebde77e74dd",
+        "series-7286e08b0d1bfa20c9963253"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-53683aa7e5569ba48150261b",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
+          "observedAt": "2026-11-11T04:09:00-05:00",
+          "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "title": "src-53683aa7e5569ba48150261b",
+          "start": "src-53683aa7e5569ba48150261b",
+          "venue": "src-53683aa7e5569ba48150261b",
+          "url": "src-53683aa7e5569ba48150261b",
+          "status": "src-53683aa7e5569ba48150261b",
+          "imageUrl": "src-53683aa7e5569ba48150261b"
+        },
+        "conflicts": {}
+      },
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "score": 100,
+      "scoring": {
+        "signals": {
+          "funny": 0.99,
+          "distinctive": 0.83,
+          "eclectic": 0.86,
+          "technical_science": 0.02,
+          "artsy": 0.98,
+          "progressive": 0.58,
+          "outdoors": 0.01,
+          "theatre": 0.27,
+          "live_music": 0.03,
+          "live_comedy": 0.99,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.97,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.01,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.3,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 100,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"last call improv free\"]",
+      "registration": "Enter your name and email and we'll send you a link to confirm your spot.",
+      "bookingUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21:00:00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-14T02:28:35.751930-05:00",
+        "expiresAt": "2026-11-15T02:28:35.751930-05:00",
+        "sourceUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
+        "sourceHash": "6b3f95efd44876ca1f63119c6b00e4bd297abde7b73950592de870bc9d0a1c5a",
+        "inputFacts": {
+          "id": "occ-5454f42628ddd12c400b022f",
+          "url": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
+          "start": "2026-11-19T21:00:00-05:00",
+          "end": null,
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "city": "Hamtramck",
+          "price": "Free",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Nov 19, 2026",
+          "time": "9:00 PM EST",
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21:00:00\", \"price\": 0.0, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "Last Call Improv takes over Thursday nights at 9:30 PM for a wild, dynamic mix of styles and forms. Following right after the regular Thursday show, this late-night staple features a rotating lineup of performance troupes hand-picked from open submissions. The evening is anchored by Wanted Live , a featured headliner performing a TJ and Dave-style long-form improv set, where grounded, authentic human behavior drives the comedy. Whether you are looking for experimental forms or high-energy laughs, Last Call Improv offers an unpredictable, one-of-a-kind experience every single week.",
+          "registration": "Enter your name and email and we'll send you a link to confirm your spot."
+        }
+      },
+      "reviewExpiresAt": "2026-11-15T02:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-c0efaed1b071b1a6f279a831",
+      "title": "Zhaowei Qu, tuba",
+      "summary": "Enjoy a senior recital performance by undergraduate student Zhaowei Qu on the tuba. This event showcases classical music talent and offers a chance to experience a student's final performance before graduation.",
+      "url": "https://events.umich.edu/event/153886",
+      "start": "2026-11-15T20:00:00-05:00",
+      "venue": "Walgreen Drama Center",
+      "city": "Ann Arbor",
+      "price": "Free",
+      "category": "Performance",
+      "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153886_original-1.jpg",
+      "imageAlt": "Zhaowei Qu, tuba",
+      "status": "confirmed",
+      "occurrenceId": "occ-c0efaed1b071b1a6f279a831",
+      "seriesId": "series-a316170a218d49aa7fda4d40",
+      "sourceUpdatedAt": "2026-11-04T12:17:18-05:00",
+      "lastCheckedAt": "2026-11-14T02:28:35.751930-05:00",
+      "canonicalUrl": "https://events.umich.edu/event/153886",
+      "venueId": "walgreen drama center|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "src-7c0c90fa004c147c8821e92b",
+        "src-eb50266923bbd94d382bd55f",
+        "zhaowei-qu-tuba-event-2026-11-15"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-7c0c90fa004c147c8821e92b|2026-11-15T20:00:00-05:00",
+        "src-eb50266923bbd94d382bd55f|2026-11-15T20:00:00-05:00",
+        "zhaowei-qu-tuba-event-2026-11-15|2026-11-15T20:00:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "series-a316170a218d49aa7fda4d40"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-eb50266923bbd94d382bd55f",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/153886",
+          "observedAt": "2026-11-05T13:19:34-05:00",
+          "sourceUpdatedAt": "2026-11-04T12:17:18-05:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        },
+        {
+          "sourceRecordId": "src-7c0c90fa004c147c8821e92b",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/153886",
+          "observedAt": "2026-10-23T03:28:48-04:00",
+          "sourceUpdatedAt": "2026-10-20T18:17:11-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence",
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-eb50266923bbd94d382bd55f",
+          "start": "src-eb50266923bbd94d382bd55f",
+          "end": "src-eb50266923bbd94d382bd55f",
+          "venue": "src-eb50266923bbd94d382bd55f",
+          "url": "src-eb50266923bbd94d382bd55f",
+          "imageUrl": "src-eb50266923bbd94d382bd55f",
+          "status": "src-eb50266923bbd94d382bd55f"
+        },
+        "conflicts": {}
+      },
+      "score": 77,
+      "scoring": {
+        "signals": {
+          "funny": 0.08,
+          "distinctive": 0.37,
+          "eclectic": 0.08,
+          "technical_science": 0.09,
+          "artsy": 0.98,
+          "progressive": 0.12,
+          "outdoors": 0.02,
+          "theatre": 0.09,
+          "live_music": 0.87,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.07,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.03,
+          "sales_related": 0.06,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        },
+        "score": 77,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"walgreen drama center\",\"zhaowei qu tuba\"]",
+      "end": "2026-11-15T21:30:00-05:00",
+      "registration": "no tickets required",
+      "bookingUrl": "",
+      "statusEvidence": "Organizer detail reviewed",
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "priceCurrency": "USD",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-14T02:28:35.751930-05:00",
+        "expiresAt": "2026-11-15T02:28:35.751930-05:00",
+        "sourceUrl": "https://events.umich.edu/event/153886",
+        "sourceHash": "76259100164c1d8f632e648c6882856897012162991a2bb61a91f9a30bb87b8e",
+        "inputFacts": {
+          "id": "occ-c0efaed1b071b1a6f279a831",
+          "url": "https://events.umich.edu/event/153886",
+          "start": "2026-11-15T20:00:00-05:00",
+          "end": "2026-11-15T21:30:00-05:00",
+          "venue": "Walgreen Drama Center",
+          "city": "Ann Arbor",
+          "price": "Free - no tickets required",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Nov 15 2026",
+          "time": "8:00pm",
+          "venue": "Walgreen Drama Center",
+          "admission": "Free - no tickets required",
+          "description": "Undergraduate student Zhaowei Qu performs a final senior recital.",
+          "registration": "no tickets required",
+          "end": "9:30pm"
+        }
+      },
+      "reviewExpiresAt": "2026-11-15T02:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-f5321784ee9a2ba436f37e82",
+      "title": "Match Day for Art at Home",
+      "summary": "University of Michigan undergraduate students can select original artwork to borrow for the academic year. This event offers a unique opportunity to live with art, with free cider, donuts, and swag provided.",
+      "url": "https://umma.umich.edu/events/match-day-for-art-at-home/",
+      "start": "2026-11-15T11:00:00-05:00",
+      "venue": "Forum, Lizzie and Jonathan Tisch Apse",
+      "city": "Ann Arbor",
+      "category": "Art",
+      "imageUrl": "https://umma.umich.edu/wp-content/uploads/2025/12/feelgoodfusion-april2023_52854367738_o-1.jpg",
+      "imageAlt": "Match Day for Art at Home",
+      "status": "confirmed",
+      "occurrenceId": "occ-f5321784ee9a2ba436f37e82",
+      "seriesId": "series-d8a3871deba86d9bc1d7030d",
+      "canonicalUrl": "https://umma.umich.edu/events/match-day-for-art-at-home/",
+      "venueId": "forum lizzie and jonathan tisch apse|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "src-e1156f15531deff1804445f5"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-e1156f15531deff1804445f5|2026-11-15T11:00:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "match day for art at home|forum, lizzie and jonathan tisch apse",
+        "series-d8a3871deba86d9bc1d7030d"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-e1156f15531deff1804445f5",
+          "sourceId": "university-of-michigan-museum-of-art-umma",
+          "canonicalUrl": "https://umma.umich.edu/events/match-day-for-art-at-home/",
+          "observedAt": "2026-11-10T03:24:46-05:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "status": "src-e1156f15531deff1804445f5",
+          "title": "src-e1156f15531deff1804445f5",
+          "start": "src-e1156f15531deff1804445f5",
+          "venue": "src-e1156f15531deff1804445f5",
+          "url": "src-e1156f15531deff1804445f5",
+          "imageUrl": "src-e1156f15531deff1804445f5",
+          "end": "src-e1156f15531deff1804445f5"
+        },
+        "conflicts": {}
+      },
+      "score": 74,
+      "scoring": {
+        "signals": {
+          "funny": 0.18,
+          "distinctive": 0.77,
+          "eclectic": 0.14,
+          "technical_science": 0.05,
+          "artsy": 0.97,
+          "progressive": 0.43,
+          "outdoors": 0.03,
+          "theatre": 0.03,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.42,
+          "craft_fair_shopping": 0.11,
+          "religious": 0.02,
+          "large_venue": 0.11,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.09,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.14,
+          "children_activity": 0.03,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        },
+        "score": 74,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"forum lizzie and jonathan tisch apse\",\"match day for art at home\"]",
+      "price": "Free",
+      "end": "2026-11-15T14:00:00-05:00",
+      "registration": "Open to U-M undergraduate students living in campus residence halls. Bring your UMID.",
+      "bookingUrl": "https://umma.umich.edu/events/match-day-for-art-at-home/",
+      "statusEvidence": "Organizer detail reviewed",
+      "lastCheckedAt": "2026-11-14T02:28:35.751930-05:00",
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "priceCurrency": "USD",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-14T02:28:35.751930-05:00",
+        "expiresAt": "2026-11-15T02:28:35.751930-05:00",
+        "sourceUrl": "https://umma.umich.edu/events/match-day-for-art-at-home/",
+        "sourceHash": "63a2491972dfe65d1227422e1d6c019b0d1a4e95c3c476efbcdd6e015299bf2a",
+        "inputFacts": {
+          "id": "occ-f5321784ee9a2ba436f37e82",
+          "url": "https://umma.umich.edu/events/match-day-for-art-at-home/",
+          "start": "2026-11-15T11:00:00-05:00",
+          "end": "2026-11-15T14:00:00-05:00",
+          "venue": "Forum, Lizzie and Jonathan Tisch Apse",
+          "city": "Ann Arbor",
+          "price": null,
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Nov 15, 2026",
+          "time": "11:00am",
+          "venue": "Forum, Lizzie and Jonathan Tisch Apse",
+          "admission": "The art is free to borrow, but it’s first come, first served!",
+          "description": "Join us for Art at Home Match Day, when University of Michigan undergraduate students living in residence halls get to select from 150 original works of art to take home and live with for the academic year.",
+          "registration": "A few things to know: Art at Home is open to U-M undergraduate students living in campus residence halls.",
+          "end": "2:00pm"
+        }
+      },
+      "reviewExpiresAt": "2026-11-15T02:28:35.751930-05:00"
+    },
     {
       "id": "occ-071131adb9be0393cbf36b76",
       "title": "Everything I Want to Do In a Show | A One Woman Show",
@@ -137,400 +809,6 @@
           "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/everything-i-want-to-do-in-a-show?date=2026-11-13T19:30:00\", \"price\": 27.34, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
           "description": "It's campy, crazy, and heartfelt. Most importantly, it's a love letter to everyone I've met and all the vessels of creativity I've learned along the way. Oh! And it's interactive, NSFW, and there will be some prizes for attendees. So come join me on a wild ride filled with puppets, impressions, burlesque, song, dance, and even Shakespeare.",
           "registration": "Get Tickets!"
-        }
-      },
-      "reviewExpiresAt": "2026-11-14T02:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-5454f42628ddd12c400b022f",
-      "title": "Last Call Improv | FREE!",
-      "summary": "Experience an unpredictable and energetic improv comedy show featuring a rotating lineup of troupes and a headliner performing a long-form set. This late-night staple promises high-energy laughs and experimental forms for a unique live entertainment experience.",
-      "url": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
-      "start": "2026-11-19T21:00:00-05:00",
-      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-      "city": "Hamtramck",
-      "price": "Free",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/19466/lastcall-eventpage__2_.png",
-      "imageAlt": "Last Call Improv | FREE!",
-      "status": "confirmed",
-      "occurrenceId": "occ-5454f42628ddd12c400b022f",
-      "seriesId": "series-32bf7fa61ccfec7043649ecd",
-      "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
-      "priceCurrency": "USD",
-      "availability": "InStock",
-      "lastCheckedAt": "2026-11-13T02:45:48.675463-05:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
-      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
-      "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
-      "aliases": [
-        "last-call-improv-free-event-2026-11-19",
-        "src-53683aa7e5569ba48150261b"
-      ],
-      "legacyOccurrenceKeys": [
-        "last-call-improv-free-event-2026-11-19|2026-11-19T21:00:00-05:00",
-        "src-53683aa7e5569ba48150261b|2026-11-19T21:00:00-05:00"
-      ],
-      "legacySeriesKeys": [
-        "series-25001dbb19b5ba2141dad75a",
-        "series-32bf7fa61ccfec7043649ecd",
-        "series-53b8b1339dcf1ebde77e74dd",
-        "series-7286e08b0d1bfa20c9963253"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-53683aa7e5569ba48150261b",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
-          "observedAt": "2026-11-11T04:09:00-05:00",
-          "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "native-occurrence"
-        ],
-        "fields": {
-          "title": "src-53683aa7e5569ba48150261b",
-          "start": "src-53683aa7e5569ba48150261b",
-          "venue": "src-53683aa7e5569ba48150261b",
-          "url": "src-53683aa7e5569ba48150261b",
-          "status": "src-53683aa7e5569ba48150261b",
-          "imageUrl": "src-53683aa7e5569ba48150261b"
-        },
-        "conflicts": {}
-      },
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "score": 100,
-      "scoring": {
-        "signals": {
-          "funny": 0.99,
-          "distinctive": 0.83,
-          "eclectic": 0.86,
-          "technical_science": 0.02,
-          "artsy": 0.98,
-          "progressive": 0.58,
-          "outdoors": 0.01,
-          "theatre": 0.27,
-          "live_music": 0.03,
-          "live_comedy": 0.99,
-          "farmer_market": 0.01,
-          "sporting": 0.02,
-          "recurring": 0.97,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.01,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.3,
-          "children_activity": 0.02,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        },
-        "score": 100,
-        "rulesVersion": 2
-      },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"last call improv free\"]",
-      "registration": "Enter your name and email and we'll send you a link to confirm your spot.",
-      "bookingUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21:00:00",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-13T02:45:48.675463-05:00",
-        "expiresAt": "2026-11-14T02:45:48.675463-05:00",
-        "sourceUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
-        "sourceHash": "6b3f95efd44876ca1f63119c6b00e4bd297abde7b73950592de870bc9d0a1c5a",
-        "inputFacts": {
-          "id": "occ-5454f42628ddd12c400b022f",
-          "url": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
-          "start": "2026-11-19T21:00:00-05:00",
-          "end": null,
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "city": "Hamtramck",
-          "price": "Free",
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Nov 19, 2026",
-          "time": "9:00 PM EST",
-          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21:00:00\", \"price\": 0.0, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "Last Call Improv takes over Thursday nights at 9:30 PM for a wild, dynamic mix of styles and forms. Following right after the regular Thursday show, this late-night staple features a rotating lineup of performance troupes hand-picked from open submissions. The evening is anchored by Wanted Live , a featured headliner performing a TJ and Dave-style long-form improv set, where grounded, authentic human behavior drives the comedy. Whether you are looking for experimental forms or high-energy laughs, Last Call Improv offers an unpredictable, one-of-a-kind experience every single week.",
-          "registration": "Enter your name and email and we'll send you a link to confirm your spot."
-        }
-      },
-      "reviewExpiresAt": "2026-11-14T02:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-8dbb4d65e6d126a014747916",
-      "title": "Saturday Morning Physics | The Physics of Art and the Art of Physics",
-      "summary": "Explore the intersection of physics and art in this hybrid lecture. Discover how scientific principles influence artistic creation and how beauty guides scientific discovery, featuring insights from a U-M Physics and Engineering professor.",
-      "url": "https://events.umich.edu/event/150460",
-      "start": "2026-11-14T10:30:00-05:00",
-      "venue": "Weiser Hall",
-      "city": "Ann Arbor",
-      "category": "Presentation",
-      "imageUrl": "https://events.umich.edu/media/attachments/2026/11/event_150460_original-1.png",
-      "imageAlt": "Saturday Morning Physics | The Physics of Art and the Art of Physics",
-      "status": "confirmed",
-      "occurrenceId": "occ-8dbb4d65e6d126a014747916",
-      "seriesId": "series-f3ef9424c39123d95e12c2c3",
-      "sourceUpdatedAt": "2026-11-04T16:29:13-05:00",
-      "lastCheckedAt": "2026-11-13T02:45:48.675463-05:00",
-      "canonicalUrl": "https://events.umich.edu/event/150460",
-      "venueId": "weiser hall|ann arbor",
-      "timePrecision": "time",
-      "aliases": [
-        "saturday-morning-physics-the-physics-of-event-2026-11-14",
-        "src-95a71af364d14349b71744f6",
-        "src-ad18a0e15e1f736a05b88bc9"
-      ],
-      "legacyOccurrenceKeys": [
-        "saturday-morning-physics-the-physics-of-event-2026-11-14|2026-11-14T10:30:00-05:00",
-        "src-95a71af364d14349b71744f6|2026-11-14T10:30:00-05:00",
-        "src-ad18a0e15e1f736a05b88bc9|2026-11-14T10:30:00-05:00"
-      ],
-      "legacySeriesKeys": [
-        "series-f3ef9424c39123d95e12c2c3"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-95a71af364d14349b71744f6",
-          "sourceId": "happening-at-michigan",
-          "canonicalUrl": "https://events.umich.edu/event/150460",
-          "observedAt": "2026-11-05T13:19:34-05:00",
-          "sourceUpdatedAt": "2026-11-04T16:29:13-05:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        },
-        {
-          "sourceRecordId": "src-ad18a0e15e1f736a05b88bc9",
-          "sourceId": "happening-at-michigan",
-          "canonicalUrl": "https://events.umich.edu/event/150460",
-          "observedAt": "2026-10-12T15:41:42-04:00",
-          "sourceUpdatedAt": "2026-09-11T12:10:13-04:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "native-occurrence",
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-95a71af364d14349b71744f6",
-          "start": "src-95a71af364d14349b71744f6",
-          "end": "src-95a71af364d14349b71744f6",
-          "venue": "src-95a71af364d14349b71744f6",
-          "url": "src-95a71af364d14349b71744f6",
-          "imageUrl": "src-95a71af364d14349b71744f6",
-          "status": "src-95a71af364d14349b71744f6"
-        },
-        "conflicts": {}
-      },
-      "score": 98,
-      "scoring": {
-        "signals": {
-          "funny": 0.08,
-          "distinctive": 0.65,
-          "eclectic": 0.9,
-          "technical_science": 0.97,
-          "artsy": 0.86,
-          "progressive": 0.24,
-          "outdoors": 0.02,
-          "theatre": 0.03,
-          "live_music": 0.02,
-          "live_comedy": 0.02,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.54,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.02,
-          "large_venue": 0.06,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.06,
-          "children_activity": 0.04,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        },
-        "score": 98,
-        "rulesVersion": 2
-      },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"weiser hall\",\"saturday morning physics the physics of art and the art of physics\"]",
-      "price": "Free",
-      "end": "2026-11-14T11:30:00-05:00",
-      "bookingUrl": "",
-      "statusEvidence": "Organizer detail reviewed",
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "priceCurrency": "USD",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-13T02:45:48.675463-05:00",
-        "expiresAt": "2026-11-14T02:45:48.675463-05:00",
-        "sourceUrl": "https://events.umich.edu/event/150460",
-        "sourceHash": "708345e0e2eca5354917968d97697f032663d3158c1eef674aa26a4a8855f701",
-        "inputFacts": {
-          "id": "occ-8dbb4d65e6d126a014747916",
-          "url": "https://events.umich.edu/event/150460",
-          "start": "2026-11-14T10:30:00-05:00",
-          "end": "2026-11-14T11:30:00-05:00",
-          "venue": "Weiser Hall",
-          "city": "Ann Arbor",
-          "price": null,
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Sat, Nov 14",
-          "time": "10:30am",
-          "venue": "Weiser Hall",
-          "admission": "Free",
-          "description": "Moving from light and color through Helmholtz’s science of perception, this talk traces the remarkable journey from physical reality to what the eye sees, what the artist creates, and what the audience imagines—while discussing the physics principles behind it. It then turns the lens around to ask how beauty, elegance, and symmetry guide physicists in their search for the laws of nature.",
-          "end": "11:30am"
-        }
-      },
-      "reviewExpiresAt": "2026-11-14T02:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-6ccb10f510370b131d3ef6d0",
-      "title": "Math Grad Show and Tell Seminar: A mathematical introduction to knitting",
-      "summary": "Explore the mathematical underpinnings of knitting in this engaging seminar. Learn how knitted fabrics are constructed, delve into topological models, and discover a new stitch designed by physicists. Participants can even practice knitting a few stitches.",
-      "url": "https://events.umich.edu/event/154887",
-      "start": "2026-11-16T15:00:00-05:00",
-      "venue": "East Hall",
-      "city": "Ann Arbor",
-      "category": "Workshop / Seminar",
-      "imageUrl": "https://events.umich.edu/media/attachments/2026/11/event_154887_original-1.png",
-      "imageAlt": "Math Grad Show and Tell Seminar: A mathematical introduction to knitting",
-      "status": "confirmed",
-      "occurrenceId": "occ-6ccb10f510370b131d3ef6d0",
-      "seriesId": "series-e18fa2722d87fc749af8e8a5",
-      "sourceUpdatedAt": "2026-11-12T21:06:25-05:00",
-      "lastCheckedAt": "2026-11-13T02:45:48.675463-05:00",
-      "canonicalUrl": "https://events.umich.edu/event/154887",
-      "venueId": "east hall|ann arbor",
-      "timePrecision": "time",
-      "aliases": [
-        "math-grad-show-and-tell-seminar-a-mathem-event-2026-11-16",
-        "src-79cc1cf75e9a6274f5979149"
-      ],
-      "legacyOccurrenceKeys": [
-        "math-grad-show-and-tell-seminar-a-mathem-event-2026-11-16|2026-11-16T15:00:00-05:00",
-        "src-79cc1cf75e9a6274f5979149|2026-11-16T15:00:00-05:00"
-      ],
-      "legacySeriesKeys": [
-        "series-e18fa2722d87fc749af8e8a5"
-      ],
-      "sources": [
-        {
-          "sourceRecordId": "src-79cc1cf75e9a6274f5979149",
-          "sourceId": "happening-at-michigan",
-          "canonicalUrl": "https://events.umich.edu/event/154887",
-          "observedAt": "2026-11-13T02:37:54-05:00",
-          "sourceUpdatedAt": "2026-11-12T21:06:25-05:00",
-          "sourceAuthority": "organizer",
-          "status": "scheduled"
-        }
-      ],
-      "identity": {
-        "ruleVersion": "occurrence-v1",
-        "reasons": [
-          "new-occurrence"
-        ],
-        "fields": {
-          "title": "src-79cc1cf75e9a6274f5979149",
-          "start": "src-79cc1cf75e9a6274f5979149",
-          "end": "src-79cc1cf75e9a6274f5979149",
-          "venue": "src-79cc1cf75e9a6274f5979149",
-          "url": "src-79cc1cf75e9a6274f5979149",
-          "imageUrl": "src-79cc1cf75e9a6274f5979149",
-          "status": "src-79cc1cf75e9a6274f5979149"
-        },
-        "conflicts": {}
-      },
-      "score": 100,
-      "scoring": {
-        "signals": {
-          "funny": 0.26,
-          "distinctive": 0.85,
-          "eclectic": 0.86,
-          "technical_science": 0.96,
-          "artsy": 0.63,
-          "progressive": 0.43,
-          "outdoors": 0.02,
-          "theatre": 0.02,
-          "live_music": 0.01,
-          "live_comedy": 0.02,
-          "farmer_market": 0.02,
-          "sporting": 0.01,
-          "recurring": 0.26,
-          "craft_fair_shopping": 0.03,
-          "religious": 0.02,
-          "large_venue": 0.05,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.02,
-          "sales_related": 0.05,
-          "children_activity": 0.06,
-          "running": 0.01,
-          "exercise": 0.02,
-          "employment_related": 0.02
-        },
-        "score": 100,
-        "rulesVersion": 2
-      },
-      "localityTier": "regional",
-      "experienceId": "experience:[\"ann arbor\",\"east hall\",\"math grad show and tell seminar a mathematical introduction to knitting\"]",
-      "price": "Free",
-      "end": "2026-11-16T16:00:00-05:00",
-      "bookingUrl": "",
-      "statusEvidence": "Organizer detail reviewed",
-      "priceMin": 0.0,
-      "priceMax": 0.0,
-      "priceCurrency": "USD",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-13T02:45:48.675463-05:00",
-        "expiresAt": "2026-11-14T02:45:48.675463-05:00",
-        "sourceUrl": "https://events.umich.edu/event/154887",
-        "sourceHash": "0f8d3a7668c465f90db095f99716aa61cd2bdc0cf185bbf9b8f6d70b89346114",
-        "inputFacts": {
-          "id": "occ-6ccb10f510370b131d3ef6d0",
-          "url": "https://events.umich.edu/event/154887",
-          "start": "2026-11-16T15:00:00-05:00",
-          "end": "2026-11-16T16:00:00-05:00",
-          "venue": "East Hall",
-          "city": "Ann Arbor",
-          "price": null,
-          "status": "scheduled"
-        },
-        "evidence": {
-          "date": "Mon, Nov 16",
-          "time": "3:00pm",
-          "venue": "East Hall",
-          "admission": "Free",
-          "description": "In this talk, we will learn how knitted textiles are constructed and explore topological models of knitting. We will learn what it means to be knittable and meet a new knitted stitch that physicists designed to be less prone to unraveling than standard knitting. You will also get to practice knitting a few stitches for yourself!",
-          "end": "4:00pm"
         }
       },
       "reviewExpiresAt": "2026-11-14T02:45:48.675463-05:00"
@@ -852,6 +1130,91 @@
   ],
   "rejections": [
     {
+      "id": "occ-8dbb4d65e6d126a014747916",
+      "title": "Saturday Morning Physics | The Physics of Art and the Art of Physics",
+      "url": "https://events.umich.edu/event/150460",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-8dbb4d65e6d126a014747916",
+        "url": "https://events.umich.edu/event/150460",
+        "start": "2026-11-14T10:30:00-05:00",
+        "end": "2026-11-14T11:30:00-05:00",
+        "venue": "Weiser Hall",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-3934bc6ffcc078e807639627",
+      "title": "Awakening the Dragon–Showcasing the Building and Performance of an Asian Icon",
+      "url": "https://events.umich.edu/event/152125",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-3934bc6ffcc078e807639627",
+        "url": "https://events.umich.edu/event/152125",
+        "start": "2026-11-16T08:00:00-05:00",
+        "end": "2026-11-16T17:00:00-05:00",
+        "venue": "Weiser Hall",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-084142aeb14b24ba9d24d93f",
+      "title": "Beauty & The Bass",
+      "url": "https://www.instagram.com/tangentgallery/",
+      "reason": "ValueError: Not an actionable upcoming occurrence",
+      "inputFacts": {
+        "id": "occ-084142aeb14b24ba9d24d93f",
+        "url": "https://www.instagram.com/tangentgallery/",
+        "start": "2026-11-13T20:00:00-05:00",
+        "end": "2026-11-14T03:00:00-05:00",
+        "venue": "Tangent Gallery & Hastings Street Ballroom",
+        "city": "Detroit",
+        "price": "$25",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-aabc462773f08e8a2c161d83",
+      "title": "Reimagine Contemporary Art",
+      "url": "https://dia.org/events/exhibitions/reimagine-contemporary-art",
+      "reason": "ValueError: Editorial summary contains stale or unresolved logistics",
+      "inputFacts": {
+        "id": "occ-aabc462773f08e8a2c161d83",
+        "url": "https://dia.org/events/exhibitions/reimagine-contemporary-art",
+        "start": "2026-11-15T00:00:00-05:00",
+        "end": null,
+        "venue": "Detroit Institute of Arts",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-8163aba47f8fdcc0eef2974f",
+      "title": "The Sounding Room: Na Bonsai",
+      "url": "https://mocadetroit.org/event/the-sounding-room-na-bonsai/",
+      "reason": "ValueError: Date/time quote conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-8163aba47f8fdcc0eef2974f",
+        "url": "https://mocadetroit.org/event/the-sounding-room-na-bonsai/",
+        "start": "2026-11-14T15:00:00-05:00",
+        "end": "2026-11-14T16:00:00-05:00",
+        "venue": "Museum of Contemporary Art Detroit (MOCAD)",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
       "id": "occ-f1cae3775f7b0d4be56f76e1",
       "title": "Black, White, and Red: Black Women in Silent Film",
       "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
@@ -866,118 +1229,16 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
-      "id": "occ-73ff9bdd82d5cdfc247e20ba",
-      "title": "Awakening the Dragon–Showcasing the Building and Performance of an Asian Icon",
-      "url": "https://events.umich.edu/event/152125",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-73ff9bdd82d5cdfc247e20ba",
-        "url": "https://events.umich.edu/event/152125",
-        "start": "2026-11-13T08:00:00-05:00",
-        "end": "2026-11-13T17:00:00-05:00",
-        "venue": "Weiser Hall",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-3934bc6ffcc078e807639627",
-      "title": "Awakening the Dragon–Showcasing the Building and Performance of an Asian Icon",
-      "url": "https://events.umich.edu/event/152125",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-3934bc6ffcc078e807639627",
-        "url": "https://events.umich.edu/event/152125",
-        "start": "2026-11-16T08:00:00-05:00",
-        "end": "2026-11-16T17:00:00-05:00",
-        "venue": "Weiser Hall",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-7bec2c2b6c0c4864e668fb4e",
-      "title": "Bill Smith: The Jeweler",
-      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-      "reason": "ValueError: venue quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-7bec2c2b6c0c4864e668fb4e",
-        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-        "start": "2026-07-09T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit, MI",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-8163aba47f8fdcc0eef2974f",
-      "title": "The Sounding Room: Na Bonsai",
-      "url": "https://mocadetroit.org/event/the-sounding-room-na-bonsai/",
-      "reason": "ValueError: HTTP 503: https://mocadetroit.org/event/the-sounding-room-na-bonsai/",
-      "inputFacts": {
-        "id": "occ-8163aba47f8fdcc0eef2974f",
-        "url": "https://mocadetroit.org/event/the-sounding-room-na-bonsai/",
-        "start": "2026-11-14T15:00:00-05:00",
-        "end": "2026-11-14T16:00:00-05:00",
-        "venue": "Museum of Contemporary Art Detroit (MOCAD)",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-b2e157ce105ec2b212058ec1",
-      "title": "John Santos Sextet",
-      "url": "https://events.umich.edu/event/152877",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-b2e157ce105ec2b212058ec1",
-        "url": "https://events.umich.edu/event/152877",
-        "start": "2026-11-13T19:00:00-05:00",
-        "end": "2026-11-13T21:00:00-05:00",
-        "venue": "East Quadrangle",
-        "city": "Ann Arbor",
-        "price": "Free - no tickets required",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-2660d2f257cbb99f333f96ba",
-      "title": "Georgia O’Keeffe: Architecture",
-      "url": "https://dia.org/events/exhibitions/georgia-okeeffe-architecture",
-      "reason": "ValueError: time quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-2660d2f257cbb99f333f96ba",
-        "url": "https://dia.org/events/exhibitions/georgia-okeeffe-architecture",
-        "start": "2026-09-11T00:00:00-04:00",
-        "end": "2027-01-03T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-515d0291bdb85e27c1947879",
+      "id": "occ-e5be6189d4be326bf779f510",
       "title": "GISES A New Celestial Film by Kevin Jerome Everson",
-      "url": "https://trinosophes.com/contact-form",
+      "url": "https://trinosophes.com",
       "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-515d0291bdb85e27c1947879",
-        "url": "https://trinosophes.com/contact-form",
+        "id": "occ-e5be6189d4be326bf779f510",
+        "url": "https://trinosophes.com",
         "start": "2026-11-14T11:00:00-05:00",
         "end": "2026-11-14T17:00:00-05:00",
         "venue": "Clara Stanton Jones Friends Auditorium, Detroit Public Library | Main Branch",
@@ -985,7 +1246,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
       "id": "occ-c1d6c6935f799bd73e91716d",
@@ -1002,24 +1263,41 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
-      "id": "occ-e8f9e4784645e34676c5c428",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-      "reason": "ValueError: Occurrence outside actionable window",
+      "id": "occ-7bec2c2b6c0c4864e668fb4e",
+      "title": "Bill Smith: The Jeweler",
+      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+      "reason": "ValueError: venue quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-e8f9e4784645e34676c5c428",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2027-01-03T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts (DIA)",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
+        "id": "occ-7bec2c2b6c0c4864e668fb4e",
+        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+        "start": "2026-07-09T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit, MI",
+        "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-88da62a91f1c89f00743fcca",
+      "title": "Jaden Tan, clarinet",
+      "url": "https://events.umich.edu/event/153884",
+      "reason": "ValueError: Editorial summary must contain 30-50 words",
+      "inputFacts": {
+        "id": "occ-88da62a91f1c89f00743fcca",
+        "url": "https://events.umich.edu/event/153884",
+        "start": "2026-11-15T14:00:00-05:00",
+        "end": "2026-11-15T15:00:00-05:00",
+        "venue": "Earl V. Moore Building",
+        "city": "Ann Arbor",
+        "price": "Free - no tickets required",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
       "id": "occ-a2899444066af979b51c15e2",
@@ -1036,41 +1314,41 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
-      "id": "occ-f8f7faf9bcb228c48d93890d",
-      "title": "Kathleen Beck, carillon",
-      "url": "https://events.umich.edu/event/154334",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "id": "occ-2660d2f257cbb99f333f96ba",
+      "title": "Georgia O’Keeffe: Architecture",
+      "url": "https://dia.org/events/exhibitions/georgia-okeeffe-architecture",
+      "reason": "ValueError: time quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-f8f7faf9bcb228c48d93890d",
-        "url": "https://events.umich.edu/event/154334",
-        "start": "2026-11-13T12:00:00-05:00",
-        "end": "2026-11-13T12:30:00-05:00",
-        "venue": "Burton Memorial Tower",
+        "id": "occ-2660d2f257cbb99f333f96ba",
+        "url": "https://dia.org/events/exhibitions/georgia-okeeffe-architecture",
+        "start": "2026-09-11T00:00:00-04:00",
+        "end": "2027-01-03T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-f76a512296799d55919b6bea",
+      "title": "Bo Chenoweth, jazz saxophone",
+      "url": "https://events.umich.edu/event/153885",
+      "reason": "ValueError: Editorial summary must contain 30-50 words",
+      "inputFacts": {
+        "id": "occ-f76a512296799d55919b6bea",
+        "url": "https://events.umich.edu/event/153885",
+        "start": "2026-11-15T17:00:00-05:00",
+        "end": "2026-11-15T18:00:00-05:00",
+        "venue": "Earl V. Moore Building",
         "city": "Ann Arbor",
         "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-e8414b8d9b885d76505aa2c4",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-e8414b8d9b885d76505aa2c4",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2026-12-11T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
       "id": "occ-d87783a7083a0e670a0003a7",
@@ -1087,47 +1365,30 @@
         "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
-      "id": "occ-6fe2a2396b5a076d71a4ca21",
-      "title": "Drag Queen Bingo  - Fri 9pm",
-      "url": "https://events.five15.net/event/drag-queen-bingo/drag-queen-bingo-fri-9pm-74",
-      "reason": "ValueError: End time lacks matching evidence",
+      "id": "occ-13ba204f2c1857fb362d1e0b",
+      "title": "33rd Ann Arbor Polish Film Festival",
+      "url": "https://annarborpolishfilmfestival.com",
+      "reason": "ValueError: Occurrence outside actionable window",
       "inputFacts": {
-        "id": "occ-6fe2a2396b5a076d71a4ca21",
-        "url": "https://events.five15.net/event/drag-queen-bingo/drag-queen-bingo-fri-9pm-74",
-        "start": "2026-11-13T21:00:00-05:00",
-        "end": null,
-        "venue": "Five15",
-        "city": "Royal Oak",
-        "price": "$25",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-ad4dd4b689b9f46d4c71c820",
-      "title": "20 Years of MOCAD: A Practice of Multiplicity – Parts II–IV",
-      "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
-      "reason": "ValueError: HTTP 503: https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
-      "inputFacts": {
-        "id": "occ-ad4dd4b689b9f46d4c71c820",
-        "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
-        "start": "2026-11-04T00:00:00-05:00",
-        "end": "2027-04-04T00:00:00-04:00",
-        "venue": "Julia Reyes Taubman Building",
-        "city": "Detroit",
+        "id": "occ-13ba204f2c1857fb362d1e0b",
+        "url": "https://annarborpolishfilmfestival.com",
+        "start": "2026-11-13T00:00:00-05:00",
+        "end": "2026-11-15T00:00:00-05:00",
+        "venue": "University of Michigan Museum of Natural History",
+        "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
       "id": "occ-48f3a39817ee996900fb9f6a",
       "title": "Nathaniel Gorman, voice",
       "url": "https://events.umich.edu/event/153881",
-      "reason": "Timeout: Failed to perform, curl: (28) Operation timed out after 1007654 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "reason": "ValueError: Editorial summary must contain 30-50 words",
       "inputFacts": {
         "id": "occ-48f3a39817ee996900fb9f6a",
         "url": "https://events.umich.edu/event/153881",
@@ -1138,41 +1399,41 @@
         "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
-      "id": "occ-d4e0985a31ae384a397b423f",
-      "title": "Night at the Museum",
-      "url": "https://mocadetroit.org/event/night-at-the-museum/",
-      "reason": "ValueError: Date/time quote conflicts with occurrence",
+      "id": "occ-e8f9e4784645e34676c5c428",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+      "reason": "ValueError: Occurrence outside actionable window",
       "inputFacts": {
-        "id": "occ-d4e0985a31ae384a397b423f",
-        "url": "https://mocadetroit.org/event/night-at-the-museum/",
-        "start": "2026-11-13T19:00:00-05:00",
-        "end": "2026-11-13T22:00:00-05:00",
-        "venue": "Museum of Contemporary Art Detroit (MOCAD)",
+        "id": "occ-e8f9e4784645e34676c5c428",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2027-01-03T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts (DIA)",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-ed39c87cf8189d4c4a6ddc35",
+      "title": "Reimagine Modern Art",
+      "url": "https://dia.org/events/exhibitions/reimagine-modern-art",
+      "reason": "ValueError: time quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-ed39c87cf8189d4c4a6ddc35",
+        "url": "https://dia.org/events/exhibitions/reimagine-modern-art",
+        "start": "2026-11-15T00:00:00-05:00",
+        "end": null,
+        "venue": "Detroit Institute of Arts (DIA)",
         "city": "Detroit",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-c4c862ed74ca166ee4b95e0a",
-      "title": "Who Votes? The Electoral College",
-      "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-c4c862ed74ca166ee4b95e0a",
-        "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-        "start": "2026-08-06T00:00:00-04:00",
-        "end": "2027-03-21T00:00:00-04:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit, MI",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
       "id": "occ-6de01bec300dfcf4d062a121",
@@ -1189,24 +1450,41 @@
         "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
-      "id": "occ-72d370048e7239a2d13742a7",
-      "title": "Out of the Ordinary | the work of John Ronan Architects",
-      "url": "https://events.umich.edu/event/152116",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "id": "occ-e8414b8d9b885d76505aa2c4",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+      "reason": "ValueError: registration quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-72d370048e7239a2d13742a7",
-        "url": "https://events.umich.edu/event/152116",
-        "start": "2026-11-13T18:00:00-05:00",
-        "end": "2026-11-13T21:00:00-05:00",
-        "venue": "305 W Liberty",
-        "city": "Ann Arbor",
-        "price": null,
+        "id": "occ-e8414b8d9b885d76505aa2c4",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2026-12-11T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-c7789dd39afa06971014b5b3",
+      "title": "Michigan Youth Chamber Singers & Michigan Youth Treble Singers",
+      "url": "https://events.umich.edu/event/148723",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-c7789dd39afa06971014b5b3",
+        "url": "https://events.umich.edu/event/148723",
+        "start": "2026-11-15T16:00:00-05:00",
+        "end": "2026-11-15T17:30:00-05:00",
+        "venue": "Walgreen Drama Center",
+        "city": "Ann Arbor",
+        "price": "Free - no tickets required",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
       "id": "occ-b3d2ccc7c68155b8eacfdc9a",
@@ -1223,24 +1501,41 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
-      "id": "occ-5f13fc34ff286d971d3db7ba",
-      "title": "The Tree of Eternity",
-      "url": "https://events.umich.edu/event/154133",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "id": "occ-ad4dd4b689b9f46d4c71c820",
+      "title": "20 Years of MOCAD: A Practice of Multiplicity – Parts II–IV",
+      "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
+      "reason": "ValueError: time quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-5f13fc34ff286d971d3db7ba",
-        "url": "https://events.umich.edu/event/154133",
-        "start": "2026-11-17T12:00:00-05:00",
-        "end": "2026-11-17T18:00:00-05:00",
-        "venue": "Duderstadt Center",
-        "city": "Ann Arbor",
+        "id": "occ-ad4dd4b689b9f46d4c71c820",
+        "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
+        "start": "2026-11-04T00:00:00-05:00",
+        "end": "2027-04-04T00:00:00-04:00",
+        "venue": "Julia Reyes Taubman Building",
+        "city": "Detroit",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-121364358153a8bd047129fe",
+      "title": "Michigan Youth Philharmonia Orchestra / Symphonic Band /  Symphony Orchestra Fall Performance",
+      "url": "https://events.umich.edu/event/148686",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-121364358153a8bd047129fe",
+        "url": "https://events.umich.edu/event/148686",
+        "start": "2026-11-15T16:30:00-05:00",
+        "end": "2026-11-15T19:30:00-05:00",
+        "venue": "Hill Auditorium",
+        "city": "Ann Arbor",
+        "price": "Free - no tickets required",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
       "id": "occ-dd7ddcaf6c4e198434ea08ab",
@@ -1257,41 +1552,41 @@
         "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     },
     {
-      "id": "occ-edb9d3c1ebdf1e8110a4d88b",
-      "title": "Paradise Theatre Big Band",
-      "url": "https://www.dso.org/events-and-tickets/events/26-27-fall/paradise-theatre-big-band?performance=11619",
-      "reason": "ValueError: Admission price unknown",
-      "inputFacts": {
-        "id": "occ-edb9d3c1ebdf1e8110a4d88b",
-        "url": "https://www.dso.org/events-and-tickets/events/26-27-fall/paradise-theatre-big-band?performance=11619",
-        "start": "2026-11-13T20:00:00-05:00",
-        "end": null,
-        "venue": "Orchestra Hall",
-        "city": "Detroit",
-        "price": "$20.55–$103.95",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
-    },
-    {
-      "id": "occ-ab6fbc29ab2c97f9d4863b8d",
-      "title": "\"Don't Let The Sun\": Chamber Choir & University Choir",
-      "url": "https://events.umich.edu/event/149480",
+      "id": "occ-d39f6057f04b3bf0c59a6c82",
+      "title": "Austin Zhu, carillon",
+      "url": "https://events.umich.edu/event/154335",
       "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-ab6fbc29ab2c97f9d4863b8d",
-        "url": "https://events.umich.edu/event/149480",
-        "start": "2026-11-17T20:00:00-05:00",
-        "end": "2026-11-17T22:00:00-05:00",
-        "venue": "Hill Auditorium",
+        "id": "occ-d39f6057f04b3bf0c59a6c82",
+        "url": "https://events.umich.edu/event/154335",
+        "start": "2026-11-16T12:00:00-05:00",
+        "end": "2026-11-16T12:30:00-05:00",
+        "venue": "Burton Memorial Tower",
         "city": "Ann Arbor",
         "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-13T05:45:48.675463-05:00"
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
+    },
+    {
+      "id": "occ-c4c862ed74ca166ee4b95e0a",
+      "title": "Who Votes? The Electoral College",
+      "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
+      "reason": "ValueError: Occurrence outside actionable window",
+      "inputFacts": {
+        "id": "occ-c4c862ed74ca166ee4b95e0a",
+        "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
+        "start": "2026-08-06T00:00:00-04:00",
+        "end": "2027-03-21T00:00:00-04:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit, MI",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-14T05:28:35.751930-05:00"
     }
   ]
 }
