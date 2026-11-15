@@ -1,8 +1,66 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-14T06:45:39.859414-05:00",
+  "generatedAt": "2026-11-15T06:41:26.319694-05:00",
   "stories": [
+    {
+      "id": "science-a2daa312bdf773c7",
+      "title": "James Webb telescope finds ice older than the star it orbits",
+      "summary": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice is amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds.",
+      "finding": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice is amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds.",
+      "significance": "The composition resembles Solar System comets, suggesting the fundamental icy ingredients necessary to form water-rich and potentially habitable planets may be common around young stars.",
+      "caveat": "Researchers could not determine the precise amount of crystalline ice present or rule out the presence of other hidden molecules within the ice mixture.",
+      "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-14T12:15:48+00:00",
+      "firstSeenAt": "2026-11-15T11:01:01.250099Z",
+      "checkedAt": "2026-11-15T11:01:01.250099Z",
+      "verifiedAt": "2026-11-15T11:01:01.250099Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "Beta Pictoris",
+        "Science",
+        "Sarah Betti",
+        "Space Telescope Science Institute",
+        "James Webb Space Telescope"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1126/science.adw7770",
+      "sourceUpdatedAt": "2026-11-13T20:54:24Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-15T06:41:26.319694-05:00",
+        "expiresAt": "2026-11-18T06:41:26.319694-05:00",
+        "inputFacts": {
+          "id": "science-a2daa312bdf773c7",
+          "title": "James Webb telescope finds ice older than the star it orbits",
+          "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
+          "publishedAt": "2026-11-14T12:15:48Z",
+          "summary": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
+          "finding": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
+          "sourceUpdatedAt": "2026-11-13T20:54:24Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-14T12:15:48+00:00",
+        "datePrecision": "time",
+        "sourceHash": "2edef6400c7151d42331e99f07c6ec4d4cdb786d443727e641ceb83f4db9b912",
+        "relevance": 5,
+        "novelty": 5,
+        "reason": "Substantive new finding about the origins of planetary systems and potential for water-rich worlds, directly relevant to astronomy interests.",
+        "storyKey": "jwst-beta-pictoris-ice-discovery",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice was found to be amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds."
+      }
+    },
     {
       "id": "science-7b0b0a977258a502",
       "title": "In elephants, the resilience of communities has its limits",
@@ -172,67 +230,24 @@
         "grounded": true,
         "groundingReason": "The article confirms a robot autonomously assembled a 1.4-meter radio antenna structure in space as part of a DARPA initiative, and that the construction is not yet fully completed, aligning with all claims in the summary. This represents a new technical advance in in-orbit manufacturing."
       }
-    },
-    {
-      "id": "science-780a35cbfb8cfbda",
-      "title": "Some PFAS chemicals are declining in English rivers but others are appearing",
-      "summary": "A UK Environment Agency report indicates that concentrations of two legacy PFAS chemicals, PFOS and PFOA, in English rivers have declined by nearly 30% over the past decade, following global restrictions. However, other replacement PFAS chemicals, including short-chain PFAS and fluorotelomer compounds, are now emerging at detectable levels, complicating efforts to manage these persistent pollutants.",
-      "finding": "A UK Environment Agency report indicates that concentrations of two legacy PFAS chemicals, PFOS and PFOA, in English rivers have declined by nearly 30% over the past decade, following global restrictions. However, other replacement PFAS chemicals, including short-chain PFAS and fluorotelomer compounds, are now emerging at detectable levels, complicating efforts to manage these persistent pollutants.",
-      "significance": "The results demonstrate the efficacy of global restrictions on legacy forever chemicals, but highlight how replacement compounds are accumulating in freshwater ecosystems.",
-      "caveat": "Despite the decline, recorded PFOS concentrations often remain above Environmental Quality Standards, and the environmental and health impacts of replacement PFAS remain relatively understudied.",
-      "url": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
-      "primarySourceUrl": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-12T00:01:00+00:00",
-      "firstSeenAt": "2026-11-12T11:00:48.186424Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "earth-science",
-        "health"
-      ],
-      "entities": [
-        "River Wye",
-        "Environment Agency",
-        "International Agency for Research on Cancer",
-        "University of York",
-        "Liverpool John Moores University"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://pubs.rsc.org/em/article/doi/10.1039/d6em00715e/1379687/National-scale-monitoring-reveals-widespread?searchresult=1",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-12T06:24:06.133284-05:00",
-        "expiresAt": "2026-11-15T06:24:06.133284-05:00",
-        "inputFacts": {
-          "id": "science-780a35cbfb8cfbda",
-          "title": "Some PFAS chemicals are declining in English rivers but others are appearing",
-          "url": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
-          "publishedAt": "2026-11-12T00:01:00Z",
-          "summary": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
-          "finding": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-12T00:01:00+00:00",
-        "datePrecision": "time",
-        "sourceHash": "61858b9b067cc2a074c4f0916082630f744075b68b49b4a36e4ea86ef2fd9b20",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The article presents a new finding regarding the effectiveness of global restrictions on specific PFAS chemicals while highlighting the emerging challenge of replacement chemicals. This is a substantive development in environmental science with broad implications for public health and policy.",
-        "storyKey": "pfas-decline-replacement-emergence",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article supports all claims in the summary, including specific chemicals, percentage declines, and the emergence of replacement PFAS. The finding represents a new scientific observation regarding the effectiveness of global restrictions and the evolving challenge of PFAS pollution."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-a2daa312bdf773c7",
+      "inputFacts": {
+        "id": "science-a2daa312bdf773c7",
+        "title": "James Webb telescope finds ice older than the star it orbits",
+        "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
+        "publishedAt": "2026-11-14T12:15:48Z",
+        "summary": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
+        "finding": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
+        "sourceUpdatedAt": "2026-11-13T20:54:24Z"
+      },
+      "publishedAt": "2026-11-14T12:15:48+00:00",
+      "publicationEvidence": "2026-11-14T12:15:48+00:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-7b0b0a977258a502",
       "inputFacts": {
@@ -246,6 +261,36 @@
       },
       "publishedAt": "2026-11-13T20:03:13+00:00",
       "publicationEvidence": "2026-11-13T20:03:13+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-db77468d0c868614",
+      "inputFacts": {
+        "id": "science-db77468d0c868614",
+        "title": "Noise pollution is reshaping the health and behaviour of animals everywhere",
+        "url": "https://www.newscientist.com/article/2598675-noise-pollution-is-reshaping-the-health-and-behaviour-of-animals-everywhere",
+        "publishedAt": "2026-11-13T18:00:00Z",
+        "summary": "A meta-analysis revealed that anthropogenic noise pollution alters physiological, developmental, or behavioural traits in 80 percent of studied aquatic and terrestrial species across every major habitat.",
+        "finding": "A meta-analysis revealed that anthropogenic noise pollution alters physiological, developmental, or behavioural traits in 80 percent of studied aquatic and terrestrial species across every major habitat.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-13T18:00:00+00:00",
+      "publicationEvidence": "2026-11-13T18:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-ce7effe6f03652f6",
+      "inputFacts": {
+        "id": "science-ce7effe6f03652f6",
+        "title": "Did El Niño cause an early breakdown in the polar vortex?",
+        "url": "https://www.newscientist.com/article/2599008-did-el-nino-cause-an-early-breakdown-in-the-polar-vortex",
+        "publishedAt": "2026-11-13T17:55:02Z",
+        "summary": "The Arctic polar vortex suffered a record-early breakdown on November 10, with wind reversals occurring earlier than at any point since balloon records began in the 1950s.",
+        "finding": "The Arctic polar vortex suffered a record-early breakdown on November 10, with wind reversals occurring earlier than at any point since balloon records began in the 1950s.",
+        "sourceUpdatedAt": "2026-11-13T18:21:18Z"
+      },
+      "publishedAt": "2026-11-13T17:55:02+00:00",
+      "publicationEvidence": "2026-11-13T17:55:02+00:00",
       "datePrecision": "time"
     },
     {
@@ -369,63 +414,18 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-780a35cbfb8cfbda",
+      "id": "science-808b4a1d23d0d5e6",
       "inputFacts": {
-        "id": "science-780a35cbfb8cfbda",
-        "title": "Some PFAS chemicals are declining in English rivers but others are appearing",
-        "url": "https://www.newscientist.com/article/2598571-some-pfas-chemicals-are-declining-in-english-rivers-but-others-are-appearing",
-        "publishedAt": "2026-11-12T00:01:00Z",
-        "summary": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
-        "finding": "Concentrations of PFOS and PFOA in English rivers dropped by 30% and 29% respectively over the past decade, while replacement PFAS such as short-chain compounds have emerged.",
-        "sourceUpdatedAt": null
+        "id": "science-808b4a1d23d0d5e6",
+        "title": "Winemakers are learning that conservation can be good for business",
+        "url": "https://arstechnica.com/science/2026/11/winemakers-are-learning-that-conservation-can-be-good-for-business",
+        "publishedAt": "2026-11-14T12:05:51Z",
+        "summary": "An analysis of 107 vineyards in South Africa's Western Cape showed that many wine producers view soil and wildlife conservation not as a hindrance, but as an essential strategy for long-term business resilience against climate variability.",
+        "finding": "An analysis of 107 vineyards in South Africa's Western Cape showed that many wine producers view soil and wildlife conservation not as a hindrance, but as an essential strategy for long-term business resilience against climate variability.",
+        "sourceUpdatedAt": "2026-11-14T19:05:58Z"
       },
-      "publishedAt": "2026-11-12T00:01:00+00:00",
-      "publicationEvidence": "2026-11-12T00:01:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-ac9927faad7ed128",
-      "inputFacts": {
-        "id": "science-ac9927faad7ed128",
-        "title": "Light is hard to block from every direction. This physicist found a way",
-        "url": "https://www.sciencenews.org/article/light-block-direction-physicist-sn10",
-        "publishedAt": "2026-11-11T12:00:00Z",
-        "summary": "Physicist Stefano Martiniani designed a new class of metamaterials called gyromorphs that combine crystal-like geometry and liquidlike randomness to block light from penetrating at any angle.",
-        "finding": "Physicist Stefano Martiniani designed a new class of metamaterials called gyromorphs that combine crystal-like geometry and liquidlike randomness to block light from penetrating at any angle.",
-        "sourceUpdatedAt": "2026-11-11T12:00:00Z"
-      },
-      "publishedAt": "2026-11-11T07:00:00-05:00",
-      "publicationEvidence": "2026-11-11T07:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-f881bc45f9b01c42",
-      "inputFacts": {
-        "id": "science-f881bc45f9b01c42",
-        "title": "APOD: 2026 November 11 – NGC 4449: Small Galaxy, Big Impact",
-        "url": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact",
-        "publishedAt": "2026-11-11T05:05:00Z",
-        "summary": "Observations show NGC 4449 and similar dwarf galaxies lack more oxygen than expected by models, suggesting stellar winds and supernovae effectively expel oxygen and heavy elements into space.",
-        "finding": "Observations show NGC 4449 and similar dwarf galaxies lack more oxygen than expected by models, suggesting stellar winds and supernovae effectively expel oxygen and heavy elements into space.",
-        "sourceUpdatedAt": "2026-11-11T05:05:00Z"
-      },
-      "publishedAt": "2026-11-11T00:05:00-05:00",
-      "publicationEvidence": "2026-11-11T00:05:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-6c2824fb2757db42",
-      "inputFacts": {
-        "id": "science-6c2824fb2757db42",
-        "title": "The Case for a Bubble at Life’s Start",
-        "url": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110",
-        "publishedAt": "2026-11-10T15:08:35Z",
-        "summary": "The lipid-first theory suggests life began with self-enclosed lipid membranes that gathered chemistry and underwent evolution through compositional inheritance.",
-        "finding": "The lipid-first theory suggests life began with self-enclosed lipid membranes that gathered chemistry and underwent evolution through compositional inheritance.",
-        "sourceUpdatedAt": "2026-11-10T15:08:56Z"
-      },
-      "publishedAt": "2026-11-10T15:08:35+00:00",
-      "publicationEvidence": "2026-11-10T15:08:35+00:00",
+      "publishedAt": "2026-11-14T12:05:51+00:00",
+      "publicationEvidence": "2026-11-14T12:05:51+00:00",
       "datePrecision": "time"
     },
     {
@@ -472,32 +472,9 @@
       "publishedAt": "2026-11-13T09:00:00+00:00",
       "publicationEvidence": "2026-11-13T09:00:00+00:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-ed14340572225b1f",
-      "inputFacts": {
-        "id": "science-ed14340572225b1f",
-        "title": "The Evolving Story of How Chemistry Became Biology",
-        "url": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112",
-        "publishedAt": "2026-11-12T15:45:27Z",
-        "summary": "Origins-of-life researchers are shifting away from single-molecule theories toward integrative frameworks that examine how complex molecular mixtures transitioned into stable evolutionary systems.",
-        "finding": "Origins-of-life researchers are shifting away from single-molecule theories toward integrative frameworks that examine how complex molecular mixtures transitioned into stable evolutionary systems.",
-        "sourceUpdatedAt": "2026-11-13T17:04:21Z"
-      },
-      "publishedAt": "2026-11-12T15:45:27+00:00",
-      "publicationEvidence": "2026-11-12T15:45:27+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-13",
-      "selectedIds": [
-        "science-780a35cbfb8cfbda",
-        "science-b0cd481433eb7ca1",
-        "science-e9755bd1cb6983f9"
-      ]
-    },
     {
       "date": "2026-11-14",
       "selectedIds": [
@@ -512,6 +489,14 @@
         "science-b0cd481433eb7ca1",
         "science-e9755bd1cb6983f9",
         "science-7b0b0a977258a502"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "selectedIds": [
+        "science-a2daa312bdf773c7",
+        "science-b0cd481433eb7ca1",
+        "science-e9755bd1cb6983f9"
       ]
     }
   ]
