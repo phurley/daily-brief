@@ -1,8 +1,98 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-11-14T02:28:58.396435-05:00",
+  "generatedAt": "2026-11-15T02:06:48.486184-05:00",
   "stories": [
+    {
+      "id": "ann-arbor-launches-new-crisis-response-t-news-2026-11-14",
+      "title": "Ann Arbor launches new crisis response team",
+      "summary": "Ann Arbor has launched a new crisis response team, A2 REACH, partnering an Ann Arbor Police officer with a licensed social worker to respond to individuals experiencing mental health crises. The team aims to provide support and direct individuals to appropriate services, rather than involving them in the criminal justice system.",
+      "url": "https://www.wemu.org/wemu-news/2026-11-14/ann-arbor-launches-new-crisis-response-team",
+      "publishedAt": "2026-11-14T13:06:00-05:00",
+      "addedAt": "2026-11-15T02:00:07-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Ann Arbor Police Department",
+        "Washtenaw County Community Mental Health",
+        "Nicole Berent",
+        "Anya Shinabery",
+        "A2 REACH"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "public safety",
+        "mental health",
+        "local government",
+        "police"
+      ],
+      "source": {
+        "name": "Kevin Meerschaert",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.23,
+          "eclectic": 0.12,
+          "technical_science": 0.07,
+          "artsy": 0.02,
+          "progressive": 0.8,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.1,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.03
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/1232986/2147483647/strip/true/crop/884x499+0+0/resize/610x344!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fff%2F3a%2Fe9bda46749038901dd6db934cd11%2Fa2reach-berent-shinabery.png",
+        "alt": "Washtenaw County Mental Health Co-response Clinician Nicole Berent (left) and Ann Arbor Police Officer Anya Shinabery of the A2 REACH team."
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-15T02:06:48.486184-05:00",
+        "expiresAt": "2026-11-18T02:06:48.486184-05:00",
+        "inputFacts": {
+          "id": "ann-arbor-launches-new-crisis-response-t-news-2026-11-14",
+          "title": "Ann Arbor launches new crisis response team",
+          "url": "https://www.wemu.org/wemu-news/2026-11-14/ann-arbor-launches-new-crisis-response-team",
+          "publishedAt": "2026-11-14T00:00:00-05:00",
+          "summary": "The Ann Arbor Police Department has established a new crisis response partnership with Washtenaw County Community Mental Health. The initiative, known as the A2 REACH team, aims to improve how the city handles mental health-related emergencies.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-14T13:06:00",
+        "datePrecision": "time",
+        "sourceHash": "bc7efe0eb643b38ae3817bd65cd43d9709d2708abfa59f09aebe3cd1bbc3f903",
+        "relevance": 3,
+        "novelty": 3,
+        "reason": "New public service initiative in a nearby community with potential impact on how mental health crises are handled, offering an alternative to traditional law enforcement responses.",
+        "storyKey": "ann-arbor-crisis-response-team",
+        "localConnection": "Ann Arbor is a nearby community, and this initiative represents a new approach to public services that could be relevant to surrounding areas.",
+        "grounded": true,
+        "groundingReason": "The article confirms the launch of A2 REACH in Ann Arbor, its partnership between an Ann Arbor Police officer and a licensed social worker, and its goal to provide support and direct individuals to services rather than involving them in the criminal justice system. This is a new local development."
+      }
+    },
     {
       "id": "michigan-s-arab-american-news-publisher-news-2026-11-13",
       "title": "Michigan’s Arab American News publisher sues Mike Rogers, campaign over alleged defamation",
@@ -383,190 +473,24 @@
         "grounded": true,
         "groundingReason": "The summary accurately reflects the article's content regarding regional deer management in Southern Michigan, including specific communities, methods, and goals. The article details new and ongoing local initiatives to address a significant community issue."
       }
-    },
-    {
-      "id": "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
-      "title": "Canton woman gets 16 insurance notices for treatments she never had; provider found billing under her name",
-      "summary": "A Canton woman received 16 insurance notices for medical treatments she never had, including cancer care. After media intervention, UnitedHealthcare stated a Florida provider billed the claims in her name. The insurer denied the claims, confirming she has no financial responsibility, and explained that benefit statements are issued even for denied claims.",
-      "url": "https://www.clickondetroit.com/news/local/2026/11/10/canton-woman-gets-16-insurance-notices-for-treatments-she-never-had-fl-provider-found-billing-under-her-name/",
-      "publishedAt": "2026-11-10T22:17:23.568000+00:00",
-      "addedAt": "2026-11-11T04:09:00-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Susan Kelly",
-        "UnitedHealthcare",
-        "Local 4",
-        "Kyla Russell",
-        "Erik Yettaw"
-      ],
-      "locations": [
-        "Canton",
-        "Canton Township",
-        "Wayne County",
-        "Florida"
-      ],
-      "localityIndex": 0,
-      "topics": [
-        "insurance fraud",
-        "medical billing",
-        "consumer protection",
-        "healthcare"
-      ],
-      "source": {
-        "name": "Kyla Russell",
-        "publication": "All About Ann Arbor (WDIV ClickOnDetroit)"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.01,
-          "distinctive": 0.65,
-          "eclectic": 0.12,
-          "technical_science": 0.1,
-          "artsy": 0.02,
-          "progressive": 0.1,
-          "outdoors": 0.01,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.04,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.02,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        }
-      },
-      "photo": {
-        "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/7a397c08-64ca-49ca-bc67-f9d3f31241a3/image.jpg?api_key=clickondetroit_06f87fefb2123598",
-        "alt": "Canton woman gets 16 insurance notices for treatments she never had"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-11T04:26:42.596780-05:00",
-        "expiresAt": "2026-11-14T04:26:42.596780-05:00",
-        "inputFacts": {
-          "id": "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
-          "title": "Canton woman gets 16 insurance notices for treatments she never had; provider found billing under her name",
-          "url": "https://www.clickondetroit.com/news/local/2026/11/10/canton-woman-gets-16-insurance-notices-for-treatments-she-never-had-fl-provider-found-billing-under-her-name/",
-          "publishedAt": "2026-11-10T17:17:00-05:00",
-          "summary": "A Canton woman received 16 insurance benefit statements for medical procedures she never underwent, including cancer treatments. After she spent over a year seeking resolution from her insurer and doctor, Local 4 intervened and discovered a Florida-based provider had been billing under her name. UnitedHealthcare has since denied the claims and confirmed the woman has no financial responsibility.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-10T22:17:23.568Z",
-        "datePrecision": "time",
-        "sourceHash": "28404fe53c4acb59c6008df545c5609324558e04e01a10f9b97e51355803d092",
-        "relevance": 4,
-        "novelty": 3,
-        "reason": "This story directly impacts a Canton resident and highlights a significant consumer issue with insurance billing and potential fraud, which is relevant to household costs and public services.",
-        "storyKey": "canton-woman-insurance-fraud-notices",
-        "localConnection": "Canton, Michigan resident affected by insurance billing issues.",
-        "grounded": true,
-        "groundingReason": "The summary accurately reflects the article's details about a Canton woman receiving fraudulent medical bills, the intervention of local media, and the resolution provided by UnitedHealthcare. This is a useful local development for Canton residents regarding insurance fraud and consumer protection."
-      }
-    },
-    {
-      "id": "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11",
-      "title": "Priced out: Why Ann Arbor housing keeps getting more expensive, and what the city is doing about it",
-      "summary": "Ann Arbor's housing costs are significantly higher than national averages, with median home prices rising nearly 50% since 2016 to $618,838. The city's Comprehensive Land Use Plan, approved in March 2026, aims to address this by opening up single-family areas to low-rise residential developments, despite some community concerns about gentrification and green spaces.",
-      "url": "https://www.michigandaily.com/news/ann-arbor/priced-out-why-ann-arbor-housing-keeps-getting-more-expensive-and-what-the-city-is-doing-about-it/",
-      "publishedAt": "2026-11-11T05:42:44+00:00",
-      "addedAt": "2026-11-11T04:09:00-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Caleb Obico",
-        "The Michigan Daily"
-      ],
-      "locations": [
-        "Ann Arbor"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "housing",
-        "affordability",
-        "real estate",
-        "cost of living",
-        "urban planning"
-      ],
-      "source": {
-        "name": "Caleb Obico",
-        "publication": "The Michigan Daily"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.03,
-          "distinctive": 0.09,
-          "eclectic": 0.1,
-          "technical_science": 0.07,
-          "artsy": 0.04,
-          "progressive": 0.46,
-          "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.02,
-          "farmer_market": 0.02,
-          "sporting": 0.01,
-          "recurring": 0.13,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.02,
-          "large_venue": 0.05,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.03,
-          "children_activity": 0.02,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/11/T8A9241.jpg?resize=1200%2C900&ssl=1",
-        "alt": "Ann Arbor cityscape"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-11T04:26:42.596780-05:00",
-        "expiresAt": "2026-11-14T04:26:42.596780-05:00",
-        "inputFacts": {
-          "id": "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11",
-          "title": "Priced out: Why Ann Arbor housing keeps getting more expensive, and what the city is doing about it",
-          "url": "https://www.michigandaily.com/news/ann-arbor/priced-out-why-ann-arbor-housing-keeps-getting-more-expensive-and-what-the-city-is-doing-about-it/",
-          "publishedAt": "2026-11-11T00:00:00-05:00",
-          "summary": "The cost of living in Ann Arbor continues to rise, creating significant challenges for both students and long-term residents. The article explores the factors driving the housing shortage and examines the city's ongoing efforts to address affordability.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-11T05:42:44+00:00",
-        "datePrecision": "time",
-        "sourceHash": "201e1a9abda2ec0043de1a3914705ee5de39adce90ae10e2ecda882e88bcb1b9",
-        "relevance": 4,
-        "novelty": 3,
-        "reason": "Ann Arbor's housing market directly impacts Canton/Plymouth residents who may commute there for work or education. The city's efforts to address housing affordability are a relevant civic decision for the broader regional community.",
-        "storyKey": "ann-arbor-housing-affordability-plan",
-        "localConnection": "Ann Arbor is a major employment and education hub for Canton/Plymouth residents, making its housing affordability a direct concern for the local community.",
-        "grounded": true,
-        "groundingReason": "The article supports all claims in the summary, including the specific financial figures, the plan's approval date, and the nature of community concerns. The article details a significant local development regarding Ann Arbor's housing policy and its potential impact on residents."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "ann-arbor-launches-new-crisis-response-t-news-2026-11-14",
+      "inputFacts": {
+        "id": "ann-arbor-launches-new-crisis-response-t-news-2026-11-14",
+        "title": "Ann Arbor launches new crisis response team",
+        "url": "https://www.wemu.org/wemu-news/2026-11-14/ann-arbor-launches-new-crisis-response-team",
+        "publishedAt": "2026-11-14T00:00:00-05:00",
+        "summary": "The Ann Arbor Police Department has established a new crisis response partnership with Washtenaw County Community Mental Health. The initiative, known as the A2 REACH team, aims to improve how the city handles mental health-related emergencies.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-14T13:06:00-05:00",
+      "publicationEvidence": "2026-11-14T13:06:00",
+      "datePrecision": "time"
+    },
     {
       "id": "michigan-s-arab-american-news-publisher-news-2026-11-13",
       "inputFacts": {
@@ -628,48 +552,33 @@
       "datePrecision": "time"
     },
     {
-      "id": "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
+      "id": "ann-arbor-s-sustainable-energy-utility-p-news-2026-11-14",
       "inputFacts": {
-        "id": "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
-        "title": "Canton woman gets 16 insurance notices for treatments she never had; provider found billing under her name",
-        "url": "https://www.clickondetroit.com/news/local/2026/11/10/canton-woman-gets-16-insurance-notices-for-treatments-she-never-had-fl-provider-found-billing-under-her-name/",
-        "publishedAt": "2026-11-10T17:17:00-05:00",
-        "summary": "A Canton woman received 16 insurance benefit statements for medical procedures she never underwent, including cancer treatments. After she spent over a year seeking resolution from her insurer and doctor, Local 4 intervened and discovered a Florida-based provider had been billing under her name. UnitedHealthcare has since denied the claims and confirmed the woman has no financial responsibility.",
+        "id": "ann-arbor-s-sustainable-energy-utility-p-news-2026-11-14",
+        "title": "Ann Arbor's Sustainable Energy Utility pilot program expands to more neighborhoods",
+        "url": "https://www.wemu.org/wemu-news/2026-11-14/ann-arbors-sustainable-energy-utility-pilot-program-expands-to-more-neighborhoods",
+        "publishedAt": "2026-11-14T08:05:00-05:00",
+        "summary": "The City of Ann Arbor is expanding its Sustainable Energy Utility pilot program beyond the Bryant neighborhood to include income-eligible residents. The program, which provides solar panels and battery installations, plans to offer energy options to all city residents and businesses by 2027.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-10T22:17:23.568000+00:00",
-      "publicationEvidence": "2026-11-10T22:17:23.568Z",
+      "publishedAt": "2026-11-14T13:05:00-05:00",
+      "publicationEvidence": "2026-11-14T13:05:00",
       "datePrecision": "time"
     },
     {
-      "id": "university-of-michigan-detroit-tigers-pa-news-2026-11-09",
+      "id": "distracted-driver-injures-pontiac-pedest-news-2026-11-14",
       "inputFacts": {
-        "id": "university-of-michigan-detroit-tigers-pa-news-2026-11-09",
-        "title": "University of Michigan, Detroit Tigers PA announcer Zach Linfield injured in car crash after MSU game",
-        "url": "https://www.clickondetroit.com/all-about-ann-arbor/2026/11/10/michigan-wolverines-detroit-tigers-pa-announcer-zach-linfield-injured-in-car-crash-after-msu-game/",
-        "publishedAt": "2026-11-09T21:10:00-05:00",
-        "summary": "Public address announcer Zach Linfield was injured in a car accident after the Michigan-Michigan State game on Saturday night. Linfield reported suffering bruises, chemical burns, and finger injuries when his airbags deployed after being struck by another driver.",
+        "id": "distracted-driver-injures-pontiac-pedest-news-2026-11-14",
+        "title": "Distracted driver injures Pontiac pedestrian pushing cart, police say",
+        "url": "https://www.hometownlife.com/story/news/crime/2026/11/13/pontiac-pedestrian-injured-crash-distracted-driver/92759011007/",
+        "publishedAt": "2026-11-14T07:16:00-05:00",
+        "summary": "A 42-year-old woman is in grave condition after being struck by a distracted driver while crossing Baldwin Avenue in Pontiac on November 12. The Oakland County Sheriff's Office is investigating the crash, noting that streetlights in the area were not operational at the time of the incident.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-10T02:10:51.924000+00:00",
-      "publicationEvidence": "2026-11-10T02:10:51.924Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11",
-      "inputFacts": {
-        "id": "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11",
-        "title": "Priced out: Why Ann Arbor housing keeps getting more expensive, and what the city is doing about it",
-        "url": "https://www.michigandaily.com/news/ann-arbor/priced-out-why-ann-arbor-housing-keeps-getting-more-expensive-and-what-the-city-is-doing-about-it/",
-        "publishedAt": "2026-11-11T00:00:00-05:00",
-        "summary": "The cost of living in Ann Arbor continues to rise, creating significant challenges for both students and long-term residents. The article explores the factors driving the housing shortage and examines the city's ongoing efforts to address affordability.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-11T05:42:44+00:00",
-      "publicationEvidence": "2026-11-11T05:42:44+00:00",
+      "publishedAt": "2026-11-13T18:17:32+00:00",
+      "publicationEvidence": "2026-11-13T18:17:32Z",
       "datePrecision": "time"
     },
     {
@@ -733,6 +642,36 @@
       "datePrecision": "time"
     },
     {
+      "id": "new-federal-order-keeping-michigan-coal-news-2026-11-14",
+      "inputFacts": {
+        "id": "new-federal-order-keeping-michigan-coal-news-2026-11-14",
+        "title": "New federal order keeping Michigan coal plant open cites winter storms",
+        "url": "https://www.michiganpublic.org/transportation-infrastructure/2026-11-14/new-federal-order-keeping-michigan-coal-plant-open-cites-winter-storms",
+        "publishedAt": "2026-11-14T12:46:00-05:00",
+        "summary": "The U.S. Department of Energy has issued a new 90-day emergency order requiring the J.H. Campbell coal-fired power plant in Ottawa County to remain operational, citing potential winter energy shortages. This move continues a legal dispute with the state of Michigan, which has challenged the federal government's authority to keep the plant open past its planned 2025 retirement.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-14T17:46:28.244000-05:00",
+      "publicationEvidence": "2026-11-14T17:46:28.244",
+      "datePrecision": "time"
+    },
+    {
+      "id": "thornetta-davis-dames-brown-lizzy-mcalpi-news-2026-11-14",
+      "inputFacts": {
+        "id": "thornetta-davis-dames-brown-lizzy-mcalpi-news-2026-11-14",
+        "title": "Thornetta Davis, Dames Brown, Lizzy McAlpine + more | Rob Reinhart’s Essential Music",
+        "url": "https://wdet.org/2026/11/14/thornetta-davis-dames-brown-lizzy-mcalpine-more-rob-reinharts-essential-music/",
+        "publishedAt": "2026-11-14T00:00:00Z",
+        "summary": "Rob Reinhart hosts his weekly music program, \"Rob Reinhart’s Essential Music,\" featuring artists such as Thornetta Davis, Dames Brown, and Lizzy McAlpine. The show airs every Saturday from 2-4 p.m. ET on Detroit Public Radio 101.9 WDET.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-14T20:40:15+00:00",
+      "publicationEvidence": "2026-11-14T20:40:15+00:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "an-anti-muslim-flyer-targeted-a-taylor-r-news-2026-11-13",
       "inputFacts": {
         "id": "an-anti-muslim-flyer-targeted-a-taylor-r-news-2026-11-13",
@@ -748,55 +687,30 @@
       "datePrecision": "time"
     },
     {
-      "id": "detroit-school-board-candidate-raises-ov-news-2026-11-13",
+      "id": "flights-halted-at-airports-across-us-due-news-2026-11-13",
       "inputFacts": {
-        "id": "detroit-school-board-candidate-raises-ov-news-2026-11-13",
-        "title": "Detroit school board candidate raises over $75,500 in 2026 election",
-        "url": "https://www.chalkbeat.org/detroit/2026/10/29/dpscd-candidate-raises-bulk-of-campaign-funds-ahead-of-election/",
-        "publishedAt": "2026-11-13T00:00:00-05:00",
-        "summary": "Detroit school board candidate Dr. Jameel Smith has raised over $75,500 for the 2026 election, significantly outpacing other candidates in campaign funding. Smith utilized these funds to hire professional campaign staff and consultants, while other candidates reported minimal or no expenditures for traditional advertising.",
+        "id": "flights-halted-at-airports-across-us-due-news-2026-11-13",
+        "title": "Flights halted at airports across US due to unspecified ‘extraordinary circumstances,’ FAA says",
+        "url": "https://www.michiganpublic.org/politics-government/2026-11-13/flights-halted-at-airports-across-us-due-to-unspecified-extraordinary-circumstances-faa-says",
+        "publishedAt": "2026-11-13T16:35:00-05:00",
+        "summary": "The Federal Aviation Administration has issued a nationwide ground stop for all flights due to communications issues at regional air traffic control centers. Transportation Secretary Sean Duffy confirmed that technicians are investigating the outage, which is the first of its kind since January 2023.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-10-29T06:00:01-04:00",
-      "publicationEvidence": "2026-10-29T06:00:01-0400",
-      "datePrecision": "time"
-    },
-    {
-      "id": "el-sayed-backs-maryland-s-chris-van-holl-news-2026-11-13",
-      "inputFacts": {
-        "id": "el-sayed-backs-maryland-s-chris-van-holl-news-2026-11-13",
-        "title": "El-Sayed backs Maryland’s Chris Van Hollen as US Senate majority leader battle begins",
-        "url": "https://michiganadvance.com/2026/11/13/el-sayed-backs-marylands-chris-van-hollen-as-u-s-senate-majority-leader-battle-begins/",
-        "publishedAt": "2026-11-13T00:00:00-05:00",
-        "summary": "Michigan senator-elect Abdul El-Sayed has endorsed Maryland Senator Chris Van Hollen in his challenge against Chuck Schumer for the U.S. Senate majority leader position. The move follows the Democratic party's recent success in the November 3 election, with El-Sayed calling for new leadership to better represent working families.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-13T10:32:12+00:00",
-      "publicationEvidence": "2026-11-13T10:32:12+00:00",
+      "publishedAt": "2026-11-13T21:35:41.390000-05:00",
+      "publicationEvidence": "2026-11-13T21:35:41.39",
       "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-13",
-      "selectedIds": [
-        "plymouth-testing-cameras-at-train-crossi-news-2026-11-11",
-        "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11",
-        "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
-        "southern-michigan-communities-turn-to-re-news-2026-11-12",
-        "michigan-s-arab-american-news-publisher-news-2026-11-13"
-      ]
-    },
-    {
       "date": "2026-11-14",
       "selectedIds": [
         "plymouth-testing-cameras-at-train-crossi-news-2026-11-11",
         "southern-michigan-communities-turn-to-re-news-2026-11-12",
-        "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11",
-        "canton-woman-gets-16-insurance-notices-f-news-2026-11-10",
-        "michigan-s-arab-american-news-publisher-news-2026-11-13"
+        "michigan-s-arab-american-news-publisher-news-2026-11-13",
+        "an-herbicide-had-a-strange-effect-on-thi-news-2026-11-13",
+        "ann-arbor-launches-new-crisis-response-t-news-2026-11-14"
       ]
     },
     {
@@ -806,7 +720,17 @@
         "michigan-s-arab-american-news-publisher-news-2026-11-13",
         "an-herbicide-had-a-strange-effect-on-thi-news-2026-11-13",
         "southern-michigan-communities-turn-to-re-news-2026-11-12",
-        "priced-out-why-ann-arbor-housing-keeps-g-news-2026-11-11"
+        "ann-arbor-launches-new-crisis-response-t-news-2026-11-14"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "selectedIds": [
+        "plymouth-testing-cameras-at-train-crossi-news-2026-11-11",
+        "michigan-s-arab-american-news-publisher-news-2026-11-13",
+        "an-herbicide-had-a-strange-effect-on-thi-news-2026-11-13",
+        "southern-michigan-communities-turn-to-re-news-2026-11-12",
+        "ann-arbor-launches-new-crisis-response-t-news-2026-11-14"
       ]
     }
   ]
