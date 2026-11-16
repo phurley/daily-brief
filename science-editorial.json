@@ -1,15 +1,130 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-15T06:41:26.319694-05:00",
+  "generatedAt": "2026-11-16T06:57:14.734020-05:00",
   "stories": [
+    {
+      "id": "science-27ff426d4247d2c9",
+      "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Jets from Webb",
+      "summary": "The James Webb Space Telescope captured detailed infrared images of the NGC 7129 star-forming region, revealing young stars at different developmental stages. The observations show gold-colored gas with more mature stars on the left and red regions with younger stars on the right, where jets and winds likely create the filamentary structures.",
+      "finding": "The James Webb Space Telescope captured detailed infrared images of the NGC 7129 star-forming region, revealing young stars at different developmental stages. The observations show gold-colored gas with more mature stars on the left and red regions with younger stars on the right, where jets and winds likely create the filamentary structures.",
+      "significance": "Observing stars at varying developmental stages helps clarify which physical processes dominate during different phases of star formation.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
+      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-16T00:05:00-05:00",
+      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "NASA",
+        "James Webb Space Telescope",
+        "NGC 7129",
+        "ESA",
+        "STScI"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-16T05:05:00Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-16T06:57:14.734020-05:00",
+        "expiresAt": "2026-11-19T06:57:14.734020-05:00",
+        "inputFacts": {
+          "id": "science-27ff426d4247d2c9",
+          "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Jets from Webb",
+          "url": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
+          "publishedAt": "2026-11-16T05:05:00Z",
+          "summary": "Infrared imagery from the James Webb Space Telescope shows star formation in NGC 7129, revealing young stars at differing developmental stages alongside filamentary gas shaped by stellar jets and winds.",
+          "finding": "Infrared imagery from the James Webb Space Telescope shows star formation in NGC 7129, revealing young stars at differing developmental stages alongside filamentary gas shaped by stellar jets and winds.",
+          "sourceUpdatedAt": "2026-11-16T05:05:00Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-16T00:05:00-05:00",
+        "datePrecision": "time",
+        "sourceHash": "b8fc012d058bf5264660477fca7866f3aca8d66f315ed9a981acf4da7c5d6f2e",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "New detailed observations from JWST provide insights into star formation processes, aligning with astronomy interests.",
+        "storyKey": "jwst-ngc7129-star-formation",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The summary accurately describes the new detailed infrared images from the James Webb Space Telescope of the NGC 7129 star-forming region, including the different developmental stages of stars and the explanation for the filamentary structures, all of which are directly supported by the article."
+      }
+    },
+    {
+      "id": "science-22dc9962cb4da998",
+      "title": "How the world’s fires changed while humanity hit pause",
+      "summary": "A study comparing fire activity during COVID-19 lockdowns to previous years found a net 12.3% decrease in active-fire detections globally, after controlling for weather. This suggests reduced human activity lowered ignitions, particularly in forests and grasslands. However, some regions saw increased fires, possibly due to diminished fire suppression capacity.",
+      "finding": "A study comparing fire activity during COVID-19 lockdowns to previous years found a net 12.3% decrease in active-fire detections globally, after controlling for weather. This suggests reduced human activity lowered ignitions, particularly in forests and grasslands. However, some regions saw increased fires, possibly due to diminished fire suppression capacity.",
+      "significance": "Disentangling human mobility from weather patterns demonstrates that reduced human presence had a net suppressive effect on wildfires globally, particularly in forests and grasslands.",
+      "caveat": "The study relied on mobile phone data that may undercount rural areas, examined only the first half of the year, and provides associational evidence rather than a fully controlled experiment.",
+      "url": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-15T12:07:34+00:00",
+      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "Jianghao Wang",
+        "Chinese Academy of Sciences",
+        "Cell Reports Sustainability",
+        "NASA",
+        "Suomi NPP"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://dx.doi.org/10.1016/j.crsus.2026.100860",
+      "sourceUpdatedAt": "2026-11-13T23:23:21Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-16T06:57:14.734020-05:00",
+        "expiresAt": "2026-11-19T06:57:14.734020-05:00",
+        "inputFacts": {
+          "id": "science-22dc9962cb4da998",
+          "title": "How the world’s fires changed while humanity hit pause",
+          "url": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
+          "publishedAt": "2026-11-15T12:07:34Z",
+          "summary": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
+          "finding": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
+          "sourceUpdatedAt": "2026-11-13T23:23:21Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-15T12:07:34+00:00",
+        "datePrecision": "time",
+        "sourceHash": "7487832aebf44824f6e98588bfeef1337ceae299e665adfd786cf340f384b9b7",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The study presents a novel analysis of human impact on global fire regimes using a natural experiment, offering substantive new findings relevant to earth science and environmental understanding.",
+        "storyKey": "covid-lockdown-fire-impact",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article supports all claims in the summary, including the global decrease in active-fire detections, the specific percentage, the control for weather, the interpretation of reduced human activity lowering ignitions in forests and grasslands, and the inference about increased fires in some regions due to diminished fire suppression capacity. The study presents a new finding regarding the net effect of human activity on global fire patterns during the COVID-19 lockdowns."
+      }
+    },
     {
       "id": "science-a2daa312bdf773c7",
       "title": "James Webb telescope finds ice older than the star it orbits",
       "summary": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice is amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds.",
       "finding": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice is amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds.",
-      "significance": "The composition resembles Solar System comets, suggesting the fundamental icy ingredients necessary to form water-rich and potentially habitable planets may be common around young stars.",
-      "caveat": "Researchers could not determine the precise amount of crystalline ice present or rule out the presence of other hidden molecules within the ice mixture.",
+      "significance": "The findings imply that interstellar ice and key volatile ingredients needed to form water-rich, potentially habitable planets may be common across young planetary systems.",
+      "caveat": "Researchers were unable to determine the exact amount of crystalline ice present or rule out other molecules mixed into the ice.",
       "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
       "source": {
@@ -19,46 +134,46 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-14T12:15:48+00:00",
       "firstSeenAt": "2026-11-15T11:01:01.250099Z",
-      "checkedAt": "2026-11-15T11:01:01.250099Z",
-      "verifiedAt": "2026-11-15T11:01:01.250099Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
       ],
       "entities": [
         "Beta Pictoris",
-        "Science",
         "Sarah Betti",
         "Space Telescope Science Institute",
-        "James Webb Space Telescope"
+        "James Webb Space Telescope",
+        "Near Infrared Spectrograph"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1126/science.adw7770",
       "sourceUpdatedAt": "2026-11-13T20:54:24Z",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-15T06:41:26.319694-05:00",
-        "expiresAt": "2026-11-18T06:41:26.319694-05:00",
+        "reviewedAt": "2026-11-16T06:57:14.734020-05:00",
+        "expiresAt": "2026-11-19T06:57:14.734020-05:00",
         "inputFacts": {
           "id": "science-a2daa312bdf773c7",
           "title": "James Webb telescope finds ice older than the star it orbits",
           "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
           "publishedAt": "2026-11-14T12:15:48Z",
-          "summary": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
-          "finding": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
+          "summary": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
+          "finding": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
           "sourceUpdatedAt": "2026-11-13T20:54:24Z"
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
         "publicationEvidence": "2026-11-14T12:15:48+00:00",
         "datePrecision": "time",
-        "sourceHash": "2edef6400c7151d42331e99f07c6ec4d4cdb786d443727e641ceb83f4db9b912",
+        "sourceHash": "6518645cff4e02d4becf0993e471692c72c802c533c09ab31192025db65026ac",
         "relevance": 5,
         "novelty": 5,
         "reason": "Substantive new finding about the origins of planetary systems and potential for water-rich worlds, directly relevant to astronomy interests.",
         "storyKey": "jwst-beta-pictoris-ice-discovery",
         "localConnection": "",
         "grounded": true,
-        "groundingReason": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice was found to be amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds."
+        "groundingReason": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice is amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds."
       }
     },
     {
@@ -118,121 +233,39 @@
         "grounded": true,
         "groundingReason": "The article describes a 12-year study of wild Asian elephants in Sri Lanka, finding that sustained population losses led to the fracturing of their social networks, with communities becoming smaller, more numerous, and isolated, even among resident individuals, potentially due to the loss of key social connectors. This directly supports all material claims in the summary."
       }
-    },
-    {
-      "id": "science-b0cd481433eb7ca1",
-      "title": "AI confirms a long-suspected limit on quantum computers’ advantages",
-      "summary": "AI has proven a decades-old conjecture, confirming that quantum computers cannot significantly outperform conventional computers for a class of mathematical problems with little structure and high randomness. This finding, while more mathematical than practical, helps define the limits of quantum advantage and guides future research into problems where quantum computing may excel.",
-      "finding": "AI has proven a decades-old conjecture, confirming that quantum computers cannot significantly outperform conventional computers for a class of mathematical problems with little structure and high randomness. This finding, while more mathematical than practical, helps define the limits of quantum advantage and guides future research into problems where quantum computing may excel.",
-      "significance": "The verified mathematical proof establishes clear theoretical limits on quantum speedups, helping guide researchers toward problem classes where quantum advantages are genuinely possible.",
-      "caveat": "The practical implications for quantum computing may be limited because the proof is more mathematical than practical, ruling out an avenue not widely considered plausible anyway.",
-      "url": "https://www.newscientist.com/article/2598418-ai-confirms-a-long-suspected-limit-on-quantum-computers-advantages",
-      "primarySourceUrl": "https://www.newscientist.com/article/2598418-ai-confirms-a-long-suspected-limit-on-quantum-computers-advantages",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-12T20:00:00+00:00",
-      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-13T11:01:00.753629Z",
-      "verifiedAt": "2026-11-13T11:01:00.753629Z",
-      "evidenceType": "unknown",
-      "topics": [
-        "technology",
-        "physics"
-      ],
-      "entities": [
-        "Scott Aaronson",
-        "University of Texas at Austin",
-        "Andris Ambainis",
-        "University of Latvia",
-        "Stanford University"
-      ],
-      "milestoneStatus": "unknown",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-13T06:19:46.538217-05:00",
-        "expiresAt": "2026-11-16T06:19:46.538217-05:00",
-        "inputFacts": {
-          "id": "science-b0cd481433eb7ca1",
-          "title": "AI confirms a long-suspected limit on quantum computers’ advantages",
-          "url": "https://www.newscientist.com/article/2598418-ai-confirms-a-long-suspected-limit-on-quantum-computers-advantages",
-          "publishedAt": "2026-11-12T20:00:00Z",
-          "summary": "Researchers using an AI model proved the Aaronson-Ambainis conjecture, confirming that quantum computers cannot significantly outperform classical computers on a class of unstructured, random mathematical problems.",
-          "finding": "Researchers using an AI model proved the Aaronson-Ambainis conjecture, confirming that quantum computers cannot significantly outperform classical computers on a class of unstructured, random mathematical problems.",
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-12T20:00:00+00:00",
-        "datePrecision": "time",
-        "sourceHash": "9d45b29781a1e154667a9e6ff0e0312356e7499d863dda53b3b1c17cb861e69f",
-        "relevance": 4,
-        "novelty": 5,
-        "reason": "The article describes a significant scientific breakthrough in quantum computing, a field of high interest. The use of AI to prove a long-standing conjecture is a novel development. The finding helps define the capabilities and limitations of quantum computers, which is a substantive advance.",
-        "storyKey": "ai-proves-quantum-computing-limit",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article confirms that AI has proven a decades-old conjecture regarding the limits of quantum computers for a specific class of problems, which is a new finding in the field of quantum computing and mathematics."
-      }
-    },
-    {
-      "id": "science-e9755bd1cb6983f9",
-      "title": "A robot has assembled a structure in space for the first time",
-      "summary": "A robot has autonomously assembled a 1.4-meter radio antenna structure in space, marking a first-of-its-kind achievement. This demonstration, part of a DARPA initiative, aims to advance in-orbit manufacturing for future space stations and data centers, though the antenna construction is not yet fully completed.",
-      "finding": "A robot has autonomously assembled a 1.4-meter radio antenna structure in space, marking a first-of-its-kind achievement. This demonstration, part of a DARPA initiative, aims to advance in-orbit manufacturing for future space stations and data centers, though the antenna construction is not yet fully completed.",
-      "significance": "Autonomous assembly offers a scalable alternative to unfolding pre-assembled payloads or using costly astronaut labor, enabling the future construction of larger orbital structures.",
-      "caveat": "Construction of the radio antenna is not yet fully completed, and the mission relies on researchers troubleshooting issues from the ground using a replica robot.",
-      "url": "https://www.newscientist.com/article/2598576-a-robot-has-assembled-a-structure-in-space-for-the-first-time",
-      "primarySourceUrl": "https://www.newscientist.com/article/2598576-a-robot-has-assembled-a-structure-in-space-for-the-first-time",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-12T19:00:00+00:00",
-      "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-13T11:01:00.753629Z",
-      "verifiedAt": "2026-11-13T11:01:00.753629Z",
-      "evidenceType": "mission-milestone",
-      "topics": [
-        "technology"
-      ],
-      "entities": [
-        "Sergio Pellegrino",
-        "California Institute of Technology",
-        "DARPA",
-        "Vandenberg Space Force Base"
-      ],
-      "milestoneStatus": "completed",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-13T06:19:46.538217-05:00",
-        "expiresAt": "2026-11-16T06:19:46.538217-05:00",
-        "inputFacts": {
-          "id": "science-e9755bd1cb6983f9",
-          "title": "A robot has assembled a structure in space for the first time",
-          "url": "https://www.newscientist.com/article/2598576-a-robot-has-assembled-a-structure-in-space-for-the-first-time",
-          "publishedAt": "2026-11-12T19:00:00Z",
-          "summary": "A robotic arm has demonstrated autonomous in-orbit construction by assembling parts of a 1.4-meter radio antenna in space without astronaut assistance.",
-          "finding": "A robotic arm has demonstrated autonomous in-orbit construction by assembling parts of a 1.4-meter radio antenna in space without astronaut assistance.",
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-12T19:00:00+00:00",
-        "datePrecision": "time",
-        "sourceHash": "f0c2ddf97a8f73e036b5e9eb55044a100def93ad5c1d10f613314ed7b190e462",
-        "relevance": 4,
-        "novelty": 5,
-        "reason": "This is a significant engineering and technology development with potential long-term implications for space infrastructure, aligning with science interests.",
-        "storyKey": "robot-in-space-assembly",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article confirms a robot autonomously assembled a 1.4-meter radio antenna structure in space as part of a DARPA initiative, and that the construction is not yet fully completed, aligning with all claims in the summary. This represents a new technical advance in in-orbit manufacturing."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-27ff426d4247d2c9",
+      "inputFacts": {
+        "id": "science-27ff426d4247d2c9",
+        "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Jets from Webb",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
+        "publishedAt": "2026-11-16T05:05:00Z",
+        "summary": "Infrared imagery from the James Webb Space Telescope shows star formation in NGC 7129, revealing young stars at differing developmental stages alongside filamentary gas shaped by stellar jets and winds.",
+        "finding": "Infrared imagery from the James Webb Space Telescope shows star formation in NGC 7129, revealing young stars at differing developmental stages alongside filamentary gas shaped by stellar jets and winds.",
+        "sourceUpdatedAt": "2026-11-16T05:05:00Z"
+      },
+      "publishedAt": "2026-11-16T00:05:00-05:00",
+      "publicationEvidence": "2026-11-16T00:05:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-22dc9962cb4da998",
+      "inputFacts": {
+        "id": "science-22dc9962cb4da998",
+        "title": "How the world’s fires changed while humanity hit pause",
+        "url": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
+        "publishedAt": "2026-11-15T12:07:34Z",
+        "summary": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
+        "finding": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
+        "sourceUpdatedAt": "2026-11-13T23:23:21Z"
+      },
+      "publishedAt": "2026-11-15T12:07:34+00:00",
+      "publicationEvidence": "2026-11-15T12:07:34+00:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-a2daa312bdf773c7",
       "inputFacts": {
@@ -240,8 +273,8 @@
         "title": "James Webb telescope finds ice older than the star it orbits",
         "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
         "publishedAt": "2026-11-14T12:15:48Z",
-        "summary": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
-        "finding": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
+        "summary": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
+        "finding": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
         "sourceUpdatedAt": "2026-11-13T20:54:24Z"
       },
       "publishedAt": "2026-11-14T12:15:48+00:00",
@@ -300,8 +333,8 @@
         "title": "The ‘hell chicken’ dinosaur was a real terror — to fruit",
         "url": "https://www.sciencenews.org/article/hell-chicken-dinosaur-terror-fruit-eat",
         "publishedAt": "2026-11-13T16:00:00Z",
-        "summary": "Skeletal reconstructions of the Cretaceous theropod dinosaur Infernogallus jamesi show jaw joints and muscles adapted for forward and back sliding motions, suggesting a specialized fruit-eating diet similar to modern parrots.",
-        "finding": "Skeletal reconstructions of the Cretaceous theropod dinosaur Infernogallus jamesi show jaw joints and muscles adapted for forward and back sliding motions, suggesting a specialized fruit-eating diet similar to modern parrots.",
+        "summary": "Reconstruction of the jaw and beak of the Cretaceous dinosaur Infernogallus jamesi indicates specialized adaptations for eating fruit, marking the first evidence of specialized frugivory in non-avian dinosaurs.",
+        "finding": "Reconstruction of the jaw and beak of the Cretaceous dinosaur Infernogallus jamesi indicates specialized adaptations for eating fruit, marking the first evidence of specialized frugivory in non-avian dinosaurs.",
         "sourceUpdatedAt": "2026-11-13T16:00:00Z"
       },
       "publishedAt": "2026-11-13T11:00:00-05:00",
@@ -324,66 +357,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-b0cd481433eb7ca1",
-      "inputFacts": {
-        "id": "science-b0cd481433eb7ca1",
-        "title": "AI confirms a long-suspected limit on quantum computers’ advantages",
-        "url": "https://www.newscientist.com/article/2598418-ai-confirms-a-long-suspected-limit-on-quantum-computers-advantages",
-        "publishedAt": "2026-11-12T20:00:00Z",
-        "summary": "Researchers using an AI model proved the Aaronson-Ambainis conjecture, confirming that quantum computers cannot significantly outperform classical computers on a class of unstructured, random mathematical problems.",
-        "finding": "Researchers using an AI model proved the Aaronson-Ambainis conjecture, confirming that quantum computers cannot significantly outperform classical computers on a class of unstructured, random mathematical problems.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-12T20:00:00+00:00",
-      "publicationEvidence": "2026-11-12T20:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-f9dbd3c56fd3b6c5",
-      "inputFacts": {
-        "id": "science-f9dbd3c56fd3b6c5",
-        "title": "Can Network Science Transform Health and Nutrition?",
-        "url": "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112",
-        "publishedAt": "2026-11-12T19:40:54Z",
-        "summary": "Diverse complex systems share common architectural network principles, such as hubs, which can be applied to understand cellular biology and nutrition.",
-        "finding": "Diverse complex systems share common architectural network principles, such as hubs, which can be applied to understand cellular biology and nutrition.",
-        "sourceUpdatedAt": "2026-11-12T21:42:04Z"
-      },
-      "publishedAt": "2026-11-12T19:40:54+00:00",
-      "publicationEvidence": "2026-11-12T19:40:54+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-e9755bd1cb6983f9",
-      "inputFacts": {
-        "id": "science-e9755bd1cb6983f9",
-        "title": "A robot has assembled a structure in space for the first time",
-        "url": "https://www.newscientist.com/article/2598576-a-robot-has-assembled-a-structure-in-space-for-the-first-time",
-        "publishedAt": "2026-11-12T19:00:00Z",
-        "summary": "A robotic arm has demonstrated autonomous in-orbit construction by assembling parts of a 1.4-meter radio antenna in space without astronaut assistance.",
-        "finding": "A robotic arm has demonstrated autonomous in-orbit construction by assembling parts of a 1.4-meter radio antenna in space without astronaut assistance.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-12T19:00:00+00:00",
-      "publicationEvidence": "2026-11-12T19:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-d6fd8a99fda43004",
-      "inputFacts": {
-        "id": "science-d6fd8a99fda43004",
-        "title": "Economics, not climate summits, will dictate the net-zero transition",
-        "url": "https://www.newscientist.com/article/2598706-economics-not-climate-summits-will-dictate-the-net-zero-transition",
-        "publishedAt": "2026-11-12T18:20:00Z",
-        "summary": "The Global Carbon Budget projected that global fossil fuel emissions would decrease slightly by 0.4 percent in 2026, driven largely by rapid clean technology growth alongside an oil crisis.",
-        "finding": "The Global Carbon Budget projected that global fossil fuel emissions would decrease slightly by 0.4 percent in 2026, driven largely by rapid clean technology growth alongside an oil crisis.",
-        "sourceUpdatedAt": "2026-11-12T20:20:49Z"
-      },
-      "publishedAt": "2026-11-12T18:20:00+00:00",
-      "publicationEvidence": "2026-11-12T18:20:00+00:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-38d32834f94f250a",
       "inputFacts": {
         "id": "science-38d32834f94f250a",
@@ -399,18 +372,33 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-4aadc1d98b6a357b",
+      "id": "science-bc8d91b6fa99d26c",
       "inputFacts": {
-        "id": "science-4aadc1d98b6a357b",
-        "title": "The brain’s fear center moonlights as the save button for memories",
-        "url": "https://www.sciencenews.org/article/brain-amygdala-neuron-saves-memories",
-        "publishedAt": "2026-11-12T16:00:00Z",
-        "summary": "Activity in specific human amygdala neurons predicts whether an everyday image will be recalled, indicating the region helps select memories for longer-term storage.",
-        "finding": "Activity in specific human amygdala neurons predicts whether an everyday image will be recalled, indicating the region helps select memories for longer-term storage.",
-        "sourceUpdatedAt": "2026-11-12T16:00:00Z"
+        "id": "science-bc8d91b6fa99d26c",
+        "title": "The end of the universe could emerge suddenly from nothing",
+        "url": "https://www.newscientist.com/article/2598817-the-end-of-the-universe-could-emerge-suddenly-from-nothing",
+        "publishedAt": "2026-11-16T09:00:00Z",
+        "summary": "The universe may exist in a false vacuum state, where quantum tunneling could theoretically form a bubble of true vacuum that expands at light speed and destroys cosmic structure.",
+        "finding": "The universe may exist in a false vacuum state, where quantum tunneling could theoretically form a bubble of true vacuum that expands at light speed and destroys cosmic structure.",
+        "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-12T11:00:00-05:00",
-      "publicationEvidence": "2026-11-12T11:00:00-05:00",
+      "publishedAt": "2026-11-16T09:00:00+00:00",
+      "publicationEvidence": "2026-11-16T09:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-7f3ad460c89ae8b7",
+      "inputFacts": {
+        "id": "science-7f3ad460c89ae8b7",
+        "title": "The Last Ice on Puncak Jaya",
+        "url": "https://science.nasa.gov/earth/earth-observatory/the-last-ice-on-puncak-jaya",
+        "publishedAt": "2026-11-16T05:00:00Z",
+        "summary": "Ice remnants near the summit of Puncak Jaya have thinned and fragmented to approximately two percent of their 1988 extent, ending their functional life as active glaciers.",
+        "finding": "Ice remnants near the summit of Puncak Jaya have thinned and fragmented to approximately two percent of their 1988 extent, ending their functional life as active glaciers.",
+        "sourceUpdatedAt": "2026-11-16T05:00:00Z"
+      },
+      "publishedAt": "2026-11-16T00:00:00-05:00",
+      "publicationEvidence": "2026-11-16T00:00:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -420,8 +408,8 @@
         "title": "Winemakers are learning that conservation can be good for business",
         "url": "https://arstechnica.com/science/2026/11/winemakers-are-learning-that-conservation-can-be-good-for-business",
         "publishedAt": "2026-11-14T12:05:51Z",
-        "summary": "An analysis of 107 vineyards in South Africa's Western Cape showed that many wine producers view soil and wildlife conservation not as a hindrance, but as an essential strategy for long-term business resilience against climate variability.",
-        "finding": "An analysis of 107 vineyards in South Africa's Western Cape showed that many wine producers view soil and wildlife conservation not as a hindrance, but as an essential strategy for long-term business resilience against climate variability.",
+        "summary": "An analysis of 107 Western Cape vineyards found that many operators view long-term soil and wildlife conservation as critical strategies for business success rather than competing priorities.",
+        "finding": "An analysis of 107 Western Cape vineyards found that many operators view long-term soil and wildlife conservation as critical strategies for business success rather than competing priorities.",
         "sourceUpdatedAt": "2026-11-14T19:05:58Z"
       },
       "publishedAt": "2026-11-14T12:05:51+00:00",
@@ -457,46 +445,31 @@
       "publishedAt": "2026-11-13T14:29:15+00:00",
       "publicationEvidence": "2026-11-13T14:29:15+00:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-c49fb4d96bbd993c",
-      "inputFacts": {
-        "id": "science-c49fb4d96bbd993c",
-        "title": "Why we buy: 5 thinking errors companies exploit to make you shop",
-        "url": "https://www.newscientist.com/article/2598587-why-we-buy-5-thinking-errors-companies-exploit-to-make-you-shop",
-        "publishedAt": "2026-11-13T09:00:00Z",
-        "summary": "Marketing schemes deliberately target intuitive cognitive shortcuts like urgency, scarcity, and anchoring, which can sway consumer judgment away from conscious and accurate deliberation.",
-        "finding": "Marketing schemes deliberately target intuitive cognitive shortcuts like urgency, scarcity, and anchoring, which can sway consumer judgment away from conscious and accurate deliberation.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-13T09:00:00+00:00",
-      "publicationEvidence": "2026-11-13T09:00:00+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-14",
-      "selectedIds": [
-        "science-b0cd481433eb7ca1",
-        "science-e9755bd1cb6983f9",
-        "science-7b0b0a977258a502"
-      ]
-    },
-    {
       "date": "2026-11-15",
       "selectedIds": [
-        "science-b0cd481433eb7ca1",
-        "science-e9755bd1cb6983f9",
-        "science-7b0b0a977258a502"
+        "science-7b0b0a977258a502",
+        "science-a2daa312bdf773c7",
+        "science-22dc9962cb4da998"
       ]
     },
     {
       "date": "2026-11-16",
       "selectedIds": [
         "science-a2daa312bdf773c7",
-        "science-b0cd481433eb7ca1",
-        "science-e9755bd1cb6983f9"
+        "science-27ff426d4247d2c9",
+        "science-22dc9962cb4da998"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "selectedIds": [
+        "science-a2daa312bdf773c7",
+        "science-27ff426d4247d2c9",
+        "science-22dc9962cb4da998"
       ]
     }
   ]

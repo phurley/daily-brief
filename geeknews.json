@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-15T11:01:01.250099Z",
-  "editionDate": "2026-11-15",
+  "generatedAt": "2026-11-16T11:01:02.875720Z",
+  "editionDate": "2026-11-16",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -21,12 +21,171 @@
   },
   "stories": [
     {
+      "id": "science-bc8d91b6fa99d26c",
+      "title": "The end of the universe could emerge suddenly from nothing",
+      "summary": "The universe may exist in a false vacuum state, where quantum tunneling could theoretically form a bubble of true vacuum that expands at light speed and destroys cosmic structure.",
+      "finding": "The universe may exist in a false vacuum state, where quantum tunneling could theoretically form a bubble of true vacuum that expands at light speed and destroys cosmic structure.",
+      "significance": "Understanding vacuum stability can reveal whether fundamental physical constants and forces will permanently sustain current cosmic laws or lead to ultimate collapse.",
+      "caveat": "Scientists do not know if vacuum decay is physically possible, and physical constant measurements lack the precision needed to confirm whether the universe is stable.",
+      "url": "https://www.newscientist.com/article/2598817-the-end-of-the-universe-could-emerge-suddenly-from-nothing",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598817-the-end-of-the-universe-could-emerge-suddenly-from-nothing",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T09:00:00Z",
+      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "Higgs boson",
+        "The NeverEnding Story"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-27ff426d4247d2c9",
+      "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Jets from Webb",
+      "summary": "Infrared imagery from the James Webb Space Telescope shows star formation in NGC 7129, revealing young stars at differing developmental stages alongside filamentary gas shaped by stellar jets and winds.",
+      "finding": "Infrared imagery from the James Webb Space Telescope shows star formation in NGC 7129, revealing young stars at differing developmental stages alongside filamentary gas shaped by stellar jets and winds.",
+      "significance": "Observing stars at varying developmental stages helps clarify which physical processes dominate during different phases of star formation.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
+      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-16T05:05:00Z",
+      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "evidenceType": "explanatory-background",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "NASA",
+        "James Webb Space Telescope",
+        "NGC 7129",
+        "ESA",
+        "STScI"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-16T05:05:00Z"
+    },
+    {
+      "id": "science-7f3ad460c89ae8b7",
+      "title": "The Last Ice on Puncak Jaya",
+      "summary": "Ice remnants near the summit of Puncak Jaya have thinned and fragmented to approximately two percent of their 1988 extent, ending their functional life as active glaciers.",
+      "finding": "Ice remnants near the summit of Puncak Jaya have thinned and fragmented to approximately two percent of their 1988 extent, ending their functional life as active glaciers.",
+      "significance": "As some of the few equatorial glaciers, their rapid loss serves as an early indicator of climate impacts on high-altitude tropical ice.",
+      "caveat": "Small ice patches still survive in high-elevation crevices, and an upcoming aerial survey is required to obtain precise measurements of the remaining ice area.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/the-last-ice-on-puncak-jaya",
+      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/the-last-ice-on-puncak-jaya",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-16T05:00:00Z",
+      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "Puncak Jaya",
+        "Landsat 9",
+        "Landsat 5",
+        "NASA Earth Observatory",
+        "BMKG"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1016/j.coldregions.2026.104831",
+      "sourceUpdatedAt": "2026-11-16T05:00:00Z"
+    },
+    {
+      "id": "science-9a50a14141fbbda0",
+      "title": "Vitamin C could help block cancer-linked chemicals in your stomach, study finds",
+      "summary": "A mathematical model suggests that consuming vitamin C alongside or after meals containing nitrates and nitrites may moderately reduce the formation of potentially cancer-linked nitrosation products in the digestive system.",
+      "finding": "A mathematical model suggests that consuming vitamin C alongside or after meals containing nitrates and nitrites may moderately reduce the formation of potentially cancer-linked nitrosation products in the digestive system.",
+      "significance": "The findings help clarify why nitrate-rich vegetables may not pose the same risks as processed meats and could guide future clinical trials and dietary interventions targeting cancer prevention.",
+      "caveat": "The findings are based entirely on mathematical simulations rather than clinical trials, and further research is needed to determine whether this actually translates into a measurable cancer risk reduction in humans.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261114202236.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261114202236.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-15T14:13:18Z",
+      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "health",
+        "biology"
+      ],
+      "entities": [
+        "University of Waterloo",
+        "Gordon McNicol",
+        "Anita Layton",
+        "Journal of Theoretical Biology"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1016/j.jtbi.2026.112444"
+    },
+    {
+      "id": "science-22dc9962cb4da998",
+      "title": "How the world’s fires changed while humanity hit pause",
+      "summary": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
+      "finding": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
+      "significance": "Disentangling human mobility from weather patterns demonstrates that reduced human presence had a net suppressive effect on wildfires globally, particularly in forests and grasslands.",
+      "caveat": "The study relied on mobile phone data that may undercount rural areas, examined only the first half of the year, and provides associational evidence rather than a fully controlled experiment.",
+      "url": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-15T12:07:34Z",
+      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "Jianghao Wang",
+        "Chinese Academy of Sciences",
+        "Cell Reports Sustainability",
+        "NASA",
+        "Suomi NPP"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://dx.doi.org/10.1016/j.crsus.2026.100860",
+      "sourceUpdatedAt": "2026-11-13T23:23:21Z"
+    },
+    {
       "id": "science-a2daa312bdf773c7",
       "title": "James Webb telescope finds ice older than the star it orbits",
-      "summary": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
-      "finding": "Astronomers detected amorphous water ice mixed with carbon dioxide in the debris disk of Beta Pictoris, indicating the ice likely originated in the interstellar medium prior to the system's formation.",
-      "significance": "The composition resembles Solar System comets, suggesting the fundamental icy ingredients necessary to form water-rich and potentially habitable planets may be common around young stars.",
-      "caveat": "Researchers could not determine the precise amount of crystalline ice present or rule out the presence of other hidden molecules within the ice mixture.",
+      "summary": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
+      "finding": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
+      "significance": "The findings imply that interstellar ice and key volatile ingredients needed to form water-rich, potentially habitable planets may be common across young planetary systems.",
+      "caveat": "Researchers were unable to determine the exact amount of crystalline ice present or rule out other molecules mixed into the ice.",
       "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
       "source": {
@@ -36,18 +195,18 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-14T12:15:48Z",
       "firstSeenAt": "2026-11-15T11:01:01.250099Z",
-      "checkedAt": "2026-11-15T11:01:01.250099Z",
-      "verifiedAt": "2026-11-15T11:01:01.250099Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
       ],
       "entities": [
         "Beta Pictoris",
-        "Science",
         "Sarah Betti",
         "Space Telescope Science Institute",
-        "James Webb Space Telescope"
+        "James Webb Space Telescope",
+        "Near Infrared Spectrograph"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1126/science.adw7770",
@@ -56,10 +215,10 @@
     {
       "id": "science-808b4a1d23d0d5e6",
       "title": "Winemakers are learning that conservation can be good for business",
-      "summary": "An analysis of 107 vineyards in South Africa's Western Cape showed that many wine producers view soil and wildlife conservation not as a hindrance, but as an essential strategy for long-term business resilience against climate variability.",
-      "finding": "An analysis of 107 vineyards in South Africa's Western Cape showed that many wine producers view soil and wildlife conservation not as a hindrance, but as an essential strategy for long-term business resilience against climate variability.",
-      "significance": "Demonstrates how sustainable land stewardship—such as cover cropping, restoring native vegetation, and natural pest control—can align agricultural production with biodiversity preservation.",
-      "caveat": "Cover crops require active maintenance and can shelter pests, and overall economic pressures alongside drought have led to a decrease in the total land area used for vineyard production.",
+      "summary": "An analysis of 107 Western Cape vineyards found that many operators view long-term soil and wildlife conservation as critical strategies for business success rather than competing priorities.",
+      "finding": "An analysis of 107 Western Cape vineyards found that many operators view long-term soil and wildlife conservation as critical strategies for business success rather than competing priorities.",
+      "significance": "Demonstrates how sustainable land stewardship and regenerative agricultural methods can bolster economic resilience against extreme climate variability and rising chemical costs.",
+      "caveat": "Cover crops demand maintenance and risk harboring pests, while chemical treatments are still relied upon by many vineyard operations.",
       "url": "https://arstechnica.com/science/2026/11/winemakers-are-learning-that-conservation-can-be-good-for-business",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/winemakers-are-learning-that-conservation-can-be-good-for-business",
       "source": {
@@ -69,20 +228,20 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-14T12:05:51Z",
       "firstSeenAt": "2026-11-15T11:01:01.250099Z",
-      "checkedAt": "2026-11-15T11:01:01.250099Z",
-      "verifiedAt": "2026-11-15T11:01:01.250099Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "biology",
         "earth-science",
+        "biology",
         "social-science"
       ],
       "entities": [
         "Western Cape",
         "South Africa",
         "Integrated Production of Wine",
-        "World Wildlife Fund Conservation Champions",
-        "Cape Floral Region"
+        "Cape Floral Region",
+        "World Wildlife Fund Conservation Champions"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.3390/su18083825",
@@ -137,7 +296,7 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-13T18:00:00Z",
       "firstSeenAt": "2026-11-15T11:01:01.250099Z",
-      "checkedAt": "2026-11-15T11:01:01.250099Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
       "verifiedAt": "2026-11-15T11:01:01.250099Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
@@ -186,9 +345,9 @@
     {
       "id": "science-48f4c41fb88a6ee2",
       "title": "Outbursts from a Massive Star",
-      "summary": "Astronomers using the Chandra X-ray Observatory identified the trigger behind repeated outbursts from AT 2016blu, a giant unstable star.",
-      "finding": "Astronomers using the Chandra X-ray Observatory identified the trigger behind repeated outbursts from AT 2016blu, a giant unstable star.",
-      "significance": "Understanding the mechanisms behind outbursts in massive, volatile stars aids research into stellar evolution and instability.",
+      "summary": "Astronomers using NASA's Chandra X-ray Observatory identified the trigger behind recurring outbursts from AT 2016blu, an unstable star with at least 33 solar masses.",
+      "finding": "Astronomers using NASA's Chandra X-ray Observatory identified the trigger behind recurring outbursts from AT 2016blu, an unstable star with at least 33 solar masses.",
+      "significance": "Understanding these triggers provides insight into the behavior and evolution of volatile, massive stars located tens of millions of light-years away.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/image-article/outbursts-from-a-massive-star",
       "primarySourceUrl": "https://www.nasa.gov/image-article/outbursts-from-a-massive-star",
@@ -199,27 +358,28 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-13T16:39:33Z",
       "firstSeenAt": "2026-11-14T11:01:01.420815Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "explanatory-background",
       "topics": [
-        "astronomy"
+        "astronomy",
+        "physics"
       ],
       "entities": [
-        "NASA",
         "Chandra X-ray Observatory",
+        "NASA",
         "AT 2016blu",
         "NGC 4559",
-        "Sun"
+        "Earth"
       ],
       "milestoneStatus": "unknown"
     },
     {
       "id": "science-22eb3de9760f07c5",
       "title": "Gemini Astronaut Photos Inspired Early Earth Observation Program",
-      "summary": "Orbital photography taken by astronauts during early spaceflights demonstrated the scientific value of space-based imagery, helping prompt the creation of dedicated Earth observation programs.",
-      "finding": "Orbital photography taken by astronauts during early spaceflights demonstrated the scientific value of space-based imagery, helping prompt the creation of dedicated Earth observation programs.",
-      "significance": "This early demonstration directly catalyzed satellite initiatives such as EROS and Landsat, establishing over fifty years of global monitoring for agriculture, disasters, and land use.",
+      "summary": "Orbital photography taken by astronauts during early spaceflights demonstrated the utility of space-based imaging for Earth surface and resource studies, motivating dedicated Earth observation satellites.",
+      "finding": "Orbital photography taken by astronauts during early spaceflights demonstrated the utility of space-based imaging for Earth surface and resource studies, motivating dedicated Earth observation satellites.",
+      "significance": "These early images spurred the development of dedicated Earth observation programs like EROS and Landsat, enabling decades of monitoring crops, wildfires, floods, and land use globally.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/image-article/gemini-astronaut-photos-inspired-early-earth-observation-program",
       "primarySourceUrl": "https://www.nasa.gov/image-article/gemini-astronaut-photos-inspired-early-earth-observation-program",
@@ -230,28 +390,27 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-13T16:05:54Z",
       "firstSeenAt": "2026-11-14T11:01:01.420815Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "explanatory-background",
       "topics": [
-        "earth-science",
-        "technology"
+        "earth-science"
       ],
       "entities": [
+        "NASA",
         "James A. Lovell Jr.",
-        "Edwin E. “Buzz” Aldrin Jr.",
+        "Edwin E. ‘Buzz’ Aldrin Jr.",
         "William T. Pecora",
-        "United States Geological Survey",
-        "NASA"
+        "United States Geological Survey"
       ],
       "milestoneStatus": "unknown"
     },
     {
       "id": "science-240279729ad0e4b5",
       "title": "The ‘hell chicken’ dinosaur was a real terror — to fruit",
-      "summary": "Skeletal reconstructions of the Cretaceous theropod dinosaur Infernogallus jamesi show jaw joints and muscles adapted for forward and back sliding motions, suggesting a specialized fruit-eating diet similar to modern parrots.",
-      "finding": "Skeletal reconstructions of the Cretaceous theropod dinosaur Infernogallus jamesi show jaw joints and muscles adapted for forward and back sliding motions, suggesting a specialized fruit-eating diet similar to modern parrots.",
-      "significance": "This provides the first known evidence of non-avian dinosaurs evolving specialized adaptations to eat fruit, supporting the idea that dinosaurs coevolved with diversifying flowering plants.",
+      "summary": "Reconstruction of the jaw and beak of the Cretaceous dinosaur Infernogallus jamesi indicates specialized adaptations for eating fruit, marking the first evidence of specialized frugivory in non-avian dinosaurs.",
+      "finding": "Reconstruction of the jaw and beak of the Cretaceous dinosaur Infernogallus jamesi indicates specialized adaptations for eating fruit, marking the first evidence of specialized frugivory in non-avian dinosaurs.",
+      "significance": "The discovery supports evidence that dinosaurs coevolved with diversifying flowering plants and suggests dinosaur ecology prior to the Cretaceous extinction was more diverse than recognized.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.sciencenews.org/article/hell-chicken-dinosaur-terror-fruit-eat",
       "primarySourceUrl": "https://www.sciencenews.org/article/hell-chicken-dinosaur-terror-fruit-eat",
@@ -262,18 +421,18 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-13T16:00:00Z",
       "firstSeenAt": "2026-11-14T11:01:01.420815Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology"
       ],
       "entities": [
+        "Infernogallus jamesi",
         "David Evans",
         "Royal Ontario Museum",
         "Greg Funston",
-        "Stony Brook University",
-        "Infernogallus jamesi"
+        "Stony Brook University"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.nature.com/articles/s41467-026-78343-w",
@@ -412,10 +571,10 @@
     {
       "id": "science-3d2e8c95745650ad",
       "title": "Hera spies a half-hidden asteroid moonlet",
-      "summary": "ESA's Hera spacecraft captured an early preview image from 56 km away showing asteroid Didymos and its partially visible moonlet Dimorphos, revealing large boulders, smoother areas, and a sharp equatorial ridge.",
-      "finding": "ESA's Hera spacecraft captured an early preview image from 56 km away showing asteroid Didymos and its partially visible moonlet Dimorphos, revealing large boulders, smoother areas, and a sharp equatorial ridge.",
-      "significance": "Studying the binary system and the outcome of the DART kinetic impact will help scientists understand Didymos's formation and assess planetary defence techniques.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "summary": "ESA's Hera spacecraft captured an early image from 56 km away showing Didymos with large boulders, smoother regions, and a sharp equatorial ridge, alongside its moonlet Dimorphos.",
+      "finding": "ESA's Hera spacecraft captured an early image from 56 km away showing Didymos with large boulders, smoother regions, and a sharp equatorial ridge, alongside its moonlet Dimorphos.",
+      "significance": "The imagery supports numerical models suggesting fast-spinning asteroids shed surface material to their equators and potentially spawn moonlets like Dimorphos.",
+      "caveat": "The proposed origin of the equatorial ridge and moonlet from rotational shedding is based on numerical modeling and has not yet been confirmed by close-up data.",
       "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-spies-a-half-hidden-asteroid-moonlet",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-spies-a-half-hidden-asteroid-moonlet",
       "source": {
@@ -425,18 +584,17 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-13T10:46:06Z",
       "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "agency-announcement",
       "topics": [
-        "astronomy",
-        "technology"
+        "astronomy"
       ],
       "entities": [
         "Hera",
-        "ESA",
         "Didymos",
         "Dimorphos",
+        "ESA",
         "DART"
       ],
       "milestoneStatus": "unknown"
@@ -538,10 +696,10 @@
     {
       "id": "science-f9dbd3c56fd3b6c5",
       "title": "Can Network Science Transform Health and Nutrition?",
-      "summary": "Diverse complex systems share common architectural network principles, such as hubs, which can be applied to understand cellular biology and nutrition.",
-      "finding": "Diverse complex systems share common architectural network principles, such as hubs, which can be applied to understand cellular biology and nutrition.",
-      "significance": "Mapping biological networks helps identify disease-related gene neighborhoods for drug targeting and characterizes unstudied nutritional compounds.",
-      "caveat": "The effects on the body of around 135,000 nutritional compounds lying outside conventional nutrition are only beginning to be understood.",
+      "summary": "Researchers found that diverse real-world systems, from biological cells to the internet, share architectural features not explained by their components alone, pointing to common organizing principles governing networks.",
+      "finding": "Researchers found that diverse real-world systems, from biological cells to the internet, share architectural features not explained by their components alone, pointing to common organizing principles governing networks.",
+      "significance": "Applying network principles to biology can help identify better drug targets by revealing disease-related gene neighborhoods and explore uncataloged compounds in nutrition.",
+      "caveat": "The effects of approximately 135,000 food compounds lying outside conventional nutrition on the human body are only beginning to be understood.",
       "url": "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112",
       "primarySourceUrl": "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112",
       "source": {
@@ -551,14 +709,15 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-12T19:40:54Z",
       "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "biology",
         "health"
       ],
       "entities": [
+        "Albert-László Barabási",
         "Steven Strogatz",
         "Janna Levin",
         "Northeastern University",
@@ -666,10 +825,10 @@
     {
       "id": "science-4aadc1d98b6a357b",
       "title": "The brain’s fear center moonlights as the save button for memories",
-      "summary": "Activity in specific human amygdala neurons predicts whether an everyday image will be recalled, indicating the region helps select memories for longer-term storage.",
-      "finding": "Activity in specific human amygdala neurons predicts whether an everyday image will be recalled, indicating the region helps select memories for longer-term storage.",
-      "significance": "Clarifying the amygdala's role in memory formation may eventually inform targeted interventions for memory disorders.",
-      "caveat": "Participants only had to recall items up to 30 minutes later, and the precise biological mechanism for memory storage remains unestablished.",
+      "summary": "Activity in specific human amygdala neurons correlates with whether an image is later remembered, with initial response strength predicting recall.",
+      "finding": "Activity in specific human amygdala neurons correlates with whether an image is later remembered, with initial response strength predicting recall.",
+      "significance": "Clarifying the amygdala's role in memory selection could help guide new therapeutic targets for memory disorders.",
+      "caveat": "The exact mechanism of memory formation is unresolved, and participants only performed recall tests over a span of up to 30 minutes.",
       "url": "https://www.sciencenews.org/article/brain-amygdala-neuron-saves-memories",
       "primarySourceUrl": "https://www.sciencenews.org/article/brain-amygdala-neuron-saves-memories",
       "source": {
@@ -679,19 +838,19 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-12T16:00:00Z",
       "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
         "health"
       ],
       "entities": [
-        "Cedars-Sinai Health Sciences University",
-        "University of Utah",
+        "amygdala",
+        "Nature Neuroscience",
         "Jiayang Xiao",
-        "Cory Inman",
-        "Nature Neuroscience"
+        "Cedars-Sinai Health Sciences University",
+        "Cory Inman"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1038/s41593-026-02493-9",
@@ -700,10 +859,10 @@
     {
       "id": "science-ed14340572225b1f",
       "title": "The Evolving Story of How Chemistry Became Biology",
-      "summary": "Origins-of-life researchers are shifting away from single-molecule theories toward integrative frameworks that examine how complex molecular mixtures transitioned into stable evolutionary systems.",
-      "finding": "Origins-of-life researchers are shifting away from single-molecule theories toward integrative frameworks that examine how complex molecular mixtures transitioned into stable evolutionary systems.",
-      "significance": "Moving beyond debates over whether RNA, metabolism, or lipids came first helps bridge the gap between prebiotic chemistry and sustained biological evolution.",
-      "caveat": "Explaining how disparate molecular processes originally integrated into a stable, enduring evolutionary lineage remains difficult.",
+      "summary": "Origins-of-life researchers are moving away from single-molecule theories toward integrative frameworks exploring how diverse chemical processes became stable, evolving biological systems.",
+      "finding": "Origins-of-life researchers are moving away from single-molecule theories toward integrative frameworks exploring how diverse chemical processes became stable, evolving biological systems.",
+      "significance": "Moving beyond historical debates among RNA-world, metabolism-first, and lipid-world proponents may clarify how nonliving molecules transitioned into self-sustaining, replicating life.",
+      "caveat": "Explaining how early molecular reactions stably linked into continuous evolutionary lineages remains an unresolved challenge.",
       "url": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112",
       "primarySourceUrl": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112",
       "source": {
@@ -713,20 +872,20 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-12T15:45:27Z",
       "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "biology",
         "chemistry",
-        "evolution"
+        "evolutionary-biology"
       ],
       "entities": [
-        "University of Chicago",
+        "Alexander Oparin",
         "Stanley Miller",
         "Harold Urey",
-        "University of Wisconsin, Madison",
-        "University College London"
+        "Betül Kaçar",
+        "Ramanarayanan Krishnamurthy"
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-11-13T17:04:21Z"
@@ -734,10 +893,10 @@
     {
       "id": "science-0c210fd64684a210",
       "title": "Europe’s Hera mission is ready to double down on asteroid science",
-      "summary": "The European Space Agency's Hera spacecraft has arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to begin up-close exploration.",
-      "finding": "The European Space Agency's Hera spacecraft has arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to begin up-close exploration.",
-      "significance": "This encounter represents the first time a spacecraft explores a pair of asteroids orbiting together, investigating binary asteroid properties and the aftermath of the DART impact.",
-      "caveat": "Scientists must disentangle the artificial alterations caused by the DART collision from natural binary asteroid characteristics, and it remains unknown if or when Dimorphos will restabilize.",
+      "summary": "The European Space Agency's Hera spacecraft has arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to begin close-range exploration.",
+      "finding": "The European Space Agency's Hera spacecraft has arrived within 30 kilometers of the binary asteroid system Didymos and Dimorphos to begin close-range exploration.",
+      "significance": "This encounter represents the first close exploration of a binary asteroid system, offering data on planetary defense following NASA's DART collision and asteroid internal structures.",
+      "caveat": "Scientists must account for how the DART impact altered the asteroids compared to standard binaries, and the post-collision state and stabilization timeline of Dimorphos remain unknown.",
       "url": "https://www.sciencenews.org/article/europe-hera-mission-double-asteroid",
       "primarySourceUrl": "https://www.sciencenews.org/article/europe-hera-mission-double-asteroid",
       "source": {
@@ -747,11 +906,12 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-12T14:00:00Z",
       "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "mission-milestone",
       "topics": [
-        "astronomy"
+        "astronomy",
+        "technology"
       ],
       "entities": [
         "European Space Agency",
@@ -1122,10 +1282,10 @@
     {
       "id": "science-5398788b6a3f4743",
       "title": "How a Metabolic Spark Could Have Jump-Started Life",
-      "summary": "Scientists are exploring the hypothesis that life originated through self-sustaining metabolic reaction cycles occurring before genetic material or cells evolved.",
-      "finding": "Scientists are exploring the hypothesis that life originated through self-sustaining metabolic reaction cycles occurring before genetic material or cells evolved.",
-      "significance": "Understanding prebiotic metabolism offers an explanation for how complex, energy-requiring molecules essential for cellular life could form from nonliving geochemical processes.",
-      "caveat": "Scientists do not fully understand how initial metabolic cycles gained stability to build complexity or how they became connected to genetic material and compartmentalized.",
+      "summary": "Laboratory studies suggest proto-metabolic pathways, such as key components of the acetyl-CoA or reverse citric acid cycles, can form spontaneously from simple molecules with or without extreme hydrothermal conditions or metal catalysts.",
+      "finding": "Laboratory studies suggest proto-metabolic pathways, such as key components of the acetyl-CoA or reverse citric acid cycles, can form spontaneously from simple molecules with or without extreme hydrothermal conditions or metal catalysts.",
+      "significance": "Supports the hypothesis that self-sustaining energetic chemical reactions could have preceded genetic material like RNA and driven the initial emergence of life on Earth.",
+      "caveat": "Scientists do not yet understand how early metabolic reactions became stable enough to increase in complexity, connect with genetic mechanisms, or coexist inside cell membranes.",
       "url": "https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111",
       "primarySourceUrl": "https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111",
       "source": {
@@ -1135,17 +1295,16 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-11T15:10:30Z",
       "firstSeenAt": "2026-11-12T11:00:48.186424Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "explanatory-background",
       "topics": [
-        "biology",
-        "earth-science"
+        "biology"
       ],
       "entities": [
-        "Harold Morowitz",
         "William Martin",
         "Martina Preiner",
+        "Max Planck Institute for Terrestrial Microbiology",
         "Ramanarayanan Krishnamurthy"
       ],
       "milestoneStatus": "unknown",
@@ -1311,6 +1470,38 @@
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://journals.aps.org/prl/accepted/10.1103/j1r2-5ph7"
+    },
+    {
+      "id": "science-c45c5c281dd2928f",
+      "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
+      "summary": "NASA's Voyager 1 spacecraft was scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
+      "finding": "NASA's Voyager 1 spacecraft was scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
+      "significance": "Voyager 1 is the most distant human-made object, continuing to transmit scientific observations from interstellar space beyond the heliosphere.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+      "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+      "source": {
+        "name": "NASA JPL"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-10T19:22:45Z",
+      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "Voyager 1",
+        "Earth",
+        "Jet Propulsion Laboratory",
+        "Caltech"
+      ],
+      "milestoneStatus": "planned"
     },
     {
       "id": "science-6103d40234ae1019",
@@ -2648,10 +2839,10 @@
     {
       "id": "science-8b317084cde7e6b6",
       "title": "European orbiter detects hints of volcanic activity on Mars",
-      "summary": "Detections of localized hydrogen chloride gas seeping above volcanic fissures in Mars's Alba Mons region suggest the planet may still harbor dormant subsurface volcanic activity.",
-      "finding": "Detections of localized hydrogen chloride gas seeping above volcanic fissures in Mars's Alba Mons region suggest the planet may still harbor dormant subsurface volcanic activity.",
-      "significance": "Evidence of internal heat and potential magma chambers indicates Mars is not geologically dead, raising possibilities for habitable subsurface hydrothermal environments.",
-      "caveat": "No active lava flows or volcanic eruptions have ever been directly observed on Mars, and the link between the gas and volcanic activity remains an inferential explanation.",
+      "summary": "The ExoMars Trace Gas Orbiter detected localized spikes of hydrogen chloride gas over fresh fissures in Mars's Alba Mons region, suggesting potential dormant volcanic activity.",
+      "finding": "The ExoMars Trace Gas Orbiter detected localized spikes of hydrogen chloride gas over fresh fissures in Mars's Alba Mons region, suggesting potential dormant volcanic activity.",
+      "significance": "The observations indicate Mars may have retained internal heat to support recent or present volcanic activity, potentially creating warm subsurface hydrothermal niches.",
+      "caveat": "Scientists have not directly observed any active lava flows or volcanic eruptions on Mars.",
       "url": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "primarySourceUrl": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "source": {
@@ -2661,17 +2852,17 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T10:05:36Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
       ],
       "entities": [
+        "ExoMars Trace Gas Orbiter",
         "Alba Mons",
         "Alexander Trokhimovskiy",
-        "Trace Gas Orbiter",
-        "Science Advances"
+        "Colin Wilson"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/doi/10.1126/sciadv.aeb9422"
@@ -2711,10 +2902,10 @@
     {
       "id": "science-bd3627b78838f002",
       "title": "Euclid discovers new comet",
-      "summary": "The Euclid space telescope detected its first previously unknown comet, designated C/2026 S1 (Euclid), in observations taken between September 16 and 24, 2026.",
-      "finding": "The Euclid space telescope detected its first previously unknown comet, designated C/2026 S1 (Euclid), in observations taken between September 16 and 24, 2026.",
-      "significance": "The identification demonstrates that Euclid can spot new comets far from the Sun, providing a potential test case for coordinating future target alerts with missions like Comet Interceptor.",
-      "caveat": "Very few comet discoveries are expected because Euclid avoids the Solar System plane and uses a step-and-stare survey that rarely revisits sky regions on demand.",
+      "summary": "The Euclid space telescope has discovered its first previously unknown comet, named C/2026 S1 (Euclid), located approximately 1.3 billion kilometres from Earth on an orbit inclined away from the planetary plane.",
+      "finding": "The Euclid space telescope has discovered its first previously unknown comet, named C/2026 S1 (Euclid), located approximately 1.3 billion kilometres from Earth on an orbit inclined away from the planetary plane.",
+      "significance": "Demonstrates that Euclid can detect distant, fast-moving Solar System bodies and provides a operational test case for future coordination with ESA's Comet Interceptor mission.",
+      "caveat": "Very few comets are expected to be discovered by Euclid because its step-and-stare survey avoids the comet-rich plane of the Solar System and rarely revisits sky sections.",
       "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-discovers-new-comet",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-discovers-new-comet",
       "source": {
@@ -2724,8 +2915,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T08:24:42Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "astronomy"
@@ -2733,9 +2924,9 @@
       "entities": [
         "European Space Agency",
         "Euclid",
-        "Comet Interceptor",
         "Minor Planet Center",
-        "University of Helsinki"
+        "University of Helsinki",
+        "Comet Interceptor"
       ],
       "milestoneStatus": "unknown"
     },
@@ -3478,7 +3669,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-02T21:07:52Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -3723,10 +3914,10 @@
     {
       "id": "science-e77a7638ee47a43c",
       "title": "It’s not (just) the heat, it’s the humidity: Examining the impact of intensifying humid heat on pregnancies",
-      "summary": "In Nigeria, increasing humid heat correlates with an increased likelihood of early pregnancy terminations and shifts the timing of conceptions.",
-      "finding": "In Nigeria, increasing humid heat correlates with an increased likelihood of early pregnancy terminations and shifts the timing of conceptions.",
-      "significance": "High humidity combined with heat impairs cooling, disproportionately influencing fertility patterns and pregnancy outcomes in vulnerable developing regions.",
-      "caveat": "The demographic surveys utilized do not distinguish whether the reported early pregnancy terminations were induced or spontaneous.",
+      "summary": "Increasing humid heat in Nigeria is strongly linked to an elevated risk of early pregnancy terminations and shifts the timing of conceptions.",
+      "finding": "Increasing humid heat in Nigeria is strongly linked to an elevated risk of early pregnancy terminations and shifts the timing of conceptions.",
+      "significance": "Combining satellite climate data with health surveys reveals how humid heat affects maternal outcomes in vulnerable, low- and middle-income regions.",
+      "caveat": "The underlying demographic surveys do not differentiate between spontaneous pregnancy terminations and induced abortions.",
       "url": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "primarySourceUrl": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "source": {
@@ -3736,20 +3927,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T15:38:09Z",
       "firstSeenAt": "2026-11-05T11:24:38.846856Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "health",
-        "earth-science",
-        "social-science"
+        "earth-science"
       ],
       "entities": [
         "University of Michigan",
         "Proceedings of the National Academy of Sciences",
-        "Nigeria",
-        "Nina Brooks",
-        "Cascade Tuholske"
+        "NASA",
+        "Aix-Marseille University",
+        "University of California Santa Barbara"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1073/pnas.2321152122",
@@ -3793,10 +3983,10 @@
     {
       "id": "science-e10edceaccaeeca7",
       "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
-      "summary": "Long-term monitoring showed a large chimpanzee community split into two groups that engaged in persistent, lethal aggression against former group members who had previously affiliated and cooperated.",
-      "finding": "Long-term monitoring showed a large chimpanzee community split into two groups that engaged in persistent, lethal aggression against former group members who had previously affiliated and cooperated.",
-      "significance": "The observations contrast with human social behavior, where humans display widespread prosociality and provide mutual aid to strangers even during conflict or disaster.",
-      "caveat": "The underlying causes driving the community fission and the asymmetric nature of the lethal attacks remain difficult to explain.",
+      "summary": "Researchers observing a community split in the Ngogo chimpanzee population documented lethal intergroup aggression occurring between individuals who previously lived, affiliated, and cooperated together.",
+      "finding": "Researchers observing a community split in the Ngogo chimpanzee population documented lethal intergroup aggression occurring between individuals who previously lived, affiliated, and cooperated together.",
+      "significance": "The observations contrast with human social behavior, highlighting that while chimpanzees kill former associates, humans uniquely display widespread prosociality and aid strangers.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "primarySourceUrl": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "source": {
@@ -3806,8 +3996,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T14:08:23Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
@@ -3817,11 +4007,10 @@
         "John Mitani",
         "Kibale National Park",
         "University of Michigan",
-        "Ngogo Chimpanzee Project",
-        "Nature Human Behaviour"
+        "Ngogo Chimpanzee Project"
       ],
       "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nature.com/articles/s41562-026-02601-6",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.adz4944?referrer=https%3A%2F%2Fwww.google.com%2F",
       "sourceUpdatedAt": "2026-11-02T15:08:51Z",
       "localConnection": "University of Michigan research in Ann Arbor."
     },
@@ -3928,10 +4117,10 @@
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "summary": "Scientists dated the Martian meteorite Teghaza 001 to more than 4.1 billion years old, finding it was altered by Martian water around that time.",
-      "finding": "Scientists dated the Martian meteorite Teghaza 001 to more than 4.1 billion years old, finding it was altered by Martian water around that time.",
-      "significance": "As one of the oldest Martian meteorites ever discovered, it offers a rare snapshot of Mars' ancient crust and evidence of an early dynamic water cycle.",
-      "caveat": "Researchers cannot definitively determine where the meteorite originally came from on Mars, though several potential candidate locations have been identified.",
+      "summary": "Scientists age-dated minerals in the Martian meteorite Teghaza 001, discovering it formed more than 4.1 billion years ago and preserves evidence of early crustal formation and alteration by water.",
+      "finding": "Scientists age-dated minerals in the Martian meteorite Teghaza 001, discovering it formed more than 4.1 billion years ago and preserves evidence of early crustal formation and alteration by water.",
+      "significance": "As one of Earth's oldest known Martian meteorites, it provides an unprecedented physical record of early Martian crustal geology and dynamic water-rock interactions.",
+      "caveat": "The exact source location on Mars from which the meteorite originated remains unknown, although researchers have proposed multiple matching candidate areas.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "source": {
@@ -3941,8 +4130,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T18:18:09Z",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -3952,8 +4141,8 @@
         "NASA",
         "Jet Propulsion Laboratory",
         "Science",
-        "Science Advances",
-        "Caltech"
+        "Yang Liu",
+        "Teghaza 001"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
@@ -4208,7 +4397,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T20:23:58Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -4239,7 +4428,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T18:51:35Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
       "verifiedAt": "2026-10-29T05:30:05.908168Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -4328,10 +4517,10 @@
     {
       "id": "science-6d879a7a5c5c91f8",
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
-      "summary": "NASA's Perseverance rover detected fine (under 2.5 micrometers) and ultrafine (around 100 nanometers) Mars dust particles clinging to spacesuit material samples, with the smallest particles persisting through years of movement.",
-      "finding": "NASA's Perseverance rover detected fine (under 2.5 micrometers) and ultrafine (around 100 nanometers) Mars dust particles clinging to spacesuit material samples, with the smallest particles persisting through years of movement.",
-      "significance": "Understanding how ultrafine dust sticks to suit materials helps engineers design protective coatings, airlocks, and exposure limits to reduce health risks for astronauts.",
-      "caveat": "Scientists note that the actual health risks from Martian dust depend on both the quantity inhaled and the duration of exposure.",
+      "summary": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, down to roughly 100 nanometers, adhering to spacesuit material samples via static electricity.",
+      "finding": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, down to roughly 100 nanometers, adhering to spacesuit material samples via static electricity.",
+      "significance": "Understanding the size and adherence of these tiny particles helps engineers design better spacesuits, airlocks, and mitigation protocols to protect future astronaut health from toxic dust.",
+      "caveat": "Scientists note that the health hazards from Martian dust depend on both the total quantity inhaled and the duration of exposure.",
       "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "source": {
@@ -4341,8 +4530,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-26T21:07:28Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "verifiedAt": "2026-11-16T11:01:02.875720Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -5707,256 +5896,60 @@
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-10-10T04:05:00Z"
-    },
-    {
-      "id": "science-174527e0ab0de8a5",
-      "title": "NASA Demonstrates Next-Generation Heat Shield Technologies",
-      "summary": "NASA is testing next-generation heat shield materials and designs, including 3D-printed heat shields and flexible MERINO materials, using experimental capsules carried aboard a Northrop Grumman Cygnus XL cargo spacecraft during its re-entry into Earth's atmosphere.",
-      "finding": "NASA is testing next-generation heat shield materials and designs, including 3D-printed heat shields and flexible MERINO materials, using experimental capsules carried aboard a Northrop Grumman Cygnus XL cargo spacecraft during its re-entry into Earth's atmosphere.",
-      "significance": "This method provides a cost-effective way to gather real-world flight data on new thermal protection systems, which are crucial for ensuring the safety of future crewed and uncrewed missions to destinations like the Moon and Mars.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies",
-      "primarySourceUrl": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-09T16:59:24Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-09T18:57:35.412035Z",
-      "verifiedAt": "2026-10-09T18:59:36.257899Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "physics",
-        "astronomy"
-      ],
-      "entities": [
-        "NASA",
-        "International Space Station",
-        "Kentucky Reentry Probe Experiment (KREPE-3)",
-        "University of Kentucky"
-      ],
-      "milestoneStatus": "completed",
-      "sourceUpdatedAt": "2026-10-09T16:59:26Z"
-    },
-    {
-      "id": "science-e4f2618d2f0ea370",
-      "title": "Cosmic House of Mirrors",
-      "summary": "The James Webb Space Telescope captured an image of the galaxy cluster MACS J0454.1-0300, revealing distant galaxies whose light is bent and magnified by gravitational lensing, creating a \"house of mirrors\" effect.",
-      "finding": "The James Webb Space Telescope captured an image of the galaxy cluster MACS J0454.1-0300, revealing distant galaxies whose light is bent and magnified by gravitational lensing, creating a \"house of mirrors\" effect.",
-      "significance": "This phenomenon demonstrates how massive objects in space can distort and amplify light from more distant objects, providing insights into the distribution of mass and the nature of light in the universe.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/image-article/cosmic-house-of-mirrors",
-      "primarySourceUrl": "https://www.nasa.gov/image-article/cosmic-house-of-mirrors",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-09T13:57:24Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-09T18:57:35.412035Z",
-      "verifiedAt": "2026-10-09T18:57:35.412035Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "astronomy",
-        "physics"
-      ],
-      "entities": [
-        "James Webb Space Telescope",
-        "MACS J0454.1-0300",
-        "NASA"
-      ],
-      "milestoneStatus": "unknown"
-    },
-    {
-      "id": "science-ab935723f070f44f",
-      "title": "U-M Center for Innovation in Detroit celebrates construction milestone",
-      "summary": "The University of Michigan Center for Innovation in Detroit (UMCI) has reached a construction milestone for its new 200,000-square-foot, all-electric facility, which is designed to achieve LEED Platinum certification and is expected to open in fall 2027.",
-      "finding": "The University of Michigan Center for Innovation in Detroit (UMCI) has reached a construction milestone for its new 200,000-square-foot, all-electric facility, which is designed to achieve LEED Platinum certification and is expected to open in fall 2027.",
-      "significance": "This milestone signifies progress in establishing a hub for education, innovation, industry, and community engagement in Detroit, aiming to create new opportunities for students, faculty, and the community.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://news.umich.edu/u-m-center-for-innovation-in-detroit-celebrates-construction-milestone",
-      "primarySourceUrl": "https://news.umich.edu/u-m-center-for-innovation-in-detroit-celebrates-construction-milestone",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-09T13:12:21Z",
-      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
-      "checkedAt": "2026-10-15T10:00:00.772183Z",
-      "verifiedAt": "2026-10-15T10:00:00.772183Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "technology",
-        "education",
-        "sustainability"
-      ],
-      "entities": [
-        "University of Michigan Center for Innovation in Detroit",
-        "UMCI",
-        "Detroit",
-        "LEED Platinum certification"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-12T13:30:14Z",
-      "localConnection": "University of Michigan research in Ann Arbor."
-    },
-    {
-      "id": "science-57f3a3d36dfa1845",
-      "title": "APOD: 2026 October 9 – Stickney Crater",
-      "summary": "Streaks on Phobos suggest loose material slid down inside Stickney Crater walls over time, and light bluish regions near the crater's rim could indicate a relatively freshly exposed surface.",
-      "finding": "Streaks on Phobos suggest loose material slid down inside Stickney Crater walls over time, and light bluish regions near the crater's rim could indicate a relatively freshly exposed surface.",
-      "significance": "These observations provide clues about the geological processes occurring on Phobos, a moon of Mars, including potential recent surface activity and the nature of its composition.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-9-stickney-crater",
-      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-october-9-stickney-crater",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-09T04:05:00Z",
-      "firstSeenAt": "2026-10-09T18:56:33.050646Z",
-      "checkedAt": "2026-10-09T18:56:33.050646Z",
-      "verifiedAt": "2026-10-09T18:56:33.050646Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "astronomy",
-        "planetary-science"
-      ],
-      "entities": [
-        "Stickney Crater",
-        "Phobos",
-        "Mars",
-        "HiRISE camera",
-        "Mars Reconnaissance Orbiter"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-09T04:05:00Z"
-    },
-    {
-      "id": "science-74da31eddbb7c532",
-      "title": "Floodwaters Overwhelm Thailand",
-      "summary": "Persistent heavy rains in late September and early October 2026 caused widespread flooding across Thailand, inundating agricultural and aquaculture lands, particularly in Prachin Buri province along the Bang Pakong River.",
-      "finding": "Persistent heavy rains in late September and early October 2026 caused widespread flooding across Thailand, inundating agricultural and aquaculture lands, particularly in Prachin Buri province along the Bang Pakong River.",
-      "significance": "The flooding affected millions of people, caused dozens of deaths, and damaged an estimated 270,000 hectares of farmland, highlighting the vulnerability of the region to extreme weather events.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/earth/earth-observatory/floodwaters-overwhelm-thailand",
-      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/floodwaters-overwhelm-thailand",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-09T04:01:00Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-09T18:57:35.412035Z",
-      "verifiedAt": "2026-10-09T18:57:35.412035Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "earth-science",
-        "technology"
-      ],
-      "entities": [
-        "Thailand",
-        "NASA",
-        "Landsat",
-        "Bang Pakong River",
-        "Gulf of Thailand"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-09T12:21:40Z"
-    },
-    {
-      "id": "science-106b657c30ff37f7",
-      "title": "NASA Briefing to Highlight Contributions to Martian Moons Mission",
-      "summary": "NASA will contribute a gamma-ray and neutron spectrometer, a surface sampler mechanism, and communications and navigation support to Japan's Martian Moons eXploration (MMX) mission.",
-      "finding": "NASA will contribute a gamma-ray and neutron spectrometer, a surface sampler mechanism, and communications and navigation support to Japan's Martian Moons eXploration (MMX) mission.",
-      "significance": "These contributions will aid in the MMX mission's survey of Mars' moons, Phobos and Deimos, and the eventual collection and delivery of a surface sample from Phobos to Earth.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/news-release/nasa-briefing-to-highlight-contributions-to-martian-moons-mission",
-      "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-briefing-to-highlight-contributions-to-martian-moons-mission",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-08T20:22:12Z",
-      "firstSeenAt": "2026-10-09T18:57:35.412035Z",
-      "checkedAt": "2026-10-09T18:57:35.412035Z",
-      "verifiedAt": "2026-10-09T18:57:35.412035Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "astronomy",
-        "technology",
-        "earth-science"
-      ],
-      "entities": [
-        "NASA",
-        "Martian Moons eXploration",
-        "MMX",
-        "Phobos",
-        "Deimos"
-      ],
-      "milestoneStatus": "planned"
     }
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "selectedIds": [
+      "science-7f3ad460c89ae8b7",
+      "science-9a50a14141fbbda0",
       "science-3d2e8c95745650ad",
-      "science-6c50c567a596c770",
-      "science-808b4a1d23d0d5e6",
+      "science-7b0b0a977258a502",
       "science-b0cd481433eb7ca1",
-      "science-4dcee2b3879b37c3",
-      "science-39de7efce9733b77"
+      "science-4dcee2b3879b37c3"
     ],
     "reasons": {
+      "science-7f3ad460c89ae8b7": {
+        "score": 34,
+        "source": "NASA",
+        "topic": "earth-science",
+        "publishedAt": "2026-11-16T05:00:00Z",
+        "interestMatch": false
+      },
+      "science-9a50a14141fbbda0": {
+        "score": 31,
+        "source": "ScienceDaily",
+        "topic": "health",
+        "publishedAt": "2026-11-15T14:13:18Z",
+        "interestMatch": false
+      },
       "science-3d2e8c95745650ad": {
-        "score": 32,
+        "score": 31,
         "source": "ESA",
         "topic": "astronomy",
         "publishedAt": "2026-11-13T10:46:06Z",
         "interestMatch": false
       },
-      "science-6c50c567a596c770": {
-        "score": 32,
-        "source": "NASA",
-        "topic": "earth-science",
-        "publishedAt": "2026-11-13T05:01:00Z",
-        "interestMatch": false
-      },
-      "science-808b4a1d23d0d5e6": {
-        "score": 31,
+      "science-7b0b0a977258a502": {
+        "score": 29,
         "source": "Ars Technica Science",
         "topic": "biology",
-        "publishedAt": "2026-11-14T12:05:51Z",
+        "publishedAt": "2026-11-13T20:03:13Z",
         "interestMatch": false
       },
       "science-b0cd481433eb7ca1": {
-        "score": 29,
+        "score": 28,
         "source": "New Scientist",
         "topic": "technology",
         "publishedAt": "2026-11-12T20:00:00Z",
         "interestMatch": false
       },
       "science-4dcee2b3879b37c3": {
-        "score": 28,
+        "score": 27,
         "source": "Science News",
         "topic": "social-science",
         "publishedAt": "2026-11-11T19:00:00Z",
-        "interestMatch": false
-      },
-      "science-39de7efce9733b77": {
-        "score": 25,
-        "source": "ScienceDaily",
-        "topic": "biology",
-        "publishedAt": "2026-11-13T12:55:11Z",
         "interestMatch": false
       }
     }
