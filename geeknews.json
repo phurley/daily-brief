@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-16T11:01:02.875720Z",
-  "editionDate": "2026-11-16",
+  "generatedAt": "2026-11-17T11:01:01.149456Z",
+  "editionDate": "2026-11-17",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -20,6 +20,263 @@
     ]
   },
   "stories": [
+    {
+      "id": "science-e0d2013ab465cdc5",
+      "title": "Hera surveying asteroids with superhuman vision",
+      "summary": "The Hera spacecraft observed the Didymos asteroid system using optical, multispectral, and thermal infrared instruments, revealing surface features, candidate landslides, and thermal structures.",
+      "finding": "The Hera spacecraft observed the Didymos asteroid system using optical, multispectral, and thermal infrared instruments, revealing surface features, candidate landslides, and thermal structures.",
+      "significance": "These multispectral and thermal observations help researchers investigate asteroid composition, structure, and the consequences of NASA's DART collision for planetary defence.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-surveying-asteroids-with-superhuman-vision",
+      "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-surveying-asteroids-with-superhuman-vision",
+      "source": {
+        "name": "ESA"
+      },
+      "sourceGroup": "ESA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-17T08:59:44Z",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "European Space Agency",
+        "Hera",
+        "Didymos",
+        "Dimorphos",
+        "DART"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-f709330c4c7d4bfc",
+      "title": "Perseverance Update: The Ghostly Rocks of ‘Idubi’ — Bright Remnants of Aqueous Systems from Long Ago",
+      "summary": "SuperCam data from the Perseverance rover confirmed that light-toned rocks at Idubi are rich in hydrated silica rather than being igneous in origin.",
+      "finding": "SuperCam data from the Perseverance rover confirmed that light-toned rocks at Idubi are rich in hydrated silica rather than being igneous in origin.",
+      "significance": "Hydrated silica forms in aqueous settings that may support habitability and possesses strong potential for preserving microfossils and biosignatures.",
+      "caveat": "High-resolution chemical and mineralogical proximity science data are still being gathered to constrain the rocks' exact origin and biosignature preservation potential.",
+      "url": "https://science.nasa.gov/blog/perseverance-update-the-ghostly-rocks-of-idubi-bright-remnants-of-aqueous-systems-from-long-ago",
+      "primarySourceUrl": "https://science.nasa.gov/blog/perseverance-update-the-ghostly-rocks-of-idubi-bright-remnants-of-aqueous-systems-from-long-ago",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-16T23:12:45Z",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "Perseverance",
+        "SuperCam",
+        "Mastcam-Z",
+        "SHERLOC",
+        "WATSON"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-16T23:12:48Z"
+    },
+    {
+      "id": "science-d12392adea6070f4",
+      "title": "Hyperscale data centers use 2% of US electricity",
+      "summary": "Between May 2024 and April 2025, 403 US hyperscale data centers were estimated to consume 68 to 99 terawatt-hours, or 1.5 to 2.2 percent of total US electricity.",
+      "finding": "Between May 2024 and April 2025, 403 US hyperscale data centers were estimated to consume 68 to 99 terawatt-hours, or 1.5 to 2.2 percent of total US electricity.",
+      "significance": "Hyperscalers account for roughly one-third to one-half of all US data center energy use, generating an estimated 21 to 31 million metric tons of carbon dioxide.",
+      "caveat": "The study could not differentiate between AI workloads and traditional data services, and it excluded on-site behind-the-meter power generation.",
+      "url": "https://arstechnica.com/science/2026/11/hyperscale-data-centers-use-2-of-us-electricity",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/hyperscale-data-centers-use-2-of-us-electricity",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T20:52:10Z",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "technology"
+      ],
+      "entities": [
+        "United States",
+        "Nature Sustainability"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41893-026-01985-7",
+      "sourceUpdatedAt": "2026-11-16T22:12:03Z"
+    },
+    {
+      "id": "science-a4747eacd3383c98",
+      "title": "Nuclear bomb in space would disable 98 per cent of satellites within a week",
+      "summary": "Simulations indicate a 1-megaton nuclear explosion 500 kilometers above the South Atlantic would disable 98 percent of satellites within a week via an artificial radiation belt of trapped electrons.",
+      "finding": "Simulations indicate a 1-megaton nuclear explosion 500 kilometers above the South Atlantic would disable 98 percent of satellites within a week via an artificial radiation belt of trapped electrons.",
+      "significance": "A single exoatmospheric nuclear detonation could disrupt modern critical space infrastructure like GPS and communications, triggering collisions and prolonged societal degradation.",
+      "caveat": "Preprint / working paper; peer review is not established. The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.newscientist.com/article/2598378-nuclear-bomb-in-space-would-disable-98-per-cent-of-satellites-within-a-week",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598378-nuclear-bomb-in-space-would-disable-98-per-cent-of-satellites-within-a-week",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T16:15:00Z",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "University of Wisconsin–Madison",
+        "Zachary Petersen",
+        "Craig Underwood",
+        "University of Surrey",
+        "Chantal Cappelletti"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://arxiv.org/abs/2611.09827",
+      "sourceUpdatedAt": "2026-11-16T16:29:11Z"
+    },
+    {
+      "id": "science-74a972bdc187c2ef",
+      "title": "Massive data centres collectively use as much electricity as an entire US state",
+      "summary": "Researchers estimate that 403 US hyperscale data centres collectively consumed around 82 terawatt-hours of electricity between May 2024 and April 2025, generating approximately 25.7 million tonnes of carbon dioxide.",
+      "finding": "Researchers estimate that 403 US hyperscale data centres collectively consumed around 82 terawatt-hours of electricity between May 2024 and April 2025, generating approximately 25.7 million tonnes of carbon dioxide.",
+      "significance": "This consumption accounts for roughly 1.8 percent of total US electricity use, matching the power demand of major individual states and highlighting the growing climate footprint of AI infrastructure.",
+      "caveat": "The study relies on commercial data that cannot be independently validated and uses modeling assumptions that overlook nuances such as grid network constraints on power emissions.",
+      "url": "https://www.newscientist.com/article/2599078-massive-datacentres-use-as-much-electricity-as-an-entire-us-state",
+      "primarySourceUrl": "https://www.newscientist.com/article/2599078-massive-datacentres-use-as-much-electricity-as-an-entire-us-state",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T16:00:00Z",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "technology",
+        "earth-science"
+      ],
+      "entities": [
+        "Harvard University",
+        "Free University of Amsterdam",
+        "Johns Hopkins University",
+        "International Energy Agency"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41893-026-01985-7"
+    },
+    {
+      "id": "science-07fcdfff67a13137",
+      "title": "Most transgender youth satisfied after choosing hormone therapy",
+      "summary": "In a survey of 376 transgender and gender-diverse young people, nearly 97 percent reported that undergoing gender-affirming hormone therapy was the right decision, while about 3 percent expressed regret.",
+      "finding": "In a survey of 376 transgender and gender-diverse young people, nearly 97 percent reported that undergoing gender-affirming hormone therapy was the right decision, while about 3 percent expressed regret.",
+      "significance": "The findings support current clinical standards of care as policymakers in numerous U.S. states implement restrictions or bans on youth gender-affirming medical treatments.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencenews.org/article/hormone-therapy-transgender-youth",
+      "primarySourceUrl": "https://www.sciencenews.org/article/hormone-therapy-transgender-youth",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T14:00:00Z",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "health",
+        "social-science"
+      ],
+      "entities": [
+        "JAMA Pediatrics",
+        "KFF",
+        "American Academy of Pediatrics",
+        "Endocrine Society"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2856355",
+      "sourceUpdatedAt": "2026-11-16T14:00:00Z"
+    },
+    {
+      "id": "science-e38220cba2ba2313",
+      "title": "NASA smashed into an asteroid. Now Hera has revealed a strange new world",
+      "summary": "The Hera spacecraft captured its first close-up view of the Didymos asteroid system, revealing an unobserved side of Didymos marked by multiple boulders, craters, and groove-like ridges.",
+      "finding": "The Hera spacecraft captured its first close-up view of the Didymos asteroid system, revealing an unobserved side of Didymos marked by multiple boulders, craters, and groove-like ridges.",
+      "significance": "Investigating this terrain and Didymos's characteristics helps researchers evaluate the physical consequences of NASA's DART collision and improve planetary defense techniques.",
+      "caveat": "Scientists have not yet determined whether the newly observed surface features originated naturally or were caused by impact-ejected debris traveling from Dimorphos.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261116023351.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261116023351.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T13:40:11Z",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "Hera",
+        "Didymos",
+        "Dimorphos",
+        "ESA"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-d16a6fe9446d46f5",
+      "title": "A hidden biological divide may help explain Alzheimer’s and chronic pain",
+      "summary": "Studies indicate that biological sex, genetics, and menopause influence Alzheimer's disease vulnerability, hormone therapy responses, pain sensitivity, and neuroinflammatory effects.",
+      "finding": "Studies indicate that biological sex, genetics, and menopause influence Alzheimer's disease vulnerability, hormone therapy responses, pain sensitivity, and neuroinflammatory effects.",
+      "significance": "Understanding sex-specific biological differences may guide more personalized and targeted therapeutic approaches for conditions like Alzheimer's disease and fibromyalgia.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261115085535.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261115085535.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T12:41:09Z",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "health",
+        "biology"
+      ],
+      "entities": [
+        "Society for Neuroscience",
+        "University of Toronto",
+        "University of Texas Health Science Center at San Antonio",
+        "University of Cincinnati",
+        "University of North Dakota"
+      ],
+      "milestoneStatus": "unknown"
+    },
     {
       "id": "science-bc8d91b6fa99d26c",
       "title": "The end of the universe could emerge suddenly from nothing",
@@ -250,10 +507,10 @@
     {
       "id": "science-7b0b0a977258a502",
       "title": "In elephants, the resilience of communities has its limits",
-      "summary": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
-      "finding": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
-      "significance": "Demonstrates limits to elephant social resilience and shows that subtle network fluctuations could potentially act as early warning indicators before population collapse occurs.",
-      "caveat": "Detecting these social network warning signals requires extensive long-term observational data that are currently unavailable for many elephant populations.",
+      "summary": "In a Sri Lankan national park, persistent elephant losses that outpaced newcomers led the animals' fission-fusion society to fracture into smaller, more isolated communities rather than simply shrinking.",
+      "finding": "In a Sri Lankan national park, persistent elephant losses that outpaced newcomers led the animals' fission-fusion society to fracture into smaller, more isolated communities rather than simply shrinking.",
+      "significance": "The findings suggest elephant social resilience has thresholds, meaning sustained population declines can permanently break down social structures and complicate conservation efforts.",
+      "caveat": "Detecting early warning network fluctuations requires extensive, long-term observational data that is currently unavailable for most wild populations.",
       "url": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
       "source": {
@@ -263,18 +520,17 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-13T20:03:13Z",
       "firstSeenAt": "2026-11-14T11:01:01.420815Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology"
       ],
       "entities": [
-        "University of California, San Diego",
-        "Anastasia Madsen",
-        "Shermin de Silva",
         "Udawalawe National Park",
-        "Science"
+        "Anastasia Madsen",
+        "University of California, San Diego",
+        "Shermin de Silva"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1126/science.aef6714",
@@ -441,10 +697,10 @@
     {
       "id": "science-650d65519942a656",
       "title": "It's the end of the world as we know it, per a physicist's 1960 prediction",
-      "summary": "A 1960 mathematical model predicted that human population growth would reach an infinite breaking point by November 13, 2026.",
-      "finding": "A 1960 mathematical model predicted that human population growth would reach an infinite breaking point by November 13, 2026.",
-      "significance": "While the projection tracked demographer numbers accurately through the 1970s and 1980s, its failure highlights the limitations of extrapolating historical growth dynamics.",
-      "caveat": "The model incorrectly assumed past exponential acceleration would continue indefinitely and failed to foresee declining birth rates, longer life expectancy, and falling child mortality.",
+      "summary": "A retrospective look examines Heinz von Foerster's 1960 mathematical model predicting human population growth would reach an infinite breaking point by November 13, 2026.",
+      "finding": "A retrospective look examines Heinz von Foerster's 1960 mathematical model predicting human population growth would reach an infinite breaking point by November 13, 2026.",
+      "significance": "Von Foerster's core equations accurately matched global demographic trends through the 1970s and 1980s better than many demographers' models before diverging.",
+      "caveat": "The model failed because population growth rates peaked in the early 1960s, birth rates fell to less than half of 1960 levels, and the equation assumed trends would continue indefinitely.",
       "url": "https://arstechnica.com/science/2026/11/its-the-end-of-the-world-as-we-know-it-per-a-physicists-1960-prediction",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/its-the-end-of-the-world-as-we-know-it-per-a-physicists-1960-prediction",
       "source": {
@@ -454,8 +710,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-13T15:09:39Z",
       "firstSeenAt": "2026-11-14T11:01:01.420815Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "social-science",
@@ -463,10 +719,10 @@
       ],
       "entities": [
         "Heinz von Foerster",
-        "Science",
         "Thomas Malthus",
         "Joel Cohen",
-        "Alan MacEachern"
+        "Rockefeller University",
+        "Columbia University"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "http://dx.doi.org/10.1126/science.132.3436.1291",
@@ -1218,10 +1474,10 @@
     {
       "id": "science-4dcee2b3879b37c3",
       "title": "Stone Age children left fingerprints on ancient art projects",
-      "summary": "Clay figurines from up to 15,000 years ago found in Israel bear fingerprints from both adults and children, suggesting adults may have taught children to craft clay.",
-      "finding": "Clay figurines from up to 15,000 years ago found in Israel bear fingerprints from both adults and children, suggesting adults may have taught children to craft clay.",
-      "significance": "The findings provide rare physical evidence of children's participation and intergenerational learning in prehistoric art and culture prior to regional agriculture.",
-      "caveat": "The exact function of the tiny Natufian figurines remains unclear, though lack of wear indicates they were not precious heirlooms.",
+      "summary": "Clay figurines from Natufian sites dating up to 15,000 years ago preserve fingerprints of adults and children, suggesting adults taught children how to shape clay.",
+      "finding": "Clay figurines from Natufian sites dating up to 15,000 years ago preserve fingerprints of adults and children, suggesting adults taught children how to shape clay.",
+      "significance": "The discovery offers rare physical evidence of intergenerational learning and prehistoric children's involvement in art and culture prior to the advent of agriculture.",
+      "caveat": "The exact function and purpose of the small Natufian figurines remain unknown.",
       "url": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
       "primarySourceUrl": "https://www.sciencenews.org/article/stone-age-children-made-art-clay-sculpt",
       "source": {
@@ -1231,15 +1487,15 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-11T19:00:00Z",
       "firstSeenAt": "2026-11-12T11:00:48.186424Z",
-      "checkedAt": "2026-11-15T11:01:01.250099Z",
-      "verifiedAt": "2026-11-15T11:01:01.250099Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "social-science"
       ],
       "entities": [
-        "Hebrew University of Jerusalem",
         "PLOS One",
+        "Hebrew University of Jerusalem",
         "Grand Valley State University"
       ],
       "milestoneStatus": "unknown",
@@ -4617,38 +4873,6 @@
       "paperUrl": "https://arxiv.org/abs/2609.27126"
     },
     {
-      "id": "science-ebd5ed8eaec52f79",
-      "title": "NASA JPL Looks to Next 90 Years of Innovation, Exploration",
-      "summary": "Voyager 1 will reach a distance of one full light-day, approximately 16 billion miles or 26 billion kilometers, from Earth on November 18, 2026.",
-      "finding": "Voyager 1 will reach a distance of one full light-day, approximately 16 billion miles or 26 billion kilometers, from Earth on November 18, 2026.",
-      "significance": "The milestone marks an unprecedented distance for a human-made spacecraft as both Voyagers continue operating in interstellar space.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration",
-      "primarySourceUrl": "https://www.nasa.gov/centers-and-facilities/jpl/nasa-jpl-looks-to-next-90-years-of-innovation-exploration",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-21T18:35:56Z",
-      "firstSeenAt": "2026-11-15T11:01:01.250099Z",
-      "checkedAt": "2026-11-15T11:01:01.250099Z",
-      "verifiedAt": "2026-11-15T11:01:01.250099Z",
-      "evidenceType": "mission-milestone",
-      "topics": [
-        "astronomy",
-        "technology"
-      ],
-      "entities": [
-        "NASA",
-        "JPL",
-        "Caltech",
-        "Voyager 1"
-      ],
-      "milestoneStatus": "planned",
-      "sourceUpdatedAt": "2026-10-21T18:35:57Z"
-    },
-    {
       "id": "science-96e26a5e582ff203",
       "title": "MMX lifts off to Mars’s moon Phobos",
       "summary": "The Martian Moons eXploration (MMX) mission successfully launched into space on an H3 rocket from the Tanegashima Space Center on October 20, 2026, beginning its journey to Mars's moons Phobos and Deimos.",
@@ -5008,9 +5232,9 @@
     {
       "id": "science-4b31a65269f1add9",
       "title": "NASA Satellites Observe Historic 2026 El Niño",
-      "summary": "NASA satellites tracked the emergence of a potentially historic 2026 El Niño, documenting elevated sea levels, warmer equatorial Pacific waters, and a bluer ocean caused by declining phytoplankton.",
-      "finding": "NASA satellites tracked the emergence of a potentially historic 2026 El Niño, documenting elevated sea levels, warmer equatorial Pacific waters, and a bluer ocean caused by declining phytoplankton.",
-      "significance": "Tracking these ocean changes in near-real time helps scientists understand shifts in global weather patterns and cascading effects on marine food webs caused by reduced nutrient upwelling.",
+      "summary": "NASA satellites tracked the 2026 El Niño, recording elevated sea surface heights, ocean warming, and a decline in phytoplankton abundance that caused equatorial Pacific waters to become measurably bluer.",
+      "finding": "NASA satellites tracked the 2026 El Niño, recording elevated sea surface heights, ocean warming, and a decline in phytoplankton abundance that caused equatorial Pacific waters to become measurably bluer.",
+      "significance": "The observations demonstrate the ability of missions like Sentinel-6 and PACE to monitor large-scale climatic shifts, marine ecosystem changes, and sea level variations across the Pacific in near-real time.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino",
       "primarySourceUrl": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino",
@@ -5021,18 +5245,18 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-15T17:59:22Z",
       "firstSeenAt": "2026-10-16T10:02:47.778170Z",
-      "checkedAt": "2026-11-15T11:01:01.250099Z",
-      "verifiedAt": "2026-11-15T11:01:01.250099Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "earth-science"
       ],
       "entities": [
         "NASA",
-        "National Oceanic and Atmospheric Administration",
-        "Sentinel-6",
         "PACE",
-        "Ocean Color Instrument"
+        "Sentinel-6",
+        "Jet Propulsion Laboratory",
+        "Goddard Space Flight Center"
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-10-15T20:07:23Z"
@@ -5576,9 +5800,9 @@
     {
       "id": "science-996b79babe601422",
       "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
-      "summary": "Voyager Technologies' Griffin-1 lunar lander completed environmental testing at NASA's Jet Propulsion Laboratory, confirming its readiness to endure space launch and lunar conditions.",
-      "finding": "Voyager Technologies' Griffin-1 lunar lander completed environmental testing at NASA's Jet Propulsion Laboratory, confirming its readiness to endure space launch and lunar conditions.",
-      "significance": "Passing these tests readies Griffin-1 to transport over 1,100 pounds of cargo and technology demonstrations to the lunar South Pole under NASA's CLPS initiative.",
+      "summary": "Voyager Technologies' Griffin-1 lunar lander successfully finished rigorous environmental tests at NASA's Jet Propulsion Laboratory, confirming its readiness to endure launch and deep space conditions.",
+      "finding": "Voyager Technologies' Griffin-1 lunar lander successfully finished rigorous environmental tests at NASA's Jet Propulsion Laboratory, confirming its readiness to endure launch and deep space conditions.",
+      "significance": "Griffin-1 is scheduled to transport over 1,100 pounds of cargo, including multiple international science payloads, to the lunar South Pole to support Moon Base infrastructure.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
       "primarySourceUrl": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
@@ -5589,18 +5813,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-13T13:00:00Z",
       "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-11-15T11:01:01.250099Z",
-      "verifiedAt": "2026-11-15T11:01:01.250099Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
       "evidenceType": "mission-milestone",
       "topics": [
-        "astronomy",
-        "technology"
+        "technology",
+        "astronomy"
       ],
       "entities": [
         "NASA",
         "Jet Propulsion Laboratory",
         "Voyager Technologies",
-        "SpaceX Falcon Heavy"
+        "Griffin-1",
+        "SpaceX"
       ],
       "milestoneStatus": "completed",
       "sourceUpdatedAt": "2026-10-14T13:37:45Z"
@@ -5668,288 +5893,60 @@
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-10-13T04:05:00Z"
-    },
-    {
-      "id": "science-0839a004776646c1",
-      "title": "An Impact Structure With Legs",
-      "summary": "The Spider Crater in Western Australia, an oval-shaped impact structure measuring about 13 by 11 kilometers, exhibits an unusual arachnoid pattern in its central portion, which is believed to be the remnant of a central uplift formed by the rebound of the initial impact shock. The light-colored \"legs\" are sandstone ridges that have resisted erosion, while other rock layers have eroded away.",
-      "finding": "The Spider Crater in Western Australia, an oval-shaped impact structure measuring about 13 by 11 kilometers, exhibits an unusual arachnoid pattern in its central portion, which is believed to be the remnant of a central uplift formed by the rebound of the initial impact shock. The light-colored \"legs\" are sandstone ridges that have resisted erosion, while other rock layers have eroded away.",
-      "significance": "This finding helps to understand the geological processes that occur after a meteorite impact, specifically how erosion and the rebound effect can shape the resulting crater over millions of years, providing insights into Earth's geological history and impact mechanics.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/earth/earth-observatory/an-impact-structure-with-legs",
-      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/an-impact-structure-with-legs",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T04:01:00Z",
-      "firstSeenAt": "2026-10-13T10:00:01.886016Z",
-      "checkedAt": "2026-10-13T10:00:01.886016Z",
-      "verifiedAt": "2026-10-13T10:00:01.886016Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "earth-science",
-        "geology"
-      ],
-      "entities": [
-        "Spider Crater",
-        "Western Australia",
-        "Kimberley region",
-        "Landsat 9",
-        "OLI"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-13T04:01:00Z"
-    },
-    {
-      "id": "science-f49806e648203e32",
-      "title": "NASA’s SpaceX CRS-35 Mission to Launch Health Research",
-      "summary": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
-      "finding": "NASA's SpaceX CRS-35 mission will launch experiments to the International Space Station focusing on human and plant health, and drug-resistant organisms. These include studies on 3D human brain models to understand spaceflight effects at a cellular level, crop disease development in microgravity, a compact microplate reader for rapid astronaut health assessment, and the survival and evolution of antibiotic-resistant bacteria in microgravity.",
-      "significance": "This research aims to benefit life on Earth by guiding plant breeding for disease-resistant crops and providing insights into superbug development. It also supports future space exploration by addressing astronaut health risks during long-duration missions, improving space agriculture systems, and enabling timely detection of health issues in remote locations.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research",
-      "primarySourceUrl": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-12T17:45:27Z",
-      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
-      "checkedAt": "2026-10-12T21:09:35.027780Z",
-      "verifiedAt": "2026-10-12T21:09:35.027780Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "health",
-        "biology",
-        "technology"
-      ],
-      "entities": [
-        "NASA",
-        "SpaceX CRS-35 Mission",
-        "International Space Station",
-        "Cape Canaveral Space Force Station"
-      ],
-      "milestoneStatus": "planned",
-      "sourceUpdatedAt": "2026-10-12T17:52:13Z"
-    },
-    {
-      "id": "science-d7bc2296036a996c",
-      "title": "How nature lovers can aid ecology with an assist from AI",
-      "summary": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
-      "finding": "Artificial intelligence tools, specifically large language models like Claude and ChatGPT, can effectively extract and categorize ecological data, such as species interactions and the presence of non-native species, from the comments sections of participatory science platforms like eBird and iNaturalist.",
-      "significance": "This approach allows ecologists to efficiently access and analyze a vast, previously underutilized source of observational data, enabling them to study species interactions and ecosystem health across broad spatial and temporal scales, which is crucial for understanding responses to global change.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
-      "primarySourceUrl": "https://news.umich.edu/how-nature-lovers-can-aid-ecology-with-an-assist-from-ai",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-12T13:00:00Z",
-      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
-      "checkedAt": "2026-10-15T10:00:00.772183Z",
-      "verifiedAt": "2026-10-15T10:00:00.772183Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "ecology",
-        "technology",
-        "environment"
-      ],
-      "entities": [
-        "University of Michigan",
-        "Claude",
-        "ChatGPT",
-        "eBird",
-        "iNaturalist"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.pnas.org/doi/10.1073/pnas.2602244123",
-      "sourceUpdatedAt": "2026-10-12T15:21:32Z",
-      "localConnection": "University of Michigan research in Ann Arbor."
-    },
-    {
-      "id": "science-dfecbaa7cd4849d7",
-      "title": "APOD: 2026 October 12 – Jupiter and the Moons",
-      "summary": "A recent celestial alignment allowed for a photograph showing Earth's Moon positioned in front of Jupiter, with four of Jupiter's Galilean moons (Ganymede, Io, Callisto, and Europa) visible in a near-vertical line above it.",
-      "finding": "A recent celestial alignment allowed for a photograph showing Earth's Moon positioned in front of Jupiter, with four of Jupiter's Galilean moons (Ganymede, Io, Callisto, and Europa) visible in a near-vertical line above it.",
-      "significance": "This event provided a unique visual opportunity to observe multiple celestial bodies in close apparent proximity, highlighting the relative sizes and positions of Earth's Moon and Jupiter's largest moons.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-12-jupiter-and-the-moons",
-      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-october-12-jupiter-and-the-moons",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-12T04:05:00Z",
-      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
-      "checkedAt": "2026-10-12T21:09:35.027780Z",
-      "verifiedAt": "2026-10-12T21:09:35.027780Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "astronomy"
-      ],
-      "entities": [
-        "Jupiter",
-        "Earth's Moon",
-        "Ganymede",
-        "Io",
-        "Callisto"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-12T04:05:00Z"
-    },
-    {
-      "id": "science-e24e2e3eb0ca16aa",
-      "title": "Antarctic Sea Ice Grows to Its 2026 Maximum",
-      "summary": "Antarctic sea ice reached its annual maximum extent on September 14, 2026, covering an estimated 17.59 million square kilometers (6.79 million square miles), making it the third-lowest maximum on record.",
-      "finding": "Antarctic sea ice reached its annual maximum extent on September 14, 2026, covering an estimated 17.59 million square kilometers (6.79 million square miles), making it the third-lowest maximum on record.",
-      "significance": "This finding contributes to the long-term monitoring of Antarctic sea ice, which is an important indicator of climate change and has implications for global climate patterns, ocean circulation, and marine ecosystems.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/earth/earth-observatory/antarctic-sea-ice-grows-to-its-2026-maximum",
-      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/antarctic-sea-ice-grows-to-its-2026-maximum",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-12T04:00:00Z",
-      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
-      "checkedAt": "2026-10-12T21:09:35.027780Z",
-      "verifiedAt": "2026-10-12T21:09:35.027780Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "earth-science",
-        "climate"
-      ],
-      "entities": [
-        "Antarctic",
-        "NASA Earth Observatory",
-        "National Snow and Ice Data Center",
-        "satellite"
-      ],
-      "milestoneStatus": "completed",
-      "sourceUpdatedAt": "2026-10-12T04:00:00Z"
-    },
-    {
-      "id": "science-f5183f6ff8c05371",
-      "title": "APOD: 2026 October 11 – Ice Fishing for Cosmic Neutrinos",
-      "summary": "The IceCube Neutrino Observatory has detected numerous high-energy neutrinos originating from powerful processes in the universe.",
-      "finding": "The IceCube Neutrino Observatory has detected numerous high-energy neutrinos originating from powerful processes in the universe.",
-      "significance": "This detection of cosmic neutrinos provides a new way to study extreme astrophysical phenomena and understand the universe's most energetic events.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-11-ice-fishing-for-cosmic-neutrinos",
-      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-october-11-ice-fishing-for-cosmic-neutrinos",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-11T04:05:00Z",
-      "firstSeenAt": "2026-10-12T21:09:35.027780Z",
-      "checkedAt": "2026-10-12T21:09:35.027780Z",
-      "verifiedAt": "2026-10-12T21:09:35.027780Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "astronomy",
-        "physics"
-      ],
-      "entities": [
-        "IceCube Neutrino Observatory",
-        "neutrinos",
-        "South Pole"
-      ],
-      "milestoneStatus": "completed",
-      "sourceUpdatedAt": "2026-10-11T04:05:00Z"
-    },
-    {
-      "id": "science-b5c109cca896d755",
-      "title": "APOD: 2026 October 10 – Lunar Farside",
-      "summary": "The Moon's farside has a rougher, more battered surface and lacks the smooth, dark lunar maria found on the nearside. This difference is likely due to a thicker crust on the farside, which would make it more difficult for molten material from the interior to reach the surface and form maria.",
-      "finding": "The Moon's farside has a rougher, more battered surface and lacks the smooth, dark lunar maria found on the nearside. This difference is likely due to a thicker crust on the farside, which would make it more difficult for molten material from the interior to reach the surface and form maria.",
-      "significance": "Understanding the geological differences between the Moon's nearside and farside provides insights into the Moon's formation and evolutionary processes, particularly regarding its internal structure and volcanic activity.",
-      "caveat": "The explanation for the difference in lunar maria distribution is presented as a \"likely explanation\" rather than a confirmed fact, indicating it is a hypothesis based on observations.",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-10-lunar-farside",
-      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-october-10-lunar-farside",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-10T04:05:00Z",
-      "firstSeenAt": "2026-10-10T10:16:39.118957Z",
-      "checkedAt": "2026-10-13T10:00:01.886016Z",
-      "verifiedAt": "2026-10-13T10:00:01.886016Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "astronomy",
-        "earth-science"
-      ],
-      "entities": [
-        "Moon",
-        "Lunar Reconnaissance Orbiter",
-        "NASA"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-10T04:05:00Z"
     }
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-11-16",
+    "date": "2026-11-17",
     "selectedIds": [
+      "science-e0d2013ab465cdc5",
       "science-7f3ad460c89ae8b7",
-      "science-9a50a14141fbbda0",
-      "science-3d2e8c95745650ad",
-      "science-7b0b0a977258a502",
-      "science-b0cd481433eb7ca1",
-      "science-4dcee2b3879b37c3"
+      "science-d12392adea6070f4",
+      "science-a4747eacd3383c98",
+      "science-07fcdfff67a13137",
+      "science-39de7efce9733b77"
     ],
     "reasons": {
-      "science-7f3ad460c89ae8b7": {
+      "science-e0d2013ab465cdc5": {
         "score": 34,
+        "source": "ESA",
+        "topic": "astronomy",
+        "publishedAt": "2026-11-17T08:59:44Z",
+        "interestMatch": false
+      },
+      "science-7f3ad460c89ae8b7": {
+        "score": 33,
         "source": "NASA",
         "topic": "earth-science",
         "publishedAt": "2026-11-16T05:00:00Z",
         "interestMatch": false
       },
-      "science-9a50a14141fbbda0": {
+      "science-d12392adea6070f4": {
         "score": 31,
-        "source": "ScienceDaily",
-        "topic": "health",
-        "publishedAt": "2026-11-15T14:13:18Z",
-        "interestMatch": false
-      },
-      "science-3d2e8c95745650ad": {
-        "score": 31,
-        "source": "ESA",
-        "topic": "astronomy",
-        "publishedAt": "2026-11-13T10:46:06Z",
-        "interestMatch": false
-      },
-      "science-7b0b0a977258a502": {
-        "score": 29,
         "source": "Ars Technica Science",
-        "topic": "biology",
-        "publishedAt": "2026-11-13T20:03:13Z",
-        "interestMatch": false
-      },
-      "science-b0cd481433eb7ca1": {
-        "score": 28,
-        "source": "New Scientist",
         "topic": "technology",
-        "publishedAt": "2026-11-12T20:00:00Z",
+        "publishedAt": "2026-11-16T20:52:10Z",
         "interestMatch": false
       },
-      "science-4dcee2b3879b37c3": {
-        "score": 27,
+      "science-a4747eacd3383c98": {
+        "score": 31,
+        "source": "New Scientist",
+        "topic": "physics",
+        "publishedAt": "2026-11-16T16:15:00Z",
+        "interestMatch": false
+      },
+      "science-07fcdfff67a13137": {
+        "score": 31,
         "source": "Science News",
-        "topic": "social-science",
-        "publishedAt": "2026-11-11T19:00:00Z",
+        "topic": "health",
+        "publishedAt": "2026-11-16T14:00:00Z",
+        "interestMatch": false
+      },
+      "science-39de7efce9733b77": {
+        "score": 28,
+        "source": "ScienceDaily",
+        "topic": "biology",
+        "publishedAt": "2026-11-13T12:55:11Z",
         "interestMatch": false
       }
     }

@@ -1,8 +1,124 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-16T06:57:14.734020-05:00",
+  "generatedAt": "2026-11-17T06:19:37.588016-05:00",
   "stories": [
+    {
+      "id": "science-f709330c4c7d4bfc",
+      "title": "Perseverance Update: The Ghostly Rocks of ‘Idubi’ — Bright Remnants of Aqueous Systems from Long Ago",
+      "summary": "NASA's Perseverance rover identified bright, silica-rich rocks in Mars' \"Idubi\" area, confirmed by SuperCam data to be hydrated silica. These deposits, which can preserve microfossils on Earth, suggest ancient Martian aqueous systems and are now undergoing detailed proximity science investigations to understand their origin and biosignature preservation potential.",
+      "finding": "NASA's Perseverance rover identified bright, silica-rich rocks in Mars' \"Idubi\" area, confirmed by SuperCam data to be hydrated silica. These deposits, which can preserve microfossils on Earth, suggest ancient Martian aqueous systems and are now undergoing detailed proximity science investigations to understand their origin and biosignature preservation potential.",
+      "significance": "Hydrated silica forms in aqueous settings that may support habitability and possesses strong potential for preserving microfossils and biosignatures.",
+      "caveat": "High-resolution chemical and mineralogical proximity science data are still being gathered to constrain the rocks' exact origin and biosignature preservation potential.",
+      "url": "https://science.nasa.gov/blog/perseverance-update-the-ghostly-rocks-of-idubi-bright-remnants-of-aqueous-systems-from-long-ago",
+      "primarySourceUrl": "https://science.nasa.gov/blog/perseverance-update-the-ghostly-rocks-of-idubi-bright-remnants-of-aqueous-systems-from-long-ago",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-16T18:12:45-05:00",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "Perseverance",
+        "SuperCam",
+        "Mastcam-Z",
+        "SHERLOC",
+        "WATSON"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-16T23:12:48Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-17T06:19:37.588016-05:00",
+        "expiresAt": "2026-11-20T06:19:37.588016-05:00",
+        "inputFacts": {
+          "id": "science-f709330c4c7d4bfc",
+          "title": "Perseverance Update: The Ghostly Rocks of ‘Idubi’ — Bright Remnants of Aqueous Systems from Long Ago",
+          "url": "https://science.nasa.gov/blog/perseverance-update-the-ghostly-rocks-of-idubi-bright-remnants-of-aqueous-systems-from-long-ago",
+          "publishedAt": "2026-11-16T23:12:45Z",
+          "summary": "SuperCam data from the Perseverance rover confirmed that light-toned rocks at Idubi are rich in hydrated silica rather than being igneous in origin.",
+          "finding": "SuperCam data from the Perseverance rover confirmed that light-toned rocks at Idubi are rich in hydrated silica rather than being igneous in origin.",
+          "sourceUpdatedAt": "2026-11-16T23:12:48Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-16T18:12:45-05:00",
+        "datePrecision": "time",
+        "sourceHash": "a267ec261c58a7420469e4a03ddbf63b2840a8bbb66dd9239d4d91040faa8944",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "New finding of hydrated silica on Mars with astrobiological implications, representing a substantive new finding.",
+        "storyKey": "perseverance-idubi-silica-rocks",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article confirms the identification of silica-rich rocks by the Perseverance rover, their hydrated nature, and their potential astrobiological significance, which aligns with the summary. It also details ongoing proximity science investigations."
+      }
+    },
+    {
+      "id": "science-a4747eacd3383c98",
+      "title": "Nuclear bomb in space would disable 98 per cent of satellites within a week",
+      "summary": "A new model suggests a single 1-megaton nuclear explosion 500 km above the South Atlantic could disable 98% of satellites within a week, even with radiation-hardened chips. The primary damage comes from electrons trapped in Earth's magnetic field, creating an artificial radiation belt. Recovery could take years due to elevated radiation and increased debris, risking Kessler syndrome.",
+      "finding": "A new model suggests a single 1-megaton nuclear explosion 500 km above the South Atlantic could disable 98% of satellites within a week, even with radiation-hardened chips. The primary damage comes from electrons trapped in Earth's magnetic field, creating an artificial radiation belt. Recovery could take years due to elevated radiation and increased debris, risking Kessler syndrome.",
+      "significance": "A single exoatmospheric nuclear detonation could disrupt modern critical space infrastructure like GPS and communications, triggering collisions and prolonged societal degradation.",
+      "caveat": "Preprint / working paper; peer review is not established. The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.newscientist.com/article/2598378-nuclear-bomb-in-space-would-disable-98-per-cent-of-satellites-within-a-week",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598378-nuclear-bomb-in-space-would-disable-98-per-cent-of-satellites-within-a-week",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T16:15:00+00:00",
+      "firstSeenAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-17T11:01:01.149456Z",
+      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "University of Wisconsin–Madison",
+        "Zachary Petersen",
+        "Craig Underwood",
+        "University of Surrey",
+        "Chantal Cappelletti"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://arxiv.org/abs/2611.09827",
+      "sourceUpdatedAt": "2026-11-16T16:29:11Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-17T06:19:37.588016-05:00",
+        "expiresAt": "2026-11-20T06:19:37.588016-05:00",
+        "inputFacts": {
+          "id": "science-a4747eacd3383c98",
+          "title": "Nuclear bomb in space would disable 98 per cent of satellites within a week",
+          "url": "https://www.newscientist.com/article/2598378-nuclear-bomb-in-space-would-disable-98-per-cent-of-satellites-within-a-week",
+          "publishedAt": "2026-11-16T16:15:00Z",
+          "summary": "Simulations indicate a 1-megaton nuclear explosion 500 kilometers above the South Atlantic would disable 98 percent of satellites within a week via an artificial radiation belt of trapped electrons.",
+          "finding": "Simulations indicate a 1-megaton nuclear explosion 500 kilometers above the South Atlantic would disable 98 percent of satellites within a week via an artificial radiation belt of trapped electrons.",
+          "sourceUpdatedAt": "2026-11-16T16:29:11Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-16T16:15:00+00:00",
+        "datePrecision": "time",
+        "sourceHash": "4d85b6feda9653566214b33fd6b2199e8488acd0bf1eb89a9916157dad479bac",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "This is a new scientific finding with significant implications for global infrastructure, including services used in Canton, such as GPS and internet. The modeling provides a novel assessment of a catastrophic event.",
+        "storyKey": "space-nuke-satellite-impact",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article supports all material claims in the summary, including quantities, timeframes, mechanisms, and the impact of radiation-hardened chips. The summary accurately reflects the findings of the new model and its implications. This is a new finding with significant implications for space technology and global infrastructure."
+      }
+    },
     {
       "id": "science-27ff426d4247d2c9",
       "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Jets from Webb",
@@ -175,67 +291,69 @@
         "grounded": true,
         "groundingReason": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice is amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds."
       }
-    },
-    {
-      "id": "science-7b0b0a977258a502",
-      "title": "In elephants, the resilience of communities has its limits",
-      "summary": "A 12-year study of wild Asian elephants in Sri Lanka suggests that sustained population losses, rather than sudden spikes, can fracture their social networks. Researchers observed that as losses outpaced new elephants, communities became smaller, more numerous, and isolated, even among resident individuals, potentially due to the loss of key social connectors.",
-      "finding": "A 12-year study of wild Asian elephants in Sri Lanka suggests that sustained population losses, rather than sudden spikes, can fracture their social networks. Researchers observed that as losses outpaced new elephants, communities became smaller, more numerous, and isolated, even among resident individuals, potentially due to the loss of key social connectors.",
-      "significance": "Demonstrates limits to elephant social resilience and shows that subtle network fluctuations could potentially act as early warning indicators before population collapse occurs.",
-      "caveat": "Detecting these social network warning signals requires extensive long-term observational data that are currently unavailable for many elephant populations.",
-      "url": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
-      "primarySourceUrl": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
-      "source": {
-        "name": "Ars Technica Science"
-      },
-      "sourceGroup": "Ars Technica Science",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-13T20:03:13+00:00",
-      "firstSeenAt": "2026-11-14T11:01:01.420815Z",
-      "checkedAt": "2026-11-14T11:01:01.420815Z",
-      "verifiedAt": "2026-11-14T11:01:01.420815Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "biology"
-      ],
-      "entities": [
-        "University of California, San Diego",
-        "Anastasia Madsen",
-        "Shermin de Silva",
-        "Udawalawe National Park",
-        "Science"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://doi.org/10.1126/science.aef6714",
-      "sourceUpdatedAt": "2026-11-13T20:03:13Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-14T06:45:39.859414-05:00",
-        "expiresAt": "2026-11-17T06:45:39.859414-05:00",
-        "inputFacts": {
-          "id": "science-7b0b0a977258a502",
-          "title": "In elephants, the resilience of communities has its limits",
-          "url": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
-          "publishedAt": "2026-11-13T20:03:13Z",
-          "summary": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
-          "finding": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
-          "sourceUpdatedAt": "2026-11-13T20:03:13Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-13T20:03:13+00:00",
-        "datePrecision": "time",
-        "sourceHash": "b6f6eca4dab9befb92c21b578cf31a52ac8d7adbf0e4a62ab0d0c1da8a939805",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The study presents a novel finding on the long-term social impact of sustained population decline in a complex animal society, which is relevant to biology and conservation efforts.",
-        "storyKey": "elephant-social-fracture",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article describes a 12-year study of wild Asian elephants in Sri Lanka, finding that sustained population losses led to the fracturing of their social networks, with communities becoming smaller, more numerous, and isolated, even among resident individuals, potentially due to the loss of key social connectors. This directly supports all material claims in the summary."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-f709330c4c7d4bfc",
+      "inputFacts": {
+        "id": "science-f709330c4c7d4bfc",
+        "title": "Perseverance Update: The Ghostly Rocks of ‘Idubi’ — Bright Remnants of Aqueous Systems from Long Ago",
+        "url": "https://science.nasa.gov/blog/perseverance-update-the-ghostly-rocks-of-idubi-bright-remnants-of-aqueous-systems-from-long-ago",
+        "publishedAt": "2026-11-16T23:12:45Z",
+        "summary": "SuperCam data from the Perseverance rover confirmed that light-toned rocks at Idubi are rich in hydrated silica rather than being igneous in origin.",
+        "finding": "SuperCam data from the Perseverance rover confirmed that light-toned rocks at Idubi are rich in hydrated silica rather than being igneous in origin.",
+        "sourceUpdatedAt": "2026-11-16T23:12:48Z"
+      },
+      "publishedAt": "2026-11-16T18:12:45-05:00",
+      "publicationEvidence": "2026-11-16T18:12:45-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-a4747eacd3383c98",
+      "inputFacts": {
+        "id": "science-a4747eacd3383c98",
+        "title": "Nuclear bomb in space would disable 98 per cent of satellites within a week",
+        "url": "https://www.newscientist.com/article/2598378-nuclear-bomb-in-space-would-disable-98-per-cent-of-satellites-within-a-week",
+        "publishedAt": "2026-11-16T16:15:00Z",
+        "summary": "Simulations indicate a 1-megaton nuclear explosion 500 kilometers above the South Atlantic would disable 98 percent of satellites within a week via an artificial radiation belt of trapped electrons.",
+        "finding": "Simulations indicate a 1-megaton nuclear explosion 500 kilometers above the South Atlantic would disable 98 percent of satellites within a week via an artificial radiation belt of trapped electrons.",
+        "sourceUpdatedAt": "2026-11-16T16:29:11Z"
+      },
+      "publishedAt": "2026-11-16T16:15:00+00:00",
+      "publicationEvidence": "2026-11-16T16:15:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-74a972bdc187c2ef",
+      "inputFacts": {
+        "id": "science-74a972bdc187c2ef",
+        "title": "Massive data centres collectively use as much electricity as an entire US state",
+        "url": "https://www.newscientist.com/article/2599078-massive-datacentres-use-as-much-electricity-as-an-entire-us-state",
+        "publishedAt": "2026-11-16T16:00:00Z",
+        "summary": "Researchers estimate that 403 US hyperscale data centres collectively consumed around 82 terawatt-hours of electricity between May 2024 and April 2025, generating approximately 25.7 million tonnes of carbon dioxide.",
+        "finding": "Researchers estimate that 403 US hyperscale data centres collectively consumed around 82 terawatt-hours of electricity between May 2024 and April 2025, generating approximately 25.7 million tonnes of carbon dioxide.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-16T16:00:00+00:00",
+      "publicationEvidence": "2026-11-16T16:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-07fcdfff67a13137",
+      "inputFacts": {
+        "id": "science-07fcdfff67a13137",
+        "title": "Most transgender youth satisfied after choosing hormone therapy",
+        "url": "https://www.sciencenews.org/article/hormone-therapy-transgender-youth",
+        "publishedAt": "2026-11-16T14:00:00Z",
+        "summary": "In a survey of 376 transgender and gender-diverse young people, nearly 97 percent reported that undergoing gender-affirming hormone therapy was the right decision, while about 3 percent expressed regret.",
+        "finding": "In a survey of 376 transgender and gender-diverse young people, nearly 97 percent reported that undergoing gender-affirming hormone therapy was the right decision, while about 3 percent expressed regret.",
+        "sourceUpdatedAt": "2026-11-16T14:00:00Z"
+      },
+      "publishedAt": "2026-11-16T09:00:00-05:00",
+      "publicationEvidence": "2026-11-16T09:00:00-05:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-27ff426d4247d2c9",
       "inputFacts": {
@@ -288,8 +406,8 @@
         "title": "In elephants, the resilience of communities has its limits",
         "url": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits",
         "publishedAt": "2026-11-13T20:03:13Z",
-        "summary": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
-        "finding": "Researchers found that when losses of wild Asian elephants steadily outpaced newcomers, their society fractured into smaller, more isolated communities rather than simply shrinking.",
+        "summary": "In a Sri Lankan national park, persistent elephant losses that outpaced newcomers led the animals' fission-fusion society to fracture into smaller, more isolated communities rather than simply shrinking.",
+        "finding": "In a Sri Lankan national park, persistent elephant losses that outpaced newcomers led the animals' fission-fusion society to fracture into smaller, more isolated communities rather than simply shrinking.",
         "sourceUpdatedAt": "2026-11-13T20:03:13Z"
       },
       "publishedAt": "2026-11-13T20:03:13+00:00",
@@ -372,6 +490,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-d12392adea6070f4",
+      "inputFacts": {
+        "id": "science-d12392adea6070f4",
+        "title": "Hyperscale data centers use 2% of US electricity",
+        "url": "https://arstechnica.com/science/2026/11/hyperscale-data-centers-use-2-of-us-electricity",
+        "publishedAt": "2026-11-16T20:52:10Z",
+        "summary": "Between May 2024 and April 2025, 403 US hyperscale data centers were estimated to consume 68 to 99 terawatt-hours, or 1.5 to 2.2 percent of total US electricity.",
+        "finding": "Between May 2024 and April 2025, 403 US hyperscale data centers were estimated to consume 68 to 99 terawatt-hours, or 1.5 to 2.2 percent of total US electricity.",
+        "sourceUpdatedAt": "2026-11-16T22:12:03Z"
+      },
+      "publishedAt": "2026-11-16T20:52:10+00:00",
+      "publicationEvidence": "2026-11-16T20:52:10+00:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-bc8d91b6fa99d26c",
       "inputFacts": {
         "id": "science-bc8d91b6fa99d26c",
@@ -415,47 +548,9 @@
       "publishedAt": "2026-11-14T12:05:51+00:00",
       "publicationEvidence": "2026-11-14T12:05:51+00:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-650d65519942a656",
-      "inputFacts": {
-        "id": "science-650d65519942a656",
-        "title": "It's the end of the world as we know it, per a physicist's 1960 prediction",
-        "url": "https://arstechnica.com/science/2026/11/its-the-end-of-the-world-as-we-know-it-per-a-physicists-1960-prediction",
-        "publishedAt": "2026-11-13T15:09:39Z",
-        "summary": "A 1960 mathematical model predicted that human population growth would reach an infinite breaking point by November 13, 2026.",
-        "finding": "A 1960 mathematical model predicted that human population growth would reach an infinite breaking point by November 13, 2026.",
-        "sourceUpdatedAt": "2026-11-13T17:14:16Z"
-      },
-      "publishedAt": "2026-11-13T15:09:39+00:00",
-      "publicationEvidence": "2026-11-13T15:09:39+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-9072a5ad3b0a42fd",
-      "inputFacts": {
-        "id": "science-9072a5ad3b0a42fd",
-        "title": "Scientists warn 1.5°C climate change threshold could arrive by 2029",
-        "url": "https://arstechnica.com/science/2026/11/scientists-warn-the-1-5c-climate-change-threshold-could-arrive-by-2029",
-        "publishedAt": "2026-11-13T14:29:15Z",
-        "summary": "According to the European Union's Copernicus climate change service, global warming has accelerated, with the 1.5\u0000C threshold projected to be crossed as early as 2029.",
-        "finding": "According to the European Union's Copernicus climate change service, global warming has accelerated, with the 1.5\u0000C threshold projected to be crossed as early as 2029.",
-        "sourceUpdatedAt": "2026-11-13T17:42:25Z"
-      },
-      "publishedAt": "2026-11-13T14:29:15+00:00",
-      "publicationEvidence": "2026-11-13T14:29:15+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-15",
-      "selectedIds": [
-        "science-7b0b0a977258a502",
-        "science-a2daa312bdf773c7",
-        "science-22dc9962cb4da998"
-      ]
-    },
     {
       "date": "2026-11-16",
       "selectedIds": [
@@ -470,6 +565,14 @@
         "science-a2daa312bdf773c7",
         "science-27ff426d4247d2c9",
         "science-22dc9962cb4da998"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "selectedIds": [
+        "science-a2daa312bdf773c7",
+        "science-f709330c4c7d4bfc",
+        "science-a4747eacd3383c98"
       ]
     }
   ]
