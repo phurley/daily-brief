@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-18T00:42:12Z",
+  "generatedAt": "2026-11-18T04:23:16Z",
   "location": {
     "name": "Canton",
     "region": "Michigan",
@@ -9,19 +9,19 @@
     "timeZone": "America/Detroit"
   },
   "current": {
-    "observedAt": "2026-11-17T19:30:00-05:00",
-    "temperatureF": 42.9,
-    "feelsLikeF": 36.9,
+    "observedAt": "2026-11-17T23:15:00-05:00",
+    "temperatureF": 35.2,
+    "feelsLikeF": 28.9,
     "conditionCode": 0,
     "conditionText": "Clear",
     "icon": "☀",
     "precipitationIn": 0.0,
-    "humidityPercent": 65,
+    "humidityPercent": 77,
     "wind": {
-      "speedMph": 5.1,
-      "directionDegrees": 218,
+      "speedMph": 4.9,
+      "directionDegrees": 236,
       "direction": "SW",
-      "gustMph": 14.5
+      "gustMph": 12.5
     }
   },
   "daily": [
@@ -39,27 +39,27 @@
     },
     {
       "date": "2026-11-18",
-      "highF": 56.5,
-      "lowF": 29.6,
+      "highF": 58.0,
+      "lowF": 28.0,
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
       "precipitationChancePercent": 0,
       "sunrise": "2026-11-18T07:28:00-05:00",
       "sunset": "2026-11-18T17:09:00-05:00",
-      "narrative": "Overcast with a high near 56°F and a low around 30°F; 0% chance of precipitation."
+      "narrative": "Overcast with a high near 58°F and a low around 28°F; 0% chance of precipitation."
     },
     {
       "date": "2026-11-19",
-      "highF": 60.4,
-      "lowF": 33.9,
+      "highF": 61.5,
+      "lowF": 35.5,
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
       "precipitationChancePercent": 0,
       "sunrise": "2026-11-19T07:29:00-05:00",
       "sunset": "2026-11-19T17:08:00-05:00",
-      "narrative": "Overcast with a high near 60°F and a low around 34°F; 0% chance of precipitation."
+      "narrative": "Overcast with a high near 62°F and a low around 36°F; 0% chance of precipitation."
     },
     {
       "date": "2026-11-20",
@@ -80,10 +80,10 @@
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
-      "precipitationChancePercent": 13,
+      "precipitationChancePercent": 8,
       "sunrise": "2026-11-21T07:31:00-05:00",
       "sunset": "2026-11-21T17:07:00-05:00",
-      "narrative": "Overcast with a high near 60°F and a low around 43°F; 13% chance of precipitation."
+      "narrative": "Overcast with a high near 60°F and a low around 43°F; 8% chance of precipitation."
     },
     {
       "date": "2026-11-22",
@@ -92,10 +92,10 @@
       "conditionCode": 51,
       "conditionText": "Light drizzle",
       "icon": "🌦",
-      "precipitationChancePercent": 36,
+      "precipitationChancePercent": 37,
       "sunrise": "2026-11-22T07:33:00-05:00",
       "sunset": "2026-11-22T17:06:00-05:00",
-      "narrative": "Light drizzle with a high near 57°F and a low around 50°F; 36% chance of precipitation."
+      "narrative": "Light drizzle with a high near 57°F and a low around 50°F; 37% chance of precipitation."
     },
     {
       "date": "2026-11-23",
@@ -104,17 +104,17 @@
       "conditionCode": 3,
       "conditionText": "Overcast",
       "icon": "☁",
-      "precipitationChancePercent": 12,
+      "precipitationChancePercent": 28,
       "sunrise": "2026-11-23T07:34:00-05:00",
       "sunset": "2026-11-23T17:06:00-05:00",
-      "narrative": "Overcast with a high near 51°F and a low around 31°F; 12% chance of precipitation."
+      "narrative": "Overcast with a high near 51°F and a low around 31°F; 28% chance of precipitation."
     }
   ],
   "sources": [
     {
       "name": "Open-Meteo",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=42.3086&longitude=-83.4824&current=temperature_2m,apparent_temperature,precipitation,weather_code,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDetroit&forecast_days=7",
-      "retrievedAt": "2026-11-18T00:42:12Z"
+      "retrievedAt": "2026-11-18T04:23:16Z"
     }
   ]
 }
