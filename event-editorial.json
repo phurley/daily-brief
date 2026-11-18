@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-17T04:55:22.588839-05:00",
+  "generatedAt": "2026-11-18T04:25:28.963099-05:00",
   "events": [
     {
       "id": "occ-5454f42628ddd12c400b022f",
@@ -20,7 +20,7 @@
       "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
       "priceCurrency": "USD",
       "availability": "InStock",
-      "lastCheckedAt": "2026-11-17T04:55:22.588839-05:00",
+      "lastCheckedAt": "2026-11-18T04:25:28.963099-05:00",
       "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
       "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
       "timePrecision": "time",
@@ -107,8 +107,8 @@
       "bookingUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-17T04:55:22.588839-05:00",
-        "expiresAt": "2026-11-18T04:55:22.588839-05:00",
+        "reviewedAt": "2026-11-18T04:25:28.963099-05:00",
+        "expiresAt": "2026-11-19T04:25:28.963099-05:00",
         "sourceUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-11-19T21%3A00%3A00.000-05%3A00",
         "sourceHash": "04ee9b175b70d4631d49e290d98e2be8fff04d12c13f4b85b338e0b9ca9ab657",
         "inputFacts": {
@@ -130,7 +130,265 @@
           "registration": "Enter your name and email and we'll send you a link to confirm your spot."
         }
       },
-      "reviewExpiresAt": "2026-11-18T04:55:22.588839-05:00"
+      "reviewExpiresAt": "2026-11-19T04:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-43425a9a3b228bf82c254dda",
+      "title": "Tiffany Ng, carillon",
+      "summary": "Enjoy a 30-minute carillon recital performed by University Carillonist Tiffany Ng on the Charles Baird Carillon. This unique musical experience features an instrument with 53 bronze bells, offering a chance to hear the resonant tones of this historic tower.",
+      "url": "https://events.umich.edu/event/154337",
+      "start": "2026-11-18T12:00:00-05:00",
+      "venue": "Burton Memorial Tower",
+      "city": "Ann Arbor",
+      "price": "Free",
+      "category": "Performance",
+      "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_154337_original-1.jpg",
+      "imageAlt": "Tiffany Ng, carillon",
+      "status": "confirmed",
+      "occurrenceId": "occ-43425a9a3b228bf82c254dda",
+      "seriesId": "series-0c7fcb53f07425d0f2344f51",
+      "sourceUpdatedAt": "2026-10-30T12:17:11-04:00",
+      "lastCheckedAt": "2026-11-18T04:25:28.963099-05:00",
+      "canonicalUrl": "https://events.umich.edu/event/154337",
+      "venueId": "burton memorial tower|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "src-c94b5a81ec3eef5d6327d73e",
+        "tiffany-ng-carillon-event-2026-11-18"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-c94b5a81ec3eef5d6327d73e|2026-11-18T12:00:00-05:00",
+        "tiffany-ng-carillon-event-2026-11-18|2026-11-18T12:00:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "series-0c7fcb53f07425d0f2344f51",
+        "series-6e65ba874e26bff4697632a5",
+        "series-973901da48081d14cf36106a",
+        "series-fa63d4894d0f7c334aeed119"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-c94b5a81ec3eef5d6327d73e",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/154337",
+          "observedAt": "2026-10-31T09:45:58-04:00",
+          "sourceUpdatedAt": "2026-10-30T12:17:11-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-c94b5a81ec3eef5d6327d73e",
+          "start": "src-c94b5a81ec3eef5d6327d73e",
+          "end": "src-c94b5a81ec3eef5d6327d73e",
+          "venue": "src-c94b5a81ec3eef5d6327d73e",
+          "url": "src-c94b5a81ec3eef5d6327d73e",
+          "imageUrl": "src-c94b5a81ec3eef5d6327d73e",
+          "status": "src-c94b5a81ec3eef5d6327d73e"
+        },
+        "conflicts": {}
+      },
+      "score": 92,
+      "scoring": {
+        "signals": {
+          "funny": 0.09,
+          "distinctive": 0.82,
+          "eclectic": 0.09,
+          "technical_science": 0.28,
+          "artsy": 0.98,
+          "progressive": 0.11,
+          "outdoors": 0.02,
+          "theatre": 0.03,
+          "live_music": 0.9,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.97,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.03,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.05,
+          "children_activity": 0.05,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 92,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"burton memorial tower\",\"tiffany ng carillon\"]",
+      "end": "2026-11-18T12:30:00-05:00",
+      "registration": "no tickets required",
+      "bookingUrl": "",
+      "statusEvidence": "Organizer detail reviewed",
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "priceCurrency": "USD",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-18T04:25:28.963099-05:00",
+        "expiresAt": "2026-11-19T04:25:28.963099-05:00",
+        "sourceUrl": "https://events.umich.edu/event/154337",
+        "sourceHash": "90326f055a0c6599a1c9cebabd18d54c048e92148a3fae5a2563511a832fabfa",
+        "inputFacts": {
+          "id": "occ-43425a9a3b228bf82c254dda",
+          "url": "https://events.umich.edu/event/154337",
+          "start": "2026-11-18T12:00:00-05:00",
+          "end": "2026-11-18T12:30:00-05:00",
+          "venue": "Burton Memorial Tower",
+          "city": "Ann Arbor",
+          "price": "Free - no tickets required",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Wed, Nov 18",
+          "time": "12:00pm",
+          "venue": "Burton Memorial Tower",
+          "admission": "Free - no tickets required",
+          "description": "University Carillonist Tiffany Ng performs on the Charles Baird Carillon, an instrument of 53 bronze bells located inside the Burton Memorial Tower.",
+          "registration": "no tickets required",
+          "end": "12:30pm"
+        }
+      },
+      "reviewExpiresAt": "2026-11-19T04:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-f05c5dae374f325c3d9246f2",
+      "title": "For Real wsg Mallory McMorrow | Monthly Storytelling and Improv Show",
+      "summary": "Experience \"For Real,\" a live improv show where comedians turn true stories into unscripted comedy. This month features Michigan State Senator Mallory McMorrow sharing personal anecdotes as inspiration for the performance.",
+      "url": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
+      "start": "2026-11-19T19:30:00-05:00",
+      "venue": "Go Comedy Improv Theater",
+      "city": "Ferndale",
+      "price": "$16.94",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/16530/For_Real.png",
+      "imageAlt": "For Real wsg Mallory McMorrow | Monthly Storytelling and Improv Show",
+      "status": "confirmed",
+      "occurrenceId": "occ-f05c5dae374f325c3d9246f2",
+      "seriesId": "series-b0834a8ab5ecb634189a502f",
+      "sourceUpdatedAt": "2026-07-18T01:16:00.062000+00:00",
+      "priceMin": 16.94,
+      "priceMax": 16.94,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-11-18T04:25:28.963099-05:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
+      "venueId": "go comedy improv theater|ferndale",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "for-real-wsg-mallory-mcmorrow-monthly-st-event-2026-11-19",
+        "src-d353ca4c048857a8a11a44d2"
+      ],
+      "legacyOccurrenceKeys": [
+        "for-real-wsg-mallory-mcmorrow-monthly-st-event-2026-11-19|2026-11-19T19:30:00-05:00",
+        "src-d353ca4c048857a8a11a44d2|2026-11-19T19:30:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "series-b0834a8ab5ecb634189a502f"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-d353ca4c048857a8a11a44d2",
+          "sourceId": "go-comedy-improv-theater",
+          "canonicalUrl": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
+          "observedAt": "2026-11-07T01:38:58-05:00",
+          "sourceUpdatedAt": "2026-07-18T01:16:00.062000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "title": "src-d353ca4c048857a8a11a44d2",
+          "start": "src-d353ca4c048857a8a11a44d2",
+          "venue": "src-d353ca4c048857a8a11a44d2",
+          "url": "src-d353ca4c048857a8a11a44d2",
+          "status": "src-d353ca4c048857a8a11a44d2",
+          "imageUrl": "src-d353ca4c048857a8a11a44d2"
+        },
+        "conflicts": {}
+      },
+      "score": 93,
+      "scoring": {
+        "signals": {
+          "funny": 0.98,
+          "distinctive": 0.57,
+          "eclectic": 0.32,
+          "technical_science": 0.03,
+          "artsy": 0.96,
+          "progressive": 0.51,
+          "outdoors": 0.02,
+          "theatre": 0.38,
+          "live_music": 0.02,
+          "live_comedy": 0.98,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.94,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.01,
+          "large_venue": 0.03,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.55,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 93,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"ferndale\",\"go comedy improv theater\",\"for real wsg mallory mcmorrow monthly storytelling and improv show\"]",
+      "registration": "Get Tickets!",
+      "bookingUrl": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19:30:00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-18T04:25:28.963099-05:00",
+        "expiresAt": "2026-11-19T04:25:28.963099-05:00",
+        "sourceUrl": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
+        "sourceHash": "bdea2c116b9b20c4f79bd128702c7fcd095e00c1bb3eb3ba798ead138d674a98",
+        "inputFacts": {
+          "id": "occ-f05c5dae374f325c3d9246f2",
+          "url": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
+          "start": "2026-11-19T19:30:00-05:00",
+          "end": null,
+          "venue": "Go Comedy Improv Theater",
+          "city": "Ferndale",
+          "price": "$16.94",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "November 19",
+          "time": "7:30 PM",
+          "venue": "Go Comedy Improv Theater",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/for-real?date=2026-11-19T19:30:00\", \"price\": 16.94, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "For Real is an improvised show inspired by real-life stories. Each month features a new guest who will share true stories from their life and experiences, then our cast of improvisers will use that as the starting point for unscripted comedy. Join us on November 19th with special guest Michigan State Senator, Mallory McMorrow!",
+          "registration": "Get Tickets!"
+        }
+      },
+      "reviewExpiresAt": "2026-11-19T04:25:28.963099-05:00"
     },
     {
       "id": "occ-e23b191f2dfb225e3d325e0c",
@@ -151,18 +409,18 @@
       "priceMin": 3.0,
       "priceMax": 3.0,
       "priceCurrency": "USD",
-      "lastCheckedAt": "2026-11-17T04:55:22.588839-05:00",
+      "lastCheckedAt": "2026-11-18T04:25:28.963099-05:00",
       "canonicalUrl": "https://theark.org/event/the-arks-open-stage-261118/",
       "venueId": "the ark|ann arbor",
       "timePrecision": "time",
       "statusEvidence": "Organizer detail reviewed",
       "aliases": [
-        "src-2a1548cee35cf18c89b62811",
+        "src-1a7b7f590ac38f6bf422ca93",
         "src-582b0b718cbd99ac685892f8",
         "the-ark-s-open-stage-event-2026-11-18"
       ],
       "legacyOccurrenceKeys": [
-        "src-2a1548cee35cf18c89b62811|2026-11-18T20:00:00-05:00",
+        "src-1a7b7f590ac38f6bf422ca93|2026-11-18T20:00:00-05:00",
         "src-582b0b718cbd99ac685892f8|2026-11-18T20:00:00-05:00",
         "the-ark-s-open-stage-event-2026-11-18|2026-11-18T20:00:00-05:00"
       ],
@@ -174,7 +432,7 @@
       ],
       "sources": [
         {
-          "sourceRecordId": "src-2a1548cee35cf18c89b62811",
+          "sourceRecordId": "src-1a7b7f590ac38f6bf422ca93",
           "sourceId": "the-ark",
           "canonicalUrl": "https://theark.org/event/the-arks-open-stage-261118/",
           "observedAt": "2026-10-09T19:21:20-04:00",
@@ -195,16 +453,15 @@
       "identity": {
         "ruleVersion": "occurrence-v1",
         "reasons": [
-          "exact-title-time-venue",
-          "new-occurrence"
+          "exact-title-time-venue"
         ],
         "fields": {
-          "title": "src-2a1548cee35cf18c89b62811",
-          "start": "src-2a1548cee35cf18c89b62811",
-          "end": "src-2a1548cee35cf18c89b62811",
-          "venue": "src-2a1548cee35cf18c89b62811",
-          "url": "src-2a1548cee35cf18c89b62811",
-          "status": "src-2a1548cee35cf18c89b62811",
+          "title": "src-1a7b7f590ac38f6bf422ca93",
+          "start": "src-1a7b7f590ac38f6bf422ca93",
+          "end": "src-1a7b7f590ac38f6bf422ca93",
+          "venue": "src-1a7b7f590ac38f6bf422ca93",
+          "url": "src-1a7b7f590ac38f6bf422ca93",
+          "status": "src-1a7b7f590ac38f6bf422ca93",
           "imageUrl": "src-582b0b718cbd99ac685892f8"
         },
         "conflicts": {}
@@ -249,8 +506,8 @@
       "bookingUrl": "https://theark.org/event/the-arks-open-stage-261118/",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-17T04:55:22.588839-05:00",
-        "expiresAt": "2026-11-18T04:55:22.588839-05:00",
+        "reviewedAt": "2026-11-18T04:25:28.963099-05:00",
+        "expiresAt": "2026-11-19T04:25:28.963099-05:00",
         "sourceUrl": "https://theark.org/event/the-arks-open-stage-261118/",
         "sourceHash": "7317d2e5f7c7632f8e22a042f336e832f362c36bfa26709d25608df37b561d18",
         "inputFacts": {
@@ -273,50 +530,181 @@
           "end": "2026-11-18T23:00:00-05:00"
         }
       },
-      "reviewExpiresAt": "2026-11-18T04:55:22.588839-05:00"
+      "reviewExpiresAt": "2026-11-19T04:25:28.963099-05:00"
     },
     {
-      "id": "occ-f05c5dae374f325c3d9246f2",
-      "title": "For Real wsg Mallory McMorrow | Monthly Storytelling and Improv Show",
-      "summary": "Experience \"For Real,\" a live storytelling and improv show where comedians use real-life anecdotes as inspiration for unscripted comedy. This month features Michigan State Senator Mallory McMorrow sharing personal stories.",
-      "url": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
-      "start": "2026-11-19T19:30:00-05:00",
-      "venue": "Go Comedy Improv Theater",
-      "city": "Ferndale",
-      "price": "$16.94",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/16530/For_Real.png",
-      "imageAlt": "For Real wsg Mallory McMorrow | Monthly Storytelling and Improv Show",
+      "id": "occ-520b79eb00dcff93669a009c",
+      "title": "Lon Mitchell, carillon",
+      "summary": "Experience a 30-minute carillon recital by Lon Mitchell. Visitors can ascend the tower to view the instrument's bells and the carillonist at work, offering a unique auditory and visual experience.",
+      "url": "https://events.umich.edu/event/153653",
+      "start": "2026-11-19T13:20:00-05:00",
+      "venue": "Lurie Ann & Robert H. Tower",
+      "city": "Ann Arbor",
+      "price": "Free",
+      "category": "Performance",
+      "imageUrl": "https://events.umich.edu/media/attachments/2026/10/event_153653_original-1.jpg",
+      "imageAlt": "Lon Mitchell, carillon",
       "status": "confirmed",
-      "occurrenceId": "occ-f05c5dae374f325c3d9246f2",
-      "seriesId": "series-b0834a8ab5ecb634189a502f",
-      "sourceUpdatedAt": "2026-07-18T01:16:00.062000+00:00",
-      "priceMin": 16.94,
-      "priceMax": 16.94,
-      "priceCurrency": "USD",
-      "lastCheckedAt": "2026-11-17T04:55:22.588839-05:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
-      "venueId": "go comedy improv theater|ferndale",
+      "occurrenceId": "occ-520b79eb00dcff93669a009c",
+      "seriesId": "series-6a72ec16ead6df95875a34b9",
+      "sourceUpdatedAt": "2026-10-13T18:17:53-04:00",
+      "lastCheckedAt": "2026-11-18T04:25:28.963099-05:00",
+      "canonicalUrl": "https://events.umich.edu/event/153653",
+      "venueId": "lurie ann robert h tower|ann arbor",
       "timePrecision": "time",
-      "statusEvidence": "Organizer detail reviewed",
       "aliases": [
-        "for-real-wsg-mallory-mcmorrow-monthly-st-event-2026-11-19",
-        "src-0d330b3dcfa7fe6f51daaa68"
+        "lon-mitchell-carillon-event-2026-11-19",
+        "src-18e53104ada134c89f63b1bd"
       ],
       "legacyOccurrenceKeys": [
-        "for-real-wsg-mallory-mcmorrow-monthly-st-event-2026-11-19|2026-11-19T19:30:00-05:00",
-        "src-0d330b3dcfa7fe6f51daaa68|2026-11-19T19:30:00-05:00"
+        "lon-mitchell-carillon-event-2026-11-19|2026-11-19T13:20:00-05:00",
+        "src-18e53104ada134c89f63b1bd|2026-11-19T13:20:00-05:00"
       ],
       "legacySeriesKeys": [
-        "series-b0834a8ab5ecb634189a502f"
+        "series-6a72ec16ead6df95875a34b9",
+        "series-7cda1445c51e38888fb1b221",
+        "series-b86c2a3a12c1f9f16af5d5dd"
       ],
       "sources": [
         {
-          "sourceRecordId": "src-0d330b3dcfa7fe6f51daaa68",
-          "sourceId": "go-comedy-improv-theater",
-          "canonicalUrl": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
-          "observedAt": "2026-11-07T01:38:58-05:00",
-          "sourceUpdatedAt": "2026-07-18T01:16:00.062000+00:00",
+          "sourceRecordId": "src-18e53104ada134c89f63b1bd",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/153653",
+          "observedAt": "2026-10-14T23:41:11-04:00",
+          "sourceUpdatedAt": "2026-10-13T18:17:53-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-18e53104ada134c89f63b1bd",
+          "start": "src-18e53104ada134c89f63b1bd",
+          "end": "src-18e53104ada134c89f63b1bd",
+          "venue": "src-18e53104ada134c89f63b1bd",
+          "url": "src-18e53104ada134c89f63b1bd",
+          "imageUrl": "src-18e53104ada134c89f63b1bd",
+          "status": "src-18e53104ada134c89f63b1bd"
+        },
+        "conflicts": {}
+      },
+      "score": 90,
+      "scoring": {
+        "signals": {
+          "funny": 0.1,
+          "distinctive": 0.78,
+          "eclectic": 0.09,
+          "technical_science": 0.29,
+          "artsy": 0.98,
+          "progressive": 0.1,
+          "outdoors": 0.02,
+          "theatre": 0.03,
+          "live_music": 0.87,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.97,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.04,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.05,
+          "children_activity": 0.04,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 90,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"lurie ann robert h tower\",\"lon mitchell carillon\"]",
+      "end": "2026-11-19T13:50:00-05:00",
+      "registration": "no tickets required",
+      "bookingUrl": "",
+      "statusEvidence": "Organizer detail reviewed",
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "priceCurrency": "USD",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-18T04:25:28.963099-05:00",
+        "expiresAt": "2026-11-19T04:25:28.963099-05:00",
+        "sourceUrl": "https://events.umich.edu/event/153653",
+        "sourceHash": "f3132ac3839c0628a2d3b71c52fea8d604c0012c60eafa73e19f9f12b09c2888",
+        "inputFacts": {
+          "id": "occ-520b79eb00dcff93669a009c",
+          "url": "https://events.umich.edu/event/153653",
+          "start": "2026-11-19T13:20:00-05:00",
+          "end": "2026-11-19T13:50:00-05:00",
+          "venue": "Lurie Ann & Robert H. Tower",
+          "city": "Ann Arbor",
+          "price": "Free - no tickets required",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Thu, Nov 19\n                                    2026",
+          "time": "1:20pm",
+          "venue": "Lurie Ann & Robert H. Tower",
+          "admission": "Free - no tickets required",
+          "description": "Lon Mitchell performs on the Ann & Robert H. Lurie Carillon, an instrument of 60 bells with the lowest bell (bourdon) weighing 6 tons.\n\nThirty-minute recitals are performed on the Lurie Carillon every weekday that classes are in session. During these recitals, visitors may take the elevator to level 2 to view the largest bells, or to level 3 to see the carillonist performing. (Visitors subject to acrophobia are recommended to visit level 2 only.) An optional spiral stairway between levels 2 and 3 allows for up-close views of some of the largest bells.",
+          "registration": "no tickets required",
+          "end": "1:50pm"
+        }
+      },
+      "reviewExpiresAt": "2026-11-19T04:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-6efb62fae813000aacbc8fac",
+      "title": "Last Call Improv",
+      "summary": "Experience a dynamic mix of improv styles and forms with \"Last Call Improv.\" This late-night show features rotating troupes and a headliner performing long-form improv, promising an unpredictable and hilarious experience.",
+      "url": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21%3A00%3A00.000-05%3A00",
+      "start": "2026-12-03T21:00:00-05:00",
+      "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+      "city": "Hamtramck",
+      "price": "Free",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/19466/lastcall-eventpage__2_.png",
+      "imageAlt": "Last Call Improv | FREE!",
+      "status": "confirmed",
+      "occurrenceId": "occ-6efb62fae813000aacbc8fac",
+      "seriesId": "series-53b8b1339dcf1ebde77e74dd",
+      "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
+      "priceCurrency": "USD",
+      "lastCheckedAt": "2026-11-18T04:25:28.963099-05:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21%3A00%3A00.000-05%3A00",
+      "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "last-call-improv-free-event-2026-12-03",
+        "src-52a366ca83c3429d8b227384"
+      ],
+      "legacyOccurrenceKeys": [
+        "last-call-improv-free-event-2026-12-03|2026-12-03T21:00:00-05:00",
+        "src-52a366ca83c3429d8b227384|2026-12-03T21:00:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "series-25001dbb19b5ba2141dad75a",
+        "series-32bf7fa61ccfec7043649ecd",
+        "series-53b8b1339dcf1ebde77e74dd",
+        "series-7286e08b0d1bfa20c9963253"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-52a366ca83c3429d8b227384",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21%3A00%3A00.000-05%3A00",
+          "observedAt": "2026-11-11T04:09:00-05:00",
+          "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
           "sourceAuthority": "organizer",
           "status": "scheduled",
           "statusEvidence": "https://schema.org/EventScheduled"
@@ -328,83 +716,85 @@
           "new-occurrence"
         ],
         "fields": {
-          "title": "src-0d330b3dcfa7fe6f51daaa68",
-          "start": "src-0d330b3dcfa7fe6f51daaa68",
-          "venue": "src-0d330b3dcfa7fe6f51daaa68",
-          "url": "src-0d330b3dcfa7fe6f51daaa68",
-          "status": "src-0d330b3dcfa7fe6f51daaa68",
-          "imageUrl": "src-0d330b3dcfa7fe6f51daaa68"
+          "title": "src-52a366ca83c3429d8b227384",
+          "start": "src-52a366ca83c3429d8b227384",
+          "venue": "src-52a366ca83c3429d8b227384",
+          "url": "src-52a366ca83c3429d8b227384",
+          "status": "src-52a366ca83c3429d8b227384",
+          "imageUrl": "src-52a366ca83c3429d8b227384"
         },
         "conflicts": {}
       },
-      "score": 93,
+      "priceMin": 0.0,
+      "priceMax": 0.0,
+      "score": 100,
       "scoring": {
         "signals": {
-          "funny": 0.98,
-          "distinctive": 0.57,
-          "eclectic": 0.32,
-          "technical_science": 0.03,
-          "artsy": 0.96,
-          "progressive": 0.51,
-          "outdoors": 0.02,
-          "theatre": 0.38,
-          "live_music": 0.02,
-          "live_comedy": 0.98,
+          "funny": 0.99,
+          "distinctive": 0.83,
+          "eclectic": 0.86,
+          "technical_science": 0.02,
+          "artsy": 0.98,
+          "progressive": 0.58,
+          "outdoors": 0.01,
+          "theatre": 0.27,
+          "live_music": 0.03,
+          "live_comedy": 0.99,
           "farmer_market": 0.01,
           "sporting": 0.02,
-          "recurring": 0.94,
+          "recurring": 0.97,
           "craft_fair_shopping": 0.02,
           "religious": 0.01,
-          "large_venue": 0.03,
-          "substance_recovery": 0.02,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
           "dance": 0.02,
-          "sales_related": 0.55,
-          "children_activity": 0.03,
+          "sales_related": 0.3,
+          "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.01
         },
-        "score": 93,
+        "score": 100,
         "rulesVersion": 2
       },
       "localityTier": "unknown",
-      "experienceId": "experience:[\"ferndale\",\"go comedy improv theater\",\"for real wsg mallory mcmorrow monthly storytelling and improv show\"]",
-      "registration": "Get Tickets!",
-      "bookingUrl": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
+      "experienceId": "experience:[\"hamtramck\",\"black box 2357 caniff hamtramck mi 48212 entrance in the rear\",\"last call improv free\"]",
+      "registration": "Enter your name and email and we'll send you a link to confirm your spot.",
+      "bookingUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21:00:00",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-17T04:55:22.588839-05:00",
-        "expiresAt": "2026-11-18T04:55:22.588839-05:00",
-        "sourceUrl": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
-        "sourceHash": "2a7c19d9d4adf102aba1742ab97c6a2f45910ef8b375fe92b9ebdff3ac312d57",
+        "reviewedAt": "2026-11-18T04:25:28.963099-05:00",
+        "expiresAt": "2026-11-19T04:25:28.963099-05:00",
+        "sourceUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21%3A00%3A00.000-05%3A00",
+        "sourceHash": "c5f50102451b197d9e5a0229b8e99ceaa35109ff8b852b5eec5fe03218ceb75e",
         "inputFacts": {
-          "id": "occ-f05c5dae374f325c3d9246f2",
-          "url": "https://www.crowdwork.com/e/for-real?date=2026-11-19T19%3A30%3A00.000-05%3A00",
-          "start": "2026-11-19T19:30:00-05:00",
+          "id": "occ-6efb62fae813000aacbc8fac",
+          "url": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21%3A00%3A00.000-05%3A00",
+          "start": "2026-12-03T21:00:00-05:00",
           "end": null,
-          "venue": "Go Comedy Improv Theater",
-          "city": "Ferndale",
-          "price": "$16.94 including fees",
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "city": "Hamtramck",
+          "price": "$0 including fees",
           "status": "scheduled"
         },
         "evidence": {
-          "date": "November 19",
-          "time": "7:30 PM",
-          "venue": "Go Comedy Improv Theater",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/for-real?date=2026-11-19T19:30:00\", \"price\": 16.94, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "Real Stories. Real Improv. For Real is an improvised show inspired by real-life stories. Each month features a new guest who will share true stories from their life and experiences, then our cast of improvisers will use that as the starting point for unscripted comedy. Join us on November 19th with special guest Michigan State Senator, Mallory McMorrow!",
-          "registration": "Get Tickets!"
+          "date": "Dec 3, 2026",
+          "time": "9:00 PM EST",
+          "venue": "Black Box - 2357 Caniff Hamtramck, MI 48212 - Entrance in the rear",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21:00:00\", \"price\": 0.0, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "Last Call Improv takes over Thursday nights at 9:30 PM for a wild, dynamic mix of styles and forms. Following right after the regular Thursday show, this late-night staple features a rotating lineup of performance troupes hand-picked from open submissions. The evening is anchored by Wanted Live , a featured headliner performing a TJ and Dave-style long-form improv set, where grounded, authentic human behavior drives the comedy. Whether you are looking for experimental forms or high-energy laughs, Last Call Improv offers an unpredictable, one-of-a-kind experience every single week.",
+          "registration": "Enter your name and email and we'll send you a link to confirm your spot."
         }
       },
-      "reviewExpiresAt": "2026-11-18T04:55:22.588839-05:00"
+      "reviewExpiresAt": "2026-11-19T04:25:28.963099-05:00"
     },
     {
       "id": "occ-6d66c8d791ae77f9b776f8c1",
       "title": "Learning Seminar in Algebraic Combinatorics",
-      "summary": "Attend a mathematics seminar discussing torus-equivariant cohomology classes of smooth projective varieties. The session will explore the 6-vertex model and its relation to computing products of Schubert classes for flag varieties.",
+      "summary": "Attend a seminar on algebraic combinatorics exploring torus-equivariant cohomology classes of smooth projective varieties. The session will delve into the 6-vertex model and its relation to Schubert classes and R-matrices for flag varieties.",
       "url": "https://events.umich.edu/event/154946",
       "start": "2026-11-18T14:30:00-05:00",
       "venue": "East Hall",
@@ -416,7 +806,7 @@
       "occurrenceId": "occ-6d66c8d791ae77f9b776f8c1",
       "seriesId": "series-482b990b068b88af068a848c",
       "sourceUpdatedAt": "2026-11-16T10:35:55-05:00",
-      "lastCheckedAt": "2026-11-17T04:55:22.588839-05:00",
+      "lastCheckedAt": "2026-11-18T04:25:28.963099-05:00",
       "canonicalUrl": "https://events.umich.edu/event/154946",
       "venueId": "east hall|ann arbor",
       "timePrecision": "time",
@@ -502,8 +892,8 @@
       "priceCurrency": "USD",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-17T04:55:22.588839-05:00",
-        "expiresAt": "2026-11-18T04:55:22.588839-05:00",
+        "reviewedAt": "2026-11-18T04:25:28.963099-05:00",
+        "expiresAt": "2026-11-19T04:25:28.963099-05:00",
         "sourceUrl": "https://events.umich.edu/event/154946",
         "sourceHash": "e9f2186f917a59bae78bb30a127c7cfacb45327d9ae04b73b933584ddbd8b9dd",
         "inputFacts": {
@@ -525,7 +915,7 @@
           "end": "3:30pm"
         }
       },
-      "reviewExpiresAt": "2026-11-18T04:55:22.588839-05:00"
+      "reviewExpiresAt": "2026-11-19T04:25:28.963099-05:00"
     },
     {
       "id": "occ-d91fbbad50389065e8998b57",
@@ -671,40 +1061,6 @@
   ],
   "rejections": [
     {
-      "id": "occ-5f13fc34ff286d971d3db7ba",
-      "title": "The Tree of Eternity",
-      "url": "https://events.umich.edu/event/154133",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-5f13fc34ff286d971d3db7ba",
-        "url": "https://events.umich.edu/event/154133",
-        "start": "2026-11-17T12:00:00-05:00",
-        "end": "2026-11-17T18:00:00-05:00",
-        "venue": "Duderstadt Center",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-f1cae3775f7b0d4be56f76e1",
-      "title": "Black, White, and Red: Black Women in Silent Film",
-      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-      "reason": "ValueError: venue quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-f1cae3775f7b0d4be56f76e1",
-        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-        "start": "2026-07-30T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
       "id": "occ-d3268bb8b37d4a971eb1b18f",
       "title": "Awakening the Dragon–Showcasing the Building and Performance of an Asian Icon",
       "url": "https://events.umich.edu/event/152125",
@@ -719,58 +1075,41 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
-      "id": "occ-0d893ee8ad9b7f4e611034d9",
-      "title": "The Tree of Eternity",
-      "url": "https://www.digitalstudies.umich.edu/news-events/all-events.detail.html/154133-21917243.html",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-0d893ee8ad9b7f4e611034d9",
-        "url": "https://www.digitalstudies.umich.edu/news-events/all-events.detail.html/154133-21917243.html",
-        "start": "2026-11-17T12:00:00-05:00",
-        "end": null,
-        "venue": "Gallery Duderstadt Center",
-        "city": "Ann Arbor, MI",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-78bfed4688ef2d3ed530aa6e",
+      "id": "occ-0adf13c1d2f79e1ac969a1b0",
       "title": "Awakening the Dragon–Showcasing the Building and Performance of an Asian Icon",
       "url": "https://events.umich.edu/event/152125",
       "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-78bfed4688ef2d3ed530aa6e",
+        "id": "occ-0adf13c1d2f79e1ac969a1b0",
         "url": "https://events.umich.edu/event/152125",
-        "start": "2026-11-19T08:00:00-05:00",
-        "end": "2026-11-19T17:00:00-05:00",
+        "start": "2026-11-20T08:00:00-05:00",
+        "end": "2026-11-20T17:00:00-05:00",
         "venue": "Weiser Hall",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
-      "id": "occ-7bec2c2b6c0c4864e668fb4e",
-      "title": "Bill Smith: The Jeweler",
-      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-      "reason": "ValueError: venue quote not present in organizer evidence",
+      "id": "occ-46d67ddd08631de862570cb5",
+      "title": "The Sounding Room",
+      "url": "https://mocadetroit.org/exhibition/the-sounding-room/",
+      "reason": "ValueError: time quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-7bec2c2b6c0c4864e668fb4e",
-        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-        "start": "2026-07-09T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit, MI",
+        "id": "occ-46d67ddd08631de862570cb5",
+        "url": "https://mocadetroit.org/exhibition/the-sounding-room/",
+        "start": "2026-07-08T00:00:00-04:00",
+        "end": "2026-12-20T00:00:00-05:00",
+        "venue": "MOCAD",
+        "city": "Detroit",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
       "id": "occ-1da7d692289a8f76dbf2fef2",
@@ -787,24 +1126,75 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
-      "id": "occ-6d6871483f1d109153724071",
-      "title": "\"Don't Let The Sun\": Chamber Choir & University Choir",
-      "url": "https://events.umich.edu/event/149480",
+      "id": "occ-661a315a4a6b3e9edcad4086",
+      "title": "The Tree of Eternity",
+      "url": "https://events.umich.edu/event/154133",
       "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-6d6871483f1d109153724071",
-        "url": "https://events.umich.edu/event/149480",
-        "start": "2026-11-17T20:00:00-05:00",
+        "id": "occ-661a315a4a6b3e9edcad4086",
+        "url": "https://events.umich.edu/event/154133",
+        "start": "2026-11-20T18:00:00-05:00",
         "end": null,
-        "venue": "Hill Auditorium",
+        "venue": "Duderstadt Center",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-962ad90b290f0f9f98f38e90",
+      "title": "20 Years of MOCAD: A Practice of Multiplicity – Parts II–IV",
+      "url": "https://mocadetroit.org/exhibitions/current/",
+      "reason": "ValueError: time quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-962ad90b290f0f9f98f38e90",
+        "url": "https://mocadetroit.org/exhibitions/current/",
+        "start": "2026-11-04T00:00:00-05:00",
+        "end": "2027-04-04T00:00:00-04:00",
+        "venue": "Julia Reyes Taubman Building",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-61db279daa46b2c52031fd54",
+      "title": "Creative Arts Orchestra",
+      "url": "https://events.umich.edu/event/148688",
+      "reason": "ValueError: Editorial summary must contain 30-50 words",
+      "inputFacts": {
+        "id": "occ-61db279daa46b2c52031fd54",
+        "url": "https://events.umich.edu/event/148688",
+        "start": "2026-11-19T20:00:00-05:00",
+        "end": "2026-11-19T22:00:00-05:00",
+        "venue": "Earl V. Moore Building",
+        "city": "Ann Arbor",
+        "price": "Free - no tickets required",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-f1cae3775f7b0d4be56f76e1",
+      "title": "Black, White, and Red: Black Women in Silent Film",
+      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
+      "reason": "ValueError: venue quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-f1cae3775f7b0d4be56f76e1",
+        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
+        "start": "2026-07-30T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
       "id": "occ-82e448c3e145789bcd2c9c02",
@@ -821,58 +1211,41 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
-      "id": "occ-2660d2f257cbb99f333f96ba",
-      "title": "Georgia O’Keeffe: Architecture",
-      "url": "https://dia.org/events/exhibitions/georgia-okeeffe-architecture",
-      "reason": "ValueError: time quote not present in organizer evidence",
+      "id": "occ-d2e101751d2b6aac70aeef83",
+      "title": "Choir: The Theology of Preservation",
+      "url": "https://mocadetroit.org/event/choir-the-theology-of-preservation/",
+      "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-2660d2f257cbb99f333f96ba",
-        "url": "https://dia.org/events/exhibitions/georgia-okeeffe-architecture",
-        "start": "2026-09-11T00:00:00-04:00",
-        "end": "2027-01-03T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts",
+        "id": "occ-d2e101751d2b6aac70aeef83",
+        "url": "https://mocadetroit.org/event/choir-the-theology-of-preservation/",
+        "start": "2026-11-18T00:00:00-05:00",
+        "end": null,
+        "venue": "MOCAD",
         "city": "Detroit",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
-      "id": "occ-43425a9a3b228bf82c254dda",
-      "title": "Tiffany Ng, carillon",
-      "url": "https://events.umich.edu/event/154337",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "id": "occ-7bec2c2b6c0c4864e668fb4e",
+      "title": "Bill Smith: The Jeweler",
+      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+      "reason": "ValueError: venue quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-43425a9a3b228bf82c254dda",
-        "url": "https://events.umich.edu/event/154337",
-        "start": "2026-11-18T12:00:00-05:00",
-        "end": "2026-11-18T12:30:00-05:00",
-        "venue": "Burton Memorial Tower",
-        "city": "Ann Arbor",
-        "price": "Free - no tickets required",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-7297927e245c807cb524d327",
-      "title": "Wind, Light, and the Moment of Death",
-      "url": "https://events.umich.edu/event/154793",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-7297927e245c807cb524d327",
-        "url": "https://events.umich.edu/event/154793",
-        "start": "2026-11-17T18:30:00-05:00",
-        "end": "2026-11-17T19:30:00-05:00",
-        "venue": "East Quadrangle",
-        "city": "Ann Arbor",
+        "id": "occ-7bec2c2b6c0c4864e668fb4e",
+        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+        "start": "2026-07-09T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit, MI",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
       "id": "occ-9aa71652dddf779132309253",
@@ -889,92 +1262,24 @@
         "price": "Free",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
-      "id": "occ-f3c9b9a83ae3576a70e1e524",
-      "title": "NCKS Colloquium Series | Dying Tree: Embodying Jungyong in Contemporary Korean Choreography",
-      "url": "https://events.umich.edu/event/154594",
+      "id": "occ-bd31efc196c02ecfd9e8532c",
+      "title": "Adam Lenhart, carillon",
+      "url": "https://events.umich.edu/event/154338",
       "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-f3c9b9a83ae3576a70e1e524",
-        "url": "https://events.umich.edu/event/154594",
-        "start": "2026-11-18T12:00:00-05:00",
-        "end": "2026-11-18T13:30:00-05:00",
-        "venue": "Walgreen Drama Center",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-58790bc717db1c1c772eb2ba",
-      "title": "Graduate Workshop Series | History, Memory, Research, and Creative Practice with Dr. Haekyoung Lee",
-      "url": "https://events.umich.edu/event/154231",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-58790bc717db1c1c772eb2ba",
-        "url": "https://events.umich.edu/event/154231",
-        "start": "2026-11-17T16:00:00-05:00",
-        "end": "2026-11-17T17:00:00-05:00",
-        "venue": "Weiser Hall",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-e8f9e4784645e34676c5c428",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-e8f9e4784645e34676c5c428",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2027-01-03T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts (DIA)",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-e8d9f02c6006b7a8e52d3a6b",
-      "title": "Xin Yi Chong, percussion",
-      "url": "https://events.umich.edu/event/153946",
-      "reason": "ValueError: Editorial summary must contain 30-50 words",
-      "inputFacts": {
-        "id": "occ-e8d9f02c6006b7a8e52d3a6b",
-        "url": "https://events.umich.edu/event/153946",
-        "start": "2026-11-17T20:00:00-05:00",
-        "end": "2026-11-17T21:00:00-05:00",
-        "venue": "Earl V. Moore Building",
+        "id": "occ-bd31efc196c02ecfd9e8532c",
+        "url": "https://events.umich.edu/event/154338",
+        "start": "2026-11-19T12:00:00-05:00",
+        "end": "2026-11-19T12:30:00-05:00",
+        "venue": "Burton Memorial Tower",
         "city": "Ann Arbor",
         "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-e8414b8d9b885d76505aa2c4",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-e8414b8d9b885d76505aa2c4",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2026-12-11T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
       "id": "occ-6d2e66b913e39e5332d4295e",
@@ -991,47 +1296,30 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
-      "id": "occ-a13470adfe5f12d73ed413d9",
-      "title": "Tiffany Ng, carillon",
-      "url": "https://events.umich.edu/event/154336",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-a13470adfe5f12d73ed413d9",
-        "url": "https://events.umich.edu/event/154336",
-        "start": "2026-11-17T12:00:00-05:00",
-        "end": "2026-11-17T12:30:00-05:00",
-        "venue": "Burton Memorial Tower",
-        "city": "Ann Arbor",
-        "price": "Free - no tickets required",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-ad4dd4b689b9f46d4c71c820",
-      "title": "20 Years of MOCAD: A Practice of Multiplicity – Parts II–IV",
-      "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
+      "id": "occ-1015de8b689e06c790363893",
+      "title": "Georgia O’Keeffe: Architecture",
+      "url": "https://dia.org/events/exhibitions/georgia-okeeffe-architecture",
       "reason": "ValueError: time quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-ad4dd4b689b9f46d4c71c820",
-        "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
-        "start": "2026-11-04T00:00:00-05:00",
-        "end": "2027-04-04T00:00:00-04:00",
-        "venue": "Julia Reyes Taubman Building",
+        "id": "occ-1015de8b689e06c790363893",
+        "url": "https://dia.org/events/exhibitions/georgia-okeeffe-architecture",
+        "start": "2026-09-11T00:00:00-04:00",
+        "end": "2027-01-03T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts",
         "city": "Detroit",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
       "id": "occ-63dabc086ef4aa72ccecd20f",
       "title": "Like the flowing river",
       "url": "https://events.umich.edu/event/149763",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
+      "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
         "id": "occ-63dabc086ef4aa72ccecd20f",
         "url": "https://events.umich.edu/event/149763",
@@ -1042,58 +1330,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-89bce0e7eae7330b43a74687",
-      "title": "Tiffany Ng, carillon",
-      "url": "https://events.umich.edu/event/152276",
-      "reason": "ValueError: Date/time quote conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-89bce0e7eae7330b43a74687",
-        "url": "https://events.umich.edu/event/152276",
-        "start": "2026-11-17T13:30:00-05:00",
-        "end": null,
-        "venue": "Lurie Ann & Robert H. Tower",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-c4c862ed74ca166ee4b95e0a",
-      "title": "Who Votes? The Electoral College",
-      "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-c4c862ed74ca166ee4b95e0a",
-        "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-        "start": "2026-08-06T00:00:00-04:00",
-        "end": "2027-03-21T00:00:00-04:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit, MI",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
-    },
-    {
-      "id": "occ-09007e37e647e4e3e065b44f",
-      "title": "Diagrams of Memory: Interwoven Ontology",
-      "url": "https://events.umich.edu/event/150411",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-09007e37e647e4e3e065b44f",
-        "url": "https://events.umich.edu/event/150411",
-        "start": "2026-11-17T08:00:00-05:00",
-        "end": null,
-        "venue": "North Campus Research Complex Building 18",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
       "id": "occ-7ed23c8f472d33db836f74c2",
@@ -1110,7 +1347,126 @@
         "price": "Free, donations accepted for Food Gatherers",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-e8f9e4784645e34676c5c428",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+      "reason": "ValueError: Occurrence outside actionable window",
+      "inputFacts": {
+        "id": "occ-e8f9e4784645e34676c5c428",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2027-01-03T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts (DIA)",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-32a1afba424bdf4375d83cc8",
+      "title": "U-M Farm Stand",
+      "url": "https://events.umich.edu/event/152469",
+      "reason": "ValueError: Admission price unknown",
+      "inputFacts": {
+        "id": "occ-32a1afba424bdf4375d83cc8",
+        "url": "https://events.umich.edu/event/152469",
+        "start": "2026-11-19T17:00:00-05:00",
+        "end": null,
+        "venue": "Ingalls Mall",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-f3c9b9a83ae3576a70e1e524",
+      "title": "NCKS Colloquium Series | Dying Tree: Embodying Jungyong in Contemporary Korean Choreography",
+      "url": "http://events.umich.edu/event/154594",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-f3c9b9a83ae3576a70e1e524",
+        "url": "http://events.umich.edu/event/154594",
+        "start": "2026-11-18T12:00:00-05:00",
+        "end": "2026-11-18T13:30:00-05:00",
+        "venue": "Walgreen Drama Center",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-e8414b8d9b885d76505aa2c4",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+      "reason": "ValueError: registration quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-e8414b8d9b885d76505aa2c4",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2026-12-11T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-33bf90deee73746659cc6f18",
+      "title": "Friends Adventure Club: Fantastical Beings and Beasts",
+      "url": "https://cantonpl.librarycalendar.com/event/friends-adventure-club-1004",
+      "reason": "ValueError: Free admission not evidenced",
+      "inputFacts": {
+        "id": "occ-33bf90deee73746659cc6f18",
+        "url": "https://cantonpl.librarycalendar.com/event/friends-adventure-club-1004",
+        "start": "2026-11-19T13:00:00-05:00",
+        "end": "2026-11-19T14:30:00-05:00",
+        "venue": "Canton Public Library",
+        "city": "Canton",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-c4c862ed74ca166ee4b95e0a",
+      "title": "Who Votes? The Electoral College",
+      "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
+      "reason": "ValueError: Occurrence outside actionable window",
+      "inputFacts": {
+        "id": "occ-c4c862ed74ca166ee4b95e0a",
+        "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
+        "start": "2026-08-06T00:00:00-04:00",
+        "end": "2027-03-21T00:00:00-04:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit, MI",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
+    },
+    {
+      "id": "occ-782b852649e157c5dcd76b06",
+      "title": "Gifts of Art presents Klezmer RD",
+      "url": "https://events.umich.edu/event/154443",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-782b852649e157c5dcd76b06",
+        "url": "https://events.umich.edu/event/154443",
+        "start": "2026-11-19T12:00:00-05:00",
+        "end": "2026-11-19T13:00:00-05:00",
+        "venue": "University Hospitals",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     },
     {
       "id": "occ-fc5aa77a18a03e8d723cb36c",
@@ -1127,7 +1483,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-17T07:55:22.588839-05:00"
+      "retryAt": "2026-11-18T07:25:28.963099-05:00"
     }
   ]
 }
