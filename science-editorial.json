@@ -1,8 +1,65 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-17T06:19:37.588016-05:00",
+  "generatedAt": "2026-11-18T06:36:56.282554-05:00",
   "stories": [
+    {
+      "id": "science-62844aafa0fbfb51",
+      "title": "The U.S. just lost its measles elimination status. What now?",
+      "summary": "The U.S. has lost its measles elimination status, declared by the Pan American Health Organization on November 17, 2026, due to uninterrupted spread for over a year, with nearly 100 outbreaks, thousands sickened, and nearly a dozen deaths since 2025. Regaining status requires stopping outbreaks and proving no local transmission for a full year, primarily through increased vaccination.",
+      "finding": "The U.S. has lost its measles elimination status, declared by the Pan American Health Organization on November 17, 2026, due to uninterrupted spread for over a year, with nearly 100 outbreaks, thousands sickened, and nearly a dozen deaths since 2025. Regaining status requires stopping outbreaks and proving no local transmission for a full year, primarily through increased vaccination.",
+      "significance": "Losing measles elimination status marks a significant reversal of decades of public health progress and underscores risks stemming from declining vaccination coverage.",
+      "caveat": "Underreporting and untested cases hamper accurate surveillance, making the true scope of outbreaks difficult to determine.",
+      "url": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
+      "primarySourceUrl": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-17T11:09:29-05:00",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "health"
+      ],
+      "entities": [
+        "Pan American Health Organization",
+        "PAHO",
+        "Centers for Disease Control and Prevention",
+        "CDC",
+        "Brown University School of Public Health"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-17T17:57:34Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-18T06:36:56.282554-05:00",
+        "expiresAt": "2026-11-21T06:36:56.282554-05:00",
+        "inputFacts": {
+          "id": "science-62844aafa0fbfb51",
+          "title": "The U.S. just lost its measles elimination status. What now?",
+          "url": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
+          "publishedAt": "2026-11-17T16:09:29Z",
+          "summary": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
+          "finding": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
+          "sourceUpdatedAt": "2026-11-17T17:57:34Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-17T11:09:29-05:00",
+        "datePrecision": "time",
+        "sourceHash": "c475125bb45db602a89885661dadf971342391f1ee4bf082539ffcc2b01a650a",
+        "relevance": 5,
+        "novelty": 4,
+        "reason": "The loss of measles elimination status in the US is a significant public health development with direct implications for local communities, including Canton, regarding disease risk and public health resource allocation.",
+        "storyKey": "us-loses-measles-elimination-status",
+        "localConnection": "The loss of measles elimination status in the US directly impacts public health in all communities, including Canton, by increasing the risk of local outbreaks and requiring local public health responses.",
+        "grounded": true,
+        "groundingReason": "The summary accurately reflects the article's claims regarding the U.S. losing its measles elimination status, the reasons for it, and the requirements to regain it. The article presents a new finding of the U.S. losing its measles elimination status and the implications of this development."
+      }
+    },
     {
       "id": "science-f709330c4c7d4bfc",
       "title": "Perseverance Update: The Ghostly Rocks of ‘Idubi’ — Bright Remnants of Aqueous Systems from Long Ago",
@@ -120,6 +177,65 @@
       }
     },
     {
+      "id": "science-ec8551b58464f4d5",
+      "title": "What Makes Up the Cosmos? A 20-Year Survey Hints That Something Is Missing.",
+      "summary": "The Dark Energy Survey's final results, combined with data from the Dark Energy Spectroscopic Instrument, suggest the standard model of cosmology (Lambda-CDM) is incomplete. The findings indicate a \"three-sigma\" preference for a theory where dark energy is not stable and has weakened over time, though this falls short of the \"five-sigma\" confidence needed for a new discovery.",
+      "finding": "The Dark Energy Survey's final results, combined with data from the Dark Energy Spectroscopic Instrument, suggest the standard model of cosmology (Lambda-CDM) is incomplete. The findings indicate a \"three-sigma\" preference for a theory where dark energy is not stable and has weakened over time, though this falls short of the \"five-sigma\" confidence needed for a new discovery.",
+      "significance": "The finding challenges the standard Lambda-CDM cosmological model, hinting that the prevailing understanding of the universe's primary energetic component is incomplete.",
+      "caveat": "Preprint / working paper; peer review is not established. The observed statistical preference is three-sigma, falling short of the five-sigma threshold physicists require to claim a definitive new discovery.",
+      "url": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116",
+      "primarySourceUrl": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116",
+      "source": {
+        "name": "Quanta Magazine"
+      },
+      "sourceGroup": "Quanta Magazine",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T15:15:33+00:00",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "Dark Energy Survey",
+        "Dark Energy Spectroscopic Instrument",
+        "Joshua Frieman",
+        "Simone Ferraro",
+        "Fermi National Accelerator Laboratory"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://arxiv.org/abs/2605.27221",
+      "sourceUpdatedAt": "2026-11-17T17:41:04Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-18T06:36:56.282554-05:00",
+        "expiresAt": "2026-11-21T06:36:56.282554-05:00",
+        "inputFacts": {
+          "id": "science-ec8551b58464f4d5",
+          "title": "What Makes Up the Cosmos? A 20-Year Survey Hints That Something Is Missing.",
+          "url": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116",
+          "publishedAt": "2026-11-16T15:15:33Z",
+          "summary": "Final results from the Dark Energy Survey combined with other cosmological data show a three-sigma statistical preference for dark energy weakening over time rather than behaving as a constant vacuum energy.",
+          "finding": "Final results from the Dark Energy Survey combined with other cosmological data show a three-sigma statistical preference for dark energy weakening over time rather than behaving as a constant vacuum energy.",
+          "sourceUpdatedAt": "2026-11-17T17:41:04Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-16T15:15:33+00:00",
+        "datePrecision": "time",
+        "sourceHash": "657f168c078d84843b6316ba5eb6c3135542426f5254796e5da136b0e7483702",
+        "relevance": 5,
+        "novelty": 4,
+        "reason": "The article presents a significant new finding in cosmology, indicating a potential crack in the standard model of the universe based on extensive survey data. This is a substantive scientific development.",
+        "storyKey": "dark-energy-survey-final-results",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article details the final results of the Dark Energy Survey, combined with DESI data, indicating a \"three-sigma\" preference for a theory where dark energy is not stable, challenging the Lambda-CDM model. This represents a new finding in cosmology, even if it doesn't meet the \"five-sigma\" threshold for a new discovery."
+      }
+    },
+    {
       "id": "science-27ff426d4247d2c9",
       "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Jets from Webb",
       "summary": "The James Webb Space Telescope captured detailed infrared images of the NGC 7129 star-forming region, revealing young stars at different developmental stages. The observations show gold-colored gas with more mature stars on the left and red regions with younger stars on the right, where jets and winds likely create the filamentary structures.",
@@ -174,64 +290,6 @@
         "localConnection": "",
         "grounded": true,
         "groundingReason": "The summary accurately describes the new detailed infrared images from the James Webb Space Telescope of the NGC 7129 star-forming region, including the different developmental stages of stars and the explanation for the filamentary structures, all of which are directly supported by the article."
-      }
-    },
-    {
-      "id": "science-22dc9962cb4da998",
-      "title": "How the world’s fires changed while humanity hit pause",
-      "summary": "A study comparing fire activity during COVID-19 lockdowns to previous years found a net 12.3% decrease in active-fire detections globally, after controlling for weather. This suggests reduced human activity lowered ignitions, particularly in forests and grasslands. However, some regions saw increased fires, possibly due to diminished fire suppression capacity.",
-      "finding": "A study comparing fire activity during COVID-19 lockdowns to previous years found a net 12.3% decrease in active-fire detections globally, after controlling for weather. This suggests reduced human activity lowered ignitions, particularly in forests and grasslands. However, some regions saw increased fires, possibly due to diminished fire suppression capacity.",
-      "significance": "Disentangling human mobility from weather patterns demonstrates that reduced human presence had a net suppressive effect on wildfires globally, particularly in forests and grasslands.",
-      "caveat": "The study relied on mobile phone data that may undercount rural areas, examined only the first half of the year, and provides associational evidence rather than a fully controlled experiment.",
-      "url": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
-      "primarySourceUrl": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
-      "source": {
-        "name": "Ars Technica Science"
-      },
-      "sourceGroup": "Ars Technica Science",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-15T12:07:34+00:00",
-      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "earth-science"
-      ],
-      "entities": [
-        "Jianghao Wang",
-        "Chinese Academy of Sciences",
-        "Cell Reports Sustainability",
-        "NASA",
-        "Suomi NPP"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://dx.doi.org/10.1016/j.crsus.2026.100860",
-      "sourceUpdatedAt": "2026-11-13T23:23:21Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-16T06:57:14.734020-05:00",
-        "expiresAt": "2026-11-19T06:57:14.734020-05:00",
-        "inputFacts": {
-          "id": "science-22dc9962cb4da998",
-          "title": "How the world’s fires changed while humanity hit pause",
-          "url": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
-          "publishedAt": "2026-11-15T12:07:34Z",
-          "summary": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
-          "finding": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
-          "sourceUpdatedAt": "2026-11-13T23:23:21Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-15T12:07:34+00:00",
-        "datePrecision": "time",
-        "sourceHash": "7487832aebf44824f6e98588bfeef1337ceae299e665adfd786cf340f384b9b7",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The study presents a novel analysis of human impact on global fire regimes using a natural experiment, offering substantive new findings relevant to earth science and environmental understanding.",
-        "storyKey": "covid-lockdown-fire-impact",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article supports all claims in the summary, including the global decrease in active-fire detections, the specific percentage, the control for weather, the interpretation of reduced human activity lowering ignitions in forests and grasslands, and the inference about increased fires in some regions due to diminished fire suppression capacity. The study presents a new finding regarding the net effect of human activity on global fire patterns during the COVID-19 lockdowns."
       }
     },
     {
@@ -295,6 +353,21 @@
   ],
   "corrections": [
     {
+      "id": "science-62844aafa0fbfb51",
+      "inputFacts": {
+        "id": "science-62844aafa0fbfb51",
+        "title": "The U.S. just lost its measles elimination status. What now?",
+        "url": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
+        "publishedAt": "2026-11-17T16:09:29Z",
+        "summary": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
+        "finding": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
+        "sourceUpdatedAt": "2026-11-17T17:57:34Z"
+      },
+      "publishedAt": "2026-11-17T11:09:29-05:00",
+      "publicationEvidence": "2026-11-17T11:09:29-05:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-f709330c4c7d4bfc",
       "inputFacts": {
         "id": "science-f709330c4c7d4bfc",
@@ -340,6 +413,21 @@
       "datePrecision": "time"
     },
     {
+      "id": "science-ec8551b58464f4d5",
+      "inputFacts": {
+        "id": "science-ec8551b58464f4d5",
+        "title": "What Makes Up the Cosmos? A 20-Year Survey Hints That Something Is Missing.",
+        "url": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116",
+        "publishedAt": "2026-11-16T15:15:33Z",
+        "summary": "Final results from the Dark Energy Survey combined with other cosmological data show a three-sigma statistical preference for dark energy weakening over time rather than behaving as a constant vacuum energy.",
+        "finding": "Final results from the Dark Energy Survey combined with other cosmological data show a three-sigma statistical preference for dark energy weakening over time rather than behaving as a constant vacuum energy.",
+        "sourceUpdatedAt": "2026-11-17T17:41:04Z"
+      },
+      "publishedAt": "2026-11-16T15:15:33+00:00",
+      "publicationEvidence": "2026-11-16T15:15:33+00:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-07fcdfff67a13137",
       "inputFacts": {
         "id": "science-07fcdfff67a13137",
@@ -367,21 +455,6 @@
       },
       "publishedAt": "2026-11-16T00:05:00-05:00",
       "publicationEvidence": "2026-11-16T00:05:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-22dc9962cb4da998",
-      "inputFacts": {
-        "id": "science-22dc9962cb4da998",
-        "title": "How the world’s fires changed while humanity hit pause",
-        "url": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
-        "publishedAt": "2026-11-15T12:07:34Z",
-        "summary": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
-        "finding": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
-        "sourceUpdatedAt": "2026-11-13T23:23:21Z"
-      },
-      "publishedAt": "2026-11-15T12:07:34+00:00",
-      "publicationEvidence": "2026-11-15T12:07:34+00:00",
       "datePrecision": "time"
     },
     {
@@ -460,33 +533,33 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-6c50c567a596c770",
+      "id": "science-630372d2eb3bc82f",
       "inputFacts": {
-        "id": "science-6c50c567a596c770",
-        "title": "A Global Rebound for Mangroves",
-        "url": "https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves",
-        "publishedAt": "2026-11-13T05:01:00Z",
-        "summary": "After losing nearly 3,000 square kilometers from 1984 to 2010, global mangrove forest area rebounded with an unexpected net increase of nearly 2,000 square kilometers following 2010.",
-        "finding": "After losing nearly 3,000 square kilometers from 1984 to 2010, global mangrove forest area rebounded with an unexpected net increase of nearly 2,000 square kilometers following 2010.",
-        "sourceUpdatedAt": "2026-11-13T13:38:26Z"
+        "id": "science-630372d2eb3bc82f",
+        "title": "Sierra Snow Season Spins Up",
+        "url": "https://science.nasa.gov/earth/earth-observatory/sierra-snow-season-spins-up",
+        "publishedAt": "2026-11-18T05:01:00Z",
+        "summary": "An early-season Pacific storm delivered widespread rain to lower elevations and around a foot of snow to areas of California's Sierra Nevada in mid-November 2026.",
+        "finding": "An early-season Pacific storm delivered widespread rain to lower elevations and around a foot of snow to areas of California's Sierra Nevada in mid-November 2026.",
+        "sourceUpdatedAt": "2026-11-18T05:01:00Z"
       },
-      "publishedAt": "2026-11-13T00:01:00-05:00",
-      "publicationEvidence": "2026-11-13T00:01:00-05:00",
+      "publishedAt": "2026-11-18T00:01:00-05:00",
+      "publicationEvidence": "2026-11-18T00:01:00-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-38d32834f94f250a",
+      "id": "science-c73e9142e8e7494d",
       "inputFacts": {
-        "id": "science-38d32834f94f250a",
-        "title": "The amazing disappearing exoplanet",
-        "url": "https://arstechnica.com/science/2026/11/the-amazing-disappearing-exoplanet",
-        "publishedAt": "2026-11-12T17:18:10Z",
-        "summary": "The hot Jupiter exoplanet TOI-2535b ceased its regular transits across its host star, likely because the gravitational influence of an unseen companion changed its orbital inclination.",
-        "finding": "The hot Jupiter exoplanet TOI-2535b ceased its regular transits across its host star, likely because the gravitational influence of an unseen companion changed its orbital inclination.",
-        "sourceUpdatedAt": "2026-11-12T18:01:45Z"
+        "id": "science-c73e9142e8e7494d",
+        "title": "What to know about kratom and its powerful derivatives",
+        "url": "https://www.sciencenews.org/article/kratom-pain-addictive-potential-danger",
+        "publishedAt": "2026-11-17T13:00:00Z",
+        "summary": "An analysis of 44 commercial kratom products found that 85 percent contained ingredients that did not match their labels, frequently containing high levels of potent synthetic or concentrated derivatives.",
+        "finding": "An analysis of 44 commercial kratom products found that 85 percent contained ingredients that did not match their labels, frequently containing high levels of potent synthetic or concentrated derivatives.",
+        "sourceUpdatedAt": "2026-11-17T13:00:00Z"
       },
-      "publishedAt": "2026-11-12T17:18:10+00:00",
-      "publicationEvidence": "2026-11-12T17:18:10+00:00",
+      "publishedAt": "2026-11-17T08:00:00-05:00",
+      "publicationEvidence": "2026-11-17T08:00:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -496,8 +569,8 @@
         "title": "Hyperscale data centers use 2% of US electricity",
         "url": "https://arstechnica.com/science/2026/11/hyperscale-data-centers-use-2-of-us-electricity",
         "publishedAt": "2026-11-16T20:52:10Z",
-        "summary": "Between May 2024 and April 2025, 403 US hyperscale data centers were estimated to consume 68 to 99 terawatt-hours, or 1.5 to 2.2 percent of total US electricity.",
-        "finding": "Between May 2024 and April 2025, 403 US hyperscale data centers were estimated to consume 68 to 99 terawatt-hours, or 1.5 to 2.2 percent of total US electricity.",
+        "summary": "An analysis of 403 US hyperscale data centers operating between May 2024 and April 2025 estimated they consumed 68 to 99 terawatt-hours of electricity, representing 1.5 to 2.2 percent of total US power use.",
+        "finding": "An analysis of 403 US hyperscale data centers operating between May 2024 and April 2025 estimated they consumed 68 to 99 terawatt-hours of electricity, representing 1.5 to 2.2 percent of total US power use.",
         "sourceUpdatedAt": "2026-11-16T22:12:03Z"
       },
       "publishedAt": "2026-11-16T20:52:10+00:00",
@@ -518,53 +591,15 @@
       "publishedAt": "2026-11-16T09:00:00+00:00",
       "publicationEvidence": "2026-11-16T09:00:00+00:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-7f3ad460c89ae8b7",
-      "inputFacts": {
-        "id": "science-7f3ad460c89ae8b7",
-        "title": "The Last Ice on Puncak Jaya",
-        "url": "https://science.nasa.gov/earth/earth-observatory/the-last-ice-on-puncak-jaya",
-        "publishedAt": "2026-11-16T05:00:00Z",
-        "summary": "Ice remnants near the summit of Puncak Jaya have thinned and fragmented to approximately two percent of their 1988 extent, ending their functional life as active glaciers.",
-        "finding": "Ice remnants near the summit of Puncak Jaya have thinned and fragmented to approximately two percent of their 1988 extent, ending their functional life as active glaciers.",
-        "sourceUpdatedAt": "2026-11-16T05:00:00Z"
-      },
-      "publishedAt": "2026-11-16T00:00:00-05:00",
-      "publicationEvidence": "2026-11-16T00:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-808b4a1d23d0d5e6",
-      "inputFacts": {
-        "id": "science-808b4a1d23d0d5e6",
-        "title": "Winemakers are learning that conservation can be good for business",
-        "url": "https://arstechnica.com/science/2026/11/winemakers-are-learning-that-conservation-can-be-good-for-business",
-        "publishedAt": "2026-11-14T12:05:51Z",
-        "summary": "An analysis of 107 Western Cape vineyards found that many operators view long-term soil and wildlife conservation as critical strategies for business success rather than competing priorities.",
-        "finding": "An analysis of 107 Western Cape vineyards found that many operators view long-term soil and wildlife conservation as critical strategies for business success rather than competing priorities.",
-        "sourceUpdatedAt": "2026-11-14T19:05:58Z"
-      },
-      "publishedAt": "2026-11-14T12:05:51+00:00",
-      "publicationEvidence": "2026-11-14T12:05:51+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-16",
-      "selectedIds": [
-        "science-a2daa312bdf773c7",
-        "science-27ff426d4247d2c9",
-        "science-22dc9962cb4da998"
-      ]
-    },
     {
       "date": "2026-11-17",
       "selectedIds": [
         "science-a2daa312bdf773c7",
         "science-27ff426d4247d2c9",
-        "science-22dc9962cb4da998"
+        "science-62844aafa0fbfb51"
       ]
     },
     {
@@ -573,6 +608,14 @@
         "science-a2daa312bdf773c7",
         "science-f709330c4c7d4bfc",
         "science-a4747eacd3383c98"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "selectedIds": [
+        "science-a2daa312bdf773c7",
+        "science-62844aafa0fbfb51",
+        "science-ec8551b58464f4d5"
       ]
     }
   ]

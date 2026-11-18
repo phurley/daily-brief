@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-17T11:01:01.149456Z",
-  "editionDate": "2026-11-17",
+  "generatedAt": "2026-11-18T11:01:02.145560Z",
+  "editionDate": "2026-11-18",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -21,11 +21,237 @@
   },
   "stories": [
     {
+      "id": "science-630372d2eb3bc82f",
+      "title": "Sierra Snow Season Spins Up",
+      "summary": "An early-season Pacific storm delivered widespread rain to lower elevations and around a foot of snow to areas of California's Sierra Nevada in mid-November 2026.",
+      "finding": "An early-season Pacific storm delivered widespread rain to lower elevations and around a foot of snow to areas of California's Sierra Nevada in mid-November 2026.",
+      "significance": "The event marked one of the first major snowfalls of the water year, initiating snowpack accumulation across California's mountains.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/sierra-snow-season-spins-up",
+      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/sierra-snow-season-spins-up",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-18T05:01:00Z",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "Sierra Nevada",
+        "MODIS",
+        "Terra",
+        "NASA Earth Observatory",
+        "National Weather Service"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-18T05:01:00Z"
+    },
+    {
+      "id": "science-62844aafa0fbfb51",
+      "title": "The U.S. just lost its measles elimination status. What now?",
+      "summary": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
+      "finding": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
+      "significance": "Losing measles elimination status marks a significant reversal of decades of public health progress and underscores risks stemming from declining vaccination coverage.",
+      "caveat": "Underreporting and untested cases hamper accurate surveillance, making the true scope of outbreaks difficult to determine.",
+      "url": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
+      "primarySourceUrl": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-17T16:09:29Z",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "health"
+      ],
+      "entities": [
+        "Pan American Health Organization",
+        "PAHO",
+        "Centers for Disease Control and Prevention",
+        "CDC",
+        "Brown University School of Public Health"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-17T17:57:34Z"
+    },
+    {
+      "id": "science-c73e9142e8e7494d",
+      "title": "What to know about kratom and its powerful derivatives",
+      "summary": "An analysis of 44 commercial kratom products found that 85 percent contained ingredients that did not match their labels, frequently containing high levels of potent synthetic or concentrated derivatives.",
+      "finding": "An analysis of 44 commercial kratom products found that 85 percent contained ingredients that did not match their labels, frequently containing high levels of potent synthetic or concentrated derivatives.",
+      "significance": "Derivatives such as 7-hydroxymitragynine bind mu opioid receptors far more strongly than raw plant alkaloids, leading to severe withdrawal symptoms, cravings, and hospitalizations.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencenews.org/article/kratom-pain-addictive-potential-danger",
+      "primarySourceUrl": "https://www.sciencenews.org/article/kratom-pain-addictive-potential-danger",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-17T13:00:00Z",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "health"
+      ],
+      "entities": [
+        "Roopa Sethi",
+        "Oliver Grundmann",
+        "Mallory Pullman",
+        "Drug Enforcement Administration",
+        "Food and Drug Administration"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/abs/10.1002/dta.70122",
+      "sourceUpdatedAt": "2026-11-17T13:00:00Z"
+    },
+    {
+      "id": "science-b4f7444234143e65",
+      "title": "A mysterious twist in the universe’s oldest light could reveal new physics",
+      "summary": "Researchers developed a differential calibration method comparing separate detector maps to test whether the apparent polarization rotation in cosmic microwave background data is genuine or due to instrument errors.",
+      "finding": "Researchers developed a differential calibration method comparing separate detector maps to test whether the apparent polarization rotation in cosmic microwave background data is genuine or due to instrument errors.",
+      "significance": "Cosmic birefringence could indicate new physics beyond the Standard Model, including dark matter or dark energy fields, and the method helps avoid false detections of primordial B-mode gravitational waves.",
+      "caveat": "The method removes shared rotation across maps, preventing it from independently measuring the absolute polarization angle or definitively confirming that the light has rotated.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261116023348.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261116023348.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-17T12:14:04Z",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "University of California San Diego",
+        "Planck",
+        "Anto I. Lonappan",
+        "Brian Keating",
+        "The Astrophysical Journal Letters"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.3847/2041-8213/aea401"
+    },
+    {
+      "id": "science-479263f7ac063934",
+      "title": "Scientists tracked kids for 8 years. What they found about screen time was surprising",
+      "summary": "An eight-year study found that children who spent more time using screens tended to have better cognitive processing abilities as adolescents.",
+      "finding": "An eight-year study found that children who spent more time using screens tended to have better cognitive processing abilities as adolescents.",
+      "significance": "The findings challenge conventional assumptions that screen time is inherently harmful to developing brains, suggesting the type of screen activity may matter more than total duration.",
+      "caveat": "The findings establish associations rather than cause and effect, and wearable sensor measurements did not mirror associations found in questionnaire responses.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261116014725.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261116014725.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-17T12:03:58Z",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "health",
+        "social-science"
+      ],
+      "entities": [
+        "University of Jyväskylä",
+        "Pediatric Exercise Science",
+        "Petri Jalanko",
+        "CogState"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1123/pes.2025-0083"
+    },
+    {
+      "id": "science-160e481f0124994b",
+      "title": "The hidden language of psychopathy is not what scientists expected",
+      "summary": "Analysis of 450 personal life stories revealed that psychopathic traits correspond to distinct language patterns: meanness correlated with more positive words, disinhibition with negative language, and boldness with fewer anxiety-related terms.",
+      "finding": "Analysis of 450 personal life stories revealed that psychopathic traits correspond to distinct language patterns: meanness correlated with more positive words, disinhibition with negative language, and boldness with fewer anxiety-related terms.",
+      "significance": "The findings challenge the assumption that psychopathy causes uniformly cold, flat communication, suggesting language variations reflect nuanced personality dimensions across a spectrum.",
+      "caveat": "The researchers note that the analysis is not meant for diagnosing psychopathy, and language patterns varied depending on which life events participants discussed.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261116023346.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261116023346.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-17T11:51:35Z",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "social-science",
+        "health"
+      ],
+      "entities": [
+        "University of Mississippi",
+        "Personality and Individual Differences",
+        "Ky Bray",
+        "Laura Drislane"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1016/j.paid.2026.113978"
+    },
+    {
+      "id": "science-8e3f7b78104c7202",
+      "title": "ESA’s Hera spacecraft is flying rectangles around NASA’s asteroid crash site",
+      "summary": "The Hera spacecraft reached the Didymos asteroid system, entering an early characterization phase where it flies in rectangular trajectories about 25 to 30 kilometers away to safely observe Dimorphos.",
+      "finding": "The Hera spacecraft reached the Didymos asteroid system, entering an early characterization phase where it flies in rectangular trajectories about 25 to 30 kilometers away to safely observe Dimorphos.",
+      "significance": "Close-up observations will reveal the structural aftermath of NASA's DART impact, refining models and strategies for kinetic impact planetary defense.",
+      "caveat": "Scientists still do not know Dimorphos' internal composition, structure, mass, or whether the collision excavated a crater versus reshaping the entire asteroid.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261115085545.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261115085545.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-17T10:45:41Z",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "Hera",
+        "European Space Agency",
+        "Didymos",
+        "Dimorphos",
+        "DART"
+      ],
+      "milestoneStatus": "completed"
+    },
+    {
       "id": "science-e0d2013ab465cdc5",
       "title": "Hera surveying asteroids with superhuman vision",
-      "summary": "The Hera spacecraft observed the Didymos asteroid system using optical, multispectral, and thermal infrared instruments, revealing surface features, candidate landslides, and thermal structures.",
-      "finding": "The Hera spacecraft observed the Didymos asteroid system using optical, multispectral, and thermal infrared instruments, revealing surface features, candidate landslides, and thermal structures.",
-      "significance": "These multispectral and thermal observations help researchers investigate asteroid composition, structure, and the consequences of NASA's DART collision for planetary defence.",
+      "summary": "The Hera spacecraft observed the Didymos asteroid system from 28.5 km away using visible, multispectral, and thermal infrared instruments, revealing diverse surface features and a central ridge on the fast-spinning asteroid.",
+      "finding": "The Hera spacecraft observed the Didymos asteroid system from 28.5 km away using visible, multispectral, and thermal infrared instruments, revealing diverse surface features and a central ridge on the fast-spinning asteroid.",
+      "significance": "These observations provide detailed compositional and physical data on Didymos and Dimorphos, helping clarify the aftermath and mechanisms of the DART kinetic impact planetary defense test.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-surveying-asteroids-with-superhuman-vision",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-surveying-asteroids-with-superhuman-vision",
@@ -36,8 +262,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-17T08:59:44Z",
       "firstSeenAt": "2026-11-17T11:01:01.149456Z",
-      "checkedAt": "2026-11-17T11:01:01.149456Z",
-      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "agency-announcement",
       "topics": [
         "astronomy",
@@ -45,10 +271,10 @@
       ],
       "entities": [
         "European Space Agency",
-        "Hera",
         "Didymos",
         "Dimorphos",
-        "DART"
+        "DART",
+        "JAXA"
       ],
       "milestoneStatus": "unknown"
     },
@@ -87,10 +313,10 @@
     {
       "id": "science-d12392adea6070f4",
       "title": "Hyperscale data centers use 2% of US electricity",
-      "summary": "Between May 2024 and April 2025, 403 US hyperscale data centers were estimated to consume 68 to 99 terawatt-hours, or 1.5 to 2.2 percent of total US electricity.",
-      "finding": "Between May 2024 and April 2025, 403 US hyperscale data centers were estimated to consume 68 to 99 terawatt-hours, or 1.5 to 2.2 percent of total US electricity.",
-      "significance": "Hyperscalers account for roughly one-third to one-half of all US data center energy use, generating an estimated 21 to 31 million metric tons of carbon dioxide.",
-      "caveat": "The study could not differentiate between AI workloads and traditional data services, and it excluded on-site behind-the-meter power generation.",
+      "summary": "An analysis of 403 US hyperscale data centers operating between May 2024 and April 2025 estimated they consumed 68 to 99 terawatt-hours of electricity, representing 1.5 to 2.2 percent of total US power use.",
+      "finding": "An analysis of 403 US hyperscale data centers operating between May 2024 and April 2025 estimated they consumed 68 to 99 terawatt-hours of electricity, representing 1.5 to 2.2 percent of total US power use.",
+      "significance": "Hyperscale facilities account for an estimated one-third to one-half of all US data center power consumption, generating roughly 21 to 31 million metric tons of carbon dioxide.",
+      "caveat": "The study could not distinguish AI computing from conventional data services, omitted 272 facilities lacking verification data, and did not include on-site behind-the-meter generation.",
       "url": "https://arstechnica.com/science/2026/11/hyperscale-data-centers-use-2-of-us-electricity",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/hyperscale-data-centers-use-2-of-us-electricity",
       "source": {
@@ -100,14 +326,18 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-16T20:52:10Z",
       "firstSeenAt": "2026-11-17T11:01:01.149456Z",
-      "checkedAt": "2026-11-17T11:01:01.149456Z",
-      "verifiedAt": "2026-11-17T11:01:01.149456Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "technology"
+        "technology",
+        "earth-science"
       ],
       "entities": [
         "United States",
+        "Lawrence Berkeley National Laboratory",
+        "Tennessee",
+        "Cleanview",
         "Nature Sustainability"
       ],
       "milestoneStatus": "unknown",
@@ -179,6 +409,40 @@
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.nature.com/articles/s41893-026-01985-7"
+    },
+    {
+      "id": "science-ec8551b58464f4d5",
+      "title": "What Makes Up the Cosmos? A 20-Year Survey Hints That Something Is Missing.",
+      "summary": "Final results from the Dark Energy Survey combined with other cosmological data show a three-sigma statistical preference for dark energy weakening over time rather than behaving as a constant vacuum energy.",
+      "finding": "Final results from the Dark Energy Survey combined with other cosmological data show a three-sigma statistical preference for dark energy weakening over time rather than behaving as a constant vacuum energy.",
+      "significance": "The finding challenges the standard Lambda-CDM cosmological model, hinting that the prevailing understanding of the universe's primary energetic component is incomplete.",
+      "caveat": "Preprint / working paper; peer review is not established. The observed statistical preference is three-sigma, falling short of the five-sigma threshold physicists require to claim a definitive new discovery.",
+      "url": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116",
+      "primarySourceUrl": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116",
+      "source": {
+        "name": "Quanta Magazine"
+      },
+      "sourceGroup": "Quanta Magazine",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-16T15:15:33Z",
+      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "Dark Energy Survey",
+        "Dark Energy Spectroscopic Instrument",
+        "Joshua Frieman",
+        "Simone Ferraro",
+        "Fermi National Accelerator Laboratory"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://arxiv.org/abs/2605.27221",
+      "sourceUpdatedAt": "2026-11-17T17:41:04Z"
     },
     {
       "id": "science-07fcdfff67a13137",
@@ -406,10 +670,10 @@
     {
       "id": "science-22dc9962cb4da998",
       "title": "How the world’s fires changed while humanity hit pause",
-      "summary": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
-      "finding": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections than recent historical averages after controlling for weather conditions.",
-      "significance": "Disentangling human mobility from weather patterns demonstrates that reduced human presence had a net suppressive effect on wildfires globally, particularly in forests and grasslands.",
-      "caveat": "The study relied on mobile phone data that may undercount rural areas, examined only the first half of the year, and provides associational evidence rather than a fully controlled experiment.",
+      "summary": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections compared to 2013-2019 averages after controlling for weather.",
+      "finding": "During the first half of 2020, areas under COVID-19 lockdowns had an estimated 12.3 percent fewer active-fire detections compared to 2013-2019 averages after controlling for weather.",
+      "significance": "Disentangling human behavior from weather shows that mobility restrictions lowered net fire activity globally, informing fire management strategies based on regional human-fire dynamics.",
+      "caveat": "Mobile phone data may miss rural activity, the study only examined the first half of the year, satellite data cannot distinguish wildfires from prescribed burns, and it is not a controlled experiment.",
       "url": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause",
       "source": {
@@ -419,18 +683,17 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-15T12:07:34Z",
       "firstSeenAt": "2026-11-16T11:01:02.875720Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "earth-science"
       ],
       "entities": [
-        "Jianghao Wang",
         "Chinese Academy of Sciences",
-        "Cell Reports Sustainability",
+        "Jianghao Wang",
         "NASA",
-        "Suomi NPP"
+        "National Oceanic and Atmospheric Administration"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://dx.doi.org/10.1016/j.crsus.2026.100860",
@@ -827,10 +1090,10 @@
     {
       "id": "science-3d2e8c95745650ad",
       "title": "Hera spies a half-hidden asteroid moonlet",
-      "summary": "ESA's Hera spacecraft captured an early image from 56 km away showing Didymos with large boulders, smoother regions, and a sharp equatorial ridge, alongside its moonlet Dimorphos.",
-      "finding": "ESA's Hera spacecraft captured an early image from 56 km away showing Didymos with large boulders, smoother regions, and a sharp equatorial ridge, alongside its moonlet Dimorphos.",
-      "significance": "The imagery supports numerical models suggesting fast-spinning asteroids shed surface material to their equators and potentially spawn moonlets like Dimorphos.",
-      "caveat": "The proposed origin of the equatorial ridge and moonlet from rotational shedding is based on numerical modeling and has not yet been confirmed by close-up data.",
+      "summary": "ESA's Hera spacecraft captured an early preview image from 56 km away showing asteroid Didymos with an equatorial ridge and boulder-strewn surface, alongside a glimpse of its moonlet Dimorphos.",
+      "finding": "ESA's Hera spacecraft captured an early preview image from 56 km away showing asteroid Didymos with an equatorial ridge and boulder-strewn surface, alongside a glimpse of its moonlet Dimorphos.",
+      "significance": "Studying the binary asteroid system helps clarify the origins of asteroid moonlets and provides crucial post-impact investigation data for planetary defence following NASA's DART mission.",
+      "caveat": "Key questions remain unanswered, including the precise internal structure and mass of Dimorphos, and whether the DART impact created a crater or reshaped the moonlet completely.",
       "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-spies-a-half-hidden-asteroid-moonlet",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-spies-a-half-hidden-asteroid-moonlet",
       "source": {
@@ -840,17 +1103,18 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-13T10:46:06Z",
       "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "agency-announcement",
       "topics": [
-        "astronomy"
+        "astronomy",
+        "technology"
       ],
       "entities": [
         "Hera",
+        "ESA",
         "Didymos",
         "Dimorphos",
-        "ESA",
         "DART"
       ],
       "milestoneStatus": "unknown"
@@ -952,10 +1216,10 @@
     {
       "id": "science-f9dbd3c56fd3b6c5",
       "title": "Can Network Science Transform Health and Nutrition?",
-      "summary": "Researchers found that diverse real-world systems, from biological cells to the internet, share architectural features not explained by their components alone, pointing to common organizing principles governing networks.",
-      "finding": "Researchers found that diverse real-world systems, from biological cells to the internet, share architectural features not explained by their components alone, pointing to common organizing principles governing networks.",
-      "significance": "Applying network principles to biology can help identify better drug targets by revealing disease-related gene neighborhoods and explore uncataloged compounds in nutrition.",
-      "caveat": "The effects of approximately 135,000 food compounds lying outside conventional nutrition on the human body are only beginning to be understood.",
+      "summary": "Diverse systems from the internet to biological cells share universal architectural features that reflect common organizing principles governing networks.",
+      "finding": "Diverse systems from the internet to biological cells share universal architectural features that reflect common organizing principles governing networks.",
+      "significance": "Mapping internal biological networks could improve how diseases are treated, identify drug targets, and reveal the functions of uncataloged food compounds.",
+      "caveat": "The effects of approximately 135,000 nutritional compounds lying outside conventional dietary science are only beginning to be understood.",
       "url": "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112",
       "primarySourceUrl": "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112",
       "source": {
@@ -965,8 +1229,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-12T19:40:54Z",
       "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "biology",
@@ -1115,10 +1379,10 @@
     {
       "id": "science-ed14340572225b1f",
       "title": "The Evolving Story of How Chemistry Became Biology",
-      "summary": "Origins-of-life researchers are moving away from single-molecule theories toward integrative frameworks exploring how diverse chemical processes became stable, evolving biological systems.",
-      "finding": "Origins-of-life researchers are moving away from single-molecule theories toward integrative frameworks exploring how diverse chemical processes became stable, evolving biological systems.",
-      "significance": "Moving beyond historical debates among RNA-world, metabolism-first, and lipid-world proponents may clarify how nonliving molecules transitioned into self-sustaining, replicating life.",
-      "caveat": "Explaining how early molecular reactions stably linked into continuous evolutionary lineages remains an unresolved challenge.",
+      "summary": "Origins-of-life researchers are moving away from single-molecule theories toward integrative frameworks that study how complex chemical networks transitioned into stable evolutionary biology.",
+      "finding": "Origins-of-life researchers are moving away from single-molecule theories toward integrative frameworks that study how complex chemical networks transitioned into stable evolutionary biology.",
+      "significance": "Re-evaluating how early precursors assembled into evolving systems could unify conflicting historical hypotheses and clarify the emergence of life on Earth and elsewhere.",
+      "caveat": "Explaining how disparate molecular processes merged into an enduring evolutionary lineage capable of storing and transmitting information remains unresolved.",
       "url": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112",
       "primarySourceUrl": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112",
       "source": {
@@ -1128,23 +1392,22 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-12T15:45:27Z",
       "firstSeenAt": "2026-11-13T11:01:00.753629Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "biology",
-        "chemistry",
-        "evolutionary-biology"
+        "chemistry"
       ],
       "entities": [
-        "Alexander Oparin",
+        "Betül Kaçar",
         "Stanley Miller",
         "Harold Urey",
-        "Betül Kaçar",
-        "Ramanarayanan Krishnamurthy"
+        "Alexander Oparin",
+        "David Baum"
       ],
       "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-13T17:04:21Z"
+      "sourceUpdatedAt": "2026-11-17T16:50:59Z"
     },
     {
       "id": "science-0c210fd64684a210",
@@ -1730,9 +1993,9 @@
     {
       "id": "science-c45c5c281dd2928f",
       "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
-      "summary": "NASA's Voyager 1 spacecraft was scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
-      "finding": "NASA's Voyager 1 spacecraft was scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
-      "significance": "Voyager 1 is the most distant human-made object, continuing to transmit scientific observations from interstellar space beyond the heliosphere.",
+      "summary": "NASA reported that Voyager 1 is projected to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
+      "finding": "NASA reported that Voyager 1 is projected to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
+      "significance": "Voyager 1 remains the most distant human-made object, traveling so far that light from Earth takes 24 hours to reach it.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
       "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
@@ -1743,8 +2006,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-10T19:22:45Z",
       "firstSeenAt": "2026-11-16T11:01:02.875720Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "mission-milestone",
       "topics": [
         "astronomy",
@@ -1753,7 +2016,7 @@
       "entities": [
         "NASA",
         "Voyager 1",
-        "Earth",
+        "Voyager 2",
         "Jet Propulsion Laboratory",
         "Caltech"
       ],
@@ -3095,10 +3358,10 @@
     {
       "id": "science-8b317084cde7e6b6",
       "title": "European orbiter detects hints of volcanic activity on Mars",
-      "summary": "The ExoMars Trace Gas Orbiter detected localized spikes of hydrogen chloride gas over fresh fissures in Mars's Alba Mons region, suggesting potential dormant volcanic activity.",
-      "finding": "The ExoMars Trace Gas Orbiter detected localized spikes of hydrogen chloride gas over fresh fissures in Mars's Alba Mons region, suggesting potential dormant volcanic activity.",
-      "significance": "The observations indicate Mars may have retained internal heat to support recent or present volcanic activity, potentially creating warm subsurface hydrothermal niches.",
-      "caveat": "Scientists have not directly observed any active lava flows or volcanic eruptions on Mars.",
+      "summary": "Researchers detected localised releases of hydrogen chloride gas over volcanic fissures on the Alba Mons volcano during early summer on Mars, pointing to possible dormant magmatic activity.",
+      "finding": "Researchers detected localised releases of hydrogen chloride gas over volcanic fissures on the Alba Mons volcano during early summer on Mars, pointing to possible dormant magmatic activity.",
+      "significance": "The observations indicate Mars may still retain internal heat capable of driving volcanic and hydrothermal processes, potentially offering protected habitats for microbial life.",
+      "caveat": "No actual lava flows or eruptions have ever been directly observed on Mars, and the link between the gas seepage and magmatic activity relies partly on geological inference.",
       "url": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "primarySourceUrl": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
       "source": {
@@ -3108,8 +3371,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-06T10:05:36Z",
       "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy"
@@ -3118,6 +3381,7 @@
         "ExoMars Trace Gas Orbiter",
         "Alba Mons",
         "Alexander Trokhimovskiy",
+        "Daniel Mège",
         "Colin Wilson"
       ],
       "milestoneStatus": "unknown",
@@ -3925,7 +4189,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-02T21:07:52Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -4170,10 +4434,10 @@
     {
       "id": "science-e77a7638ee47a43c",
       "title": "It’s not (just) the heat, it’s the humidity: Examining the impact of intensifying humid heat on pregnancies",
-      "summary": "Increasing humid heat in Nigeria is strongly linked to an elevated risk of early pregnancy terminations and shifts the timing of conceptions.",
-      "finding": "Increasing humid heat in Nigeria is strongly linked to an elevated risk of early pregnancy terminations and shifts the timing of conceptions.",
-      "significance": "Combining satellite climate data with health surveys reveals how humid heat affects maternal outcomes in vulnerable, low- and middle-income regions.",
-      "caveat": "The underlying demographic surveys do not differentiate between spontaneous pregnancy terminations and induced abortions.",
+      "summary": "In Nigeria, increasing humid heat correlates with a higher risk of early pregnancy terminations and temporary shifts in the timing of conceptions.",
+      "finding": "In Nigeria, increasing humid heat correlates with a higher risk of early pregnancy terminations and temporary shifts in the timing of conceptions.",
+      "significance": "Combining satellite and health survey data reveals how high humidity affects fertility and pregnancy risks in vulnerable, lower- and middle-income nations.",
+      "caveat": "The health surveys analyzed do not distinguish whether the reported pregnancy terminations were spontaneous miscarriages or induced abortions.",
       "url": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "primarySourceUrl": "https://news.umich.edu/its-not-just-the-heat-its-the-humidity-examining-the-impact-of-intensifying-humid-heat-on-pregnancies",
       "source": {
@@ -4183,8 +4447,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T15:38:09Z",
       "firstSeenAt": "2026-11-05T11:24:38.846856Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "health",
@@ -4192,10 +4456,10 @@
       ],
       "entities": [
         "University of Michigan",
-        "Proceedings of the National Academy of Sciences",
         "NASA",
-        "Aix-Marseille University",
-        "University of California Santa Barbara"
+        "Nina Brooks",
+        "Cascade Tuholske",
+        "Proceedings of the National Academy of Sciences"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1073/pnas.2321152122",
@@ -4239,10 +4503,10 @@
     {
       "id": "science-e10edceaccaeeca7",
       "title": "Chimpanzees at war: U-M researcher finds hope for humanity",
-      "summary": "Researchers observing a community split in the Ngogo chimpanzee population documented lethal intergroup aggression occurring between individuals who previously lived, affiliated, and cooperated together.",
-      "finding": "Researchers observing a community split in the Ngogo chimpanzee population documented lethal intergroup aggression occurring between individuals who previously lived, affiliated, and cooperated together.",
-      "significance": "The observations contrast with human social behavior, highlighting that while chimpanzees kill former associates, humans uniquely display widespread prosociality and aid strangers.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "summary": "Long-term monitoring revealed that a large chimpanzee community split into two groups, leading to sustained lethal intergroup attacks among individuals who had previously lived and cooperated together.",
+      "finding": "Long-term monitoring revealed that a large chimpanzee community split into two groups, leading to sustained lethal intergroup attacks among individuals who had previously lived and cooperated together.",
+      "significance": "The observations contrast with human social behavior, highlighting that chimpanzees will fatally attack formerly familiar group members, while humans uniquely exhibit widespread prosocial cooperation toward strangers.",
+      "caveat": "The asymmetric nature of the killings and the exact causes behind the group fission remain difficult to explain.",
       "url": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "primarySourceUrl": "https://news.umich.edu/chimpanzees-at-war-u-m-researcher-finds-hope-for-humanity",
       "source": {
@@ -4252,8 +4516,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-30T14:08:23Z",
       "firstSeenAt": "2026-11-03T11:00:02.680578Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology",
@@ -4262,11 +4526,12 @@
       "entities": [
         "John Mitani",
         "Kibale National Park",
-        "University of Michigan",
-        "Ngogo Chimpanzee Project"
+        "Ngogo Chimpanzee Project",
+        "Nature Human Behaviour",
+        "University of Michigan"
       ],
       "milestoneStatus": "unknown",
-      "paperUrl": "https://www.science.org/doi/10.1126/science.adz4944?referrer=https%3A%2F%2Fwww.google.com%2F",
+      "paperUrl": "https://www.nature.com/articles/s41562-026-02601-6",
       "sourceUpdatedAt": "2026-11-02T15:08:51Z",
       "localConnection": "University of Michigan research in Ann Arbor."
     },
@@ -4373,10 +4638,10 @@
     {
       "id": "science-5c3380370cf61ae7",
       "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "summary": "Scientists age-dated minerals in the Martian meteorite Teghaza 001, discovering it formed more than 4.1 billion years ago and preserves evidence of early crustal formation and alteration by water.",
-      "finding": "Scientists age-dated minerals in the Martian meteorite Teghaza 001, discovering it formed more than 4.1 billion years ago and preserves evidence of early crustal formation and alteration by water.",
-      "significance": "As one of Earth's oldest known Martian meteorites, it provides an unprecedented physical record of early Martian crustal geology and dynamic water-rock interactions.",
-      "caveat": "The exact source location on Mars from which the meteorite originated remains unknown, although researchers have proposed multiple matching candidate areas.",
+      "summary": "Scientists determined the Martian meteorite Teghaza 001 formed over 4.1 billion years ago and preserves evidence of water altering Mars's ancient igneous crust.",
+      "finding": "Scientists determined the Martian meteorite Teghaza 001 formed over 4.1 billion years ago and preserves evidence of water altering Mars's ancient igneous crust.",
+      "significance": "As one of Earth's oldest Martian meteorites, it offers a rare record of the early Martian water cycle and crust formation from a previously unsampled region.",
+      "caveat": "The exact Martian origin location remains unknown, though several matching candidate regions have been identified.",
       "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "primarySourceUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found",
       "source": {
@@ -4386,19 +4651,18 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-29T18:18:09Z",
       "firstSeenAt": "2026-10-30T10:01:04.491389Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "astronomy",
-        "earth-science"
+        "astronomy"
       ],
       "entities": [
-        "NASA",
+        "Teghaza 001",
+        "Mars",
         "Jet Propulsion Laboratory",
         "Science",
-        "Yang Liu",
-        "Teghaza 001"
+        "NASA"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.science.org/eprint/6FRMXEUFASPRPAFJRZ64/full?activationRedirect=/doi/full/10.1126/science.adz5646",
@@ -4653,7 +4917,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T20:23:58Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
       "verifiedAt": "2026-11-03T11:00:02.680578Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -4684,7 +4948,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-27T18:51:35Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
       "verifiedAt": "2026-10-29T05:30:05.908168Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -4773,10 +5037,10 @@
     {
       "id": "science-6d879a7a5c5c91f8",
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
-      "summary": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, down to roughly 100 nanometers, adhering to spacesuit material samples via static electricity.",
-      "finding": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, down to roughly 100 nanometers, adhering to spacesuit material samples via static electricity.",
-      "significance": "Understanding the size and adherence of these tiny particles helps engineers design better spacesuits, airlocks, and mitigation protocols to protect future astronaut health from toxic dust.",
-      "caveat": "Scientists note that the health hazards from Martian dust depend on both the total quantity inhaled and the duration of exposure.",
+      "summary": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, some down to 100 nanometers, clinging to spacesuit material samples via static electricity.",
+      "finding": "NASA's Perseverance rover detected fine and ultrafine Martian dust particles, some down to 100 nanometers, clinging to spacesuit material samples via static electricity.",
+      "significance": "Direct measurements of these lung-penetrating dust sizes can guide material choices, habitat designs, and health standards to protect future astronauts on Mars.",
+      "caveat": "Scientists note that the health risks from Mars dust depend on the specific quantity of dust and duration of exposure.",
       "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "primarySourceUrl": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust",
       "source": {
@@ -4786,8 +5050,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-10-26T21:07:28Z",
       "firstSeenAt": "2026-10-29T05:30:05.908168Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
+      "checkedAt": "2026-11-18T11:01:02.145560Z",
+      "verifiedAt": "2026-11-18T11:01:02.145560Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -4795,10 +5059,10 @@
         "health"
       ],
       "entities": [
-        "Perseverance",
         "NASA",
-        "PIXL",
+        "Perseverance",
         "SHERLOC",
+        "PIXL",
         "Jet Propulsion Laboratory"
       ],
       "milestoneStatus": "unknown",
@@ -5627,326 +5891,60 @@
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-10-14T04:01:00Z"
-    },
-    {
-      "id": "science-7372c3e01f24fcad",
-      "title": "Comparing Off-World Rover Driving Distances",
-      "summary": "As of October 11, 2026, NASA's Perseverance rover has surpassed the driving distance record previously held by the Opportunity rover on Mars.",
-      "finding": "As of October 11, 2026, NASA's Perseverance rover has surpassed the driving distance record previously held by the Opportunity rover on Mars.",
-      "significance": "This milestone highlights the longevity and operational success of the Perseverance rover, demonstrating its continued capability to explore the Martian surface and collect scientific data over extended periods.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/photojournal/comparing-off-world-rover-driving-distances",
-      "primarySourceUrl": "https://science.nasa.gov/photojournal/comparing-off-world-rover-driving-distances",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T17:56:08Z",
-      "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-14T10:00:06.638546Z",
-      "verifiedAt": "2026-10-14T10:00:06.638546Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "astronomy",
-        "technology"
-      ],
-      "entities": [
-        "Perseverance",
-        "Opportunity",
-        "Mars",
-        "NASA"
-      ],
-      "milestoneStatus": "completed",
-      "sourceUpdatedAt": "2026-10-13T17:56:12Z"
-    },
-    {
-      "id": "science-3f01fb21be9ace53",
-      "title": "Can you trust a robot in charge?",
-      "summary": "A study found that people's trust in security robots as authority figures increases when the robots demonstrate interactional fairness (how they treat people and explain decisions) and distributive fairness (consistent application of rules).",
-      "finding": "A study found that people's trust in security robots as authority figures increases when the robots demonstrate interactional fairness (how they treat people and explain decisions) and distributive fairness (consistent application of rules).",
-      "significance": "As security robots increasingly assume roles previously held by humans, understanding the factors that build public trust is crucial for their effective design and deployment, particularly in consequential settings like security.",
-      "caveat": "The study utilized a parking-lot security scenario, and the researchers acknowledge that responses might differ in higher-stakes environments. Therefore, the generalizability of these findings to all security contexts is not fully established.",
-      "url": "https://news.umich.edu/can-you-trust-a-robot-in-charge",
-      "primarySourceUrl": "https://news.umich.edu/can-you-trust-a-robot-in-charge",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T17:09:11Z",
-      "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-17T10:01:38.386991Z",
-      "verifiedAt": "2026-10-17T10:01:38.386991Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "social-science",
-        "technology"
-      ],
-      "entities": [
-        "Xin Ye",
-        "Lionel Robert",
-        "University of Michigan School of Information",
-        "security robots"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://journals.sagepub.com/doi/full/10.1177/10711813261475182",
-      "sourceUpdatedAt": "2026-10-13T17:09:17Z",
-      "localConnection": "University of Michigan research in Ann Arbor."
-    },
-    {
-      "id": "science-21579838c4cb1b39",
-      "title": "Treating life-threatening blood clots in minutes with swirling sound waves",
-      "summary": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging blood vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch blood clot in eight minutes.",
-      "finding": "A minimally invasive \"vortex ultrasound\" device is being developed to treat pulmonary embolisms by using twisting sound waves to break up blood clots without damaging blood vessel walls. Preliminary tests in cow blood showed the technology could restore blood flow through a three-inch blood clot in eight minutes.",
-      "significance": "This technology could offer a faster and safer alternative to current treatments for pulmonary embolisms, which are a leading cause of cardiovascular death. Existing treatments either carry risks of internal bleeding and slow efficacy (clot-busting drugs) or risk vessel damage and require open-chest surgery for severe cases (mechanical removal).",
-      "caveat": "The current findings are based on preliminary tests in cow blood and further research is needed to refine the device, optimize ultrasound parameters, and evaluate its short- and long-term safety in pigs before human clinical use.",
-      "url": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
-      "primarySourceUrl": "https://news.umich.edu/treating-life-threatening-blood-clots-in-minutes-with-swirling-sound-waves",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T16:25:49Z",
-      "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-17T11:49:01.701877Z",
-      "verifiedAt": "2026-10-17T11:49:01.701877Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "health",
-        "technology",
-        "biology"
-      ],
-      "entities": [
-        "National Institutes of Health",
-        "University of Michigan",
-        "pulmonary embolisms",
-        "vortex ultrasound"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-13T19:23:00Z",
-      "localConnection": "University of Michigan research in Ann Arbor."
-    },
-    {
-      "id": "science-5abd4545c45025a8",
-      "title": "Your chances of Alzheimer’s disease vary based on where you live. Why is that?",
-      "summary": "A research team from the University of Michigan School of Public Health will combine and standardize memory and thinking test data from older adults in 20 countries to investigate why dementia risk varies globally. The study aims to understand how factors like education, heart health, social isolation, and depression influence cognitive decline and dementia risk, and whether these factors have a greater impact in lower-income countries or on women due to gender inequality.",
-      "finding": "A research team from the University of Michigan School of Public Health will combine and standardize memory and thinking test data from older adults in 20 countries to investigate why dementia risk varies globally. The study aims to understand how factors like education, heart health, social isolation, and depression influence cognitive decline and dementia risk, and whether these factors have a greater impact in lower-income countries or on women due to gender inequality.",
-      "significance": "By comparing diverse global populations, researchers hope to identify effective prevention strategies for Alzheimer's disease and related dementias. This research could help governments and health systems prioritize prevention strategies most likely to delay or reduce dementia in different countries, ultimately improving brain health for future generations.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://news.umich.edu/your-chances-of-alzheimers-disease-vary-based-on-where-you-live-why-is-that",
-      "primarySourceUrl": "https://news.umich.edu/your-chances-of-alzheimers-disease-vary-based-on-where-you-live-why-is-that",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T14:31:56Z",
-      "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-14T10:00:06.638546Z",
-      "verifiedAt": "2026-10-14T10:00:06.638546Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "health",
-        "social-science"
-      ],
-      "entities": [
-        "University of Michigan School of Public Health",
-        "National Institute on Aging",
-        "National Institutes of Health",
-        "Lindsay Kobayashi",
-        "Harmonized Cognitive Assessment Protocol"
-      ],
-      "milestoneStatus": "planned",
-      "sourceUpdatedAt": "2026-10-13T17:45:07Z",
-      "localConnection": "University of Michigan research in Ann Arbor."
-    },
-    {
-      "id": "science-f7176b47f07ea772",
-      "title": "How celebrity culture reshapes political leadership",
-      "summary": "Celebrity culture is increasingly shaping political leadership by providing new ways for leaders to construct authority and present themselves to the public, moving beyond traditional political arguments to create personal impressions.",
-      "finding": "Celebrity culture is increasingly shaping political leadership by providing new ways for leaders to construct authority and present themselves to the public, moving beyond traditional political arguments to create personal impressions.",
-      "significance": "This shift means that political messages can be conveyed through feelings about a leader's persona, rather than solely through arguments, impacting how political authority is understood globally and potentially altering public perceptions of associated ideas, such as religion or national identity.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://news.umich.edu/how-celebrity-culture-reshapes-political-leadership",
-      "primarySourceUrl": "https://news.umich.edu/how-celebrity-culture-reshapes-political-leadership",
-      "source": {
-        "name": "University of Michigan News"
-      },
-      "sourceGroup": "U-M",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T14:24:00Z",
-      "firstSeenAt": "2026-10-15T10:00:00.772183Z",
-      "checkedAt": "2026-10-15T10:00:00.772183Z",
-      "verifiedAt": "2026-10-15T10:00:00.772183Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "social-science",
-        "politics"
-      ],
-      "entities": [
-        "Swapnil Rai",
-        "University of Michigan",
-        "Narendra Modi",
-        "Journal of Cinema and Media Studies",
-        "Man vs. Wild"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://muse.jhu.edu/pub/349/article/919196/summary",
-      "sourceUpdatedAt": "2026-10-13T14:24:10Z",
-      "localConnection": "University of Michigan research in Ann Arbor."
-    },
-    {
-      "id": "science-996b79babe601422",
-      "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
-      "summary": "Voyager Technologies' Griffin-1 lunar lander successfully finished rigorous environmental tests at NASA's Jet Propulsion Laboratory, confirming its readiness to endure launch and deep space conditions.",
-      "finding": "Voyager Technologies' Griffin-1 lunar lander successfully finished rigorous environmental tests at NASA's Jet Propulsion Laboratory, confirming its readiness to endure launch and deep space conditions.",
-      "significance": "Griffin-1 is scheduled to transport over 1,100 pounds of cargo, including multiple international science payloads, to the lunar South Pole to support Moon Base infrastructure.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
-      "primarySourceUrl": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T13:00:00Z",
-      "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-11-17T11:01:01.149456Z",
-      "verifiedAt": "2026-11-17T11:01:01.149456Z",
-      "evidenceType": "mission-milestone",
-      "topics": [
-        "technology",
-        "astronomy"
-      ],
-      "entities": [
-        "NASA",
-        "Jet Propulsion Laboratory",
-        "Voyager Technologies",
-        "Griffin-1",
-        "SpaceX"
-      ],
-      "milestoneStatus": "completed",
-      "sourceUpdatedAt": "2026-10-14T13:37:45Z"
-    },
-    {
-      "id": "science-9216e6cae5d0a88a",
-      "title": "Mars moon lander set to launch on 19 October",
-      "summary": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, to collect the first-ever sample from Mars's moon Phobos and return it to Earth.",
-      "finding": "The Martian Moons eXploration (MMX) mission is scheduled to launch on October 19, 2026, to collect the first-ever sample from Mars's moon Phobos and return it to Earth.",
-      "significance": "This mission aims to provide crucial data and samples to understand the formation and composition of Mars's moons, Phobos and Deimos, which could shed light on the evolution of Mars, the Solar System, and potentially rocky planets around other stars. The ability to return samples from the Mars system could also pave the way for future human missions to Mars.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_moon_lander_set_to_launch_on_19_October",
-      "primarySourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Mars_moon_lander_set_to_launch_on_19_October",
-      "source": {
-        "name": "ESA"
-      },
-      "sourceGroup": "ESA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T12:00:00Z",
-      "firstSeenAt": "2026-10-14T10:00:06.638546Z",
-      "checkedAt": "2026-10-19T10:14:42.592285Z",
-      "verifiedAt": "2026-10-19T10:14:42.592285Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "astronomy",
-        "technology"
-      ],
-      "entities": [
-        "Martian Moons eXploration (MMX) mission",
-        "Phobos",
-        "Mars",
-        "Japan Aerospace Exploration Agency (JAXA)",
-        "European Space Agency (ESA)"
-      ],
-      "milestoneStatus": "planned"
-    },
-    {
-      "id": "science-8aa465f54d5a7089",
-      "title": "APOD: 2026 October 13 – Desert Stairway to Heaven",
-      "summary": "A wide-angle composite image captured in July 2025 showcases several celestial phenomena visible from the Atacama Desert in Chile, including the Milky Way galaxy, zodiacal light, airglow, the star Spica, and the Small Magellanic Cloud galaxy.",
-      "finding": "A wide-angle composite image captured in July 2025 showcases several celestial phenomena visible from the Atacama Desert in Chile, including the Milky Way galaxy, zodiacal light, airglow, the star Spica, and the Small Magellanic Cloud galaxy.",
-      "significance": "This image provides a comprehensive view of various astronomical features observable from a dark-sky location, highlighting the beauty and complexity of the night sky and offering a visual reference for understanding these phenomena.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-13-desert-stairway-to-heaven",
-      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-october-13-desert-stairway-to-heaven",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-10-13T04:05:00Z",
-      "firstSeenAt": "2026-10-13T10:00:01.886016Z",
-      "checkedAt": "2026-10-13T10:00:01.886016Z",
-      "verifiedAt": "2026-10-13T10:00:01.886016Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "astronomy"
-      ],
-      "entities": [
-        "Milky Way galaxy",
-        "Atacama Desert",
-        "Chile",
-        "zodiacal light",
-        "Small Magellanic Cloud"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-10-13T04:05:00Z"
     }
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "selectedIds": [
+      "science-630372d2eb3bc82f",
       "science-e0d2013ab465cdc5",
-      "science-7f3ad460c89ae8b7",
+      "science-62844aafa0fbfb51",
+      "science-160e481f0124994b",
       "science-d12392adea6070f4",
-      "science-a4747eacd3383c98",
-      "science-07fcdfff67a13137",
-      "science-39de7efce9733b77"
+      "science-a4747eacd3383c98"
     ],
     "reasons": {
-      "science-e0d2013ab465cdc5": {
+      "science-630372d2eb3bc82f": {
         "score": 34,
+        "source": "NASA",
+        "topic": "earth-science",
+        "publishedAt": "2026-11-18T05:01:00Z",
+        "interestMatch": false
+      },
+      "science-e0d2013ab465cdc5": {
+        "score": 33,
         "source": "ESA",
         "topic": "astronomy",
         "publishedAt": "2026-11-17T08:59:44Z",
         "interestMatch": false
       },
-      "science-7f3ad460c89ae8b7": {
-        "score": 33,
-        "source": "NASA",
-        "topic": "earth-science",
-        "publishedAt": "2026-11-16T05:00:00Z",
+      "science-62844aafa0fbfb51": {
+        "score": 31,
+        "source": "Science News",
+        "topic": "health",
+        "publishedAt": "2026-11-17T16:09:29Z",
+        "interestMatch": false
+      },
+      "science-160e481f0124994b": {
+        "score": 31,
+        "source": "ScienceDaily",
+        "topic": "social-science",
+        "publishedAt": "2026-11-17T11:51:35Z",
         "interestMatch": false
       },
       "science-d12392adea6070f4": {
-        "score": 31,
+        "score": 30,
         "source": "Ars Technica Science",
         "topic": "technology",
         "publishedAt": "2026-11-16T20:52:10Z",
         "interestMatch": false
       },
       "science-a4747eacd3383c98": {
-        "score": 31,
+        "score": 30,
         "source": "New Scientist",
         "topic": "physics",
         "publishedAt": "2026-11-16T16:15:00Z",
-        "interestMatch": false
-      },
-      "science-07fcdfff67a13137": {
-        "score": 31,
-        "source": "Science News",
-        "topic": "health",
-        "publishedAt": "2026-11-16T14:00:00Z",
-        "interestMatch": false
-      },
-      "science-39de7efce9733b77": {
-        "score": 28,
-        "source": "ScienceDaily",
-        "topic": "biology",
-        "publishedAt": "2026-11-13T12:55:11Z",
         "interestMatch": false
       }
     }
