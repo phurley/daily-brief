@@ -1,8 +1,66 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-18T06:36:56.282554-05:00",
+  "generatedAt": "2026-11-19T06:52:20.364945-05:00",
   "stories": [
+    {
+      "id": "science-9980fa1e3bdcdb7e",
+      "title": "How aquanauts could help save Florida’s reefs",
+      "summary": "An underwater habitat, Vanguard, deployed in the Florida Keys, is enabling aquanauts to monitor coral restoration efforts around the clock. Corals stressed by warmer surface waters were relocated to a deeper, cooler nursery next to Vanguard, where they are beginning to recover. This approach allows continuous observation of marine life, including urchins crucial for reef health.",
+      "finding": "An underwater habitat, Vanguard, deployed in the Florida Keys, is enabling aquanauts to monitor coral restoration efforts around the clock. Corals stressed by warmer surface waters were relocated to a deeper, cooler nursery next to Vanguard, where they are beginning to recover. This approach allows continuous observation of marine life, including urchins crucial for reef health.",
+      "significance": "Long-stay underwater habitats allow continuous day and night marine research without the strict time limits and decompression restrictions of boat-based diving.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.newscientist.com/article/2599340-how-aquanauts-could-help-save-floridas-reefs",
+      "primarySourceUrl": "https://www.newscientist.com/article/2599340-how-aquanauts-could-help-save-floridas-reefs",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-19T05:57:00+00:00",
+      "firstSeenAt": "2026-11-19T11:01:01.495335Z",
+      "checkedAt": "2026-11-19T11:01:01.495335Z",
+      "verifiedAt": "2026-11-19T11:01:01.495335Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "biology",
+        "earth-science",
+        "technology"
+      ],
+      "entities": [
+        "Vanguard",
+        "Tennessee Reef",
+        "Florida Keys National Marine Sanctuary",
+        "DEEP",
+        "Jim Brittsan"
+      ],
+      "milestoneStatus": "unknown",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-19T06:52:20.364945-05:00",
+        "expiresAt": "2026-11-22T06:52:20.364945-05:00",
+        "inputFacts": {
+          "id": "science-9980fa1e3bdcdb7e",
+          "title": "How aquanauts could help save Florida’s reefs",
+          "url": "https://www.newscientist.com/article/2599340-how-aquanauts-could-help-save-floridas-reefs",
+          "publishedAt": "2026-11-19T05:57:00Z",
+          "summary": "Scientists are using the Vanguard underwater habitat at Tennessee Reef to relocate heat-stressed coral species to deeper, cooler water in a temporary nursery for continuous monitoring.",
+          "finding": "Scientists are using the Vanguard underwater habitat at Tennessee Reef to relocate heat-stressed coral species to deeper, cooler water in a temporary nursery for continuous monitoring.",
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-19T05:57:00+00:00",
+        "datePrecision": "time",
+        "sourceHash": "1575718f4fae9cde02fb4f65205b12ddf1e9d1b0be3e1e651d7077dc27538c4f",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "This article describes a novel engineering and scientific approach to coral reef restoration, which is a significant environmental concern. The deployment of an underwater habitat for extended research is a substantive technical advance with potential for broader application.",
+        "storyKey": "underwater-habitat-coral-restoration",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article confirms the deployment of Vanguard, the relocation and recovery of corals in a deeper nursery, and the continuous monitoring capabilities for marine life, including urchins, as described in the summary. This represents a new technical advance in marine research and conservation."
+      }
+    },
     {
       "id": "science-62844aafa0fbfb51",
       "title": "The U.S. just lost its measles elimination status. What now?",
@@ -234,124 +292,39 @@
         "grounded": true,
         "groundingReason": "The article details the final results of the Dark Energy Survey, combined with DESI data, indicating a \"three-sigma\" preference for a theory where dark energy is not stable, challenging the Lambda-CDM model. This represents a new finding in cosmology, even if it doesn't meet the \"five-sigma\" threshold for a new discovery."
       }
-    },
-    {
-      "id": "science-27ff426d4247d2c9",
-      "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Jets from Webb",
-      "summary": "The James Webb Space Telescope captured detailed infrared images of the NGC 7129 star-forming region, revealing young stars at different developmental stages. The observations show gold-colored gas with more mature stars on the left and red regions with younger stars on the right, where jets and winds likely create the filamentary structures.",
-      "finding": "The James Webb Space Telescope captured detailed infrared images of the NGC 7129 star-forming region, revealing young stars at different developmental stages. The observations show gold-colored gas with more mature stars on the left and red regions with younger stars on the right, where jets and winds likely create the filamentary structures.",
-      "significance": "Observing stars at varying developmental stages helps clarify which physical processes dominate during different phases of star formation.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
-      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-11-16T00:05:00-05:00",
-      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "astronomy"
-      ],
-      "entities": [
-        "NASA",
-        "James Webb Space Telescope",
-        "NGC 7129",
-        "ESA",
-        "STScI"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-16T05:05:00Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-16T06:57:14.734020-05:00",
-        "expiresAt": "2026-11-19T06:57:14.734020-05:00",
-        "inputFacts": {
-          "id": "science-27ff426d4247d2c9",
-          "title": "APOD: 2026 November 16 – NGC 7129: Star Formation with Jets from Webb",
-          "url": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb",
-          "publishedAt": "2026-11-16T05:05:00Z",
-          "summary": "Infrared imagery from the James Webb Space Telescope shows star formation in NGC 7129, revealing young stars at differing developmental stages alongside filamentary gas shaped by stellar jets and winds.",
-          "finding": "Infrared imagery from the James Webb Space Telescope shows star formation in NGC 7129, revealing young stars at differing developmental stages alongside filamentary gas shaped by stellar jets and winds.",
-          "sourceUpdatedAt": "2026-11-16T05:05:00Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-16T00:05:00-05:00",
-        "datePrecision": "time",
-        "sourceHash": "b8fc012d058bf5264660477fca7866f3aca8d66f315ed9a981acf4da7c5d6f2e",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "New detailed observations from JWST provide insights into star formation processes, aligning with astronomy interests.",
-        "storyKey": "jwst-ngc7129-star-formation",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The summary accurately describes the new detailed infrared images from the James Webb Space Telescope of the NGC 7129 star-forming region, including the different developmental stages of stars and the explanation for the filamentary structures, all of which are directly supported by the article."
-      }
-    },
-    {
-      "id": "science-a2daa312bdf773c7",
-      "title": "James Webb telescope finds ice older than the star it orbits",
-      "summary": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice is amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds.",
-      "finding": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice is amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds.",
-      "significance": "The findings imply that interstellar ice and key volatile ingredients needed to form water-rich, potentially habitable planets may be common across young planetary systems.",
-      "caveat": "Researchers were unable to determine the exact amount of crystalline ice present or rule out other molecules mixed into the ice.",
-      "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
-      "primarySourceUrl": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
-      "source": {
-        "name": "Ars Technica Science"
-      },
-      "sourceGroup": "Ars Technica Science",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-14T12:15:48+00:00",
-      "firstSeenAt": "2026-11-15T11:01:01.250099Z",
-      "checkedAt": "2026-11-16T11:01:02.875720Z",
-      "verifiedAt": "2026-11-16T11:01:02.875720Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "astronomy"
-      ],
-      "entities": [
-        "Beta Pictoris",
-        "Sarah Betti",
-        "Space Telescope Science Institute",
-        "James Webb Space Telescope",
-        "Near Infrared Spectrograph"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://doi.org/10.1126/science.adw7770",
-      "sourceUpdatedAt": "2026-11-13T20:54:24Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-16T06:57:14.734020-05:00",
-        "expiresAt": "2026-11-19T06:57:14.734020-05:00",
-        "inputFacts": {
-          "id": "science-a2daa312bdf773c7",
-          "title": "James Webb telescope finds ice older than the star it orbits",
-          "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
-          "publishedAt": "2026-11-14T12:15:48Z",
-          "summary": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
-          "finding": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
-          "sourceUpdatedAt": "2026-11-13T20:54:24Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-14T12:15:48+00:00",
-        "datePrecision": "time",
-        "sourceHash": "6518645cff4e02d4becf0993e471692c72c802c533c09ab31192025db65026ac",
-        "relevance": 5,
-        "novelty": 5,
-        "reason": "Substantive new finding about the origins of planetary systems and potential for water-rich worlds, directly relevant to astronomy interests.",
-        "storyKey": "jwst-beta-pictoris-ice-discovery",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The James Webb Space Telescope detected water and carbon dioxide ice in the Beta Pictoris star system's debris disk. The ice is amorphous and mixed, suggesting it formed in the interstellar medium before the star's planets, and that such primordial ice may be a common ingredient for water-rich worlds."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-9980fa1e3bdcdb7e",
+      "inputFacts": {
+        "id": "science-9980fa1e3bdcdb7e",
+        "title": "How aquanauts could help save Florida’s reefs",
+        "url": "https://www.newscientist.com/article/2599340-how-aquanauts-could-help-save-floridas-reefs",
+        "publishedAt": "2026-11-19T05:57:00Z",
+        "summary": "Scientists are using the Vanguard underwater habitat at Tennessee Reef to relocate heat-stressed coral species to deeper, cooler water in a temporary nursery for continuous monitoring.",
+        "finding": "Scientists are using the Vanguard underwater habitat at Tennessee Reef to relocate heat-stressed coral species to deeper, cooler water in a temporary nursery for continuous monitoring.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-19T05:57:00+00:00",
+      "publicationEvidence": "2026-11-19T05:57:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-6f3f4555c9292586",
+      "inputFacts": {
+        "id": "science-6f3f4555c9292586",
+        "title": "El Niño Rains Paint the Atacama",
+        "url": "https://science.nasa.gov/earth/earth-observatory/el-nino-rains-paint-the-atacama",
+        "publishedAt": "2026-11-19T05:00:00Z",
+        "summary": "Unusually wet winter conditions driven by El Niño triggered what may be the most extensive flowering event in Chile's Atacama Desert during the satellite era.",
+        "finding": "Unusually wet winter conditions driven by El Niño triggered what may be the most extensive flowering event in Chile's Atacama Desert during the satellite era.",
+        "sourceUpdatedAt": "2026-11-19T05:00:00Z"
+      },
+      "publishedAt": "2026-11-19T00:00:00-05:00",
+      "publicationEvidence": "2026-11-19T00:00:00-05:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-62844aafa0fbfb51",
       "inputFacts": {
@@ -458,21 +431,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-a2daa312bdf773c7",
-      "inputFacts": {
-        "id": "science-a2daa312bdf773c7",
-        "title": "James Webb telescope finds ice older than the star it orbits",
-        "url": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits",
-        "publishedAt": "2026-11-14T12:15:48Z",
-        "summary": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
-        "finding": "Astronomers using the James Webb Space Telescope detected both water and carbon dioxide ice mixed uniformly in the debris disk of the young star Beta Pictoris, indicating the ice likely originated in the interstellar medium.",
-        "sourceUpdatedAt": "2026-11-13T20:54:24Z"
-      },
-      "publishedAt": "2026-11-14T12:15:48+00:00",
-      "publicationEvidence": "2026-11-14T12:15:48+00:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-7b0b0a977258a502",
       "inputFacts": {
         "id": "science-7b0b0a977258a502",
@@ -488,36 +446,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-db77468d0c868614",
-      "inputFacts": {
-        "id": "science-db77468d0c868614",
-        "title": "Noise pollution is reshaping the health and behaviour of animals everywhere",
-        "url": "https://www.newscientist.com/article/2598675-noise-pollution-is-reshaping-the-health-and-behaviour-of-animals-everywhere",
-        "publishedAt": "2026-11-13T18:00:00Z",
-        "summary": "A meta-analysis revealed that anthropogenic noise pollution alters physiological, developmental, or behavioural traits in 80 percent of studied aquatic and terrestrial species across every major habitat.",
-        "finding": "A meta-analysis revealed that anthropogenic noise pollution alters physiological, developmental, or behavioural traits in 80 percent of studied aquatic and terrestrial species across every major habitat.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-13T18:00:00+00:00",
-      "publicationEvidence": "2026-11-13T18:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-ce7effe6f03652f6",
-      "inputFacts": {
-        "id": "science-ce7effe6f03652f6",
-        "title": "Did El Niño cause an early breakdown in the polar vortex?",
-        "url": "https://www.newscientist.com/article/2599008-did-el-nino-cause-an-early-breakdown-in-the-polar-vortex",
-        "publishedAt": "2026-11-13T17:55:02Z",
-        "summary": "The Arctic polar vortex suffered a record-early breakdown on November 10, with wind reversals occurring earlier than at any point since balloon records began in the 1950s.",
-        "finding": "The Arctic polar vortex suffered a record-early breakdown on November 10, with wind reversals occurring earlier than at any point since balloon records began in the 1950s.",
-        "sourceUpdatedAt": "2026-11-13T18:21:18Z"
-      },
-      "publishedAt": "2026-11-13T17:55:02+00:00",
-      "publicationEvidence": "2026-11-13T17:55:02+00:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-240279729ad0e4b5",
       "inputFacts": {
         "id": "science-240279729ad0e4b5",
@@ -530,6 +458,66 @@
       },
       "publishedAt": "2026-11-13T11:00:00-05:00",
       "publicationEvidence": "2026-11-13T11:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-40b9a343748aceeb",
+      "inputFacts": {
+        "id": "science-40b9a343748aceeb",
+        "title": "Turmeric supplements offer little benefit for knee osteoarthritis",
+        "url": "https://www.newscientist.com/article/2599636-turmeric-supplements-offer-little-benefit-for-knee-osteoarthritis",
+        "publishedAt": "2026-11-19T01:00:00Z",
+        "summary": "A review of four randomized controlled trials found that turmeric supplements have little to no meaningful effect on pain, mobility, or quality of life for individuals with knee osteoarthritis.",
+        "finding": "A review of four randomized controlled trials found that turmeric supplements have little to no meaningful effect on pain, mobility, or quality of life for individuals with knee osteoarthritis.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-19T01:00:00+00:00",
+      "publicationEvidence": "2026-11-19T01:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-5510d063745de8f9",
+      "inputFacts": {
+        "id": "science-5510d063745de8f9",
+        "title": "Voyager 1 reaches a historic milestone: one light-day from Earth",
+        "url": "https://www.sciencenews.org/article/voyager-1-light-day-earth-distance",
+        "publishedAt": "2026-11-19T00:50:00Z",
+        "summary": "Nearly 50 years after its 1977 launch, the Voyager 1 spacecraft is reaching the distance milestone of one light-day from Earth.",
+        "finding": "Nearly 50 years after its 1977 launch, the Voyager 1 spacecraft is reaching the distance milestone of one light-day from Earth.",
+        "sourceUpdatedAt": "2026-11-19T00:50:00Z"
+      },
+      "publishedAt": "2026-11-18T19:50:00-05:00",
+      "publicationEvidence": "2026-11-18T19:50:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-507722eb2e0093ed",
+      "inputFacts": {
+        "id": "science-507722eb2e0093ed",
+        "title": "Two stars in the Andromeda galaxy merged before astronomers’ eyes",
+        "url": "https://www.sciencenews.org/article/stars-andromeda-galaxy-merge-little-bao",
+        "publishedAt": "2026-11-18T16:00:00Z",
+        "summary": "Astronomers observed evidence of two stars merging in the Andromeda galaxy after a smaller star orbited inside a giant companion and culminated in an eruption.",
+        "finding": "Astronomers observed evidence of two stars merging in the Andromeda galaxy after a smaller star orbited inside a giant companion and culminated in an eruption.",
+        "sourceUpdatedAt": "2026-11-18T16:00:00Z"
+      },
+      "publishedAt": "2026-11-18T11:00:00-05:00",
+      "publicationEvidence": "2026-11-18T11:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-04d8dbeaed4da292",
+      "inputFacts": {
+        "id": "science-04d8dbeaed4da292",
+        "title": "Cracks in public health grew in 2026",
+        "url": "https://www.sciencenews.org/article/public-health-2026-outbreaks-measles",
+        "publishedAt": "2026-11-18T14:00:00Z",
+        "summary": "In 2026, dropping vaccination rates contributed to 5,412 confirmed U.S. measles cases by mid-November, prompting the Pan American Health Organization to declare the disease endemic and strip the country of elimination status.",
+        "finding": "In 2026, dropping vaccination rates contributed to 5,412 confirmed U.S. measles cases by mid-November, prompting the Pan American Health Organization to declare the disease endemic and strip the country of elimination status.",
+        "sourceUpdatedAt": "2026-11-18T14:00:00Z"
+      },
+      "publishedAt": "2026-11-18T09:00:00-05:00",
+      "publicationEvidence": "2026-11-18T09:00:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -561,61 +549,31 @@
       "publishedAt": "2026-11-17T08:00:00-05:00",
       "publicationEvidence": "2026-11-17T08:00:00-05:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-d12392adea6070f4",
-      "inputFacts": {
-        "id": "science-d12392adea6070f4",
-        "title": "Hyperscale data centers use 2% of US electricity",
-        "url": "https://arstechnica.com/science/2026/11/hyperscale-data-centers-use-2-of-us-electricity",
-        "publishedAt": "2026-11-16T20:52:10Z",
-        "summary": "An analysis of 403 US hyperscale data centers operating between May 2024 and April 2025 estimated they consumed 68 to 99 terawatt-hours of electricity, representing 1.5 to 2.2 percent of total US power use.",
-        "finding": "An analysis of 403 US hyperscale data centers operating between May 2024 and April 2025 estimated they consumed 68 to 99 terawatt-hours of electricity, representing 1.5 to 2.2 percent of total US power use.",
-        "sourceUpdatedAt": "2026-11-16T22:12:03Z"
-      },
-      "publishedAt": "2026-11-16T20:52:10+00:00",
-      "publicationEvidence": "2026-11-16T20:52:10+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-bc8d91b6fa99d26c",
-      "inputFacts": {
-        "id": "science-bc8d91b6fa99d26c",
-        "title": "The end of the universe could emerge suddenly from nothing",
-        "url": "https://www.newscientist.com/article/2598817-the-end-of-the-universe-could-emerge-suddenly-from-nothing",
-        "publishedAt": "2026-11-16T09:00:00Z",
-        "summary": "The universe may exist in a false vacuum state, where quantum tunneling could theoretically form a bubble of true vacuum that expands at light speed and destroys cosmic structure.",
-        "finding": "The universe may exist in a false vacuum state, where quantum tunneling could theoretically form a bubble of true vacuum that expands at light speed and destroys cosmic structure.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-16T09:00:00+00:00",
-      "publicationEvidence": "2026-11-16T09:00:00+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-17",
-      "selectedIds": [
-        "science-a2daa312bdf773c7",
-        "science-27ff426d4247d2c9",
-        "science-62844aafa0fbfb51"
-      ]
-    },
-    {
       "date": "2026-11-18",
       "selectedIds": [
-        "science-a2daa312bdf773c7",
         "science-f709330c4c7d4bfc",
-        "science-a4747eacd3383c98"
+        "science-a4747eacd3383c98",
+        "science-62844aafa0fbfb51"
       ]
     },
     {
       "date": "2026-11-19",
       "selectedIds": [
-        "science-a2daa312bdf773c7",
         "science-62844aafa0fbfb51",
-        "science-ec8551b58464f4d5"
+        "science-ec8551b58464f4d5",
+        "science-9980fa1e3bdcdb7e"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "selectedIds": [
+        "science-62844aafa0fbfb51",
+        "science-ec8551b58464f4d5",
+        "science-9980fa1e3bdcdb7e"
       ]
     }
   ]
