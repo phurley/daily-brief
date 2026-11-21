@@ -1,8 +1,122 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-20T06:56:05.192076-05:00",
+  "generatedAt": "2026-11-21T06:46:23.653565-05:00",
   "stories": [
+    {
+      "id": "science-321844474abd26db",
+      "title": "Mathematicians are amazed by ‘holy grail’ proof of Riemann hypothesis",
+      "summary": "An AI company claims to have used AI to prove the Riemann hypothesis, a nearly 200-year-old problem concerning prime number distribution. The proof is reportedly 250,000 pages long, with a 17-million-line version for proof-checking software. It has not yet been formally reviewed by other mathematicians, and the full proof has not been released.",
+      "finding": "An AI company claims to have used AI to prove the Riemann hypothesis, a nearly 200-year-old problem concerning prime number distribution. The proof is reportedly 250,000 pages long, with a 17-million-line version for proof-checking software. It has not yet been formally reviewed by other mathematicians, and the full proof has not been released.",
+      "significance": "If verified, proving the hypothesis would resolve a foundational question regarding prime number distribution and validate numerous dependent mathematical theorems.",
+      "caveat": "The proof spans millions of lines of code, has not been formally peer-reviewed, and could theoretically exploit an undiscovered software bug.",
+      "url": "https://www.newscientist.com/article/2600235-mathematicians-are-amazed-by-holy-grail-proof-of-riemann-hypothesis",
+      "primarySourceUrl": "https://www.newscientist.com/article/2600235-mathematicians-are-amazed-by-holy-grail-proof-of-riemann-hypothesis",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-20T22:33:06+00:00",
+      "firstSeenAt": "2026-11-21T11:01:01.866898Z",
+      "checkedAt": "2026-11-21T11:01:01.866898Z",
+      "verifiedAt": "2026-11-21T11:01:01.866898Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "technology"
+      ],
+      "entities": [
+        "Levent Alpöge",
+        "Anthropic",
+        "Lean",
+        "Thomas Bloom",
+        "Ravi Vakil"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-21T02:26:43Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-21T06:46:23.653565-05:00",
+        "expiresAt": "2026-11-24T06:46:23.653565-05:00",
+        "inputFacts": {
+          "id": "science-321844474abd26db",
+          "title": "Mathematicians are amazed by ‘holy grail’ proof of Riemann hypothesis",
+          "url": "https://www.newscientist.com/article/2600235-mathematicians-are-amazed-by-holy-grail-proof-of-riemann-hypothesis",
+          "publishedAt": "2026-11-20T22:33:06Z",
+          "summary": "A researcher reported using artificial intelligence to produce a formal proof of the centuries-old Riemann hypothesis.",
+          "finding": "A researcher reported using artificial intelligence to produce a formal proof of the centuries-old Riemann hypothesis.",
+          "sourceUpdatedAt": "2026-11-21T02:26:43Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-20T22:33:06+00:00",
+        "datePrecision": "time",
+        "sourceHash": "61b570e827e54dc5df6d8ebf62a9a3bc182de2b3e8b907816b2447b55c018638",
+        "relevance": 5,
+        "novelty": 5,
+        "reason": "This is a potentially monumental development in mathematics, a core science interest, with significant implications for the field and AI capabilities.",
+        "storyKey": "ai-riemann-hypothesis-proof",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article supports all claims in the summary, including the AI company, the problem solved, the length of the proof, and the lack of formal review or full release. The article describes a significant new finding in mathematics, if true, which would be a substantive scientific development."
+      }
+    },
+    {
+      "id": "science-da44b66835dcdb41",
+      "title": "Quantum effect could reverse gravity and violate Einstein’s theory of relativity",
+      "summary": "Two independent research teams mathematically modeled how quantum effects could theoretically make gravity repulsive, pushing objects apart instead of attracting them. This proposed phenomenon, which contradicts Einstein's theory of general relativity, could be tested in laboratory experiments using bacterium-sized objects that maintain a quantum superposition state, though such experiments are expected to be challenging.",
+      "finding": "Two independent research teams mathematically modeled how quantum effects could theoretically make gravity repulsive, pushing objects apart instead of attracting them. This proposed phenomenon, which contradicts Einstein's theory of general relativity, could be tested in laboratory experiments using bacterium-sized objects that maintain a quantum superposition state, though such experiments are expected to be challenging.",
+      "significance": "Demonstrating repulsive gravitational interactions in laboratory experiments could reveal whether gravity possesses inherently quantum properties, departing from general relativity.",
+      "caveat": "Lab tests will be exceptionally difficult because required bacterium-sized objects experience acceleration less than a quadrillionth of Earth's gravity.",
+      "url": "https://www.newscientist.com/article/2599897-quantum-effect-could-reverse-gravity-and-violate-einsteins-theory-of-relativity",
+      "primarySourceUrl": "https://www.newscientist.com/article/2599897-quantum-effect-could-reverse-gravity-and-violate-einsteins-theory-of-relativity",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-20T22:00:00+00:00",
+      "firstSeenAt": "2026-11-21T11:01:01.866898Z",
+      "checkedAt": "2026-11-21T11:01:01.866898Z",
+      "verifiedAt": "2026-11-21T11:01:01.866898Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "physics"
+      ],
+      "entities": [
+        "Pablo Saldanha",
+        "Vlatko Vedral",
+        "Chiara Marletto",
+        "Sougato Bose",
+        "Lev Vaidman"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1103/df22-8kb6",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-21T06:46:23.653565-05:00",
+        "expiresAt": "2026-11-24T06:46:23.653565-05:00",
+        "inputFacts": {
+          "id": "science-da44b66835dcdb41",
+          "title": "Quantum effect could reverse gravity and violate Einstein’s theory of relativity",
+          "url": "https://www.newscientist.com/article/2599897-quantum-effect-could-reverse-gravity-and-violate-einsteins-theory-of-relativity",
+          "publishedAt": "2026-11-20T22:00:00Z",
+          "summary": "Theoretical studies show that combining quantum superposition with post-selection measurement can theoretically cause gravity to act as a repulsive force rather than an attractive one.",
+          "finding": "Theoretical studies show that combining quantum superposition with post-selection measurement can theoretically cause gravity to act as a repulsive force rather than an attractive one.",
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-20T22:00:00+00:00",
+        "datePrecision": "time",
+        "sourceHash": "cdac745f251441f1fde4de5676fcf01ae9df53a188fc1c8ec5ced838537e5779",
+        "relevance": 4,
+        "novelty": 5,
+        "reason": "This article describes a significant theoretical advance in quantum physics and gravity, proposing a novel effect that challenges established understanding. The potential for experimental verification in the near future makes it highly relevant for science interests.",
+        "storyKey": "quantum-gravity-repulsion",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article describes two independent research teams mathematically modeling how quantum effects could theoretically lead to repulsive gravity, a new finding that contradicts Einstein's theory. It also discusses the potential for laboratory testing using bacterium-sized objects in a quantum superposition state, acknowledging the experimental challenges."
+      }
+    },
     {
       "id": "science-c1c4abb28a314016",
       "title": "APOD: 2026 November 20 – V-G-R",
@@ -176,66 +290,39 @@
         "grounded": true,
         "groundingReason": "The article confirms the deployment of Vanguard, the relocation and recovery of corals in a deeper nursery, and the continuous monitoring capabilities for marine life, including urchins, as described in the summary. This represents a new technical advance in marine research and conservation."
       }
-    },
-    {
-      "id": "science-62844aafa0fbfb51",
-      "title": "The U.S. just lost its measles elimination status. What now?",
-      "summary": "The U.S. has lost its measles elimination status, declared by the Pan American Health Organization on November 17, 2026, due to uninterrupted spread for over a year, with nearly 100 outbreaks, thousands sickened, and nearly a dozen deaths since 2025. Regaining status requires stopping outbreaks and proving no local transmission for a full year, primarily through increased vaccination.",
-      "finding": "The U.S. has lost its measles elimination status, declared by the Pan American Health Organization on November 17, 2026, due to uninterrupted spread for over a year, with nearly 100 outbreaks, thousands sickened, and nearly a dozen deaths since 2025. Regaining status requires stopping outbreaks and proving no local transmission for a full year, primarily through increased vaccination.",
-      "significance": "Losing measles elimination status marks a significant reversal of decades of public health progress and underscores risks stemming from declining vaccination coverage.",
-      "caveat": "Underreporting and untested cases hamper accurate surveillance, making the true scope of outbreaks difficult to determine.",
-      "url": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
-      "primarySourceUrl": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
-      "source": {
-        "name": "Science News"
-      },
-      "sourceGroup": "Science News",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-17T11:09:29-05:00",
-      "firstSeenAt": "2026-11-18T11:01:02.145560Z",
-      "checkedAt": "2026-11-18T11:01:02.145560Z",
-      "verifiedAt": "2026-11-18T11:01:02.145560Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "health"
-      ],
-      "entities": [
-        "Pan American Health Organization",
-        "PAHO",
-        "Centers for Disease Control and Prevention",
-        "CDC",
-        "Brown University School of Public Health"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-17T17:57:34Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-18T06:36:56.282554-05:00",
-        "expiresAt": "2026-11-21T06:36:56.282554-05:00",
-        "inputFacts": {
-          "id": "science-62844aafa0fbfb51",
-          "title": "The U.S. just lost its measles elimination status. What now?",
-          "url": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
-          "publishedAt": "2026-11-17T16:09:29Z",
-          "summary": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
-          "finding": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
-          "sourceUpdatedAt": "2026-11-17T17:57:34Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-17T11:09:29-05:00",
-        "datePrecision": "time",
-        "sourceHash": "c475125bb45db602a89885661dadf971342391f1ee4bf082539ffcc2b01a650a",
-        "relevance": 5,
-        "novelty": 4,
-        "reason": "The loss of measles elimination status in the US is a significant public health development with direct implications for local communities, including Canton, regarding disease risk and public health resource allocation.",
-        "storyKey": "us-loses-measles-elimination-status",
-        "localConnection": "The loss of measles elimination status in the US directly impacts public health in all communities, including Canton, by increasing the risk of local outbreaks and requiring local public health responses.",
-        "grounded": true,
-        "groundingReason": "The summary accurately reflects the article's claims regarding the U.S. losing its measles elimination status, the reasons for it, and the requirements to regain it. The article presents a new finding of the U.S. losing its measles elimination status and the implications of this development."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-321844474abd26db",
+      "inputFacts": {
+        "id": "science-321844474abd26db",
+        "title": "Mathematicians are amazed by ‘holy grail’ proof of Riemann hypothesis",
+        "url": "https://www.newscientist.com/article/2600235-mathematicians-are-amazed-by-holy-grail-proof-of-riemann-hypothesis",
+        "publishedAt": "2026-11-20T22:33:06Z",
+        "summary": "A researcher reported using artificial intelligence to produce a formal proof of the centuries-old Riemann hypothesis.",
+        "finding": "A researcher reported using artificial intelligence to produce a formal proof of the centuries-old Riemann hypothesis.",
+        "sourceUpdatedAt": "2026-11-21T02:26:43Z"
+      },
+      "publishedAt": "2026-11-20T22:33:06+00:00",
+      "publicationEvidence": "2026-11-20T22:33:06+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-da44b66835dcdb41",
+      "inputFacts": {
+        "id": "science-da44b66835dcdb41",
+        "title": "Quantum effect could reverse gravity and violate Einstein’s theory of relativity",
+        "url": "https://www.newscientist.com/article/2599897-quantum-effect-could-reverse-gravity-and-violate-einsteins-theory-of-relativity",
+        "publishedAt": "2026-11-20T22:00:00Z",
+        "summary": "Theoretical studies show that combining quantum superposition with post-selection measurement can theoretically cause gravity to act as a repulsive force rather than an attractive one.",
+        "finding": "Theoretical studies show that combining quantum superposition with post-selection measurement can theoretically cause gravity to act as a repulsive force rather than an attractive one.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-20T22:00:00+00:00",
+      "publicationEvidence": "2026-11-20T22:00:00+00:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-c1c4abb28a314016",
       "inputFacts": {
@@ -327,18 +414,93 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-62844aafa0fbfb51",
+      "id": "science-f72ac5ae4ce89df7",
       "inputFacts": {
-        "id": "science-62844aafa0fbfb51",
-        "title": "The U.S. just lost its measles elimination status. What now?",
-        "url": "https://www.sciencenews.org/article/measles-us-elimination-status-vaccine",
-        "publishedAt": "2026-11-17T16:09:29Z",
-        "summary": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
-        "finding": "The Pan American Health Organization declared measles endemic in the United States after uninterrupted transmission persisted for more than a year across multiple outbreaks.",
-        "sourceUpdatedAt": "2026-11-17T17:57:34Z"
+        "id": "science-f72ac5ae4ce89df7",
+        "title": "What is the Riemann hypothesis and why is its solution so monumental?",
+        "url": "https://www.newscientist.com/article/2600226-what-is-the-riemann-hypothesis-and-why-is-its-solution-so-monumental",
+        "publishedAt": "2026-11-20T21:24:57Z",
+        "summary": "A researcher has announced an AI-assisted proof that may solve the longstanding Riemann hypothesis.",
+        "finding": "A researcher has announced an AI-assisted proof that may solve the longstanding Riemann hypothesis.",
+        "sourceUpdatedAt": "2026-11-20T22:39:55Z"
       },
-      "publishedAt": "2026-11-17T11:09:29-05:00",
-      "publicationEvidence": "2026-11-17T11:09:29-05:00",
+      "publishedAt": "2026-11-20T21:24:57+00:00",
+      "publicationEvidence": "2026-11-20T21:24:57+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-73956cabde281c3c",
+      "inputFacts": {
+        "id": "science-73956cabde281c3c",
+        "title": "This year’s El Niño is unlike any other on record",
+        "url": "https://www.sciencenews.org/article/super-el-nino-historic-effect-hurricane",
+        "publishedAt": "2026-11-20T21:00:00Z",
+        "summary": "The 2026 El Nino monitoring region reached an unprecedented average temperature above 30 degrees Celsius by October 18, exceeding 3.03 degrees Celsius above the 30-year average in September.",
+        "finding": "The 2026 El Nino monitoring region reached an unprecedented average temperature above 30 degrees Celsius by October 18, exceeding 3.03 degrees Celsius above the 30-year average in September.",
+        "sourceUpdatedAt": "2026-11-20T21:00:00Z"
+      },
+      "publishedAt": "2026-11-20T16:00:00-05:00",
+      "publicationEvidence": "2026-11-20T16:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-b6e6571fc353d144",
+      "inputFacts": {
+        "id": "science-b6e6571fc353d144",
+        "title": "NASA’s new Moon plan is taking shape, but some big questions remain",
+        "url": "https://arstechnica.com/space/2026/11/nasas-new-moon-plan-is-taking-shape-but-some-big-questions-remain",
+        "publishedAt": "2026-11-20T20:26:33Z",
+        "summary": "NASA has restructured the Artemis architecture, shifting Artemis III to a low-Earth orbit test mission and easing lunar loiter constraints for SpaceX and Blue Origin landers.",
+        "finding": "NASA has restructured the Artemis architecture, shifting Artemis III to a low-Earth orbit test mission and easing lunar loiter constraints for SpaceX and Blue Origin landers.",
+        "sourceUpdatedAt": "2026-11-20T21:18:18Z"
+      },
+      "publishedAt": "2026-11-20T20:26:33+00:00",
+      "publicationEvidence": "2026-11-20T20:26:33+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-d3928a6d54c2b0af",
+      "inputFacts": {
+        "id": "science-d3928a6d54c2b0af",
+        "title": "The libido drug women want is testosterone",
+        "url": "https://www.sciencenews.org/article/libido-drug-women-want-is-testosterone",
+        "publishedAt": "2026-11-20T19:00:00Z",
+        "summary": "Testosterone shows potential to enhance sexual function and libido in postmenopausal women, with preliminary evidence also suggesting possible benefits for premenopausal women.",
+        "finding": "Testosterone shows potential to enhance sexual function and libido in postmenopausal women, with preliminary evidence also suggesting possible benefits for premenopausal women.",
+        "sourceUpdatedAt": "2026-11-20T19:00:00Z"
+      },
+      "publishedAt": "2026-11-20T14:00:00-05:00",
+      "publicationEvidence": "2026-11-20T14:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-e7881f6c1f882f15",
+      "inputFacts": {
+        "id": "science-e7881f6c1f882f15",
+        "title": "An El Niño amped by climate change has California bracing for the worst",
+        "url": "https://www.sciencenews.org/article/el-nino-climate-change-california",
+        "publishedAt": "2026-11-20T17:47:05Z",
+        "summary": "Computer model simulations suggest that during the 2026–2027 Super El Niño, the risk of extreme sea levels along Pacific coastlines from Alaska to Chile could be 10 times higher than in previous events.",
+        "finding": "Computer model simulations suggest that during the 2026–2027 Super El Niño, the risk of extreme sea levels along Pacific coastlines from Alaska to Chile could be 10 times higher than in previous events.",
+        "sourceUpdatedAt": "2026-11-20T17:47:05Z"
+      },
+      "publishedAt": "2026-11-20T12:47:05-05:00",
+      "publicationEvidence": "2026-11-20T12:47:05-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-34daf2348b900e74",
+      "inputFacts": {
+        "id": "science-34daf2348b900e74",
+        "title": "Rocket Report: A weekend of ups and downs; Stoke celebrates engine milestone",
+        "url": "https://arstechnica.com/space/2026/11/rocket-report-a-weekend-of-ups-and-downs-stoke-celebrates-engine-milestone",
+        "publishedAt": "2026-11-20T13:35:45Z",
+        "summary": "Stoke Space has completed development of its methane-fueled Zenith engine, designed to power the reusable first-stage booster of its Nova rocket.",
+        "finding": "Stoke Space has completed development of its methane-fueled Zenith engine, designed to power the reusable first-stage booster of its Nova rocket.",
+        "sourceUpdatedAt": "2026-11-20T17:24:50Z"
+      },
+      "publishedAt": "2026-11-20T13:35:45+00:00",
+      "publicationEvidence": "2026-11-20T13:35:45+00:00",
       "datePrecision": "time"
     },
     {
@@ -400,46 +562,31 @@
       "publishedAt": "2026-11-19T18:44:39+00:00",
       "publicationEvidence": "2026-11-19T18:44:39+00:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-f32b297db0281e65",
-      "inputFacts": {
-        "id": "science-f32b297db0281e65",
-        "title": "Mouse fight club might explain why we like to watch violent things",
-        "url": "https://arstechnica.com/science/2026/11/watching-mouse-fight-club-teaches-the-critters-how-to-fight",
-        "publishedAt": "2026-11-19T14:04:38Z",
-        "summary": "Male mice that observed fights learned defensive fighting behaviors and exhibited brain activity changes across 12 regions resembling those of experienced fighters, performing better against aggressive opponents than naive mice.",
-        "finding": "Male mice that observed fights learned defensive fighting behaviors and exhibited brain activity changes across 12 regions resembling those of experienced fighters, performing better against aggressive opponents than naive mice.",
-        "sourceUpdatedAt": "2026-11-19T17:46:44Z"
-      },
-      "publishedAt": "2026-11-19T14:04:38+00:00",
-      "publicationEvidence": "2026-11-19T14:04:38+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-19",
-      "selectedIds": [
-        "science-62844aafa0fbfb51",
-        "science-9980fa1e3bdcdb7e",
-        "science-a0aedd2cc1da0eea"
-      ]
-    },
-    {
       "date": "2026-11-20",
       "selectedIds": [
-        "science-62844aafa0fbfb51",
         "science-9980fa1e3bdcdb7e",
-        "science-c1c4abb28a314016"
+        "science-c1c4abb28a314016",
+        "science-321844474abd26db"
       ]
     },
     {
       "date": "2026-11-21",
       "selectedIds": [
-        "science-62844aafa0fbfb51",
         "science-c1c4abb28a314016",
-        "science-a0aedd2cc1da0eea"
+        "science-a0aedd2cc1da0eea",
+        "science-321844474abd26db"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "selectedIds": [
+        "science-321844474abd26db",
+        "science-da44b66835dcdb41",
+        "science-c1c4abb28a314016"
       ]
     }
   ]
