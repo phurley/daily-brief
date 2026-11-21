@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-11-20T04:53:28.936069-05:00",
+  "generatedAt": "2026-11-21T02:42:28.488058-05:00",
   "stories": [
     {
       "id": "progressives-grow-sway-in-lansing-push-t-news-2026-11-19",
@@ -114,6 +114,94 @@
         "localConnection": "Canton's Ranjeev Puri is the incoming House Speaker, directly impacting state legislative priorities.",
         "grounded": true,
         "groundingReason": "The article discusses the growing progressive caucus in the Michigan Legislature, their policy goals (including corporate income tax, ethics reforms, and single-payer healthcare), and the role of incoming House Speaker Ranjeev Puri of Canton in navigating these ambitions. All claims in the summary are directly supported by the article."
+      }
+    },
+    {
+      "id": "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
+      "title": "Ann Arbor-born artist jazz Stratøs stops by the WEMU studio",
+      "summary": "Ann Arbor-born jazz artist Stratøs, a three-time Herb Alpert Young Jazz Composer Award winner, discussed his new album \"Challenger Deep\" and its themes rooted in his Barbadian heritage and family history. He also reflected on his musical upbringing in Ann Arbor and Detroit, including his time with the Detroit Symphony Orchestra's youth programs.",
+      "url": "https://www.wemu.org/music/2026-11-20/ann-arbor-born-artist-jazz-strat%C3%B8s-stops-by-the-wemu-studio",
+      "publishedAt": "2026-11-20T17:52:00.594000-05:00",
+      "addedAt": "2026-11-21T02:38:47-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Stratøs",
+        "Daniel Long",
+        "WEMU"
+      ],
+      "locations": [
+        "Ann Arbor",
+        "Ypsilanti"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "jazz",
+        "music",
+        "interview"
+      ],
+      "source": {
+        "name": "Daniel W. Long",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.14,
+          "distinctive": 0.34,
+          "eclectic": 0.19,
+          "technical_science": 0.11,
+          "artsy": 0.98,
+          "progressive": 0.36,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.06,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.17,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.02,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.02,
+          "sales_related": 0.11,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/6be84d3/2147483647/strip/true/crop/3024x1685+0+999/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F1f%2F61%2Fd32f590541579f1b4c3d6e7dbcf0%2Fdaniel-and-stratos.jpg",
+        "alt": "WEMU's own Daniel Long (back) and Stratos hang out at the Timko Broadcast Center."
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-21T02:42:28.488058-05:00",
+        "expiresAt": "2026-11-24T02:42:28.488058-05:00",
+        "inputFacts": {
+          "id": "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
+          "title": "Ann Arbor-born artist jazz Stratøs stops by the WEMU studio",
+          "url": "https://www.wemu.org/music/2026-11-20/ann-arbor-born-artist-jazz-strat%C3%B8s-stops-by-the-wemu-studio",
+          "publishedAt": "2026-11-20T00:00:00-05:00",
+          "summary": "Saxophonist and composer Stratøs discusses his musical craft and the family influences behind his latest release. WEMU's Daniel Long interviewed the artist during his studio visit.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-20T17:52:00.594",
+        "datePrecision": "time",
+        "sourceHash": "e600ef509cb7654e760ecee9d30fb843bfe265643df304aff089f9f64ba164f3",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The article features a notable Ann Arbor-born artist discussing his new work and local musical influences, including the Detroit Symphony Orchestra, which aligns with local arts and cultural interests.",
+        "storyKey": "ann-arbor-jazz-artist-stratos-new-album",
+        "localConnection": "Ann Arbor-born artist, Detroit Symphony Orchestra youth programs",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims in the summary, including the artist's awards, new album, themes, and musical upbringing in Ann Arbor and Detroit with the DSO. This is a local news story about an Ann Arbor-born artist and his new work."
       }
     },
     {
@@ -398,190 +486,24 @@
         "grounded": true,
         "groundingReason": "The article details how Dexter's specific zoning changes, including those for mixed-use development and outdoor dining, have directly supported its local economy and small businesses. It also includes expert opinions on the broader importance of municipalities reviewing zoning to reduce barriers for entrepreneurs, aligning with the summary's claims."
       }
-    },
-    {
-      "id": "faculty-senate-passes-vote-of-no-confide-news-2026-11-17",
-      "title": "Faculty Senate passes vote of no confidence in UMPD and University’s handling of GEO negotiations",
-      "summary": "The University of Michigan Faculty Senate passed a vote of no confidence in the University's handling of Graduate Employees' Organization (GEO) negotiations and the University of Michigan Police Department (UMPD). This vote was part of a broader motion expressing solidarity with GEO and pro-Palestine activists, and criticizing the administration's response to activism.",
-      "url": "https://www.michigandaily.com/news/academics/faculty-senate-passes-vote-of-no-confidence-in-umpd-and-universitys-handling-of-geo-negotiations/",
-      "publishedAt": "2026-11-17T05:21:21+00:00",
-      "addedAt": "2026-11-17T04:54:04-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Faculty Senate",
-        "UMPD",
-        "University of Michigan",
-        "GEO",
-        "Aliana Ritter"
-      ],
-      "locations": [
-        "Ann Arbor, MI"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "higher education",
-        "labor relations",
-        "campus safety",
-        "faculty senate",
-        "university administration"
-      ],
-      "source": {
-        "name": "Aliana Ritter",
-        "publication": "The Michigan Daily"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.03,
-          "distinctive": 0.51,
-          "eclectic": 0.11,
-          "technical_science": 0.09,
-          "artsy": 0.03,
-          "progressive": 0.5,
-          "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.06,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.01,
-          "large_venue": 0.04,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.02,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2026/11/online.syn_.SACUA_.10.12.2026.011.jpg?resize=800%2C600&ssl=1",
-        "alt": "SACUA members sit around a table."
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-17T04:55:49.011602-05:00",
-        "expiresAt": "2026-11-20T04:55:49.011602-05:00",
-        "inputFacts": {
-          "id": "faculty-senate-passes-vote-of-no-confide-news-2026-11-17",
-          "title": "Faculty Senate passes vote of no confidence in UMPD and University’s handling of GEO negotiations",
-          "url": "https://www.michigandaily.com/news/academics/faculty-senate-passes-vote-of-no-confidence-in-umpd-and-universitys-handling-of-geo-negotiations/",
-          "publishedAt": "2026-11-17T00:00:00-05:00",
-          "summary": "The University of Michigan Faculty Senate has officially passed a vote of no confidence regarding the University of Michigan Police Department and the administration's management of negotiations with the Graduate Employees' Organization. The vote reflects growing faculty dissatisfaction with institutional leadership and campus safety policies.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-17T05:21:21+00:00",
-        "datePrecision": "time",
-        "sourceHash": "cdad57a9a4594772329dd00e5f9b2ded0151c441f124e66c155c75b76320ede5",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The University of Michigan is a major institution in the region, and a vote of no confidence from its Faculty Senate regarding police and labor negotiations represents a significant local civic decision and development with potential implications for the university community and public services.",
-        "storyKey": "umich-faculty-no-confidence-vote",
-        "localConnection": "University of Michigan is a major regional institution.",
-        "grounded": true,
-        "groundingReason": "The article confirms the University of Michigan Faculty Senate passed a vote of no confidence in the University's handling of GEO negotiations and UMPD, as part of a broader motion expressing solidarity with GEO and pro-Palestine activists, and criticizing the administration's response to activism. This is a significant development for the University of Michigan community."
-      }
-    },
-    {
-      "id": "world-premiere-of-oratorio-don-t-let-the-news-2026-11-16",
-      "title": "World premiere of oratorio 'Don't Let the Sun' at U-M",
-      "summary": "The University of Michigan will premiere \"Don't Let the Sun,\" an oratorio exploring the history of \"sundown towns\" in the U.S., including their prevalence outside the South. The work, commissioned by U-M, aims to educate audiences on this hidden dimension of American history and encourage reflection on building welcoming communities.",
-      "url": "https://news.umich.edu/curtains-up-on-sundown-towns-world-premiere-of-oratorio-dont-let-the-sun-at-u-m/",
-      "publishedAt": "2026-11-12T16:30:00-05:00",
-      "addedAt": "2026-11-17T04:54:04-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "James Loewen",
-        "U-M Chamber Choir",
-        "University Choir",
-        "Eugene Rogers",
-        "Stephen Berrey"
-      ],
-      "locations": [
-        "Ann Arbor",
-        "Hill Auditorium"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "music",
-        "history",
-        "arts"
-      ],
-      "source": {
-        "name": "Stateside Staff",
-        "publication": "Michigan Public"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.07,
-          "distinctive": 0.47,
-          "eclectic": 0.53,
-          "technical_science": 0.05,
-          "artsy": 0.63,
-          "progressive": 0.79,
-          "outdoors": 0.02,
-          "theatre": 0.22,
-          "live_music": 0.07,
-          "live_comedy": 0.02,
-          "farmer_market": 0.01,
-          "sporting": 0.02,
-          "recurring": 0.94,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.07,
-          "large_venue": 0.23,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.03,
-          "sales_related": 0.06,
-          "children_activity": 0.03,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/a4595ad/2147483647/strip/true/crop/1920x1008+0+53/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc1%2F5a%2F3a28ad974cfea2c1e36682a3098e%2Fstateside-full-show-pod.png",
-        "alt": "Stateside podcast logo"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-17T04:55:49.011602-05:00",
-        "expiresAt": "2026-11-20T04:55:49.011602-05:00",
-        "inputFacts": {
-          "id": "world-premiere-of-oratorio-don-t-let-the-news-2026-11-16",
-          "title": "World premiere of oratorio 'Don't Let the Sun' at U-M",
-          "url": "https://news.umich.edu/curtains-up-on-sundown-towns-world-premiere-of-oratorio-dont-let-the-sun-at-u-m/",
-          "publishedAt": "2026-11-16T16:26:00-05:00",
-          "summary": "A new oratorio titled 'Don't Let the Sun' explores the history of sundown towns in America. Inspired by sociologist James Loewen, the work will be performed by the U-M Chamber Choir and University Choir at Hill Auditorium on November 17.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-12T16:30:00-05:00",
-        "datePrecision": "time",
-        "sourceHash": "4ed75822b37d67bcf212d288716f112b8903ed41978277f43b3882508292f033",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The premiere of a significant new artistic work commissioned by the University of Michigan, addressing a relevant historical topic, qualifies as a notable local arts event.",
-        "storyKey": "umich-sundown-towns-oratorio-premiere",
-        "localConnection": "University of Michigan premiere of a commissioned work.",
-        "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, including the commissioning body, the work's purpose, and its focus on the prevalence of sundown towns outside the South. The premiere of a new oratorio exploring a hidden dimension of American history, commissioned by the University of Michigan, is a substantive local development."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "survivors-of-suicide-many-of-those-mourn-news-2026-11-21",
+      "inputFacts": {
+        "id": "survivors-of-suicide-many-of-those-mourn-news-2026-11-21",
+        "title": "Survivors of suicide: Many of those mourned are veterans",
+        "url": "https://concentratemedia.com/survivors-of-suicide-many-of-those-mourned-are-veterans/",
+        "publishedAt": "2026-11-21T00:00:00-05:00",
+        "summary": "As International Survivors of Suicide Loss Day approaches on November 21st, experts highlight the significant impact of suicide on veteran communities and the importance of postvention support. The VA Ann Arbor Healthcare System and other local organizations offer various resources, including crisis lines and grant programs, to assist survivors and veterans in need of mental health care.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-19T16:21:13+00:00",
+      "publicationEvidence": "2026-11-19T16:21:13+00:00",
+      "datePrecision": "time"
+    },
     {
       "id": "progressives-grow-sway-in-lansing-push-t-news-2026-11-19",
       "inputFacts": {
@@ -595,6 +517,21 @@
       },
       "publishedAt": "2026-11-19T16:16:31+00:00",
       "publicationEvidence": "2026-11-19T16:16:31+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
+      "inputFacts": {
+        "id": "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
+        "title": "Ann Arbor-born artist jazz Stratøs stops by the WEMU studio",
+        "url": "https://www.wemu.org/music/2026-11-20/ann-arbor-born-artist-jazz-strat%C3%B8s-stops-by-the-wemu-studio",
+        "publishedAt": "2026-11-20T00:00:00-05:00",
+        "summary": "Saxophonist and composer Stratøs discusses his musical craft and the family influences behind his latest release. WEMU's Daniel Long interviewed the artist during his studio visit.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-20T17:52:00.594000-05:00",
+      "publicationEvidence": "2026-11-20T17:52:00.594",
       "datePrecision": "time"
     },
     {
@@ -658,33 +595,63 @@
       "datePrecision": "time"
     },
     {
-      "id": "faculty-senate-passes-vote-of-no-confide-news-2026-11-17",
+      "id": "brighton-s-holiday-glow-market-news-2026-11-21",
       "inputFacts": {
-        "id": "faculty-senate-passes-vote-of-no-confide-news-2026-11-17",
-        "title": "Faculty Senate passes vote of no confidence in UMPD and University’s handling of GEO negotiations",
-        "url": "https://www.michigandaily.com/news/academics/faculty-senate-passes-vote-of-no-confidence-in-umpd-and-universitys-handling-of-geo-negotiations/",
-        "publishedAt": "2026-11-17T00:00:00-05:00",
-        "summary": "The University of Michigan Faculty Senate has officially passed a vote of no confidence regarding the University of Michigan Police Department and the administration's management of negotiations with the Graduate Employees' Organization. The vote reflects growing faculty dissatisfaction with institutional leadership and campus safety policies.",
+        "id": "brighton-s-holiday-glow-market-news-2026-11-21",
+        "title": "Brighton’s Holiday Glow & Market",
+        "url": "https://www.ecurrent.com/calendar/details/brighton-s-holiday-glow-market/20428817/2026-11-21T13",
+        "publishedAt": "2026-11-21T00:00:00-05:00",
+        "summary": "Brighton’s Holiday Glow & Market is a downtown holiday kickoff event featuring local vendors, family activities, and live reindeer. The celebration includes live performances, a train, and a tree lighting ceremony with Santa and Mrs. Claus.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-17T05:21:21+00:00",
-      "publicationEvidence": "2026-11-17T05:21:21+00:00",
+      "publishedAt": "2016-05-10T12:53:59+00:00",
+      "publicationEvidence": "2016-05-10T12:53:59+00:00",
       "datePrecision": "time"
     },
     {
-      "id": "world-premiere-of-oratorio-don-t-let-the-news-2026-11-16",
+      "id": "riverside-s-2026-holiday-art-fair-news-2026-11-21",
       "inputFacts": {
-        "id": "world-premiere-of-oratorio-don-t-let-the-news-2026-11-16",
-        "title": "World premiere of oratorio 'Don't Let the Sun' at U-M",
-        "url": "https://news.umich.edu/curtains-up-on-sundown-towns-world-premiere-of-oratorio-dont-let-the-sun-at-u-m/",
-        "publishedAt": "2026-11-16T16:26:00-05:00",
-        "summary": "A new oratorio titled 'Don't Let the Sun' explores the history of sundown towns in America. Inspired by sociologist James Loewen, the work will be performed by the U-M Chamber Choir and University Choir at Hill Auditorium on November 17.",
+        "id": "riverside-s-2026-holiday-art-fair-news-2026-11-21",
+        "title": "Riverside’s 2026 Holiday Art Fair",
+        "url": "https://www.ecurrent.com/calendar/details/riverside-s-2026-holiday-art-fair/20375065/2026-11-21T11",
+        "publishedAt": "2026-11-21T00:00:00-05:00",
+        "summary": "Riverside Arts Center in Ypsilanti is hosting a holiday art fair featuring over 60 local artisans. The event includes handmade art, vintage goods, self-care products, food, and mini golf.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-12T16:30:00-05:00",
-      "publicationEvidence": "2026-11-12T16:30:00-05:00",
+      "publishedAt": "2016-05-10T12:53:59+00:00",
+      "publicationEvidence": "2016-05-10T12:53:59+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "tyree-guyton-at-the-shepherd-news-2026-11-21",
+      "inputFacts": {
+        "id": "tyree-guyton-at-the-shepherd-news-2026-11-21",
+        "title": "Tyree Guyton at The Shepherd",
+        "url": "https://kimfay.substack.com/p/tyree-guyton-at-the-shepherd",
+        "publishedAt": "2026-11-21T00:00:00-05:00",
+        "summary": "An exhibition of gallery work by artist Tyree Guyton is on view at The Shepherd in Detroit through November 21. The article reflects on the history of the Heidelberg Project and Guyton's artistic legacy in the city.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-10-13T19:11:00+00:00",
+      "publicationEvidence": "2026-10-13T19:11:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "detroit-metro-airport-opens-new-north-ce-news-2026-11-20",
+      "inputFacts": {
+        "id": "detroit-metro-airport-opens-new-north-ce-news-2026-11-20",
+        "title": "Detroit Metro Airport opens new North Cell Phone Lot",
+        "url": "https://www.wemu.org/wemu-news/2026-11-20/detroit-metro-airport-opens-new-north-cell-phone-lot",
+        "publishedAt": "2026-11-20T16:00:00-05:00",
+        "summary": "Detroit Metro Airport has opened a new North Cell Phone Lot at Rogell and Burton Drive to provide a more convenient location for passenger pickups. With the opening, airport officials are strictly enforcing a ban on parking in front of the Evans and McNamara Terminals, with violators subject to fines and towing.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-20T21:00:00-05:00",
+      "publicationEvidence": "2026-11-20T21:00:00",
       "datePrecision": "time"
     },
     {
@@ -703,107 +670,77 @@
       "datePrecision": "time"
     },
     {
-      "id": "there-has-to-be-accountability-universit-news-2026-11-19",
+      "id": "expect-university-of-michigan-s-next-ath-news-2026-11-20",
       "inputFacts": {
-        "id": "there-has-to-be-accountability-universit-news-2026-11-19",
-        "title": "‘There has to be accountability’: University of Michigan ‘monitoring situation’ after Andrew Marsh charge",
-        "url": "https://www.clickondetroit.com/news/local/2026/11/20/there-has-to-be-accountability-university-of-michigan-monitoring-situation-after-andrew-marsh-charge/",
-        "publishedAt": "2026-11-19T22:47:00-05:00",
-        "summary": "University of Michigan wide receiver Andrew Marsh is facing a misdemeanor indecent exposure charge following an incident involving a food delivery driver in Pittsfield Township on February 2. The university stated it is monitoring the situation, and Marsh is scheduled for arraignment on December 2.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-20T03:47:51.932000+00:00",
-      "publicationEvidence": "2026-11-20T03:47:51.932Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "narratives-beyond-the-battlefield-emu-ev-news-2026-11-19",
-      "inputFacts": {
-        "id": "narratives-beyond-the-battlefield-emu-ev-news-2026-11-19",
-        "title": "Narratives Beyond the Battlefield: EMU Event Explores How Stories Shape Our Understanding of War",
-        "url": "https://www.ecurrent.com/feature/narratives-beyond-the-battlefield-emu-event-explores-how-stories-shape-our-understanding-of-war/",
-        "publishedAt": "2026-11-19T18:30:00-05:00",
-        "summary": "Eastern Michigan University is hosting a public event titled 'Narrative of War in Life, Literature, and Film'. The discussion will explore how various storytelling mediums influence our perception of conflict.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-09T13:03:00+00:00",
-      "publicationEvidence": "2026-11-09T13:03:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "detroit-s-holiday-tradition-shines-with-news-2026-11-20",
-      "inputFacts": {
-        "id": "detroit-s-holiday-tradition-shines-with-news-2026-11-20",
-        "title": "Detroit’s Holiday Tradition Shines with 23rd Annual Detroit Tree Lighting",
-        "url": "https://downtowndetroit.org/news-insights/detroits-holiday-tradition-shines-with-23rd-annual-detroit-tree-lighting/",
+        "id": "expect-university-of-michigan-s-next-ath-news-2026-11-20",
+        "title": "Expect University of Michigan's next athletic director to clean house, John U. Bacon says",
+        "url": "https://www.michiganpublic.org/sports/2026-11-20/expect-university-of-michigans-next-athletic-director-to-clean-house-john-u-bacon-says",
         "publishedAt": "2026-11-20T00:00:00-05:00",
-        "summary": "The 23rd annual Detroit Tree Lighting at Campus Martius Park features a variety of musical performances, local food vendors, and holiday activities. The event also supports the community through the Mittens for Detroit donation drive and kicks off the winter season with the opening of The Rink at Campus Martius Park.",
+        "summary": "John U. Bacon discusses potential changes within the University of Michigan football program and the future of the athletic department. The segment also touches on the Detroit Lions' defense following Aidan Hutchinson's injury.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-04T18:22:09+00:00",
-      "publicationEvidence": "2026-11-04T18:22:09+00:00",
+      "publishedAt": "2026-11-20T18:29:08.108000-05:00",
+      "publicationEvidence": "2026-11-20T18:29:08.108",
       "datePrecision": "time"
     },
     {
-      "id": "detroit-sleep-out-raises-awareness-funds-news-2026-11-19",
+      "id": "the-eastern-harvest-tackles-food-insecur-news-2026-11-20",
       "inputFacts": {
-        "id": "detroit-sleep-out-raises-awareness-funds-news-2026-11-19",
-        "title": "Detroit ‘Sleep Out’ raises awareness, funds to fight youth homelessness",
-        "url": "https://www.clickondetroit.com/news/local/2026/11/20/detroit-sleep-out-raises-awareness-funds-to-fight-youth-homelessness/",
-        "publishedAt": "2026-11-19T23:27:00-05:00",
-        "summary": "Covenant House hosted its 13th annual Detroit Sleep Out to raise awareness and funds for youth homelessness, which has seen a 27% increase since 2021. Participants spent the night in cardboard boxes and tarps to stand in solidarity with young people experiencing housing instability.",
+        "id": "the-eastern-harvest-tackles-food-insecur-news-2026-11-20",
+        "title": "The Eastern Harvest tackles food insecurity through community partnerships",
+        "url": "https://www.wemu.org/wemu-news/2026-11-20/the-eastern-harvest-tackles-food-insecurity-through-community-partnerships",
+        "publishedAt": "2026-11-20T00:00:00-05:00",
+        "summary": "A partnership between Eastern Michigan University and Chartwells Dining Services, known as The Eastern Harvest, is working to address year-round food insecurity for families in Washtenaw County.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-20T04:27:34.109000+00:00",
-      "publicationEvidence": "2026-11-20T04:27:34.109Z",
+      "publishedAt": "2026-11-20T14:51:02.204000-05:00",
+      "publicationEvidence": "2026-11-20T14:51:02.204",
       "datePrecision": "time"
     },
     {
-      "id": "mild-for-tree-lighting-tipoff-touchdowns-news-2026-11-19",
+      "id": "u-m-board-of-regents-votes-to-proceed-wi-news-2026-11-20",
       "inputFacts": {
-        "id": "mild-for-tree-lighting-tipoff-touchdowns-news-2026-11-19",
-        "title": "Mild for tree lighting, tipoff, touchdowns: Metro Detroit’s weather delivers before major reversal",
-        "url": "https://www.clickondetroit.com/weather/2026/11/20/mild-for-tree-lighting-tipoff-and-touchdowns-metro-detroits-weekend-weather-delivers-before-major-reversal/",
-        "publishedAt": "2026-11-19T20:24:00-05:00",
-        "summary": "Metro Detroit is experiencing near-record warmth with temperatures reaching 65 degrees, significantly above the seasonal average. These mild conditions are expected to persist through the weekend for local events before a sharp cooldown and rain arrive early next week.",
+        "id": "u-m-board-of-regents-votes-to-proceed-wi-news-2026-11-20",
+        "title": "U-M Board of Regents votes to proceed with Ypsi Township research computing center",
+        "url": "https://www.wemu.org/wemu-news/2026-11-20/u-m-board-of-regents-votes-to-proceed-with-ypsi-township-research-computing-center",
+        "publishedAt": "2026-11-20T00:00:00-05:00",
+        "summary": "The University of Michigan Board of Regents has officially voted to move forward with construction plans for a new research computing center located in Ypsilanti Township.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-20T01:24:39.638000+00:00",
-      "publicationEvidence": "2026-11-20T01:24:39.638Z",
+      "publishedAt": "2026-11-20T12:39:31.052000-05:00",
+      "publicationEvidence": "2026-11-20T12:39:31.052",
       "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-19",
-      "selectedIds": [
-        "faculty-senate-passes-vote-of-no-confide-news-2026-11-17",
-        "world-premiere-of-oratorio-don-t-let-the-news-2026-11-16",
-        "u-m-addiction-specialist-warns-of-kratom-news-2026-11-18",
-        "zoning-can-make-or-break-small-business-news-2026-11-18",
-        "progressives-grow-sway-in-lansing-push-t-news-2026-11-19"
-      ]
-    },
-    {
       "date": "2026-11-20",
       "selectedIds": [
-        "faculty-senate-passes-vote-of-no-confide-news-2026-11-17",
         "u-m-addiction-specialist-warns-of-kratom-news-2026-11-18",
         "zoning-can-make-or-break-small-business-news-2026-11-18",
         "progressives-grow-sway-in-lansing-push-t-news-2026-11-19",
-        "ypsi-township-to-hold-panel-discussion-a-news-2026-11-19"
+        "ypsi-township-to-hold-panel-discussion-a-news-2026-11-19",
+        "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20"
       ]
     },
     {
       "date": "2026-11-21",
       "selectedIds": [
         "progressives-grow-sway-in-lansing-push-t-news-2026-11-19",
-        "faculty-senate-passes-vote-of-no-confide-news-2026-11-17",
+        "u-m-addiction-specialist-warns-of-kratom-news-2026-11-18",
+        "zoning-can-make-or-break-small-business-news-2026-11-18",
+        "ypsi-township-to-hold-panel-discussion-a-news-2026-11-19",
+        "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "selectedIds": [
+        "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
+        "progressives-grow-sway-in-lansing-push-t-news-2026-11-19",
         "u-m-addiction-specialist-warns-of-kratom-news-2026-11-18",
         "zoning-can-make-or-break-small-business-news-2026-11-18",
         "ypsi-township-to-hold-panel-discussion-a-news-2026-11-19"
