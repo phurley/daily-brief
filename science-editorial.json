@@ -1,8 +1,66 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-22T06:21:55.118648-05:00",
+  "generatedAt": "2026-11-23T06:55:06.277518-05:00",
   "stories": [
+    {
+      "id": "science-24598c1cc994ea15",
+      "title": "Laser Focus at the Top of the World",
+      "summary": "A new, more precise satellite laser ranging system, developed by NASA, officially debuted at the Ny-Ålesund Geodetic Observatory in Svalbard, Norway, in October 2026. This next-generation system fires laser pulses thousands of times per second and uses sensors that detect single photons, improving satellite tracking and the accuracy of Earth observation data, particularly for polar-orbiting satellites.",
+      "finding": "A new, more precise satellite laser ranging system, developed by NASA, officially debuted at the Ny-Ålesund Geodetic Observatory in Svalbard, Norway, in October 2026. This next-generation system fires laser pulses thousands of times per second and uses sensors that detect single photons, improving satellite tracking and the accuracy of Earth observation data, particularly for polar-orbiting satellites.",
+      "significance": "As the northernmost facility of its kind, the system improves global network distribution, tracks polar-orbiting satellites almost every orbit, and refines the terrestrial reference frame.",
+      "caveat": "The remote site is next to a bird sanctuary, imposing environmental access restrictions that require remote operation during migratory bird breeding seasons.",
+      "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world",
+      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-23T00:01:00-05:00",
+      "firstSeenAt": "2026-11-23T11:00:07.283061Z",
+      "checkedAt": "2026-11-23T11:00:07.283061Z",
+      "verifiedAt": "2026-11-23T11:00:07.283061Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "earth-science",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "Norwegian Mapping Authority",
+        "Ny-Ålesund Geodetic Observatory",
+        "Goddard Space Flight Center",
+        "Stephen Merkowitz"
+      ],
+      "milestoneStatus": "completed",
+      "sourceUpdatedAt": "2026-11-23T05:01:00Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-23T06:55:06.277518-05:00",
+        "expiresAt": "2026-11-26T06:55:06.277518-05:00",
+        "inputFacts": {
+          "id": "science-24598c1cc994ea15",
+          "title": "Laser Focus at the Top of the World",
+          "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world",
+          "publishedAt": "2026-11-23T05:01:00Z",
+          "summary": "NASA and the Norwegian Mapping Authority have brought online a faster, next-generation satellite laser ranging system at the Ny-Alesund Geodetic Observatory in Svalbard, Norway.",
+          "finding": "NASA and the Norwegian Mapping Authority have brought online a faster, next-generation satellite laser ranging system at the Ny-Alesund Geodetic Observatory in Svalbard, Norway.",
+          "sourceUpdatedAt": "2026-11-23T05:01:00Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-23T00:01:00-05:00",
+        "datePrecision": "time",
+        "sourceHash": "f416dec4a8b73f5cc49cc638e176443bb5d171639e6e5842e6ac47eca151d6b3",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "New, more precise satellite laser ranging system with significant implications for Earth observation and scientific understanding.",
+        "storyKey": "next-gen-satellite-laser-ranging-svalbard",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims in the summary, including the debut date, location, and technical specifications of the new satellite laser ranging system, as well as its benefits for satellite tracking and Earth observation data, particularly for polar-orbiting satellites. This represents a new technical advance in Earth observation."
+      }
+    },
     {
       "id": "science-321844474abd26db",
       "title": "Mathematicians are amazed by ‘holy grail’ proof of Riemann hypothesis",
@@ -179,6 +237,51 @@
   ],
   "corrections": [
     {
+      "id": "science-d90eb59e9c225bde",
+      "inputFacts": {
+        "id": "science-d90eb59e9c225bde",
+        "title": "The brain benefits of letting children do things on their own",
+        "url": "https://www.newscientist.com/article/2600239-the-brain-benefits-of-letting-children-do-things-on-their-own",
+        "publishedAt": "2026-11-23T09:00:00Z",
+        "summary": "Animal and correlational human studies suggest that independent play and early experiences of personal control help build neural circuits that regulate stress and support emotional resilience.",
+        "finding": "Animal and correlational human studies suggest that independent play and early experiences of personal control help build neural circuits that regulate stress and support emotional resilience.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-23T09:00:00+00:00",
+      "publicationEvidence": "2026-11-23T09:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-24598c1cc994ea15",
+      "inputFacts": {
+        "id": "science-24598c1cc994ea15",
+        "title": "Laser Focus at the Top of the World",
+        "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world",
+        "publishedAt": "2026-11-23T05:01:00Z",
+        "summary": "NASA and the Norwegian Mapping Authority have brought online a faster, next-generation satellite laser ranging system at the Ny-Alesund Geodetic Observatory in Svalbard, Norway.",
+        "finding": "NASA and the Norwegian Mapping Authority have brought online a faster, next-generation satellite laser ranging system at the Ny-Alesund Geodetic Observatory in Svalbard, Norway.",
+        "sourceUpdatedAt": "2026-11-23T05:01:00Z"
+      },
+      "publishedAt": "2026-11-23T00:01:00-05:00",
+      "publicationEvidence": "2026-11-23T00:01:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-ff03892f4924aa48",
+      "inputFacts": {
+        "id": "science-ff03892f4924aa48",
+        "title": "Motion under the ocean explains the depth of the world’s deepest spot",
+        "url": "https://www.sciencenews.org/article/ocean-deepest-spot-explained-challenger",
+        "publishedAt": "2026-11-23T05:00:00Z",
+        "summary": "Scientists discovered the deepest known pyroclastic volcanic deposits near Challenger Deep, suggesting an unusually sharp bend in the sinking Pacific plate explains both the trench's depth and nearby volcanism.",
+        "finding": "Scientists discovered the deepest known pyroclastic volcanic deposits near Challenger Deep, suggesting an unusually sharp bend in the sinking Pacific plate explains both the trench's depth and nearby volcanism.",
+        "sourceUpdatedAt": "2026-11-23T05:00:00Z"
+      },
+      "publishedAt": "2026-11-23T00:00:00-05:00",
+      "publicationEvidence": "2026-11-23T00:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "science-782cb492ea3529a6",
       "inputFacts": {
         "id": "science-782cb492ea3529a6",
@@ -191,6 +294,21 @@
       },
       "publishedAt": "2026-11-21T12:01:13+00:00",
       "publicationEvidence": "2026-11-21T12:01:13+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-d3c77f39276e69b3",
+      "inputFacts": {
+        "id": "science-d3c77f39276e69b3",
+        "title": "How do tumors talk to nerves? This scientist is finding out",
+        "url": "https://www.sciencenews.org/article/tumors-talk-nerve-sn-10-sebnem-ece-eksi",
+        "publishedAt": "2026-11-21T12:00:00Z",
+        "summary": "Neuronal adhesion molecules, proteins typically associated with brain circuitry and memory, have been identified in prostate cancer cells from high-risk patients.",
+        "finding": "Neuronal adhesion molecules, proteins typically associated with brain circuitry and memory, have been identified in prostate cancer cells from high-risk patients.",
+        "sourceUpdatedAt": "2026-11-21T12:00:00Z"
+      },
+      "publishedAt": "2026-11-21T07:00:00-05:00",
+      "publicationEvidence": "2026-11-21T07:00:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -269,51 +387,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-9980fa1e3bdcdb7e",
-      "inputFacts": {
-        "id": "science-9980fa1e3bdcdb7e",
-        "title": "How aquanauts could help save Florida’s reefs",
-        "url": "https://www.newscientist.com/article/2599340-how-aquanauts-could-help-save-floridas-reefs",
-        "publishedAt": "2026-11-19T05:57:00Z",
-        "summary": "Scientists are using the Vanguard underwater habitat at Tennessee Reef to relocate heat-stressed coral species to deeper, cooler water in a temporary nursery for continuous monitoring.",
-        "finding": "Scientists are using the Vanguard underwater habitat at Tennessee Reef to relocate heat-stressed coral species to deeper, cooler water in a temporary nursery for continuous monitoring.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-19T05:57:00+00:00",
-      "publicationEvidence": "2026-11-19T05:57:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-6f3f4555c9292586",
-      "inputFacts": {
-        "id": "science-6f3f4555c9292586",
-        "title": "El Niño Rains Paint the Atacama",
-        "url": "https://science.nasa.gov/earth/earth-observatory/el-nino-rains-paint-the-atacama",
-        "publishedAt": "2026-11-19T05:00:00Z",
-        "summary": "Unusually wet winter conditions driven by El Niño triggered what may be the most extensive flowering event in Chile's Atacama Desert during the satellite era.",
-        "finding": "Unusually wet winter conditions driven by El Niño triggered what may be the most extensive flowering event in Chile's Atacama Desert during the satellite era.",
-        "sourceUpdatedAt": "2026-11-19T05:00:00Z"
-      },
-      "publishedAt": "2026-11-19T00:00:00-05:00",
-      "publicationEvidence": "2026-11-19T00:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-f5ce4a0fe482d320",
-      "inputFacts": {
-        "id": "science-f5ce4a0fe482d320",
-        "title": "APOD: 2026 November 22 – Swirls and Colors on Jupiter from Juno",
-        "url": "https://science.nasa.gov/image-article/apod-2026-november-22-swirls-and-colors-on-jupiter-from-juno",
-        "publishedAt": "2026-11-22T05:05:00Z",
-        "summary": "Images from the Juno spacecraft show that lighter clouds on Jupiter are generally situated at higher altitudes than darker cloud layers.",
-        "finding": "Images from the Juno spacecraft show that lighter clouds on Jupiter are generally situated at higher altitudes than darker cloud layers.",
-        "sourceUpdatedAt": "2026-11-22T05:05:00Z"
-      },
-      "publishedAt": "2026-11-22T00:05:00-05:00",
-      "publicationEvidence": "2026-11-22T00:05:00-05:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-ac66f584d8674695",
       "inputFacts": {
         "id": "science-ac66f584d8674695",
@@ -350,8 +423,8 @@
         "title": "This year’s El Niño is unlike any other on record",
         "url": "https://www.sciencenews.org/article/super-el-nino-historic-effect-hurricane",
         "publishedAt": "2026-11-20T21:00:00Z",
-        "summary": "The 2026 El Nino monitoring region reached an unprecedented average temperature above 30 degrees Celsius by October 18, exceeding 3.03 degrees Celsius above the 30-year average in September.",
-        "finding": "The 2026 El Nino monitoring region reached an unprecedented average temperature above 30 degrees Celsius by October 18, exceeding 3.03 degrees Celsius above the 30-year average in September.",
+        "summary": "The 2026 El Nino ocean monitoring area reached record sea surface temperatures over 30 degrees Celsius, fueling unprecedented Pacific hurricane activity and extreme global weather anomalies.",
+        "finding": "The 2026 El Nino ocean monitoring area reached record sea surface temperatures over 30 degrees Celsius, fueling unprecedented Pacific hurricane activity and extreme global weather anomalies.",
         "sourceUpdatedAt": "2026-11-20T21:00:00Z"
       },
       "publishedAt": "2026-11-20T16:00:00-05:00",
@@ -380,69 +453,16 @@
         "title": "NASA’s new Moon plan is taking shape, but some big questions remain",
         "url": "https://arstechnica.com/space/2026/11/nasas-new-moon-plan-is-taking-shape-but-some-big-questions-remain",
         "publishedAt": "2026-11-20T20:26:33Z",
-        "summary": "NASA has restructured the Artemis architecture, shifting Artemis III to a low-Earth orbit test mission and easing lunar loiter constraints for SpaceX and Blue Origin landers.",
-        "finding": "NASA has restructured the Artemis architecture, shifting Artemis III to a low-Earth orbit test mission and easing lunar loiter constraints for SpaceX and Blue Origin landers.",
+        "summary": "NASA has revised its Artemis lunar architecture, altering Artemis III into an orbital checkout mission and adjusting orbital rendezvous and surface stay requirements for SpaceX and Blue Origin landers.",
+        "finding": "NASA has revised its Artemis lunar architecture, altering Artemis III into an orbital checkout mission and adjusting orbital rendezvous and surface stay requirements for SpaceX and Blue Origin landers.",
         "sourceUpdatedAt": "2026-11-20T21:18:18Z"
       },
       "publishedAt": "2026-11-20T20:26:33+00:00",
       "publicationEvidence": "2026-11-20T20:26:33+00:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-d3928a6d54c2b0af",
-      "inputFacts": {
-        "id": "science-d3928a6d54c2b0af",
-        "title": "The libido drug women want is testosterone",
-        "url": "https://www.sciencenews.org/article/libido-drug-women-want-is-testosterone",
-        "publishedAt": "2026-11-20T19:00:00Z",
-        "summary": "Testosterone shows potential to enhance sexual function and libido in postmenopausal women, with preliminary evidence also suggesting possible benefits for premenopausal women.",
-        "finding": "Testosterone shows potential to enhance sexual function and libido in postmenopausal women, with preliminary evidence also suggesting possible benefits for premenopausal women.",
-        "sourceUpdatedAt": "2026-11-20T19:00:00Z"
-      },
-      "publishedAt": "2026-11-20T14:00:00-05:00",
-      "publicationEvidence": "2026-11-20T14:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-e7881f6c1f882f15",
-      "inputFacts": {
-        "id": "science-e7881f6c1f882f15",
-        "title": "An El Niño amped by climate change has California bracing for the worst",
-        "url": "https://www.sciencenews.org/article/el-nino-climate-change-california",
-        "publishedAt": "2026-11-20T17:47:05Z",
-        "summary": "Computer model simulations suggest that during the 2026–2027 Super El Niño, the risk of extreme sea levels along Pacific coastlines from Alaska to Chile could be 10 times higher than in previous events.",
-        "finding": "Computer model simulations suggest that during the 2026–2027 Super El Niño, the risk of extreme sea levels along Pacific coastlines from Alaska to Chile could be 10 times higher than in previous events.",
-        "sourceUpdatedAt": "2026-11-20T17:47:05Z"
-      },
-      "publishedAt": "2026-11-20T12:47:05-05:00",
-      "publicationEvidence": "2026-11-20T12:47:05-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-34daf2348b900e74",
-      "inputFacts": {
-        "id": "science-34daf2348b900e74",
-        "title": "Rocket Report: A weekend of ups and downs; Stoke celebrates engine milestone",
-        "url": "https://arstechnica.com/space/2026/11/rocket-report-a-weekend-of-ups-and-downs-stoke-celebrates-engine-milestone",
-        "publishedAt": "2026-11-20T13:35:45Z",
-        "summary": "Stoke Space has completed development of its methane-fueled Zenith engine, designed to power the reusable first-stage booster of its Nova rocket.",
-        "finding": "Stoke Space has completed development of its methane-fueled Zenith engine, designed to power the reusable first-stage booster of its Nova rocket.",
-        "sourceUpdatedAt": "2026-11-20T17:24:50Z"
-      },
-      "publishedAt": "2026-11-20T13:35:45+00:00",
-      "publicationEvidence": "2026-11-20T13:35:45+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-21",
-      "selectedIds": [
-        "science-a0aedd2cc1da0eea",
-        "science-321844474abd26db",
-        "science-da44b66835dcdb41"
-      ]
-    },
     {
       "date": "2026-11-22",
       "selectedIds": [
@@ -457,6 +477,14 @@
         "science-321844474abd26db",
         "science-da44b66835dcdb41",
         "science-a0aedd2cc1da0eea"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "selectedIds": [
+        "science-321844474abd26db",
+        "science-da44b66835dcdb41",
+        "science-24598c1cc994ea15"
       ]
     }
   ]
