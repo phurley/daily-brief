@@ -1,8 +1,101 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-11-23T05:04:11.315333-05:00",
+  "generatedAt": "2026-11-24T06:08:26.422944-05:00",
   "stories": [
+    {
+      "id": "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
+      "title": "Nuclear Watch New Mexico warns Ypsi Township computing center will accelerate nuclear arms race",
+      "summary": "A proposed University of Michigan research center in Ypsilanti Township, intended for Los Alamos National Laboratory, is criticized by Nuclear Watch New Mexico for potentially accelerating the nuclear arms race. The group claims the facility, primarily funded by Michigan taxpayers, would largely support new nuclear weapon designs, despite U-M's statements about unclassified research.",
+      "url": "https://www.wemu.org/wemu-news/2026-11-23/nuclear-watch-new-mexico-warns-ypsi-township-computing-center-will-accelerate-nuclear-arms-race",
+      "publishedAt": "2026-11-23T11:16:44.773000-05:00",
+      "addedAt": "2026-11-24T06:06:48-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Jay Coghlan",
+        "Caroline MacGregor",
+        "Nuclear Watch New Mexico",
+        "Los Alamos National Laboratory",
+        "WEMU",
+        "University of Michigan"
+      ],
+      "locations": [
+        "Ypsilanti Township, MI",
+        "Los Alamos, NM"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "nuclear weapons",
+        "national security",
+        "computing",
+        "government spending",
+        "environmental safety"
+      ],
+      "source": {
+        "name": "Caroline MacGregor",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.38,
+          "eclectic": 0.18,
+          "technical_science": 0.89,
+          "artsy": 0.03,
+          "progressive": 0.33,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.1,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/7df938e/2147483647/strip/true/crop/4096x2304+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Ff6%2F49%2F4a149c1f4f7aa5f2e5c36c8bdf95%2Fimg-20261119-183914481.jpg",
+        "alt": "Nuclear Watch New Mexico warns Ypsi Township computing center will accelerate nuclear arms race"
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-24T06:08:26.422944-05:00",
+        "expiresAt": "2026-11-27T06:08:26.422944-05:00",
+        "inputFacts": {
+          "id": "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
+          "title": "Nuclear Watch New Mexico warns Ypsi Township computing center will accelerate nuclear arms race",
+          "url": "https://www.wemu.org/wemu-news/2026-11-23/nuclear-watch-new-mexico-warns-ypsi-township-computing-center-will-accelerate-nuclear-arms-race",
+          "publishedAt": "2026-11-23T00:00:00-05:00",
+          "summary": "Jay Coghlan, executive director of Nuclear Watch New Mexico, warns that a new Los Alamos National Laboratory computing center planned for Ypsilanti Township will facilitate the design of new nuclear weapons. Coghlan argues that the facility's stated civilian research goals are misleading and that the project contributes to a broader, taxpayer-funded nuclear arms race.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-23T11:16:44.773",
+        "datePrecision": "time",
+        "sourceHash": "f99df4b9fe0d0997fa3836db0cd2b1900224d525b4dcc2168dfc2ed9385c70da",
+        "relevance": 4,
+        "novelty": 3,
+        "reason": "The article discusses a significant civic decision with potential local consequences in Ypsilanti Township, which is nearby Canton/Plymouth. It addresses public services (university funding, energy use) and civic debate regarding the nature of the research.",
+        "storyKey": "umich-los-alamos-ypsi-center",
+        "localConnection": "Ypsilanti Township is a nearby community to Canton/Plymouth.",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims made in the summary, including the criticism from Nuclear Watch New Mexico, the group's claims about the facility's purpose, and the funding details. The article discusses a proposed research center in Ypsilanti Township, a local development with potential significant impact on the community and Michigan, making it substantive news."
+      }
+    },
     {
       "id": "school-of-education-s-new-direct-admit-p-news-2026-11-23",
       "title": "School of Education’s new direct admit program expands opportunities for aspiring teachers",
@@ -371,201 +464,24 @@
         "grounded": true,
         "groundingReason": "The article supports all claims made in the summary, including specific numbers for road repairs, bridge repairs, annual road funding, and the number of additional children eligible for childcare subsidies. It also confirms the implementation of free K-12 school meals and the vulnerability of some programs due to diminishing federal funds. The article details significant policy achievements and their impact on Michigan residents."
       }
-    },
-    {
-      "id": "survivors-of-suicide-many-of-those-mourn-news-2026-11-21",
-      "title": "Survivors of suicide: Many of those mourned are veterans",
-      "summary": "The VA Ann Arbor Healthcare System offers postvention support for suicide-loss survivors, a growing initiative in Michigan. Additionally, the VA provides an Emergency Suicide Crisis Benefit for eligible veterans in acute suicidal crisis, covering emergent care and up to 90 days of outpatient care, which has helped many enroll in VA healthcare.",
-      "url": "https://concentratemedia.com/survivors-of-suicide-many-of-those-mourned-are-veterans/",
-      "publishedAt": "2026-11-19T16:21:13+00:00",
-      "addedAt": "2026-11-20T04:39:02-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Matthew Raad",
-        "U.S. Department of Veterans Affairs",
-        "VA Ann Arbor Healthcare System",
-        "Tragedy Assistance Program for Survivors",
-        "TAPS",
-        "Washtenaw County Community Mental Health",
-        "WCCMH",
-        "Community Mental Health Association of Michigan",
-        "Center for Health and Research Transformation",
-        "Lifeways",
-        "OnPoint",
-        "Sanilac County CMH",
-        "Summit Pointe",
-        "Michigan Health and Hospital Association",
-        "Washtenaw CMH",
-        "Public Safety Preservation Millage"
-      ],
-      "locations": [
-        "Ann Arbor",
-        "Ypsilanti",
-        "Michigan",
-        "Washtenaw County"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "mental health",
-        "suicide prevention",
-        "veterans",
-        "community health"
-      ],
-      "source": {
-        "name": "Monique Bedford",
-        "publication": "Concentrate"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.01,
-          "distinctive": 0.16,
-          "eclectic": 0.12,
-          "technical_science": 0.06,
-          "artsy": 0.05,
-          "progressive": 0.46,
-          "outdoors": 0.03,
-          "theatre": 0.02,
-          "live_music": 0.02,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.61,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.03,
-          "large_venue": 0.09,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.02,
-          "sales_related": 0.04,
-          "children_activity": 0.02,
-          "running": 0.02,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://d3ggs9wi9hwg8r.cloudfront.net/wp-content/uploads/2026/11/17085341/malcolmhillRS-1024x683.jpg",
-        "alt": "Malcolm Hill"
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-21T02:42:28.488058-05:00",
-        "expiresAt": "2026-11-24T02:42:28.488058-05:00",
-        "inputFacts": {
-          "id": "survivors-of-suicide-many-of-those-mourn-news-2026-11-21",
-          "title": "Survivors of suicide: Many of those mourned are veterans",
-          "url": "https://concentratemedia.com/survivors-of-suicide-many-of-those-mourned-are-veterans/",
-          "publishedAt": "2026-11-21T00:00:00-05:00",
-          "summary": "As International Survivors of Suicide Loss Day approaches on November 21st, experts highlight the significant impact of suicide on veteran communities and the importance of postvention support. The VA Ann Arbor Healthcare System and other local organizations offer various resources, including crisis lines and grant programs, to assist survivors and veterans in need of mental health care.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-19T16:21:13+00:00",
-        "datePrecision": "time",
-        "sourceHash": "99b992c32a9c21d4a3335363764085c6ac1b52e0eecfab19321e4cb65afdcd06",
-        "relevance": 3,
-        "novelty": 3,
-        "reason": "The article discusses local mental health resources for veterans and their families, specifically mentioning the VA Ann Arbor Healthcare System and its postvention team, which is relevant to nearby communities.",
-        "storyKey": "veteran-suicide-support-ann-arbor",
-        "localConnection": "VA Ann Arbor Healthcare System provides local support.",
-        "grounded": true,
-        "groundingReason": "The article confirms the VA Ann Arbor Healthcare System offers postvention support for suicide-loss survivors and that this is a growing initiative in Michigan. It also details the Emergency Suicide Crisis Benefit, including its coverage and its role in helping veterans enroll in VA healthcare, with specific numbers provided."
-      }
-    },
-    {
-      "id": "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
-      "title": "Ann Arbor-born artist jazz Stratøs stops by the WEMU studio",
-      "summary": "Ann Arbor-born jazz artist Stratøs, a three-time Herb Alpert Young Jazz Composer Award winner, discussed his new album \"Challenger Deep\" and its themes rooted in his Barbadian heritage and family history. He also reflected on his musical upbringing in Ann Arbor and Detroit, including his time with the Detroit Symphony Orchestra's youth programs.",
-      "url": "https://www.wemu.org/music/2026-11-20/ann-arbor-born-artist-jazz-strat%C3%B8s-stops-by-the-wemu-studio",
-      "publishedAt": "2026-11-20T17:52:00.594000-05:00",
-      "addedAt": "2026-11-21T02:38:47-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Stratøs",
-        "Daniel Long",
-        "WEMU"
-      ],
-      "locations": [
-        "Ann Arbor",
-        "Ypsilanti"
-      ],
-      "localityIndex": 2,
-      "topics": [
-        "jazz",
-        "music",
-        "interview"
-      ],
-      "source": {
-        "name": "Daniel W. Long",
-        "publication": "WEMU 89.1 FM"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.14,
-          "distinctive": 0.34,
-          "eclectic": 0.19,
-          "technical_science": 0.11,
-          "artsy": 0.98,
-          "progressive": 0.36,
-          "outdoors": 0.02,
-          "theatre": 0.02,
-          "live_music": 0.06,
-          "live_comedy": 0.02,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.17,
-          "craft_fair_shopping": 0.02,
-          "religious": 0.02,
-          "large_venue": 0.02,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.03,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.03,
-          "dance": 0.02,
-          "sales_related": 0.11,
-          "children_activity": 0.03,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/6be84d3/2147483647/strip/true/crop/3024x1685+0+999/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F1f%2F61%2Fd32f590541579f1b4c3d6e7dbcf0%2Fdaniel-and-stratos.jpg",
-        "alt": "WEMU's own Daniel Long (back) and Stratos hang out at the Timko Broadcast Center."
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-21T02:42:28.488058-05:00",
-        "expiresAt": "2026-11-24T02:42:28.488058-05:00",
-        "inputFacts": {
-          "id": "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
-          "title": "Ann Arbor-born artist jazz Stratøs stops by the WEMU studio",
-          "url": "https://www.wemu.org/music/2026-11-20/ann-arbor-born-artist-jazz-strat%C3%B8s-stops-by-the-wemu-studio",
-          "publishedAt": "2026-11-20T00:00:00-05:00",
-          "summary": "Saxophonist and composer Stratøs discusses his musical craft and the family influences behind his latest release. WEMU's Daniel Long interviewed the artist during his studio visit.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-20T17:52:00.594",
-        "datePrecision": "time",
-        "sourceHash": "e600ef509cb7654e760ecee9d30fb843bfe265643df304aff089f9f64ba164f3",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The article features a notable Ann Arbor-born artist discussing his new work and local musical influences, including the Detroit Symphony Orchestra, which aligns with local arts and cultural interests.",
-        "storyKey": "ann-arbor-jazz-artist-stratos-new-album",
-        "localConnection": "Ann Arbor-born artist, Detroit Symphony Orchestra youth programs",
-        "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, including the artist's awards, new album, themes, and musical upbringing in Ann Arbor and Detroit with the DSO. This is a local news story about an Ann Arbor-born artist and his new work."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
+      "inputFacts": {
+        "id": "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
+        "title": "Nuclear Watch New Mexico warns Ypsi Township computing center will accelerate nuclear arms race",
+        "url": "https://www.wemu.org/wemu-news/2026-11-23/nuclear-watch-new-mexico-warns-ypsi-township-computing-center-will-accelerate-nuclear-arms-race",
+        "publishedAt": "2026-11-23T00:00:00-05:00",
+        "summary": "Jay Coghlan, executive director of Nuclear Watch New Mexico, warns that a new Los Alamos National Laboratory computing center planned for Ypsilanti Township will facilitate the design of new nuclear weapons. Coghlan argues that the facility's stated civilian research goals are misleading and that the project contributes to a broader, taxpayer-funded nuclear arms race.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-23T11:16:44.773000-05:00",
+      "publicationEvidence": "2026-11-23T11:16:44.773",
+      "datePrecision": "time"
+    },
     {
       "id": "school-of-education-s-new-direct-admit-p-news-2026-11-23",
       "inputFacts": {
@@ -627,36 +543,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "survivors-of-suicide-many-of-those-mourn-news-2026-11-21",
-      "inputFacts": {
-        "id": "survivors-of-suicide-many-of-those-mourn-news-2026-11-21",
-        "title": "Survivors of suicide: Many of those mourned are veterans",
-        "url": "https://concentratemedia.com/survivors-of-suicide-many-of-those-mourned-are-veterans/",
-        "publishedAt": "2026-11-21T00:00:00-05:00",
-        "summary": "As International Survivors of Suicide Loss Day approaches on November 21st, experts highlight the significant impact of suicide on veteran communities and the importance of postvention support. The VA Ann Arbor Healthcare System and other local organizations offer various resources, including crisis lines and grant programs, to assist survivors and veterans in need of mental health care.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-19T16:21:13+00:00",
-      "publicationEvidence": "2026-11-19T16:21:13+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
-      "inputFacts": {
-        "id": "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
-        "title": "Ann Arbor-born artist jazz Stratøs stops by the WEMU studio",
-        "url": "https://www.wemu.org/music/2026-11-20/ann-arbor-born-artist-jazz-strat%C3%B8s-stops-by-the-wemu-studio",
-        "publishedAt": "2026-11-20T00:00:00-05:00",
-        "summary": "Saxophonist and composer Stratøs discusses his musical craft and the family influences behind his latest release. WEMU's Daniel Long interviewed the artist during his studio visit.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-20T17:52:00.594000-05:00",
-      "publicationEvidence": "2026-11-20T17:52:00.594",
-      "datePrecision": "time"
-    },
-    {
       "id": "a-horse-farm-relocates-news-2026-11-23",
       "inputFacts": {
         "id": "a-horse-farm-relocates-news-2026-11-23",
@@ -684,6 +570,21 @@
       },
       "publishedAt": "2026-11-23T06:29:16+00:00",
       "publicationEvidence": "2026-11-23T06:29:16+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "construction-on-eastern-washtenaw-commun-news-2026-11-23",
+      "inputFacts": {
+        "id": "construction-on-eastern-washtenaw-commun-news-2026-11-23",
+        "title": "Construction on Eastern Washtenaw Community Rec Center to start soon",
+        "url": "https://www.wemu.org/wemu-news/2026-11-23/construction-on-eastern-washtenaw-community-rec-center-to-start-soon",
+        "publishedAt": "2026-11-23T00:00:00-05:00",
+        "summary": "Plans for the new Eastern Washtenaw Community Recreation Center are progressing toward the start of construction. WEMU's Kevin Meerschaert reports on the development.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-23T22:06:12.013000-05:00",
+      "publicationEvidence": "2026-11-23T22:06:12.013",
       "datePrecision": "time"
     },
     {
@@ -732,106 +633,47 @@
       "datePrecision": "time"
     },
     {
-      "id": "a-look-back-christopher-taylor-s-12-year-news-2026-11-23",
+      "id": "washtenaw-united-groundcover-news-keeps-news-2026-11-23",
       "inputFacts": {
-        "id": "a-look-back-christopher-taylor-s-12-year-news-2026-11-23",
-        "title": "A look back: Christopher Taylor’s 12 years as Ann Arbor’s mayor",
-        "url": "https://www.michigandaily.com/news/government/a-look-back-christopher-taylors-12-years-as-ann-arbors-mayor/",
-        "publishedAt": "2026-11-23T00:00:00Z",
-        "summary": "As Christopher Taylor concludes his 12-year tenure as mayor of Ann Arbor, colleagues and officials reflect on his leadership, focusing on his impact on housing development and climate policy. The retrospective examines the political shifts within the City Council and the varying perspectives on his ability to navigate policy disagreements during his time in office.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-23T06:09:56+00:00",
-      "publicationEvidence": "2026-11-23T06:09:56+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "oakland-county-veteran-says-roofing-cont-news-2026-11-22",
-      "inputFacts": {
-        "id": "oakland-county-veteran-says-roofing-cont-news-2026-11-22",
-        "title": "Oakland County veteran says roofing contractor took $15,000 and disappeared",
-        "url": "https://www.clickondetroit.com/news/local/2026/11/23/oakland-county-veteran-says-roofing-contractor-took-15000-and-disappeared/",
-        "publishedAt": "2026-11-22T22:21:00-05:00",
-        "summary": "A Holly, Michigan veteran reports that a contractor from MI Roof Pros cashed a $15,000 insurance check for a roof replacement and subsequently ceased all communication. The veteran, David Myers, has been unable to reach the company for over 500 days, and attempts by local media to contact the business have also been unsuccessful.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-23T03:21:49.162000+00:00",
-      "publicationEvidence": "2026-11-23T03:21:49.162Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "how-ann-arbor-stores-are-taking-advantag-news-2026-11-22",
-      "inputFacts": {
-        "id": "how-ann-arbor-stores-are-taking-advantag-news-2026-11-22",
-        "title": "How Ann Arbor stores are taking advantage of Black Friday",
-        "url": "https://www.michigandaily.com/news/business/how-ann-arbor-stores-are-taking-advantage-of-black-friday/",
-        "publishedAt": "2026-11-22T00:00:00-05:00",
-        "summary": "Independent retailers in Ann Arbor are preparing for the holiday shopping season by focusing on community support and extended discounts. Unlike major corporations that rely on aggressive advertising and steep markdowns, these small businesses are adopting a more personalized approach to the Black Friday weekend.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-23T04:18:36+00:00",
-      "publicationEvidence": "2026-11-23T04:18:36+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "whatthef-magazine-art-fair-puts-student-news-2026-11-22",
-      "inputFacts": {
-        "id": "whatthef-magazine-art-fair-puts-student-news-2026-11-22",
-        "title": "WhatTheF! Magazine Art Fair puts student creativity on display beyond the page",
-        "url": "https://www.michigandaily.com/news/campus-life/whatthef-magazine-art-fair-puts-student-creativity-on-display-beyond-the-page/",
-        "publishedAt": "2026-11-22T00:00:00-05:00",
-        "summary": "Five University of Michigan student artists gathered at the Michigan Union to showcase and sell their designs at the WhatTheF! Magazine Art Fair. The event provided an opportunity for students to connect with local artists and support their creative work.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-23T04:00:22+00:00",
-      "publicationEvidence": "2026-11-23T04:00:22+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "a-look-back-garlin-gilchrist-ii-s-8-year-news-2026-11-23",
-      "inputFacts": {
-        "id": "a-look-back-garlin-gilchrist-ii-s-8-year-news-2026-11-23",
-        "title": "A look back: Garlin Gilchrist II’s 8 years as Lt. Gov",
-        "url": "https://www.michigandaily.com/news/government/a-look-back-garlin-gilchrist-iis-8-years-as-lt-gov/",
+        "id": "washtenaw-united-groundcover-news-keeps-news-2026-11-23",
+        "title": "Washtenaw United: Groundcover News keeps Washtenaw County residents informed and uplifted",
+        "url": "https://www.wemu.org/show/washtenaw-united/2026-11-23/washtenaw-united-groundcover-news-keeps-washtenaw-county-residents-informed-and-uplifted",
         "publishedAt": "2026-11-23T00:00:00-05:00",
-        "summary": "This article provides a retrospective on the eight-year tenure of Garlin Gilchrist II as the Lieutenant Governor of Michigan. It examines his contributions and time in office as his term concludes.",
+        "summary": "Decky Alexander interviews Groundcover News leadership about their mission to provide affordable news and employment opportunities for marginalized residents in Washtenaw County.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-23T06:12:40+00:00",
-      "publicationEvidence": "2026-11-23T06:12:40+00:00",
+      "publishedAt": "2026-11-23T07:47:00+00:00",
+      "publicationEvidence": "2026-11-23T07:47:00Z",
       "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-22",
-      "selectedIds": [
-        "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
-        "new-net-zero-community-will-become-michi-news-2026-11-22",
-        "aaps-officials-say-new-teacher-contract-news-2026-11-22",
-        "survivors-of-suicide-many-of-those-mourn-news-2026-11-21"
-      ]
-    },
-    {
       "date": "2026-11-23",
       "selectedIds": [
-        "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
         "new-net-zero-community-will-become-michi-news-2026-11-22",
         "a-look-back-gretchen-whitmer-8-years-as-news-2026-11-23",
         "school-of-education-s-new-direct-admit-p-news-2026-11-23",
-        "aaps-officials-say-new-teacher-contract-news-2026-11-22"
+        "aaps-officials-say-new-teacher-contract-news-2026-11-22",
+        "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23"
       ]
     },
     {
       "date": "2026-11-24",
       "selectedIds": [
         "new-net-zero-community-will-become-michi-news-2026-11-22",
-        "ann-arbor-born-artist-jazz-strat-s-stops-news-2026-11-20",
+        "a-look-back-gretchen-whitmer-8-years-as-news-2026-11-23",
+        "school-of-education-s-new-direct-admit-p-news-2026-11-23",
+        "aaps-officials-say-new-teacher-contract-news-2026-11-22",
+        "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "selectedIds": [
+        "new-net-zero-community-will-become-michi-news-2026-11-22",
+        "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
         "a-look-back-gretchen-whitmer-8-years-as-news-2026-11-23",
         "school-of-education-s-new-direct-admit-p-news-2026-11-23",
         "aaps-officials-say-new-teacher-contract-news-2026-11-22"
