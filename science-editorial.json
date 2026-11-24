@@ -1,8 +1,65 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-23T06:55:06.277518-05:00",
+  "generatedAt": "2026-11-24T06:08:07.958172-05:00",
   "stories": [
+    {
+      "id": "science-aaffec7cab6e3c5c",
+      "title": "Math’s holy grail, the Riemann hypothesis, appears solved with AI’s help",
+      "summary": "A mathematician, working with Anthropic's AI tool Claude, appears to have solved the Riemann hypothesis, a long-standing mathematical puzzle concerning prime numbers. Independent mathematicians have confirmed the result, which could have wide implications across various fields of mathematics. The proof is currently 250,000 pages of complex math.",
+      "finding": "A mathematician, working with Anthropic's AI tool Claude, appears to have solved the Riemann hypothesis, a long-standing mathematical puzzle concerning prime numbers. Independent mathematicians have confirmed the result, which could have wide implications across various fields of mathematics. The proof is currently 250,000 pages of complex math.",
+      "significance": "Resolving this century-old mathematical problem clarifies the distribution and secrets of prime numbers, underpinning numerous related mathematical statements.",
+      "caveat": "The dense proof spans 250,000 pages that mathematicians must still translate into human-comprehensible form, and critics question whether humans can confirm it with full certainty.",
+      "url": "https://www.sciencenews.org/article/riemann-hypothesis-solved-math-ai",
+      "primarySourceUrl": "https://www.sciencenews.org/article/riemann-hypothesis-solved-math-ai",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-23T16:01:59-05:00",
+      "firstSeenAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-24T11:01:01.050443Z",
+      "verifiedAt": "2026-11-24T11:01:01.050443Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "technology"
+      ],
+      "entities": [
+        "Levent Alpöge",
+        "Anthropic",
+        "Claude",
+        "Lean Focused Research Organization",
+        "Mathlib Initiative"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-23T21:01:59Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-24T06:08:07.958172-05:00",
+        "expiresAt": "2026-11-27T06:08:07.958172-05:00",
+        "inputFacts": {
+          "id": "science-aaffec7cab6e3c5c",
+          "title": "Math’s holy grail, the Riemann hypothesis, appears solved with AI’s help",
+          "url": "https://www.sciencenews.org/article/riemann-hypothesis-solved-math-ai",
+          "publishedAt": "2026-11-23T21:01:59Z",
+          "summary": "Mathematician Levent Alpöge, collaborating with the AI tool Claude, posted a 250,000-page computer-verified proof of the Riemann hypothesis and the generalized Riemann hypothesis.",
+          "finding": "Mathematician Levent Alpöge, collaborating with the AI tool Claude, posted a 250,000-page computer-verified proof of the Riemann hypothesis and the generalized Riemann hypothesis.",
+          "sourceUpdatedAt": "2026-11-23T21:01:59Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-23T16:01:59-05:00",
+        "datePrecision": "time",
+        "sourceHash": "d6171290db58197486180863ec01b14db6a1f03b099a78c0108627a94bb22db1",
+        "relevance": 5,
+        "novelty": 5,
+        "reason": "The article describes a significant breakthrough in mathematics with the apparent solution of the Riemann hypothesis, a major scientific development.",
+        "storyKey": "riemann-hypothesis-solved-ai",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims in the summary, including the involvement of a mathematician and AI, the confirmation by independent mathematicians, the implications, and the length of the proof. The finding is a significant new development in mathematics."
+      }
+    },
     {
       "id": "science-24598c1cc994ea15",
       "title": "Laser Focus at the Top of the World",
@@ -174,68 +231,84 @@
         "grounded": true,
         "groundingReason": "The article describes two independent research teams mathematically modeling how quantum effects could theoretically lead to repulsive gravity, a new finding that contradicts Einstein's theory. It also discusses the potential for laboratory testing using bacterium-sized objects in a quantum superposition state, acknowledging the experimental challenges."
       }
-    },
-    {
-      "id": "science-a0aedd2cc1da0eea",
-      "title": "A brain region known for listening helps us speak",
-      "summary": "A small part of Wernicke's area, the left posterior superior temporal gyrus, is active just before speech production, not just during comprehension. This finding, based on brain activity measurements and electrical stimulation in people, may inform efforts to restore speech using implanted devices.",
-      "finding": "A small part of Wernicke's area, the left posterior superior temporal gyrus, is active just before speech production, not just during comprehension. This finding, based on brain activity measurements and electrical stimulation in people, may inform efforts to restore speech using implanted devices.",
-      "significance": "Clarifying how this auditory area contributes to speech could improve brain-computer interfaces aimed at restoring speech to individuals who cannot talk.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.sciencenews.org/article/brain-region-listening-speak-wernickie",
-      "primarySourceUrl": "https://www.sciencenews.org/article/brain-region-listening-speak-wernickie",
-      "source": {
-        "name": "Science News"
-      },
-      "sourceGroup": "Science News",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-19T14:00:00-05:00",
-      "firstSeenAt": "2026-11-20T11:01:01.132205Z",
-      "checkedAt": "2026-11-20T11:01:01.132205Z",
-      "verifiedAt": "2026-11-20T11:01:01.132205Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "biology",
-        "health"
-      ],
-      "entities": [
-        "Society for Neuroscience",
-        "Science",
-        "Jeffrey Binder",
-        "Medical College of Wisconsin",
-        "Edward Chang"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://www.science.org/doi/10.1126/science.aef8963",
-      "sourceUpdatedAt": "2026-11-19T19:00:00Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-20T06:56:05.192076-05:00",
-        "expiresAt": "2026-11-23T06:56:05.192076-05:00",
-        "inputFacts": {
-          "id": "science-a0aedd2cc1da0eea",
-          "title": "A brain region known for listening helps us speak",
-          "url": "https://www.sciencenews.org/article/brain-region-listening-speak-wernickie",
-          "publishedAt": "2026-11-19T19:00:00Z",
-          "summary": "The left posterior superior temporal gyrus, located within Wernicke's area, becomes active right before a person speaks and is essential for speech production as well as listening.",
-          "finding": "The left posterior superior temporal gyrus, located within Wernicke's area, becomes active right before a person speaks and is essential for speech production as well as listening.",
-          "sourceUpdatedAt": "2026-11-19T19:00:00Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-19T14:00:00-05:00",
-        "datePrecision": "time",
-        "sourceHash": "3b76a0644e736fb1ffeae2d329eb2ce8d4dc5b380a82861370aa6af2ff90180a",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "New research identifies a specific brain region's dual role in speech, offering a novel target for therapeutic interventions.",
-        "storyKey": "wernickes-area-speech-production",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, including the specific brain region, its activity timing, the methods used (brain activity measurements and electrical stimulation in people), and the potential application to speech restoration devices. The finding represents a new understanding of Wernicke's area's role in speech production."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-e67278aa4da5fc45",
+      "inputFacts": {
+        "id": "science-e67278aa4da5fc45",
+        "title": "Toddlers form complex memories but may then lose access to them",
+        "url": "https://www.newscientist.com/article/2600418-toddlers-form-complex-memories-but-may-then-lose-access-to-them",
+        "publishedAt": "2026-11-24T11:00:00Z",
+        "summary": "Toddlers can form and retain complex contextual memories, but many lose the ability to recall them months later, suggesting infantile amnesia may stem from retrieval failure rather than storage failure.",
+        "finding": "Toddlers can form and retain complex contextual memories, but many lose the ability to recall them months later, suggesting infantile amnesia may stem from retrieval failure rather than storage failure.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-24T11:00:00+00:00",
+      "publicationEvidence": "2026-11-24T11:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-9aafd7158138ae9f",
+      "inputFacts": {
+        "id": "science-9aafd7158138ae9f",
+        "title": "The technology that could make government internet blackouts impossible",
+        "url": "https://www.newscientist.com/article/2600040-the-technology-that-could-make-government-internet-blackouts-impossible",
+        "publishedAt": "2026-11-24T08:00:00Z",
+        "summary": "Direct-to-cell satellite communication enables standard unmodified mobile phones to connect directly to satellites in low Earth orbit, potentially bypassing terrestrial internet blackouts.",
+        "finding": "Direct-to-cell satellite communication enables standard unmodified mobile phones to connect directly to satellites in low Earth orbit, potentially bypassing terrestrial internet blackouts.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-24T08:00:00+00:00",
+      "publicationEvidence": "2026-11-24T08:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-5362c14e3ea77a60",
+      "inputFacts": {
+        "id": "science-5362c14e3ea77a60",
+        "title": "APOD: 2026 November 24 – Galaxies Battle in the NGC 7771 Group",
+        "url": "https://science.nasa.gov/image-article/apod-2026-november-24-galaxies-battle-in-the-ngc-7771-group",
+        "publishedAt": "2026-11-24T05:05:00Z",
+        "summary": "The interacting galaxies within the NGC 7771 Group display rings and star swirls from gravitational encounters, indicating they will likely merge into a single large galaxy over billions of years.",
+        "finding": "The interacting galaxies within the NGC 7771 Group display rings and star swirls from gravitational encounters, indicating they will likely merge into a single large galaxy over billions of years.",
+        "sourceUpdatedAt": "2026-11-24T05:05:00Z"
+      },
+      "publishedAt": "2026-11-24T00:05:00-05:00",
+      "publicationEvidence": "2026-11-24T00:05:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-aaffec7cab6e3c5c",
+      "inputFacts": {
+        "id": "science-aaffec7cab6e3c5c",
+        "title": "Math’s holy grail, the Riemann hypothesis, appears solved with AI’s help",
+        "url": "https://www.sciencenews.org/article/riemann-hypothesis-solved-math-ai",
+        "publishedAt": "2026-11-23T21:01:59Z",
+        "summary": "Mathematician Levent Alpöge, collaborating with the AI tool Claude, posted a 250,000-page computer-verified proof of the Riemann hypothesis and the generalized Riemann hypothesis.",
+        "finding": "Mathematician Levent Alpöge, collaborating with the AI tool Claude, posted a 250,000-page computer-verified proof of the Riemann hypothesis and the generalized Riemann hypothesis.",
+        "sourceUpdatedAt": "2026-11-23T21:01:59Z"
+      },
+      "publishedAt": "2026-11-23T16:01:59-05:00",
+      "publicationEvidence": "2026-11-23T16:01:59-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-a80568159c6dbdc0",
+      "inputFacts": {
+        "id": "science-a80568159c6dbdc0",
+        "title": "Submarine finds world’s deepest explosive volcanic activity in Mariana trench",
+        "url": "https://www.newscientist.com/article/2599436-submarine-finds-worlds-deepest-explosive-volcanic-activity-in-mariana-trench",
+        "publishedAt": "2026-11-23T17:00:00Z",
+        "summary": "Scientists using a remotely operated submarine found evidence of explosive volcanic activity around 6,100 metres below sea level in the Mariana trench, the deepest such activity reported to date.",
+        "finding": "Scientists using a remotely operated submarine found evidence of explosive volcanic activity around 6,100 metres below sea level in the Mariana trench, the deepest such activity reported to date.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-23T17:00:00+00:00",
+      "publicationEvidence": "2026-11-23T17:00:00+00:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-d90eb59e9c225bde",
       "inputFacts": {
@@ -273,27 +346,12 @@
         "title": "Motion under the ocean explains the depth of the world’s deepest spot",
         "url": "https://www.sciencenews.org/article/ocean-deepest-spot-explained-challenger",
         "publishedAt": "2026-11-23T05:00:00Z",
-        "summary": "Scientists discovered the deepest known pyroclastic volcanic deposits near Challenger Deep, suggesting an unusually sharp bend in the sinking Pacific plate explains both the trench's depth and nearby volcanism.",
-        "finding": "Scientists discovered the deepest known pyroclastic volcanic deposits near Challenger Deep, suggesting an unusually sharp bend in the sinking Pacific plate explains both the trench's depth and nearby volcanism.",
-        "sourceUpdatedAt": "2026-11-23T05:00:00Z"
+        "summary": "Researchers discovered the deepest known pyroclastic volcanic deposits near Challenger Deep, suggesting the trench's extreme depth may stem from an unusually sharp bend in the subducting Pacific plate.",
+        "finding": "Researchers discovered the deepest known pyroclastic volcanic deposits near Challenger Deep, suggesting the trench's extreme depth may stem from an unusually sharp bend in the subducting Pacific plate.",
+        "sourceUpdatedAt": "2026-11-23T20:02:57Z"
       },
       "publishedAt": "2026-11-23T00:00:00-05:00",
       "publicationEvidence": "2026-11-23T00:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-782cb492ea3529a6",
-      "inputFacts": {
-        "id": "science-782cb492ea3529a6",
-        "title": "“Race realism” isn’t realistic—and it isn’t good science",
-        "url": "https://arstechnica.com/science/2026/11/race-realism-isnt-realistic-and-it-isnt-good-science",
-        "publishedAt": "2026-11-21T12:01:13Z",
-        "summary": "Claims of innate, genetically driven racial differences in intelligence are scientifically unsupported across genetics, evolutionary biology, and psychology, as human genetic variation is continuous and largely within populations.",
-        "finding": "Claims of innate, genetically driven racial differences in intelligence are scientifically unsupported across genetics, evolutionary biology, and psychology, as human genetic variation is continuous and largely within populations.",
-        "sourceUpdatedAt": "2026-11-20T21:26:04Z"
-      },
-      "publishedAt": "2026-11-21T12:01:13+00:00",
-      "publicationEvidence": "2026-11-21T12:01:13+00:00",
       "datePrecision": "time"
     },
     {
@@ -342,141 +400,103 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-a0aedd2cc1da0eea",
+      "id": "science-a67b500374db70dd",
       "inputFacts": {
-        "id": "science-a0aedd2cc1da0eea",
-        "title": "A brain region known for listening helps us speak",
-        "url": "https://www.sciencenews.org/article/brain-region-listening-speak-wernickie",
-        "publishedAt": "2026-11-19T19:00:00Z",
-        "summary": "The left posterior superior temporal gyrus, located within Wernicke's area, becomes active right before a person speaks and is essential for speech production as well as listening.",
-        "finding": "The left posterior superior temporal gyrus, located within Wernicke's area, becomes active right before a person speaks and is essential for speech production as well as listening.",
-        "sourceUpdatedAt": "2026-11-19T19:00:00Z"
+        "id": "science-a67b500374db70dd",
+        "title": "Super El Niño is making the global omega-3 shortage much worse",
+        "url": "https://www.newscientist.com/article/2600470-super-el-nino-is-making-the-global-omega-3-shortage-much-worse",
+        "publishedAt": "2026-11-24T09:00:00Z",
+        "summary": "Genetically modified crops like camelina and canola can synthesize long-chain omega-3 fatty acids, offering potential alternatives to fish oil amid severe global marine supply shortages exacerbated by El Nino events.",
+        "finding": "Genetically modified crops like camelina and canola can synthesize long-chain omega-3 fatty acids, offering potential alternatives to fish oil amid severe global marine supply shortages exacerbated by El Nino events.",
+        "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-19T14:00:00-05:00",
-      "publicationEvidence": "2026-11-19T14:00:00-05:00",
+      "publishedAt": "2026-11-24T09:00:00+00:00",
+      "publicationEvidence": "2026-11-24T09:00:00+00:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-9891ad38d9bfa50f",
+      "id": "science-2c49d7a1cab03153",
       "inputFacts": {
-        "id": "science-9891ad38d9bfa50f",
-        "title": "U.S. demand for menopause hormone therapy has more than doubled recently",
-        "url": "https://www.sciencenews.org/article/menopause-hormone-therapy-demand-up",
-        "publishedAt": "2026-11-19T16:00:00Z",
-        "summary": "Monthly dispensing of menopause hormone therapy for U.S. women aged 40 to 74 grew from 2 million to 4.9 million prescriptions between 2023 and 2026, driven by transdermal and vaginal products.",
-        "finding": "Monthly dispensing of menopause hormone therapy for U.S. women aged 40 to 74 grew from 2 million to 4.9 million prescriptions between 2023 and 2026, driven by transdermal and vaginal products.",
-        "sourceUpdatedAt": "2026-11-19T16:00:00Z"
+        "id": "science-2c49d7a1cab03153",
+        "title": "Eruption Extends Iwo Jima’s Beach",
+        "url": "https://science.nasa.gov/earth/earth-observatory/eruption-extends-iwo-jimas-beach",
+        "publishedAt": "2026-11-24T05:01:00Z",
+        "summary": "A submarine volcanic eruption off the southeast shore of Iwo Jima created approximately 50 hectares of new beach connected to the island, enlarging its land area by about 1.7 percent.",
+        "finding": "A submarine volcanic eruption off the southeast shore of Iwo Jima created approximately 50 hectares of new beach connected to the island, enlarging its land area by about 1.7 percent.",
+        "sourceUpdatedAt": "2026-11-24T05:01:00Z"
       },
-      "publishedAt": "2026-11-19T11:00:00-05:00",
-      "publicationEvidence": "2026-11-19T11:00:00-05:00",
+      "publishedAt": "2026-11-24T00:01:00-05:00",
+      "publicationEvidence": "2026-11-24T00:01:00-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-4ccd1aa0a4d51501",
+      "id": "science-cb77f90b6419809d",
       "inputFacts": {
-        "id": "science-4ccd1aa0a4d51501",
-        "title": "NASA Science Data Powers New Method to Discover Hard-to-Find Pulsars",
-        "url": "https://science.nasa.gov/open-science/fermi-data-pulsar-discovery",
-        "publishedAt": "2026-11-19T15:33:55Z",
-        "summary": "Researchers developed a cryptography-based lattice algorithm that identified the isolated pulsar PSR J1622−7204 in Fermi gamma-ray data about a million times faster than prior techniques.",
-        "finding": "Researchers developed a cryptography-based lattice algorithm that identified the isolated pulsar PSR J1622−7204 in Fermi gamma-ray data about a million times faster than prior techniques.",
-        "sourceUpdatedAt": "2026-11-19T15:42:24Z"
+        "id": "science-cb77f90b6419809d",
+        "title": "Podcast: Tiny robots could revolutionize medicine",
+        "url": "https://www.nsf.gov/news/podcast-tiny-robots-could-revolutionize-medicine",
+        "publishedAt": "2026-11-23T16:00:19Z",
+        "summary": "Researchers are developing micro-robotics intended for biomedical uses, such as drug delivery, breaking down blood clots, and cellular patterning.",
+        "finding": "Researchers are developing micro-robotics intended for biomedical uses, such as drug delivery, breaking down blood clots, and cellular patterning.",
+        "sourceUpdatedAt": "2026-11-23T16:00:19Z"
       },
-      "publishedAt": "2026-11-19T10:33:55-05:00",
-      "publicationEvidence": "2026-11-19T10:33:55-05:00",
+      "publishedAt": "2026-11-23T11:00:19-05:00",
+      "publicationEvidence": "2026-11-23T11:00:19-0500",
       "datePrecision": "time"
     },
     {
-      "id": "science-ac66f584d8674695",
+      "id": "science-015fec0b34ff3654",
       "inputFacts": {
-        "id": "science-ac66f584d8674695",
-        "title": "How do scientists learn from failure? This researcher has clues",
-        "url": "https://www.sciencenews.org/article/scientists-learn-failure-sn-10-yian-yin",
-        "publishedAt": "2026-11-21T12:00:00Z",
-        "summary": "Machine learning analysis of research proposals indicates that scientists who persist with their ideas and integrate feedback after rejections achieve success more rapidly than those who abandon initial proposals.",
-        "finding": "Machine learning analysis of research proposals indicates that scientists who persist with their ideas and integrate feedback after rejections achieve success more rapidly than those who abandon initial proposals.",
-        "sourceUpdatedAt": "2026-11-21T12:00:00Z"
+        "id": "science-015fec0b34ff3654",
+        "title": "Podcast: Helping doctors save lives before it's too late",
+        "url": "https://www.nsf.gov/news/podcast-helping-doctors-save-lives-its-too-late",
+        "publishedAt": "2026-11-23T16:00:03Z",
+        "summary": "Researcher Suchi Saria has developed and implemented a real-time super intelligence system designed to save lives by monitoring patients for signs of sepsis.",
+        "finding": "Researcher Suchi Saria has developed and implemented a real-time super intelligence system designed to save lives by monitoring patients for signs of sepsis.",
+        "sourceUpdatedAt": "2026-11-23T16:00:03Z"
       },
-      "publishedAt": "2026-11-21T07:00:00-05:00",
-      "publicationEvidence": "2026-11-21T07:00:00-05:00",
+      "publishedAt": "2026-11-23T11:00:03-05:00",
+      "publicationEvidence": "2026-11-23T11:00:03-0500",
       "datePrecision": "time"
     },
     {
-      "id": "science-f72ac5ae4ce89df7",
+      "id": "science-b355bef02b4f6c92",
       "inputFacts": {
-        "id": "science-f72ac5ae4ce89df7",
-        "title": "What is the Riemann hypothesis and why is its solution so monumental?",
-        "url": "https://www.newscientist.com/article/2600226-what-is-the-riemann-hypothesis-and-why-is-its-solution-so-monumental",
-        "publishedAt": "2026-11-20T21:24:57Z",
-        "summary": "A researcher has announced an AI-assisted proof that may solve the longstanding Riemann hypothesis.",
-        "finding": "A researcher has announced an AI-assisted proof that may solve the longstanding Riemann hypothesis.",
-        "sourceUpdatedAt": "2026-11-20T22:39:55Z"
+        "id": "science-b355bef02b4f6c92",
+        "title": "The notion of ‘positive masculinity’ is dividing the male studies field",
+        "url": "https://www.sciencenews.org/article/positive-masculinity-male-studies-field",
+        "publishedAt": "2026-11-23T16:00:00Z",
+        "summary": "Researchers are divided on positive masculinity, with some concluding masculine ideals inherently oppose femininity and correlate with sexism, while others focus on healthy behaviors to improve men's outcomes.",
+        "finding": "Researchers are divided on positive masculinity, with some concluding masculine ideals inherently oppose femininity and correlate with sexism, while others focus on healthy behaviors to improve men's outcomes.",
+        "sourceUpdatedAt": "2026-11-23T16:00:00Z"
       },
-      "publishedAt": "2026-11-20T21:24:57+00:00",
-      "publicationEvidence": "2026-11-20T21:24:57+00:00",
+      "publishedAt": "2026-11-23T11:00:00-05:00",
+      "publicationEvidence": "2026-11-23T11:00:00-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-73956cabde281c3c",
+      "id": "science-3c49d0cf93cf9eff",
       "inputFacts": {
-        "id": "science-73956cabde281c3c",
-        "title": "This year’s El Niño is unlike any other on record",
-        "url": "https://www.sciencenews.org/article/super-el-nino-historic-effect-hurricane",
-        "publishedAt": "2026-11-20T21:00:00Z",
-        "summary": "The 2026 El Nino ocean monitoring area reached record sea surface temperatures over 30 degrees Celsius, fueling unprecedented Pacific hurricane activity and extreme global weather anomalies.",
-        "finding": "The 2026 El Nino ocean monitoring area reached record sea surface temperatures over 30 degrees Celsius, fueling unprecedented Pacific hurricane activity and extreme global weather anomalies.",
-        "sourceUpdatedAt": "2026-11-20T21:00:00Z"
+        "id": "science-3c49d0cf93cf9eff",
+        "title": "The Incredible, Elegant DNA Repair System Makes Gene Editing Work",
+        "url": "https://www.quantamagazine.org/the-incredible-elegant-dna-repair-system-makes-gene-editing-work-20261123",
+        "publishedAt": "2026-11-23T15:27:11Z",
+        "summary": "Gene-editing technologies such as CRISPR-Cas and base editing function by relying on cells' native DNA repair pathways to resolve targeted cuts or single-base alterations.",
+        "finding": "Gene-editing technologies such as CRISPR-Cas and base editing function by relying on cells' native DNA repair pathways to resolve targeted cuts or single-base alterations.",
+        "sourceUpdatedAt": "2026-11-23T15:27:50Z"
       },
-      "publishedAt": "2026-11-20T16:00:00-05:00",
-      "publicationEvidence": "2026-11-20T16:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-85429396aa089ddf",
-      "inputFacts": {
-        "id": "science-85429396aa089ddf",
-        "title": "Watching as a giant star swallowed its neighbor and exploded",
-        "url": "https://arstechnica.com/science/2026/11/astronomers-watched-a-star-spiral-to-its-death-inside-a-giant-companion",
-        "publishedAt": "2026-11-20T20:41:17Z",
-        "summary": "Astronomers observed a giant star in the Andromeda Galaxy undergo common envelope evolution, swallowing its companion over years before culminating in a luminous red nova eruption in 2025.",
-        "finding": "Astronomers observed a giant star in the Andromeda Galaxy undergo common envelope evolution, swallowing its companion over years before culminating in a luminous red nova eruption in 2025.",
-        "sourceUpdatedAt": "2026-11-20T21:28:33Z"
-      },
-      "publishedAt": "2026-11-20T20:41:17+00:00",
-      "publicationEvidence": "2026-11-20T20:41:17+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-b6e6571fc353d144",
-      "inputFacts": {
-        "id": "science-b6e6571fc353d144",
-        "title": "NASA’s new Moon plan is taking shape, but some big questions remain",
-        "url": "https://arstechnica.com/space/2026/11/nasas-new-moon-plan-is-taking-shape-but-some-big-questions-remain",
-        "publishedAt": "2026-11-20T20:26:33Z",
-        "summary": "NASA has revised its Artemis lunar architecture, altering Artemis III into an orbital checkout mission and adjusting orbital rendezvous and surface stay requirements for SpaceX and Blue Origin landers.",
-        "finding": "NASA has revised its Artemis lunar architecture, altering Artemis III into an orbital checkout mission and adjusting orbital rendezvous and surface stay requirements for SpaceX and Blue Origin landers.",
-        "sourceUpdatedAt": "2026-11-20T21:18:18Z"
-      },
-      "publishedAt": "2026-11-20T20:26:33+00:00",
-      "publicationEvidence": "2026-11-20T20:26:33+00:00",
+      "publishedAt": "2026-11-23T15:27:11+00:00",
+      "publicationEvidence": "2026-11-23T15:27:11+00:00",
       "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-22",
-      "selectedIds": [
-        "science-321844474abd26db",
-        "science-da44b66835dcdb41",
-        "science-a0aedd2cc1da0eea"
-      ]
-    },
-    {
       "date": "2026-11-23",
       "selectedIds": [
         "science-321844474abd26db",
         "science-da44b66835dcdb41",
-        "science-a0aedd2cc1da0eea"
+        "science-aaffec7cab6e3c5c"
       ]
     },
     {
@@ -485,6 +505,14 @@
         "science-321844474abd26db",
         "science-da44b66835dcdb41",
         "science-24598c1cc994ea15"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "selectedIds": [
+        "science-aaffec7cab6e3c5c",
+        "science-321844474abd26db",
+        "science-da44b66835dcdb41"
       ]
     }
   ]
