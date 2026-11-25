@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-25T08:26:17Z",
+  "generatedAt": "2026-11-25T12:29:20Z",
   "location": {
     "name": "Canton",
     "region": "Michigan",
@@ -9,25 +9,25 @@
     "timeZone": "America/Detroit"
   },
   "current": {
-    "observedAt": "2026-11-25T03:15:00-05:00",
-    "temperatureF": 31.4,
-    "feelsLikeF": 22.5,
+    "observedAt": "2026-11-25T07:15:00-05:00",
+    "temperatureF": 32.7,
+    "feelsLikeF": 23.9,
     "conditionCode": 3,
     "conditionText": "Overcast",
     "icon": "☁",
     "precipitationIn": 0.0,
-    "humidityPercent": 64,
+    "humidityPercent": 67,
     "wind": {
-      "speedMph": 8.6,
-      "directionDegrees": 47,
-      "direction": "NE",
-      "gustMph": 17.9
+      "speedMph": 9.1,
+      "directionDegrees": 61,
+      "direction": "ENE",
+      "gustMph": 21.0
     }
   },
   "daily": [
     {
       "date": "2026-11-25",
-      "highF": 42.7,
+      "highF": 42.8,
       "lowF": 25.9,
       "conditionCode": 3,
       "conditionText": "Overcast",
@@ -51,70 +51,70 @@
     },
     {
       "date": "2026-11-27",
-      "highF": 40.7,
-      "lowF": 34.8,
+      "highF": 40.0,
+      "lowF": 35.5,
       "conditionCode": 73,
       "conditionText": "Snow",
       "icon": "🌨",
       "precipitationChancePercent": 100,
       "sunrise": "2026-11-27T07:39:00-05:00",
       "sunset": "2026-11-27T17:03:00-05:00",
-      "narrative": "Snow with a high near 41°F and a low around 35°F; 100% chance of precipitation."
+      "narrative": "Snow with a high near 40°F and a low around 36°F; 100% chance of precipitation."
     },
     {
       "date": "2026-11-28",
-      "highF": 41.4,
+      "highF": 41.1,
       "lowF": 32.9,
-      "conditionCode": 51,
-      "conditionText": "Light drizzle",
-      "icon": "🌦",
-      "precipitationChancePercent": 10,
+      "conditionCode": 3,
+      "conditionText": "Overcast",
+      "icon": "☁",
+      "precipitationChancePercent": 12,
       "sunrise": "2026-11-28T07:40:00-05:00",
       "sunset": "2026-11-28T17:03:00-05:00",
-      "narrative": "Light drizzle with a high near 41°F and a low around 33°F; 10% chance of precipitation."
+      "narrative": "Overcast with a high near 41°F and a low around 33°F; 12% chance of precipitation."
     },
     {
       "date": "2026-11-29",
-      "highF": 47.2,
-      "lowF": 38.8,
-      "conditionCode": 51,
-      "conditionText": "Light drizzle",
+      "highF": 45.1,
+      "lowF": 37.1,
+      "conditionCode": 61,
+      "conditionText": "Light rain",
       "icon": "🌦",
-      "precipitationChancePercent": 60,
+      "precipitationChancePercent": 71,
       "sunrise": "2026-11-29T07:41:00-05:00",
       "sunset": "2026-11-29T17:03:00-05:00",
-      "narrative": "Light drizzle with a high near 47°F and a low around 39°F; 60% chance of precipitation."
+      "narrative": "Light rain with a high near 45°F and a low around 37°F; 71% chance of precipitation."
     },
     {
       "date": "2026-11-30",
-      "highF": 42.6,
-      "lowF": 35.0,
-      "conditionCode": 51,
-      "conditionText": "Light drizzle",
+      "highF": 43.0,
+      "lowF": 34.6,
+      "conditionCode": 53,
+      "conditionText": "Drizzle",
       "icon": "🌦",
-      "precipitationChancePercent": 60,
+      "precipitationChancePercent": 71,
       "sunrise": "2026-11-30T07:42:00-05:00",
       "sunset": "2026-11-30T17:02:00-05:00",
-      "narrative": "Light drizzle with a high near 43°F and a low around 35°F; 60% chance of precipitation."
+      "narrative": "Drizzle with a high near 43°F and a low around 35°F; 71% chance of precipitation."
     },
     {
       "date": "2026-12-01",
-      "highF": 43.0,
-      "lowF": 33.7,
-      "conditionCode": 55,
-      "conditionText": "Heavy drizzle",
-      "icon": "🌧",
-      "precipitationChancePercent": 10,
+      "highF": 42.7,
+      "lowF": 32.8,
+      "conditionCode": 3,
+      "conditionText": "Overcast",
+      "icon": "☁",
+      "precipitationChancePercent": 11,
       "sunrise": "2026-12-01T07:43:00-05:00",
       "sunset": "2026-12-01T17:02:00-05:00",
-      "narrative": "Heavy drizzle with a high near 43°F and a low around 34°F; 10% chance of precipitation."
+      "narrative": "Overcast with a high near 43°F and a low around 33°F; 11% chance of precipitation."
     }
   ],
   "sources": [
     {
       "name": "Open-Meteo",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=42.3086&longitude=-83.4824&current=temperature_2m,apparent_temperature,precipitation,weather_code,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDetroit&forecast_days=7",
-      "retrievedAt": "2026-11-25T08:26:17Z"
+      "retrievedAt": "2026-11-25T12:29:20Z"
     }
   ]
 }
