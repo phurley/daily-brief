@@ -1,99 +1,200 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-11-24T06:08:26.422944-05:00",
+  "generatedAt": "2026-11-25T03:51:34.775344-05:00",
   "stories": [
     {
-      "id": "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
-      "title": "Nuclear Watch New Mexico warns Ypsi Township computing center will accelerate nuclear arms race",
-      "summary": "A proposed University of Michigan research center in Ypsilanti Township, intended for Los Alamos National Laboratory, is criticized by Nuclear Watch New Mexico for potentially accelerating the nuclear arms race. The group claims the facility, primarily funded by Michigan taxpayers, would largely support new nuclear weapon designs, despite U-M's statements about unclassified research.",
-      "url": "https://www.wemu.org/wemu-news/2026-11-23/nuclear-watch-new-mexico-warns-ypsi-township-computing-center-will-accelerate-nuclear-arms-race",
-      "publishedAt": "2026-11-23T11:16:44.773000-05:00",
-      "addedAt": "2026-11-24T06:06:48-05:00",
+      "id": "work-stops-on-google-data-center-project-news-2026-11-24",
+      "title": "Work stops on Google data center project after Wayne County says it lacks permit",
+      "summary": "Wayne County has issued a stop-work order for Google's \"Project Cannoli\" data center in Van Buren Township, citing a lack of proper county construction permits and potential impacts on county drains. The developer, Panattoni, is accused of working within easement areas and obstructing drains, creating flood risks. The project is expected to require significant power, equivalent to a city's electricity needs.",
+      "url": "https://www.michiganpublic.org/politics-government/2026-11-24/work-stops-on-google-data-center-project-after-wayne-county-says-it-lacks-permit",
+      "publishedAt": "2026-11-24T20:11:08.210000-05:00",
+      "addedAt": "2026-11-25T03:31:49-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Jay Coghlan",
-        "Caroline MacGregor",
-        "Nuclear Watch New Mexico",
-        "Los Alamos National Laboratory",
-        "WEMU",
-        "University of Michigan"
+        "Google",
+        "Wayne County",
+        "Van Buren Township",
+        "Wayne County Department of Public Services",
+        "Oladayo Akinyemi",
+        "MLive",
+        "Matt Allen",
+        "DTE",
+        "Will Conkling",
+        "Dana Nessel",
+        "Panattoni Development Company, Inc."
       ],
       "locations": [
-        "Ypsilanti Township, MI",
-        "Los Alamos, NM"
+        "Wayne County",
+        "Van Buren Township",
+        "Detroit Metro Airport"
       ],
-      "localityIndex": 2,
+      "localityIndex": 1,
       "topics": [
-        "nuclear weapons",
-        "national security",
-        "computing",
-        "government spending",
-        "environmental safety"
+        "data center",
+        "construction",
+        "permits",
+        "infrastructure",
+        "politics & government"
       ],
       "source": {
-        "name": "Caroline MacGregor",
-        "publication": "WEMU 89.1 FM"
+        "name": "Dustin Dwyer",
+        "publication": "Michigan Public"
       },
       "scoring": {
         "signals": {
-          "funny": 0.02,
-          "distinctive": 0.38,
-          "eclectic": 0.18,
-          "technical_science": 0.89,
-          "artsy": 0.03,
-          "progressive": 0.33,
+          "funny": 0.05,
+          "distinctive": 0.33,
+          "eclectic": 0.14,
+          "technical_science": 0.77,
+          "artsy": 0.02,
+          "progressive": 0.11,
           "outdoors": 0.02,
           "theatre": 0.01,
-          "live_music": 0.02,
-          "live_comedy": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.1,
+          "recurring": 0.04,
           "craft_fair_shopping": 0.01,
           "religious": 0.01,
           "large_venue": 0.04,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
+          "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
           "sales_related": 0.03,
-          "children_activity": 0.02,
+          "children_activity": 0.01,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/7df938e/2147483647/strip/true/crop/4096x2304+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Ff6%2F49%2F4a149c1f4f7aa5f2e5c36c8bdf95%2Fimg-20261119-183914481.jpg",
-        "alt": "Nuclear Watch New Mexico warns Ypsi Township computing center will accelerate nuclear arms race"
+        "url": "https://npr.brightspotcdn.com/dims4/default/fbc9708/2147483647/strip/true/crop/1669x876+0+36/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc5%2F0c%2Ff897069f44a3aeaa0006b355c855%2Fcanolli-site-plan.png",
+        "alt": "Aerial rendering of Google's proposed hyperscale data center, Project Cannoli."
       },
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-24T06:08:26.422944-05:00",
-        "expiresAt": "2026-11-27T06:08:26.422944-05:00",
+        "reviewedAt": "2026-11-25T03:51:34.775344-05:00",
+        "expiresAt": "2026-11-28T03:51:34.775344-05:00",
         "inputFacts": {
-          "id": "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
-          "title": "Nuclear Watch New Mexico warns Ypsi Township computing center will accelerate nuclear arms race",
-          "url": "https://www.wemu.org/wemu-news/2026-11-23/nuclear-watch-new-mexico-warns-ypsi-township-computing-center-will-accelerate-nuclear-arms-race",
-          "publishedAt": "2026-11-23T00:00:00-05:00",
-          "summary": "Jay Coghlan, executive director of Nuclear Watch New Mexico, warns that a new Los Alamos National Laboratory computing center planned for Ypsilanti Township will facilitate the design of new nuclear weapons. Coghlan argues that the facility's stated civilian research goals are misleading and that the project contributes to a broader, taxpayer-funded nuclear arms race.",
+          "id": "work-stops-on-google-data-center-project-news-2026-11-24",
+          "title": "Work stops on Google data center project after Wayne County says it lacks permit",
+          "url": "https://www.michiganpublic.org/politics-government/2026-11-24/work-stops-on-google-data-center-project-after-wayne-county-says-it-lacks-permit",
+          "publishedAt": "2026-11-24T15:11:00-05:00",
+          "summary": "Wayne County has issued a stop-work order for the 'Project Cannoli' data center development in Van Buren Township, citing the developer's failure to obtain necessary construction permits. The county stated that unauthorized construction activity has impacted local drains and created flooding risks, while the developer, Panattoni, has pledged to work with officials to resolve the compliance issues.",
           "finding": null,
           "sourceUpdatedAt": null
         },
         "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-23T11:16:44.773",
+        "publicationEvidence": "2026-11-24T20:11:08.21",
         "datePrecision": "time",
-        "sourceHash": "f99df4b9fe0d0997fa3836db0cd2b1900224d525b4dcc2168dfc2ed9385c70da",
+        "sourceHash": "3bde812ed92e7b3e126a8e7c6ed4d6ad3e46dc6500d5f5687d001cb752ca2692",
+        "relevance": 4,
+        "novelty": 4,
+        "reason": "The article details a significant local civic decision impacting a major development in a nearby community, with potential environmental consequences (flooding) and implications for public services (drainage, electricity grid).",
+        "storyKey": "google-data-center-permit-halt",
+        "localConnection": "Van Buren Township is a nearby community to Canton and Plymouth. The project's scale and potential impact on the regional power grid and environment are relevant.",
+        "grounded": true,
+        "groundingReason": "The article fully supports all claims in the summary, including the stop-work order, reasons for it (lack of permits, impact on drains, flood risks), the developer's name, and the project's power requirements. This is a significant local development for Van Buren Township and Wayne County."
+      }
+    },
+    {
+      "id": "round-every-corner-ypsi-clown-community-news-2026-11-24",
+      "title": "'Round Every Corner: Ypsi clown community reflects national clowning trend",
+      "summary": "Ypsilanti's \"Ypsi Clown Darlings\" host monthly clown socials at Dzanc House, drawing performers from across the region. Co-founders Kieren Berres and Levi Robinson, inspired by political clowning, see it as a form of protest and a way to cope with current societal absurdities, while others view it through a lens of nostalgia or as a trade.",
+      "url": "https://www.wemu.org/show/round-every-corner/2026-11-24/round-every-corner-ypsi-clown-community-reflects-national-clowning-trend",
+      "publishedAt": "2026-11-24T07:50:00+00:00",
+      "addedAt": "2026-11-25T03:31:49-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Kieren Berres",
+        "Levi Robinson",
+        "Ypsi Clown Darlings",
+        "Rose Carver",
+        "Wren Wilson",
+        "Kaylin Janiczek",
+        "Trevor Elliott",
+        "Neda Ulaby",
+        "Kat Layton"
+      ],
+      "locations": [
+        "Ypsilanti, MI",
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "arts",
+        "culture",
+        "community",
+        "performance",
+        "social media"
+      ],
+      "source": {
+        "name": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.89,
+          "distinctive": 0.44,
+          "eclectic": 0.85,
+          "technical_science": 0.06,
+          "artsy": 0.97,
+          "progressive": 0.78,
+          "outdoors": 0.05,
+          "theatre": 0.11,
+          "live_music": 0.03,
+          "live_comedy": 0.23,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.38,
+          "craft_fair_shopping": 0.03,
+          "religious": 0.02,
+          "large_venue": 0.07,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.03,
+          "sales_related": 0.05,
+          "children_activity": 0.08,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.03
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/bbf7519/2147483647/strip/true/crop/4624x2428+0+522/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fc0%2F1f%2Fa31ccd0f4c70808b90743b817832%2F1000014974.jpg",
+        "alt": "A group of clowns in colorful makeup and costumes."
+      },
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-25T03:51:34.775344-05:00",
+        "expiresAt": "2026-11-28T03:51:34.775344-05:00",
+        "inputFacts": {
+          "id": "round-every-corner-ypsi-clown-community-news-2026-11-24",
+          "title": "'Round Every Corner: Ypsi clown community reflects national clowning trend",
+          "url": "https://www.wemu.org/show/round-every-corner/2026-11-24/round-every-corner-ypsi-clown-community-reflects-national-clowning-trend",
+          "publishedAt": "2026-11-24T00:00:00Z",
+          "summary": "The Ypsi Clown Darlings community is part of a broader cultural resurgence in clowning, driven by social media visibility and a desire for catharsis in an absurd political climate. Practitioners explore themes ranging from political satire and performance art to nostalgia and professional trade, finding community in the shared embrace of failure and play.",
+          "finding": null,
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-24T07:50:00Z",
+        "datePrecision": "time",
+        "sourceHash": "120267b09e13770b8b29b4d875fbac3f5dfb2af0595d0dac48645006ccba34ed",
         "relevance": 4,
         "novelty": 3,
-        "reason": "The article discusses a significant civic decision with potential local consequences in Ypsilanti Township, which is nearby Canton/Plymouth. It addresses public services (university funding, energy use) and civic debate regarding the nature of the research.",
-        "storyKey": "umich-los-alamos-ypsi-center",
-        "localConnection": "Ypsilanti Township is a nearby community to Canton/Plymouth.",
+        "reason": "The article details a local arts community in Ypsilanti, which is a nearby community. It describes a specific, ongoing cultural activity with local participants and venues, aligning with the 'eclectic live arts' focus.",
+        "storyKey": "ypsi-clown-darlings-community",
+        "localConnection": "E0",
         "grounded": true,
-        "groundingReason": "The article fully supports all claims made in the summary, including the criticism from Nuclear Watch New Mexico, the group's claims about the facility's purpose, and the funding details. The article discusses a proposed research center in Ypsilanti Township, a local development with potential significant impact on the community and Michigan, making it substantive news."
+        "groundingReason": "The article fully supports all claims in the summary, detailing the Ypsi Clown Darlings, their monthly socials at Dzanc House, the co-founders Kieren Berres and Levi Robinson, and the various motivations for clowning, including political protest, coping with societal absurdities, nostalgia, and viewing it as a trade. The article describes a local community development in Ypsilanti."
       }
     },
     {
@@ -468,18 +569,33 @@
   ],
   "corrections": [
     {
-      "id": "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
+      "id": "work-stops-on-google-data-center-project-news-2026-11-24",
       "inputFacts": {
-        "id": "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
-        "title": "Nuclear Watch New Mexico warns Ypsi Township computing center will accelerate nuclear arms race",
-        "url": "https://www.wemu.org/wemu-news/2026-11-23/nuclear-watch-new-mexico-warns-ypsi-township-computing-center-will-accelerate-nuclear-arms-race",
-        "publishedAt": "2026-11-23T00:00:00-05:00",
-        "summary": "Jay Coghlan, executive director of Nuclear Watch New Mexico, warns that a new Los Alamos National Laboratory computing center planned for Ypsilanti Township will facilitate the design of new nuclear weapons. Coghlan argues that the facility's stated civilian research goals are misleading and that the project contributes to a broader, taxpayer-funded nuclear arms race.",
+        "id": "work-stops-on-google-data-center-project-news-2026-11-24",
+        "title": "Work stops on Google data center project after Wayne County says it lacks permit",
+        "url": "https://www.michiganpublic.org/politics-government/2026-11-24/work-stops-on-google-data-center-project-after-wayne-county-says-it-lacks-permit",
+        "publishedAt": "2026-11-24T15:11:00-05:00",
+        "summary": "Wayne County has issued a stop-work order for the 'Project Cannoli' data center development in Van Buren Township, citing the developer's failure to obtain necessary construction permits. The county stated that unauthorized construction activity has impacted local drains and created flooding risks, while the developer, Panattoni, has pledged to work with officials to resolve the compliance issues.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-23T11:16:44.773000-05:00",
-      "publicationEvidence": "2026-11-23T11:16:44.773",
+      "publishedAt": "2026-11-24T20:11:08.210000-05:00",
+      "publicationEvidence": "2026-11-24T20:11:08.21",
+      "datePrecision": "time"
+    },
+    {
+      "id": "round-every-corner-ypsi-clown-community-news-2026-11-24",
+      "inputFacts": {
+        "id": "round-every-corner-ypsi-clown-community-news-2026-11-24",
+        "title": "'Round Every Corner: Ypsi clown community reflects national clowning trend",
+        "url": "https://www.wemu.org/show/round-every-corner/2026-11-24/round-every-corner-ypsi-clown-community-reflects-national-clowning-trend",
+        "publishedAt": "2026-11-24T00:00:00Z",
+        "summary": "The Ypsi Clown Darlings community is part of a broader cultural resurgence in clowning, driven by social media visibility and a desire for catharsis in an absurd political climate. Practitioners explore themes ranging from political satire and performance art to nostalgia and professional trade, finding community in the shared embrace of failure and play.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-24T07:50:00+00:00",
+      "publicationEvidence": "2026-11-24T07:50:00Z",
       "datePrecision": "time"
     },
     {
@@ -543,33 +659,63 @@
       "datePrecision": "time"
     },
     {
-      "id": "a-horse-farm-relocates-news-2026-11-23",
+      "id": "lleg-a-michigan-en-busca-de-seguridad-tr-news-2026-11-24",
       "inputFacts": {
-        "id": "a-horse-farm-relocates-news-2026-11-23",
-        "title": "A Horse Farm Relocates",
-        "url": "https://annarborobserver.com/sage-saddle/?utm_source=rss&utm_medium=rss&utm_campaign=sage-saddle",
-        "publishedAt": "2026-11-23T00:00:00-05:00",
-        "summary": "Sage & Saddle has relocated its horse farm from Northville to 2352 Warren Rd. in Ann Arbor to better serve its Washtenaw County visitors. The facility offers riding lessons, trail rides, and opportunities to interact with their nine horses and two miniature donkeys.",
+        "id": "lleg-a-michigan-en-busca-de-seguridad-tr-news-2026-11-24",
+        "title": "Llegó a Michigan en busca de seguridad. Tras ser deportada, fue asesinada en Venezuela.",
+        "url": "https://www.michiganpublic.org/arts-life/2026-11-24/mujer-trans-venezolana-deportada-eeuu-asesinada",
+        "publishedAt": "2026-11-24T16:23:00-05:00",
+        "summary": "A transgender Venezuelan woman known as Q, who sought refuge in Michigan after facing violence, was deported back to Venezuela. Following her deportation, she was murdered in her home country.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-23T06:46:32+00:00",
-      "publicationEvidence": "2026-11-23T06:46:32+00:00",
+      "publishedAt": "2026-11-24T21:23:43.891000-05:00",
+      "publicationEvidence": "2026-11-24T21:23:43.891",
       "datePrecision": "time"
     },
     {
-      "id": "beer-spirits-pizza-and-relax-nachos-news-2026-11-23",
+      "id": "canvassers-certify-washtenaw-county-elec-news-2026-11-24",
       "inputFacts": {
-        "id": "beer-spirits-pizza-and-relax-nachos-news-2026-11-23",
-        "title": "Beer, Spirits, Pizza, and— Relax —Nachos",
-        "url": "https://annarborobserver.com/beer-spirits-pizza-and-relax-nachos/",
-        "publishedAt": "2026-11-23T00:00:00-05:00",
-        "summary": "Wolverine State has reopened under new management as Slow Coast Brewing & Distilling. The establishment offers beer, spirits, pizza, and nachos.",
+        "id": "canvassers-certify-washtenaw-county-elec-news-2026-11-24",
+        "title": "Canvassers certify Washtenaw County election results",
+        "url": "https://www.wemu.org/wemu-news/2026-11-24/canvassers-certify-washtenaw-county-election-results",
+        "publishedAt": "2026-11-24T00:00:00-05:00",
+        "summary": "The Washtenaw County Board of Canvassers has officially completed its review of the recent election. WEMU's Kevin Meerschaert provides coverage of the certification process.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-23T06:29:16+00:00",
-      "publicationEvidence": "2026-11-23T06:29:16+00:00",
+      "publishedAt": "2026-11-24T21:06:00-05:00",
+      "publicationEvidence": "2026-11-24T21:06:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "twin-cities-area-singer-leslie-vincent-i-news-2026-11-24",
+      "inputFacts": {
+        "id": "twin-cities-area-singer-leslie-vincent-i-news-2026-11-24",
+        "title": "Twin Cities area singer Leslie Vincent is a hit in Chelsea, MI and beyond!",
+        "url": "https://www.wemu.org/music/2026-11-24/twin-cities-area-singer-leslie-vincent-is-a-hit-in-chelsea-mi-and-beyond",
+        "publishedAt": "2026-11-24T00:00:00-05:00",
+        "summary": "Singer Leslie Vincent, based in the Twin Cities, is returning to Michigan this December. She discussed her music and career with John Bommarito on The Song Break.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-24T18:54:00-05:00",
+      "publicationEvidence": "2026-11-24T18:54:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "ypsi-dda-offers-incentives-to-shop-local-news-2026-11-24",
+      "inputFacts": {
+        "id": "ypsi-dda-offers-incentives-to-shop-local-news-2026-11-24",
+        "title": "Ypsi DDA offers incentives to shop local on Black Friday and Small Business Saturday",
+        "url": "https://www.wemu.org/wemu-news/2026-11-24/ypsi-dda-offers-incentives-to-shop-local-on-black-friday-and-small-business-saturday",
+        "publishedAt": "2026-11-24T00:00:00-05:00",
+        "summary": "The Ypsilanti Downtown Development Authority is providing incentives to encourage residents to shop at local businesses during the upcoming Black Friday and Small Business Saturday events.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-24T12:24:52.153000-05:00",
+      "publicationEvidence": "2026-11-24T12:24:52.153",
       "datePrecision": "time"
     },
     {
@@ -578,87 +724,17 @@
         "id": "construction-on-eastern-washtenaw-commun-news-2026-11-23",
         "title": "Construction on Eastern Washtenaw Community Rec Center to start soon",
         "url": "https://www.wemu.org/wemu-news/2026-11-23/construction-on-eastern-washtenaw-community-rec-center-to-start-soon",
-        "publishedAt": "2026-11-23T00:00:00-05:00",
-        "summary": "Plans for the new Eastern Washtenaw Community Recreation Center are progressing toward the start of construction. WEMU's Kevin Meerschaert reports on the development.",
+        "publishedAt": "2026-11-23T17:06:00-05:00",
+        "summary": "Plans for the new Eastern Washtenaw Community Recreation Center are progressing, with site work and grading expected to begin in early December 2026. The facility, located in Ypsilanti Township, will feature a gymnasium, pool, and fitness areas, with a scheduled opening in 2028.",
         "finding": null,
         "sourceUpdatedAt": null
       },
       "publishedAt": "2026-11-23T22:06:12.013000-05:00",
       "publicationEvidence": "2026-11-23T22:06:12.013",
       "datePrecision": "time"
-    },
-    {
-      "id": "history-lives-here-news-2026-11-23",
-      "inputFacts": {
-        "id": "history-lives-here-news-2026-11-23",
-        "title": "History Lives Here",
-        "url": "https://annarborobserver.com/history-lives-here/",
-        "publishedAt": "2026-11-23T00:00:00-05:00",
-        "summary": "This feature explores the stewardship of historic properties in the area, including a city house, a farmhouse, and a mansion. The owners focus on preserving the character of these significant homes.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-23T06:13:40+00:00",
-      "publicationEvidence": "2026-11-23T06:13:40+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "hot-shots-takes-a-big-swing-news-2026-11-23",
-      "inputFacts": {
-        "id": "hot-shots-takes-a-big-swing-news-2026-11-23",
-        "title": "Hot Shots Takes A Big Swing",
-        "url": "https://annarborobserver.com/hot-shots-batting-cages/?utm_source=rss&utm_medium=rss&utm_campaign=hot-shots-batting-cages",
-        "publishedAt": "2026-11-23T00:00:00-05:00",
-        "summary": "Hot Shots Batting Cages has opened in Ann Arbor, providing a new local facility for baseball enthusiasts. The business fills a void left by the closure of the former batting cages at Putt-Putt Golf on Washtenaw Ave.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-23T06:47:12+00:00",
-      "publicationEvidence": "2026-11-23T06:47:12+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "luxury-and-inclusivity-at-the-legacy-news-2026-11-23",
-      "inputFacts": {
-        "id": "luxury-and-inclusivity-at-the-legacy-news-2026-11-23",
-        "title": "Luxury, and Inclusivity, at the Legacy",
-        "url": "https://annarborobserver.com/luxury-and-inclusivity-at-the-legacy/",
-        "publishedAt": "2026-11-23T00:00:00-05:00",
-        "summary": "The Legacy student high-rise has partnered with Best Buddies Living to provide independent housing options for neurodivergent adults. The initiative aims to combine luxury living with inclusive community support.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-23T06:02:12+00:00",
-      "publicationEvidence": "2026-11-23T06:02:12+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "washtenaw-united-groundcover-news-keeps-news-2026-11-23",
-      "inputFacts": {
-        "id": "washtenaw-united-groundcover-news-keeps-news-2026-11-23",
-        "title": "Washtenaw United: Groundcover News keeps Washtenaw County residents informed and uplifted",
-        "url": "https://www.wemu.org/show/washtenaw-united/2026-11-23/washtenaw-united-groundcover-news-keeps-washtenaw-county-residents-informed-and-uplifted",
-        "publishedAt": "2026-11-23T00:00:00-05:00",
-        "summary": "Decky Alexander interviews Groundcover News leadership about their mission to provide affordable news and employment opportunities for marginalized residents in Washtenaw County.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-23T07:47:00+00:00",
-      "publicationEvidence": "2026-11-23T07:47:00Z",
-      "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-23",
-      "selectedIds": [
-        "new-net-zero-community-will-become-michi-news-2026-11-22",
-        "a-look-back-gretchen-whitmer-8-years-as-news-2026-11-23",
-        "school-of-education-s-new-direct-admit-p-news-2026-11-23",
-        "aaps-officials-say-new-teacher-contract-news-2026-11-22",
-        "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23"
-      ]
-    },
     {
       "date": "2026-11-24",
       "selectedIds": [
@@ -666,17 +742,27 @@
         "a-look-back-gretchen-whitmer-8-years-as-news-2026-11-23",
         "school-of-education-s-new-direct-admit-p-news-2026-11-23",
         "aaps-officials-say-new-teacher-contract-news-2026-11-22",
-        "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23"
+        "work-stops-on-google-data-center-project-news-2026-11-24"
       ]
     },
     {
       "date": "2026-11-25",
       "selectedIds": [
         "new-net-zero-community-will-become-michi-news-2026-11-22",
-        "nuclear-watch-new-mexico-warns-ypsi-town-news-2026-11-23",
         "a-look-back-gretchen-whitmer-8-years-as-news-2026-11-23",
         "school-of-education-s-new-direct-admit-p-news-2026-11-23",
-        "aaps-officials-say-new-teacher-contract-news-2026-11-22"
+        "aaps-officials-say-new-teacher-contract-news-2026-11-22",
+        "work-stops-on-google-data-center-project-news-2026-11-24"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "selectedIds": [
+        "work-stops-on-google-data-center-project-news-2026-11-24",
+        "new-net-zero-community-will-become-michi-news-2026-11-22",
+        "round-every-corner-ypsi-clown-community-news-2026-11-24",
+        "a-look-back-gretchen-whitmer-8-years-as-news-2026-11-23",
+        "school-of-education-s-new-direct-admit-p-news-2026-11-23"
       ]
     }
   ]
