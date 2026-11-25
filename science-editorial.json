@@ -1,8 +1,121 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-24T06:08:07.958172-05:00",
+  "generatedAt": "2026-11-25T06:35:02.077829-05:00",
   "stories": [
+    {
+      "id": "science-c70221070175b6b8",
+      "title": "Two AI companies reveal ‘Earth-shattering’ solutions to major maths problem",
+      "summary": "Two AI companies, Anthropic and OpenAI, independently released proofs for the VP versus VNP problem, a significant mathematical challenge related to P versus NP. Anthropic's Claude model reportedly generated its proof and formalization, which has not yet been human-verified. This development is considered a major step in understanding computational problem difficulty.",
+      "finding": "Two AI companies, Anthropic and OpenAI, independently released proofs for the VP versus VNP problem, a significant mathematical challenge related to P versus NP. Anthropic's Claude model reportedly generated its proof and formalization, which has not yet been human-verified. This development is considered a major step in understanding computational problem difficulty.",
+      "significance": "The results show that certain problem classes are inherently difficult to solve and provide progress toward tackling the major unsolved P versus NP computational puzzle.",
+      "caveat": "Anthropic noted that no human mathematician has verified the proof, and experts indicate further time is needed to examine the findings and determine whether they can generalise toward P versus NP.",
+      "url": "https://www.newscientist.com/article/2600542-two-ai-companies-reveal-earth-shattering-solutions-to-major-maths-problem",
+      "primarySourceUrl": "https://www.newscientist.com/article/2600542-two-ai-companies-reveal-earth-shattering-solutions-to-major-maths-problem",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-24T16:13:45+00:00",
+      "firstSeenAt": "2026-11-25T11:00:07.165954Z",
+      "checkedAt": "2026-11-25T11:00:07.165954Z",
+      "verifiedAt": "2026-11-25T11:00:07.165954Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "technology"
+      ],
+      "entities": [
+        "OpenAI",
+        "Anthropic",
+        "University of Cambridge",
+        "University of Oxford",
+        "Imperial College London"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://github.com/openai/math/blob/main/preprints/VP-and-VNP-are-different-November-23-2026/paper.pdf",
+      "sourceUpdatedAt": "2026-11-24T16:31:27Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-25T06:35:02.077829-05:00",
+        "expiresAt": "2026-11-28T06:35:02.077829-05:00",
+        "inputFacts": {
+          "id": "science-c70221070175b6b8",
+          "title": "Two AI companies reveal ‘Earth-shattering’ solutions to major maths problem",
+          "url": "https://www.newscientist.com/article/2600542-two-ai-companies-reveal-earth-shattering-solutions-to-major-maths-problem",
+          "publishedAt": "2026-11-24T16:13:45Z",
+          "summary": "AI systems developed by Anthropic and OpenAI independently generated formalised proofs demonstrating that VNP is not contained within VP, a complexity problem related to P versus NP.",
+          "finding": "AI systems developed by Anthropic and OpenAI independently generated formalised proofs demonstrating that VNP is not contained within VP, a complexity problem related to P versus NP.",
+          "sourceUpdatedAt": "2026-11-24T16:31:27Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-24T16:13:45+00:00",
+        "datePrecision": "time",
+        "sourceHash": "882eb767e43dd4a1226056c78e30611d1b13ae557649fbdf3fb19d1360480914",
+        "relevance": 4,
+        "novelty": 5,
+        "reason": "The article describes a significant, novel advance in theoretical computer science and mathematics, specifically in understanding computational complexity, which has broad implications for technology and engineering. This aligns with the configured science interests.",
+        "storyKey": "ai-solves-vp-vnp-problem",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article confirms that both Anthropic and OpenAI independently released proofs for the VP versus VNP problem, a significant mathematical challenge related to P versus NP. It also states that Anthropic's Claude model generated its proof and formalization, and that the proof has not yet been human-verified. The article describes this as \"Earth-shattering progress\" and a major step in understanding computational problem difficulty."
+      }
+    },
+    {
+      "id": "science-61d9ba48b4b585f5",
+      "title": "The mystery of sub-Neptunes – the planets we thought shouldn’t exist",
+      "summary": "Astronomers are using the James Webb Space Telescope to study sub-Neptunes, a common exoplanet type not found in our solar system, to understand their composition and formation. Recent observations suggest some may be \"Hycean\" worlds with liquid water, while others could be \"soot worlds\" or have magma oceans, challenging previous assumptions about planetary development.",
+      "finding": "Astronomers are using the James Webb Space Telescope to study sub-Neptunes, a common exoplanet type not found in our solar system, to understand their composition and formation. Recent observations suggest some may be \"Hycean\" worlds with liquid water, while others could be \"soot worlds\" or have magma oceans, challenging previous assumptions about planetary development.",
+      "significance": "Understanding these prevalent exoplanets could reshape models of planetary formation and expand search criteria for potentially habitable worlds beyond our solar system.",
+      "caveat": "Atmospheric interpretations remain actively debated, as signals such as dimethyl sulphide or missing ammonia may be explained by magma ocean chemistry, mini-gas giant structures, or other molecules.",
+      "url": "https://www.newscientist.com/article/2598445-the-mystery-of-sub-neptunes-the-planets-we-thought-shouldnt-exist",
+      "primarySourceUrl": "https://www.newscientist.com/article/2598445-the-mystery-of-sub-neptunes-the-planets-we-thought-shouldnt-exist",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-24T16:00:00+00:00",
+      "firstSeenAt": "2026-11-25T11:00:07.165954Z",
+      "checkedAt": "2026-11-25T11:00:07.165954Z",
+      "verifiedAt": "2026-11-25T11:00:07.165954Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "Kepler Space Telescope",
+        "NASA",
+        "James Webb Space Telescope"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.nature.com/articles/s41586-025-09630-7",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-25T06:35:02.077829-05:00",
+        "expiresAt": "2026-11-28T06:35:02.077829-05:00",
+        "inputFacts": {
+          "id": "science-61d9ba48b4b585f5",
+          "title": "The mystery of sub-Neptunes – the planets we thought shouldn’t exist",
+          "url": "https://www.newscientist.com/article/2598445-the-mystery-of-sub-neptunes-the-planets-we-thought-shouldnt-exist",
+          "publishedAt": "2026-11-24T16:00:00Z",
+          "summary": "Sub-Neptunes, planets sized between Earth and Neptune, make up about half of confirmed exoplanets with a known radius despite not being predicted by traditional solar system planet formation models.",
+          "finding": "Sub-Neptunes, planets sized between Earth and Neptune, make up about half of confirmed exoplanets with a known radius despite not being predicted by traditional solar system planet formation models.",
+          "sourceUpdatedAt": null
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-24T16:00:00+00:00",
+        "datePrecision": "time",
+        "sourceHash": "673a24a6b4adcaa47c3e1ac1f261be1b865ebe1fbd4924f717c39e03272018d8",
+        "relevance": 5,
+        "novelty": 4,
+        "reason": "This article discusses new findings and ongoing research into a common type of exoplanet, sub-Neptunes, which are a significant mystery in astronomy. The use of the James Webb Space Telescope for these discoveries represents a substantive technical advance in observation capabilities.",
+        "storyKey": "sub-neptune-exoplanet-research",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article details new findings and ongoing research using the James Webb Space Telescope to understand sub-Neptunes, a common exoplanet type not found in our solar system. It discusses various proposed compositions and formation mechanisms, including \"Hycean\" worlds, \"soot worlds,\" and planets with magma oceans, which challenge previous assumptions about planetary development. This represents a new finding and technical advance in exoplanetary science."
+      }
+    },
     {
       "id": "science-aaffec7cab6e3c5c",
       "title": "Math’s holy grail, the Riemann hypothesis, appears solved with AI’s help",
@@ -117,123 +230,129 @@
         "grounded": true,
         "groundingReason": "The article fully supports all claims in the summary, including the debut date, location, and technical specifications of the new satellite laser ranging system, as well as its benefits for satellite tracking and Earth observation data, particularly for polar-orbiting satellites. This represents a new technical advance in Earth observation."
       }
-    },
-    {
-      "id": "science-321844474abd26db",
-      "title": "Mathematicians are amazed by ‘holy grail’ proof of Riemann hypothesis",
-      "summary": "An AI company claims to have used AI to prove the Riemann hypothesis, a nearly 200-year-old problem concerning prime number distribution. The proof is reportedly 250,000 pages long, with a 17-million-line version for proof-checking software. It has not yet been formally reviewed by other mathematicians, and the full proof has not been released.",
-      "finding": "An AI company claims to have used AI to prove the Riemann hypothesis, a nearly 200-year-old problem concerning prime number distribution. The proof is reportedly 250,000 pages long, with a 17-million-line version for proof-checking software. It has not yet been formally reviewed by other mathematicians, and the full proof has not been released.",
-      "significance": "If verified, proving the hypothesis would resolve a foundational question regarding prime number distribution and validate numerous dependent mathematical theorems.",
-      "caveat": "The proof spans millions of lines of code, has not been formally peer-reviewed, and could theoretically exploit an undiscovered software bug.",
-      "url": "https://www.newscientist.com/article/2600235-mathematicians-are-amazed-by-holy-grail-proof-of-riemann-hypothesis",
-      "primarySourceUrl": "https://www.newscientist.com/article/2600235-mathematicians-are-amazed-by-holy-grail-proof-of-riemann-hypothesis",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-20T22:33:06+00:00",
-      "firstSeenAt": "2026-11-21T11:01:01.866898Z",
-      "checkedAt": "2026-11-21T11:01:01.866898Z",
-      "verifiedAt": "2026-11-21T11:01:01.866898Z",
-      "evidenceType": "unknown",
-      "topics": [
-        "technology"
-      ],
-      "entities": [
-        "Levent Alpöge",
-        "Anthropic",
-        "Lean",
-        "Thomas Bloom",
-        "Ravi Vakil"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-21T02:26:43Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-21T06:46:23.653565-05:00",
-        "expiresAt": "2026-11-24T06:46:23.653565-05:00",
-        "inputFacts": {
-          "id": "science-321844474abd26db",
-          "title": "Mathematicians are amazed by ‘holy grail’ proof of Riemann hypothesis",
-          "url": "https://www.newscientist.com/article/2600235-mathematicians-are-amazed-by-holy-grail-proof-of-riemann-hypothesis",
-          "publishedAt": "2026-11-20T22:33:06Z",
-          "summary": "A researcher reported using artificial intelligence to produce a formal proof of the centuries-old Riemann hypothesis.",
-          "finding": "A researcher reported using artificial intelligence to produce a formal proof of the centuries-old Riemann hypothesis.",
-          "sourceUpdatedAt": "2026-11-21T02:26:43Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-20T22:33:06+00:00",
-        "datePrecision": "time",
-        "sourceHash": "61b570e827e54dc5df6d8ebf62a9a3bc182de2b3e8b907816b2447b55c018638",
-        "relevance": 5,
-        "novelty": 5,
-        "reason": "This is a potentially monumental development in mathematics, a core science interest, with significant implications for the field and AI capabilities.",
-        "storyKey": "ai-riemann-hypothesis-proof",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article supports all claims in the summary, including the AI company, the problem solved, the length of the proof, and the lack of formal review or full release. The article describes a significant new finding in mathematics, if true, which would be a substantive scientific development."
-      }
-    },
-    {
-      "id": "science-da44b66835dcdb41",
-      "title": "Quantum effect could reverse gravity and violate Einstein’s theory of relativity",
-      "summary": "Two independent research teams mathematically modeled how quantum effects could theoretically make gravity repulsive, pushing objects apart instead of attracting them. This proposed phenomenon, which contradicts Einstein's theory of general relativity, could be tested in laboratory experiments using bacterium-sized objects that maintain a quantum superposition state, though such experiments are expected to be challenging.",
-      "finding": "Two independent research teams mathematically modeled how quantum effects could theoretically make gravity repulsive, pushing objects apart instead of attracting them. This proposed phenomenon, which contradicts Einstein's theory of general relativity, could be tested in laboratory experiments using bacterium-sized objects that maintain a quantum superposition state, though such experiments are expected to be challenging.",
-      "significance": "Demonstrating repulsive gravitational interactions in laboratory experiments could reveal whether gravity possesses inherently quantum properties, departing from general relativity.",
-      "caveat": "Lab tests will be exceptionally difficult because required bacterium-sized objects experience acceleration less than a quadrillionth of Earth's gravity.",
-      "url": "https://www.newscientist.com/article/2599897-quantum-effect-could-reverse-gravity-and-violate-einsteins-theory-of-relativity",
-      "primarySourceUrl": "https://www.newscientist.com/article/2599897-quantum-effect-could-reverse-gravity-and-violate-einsteins-theory-of-relativity",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-20T22:00:00+00:00",
-      "firstSeenAt": "2026-11-21T11:01:01.866898Z",
-      "checkedAt": "2026-11-21T11:01:01.866898Z",
-      "verifiedAt": "2026-11-21T11:01:01.866898Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "physics"
-      ],
-      "entities": [
-        "Pablo Saldanha",
-        "Vlatko Vedral",
-        "Chiara Marletto",
-        "Sougato Bose",
-        "Lev Vaidman"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://doi.org/10.1103/df22-8kb6",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-21T06:46:23.653565-05:00",
-        "expiresAt": "2026-11-24T06:46:23.653565-05:00",
-        "inputFacts": {
-          "id": "science-da44b66835dcdb41",
-          "title": "Quantum effect could reverse gravity and violate Einstein’s theory of relativity",
-          "url": "https://www.newscientist.com/article/2599897-quantum-effect-could-reverse-gravity-and-violate-einsteins-theory-of-relativity",
-          "publishedAt": "2026-11-20T22:00:00Z",
-          "summary": "Theoretical studies show that combining quantum superposition with post-selection measurement can theoretically cause gravity to act as a repulsive force rather than an attractive one.",
-          "finding": "Theoretical studies show that combining quantum superposition with post-selection measurement can theoretically cause gravity to act as a repulsive force rather than an attractive one.",
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-20T22:00:00+00:00",
-        "datePrecision": "time",
-        "sourceHash": "cdac745f251441f1fde4de5676fcf01ae9df53a188fc1c8ec5ced838537e5779",
-        "relevance": 4,
-        "novelty": 5,
-        "reason": "This article describes a significant theoretical advance in quantum physics and gravity, proposing a novel effect that challenges established understanding. The potential for experimental verification in the near future makes it highly relevant for science interests.",
-        "storyKey": "quantum-gravity-repulsion",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article describes two independent research teams mathematically modeling how quantum effects could theoretically lead to repulsive gravity, a new finding that contradicts Einstein's theory. It also discusses the potential for laboratory testing using bacterium-sized objects in a quantum superposition state, acknowledging the experimental challenges."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-fe1f49c9c56b287d",
+      "inputFacts": {
+        "id": "science-fe1f49c9c56b287d",
+        "title": "An atom-sized black hole could force an entire star to explode",
+        "url": "https://www.newscientist.com/article/2600427-an-atom-sized-black-hole-could-force-an-entire-star-to-explode",
+        "publishedAt": "2026-11-25T10:00:00Z",
+        "summary": "Simulations indicate that an atom-sized primordial black hole captured by a rapidly spinning star could blast the star apart via powerful plasma jets.",
+        "finding": "Simulations indicate that an atom-sized primordial black hole captured by a rapidly spinning star could blast the star apart via powerful plasma jets.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-25T10:00:00+00:00",
+      "publicationEvidence": "2026-11-25T10:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-a267abcaf4cd4686",
+      "inputFacts": {
+        "id": "science-a267abcaf4cd4686",
+        "title": "AI is forcing researchers to confront the possibility of artificial minds",
+        "url": "https://www.newscientist.com/article/2600589-ai-is-forcing-researchers-to-confront-the-possibility-of-artificial-minds",
+        "publishedAt": "2026-11-25T08:00:00Z",
+        "summary": "Advancements in large language models are leading cognitive scientists and philosophers to reconsider whether disembodied minds or thinking entities can exist without physical embodiment.",
+        "finding": "Advancements in large language models are leading cognitive scientists and philosophers to reconsider whether disembodied minds or thinking entities can exist without physical embodiment.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-25T08:00:00+00:00",
+      "publicationEvidence": "2026-11-25T08:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-d8842afd5b271805",
+      "inputFacts": {
+        "id": "science-d8842afd5b271805",
+        "title": "Extinct, long-legged grasshoppers walked on water alongside dinosaurs",
+        "url": "https://www.sciencenews.org/article/extinct-grasshoppers-walked-on-water",
+        "publishedAt": "2026-11-25T00:01:00Z",
+        "summary": "Fossils preserved in 99-million-year-old amber show that an extinct family of grasshoppers, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike legs to walk on water.",
+        "finding": "Fossils preserved in 99-million-year-old amber show that an extinct family of grasshoppers, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike legs to walk on water.",
+        "sourceUpdatedAt": "2026-11-25T00:01:00Z"
+      },
+      "publishedAt": "2026-11-24T19:01:00-05:00",
+      "publicationEvidence": "2026-11-24T19:01:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-239d5156f08bd8a9",
+      "inputFacts": {
+        "id": "science-239d5156f08bd8a9",
+        "title": "Half of NASA's aging Mars fleet knocked offline by technical issues",
+        "url": "https://arstechnica.com/space/2026/11/half-of-nasas-aging-mars-fleet-knocked-offline-by-technical-issues",
+        "publishedAt": "2026-11-24T22:50:11Z",
+        "summary": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter on Mars following distinct technical problems with communications and pointing mechanisms.",
+        "finding": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter on Mars following distinct technical problems with communications and pointing mechanisms.",
+        "sourceUpdatedAt": "2026-11-24T22:50:11Z"
+      },
+      "publishedAt": "2026-11-24T22:50:11+00:00",
+      "publicationEvidence": "2026-11-24T22:50:11+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-81375e384c76e0d8",
+      "inputFacts": {
+        "id": "science-81375e384c76e0d8",
+        "title": "Teams Lock in Mission Architecture for NASA’s SR-1 Freedom",
+        "url": "https://www.nasa.gov/general/nasa-locks-in-sr1-freedom-mission-architecture",
+        "publishedAt": "2026-11-24T21:04:32Z",
+        "summary": "NASA finalized key mission architecture choices for the Space Reactor-1 Freedom spacecraft, adopting a shorter boom and improved shielding ahead of a targeted 2028 launch.",
+        "finding": "NASA finalized key mission architecture choices for the Space Reactor-1 Freedom spacecraft, adopting a shorter boom and improved shielding ahead of a targeted 2028 launch.",
+        "sourceUpdatedAt": "2026-11-24T21:04:33Z"
+      },
+      "publishedAt": "2026-11-24T16:04:32-05:00",
+      "publicationEvidence": "2026-11-24T16:04:32-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-c70221070175b6b8",
+      "inputFacts": {
+        "id": "science-c70221070175b6b8",
+        "title": "Two AI companies reveal ‘Earth-shattering’ solutions to major maths problem",
+        "url": "https://www.newscientist.com/article/2600542-two-ai-companies-reveal-earth-shattering-solutions-to-major-maths-problem",
+        "publishedAt": "2026-11-24T16:13:45Z",
+        "summary": "AI systems developed by Anthropic and OpenAI independently generated formalised proofs demonstrating that VNP is not contained within VP, a complexity problem related to P versus NP.",
+        "finding": "AI systems developed by Anthropic and OpenAI independently generated formalised proofs demonstrating that VNP is not contained within VP, a complexity problem related to P versus NP.",
+        "sourceUpdatedAt": "2026-11-24T16:31:27Z"
+      },
+      "publishedAt": "2026-11-24T16:13:45+00:00",
+      "publicationEvidence": "2026-11-24T16:13:45+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-8d5fdf717370cb37",
+      "inputFacts": {
+        "id": "science-8d5fdf717370cb37",
+        "title": "Homo erectus lived in the rainforest alongside Denisovans",
+        "url": "https://arstechnica.com/science/2026/11/homo-erectus-lived-in-the-rainforest-alongside-denisovans",
+        "publishedAt": "2026-11-24T16:01:19Z",
+        "summary": "Fossil teeth dating to between 324,000 and 184,000 years ago indicate that Homo erectus inhabited mainland Asian tropical rainforests tens of thousands of years more recently than recognized, potentially alongside Denisovans.",
+        "finding": "Fossil teeth dating to between 324,000 and 184,000 years ago indicate that Homo erectus inhabited mainland Asian tropical rainforests tens of thousands of years more recently than recognized, potentially alongside Denisovans.",
+        "sourceUpdatedAt": "2026-11-24T19:26:37Z"
+      },
+      "publishedAt": "2026-11-24T16:01:19+00:00",
+      "publicationEvidence": "2026-11-24T16:01:19+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-61d9ba48b4b585f5",
+      "inputFacts": {
+        "id": "science-61d9ba48b4b585f5",
+        "title": "The mystery of sub-Neptunes – the planets we thought shouldn’t exist",
+        "url": "https://www.newscientist.com/article/2598445-the-mystery-of-sub-neptunes-the-planets-we-thought-shouldnt-exist",
+        "publishedAt": "2026-11-24T16:00:00Z",
+        "summary": "Sub-Neptunes, planets sized between Earth and Neptune, make up about half of confirmed exoplanets with a known radius despite not being predicted by traditional solar system planet formation models.",
+        "finding": "Sub-Neptunes, planets sized between Earth and Neptune, make up about half of confirmed exoplanets with a known radius despite not being predicted by traditional solar system planet formation models.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-24T16:00:00+00:00",
+      "publicationEvidence": "2026-11-24T16:00:00+00:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-e67278aa4da5fc45",
       "inputFacts": {
@@ -250,21 +369,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-9aafd7158138ae9f",
-      "inputFacts": {
-        "id": "science-9aafd7158138ae9f",
-        "title": "The technology that could make government internet blackouts impossible",
-        "url": "https://www.newscientist.com/article/2600040-the-technology-that-could-make-government-internet-blackouts-impossible",
-        "publishedAt": "2026-11-24T08:00:00Z",
-        "summary": "Direct-to-cell satellite communication enables standard unmodified mobile phones to connect directly to satellites in low Earth orbit, potentially bypassing terrestrial internet blackouts.",
-        "finding": "Direct-to-cell satellite communication enables standard unmodified mobile phones to connect directly to satellites in low Earth orbit, potentially bypassing terrestrial internet blackouts.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-24T08:00:00+00:00",
-      "publicationEvidence": "2026-11-24T08:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-5362c14e3ea77a60",
       "inputFacts": {
         "id": "science-5362c14e3ea77a60",
@@ -277,6 +381,21 @@
       },
       "publishedAt": "2026-11-24T00:05:00-05:00",
       "publicationEvidence": "2026-11-24T00:05:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-9aafd7158138ae9f",
+      "inputFacts": {
+        "id": "science-9aafd7158138ae9f",
+        "title": "The technology that could make government internet blackouts impossible",
+        "url": "https://www.newscientist.com/article/2600040-the-technology-that-could-make-government-internet-blackouts-impossible",
+        "publishedAt": "2026-11-24T08:00:00Z",
+        "summary": "Direct-to-cell satellite communication enables standard unmodified mobile phones to connect directly to satellites in low Earth orbit, potentially bypassing terrestrial internet blackouts.",
+        "finding": "Direct-to-cell satellite communication enables standard unmodified mobile phones to connect directly to satellites in low Earth orbit, potentially bypassing terrestrial internet blackouts.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-24T08:00:00+00:00",
+      "publicationEvidence": "2026-11-24T08:00:00+00:00",
       "datePrecision": "time"
     },
     {
@@ -370,33 +489,33 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-321844474abd26db",
+      "id": "science-ecc1858996f77b7f",
       "inputFacts": {
-        "id": "science-321844474abd26db",
-        "title": "Mathematicians are amazed by ‘holy grail’ proof of Riemann hypothesis",
-        "url": "https://www.newscientist.com/article/2600235-mathematicians-are-amazed-by-holy-grail-proof-of-riemann-hypothesis",
-        "publishedAt": "2026-11-20T22:33:06Z",
-        "summary": "A researcher reported using artificial intelligence to produce a formal proof of the centuries-old Riemann hypothesis.",
-        "finding": "A researcher reported using artificial intelligence to produce a formal proof of the centuries-old Riemann hypothesis.",
-        "sourceUpdatedAt": "2026-11-21T02:26:43Z"
+        "id": "science-ecc1858996f77b7f",
+        "title": "How brewers can protect beers from smoke-tainted hops",
+        "url": "https://arstechnica.com/science/2026/11/how-brewers-can-protect-beers-from-smoke-tainted-hops",
+        "publishedAt": "2026-11-24T18:18:37Z",
+        "summary": "Researchers found that adding smoke-tainted hops during wort boiling caused no discernible sensory difference in beer, while dry-hopping imparted smoky flavors that could be mitigated by blending tainted hops at levels under 50 percent.",
+        "finding": "Researchers found that adding smoke-tainted hops during wort boiling caused no discernible sensory difference in beer, while dry-hopping imparted smoky flavors that could be mitigated by blending tainted hops at levels under 50 percent.",
+        "sourceUpdatedAt": "2026-11-24T19:36:22Z"
       },
-      "publishedAt": "2026-11-20T22:33:06+00:00",
-      "publicationEvidence": "2026-11-20T22:33:06+00:00",
+      "publishedAt": "2026-11-24T18:18:37+00:00",
+      "publicationEvidence": "2026-11-24T18:18:37+00:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-da44b66835dcdb41",
+      "id": "science-f4a9762ecfb997ca",
       "inputFacts": {
-        "id": "science-da44b66835dcdb41",
-        "title": "Quantum effect could reverse gravity and violate Einstein’s theory of relativity",
-        "url": "https://www.newscientist.com/article/2599897-quantum-effect-could-reverse-gravity-and-violate-einsteins-theory-of-relativity",
-        "publishedAt": "2026-11-20T22:00:00Z",
-        "summary": "Theoretical studies show that combining quantum superposition with post-selection measurement can theoretically cause gravity to act as a repulsive force rather than an attractive one.",
-        "finding": "Theoretical studies show that combining quantum superposition with post-selection measurement can theoretically cause gravity to act as a repulsive force rather than an attractive one.",
-        "sourceUpdatedAt": null
+        "id": "science-f4a9762ecfb997ca",
+        "title": "Eagles can prey on adult baboons. Did our ancestors face that threat?",
+        "url": "https://www.sciencenews.org/article/eagles-prey-adult-baboon-human-ancestor",
+        "publishedAt": "2026-11-24T14:00:00Z",
+        "summary": "Skeletal remains of adult male baboons weighing 22 to 26 kilograms display puncture wounds in the eye sockets and shoulder gashes indicating predation by raptors, likely Verreaux's eagles.",
+        "finding": "Skeletal remains of adult male baboons weighing 22 to 26 kilograms display puncture wounds in the eye sockets and shoulder gashes indicating predation by raptors, likely Verreaux's eagles.",
+        "sourceUpdatedAt": "2026-11-24T14:00:00Z"
       },
-      "publishedAt": "2026-11-20T22:00:00+00:00",
-      "publicationEvidence": "2026-11-20T22:00:00+00:00",
+      "publishedAt": "2026-11-24T09:00:00-05:00",
+      "publicationEvidence": "2026-11-24T09:00:00-05:00",
       "datePrecision": "time"
     },
     {
@@ -428,91 +547,31 @@
       "publishedAt": "2026-11-24T00:01:00-05:00",
       "publicationEvidence": "2026-11-24T00:01:00-05:00",
       "datePrecision": "time"
-    },
-    {
-      "id": "science-cb77f90b6419809d",
-      "inputFacts": {
-        "id": "science-cb77f90b6419809d",
-        "title": "Podcast: Tiny robots could revolutionize medicine",
-        "url": "https://www.nsf.gov/news/podcast-tiny-robots-could-revolutionize-medicine",
-        "publishedAt": "2026-11-23T16:00:19Z",
-        "summary": "Researchers are developing micro-robotics intended for biomedical uses, such as drug delivery, breaking down blood clots, and cellular patterning.",
-        "finding": "Researchers are developing micro-robotics intended for biomedical uses, such as drug delivery, breaking down blood clots, and cellular patterning.",
-        "sourceUpdatedAt": "2026-11-23T16:00:19Z"
-      },
-      "publishedAt": "2026-11-23T11:00:19-05:00",
-      "publicationEvidence": "2026-11-23T11:00:19-0500",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-015fec0b34ff3654",
-      "inputFacts": {
-        "id": "science-015fec0b34ff3654",
-        "title": "Podcast: Helping doctors save lives before it's too late",
-        "url": "https://www.nsf.gov/news/podcast-helping-doctors-save-lives-its-too-late",
-        "publishedAt": "2026-11-23T16:00:03Z",
-        "summary": "Researcher Suchi Saria has developed and implemented a real-time super intelligence system designed to save lives by monitoring patients for signs of sepsis.",
-        "finding": "Researcher Suchi Saria has developed and implemented a real-time super intelligence system designed to save lives by monitoring patients for signs of sepsis.",
-        "sourceUpdatedAt": "2026-11-23T16:00:03Z"
-      },
-      "publishedAt": "2026-11-23T11:00:03-05:00",
-      "publicationEvidence": "2026-11-23T11:00:03-0500",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-b355bef02b4f6c92",
-      "inputFacts": {
-        "id": "science-b355bef02b4f6c92",
-        "title": "The notion of ‘positive masculinity’ is dividing the male studies field",
-        "url": "https://www.sciencenews.org/article/positive-masculinity-male-studies-field",
-        "publishedAt": "2026-11-23T16:00:00Z",
-        "summary": "Researchers are divided on positive masculinity, with some concluding masculine ideals inherently oppose femininity and correlate with sexism, while others focus on healthy behaviors to improve men's outcomes.",
-        "finding": "Researchers are divided on positive masculinity, with some concluding masculine ideals inherently oppose femininity and correlate with sexism, while others focus on healthy behaviors to improve men's outcomes.",
-        "sourceUpdatedAt": "2026-11-23T16:00:00Z"
-      },
-      "publishedAt": "2026-11-23T11:00:00-05:00",
-      "publicationEvidence": "2026-11-23T11:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-3c49d0cf93cf9eff",
-      "inputFacts": {
-        "id": "science-3c49d0cf93cf9eff",
-        "title": "The Incredible, Elegant DNA Repair System Makes Gene Editing Work",
-        "url": "https://www.quantamagazine.org/the-incredible-elegant-dna-repair-system-makes-gene-editing-work-20261123",
-        "publishedAt": "2026-11-23T15:27:11Z",
-        "summary": "Gene-editing technologies such as CRISPR-Cas and base editing function by relying on cells' native DNA repair pathways to resolve targeted cuts or single-base alterations.",
-        "finding": "Gene-editing technologies such as CRISPR-Cas and base editing function by relying on cells' native DNA repair pathways to resolve targeted cuts or single-base alterations.",
-        "sourceUpdatedAt": "2026-11-23T15:27:50Z"
-      },
-      "publishedAt": "2026-11-23T15:27:11+00:00",
-      "publicationEvidence": "2026-11-23T15:27:11+00:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-23",
-      "selectedIds": [
-        "science-321844474abd26db",
-        "science-da44b66835dcdb41",
-        "science-aaffec7cab6e3c5c"
-      ]
-    },
-    {
       "date": "2026-11-24",
       "selectedIds": [
-        "science-321844474abd26db",
-        "science-da44b66835dcdb41",
-        "science-24598c1cc994ea15"
+        "science-24598c1cc994ea15",
+        "science-aaffec7cab6e3c5c",
+        "science-61d9ba48b4b585f5"
       ]
     },
     {
       "date": "2026-11-25",
       "selectedIds": [
         "science-aaffec7cab6e3c5c",
-        "science-321844474abd26db",
-        "science-da44b66835dcdb41"
+        "science-61d9ba48b4b585f5",
+        "science-c70221070175b6b8"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "selectedIds": [
+        "science-aaffec7cab6e3c5c",
+        "science-61d9ba48b4b585f5",
+        "science-c70221070175b6b8"
       ]
     }
   ]
