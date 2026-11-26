@@ -1,8 +1,124 @@
 {
   "schemaVersion": "1.0.0",
   "section": "science",
-  "generatedAt": "2026-11-25T06:35:02.077829-05:00",
+  "generatedAt": "2026-11-26T07:27:36.151981-05:00",
   "stories": [
+    {
+      "id": "science-610a8dba03b4f860",
+      "title": "European spacecraft finds chaotic scene after asteroid deflection experiment",
+      "summary": "The European Space Agency's Hera spacecraft, following up on NASA's DART mission, has found Dimorphos tumbling wildly and surrounded by hundreds of boulders after the asteroid deflection experiment. The impact created a stadium-sized crater, nearly as large as the 151-meter asteroid itself, and significantly altered its shape. Scientists are studying the debris to understand its origin and implications for planetary defense.",
+      "finding": "The European Space Agency's Hera spacecraft, following up on NASA's DART mission, has found Dimorphos tumbling wildly and surrounded by hundreds of boulders after the asteroid deflection experiment. The impact created a stadium-sized crater, nearly as large as the 151-meter asteroid itself, and significantly altered its shape. Scientists are studying the debris to understand its origin and implications for planetary defense.",
+      "significance": "Understanding the detailed aftermath of kinetic impact deflection will refine computer models to better prepare planetary defense missions against real asteroid threats.",
+      "caveat": "Scientists have not yet confirmed whether the surrounding boulder field was produced directly by the DART impact or represents ancient debris from the asteroid's formation.",
+      "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup",
+      "primarySourceUrl": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T22:36:45+00:00",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "Hera",
+        "Dimorphos",
+        "Didymos",
+        "DART",
+        "ESA"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-26T00:37:05Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-26T07:27:36.151981-05:00",
+        "expiresAt": "2026-11-29T07:27:36.151981-05:00",
+        "inputFacts": {
+          "id": "science-610a8dba03b4f860",
+          "title": "European spacecraft finds chaotic scene after asteroid deflection experiment",
+          "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup",
+          "publishedAt": "2026-11-25T22:36:45Z",
+          "summary": "Initial observations from the Hera spacecraft show that the DART impact significantly altered the shape of asteroid Dimorphos, left it tumbling wildly in orbit, and revealed hundreds of surrounding boulders.",
+          "finding": "Initial observations from the Hera spacecraft show that the DART impact significantly altered the shape of asteroid Dimorphos, left it tumbling wildly in orbit, and revealed hundreds of surrounding boulders.",
+          "sourceUpdatedAt": "2026-11-26T00:37:05Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-25T22:36:45+00:00",
+        "datePrecision": "time",
+        "sourceHash": "67a9df07fb98b3863d4ccae0323d1c02da20d05884056db919388ba1aa749874",
+        "relevance": 5,
+        "novelty": 4,
+        "reason": "New findings from a follow-up mission to a significant planetary defense experiment, revealing unexpected and substantial consequences of the impact, are highly relevant and novel for science interests.",
+        "storyKey": "hera-dimorphos-dart-impact-findings",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The European Space Agency's Hera spacecraft has provided new, direct observations of Dimorphos following the DART mission, revealing its wild tumbling, a stadium-sized crater that significantly altered its shape, and a surrounding field of hundreds of boulders. These are new findings that advance understanding of asteroid deflection and planetary defense."
+      }
+    },
+    {
+      "id": "science-319f463cce75ff29",
+      "title": "AI may soon change what it means to be a theoretical physicist",
+      "summary": "Leading AI models can now solve nearly 90% of complex, unpublished theoretical physics problems, often identifying subtle errors in human solutions. This rapid advancement is accelerating research, increasing paper submissions by 30% in one category, and raising questions about the future training and career paths for young physicists, as well as the potential for AI-driven major discoveries.",
+      "finding": "Leading AI models can now solve nearly 90% of complex, unpublished theoretical physics problems, often identifying subtle errors in human solutions. This rapid advancement is accelerating research, increasing paper submissions by 30% in one category, and raising questions about the future training and career paths for young physicists, as well as the potential for AI-driven major discoveries.",
+      "significance": "Frontier AI models are performing advanced mathematical and theoretical physics calculations rapidly and cheaply, dramatically speeding up research output and potentially transforming how theoretical physicists work.",
+      "caveat": "The benchmark focused on well-defined calculations rather than open-ended creative research, and physics remains fundamentally bound to real-world empirical experimentation.",
+      "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next",
+      "primarySourceUrl": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T12:00:28+00:00",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "Suvrat Raju",
+        "International Centre for Theoretical Sciences",
+        "Matthew Schwartz",
+        "Andreas Karch",
+        "Daniel Harlow"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-25T14:59:09Z",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-26T07:27:36.151981-05:00",
+        "expiresAt": "2026-11-29T07:27:36.151981-05:00",
+        "inputFacts": {
+          "id": "science-319f463cce75ff29",
+          "title": "AI may soon change what it means to be a theoretical physicist",
+          "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next",
+          "publishedAt": "2026-11-25T12:00:28Z",
+          "summary": "In a theoretical physics benchmark composed of unpublished research problems taking human experts roughly a day each, the AI model GPT-6 Astra correctly answered 49 of 50 problems, even identifying errors in human-provided answers.",
+          "finding": "In a theoretical physics benchmark composed of unpublished research problems taking human experts roughly a day each, the AI model GPT-6 Astra correctly answered 49 of 50 problems, even identifying errors in human-provided answers.",
+          "sourceUpdatedAt": "2026-11-25T14:59:09Z"
+        },
+        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
+        "publicationEvidence": "2026-11-25T12:00:28+00:00",
+        "datePrecision": "time",
+        "sourceHash": "8feea85d3edf46bc0e8daa2b6dd80d603d0a0d9c571920cf671c52b9f4c60e68",
+        "relevance": 5,
+        "novelty": 5,
+        "reason": "This article details a significant and novel development in AI's capabilities within theoretical physics, demonstrating a substantial leap in problem-solving that has direct implications for the scientific community and the future of research. The findings are concrete and represent a new milestone.",
+        "storyKey": "ai-theoretical-physics-advancement",
+        "localConnection": "",
+        "grounded": true,
+        "groundingReason": "The article supports all claims in the summary, including the 90% problem-solving rate, identification of human errors, 30% increase in paper submissions, and the raising of questions about the future of physics training and career paths due to AI's rapid advancement."
+      }
+    },
     {
       "id": "science-c70221070175b6b8",
       "title": "Two AI companies reveal ‘Earth-shattering’ solutions to major maths problem",
@@ -172,67 +288,114 @@
         "grounded": true,
         "groundingReason": "The article fully supports all claims in the summary, including the involvement of a mathematician and AI, the confirmation by independent mathematicians, the implications, and the length of the proof. The finding is a significant new development in mathematics."
       }
-    },
-    {
-      "id": "science-24598c1cc994ea15",
-      "title": "Laser Focus at the Top of the World",
-      "summary": "A new, more precise satellite laser ranging system, developed by NASA, officially debuted at the Ny-Ålesund Geodetic Observatory in Svalbard, Norway, in October 2026. This next-generation system fires laser pulses thousands of times per second and uses sensors that detect single photons, improving satellite tracking and the accuracy of Earth observation data, particularly for polar-orbiting satellites.",
-      "finding": "A new, more precise satellite laser ranging system, developed by NASA, officially debuted at the Ny-Ålesund Geodetic Observatory in Svalbard, Norway, in October 2026. This next-generation system fires laser pulses thousands of times per second and uses sensors that detect single photons, improving satellite tracking and the accuracy of Earth observation data, particularly for polar-orbiting satellites.",
-      "significance": "As the northernmost facility of its kind, the system improves global network distribution, tracks polar-orbiting satellites almost every orbit, and refines the terrestrial reference frame.",
-      "caveat": "The remote site is next to a bird sanctuary, imposing environmental access restrictions that require remote operation during migratory bird breeding seasons.",
-      "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world",
-      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-11-23T00:01:00-05:00",
-      "firstSeenAt": "2026-11-23T11:00:07.283061Z",
-      "checkedAt": "2026-11-23T11:00:07.283061Z",
-      "verifiedAt": "2026-11-23T11:00:07.283061Z",
-      "evidenceType": "mission-milestone",
-      "topics": [
-        "earth-science",
-        "technology"
-      ],
-      "entities": [
-        "NASA",
-        "Norwegian Mapping Authority",
-        "Ny-Ålesund Geodetic Observatory",
-        "Goddard Space Flight Center",
-        "Stephen Merkowitz"
-      ],
-      "milestoneStatus": "completed",
-      "sourceUpdatedAt": "2026-11-23T05:01:00Z",
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-23T06:55:06.277518-05:00",
-        "expiresAt": "2026-11-26T06:55:06.277518-05:00",
-        "inputFacts": {
-          "id": "science-24598c1cc994ea15",
-          "title": "Laser Focus at the Top of the World",
-          "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world",
-          "publishedAt": "2026-11-23T05:01:00Z",
-          "summary": "NASA and the Norwegian Mapping Authority have brought online a faster, next-generation satellite laser ranging system at the Ny-Alesund Geodetic Observatory in Svalbard, Norway.",
-          "finding": "NASA and the Norwegian Mapping Authority have brought online a faster, next-generation satellite laser ranging system at the Ny-Alesund Geodetic Observatory in Svalbard, Norway.",
-          "sourceUpdatedAt": "2026-11-23T05:01:00Z"
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-23T00:01:00-05:00",
-        "datePrecision": "time",
-        "sourceHash": "f416dec4a8b73f5cc49cc638e176443bb5d171639e6e5842e6ac47eca151d6b3",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "New, more precise satellite laser ranging system with significant implications for Earth observation and scientific understanding.",
-        "storyKey": "next-gen-satellite-laser-ranging-svalbard",
-        "localConnection": "",
-        "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, including the debut date, location, and technical specifications of the new satellite laser ranging system, as well as its benefits for satellite tracking and Earth observation data, particularly for polar-orbiting satellites. This represents a new technical advance in Earth observation."
-      }
     }
   ],
   "corrections": [
+    {
+      "id": "science-610a8dba03b4f860",
+      "inputFacts": {
+        "id": "science-610a8dba03b4f860",
+        "title": "European spacecraft finds chaotic scene after asteroid deflection experiment",
+        "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup",
+        "publishedAt": "2026-11-25T22:36:45Z",
+        "summary": "Initial observations from the Hera spacecraft show that the DART impact significantly altered the shape of asteroid Dimorphos, left it tumbling wildly in orbit, and revealed hundreds of surrounding boulders.",
+        "finding": "Initial observations from the Hera spacecraft show that the DART impact significantly altered the shape of asteroid Dimorphos, left it tumbling wildly in orbit, and revealed hundreds of surrounding boulders.",
+        "sourceUpdatedAt": "2026-11-26T00:37:05Z"
+      },
+      "publishedAt": "2026-11-25T22:36:45+00:00",
+      "publicationEvidence": "2026-11-25T22:36:45+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-c9f9bac1e23bb76f",
+      "inputFacts": {
+        "id": "science-c9f9bac1e23bb76f",
+        "title": "Seabird ‘spies’ could help spot ships that aren’t broadcasting their location",
+        "url": "https://www.newscientist.com/article/2600830-seabird-spies-could-help-spot-ships-that-arent-broadcasting-their-location",
+        "publishedAt": "2026-11-25T19:00:00Z",
+        "summary": "Researchers demonstrated that seabirds tagged with mini audio recorders and GPS trackers can detect marine vessels that are not broadcasting their tracking data.",
+        "finding": "Researchers demonstrated that seabirds tagged with mini audio recorders and GPS trackers can detect marine vessels that are not broadcasting their tracking data.",
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-25T19:00:00+00:00",
+      "publicationEvidence": "2026-11-25T19:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-2fad27c0c8b8cff8",
+      "inputFacts": {
+        "id": "science-2fad27c0c8b8cff8",
+        "title": "AI’s stunning progress in maths shows how little we understand it",
+        "url": "https://www.newscientist.com/article/2600491-ais-stunning-progress-in-maths-shows-how-little-we-understand-it",
+        "publishedAt": "2026-11-25T18:00:00Z",
+        "summary": "Mathematicians report having what appears to be an AI-assisted proof of the Riemann hypothesis, though the full proof is not yet fully understood by humans.",
+        "finding": "Mathematicians report having what appears to be an AI-assisted proof of the Riemann hypothesis, though the full proof is not yet fully understood by humans.",
+        "sourceUpdatedAt": "2026-11-26T09:17:07Z"
+      },
+      "publishedAt": "2026-11-25T18:00:00+00:00",
+      "publicationEvidence": "2026-11-25T18:00:00+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-2cdf27b08a75a07c",
+      "inputFacts": {
+        "id": "science-2cdf27b08a75a07c",
+        "title": "NASA Eyes Crop Candidates for Future Menus",
+        "url": "https://science.nasa.gov/directorates/smd/nasa-eyes-crop-candidates-for-future-menus",
+        "publishedAt": "2026-11-25T17:53:42Z",
+        "summary": "Testing under simulated spaceflight conditions showed that 'Delizz' strawberries, cucumbers, and lemon basil are promising crop candidates for future space missions.",
+        "finding": "Testing under simulated spaceflight conditions showed that 'Delizz' strawberries, cucumbers, and lemon basil are promising crop candidates for future space missions.",
+        "sourceUpdatedAt": "2026-11-26T02:12:14Z"
+      },
+      "publishedAt": "2026-11-25T12:53:42-05:00",
+      "publicationEvidence": "2026-11-25T12:53:42-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-e3e5f0996b4fbd70",
+      "inputFacts": {
+        "id": "science-e3e5f0996b4fbd70",
+        "title": "Australia’s legless geckos evolved like snakes did",
+        "url": "https://www.sciencenews.org/article/legless-geckos-evolved-like-snakes",
+        "publishedAt": "2026-11-25T15:00:00Z",
+        "summary": "Researchers found that legless pygopod geckos exhibit patterns of dietary specialization and physical body-to-tail ratio diversity more similar to snakes than to other legless lizards.",
+        "finding": "Researchers found that legless pygopod geckos exhibit patterns of dietary specialization and physical body-to-tail ratio diversity more similar to snakes than to other legless lizards.",
+        "sourceUpdatedAt": "2026-11-25T15:00:00Z"
+      },
+      "publishedAt": "2026-11-25T10:00:00-05:00",
+      "publicationEvidence": "2026-11-25T10:00:00-05:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-95f59a69a76e0c0a",
+      "inputFacts": {
+        "id": "science-95f59a69a76e0c0a",
+        "title": "Novel Experiments Expand the Hunt for ‘Ultralight’ Dark Matter",
+        "url": "https://www.quantamagazine.org/novel-experiments-expand-the-hunt-for-ultralight-dark-matter-20261125",
+        "publishedAt": "2026-11-25T14:00:49Z",
+        "summary": "Physicists are developing diverse experimental approaches to hunt for ultralight dark matter candidates, deploying setups such as nuclear atomic clocks, atom interferometers, and levitating dust-sized magnets.",
+        "finding": "Physicists are developing diverse experimental approaches to hunt for ultralight dark matter candidates, deploying setups such as nuclear atomic clocks, atom interferometers, and levitating dust-sized magnets.",
+        "sourceUpdatedAt": "2026-11-25T14:24:09Z"
+      },
+      "publishedAt": "2026-11-25T14:00:49+00:00",
+      "publicationEvidence": "2026-11-25T14:00:49+00:00",
+      "datePrecision": "time"
+    },
+    {
+      "id": "science-319f463cce75ff29",
+      "inputFacts": {
+        "id": "science-319f463cce75ff29",
+        "title": "AI may soon change what it means to be a theoretical physicist",
+        "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next",
+        "publishedAt": "2026-11-25T12:00:28Z",
+        "summary": "In a theoretical physics benchmark composed of unpublished research problems taking human experts roughly a day each, the AI model GPT-6 Astra correctly answered 49 of 50 problems, even identifying errors in human-provided answers.",
+        "finding": "In a theoretical physics benchmark composed of unpublished research problems taking human experts roughly a day each, the AI model GPT-6 Astra correctly answered 49 of 50 problems, even identifying errors in human-provided answers.",
+        "sourceUpdatedAt": "2026-11-25T14:59:09Z"
+      },
+      "publishedAt": "2026-11-25T12:00:28+00:00",
+      "publicationEvidence": "2026-11-25T12:00:28+00:00",
+      "datePrecision": "time"
+    },
     {
       "id": "science-fe1f49c9c56b287d",
       "inputFacts": {
@@ -264,30 +427,15 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-d8842afd5b271805",
-      "inputFacts": {
-        "id": "science-d8842afd5b271805",
-        "title": "Extinct, long-legged grasshoppers walked on water alongside dinosaurs",
-        "url": "https://www.sciencenews.org/article/extinct-grasshoppers-walked-on-water",
-        "publishedAt": "2026-11-25T00:01:00Z",
-        "summary": "Fossils preserved in 99-million-year-old amber show that an extinct family of grasshoppers, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike legs to walk on water.",
-        "finding": "Fossils preserved in 99-million-year-old amber show that an extinct family of grasshoppers, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike legs to walk on water.",
-        "sourceUpdatedAt": "2026-11-25T00:01:00Z"
-      },
-      "publishedAt": "2026-11-24T19:01:00-05:00",
-      "publicationEvidence": "2026-11-24T19:01:00-05:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-239d5156f08bd8a9",
       "inputFacts": {
         "id": "science-239d5156f08bd8a9",
         "title": "Half of NASA's aging Mars fleet knocked offline by technical issues",
         "url": "https://arstechnica.com/space/2026/11/half-of-nasas-aging-mars-fleet-knocked-offline-by-technical-issues",
         "publishedAt": "2026-11-24T22:50:11Z",
-        "summary": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter on Mars following distinct technical problems with communications and pointing mechanisms.",
-        "finding": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter on Mars following distinct technical problems with communications and pointing mechanisms.",
-        "sourceUpdatedAt": "2026-11-24T22:50:11Z"
+        "summary": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter due to separate technical issues.",
+        "finding": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter due to separate technical issues.",
+        "sourceUpdatedAt": "2026-11-25T13:45:51Z"
       },
       "publishedAt": "2026-11-24T22:50:11+00:00",
       "publicationEvidence": "2026-11-24T22:50:11+00:00",
@@ -429,36 +577,6 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-d90eb59e9c225bde",
-      "inputFacts": {
-        "id": "science-d90eb59e9c225bde",
-        "title": "The brain benefits of letting children do things on their own",
-        "url": "https://www.newscientist.com/article/2600239-the-brain-benefits-of-letting-children-do-things-on-their-own",
-        "publishedAt": "2026-11-23T09:00:00Z",
-        "summary": "Animal and correlational human studies suggest that independent play and early experiences of personal control help build neural circuits that regulate stress and support emotional resilience.",
-        "finding": "Animal and correlational human studies suggest that independent play and early experiences of personal control help build neural circuits that regulate stress and support emotional resilience.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-23T09:00:00+00:00",
-      "publicationEvidence": "2026-11-23T09:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-24598c1cc994ea15",
-      "inputFacts": {
-        "id": "science-24598c1cc994ea15",
-        "title": "Laser Focus at the Top of the World",
-        "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world",
-        "publishedAt": "2026-11-23T05:01:00Z",
-        "summary": "NASA and the Norwegian Mapping Authority have brought online a faster, next-generation satellite laser ranging system at the Ny-Alesund Geodetic Observatory in Svalbard, Norway.",
-        "finding": "NASA and the Norwegian Mapping Authority have brought online a faster, next-generation satellite laser ranging system at the Ny-Alesund Geodetic Observatory in Svalbard, Norway.",
-        "sourceUpdatedAt": "2026-11-23T05:01:00Z"
-      },
-      "publishedAt": "2026-11-23T00:01:00-05:00",
-      "publicationEvidence": "2026-11-23T00:01:00-05:00",
-      "datePrecision": "time"
-    },
-    {
       "id": "science-ff03892f4924aa48",
       "inputFacts": {
         "id": "science-ff03892f4924aa48",
@@ -474,90 +592,37 @@
       "datePrecision": "time"
     },
     {
-      "id": "science-d3c77f39276e69b3",
+      "id": "science-c5dde3cab31bec2d",
       "inputFacts": {
-        "id": "science-d3c77f39276e69b3",
-        "title": "How do tumors talk to nerves? This scientist is finding out",
-        "url": "https://www.sciencenews.org/article/tumors-talk-nerve-sn-10-sebnem-ece-eksi",
-        "publishedAt": "2026-11-21T12:00:00Z",
-        "summary": "Neuronal adhesion molecules, proteins typically associated with brain circuitry and memory, have been identified in prostate cancer cells from high-risk patients.",
-        "finding": "Neuronal adhesion molecules, proteins typically associated with brain circuitry and memory, have been identified in prostate cancer cells from high-risk patients.",
-        "sourceUpdatedAt": "2026-11-21T12:00:00Z"
+        "id": "science-c5dde3cab31bec2d",
+        "title": "A cosmically close supernova may spill the stellar explosion’s secrets",
+        "url": "https://www.sciencenews.org/article/close-supernova-secrets-white-dwarf",
+        "publishedAt": "2026-11-25T17:00:00Z",
+        "summary": "Astronomers detected SN 2026ahvu, an unusually close type Ia supernova located 50 million light-years or less from Earth, with preliminary analysis suggesting its progenitor white dwarf was under 100 million years old.",
+        "finding": "Astronomers detected SN 2026ahvu, an unusually close type Ia supernova located 50 million light-years or less from Earth, with preliminary analysis suggesting its progenitor white dwarf was under 100 million years old.",
+        "sourceUpdatedAt": "2026-11-25T17:00:00Z"
       },
-      "publishedAt": "2026-11-21T07:00:00-05:00",
-      "publicationEvidence": "2026-11-21T07:00:00-05:00",
+      "publishedAt": "2026-11-25T12:00:00-05:00",
+      "publicationEvidence": "2026-11-25T12:00:00-05:00",
       "datePrecision": "time"
     },
     {
-      "id": "science-ecc1858996f77b7f",
+      "id": "science-d8842afd5b271805",
       "inputFacts": {
-        "id": "science-ecc1858996f77b7f",
-        "title": "How brewers can protect beers from smoke-tainted hops",
-        "url": "https://arstechnica.com/science/2026/11/how-brewers-can-protect-beers-from-smoke-tainted-hops",
-        "publishedAt": "2026-11-24T18:18:37Z",
-        "summary": "Researchers found that adding smoke-tainted hops during wort boiling caused no discernible sensory difference in beer, while dry-hopping imparted smoky flavors that could be mitigated by blending tainted hops at levels under 50 percent.",
-        "finding": "Researchers found that adding smoke-tainted hops during wort boiling caused no discernible sensory difference in beer, while dry-hopping imparted smoky flavors that could be mitigated by blending tainted hops at levels under 50 percent.",
-        "sourceUpdatedAt": "2026-11-24T19:36:22Z"
+        "id": "science-d8842afd5b271805",
+        "title": "Extinct, long-legged grasshoppers walked on water alongside dinosaurs",
+        "url": "https://www.sciencenews.org/article/extinct-grasshoppers-walked-on-water",
+        "publishedAt": "2026-11-25T00:01:00Z",
+        "summary": "Fossils preserved in 99-million-year-old amber reveal an extinct grasshopper species, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike leg structures that likely allowed it to walk on water.",
+        "finding": "Fossils preserved in 99-million-year-old amber reveal an extinct grasshopper species, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike leg structures that likely allowed it to walk on water.",
+        "sourceUpdatedAt": "2026-11-25T00:01:00Z"
       },
-      "publishedAt": "2026-11-24T18:18:37+00:00",
-      "publicationEvidence": "2026-11-24T18:18:37+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-f4a9762ecfb997ca",
-      "inputFacts": {
-        "id": "science-f4a9762ecfb997ca",
-        "title": "Eagles can prey on adult baboons. Did our ancestors face that threat?",
-        "url": "https://www.sciencenews.org/article/eagles-prey-adult-baboon-human-ancestor",
-        "publishedAt": "2026-11-24T14:00:00Z",
-        "summary": "Skeletal remains of adult male baboons weighing 22 to 26 kilograms display puncture wounds in the eye sockets and shoulder gashes indicating predation by raptors, likely Verreaux's eagles.",
-        "finding": "Skeletal remains of adult male baboons weighing 22 to 26 kilograms display puncture wounds in the eye sockets and shoulder gashes indicating predation by raptors, likely Verreaux's eagles.",
-        "sourceUpdatedAt": "2026-11-24T14:00:00Z"
-      },
-      "publishedAt": "2026-11-24T09:00:00-05:00",
-      "publicationEvidence": "2026-11-24T09:00:00-05:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-a67b500374db70dd",
-      "inputFacts": {
-        "id": "science-a67b500374db70dd",
-        "title": "Super El Niño is making the global omega-3 shortage much worse",
-        "url": "https://www.newscientist.com/article/2600470-super-el-nino-is-making-the-global-omega-3-shortage-much-worse",
-        "publishedAt": "2026-11-24T09:00:00Z",
-        "summary": "Genetically modified crops like camelina and canola can synthesize long-chain omega-3 fatty acids, offering potential alternatives to fish oil amid severe global marine supply shortages exacerbated by El Nino events.",
-        "finding": "Genetically modified crops like camelina and canola can synthesize long-chain omega-3 fatty acids, offering potential alternatives to fish oil amid severe global marine supply shortages exacerbated by El Nino events.",
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-24T09:00:00+00:00",
-      "publicationEvidence": "2026-11-24T09:00:00+00:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "science-2c49d7a1cab03153",
-      "inputFacts": {
-        "id": "science-2c49d7a1cab03153",
-        "title": "Eruption Extends Iwo Jima’s Beach",
-        "url": "https://science.nasa.gov/earth/earth-observatory/eruption-extends-iwo-jimas-beach",
-        "publishedAt": "2026-11-24T05:01:00Z",
-        "summary": "A submarine volcanic eruption off the southeast shore of Iwo Jima created approximately 50 hectares of new beach connected to the island, enlarging its land area by about 1.7 percent.",
-        "finding": "A submarine volcanic eruption off the southeast shore of Iwo Jima created approximately 50 hectares of new beach connected to the island, enlarging its land area by about 1.7 percent.",
-        "sourceUpdatedAt": "2026-11-24T05:01:00Z"
-      },
-      "publishedAt": "2026-11-24T00:01:00-05:00",
-      "publicationEvidence": "2026-11-24T00:01:00-05:00",
+      "publishedAt": "2026-11-24T19:01:00-05:00",
+      "publicationEvidence": "2026-11-24T19:01:00-05:00",
       "datePrecision": "time"
     }
   ],
   "days": [
-    {
-      "date": "2026-11-24",
-      "selectedIds": [
-        "science-24598c1cc994ea15",
-        "science-aaffec7cab6e3c5c",
-        "science-61d9ba48b4b585f5"
-      ]
-    },
     {
       "date": "2026-11-25",
       "selectedIds": [
@@ -572,6 +637,14 @@
         "science-aaffec7cab6e3c5c",
         "science-61d9ba48b4b585f5",
         "science-c70221070175b6b8"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "selectedIds": [
+        "science-319f463cce75ff29",
+        "science-aaffec7cab6e3c5c",
+        "science-610a8dba03b4f860"
       ]
     }
   ]

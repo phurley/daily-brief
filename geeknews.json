@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-25T11:00:07.165954Z",
-  "editionDate": "2026-11-25",
+  "generatedAt": "2026-11-26T11:01:02.025983Z",
+  "editionDate": "2026-11-26",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -20,6 +20,357 @@
     ]
   },
   "stories": [
+    {
+      "id": "science-610a8dba03b4f860",
+      "title": "European spacecraft finds chaotic scene after asteroid deflection experiment",
+      "summary": "Initial observations from the Hera spacecraft show that the DART impact significantly altered the shape of asteroid Dimorphos, left it tumbling wildly in orbit, and revealed hundreds of surrounding boulders.",
+      "finding": "Initial observations from the Hera spacecraft show that the DART impact significantly altered the shape of asteroid Dimorphos, left it tumbling wildly in orbit, and revealed hundreds of surrounding boulders.",
+      "significance": "Understanding the detailed aftermath of kinetic impact deflection will refine computer models to better prepare planetary defense missions against real asteroid threats.",
+      "caveat": "Scientists have not yet confirmed whether the surrounding boulder field was produced directly by the DART impact or represents ancient debris from the asteroid's formation.",
+      "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup",
+      "primarySourceUrl": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T22:36:45Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "Hera",
+        "Dimorphos",
+        "Didymos",
+        "DART",
+        "ESA"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-26T00:37:05Z"
+    },
+    {
+      "id": "science-c9f9bac1e23bb76f",
+      "title": "Seabird ‘spies’ could help spot ships that aren’t broadcasting their location",
+      "summary": "Researchers demonstrated that seabirds tagged with mini audio recorders and GPS trackers can detect marine vessels that are not broadcasting their tracking data.",
+      "finding": "Researchers demonstrated that seabirds tagged with mini audio recorders and GPS trackers can detect marine vessels that are not broadcasting their tracking data.",
+      "significance": "This approach could improve bycatch risk assessments and help reveal dark vessel activity associated with illegal, unreported, and unregulated fishing.",
+      "caveat": "The study was limited by a small sample size, produced false positives and false negatives, did not differentiate vessel size, and provided minimal information on vessel activities.",
+      "url": "https://www.newscientist.com/article/2600830-seabird-spies-could-help-spot-ships-that-arent-broadcasting-their-location",
+      "primarySourceUrl": "https://www.newscientist.com/article/2600830-seabird-spies-could-help-spot-ships-that-arent-broadcasting-their-location",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T19:00:00Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "technology"
+      ],
+      "entities": [
+        "University of Oxford",
+        "BirdLife International",
+        "Oceana",
+        "Science Advances"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://dx.doi.org/10.1126/sciadv.aeh2224"
+    },
+    {
+      "id": "science-2fad27c0c8b8cff8",
+      "title": "AI’s stunning progress in maths shows how little we understand it",
+      "summary": "Mathematicians report having what appears to be an AI-assisted proof of the Riemann hypothesis, though the full proof is not yet fully understood by humans.",
+      "finding": "Mathematicians report having what appears to be an AI-assisted proof of the Riemann hypothesis, though the full proof is not yet fully understood by humans.",
+      "significance": "Solving this centuries-old mathematical problem far earlier than anticipated highlights major leaps in AI problem-solving and rapid code verification capabilities.",
+      "caveat": "The proof is not yet comprehensible to humans and requires substantially more analysis to verify and understand.",
+      "url": "https://www.newscientist.com/article/2600491-ais-stunning-progress-in-maths-shows-how-little-we-understand-it",
+      "primarySourceUrl": "https://www.newscientist.com/article/2600491-ais-stunning-progress-in-maths-shows-how-little-we-understand-it",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T18:00:00Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "technology"
+      ],
+      "entities": [
+        "G. H. Hardy",
+        "Terence Tao"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-26T09:17:07Z"
+    },
+    {
+      "id": "science-2cdf27b08a75a07c",
+      "title": "NASA Eyes Crop Candidates for Future Menus",
+      "summary": "Testing under simulated spaceflight conditions showed that 'Delizz' strawberries, cucumbers, and lemon basil are promising crop candidates for future space missions.",
+      "finding": "Testing under simulated spaceflight conditions showed that 'Delizz' strawberries, cucumbers, and lemon basil are promising crop candidates for future space missions.",
+      "significance": "Cultivating diverse crops can supply astronauts on extended Moon and Mars missions with fresh nutrients, recycle water and gases, and combat menu fatigue.",
+      "caveat": "Cucumbers exhibited signs of enlarged leaves under test conditions, wild strawberry varieties produced space-inefficient runners, and lemon basil has only completed preliminary testing.",
+      "url": "https://science.nasa.gov/directorates/smd/nasa-eyes-crop-candidates-for-future-menus",
+      "primarySourceUrl": "https://science.nasa.gov/directorates/smd/nasa-eyes-crop-candidates-for-future-menus",
+      "source": {
+        "name": "NASA"
+      },
+      "sourceGroup": "NASA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-25T17:53:42Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "technology"
+      ],
+      "entities": [
+        "NASA",
+        "International Space Station",
+        "Kennedy Space Center",
+        "University of Melbourne",
+        "University of Western Australia"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.sciencedirect.com/science/article/pii/S2214552426000982?via%3Dihub",
+      "sourceUpdatedAt": "2026-11-26T02:12:14Z"
+    },
+    {
+      "id": "science-c5dde3cab31bec2d",
+      "title": "A cosmically close supernova may spill the stellar explosion’s secrets",
+      "summary": "Astronomers detected SN 2026ahvu, an unusually close type Ia supernova located 50 million light-years or less from Earth, with preliminary analysis suggesting its progenitor white dwarf was under 100 million years old.",
+      "finding": "Astronomers detected SN 2026ahvu, an unusually close type Ia supernova located 50 million light-years or less from Earth, with preliminary analysis suggesting its progenitor white dwarf was under 100 million years old.",
+      "significance": "Because type Ia supernovas are key standard candles for cosmic distance measurements, observing a nearby event early could clarify what triggers white dwarf reignition and mass accumulation.",
+      "caveat": "Preprint / working paper; peer review is not established. The findings regarding the white dwarf's age are preliminary and have only been submitted to the preprint server arXiv.org.",
+      "url": "https://www.sciencenews.org/article/close-supernova-secrets-white-dwarf",
+      "primarySourceUrl": "https://www.sciencenews.org/article/close-supernova-secrets-white-dwarf",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T17:00:00Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "astronomy",
+        "physics"
+      ],
+      "entities": [
+        "SN 2026ahvu",
+        "Johns Hopkins University",
+        "University of Oregon",
+        "arXiv.org"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://arxiv.org/abs/2611.09875",
+      "sourceUpdatedAt": "2026-11-25T17:00:00Z"
+    },
+    {
+      "id": "science-e3e5f0996b4fbd70",
+      "title": "Australia’s legless geckos evolved like snakes did",
+      "summary": "Researchers found that legless pygopod geckos exhibit patterns of dietary specialization and physical body-to-tail ratio diversity more similar to snakes than to other legless lizards.",
+      "finding": "Researchers found that legless pygopod geckos exhibit patterns of dietary specialization and physical body-to-tail ratio diversity more similar to snakes than to other legless lizards.",
+      "significance": "The findings show that lacking limbs is not necessarily an evolutionary limitation, indicating pygopods may have independently filled ecological roles analogous to small snakes in Australia.",
+      "caveat": "Preprint / working paper; peer review is not established. The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencenews.org/article/legless-geckos-evolved-like-snakes",
+      "primarySourceUrl": "https://www.sciencenews.org/article/legless-geckos-evolved-like-snakes",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T15:00:00Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "biology"
+      ],
+      "entities": [
+        "Queensland Museum Kurilpa",
+        "California State University, Dominguez Hills",
+        "Lialis"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.biorxiv.org/content/10.64898/2026.06.22.733657v2.abstract?%3Fcollection=",
+      "sourceUpdatedAt": "2026-11-25T15:00:00Z"
+    },
+    {
+      "id": "science-95f59a69a76e0c0a",
+      "title": "Novel Experiments Expand the Hunt for ‘Ultralight’ Dark Matter",
+      "summary": "Physicists are developing diverse experimental approaches to hunt for ultralight dark matter candidates, deploying setups such as nuclear atomic clocks, atom interferometers, and levitating dust-sized magnets.",
+      "finding": "Physicists are developing diverse experimental approaches to hunt for ultralight dark matter candidates, deploying setups such as nuclear atomic clocks, atom interferometers, and levitating dust-sized magnets.",
+      "significance": "Ultralight candidates such as axions offer an alternative to weakly interacting massive particles and could help resolve longstanding physics puzzles like the neutron strong CP problem.",
+      "caveat": "Existing prototypes like two-cloud atom interferometers require larger scaling to detect effects, and magnetometer signals require worldwide verification because Earth's magnetic field varies geographically.",
+      "url": "https://www.quantamagazine.org/novel-experiments-expand-the-hunt-for-ultralight-dark-matter-20261125",
+      "primarySourceUrl": "https://www.quantamagazine.org/novel-experiments-expand-the-hunt-for-ultralight-dark-matter-20261125",
+      "source": {
+        "name": "Quanta Magazine"
+      },
+      "sourceGroup": "Quanta Magazine",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T14:00:49Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "physics",
+        "astronomy"
+      ],
+      "entities": [
+        "Kyoto University",
+        "Lux-Zeplin",
+        "DESY",
+        "Imperial College London",
+        "Leiden University"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-25T14:24:09Z"
+    },
+    {
+      "id": "science-319f463cce75ff29",
+      "title": "AI may soon change what it means to be a theoretical physicist",
+      "summary": "In a theoretical physics benchmark composed of unpublished research problems taking human experts roughly a day each, the AI model GPT-6 Astra correctly answered 49 of 50 problems, even identifying errors in human-provided answers.",
+      "finding": "In a theoretical physics benchmark composed of unpublished research problems taking human experts roughly a day each, the AI model GPT-6 Astra correctly answered 49 of 50 problems, even identifying errors in human-provided answers.",
+      "significance": "Frontier AI models are performing advanced mathematical and theoretical physics calculations rapidly and cheaply, dramatically speeding up research output and potentially transforming how theoretical physicists work.",
+      "caveat": "The benchmark focused on well-defined calculations rather than open-ended creative research, and physics remains fundamentally bound to real-world empirical experimentation.",
+      "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next",
+      "primarySourceUrl": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T12:00:28Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "unknown",
+      "topics": [
+        "physics",
+        "technology"
+      ],
+      "entities": [
+        "Suvrat Raju",
+        "International Centre for Theoretical Sciences",
+        "Matthew Schwartz",
+        "Andreas Karch",
+        "Daniel Harlow"
+      ],
+      "milestoneStatus": "unknown",
+      "sourceUpdatedAt": "2026-11-25T14:59:09Z"
+    },
+    {
+      "id": "science-33e1ce8c5fd4917f",
+      "title": "Hera reveals stadium-sized asteroid crater from spacecraft impact",
+      "summary": "ESA's Hera mission revealed that NASA's DART impact flattened one face of asteroid Dimorphos into a stadium-sized crater spanning its entire width, induced chaotic tumbling, and created hundreds of orbiting boulders.",
+      "finding": "ESA's Hera mission revealed that NASA's DART impact flattened one face of asteroid Dimorphos into a stadium-sized crater spanning its entire width, induced chaotic tumbling, and created hundreds of orbiting boulders.",
+      "significance": "Understanding the physical aftermath of the DART collision provides critical scientific data needed to develop reliable kinetic impact strategies for planetary defense against future asteroid threats.",
+      "caveat": "The findings represent initial observations from an early characterisation phase 25-30 km away, with higher-resolution imaging, interior radar probing, and compositional analysis still pending.",
+      "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-reveals-stadium-sized-asteroid-crater-left-after-spacecraft-impact",
+      "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-reveals-stadium-sized-asteroid-crater-left-after-spacecraft-impact",
+      "source": {
+        "name": "ESA"
+      },
+      "sourceGroup": "ESA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-25T11:02:51Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy",
+        "technology"
+      ],
+      "entities": [
+        "Hera",
+        "Dimorphos",
+        "Didymos",
+        "DART",
+        "ESA"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-1813758cb7de35bf",
+      "title": "A space telescope hunting for dark matter just discovered something unexpected",
+      "summary": "ESA's Euclid space telescope detected a previously unknown comet, designated C/2026 S1 (Euclid), orbiting outside the solar system's planetary plane at approximately 1.3 billion kilometers from Earth.",
+      "finding": "ESA's Euclid space telescope detected a previously unknown comet, designated C/2026 S1 (Euclid), orbiting outside the solar system's planetary plane at approximately 1.3 billion kilometers from Earth.",
+      "significance": "Demonstrates that Euclid can detect distant solar system objects, offering valuable operational experience for identifying potential targets for future missions like Comet Interceptor.",
+      "caveat": "Because Euclid follows a step-and-stare strategy and avoids the planetary plane, it cannot readily be redirected back toward new detections, making comet discoveries rare coincidences.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261124055852.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261124055852.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T10:35:04Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "European Space Agency",
+        "Euclid",
+        "Minor Planet Center",
+        "University of Helsinki",
+        "Comet Interceptor"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-ee6f330c1f7d25f1",
+      "title": "Physicists trap antimatter in a breakthrough that could explain why the universe exists",
+      "summary": "Physicists trapped a single positron, cooled it near absolute zero, and achieved quantum control over its energy states in a wall-free cyclotron trap.",
+      "finding": "Physicists trapped a single positron, cooled it near absolute zero, and achieved quantum control over its energy states in a wall-free cyclotron trap.",
+      "significance": "Controlling an isolated positron enables ultra-precise comparisons between matter and antimatter to test the Standard Model and probe why the universe is matter-dominated.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261124055849.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261124055849.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-25T10:06:22Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "physics"
+      ],
+      "entities": [
+        "Northwestern University",
+        "Gerald Gabrielse",
+        "Thomas Myers"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1103/gbkc-6nlj"
+    },
     {
       "id": "science-fe1f49c9c56b287d",
       "title": "An atom-sized black hole could force an entire star to explode",
@@ -86,9 +437,9 @@
     {
       "id": "science-d8842afd5b271805",
       "title": "Extinct, long-legged grasshoppers walked on water alongside dinosaurs",
-      "summary": "Fossils preserved in 99-million-year-old amber show that an extinct family of grasshoppers, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike legs to walk on water.",
-      "finding": "Fossils preserved in 99-million-year-old amber show that an extinct family of grasshoppers, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike legs to walk on water.",
-      "significance": "This finding marks the third insect group known to have independently evolved surface-water locomotion and may represent the earliest evidence of swarming behavior in grasshoppers or crickets.",
+      "summary": "Fossils preserved in 99-million-year-old amber reveal an extinct grasshopper species, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike leg structures that likely allowed it to walk on water.",
+      "finding": "Fossils preserved in 99-million-year-old amber reveal an extinct grasshopper species, Hydrelcana zhangi, possessed specialized water-repellent hairs and paddlelike leg structures that likely allowed it to walk on water.",
+      "significance": "The finding identifies a third insect group that independently evolved to move across water surfaces, and amber containing multiple specimens may represent the earliest record of swarming behavior in grasshoppers or crickets.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.sciencenews.org/article/extinct-grasshoppers-walked-on-water",
       "primarySourceUrl": "https://www.sciencenews.org/article/extinct-grasshoppers-walked-on-water",
@@ -99,18 +450,18 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-25T00:01:00Z",
       "firstSeenAt": "2026-11-25T11:00:07.165954Z",
-      "checkedAt": "2026-11-25T11:00:07.165954Z",
-      "verifiedAt": "2026-11-25T11:00:07.165954Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology"
       ],
       "entities": [
+        "Proceedings of the Royal Society B",
         "Chunpeng Xu",
         "Nanjing Institute of Geology and Paleontology",
         "Hydrelcana zhangi",
-        "Hydrelcanidae",
-        "Proceedings of the Royal Society B"
+        "Hydrelcanidae"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://doi.org/10.1098/rspb.2026.0751",
@@ -152,10 +503,10 @@
     {
       "id": "science-239d5156f08bd8a9",
       "title": "Half of NASA's aging Mars fleet knocked offline by technical issues",
-      "summary": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter on Mars following distinct technical problems with communications and pointing mechanisms.",
-      "finding": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter on Mars following distinct technical problems with communications and pointing mechanisms.",
-      "significance": "Odyssey and Perseverance are crucial components of NASA's Mars exploration network, with Odyssey also providing essential orbital communication relay services for surface rovers.",
-      "caveat": "Both issues remain under active troubleshooting; Odyssey may have only one to two months of propellant remaining if its malfunctioning reaction wheel cannot be recovered.",
+      "summary": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter due to separate technical issues.",
+      "finding": "NASA has temporarily suspended science operations for both the Perseverance rover and the Odyssey orbiter due to separate technical issues.",
+      "significance": "The outages affect half of NASA's operating Mars fleet, reducing high-rate data relay capabilities and threatening Odyssey's remaining fuel supply.",
+      "caveat": "The outages may be temporary as engineers troubleshoot Perseverance's UHF radios and Odyssey's balky reaction wheel, but further testing is required to confirm recovery.",
       "url": "https://arstechnica.com/space/2026/11/half-of-nasas-aging-mars-fleet-knocked-offline-by-technical-issues",
       "primarySourceUrl": "https://arstechnica.com/space/2026/11/half-of-nasas-aging-mars-fleet-knocked-offline-by-technical-issues",
       "source": {
@@ -165,8 +516,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-24T22:50:11Z",
       "firstSeenAt": "2026-11-25T11:00:07.165954Z",
-      "checkedAt": "2026-11-25T11:00:07.165954Z",
-      "verifiedAt": "2026-11-25T11:00:07.165954Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
       "evidenceType": "mission-milestone",
       "topics": [
         "astronomy",
@@ -179,7 +530,7 @@
         "Jet Propulsion Laboratory"
       ],
       "milestoneStatus": "delayed",
-      "sourceUpdatedAt": "2026-11-24T22:50:11Z"
+      "sourceUpdatedAt": "2026-11-25T13:45:51Z"
     },
     {
       "id": "science-81375e384c76e0d8",
@@ -250,10 +601,10 @@
     {
       "id": "science-ecc1858996f77b7f",
       "title": "How brewers can protect beers from smoke-tainted hops",
-      "summary": "Researchers found that adding smoke-tainted hops during wort boiling caused no discernible sensory difference in beer, while dry-hopping imparted smoky flavors that could be mitigated by blending tainted hops at levels under 50 percent.",
-      "finding": "Researchers found that adding smoke-tainted hops during wort boiling caused no discernible sensory difference in beer, while dry-hopping imparted smoky flavors that could be mitigated by blending tainted hops at levels under 50 percent.",
-      "significance": "Blending smoke-tainted hops with untainted hops allows brewers to salvage wildfire-affected crops, reducing severe economic losses for growers.",
-      "caveat": "Findings are preliminary and require replication; further research is needed to evaluate hops smoked in field conditions and broader consumer acceptance.",
+      "summary": "Researchers found that the impact of smoke-tainted hops on beer flavor depends on timing and quantity; tainted hops added during wort boiling produced virtually no discernible sensory difference compared to untainted hops, unlike dry-hopping.",
+      "finding": "Researchers found that the impact of smoke-tainted hops on beer flavor depends on timing and quantity; tainted hops added during wort boiling produced virtually no discernible sensory difference compared to untainted hops, unlike dry-hopping.",
+      "significance": "Brewers could potentially mitigate the economic fallout of wildfire smoke on hop crops by utilizing affected hops during boiling or blending them at controlled ratios below 50 percent.",
+      "caveat": "Further research is required to verify precise blending ratios, test hops exposed to smoke under active field conditions, and evaluate broader consumer acceptance.",
       "url": "https://arstechnica.com/science/2026/11/how-brewers-can-protect-beers-from-smoke-tainted-hops",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/how-brewers-can-protect-beers-from-smoke-tainted-hops",
       "source": {
@@ -263,18 +614,17 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-24T18:18:37Z",
       "firstSeenAt": "2026-11-25T11:00:07.165954Z",
-      "checkedAt": "2026-11-25T11:00:07.165954Z",
-      "verifiedAt": "2026-11-25T11:00:07.165954Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "technology",
-        "physics"
+        "technology"
       ],
       "entities": [
         "Oregon State University",
-        "Journal of the American Society of Brewing Chemists",
         "Thomas Shellhammer",
-        "Cade Jobe"
+        "Cade Jobe",
+        "Journal of the American Society of Brewing Chemists"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.tandfonline.com/doi/full/10.1080/03610470.2026.2749166",
@@ -346,6 +696,40 @@
       "milestoneStatus": "unknown",
       "paperUrl": "https://dx.doi.org/10.1038/s41586-026-11155-6%20",
       "sourceUpdatedAt": "2026-11-24T19:26:37Z"
+    },
+    {
+      "id": "science-e98cbcaffe4094ce",
+      "title": "This man sometimes sees his cat’s eyes on people’s faces",
+      "summary": "Researchers reported a case of persistent palinopsia where an individual experiences visual echoes of previously seen eyes, including those of a cat, superimposed onto human faces.",
+      "finding": "Researchers reported a case of persistent palinopsia where an individual experiences visual echoes of previously seen eyes, including those of a cat, superimposed onto human faces.",
+      "significance": "The case challenges the idea that humans process faces purely holistically and provides insights into how the brain detects and interprets specific facial features.",
+      "caveat": "The findings are based on clinical observations and self-reports from a single patient following brain surgery.",
+      "url": "https://www.sciencenews.org/article/man-cats-eyes-faces-brain",
+      "primarySourceUrl": "https://www.sciencenews.org/article/man-cats-eyes-faces-brain",
+      "source": {
+        "name": "Science News"
+      },
+      "sourceGroup": "Science News",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-24T16:00:00Z",
+      "firstSeenAt": "2026-11-26T11:01:02.025983Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "health"
+      ],
+      "entities": [
+        "Cortex",
+        "Dartmouth University",
+        "Jan Dirk Blom",
+        "Leiden University",
+        "Brad Duchaine"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0010945226002649?via%3Dihub",
+      "sourceUpdatedAt": "2026-11-24T16:00:00Z"
     },
     {
       "id": "science-61d9ba48b4b585f5",
@@ -542,10 +926,10 @@
     {
       "id": "science-55ba7087d6ed3460",
       "title": "Euclid breaks own quasar record by 40 million years",
-      "summary": "The Euclid space telescope identified the most distant known quasar, J1504+6252 (nickname D11n Aonghasa), observed at a redshift of 8.13, just 630 million years after the Big Bang.",
-      "finding": "The Euclid space telescope identified the most distant known quasar, J1504+6252 (nickname D11n Aonghasa), observed at a redshift of 8.13, just 630 million years after the Big Bang.",
-      "significance": "Hosting a 360 million-solar-mass black hole while consuming material slowly, the discovery challenges models regarding how supermassive black holes formed and grew so quickly in the early Universe.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "summary": "The Euclid space telescope discovered the most distant quasar known to date, J1504+6252, at a redshift of 8.13, observed just 630 million years after the Big Bang.",
+      "finding": "The Euclid space telescope discovered the most distant quasar known to date, J1504+6252, at a redshift of 8.13, observed just 630 million years after the Big Bang.",
+      "significance": "Hosting a 360-million-solar-mass black hole that feeds slowly, the quasar challenges models of how supermassive black holes formed and grew rapidly in the early Universe.",
+      "caveat": "Quasars at redshift 8 are extremely rare, with only a few tens expected across the entire Euclid survey, and it requires rapid early growth episodes that challenge models.",
       "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years",
       "source": {
@@ -555,8 +939,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-24T08:00:00Z",
       "firstSeenAt": "2026-11-25T11:00:07.165954Z",
-      "checkedAt": "2026-11-25T11:00:07.165954Z",
-      "verifiedAt": "2026-11-25T11:00:07.165954Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "astronomy",
@@ -564,10 +948,10 @@
       ],
       "entities": [
         "Euclid",
-        "W.M. Keck Observatory",
-        "Large Binocular Telescope Observatory",
+        "European Space Agency",
         "James Webb Space Telescope",
-        "Webb"
+        "Hubble Space Telescope",
+        "Astronomy & Astrophysics"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://www.aanda.org/10.1051/0004-6361/202662243"
@@ -671,10 +1055,10 @@
     {
       "id": "science-98e5dcba7250096e",
       "title": "BepiColombo safely in Mercury orbit despite unexpected challenge",
-      "summary": "The BepiColombo spacecraft achieved Mercury orbit insertion and secured a stable capture around the planet, despite an unexpected software glitch interrupting the thruster burn early.",
-      "finding": "The BepiColombo spacecraft achieved Mercury orbit insertion and secured a stable capture around the planet, despite an unexpected software glitch interrupting the thruster burn early.",
-      "significance": "The arrival marks the first time a spacecraft has entered orbit around another planet using weak stability capture, paving the way for orbit separation and planned science operations.",
-      "caveat": "A software glitch caused the thruster burn to terminate early at approximately 77% of planned velocity change, putting the craft into safe mode and a 75-hour orbit instead of the planned 58-hour orbit.",
+      "summary": "BepiColombo achieved Mercury orbit insertion and entered a stable 75-hour orbit despite a thruster burn interruption caused by a software glitch.",
+      "finding": "BepiColombo achieved Mercury orbit insertion and entered a stable 75-hour orbit despite a thruster burn interruption caused by a software glitch.",
+      "significance": "This marks an eight-year transit completion and the first time a spacecraft has entered orbit around another planet using weak stability capture.",
+      "caveat": "The initial thruster burn shut down early due to an attitude guidance and thruster control software issue, achieving only about 77% of its planned velocity change.",
       "url": "https://www.esa.int/articles/about-us/directorates/operations/bepicolombo-safely-in-mercury-orbit-despite-unexpected-challenge",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/operations/bepicolombo-safely-in-mercury-orbit-despite-unexpected-challenge",
       "source": {
@@ -684,8 +1068,8 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-23T18:00:00Z",
       "firstSeenAt": "2026-11-25T11:00:07.165954Z",
-      "checkedAt": "2026-11-25T11:00:07.165954Z",
-      "verifiedAt": "2026-11-25T11:00:07.165954Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
       "evidenceType": "mission-milestone",
       "topics": [
         "astronomy",
@@ -696,7 +1080,7 @@
         "ESOC",
         "Airbus",
         "ESA",
-        "JAXA"
+        "Japan Aerospace Exploration Agency"
       ],
       "milestoneStatus": "completed"
     },
@@ -748,7 +1132,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-23T16:00:19Z",
       "firstSeenAt": "2026-11-24T11:01:01.050443Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
       "verifiedAt": "2026-11-24T11:01:01.050443Z",
       "evidenceType": "explanatory-background",
       "topics": [
@@ -778,7 +1162,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-23T16:00:03Z",
       "firstSeenAt": "2026-11-24T11:01:01.050443Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
       "verifiedAt": "2026-11-24T11:01:01.050443Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -829,10 +1213,10 @@
     {
       "id": "science-3c49d0cf93cf9eff",
       "title": "The Incredible, Elegant DNA Repair System Makes Gene Editing Work",
-      "summary": "Gene-editing technologies such as CRISPR-Cas and base editing function by relying on cells' native DNA repair pathways to resolve targeted cuts or single-base alterations.",
-      "finding": "Gene-editing technologies such as CRISPR-Cas and base editing function by relying on cells' native DNA repair pathways to resolve targeted cuts or single-base alterations.",
-      "significance": "Understanding endogenous DNA repair processes clarifies how genetic editing tools insert or alter sequences, supporting treatments for genetic conditions.",
-      "caveat": "Techniques like base editing may carry limitations, including findings that the process is not precise enough to safely edit human embryos, alongside inherent risks of unintended modifications.",
+      "summary": "Gene-editing technologies like CRISPR-Cas and base editing fundamentally rely on natural cellular DNA repair systems to integrate edits or repair targeted cuts.",
+      "finding": "Gene-editing technologies like CRISPR-Cas and base editing fundamentally rely on natural cellular DNA repair systems to integrate edits or repair targeted cuts.",
+      "significance": "Understanding and harnessing native DNA repair pathways enables scientists to insert, mutate, or correct genes to study and treat genetic diseases.",
+      "caveat": "A 2026 study noted that base editing is not precise enough to be safely utilized in human embryos, and gene editing carries inherent risks of imperfection.",
       "url": "https://www.quantamagazine.org/the-incredible-elegant-dna-repair-system-makes-gene-editing-work-20261123",
       "primarySourceUrl": "https://www.quantamagazine.org/the-incredible-elegant-dna-repair-system-makes-gene-editing-work-20261123",
       "source": {
@@ -842,8 +1226,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-23T15:27:11Z",
       "firstSeenAt": "2026-11-24T11:01:01.050443Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
-      "verifiedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "biology",
@@ -851,11 +1235,11 @@
         "technology"
       ],
       "entities": [
-        "Björn Schumacher",
-        "Penny Jeggo",
-        "Maria Jasin",
         "University of Cologne",
-        "Memorial Sloan Kettering Cancer Center"
+        "Memorial Sloan Kettering Cancer Center",
+        "University of Sussex",
+        "CRISPR-Cas",
+        "Maria Jasin"
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-11-23T15:27:50Z"
@@ -863,9 +1247,9 @@
     {
       "id": "science-ab70143f3666dd5e",
       "title": "Hera’s Didymos asteroid in eclipse",
-      "summary": "The Hera mission captured an early image of a solar eclipse on Didymos, where the smaller moonlet Dimorphos cast its shadow onto the parent asteroid.",
-      "finding": "The Hera mission captured an early image of a solar eclipse on Didymos, where the smaller moonlet Dimorphos cast its shadow onto the parent asteroid.",
-      "significance": "Observing celestial mechanics and shadow dynamics on binary asteroids helps researchers study low-gravity environments and support planetary defence investigations.",
+      "summary": "The Hera spacecraft captured an image of a solar eclipse on asteroid Didymos, where its smaller moonlet Dimorphos cast a shadow across the parent body's surface.",
+      "finding": "The Hera spacecraft captured an image of a solar eclipse on asteroid Didymos, where its smaller moonlet Dimorphos cast a shadow across the parent body's surface.",
+      "significance": "The observation provides close-up visual data of the Didymos binary asteroid system to help evaluate the outcome of the DART impact for planetary defense.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-s-didymos-asteroid-in-eclipse",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-s-didymos-asteroid-in-eclipse",
@@ -876,21 +1260,21 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-23T14:10:46Z",
       "firstSeenAt": "2026-11-25T11:00:07.165954Z",
-      "checkedAt": "2026-11-25T11:00:07.165954Z",
-      "verifiedAt": "2026-11-25T11:00:07.165954Z",
-      "evidenceType": "mission-milestone",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
+      "evidenceType": "agency-announcement",
       "topics": [
         "astronomy",
         "technology"
       ],
       "entities": [
-        "Didymos",
-        "Dimorphos",
-        "European Space Agency",
         "Hera",
-        "DART"
+        "Didymos",
+        "European Space Agency",
+        "Dimorphos",
+        "Asteroid Framing Camera"
       ],
-      "milestoneStatus": "completed"
+      "milestoneStatus": "unknown"
     },
     {
       "id": "science-8905f67bb6ffa64b",
@@ -1765,10 +2149,10 @@
     {
       "id": "science-4745835fdb4923e5",
       "title": "Network Researchers Nail Down Theory of ‘Perfect Resilience’",
-      "summary": "Researchers proved that exactly four minimal network structures obstruct perfect resilience, showing that networks lacking these structures can always reliably route packets despite any link failures.",
-      "finding": "Researchers proved that exactly four minimal network structures obstruct perfect resilience, showing that networks lacking these structures can always reliably route packets despite any link failures.",
-      "significance": "The proof fully characterizes network resilience under realistic local routing constraints and provides a fast algorithm for generating routing rules in eligible networks.",
-      "caveat": "Preprint / working paper; peer review is not established. Because the four forbidden structures are simple, many dense, highly connected real-world networks contain them as minors and thus cannot achieve perfect resilience under this model.",
+      "summary": "Researchers proved that exactly four minimal network structures obstruct perfect resilience, showing that networks lacking these structures can always reliably route packets despite link failures.",
+      "finding": "Researchers proved that exactly four minimal network structures obstruct perfect resilience, showing that networks lacking these structures can always reliably route packets despite link failures.",
+      "significance": "The proof completely characterizes network structures that permit local routing rules to prevent infinite loops during link failures, and provides a fast algorithm to generate such rules.",
+      "caveat": "Preprint / working paper; peer review is not established. Because the four forbidden structures are simple, many dense, highly connected real-world networks contain them as minors, and the model does not account for high speed or low congestion.",
       "url": "https://www.quantamagazine.org/network-researchers-nail-down-theory-of-perfect-resilience-20261120",
       "primarySourceUrl": "https://www.quantamagazine.org/network-researchers-nail-down-theory-of-perfect-resilience-20261120",
       "source": {
@@ -1778,18 +2162,18 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-20T14:50:41Z",
       "firstSeenAt": "2026-11-22T11:01:01.016238Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
-      "verifiedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
       "evidenceType": "preprint",
       "topics": [
         "technology"
       ],
       "entities": [
         "Symposium on Theory of Computing",
-        "Michael Schapira",
-        "Hebrew University of Jerusalem",
         "Stefan Schmid",
-        "Matthias Bentert"
+        "Matthias Bentert",
+        "Michael Schapira",
+        "Brighten Godfrey"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://arxiv.org/abs/2602.03827",
@@ -2186,10 +2570,10 @@
     {
       "id": "science-54060f0c128ced07",
       "title": "NASA’s Voyager 1 Makes History Reaching One Light-Day From Earth",
-      "summary": "NASA's Voyager 1 probe has reached a distance of one light-day from Earth, approximately 16.1 billion miles away, with radio signals taking 24 hours to travel the distance.",
-      "finding": "NASA's Voyager 1 probe has reached a distance of one light-day from Earth, approximately 16.1 billion miles away, with radio signals taking 24 hours to travel the distance.",
-      "significance": "Voyager 1 is humanity's farthest-flying spacecraft, and reaching one light-day marks an unprecedented operational distance in interstellar exploration.",
-      "caveat": "The mission team has not received science and engineering data from Voyager 1 since November 14, 2026, though a carrier signal remains active.",
+      "summary": "Voyager 1 reached a distance of one light-day from Earth, approximately 16.1 billion miles away, marking a one-way radio communication delay of 24 hours.",
+      "finding": "Voyager 1 reached a distance of one light-day from Earth, approximately 16.1 billion miles away, marking a one-way radio communication delay of 24 hours.",
+      "significance": "Voyager 1 represents humanity's farthest-flying spacecraft, continuing to provide observations from interstellar space after entering it in 2012.",
+      "caveat": "Science and engineering data have not been received since November 14, 2026, though engineers confirmed the milestone via a carrier signal and trajectory modeling.",
       "url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth",
       "primarySourceUrl": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth",
       "source": {
@@ -2199,19 +2583,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-19T14:31:15Z",
       "firstSeenAt": "2026-11-20T11:01:01.132205Z",
-      "checkedAt": "2026-11-23T11:00:07.283061Z",
-      "verifiedAt": "2026-11-23T11:00:07.283061Z",
+      "checkedAt": "2026-11-26T11:01:02.025983Z",
+      "verifiedAt": "2026-11-26T11:01:02.025983Z",
       "evidenceType": "mission-milestone",
       "topics": [
         "astronomy",
         "technology"
       ],
       "entities": [
-        "NASA",
         "Voyager 1",
+        "Earth",
+        "NASA",
         "Jet Propulsion Laboratory",
-        "Caltech",
-        "Earth"
+        "Caltech"
       ],
       "milestoneStatus": "completed",
       "sourceUpdatedAt": "2026-11-19T14:31:18Z"
@@ -4818,38 +5202,6 @@
       "paperUrl": "https://journals.aps.org/prl/accepted/10.1103/j1r2-5ph7"
     },
     {
-      "id": "science-c45c5c281dd2928f",
-      "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
-      "summary": "NASA's Voyager 1 spacecraft is scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
-      "finding": "NASA's Voyager 1 spacecraft is scheduled to reach a distance of one light-day from Earth, exceeding 16 billion miles.",
-      "significance": "As the most distant human-made object, light transmitted from Earth will require a full 24 hours to reach the probe.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
-      "primarySourceUrl": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
-      "source": {
-        "name": "NASA JPL"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-11-10T19:22:45Z",
-      "firstSeenAt": "2026-11-16T11:01:02.875720Z",
-      "checkedAt": "2026-11-25T11:00:07.165954Z",
-      "verifiedAt": "2026-11-25T11:00:07.165954Z",
-      "evidenceType": "mission-milestone",
-      "topics": [
-        "astronomy",
-        "technology"
-      ],
-      "entities": [
-        "NASA",
-        "Voyager 1",
-        "Earth",
-        "Jet Propulsion Laboratory",
-        "Caltech"
-      ],
-      "milestoneStatus": "planned"
-    },
-    {
       "id": "science-6103d40234ae1019",
       "title": "NASA to Welcome Expedition 74 Astronauts Home at Space Center Houston",
       "summary": "The Expedition 74 crew completed long-duration missions aboard the International Space Station, devoting more than 1,400 hours to scientific research and technology demonstrations.",
@@ -5468,417 +5820,60 @@
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "http://dx.doi.org/10.3897/zse.102.187659"
-    },
-    {
-      "id": "science-863bc8d475842d3e",
-      "title": "Scientists wipe out deadly brain tumors in every mouse tested with new cancer therapy",
-      "summary": "Engineered B-SYNC CAR-T cells that activate specifically upon sensing brevican in the brain completely eliminated diffuse midline glioma tumors in two mouse models and persisted to prevent cancer recurrence.",
-      "finding": "Engineered B-SYNC CAR-T cells that activate specifically upon sensing brevican in the brain completely eliminated diffuse midline glioma tumors in two mouse models and persisted to prevent cancer recurrence.",
-      "significance": "Diffuse midline glioma is an aggressive, typically fatal childhood brain cancer; spatially restricting CAR-T activation may improve efficacy and reduce side effects compared to conventional therapies.",
-      "caveat": "The therapy has only been tested in preclinical mouse models and has not yet been evaluated for safety or effectiveness in humans.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104084009.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261104084009.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-08T23:24:50Z",
-      "firstSeenAt": "2026-11-09T11:00:04.003337Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "biology",
-        "health"
-      ],
-      "entities": [
-        "UC San Francisco",
-        "UCSF Health",
-        "Hideho Okada",
-        "Wendell Lim",
-        "Senthilnath Lakshmanachetty"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.1126/scitranslmed.aed9994"
-    },
-    {
-      "id": "science-f4af5b1661847f17",
-      "title": "An ancient ocean full of giant predators reveals a surprising twist in evolution",
-      "summary": "Fossils from Colombia's Paja Formation reveal an ancient marine ecosystem where declining older lineages coexisted with emerging newer lineages, demonstrating that major evolutionary transitions can happen without mass extinctions.",
-      "finding": "Fossils from Colombia's Paja Formation reveal an ancient marine ecosystem where declining older lineages coexisted with emerging newer lineages, demonstrating that major evolutionary transitions can happen without mass extinctions.",
-      "significance": "The pattern, termed a Biotic Inflection, suggests major biological transformations can be driven by high biodiversity and complex ecosystems rather than catastrophic die-offs.",
-      "caveat": "Researchers note that more evidence, including additional fossil finds and improved age estimates, is necessary to determine how common biotic inflections were throughout Earth's history.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261106174535.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261106174535.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-08T22:45:01Z",
-      "firstSeenAt": "2026-11-09T11:00:04.003337Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "biology",
-        "earth-science"
-      ],
-      "entities": [
-        "McGill University",
-        "Centro de Investigaciones Paleontológicas",
-        "Hans Larsson",
-        "Dirley Cortés",
-        "Paja Formation"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.3389/fevo.2026.1848892"
-    },
-    {
-      "id": "science-8ea0785cc9c63a50",
-      "title": "Physicists listened to electrical noise to crack a superconductor mystery",
-      "summary": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
-      "finding": "By measuring shot noise with scanning tunneling microscopy in a cuprate superconductor, researchers detected electron pairing occurring at the pseudogap energy scale.",
-      "significance": "The evidence supports the idea that electron pairing can occur prior to the onset of phase coherence, potentially opening avenues to increase superconducting transition temperatures.",
-      "caveat": "The technique loses sensitivity at higher temperatures, preventing measurements above the superconducting transition temperature where the pseudogap typically appears, and it does not fully rule out entangled charge patterns.",
-      "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
-      "primarySourceUrl": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery",
-      "source": {
-        "name": "Ars Technica Science"
-      },
-      "sourceGroup": "Ars Technica Science",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-08T12:15:31Z",
-      "firstSeenAt": "2026-11-09T11:00:04.003337Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "physics"
-      ],
-      "entities": [
-        "Milan Allan",
-        "Ludwig Maximilian University of Munich",
-        "Ingmar Swart",
-        "Utrecht University",
-        "Science"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://doi.org/10.1126/science.adt3444",
-      "sourceUpdatedAt": "2026-11-09T13:13:29Z"
-    },
-    {
-      "id": "science-0e34e988e4e9a6f2",
-      "title": "A nuclear blast could save Earth from an asteroid, but there's a catch",
-      "summary": "Simulations reveal that an asteroid's irregular shape significantly alters its response to a nuclear X-ray blast, causing deflection velocity to vary nearly fivefold based on blast direction.",
-      "finding": "Simulations reveal that an asteroid's irregular shape significantly alters its response to a nuclear X-ray blast, causing deflection velocity to vary nearly fivefold based on blast direction.",
-      "significance": "Understanding shape-dependent deflection allows planetary defense planners to optimize blast targeting and avoid inefficient redirection or unpredictable changes in asteroid spin.",
-      "caveat": "The current model only simulates the breakup of surface rocks and cannot accurately predict the potential fragmentation of an entire asteroid body.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261106174532.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261106174532.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-08T10:11:25Z",
-      "firstSeenAt": "2026-11-08T11:01:02.111901Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "astronomy",
-        "physics",
-        "technology"
-      ],
-      "entities": [
-        "Sandia National Laboratories",
-        "Nathan Moore",
-        "Icarus"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.1016/j.icarus.2026.117364"
-    },
-    {
-      "id": "science-974e1d23bd2b13b2",
-      "title": "Ancient Siberian tomb reveals surprising secrets of cannabis use 2,800 years ago",
-      "summary": "Archaeologists discovered roughly 1,000 cannabis seeds and chemical traces of cannabinoids in preserved human hair inside a 2,800-year-old Siberian tomb, indicating ancient Scythians used the plant for psychoactive effects.",
-      "finding": "Archaeologists discovered roughly 1,000 cannabis seeds and chemical traces of cannabinoids in preserved human hair inside a 2,800-year-old Siberian tomb, indicating ancient Scythians used the plant for psychoactive effects.",
-      "significance": "This discovery offers the oldest directly dated archaeological evidence for psychoactive cannabis use and provides insight into prehistoric funerary rituals and plant use.",
-      "caveat": "The findings cannot determine the amount consumed, the plant's THC potency, whether it was deliberately cultivated for psychoactivity, or the exact method of consumption.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261106174528.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261106174528.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-08T08:14:23Z",
-      "firstSeenAt": "2026-11-08T11:01:02.111901Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "social-science",
-        "biology"
-      ],
-      "entities": [
-        "University of Bern",
-        "Gino Caspari",
-        "Science",
-        "Max Planck Institute of Geoanthropology"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.1126/science.aeg3800"
-    },
-    {
-      "id": "science-4d1edc58dbf944a9",
-      "title": "APOD: 2026 November 8 – Major Fireball Meteor",
-      "summary": "A major fireball meteor tracked over Germany was consistent with originating near the radiant of the Northern Taurid Meteor Shower, which is linked to dust from Encke's comet.",
-      "finding": "A major fireball meteor tracked over Germany was consistent with originating near the radiant of the Northern Taurid Meteor Shower, which is linked to dust from Encke's comet.",
-      "significance": "The event generated widespread sightings across Europe, making it one of the most widely reported fireball events documented by meteor observation organizations.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://science.nasa.gov/image-article/apod-2026-november-8-major-fireball-meteor",
-      "primarySourceUrl": "https://science.nasa.gov/image-article/apod-2026-november-8-major-fireball-meteor",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-11-08T05:05:00Z",
-      "firstSeenAt": "2026-11-08T11:01:02.111901Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "astronomy"
-      ],
-      "entities": [
-        "Germany",
-        "Northern Taurid Meteor Shower",
-        "American Meteor Society",
-        "International Meteor Organization"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-08T05:05:00Z"
-    },
-    {
-      "id": "science-474872858153eec4",
-      "title": "Scientists discover hidden brain changes linked to common sleep disorders",
-      "summary": "A meta-analysis of 57 neuroimaging studies found that sleep disorders are linked to reductions in the thalamus, while parasomnias also show specific structural alterations in the posterior cingulate cortex.",
-      "finding": "A meta-analysis of 57 neuroimaging studies found that sleep disorders are linked to reductions in the thalamus, while parasomnias also show specific structural alterations in the posterior cingulate cortex.",
-      "significance": "Understanding common and disorder-specific brain alterations could assist in earlier diagnoses and guide targeted treatments for cognitive and emotional difficulties linked to sleep disorders.",
-      "caveat": "The meta-analysis identifies correlations but cannot determine whether sleep disorders cause these structural brain changes, whether brain differences precede sleep disorders, or both.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012303.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261104012303.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-08T04:47:52Z",
-      "firstSeenAt": "2026-11-08T11:01:02.111901Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "biology",
-        "health"
-      ],
-      "entities": [
-        "Florida International University",
-        "Scientific Reports",
-        "Matthew Sutherland",
-        "Katharine Crooks"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.1038/s41598-026-40818-7"
-    },
-    {
-      "id": "science-fcba619a931fe449",
-      "title": "Scientists squeeze record-breaking X-ray power into an incredibly tiny spot",
-      "summary": "Scientists generated 300-attosecond hard X-ray flashes focused into a 180 by 330 nanometer spot, achieving peak intensities exceeding 10^20 watts per square centimeter.",
-      "finding": "Scientists generated 300-attosecond hard X-ray flashes focused into a 180 by 330 nanometer spot, achieving peak intensities exceeding 10^20 watts per square centimeter.",
-      "significance": "The high intensity and ultrashort pulses enable the investigation of nonlinear X-ray matter interactions and ultrafast electron movements during chemical reactions before radiation damages samples.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012329.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261104012329.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-08T03:46:51Z",
-      "firstSeenAt": "2026-11-08T11:01:02.111901Z",
-      "checkedAt": "2026-11-08T11:01:02.111901Z",
-      "verifiedAt": "2026-11-08T11:01:02.111901Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "physics",
-        "technology"
-      ],
-      "entities": [
-        "European XFEL",
-        "University of Tokyo",
-        "DESY",
-        "University of Hamburg",
-        "Optica"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.1364/OPTICA.613284"
-    },
-    {
-      "id": "science-336af74c1de5a917",
-      "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
-      "summary": "Linguistic, genetic, and archaeological evidence indicates Bantu-speaking ancestors crossed the Congo rainforest together before splitting into eastern and southern migratory routes approximately 2,500 to 3,500 years ago.",
-      "finding": "Linguistic, genetic, and archaeological evidence indicates Bantu-speaking ancestors crossed the Congo rainforest together before splitting into eastern and southern migratory routes approximately 2,500 to 3,500 years ago.",
-      "significance": "Clarifies the route and timing of one of history's largest human migrations, which reshaped the demography, languages, and technologies of sub-Saharan Africa.",
-      "caveat": "Conclusive archaeological evidence directly confirming the Bantu homeland in western Africa remains sparse, and historical records and research funding are limited.",
-      "url": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
-      "primarySourceUrl": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures",
-      "source": {
-        "name": "Ars Technica Science"
-      },
-      "sourceGroup": "Ars Technica Science",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-07T12:15:55Z",
-      "firstSeenAt": "2026-11-08T11:01:02.111901Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "social-science",
-        "biology"
-      ],
-      "entities": [
-        "Great Zimbabwe",
-        "Field Museum of Natural History",
-        "University of Leicester",
-        "University of Oxford",
-        "Uppsala University"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nature.com/articles/s41586-023-06770-6",
-      "sourceUpdatedAt": "2026-11-07T12:26:45Z"
-    },
-    {
-      "id": "science-e4aeb9775f76183d",
-      "title": "Human bodies produce 2 billion metric tons of CO2 a year just by staying alive",
-      "summary": "Global carbon dioxide emissions from human metabolism increased by 74 percent between 1985 and 2015, reaching 2.05 billion metric tons per year, predominantly driven by population growth.",
-      "finding": "Global carbon dioxide emissions from human metabolism increased by 74 percent between 1985 and 2015, reaching 2.05 billion metric tons per year, predominantly driven by population growth.",
-      "significance": "Accurately quantifying metabolic carbon output aids in refining global carbon budgets and improves models that evaluate the efficacy of carbon reduction strategies.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012305.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261104012305.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-07T10:00:03Z",
-      "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-07T11:01:01.958577Z",
-      "verifiedAt": "2026-11-07T11:01:01.958577Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "earth-science",
-        "biology"
-      ],
-      "entities": [
-        "University of Bath",
-        "The Lancet Planetary Health",
-        "Javier Gonzalez",
-        "International Atomic Energy Agency"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.1016/j.lanplh.2026.101546"
-    },
-    {
-      "id": "science-74d6b6a43f32b8a0",
-      "title": "Scientists discover Europe's ancient forests were nothing like we imagined",
-      "summary": "Palaeoecological evidence spanning over 20 million years indicates that ancient Europe was dominated by a mosaic of open woodlands and meadows sustained by large herbivores, rather than continuous dense forest.",
-      "finding": "Palaeoecological evidence spanning over 20 million years indicates that ancient Europe was dominated by a mosaic of open woodlands and meadows sustained by large herbivores, rather than continuous dense forest.",
-      "significance": "The findings challenge traditional reforestation and conservation strategies that prioritize planting dense, continuous tree cover, suggesting such approaches may not reflect native ecosystems.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012333.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261104012333.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-07T09:44:48Z",
-      "firstSeenAt": "2026-11-07T11:01:01.958577Z",
-      "checkedAt": "2026-11-07T11:01:01.958577Z",
-      "verifiedAt": "2026-11-07T11:01:01.958577Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "earth-science",
-        "biology"
-      ],
-      "entities": [
-        "Aarhus University",
-        "Biological Conservation",
-        "Jens-Christian Svenning",
-        "Szymon Czyzewski"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.1016/j.biocon.2026.111749"
     }
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "selectedIds": [
-      "science-81375e384c76e0d8",
-      "science-55ba7087d6ed3460",
-      "science-d8842afd5b271805",
+      "science-2cdf27b08a75a07c",
+      "science-33e1ce8c5fd4917f",
+      "science-2fad27c0c8b8cff8",
+      "science-95f59a69a76e0c0a",
       "science-a5297f9bcc2bd62d",
-      "science-a80568159c6dbdc0",
-      "science-015fec0b34ff3654"
+      "science-b355bef02b4f6c92"
     ],
     "reasons": {
-      "science-81375e384c76e0d8": {
+      "science-2cdf27b08a75a07c": {
         "score": 33,
         "source": "NASA",
-        "topic": "technology",
-        "publishedAt": "2026-11-24T21:04:32Z",
+        "topic": "biology",
+        "publishedAt": "2026-11-25T17:53:42Z",
         "interestMatch": false
       },
-      "science-55ba7087d6ed3460": {
+      "science-33e1ce8c5fd4917f": {
         "score": 33,
         "source": "ESA",
         "topic": "astronomy",
-        "publishedAt": "2026-11-24T08:00:00Z",
+        "publishedAt": "2026-11-25T11:02:51Z",
         "interestMatch": false
       },
-      "science-d8842afd5b271805": {
+      "science-2fad27c0c8b8cff8": {
         "score": 31,
-        "source": "Science News",
-        "topic": "biology",
-        "publishedAt": "2026-11-25T00:01:00Z",
+        "source": "New Scientist",
+        "topic": "technology",
+        "publishedAt": "2026-11-25T18:00:00Z",
+        "interestMatch": false
+      },
+      "science-95f59a69a76e0c0a": {
+        "score": 31,
+        "source": "Quanta Magazine",
+        "topic": "physics",
+        "publishedAt": "2026-11-25T14:00:49Z",
         "interestMatch": false
       },
       "science-a5297f9bcc2bd62d": {
-        "score": 31,
+        "score": 30,
         "source": "ScienceDaily",
         "topic": "health",
         "publishedAt": "2026-11-24T23:31:52Z",
         "interestMatch": false
       },
-      "science-a80568159c6dbdc0": {
-        "score": 30,
-        "source": "New Scientist",
-        "topic": "earth-science",
-        "publishedAt": "2026-11-23T17:00:00Z",
-        "interestMatch": false
-      },
-      "science-015fec0b34ff3654": {
-        "score": 27,
-        "source": "NSF",
-        "topic": "technology",
-        "publishedAt": "2026-11-23T16:00:03Z",
+      "science-b355bef02b4f6c92": {
+        "score": 29,
+        "source": "Science News",
+        "topic": "social-science",
+        "publishedAt": "2026-11-23T16:00:00Z",
         "interestMatch": false
       }
     }
