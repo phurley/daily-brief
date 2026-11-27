@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-26T11:01:02.025983Z",
-  "editionDate": "2026-11-26",
+  "generatedAt": "2026-11-27T11:00:47.402580Z",
+  "editionDate": "2026-11-27",
   "starshipEstimatedLaunch": {
     "status": "targeted",
     "estimateLabel": "No earlier than September 18, 2026",
@@ -20,6 +20,293 @@
     ]
   },
   "stories": [
+    {
+      "id": "science-8ac033fb31a1e35f",
+      "title": "The narwhal’s legendary “unicorn horn” holds a remarkable engineering secret",
+      "summary": "Researchers found that the narwhal tusk contains two intertwined microscopic spirals that twist in opposing directions, with the outer cementum twisting opposite the underlying dentin.",
+      "finding": "Researchers found that the narwhal tusk contains two intertwined microscopic spirals that twist in opposing directions, with the outer cementum twisting opposite the underlying dentin.",
+      "significance": "This dual-helical microscopic architecture acts like the twisted fibers of a rope, giving the long tooth structural stability, flexibility, and resistance to torsional stress.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261126063316.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261126063316.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-27T10:01:39Z",
+      "firstSeenAt": "2026-11-27T11:00:47.402580Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "technology"
+      ],
+      "entities": [
+        "Paul Scherrer Institute",
+        "Nature Communications",
+        "Marianne Liebi",
+        "Adrian Rodriguez-Palomo",
+        "Henrik Birkedal"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41467-026-75689-z"
+    },
+    {
+      "id": "science-2f60d24207b6324a",
+      "title": "Scientists turn one of the world’s hardest-to-recycle plastics into high-performance lubricating oil",
+      "summary": "Researchers have developed a chemical process that transforms discarded polyvinyl chloride (PVC) plastic into polyalphaolefin, a synthetic base oil used in high-performance engine lubricants.",
+      "finding": "Researchers have developed a chemical process that transforms discarded polyvinyl chloride (PVC) plastic into polyalphaolefin, a synthetic base oil used in high-performance engine lubricants.",
+      "significance": "The method offers a potential way to upcycle notoriously hard-to-recycle PVC waste into high-value industrial materials while lowering the environmental impact of lubricant production.",
+      "caveat": "The process has only been demonstrated at the laboratory scale, and expanding it for commercial production remains an ongoing challenge.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261126033501.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261126033501.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-27T09:52:24Z",
+      "firstSeenAt": "2026-11-27T11:00:47.402580Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "chemistry",
+        "technology",
+        "earth-science"
+      ],
+      "entities": [
+        "Virginia Tech",
+        "Guoliang \"Greg\" Liu",
+        "Eric Munyaneza Nuwayo",
+        "Texas A&M University",
+        "Nature"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41586-026-10867-z"
+    },
+    {
+      "id": "science-94c1eddf1933c77b",
+      "title": "Particles not seen before have been observed in a quantum simulator",
+      "summary": "Researchers have observed signatures of emergent paraparticles using a 16-qubit superconducting quantum simulator.",
+      "finding": "Researchers have observed signatures of emergent paraparticles using a 16-qubit superconducting quantum simulator.",
+      "significance": "This provides proof-of-concept experimental evidence for a class of particles beyond traditional bosons and fermions, complicating current views of the quantum world.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.newscientist.com/article/2600979-particles-not-seen-before-have-been-observed-in-a-quantum-simulator",
+      "primarySourceUrl": "https://www.newscientist.com/article/2600979-particles-not-seen-before-have-been-observed-in-a-quantum-simulator",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-27T09:00:00Z",
+      "firstSeenAt": "2026-11-27T11:00:47.402580Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
+      "evidenceType": "preprint",
+      "topics": [
+        "physics"
+      ],
+      "entities": [
+        "Rice University",
+        "Perimeter Institute",
+        "Massachusetts Institute of Technology",
+        "Max Hays",
+        "Cora Barrett"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.48550/arXiv.2611.03908",
+      "sourceUpdatedAt": "2026-11-27T10:57:32Z"
+    },
+    {
+      "id": "science-f0b4551a4162361d",
+      "title": "Scientists identify two ages when children may be most vulnerable to screen time",
+      "summary": "Higher screen time during infancy (age 1) and around the start of formal schooling (age 6) was linked to lower academic scores at age 9 and poorer working memory at age 10.5.",
+      "finding": "Higher screen time during infancy (age 1) and around the start of formal schooling (age 6) was linked to lower academic scores at age 9 and poorer working memory at age 10.5.",
+      "significance": "The findings suggest that the timing of screen exposure during childhood development may be just as important as the total duration of screen viewing.",
+      "caveat": "The study establishes observational associations rather than direct causation, and screen exposure was based on parent reports without assessing content quality or context.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261126033220.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261126033220.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-27T03:56:06Z",
+      "firstSeenAt": "2026-11-27T11:00:47.402580Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "health",
+        "social-science"
+      ],
+      "entities": [
+        "Zhejiang University",
+        "Inserm",
+        "National University of Singapore",
+        "World Journal of Pediatrics"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1007/s12519-026-01046-1"
+    },
+    {
+      "id": "science-82aac57b6b13ce26",
+      "title": "Scientists discover signs of a hidden extinction crisis deep beneath the ocean",
+      "summary": "Analysis of 12 years of genetic data from five deep-sea fish and shrimp species in the Gulf revealed signs of extinction risk, including reduced genetic diversity and small effective population sizes.",
+      "finding": "Analysis of 12 years of genetic data from five deep-sea fish and shrimp species in the Gulf revealed signs of extinction risk, including reduced genetic diversity and small effective population sizes.",
+      "significance": "The results challenge the belief that the deep sea functions as a resilient sanctuary, suggesting environmental disruptions can jeopardize deep-sea marine biodiversity.",
+      "caveat": "Researchers have not established a direct causal link between the 2010 Deepwater Horizon oil spill and the specific genetic changes detected.",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261125045249.htm",
+      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261125045249.htm",
+      "source": {
+        "name": "ScienceDaily"
+      },
+      "sourceGroup": "ScienceDaily",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-27T01:55:42Z",
+      "firstSeenAt": "2026-11-27T11:00:47.402580Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "biology",
+        "earth-science"
+      ],
+      "entities": [
+        "Florida International University",
+        "Pedro A. Peres",
+        "Heather Bracken-Grissom",
+        "Keith Sellers",
+        "Tracey T. Sutton"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41467-026-79098-0"
+    },
+    {
+      "id": "science-f94555e807e5c09a",
+      "title": "Ozone hole one of the largest in decades",
+      "summary": "Satellite observations revealed that the 2026 Antarctic ozone hole expanded to 27.3 million square kilometers, ranking among the largest in 48 years due to a persistent polar vortex.",
+      "finding": "Satellite observations revealed that the 2026 Antarctic ozone hole expanded to 27.3 million square kilometers, ranking among the largest in 48 years due to a persistent polar vortex.",
+      "significance": "Continuous satellite tracking confirms natural year-to-year fluctuations while verifying that the long-term recovery trajectory of the ozone layer remains consistent.",
+      "caveat": "Despite its unusually large geographic coverage, the depth of the 2026 ozone hole remained close to average rather than setting depletion depth records.",
+      "url": "https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/copernicus/sentinel-5p/ozone-hole-one-of-the-largest-in-decades",
+      "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/copernicus/sentinel-5p/ozone-hole-one-of-the-largest-in-decades",
+      "source": {
+        "name": "ESA"
+      },
+      "sourceGroup": "ESA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-26T13:00:00Z",
+      "firstSeenAt": "2026-11-27T11:00:47.402580Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
+      "evidenceType": "agency-announcement",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "Copernicus Sentinel-5P",
+        "Tropomi",
+        "Copernicus Atmosphere Monitoring Service",
+        "Antarctica"
+      ],
+      "milestoneStatus": "unknown"
+    },
+    {
+      "id": "science-be25100da0168622",
+      "title": "Watch live: Gaia releases its largest-ever goldmine of cosmic data",
+      "summary": "The European Space Agency announced the scheduled unveiling of Gaia Data Release 4, featuring observations based on half the data collected over the mission's 11-year lifetime.",
+      "finding": "The European Space Agency announced the scheduled unveiling of Gaia Data Release 4, featuring observations based on half the data collected over the mission's 11-year lifetime.",
+      "significance": "The release aims to provide data to help researchers investigate Milky Way astrophysics, including the origin, structure, and evolutionary history of the galaxy.",
+      "caveat": "The source does not specify material limitations; independent verification is not established.",
+      "url": "https://www.esa.int/articles/about-us/directorates/science/gaia/watch-live-gaia-releases-its-largest-ever-goldmine-of-cosmic-data",
+      "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/science/gaia/watch-live-gaia-releases-its-largest-ever-goldmine-of-cosmic-data",
+      "source": {
+        "name": "ESA"
+      },
+      "sourceGroup": "ESA",
+      "sourceQuality": 2,
+      "publishedAt": "2026-11-26T12:39:02Z",
+      "firstSeenAt": "2026-11-27T11:00:47.402580Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
+      "evidenceType": "mission-milestone",
+      "topics": [
+        "astronomy"
+      ],
+      "entities": [
+        "European Space Agency",
+        "Gaia",
+        "Milky Way"
+      ],
+      "milestoneStatus": "planned"
+    },
+    {
+      "id": "science-fdb09ed1f29c79af",
+      "title": "Draining peatlands is responsible for a few percent of our global warming",
+      "summary": "Researchers found that historical peatland drainage accounts for about 2.7 percent of the human-caused change in Earth's energy budget in 2020.",
+      "finding": "Researchers found that historical peatland drainage accounts for about 2.7 percent of the human-caused change in Earth's energy budget in 2020.",
+      "significance": "Because drained peatlands continue releasing carbon over time, holding 2020 water levels constant could nearly double their warming impact by 2100 unless peatlands are restored.",
+      "caveat": "Accounting for error bars, the calculated impact of peatland drainage on Earth's energy budget spans a range of 1.8 to 3.6 percent.",
+      "url": "https://arstechnica.com/science/2026/11/draining-peatlands-is-responsible-for-a-few-percent-of-our-global-warming",
+      "primarySourceUrl": "https://arstechnica.com/science/2026/11/draining-peatlands-is-responsible-for-a-few-percent-of-our-global-warming",
+      "source": {
+        "name": "Ars Technica Science"
+      },
+      "sourceGroup": "Ars Technica Science",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-26T12:15:42Z",
+      "firstSeenAt": "2026-11-27T11:00:47.402580Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "earth-science"
+      ],
+      "entities": [
+        "MIT",
+        "Jevan Yu",
+        "Nature"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "http://dx.doi.org/10.1038/s41586-026-11339-0",
+      "sourceUpdatedAt": "2026-11-24T19:46:20Z"
+    },
+    {
+      "id": "science-e7fbc7ba98c95709",
+      "title": "Ultracold atoms could help unravel a major flaw in quantum theory",
+      "summary": "Researchers have proposed an experiment using ultracold atoms falling onto a detector to measure arrival-time distributions, aiming to resolve quantum theory's debate over calculating particle transit times.",
+      "finding": "Researchers have proposed an experiment using ultracold atoms falling onto a detector to measure arrival-time distributions, aiming to resolve quantum theory's debate over calculating particle transit times.",
+      "significance": "Measuring quantum particle arrival times could distinguish between rival interpretations of quantum mechanics, such as pilot-wave theory versus standard formulations, impacting practical particle-beam physics.",
+      "caveat": "The proposed setup is currently an experimental proposal that has not yet been conducted, meaning no empirical results or definitive tests of quantum interpretations currently exist.",
+      "url": "https://www.newscientist.com/article/2600718-ultracold-atoms-could-help-unravel-a-major-flaw-in-quantum-theory",
+      "primarySourceUrl": "https://www.newscientist.com/article/2600718-ultracold-atoms-could-help-unravel-a-major-flaw-in-quantum-theory",
+      "source": {
+        "name": "New Scientist"
+      },
+      "sourceGroup": "New Scientist",
+      "sourceQuality": 1,
+      "publishedAt": "2026-11-26T12:00:00Z",
+      "firstSeenAt": "2026-11-27T11:00:47.402580Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
+      "evidenceType": "peer-reviewed-research",
+      "topics": [
+        "physics"
+      ],
+      "entities": [
+        "Pascal Naidon",
+        "Lucas Happ",
+        "Denis Boiron",
+        "RIKEN",
+        "Paris-Saclay University"
+      ],
+      "milestoneStatus": "unknown",
+      "paperUrl": "https://doi.org/10.1103/683f-3qxt"
+    },
     {
       "id": "science-610a8dba03b4f860",
       "title": "European spacecraft finds chaotic scene after asteroid deflection experiment",
@@ -666,10 +953,10 @@
     {
       "id": "science-8d5fdf717370cb37",
       "title": "Homo erectus lived in the rainforest alongside Denisovans",
-      "summary": "Fossil teeth dating to between 324,000 and 184,000 years ago indicate that Homo erectus inhabited mainland Asian tropical rainforests tens of thousands of years more recently than recognized, potentially alongside Denisovans.",
-      "finding": "Fossil teeth dating to between 324,000 and 184,000 years ago indicate that Homo erectus inhabited mainland Asian tropical rainforests tens of thousands of years more recently than recognized, potentially alongside Denisovans.",
-      "significance": "The evidence challenges previous assumptions that only Homo sapiens could adapt to dense tropical rainforests and fills a major chronological gap in the mainland Asian fossil record.",
-      "caveat": "Whether rainforest adaptations were specific to late-surviving populations in southern China or more widespread remains unclear and requires testing at other sites.",
+      "summary": "Teeth from caves in southern China reveal Homo erectus survived on mainland Asia between 324,000 and 184,000 years ago, inhabited dense tropical rainforests, and likely coexisted near Denisovans.",
+      "finding": "Teeth from caves in southern China reveal Homo erectus survived on mainland Asia between 324,000 and 184,000 years ago, inhabited dense tropical rainforests, and likely coexisted near Denisovans.",
+      "significance": "The discovery closes a multi-hundred-thousand-year fossil gap in mainland Asia and challenges the view that only Homo sapiens could adapt to dense tropical rainforest environments.",
+      "caveat": "It remains unknown whether adaptations to rainforests were unique to late-surviving southern Chinese populations, and Denisovan tooth identification could not be confirmed completely.",
       "url": "https://arstechnica.com/science/2026/11/homo-erectus-lived-in-the-rainforest-alongside-denisovans",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/homo-erectus-lived-in-the-rainforest-alongside-denisovans",
       "source": {
@@ -679,23 +966,22 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-24T16:01:19Z",
       "firstSeenAt": "2026-11-25T11:00:07.165954Z",
-      "checkedAt": "2026-11-25T11:00:07.165954Z",
-      "verifiedAt": "2026-11-25T11:00:07.165954Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
-        "biology",
-        "social-science"
+        "biology"
       ],
       "entities": [
         "Homo erectus",
-        "Denisovans",
+        "University of Copenhagen",
+        "Macquarie University",
         "Frido Welker",
-        "Kira Westaway",
-        "Nature"
+        "Kira Westaway"
       ],
       "milestoneStatus": "unknown",
       "paperUrl": "https://dx.doi.org/10.1038/s41586-026-11155-6%20",
-      "sourceUpdatedAt": "2026-11-24T19:26:37Z"
+      "sourceUpdatedAt": "2026-11-25T15:38:45Z"
     },
     {
       "id": "science-e98cbcaffe4094ce",
@@ -764,10 +1050,10 @@
     {
       "id": "science-f4a9762ecfb997ca",
       "title": "Eagles can prey on adult baboons. Did our ancestors face that threat?",
-      "summary": "Skeletal remains of adult male baboons weighing 22 to 26 kilograms display puncture wounds in the eye sockets and shoulder gashes indicating predation by raptors, likely Verreaux's eagles.",
-      "finding": "Skeletal remains of adult male baboons weighing 22 to 26 kilograms display puncture wounds in the eye sockets and shoulder gashes indicating predation by raptors, likely Verreaux's eagles.",
-      "significance": "Because these baboons match the size of early human ancestors such as Australopithecus, raptor predation may have shaped early hominid social structures and vocal warning behaviors.",
-      "caveat": "Researchers did not observe an eagle attacking a baboon directly, and while puncture marks match known eagle hunting patterns, they could theoretically result from other causes like bites.",
+      "summary": "Skeletal remains of adult male baboons weighing 22 to 26 kilograms show telltale signs of predation by Verreaux's eagles.",
+      "finding": "Skeletal remains of adult male baboons weighing 22 to 26 kilograms show telltale signs of predation by Verreaux's eagles.",
+      "significance": "Demonstrates that raptors could prey on primates twice the size previously documented, suggesting aerial predators may have influenced early hominid social behavior.",
+      "caveat": "Researchers did not directly witness an attack, and cranial puncture wounds could theoretically arise from other sources like bites or bullets.",
       "url": "https://www.sciencenews.org/article/eagles-prey-adult-baboon-human-ancestor",
       "primarySourceUrl": "https://www.sciencenews.org/article/eagles-prey-adult-baboon-human-ancestor",
       "source": {
@@ -777,16 +1063,16 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-24T14:00:00Z",
       "firstSeenAt": "2026-11-25T11:00:07.165954Z",
-      "checkedAt": "2026-11-25T11:00:07.165954Z",
-      "verifiedAt": "2026-11-25T11:00:07.165954Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "biology"
       ],
       "entities": [
         "American Journal of Biological Anthropology",
-        "Cat Hobaiter",
-        "Scott McGraw",
+        "Papio anubis",
+        "Aquila verreauxii",
         "University of St Andrews",
         "Ohio State University"
       ],
@@ -1023,10 +1309,10 @@
     {
       "id": "science-aaffec7cab6e3c5c",
       "title": "Math’s holy grail, the Riemann hypothesis, appears solved with AI’s help",
-      "summary": "Mathematician Levent Alpöge, collaborating with the AI tool Claude, posted a 250,000-page computer-verified proof of the Riemann hypothesis and the generalized Riemann hypothesis.",
-      "finding": "Mathematician Levent Alpöge, collaborating with the AI tool Claude, posted a 250,000-page computer-verified proof of the Riemann hypothesis and the generalized Riemann hypothesis.",
-      "significance": "Resolving this century-old mathematical problem clarifies the distribution and secrets of prime numbers, underpinning numerous related mathematical statements.",
-      "caveat": "The dense proof spans 250,000 pages that mathematicians must still translate into human-comprehensible form, and critics question whether humans can confirm it with full certainty.",
+      "summary": "Mathematician Levent Alpoge, collaborating with Anthropic's AI Claude, reported a computer-verified proof of the Riemann hypothesis and its generalized form.",
+      "finding": "Mathematician Levent Alpoge, collaborating with Anthropic's AI Claude, reported a computer-verified proof of the Riemann hypothesis and its generalized form.",
+      "significance": "Solving this century-old problem reveals deep structures regarding prime numbers and impacts numerous other mathematical theorems that rely on the hypothesis being true.",
+      "caveat": "The massive 250,000-page proof is still being translated into human-understandable form, and some critics dispute that human mathematicians can verify it with full certainty.",
       "url": "https://www.sciencenews.org/article/riemann-hypothesis-solved-math-ai",
       "primarySourceUrl": "https://www.sciencenews.org/article/riemann-hypothesis-solved-math-ai",
       "source": {
@@ -1036,18 +1322,18 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-23T21:01:59Z",
       "firstSeenAt": "2026-11-24T11:01:01.050443Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
-      "verifiedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
       "evidenceType": "unknown",
       "topics": [
         "technology"
       ],
       "entities": [
-        "Levent Alpöge",
         "Anthropic",
         "Claude",
-        "Lean Focused Research Organization",
-        "Mathlib Initiative"
+        "Lean",
+        "Mathlib",
+        "University of Virginia"
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-11-23T21:01:59Z"
@@ -1179,10 +1465,10 @@
     {
       "id": "science-b355bef02b4f6c92",
       "title": "The notion of ‘positive masculinity’ is dividing the male studies field",
-      "summary": "Researchers are divided on positive masculinity, with some concluding masculine ideals inherently oppose femininity and correlate with sexism, while others focus on healthy behaviors to improve men's outcomes.",
-      "finding": "Researchers are divided on positive masculinity, with some concluding masculine ideals inherently oppose femininity and correlate with sexism, while others focus on healthy behaviors to improve men's outcomes.",
-      "significance": "Traditional masculinity scales link adherence to male norms with poor health and violence, driving the debate over whether to reframe manhood positively or discard gendered norms entirely.",
-      "caveat": "Some findings linking masculine ideals with sexist beliefs stem from unpublished work across limited samples, and the proposed behavioral index is still preliminary.",
+      "summary": "Researchers are divided over whether masculinity can be framed positively, as efforts to isolate positive male traits often correlate with sexist beliefs or describe universal human traits.",
+      "finding": "Researchers are divided over whether masculinity can be framed positively, as efforts to isolate positive male traits often correlate with sexist beliefs or describe universal human traits.",
+      "significance": "Traditional masculinity scales link adherence to male norms with poor health and social outcomes, prompting debate over whether health campaigns should reframe manhood positively or abandon gender labels.",
+      "caveat": "Findings linking positive masculine ideals to sexist beliefs remain unpublished across several tested samples, and alternative behavioral scales remain preliminary.",
       "url": "https://www.sciencenews.org/article/positive-masculinity-male-studies-field",
       "primarySourceUrl": "https://www.sciencenews.org/article/positive-masculinity-male-studies-field",
       "source": {
@@ -1192,22 +1478,22 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-23T16:00:00Z",
       "firstSeenAt": "2026-11-24T11:01:01.050443Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
-      "verifiedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
       "evidenceType": "peer-reviewed-research",
       "topics": [
         "social-science",
         "health"
       ],
       "entities": [
-        "Ryon McDermott",
-        "Matt Englar-Carlson",
-        "Peter Fisher",
+        "University of South Alabama",
         "Movember",
-        "Michael Addis"
+        "California State University, Fullerton",
+        "Penn State University",
+        "Stanford University"
       ],
       "milestoneStatus": "unknown",
-      "paperUrl": "https://psycnet.apa.org/record/2018-17970-001",
+      "paperUrl": "https://journals.sagepub.com/doi/10.1177/1097184X261459614",
       "sourceUpdatedAt": "2026-11-23T16:00:00Z"
     },
     {
@@ -1764,9 +2050,9 @@
     {
       "id": "science-782cb492ea3529a6",
       "title": "“Race realism” isn’t realistic—and it isn’t good science",
-      "summary": "Scientific evidence across genetics, evolutionary biology, and psychology refutes hereditarian claims of innate racial differences in intelligence, showing greater genetic variation within groups than between them.",
-      "finding": "Scientific evidence across genetics, evolutionary biology, and psychology refutes hereditarian claims of innate racial differences in intelligence, showing greater genetic variation within groups than between them.",
-      "significance": "Disproving biological determinism helps counter scientifically flawed narratives used to support political misinformation, social stratification, and discriminatory policies.",
+      "summary": "Modern genetics and evolutionary biology show human genetic variation does not correspond to racial categories and fails to support claims of innate cognitive differences between racial groups.",
+      "finding": "Modern genetics and evolutionary biology show human genetic variation does not correspond to racial categories and fails to support claims of innate cognitive differences between racial groups.",
+      "significance": "The findings directly challenge pseudoscientific race realism and hereditarian narratives used to justify political discrimination and racial hierarchies.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://arstechnica.com/science/2026/11/race-realism-isnt-realistic-and-it-isnt-good-science",
       "primarySourceUrl": "https://arstechnica.com/science/2026/11/race-realism-isnt-realistic-and-it-isnt-good-science",
@@ -1777,19 +2063,19 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-21T12:01:13Z",
       "firstSeenAt": "2026-11-22T11:01:01.016238Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
-      "verifiedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
       "evidenceType": "explanatory-background",
       "topics": [
         "biology",
         "social-science"
       ],
       "entities": [
-        "Donald Trump",
         "Richard Lewontin",
-        "Cambridge University",
-        "Ghent University",
-        "Pioneer Fund"
+        "World Economic Forum",
+        "Nathan Cofnas",
+        "Jason Arday",
+        "Donald Trump"
       ],
       "milestoneStatus": "unknown",
       "sourceUpdatedAt": "2026-11-20T21:26:04Z"
@@ -2648,7 +2934,7 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-19T12:00:00Z",
       "firstSeenAt": "2026-11-20T11:01:01.132205Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
       "verifiedAt": "2026-11-20T11:01:01.132205Z",
       "evidenceType": "agency-announcement",
       "topics": [
@@ -2792,9 +3078,9 @@
     {
       "id": "science-729d18e502d3da0d",
       "title": "Watch live: Hera’s first images of post-impact asteroid Dimorphos",
-      "summary": "The European Space Agency's Hera spacecraft reached the Didymos asteroid system to investigate the aftermath of the DART kinetic impact on the moonlet Dimorphos.",
-      "finding": "The European Space Agency's Hera spacecraft reached the Didymos asteroid system to investigate the aftermath of the DART kinetic impact on the moonlet Dimorphos.",
-      "significance": "Close-up observations are intended to turn kinetic impact deflection into a repeatable and well-understood technique for planetary defense.",
+      "summary": "The European Space Agency's Hera spacecraft has arrived at the binary asteroid system Didymos and Dimorphos following its two-year journey.",
+      "finding": "The European Space Agency's Hera spacecraft has arrived at the binary asteroid system Didymos and Dimorphos following its two-year journey.",
+      "significance": "Hera will collect close-up data to understand the effects of the DART kinetic impact, aiding planetary defense techniques.",
       "caveat": "The source does not specify material limitations; independent verification is not established.",
       "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/watch-live-hera-s-first-images-of-post-impact-asteroid-dimorphos",
       "primarySourceUrl": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/watch-live-hera-s-first-images-of-post-impact-asteroid-dimorphos",
@@ -2805,19 +3091,19 @@
       "sourceQuality": 2,
       "publishedAt": "2026-11-19T10:10:00Z",
       "firstSeenAt": "2026-11-20T11:01:01.132205Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
-      "verifiedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
       "evidenceType": "mission-milestone",
       "topics": [
         "astronomy",
         "technology"
       ],
       "entities": [
-        "DART",
-        "Dimorphos",
-        "European Space Agency",
         "Hera",
-        "Didymos"
+        "Dimorphos",
+        "Didymos",
+        "European Space Agency",
+        "DART"
       ],
       "milestoneStatus": "completed"
     },
@@ -3596,10 +3882,10 @@
     {
       "id": "science-ec8551b58464f4d5",
       "title": "What Makes Up the Cosmos? A 20-Year Survey Hints That Something Is Missing.",
-      "summary": "Final results from the Dark Energy Survey combined with other cosmological data show a discrepancy with the standard Lambda-CDM cosmological model, fitting better with a dark energy that weakens over time.",
-      "finding": "Final results from the Dark Energy Survey combined with other cosmological data show a discrepancy with the standard Lambda-CDM cosmological model, fitting better with a dark energy that weakens over time.",
-      "significance": "The results challenge the two-decade-old consensus that dark energy is an unchanging vacuum energy, potentially requiring revisions to the standard model of cosmology.",
-      "caveat": "Preprint / working paper; peer review is not established. The observed preference for evolving dark energy reaches only a three-sigma statistical significance, falling short of the five-sigma threshold required by physicists to claim a formal discovery.",
+      "summary": "Final results from the Dark Energy Survey combined with other cosmic datasets show a preference for a weakening dark energy model over the standard Lambda-CDM model.",
+      "finding": "Final results from the Dark Energy Survey combined with other cosmic datasets show a preference for a weakening dark energy model over the standard Lambda-CDM model.",
+      "significance": "A changing dark energy value challenges the standard model of cosmology, hinting that current theories of cosmic expansion and vacuum energy are incomplete.",
+      "caveat": "Preprint / working paper; peer review is not established. The preference for an evolving dark energy is at the three-sigma level, which falls short of the five-sigma threshold required to confirm a discovery.",
       "url": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116",
       "primarySourceUrl": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116",
       "source": {
@@ -3609,8 +3895,8 @@
       "sourceQuality": 1,
       "publishedAt": "2026-11-16T15:15:33Z",
       "firstSeenAt": "2026-11-18T11:01:02.145560Z",
-      "checkedAt": "2026-11-24T11:01:01.050443Z",
-      "verifiedAt": "2026-11-24T11:01:01.050443Z",
+      "checkedAt": "2026-11-27T11:00:47.402580Z",
+      "verifiedAt": "2026-11-27T11:00:47.402580Z",
       "evidenceType": "preprint",
       "topics": [
         "astronomy",
@@ -5529,348 +5815,57 @@
       ],
       "milestoneStatus": "completed",
       "sourceUpdatedAt": "2026-11-10T01:05:51Z"
-    },
-    {
-      "id": "science-e08f23602165bffd",
-      "title": "Fossil fuel emissions are down in 2026. Green energy isn’t the reason",
-      "summary": "Scientists project that global carbon dioxide emissions from fossil fuels will decrease by 0.4 percent in 2026, primarily driven by high oil prices from conflict rather than clean energy expansion.",
-      "finding": "Scientists project that global carbon dioxide emissions from fossil fuels will decrease by 0.4 percent in 2026, primarily driven by high oil prices from conflict rather than clean energy expansion.",
-      "significance": "Renewable technologies counteract substantial emissions growth, but the clean energy transition must accelerate to produce sustained declines without relying on geopolitical energy shocks.",
-      "caveat": "The observed dip in fossil fuel emissions may be temporary and global emissions likely would have risen without the energy shock.",
-      "url": "https://www.sciencenews.org/article/fossil-fuel-emissions-down-2026-gas",
-      "primarySourceUrl": "https://www.sciencenews.org/article/fossil-fuel-emissions-down-2026-gas",
-      "source": {
-        "name": "Science News"
-      },
-      "sourceGroup": "Science News",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-10T01:00:00Z",
-      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "earth-science"
-      ],
-      "entities": [
-        "Nature Climate Change",
-        "Glen Peters",
-        "Claude"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://doi.org/10.1038/s41558-026-02821-8",
-      "sourceUpdatedAt": "2026-11-10T01:00:00Z"
-    },
-    {
-      "id": "science-19c6f2c923ddd7fb",
-      "title": "Global carbon emissions set to fall in 2026 due to Iran energy shock",
-      "summary": "Global carbon dioxide emissions from fossil fuels are projected to decrease by 0.4 percent in 2026, driven partly by an energy shock and oil price spike alongside renewable energy growth.",
-      "finding": "Global carbon dioxide emissions from fossil fuels are projected to decrease by 0.4 percent in 2026, driven partly by an energy shock and oil price spike alongside renewable energy growth.",
-      "significance": "This marks the first projected annual decline in global fossil fuel emissions in five years, influenced by high oil prices and the expansion of clean energy alternatives.",
-      "caveat": "The emissions decrease may only be a temporary blip, with researchers warning that emissions are likely to rebound if oil prices normalize before renewable energy accelerates enough.",
-      "url": "https://www.newscientist.com/article/2598130-global-carbon-emissions-fall-in-2026-due-to-iran-energy-shock",
-      "primarySourceUrl": "https://www.newscientist.com/article/2598130-global-carbon-emissions-fall-in-2026-due-to-iran-energy-shock",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-10T01:00:00Z",
-      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "earth-science"
-      ],
-      "entities": [
-        "CICERO",
-        "Robbie Andrew",
-        "University of East Anglia",
-        "Corinne Le Quéré"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nature.com/articles/s41558-026-02821-8%20"
-    },
-    {
-      "id": "science-5d3be687b385fb30",
-      "title": "Scientists finally discover why we learn to love bitter coffee",
-      "summary": "Researchers identified a gut-to-brain dopamine pathway concentrated in the left basolateral amygdala that drives learning to prefer specific flavors based on post-ingestive nutrient sensing.",
-      "finding": "Researchers identified a gut-to-brain dopamine pathway concentrated in the left basolateral amygdala that drives learning to prefer specific flavors based on post-ingestive nutrient sensing.",
-      "significance": "Understanding how gut nutrients teach the brain to enjoy initially unappealing flavors may inform new interventions to alter eating habits and food cravings.",
-      "caveat": "Why dopamine signaling is concentrated specifically on the left side of the brain remains unexplained, and potential links to GLP-1 drug actions remain untested hypotheses.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261108233100.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261108233100.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-09T23:19:35Z",
-      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "biology",
-        "health"
-      ],
-      "entities": [
-        "UC San Francisco",
-        "Nature",
-        "Zachary Knight",
-        "James Grove",
-        "Dana Small"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.1038/s41586-026-11229-5"
-    },
-    {
-      "id": "science-427e7bb58879cf1b",
-      "title": "Cold therapy may be worse than doing nothing for post-exercise recovery",
-      "summary": "Adults who used ice baths after intense leg exercise exhibited elevated markers of muscle damage for longer and regained less muscle strength than those who practiced passive rest.",
-      "finding": "Adults who used ice baths after intense leg exercise exhibited elevated markers of muscle damage for longer and regained less muscle strength than those who practiced passive rest.",
-      "significance": "The results challenge the popular practice of post-workout ice baths, suggesting they may delay muscle recovery rather than accelerate it.",
-      "caveat": "It remains unknown if outcomes differ with longer follow-ups, other exercise types, or modified interventions, and ice baths only temporarily masked pain.",
-      "url": "https://www.newscientist.com/article/2598085-cold-therapy-may-be-worse-than-doing-nothing-for-post-exercise-recovery",
-      "primarySourceUrl": "https://www.newscientist.com/article/2598085-cold-therapy-may-be-worse-than-doing-nothing-for-post-exercise-recovery",
-      "source": {
-        "name": "New Scientist"
-      },
-      "sourceGroup": "New Scientist",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-09T19:00:00Z",
-      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "health",
-        "biology"
-      ],
-      "entities": [
-        "Freya Bayne",
-        "University of East London",
-        "Ken Nosaka",
-        "Edith Cowan University",
-        "Mike Tipton"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.sciencedirect.com/science/article/pii/S0306456526001841?via%3Dihub",
-      "sourceUpdatedAt": "2026-11-10T08:51:22Z"
-    },
-    {
-      "id": "science-97ffe59ce15abb83",
-      "title": "Drugs like Ozempic may help reverse chronic kidney disease",
-      "summary": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
-      "finding": "In patients with diabetic chronic kidney disease, semaglutide improved kidney blood flow, reduced scarring and vessel stiffness, and altered gene activity to suppress inflammation and activate repair.",
-      "significance": "The findings explain how GLP-1 drugs directly protect and repair kidney blood vessels, offering a biological mechanism for their ability to slow kidney disease progression.",
-      "caveat": "The source does not specify material limitations; independent verification is not established.",
-      "url": "https://www.sciencenews.org/article/semaglutide-chronic-kidney-disease",
-      "primarySourceUrl": "https://www.sciencenews.org/article/semaglutide-chronic-kidney-disease",
-      "source": {
-        "name": "Science News"
-      },
-      "sourceGroup": "Science News",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-09T16:00:00Z",
-      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "health",
-        "biology"
-      ],
-      "entities": [
-        "Nature Medicine",
-        "Susan Quaggin",
-        "Peter Nguyen",
-        "Katherine Tuttle",
-        "Ozempic"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nature.com/articles/s41591-026-04674-2",
-      "sourceUpdatedAt": "2026-11-09T16:00:00Z"
-    },
-    {
-      "id": "science-ae28a572f4f0fdc6",
-      "title": "Did Life Begin in an RNA World?",
-      "summary": "Researchers identified a 45-nucleotide RNA molecule that can seize and copy another RNA strand, showing that self-replicating ribozymes do not necessarily require hundreds of linked nucleotides.",
-      "finding": "Researchers identified a 45-nucleotide RNA molecule that can seize and copy another RNA strand, showing that self-replicating ribozymes do not necessarily require hundreds of linked nucleotides.",
-      "significance": "Demonstrating that catalytic, self-replicating RNAs can be relatively small strengthens the plausibility that functional RNA sequences could have emerged by chance in a primordial prebiotic environment.",
-      "caveat": "It remains unknown if a suitable prebiotic niche existed on early Earth, and true living systems likely required more than genetic replication, such as metabolism.",
-      "url": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109",
-      "primarySourceUrl": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109",
-      "source": {
-        "name": "Quanta Magazine"
-      },
-      "sourceGroup": "Quanta Magazine",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-09T15:20:29Z",
-      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
-      "checkedAt": "2026-11-12T11:00:48.186424Z",
-      "verifiedAt": "2026-11-12T11:00:48.186424Z",
-      "evidenceType": "explanatory-background",
-      "topics": [
-        "biology"
-      ],
-      "entities": [
-        "Salk Institute",
-        "MRC Laboratory of Molecular Biology",
-        "Gerald Joyce",
-        "Philipp Holliger",
-        "Walter Gilbert"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-10T15:07:39Z"
-    },
-    {
-      "id": "science-f7b623d516c9558f",
-      "title": "A high-fiber diet may clear away plastic in the gut",
-      "summary": "In mice fed plastic particles, consuming medium- or high-fiber diets helped clear more particles from the gut within 24 hours and prevented gut tissue damage seen in low-fiber mice.",
-      "finding": "In mice fed plastic particles, consuming medium- or high-fiber diets helped clear more particles from the gut within 24 hours and prevented gut tissue damage seen in low-fiber mice.",
-      "significance": "The results suggest that dietary fiber may offer a potential mechanism to trap ingested micro- and nanoplastics and shield gut tissue from damage.",
-      "caveat": "The research was conducted only in mice using fiber amounts far exceeding recommended human intake, and it is uncertain whether dietary fiber provides the same effect in people.",
-      "url": "https://www.sciencenews.org/article/high-fiber-diet-nanoplastic-gut-health",
-      "primarySourceUrl": "https://www.sciencenews.org/article/high-fiber-diet-nanoplastic-gut-health",
-      "source": {
-        "name": "Science News"
-      },
-      "sourceGroup": "Science News",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-09T14:00:00Z",
-      "firstSeenAt": "2026-11-10T11:01:01.192536Z",
-      "checkedAt": "2026-11-10T11:01:01.192536Z",
-      "verifiedAt": "2026-11-10T11:01:01.192536Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "biology",
-        "health"
-      ],
-      "entities": [
-        "Eddy Y. Zeng",
-        "South China University of Technology",
-        "Nature Communications"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "https://www.nature.com/articles/s41467-026-78675-7",
-      "sourceUpdatedAt": "2026-11-09T14:00:00Z"
-    },
-    {
-      "id": "science-155d9f5cc0b5428b",
-      "title": "Ozone Hole Reaches Its 2026 Maximum",
-      "summary": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
-      "finding": "The 2026 Antarctic ozone hole ranked as the seventh largest by area in 48 years of monitoring, driven by an unusually strong polar vortex.",
-      "significance": "Understanding annual fluctuations in ozone depletion helps track the long-term recovery of Earth's protective stratospheric layer following CFC phaseouts.",
-      "caveat": "Despite its substantial surface area, the 2026 ozone hole was not as deep as other large holes on record.",
-      "url": "https://science.nasa.gov/earth/earth-observatory/ozone-hole-reaches-its-2026-maximum",
-      "primarySourceUrl": "https://science.nasa.gov/earth/earth-observatory/ozone-hole-reaches-its-2026-maximum",
-      "source": {
-        "name": "NASA"
-      },
-      "sourceGroup": "NASA",
-      "sourceQuality": 2,
-      "publishedAt": "2026-11-09T05:00:00Z",
-      "firstSeenAt": "2026-11-09T11:00:04.003337Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
-      "evidenceType": "agency-announcement",
-      "topics": [
-        "earth-science"
-      ],
-      "entities": [
-        "NASA Earth Observatory",
-        "NOAA-20",
-        "Suomi NPP",
-        "Aura",
-        "British Antarctic Survey"
-      ],
-      "milestoneStatus": "unknown",
-      "sourceUpdatedAt": "2026-11-09T05:00:00Z"
-    },
-    {
-      "id": "science-b7a2f4b84df2a343",
-      "title": "Scientists discover stunning new Amazon fish that may already be endangered",
-      "summary": "Scientists identified a new species of miniature killifish, named Laimosemion laranja, featuring distinct orange patterns and genetic divergence, discovered in the Rio Cajari drainage of northern Brazil.",
-      "finding": "Scientists identified a new species of miniature killifish, named Laimosemion laranja, featuring distinct orange patterns and genetic divergence, discovered in the Rio Cajari drainage of northern Brazil.",
-      "significance": "The discovery expands understanding of the diversity and evolutionary origins of annual life cycles within Amazonian killifish while drawing attention to poorly explored, vulnerable habitats.",
-      "caveat": "The species is known from only three small forest pools spanning an estimated 25 square kilometers, with all known sites experiencing environmental disruption from deforestation, mining, or urban pollution.",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104084019.htm",
-      "primarySourceUrl": "https://www.sciencedaily.com/releases/2026/11/261104084019.htm",
-      "source": {
-        "name": "ScienceDaily"
-      },
-      "sourceGroup": "ScienceDaily",
-      "sourceQuality": 1,
-      "publishedAt": "2026-11-08T23:56:14Z",
-      "firstSeenAt": "2026-11-09T11:00:04.003337Z",
-      "checkedAt": "2026-11-09T11:00:04.003337Z",
-      "verifiedAt": "2026-11-09T11:00:04.003337Z",
-      "evidenceType": "peer-reviewed-research",
-      "topics": [
-        "biology"
-      ],
-      "entities": [
-        "Laimosemion laranja",
-        "Rio Cajari",
-        "Universidade Federal do Rio Grande do Norte",
-        "Yuri Abrantes",
-        "Zoosystematics and Evolution"
-      ],
-      "milestoneStatus": "unknown",
-      "paperUrl": "http://dx.doi.org/10.3897/zse.102.187659"
     }
   ],
   "scienceInterests": [],
   "selection": {
-    "date": "2026-11-26",
+    "date": "2026-11-27",
     "selectedIds": [
-      "science-2cdf27b08a75a07c",
-      "science-33e1ce8c5fd4917f",
-      "science-2fad27c0c8b8cff8",
-      "science-95f59a69a76e0c0a",
-      "science-a5297f9bcc2bd62d",
+      "science-f94555e807e5c09a",
+      "science-8ac033fb31a1e35f",
+      "science-94c1eddf1933c77b",
+      "science-81375e384c76e0d8",
+      "science-610a8dba03b4f860",
       "science-b355bef02b4f6c92"
     ],
     "reasons": {
-      "science-2cdf27b08a75a07c": {
-        "score": 33,
-        "source": "NASA",
-        "topic": "biology",
-        "publishedAt": "2026-11-25T17:53:42Z",
-        "interestMatch": false
-      },
-      "science-33e1ce8c5fd4917f": {
+      "science-f94555e807e5c09a": {
         "score": 33,
         "source": "ESA",
-        "topic": "astronomy",
-        "publishedAt": "2026-11-25T11:02:51Z",
+        "topic": "earth-science",
+        "publishedAt": "2026-11-26T13:00:00Z",
         "interestMatch": false
       },
-      "science-2fad27c0c8b8cff8": {
-        "score": 31,
-        "source": "New Scientist",
-        "topic": "technology",
-        "publishedAt": "2026-11-25T18:00:00Z",
-        "interestMatch": false
-      },
-      "science-95f59a69a76e0c0a": {
-        "score": 31,
-        "source": "Quanta Magazine",
-        "topic": "physics",
-        "publishedAt": "2026-11-25T14:00:49Z",
-        "interestMatch": false
-      },
-      "science-a5297f9bcc2bd62d": {
-        "score": 30,
+      "science-8ac033fb31a1e35f": {
+        "score": 32,
         "source": "ScienceDaily",
-        "topic": "health",
-        "publishedAt": "2026-11-24T23:31:52Z",
+        "topic": "biology",
+        "publishedAt": "2026-11-27T10:01:39Z",
+        "interestMatch": false
+      },
+      "science-94c1eddf1933c77b": {
+        "score": 32,
+        "source": "New Scientist",
+        "topic": "physics",
+        "publishedAt": "2026-11-27T09:00:00Z",
+        "interestMatch": false
+      },
+      "science-81375e384c76e0d8": {
+        "score": 31,
+        "source": "NASA",
+        "topic": "technology",
+        "publishedAt": "2026-11-24T21:04:32Z",
+        "interestMatch": false
+      },
+      "science-610a8dba03b4f860": {
+        "score": 30,
+        "source": "Ars Technica Science",
+        "topic": "astronomy",
+        "publishedAt": "2026-11-25T22:36:45Z",
         "interestMatch": false
       },
       "science-b355bef02b4f6c92": {
-        "score": 29,
+        "score": 28,
         "source": "Science News",
         "topic": "social-science",
         "publishedAt": "2026-11-23T16:00:00Z",
