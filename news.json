@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-11-26T03:18:06-05:00",
-  "editionDate": "2026-11-26",
+  "generatedAt": "2026-11-27T03:40:34-05:00",
+  "editionDate": "2026-11-27",
   "stories": [
     {
       "id": "1-044m-for-first-responder-mental-health-news-2031-09-30",
@@ -4957,10 +4957,10 @@
     {
       "id": "2026-midterm-elections-u-m-experts-avail-news-2026-10-29",
       "title": "2026 midterm elections: U-M experts available to comment",
-      "summary": "The University of Michigan has made several faculty members available to provide research-based insights and analysis regarding the 2026 midterm elections. These experts cover topics ranging from political communication and public opinion to legislative processes and electoral systems.",
+      "summary": "The University of Michigan has made several faculty experts available to provide research-based analysis on the 2026 midterm elections. These experts cover topics ranging from political communication and public opinion to legislative processes and electoral systems.",
       "url": "https://news.umich.edu/2026-midterm-elections-u-m-experts-available-to-comment/",
       "publishedAt": "2026-10-29T00:00:00-04:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "primary",
       "entities": [
@@ -4970,7 +4970,7 @@
         "Rusty Hills",
         "Michael Traugott",
         "Jenna Bednar",
-        "Mara Ostfeld",
+        "Mara Cecilia Ostfeld",
         "Josh Pasek"
       ],
       "locations": [
@@ -4989,29 +4989,29 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.03,
-          "distinctive": 0.1,
-          "eclectic": 0.09,
-          "technical_science": 0.05,
+          "funny": 0.02,
+          "distinctive": 0.09,
+          "eclectic": 0.11,
+          "technical_science": 0.07,
           "artsy": 0.03,
-          "progressive": 0.14,
+          "progressive": 0.19,
           "outdoors": 0.02,
-          "theatre": 0.02,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
           "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.15,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.02,
-          "large_venue": 0.05,
+          "sporting": 0.02,
+          "recurring": 0.18,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.01,
+          "large_venue": 0.04,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
-          "dance": 0.02,
-          "sales_related": 0.05,
-          "children_activity": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.13,
+          "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
@@ -11248,6 +11248,67 @@
       }
     },
     {
+      "id": "a-christmas-story-screening-and-q-a-news-2026-11-26",
+      "title": "A Christmas Story Screening and Q&A",
+      "summary": "The Michigan Theater will host a screening of the original 'A Christmas Story' on December 5, featuring a live moderated conversation and audience Q&A with Peter. Attendees can participate in a trivia competition for a chance to win an autographed leg lamp.",
+      "url": "https://www.wemu.org/show/cinema-chat/2026-11-26/cinema-chat-paper-tiger-opens-and-special-holiday-screenings-are-on-the-way",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Peter",
+        "Michigan Theater"
+      ],
+      "locations": [
+        "Michigan Theater"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "film",
+        "events",
+        "holiday"
+      ],
+      "source": {
+        "name": "Mat Hopson",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.92,
+          "distinctive": 0.64,
+          "eclectic": 0.18,
+          "technical_science": 0.03,
+          "artsy": 0.81,
+          "progressive": 0.07,
+          "outdoors": 0.02,
+          "theatre": 0.06,
+          "live_music": 0.02,
+          "live_comedy": 0.03,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.08,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.08,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.42,
+          "children_activity": 0.09,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/05ec60d/2147483647/strip/true/crop/2758x1448+69+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0e%2F26%2F07816d874a648fa71265ecd20e9e%2Fmichigan-theater-winter.jpg",
+        "alt": "Michigan Theater winter"
+      }
+    },
+    {
       "id": "a-commanding-performance-from-pioneer-news-2026-09-21",
       "title": "A Commanding Performance From Pioneer",
       "summary": "A report on a standout performance by the Pioneer team, highlighting their strategic execution and dominance in a recent event.",
@@ -11427,57 +11488,58 @@
     {
       "id": "a-court-for-everyone-news-2026-11-12",
       "title": "A Court for Everyone",
-      "summary": "The rise of organized basketball games among students at Community High School. The article discusses the social importance of the sport on the school grounds.",
+      "summary": "The article highlights the growing popularity of organized basketball games among students at Community High School during lunch hours.",
       "url": "https://chscommunicator.com/114078/features/2026/11/the-importance-of-basketball-at-community/",
       "publishedAt": "2026-11-12T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Jacob Williams"
+        "Jacob Williams",
+        "Community High School"
       ],
       "locations": [
-        "Ann Arbor, MI",
+        "Ann Arbor",
         "Kerrytown"
       ],
       "localityIndex": 2,
       "topics": [
         "sports",
-        "basketball",
-        "student life"
+        "student life",
+        "basketball"
       ],
       "source": {
-        "name": "Edin Colson, Edie Kupetz",
+        "name": "Edin Colson and Edie Kupetz",
         "publication": "The Communicator"
       },
       "scoring": {
         "signals": {
-          "funny": 0.29,
-          "distinctive": 0.33,
-          "eclectic": 0.3,
-          "technical_science": 0.72,
-          "artsy": 0.5,
-          "progressive": 0.24,
-          "outdoors": 0.09,
+          "funny": 0.24,
+          "distinctive": 0.13,
+          "eclectic": 0.08,
+          "technical_science": 0.03,
+          "artsy": 0.06,
+          "progressive": 0.18,
+          "outdoors": 0.07,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
-          "farmer_market": 0.02,
-          "sporting": 0.07,
-          "recurring": 0.36,
-          "craft_fair_shopping": 0.03,
-          "religious": 0.03,
-          "large_venue": 0.05,
-          "substance_recovery": 0.02,
+          "farmer_market": 0.03,
+          "sporting": 0.73,
+          "recurring": 0.83,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
-          "dance": 0.03,
+          "dance": 0.02,
           "sales_related": 0.04,
-          "children_activity": 0.03,
+          "children_activity": 0.05,
           "running": 0.02,
-          "exercise": 0.04,
-          "employment_related": 0.03
+          "exercise": 0.08,
+          "employment_related": 0.02
         }
       },
       "photo": {
@@ -12622,24 +12684,23 @@
     {
       "id": "a-gun-in-a-battle-creek-student-s-backpa-news-2026-09-25",
       "title": "A gun in a Battle Creek student's backpack demands answers",
-      "summary": "An opinion piece by Keith Kindred addressing the discovery of a gun in a Michigan elementary school student's backpack and the need for accountability.",
+      "summary": "An opinion piece addresses the security failure that allowed a student to bring a gun to a Battle Creek elementary school. The author calls for accountability and systemic changes.",
       "url": "https://www.hometownlife.com/story/opinion/2026/09/25/how-did-a-gun-reach-a-michigan-elementary-school-student-opinion/91935770007/",
-      "publishedAt": "2026-09-25T00:00:00-04:00",
-      "addedAt": "2026-10-31T09:45:59-04:00",
+      "publishedAt": "2026-09-25T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "opinion",
       "entities": [
-        "Keith Kindred",
-        "Battle Creek student"
+        "Keith Kindred"
       ],
       "locations": [
-        "Battle Creek, MI"
+        "Battle Creek"
       ],
       "localityIndex": 4,
       "topics": [
+        "opinion",
         "education",
-        "gun safety",
-        "opinion"
+        "safety"
       ],
       "source": {
         "name": "Keith Kindred",
@@ -12647,37 +12708,37 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.02,
-          "distinctive": 0.61,
-          "eclectic": 0.16,
+          "funny": 0.01,
+          "distinctive": 0.52,
+          "eclectic": 0.11,
           "technical_science": 0.05,
           "artsy": 0.03,
-          "progressive": 0.19,
-          "outdoors": 0.02,
+          "progressive": 0.24,
+          "outdoors": 0.01,
           "theatre": 0.02,
           "live_music": 0.01,
           "live_comedy": 0.02,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.06,
+          "recurring": 0.07,
           "craft_fair_shopping": 0.01,
           "religious": 0.02,
-          "large_venue": 0.03,
+          "large_venue": 0.02,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
+          "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
           "sales_related": 0.02,
           "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
-          "employment_related": 0.02
+          "employment_related": 0.01
         }
       },
       "photo": {
-        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/08/07/PLSJ/91211534007-19-n-70861.jpeg?crop=1279,720,x0,y206&width=210&height=118&format=pjpg&auto=webp",
-        "alt": "Hometown Life logo"
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2025/07/30/PLSJ/85440348007-screenshot-seiche-gl.jpg?crop=505,283,x95,y0&width=210&height=118&format=pjpg&auto=webp",
+        "alt": "School safety"
       }
     },
     {
@@ -15201,10 +15262,10 @@
     {
       "id": "a-pretty-sweet-victory-news-2026-11-25",
       "title": "A Pretty Sweet Victory",
-      "summary": "A team led by Sonntag, including Swanson and Pritchard, won the Foodtastic competition on Disney+ by creating impressive sculptures using unconventional materials like jicama. Sonntag is now expanding her bakery business and reflecting on her 20-year career and the mentorship she received at Schoolcraft College.",
+      "summary": "A team of bakers led by Sonntag won the Foodtastic competition on Disney+ by utilizing creative materials like jicama for their sculptures. Following their victory, Sonntag is expanding her bakery business and reflecting on her 20-year career and the mentorship she received at Schoolcraft College.",
       "url": "https://schoolcraftconnection.com/32157/news/a-pretty-sweet-victory/",
       "publishedAt": "2026-11-25T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -15227,6 +15288,7 @@
         "baking",
         "competition",
         "alumni",
+        "television",
         "business"
       ],
       "source": {
@@ -15235,37 +15297,37 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.52,
-          "distinctive": 0.67,
-          "eclectic": 0.28,
-          "technical_science": 0.46,
-          "artsy": 0.92,
-          "progressive": 0.41,
-          "outdoors": 0.03,
-          "theatre": 0.03,
+          "funny": 0.4,
+          "distinctive": 0.72,
+          "eclectic": 0.31,
+          "technical_science": 0.63,
+          "artsy": 0.93,
+          "progressive": 0.48,
+          "outdoors": 0.02,
+          "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.03,
-          "sporting": 0.47,
-          "recurring": 0.14,
+          "sporting": 0.39,
+          "recurring": 0.11,
           "craft_fair_shopping": 0.04,
           "religious": 0.02,
-          "large_venue": 0.12,
+          "large_venue": 0.09,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
           "dance": 0.02,
           "sales_related": 0.14,
           "children_activity": 0.04,
           "running": 0.02,
-          "exercise": 0.02,
+          "exercise": 0.01,
           "employment_related": 0.03
         }
       },
       "photo": {
         "url": "https://schoolcraftconnection.com/wp-content/uploads/2022/02/foodtastic.jpg",
-        "alt": "Foodtastic"
+        "alt": "Foodtastic logo"
       }
     },
     {
@@ -28759,17 +28821,21 @@
     {
       "id": "ann-arbor-s-turkey-trot-returns-with-a-n-news-2026-11-25",
       "title": "Ann Arbor's Turkey Trot returns with a new route",
-      "summary": "The annual five-kilometer Turkey Trot in Ann Arbor is scheduled for Thanksgiving Day. The race begins at 8:45 a.m. at the intersection of Main Street and Washington.",
+      "summary": "The annual five-kilometer Turkey Trot in Ann Arbor returns this Thanksgiving with a modified course designed for better maneuverability. Approximately 4,000 participants are expected to run the new route, which begins at the corner of Main Street and Washington at 8:45 a.m.",
       "url": "https://www.wemu.org/wemu-news/2026-11-25/ann-arbors-turkey-trot-returns-with-a-new-route",
-      "publishedAt": "2026-11-25T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "publishedAt": "2026-11-25T06:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Joshua Nieman"
+        "Joshua Nieman",
+        "Trevor Step",
+        "WEMU",
+        "RF Events",
+        "Santa"
       ],
       "locations": [
-        "Ann Arbor"
+        "Ann Arbor, MI"
       ],
       "localityIndex": 2,
       "topics": [
@@ -28784,19 +28850,19 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.19,
-          "distinctive": 0.23,
-          "eclectic": 0.08,
+          "funny": 0.18,
+          "distinctive": 0.21,
+          "eclectic": 0.07,
           "technical_science": 0.03,
           "artsy": 0.06,
-          "progressive": 0.16,
-          "outdoors": 0.41,
-          "theatre": 0.02,
+          "progressive": 0.14,
+          "outdoors": 0.43,
+          "theatre": 0.01,
           "live_music": 0.02,
           "live_comedy": 0.01,
           "farmer_market": 0.02,
-          "sporting": 0.95,
-          "recurring": 0.85,
+          "sporting": 0.94,
+          "recurring": 0.83,
           "craft_fair_shopping": 0.02,
           "religious": 0.03,
           "large_venue": 0.06,
@@ -28805,15 +28871,15 @@
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.02,
-          "sales_related": 0.08,
-          "children_activity": 0.06,
+          "sales_related": 0.07,
+          "children_activity": 0.04,
           "running": 0.98,
-          "exercise": 0.11,
+          "exercise": 0.1,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/f603826/2147483647/strip/true/crop/700x390+0+8/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F33%2F91%2Fd8bcfdff4d51829136c66c86e252%2Fd746af55-c359-4df2-9091-6c2b5db71b2b.png",
+        "url": "https://npr.brightspotcdn.com/dims4/default/a453f82/2147483647/strip/true/crop/700x394+0+6/resize/1200x675!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F33%2F91%2Fd8bcfdff4d51829136c66c86e252%2Fd746af55-c359-4df2-9091-6c2b5db71b2b.png",
         "alt": "Ann Arbor's Turkey Trot returns with a new route"
       }
     },
@@ -42493,6 +42559,63 @@
       }
     },
     {
+      "id": "black-and-tan-coonhound-rocker-is-top-do-news-2026-11-26",
+      "title": "Black and tan coonhound Rocker is top dog at the 2026 National Dog Show",
+      "summary": "A black and tan coonhound named Rocker won the top prize at the 2026 National Dog Show.",
+      "url": "https://www.michiganpublic.org/2026-11-26/black-and-tan-coonhound-rocker-is-top-dog-at-the-2026-national-dog-show",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Rocker"
+      ],
+      "locations": [],
+      "localityIndex": 4,
+      "topics": [
+        "animals",
+        "entertainment"
+      ],
+      "source": {
+        "name": "Michigan Radio (Michigan Public)",
+        "publication": "NPR"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.67,
+          "distinctive": 0.48,
+          "eclectic": 0.15,
+          "technical_science": 0.05,
+          "artsy": 0.58,
+          "progressive": 0.11,
+          "outdoors": 0.05,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.65,
+          "recurring": 0.81,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.78,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.12,
+          "children_activity": 0.08,
+          "running": 0.02,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/771d9a3/2147483647/strip/true/crop/4032x2274+0+399/resize/610x344!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F4d%2F19%2F0756592c4017a273fcea8013ac3d%2Fimg-3104.jpg",
+        "alt": "NPR logo"
+      }
+    },
+    {
       "id": "black-birth-joy-puts-black-childbirth-an-news-2026-11-11",
       "title": "Black Birth Joy puts Black childbirth and motherhood in the spotlight at University of Michigan",
       "summary": "Award-winning photographer Tiana Lashae is showcasing more than 30 photographs at the University of Michigan. The exhibition aims to challenge traditional narratives surrounding Black childbirth while celebrating the families involved.",
@@ -50342,6 +50465,66 @@
       }
     },
     {
+      "id": "cases-of-respiratory-illness-and-measles-news-2026-11-26",
+      "title": "Cases of respiratory illness and measles may rise in Michigan",
+      "summary": "As temperatures drop in Michigan, health officials are bracing for an increase in respiratory illnesses. Reporter Russ McNamara also notes concerns regarding potential rises in measles cases.",
+      "url": "https://www.wemu.org/michigan-news/2026-11-26/cases-of-respiratory-illness-and-measles-may-rise-in-michigan",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Russ McNamara"
+      ],
+      "locations": [
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "health",
+        "public health",
+        "illness"
+      ],
+      "source": {
+        "name": "Russ McNamara",
+        "publication": "Michigan News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.09,
+          "eclectic": 0.07,
+          "technical_science": 0.63,
+          "artsy": 0.02,
+          "progressive": 0.06,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.23,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/756c029/2147483647/strip/true/crop/960x535+0+53/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwemu%2Ffiles%2F202102%2Fflu-shot-1719334_960_720.jpg",
+        "alt": "Flu shot"
+      }
+    },
+    {
       "id": "casey-s-tavern-opens-second-location-in-news-2026-10-16",
       "title": "Casey’s Tavern Opens Second Location in Ann Arbor",
       "summary": "Casey’s Tavern has opened its second location in Ann Arbor at the former Carson’s American Bistro site. The original location remains open at 304 Depot St.",
@@ -53255,71 +53438,6 @@
       }
     },
     {
-      "id": "chesterfield-township-police-release-bod-news-2026-05-28",
-      "title": "Chesterfield Township police release body cam of Eminem’s ex-wife Kim Mathers after DUI crash, arrest",
-      "summary": "Chesterfield Township police released body camera footage showing Kim Mathers, Eminem's ex-wife, being arrested after a DUI crash. The officer informed her she was .20 on a breath test, nearly three times Michigan's legal limit of .08. No injuries were reported, and details about charges or court proceedings remain unavailable.",
-      "url": "https://www.clickondetroit.com/news/local/2026/05/28/chesterfield-township-police-release-body-cam-of-eminems-ex-wife-kim-mathers-after-dui-crash-arrest/",
-      "publishedAt": "2026-05-28T00:00:00-04:00",
-      "addedAt": "2026-10-14T23:41:11-04:00",
-      "urgentLocal": false,
-      "evidenceQuality": "primary",
-      "entities": [
-        "Chesterfield Township police",
-        "Kim Mathers",
-        "Eminem"
-      ],
-      "locations": [
-        "Chesterfield Township, MI"
-      ],
-      "localityIndex": 4,
-      "topics": [
-        "dui",
-        "arrest",
-        "body camera",
-        "police",
-        "sobriety test",
-        "michigan"
-      ],
-      "source": {
-        "name": "All About Ann Arbor (WDIV ClickOnDetroit)",
-        "publication": "WDIV ClickOnDetroit"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.03,
-          "distinctive": 0.61,
-          "eclectic": 0.09,
-          "technical_science": 0.07,
-          "artsy": 0.02,
-          "progressive": 0.06,
-          "outdoors": 0.06,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.04,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.02,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.01,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.01,
-          "sales_related": 0.02,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.01
-        }
-      },
-      "photo": {
-        "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/b7bbdd64-f7c8-448c-b603-bf89f74d2f46/image.jpg?api_key=clickondetroit_06f87fefb2123598",
-        "alt": "Body camera footage of Kim Mathers DUI arrest"
-      }
-    },
-    {
       "id": "chicago-voters-picked-their-first-fully-news-2026-11-05",
       "title": "Chicago voters picked their first fully elected school board. What happens now?",
       "summary": "While votes are still being counted in a handful of close races, unofficial results indicate that 11 candidates who were backed by groups supportive of charter schools and school choice are on track to be seated in January.",
@@ -55057,6 +55175,65 @@
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/05a126e/2147483647/strip/true/crop/1024x538+0+24/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb4%2Fcd%2F580f7f0e45e8ab9fe694f0e56cf2%2Fskarmavbild-2023-06-28-kl-140111-1024x586.jpg",
         "alt": "Cinema Chat: 'If I Go Will They Miss Me' opens at the Michigan, 'Resident Evil' opens at the State"
+      }
+    },
+    {
+      "id": "cinema-chat-paper-tiger-opens-and-specia-news-2026-11-26",
+      "title": "Cinema Chat: \"Paper Tiger\" opens and special holiday screenings are on the way",
+      "summary": "Mat Hopson and Tara Calligan discuss new movie releases for the Thanksgiving weekend and upcoming holiday season screenings. They provide insights into what audiences can expect at the cinema.",
+      "url": "https://www.wemu.org/show/cinema-chat/2026-11-26/cinema-chat-paper-tiger-opens-and-special-holiday-screenings-are-on-the-way",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Mat Hopson",
+        "Tara Calligan"
+      ],
+      "locations": [],
+      "localityIndex": 2,
+      "topics": [
+        "movies",
+        "entertainment",
+        "holidays"
+      ],
+      "source": {
+        "name": "Mat Hopson, Tara Calligan",
+        "publication": "Cinema Chat"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.54,
+          "distinctive": 0.16,
+          "eclectic": 0.15,
+          "technical_science": 0.04,
+          "artsy": 0.71,
+          "progressive": 0.12,
+          "outdoors": 0.02,
+          "theatre": 0.04,
+          "live_music": 0.02,
+          "live_comedy": 0.03,
+          "farmer_market": 0.01,
+          "sporting": 0.02,
+          "recurring": 0.6,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.06,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.59,
+          "children_activity": 0.05,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/2048b10/2147483647/strip/true/crop/2599x1448+149+0/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0e%2F26%2F07816d874a648fa71265ecd20e9e%2Fmichigan-theater-winter.jpg",
+        "alt": "Throwback to 2022 when the streets of Downtown Ann Arbor were peaceful and covered in snow."
       }
     },
     {
@@ -58478,6 +58655,66 @@
       "photo": {
         "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/10/16/PLSJ/92278780007-ridge-stump.jpg?width=300&height=400&fit=crop&format=pjpg&auto=webp",
         "alt": "Closures around fires"
+      }
+    },
+    {
+      "id": "club-kid-news-2026-11-26",
+      "title": "Club Kid",
+      "summary": "Actor and comedian Jordan Firstman makes his directorial debut with the A24 comedy-drama 'Club Kid'. The film follows a nightlife promoter who unexpectedly becomes a father.",
+      "url": "https://www.youtube.com/watch?v=guKEdb_iRXw",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Jordan Firstman",
+        "A24"
+      ],
+      "locations": [
+        "Ann Arbor"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "film",
+        "cinema"
+      ],
+      "source": {
+        "name": "Mat Hopson",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.84,
+          "distinctive": 0.41,
+          "eclectic": 0.66,
+          "technical_science": 0.15,
+          "artsy": 0.95,
+          "progressive": 0.63,
+          "outdoors": 0.03,
+          "theatre": 0.04,
+          "live_music": 0.04,
+          "live_comedy": 0.04,
+          "farmer_market": 0.03,
+          "sporting": 0.02,
+          "recurring": 0.06,
+          "craft_fair_shopping": 0.03,
+          "religious": 0.02,
+          "large_venue": 0.15,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.04,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.07,
+          "dance": 0.06,
+          "sales_related": 0.35,
+          "children_activity": 0.04,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.03
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/05ec60d/2147483647/strip/true/crop/2758x1448+69+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0e%2F26%2F07816d874a648fa71265ecd20e9e%2Fmichigan-theater-winter.jpg",
+        "alt": "Michigan Theater winter"
       }
     },
     {
@@ -64365,10 +64602,10 @@
     {
       "id": "county-commissioners-approve-ypsilanti-p-news-2026-11-25",
       "title": "County commissioners approve Ypsilanti park grant application, consider transportation contract",
-      "summary": "The Washtenaw County Board of Commissioners met on November 18, 2026, to approve a park grant application for Ypsilanti. The board also discussed a potential transportation contract affecting local residents.",
+      "summary": "The Washtenaw County Board of Commissioners met on Nov. 18, 2026, to approve a grant application for a Ypsilanti park and discuss a new transportation contract.",
       "url": "https://www.easternecho.com/article/2026/11/county-commissioners-approve-ypsilanti-park-grant-application-consider-transportation-contract",
       "publishedAt": "2026-11-25T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -64381,48 +64618,47 @@
       ],
       "localityIndex": 2,
       "topics": [
-        "local government",
+        "government",
         "parks",
-        "transportation",
-        "grants"
+        "transportation"
       ],
       "source": {
         "name": "Yana McGuire",
-        "publication": "The Eastern Echo"
+        "publication": "Eastern Echo"
       },
       "scoring": {
         "signals": {
-          "funny": 0.04,
-          "distinctive": 0.1,
-          "eclectic": 0.1,
-          "technical_science": 0.06,
-          "artsy": 0.07,
-          "progressive": 0.2,
-          "outdoors": 0.11,
-          "theatre": 0.02,
-          "live_music": 0.03,
-          "live_comedy": 0.02,
-          "farmer_market": 0.03,
-          "sporting": 0.02,
-          "recurring": 0.23,
-          "craft_fair_shopping": 0.03,
+          "funny": 0.02,
+          "distinctive": 0.12,
+          "eclectic": 0.13,
+          "technical_science": 0.07,
+          "artsy": 0.04,
+          "progressive": 0.26,
+          "outdoors": 0.09,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.6,
+          "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.06,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.04,
-          "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.03,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
           "sales_related": 0.03,
           "children_activity": 0.03,
-          "running": 0.03,
-          "exercise": 0.02,
+          "running": 0.02,
+          "exercise": 0.01,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://snworksceo.imgix.net/emu/87545387-2ac0-4d73-9038-196b914e2a77.sized-1000x1000.jpg?w=1500&ar=16%3A9&fit=crop&crop=faces&facepad=3&auto=format",
-        "alt": "Long, single story, red brick building with a green roof. The building is a historical train depot."
+        "url": "https://d2c076l7bqbhhm.cloudfront.net/9f0fc8d75963ebbda63eb514bcfb6348/dist/img/placeholder-16x9.png",
+        "alt": "The Eastern Echo"
       }
     },
     {
@@ -64911,6 +65147,66 @@
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/78617c9/2147483647/strip/true/crop/907x510+53+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F65%2F31%2F477dff1942ed80a42baab2187466%2F793270093-1521043840048498-2175906570418139570-n.jpg",
         "alt": "Creative Washtenaw presents 'The Get Down' concerts the first weekend in October"
+      }
+    },
+    {
+      "id": "crew-girl-rowers-get-ready-to-cringe-news-2026-11-25",
+      "title": "Crew Girl: Rowers, Get Ready to Cringe",
+      "summary": "A review of the Netflix show \"Crew Girl,\" specifically addressing the rowing community.",
+      "url": "https://skylinepost.org/13069/arts-entertainment/crew-girl-rowers-get-ready-to-cringe/",
+      "publishedAt": "2026-11-25T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Netflix"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "television",
+        "reviews",
+        "entertainment"
+      ],
+      "source": {
+        "name": "Macklan Lusk",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.79,
+          "distinctive": 0.24,
+          "eclectic": 0.28,
+          "technical_science": 0.07,
+          "artsy": 0.7,
+          "progressive": 0.2,
+          "outdoors": 0.03,
+          "theatre": 0.03,
+          "live_music": 0.02,
+          "live_comedy": 0.04,
+          "farmer_market": 0.02,
+          "sporting": 0.04,
+          "recurring": 0.16,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.06,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.08,
+          "children_activity": 0.04,
+          "running": 0.02,
+          "exercise": 0.03,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/Crewgirl-960x1200.jpg",
+        "alt": "A poster for season one of the Netflix show \"Crew Girl.\""
       }
     },
     {
@@ -68274,6 +68570,64 @@
       }
     },
     {
+      "id": "data-centers-panel-encourages-transparen-news-2026-11-16",
+      "title": "Data centers: Panel encourages transparency, collaboration",
+      "summary": "A panel discussion explored the complexities of data center development. Participants emphasized the need for increased transparency and collaboration with local communities.",
+      "url": "https://www.hometownlife.com/story/opinion/2026/11/16/panel-discussion-on-data-centers-delve-into-a-myriad-of-topics/92764062007/",
+      "publishedAt": "2026-11-16T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "opinion",
+      "entities": [
+        "Byron McCauley"
+      ],
+      "locations": [],
+      "localityIndex": 1,
+      "topics": [
+        "opinion",
+        "technology",
+        "infrastructure"
+      ],
+      "source": {
+        "name": "Byron McCauley",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.14,
+          "eclectic": 0.22,
+          "technical_science": 0.92,
+          "artsy": 0.05,
+          "progressive": 0.53,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.2,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.14,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.06,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2025/07/30/PLSJ/85440348007-screenshot-seiche-gl.jpg?crop=505,283,x95,y0&width=210&height=118&format=pjpg&auto=webp",
+        "alt": "Data center panel"
+      }
+    },
+    {
       "id": "data-driven-detroit-hires-senior-analyst-news-2026-09-23",
       "title": "Data Driven Detroit Hires Senior Analyst for Research Programs",
       "summary": "Data Driven Detroit is hiring a researcher to support and coordinate two programs, tracking neighborhood conditions and promoting early childhood services. This full-time, remote position offers a starting salary of $60,000, 32-hour workweeks and benefits.",
@@ -68564,10 +68918,10 @@
     {
       "id": "day-after-thanksgiving-administration-of-news-2026-11-27",
       "title": "Day After Thanksgiving - Administration Offices Closed",
-      "summary": "Canton Township administration offices will be closed on Friday, November 27, 2026, for the day after Thanksgiving.",
+      "summary": "Canton Township administration offices will be closed on Friday, November 27, 2026, in observance of the day after Thanksgiving.",
       "url": "https://www.cantonmi.gov/Calendar.aspx?EID=4541",
       "publishedAt": "2026-11-27T00:00:00-05:00",
-      "addedAt": "2026-11-25T03:31:49-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "primary",
       "entities": [
@@ -68580,11 +68934,10 @@
       "topics": [
         "government",
         "holiday",
-        "closure"
+        "office closure"
       ],
       "source": {
-        "name": "Charter Township of Canton - Official News & Announcements",
-        "publication": "Charter Township of Canton"
+        "name": "Charter Township of Canton - Official News & Announcements"
       },
       "scoring": {
         "signals": {
@@ -68596,11 +68949,11 @@
           "progressive": 0.04,
           "outdoors": 0.02,
           "theatre": 0.01,
-          "live_music": 0.01,
+          "live_music": 0.02,
           "live_comedy": 0.01,
-          "farmer_market": 0.02,
+          "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.54,
+          "recurring": 0.51,
           "craft_fair_shopping": 0.02,
           "religious": 0.02,
           "large_venue": 0.02,
@@ -68618,7 +68971,7 @@
       },
       "photo": {
         "url": "https://www.canton-mi.org/ImageRepository/Document?documentID=11532",
-        "alt": "Canton Township logo"
+        "alt": "Canton Township official logo"
       }
     },
     {
@@ -85213,6 +85566,71 @@
       }
     },
     {
+      "id": "detroit-s-100th-thanksgiving-parade-is-r-news-2026-11-25",
+      "title": "Detroit’s 100th Thanksgiving parade is ready to float down Woodward Ave",
+      "summary": "Detroit is celebrating its 100th Thanksgiving parade, which will feature nine new floats. Dan Gilbert has been named the Grand Marshal for this milestone event.",
+      "url": "https://wdet.org/2026/11/25/detroits-100th-thanksgiving-parade-is-ready-to-float-down-woodward-ave/",
+      "publishedAt": "2026-11-25T00:00:00Z",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Dan Gilbert",
+        "WDET 101.9 FM"
+      ],
+      "locations": [
+        "Detroit",
+        "Woodward Ave"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "featured",
+        "news",
+        "detroit",
+        "holidays",
+        "thanksgiving",
+        "thanksgiving day parade"
+      ],
+      "source": {
+        "name": "Pat Batcheller",
+        "publication": "WDET 101.9 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.49,
+          "distinctive": 0.55,
+          "eclectic": 0.12,
+          "technical_science": 0.04,
+          "artsy": 0.73,
+          "progressive": 0.13,
+          "outdoors": 0.75,
+          "theatre": 0.02,
+          "live_music": 0.03,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.83,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.03,
+          "large_venue": 0.09,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.05,
+          "children_activity": 0.11,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://wdet.org/wp-content/uploads/2022/09/2021Parade3-450x450.jpg",
+        "alt": "Detroit’s 100th Thanksgiving parade is ready to float down Woodward Ave"
+      }
+    },
+    {
       "id": "detroit-s-america-s-thanksgiving-parade-news-2026-11-25",
       "title": "Detroit’s America’s Thanksgiving Parade celebrates 100 years on Woodward Avenue",
       "summary": "Detroit’s America’s Thanksgiving Parade marks its 100th anniversary on November 26, 2026, featuring 33 floats and a performance by the Detroit Youth Choir. The event, led by grand marshal Dan Gilbert, begins at 8:45 a.m. on Woodward Avenue.",
@@ -93860,6 +94278,66 @@
       }
     },
     {
+      "id": "do-skyline-student-prefer-handmade-or-st-news-2026-11-26",
+      "title": "Do Skyline Student Prefer Handmade or Store Bought Gifts?",
+      "summary": "An exploration of gift-giving preferences among Skyline students, comparing handmade items to store-bought gifts.",
+      "url": "https://skylinepost.org/13112/arts-entertainment/do-skyline-student-prefer-handmade-or-store-bought-gifts/",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Skyline High School"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "students",
+        "lifestyle",
+        "gifts"
+      ],
+      "source": {
+        "name": "Adelyn Mazak",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.28,
+          "distinctive": 0.17,
+          "eclectic": 0.17,
+          "technical_science": 0.09,
+          "artsy": 0.28,
+          "progressive": 0.18,
+          "outdoors": 0.03,
+          "theatre": 0.02,
+          "live_music": 0.03,
+          "live_comedy": 0.03,
+          "farmer_market": 0.04,
+          "sporting": 0.02,
+          "recurring": 0.15,
+          "craft_fair_shopping": 0.07,
+          "religious": 0.03,
+          "large_venue": 0.05,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.04,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.02,
+          "sales_related": 0.06,
+          "children_activity": 0.05,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/IMG_5610-1-1200x675.jpg",
+        "alt": "A handmade pair of earrings Adelyn made as a gift for her friend Bella."
+      }
+    },
+    {
       "id": "do-the-right-thing-tenants-at-second-met-news-2026-10-11",
       "title": "‘Do the right thing’: Tenants at second Metro Detroit Public Storage unit say their items are covered in mold",
       "summary": "Tenants at a Public Storage facility in Royal Oak, Michigan, report finding white mold on their belongings in climate-controlled units, mirroring a previous issue at a Downriver location. Brittany Bacinski, one affected tenant, described discovering mold-covered items after storing family belongings for the summer and struggling to get assistance from the company.",
@@ -99980,24 +100458,29 @@
     {
       "id": "dtw-expects-about-four-million-passenger-news-2026-11-25",
       "title": "DTW expects about four million passengers this holiday season",
-      "summary": "Detroit Metro Airport anticipates over four million travelers during the upcoming holiday season. WEMU's Kevin Meerschaert reports on the expected passenger volume.",
+      "summary": "Detroit Metro Airport anticipates over four million travelers this holiday season, noting a slight decrease in traffic following the closure of Spirit Airlines. Airport officials advise travelers to arrive early and ensure they have proper identification, while also announcing upcoming holiday-themed musical performances in the terminals.",
       "url": "https://www.wemu.org/wemu-news/2026-11-25/dtw-expects-about-four-million-passengers-this-holiday-season",
-      "publishedAt": "2026-11-25T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "publishedAt": "2026-11-25T05:41:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Detroit Metro Airport",
-        "Kevin Meerschaert"
+        "Spirit Airlines",
+        "Wayne County Airport Authority",
+        "Cortez Strickland",
+        "TSA",
+        "Kevin Meerschaert",
+        "WEMU"
       ],
       "locations": [
-        "Detroit"
+        "Detroit Metro Airport"
       ],
       "localityIndex": 3,
       "topics": [
         "travel",
-        "airport",
         "holidays",
+        "aviation",
         "transportation"
       ],
       "source": {
@@ -100006,36 +100489,36 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.03,
-          "distinctive": 0.07,
-          "eclectic": 0.06,
-          "technical_science": 0.07,
-          "artsy": 0.03,
-          "progressive": 0.05,
+          "funny": 0.09,
+          "distinctive": 0.12,
+          "eclectic": 0.12,
+          "technical_science": 0.08,
+          "artsy": 0.18,
+          "progressive": 0.07,
           "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
+          "theatre": 0.02,
+          "live_music": 0.1,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
           "sporting": 0.01,
-          "recurring": 0.32,
+          "recurring": 0.39,
           "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.23,
+          "large_venue": 0.29,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
+          "popular_music_cover_band": 0.13,
           "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.04,
-          "children_activity": 0.02,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.03,
+          "sales_related": 0.09,
+          "children_activity": 0.03,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/f1cde02/2147483647/strip/true/crop/720x401+0+69/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F4f%2F32%2F87b2a36549fba11e1084e2dce2a1%2Fmetro-airport-tunnel.jpg",
+        "url": "https://npr.brightspotcdn.com/dims4/default/4bbd0c1/2147483647/strip/true/crop/720x405+0+68/resize/1200x675!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F4f%2F32%2F87b2a36549fba11e1084e2dce2a1%2Fmetro-airport-tunnel.jpg",
         "alt": "The LED tunnel at Detroit Metro Airport."
       }
     },
@@ -101239,6 +101722,69 @@
       "photo": {
         "url": "https://snworksceo.imgix.net/emu/ce29d9e1-6b77-4674-941f-5763e194ae42.sized-1000x1000.jpg?w=1500&ar=16%3A9&fit=crop&crop=faces&facepad=3&auto=format",
         "alt": "IMG_3701.jpeg"
+      }
+    },
+    {
+      "id": "eastern-michigan-university-police-inves-news-2026-11-01",
+      "title": "Eastern Michigan University police investigate scooter thefts",
+      "summary": "Eastern Michigan University police are investigating a series of scooter thefts on campus. Four recovered scooters were held at the department's offices in November 2026 following an investigation at a suspect's residence.",
+      "url": "https://www.easternecho.com/article/2026/11/eastern-michigan-university-police-investigate-scooter-thefts",
+      "publishedAt": "2026-11-01T00:00:00Z",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Eastern Michigan University Police",
+        "Eastern Michigan University"
+      ],
+      "locations": [
+        "Ypsilanti, MI",
+        "Eastern Michigan University"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "crime",
+        "campus safety",
+        "theft",
+        "police investigation"
+      ],
+      "source": {
+        "name": "Eastern Echo (Eastern Michigan University)",
+        "publication": "Eastern Echo"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.16,
+          "eclectic": 0.05,
+          "technical_science": 0.05,
+          "artsy": 0.02,
+          "progressive": 0.05,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.18,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.01,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://snworksceo.imgix.net/emu/b693930a-4a75-4314-bb7a-67f0d65e6cda.sized-1000x1000.png?w=800&h=600",
+        "alt": "Four scooters retrieved from a suspect house during an Eastern Michigan University police investigation."
       }
     },
     {
@@ -116005,6 +116551,69 @@
       }
     },
     {
+      "id": "families-line-detroit-streets-to-celebra-news-2026-11-26",
+      "title": "Families line Detroit streets to celebrate the 100th America's Thanksgiving Parade",
+      "summary": "Families gathered along Woodward Avenue in Detroit to celebrate the 100th anniversary of America's Thanksgiving Parade. The event featured various floats from local businesses and sponsors.",
+      "url": "https://www.michiganpublic.org/arts-life/2026-11-26/families-line-detroit-streets-to-celebrate-the-100th-americas-thanksgiving-parade",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Ford Motor Company",
+        "Gardner White"
+      ],
+      "locations": [
+        "Detroit",
+        "Woodward Avenue"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "parade",
+        "thanksgiving",
+        "detroit",
+        "community"
+      ],
+      "source": {
+        "name": "Zena Issa",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.59,
+          "distinctive": 0.54,
+          "eclectic": 0.13,
+          "technical_science": 0.04,
+          "artsy": 0.73,
+          "progressive": 0.13,
+          "outdoors": 0.83,
+          "theatre": 0.02,
+          "live_music": 0.03,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.76,
+          "craft_fair_shopping": 0.03,
+          "religious": 0.04,
+          "large_venue": 0.07,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.07,
+          "children_activity": 0.19,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/771d9a3/2147483647/strip/true/crop/4032x2274+0+399/resize/610x344!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F4d%2F19%2F0756592c4017a273fcea8013ac3d%2Fimg-3104.jpg",
+        "alt": "3 little boys wearing blue, black and yellow coats watching colorful parade floats pass by."
+      }
+    },
+    {
       "id": "families-of-13-children-sue-hospitals-mi-news-2026-11-06",
       "title": "Families of 13 children sue hospitals, Michigan doctor over alleged misuse of pediatric medical images",
       "summary": "Families of 13 children have filed a class-action lawsuit against a pediatric urologist and two hospital systems, alleging the doctor improperly recorded and stored sensitive images of young patients. The lawsuit claims the hospitals failed to implement necessary safeguards to protect children from the doctor's unauthorized conduct.",
@@ -119447,26 +120056,23 @@
     {
       "id": "ferndale-s-treat-dreams-shuts-flagship-s-news-2026-10-02",
       "title": "Ferndale's Treat Dreams shuts flagship store but keeps food truck",
-      "summary": "Treat Dreams in Ferndale announced the closure of its flagship store but will continue operating its popular food truck. The decision follows shifting business strategies and reduced foot traffic in the area.",
+      "summary": "Treat Dreams has closed its flagship storefront in Ferndale. The business will continue to operate through its food truck.",
       "url": "https://www.hometownlife.com/story/entertainment/dining/2026/10/02/treat-dreams-closing-ferndale-shop/92054727007/",
-      "publishedAt": "2026-10-02T00:00:00-04:00",
-      "addedAt": "2026-10-18T23:10:35-04:00",
+      "publishedAt": "2026-10-02T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Ferndale",
-        "Treat Dreams",
-        "food truck"
+        "Treat Dreams"
       ],
       "locations": [
-        "Ferndale",
-        "Michigan"
+        "Ferndale"
       ],
       "localityIndex": 3,
       "topics": [
+        "dining",
         "business",
-        "closures",
-        "food"
+        "closures"
       ],
       "source": {
         "name": "Hometown Life (Observer & Eccentric)",
@@ -119474,28 +120080,28 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.08,
-          "distinctive": 0.22,
-          "eclectic": 0.12,
+          "funny": 0.09,
+          "distinctive": 0.33,
+          "eclectic": 0.13,
           "technical_science": 0.04,
-          "artsy": 0.08,
-          "progressive": 0.13,
+          "artsy": 0.11,
+          "progressive": 0.15,
           "outdoors": 0.03,
-          "theatre": 0.02,
-          "live_music": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.02,
           "live_comedy": 0.01,
           "farmer_market": 0.04,
           "sporting": 0.01,
-          "recurring": 0.04,
-          "craft_fair_shopping": 0.15,
-          "religious": 0.01,
-          "large_venue": 0.03,
+          "recurring": 0.05,
+          "craft_fair_shopping": 0.09,
+          "religious": 0.02,
+          "large_venue": 0.02,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
+          "popular_music_cover_band": 0.02,
           "market_or_shop": 0.05,
-          "punk_metal_or_rock": 0.01,
+          "punk_metal_or_rock": 0.02,
           "dance": 0.01,
-          "sales_related": 0.05,
+          "sales_related": 0.06,
           "children_activity": 0.03,
           "running": 0.01,
           "exercise": 0.01,
@@ -119503,8 +120109,8 @@
         }
       },
       "photo": {
-        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/10/18/PLSJ/92318918007-canoe-trailer.jpg?crop=1021,574,x0,y21&width=660&height=370&format=pjpg&auto=webp",
-        "alt": "Ferndale's Treat Dreams shuts flagship store but keeps food truck"
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2025/07/30/PLSJ/85440348007-screenshot-seiche-gl.jpg?crop=505,283,x95,y0&width=210&height=118&format=pjpg&auto=webp",
+        "alt": "Treat Dreams storefront"
       }
     },
     {
@@ -124348,23 +124954,28 @@
     {
       "id": "food-gatherers-readies-for-increased-foo-news-2026-11-25",
       "title": "Food Gatherers readies for increased food assistance demand",
-      "summary": "Food Gatherers is preparing for a rise in demand for food assistance as federal program changes take effect. WEMU's Ana Longoria reports on the organization's preparations.",
+      "summary": "Food Gatherers is preparing for a rise in demand for food assistance as federal program changes reduce government food supplies. The organization is facing significantly higher operational costs for food and fuel while working to maintain its community support commitments.",
       "url": "https://www.wemu.org/wemu-news/2026-11-25/food-gatherers-readies-for-increased-food-assistance-demand",
-      "publishedAt": "2026-11-25T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "publishedAt": "2026-11-25T05:40:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Food Gatherers",
-        "Ana Longoria"
+        "Ana Longoria",
+        "Eileen Spring",
+        "USDA"
       ],
-      "locations": [],
+      "locations": [
+        "Ypsilanti",
+        "Ann Arbor"
+      ],
       "localityIndex": 2,
       "topics": [
-        "food security",
-        "social services",
-        "poverty",
-        "nonprofit"
+        "food insecurity",
+        "nonprofit",
+        "federal policy",
+        "community services"
       ],
       "source": {
         "name": "Ana Longoria",
@@ -124373,27 +124984,27 @@
       "scoring": {
         "signals": {
           "funny": 0.02,
-          "distinctive": 0.12,
-          "eclectic": 0.06,
-          "technical_science": 0.04,
-          "artsy": 0.03,
-          "progressive": 0.28,
+          "distinctive": 0.14,
+          "eclectic": 0.09,
+          "technical_science": 0.05,
+          "artsy": 0.02,
+          "progressive": 0.29,
           "outdoors": 0.02,
           "theatre": 0.02,
-          "live_music": 0.02,
-          "live_comedy": 0.01,
-          "farmer_market": 0.06,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.07,
           "sporting": 0.01,
-          "recurring": 0.17,
-          "craft_fair_shopping": 0.02,
+          "recurring": 0.16,
+          "craft_fair_shopping": 0.03,
           "religious": 0.04,
           "large_venue": 0.04,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.04,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.05,
           "children_activity": 0.03,
           "running": 0.02,
           "exercise": 0.01,
@@ -124401,8 +125012,8 @@
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/363f152/2147483647/strip/true/crop/2048x1141+0+0/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fa8%2Fd2%2F19bba6bd420182db7cf42682163a%2F860366199-1121610003683673-2897259019216744929-n.jpg",
-        "alt": "Food Gatherers readies for increased food assistance demand"
+        "url": "https://npr.brightspotcdn.com/dims4/default/293ce93/2147483647/strip/true/crop/2048x1075+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fa8%2Fd2%2F19bba6bd420182db7cf42682163a%2F860366199-1121610003683673-2897259019216744929-n.jpg",
+        "alt": "Food Gatherers logo"
       }
     },
     {
@@ -131524,22 +132135,22 @@
     {
       "id": "gathering-around-the-table-a-special-edi-news-2026-11-25",
       "title": "Gathering Around the Table: A Special Edition of The Dish",
-      "summary": "A special edition of the podcast 'The Dish', hosted by Mercedes Mejia, focuses on themes related to gathering around the table for the holiday season.",
+      "summary": "A special edition of the podcast The Dish, hosted by Mercedes Mejia, explores themes related to gathering around the table.",
       "url": "https://www.michiganpublic.org/podcast/the-dish/2026-11-25/gathering-around-the-table-a-special-edition-of-the-dish",
       "publishedAt": "2026-11-25T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "The Dish",
-        "Mercedes Mejia"
+        "Mercedes Mejia",
+        "The Dish"
       ],
       "locations": [],
       "localityIndex": 4,
       "topics": [
         "podcast",
         "food",
-        "holiday"
+        "culture"
       ],
       "source": {
         "name": "Michigan Radio (Michigan Public)",
@@ -131547,36 +132158,36 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.51,
-          "distinctive": 0.26,
-          "eclectic": 0.18,
-          "technical_science": 0.05,
-          "artsy": 0.78,
-          "progressive": 0.17,
+          "funny": 0.41,
+          "distinctive": 0.33,
+          "eclectic": 0.36,
+          "technical_science": 0.07,
+          "artsy": 0.81,
+          "progressive": 0.27,
           "outdoors": 0.03,
           "theatre": 0.02,
           "live_music": 0.02,
-          "live_comedy": 0.02,
+          "live_comedy": 0.03,
           "farmer_market": 0.03,
-          "sporting": 0.01,
-          "recurring": 0.21,
+          "sporting": 0.02,
+          "recurring": 0.19,
           "craft_fair_shopping": 0.02,
-          "religious": 0.06,
-          "large_venue": 0.03,
+          "religious": 0.04,
+          "large_venue": 0.04,
           "substance_recovery": 0.02,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
           "dance": 0.02,
-          "sales_related": 0.15,
-          "children_activity": 0.07,
-          "running": 0.01,
-          "exercise": 0.01,
+          "sales_related": 0.16,
+          "children_activity": 0.06,
+          "running": 0.02,
+          "exercise": 0.02,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/d8/87/8534289c45b0a82c624c34e39b5b/the-dish-special-collage2.png",
+        "url": "https://npr.brightspotcdn.com/dims4/default/c189d8a/2147483647/strip/true/crop/2380x1574+0+341/resize/130x86!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fd8%2F87%2F8534289c45b0a82c624c34e39b5b%2Fthe-dish-special-collage2.png",
         "alt": "The Dish hosted by with Mercedes Mejia podcast logo"
       }
     },
@@ -133561,6 +134172,66 @@
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/KAXOF6KVRJBQZNZKVFG7Q4ECCM.jpg?api_key=clickondetroit_06f87fefb2123598",
         "alt": "A girl is injured after a stabbing in Detroit Friday evening."
+      }
+    },
+    {
+      "id": "girls-basketball-2026-2027-expectation-f-news-2026-11-26",
+      "title": "Girls Basketball (2026-2027) Expectation For Upcoming Season",
+      "summary": "A look at the expectations and outlook for the Skyline girls basketball team for the 2026-2027 season.",
+      "url": "https://skylinepost.org/13052/sports/girls-basketball-2026-2027-expectation-for-upcoming-season/",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Skyline High School"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "sports",
+        "basketball",
+        "high school sports"
+      ],
+      "source": {
+        "name": "Avyn Fife",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.07,
+          "distinctive": 0.1,
+          "eclectic": 0.05,
+          "technical_science": 0.03,
+          "artsy": 0.05,
+          "progressive": 0.09,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.02,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.24,
+          "recurring": 0.43,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.1,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.06,
+          "children_activity": 0.05,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/IMG_5390-816x1200.jpg",
+        "alt": "#21 Sadie jordan ('28) controlling the play"
       }
     },
     {
@@ -141884,6 +142555,68 @@
       }
     },
     {
+      "id": "head-football-coach-chris-creighton-and-news-2026-11-25",
+      "title": "Head football coach Chris Creighton and Eagles part ways after 13 seasons",
+      "summary": "Eastern Michigan University has parted ways with head football coach Chris Creighton. The university is now beginning a national search for the program's 38th head coach.",
+      "url": "https://www.easternecho.com/article/2026/11/head-football-coach-chris-creighton-and-eagles-part-ways-after-13-seasons",
+      "publishedAt": "2026-11-25T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Chris Creighton",
+        "Eastern Michigan University",
+        "Ruby Brannon"
+      ],
+      "locations": [
+        "Ypsilanti, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "football",
+        "sports",
+        "coaching"
+      ],
+      "source": {
+        "name": "Ruby Brannon",
+        "publication": "Eastern Echo"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.21,
+          "eclectic": 0.05,
+          "technical_science": 0.02,
+          "artsy": 0.03,
+          "progressive": 0.06,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.07,
+          "recurring": 0.05,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.12,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.12
+        }
+      },
+      "photo": {
+        "url": "https://snworksceo.imgix.net/emu/6a6625b1-08d5-4304-90af-b4d79122dc63.sized-1000x1000.jpg?w=1500&ar=16%3A9&fit=crop&crop=faces&facepad=3&auto=format",
+        "alt": "Chris Creighton, dressed in green, running with his team, who are wearing black jerseys"
+      }
+    },
+    {
       "id": "head-start-opens-a-door-for-millions-of-news-2026-09-25",
       "title": "Head Start opens a door for millions of young Michiganders. Don’t close it.",
       "summary": "A Michigan resident shares their personal experience with Head Start, highlighting its impact on their life and the program's importance for Michigan's children. The article warns against proposed federal changes that would weaken the program's standards and support for vulnerable children, urging public comment to protect it.",
@@ -142810,24 +143543,21 @@
     {
       "id": "here-are-28-things-to-do-in-michigan-thi-news-2026-11-24",
       "title": "Here are 28 things to do in Michigan this weekend, November 25-29",
-      "summary": "Michigan Public has compiled a list of 28 events happening across the state for the Thanksgiving holiday weekend. The guide features a variety of activities to celebrate the holiday and kick off the winter season.",
+      "summary": "A curated list of 28 activities and events happening across Michigan during the Thanksgiving holiday weekend. The guide covers various community events for residents and visitors.",
       "url": "https://www.michiganpublic.org/community/2026-11-24/things-to-do-michigan-thanksgiving-weekend",
-      "publishedAt": "2026-11-24T13:40:00-05:00",
-      "addedAt": "2026-11-25T03:31:49-05:00",
+      "publishedAt": "2026-11-24T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
-      "entities": [
-        "Michigan Public"
-      ],
+      "entities": [],
       "locations": [
         "Michigan"
       ],
       "localityIndex": 4,
       "topics": [
         "events",
-        "thanksgiving",
-        "holidays",
         "community",
+        "thanksgiving",
         "tourism"
       ],
       "source": {
@@ -142836,37 +143566,37 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.18,
-          "distinctive": 0.11,
-          "eclectic": 0.48,
+          "funny": 0.19,
+          "distinctive": 0.12,
+          "eclectic": 0.46,
           "technical_science": 0.05,
-          "artsy": 0.25,
-          "progressive": 0.13,
-          "outdoors": 0.18,
-          "theatre": 0.03,
-          "live_music": 0.06,
+          "artsy": 0.18,
+          "progressive": 0.11,
+          "outdoors": 0.17,
+          "theatre": 0.02,
+          "live_music": 0.05,
           "live_comedy": 0.04,
-          "farmer_market": 0.03,
+          "farmer_market": 0.04,
           "sporting": 0.04,
-          "recurring": 0.39,
-          "craft_fair_shopping": 0.06,
-          "religious": 0.05,
-          "large_venue": 0.2,
+          "recurring": 0.35,
+          "craft_fair_shopping": 0.07,
+          "religious": 0.04,
+          "large_venue": 0.19,
           "substance_recovery": 0.02,
           "popular_music_cover_band": 0.05,
           "market_or_shop": 0.06,
           "punk_metal_or_rock": 0.03,
           "dance": 0.03,
-          "sales_related": 0.07,
-          "children_activity": 0.09,
+          "sales_related": 0.09,
+          "children_activity": 0.08,
           "running": 0.04,
           "exercise": 0.02,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/eda3408/2147483647/strip/true/crop/1920x1008+0+36/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fcf%2F50%2F3f8df7c14587bef0e6ade75d227f%2Fftim-11-25-29.png",
-        "alt": "Graphic for things to do in Michigan November 25-29"
+        "url": "https://npr.brightspotcdn.com/dims4/default/7830569/2147483647/strip/true/crop/1920x1080+0+0/resize/480x270!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fcf%2F50%2F3f8df7c14587bef0e6ade75d227f%2Fftim-11-25-29.png",
+        "alt": "Here are 28 things to do in Michigan this weekend, November 25-29"
       }
     },
     {
@@ -146475,28 +147205,29 @@
     {
       "id": "holidays-not-so-happy-mental-health-help-news-2026-11-25",
       "title": "Holidays not so happy? Mental health help is available",
-      "summary": "As the holiday season approaches, many individuals experience increased stress, grief, and loneliness due to personal and professional demands. The Washtenaw County Health Department encourages those feeling overwhelmed to seek support through local resources like the 'Wish You Knew' campaign or by calling 988.",
+      "summary": "As the holiday season approaches, experts note that increased stress, grief, and loneliness can significantly impact mental health. The Washtenaw County Health Department encourages those feeling overwhelmed to seek support through local resources or by calling 988.",
       "url": "https://www.wemu.org/wemu-news/2026-11-25/holidays-not-so-happy-mental-health-help-is-available",
       "publishedAt": "2026-11-25T16:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Caroline MacGregor",
-        "Washtenaw County Health Department",
         "Beth Ann Hamilton",
+        "Washtenaw County Health Department",
         "WEMU"
       ],
       "locations": [
         "Washtenaw County",
-        "Michigan"
+        "Ypsilanti",
+        "Ann Arbor"
       ],
       "localityIndex": 2,
       "topics": [
         "mental health",
         "holidays",
-        "stress",
-        "public health"
+        "public health",
+        "stress management"
       ],
       "source": {
         "name": "Caroline MacGregor",
@@ -146504,19 +147235,19 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.03,
+          "funny": 0.02,
           "distinctive": 0.07,
-          "eclectic": 0.1,
-          "technical_science": 0.1,
-          "artsy": 0.06,
-          "progressive": 0.31,
+          "eclectic": 0.09,
+          "technical_science": 0.14,
+          "artsy": 0.03,
+          "progressive": 0.23,
           "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
           "sporting": 0.01,
-          "recurring": 0.33,
+          "recurring": 0.26,
           "craft_fair_shopping": 0.02,
           "religious": 0.03,
           "large_venue": 0.03,
@@ -146525,7 +147256,7 @@
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.07,
+          "sales_related": 0.04,
           "children_activity": 0.03,
           "running": 0.01,
           "exercise": 0.02,
@@ -147011,11 +147742,11 @@
     },
     {
       "id": "homebuilding-program-news-2026-11-16",
-      "title": "Homebuilding Program",
+      "title": "Homebuilding program",
       "summary": "Ann Arbor students participate in a yearlong homebuilding program that emphasizes teamwork. The project involves students working together to construct a house.",
       "url": "https://chscommunicator.com/",
       "publishedAt": "2026-11-16T00:00:00-05:00",
-      "addedAt": "2026-11-25T03:31:49-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -147023,7 +147754,7 @@
         "Micheal Bailey"
       ],
       "locations": [
-        "Ann Arbor, MI"
+        "Ann Arbor"
       ],
       "localityIndex": 2,
       "topics": [
@@ -147038,27 +147769,27 @@
       "scoring": {
         "signals": {
           "funny": 0.06,
-          "distinctive": 0.57,
-          "eclectic": 0.27,
-          "technical_science": 0.88,
-          "artsy": 0.15,
-          "progressive": 0.57,
+          "distinctive": 0.54,
+          "eclectic": 0.29,
+          "technical_science": 0.86,
+          "artsy": 0.14,
+          "progressive": 0.61,
           "outdoors": 0.11,
           "theatre": 0.02,
-          "live_music": 0.02,
-          "live_comedy": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
           "farmer_market": 0.02,
           "sporting": 0.02,
-          "recurring": 0.51,
+          "recurring": 0.56,
           "craft_fair_shopping": 0.02,
           "religious": 0.02,
           "large_venue": 0.04,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.07,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.06,
           "children_activity": 0.09,
           "running": 0.01,
           "exercise": 0.02,
@@ -147067,7 +147798,7 @@
       },
       "photo": {
         "url": "https://chscommunicator.com/wp-content/uploads/2026/11/IMG_0897-1200x900.jpg",
-        "alt": "Adam Gardner and Micheal Bailey talk on top of a house they are building together."
+        "alt": "Adam Gardner and Micheal Bailey talk on top of a house they are building together. The house is being built as a yearlong project for the homebuilding program. \"Home building is very much a teamwork-based class.\""
       }
     },
     {
@@ -148734,6 +149465,62 @@
       }
     },
     {
+      "id": "how-260-tons-of-thanksgiving-leftovers-i-news-2026-11-26",
+      "title": "How 260 tons of Thanksgiving leftovers inspired an American icon: the TV dinner",
+      "summary": "This report explores the history of the TV dinner, tracing its origins to a massive surplus of Thanksgiving leftovers. It highlights how this innovation became an American cultural icon.",
+      "url": "https://www.wemu.org/npr-national-news/2026-11-26/how-260-tons-of-thanksgiving-leftovers-inspired-an-american-icon-the-tv-dinner",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [],
+      "locations": [],
+      "localityIndex": 2,
+      "topics": [
+        "history",
+        "food",
+        "thanksgiving"
+      ],
+      "source": {
+        "name": "WEMU 89.1 FM",
+        "publication": "NPR News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.32,
+          "distinctive": 0.62,
+          "eclectic": 0.3,
+          "technical_science": 0.49,
+          "artsy": 0.26,
+          "progressive": 0.34,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.03,
+          "sporting": 0.01,
+          "recurring": 0.09,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.03,
+          "large_venue": 0.06,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.05,
+          "children_activity": 0.05,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/770c6c7/2147483647/strip/true/crop/1600x117+0+30/resize/1440x105!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwemu%2Ffiles%2F201411%2Fbg-header-wemu-rs.jpg",
+        "alt": "How 260 tons of Thanksgiving leftovers inspired an American icon: the TV dinner"
+      }
+    },
+    {
       "id": "how-a-29-year-old-flipped-a-state-house-news-2026-11-10",
       "title": "How a 29-year-old flipped a state House seat in a West Michigan Republican stronghold",
       "summary": "Joseph McClusky, 29, won a seat in the Michigan State House representing the 86th District after defeating incumbent Republican Nancy DeBoer. The victory marks a notable shift in a traditionally Republican area.",
@@ -148855,16 +149642,16 @@
     {
       "id": "how-a-canadian-radio-station-became-a-de-news-2026-11-24",
       "title": "How a Canadian radio station became a Detroit music icon in the 1960s",
-      "summary": "A Canadian radio station based in Windsor, Ontario, played a significant role in shaping the sound of Detroit from the 1960s through the 1980s. The program features an interview with a Michigan archivist regarding the station's historical impact.",
+      "summary": "An exploration of the history of CKLW, a Canadian radio station that became a major influence on the Detroit music scene during the 1960s.",
       "url": "https://www.michiganpublic.org/section/stateside/2026-11-24/cklw-am-windsor-detroit-radio-history-rosalie-trombley",
       "publishedAt": "2026-11-24T00:00:00-05:00",
-      "addedAt": "2026-11-25T03:31:49-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "CKLW",
         "Rosalie Trombley",
-        "Dick Purtan"
+        "Dick Purtan",
+        "CKLW"
       ],
       "locations": [
         "Windsor",
@@ -148874,37 +149661,36 @@
       "topics": [
         "radio",
         "music",
-        "history",
-        "detroit"
+        "history"
       ],
       "source": {
-        "name": "April Van Buren",
+        "name": "Michigan Radio (Michigan Public)",
         "publication": "Michigan Public"
       },
       "scoring": {
         "signals": {
-          "funny": 0.1,
-          "distinctive": 0.62,
-          "eclectic": 0.32,
-          "technical_science": 0.21,
-          "artsy": 0.56,
-          "progressive": 0.39,
+          "funny": 0.09,
+          "distinctive": 0.6,
+          "eclectic": 0.34,
+          "technical_science": 0.24,
+          "artsy": 0.6,
+          "progressive": 0.35,
           "outdoors": 0.02,
           "theatre": 0.02,
           "live_music": 0.07,
           "live_comedy": 0.02,
           "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.2,
+          "sporting": 0.02,
+          "recurring": 0.08,
           "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.05,
+          "large_venue": 0.07,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.04,
+          "popular_music_cover_band": 0.05,
           "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.07,
+          "punk_metal_or_rock": 0.06,
           "dance": 0.02,
-          "sales_related": 0.05,
+          "sales_related": 0.04,
           "children_activity": 0.04,
           "running": 0.01,
           "exercise": 0.01,
@@ -148912,8 +149698,8 @@
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/e779f80/2147483647/strip/true/crop/1920x1070+0+5/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F9e%2Fba%2Fc066acfe4540851c4c28b68ce5d3%2Funtitled-design.png",
-        "alt": "A collage of three images. The first is a statue of Rosalie Trombley in Windsor, Ontario. The second image is an advertising booklet from CKLW with a large red globe against blue sky and a radio tower emitting the letters \"CKLW.\" The third image is a Black and white photograph of radio personality Dick Purtan posed with his arms crossed in Hart Plaza."
+        "url": "https://npr.brightspotcdn.com/dims4/default/a2ad321/2147483647/strip/true/crop/1633x1080+144+0/resize/130x86!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc1%2F5a%2F3a28ad974cfea2c1e36682a3098e%2Fstateside-full-show-pod.png",
+        "alt": "A collage of three images including a statue of Rosalie Trombley."
       }
     },
     {
@@ -150030,6 +150816,71 @@
       }
     },
     {
+      "id": "how-did-dwindling-industry-affect-detroi-news-2026-11-26",
+      "title": "How did dwindling industry affect Detroit, Chicago and Milwaukee? | CuriosiD",
+      "summary": "The Curious Midwest series examines the varying impacts of deindustrialization on major Midwestern cities. It specifically explores why some cities recovered from the decline of industry while others struggled.",
+      "url": "https://wdet.org/2026/11/26/how-did-dwindling-industry-affect-detroit-chicago-and-milwaukee-curiosid/",
+      "publishedAt": "2026-11-26T00:00:00Z",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "WDET 101.9 FM",
+        "Bre'Anna Tinsley"
+      ],
+      "locations": [
+        "Detroit",
+        "Chicago",
+        "Milwaukee",
+        "Midwest"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "deindustrialization",
+        "economy",
+        "history",
+        "urban development"
+      ],
+      "source": {
+        "name": "Bre'Anna Tinsley",
+        "publication": "WDET 101.9 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.05,
+          "distinctive": 0.14,
+          "eclectic": 0.18,
+          "technical_science": 0.1,
+          "artsy": 0.08,
+          "progressive": 0.2,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.67,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.06,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.06,
+          "children_activity": 0.05,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://wdet.org/wp-content/uploads/2017/08/DSC_0018-450x450.jpg",
+        "alt": "CuriosiD series graphic"
+      }
+    },
+    {
       "id": "how-did-your-michigan-school-district-sc-news-2026-10-09",
       "title": "How did your Michigan school district score on the SAT?",
       "summary": "The statewide average SAT score in Michigan fell by nine points from the previous school year to 945 in 2025-26. Novi Community School District had the highest average at 1186, while Benton Harbor Area Schools had the lowest at 694. The article provides a map and table showing scores for all districts.",
@@ -150083,6 +150934,66 @@
       "photo": {
         "url": "https://www.mlive.com/resizer/v2/4EU3XLPYENCCJNL3QXUTD7JE7U.jpg?auth=56be7642134b44bf07f0eaf5162653d18daf2a64cb9b699629aa194aab95832c&width=1280&smart=true&quality=90",
         "alt": "Michigan SAT map"
+      }
+    },
+    {
+      "id": "how-do-skyline-athletes-stay-conditioned-news-2026-11-26",
+      "title": "How do Skyline Athletes stay conditioned during the off season?",
+      "summary": "An investigation into the training and conditioning methods used by Skyline athletes during their off-season.",
+      "url": "https://skylinepost.org/13103/sports/how-do-skyline-athletes-stay-conditioned-during-the-off-season/",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Skyline High School"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "sports",
+        "fitness",
+        "training"
+      ],
+      "source": {
+        "name": "Liam Gagern",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.07,
+          "distinctive": 0.17,
+          "eclectic": 0.13,
+          "technical_science": 0.28,
+          "artsy": 0.06,
+          "progressive": 0.18,
+          "outdoors": 0.08,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.04,
+          "recurring": 0.2,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.11,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.07,
+          "children_activity": 0.04,
+          "running": 0.05,
+          "exercise": 0.11,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/Screenshot-2026-11-18-at-2.01.47-PM-1200x890.png",
+        "alt": "The Skyline gym where most athletes spend time getting ready for their season"
       }
     },
     {
@@ -153041,10 +153952,10 @@
     {
       "id": "humane-society-of-huron-valley-offers-pe-news-2026-11-25",
       "title": "Humane Society of Huron Valley offers pet safety tips for holiday season",
-      "summary": "The Humane Society of Huron Valley is providing advice to pet owners to ensure animal safety during the busy holiday season. Recommendations include creating quiet spaces for anxious pets, planning ahead for boarding, and keeping dangerous foods like those containing xylitol away from animals.",
+      "summary": "The Humane Society of Huron Valley is providing advice to pet owners to ensure animal safety during the busy holiday season. Experts recommend creating quiet spaces for pets to avoid overstimulation and caution against feeding them rich holiday foods that can be toxic.",
       "url": "https://www.wemu.org/wemu-news/2026-11-25/humane-society-of-huron-valley-offers-pet-safety-tips-for-holiday-season",
       "publishedAt": "2026-11-25T16:01:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -153055,15 +153966,14 @@
       ],
       "locations": [
         "Ypsilanti",
-        "Ann Arbor",
-        "Michigan"
+        "Ann Arbor"
       ],
       "localityIndex": 2,
       "topics": [
         "pets",
         "holidays",
-        "animal welfare",
-        "safety"
+        "safety",
+        "animals"
       ],
       "source": {
         "name": "Caroline MacGregor",
@@ -153074,34 +153984,34 @@
           "funny": 0.04,
           "distinctive": 0.08,
           "eclectic": 0.08,
-          "technical_science": 0.09,
+          "technical_science": 0.11,
           "artsy": 0.04,
-          "progressive": 0.16,
+          "progressive": 0.15,
           "outdoors": 0.03,
-          "theatre": 0.01,
-          "live_music": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.02,
           "sporting": 0.01,
-          "recurring": 0.4,
+          "recurring": 0.41,
           "craft_fair_shopping": 0.02,
           "religious": 0.02,
-          "large_venue": 0.03,
+          "large_venue": 0.04,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
-          "sales_related": 0.06,
+          "sales_related": 0.05,
           "children_activity": 0.03,
           "running": 0.01,
-          "exercise": 0.01,
+          "exercise": 0.02,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/52b4162/2147483647/strip/true/crop/1080x567+0+465/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F3f%2Fc9%2F4632cd4b408e98534ddc0dcff608%2Fdog.jpg",
-        "alt": "A dog looking at the camera."
+        "url": "https://npr.brightspotcdn.com/dims4/default/44cac4d/2147483647/strip/true/crop/1080x608+0+445/resize/1200x675!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F3f%2Fc9%2F4632cd4b408e98534ddc0dcff608%2Fdog.jpg",
+        "alt": "dog"
       }
     },
     {
@@ -154555,6 +155465,62 @@
       }
     },
     {
+      "id": "i-found-red-light-therapy-devices-for-as-news-2026-11-26",
+      "title": "I found red light therapy devices for as low as $295 this Black Friday",
+      "summary": "A shopping guide highlighting Black Friday deals on red light therapy devices. The article lists specific price points for consumers looking for home wellness equipment.",
+      "url": "https://www.hometownlife.com/story/shopping/deals/black-friday/2026/11/26/rlt-home-black-friday-red-light-therapy-deals-2026/92970938007/",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [],
+      "locations": [],
+      "localityIndex": 1,
+      "topics": [
+        "shopping",
+        "deals",
+        "black friday"
+      ],
+      "source": {
+        "name": "Hometown Life (Observer & Eccentric)",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.05,
+          "distinctive": 0.08,
+          "eclectic": 0.09,
+          "technical_science": 0.31,
+          "artsy": 0.04,
+          "progressive": 0.08,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.3,
+          "craft_fair_shopping": 0.83,
+          "religious": 0.01,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.91,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.96,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2025/07/30/PLSJ/85440348007-screenshot-seiche-gl.jpg?crop=505,283,x95,y0&width=210&height=118&format=pjpg&auto=webp",
+        "alt": "Red light therapy device"
+      }
+    },
+    {
       "id": "i-think-she-s-a-witch-livonia-caregiver-news-2026-10-06",
       "title": "‘I think she’s a witch’: Livonia caregiver arrested after 86-year-old says she stole nearly $24K from her",
       "summary": "A Livonia caregiver has been arrested after an 86-year-old woman, Dame, alleged she stole nearly $24,000. The caregiver reportedly admitted to taking the money but claimed it wasn't excessive and promised to return it, which the family deemed impossible. The theft allegedly escalated over six months, with funds used for groceries and other personal items. Dame expressed fear and distrust, calling the caregiver a witch and emphasizing the stolen money's importance to her.",
@@ -155425,20 +156391,19 @@
     {
       "id": "immigrants-from-ukraine-sudan-could-soon-news-2026-10-16",
       "title": "Immigrants from Ukraine, Sudan could soon lose protected status",
-      "summary": "More than 100,000 Ukrainians and 2,000 Sudanese immigrants face potential loss of Temporary Protected Status (TPS) by October 19, 2026, as Homeland Security Secretary Markwayne Mullin has not decided whether to renew protections. The Trump administration has eliminated TPS for most countries, leaving only Ukraine, Sudan, and Lebanon with pending designations. Immigration advocates argue unsafe conditions in both countries justify continued protections, while Trump's tensions with Ukraine complicate the issue. Bipartisan lawmakers have urged an extension until 2029.",
+      "summary": "More than 100,000 Ukrainian and 2,000 Sudanese immigrants face the potential expiration of their Temporary Protected Status (TPS) as the Department of Homeland Security has yet to announce a renewal. Bipartisan groups of senators have urged the administration to extend these protections, citing ongoing conflict and humanitarian crises in both nations.",
       "url": "https://michiganadvance.com/2026/10/16/repub/immigrants-from-ukraine-sudan-could-soon-lose-protected-status/",
       "publishedAt": "2026-10-16T00:00:00-04:00",
-      "addedAt": "2026-10-18T13:59:30-04:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Ariana Figueroa",
-        "Michigan Advance",
         "Markwayne Mullin",
-        "National Immigration Forum",
-        "Jennie Murray",
         "Donald Trump",
         "Volodymyr Zelenskyy",
+        "Jennie Murray",
+        "National Immigration Forum",
+        "Marco Rubio",
         "Susan Collins",
         "Lisa Murkowski",
         "Chuck Schumer",
@@ -155463,37 +156428,30 @@
         "Tina Smith",
         "Chris Van Hollen",
         "Mark Warner",
+        "Raphael Warnock",
         "Elizabeth Warren",
         "Peter Welch",
         "Sheldon Whitehouse",
         "Ron Wyden",
         "Tammy Duckworth",
         "Angus King",
-        "Marco Rubio",
-        "Marco Rubio",
-        "Cory Booker",
-        "Michael Bennet",
-        "Tim Kaine",
-        "Chris Van Hollen",
-        "Mark Warner",
-        "Adam Schiff",
-        "Tammy Duckworth"
+        "Joe Biden",
+        "Department of Homeland Security",
+        "States Newsroom",
+        "Michigan Advance"
       ],
       "locations": [
-        "Michigan",
         "Ukraine",
         "Sudan",
-        "United States"
+        "United States",
+        "Michigan"
       ],
       "localityIndex": 4,
       "topics": [
         "immigration",
         "tps",
-        "trump",
-        "ukraine",
-        "sudan",
-        "humanitarian",
-        "policy"
+        "foreign policy",
+        "humanitarian aid"
       ],
       "source": {
         "name": "Ariana Figueroa",
@@ -155501,29 +156459,29 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.02,
-          "distinctive": 0.24,
-          "eclectic": 0.14,
-          "technical_science": 0.02,
+          "funny": 0.01,
+          "distinctive": 0.26,
+          "eclectic": 0.15,
+          "technical_science": 0.03,
           "artsy": 0.02,
-          "progressive": 0.3,
+          "progressive": 0.45,
           "outdoors": 0.01,
           "theatre": 0.01,
           "live_music": 0.01,
           "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.2,
+          "recurring": 0.14,
           "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.03,
+          "religious": 0.02,
+          "large_venue": 0.04,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
+          "popular_music_cover_band": 0.02,
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
           "dance": 0.01,
           "sales_related": 0.02,
-          "children_activity": 0.01,
+          "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.02
@@ -155531,7 +156489,7 @@
       },
       "photo": {
         "url": "https://michiganadvance.com/wp-content/uploads/2026/10/ukrainian-prayer-saturday_zjw_022826-05-1024x5891779712441-1.jpg",
-        "alt": "Immigrants from Ukraine, Sudan could soon lose protected status"
+        "alt": "Ukrainian prayer"
       }
     },
     {
@@ -163256,6 +164214,64 @@
       }
     },
     {
+      "id": "it-s-worth-it-to-get-lost-in-the-backroo-news-2026-11-26",
+      "title": "It’s Worth It to Get Lost in The Backrooms",
+      "summary": "A review of the movie \"The Backrooms,\" recommending it to viewers.",
+      "url": "https://skylinepost.org/13096/arts-entertainment/its-worth-it-to-get-lost-in-the-backrooms/",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "film",
+        "reviews",
+        "entertainment"
+      ],
+      "source": {
+        "name": "Macklan Lusk",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.29,
+          "distinctive": 0.22,
+          "eclectic": 0.25,
+          "technical_science": 0.06,
+          "artsy": 0.86,
+          "progressive": 0.22,
+          "outdoors": 0.03,
+          "theatre": 0.05,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.13,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.07,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.49,
+          "children_activity": 0.04,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/The-backrooms.avif",
+        "alt": "Official movie poster for \"The Backrooms\" movie."
+      }
+    },
+    {
       "id": "it-will-get-better-former-u-s-sen-jeff-f-news-2026-11-17",
       "title": "‘It will get better’: Former U.S. Sen. Jeff Flake advocates for bipartisan cooperation",
       "summary": "Former U.S. Senator Jeff Flake visited to discuss the importance of bipartisan cooperation in American politics. He expressed optimism about the future of the political climate.",
@@ -168000,6 +169016,70 @@
       }
     },
     {
+      "id": "john-u-bacon-michigan-s-failed-athletic-news-2026-11-26",
+      "title": "John U. Bacon: Michigan's failed athletic director search shows 'utter incompetence'",
+      "summary": "Commentator John U. Bacon discusses the University of Michigan's recent athletic director search process. He criticizes the handling of the search, labeling it as a display of incompetence.",
+      "url": "https://www.michiganpublic.org/sports/2026-11-26/john-u-bacon-michigans-failed-athletic-director-search-shows-utter-incompetence",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "opinion",
+      "entities": [
+        "Trev Alberts",
+        "John U. Bacon",
+        "Doug Tribou",
+        "Caoilinn Goss"
+      ],
+      "locations": [
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "sports",
+        "university of michigan",
+        "hiring",
+        "commentary"
+      ],
+      "source": {
+        "name": "Rebecca S. Gratz",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.16,
+          "distinctive": 0.34,
+          "eclectic": 0.09,
+          "technical_science": 0.03,
+          "artsy": 0.04,
+          "progressive": 0.08,
+          "outdoors": 0.02,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.04,
+          "farmer_market": 0.01,
+          "sporting": 0.03,
+          "recurring": 0.17,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.08,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.04,
+          "children_activity": 0.02,
+          "running": 0.02,
+          "exercise": 0.01,
+          "employment_related": 0.09
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/0cb8532/2147483647/strip/true/crop/7811x4394+0+272/resize/480x270!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F38%2F0c%2Fee7d9ea9411da4c683770ee4919f%2Fmichigan-alberts-26328581819504.jpg",
+        "alt": "Nebraska athletic director Trev Alberts in a red polo shirt looking over his left shoulder. Blurred stadium seats full of people in red are in the background."
+      }
+    },
+    {
       "id": "john-u-bacon-on-bryce-underwood-s-fumble-news-2026-09-25",
       "title": "John U. Bacon on Bryce Underwood's fumbles and Justin Verlander's farewell",
       "summary": "Analysis of Bryce Underwood's performance and reflections on Justin Verlander's career as he prepares for his farewell in baseball.",
@@ -168526,6 +169606,66 @@
       "photo": {
         "url": "https://annarborobserver.com/wp-content/uploads/2026/11/Screenshot-2026-11-22-at-11.52.40-AM.png",
         "alt": "Journeys Through the Weird"
+      }
+    },
+    {
+      "id": "jovany-romero-garduno-humans-of-skyline-news-2026-11-26",
+      "title": "Jovany Romero Garduno: Humans of Skyline!",
+      "summary": "A profile of Skyline student Jovany Romero Garduno as part of the Humans of Skyline series.",
+      "url": "https://skylinepost.org/12951/humans-of-skyline/humans-of-skyline-jovany-romero-garduno/",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Jovany Romero Garduno"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "students",
+        "profiles",
+        "skyline high school"
+      ],
+      "source": {
+        "name": "Noah Pomeroy and Romeo Ayala",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.16,
+          "distinctive": 0.27,
+          "eclectic": 0.1,
+          "technical_science": 0.07,
+          "artsy": 0.51,
+          "progressive": 0.28,
+          "outdoors": 0.03,
+          "theatre": 0.03,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.83,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.03,
+          "large_venue": 0.04,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.03,
+          "sales_related": 0.05,
+          "children_activity": 0.04,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.03
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/FIXEDPNGForHumans-1200x1200.png",
+        "alt": "Jovany Romero Garduno ('28) holding a soccer ball."
       }
     },
     {
@@ -179510,55 +180650,46 @@
     {
       "id": "lleg-a-michigan-en-busca-de-seguridad-tr-news-2026-11-24",
       "title": "Llegó a Michigan en busca de seguridad. Tras ser deportada, fue asesinada en Venezuela.",
-      "summary": "A transgender Venezuelan woman known as Q, who sought refuge in Michigan after facing violence, was deported back to Venezuela. Following her deportation, she was murdered in her home country.",
+      "summary": "A report on a transgender woman who sought refuge in Michigan but was later deported to Venezuela, where she was killed.",
       "url": "https://www.michiganpublic.org/arts-life/2026-11-24/mujer-trans-venezolana-deportada-eeuu-asesinada",
-      "publishedAt": "2026-11-24T16:23:00-05:00",
-      "addedAt": "2026-11-25T03:31:49-05:00",
+      "publishedAt": "2026-11-24T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
-      "entities": [
-        "Q",
-        "Michelle Jokisch Polo",
-        "Michigan Public",
-        "Rosaura Quintero",
-        "Fundación LGBTI Gente Bella"
-      ],
+      "entities": [],
       "locations": [
         "Michigan",
-        "Pontiac",
         "Venezuela"
       ],
-      "localityIndex": 3,
+      "localityIndex": 4,
       "topics": [
         "immigration",
         "human rights",
-        "lgbtq+",
-        "deportation",
-        "violence"
+        "crime"
       ],
       "source": {
-        "name": "Michelle Jokisch Polo",
+        "name": "Michigan Radio (Michigan Public)",
         "publication": "Michigan Public"
       },
       "scoring": {
         "signals": {
           "funny": 0.01,
-          "distinctive": 0.72,
-          "eclectic": 0.22,
+          "distinctive": 0.71,
+          "eclectic": 0.3,
           "technical_science": 0.03,
           "artsy": 0.03,
-          "progressive": 0.29,
-          "outdoors": 0.02,
+          "progressive": 0.27,
+          "outdoors": 0.01,
           "theatre": 0.02,
           "live_music": 0.01,
-          "live_comedy": 0.02,
+          "live_comedy": 0.01,
           "farmer_market": 0.01,
           "sporting": 0.01,
           "recurring": 0.04,
           "craft_fair_shopping": 0.01,
           "religious": 0.02,
           "large_venue": 0.03,
-          "substance_recovery": 0.01,
+          "substance_recovery": 0.02,
           "popular_music_cover_band": 0.01,
           "market_or_shop": 0.01,
           "punk_metal_or_rock": 0.01,
@@ -179567,12 +180698,12 @@
           "children_activity": 0.02,
           "running": 0.01,
           "exercise": 0.01,
-          "employment_related": 0.01
+          "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/7e0f60c/2147483647/strip/true/crop/1200x630+0+35/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F86%2Ff9%2F98667f0b4e21bfbd06f226606b7d%2Ffinal-mjp.png",
-        "alt": "Q en un evento organizado por su fundación, Fundación LGBTI Gente Bella"
+        "url": "https://npr.brightspotcdn.com/dims4/default/2dcb64d/2147483647/strip/true/crop/1058x700+71+0/resize/130x86!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F86%2Ff9%2F98667f0b4e21bfbd06f226606b7d%2Ffinal-mjp.png",
+        "alt": "Q came to Michigan in 2025 seeking refuge after facing violence for being trans."
       }
     },
     {
@@ -197082,6 +198213,70 @@
       }
     },
     {
+      "id": "michigan-attorney-general-s-office-re-is-news-2026-11-26",
+      "title": "Michigan Attorney General’s office re-issues holiday safety warnings",
+      "summary": "Attorney General Dana Nessel has launched an annual holiday consumer protection campaign to warn residents about scams, including spoofed websites and surveillance pricing. Nessel highlighted that Michigan lacks certain consumer protection laws found in other states and encouraged residents to report suspicious activity.",
+      "url": "https://www.wemu.org/michigan-news/2026-11-26/michigan-attorney-generals-office-re-issues-holiday-safety-warnings-joins-another-federal-lawsuit",
+      "publishedAt": "2026-11-26T05:55:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Michigan Attorney General’s office",
+        "Dana Nessel",
+        "Eli Savit",
+        "Eli Lilly"
+      ],
+      "locations": [
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "consumer protection",
+        "scams",
+        "holidays",
+        "law"
+      ],
+      "source": {
+        "name": "Colin Jackson",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.14,
+          "eclectic": 0.1,
+          "technical_science": 0.18,
+          "artsy": 0.03,
+          "progressive": 0.29,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.92,
+          "craft_fair_shopping": 0.03,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.04,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/2831810/2147483647/strip/true/crop/1535x806+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F95%2Fc8%2F800a7a574c5dbf79401686e4d654%2Fscam-1536x806.jpg",
+        "alt": "scam"
+      }
+    },
+    {
       "id": "michigan-attorney-general-says-no-charge-news-2026-11-06",
       "title": "Michigan Attorney General says no charges for deputies who shot Navy veteran",
       "summary": "Michigan Attorney General Dana Nessel's office announced that no charges will be filed against Washtenaw County deputies involved in the fatal shooting of Navy veteran John Jenuwine.",
@@ -206209,6 +207404,70 @@
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/b6084de/2147483647/strip/false/crop/1282x678+0+0/resize/792x419!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F84%2F1a%2Fd3d0496848718055074aca71af8b%2Fscampaign.png",
         "alt": "A graphic for the AG's scampaign"
+      }
+    },
+    {
+      "id": "michigan-joins-multi-state-lawsuit-again-news-2026-11-26",
+      "title": "Michigan joins multi-state lawsuit against federal housing rule",
+      "summary": "The Michigan Attorney General’s office has joined a multi-state lawsuit challenging a new federal rule from the Department of Housing and Urban Development. The rule aims to restrict housing assistance for households containing members who do not qualify for immigration status, a move Nessel characterizes as an attempt to withhold funding from Michigan residents.",
+      "url": "https://www.wemu.org/michigan-news/2026-11-26/michigan-attorney-generals-office-re-issues-holiday-safety-warnings-joins-another-federal-lawsuit",
+      "publishedAt": "2026-11-26T05:55:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Michigan Attorney General’s office",
+        "Dana Nessel",
+        "Trump administration",
+        "Department of Housing and Urban Development"
+      ],
+      "locations": [
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "lawsuit",
+        "housing",
+        "federal policy",
+        "immigration"
+      ],
+      "source": {
+        "name": "Colin Jackson",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.23,
+          "eclectic": 0.12,
+          "technical_science": 0.03,
+          "artsy": 0.02,
+          "progressive": 0.52,
+          "outdoors": 0.01,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.05,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.01,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/2831810/2147483647/strip/true/crop/1535x806+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F95%2Fc8%2F800a7a574c5dbf79401686e4d654%2Fscam-1536x806.jpg",
+        "alt": "scam"
       }
     },
     {
@@ -230196,60 +231455,60 @@
     {
       "id": "msu-s-renowned-horse-breeding-program-is-news-2026-11-25",
       "title": "MSU's renowned horse breeding program is hiding in plain sight, and you can visit for free",
-      "summary": "Michigan State University operates a notable horse breeding program that is open to the public for free visits. The program is highlighted as a hidden gem on the university campus.",
+      "summary": "Michigan State University operates a horse breeding program that is open to the public for free visits. The program is noted for its history and accessibility.",
       "url": "https://www.michiganpublic.org/education/2026-11-25/michigan-state-university-horse-breeding-program",
       "publishedAt": "2026-11-25T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Michigan State University"
       ],
       "locations": [
-        "Michigan State University"
+        "Michigan"
       ],
       "localityIndex": 4,
       "topics": [
         "education",
         "agriculture",
-        "horses"
+        "animals"
       ],
       "source": {
-        "name": "Laura Weber Davis",
+        "name": "Michigan Radio (Michigan Public)",
         "publication": "Michigan Public"
       },
       "scoring": {
         "signals": {
-          "funny": 0.14,
+          "funny": 0.11,
           "distinctive": 0.55,
-          "eclectic": 0.17,
-          "technical_science": 0.66,
+          "eclectic": 0.16,
+          "technical_science": 0.64,
           "artsy": 0.09,
-          "progressive": 0.19,
-          "outdoors": 0.7,
+          "progressive": 0.2,
+          "outdoors": 0.76,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.03,
           "sporting": 0.03,
-          "recurring": 0.45,
+          "recurring": 0.54,
           "craft_fair_shopping": 0.03,
           "religious": 0.02,
-          "large_venue": 0.09,
+          "large_venue": 0.1,
           "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.02,
+          "punk_metal_or_rock": 0.01,
           "dance": 0.02,
-          "sales_related": 0.22,
-          "children_activity": 0.07,
+          "sales_related": 0.16,
+          "children_activity": 0.09,
           "running": 0.02,
           "exercise": 0.02,
           "employment_related": 0.03
         }
       },
       "photo": {
-        "url": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/de/8b/1574018548d18cb3aa0c1a192fbf/horse-msu-1.jpg",
+        "url": "https://npr.brightspotcdn.com/dims4/default/2c3dca4/2147483647/strip/true/crop/4284x2834+0+273/resize/130x86!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fde%2F8b%2F1574018548d18cb3aa0c1a192fbf%2Fhorse-msu-1.jpg",
         "alt": "Arabian horse at MSU farm."
       }
     },
@@ -234758,6 +236017,66 @@
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/03491ba/2147483647/strip/true/crop/890x467+0+66/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fad%2F03%2F8a4667eb41f88281b9b412ed2a26%2Ftreeline-trail-bridge.png",
         "alt": "Rendering of the new elevated portion of Ann Arbor's Treeline Trail bridge"
+      }
+    },
+    {
+      "id": "new-light-on-green-lantern-reboot-show-r-news-2026-11-26",
+      "title": "New Light on Green Lantern: Reboot Show Review",
+      "summary": "A review of the new DC Studios reboot show based on the Green Lantern franchise.",
+      "url": "https://skylinepost.org/12905/arts-entertainment/new-light-on-green-lantern-reboot-show-review/",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "DC Studios"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "television",
+        "entertainment",
+        "reviews"
+      ],
+      "source": {
+        "name": "Phylip Elliott",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.37,
+          "distinctive": 0.2,
+          "eclectic": 0.2,
+          "technical_science": 0.11,
+          "artsy": 0.79,
+          "progressive": 0.22,
+          "outdoors": 0.02,
+          "theatre": 0.03,
+          "live_music": 0.02,
+          "live_comedy": 0.03,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.19,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.07,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.13,
+          "children_activity": 0.04,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/lanterns-786x1200.webp",
+        "alt": "The official poster for the DC Studios Show \"Lanterns\""
       }
     },
     {
@@ -240015,25 +241334,23 @@
     {
       "id": "notes-from-lake-america-and-meijer-garde-news-2026-09-05",
       "title": "Notes from Lake America and Meijer Gardens",
-      "summary": "Andrew Heller's opinion column reflecting on the artistic brilliance of Chihuly at Meijer Gardens and the chaotic appeal of Lake America.",
+      "summary": "A commentary piece reflecting on a visit to Meijer Gardens and observations regarding Lake America. The author shares personal thoughts on art and local attractions.",
       "url": "https://www.hometownlife.com/story/opinion/2026/09/05/chihulys-brilliance-and-lake-americas-nonsense-opinion/91628754007/",
-      "publishedAt": "2026-09-05T00:00:00-04:00",
-      "addedAt": "2026-10-31T09:45:59-04:00",
+      "publishedAt": "2026-09-05T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "opinion",
       "entities": [
-        "Andrew Heller",
-        "Lake America",
-        "Meijer Gardens"
+        "Andrew Heller"
       ],
       "locations": [
-        "Michigan"
+        "Meijer Gardens"
       ],
-      "localityIndex": 4,
+      "localityIndex": 1,
       "topics": [
-        "art",
         "opinion",
-        "culture"
+        "arts",
+        "travel"
       ],
       "source": {
         "name": "Andrew Heller",
@@ -240041,37 +241358,37 @@
       },
       "scoring": {
         "signals": {
-          "funny": 0.44,
-          "distinctive": 0.62,
-          "eclectic": 0.6,
-          "technical_science": 0.13,
-          "artsy": 0.92,
-          "progressive": 0.45,
-          "outdoors": 0.66,
-          "theatre": 0.03,
+          "funny": 0.24,
+          "distinctive": 0.25,
+          "eclectic": 0.48,
+          "technical_science": 0.06,
+          "artsy": 0.9,
+          "progressive": 0.19,
+          "outdoors": 0.72,
+          "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.03,
           "sporting": 0.02,
-          "recurring": 0.28,
-          "craft_fair_shopping": 0.05,
+          "recurring": 0.1,
+          "craft_fair_shopping": 0.04,
           "religious": 0.02,
-          "large_venue": 0.21,
-          "substance_recovery": 0.02,
+          "large_venue": 0.11,
+          "substance_recovery": 0.01,
           "popular_music_cover_band": 0.03,
           "market_or_shop": 0.03,
-          "punk_metal_or_rock": 0.03,
+          "punk_metal_or_rock": 0.02,
           "dance": 0.02,
-          "sales_related": 0.04,
-          "children_activity": 0.03,
+          "sales_related": 0.05,
+          "children_activity": 0.05,
           "running": 0.02,
-          "exercise": 0.01,
-          "employment_related": 0.01
+          "exercise": 0.02,
+          "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/08/07/PLSJ/91211534007-19-n-70861.jpeg?crop=1279,720,x0,y206&width=210&height=118&format=pjpg&auto=webp",
-        "alt": "Hometown Life logo"
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2025/07/30/PLSJ/85440348007-screenshot-seiche-gl.jpg?crop=505,283,x95,y0&width=210&height=118&format=pjpg&auto=webp",
+        "alt": "Meijer Gardens"
       }
     },
     {
@@ -241222,6 +242539,66 @@
       "photo": {
         "url": "https://michiganadvance.com/wp-content/uploads/2024/06/IMG_4001-1-1536x1024.jpg",
         "alt": "Electric vehicle chargers in Mackinaw City, funded by the Michigan Department of Environment Great Lakes and Energy."
+      }
+    },
+    {
+      "id": "nu-metal-fans-try-system-of-a-down-s-joh-news-2026-11-26",
+      "title": "Nu-metal Fans: Try System Of A Down’s “Johnny”",
+      "summary": "A review and recommendation of the System Of A Down single \"Johnny\" for fans of the nu-metal genre.",
+      "url": "https://skylinepost.org/13233/arts-entertainment/nu-metal-fans-try-system-of-a-downs-johnny/",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "System Of A Down"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "music",
+        "arts",
+        "entertainment"
+      ],
+      "source": {
+        "name": "Aire Gallaway",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.28,
+          "distinctive": 0.12,
+          "eclectic": 0.39,
+          "technical_science": 0.03,
+          "artsy": 0.91,
+          "progressive": 0.45,
+          "outdoors": 0.02,
+          "theatre": 0.03,
+          "live_music": 0.07,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.14,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.08,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.04,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.86,
+          "dance": 0.02,
+          "sales_related": 0.3,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/Screenshot-2026-09-29-at-12.00.08-PM-1191x1200.png",
+        "alt": "System Of A Down's single cover for Johnny."
       }
     },
     {
@@ -257054,6 +258431,66 @@
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/7981f9a/2147483647/strip/true/crop/5136x2896+0+264/resize/610x344!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb8%2F56%2F8ee5e2694eab83178fd9656dddcb%2Felection-2026-michigan-house-26308141053379.jpg",
         "alt": "Election 2026 Michigan House"
+      }
+    },
+    {
+      "id": "quick-tips-to-fight-against-burnout-from-news-2026-11-25",
+      "title": "Quick Tips to Fight Against Burnout from Skyline Staff",
+      "summary": "Advice from Skyline staff members on how to manage and prevent burnout.",
+      "url": "https://skylinepost.org/12936/lifestyles/quick-tips-to-fight-against-burnout-from-skyline-staff/",
+      "publishedAt": "2026-11-25T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Skyline High School"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "mental health",
+        "lifestyle",
+        "education"
+      ],
+      "source": {
+        "name": "Hannelore Hoff",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.07,
+          "distinctive": 0.13,
+          "eclectic": 0.21,
+          "technical_science": 0.07,
+          "artsy": 0.07,
+          "progressive": 0.27,
+          "outdoors": 0.03,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.26,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.03,
+          "large_venue": 0.04,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.05,
+          "children_activity": 0.03,
+          "running": 0.02,
+          "exercise": 0.03,
+          "employment_related": 0.06
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/Burn-Out-1200x1183.jpg",
+        "alt": "Owner: Hannelore Hoff"
       }
     },
     {
@@ -279117,6 +280554,68 @@
       }
     },
     {
+      "id": "sheronda-rogers-shares-her-unexpected-lo-news-2026-11-19",
+      "title": "Sheronda Rogers Shares her Unexpected Love for Driving Public Buses for The Ride",
+      "summary": "Sheronda Rogers discusses her experience as a bus driver for The Ride in Ann Arbor. She balances her professional responsibilities with a personal morning prayer routine.",
+      "url": "https://chscommunicator.com/114550/features/2026/11/through-hesitance-and-confidence/",
+      "publishedAt": "2026-11-19T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Sheronda Rogers",
+        "The Ride"
+      ],
+      "locations": [
+        "Ann Arbor",
+        "Scio Ridge"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "transportation",
+        "public service",
+        "profile"
+      ],
+      "source": {
+        "name": "Eva Rutyna",
+        "publication": "The Communicator"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.17,
+          "distinctive": 0.34,
+          "eclectic": 0.16,
+          "technical_science": 0.1,
+          "artsy": 0.09,
+          "progressive": 0.21,
+          "outdoors": 0.03,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.19,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.05,
+          "large_venue": 0.03,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.06,
+          "children_activity": 0.03,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.04
+        }
+      },
+      "photo": {
+        "url": "https://chscommunicator.com/wp-content/uploads/2026/11/7L4A1057-e1795101502456-1200x954.jpg",
+        "alt": "Sheronda Rogers keeps her eyes on the road as she drives Route 26 through the Scio Ridge neighborhood. Rogers has been driving for about five years, and plans to retire from her current job. \"I wouldn't say [driving is] easy, but I love dealing with the public,\" Rogers said."
+      }
+    },
+    {
       "id": "sherrone-moore-alerted-of-alleged-rape-i-news-2026-10-01",
       "title": "Sherrone Moore alerted of alleged rape in 2024, Ann Arbor police report finds",
       "summary": "A 2024 police report reveals former Michigan football coach Sherrone Moore was informed via Snapchat by a woman who accused ex-staffer LaTroy Lewis of rape. Ann Arbor police closed their investigation on August 28, 2024, and the University of Michigan settled with the accuser for $848,000. Moore’s attorney claims he did not fail to report the misconduct, though the university’s policy required immediate reporting.",
@@ -281969,6 +283468,71 @@
       }
     },
     {
+      "id": "small-business-saturday-jumpstarts-ann-a-news-2026-11-26",
+      "title": "Small Business Saturday jumpstarts Ann Arbor’s economy heading into the holidays",
+      "summary": "Small Business Saturday is highlighted as a significant economic driver for local brick-and-mortar stores in Ann Arbor as the holiday season begins. Chad Wiebesick of Destination Ann Arbor emphasizes that shopping locally keeps a majority of spending within the community, supporting both employees and independent businesses.",
+      "url": "https://www.wemu.org/wemu-news/2026-11-26/small-business-saturday-jumpstarts-ann-arbors-economy-heading-into-the-holidays",
+      "publishedAt": "2026-11-26T08:34:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Ana Longoria",
+        "Chad Wiebesick",
+        "Destination Ann Arbor",
+        "WEMU"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "economy",
+        "small business",
+        "holidays",
+        "shopping",
+        "local business"
+      ],
+      "source": {
+        "name": "Ana Longoria",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.04,
+          "distinctive": 0.12,
+          "eclectic": 0.09,
+          "technical_science": 0.03,
+          "artsy": 0.05,
+          "progressive": 0.21,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.03,
+          "sporting": 0.01,
+          "recurring": 0.64,
+          "craft_fair_shopping": 0.76,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.63,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.02,
+          "sales_related": 0.43,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.03
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/1ff0ad3/2147483647/strip/true/crop/1920x1008+0+136/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fcc%2F9d%2Ff76b87cb4747992ae71d22b76dc6%2Fpexels-gustavo-fring-6284998.jpg",
+        "alt": "A man in a brown jacket holds wrapped gifts near a spruce tree in a winter setting."
+      }
+    },
+    {
       "id": "small-businesses-could-benefit-from-the-news-2026-11-19",
       "title": "Small businesses could benefit from the election promises of Democrats | The Metro",
       "summary": "Following the midterm elections, Democrats have secured control of both chambers of Congress and the Michigan state government. Business advisor Mark Lee discusses how these newly elected officials might address economic challenges, such as Michigan's record-low labor participation rate, to support the state's small businesses.",
@@ -283673,12 +285237,13 @@
       "summary": "Soldiers’ Angels is a national non-profit organization dedicated to providing aid, comfort, and resources to veterans, deployed military personnel, and their families. The organization offers various volunteer opportunities, including virtual and in-person roles such as food distribution, event support, and the creation of care packages.",
       "url": "https://schoolcraftconnection.com/34410/news/get-involved-in-your-neighborhood/",
       "publishedAt": "2026-11-25T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Soldiers’ Angels",
-        "Schoolcraft College"
+        "Schoolcraft College",
+        "Kathryn Wenske"
       ],
       "locations": [
         "Livonia, MI"
@@ -290571,61 +292136,61 @@
     {
       "id": "stateside-tuesday-nov-25-2026-news-2026-11-25",
       "title": "Stateside: Tuesday, Nov. 25, 2026",
-      "summary": "The program features an update on a former Northlake Detention Center detainee returned to Venezuela and a discussion on the history of American childhood diets and picky eating.",
+      "summary": "The daily Stateside program hosted by April Baer covers news and conversations relevant to Michigan listeners.",
       "url": "https://www.michiganpublic.org/stateside/2026-11-25/stateside-tuesday-nov-25-2026",
       "publishedAt": "2026-11-25T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
-        "Stateside Staff",
-        "April Baer"
+        "April Baer",
+        "Stateside"
       ],
       "locations": [
-        "Venezuela"
+        "Michigan"
       ],
       "localityIndex": 4,
       "topics": [
-        "immigration",
-        "diet",
-        "history"
+        "news",
+        "radio",
+        "podcast"
       ],
       "source": {
-        "name": "Stateside Staff",
+        "name": "April Baer",
         "publication": "Michigan Public"
       },
       "scoring": {
         "signals": {
-          "funny": 0.19,
-          "distinctive": 0.23,
-          "eclectic": 0.78,
+          "funny": 0.09,
+          "distinctive": 0.07,
+          "eclectic": 0.22,
           "technical_science": 0.1,
-          "artsy": 0.11,
-          "progressive": 0.33,
+          "artsy": 0.13,
+          "progressive": 0.28,
           "outdoors": 0.02,
-          "theatre": 0.04,
+          "theatre": 0.02,
           "live_music": 0.02,
-          "live_comedy": 0.03,
+          "live_comedy": 0.02,
           "farmer_market": 0.02,
           "sporting": 0.02,
-          "recurring": 0.7,
+          "recurring": 0.96,
           "craft_fair_shopping": 0.02,
-          "religious": 0.03,
-          "large_venue": 0.05,
+          "religious": 0.02,
+          "large_venue": 0.03,
           "substance_recovery": 0.02,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
-          "dance": 0.02,
-          "sales_related": 0.04,
-          "children_activity": 0.06,
+          "dance": 0.01,
+          "sales_related": 0.06,
+          "children_activity": 0.03,
           "running": 0.02,
-          "exercise": 0.02,
+          "exercise": 0.01,
           "employment_related": 0.02
         }
       },
       "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/55c4d93/2147483647/strip/true/crop/1920x1070+0+10/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc1%2F5a%2F3a28ad974cfea2c1e36682a3098e%2Fstateside-full-show-pod.png",
+        "url": "https://npr.brightspotcdn.com/dims4/default/fe42573/2147483647/strip/true/crop/1633x1080+119+0/resize/130x86!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc1%2F5a%2F3a28ad974cfea2c1e36682a3098e%2Fstateside-full-show-pod.png",
         "alt": "A black and white portrait of April Baer"
       }
     },
@@ -293572,6 +295137,66 @@
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/8313776f-c94e-4c82-ae34-d2a907025950/image.jpg?api_key=clickondetroit_06f87fefb2123598",
         "alt": "A stretch of Van Dyke is closed both ways on Thursday after a crash involving a pickup truck and a bicycle."
+      }
+    },
+    {
+      "id": "strobe-talbott-former-time-magazine-repo-news-2026-11-27",
+      "title": "Strobe Talbott, former Time magazine reporter and deputy secretary of state, has died",
+      "summary": "Strobe Talbott, a former journalist for Time magazine and a former deputy secretary of state, has passed away. He was also known for his leadership at the Brookings Institution.",
+      "url": "https://www.wemu.org/npr-national-news/2026-11-27/strobe-talbott-former-time-magazine-reporter-and-deputy-secretary-of-state-has-died",
+      "publishedAt": "2026-11-27T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Strobe Talbott",
+        "Time",
+        "Brookings Institution"
+      ],
+      "locations": [],
+      "localityIndex": 2,
+      "topics": [
+        "obituary",
+        "journalism",
+        "politics"
+      ],
+      "source": {
+        "name": "WEMU 89.1 FM",
+        "publication": "NPR News"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.36,
+          "eclectic": 0.16,
+          "technical_science": 0.04,
+          "artsy": 0.04,
+          "progressive": 0.08,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.04,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.03,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/6f7fe50/2147483647/strip/true/crop/3888x2166+0+10/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr.brightspotcdn.com%2Fdims3%2Fdefault%2Fstrip%2Ffalse%2Fcrop%2F3888x2187%200%20203%2Fresize%2F3888x2187%21%2Fquality%2F85%2Fformat%2Fwebp%2F%3Furl%3Dhttps%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F7e%2Fcb%2F367e983047b195799abc793a8a87%2Fap26330767680840.jpg",
+        "alt": "FILE - Strobe Talbott, President Brookings Institution, speaks during a news conference in Berlin, July 16, 2008."
       }
     },
     {
@@ -299970,6 +301595,70 @@
       }
     },
     {
+      "id": "thanksgiving-meals-in-michigan-are-sligh-news-2026-11-26",
+      "title": "Thanksgiving meals in Michigan are slightly cheaper than last year, survey shows",
+      "summary": "A survey from the Michigan Farm Bureau indicates that the cost of a classic Thanksgiving dinner for 10 people in Michigan is $50.38 in 2026, a 3% decrease from 2025. This contrasts with the national average, which rose 6% to $58.63 during the same period.",
+      "url": "https://www.michiganpublic.org/economy/2026-11-26/thanksgiving-meal-price-michigan-2026",
+      "publishedAt": "2026-11-26T05:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Michigan Farm Bureau",
+        "Nancy Nyquist",
+        "Steve Carmody",
+        "Michigan Public"
+      ],
+      "locations": [
+        "Michigan"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "thanksgiving",
+        "economy",
+        "food prices",
+        "agriculture"
+      ],
+      "source": {
+        "name": "Steve Carmody",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.05,
+          "distinctive": 0.1,
+          "eclectic": 0.09,
+          "technical_science": 0.07,
+          "artsy": 0.03,
+          "progressive": 0.07,
+          "outdoors": 0.03,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.06,
+          "sporting": 0.01,
+          "recurring": 0.59,
+          "craft_fair_shopping": 0.03,
+          "religious": 0.06,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.04,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/61a9925/2147483647/strip/true/crop/5616x2948+0+398/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fcf%2Fbd%2F37598c31401983767335f3d9753e%2Fadobestock-89800782.jpeg",
+        "alt": "Roasted turkey garnished with cranberries on a rustic style table decoraded with pumpkins, gourds, asparagus, brussel sprouts, baked vegetables, pie, flowers, and candles."
+      }
+    },
+    {
       "id": "thanksgiving-options-at-le-supr-me-news-2026-11-26",
       "title": "Thanksgiving Options at Le Suprême",
       "summary": "Le Suprême at Book Tower is offering dine-in service from 7 a.m. to 2:30 p.m. and a carryout Thanksgiving dinner menu. Carryout orders must be placed by November 20, 2026.",
@@ -303083,6 +304772,75 @@
       "photo": {
         "url": "https://annarborobserver.com/wp-content/uploads/2026/10/Dexter-Enchanted-Depot-Tara-Brennan-and-Terri-Long-by-Doug-Coombe-6-1024x683.jpg",
         "alt": "The Enchanted Depot"
+      }
+    },
+    {
+      "id": "the-energy-bill-trump-and-schumer-agree-news-2026-11-25",
+      "title": "The energy bill Trump and Schumer agree on is headed to the House. Rep. Tlaib is trying to stop it",
+      "summary": "Representative Rashida Tlaib is opposing a bipartisan energy bill supported by President Donald Trump and Senator Chuck Schumer. The legislation, which aims to expedite the approval process for data center projects, faces criticism from Tlaib as such facilities continue to expand across Michigan.",
+      "url": "https://wdet.org/2026/11/25/rep-rashisa-tlaib-oposses-bill-that-would-speed-up-data-center-project-approval-the-metro/",
+      "publishedAt": "2026-11-25T00:00:00Z",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Rashida Tlaib",
+        "Chuck Schumer",
+        "Donald Trump",
+        "Elissa Slotkin",
+        "Gary Peters",
+        "DTE Energy"
+      ],
+      "locations": [
+        "Michigan",
+        "Saline Township",
+        "Van Buren Township"
+      ],
+      "localityIndex": 1,
+      "topics": [
+        "energy",
+        "congress",
+        "data centers",
+        "permitting",
+        "politics"
+      ],
+      "source": {
+        "name": "Robyn Sfeir-Vincent",
+        "publication": "WDET 101.9 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.03,
+          "distinctive": 0.23,
+          "eclectic": 0.11,
+          "technical_science": 0.66,
+          "artsy": 0.02,
+          "progressive": 0.31,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.02,
+          "sporting": 0.01,
+          "recurring": 0.08,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://wdet.org/wp-content/uploads/2026/11/IMG_9757-450x450.jpg",
+        "alt": "The energy bill Trump and Schumer agree on is headed to the House. Rep. Tlaib is trying to stop it"
       }
     },
     {
@@ -306461,6 +308219,75 @@
       }
     },
     {
+      "id": "the-motor-city-news-2026-11-26",
+      "title": "The Motor City",
+      "summary": "The article explores the historical impact of the auto industry on Detroit, highlighting how the 'Big Three' automakers shaped the city's economy and demographics. It features the personal story of Joe Von Battle, who transitioned from an auto worker to a successful record shop owner before facing the decline of the industry and the 1967 rebellion.",
+      "url": "https://wdet.org/2026/11/26/how-did-dwindling-industry-affect-detroit-chicago-and-milwaukee-curiosid/",
+      "publishedAt": "2026-11-26T00:00:00Z",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "GM",
+        "Ford",
+        "Chrysler",
+        "Marsha Battle-Philpot",
+        "Joe Von Battle",
+        "Joe's Record Shop"
+      ],
+      "locations": [
+        "Detroit",
+        "Georgia",
+        "South",
+        "North"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "history",
+        "automotive",
+        "economy",
+        "civil rights",
+        "detroit"
+      ],
+      "source": {
+        "name": "WDET 101.9 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.05,
+          "distinctive": 0.35,
+          "eclectic": 0.57,
+          "technical_science": 0.35,
+          "artsy": 0.23,
+          "progressive": 0.54,
+          "outdoors": 0.02,
+          "theatre": 0.07,
+          "live_music": 0.04,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.09,
+          "craft_fair_shopping": 0.03,
+          "religious": 0.02,
+          "large_venue": 0.1,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.04,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.05,
+          "dance": 0.03,
+          "sales_related": 0.04,
+          "children_activity": 0.05,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://wdet.org/wp-content/uploads/2026/11/marsha-music-654x900.webp",
+        "alt": "Marsha Battle-Philpot"
+      }
+    },
+    {
       "id": "the-music-of-the-akropolis-reed-quintet-news-2026-11-17",
       "title": "The music of the Akropolis Reed Quintet",
       "summary": "A feature on the Akropolis Reed Quintet, exploring their musical style and contributions to the arts. The segment provides an immersive look at their performances and artistic process.",
@@ -308575,10 +310402,10 @@
     {
       "id": "the-style-cycle-news-2026-11-13",
       "title": "The Style Cycle",
-      "summary": "A feature on student fashion trends observed at the University of Michigan undergraduate library.",
+      "summary": "A feature on student fashion trends, featuring Azalea VanderElzen and Ellis Brown at the University of Michigan undergraduate library.",
       "url": "https://chscommunicator.com/114361/features/2026/11/the-style-cycle/",
       "publishedAt": "2026-11-13T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -308587,46 +310414,46 @@
         "University of Michigan"
       ],
       "locations": [
-        "Ann Arbor, MI"
+        "Ann Arbor"
       ],
       "localityIndex": 2,
       "topics": [
         "fashion",
-        "students",
-        "lifestyle"
+        "student life",
+        "culture"
       ],
       "source": {
-        "name": "Sadie Jacobson, Oliver Swinko",
+        "name": "Sadie Jacobson and Oliver Swinko",
         "publication": "The Communicator"
       },
       "scoring": {
         "signals": {
-          "funny": 0.29,
-          "distinctive": 0.33,
-          "eclectic": 0.3,
-          "technical_science": 0.72,
-          "artsy": 0.5,
-          "progressive": 0.24,
-          "outdoors": 0.09,
+          "funny": 0.39,
+          "distinctive": 0.2,
+          "eclectic": 0.22,
+          "technical_science": 0.04,
+          "artsy": 0.7,
+          "progressive": 0.26,
+          "outdoors": 0.03,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
-          "sporting": 0.07,
-          "recurring": 0.36,
+          "sporting": 0.02,
+          "recurring": 0.24,
           "craft_fair_shopping": 0.03,
-          "religious": 0.03,
-          "large_venue": 0.05,
-          "substance_recovery": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.03,
-          "sales_related": 0.04,
-          "children_activity": 0.03,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.02,
+          "sales_related": 0.06,
+          "children_activity": 0.02,
           "running": 0.02,
-          "exercise": 0.04,
-          "employment_related": 0.03
+          "exercise": 0.02,
+          "employment_related": 0.02
         }
       },
       "photo": {
@@ -310265,6 +312092,66 @@
       }
     },
     {
+      "id": "things-to-do-over-the-thanksgiving-break-news-2026-11-26",
+      "title": "Things to do over the Thanksgiving break",
+      "summary": "A guide providing suggestions for activities and events for students and residents during the Thanksgiving holiday break.",
+      "url": "https://www.easternecho.com/section/news",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Lelaina MacDonald"
+      ],
+      "locations": [
+        "Ypsilanti, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "thanksgiving",
+        "events",
+        "holiday"
+      ],
+      "source": {
+        "name": "Lelaina MacDonald",
+        "publication": "Eastern Echo"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.19,
+          "distinctive": 0.12,
+          "eclectic": 0.18,
+          "technical_science": 0.07,
+          "artsy": 0.2,
+          "progressive": 0.13,
+          "outdoors": 0.16,
+          "theatre": 0.03,
+          "live_music": 0.06,
+          "live_comedy": 0.04,
+          "farmer_market": 0.04,
+          "sporting": 0.04,
+          "recurring": 0.24,
+          "craft_fair_shopping": 0.05,
+          "religious": 0.05,
+          "large_venue": 0.17,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.07,
+          "market_or_shop": 0.06,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.05,
+          "sales_related": 0.07,
+          "children_activity": 0.1,
+          "running": 0.05,
+          "exercise": 0.03,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://d2c076l7bqbhhm.cloudfront.net/9f0fc8d75963ebbda63eb514bcfb6348/dist/img/fb-hidden-icon.png",
+        "alt": "Eastern Echo logo"
+      }
+    },
+    {
       "id": "think-small-think-local-news-2026-11-28",
       "title": "Think Small, Think Local",
       "summary": "The Canton Public Library encourages shoppers to support local businesses year-round, highlighting the economic and personal benefits of choosing boutique and handmade gifts. The article provides resources for finding local retailers through the Canton and Plymouth Community Chambers of Commerce.",
@@ -311874,10 +313761,10 @@
     {
       "id": "through-the-camera-lens-with-dieu-nalio-news-2026-11-17",
       "title": "Through the Camera Lens with Dieu-Nalio Chery",
-      "summary": "A profile of University of Michigan photographer Dieu-Nalio Chery, who has pursued photography as a lifelong passion. The article explores his dedication to his craft and his perspective as a journalist.",
+      "summary": "A profile of University of Michigan photographer Dieu-Nalio Chery, who has pursued photography since childhood. The article explores his dedication to his craft and his perspective as a journalist.",
       "url": "https://chscommunicator.com/114390/features/2026/11/through-the-camera-lens-with-dieu-nalio-chery/",
       "publishedAt": "2026-11-17T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
@@ -311885,46 +313772,46 @@
         "University of Michigan"
       ],
       "locations": [
-        "Ann Arbor, MI"
+        "Ann Arbor"
       ],
       "localityIndex": 2,
       "topics": [
         "photography",
         "journalism",
-        "profiles"
+        "profile"
       ],
       "source": {
-        "name": "Oliver Skerlos, Zia Walker",
+        "name": "Oliver Skerlos and Zia Walker",
         "publication": "The Communicator"
       },
       "scoring": {
         "signals": {
-          "funny": 0.29,
-          "distinctive": 0.33,
-          "eclectic": 0.3,
-          "technical_science": 0.72,
-          "artsy": 0.5,
-          "progressive": 0.24,
-          "outdoors": 0.09,
+          "funny": 0.07,
+          "distinctive": 0.24,
+          "eclectic": 0.15,
+          "technical_science": 0.58,
+          "artsy": 0.86,
+          "progressive": 0.25,
+          "outdoors": 0.03,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
           "farmer_market": 0.02,
-          "sporting": 0.07,
-          "recurring": 0.36,
-          "craft_fair_shopping": 0.03,
-          "religious": 0.03,
+          "sporting": 0.02,
+          "recurring": 0.12,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
           "large_venue": 0.05,
-          "substance_recovery": 0.02,
+          "substance_recovery": 0.01,
           "popular_music_cover_band": 0.02,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
-          "dance": 0.03,
-          "sales_related": 0.04,
+          "dance": 0.02,
+          "sales_related": 0.06,
           "children_activity": 0.03,
           "running": 0.02,
-          "exercise": 0.04,
-          "employment_related": 0.03
+          "exercise": 0.01,
+          "employment_related": 0.02
         }
       },
       "photo": {
@@ -312752,6 +314639,72 @@
       }
     },
     {
+      "id": "tonya-burns-sworn-in-as-flint-s-new-mayo-news-2026-11-24",
+      "title": "Tonya Burns sworn in as Flint's new mayor, vows she will address city's gun violence",
+      "summary": "Tonya Burns was sworn in as the new mayor of Flint and has pledged to prioritize addressing the city's gun violence. She will officially assume office on December 1 after defeating incumbent Sheldon Neeley in the recent election.",
+      "url": "https://www.michiganpublic.org/politics-government/2026-11-24/flints-incoming-mayor-is-sworn-into-office",
+      "publishedAt": "2026-11-24T21:05:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Tonya Burns",
+        "Flint City Hall",
+        "Flint Police Department",
+        "Sheldon Neeley",
+        "Michigan Public"
+      ],
+      "locations": [
+        "Flint"
+      ],
+      "localityIndex": 4,
+      "topics": [
+        "politics",
+        "government",
+        "flint mayor",
+        "2026 midterm election",
+        "gun violence"
+      ],
+      "source": {
+        "name": "Steve Carmody",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.31,
+          "eclectic": 0.06,
+          "technical_science": 0.02,
+          "artsy": 0.03,
+          "progressive": 0.36,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.07,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.02,
+          "large_venue": 0.1,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.01,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.02,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/674c070/2147483647/strip/true/crop/5712x3213+0+45/resize/1200x675!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F58%2Fa8%2Fdc0b9bd1462eadf0f103eed5cfc8%2Fimg-9305.jpg",
+        "alt": "Flint mayor-elect Tonya Burns, right, takes her oath of office."
+      }
+    },
+    {
       "id": "too-young-to-vote-but-dpscd-students-hav-news-2026-10-14",
       "title": "Too young to vote, but DPSCD students have lots to say about the district’s next chapter",
       "summary": "Detroit Public Schools Community District (DPSCD) students shared their priorities for the upcoming school board election, including increased arts funding, improved transportation, and better building conditions. With five new board members to be elected on Nov. 3, 2026, students emphasized the need for stronger support for arts programs and collaboration between the board and administration. Current board leaders LaTrice McClendon and Corletta Vaughn are not running for reelection, creating a pivotal shift in the district's leadership structure.",
@@ -313540,6 +315493,67 @@
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/9973484/2147483647/strip/true/crop/2052x1154+0+191/resize/1200x675!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F6d%2F25%2F3e3e09ad4058bac8b86bce96fa28%2F10916163833-6b8d8b00d5-o.jpg",
         "alt": "Huron River"
+      }
+    },
+    {
+      "id": "trader-s-joes-opening-in-16-states-where-news-2026-10-20",
+      "title": "Trader's Joes opening in 16 states. Where Michigan is getting store",
+      "summary": "Trader Joe's is expanding its grocery store footprint across 16 states. The report details the specific location selected for the new Michigan store in Farmington Hills.",
+      "url": "https://www.hometownlife.com/story/grocery/stores/2026/10/20/michigan-trader-joes-grocery-store-expansion-farmington-hills/92342494007/",
+      "publishedAt": "2026-10-20T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Trader Joe's"
+      ],
+      "locations": [
+        "Michigan",
+        "Farmington Hills"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "grocery",
+        "business",
+        "retail"
+      ],
+      "source": {
+        "name": "Hometown Life (Observer & Eccentric)",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.06,
+          "distinctive": 0.22,
+          "eclectic": 0.07,
+          "technical_science": 0.04,
+          "artsy": 0.03,
+          "progressive": 0.16,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.03,
+          "sporting": 0.01,
+          "recurring": 0.12,
+          "craft_fair_shopping": 0.6,
+          "religious": 0.01,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.21,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.24,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2025/07/30/PLSJ/85440348007-screenshot-seiche-gl.jpg?crop=505,283,x95,y0&width=210&height=118&format=pjpg&auto=webp",
+        "alt": "Trader Joe's expansion map"
       }
     },
     {
@@ -335441,67 +337455,6 @@
       }
     },
     {
-      "id": "wayne-county-transit-millage-what-it-is-news-2026-05-28",
-      "title": "Wayne County transit millage: What it is, cost, who it affects",
-      "summary": "If the Wayne County transit millage fails, SMART will lack funding for bus services, impacting Detroiters who use the system. Gunter emphasized the decision requires a majority vote, with all stakeholders affected equally.",
-      "url": "https://www.hometownlife.com/story/news/local/michigan/wayne/2026/05/28/wayne-county-detroit-smart-transit-millage-costs-august/90048209007/",
-      "publishedAt": "2026-05-28T00:00:00-04:00",
-      "addedAt": "2026-09-20T19:34:05-04:00",
-      "locations": [
-        "Canton",
-        "Plymouth",
-        "Livonia",
-        "MI"
-      ],
-      "localityIndex": 0,
-      "topics": [
-        "transit millage",
-        "funding",
-        "wayne county",
-        "detroit",
-        "smart",
-        "bus services"
-      ],
-      "source": {
-        "name": "Nushrat Rahman",
-        "publication": "Hometown Life (Observer & Eccentric)"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.02,
-          "distinctive": 0.11,
-          "eclectic": 0.07,
-          "technical_science": 0.06,
-          "artsy": 0.02,
-          "progressive": 0.24,
-          "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.02,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.13,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.05,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.04,
-          "children_activity": 0.02,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2026/05/12/PDTF/90038146007-10202023-dfp-bloomfield-6.jpg?width=660&height=428&fit=crop&format=pjpg&auto=webp",
-        "alt": "Wayne County transit millage: What it is, cost, who it affects"
-      }
-    },
-    {
       "id": "wayne-county-water-assistance-program-re-news-2026-10-08",
       "title": "Wayne County water assistance program reopens",
       "summary": "A Wayne County water bill assistance program has reopened after technical issues with its website were resolved. Low-income households can now apply for help paying their water bills.",
@@ -337326,6 +339279,70 @@
       }
     },
     {
+      "id": "werwulf-opens-at-the-state-theatre-news-2026-11-26",
+      "title": "Werwulf Opens at the State Theatre",
+      "summary": "Director Robert Eggers' latest film, 'Werwulf', is set to open at the State Theatre on December 25. The 13th-century period piece stars Aaron Taylor-Johnson, Willem Dafoe, and Lily-Rose Depp.",
+      "url": "https://www.wemu.org/show/cinema-chat/2026-11-26/cinema-chat-paper-tiger-opens-and-special-holiday-screenings-are-on-the-way",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Robert Eggers",
+        "Aaron Taylor-Johnson",
+        "Willem Dafoe",
+        "Lily-Rose Depp",
+        "State Theatre"
+      ],
+      "locations": [
+        "State Theatre"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "film",
+        "cinema",
+        "entertainment"
+      ],
+      "source": {
+        "name": "Mat Hopson",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.12,
+          "distinctive": 0.32,
+          "eclectic": 0.16,
+          "technical_science": 0.1,
+          "artsy": 0.97,
+          "progressive": 0.21,
+          "outdoors": 0.02,
+          "theatre": 0.06,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.05,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.1,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.59,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/05ec60d/2147483647/strip/true/crop/2758x1448+69+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0e%2F26%2F07816d874a648fa71265ecd20e9e%2Fmichigan-theater-winter.jpg",
+        "alt": "Michigan Theater winter"
+      }
+    },
+    {
       "id": "west-bloomfield-school-district-board-me-news-2026-11-02",
       "title": "West Bloomfield School District Board Member Election",
       "summary": "The election results for the West Bloomfield School District Board Member race are being tracked as part of the 2026 general election coverage.",
@@ -337614,6 +339631,66 @@
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/video/wdiv/a85553ff-de5b-4629-b23f-861f153de29e/image.jpg?api_key=clickondetroit_06f87fefb2123598",
         "alt": "Westland encampment cleared along Rouge River -- why residents remain skeptical it will last"
+      }
+    },
+    {
+      "id": "westland-hopes-50k-grants-will-bring-new-news-2026-10-20",
+      "title": "Westland hopes $50K grants will bring new restaurants to town",
+      "summary": "The city of Westland is offering $50,000 in grants to attract new restaurants and support business upgrades. The initiative aims to revitalize empty restaurant spaces within the community.",
+      "url": "https://www.hometownlife.com/story/money/business/2026/10/20/westland-targets-empty-restaurants-offers-grants-for-business-upgrades/92329725007/",
+      "publishedAt": "2026-10-20T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Westland"
+      ],
+      "locations": [
+        "Westland"
+      ],
+      "localityIndex": 1,
+      "topics": [
+        "business",
+        "grants",
+        "restaurants"
+      ],
+      "source": {
+        "name": "Hometown Life (Observer & Eccentric)",
+        "publication": "Hometown Life"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.04,
+          "distinctive": 0.15,
+          "eclectic": 0.08,
+          "technical_science": 0.04,
+          "artsy": 0.07,
+          "progressive": 0.29,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.03,
+          "sporting": 0.01,
+          "recurring": 0.12,
+          "craft_fair_shopping": 0.04,
+          "religious": 0.02,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.13,
+          "children_activity": 0.02,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.03
+        }
+      },
+      "photo": {
+        "url": "https://www.hometownlife.com/gcdn/authoring/authoring-images/2025/07/30/PLSJ/85440348007-screenshot-seiche-gl.jpg?crop=505,283,x95,y0&width=210&height=118&format=pjpg&auto=webp",
+        "alt": "Westland business development"
       }
     },
     {
@@ -338760,6 +340837,71 @@
       }
     },
     {
+      "id": "what-losing-measles-elimination-status-i-news-2026-11-25",
+      "title": "What losing measles elimination status in the US means for metro Detroit | The Metro",
+      "summary": "Oakland County Health Officer Kate Guzmán warns that the entire country is currently in a measles outbreak. The report discusses the implications of the United States losing its measles elimination status for the metro Detroit region.",
+      "url": "https://wdet.org/2026/11/25/what-lost-measles-elimination-status-in-the-us-means-for-metro-detroit-the-metro/",
+      "publishedAt": "2026-11-25T00:00:00Z",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Kate Guzmán",
+        "Oakland County Health Department",
+        "WDET 101.9 FM"
+      ],
+      "locations": [
+        "Detroit",
+        "Metro Detroit",
+        "Oakland County"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "public health",
+        "measles",
+        "vaccines",
+        "politics"
+      ],
+      "source": {
+        "name": "Sam Corey",
+        "publication": "WDET 101.9 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.02,
+          "distinctive": 0.33,
+          "eclectic": 0.11,
+          "technical_science": 0.7,
+          "artsy": 0.03,
+          "progressive": 0.16,
+          "outdoors": 0.02,
+          "theatre": 0.01,
+          "live_music": 0.01,
+          "live_comedy": 0.01,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.08,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.01,
+          "dance": 0.01,
+          "sales_related": 0.03,
+          "children_activity": 0.03,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://wdet.org/wp-content/uploads/2021/04/national-cancer-institute-fi3zHLxWrYw-unsplash-450x450.jpg",
+        "alt": "Medical imagery"
+      }
+    },
+    {
       "id": "what-makes-for-a-great-sandwich-a-georgi-news-2026-09-22",
       "title": "What Makes For A Great Sandwich? + A Georgia O'Keeffe DIA Preview",
       "summary": "An exploration of sandwich-making techniques and a preview of the Georgia O'Keeffe exhibition at the Detroit Institute of Arts.",
@@ -339667,17 +341809,17 @@
     {
       "id": "what-s-in-your-bag-news-2026-11-16",
       "title": "What’s in Your Bag?",
-      "summary": "An exploration of student style through the lens of their backpacks. The piece highlights how students personalize their bags with charms and accessories.",
+      "summary": "An exploration of student style through the lens of personalizing school backpacks. The article features Rue Carr and her approach to customizing her bag with meaningful charms.",
       "url": "https://chscommunicator.com/114322/features/2026/11/whats-in-your-bag/",
       "publishedAt": "2026-11-16T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
       "entities": [
         "Rue Carr"
       ],
       "locations": [
-        "Ann Arbor, MI"
+        "Ann Arbor"
       ],
       "localityIndex": 2,
       "topics": [
@@ -339686,37 +341828,37 @@
         "lifestyle"
       ],
       "source": {
-        "name": "Rosemary Churchville, Luke Gery",
+        "name": "Rosemary Churchville and Luke Gery",
         "publication": "The Communicator"
       },
       "scoring": {
         "signals": {
-          "funny": 0.29,
-          "distinctive": 0.33,
-          "eclectic": 0.3,
-          "technical_science": 0.72,
-          "artsy": 0.5,
+          "funny": 0.59,
+          "distinctive": 0.22,
+          "eclectic": 0.23,
+          "technical_science": 0.06,
+          "artsy": 0.82,
           "progressive": 0.24,
-          "outdoors": 0.09,
+          "outdoors": 0.03,
           "theatre": 0.02,
           "live_music": 0.02,
           "live_comedy": 0.02,
-          "farmer_market": 0.02,
-          "sporting": 0.07,
-          "recurring": 0.36,
-          "craft_fair_shopping": 0.03,
-          "religious": 0.03,
-          "large_venue": 0.05,
-          "substance_recovery": 0.02,
-          "popular_music_cover_band": 0.02,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.02,
-          "dance": 0.03,
-          "sales_related": 0.04,
-          "children_activity": 0.03,
-          "running": 0.02,
-          "exercise": 0.04,
-          "employment_related": 0.03
+          "farmer_market": 0.03,
+          "sporting": 0.02,
+          "recurring": 0.16,
+          "craft_fair_shopping": 0.05,
+          "religious": 0.02,
+          "large_venue": 0.04,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.03,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.03,
+          "dance": 0.02,
+          "sales_related": 0.11,
+          "children_activity": 0.12,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
         }
       },
       "photo": {
@@ -340231,16 +342373,13 @@
     {
       "id": "what-s-the-move-nov-24-nov-30-news-2026-11-24",
       "title": "What's the Move? Nov. 24 - Nov. 30",
-      "summary": "This article provides a guide to festive activities and events happening in Ypsilanti, Michigan, for the week of November 24 through November 30, 2026. It serves as a weekly roundup for students and local residents looking for things to do.",
+      "summary": "A weekly guide outlining local events and activities happening in the Ypsilanti area between November 24 and November 30, 2026.",
       "url": "https://www.easternecho.com/article/2026/11/whats-the-move-nov-24-nov-30",
       "publishedAt": "2026-11-24T00:00:00-05:00",
-      "addedAt": "2026-11-26T03:17:06-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
       "urgentLocal": false,
       "evidenceQuality": "reported",
-      "entities": [
-        "Lelaina MacDonald",
-        "The Eastern Echo"
-      ],
+      "entities": [],
       "locations": [
         "Ypsilanti, MI"
       ],
@@ -340248,47 +342387,45 @@
       "topics": [
         "events",
         "community",
-        "festive",
-        "ypsilanti",
-        "student life"
+        "calendar"
       ],
       "source": {
-        "name": "Lelaina MacDonald",
-        "publication": "The Eastern Echo"
+        "name": "Eastern Echo (Eastern Michigan University)",
+        "publication": "Eastern Echo"
       },
       "scoring": {
         "signals": {
-          "funny": 0.33,
-          "distinctive": 0.12,
-          "eclectic": 0.28,
-          "technical_science": 0.06,
-          "artsy": 0.28,
-          "progressive": 0.18,
-          "outdoors": 0.1,
-          "theatre": 0.05,
-          "live_music": 0.07,
+          "funny": 0.17,
+          "distinctive": 0.13,
+          "eclectic": 0.35,
+          "technical_science": 0.09,
+          "artsy": 0.24,
+          "progressive": 0.19,
+          "outdoors": 0.14,
+          "theatre": 0.04,
+          "live_music": 0.09,
           "live_comedy": 0.06,
-          "farmer_market": 0.04,
-          "sporting": 0.04,
-          "recurring": 0.85,
-          "craft_fair_shopping": 0.09,
-          "religious": 0.06,
-          "large_venue": 0.11,
+          "farmer_market": 0.06,
+          "sporting": 0.06,
+          "recurring": 0.88,
+          "craft_fair_shopping": 0.11,
+          "religious": 0.05,
+          "large_venue": 0.12,
           "substance_recovery": 0.03,
-          "popular_music_cover_band": 0.06,
-          "market_or_shop": 0.06,
-          "punk_metal_or_rock": 0.05,
-          "dance": 0.06,
-          "sales_related": 0.1,
-          "children_activity": 0.08,
-          "running": 0.04,
-          "exercise": 0.03,
+          "popular_music_cover_band": 0.07,
+          "market_or_shop": 0.12,
+          "punk_metal_or_rock": 0.06,
+          "dance": 0.07,
+          "sales_related": 0.07,
+          "children_activity": 0.12,
+          "running": 0.06,
+          "exercise": 0.04,
           "employment_related": 0.03
         }
       },
       "photo": {
-        "url": "https://d2c076l7bqbhhm.cloudfront.net/9f0fc8d75963ebbda63eb514bcfb6348/dist/img/placeholder-16x9.png",
-        "alt": "The Eastern Echo"
+        "url": "https://snworksceo.imgix.net/emu/87545387-2ac0-4d73-9038-196b914e2a77.sized-1000x1000.jpg?w=1500&ar=16%3A9&fit=crop&crop=faces&facepad=3&auto=format",
+        "alt": "Long, single story, red brick building with a green roof. The building is a historical train depot."
       }
     },
     {
@@ -345551,6 +347688,66 @@
       }
     },
     {
+      "id": "who-are-each-team-s-biggest-rivals-news-2026-11-25",
+      "title": "Who Are Each Team’s Biggest Rivals?",
+      "summary": "An overview of the primary athletic rivals for various teams at Skyline High School.",
+      "url": "https://skylinepost.org/13083/sports/who-are-each-teams-biggest-rivals/",
+      "publishedAt": "2026-11-25T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Skyline High School"
+      ],
+      "locations": [
+        "Ann Arbor, MI"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "sports",
+        "rivalry",
+        "high school sports"
+      ],
+      "source": {
+        "name": "Audrey Walters",
+        "publication": "The Skyline Post"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.19,
+          "distinctive": 0.13,
+          "eclectic": 0.09,
+          "technical_science": 0.03,
+          "artsy": 0.07,
+          "progressive": 0.06,
+          "outdoors": 0.04,
+          "theatre": 0.02,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.11,
+          "recurring": 0.25,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.18,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.01,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.04,
+          "children_activity": 0.06,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://skylinepost.org/wp-content/uploads/2026/11/unnamed-801x1200.jpg",
+        "alt": "Skyline Girls Varsity volleyball team high fives one of their rivals, wishing them luck before a game."
+      }
+    },
+    {
       "id": "who-are-the-3-candidates-running-for-the-news-2026-10-09",
       "title": "Who are the 3 candidates running for the Grass Lake Community Schools board?",
       "summary": "Three candidates are running for two open seats on the Grass Lake Community Schools board. Incumbents Shari Hein and Chris Maynard face challenger Nancy Riske in the November 2026 election. Hein and Maynard were elected in 2020, while Riske previously ran for school board in 2024.",
@@ -348788,6 +350985,73 @@
       }
     },
     {
+      "id": "why-the-detroit-lions-play-on-thanksgivi-news-2026-11-26",
+      "title": "Why the Detroit Lions play on Thanksgiving Day every year",
+      "summary": "An exploration of the Detroit Lions' long-standing tradition of playing on Thanksgiving Day. The article traces the history of the event back over 90 years to its origins.",
+      "url": "https://www.michiganpublic.org/sports/2026-11-26/why-do-the-detroit-lions-play-on-thanksgiving-every-year",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Detroit Lions",
+        "Chicago Bears",
+        "George Christensen",
+        "Ace Gutowsky",
+        "Bill McKalip",
+        "Zuck Carlson",
+        "Ookie Miller"
+      ],
+      "locations": [
+        "Detroit"
+      ],
+      "localityIndex": 3,
+      "topics": [
+        "sports",
+        "football",
+        "thanksgiving",
+        "history"
+      ],
+      "source": {
+        "name": "Rob Hess",
+        "publication": "Michigan Public"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.22,
+          "distinctive": 0.62,
+          "eclectic": 0.12,
+          "technical_science": 0.03,
+          "artsy": 0.06,
+          "progressive": 0.09,
+          "outdoors": 0.07,
+          "theatre": 0.02,
+          "live_music": 0.01,
+          "live_comedy": 0.02,
+          "farmer_market": 0.01,
+          "sporting": 0.87,
+          "recurring": 0.93,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.03,
+          "large_venue": 0.95,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.06,
+          "children_activity": 0.04,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.01
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/53da96e/2147483647/strip/true/crop/850x474+0+40/resize/280x156!/quality/90/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F5a%2F94%2Fdabd5d6f483c818acc0fe51196f1%2F2005004137-jpg.webp",
+        "alt": "Black and white photographic print depicting a play during a game between the Detroit Lions and Chicago Bears at University of Detroit Stadium on November 29, 1934. Identified players include #14 George Christensen, #5 Ace Gutowsky, #10 Bill McKalip, #47 Zuck Carlson, and #76 Ookie Miller."
+      }
+    },
+    {
       "id": "why-this-detroit-tenants-lawsuit-is-maki-news-2026-09-01",
       "title": "Why this Detroit tenants lawsuit is making landlords nervous",
       "summary": "A Detroit tenants union is suing the 36th District Court, arguing that landlords should not be allowed to evict tenants or collect rent for properties without a certificate of compliance. Landlords warn this could destabilize Detroit's rental market, potentially leading to foreclosures and higher rents, while tenants hope it will force improvements in housing conditions.",
@@ -348966,6 +351230,67 @@
       "photo": {
         "url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/AJUA6NQSKFB6BLLYR2NNB3B4IQ.jpg?api_key=clickondetroit_06f87fefb2123598",
         "alt": "Trev Alberts"
+      }
+    },
+    {
+      "id": "wild-horse-nine-news-2026-11-26",
+      "title": "Wild Horse Nine",
+      "summary": "Directed by Martin McDonagh, 'Wild Horse Nine' is a dark espionage thriller set in 1973 Chile. The film stars John Malkovich and Sam Rockwell as CIA agents on a mysterious assignment on Easter Island.",
+      "url": "https://www.youtube.com/watch?v=Haw_sznA5aQ",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Martin McDonagh",
+        "John Malkovich",
+        "Sam Rockwell"
+      ],
+      "locations": [
+        "Ann Arbor"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "film",
+        "cinema"
+      ],
+      "source": {
+        "name": "Mat Hopson",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.1,
+          "distinctive": 0.49,
+          "eclectic": 0.4,
+          "technical_science": 0.24,
+          "artsy": 0.93,
+          "progressive": 0.25,
+          "outdoors": 0.04,
+          "theatre": 0.04,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.03,
+          "sporting": 0.02,
+          "recurring": 0.05,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.14,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.28,
+          "children_activity": 0.03,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/05ec60d/2147483647/strip/true/crop/2758x1448+69+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0e%2F26%2F07816d874a648fa71265ecd20e9e%2Fmichigan-theater-winter.jpg",
+        "alt": "Michigan Theater winter"
       }
     },
     {
@@ -353105,6 +355430,66 @@
       "photo": {
         "url": "https://npr.brightspotcdn.com/dims4/default/30f2b74/2147483647/strip/true/crop/853x480+0+81/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fad%2F09%2F9e2c80f84c5c86f642d6380d902f%2Fgoat-yoga.png",
         "alt": "Goats and participants in a yoga session at Maybury Farm"
+      }
+    },
+    {
+      "id": "you-can-see-everything-news-2026-11-26",
+      "title": "You Can See Everything",
+      "summary": "This documentary follows disgraced Theranos founder Elizabeth Holmes in the final days before her imprisonment. The film captures a three-year journey into the life of the Silicon Valley figure.",
+      "url": "https://www.youtube.com/watch?v=HvW_N5p1q44",
+      "publishedAt": "2026-11-26T00:00:00-05:00",
+      "addedAt": "2026-11-27T03:24:37-05:00",
+      "urgentLocal": false,
+      "evidenceQuality": "reported",
+      "entities": [
+        "Elizabeth Holmes"
+      ],
+      "locations": [
+        "Ann Arbor"
+      ],
+      "localityIndex": 2,
+      "topics": [
+        "documentary",
+        "film",
+        "silicon valley"
+      ],
+      "source": {
+        "name": "Mat Hopson",
+        "publication": "WEMU 89.1 FM"
+      },
+      "scoring": {
+        "signals": {
+          "funny": 0.05,
+          "distinctive": 0.59,
+          "eclectic": 0.19,
+          "technical_science": 0.76,
+          "artsy": 0.81,
+          "progressive": 0.25,
+          "outdoors": 0.02,
+          "theatre": 0.03,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.05,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.1,
+          "substance_recovery": 0.02,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.28,
+          "children_activity": 0.03,
+          "running": 0.02,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        }
+      },
+      "photo": {
+        "url": "https://npr.brightspotcdn.com/dims4/default/05ec60d/2147483647/strip/true/crop/2758x1448+69+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0e%2F26%2F07816d874a648fa71265ecd20e9e%2Fmichigan-theater-winter.jpg",
+        "alt": "Michigan Theater winter"
       }
     },
     {
