@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-11-27T03:57:23.526815-05:00",
+  "generatedAt": "2026-11-28T04:06:11.780535-05:00",
   "events": [
     {
       "id": "occ-6efb62fae813000aacbc8fac",
@@ -20,7 +20,7 @@
       "sourceUpdatedAt": "2026-11-10T21:27:09.909000+00:00",
       "priceCurrency": "USD",
       "availability": "InStock",
-      "lastCheckedAt": "2026-11-27T03:57:23.526815-05:00",
+      "lastCheckedAt": "2026-11-28T04:06:11.780535-05:00",
       "canonicalUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21%3A00%3A00.000-05%3A00",
       "venueId": "black box 2357 caniff hamtramck mi 48212 entrance in the rear|hamtramck",
       "timePrecision": "time",
@@ -105,8 +105,8 @@
       "bookingUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21%3A00%3A00.000-05%3A00",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-27T03:57:23.526815-05:00",
-        "expiresAt": "2026-11-28T03:57:23.526815-05:00",
+        "reviewedAt": "2026-11-28T04:06:11.780535-05:00",
+        "expiresAt": "2026-11-29T04:06:11.780535-05:00",
         "sourceUrl": "https://www.crowdwork.com/e/last-call-improv-free?date=2026-12-03T21%3A00%3A00.000-05%3A00",
         "sourceHash": "8a4a0ffa781bb8d2d74ebee4f3bd949d82ac9489631307b6f9b1d1889e41655f",
         "inputFacts": {
@@ -128,7 +128,7 @@
           "registration": "Enter your name and email and we'll send you a link to confirm your spot."
         }
       },
-      "reviewExpiresAt": "2026-11-28T03:57:23.526815-05:00"
+      "reviewExpiresAt": "2026-11-29T04:06:11.780535-05:00"
     },
     {
       "id": "occ-a2d2259afc9cb159575f901c",
@@ -149,24 +149,27 @@
       "priceMin": 35.0,
       "priceMax": 46.5,
       "priceCurrency": "USD",
-      "lastCheckedAt": "2026-11-27T03:57:23.526815-05:00",
+      "availability": "inStock",
+      "lastCheckedAt": "2026-11-28T04:06:11.780535-05:00",
       "canonicalUrl": "https://theark.org/event/mr-b-261128/",
       "venueId": "the ark|ann arbor",
       "timePrecision": "time",
       "statusEvidence": "Organizer detail reviewed",
       "aliases": [
         "mr-b-event-2026-11-28",
-        "src-60e2efb50555802de65445c7",
-        "src-7a0441112e2f6fa83f1a77cf",
-        "src-ea1cde581bd9d0d256b7c082",
-        "src-ebcd39c98a7b947781740111"
+        "src-5d3f82c03bae4daf74994508",
+        "src-641130127debe609d8d49478",
+        "src-6a1bb5ac525107bf0e36b362",
+        "src-a340cfef9ed7c46ccb65eb34",
+        "src-ea1cde581bd9d0d256b7c082"
       ],
       "legacyOccurrenceKeys": [
         "mr-b-event-2026-11-28|2026-11-28T20:00:00-05:00",
-        "src-60e2efb50555802de65445c7|2026-11-28T20:00:00-05:00",
-        "src-7a0441112e2f6fa83f1a77cf|2026-11-28T20:00:00-05:00",
-        "src-ea1cde581bd9d0d256b7c082|2026-11-28T20:00:00-05:00",
-        "src-ebcd39c98a7b947781740111|2026-11-28T20:00:00-05:00"
+        "src-5d3f82c03bae4daf74994508|2026-11-28T20:00:00-05:00",
+        "src-641130127debe609d8d49478|2026-11-28T20:00:00-05:00",
+        "src-6a1bb5ac525107bf0e36b362|2026-11-28T20:00:00-05:00",
+        "src-a340cfef9ed7c46ccb65eb34|2026-11-28T20:00:00-05:00",
+        "src-ea1cde581bd9d0d256b7c082|2026-11-28T20:00:00-05:00"
       ],
       "legacySeriesKeys": [
         "mr. b|the ark",
@@ -175,7 +178,7 @@
       ],
       "sources": [
         {
-          "sourceRecordId": "src-7a0441112e2f6fa83f1a77cf",
+          "sourceRecordId": "src-6a1bb5ac525107bf0e36b362",
           "sourceId": "the-ark",
           "canonicalUrl": "https://theark.org/event/mr-b-261128/",
           "observedAt": "2026-10-13T18:17:27-04:00",
@@ -184,7 +187,7 @@
           "status": "scheduled"
         },
         {
-          "sourceRecordId": "src-ebcd39c98a7b947781740111",
+          "sourceRecordId": "src-a340cfef9ed7c46ccb65eb34",
           "sourceId": "the-ark",
           "canonicalUrl": "https://theark.org/event/mr-b-261128/",
           "observedAt": "2026-10-09T19:21:20-04:00",
@@ -193,7 +196,7 @@
           "statusEvidence": "https://schema.org/EventScheduled"
         },
         {
-          "sourceRecordId": "src-60e2efb50555802de65445c7",
+          "sourceRecordId": "src-5d3f82c03bae4daf74994508",
           "sourceId": "the-ark",
           "canonicalUrl": "https://theark.org/event/mr-b-261128/",
           "observedAt": "2026-10-12T15:41:42-04:00",
@@ -211,7 +214,7 @@
           "status": "scheduled"
         },
         {
-          "sourceRecordId": "src-73a48fa3728530d0aed31ae2",
+          "sourceRecordId": "src-641130127debe609d8d49478",
           "sourceId": "the-ark",
           "canonicalUrl": "https://theark.org/event/mr-b-261128/",
           "observedAt": "2026-10-02T17:14:22-04:00",
@@ -221,17 +224,16 @@
       "identity": {
         "ruleVersion": "occurrence-v1",
         "reasons": [
-          "exact-title-time-venue",
-          "new-occurrence"
+          "exact-title-time-venue"
         ],
         "fields": {
-          "title": "src-7a0441112e2f6fa83f1a77cf",
-          "start": "src-7a0441112e2f6fa83f1a77cf",
-          "end": "src-7a0441112e2f6fa83f1a77cf",
-          "venue": "src-7a0441112e2f6fa83f1a77cf",
-          "url": "src-7a0441112e2f6fa83f1a77cf",
-          "imageUrl": "src-7a0441112e2f6fa83f1a77cf",
-          "status": "src-ebcd39c98a7b947781740111"
+          "title": "src-6a1bb5ac525107bf0e36b362",
+          "start": "src-6a1bb5ac525107bf0e36b362",
+          "end": "src-6a1bb5ac525107bf0e36b362",
+          "venue": "src-6a1bb5ac525107bf0e36b362",
+          "url": "src-6a1bb5ac525107bf0e36b362",
+          "imageUrl": "src-6a1bb5ac525107bf0e36b362",
+          "status": "src-a340cfef9ed7c46ccb65eb34"
         },
         "conflicts": {}
       },
@@ -275,8 +277,8 @@
       "bookingUrl": "https://mutotix.umich.edu/6905",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-27T03:57:23.526815-05:00",
-        "expiresAt": "2026-11-28T03:57:23.526815-05:00",
+        "reviewedAt": "2026-11-28T04:06:11.780535-05:00",
+        "expiresAt": "2026-11-29T04:06:11.780535-05:00",
         "sourceUrl": "https://theark.org/event/mr-b-261128/",
         "sourceHash": "ad41f97b897e07bdfc3a0710ec2cf68b3ad5a5c541b6d35d87af7bf89205299f",
         "inputFacts": {
@@ -286,7 +288,7 @@
           "end": "2026-11-28T23:00:00-05:00",
           "venue": "The Ark",
           "city": "Ann Arbor",
-          "price": "$35.00",
+          "price": "$35.00 - $46.50",
           "status": "scheduled"
         },
         "evidence": {
@@ -299,12 +301,159 @@
           "end": "2026-11-28T23:00:00-05:00"
         }
       },
-      "reviewExpiresAt": "2026-11-28T03:57:23.526815-05:00"
+      "reviewExpiresAt": "2026-11-29T04:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-a3450677db06362ff4959f28",
+      "title": "THEATRE l She Kills Monsters",
+      "summary": "Experience \"She Kills Monsters,\" a play blending comedy, drama, and adventure. Follow Agnes as she navigates a Dungeons & Dragons world to connect with her late sister, celebrating storytelling and inner strength.",
+      "url": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
+      "start": "2026-12-04T20:00:00-05:00",
+      "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+      "city": "Hamtramck",
+      "price": "$32.85",
+      "ageRestriction": "ages 13+",
+      "category": "Comedy",
+      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18757/Eventbrite_header_graphic-She_Kills_Monsters.png",
+      "imageAlt": "THEATRE l She Kills Monsters",
+      "status": "confirmed",
+      "occurrenceId": "occ-a3450677db06362ff4959f28",
+      "seriesId": "series-d2025cc95f48546d49eb97ad",
+      "sourceUpdatedAt": "2026-10-16T04:07:58.242000+00:00",
+      "priceMin": 32.85,
+      "priceMax": 32.85,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "lastCheckedAt": "2026-11-28T04:06:11.780535-05:00",
+      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
+      "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
+      "timePrecision": "time",
+      "statusEvidence": "Organizer detail reviewed",
+      "aliases": [
+        "src-212ac4262a738556c775a7e6",
+        "src-d821d1c9ca582af13f8e2f3a",
+        "theatre-l-she-kills-monsters-event-2026-12-04"
+      ],
+      "legacyOccurrenceKeys": [
+        "src-212ac4262a738556c775a7e6|2026-12-04T20:00:00-05:00",
+        "src-d821d1c9ca582af13f8e2f3a|2026-12-04T20:00:00-05:00",
+        "theatre-l-she-kills-monsters-event-2026-12-04|2026-12-04T20:00:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "series-150a3c131cebbfb5cc20431c",
+        "series-1d5e3db4432d82cd91e23c5c",
+        "series-3a01b6952ffebba3c8cbf3e9",
+        "series-7c246a9215fd632a82d409f3",
+        "series-8d1f3d2b4bb1f42f87226794",
+        "series-958512adbfd24e39b1c40f4c",
+        "series-9f91af8c3120c4a76755f300",
+        "series-d2025cc95f48546d49eb97ad"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-d821d1c9ca582af13f8e2f3a",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
+          "observedAt": "2026-10-17T14:22:18-04:00",
+          "sourceUpdatedAt": "2026-10-16T04:07:58.242000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        },
+        {
+          "sourceRecordId": "src-212ac4262a738556c775a7e6",
+          "sourceId": "planet-ant-theatre",
+          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
+          "observedAt": "2026-11-08T02:10:42-05:00",
+          "sourceUpdatedAt": "2026-10-16T04:07:58.242000+00:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled",
+          "statusEvidence": "https://schema.org/EventScheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence"
+        ],
+        "fields": {
+          "title": "src-d821d1c9ca582af13f8e2f3a",
+          "start": "src-d821d1c9ca582af13f8e2f3a",
+          "venue": "src-d821d1c9ca582af13f8e2f3a",
+          "url": "src-d821d1c9ca582af13f8e2f3a",
+          "status": "src-d821d1c9ca582af13f8e2f3a",
+          "imageUrl": "src-d821d1c9ca582af13f8e2f3a"
+        },
+        "conflicts": {}
+      },
+      "score": 99,
+      "scoring": {
+        "signals": {
+          "funny": 0.9,
+          "distinctive": 0.62,
+          "eclectic": 0.92,
+          "technical_science": 0.06,
+          "artsy": 0.98,
+          "progressive": 0.77,
+          "outdoors": 0.02,
+          "theatre": 0.99,
+          "live_music": 0.02,
+          "live_comedy": 0.08,
+          "farmer_market": 0.01,
+          "sporting": 0.01,
+          "recurring": 0.05,
+          "craft_fair_shopping": 0.01,
+          "religious": 0.01,
+          "large_venue": 0.03,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.02,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.01,
+          "sales_related": 0.7,
+          "children_activity": 0.04,
+          "running": 0.01,
+          "exercise": 0.01,
+          "employment_related": 0.01
+        },
+        "score": 99,
+        "rulesVersion": 2
+      },
+      "localityTier": "unknown",
+      "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"theatre l she kills monsters\"]",
+      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
+      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20:00:00",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-28T04:06:11.780535-05:00",
+        "expiresAt": "2026-11-29T04:06:11.780535-05:00",
+        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
+        "sourceHash": "a66ed39e5497b7389fa0b0938d244ac989ab78cc7415d6d014fe965d98ca653d",
+        "inputFacts": {
+          "id": "occ-a3450677db06362ff4959f28",
+          "url": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
+          "start": "2026-12-04T20:00:00-05:00",
+          "end": null,
+          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+          "city": "Hamtramck",
+          "price": "$32.85",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Dec 4, 2026",
+          "time": "8:00 PM EST",
+          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20:00:00\", \"price\": 32.85, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
+          "description": "Planet Ant Theatre presents SHE KILLS MONSTERS by Qui Nguyen, December 4-19, 2026, at Ant Hall. When Agnes Evans loses her teenage sister Tilly, she realizes she barely knew her. Tilly's Dungeons & Dragons notebook pulls Agnes into a fantastical world of epic quests, homicidal fairies, snarling ogres, and 90s pop culture as she tries to reconnect with her sister and find the courage she never knew she had. Equal parts comedy, heartfelt drama, and action-packed adventure, the play celebrates the power of great storytelling and the geek and warrior in all of us.",
+          "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office."
+        }
+      },
+      "reviewExpiresAt": "2026-11-29T04:06:11.780535-05:00"
     },
     {
       "id": "occ-5697006585074dd732b0d197",
       "title": "Saturday Sampler Tour | Highlights of the Kelsey",
-      "summary": "Explore the Greek, Roman, Egyptian, and Middle Eastern collections at the Kelsey Museum on this docent-led tour. Discover fascinating artifacts like Roman frescoes and a cat mummy, offering a glimpse into ancient history and culture.",
+      "summary": "Explore the highlights of the Kelsey Museum's Greek, Roman, Egyptian, and Middle Eastern collections on this docent-led tour. Discover ancient artifacts and learn about fascinating exhibits, including Roman frescoes and a cat mummy.",
       "url": "http://events.umich.edu/event/153838",
       "start": "2026-11-28T14:00:00-05:00",
       "venue": "Kelsey Museum of Archaeology",
@@ -392,14 +541,14 @@
       "end": "2026-11-28T15:00:00-05:00",
       "bookingUrl": "",
       "statusEvidence": "Organizer detail reviewed",
-      "lastCheckedAt": "2026-11-27T03:57:23.526815-05:00",
+      "lastCheckedAt": "2026-11-28T04:06:11.780535-05:00",
       "priceMin": 0.0,
       "priceMax": 0.0,
       "priceCurrency": "USD",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-27T03:57:23.526815-05:00",
-        "expiresAt": "2026-11-28T03:57:23.526815-05:00",
+        "reviewedAt": "2026-11-28T04:06:11.780535-05:00",
+        "expiresAt": "2026-11-29T04:06:11.780535-05:00",
         "sourceUrl": "http://events.umich.edu/event/153838",
         "sourceHash": "11be8996831a7a4874fae32d5e43b0b99cd5c0cc9ba83fa85cbc7d834c8dd17e",
         "inputFacts": {
@@ -421,173 +570,361 @@
           "end": "3:00pm"
         }
       },
-      "reviewExpiresAt": "2026-11-28T03:57:23.526815-05:00"
+      "reviewExpiresAt": "2026-11-29T04:06:11.780535-05:00"
     },
     {
-      "id": "occ-a3450677db06362ff4959f28",
-      "title": "THEATRE l She Kills Monsters",
-      "summary": "Experience \"She Kills Monsters,\" a play blending comedy, drama, and adventure. Follow Agnes as she navigates a Dungeons & Dragons world to connect with her late sister, celebrating storytelling and inner strength.",
-      "url": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-      "start": "2026-12-04T20:00:00-05:00",
-      "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-      "city": "Hamtramck",
-      "price": "$32.85",
-      "ageRestriction": "ages 13+",
-      "category": "Comedy",
-      "imageUrl": "https://cdn.fourthwalltickets.com/uploads/event/imgs/18757/Eventbrite_header_graphic-She_Kills_Monsters.png",
-      "imageAlt": "THEATRE l She Kills Monsters",
+      "id": "occ-628c984d4398da13c4e2da6f",
+      "title": "Gemily",
+      "summary": "Gemily, a folk music trio featuring Laz, San Slomovits, and San's daughter Emily, presents a concert with traditional and contemporary folk, jazz, and classical music. They are known for their musicianship, warmth, and humor on stage.",
+      "url": "https://theark.org/event/gemily-261129/",
+      "start": "2026-11-29T13:00:00-05:00",
+      "venue": "The Ark",
+      "city": "Ann Arbor",
+      "price": "$18.50, $13.50 kids 12 and under",
+      "category": "Event",
+      "imageUrl": "https://theark.org/wp-content/uploads/2024/10/Gemily-Trio-scaled.jpg",
+      "imageAlt": "Gemily",
       "status": "confirmed",
-      "occurrenceId": "occ-a3450677db06362ff4959f28",
-      "seriesId": "series-d2025cc95f48546d49eb97ad",
-      "sourceUpdatedAt": "2026-10-16T04:07:58.242000+00:00",
-      "priceMin": 32.85,
-      "priceMax": 32.85,
+      "occurrenceId": "occ-628c984d4398da13c4e2da6f",
+      "seriesId": "series-e390ae6cf2c04e33be481620",
+      "sourceUpdatedAt": "2026-09-09T13:57:07+00:00",
+      "priceMin": 13.5,
+      "priceMax": 18.5,
       "priceCurrency": "USD",
-      "availability": "InStock",
-      "lastCheckedAt": "2026-11-27T03:57:23.526815-05:00",
-      "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-      "venueId": "ant hall 2320 caniff hamtramck mi 48212|hamtramck",
+      "lastCheckedAt": "2026-11-28T04:06:11.780535-05:00",
+      "canonicalUrl": "https://theark.org/event/gemily-261129/",
+      "venueId": "the ark|ann arbor",
       "timePrecision": "time",
       "statusEvidence": "Organizer detail reviewed",
       "aliases": [
-        "src-498cddba7500eed296d4d5a9",
-        "src-d821d1c9ca582af13f8e2f3a",
-        "theatre-l-she-kills-monsters-event-2026-12-04"
+        "gemily-event-2026-11-29",
+        "src-00e5fe48a4763105a5bedae8",
+        "src-122b109b1bd33430799e0aa9"
       ],
       "legacyOccurrenceKeys": [
-        "src-498cddba7500eed296d4d5a9|2026-12-04T20:00:00-05:00",
-        "src-d821d1c9ca582af13f8e2f3a|2026-12-04T20:00:00-05:00",
-        "theatre-l-she-kills-monsters-event-2026-12-04|2026-12-04T20:00:00-05:00"
+        "gemily-event-2026-11-29|2026-11-29T13:00:00-05:00",
+        "src-00e5fe48a4763105a5bedae8|2026-11-29T13:00:00-05:00",
+        "src-122b109b1bd33430799e0aa9|2026-11-29T13:00:00-05:00"
       ],
       "legacySeriesKeys": [
-        "series-150a3c131cebbfb5cc20431c",
-        "series-1d5e3db4432d82cd91e23c5c",
-        "series-3a01b6952ffebba3c8cbf3e9",
-        "series-7c246a9215fd632a82d409f3",
-        "series-8d1f3d2b4bb1f42f87226794",
-        "series-958512adbfd24e39b1c40f4c",
-        "series-9f91af8c3120c4a76755f300",
-        "series-d2025cc95f48546d49eb97ad"
+        "gemily|the ark",
+        "series-e390ae6cf2c04e33be481620"
       ],
       "sources": [
         {
-          "sourceRecordId": "src-d821d1c9ca582af13f8e2f3a",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-          "observedAt": "2026-10-17T14:22:18-04:00",
-          "sourceUpdatedAt": "2026-10-16T04:07:58.242000+00:00",
+          "sourceRecordId": "src-00e5fe48a4763105a5bedae8",
+          "sourceId": "the-ark",
+          "canonicalUrl": "https://theark.org/event/gemily-261129/",
+          "observedAt": "2026-10-09T19:21:20-04:00",
           "sourceAuthority": "organizer",
           "status": "scheduled",
           "statusEvidence": "https://schema.org/EventScheduled"
         },
         {
-          "sourceRecordId": "src-498cddba7500eed296d4d5a9",
-          "sourceId": "planet-ant-theatre",
-          "canonicalUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-          "observedAt": "2026-11-08T02:10:42-05:00",
-          "sourceUpdatedAt": "2026-10-16T04:07:58.242000+00:00",
+          "sourceRecordId": "src-122b109b1bd33430799e0aa9",
+          "sourceId": "the-ark",
+          "canonicalUrl": "https://theark.org/event/gemily-261129/",
+          "observedAt": "2026-10-12T15:41:42-04:00",
+          "sourceUpdatedAt": "2026-09-09T13:57:07+00:00",
           "sourceAuthority": "organizer",
-          "status": "scheduled",
-          "statusEvidence": "https://schema.org/EventScheduled"
+          "status": "scheduled"
+        },
+        {
+          "sourceRecordId": "src-513892134a54d1e9015622cd",
+          "sourceId": "the-ark",
+          "canonicalUrl": "https://theark.org/event/gemily-261129/",
+          "observedAt": "2026-10-02T17:14:22-04:00",
+          "status": "scheduled"
         }
       ],
       "identity": {
         "ruleVersion": "occurrence-v1",
         "reasons": [
-          "native-occurrence"
+          "exact-title-time-venue",
+          "new-occurrence"
         ],
         "fields": {
-          "title": "src-d821d1c9ca582af13f8e2f3a",
-          "start": "src-d821d1c9ca582af13f8e2f3a",
-          "venue": "src-d821d1c9ca582af13f8e2f3a",
-          "url": "src-d821d1c9ca582af13f8e2f3a",
-          "status": "src-d821d1c9ca582af13f8e2f3a",
-          "imageUrl": "src-d821d1c9ca582af13f8e2f3a"
+          "title": "src-00e5fe48a4763105a5bedae8",
+          "start": "src-00e5fe48a4763105a5bedae8",
+          "end": "src-00e5fe48a4763105a5bedae8",
+          "venue": "src-00e5fe48a4763105a5bedae8",
+          "url": "src-00e5fe48a4763105a5bedae8",
+          "status": "src-00e5fe48a4763105a5bedae8",
+          "imageUrl": "src-122b109b1bd33430799e0aa9"
         },
         "conflicts": {}
       },
-      "score": 99,
+      "score": 61,
       "scoring": {
         "signals": {
-          "funny": 0.9,
-          "distinctive": 0.62,
-          "eclectic": 0.92,
-          "technical_science": 0.06,
+          "funny": 0.47,
+          "distinctive": 0.59,
+          "eclectic": 0.17,
+          "technical_science": 0.03,
           "artsy": 0.98,
-          "progressive": 0.77,
+          "progressive": 0.16,
           "outdoors": 0.02,
-          "theatre": 0.99,
-          "live_music": 0.02,
-          "live_comedy": 0.08,
+          "theatre": 0.06,
+          "live_music": 0.98,
+          "live_comedy": 0.02,
           "farmer_market": 0.01,
           "sporting": 0.01,
-          "recurring": 0.05,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.03,
+          "recurring": 0.85,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.03,
+          "large_venue": 0.04,
           "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.02,
+          "popular_music_cover_band": 0.06,
           "market_or_shop": 0.02,
           "punk_metal_or_rock": 0.02,
-          "dance": 0.01,
-          "sales_related": 0.7,
-          "children_activity": 0.04,
+          "dance": 0.02,
+          "sales_related": 0.16,
+          "children_activity": 0.67,
           "running": 0.01,
           "exercise": 0.01,
           "employment_related": 0.01
         },
-        "score": 99,
+        "score": 61,
         "rulesVersion": 2
       },
-      "localityTier": "unknown",
-      "experienceId": "experience:[\"hamtramck\",\"ant hall 2320 caniff hamtramck mi 48212\",\"theatre l she kills monsters\"]",
-      "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office.",
-      "bookingUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20:00:00",
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"ark\",\"gemily\"]",
+      "end": "2026-11-29T23:00:00-05:00",
+      "registration": "Buy Tickets Online",
+      "bookingUrl": "https://mutotix.umich.edu/6842",
       "editorial": {
         "state": "verified",
-        "reviewedAt": "2026-11-27T03:57:23.526815-05:00",
-        "expiresAt": "2026-11-28T03:57:23.526815-05:00",
-        "sourceUrl": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-        "sourceHash": "a66ed39e5497b7389fa0b0938d244ac989ab78cc7415d6d014fe965d98ca653d",
+        "reviewedAt": "2026-11-28T04:06:11.780535-05:00",
+        "expiresAt": "2026-11-29T04:06:11.780535-05:00",
+        "sourceUrl": "https://theark.org/event/gemily-261129/",
+        "sourceHash": "79a432aa2dcba6cfd1e6589127e22af9bcec21d558c10460fa0e576ca3d7b4e7",
         "inputFacts": {
-          "id": "occ-a3450677db06362ff4959f28",
-          "url": "https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20%3A00%3A00.000-05%3A00",
-          "start": "2026-12-04T20:00:00-05:00",
-          "end": null,
-          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-          "city": "Hamtramck",
-          "price": "$32.85",
+          "id": "occ-628c984d4398da13c4e2da6f",
+          "url": "https://theark.org/event/gemily-261129/",
+          "start": "2026-11-29T13:00:00-05:00",
+          "end": "2026-11-29T23:00:00-05:00",
+          "venue": "The Ark",
+          "city": "Ann Arbor",
+          "price": "$18.50, $13.50 kids 12 and under",
           "status": "scheduled"
         },
         "evidence": {
-          "date": "Dec 4, 2026",
-          "time": "8:00 PM EST",
-          "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-          "admission": "{\"@type\": \"Offer\", \"url\": \"https://www.crowdwork.com/e/theatre-l-she-kills-monsters?date=2026-12-04T20:00:00\", \"price\": 32.85, \"priceCurrency\": \"USD\", \"availability\": \"https://schema.org/InStock\"}",
-          "description": "Planet Ant Theatre presents SHE KILLS MONSTERS by Qui Nguyen, December 4-19, 2026, at Ant Hall. When Agnes Evans loses her teenage sister Tilly, she realizes she barely knew her. Tilly's Dungeons & Dragons notebook pulls Agnes into a fantastical world of epic quests, homicidal fairies, snarling ogres, and 90s pop culture as she tries to reconnect with her sister and find the courage she never knew she had. Equal parts comedy, heartfelt drama, and action-packed adventure, the play celebrates the power of great storytelling and the geek and warrior in all of us.",
-          "registration": "Online sales end 1 (one) hour before the start of a performance. If online sales are closed, there may still be tickets available for purchase at the box office."
+          "date": "November 29 2026",
+          "time": "1:00 pm",
+          "venue": "The Ark",
+          "admission": "{\"@type\": \"Offer\", \"price\": \"18.50, $13.50 kids 12 and under\", \"priceCurrency\": \"USD\", \"url\": \"https://theark.org/event/gemily-261129/\", \"category\": \"primary\", \"availability\": \"inStock\", \"validFrom\": \"2026-09-03T00:00:00+00:00\"}",
+          "description": "Gemily (Gemini + Emily) is the folk music trio comprised of Laz and San Slomovits, and San’s daughter, Emily.",
+          "registration": "Buy tickets online",
+          "end": "2026-11-29T23:00:00-05:00"
         }
       },
-      "reviewExpiresAt": "2026-11-28T03:57:23.526815-05:00"
+      "reviewExpiresAt": "2026-11-29T04:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-9aadcf1272db3b6992c9987c",
+      "title": "Did an Asteroid Really Kill the Dinosaurs?",
+      "summary": "Explore the scientific evidence behind the dinosaur extinction theory in this film screening. The event delves into the impact of a massive asteroid collision and its consequences for life on Earth, examining cosmic events and planetary craters.",
+      "url": "https://events.umich.edu/event/105124",
+      "start": "2026-11-29T12:00:00-05:00",
+      "venue": "Museum of Natural History - Planetarium & Dome Theater",
+      "city": "Ann Arbor",
+      "price": "$9",
+      "category": "Film Screening",
+      "imageUrl": "https://events.umich.edu/media/attachments/2026/09/event_105124_original-1.jpg",
+      "imageAlt": "Did an Asteroid Really Kill the Dinosaurs?",
+      "status": "confirmed",
+      "occurrenceId": "occ-9aadcf1272db3b6992c9987c",
+      "seriesId": "series-6a5759514aede27c8cdb0327",
+      "sourceUpdatedAt": "2026-11-23T09:43:12-05:00",
+      "priceMin": 9.0,
+      "priceMax": 9.0,
+      "priceCurrency": "USD",
+      "lastCheckedAt": "2026-11-28T04:06:11.780535-05:00",
+      "canonicalUrl": "https://events.umich.edu/event/105124",
+      "venueId": "museum of natural history|ann arbor",
+      "timePrecision": "time",
+      "aliases": [
+        "did-an-asteroid-really-kill-the-dinosaur-event-2026-11-29",
+        "src-305f4388cc11eef41afdf19f",
+        "src-d964add84eea18096757242c"
+      ],
+      "legacyOccurrenceKeys": [
+        "did-an-asteroid-really-kill-the-dinosaur-event-2026-11-29|2026-11-29T12:00:00-05:00",
+        "src-305f4388cc11eef41afdf19f|2026-11-29T12:00:00-05:00",
+        "src-d964add84eea18096757242c|2026-11-29T12:00:00-05:00"
+      ],
+      "legacySeriesKeys": [
+        "series-0747da5caa441f6f44df0cfa",
+        "series-10ff8ffc8b50e1a6027837ef",
+        "series-1b4e0a05c201fa703d696989",
+        "series-1ca1dc8102e53c602cf11646",
+        "series-24c35b77fa9312157ae71ede",
+        "series-27faced6449eb9ffe8d640e6",
+        "series-302e0acd9cabf41ac8d1a2f2",
+        "series-3473881144897d7029a54fbb",
+        "series-4bf25be46324feab14e52f36",
+        "series-4c1350f630f5e12a82be3d76",
+        "series-4f4ff3e58ab2db44e6728199",
+        "series-6a5759514aede27c8cdb0327",
+        "series-6d555bc8430d549664e94bd4",
+        "series-6eccb3ca73d7d5be422737ea",
+        "series-75dbed4296389a59a05abb07",
+        "series-78e47aec24a8db76e75e01da",
+        "series-7b4132f0780c74fdfc3ab110",
+        "series-7b6c5416100a2106ab9e6dfa",
+        "series-7dc1cb0d122e24d92c850c5b",
+        "series-8c3ae150f30b3216eea5587a",
+        "series-a467597ecc6c7bb56ea3f257",
+        "series-b2b5484a5c3602e8487150e8",
+        "series-ba3b79554c4cef46cc887b16",
+        "series-cc862a2812e82d9e2701f5b2",
+        "series-cf47b2464ba1865c48e6d0e8",
+        "series-d39b57df05a16a206e0ae669",
+        "series-db0b54b95609b8ab9d0f5b9c",
+        "series-df5d70b4b0b7e6fac4652307",
+        "series-e2b91c9efd3f713f77dc886d",
+        "series-e85f28f858526c1e6cf860da",
+        "series-fa0cc460bb2834740b53dfc4",
+        "series-fb1021d1cc56e440d8da112c"
+      ],
+      "sources": [
+        {
+          "sourceRecordId": "src-d964add84eea18096757242c",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/105124",
+          "observedAt": "2026-11-25T03:31:49-05:00",
+          "sourceUpdatedAt": "2026-11-23T09:43:12-05:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        },
+        {
+          "sourceRecordId": "src-305f4388cc11eef41afdf19f",
+          "sourceId": "happening-at-michigan",
+          "canonicalUrl": "https://events.umich.edu/event/105124",
+          "observedAt": "2026-10-12T15:41:42-04:00",
+          "sourceUpdatedAt": "2026-09-14T10:57:07-04:00",
+          "sourceAuthority": "organizer",
+          "status": "scheduled"
+        }
+      ],
+      "identity": {
+        "ruleVersion": "occurrence-v1",
+        "reasons": [
+          "native-occurrence",
+          "new-occurrence"
+        ],
+        "fields": {
+          "title": "src-d964add84eea18096757242c",
+          "start": "src-d964add84eea18096757242c",
+          "end": "src-d964add84eea18096757242c",
+          "venue": "src-d964add84eea18096757242c",
+          "url": "src-d964add84eea18096757242c",
+          "imageUrl": "src-d964add84eea18096757242c",
+          "status": "src-d964add84eea18096757242c"
+        },
+        "conflicts": {}
+      },
+      "score": 61,
+      "scoring": {
+        "signals": {
+          "funny": 0.1,
+          "distinctive": 0.23,
+          "eclectic": 0.12,
+          "technical_science": 0.98,
+          "artsy": 0.21,
+          "progressive": 0.11,
+          "outdoors": 0.05,
+          "theatre": 0.03,
+          "live_music": 0.02,
+          "live_comedy": 0.02,
+          "farmer_market": 0.02,
+          "sporting": 0.02,
+          "recurring": 0.16,
+          "craft_fair_shopping": 0.02,
+          "religious": 0.02,
+          "large_venue": 0.05,
+          "substance_recovery": 0.01,
+          "popular_music_cover_band": 0.02,
+          "market_or_shop": 0.03,
+          "punk_metal_or_rock": 0.02,
+          "dance": 0.02,
+          "sales_related": 0.26,
+          "children_activity": 0.12,
+          "running": 0.01,
+          "exercise": 0.02,
+          "employment_related": 0.02
+        },
+        "score": 61,
+        "rulesVersion": 2
+      },
+      "localityTier": "regional",
+      "experienceId": "experience:[\"ann arbor\",\"museum of natural history\",\"did an asteroid really kill the dinosaurs\"]",
+      "registration": "Tickets are $9 and available in the museum store on the day of the show.",
+      "bookingUrl": "",
+      "statusEvidence": "Organizer detail reviewed",
+      "editorial": {
+        "state": "verified",
+        "reviewedAt": "2026-11-28T04:06:11.780535-05:00",
+        "expiresAt": "2026-11-29T04:06:11.780535-05:00",
+        "sourceUrl": "https://events.umich.edu/event/105124",
+        "sourceHash": "195a4bcf3c20680c4bc96760745eca68ded0aff56675f12d5d4772512dcf4de7",
+        "inputFacts": {
+          "id": "occ-9aadcf1272db3b6992c9987c",
+          "url": "https://events.umich.edu/event/105124",
+          "start": "2026-11-29T12:00:00-05:00",
+          "end": "2026-11-29T12:45:00-05:00",
+          "venue": "Museum of Natural History",
+          "city": "Ann Arbor",
+          "price": "Tickets are $9 and available in the museum store on the day of the show.",
+          "status": "scheduled"
+        },
+        "evidence": {
+          "date": "Sun, Nov 29 2026",
+          "time": "12:00pm",
+          "venue": "Museum of Natural History \n                                    - Planetarium & Dome Theater",
+          "admission": "Tickets are $9 and available in the museum store on the day of the show.",
+          "description": "Did a space rock six miles wide slam into the Earth 66 million years ago and wipe out 75 percent of all living species at that time, including the dinosaurs?",
+          "registration": "Tickets are $9 and available in the museum store on the day of the show.",
+          "end": "12:45pm"
+        }
+      },
+      "reviewExpiresAt": "2026-11-29T04:06:11.780535-05:00"
     }
   ],
   "rejections": [
     {
-      "id": "occ-86eb1d72ae4bede858ff40c6",
+      "id": "occ-93071144aa72bf785cb4fdd0",
+      "title": "The Tree of Eternity",
+      "url": "https://events.umich.edu/event/154133",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-93071144aa72bf785cb4fdd0",
+        "url": "https://events.umich.edu/event/154133",
+        "start": "2026-11-28T12:00:00-05:00",
+        "end": "2026-11-28T18:00:00-05:00",
+        "venue": "Duderstadt Center",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-0a6450d25cd8f76a52280590",
       "title": "Awakening the Dragon–Showcasing the Building and Performance of an Asian Icon",
       "url": "https://events.umich.edu/event/152125",
       "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-86eb1d72ae4bede858ff40c6",
+        "id": "occ-0a6450d25cd8f76a52280590",
         "url": "https://events.umich.edu/event/152125",
-        "start": "2026-11-27T08:00:00-05:00",
-        "end": "2026-11-27T17:00:00-05:00",
+        "start": "2026-11-30T08:00:00-05:00",
+        "end": "2026-11-30T17:00:00-05:00",
         "venue": "Weiser Hall",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
       "id": "occ-082a4b8ad4f7a3e8a639ee3f",
@@ -604,41 +941,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-93071144aa72bf785cb4fdd0",
-      "title": "The Tree of Eternity",
-      "url": "https://events.umich.edu/event/154133",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-93071144aa72bf785cb4fdd0",
-        "url": "https://events.umich.edu/event/154133",
-        "start": "2026-11-28T12:00:00-05:00",
-        "end": "2026-11-28T18:00:00-05:00",
-        "venue": "Duderstadt Center",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-1838b26a5de8d2d8f303cfbf",
-      "title": "The Tree of Eternity",
-      "url": "https://events.umich.edu/event/154133",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-1838b26a5de8d2d8f303cfbf",
-        "url": "https://events.umich.edu/event/154133",
-        "start": "2026-11-27T12:00:00-05:00",
-        "end": "2026-11-27T18:00:00-05:00",
-        "venue": "Duderstadt Center",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
       "id": "occ-e8e14bdc6b86ab19fb10bcca",
@@ -655,24 +958,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-6f4b0cbd7f1525f9af3dcdad",
-      "title": "Black, White, and Red: Black Women in Silent Film",
-      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-      "reason": "ValueError: time quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-6f4b0cbd7f1525f9af3dcdad",
-        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
-        "start": "2026-07-30T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
       "id": "occ-9d9636f72e661b8c3a960865",
@@ -689,160 +975,7 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-c4737f2009e5028e04b75a5e",
-      "title": "Comics Beyond Sight",
-      "url": "https://events.umich.edu/event/150276",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-c4737f2009e5028e04b75a5e",
-        "url": "https://events.umich.edu/event/150276",
-        "start": "2026-11-27T10:00:00-05:00",
-        "end": null,
-        "venue": "Hatcher Graduate Library",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-0a6450d25cd8f76a52280590",
-      "title": "Awakening the Dragon–Showcasing the Building and Performance of an Asian Icon",
-      "url": "https://events.umich.edu/event/152125",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-0a6450d25cd8f76a52280590",
-        "url": "https://events.umich.edu/event/152125",
-        "start": "2026-11-30T08:00:00-05:00",
-        "end": "2026-11-30T17:00:00-05:00",
-        "venue": "Weiser Hall",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-3957c66cd084a3fd179d4ae8",
-      "title": "20 Years of MOCAD: A Practice of Multiplicity – Parts II–IV",
-      "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
-      "reason": "ValueError: time quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-3957c66cd084a3fd179d4ae8",
-        "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
-        "start": "2026-11-04T00:00:00-05:00",
-        "end": "2027-04-04T00:00:00-04:00",
-        "venue": "Julia Reyes Taubman Building",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-0592f1160e2e4f04fc6bc9af",
-      "title": "Drag Queen Bingo  - Fri 9pm",
-      "url": "https://events.five15.net/event/drag-queen-bingo/drag-queen-bingo-fri-9pm-76",
-      "reason": "ValueError: End time lacks matching evidence",
-      "inputFacts": {
-        "id": "occ-0592f1160e2e4f04fc6bc9af",
-        "url": "https://events.five15.net/event/drag-queen-bingo/drag-queen-bingo-fri-9pm-76",
-        "start": "2026-11-27T21:00:00-05:00",
-        "end": null,
-        "venue": "Five15",
-        "city": "Royal Oak",
-        "price": "$25",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-07c7fd0c943ace656151b359",
-      "title": "20 Years of MOCAD: A Practice of Multiplicity — Part I",
-      "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-part-i/",
-      "reason": "ValueError: time quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-07c7fd0c943ace656151b359",
-        "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-part-i/",
-        "start": "2026-09-09T00:00:00-04:00",
-        "end": "2027-03-21T00:00:00-04:00",
-        "venue": "MOCAD",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-5b65ee0ce43bbb370be9fe17",
-      "title": "STANDUP COMEDY l Nate Varrone",
-      "url": "https://www.crowdwork.com/e/standup-comedy-l-nate-varrone?date=2026-11-28T20%3A00%3A00.000-05%3A00",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-5b65ee0ce43bbb370be9fe17",
-        "url": "https://www.crowdwork.com/e/standup-comedy-l-nate-varrone?date=2026-11-28T20%3A00%3A00.000-05%3A00",
-        "start": "2026-11-28T20:00:00-05:00",
-        "end": null,
-        "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
-        "city": "Hamtramck",
-        "price": "$22.35–$27.6 including fees",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-7def84f17e23fea2aa911204",
-      "title": "Out of the Ordinary | the work of John Ronan Architects",
-      "url": "https://events.umich.edu/event/152116",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-7def84f17e23fea2aa911204",
-        "url": "https://events.umich.edu/event/152116",
-        "start": "2026-11-27T18:00:00-05:00",
-        "end": "2026-11-27T21:00:00-05:00",
-        "venue": "305 W Liberty",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-1a3eef4457b0026fd58ff57e",
-      "title": "Comedy Bingo",
-      "url": "https://www.etix.com/ticket/e/1059577/comedy-bingo-ann-arbor-ann-arbor-comedy-showcase",
-      "reason": "ValueError: HTTP 202: https://www.etix.com/ticket/e/1059577/comedy-bingo-ann-arbor-ann-arbor-comedy-showcase",
-      "inputFacts": {
-        "id": "occ-1a3eef4457b0026fd58ff57e",
-        "url": "https://www.etix.com/ticket/e/1059577/comedy-bingo-ann-arbor-ann-arbor-comedy-showcase",
-        "start": "2026-12-02T00:00:00-05:00",
-        "end": null,
-        "venue": "Ann Arbor Comedy Showcase",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-839abb5246ea4a254ee14530",
-      "title": "Bill Smith: The Jeweler",
-      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-      "reason": "ValueError: time quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-839abb5246ea4a254ee14530",
-        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
-        "start": "2026-07-09T00:00:00-04:00",
-        "end": "2026-12-06T00:00:00-05:00",
-        "venue": "Charles H. Wright Museum of African American History",
-        "city": "Detroit",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
       "id": "occ-de0138ee92f43bdf31145aa4",
@@ -859,7 +992,194 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-a48e0cad3a6f5d9fc7ddbf56",
+      "title": "T.REX",
+      "url": "https://events.umich.edu/event/136347",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-a48e0cad3a6f5d9fc7ddbf56",
+        "url": "https://events.umich.edu/event/136347",
+        "start": "2026-11-29T14:00:00-05:00",
+        "end": "2026-11-29T14:45:00-05:00",
+        "venue": "Museum of Natural History",
+        "city": "Ann Arbor",
+        "price": "Tickets are $9 and are available in the museum store on the day of the show.",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-6f4b0cbd7f1525f9af3dcdad",
+      "title": "Black, White, and Red: Black Women in Silent Film",
+      "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
+      "reason": "ValueError: time quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-6f4b0cbd7f1525f9af3dcdad",
+        "url": "https://www.thewright.org/exhibitions/black-white-and-red-black-women-silent-film",
+        "start": "2026-07-30T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-5187ad1dc3511f462af58bc2",
+      "title": "William Hill III",
+      "url": "https://cliffbells.com/event/william-hill-iii-4/",
+      "reason": "ValueError: Admission price unknown",
+      "inputFacts": {
+        "id": "occ-5187ad1dc3511f462af58bc2",
+        "url": "https://cliffbells.com/event/william-hill-iii-4/",
+        "start": "2026-11-29T17:30:00-05:00",
+        "end": "2026-11-29T19:30:00-05:00",
+        "venue": "Cliff Bell's",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-5b65ee0ce43bbb370be9fe17",
+      "title": "STANDUP COMEDY l Nate Varrone",
+      "url": "https://www.crowdwork.com/e/standup-comedy-l-nate-varrone?date=2026-11-28T20%3A00%3A00.000-05%3A00",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-5b65ee0ce43bbb370be9fe17",
+        "url": "https://www.crowdwork.com/e/standup-comedy-l-nate-varrone?date=2026-11-28T20%3A00%3A00.000-05%3A00",
+        "start": "2026-11-28T20:00:00-05:00",
+        "end": null,
+        "venue": "Ant Hall - 2320 Caniff Hamtramck, MI 48212",
+        "city": "Hamtramck",
+        "price": "$22.35–$27.6 including fees",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-3957c66cd084a3fd179d4ae8",
+      "title": "20 Years of MOCAD: A Practice of Multiplicity – Parts II–IV",
+      "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
+      "reason": "ValueError: time quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-3957c66cd084a3fd179d4ae8",
+        "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-parts-ii-iv/",
+        "start": "2026-11-04T00:00:00-05:00",
+        "end": "2027-04-04T00:00:00-04:00",
+        "venue": "Julia Reyes Taubman Building",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-4ff130d4ddacc76c3f4e5232",
+      "title": "Saturday Sampler Tour | Highlights of the Kelsey",
+      "url": "https://events.umich.edu/event/153838",
+      "reason": "ValueError: Organizer occurrence does not match candidate date",
+      "inputFacts": {
+        "id": "occ-4ff130d4ddacc76c3f4e5232",
+        "url": "https://events.umich.edu/event/153838",
+        "start": "2026-11-29T08:00:00-05:00",
+        "end": null,
+        "venue": "Kelsey Museum of Archaeology",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-1a3eef4457b0026fd58ff57e",
+      "title": "Comedy Bingo",
+      "url": "https://www.etix.com/ticket/e/1059577/comedy-bingo-ann-arbor-ann-arbor-comedy-showcase",
+      "reason": "ValueError: HTTP 202: https://www.etix.com/ticket/e/1059577/comedy-bingo-ann-arbor-ann-arbor-comedy-showcase",
+      "inputFacts": {
+        "id": "occ-1a3eef4457b0026fd58ff57e",
+        "url": "https://www.etix.com/ticket/e/1059577/comedy-bingo-ann-arbor-ann-arbor-comedy-showcase",
+        "start": "2026-12-02T00:00:00-05:00",
+        "end": null,
+        "venue": "Ann Arbor Comedy Showcase",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-07c7fd0c943ace656151b359",
+      "title": "20 Years of MOCAD: A Practice of Multiplicity — Part I",
+      "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-part-i/",
+      "reason": "ValueError: description quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-07c7fd0c943ace656151b359",
+        "url": "https://mocadetroit.org/exhibition/20-years-of-mocad-a-practice-of-multiplicity-part-i/",
+        "start": "2026-09-09T00:00:00-04:00",
+        "end": "2027-03-21T00:00:00-04:00",
+        "venue": "MOCAD",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-064a03f30cb7c6a405ab45bc",
+      "title": "“Fill the Ranks”: The Civil War and the University of Michigan",
+      "url": "https://events.umich.edu/event/152626",
+      "reason": "ValueError: Structured organizer end conflicts with occurrence",
+      "inputFacts": {
+        "id": "occ-064a03f30cb7c6a405ab45bc",
+        "url": "https://events.umich.edu/event/152626",
+        "start": "2026-11-28T12:00:00-05:00",
+        "end": "2026-11-28T17:00:00-05:00",
+        "venue": "Detroit Observatory",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-839abb5246ea4a254ee14530",
+      "title": "Bill Smith: The Jeweler",
+      "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+      "reason": "ValueError: time quote not present in organizer evidence",
+      "inputFacts": {
+        "id": "occ-839abb5246ea4a254ee14530",
+        "url": "https://www.thewright.org/exhibitions/bill-smith-jeweler",
+        "start": "2026-07-09T00:00:00-04:00",
+        "end": "2026-12-06T00:00:00-05:00",
+        "venue": "Charles H. Wright Museum of African American History",
+        "city": "Detroit",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-83458c51dd5ac86c2603a7b3",
+      "title": "Lauren Crane",
+      "url": "https://www.nstarlounge.com/events/laurencrane11-28-26",
+      "reason": "ValueError: Admission price unknown",
+      "inputFacts": {
+        "id": "occ-83458c51dd5ac86c2603a7b3",
+        "url": "https://www.nstarlounge.com/events/laurencrane11-28-26",
+        "start": "2026-11-28T18:00:00-05:00",
+        "end": "2026-11-28T19:15:00-05:00",
+        "venue": "North Star Lounge",
+        "city": "Ann Arbor",
+        "price": null,
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
       "id": "occ-1394dbcda2f12c19a9ef5d3d",
@@ -876,58 +1196,24 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
-      "id": "occ-064a03f30cb7c6a405ab45bc",
-      "title": "“Fill the Ranks”: The Civil War and the University of Michigan",
-      "url": "https://events.umich.edu/event/152626",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "id": "occ-5c6cdd5e78edb560ab8c80ff",
+      "title": "Stella Cole",
+      "url": "https://bluellamaclub.com/event/stella-cole-sat/",
+      "reason": "ValueError: Organizer occurrence does not match candidate date",
       "inputFacts": {
-        "id": "occ-064a03f30cb7c6a405ab45bc",
-        "url": "https://events.umich.edu/event/152626",
-        "start": "2026-11-28T12:00:00-05:00",
-        "end": "2026-11-28T17:00:00-05:00",
-        "venue": "Detroit Observatory",
+        "id": "occ-5c6cdd5e78edb560ab8c80ff",
+        "url": "https://bluellamaclub.com/event/stella-cole-sat/",
+        "start": "2026-11-29T18:00:00-05:00",
+        "end": null,
+        "venue": "Blue LLaMA Jazz Club",
         "city": "Ann Arbor",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-719d52bde34a9ce9176ba585",
-      "title": "Like the flowing river",
-      "url": "https://events.umich.edu/event/149763",
-      "reason": "ValueError: Structured organizer start conflicts with occurrence",
-      "inputFacts": {
-        "id": "occ-719d52bde34a9ce9176ba585",
-        "url": "https://events.umich.edu/event/149763",
-        "start": "2026-11-27T09:00:00-05:00",
-        "end": "2026-11-27T17:00:00-05:00",
-        "venue": "202 S. Thayer",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-e8f9e4784645e34676c5c428",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-      "reason": "ValueError: description quote not present in organizer evidence",
-      "inputFacts": {
-        "id": "occ-e8f9e4784645e34676c5c428",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2027-01-03T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts (DIA)",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
       "id": "occ-99dca894c27770b84e6849f1",
@@ -944,41 +1230,41 @@
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
-      "id": "occ-43d825c61121fa53316fee15",
-      "title": "Well-Being Grows Here: A Winter Conservatory Exhibit",
-      "url": "https://events.umich.edu/event/154505",
-      "reason": "ValueError: description quote not present in organizer evidence",
+      "id": "occ-e8f9e4784645e34676c5c428",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+      "reason": "ValueError: Occurrence outside actionable window",
       "inputFacts": {
-        "id": "occ-43d825c61121fa53316fee15",
-        "url": "https://events.umich.edu/event/154505",
-        "start": "2026-11-27T12:00:00-05:00",
+        "id": "occ-e8f9e4784645e34676c5c428",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture-0?ref=/events/exhibitions/georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2027-01-03T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts (DIA)",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; $20 for adults, $10 for youth (standard exhibition tickets)",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-a1ce3d5842a338ad152a5002",
+      "title": "Venna with KHAL!L",
+      "url": "https://www.majesticdetroit.com/events/detail/venna-1547846",
+      "reason": "ValueError: Occurrence outside actionable window",
+      "inputFacts": {
+        "id": "occ-a1ce3d5842a338ad152a5002",
+        "url": "https://www.majesticdetroit.com/events/detail/venna-1547846",
+        "start": "2026-11-29T00:00:00-05:00",
         "end": null,
-        "venue": "Matthaei Botanical Gardens",
-        "city": "Ann Arbor",
+        "venue": "The Majestic Theatre",
+        "city": "Detroit",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-e8414b8d9b885d76505aa2c4",
-      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
-      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-e8414b8d9b885d76505aa2c4",
-        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
-        "start": "2026-09-30T00:00:00-04:00",
-        "end": "2026-12-11T00:00:00-05:00",
-        "venue": "Detroit Institute of Arts",
-        "city": "Detroit",
-        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
       "id": "occ-1f4a77afa71a7df7606d10cf",
@@ -995,58 +1281,58 @@
         "price": "$25 for museum Members, $40 for non-members",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
-      "id": "occ-cd1bdbfdbb9c716523dce2c3",
-      "title": "Well-Being Grows Here: A Winter Conservatory Exhibit",
-      "url": "http://events.umich.edu/event/154505",
+      "id": "occ-a9acae61ef299533118b5436",
+      "title": "Stephen Rush presents a Fluxus Concert",
+      "url": "https://events.umich.edu/event/154217",
       "reason": "ValueError: description quote not present in organizer evidence",
       "inputFacts": {
-        "id": "occ-cd1bdbfdbb9c716523dce2c3",
-        "url": "http://events.umich.edu/event/154505",
-        "start": "2026-11-27T00:00:00-05:00",
-        "end": null,
-        "venue": "University of Michigan Museum of Natural History",
+        "id": "occ-a9acae61ef299533118b5436",
+        "url": "https://events.umich.edu/event/154217",
+        "start": "2026-12-05T15:00:00-05:00",
+        "end": "2026-12-05T16:00:00-05:00",
+        "venue": "Earl V. Moore Building",
         "city": "Ann Arbor",
-        "price": null,
+        "price": "Free - no tickets required",
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     },
     {
-      "id": "occ-32053257ea542de1001e9860",
-      "title": "Who Votes? The Electoral College",
-      "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-      "reason": "ValueError: Venue not supported by quote",
+      "id": "occ-e8414b8d9b885d76505aa2c4",
+      "title": "Tri-County Free Days, Georgia O'Keeffe: Architecture",
+      "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+      "reason": "ValueError: Occurrence outside actionable window",
       "inputFacts": {
-        "id": "occ-32053257ea542de1001e9860",
-        "url": "https://www.thewright.org/exhibitions/who-votes-electoral-college",
-        "start": "2026-08-06T00:00:00-04:00",
-        "end": "2027-03-21T00:00:00-04:00",
-        "venue": "Charles H. Wright Museum of African American History",
+        "id": "occ-e8414b8d9b885d76505aa2c4",
+        "url": "https://dia.org/events/tri-county-free-days-georgia-okeeffe-architecture",
+        "start": "2026-09-30T00:00:00-04:00",
+        "end": "2026-12-11T00:00:00-05:00",
+        "venue": "Detroit Institute of Arts",
+        "city": "Detroit",
+        "price": "Free for Tri-County residents; standard tickets $20 for adults, $10 for youth",
+        "status": "scheduled"
+      },
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
+    },
+    {
+      "id": "occ-2b26ed221be0a62fc3d1adad",
+      "title": "Baby Smoove Live!",
+      "url": "https://www.majesticdetroit.com/events/detail/baby-smoove-live-1608387",
+      "reason": "ValueError: Admission price unknown",
+      "inputFacts": {
+        "id": "occ-2b26ed221be0a62fc3d1adad",
+        "url": "https://www.majesticdetroit.com/events/detail/baby-smoove-live-1608387",
+        "start": "2026-11-29T00:00:00-05:00",
+        "end": null,
+        "venue": "The Majestic Theatre",
         "city": "Detroit",
         "price": null,
         "status": "scheduled"
       },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
-    },
-    {
-      "id": "occ-4a0b730398c986a1ec73b1d7",
-      "title": "William Hill III Trio",
-      "url": "https://bluellamaclub.com/event/william-hill-iii-trio-3/",
-      "reason": "ValueError: Occurrence outside actionable window",
-      "inputFacts": {
-        "id": "occ-4a0b730398c986a1ec73b1d7",
-        "url": "https://bluellamaclub.com/event/william-hill-iii-trio-3/",
-        "start": "2026-11-28T19:00:00-05:00",
-        "end": "2026-11-28T21:00:00-05:00",
-        "venue": "Blue LLaMA Jazz Club",
-        "city": "Ann Arbor",
-        "price": null,
-        "status": "scheduled"
-      },
-      "retryAt": "2026-11-27T06:57:23.526815-05:00"
+      "retryAt": "2026-11-28T07:06:11.780535-05:00"
     }
   ]
 }

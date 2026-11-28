@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "section": "news",
-  "generatedAt": "2026-11-27T03:57:46.082611-05:00",
+  "generatedAt": "2026-11-28T04:06:36.290979-05:00",
   "stories": [
     {
       "id": "how-will-data-centers-impact-michigan-s-news-2026-11-25",
@@ -106,105 +106,6 @@
         "grounded": true,
         "groundingReason": "The article supports all claims in the summary, detailing how data center growth in Michigan, including specific locations like Saline and Van Buren Townships, complicates the state's 2035 renewable energy goals. It explains how data centers may fund new renewable generation and storage but also necessitate increased reliance on natural gas and challenge utilities' ability to meet targets without delays, requiring significant land for solar expansion. This is a substantive local development for Michigan."
       }
-    },
-    {
-      "id": "work-stops-on-google-data-center-project-news-2026-11-24",
-      "title": "Work stops on Google data center project after Wayne County says it lacks permit",
-      "summary": "Wayne County has issued a stop-work order for Google's \"Project Cannoli\" data center in Van Buren Township, citing a lack of proper county construction permits and potential impacts on county drains. The developer, Panattoni, is accused of working within easement areas and obstructing drains, creating flood risks. The project is expected to require significant power, equivalent to a city's electricity needs.",
-      "url": "https://www.michiganpublic.org/politics-government/2026-11-24/work-stops-on-google-data-center-project-after-wayne-county-says-it-lacks-permit",
-      "publishedAt": "2026-11-24T20:11:08.210000-05:00",
-      "addedAt": "2026-11-25T03:31:49-05:00",
-      "urgentLocal": false,
-      "evidenceQuality": "reported",
-      "entities": [
-        "Google",
-        "Wayne County",
-        "Van Buren Township",
-        "Wayne County Department of Public Services",
-        "Oladayo Akinyemi",
-        "MLive",
-        "Matt Allen",
-        "DTE",
-        "Will Conkling",
-        "Dana Nessel",
-        "Panattoni Development Company, Inc."
-      ],
-      "locations": [
-        "Wayne County",
-        "Van Buren Township",
-        "Detroit Metro Airport"
-      ],
-      "localityIndex": 1,
-      "topics": [
-        "data center",
-        "construction",
-        "permits",
-        "infrastructure",
-        "politics & government"
-      ],
-      "source": {
-        "name": "Dustin Dwyer",
-        "publication": "Michigan Public"
-      },
-      "scoring": {
-        "signals": {
-          "funny": 0.05,
-          "distinctive": 0.33,
-          "eclectic": 0.14,
-          "technical_science": 0.77,
-          "artsy": 0.02,
-          "progressive": 0.11,
-          "outdoors": 0.02,
-          "theatre": 0.01,
-          "live_music": 0.01,
-          "live_comedy": 0.01,
-          "farmer_market": 0.01,
-          "sporting": 0.01,
-          "recurring": 0.04,
-          "craft_fair_shopping": 0.01,
-          "religious": 0.01,
-          "large_venue": 0.04,
-          "substance_recovery": 0.01,
-          "popular_music_cover_band": 0.01,
-          "market_or_shop": 0.02,
-          "punk_metal_or_rock": 0.01,
-          "dance": 0.01,
-          "sales_related": 0.03,
-          "children_activity": 0.01,
-          "running": 0.01,
-          "exercise": 0.01,
-          "employment_related": 0.02
-        }
-      },
-      "photo": {
-        "url": "https://npr.brightspotcdn.com/dims4/default/fbc9708/2147483647/strip/true/crop/1669x876+0+36/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc5%2F0c%2Ff897069f44a3aeaa0006b355c855%2Fcanolli-site-plan.png",
-        "alt": "Aerial rendering of Google's proposed hyperscale data center, Project Cannoli."
-      },
-      "editorial": {
-        "state": "verified",
-        "reviewedAt": "2026-11-25T03:51:34.775344-05:00",
-        "expiresAt": "2026-11-28T03:51:34.775344-05:00",
-        "inputFacts": {
-          "id": "work-stops-on-google-data-center-project-news-2026-11-24",
-          "title": "Work stops on Google data center project after Wayne County says it lacks permit",
-          "url": "https://www.michiganpublic.org/politics-government/2026-11-24/work-stops-on-google-data-center-project-after-wayne-county-says-it-lacks-permit",
-          "publishedAt": "2026-11-24T15:11:00-05:00",
-          "summary": "Wayne County has issued a stop-work order for the 'Project Cannoli' data center development in Van Buren Township, citing the developer's failure to obtain necessary construction permits. The county stated that unauthorized construction activity has impacted local drains and created flooding risks, while the developer, Panattoni, has pledged to work with officials to resolve the compliance issues.",
-          "finding": null,
-          "sourceUpdatedAt": null
-        },
-        "policyKey": "fae75a7c8c5de67ba8af31f88f9db6437b6d3257b9d2241afffcfba51d83d1b6",
-        "publicationEvidence": "2026-11-24T20:11:08.21",
-        "datePrecision": "time",
-        "sourceHash": "3bde812ed92e7b3e126a8e7c6ed4d6ad3e46dc6500d5f5687d001cb752ca2692",
-        "relevance": 4,
-        "novelty": 4,
-        "reason": "The article details a significant local civic decision impacting a major development in a nearby community, with potential environmental consequences (flooding) and implications for public services (drainage, electricity grid).",
-        "storyKey": "google-data-center-permit-halt",
-        "localConnection": "Van Buren Township is a nearby community to Canton and Plymouth. The project's scale and potential impact on the regional power grid and environment are relevant.",
-        "grounded": true,
-        "groundingReason": "The article fully supports all claims in the summary, including the stop-work order, reasons for it (lack of permits, impact on drains, flood risks), the developer's name, and the project's power requirements. This is a significant local development for Van Buren Township and Wayne County."
-      }
     }
   ],
   "corrections": [
@@ -224,18 +125,33 @@
       "datePrecision": "time"
     },
     {
-      "id": "work-stops-on-google-data-center-project-news-2026-11-24",
+      "id": "ypsi-artisans-holiday-market-finding-way-news-2026-11-27",
       "inputFacts": {
-        "id": "work-stops-on-google-data-center-project-news-2026-11-24",
-        "title": "Work stops on Google data center project after Wayne County says it lacks permit",
-        "url": "https://www.michiganpublic.org/politics-government/2026-11-24/work-stops-on-google-data-center-project-after-wayne-county-says-it-lacks-permit",
-        "publishedAt": "2026-11-24T15:11:00-05:00",
-        "summary": "Wayne County has issued a stop-work order for the 'Project Cannoli' data center development in Van Buren Township, citing the developer's failure to obtain necessary construction permits. The county stated that unauthorized construction activity has impacted local drains and created flooding risks, while the developer, Panattoni, has pledged to work with officials to resolve the compliance issues.",
+        "id": "ypsi-artisans-holiday-market-finding-way-news-2026-11-27",
+        "title": "Ypsi Artisans Holiday Market finding ways to help local vendors succeed",
+        "url": "https://www.wemu.org/wemu-news/2026-11-27/ypsi-artisans-holiday-market-finding-ways-to-help-local-vendors-succeed",
+        "publishedAt": "2026-11-27T08:46:00-05:00",
+        "summary": "The Ypsi Freighthouse in Ypsilanti’s Depot Town is hosting the Ypsi Artisans Holiday Market to connect local vendors and nonprofits with the community during Small Business Saturday. Market creator Angela Scott is working to support vendors following the introduction of a new registration fee required to use the venue.",
         "finding": null,
         "sourceUpdatedAt": null
       },
-      "publishedAt": "2026-11-24T20:11:08.210000-05:00",
-      "publicationEvidence": "2026-11-24T20:11:08.21",
+      "publishedAt": "2026-11-27T13:46:43.258000-05:00",
+      "publicationEvidence": "2026-11-27T13:46:43.258",
+      "datePrecision": "time"
+    },
+    {
+      "id": "a-dog-parade-is-coming-to-ann-arbor-this-news-2026-11-27",
+      "inputFacts": {
+        "id": "a-dog-parade-is-coming-to-ann-arbor-this-news-2026-11-27",
+        "title": "A dog parade is coming to Ann Arbor this Thanksgiving weekend",
+        "url": "https://www.wemu.org/wemu-news/2026-11-27/a-dog-parade-is-coming-to-ann-arbor-this-thanksgiving-weekend",
+        "publishedAt": "2026-11-27T06:49:00-05:00",
+        "summary": "Hear.Say Brewery and Theater in Ann Arbor is hosting a dog parade and a .1K race over Thanksgiving weekend to raise funds for improv comedy workshop scholarships. The event will be hosted by improv comedians Marley Gluf and Ainsley Elder in character as Midwest moms.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-27T11:49:00-05:00",
+      "publicationEvidence": "2026-11-27T11:49:00",
       "datePrecision": "time"
     },
     {
@@ -254,18 +170,48 @@
       "datePrecision": "time"
     },
     {
+      "id": "ypsilanti-s-krampusmrkt-offers-handmade-news-2026-11-27",
+      "inputFacts": {
+        "id": "ypsilanti-s-krampusmrkt-offers-handmade-news-2026-11-27",
+        "title": "Ypsilanti's Krampusmrkt offers handmade holiday gifts with a spooky twist",
+        "url": "https://www.wemu.org/wemu-news/2026-11-27/ypsilantis-krampusmrkt-offers-handmade-holiday-gifts-with-a-spooky-twist",
+        "publishedAt": "2026-11-27T00:00:00-05:00",
+        "summary": "The 6th annual Krampusmrkt, hosted by Holy Bones Artisan Markets, returns this weekend in Ypsilanti. The event features handmade holiday gifts with a spooky theme.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-27T11:00:00-05:00",
+      "publicationEvidence": "2026-11-27T11:00:00",
+      "datePrecision": "time"
+    },
+    {
       "id": "small-business-saturday-jumpstarts-ann-a-news-2026-11-26",
       "inputFacts": {
         "id": "small-business-saturday-jumpstarts-ann-a-news-2026-11-26",
         "title": "Small Business Saturday jumpstarts Ann Arbor’s economy heading into the holidays",
         "url": "https://www.wemu.org/wemu-news/2026-11-26/small-business-saturday-jumpstarts-ann-arbors-economy-heading-into-the-holidays",
         "publishedAt": "2026-11-26T08:34:00-05:00",
-        "summary": "Small Business Saturday is highlighted as a significant economic driver for local brick-and-mortar stores in Ann Arbor as the holiday season begins. Chad Wiebesick of Destination Ann Arbor emphasizes that shopping locally keeps a majority of spending within the community, supporting both employees and independent businesses.",
+        "summary": "Small Business Saturday is highlighted as a key economic driver for Ann Arbor's local businesses as the holiday shopping season begins. Chad Wiebesick of Destination Ann Arbor emphasizes that shopping locally keeps a significant portion of spending within the community, supporting both employees and other local businesses.",
         "finding": null,
         "sourceUpdatedAt": null
       },
       "publishedAt": "2026-11-26T13:34:35.587000-05:00",
       "publicationEvidence": "2026-11-26T13:34:35.587",
+      "datePrecision": "time"
+    },
+    {
+      "id": "michigan-state-parks-offer-outdoor-alter-news-2026-11-27",
+      "inputFacts": {
+        "id": "michigan-state-parks-offer-outdoor-alter-news-2026-11-27",
+        "title": "Michigan state parks offer outdoor alternative to Black Friday craze",
+        "url": "https://www.michiganpublic.org/environment-climate-change/2026-11-27/michigan-state-parks-offer-outdoor-alternative-to-black-friday-craze",
+        "publishedAt": "2026-11-27T06:00:00-05:00",
+        "summary": "Michigan state parks are being promoted as a quiet, outdoor alternative to the traditional Black Friday shopping frenzy. While the Department of Natural Resources previously offered free admission on the holiday, officials now emphasize the value of the annual state parks pass for year-round access.",
+        "finding": null,
+        "sourceUpdatedAt": null
+      },
+      "publishedAt": "2026-11-27T11:00:00-05:00",
+      "publicationEvidence": "2026-11-27T11:00:00",
       "datePrecision": "time"
     },
     {
@@ -282,103 +228,25 @@
       "publishedAt": "2026-10-14T09:00:01+00:00",
       "publicationEvidence": "2026-10-14T09:00:01Z",
       "datePrecision": "time"
-    },
-    {
-      "id": "cinema-chat-paper-tiger-opens-and-specia-news-2026-11-26",
-      "inputFacts": {
-        "id": "cinema-chat-paper-tiger-opens-and-specia-news-2026-11-26",
-        "title": "Cinema Chat: \"Paper Tiger\" opens and special holiday screenings are on the way",
-        "url": "https://www.wemu.org/show/cinema-chat/2026-11-26/cinema-chat-paper-tiger-opens-and-special-holiday-screenings-are-on-the-way",
-        "publishedAt": "2026-11-26T00:00:00-05:00",
-        "summary": "Mat Hopson and Tara Calligan discuss new movie releases for the Thanksgiving weekend and upcoming holiday season screenings. They provide insights into what audiences can expect at the cinema.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-11-26T07:49:00+00:00",
-      "publicationEvidence": "2026-11-26T07:49:00Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "club-kid-news-2026-11-26",
-      "inputFacts": {
-        "id": "club-kid-news-2026-11-26",
-        "title": "Club Kid",
-        "url": "https://www.youtube.com/watch?v=guKEdb_iRXw",
-        "publishedAt": "2026-11-26T00:00:00-05:00",
-        "summary": "Actor and comedian Jordan Firstman makes his directorial debut with the A24 comedy-drama 'Club Kid'. The film follows a nightlife promoter who unexpectedly becomes a father.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-08-19T05:07:41-07:00",
-      "publicationEvidence": "2026-08-19T05:07:41-07:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "rewriting-michigan-s-constitution-unders-news-2026-11-26",
-      "inputFacts": {
-        "id": "rewriting-michigan-s-constitution-unders-news-2026-11-26",
-        "title": "Rewriting Michigan’s constitution?: Understanding Proposal 1 on the November 2026 ballot",
-        "url": "https://www.clickondetroit.com/news/local/2026/09/30/constitutional-convention-understanding-proposal-1-in-michigans-2026-november-ballot/",
-        "publishedAt": "2026-11-26T00:00:00-05:00",
-        "summary": "Proposal 1 on Michigan's 2026 November ballot asks voters whether to convene a constitutional convention in 2027 to draft a general revision of the state constitution for voter approval or rejection. The proposal will appear as 'Proposal 2026-1: A proposal to convene a constitutional convention for the purpose of drafting a general revision of the state constitution' on the ballot.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-10-01T09:00:01+00:00",
-      "publicationEvidence": "2026-10-01T09:00:01Z",
-      "datePrecision": "time"
-    },
-    {
-      "id": "wild-horse-nine-news-2026-11-26",
-      "inputFacts": {
-        "id": "wild-horse-nine-news-2026-11-26",
-        "title": "Wild Horse Nine",
-        "url": "https://www.youtube.com/watch?v=Haw_sznA5aQ",
-        "publishedAt": "2026-11-26T00:00:00-05:00",
-        "summary": "Directed by Martin McDonagh, 'Wild Horse Nine' is a dark espionage thriller set in 1973 Chile. The film stars John Malkovich and Sam Rockwell as CIA agents on a mysterious assignment on Easter Island.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-03-19T06:00:19-07:00",
-      "publicationEvidence": "2026-03-19T06:00:19-07:00",
-      "datePrecision": "time"
-    },
-    {
-      "id": "you-can-see-everything-news-2026-11-26",
-      "inputFacts": {
-        "id": "you-can-see-everything-news-2026-11-26",
-        "title": "You Can See Everything",
-        "url": "https://www.youtube.com/watch?v=HvW_N5p1q44",
-        "publishedAt": "2026-11-26T00:00:00-05:00",
-        "summary": "This documentary follows disgraced Theranos founder Elizabeth Holmes in the final days before her imprisonment. The film captures a three-year journey into the life of the Silicon Valley figure.",
-        "finding": null,
-        "sourceUpdatedAt": null
-      },
-      "publishedAt": "2026-09-23T06:00:14-07:00",
-      "publicationEvidence": "2026-09-23T06:00:14-07:00",
-      "datePrecision": "time"
     }
   ],
   "days": [
     {
-      "date": "2026-11-26",
-      "selectedIds": [
-        "work-stops-on-google-data-center-project-news-2026-11-24",
-        "how-will-data-centers-impact-michigan-s-news-2026-11-25"
-      ]
-    },
-    {
       "date": "2026-11-27",
       "selectedIds": [
-        "how-will-data-centers-impact-michigan-s-news-2026-11-25",
-        "work-stops-on-google-data-center-project-news-2026-11-24"
+        "how-will-data-centers-impact-michigan-s-news-2026-11-25"
       ]
     },
     {
       "date": "2026-11-28",
       "selectedIds": [
-        "how-will-data-centers-impact-michigan-s-news-2026-11-25",
-        "work-stops-on-google-data-center-project-news-2026-11-24"
+        "how-will-data-centers-impact-michigan-s-news-2026-11-25"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "selectedIds": [
+        "how-will-data-centers-impact-michigan-s-news-2026-11-25"
       ]
     }
   ]
